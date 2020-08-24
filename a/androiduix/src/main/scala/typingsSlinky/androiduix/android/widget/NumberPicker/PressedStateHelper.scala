@@ -40,53 +40,26 @@ object PressedStateHelper {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMODE_PRESS(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MODE_PRESS")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMODE_TAPPED(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MODE_TAPPED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMODE_PRESS(value: js.Any): Self = this.set("MODE_PRESS", value.asInstanceOf[js.Any])
     @scala.inline
-    def with_NumberPicker_this(value: typingsSlinky.androiduix.android.widget.NumberPicker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_NumberPicker_this")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMODE_TAPPED(value: js.Any): Self = this.set("MODE_TAPPED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withButtonPressDelayed(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonPressDelayed")(js.Any.fromFunction1(value))
-        ret
-    }
+    def set_NumberPicker_this(value: typingsSlinky.androiduix.android.widget.NumberPicker): Self = this.set("_NumberPicker_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withButtonTapped(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTapped")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setButtonPressDelayed(value: Double => Unit): Self = this.set("buttonPressDelayed", js.Any.fromFunction1(value))
     @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setButtonTapped(value: Double => Unit): Self = this.set("buttonTapped", js.Any.fromFunction1(value))
     @scala.inline
-    def withMManagedButton(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mManagedButton")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCancel(value: () => Unit): Self = this.set("cancel", js.Any.fromFunction0(value))
     @scala.inline
-    def withMMode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMManagedButton(value: js.Any): Self = this.set("mManagedButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMMode(value: js.Any): Self = this.set("mMode", value.asInstanceOf[js.Any])
   }
   
 }

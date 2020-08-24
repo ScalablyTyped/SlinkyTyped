@@ -1,302 +1,1167 @@
 package typingsSlinky.uiBox.typesEnhancersMod
 
-import typingsSlinky.csstype.mod.AlignContentProperty
-import typingsSlinky.csstype.mod.AlignItemsProperty
-import typingsSlinky.csstype.mod.AlignSelfProperty
-import typingsSlinky.csstype.mod.BackgroundBlendModeProperty
-import typingsSlinky.csstype.mod.BackgroundClipProperty
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.BackgroundImageProperty
-import typingsSlinky.csstype.mod.BackgroundOriginProperty
-import typingsSlinky.csstype.mod.BackgroundPositionProperty
-import typingsSlinky.csstype.mod.BackgroundProperty
-import typingsSlinky.csstype.mod.BackgroundRepeatProperty
-import typingsSlinky.csstype.mod.BackgroundSizeProperty
-import typingsSlinky.csstype.mod.BorderBottomColorProperty
-import typingsSlinky.csstype.mod.BorderBottomLeftRadiusProperty
-import typingsSlinky.csstype.mod.BorderBottomProperty
-import typingsSlinky.csstype.mod.BorderBottomRightRadiusProperty
-import typingsSlinky.csstype.mod.BorderBottomStyleProperty
-import typingsSlinky.csstype.mod.BorderBottomWidthProperty
-import typingsSlinky.csstype.mod.BorderColorProperty
-import typingsSlinky.csstype.mod.BorderLeftColorProperty
-import typingsSlinky.csstype.mod.BorderLeftProperty
-import typingsSlinky.csstype.mod.BorderLeftStyleProperty
-import typingsSlinky.csstype.mod.BorderLeftWidthProperty
-import typingsSlinky.csstype.mod.BorderProperty
-import typingsSlinky.csstype.mod.BorderRadiusProperty
-import typingsSlinky.csstype.mod.BorderRightColorProperty
-import typingsSlinky.csstype.mod.BorderRightProperty
-import typingsSlinky.csstype.mod.BorderRightStyleProperty
-import typingsSlinky.csstype.mod.BorderRightWidthProperty
-import typingsSlinky.csstype.mod.BorderStyleProperty
-import typingsSlinky.csstype.mod.BorderTopColorProperty
-import typingsSlinky.csstype.mod.BorderTopLeftRadiusProperty
-import typingsSlinky.csstype.mod.BorderTopProperty
-import typingsSlinky.csstype.mod.BorderTopRightRadiusProperty
-import typingsSlinky.csstype.mod.BorderTopStyleProperty
-import typingsSlinky.csstype.mod.BorderTopWidthProperty
-import typingsSlinky.csstype.mod.BorderWidthProperty
-import typingsSlinky.csstype.mod.BottomProperty
-import typingsSlinky.csstype.mod.BoxShadowProperty
-import typingsSlinky.csstype.mod.BoxSizingProperty
-import typingsSlinky.csstype.mod.ClearProperty
-import typingsSlinky.csstype.mod.ColorProperty
-import typingsSlinky.csstype.mod.ColumnGapProperty
-import typingsSlinky.csstype.mod.CursorProperty
-import typingsSlinky.csstype.mod.DisplayProperty
-import typingsSlinky.csstype.mod.FlexBasisProperty
-import typingsSlinky.csstype.mod.FlexDirectionProperty
-import typingsSlinky.csstype.mod.FlexFlowProperty
-import typingsSlinky.csstype.mod.FlexProperty
-import typingsSlinky.csstype.mod.FlexWrapProperty
-import typingsSlinky.csstype.mod.FloatProperty
-import typingsSlinky.csstype.mod.FontFamilyProperty
-import typingsSlinky.csstype.mod.FontProperty
-import typingsSlinky.csstype.mod.FontSizeProperty
-import typingsSlinky.csstype.mod.FontStyleProperty
-import typingsSlinky.csstype.mod.FontVariantProperty
-import typingsSlinky.csstype.mod.FontWeightProperty
-import typingsSlinky.csstype.mod.GapProperty
-import typingsSlinky.csstype.mod.GlobalsNumber
-import typingsSlinky.csstype.mod.GlobalsString
-import typingsSlinky.csstype.mod.GridAreaProperty
-import typingsSlinky.csstype.mod.GridAutoColumnsProperty
-import typingsSlinky.csstype.mod.GridAutoFlowProperty
-import typingsSlinky.csstype.mod.GridAutoRowsProperty
-import typingsSlinky.csstype.mod.GridColumnEndProperty
-import typingsSlinky.csstype.mod.GridColumnGapProperty
-import typingsSlinky.csstype.mod.GridColumnProperty
-import typingsSlinky.csstype.mod.GridColumnStartProperty
-import typingsSlinky.csstype.mod.GridGapProperty
-import typingsSlinky.csstype.mod.GridProperty
-import typingsSlinky.csstype.mod.GridRowEndProperty
-import typingsSlinky.csstype.mod.GridRowGapProperty
-import typingsSlinky.csstype.mod.GridRowProperty
-import typingsSlinky.csstype.mod.GridRowStartProperty
-import typingsSlinky.csstype.mod.GridTemplateAreasProperty
-import typingsSlinky.csstype.mod.GridTemplateColumnsProperty
-import typingsSlinky.csstype.mod.GridTemplateProperty
-import typingsSlinky.csstype.mod.GridTemplateRowsProperty
-import typingsSlinky.csstype.mod.HeightProperty
-import typingsSlinky.csstype.mod.JustifyContentProperty
-import typingsSlinky.csstype.mod.JustifyItemsProperty
-import typingsSlinky.csstype.mod.JustifySelfProperty
-import typingsSlinky.csstype.mod.LeftProperty
-import typingsSlinky.csstype.mod.LetterSpacingProperty
-import typingsSlinky.csstype.mod.LineHeightProperty
-import typingsSlinky.csstype.mod.ListStyleImageProperty
-import typingsSlinky.csstype.mod.ListStylePositionProperty
-import typingsSlinky.csstype.mod.ListStyleProperty
-import typingsSlinky.csstype.mod.ListStyleTypeProperty
-import typingsSlinky.csstype.mod.MarginBottomProperty
-import typingsSlinky.csstype.mod.MarginLeftProperty
-import typingsSlinky.csstype.mod.MarginProperty
-import typingsSlinky.csstype.mod.MarginRightProperty
-import typingsSlinky.csstype.mod.MarginTopProperty
-import typingsSlinky.csstype.mod.MaxHeightProperty
-import typingsSlinky.csstype.mod.MaxWidthProperty
-import typingsSlinky.csstype.mod.MinHeightProperty
-import typingsSlinky.csstype.mod.MinWidthProperty
-import typingsSlinky.csstype.mod.OutlineProperty
-import typingsSlinky.csstype.mod.OverflowProperty
-import typingsSlinky.csstype.mod.OverflowXProperty
-import typingsSlinky.csstype.mod.OverflowYProperty
-import typingsSlinky.csstype.mod.PaddingBottomProperty
-import typingsSlinky.csstype.mod.PaddingLeftProperty
-import typingsSlinky.csstype.mod.PaddingProperty
-import typingsSlinky.csstype.mod.PaddingRightProperty
-import typingsSlinky.csstype.mod.PaddingTopProperty
-import typingsSlinky.csstype.mod.PlaceContentProperty
-import typingsSlinky.csstype.mod.PlaceItemsProperty
-import typingsSlinky.csstype.mod.PlaceSelfProperty
-import typingsSlinky.csstype.mod.PointerEventsProperty
-import typingsSlinky.csstype.mod.PositionProperty
-import typingsSlinky.csstype.mod.ResizeProperty
-import typingsSlinky.csstype.mod.RightProperty
-import typingsSlinky.csstype.mod.RowGapProperty
-import typingsSlinky.csstype.mod.TextAlignProperty
-import typingsSlinky.csstype.mod.TextDecorationProperty
-import typingsSlinky.csstype.mod.TextOverflowProperty
-import typingsSlinky.csstype.mod.TextShadowProperty
-import typingsSlinky.csstype.mod.TextTransformProperty
-import typingsSlinky.csstype.mod.TopProperty
-import typingsSlinky.csstype.mod.TransformOriginProperty
-import typingsSlinky.csstype.mod.TransformProperty
-import typingsSlinky.csstype.mod.TransitionProperty
-import typingsSlinky.csstype.mod.TransitionPropertyProperty
-import typingsSlinky.csstype.mod.TransitionTimingFunctionProperty
-import typingsSlinky.csstype.mod.UserSelectProperty
-import typingsSlinky.csstype.mod.VisibilityProperty
-import typingsSlinky.csstype.mod.WhiteSpaceProperty
-import typingsSlinky.csstype.mod.WidthProperty
-import typingsSlinky.csstype.mod.WordBreakProperty
-import typingsSlinky.csstype.mod.WordWrapProperty
-import typingsSlinky.csstype.mod.ZIndexProperty
+import typingsSlinky.csstype.mod.Property.AlignContent
+import typingsSlinky.csstype.mod.Property.AlignItems
+import typingsSlinky.csstype.mod.Property.AlignSelf
+import typingsSlinky.csstype.mod.Property.Background
+import typingsSlinky.csstype.mod.Property.BackgroundBlendMode
+import typingsSlinky.csstype.mod.Property.BackgroundClip
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.BackgroundImage
+import typingsSlinky.csstype.mod.Property.BackgroundOrigin
+import typingsSlinky.csstype.mod.Property.BackgroundPosition
+import typingsSlinky.csstype.mod.Property.BackgroundRepeat
+import typingsSlinky.csstype.mod.Property.BackgroundSize
+import typingsSlinky.csstype.mod.Property.Border
+import typingsSlinky.csstype.mod.Property.BorderBottom
+import typingsSlinky.csstype.mod.Property.BorderBottomColor
+import typingsSlinky.csstype.mod.Property.BorderBottomLeftRadius
+import typingsSlinky.csstype.mod.Property.BorderBottomRightRadius
+import typingsSlinky.csstype.mod.Property.BorderBottomStyle
+import typingsSlinky.csstype.mod.Property.BorderBottomWidth
+import typingsSlinky.csstype.mod.Property.BorderColor
+import typingsSlinky.csstype.mod.Property.BorderLeft
+import typingsSlinky.csstype.mod.Property.BorderLeftColor
+import typingsSlinky.csstype.mod.Property.BorderLeftStyle
+import typingsSlinky.csstype.mod.Property.BorderLeftWidth
+import typingsSlinky.csstype.mod.Property.BorderRadius
+import typingsSlinky.csstype.mod.Property.BorderRight
+import typingsSlinky.csstype.mod.Property.BorderRightColor
+import typingsSlinky.csstype.mod.Property.BorderRightStyle
+import typingsSlinky.csstype.mod.Property.BorderRightWidth
+import typingsSlinky.csstype.mod.Property.BorderStyle
+import typingsSlinky.csstype.mod.Property.BorderTop
+import typingsSlinky.csstype.mod.Property.BorderTopColor
+import typingsSlinky.csstype.mod.Property.BorderTopLeftRadius
+import typingsSlinky.csstype.mod.Property.BorderTopRightRadius
+import typingsSlinky.csstype.mod.Property.BorderTopStyle
+import typingsSlinky.csstype.mod.Property.BorderTopWidth
+import typingsSlinky.csstype.mod.Property.BorderWidth
+import typingsSlinky.csstype.mod.Property.Bottom
+import typingsSlinky.csstype.mod.Property.BoxShadow
+import typingsSlinky.csstype.mod.Property.BoxSizing
+import typingsSlinky.csstype.mod.Property.Clear
+import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.Property.ColumnGap
+import typingsSlinky.csstype.mod.Property.Cursor
+import typingsSlinky.csstype.mod.Property.Display
+import typingsSlinky.csstype.mod.Property.Flex
+import typingsSlinky.csstype.mod.Property.FlexBasis
+import typingsSlinky.csstype.mod.Property.FlexDirection
+import typingsSlinky.csstype.mod.Property.FlexFlow
+import typingsSlinky.csstype.mod.Property.FlexGrow
+import typingsSlinky.csstype.mod.Property.FlexShrink
+import typingsSlinky.csstype.mod.Property.FlexWrap
+import typingsSlinky.csstype.mod.Property.Float
+import typingsSlinky.csstype.mod.Property.Font
+import typingsSlinky.csstype.mod.Property.FontFamily
+import typingsSlinky.csstype.mod.Property.FontSize
+import typingsSlinky.csstype.mod.Property.FontStyle
+import typingsSlinky.csstype.mod.Property.FontVariant
+import typingsSlinky.csstype.mod.Property.FontWeight
+import typingsSlinky.csstype.mod.Property.Gap
+import typingsSlinky.csstype.mod.Property.Grid
+import typingsSlinky.csstype.mod.Property.GridArea
+import typingsSlinky.csstype.mod.Property.GridAutoColumns
+import typingsSlinky.csstype.mod.Property.GridAutoFlow
+import typingsSlinky.csstype.mod.Property.GridAutoRows
+import typingsSlinky.csstype.mod.Property.GridColumn
+import typingsSlinky.csstype.mod.Property.GridColumnEnd
+import typingsSlinky.csstype.mod.Property.GridColumnGap
+import typingsSlinky.csstype.mod.Property.GridColumnStart
+import typingsSlinky.csstype.mod.Property.GridGap
+import typingsSlinky.csstype.mod.Property.GridRow
+import typingsSlinky.csstype.mod.Property.GridRowEnd
+import typingsSlinky.csstype.mod.Property.GridRowGap
+import typingsSlinky.csstype.mod.Property.GridRowStart
+import typingsSlinky.csstype.mod.Property.GridTemplate
+import typingsSlinky.csstype.mod.Property.GridTemplateAreas
+import typingsSlinky.csstype.mod.Property.GridTemplateColumns
+import typingsSlinky.csstype.mod.Property.GridTemplateRows
+import typingsSlinky.csstype.mod.Property.Height
+import typingsSlinky.csstype.mod.Property.JustifyContent
+import typingsSlinky.csstype.mod.Property.JustifyItems
+import typingsSlinky.csstype.mod.Property.JustifySelf
+import typingsSlinky.csstype.mod.Property.Left
+import typingsSlinky.csstype.mod.Property.LetterSpacing
+import typingsSlinky.csstype.mod.Property.LineHeight
+import typingsSlinky.csstype.mod.Property.ListStyle
+import typingsSlinky.csstype.mod.Property.ListStyleImage
+import typingsSlinky.csstype.mod.Property.ListStylePosition
+import typingsSlinky.csstype.mod.Property.ListStyleType
+import typingsSlinky.csstype.mod.Property.Margin
+import typingsSlinky.csstype.mod.Property.MarginBottom
+import typingsSlinky.csstype.mod.Property.MarginLeft
+import typingsSlinky.csstype.mod.Property.MarginRight
+import typingsSlinky.csstype.mod.Property.MarginTop
+import typingsSlinky.csstype.mod.Property.MaxHeight
+import typingsSlinky.csstype.mod.Property.MaxWidth
+import typingsSlinky.csstype.mod.Property.MinHeight
+import typingsSlinky.csstype.mod.Property.MinWidth
+import typingsSlinky.csstype.mod.Property.Opacity
+import typingsSlinky.csstype.mod.Property.Order
+import typingsSlinky.csstype.mod.Property.Outline
+import typingsSlinky.csstype.mod.Property.Overflow
+import typingsSlinky.csstype.mod.Property.OverflowX
+import typingsSlinky.csstype.mod.Property.OverflowY
+import typingsSlinky.csstype.mod.Property.Padding
+import typingsSlinky.csstype.mod.Property.PaddingBottom
+import typingsSlinky.csstype.mod.Property.PaddingLeft
+import typingsSlinky.csstype.mod.Property.PaddingRight
+import typingsSlinky.csstype.mod.Property.PaddingTop
+import typingsSlinky.csstype.mod.Property.PlaceContent
+import typingsSlinky.csstype.mod.Property.PlaceItems
+import typingsSlinky.csstype.mod.Property.PlaceSelf
+import typingsSlinky.csstype.mod.Property.PointerEvents
+import typingsSlinky.csstype.mod.Property.Position
+import typingsSlinky.csstype.mod.Property.Resize
+import typingsSlinky.csstype.mod.Property.Right
+import typingsSlinky.csstype.mod.Property.RowGap
+import typingsSlinky.csstype.mod.Property.TextAlign
+import typingsSlinky.csstype.mod.Property.TextDecoration
+import typingsSlinky.csstype.mod.Property.TextOverflow
+import typingsSlinky.csstype.mod.Property.TextShadow
+import typingsSlinky.csstype.mod.Property.TextTransform
+import typingsSlinky.csstype.mod.Property.Top
+import typingsSlinky.csstype.mod.Property.Transform
+import typingsSlinky.csstype.mod.Property.TransformOrigin
+import typingsSlinky.csstype.mod.Property.Transition
+import typingsSlinky.csstype.mod.Property.TransitionDelay
+import typingsSlinky.csstype.mod.Property.TransitionDuration
+import typingsSlinky.csstype.mod.Property.TransitionProperty
+import typingsSlinky.csstype.mod.Property.TransitionTimingFunction
+import typingsSlinky.csstype.mod.Property.UserSelect
+import typingsSlinky.csstype.mod.Property.Visibility
+import typingsSlinky.csstype.mod.Property.WhiteSpace
+import typingsSlinky.csstype.mod.Property.Width
+import typingsSlinky.csstype.mod.Property.WordBreak
+import typingsSlinky.csstype.mod.Property.WordWrap
+import typingsSlinky.csstype.mod.Property.ZIndex
 import typingsSlinky.uiBox.uiBoxBooleans.`false`
 import typingsSlinky.uiBox.uiBoxNumbers.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined ui-box.ui-box/dist/types/enhancers.BoxCssProps<ui-box.ui-box/dist/types/enhancers.CssProps> & {  marginX ? :ui-box.ui-box/dist/types/enhancers.BoxPropValue,   marginY ? :ui-box.ui-box/dist/types/enhancers.BoxPropValue,   paddingX ? :ui-box.ui-box/dist/types/enhancers.BoxPropValue,   paddingY ? :ui-box.ui-box/dist/types/enhancers.BoxPropValue,   clearfix ? :boolean} */
+/* Inlined ui-box.ui-box/dist/src/types/enhancers.BoxCssProps<ui-box.ui-box/dist/src/types/enhancers.CssProps> & {  marginX :ui-box.ui-box/dist/src/types/enhancers.BoxPropValue | undefined,   marginY :ui-box.ui-box/dist/src/types/enhancers.BoxPropValue | undefined,   paddingX :ui-box.ui-box/dist/src/types/enhancers.BoxPropValue | undefined,   paddingY :ui-box.ui-box/dist/src/types/enhancers.BoxPropValue | undefined,   clearfix :boolean | undefined} */
+@js.native
 trait EnhancerProps extends js.Object {
-  var alignContent: js.UndefOr[AlignContentProperty | Double | `false`] = js.undefined
-  var alignItems: js.UndefOr[AlignItemsProperty | Double | `false`] = js.undefined
-  var alignSelf: js.UndefOr[AlignSelfProperty | Double | `false`] = js.undefined
-  var background: js.UndefOr[(BackgroundProperty[String | `0`]) | Double | `false`] = js.undefined
-  var backgroundBlendMode: js.UndefOr[BackgroundBlendModeProperty | Double | `false`] = js.undefined
-  var backgroundClip: js.UndefOr[BackgroundClipProperty | Double | `false`] = js.undefined
-  var backgroundColor: js.UndefOr[BackgroundColorProperty | Double | `false`] = js.undefined
-  var backgroundImage: js.UndefOr[BackgroundImageProperty | Double | `false`] = js.undefined
-  var backgroundOrigin: js.UndefOr[BackgroundOriginProperty | Double | `false`] = js.undefined
-  var backgroundPosition: js.UndefOr[(BackgroundPositionProperty[String | `0`]) | Double | `false`] = js.undefined
-  var backgroundRepeat: js.UndefOr[BackgroundRepeatProperty | Double | `false`] = js.undefined
-  var backgroundSize: js.UndefOr[(BackgroundSizeProperty[String | `0`]) | Double | `false`] = js.undefined
-  var border: js.UndefOr[(BorderProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderBottom: js.UndefOr[(BorderBottomProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderBottomColor: js.UndefOr[BorderBottomColorProperty | Double | `false`] = js.undefined
-  var borderBottomLeftRadius: js.UndefOr[(BorderBottomLeftRadiusProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderBottomRightRadius: js.UndefOr[(BorderBottomRightRadiusProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderBottomStyle: js.UndefOr[BorderBottomStyleProperty | Double | `false`] = js.undefined
-  var borderBottomWidth: js.UndefOr[(BorderBottomWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderColor: js.UndefOr[BorderColorProperty | Double | `false`] = js.undefined
-  var borderLeft: js.UndefOr[(BorderLeftProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderLeftColor: js.UndefOr[BorderLeftColorProperty | Double | `false`] = js.undefined
-  var borderLeftStyle: js.UndefOr[BorderLeftStyleProperty | Double | `false`] = js.undefined
-  var borderLeftWidth: js.UndefOr[(BorderLeftWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderRadius: js.UndefOr[(BorderRadiusProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderRight: js.UndefOr[(BorderRightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderRightColor: js.UndefOr[BorderRightColorProperty | Double | `false`] = js.undefined
-  var borderRightStyle: js.UndefOr[BorderRightStyleProperty | Double | `false`] = js.undefined
-  var borderRightWidth: js.UndefOr[(BorderRightWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderStyle: js.UndefOr[BorderStyleProperty | Double | `false`] = js.undefined
-  var borderTop: js.UndefOr[(BorderTopProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderTopColor: js.UndefOr[BorderTopColorProperty | Double | `false`] = js.undefined
-  var borderTopLeftRadius: js.UndefOr[(BorderTopLeftRadiusProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderTopRightRadius: js.UndefOr[(BorderTopRightRadiusProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderTopStyle: js.UndefOr[BorderTopStyleProperty | Double | `false`] = js.undefined
-  var borderTopWidth: js.UndefOr[(BorderTopWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var borderWidth: js.UndefOr[(BorderWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var bottom: js.UndefOr[(BottomProperty[String | `0`]) | Double | `false`] = js.undefined
-  var boxShadow: js.UndefOr[BoxShadowProperty | Double | `false`] = js.undefined
-  var boxSizing: js.UndefOr[BoxSizingProperty | Double | `false`] = js.undefined
-  var clear: js.UndefOr[ClearProperty | Double | `false`] = js.undefined
-  /**
-    * Utility property for easily adding clearfix styles to the element.
-    */
-  var clearfix: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[ColorProperty | Double | `false`] = js.undefined
-  var columnGap: js.UndefOr[(ColumnGapProperty[String | `0`]) | Double | `false`] = js.undefined
-  var cursor: js.UndefOr[CursorProperty | Double | `false`] = js.undefined
-  var display: js.UndefOr[DisplayProperty | Double | `false`] = js.undefined
-  var flex: js.UndefOr[(FlexProperty[String | `0`]) | Double | `false`] = js.undefined
-  var flexBasis: js.UndefOr[(FlexBasisProperty[String | `0`]) | Double | `false`] = js.undefined
-  var flexDirection: js.UndefOr[FlexDirectionProperty | Double | `false`] = js.undefined
-  var flexFlow: js.UndefOr[FlexFlowProperty | Double | `false`] = js.undefined
-  var flexGrow: js.UndefOr[GlobalsNumber | Double | `false`] = js.undefined
-  var flexShrink: js.UndefOr[GlobalsNumber | Double | `false`] = js.undefined
-  var flexWrap: js.UndefOr[FlexWrapProperty | Double | `false`] = js.undefined
-  var float: js.UndefOr[FloatProperty | Double | `false`] = js.undefined
-  var font: js.UndefOr[FontProperty | Double | `false`] = js.undefined
-  var fontFamily: js.UndefOr[FontFamilyProperty | Double | `false`] = js.undefined
-  var fontSize: js.UndefOr[(FontSizeProperty[String | `0`]) | Double | `false`] = js.undefined
-  var fontStyle: js.UndefOr[FontStyleProperty | Double | `false`] = js.undefined
-  var fontVariant: js.UndefOr[FontVariantProperty | Double | `false`] = js.undefined
-  var fontWeight: js.UndefOr[FontWeightProperty | Double | `false`] = js.undefined
-  var gap: js.UndefOr[(GapProperty[String | `0`]) | Double | `false`] = js.undefined
-  var grid: js.UndefOr[GridProperty | Double | `false`] = js.undefined
-  var gridArea: js.UndefOr[GridAreaProperty | Double | `false`] = js.undefined
-  var gridAutoColumns: js.UndefOr[(GridAutoColumnsProperty[String | `0`]) | Double | `false`] = js.undefined
-  var gridAutoFlow: js.UndefOr[GridAutoFlowProperty | Double | `false`] = js.undefined
-  var gridAutoRows: js.UndefOr[(GridAutoRowsProperty[String | `0`]) | Double | `false`] = js.undefined
-  var gridColumn: js.UndefOr[GridColumnProperty | Double | `false`] = js.undefined
-  var gridColumnEnd: js.UndefOr[GridColumnEndProperty | Double | `false`] = js.undefined
-  var gridColumnGap: js.UndefOr[(GridColumnGapProperty[String | `0`]) | Double | `false`] = js.undefined
-  var gridColumnStart: js.UndefOr[GridColumnStartProperty | Double | `false`] = js.undefined
-  var gridGap: js.UndefOr[(GridGapProperty[String | `0`]) | Double | `false`] = js.undefined
-  var gridRow: js.UndefOr[GridRowProperty | Double | `false`] = js.undefined
-  var gridRowEnd: js.UndefOr[GridRowEndProperty | Double | `false`] = js.undefined
-  var gridRowGap: js.UndefOr[(GridRowGapProperty[String | `0`]) | Double | `false`] = js.undefined
-  var gridRowStart: js.UndefOr[GridRowStartProperty | Double | `false`] = js.undefined
-  var gridTemplate: js.UndefOr[GridTemplateProperty | Double | `false`] = js.undefined
-  var gridTemplateAreas: js.UndefOr[GridTemplateAreasProperty | Double | `false`] = js.undefined
-  var gridTemplateColumns: js.UndefOr[(GridTemplateColumnsProperty[String | `0`]) | Double | `false`] = js.undefined
-  var gridTemplateRows: js.UndefOr[(GridTemplateRowsProperty[String | `0`]) | Double | `false`] = js.undefined
-  var height: js.UndefOr[(HeightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var justifyContent: js.UndefOr[JustifyContentProperty | Double | `false`] = js.undefined
-  var justifyItems: js.UndefOr[JustifyItemsProperty | Double | `false`] = js.undefined
-  var justifySelf: js.UndefOr[JustifySelfProperty | Double | `false`] = js.undefined
-  var left: js.UndefOr[(LeftProperty[String | `0`]) | Double | `false`] = js.undefined
-  var letterSpacing: js.UndefOr[(LetterSpacingProperty[String | `0`]) | Double | `false`] = js.undefined
-  var lineHeight: js.UndefOr[(LineHeightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var listStyle: js.UndefOr[ListStyleProperty | Double | `false`] = js.undefined
-  var listStyleImage: js.UndefOr[ListStyleImageProperty | Double | `false`] = js.undefined
-  var listStylePosition: js.UndefOr[ListStylePositionProperty | Double | `false`] = js.undefined
-  var listStyleType: js.UndefOr[ListStyleTypeProperty | Double | `false`] = js.undefined
-  var margin: js.UndefOr[(MarginProperty[String | `0`]) | Double | `false`] = js.undefined
-  var marginBottom: js.UndefOr[(MarginBottomProperty[String | `0`]) | Double | `false`] = js.undefined
-  var marginLeft: js.UndefOr[(MarginLeftProperty[String | `0`]) | Double | `false`] = js.undefined
-  var marginRight: js.UndefOr[(MarginRightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var marginTop: js.UndefOr[(MarginTopProperty[String | `0`]) | Double | `false`] = js.undefined
-  /**
-    * Sets `marginLeft` and `marginRight` to the same value
-    */
-  var marginX: js.UndefOr[BoxPropValue] = js.undefined
-  /**
-    * Sets `marginTop` and `marginBottom` to the same value
-    */
-  var marginY: js.UndefOr[BoxPropValue] = js.undefined
-  var maxHeight: js.UndefOr[(MaxHeightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var maxWidth: js.UndefOr[(MaxWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var minHeight: js.UndefOr[(MinHeightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var minWidth: js.UndefOr[(MinWidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var opacity: js.UndefOr[GlobalsNumber | Double | `false`] = js.undefined
-  var order: js.UndefOr[GlobalsNumber | Double | `false`] = js.undefined
-  var outline: js.UndefOr[(OutlineProperty[String | `0`]) | Double | `false`] = js.undefined
-  var overflow: js.UndefOr[OverflowProperty | Double | `false`] = js.undefined
-  var overflowX: js.UndefOr[OverflowXProperty | Double | `false`] = js.undefined
-  var overflowY: js.UndefOr[OverflowYProperty | Double | `false`] = js.undefined
-  var padding: js.UndefOr[(PaddingProperty[String | `0`]) | Double | `false`] = js.undefined
-  var paddingBottom: js.UndefOr[(PaddingBottomProperty[String | `0`]) | Double | `false`] = js.undefined
-  var paddingLeft: js.UndefOr[(PaddingLeftProperty[String | `0`]) | Double | `false`] = js.undefined
-  var paddingRight: js.UndefOr[(PaddingRightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var paddingTop: js.UndefOr[(PaddingTopProperty[String | `0`]) | Double | `false`] = js.undefined
-  /**
-    * Sets `paddingLeft` and `paddingRight` to the same value
-    */
-  var paddingX: js.UndefOr[BoxPropValue] = js.undefined
-  /**
-    * Sets `paddingTop` and `paddingBottom` to the same value
-    */
-  var paddingY: js.UndefOr[BoxPropValue] = js.undefined
-  var placeContent: js.UndefOr[PlaceContentProperty | Double | `false`] = js.undefined
-  var placeItems: js.UndefOr[PlaceItemsProperty | Double | `false`] = js.undefined
-  var placeSelf: js.UndefOr[PlaceSelfProperty | Double | `false`] = js.undefined
-  var pointerEvents: js.UndefOr[PointerEventsProperty | Double | `false`] = js.undefined
-  var position: js.UndefOr[PositionProperty | Double | `false`] = js.undefined
-  var resize: js.UndefOr[ResizeProperty | Double | `false`] = js.undefined
-  var right: js.UndefOr[(RightProperty[String | `0`]) | Double | `false`] = js.undefined
-  var rowGap: js.UndefOr[(RowGapProperty[String | `0`]) | Double | `false`] = js.undefined
-  var textAlign: js.UndefOr[TextAlignProperty | Double | `false`] = js.undefined
-  var textDecoration: js.UndefOr[TextDecorationProperty | Double | `false`] = js.undefined
-  var textOverflow: js.UndefOr[TextOverflowProperty | Double | `false`] = js.undefined
-  var textShadow: js.UndefOr[TextShadowProperty | Double | `false`] = js.undefined
-  var textTransform: js.UndefOr[TextTransformProperty | Double | `false`] = js.undefined
-  var top: js.UndefOr[(TopProperty[String | `0`]) | Double | `false`] = js.undefined
-  var transform: js.UndefOr[TransformProperty | Double | `false`] = js.undefined
-  var transformOrigin: js.UndefOr[(TransformOriginProperty[String | `0`]) | Double | `false`] = js.undefined
-  var transition: js.UndefOr[TransitionProperty | Double | `false`] = js.undefined
-  var transitionDelay: js.UndefOr[GlobalsString | Double | `false`] = js.undefined
-  var transitionDuration: js.UndefOr[GlobalsString | Double | `false`] = js.undefined
-  var transitionProperty: js.UndefOr[TransitionPropertyProperty | Double | `false`] = js.undefined
-  var transitionTimingFunction: js.UndefOr[TransitionTimingFunctionProperty | Double | `false`] = js.undefined
-  var userSelect: js.UndefOr[UserSelectProperty | Double | `false`] = js.undefined
-  var visibility: js.UndefOr[VisibilityProperty | Double | `false`] = js.undefined
-  var whiteSpace: js.UndefOr[WhiteSpaceProperty | Double | `false`] = js.undefined
-  var width: js.UndefOr[(WidthProperty[String | `0`]) | Double | `false`] = js.undefined
-  var wordBreak: js.UndefOr[WordBreakProperty | Double | `false`] = js.undefined
-  var wordWrap: js.UndefOr[WordWrapProperty | Double | `false`] = js.undefined
-  var zIndex: js.UndefOr[ZIndexProperty | Double | `false`] = js.undefined
+  var alignContent: js.UndefOr[AlignContent | Double | `false` | Null] = js.native
+  var alignItems: js.UndefOr[AlignItems | Double | `false` | Null] = js.native
+  var alignSelf: js.UndefOr[AlignSelf | Double | `false` | Null] = js.native
+  var background: js.UndefOr[(Background[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var backgroundBlendMode: js.UndefOr[BackgroundBlendMode | Double | `false` | Null] = js.native
+  var backgroundClip: js.UndefOr[BackgroundClip | Double | `false` | Null] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColor | Double | `false` | Null] = js.native
+  var backgroundImage: js.UndefOr[BackgroundImage | Double | `false` | Null] = js.native
+  var backgroundOrigin: js.UndefOr[BackgroundOrigin | Double | `false` | Null] = js.native
+  var backgroundPosition: js.UndefOr[(BackgroundPosition[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var backgroundRepeat: js.UndefOr[BackgroundRepeat | Double | `false` | Null] = js.native
+  var backgroundSize: js.UndefOr[(BackgroundSize[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var border: js.UndefOr[(Border[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderBottom: js.UndefOr[(BorderBottom[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderBottomColor: js.UndefOr[BorderBottomColor | Double | `false` | Null] = js.native
+  var borderBottomLeftRadius: js.UndefOr[
+    (BorderBottomLeftRadius[(String with js.Object) | `0`]) | Double | `false` | Null
+  ] = js.native
+  var borderBottomRightRadius: js.UndefOr[
+    (BorderBottomRightRadius[(String with js.Object) | `0`]) | Double | `false` | Null
+  ] = js.native
+  var borderBottomStyle: js.UndefOr[BorderBottomStyle | Double | `false` | Null] = js.native
+  var borderBottomWidth: js.UndefOr[(BorderBottomWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderColor: js.UndefOr[BorderColor | Double | `false` | Null] = js.native
+  var borderLeft: js.UndefOr[(BorderLeft[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderLeftColor: js.UndefOr[BorderLeftColor | Double | `false` | Null] = js.native
+  var borderLeftStyle: js.UndefOr[BorderLeftStyle | Double | `false` | Null] = js.native
+  var borderLeftWidth: js.UndefOr[(BorderLeftWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderRadius: js.UndefOr[(BorderRadius[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderRight: js.UndefOr[(BorderRight[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderRightColor: js.UndefOr[BorderRightColor | Double | `false` | Null] = js.native
+  var borderRightStyle: js.UndefOr[BorderRightStyle | Double | `false` | Null] = js.native
+  var borderRightWidth: js.UndefOr[(BorderRightWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderStyle: js.UndefOr[BorderStyle | Double | `false` | Null] = js.native
+  var borderTop: js.UndefOr[(BorderTop[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderTopColor: js.UndefOr[BorderTopColor | Double | `false` | Null] = js.native
+  var borderTopLeftRadius: js.UndefOr[(BorderTopLeftRadius[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderTopRightRadius: js.UndefOr[(BorderTopRightRadius[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderTopStyle: js.UndefOr[BorderTopStyle | Double | `false` | Null] = js.native
+  var borderTopWidth: js.UndefOr[(BorderTopWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var borderWidth: js.UndefOr[(BorderWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var bottom: js.UndefOr[(Bottom[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var boxShadow: js.UndefOr[BoxShadow | Double | `false` | Null] = js.native
+  var boxSizing: js.UndefOr[BoxSizing | Double | `false` | Null] = js.native
+  var clear: js.UndefOr[Clear | Double | `false` | Null] = js.native
+  var clearfix: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[Color | Double | `false` | Null] = js.native
+  var columnGap: js.UndefOr[(ColumnGap[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var cursor: js.UndefOr[Cursor | Double | `false` | Null] = js.native
+  var display: js.UndefOr[Display | Double | `false` | Null] = js.native
+  var flex: js.UndefOr[(Flex[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var flexBasis: js.UndefOr[(FlexBasis[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var flexDirection: js.UndefOr[FlexDirection | Double | `false` | Null] = js.native
+  var flexFlow: js.UndefOr[FlexFlow | Double | `false` | Null] = js.native
+  var flexGrow: js.UndefOr[FlexGrow | Double | `false` | Null] = js.native
+  var flexShrink: js.UndefOr[FlexShrink | Double | `false` | Null] = js.native
+  var flexWrap: js.UndefOr[FlexWrap | Double | `false` | Null] = js.native
+  var float: js.UndefOr[Float | Double | `false` | Null] = js.native
+  var font: js.UndefOr[Font | Double | `false` | Null] = js.native
+  var fontFamily: js.UndefOr[FontFamily | Double | `false` | Null] = js.native
+  var fontSize: js.UndefOr[(FontSize[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var fontStyle: js.UndefOr[FontStyle | Double | `false` | Null] = js.native
+  var fontVariant: js.UndefOr[FontVariant | Double | `false` | Null] = js.native
+  var fontWeight: js.UndefOr[FontWeight | Double | `false` | Null] = js.native
+  var gap: js.UndefOr[(Gap[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var grid: js.UndefOr[Grid | Double | `false` | Null] = js.native
+  var gridArea: js.UndefOr[GridArea | Double | `false` | Null] = js.native
+  var gridAutoColumns: js.UndefOr[(GridAutoColumns[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var gridAutoFlow: js.UndefOr[GridAutoFlow | Double | `false` | Null] = js.native
+  var gridAutoRows: js.UndefOr[(GridAutoRows[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var gridColumn: js.UndefOr[GridColumn | Double | `false` | Null] = js.native
+  var gridColumnEnd: js.UndefOr[GridColumnEnd | Double | `false` | Null] = js.native
+  var gridColumnGap: js.UndefOr[(GridColumnGap[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var gridColumnStart: js.UndefOr[GridColumnStart | Double | `false` | Null] = js.native
+  var gridGap: js.UndefOr[(GridGap[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var gridRow: js.UndefOr[GridRow | Double | `false` | Null] = js.native
+  var gridRowEnd: js.UndefOr[GridRowEnd | Double | `false` | Null] = js.native
+  var gridRowGap: js.UndefOr[(GridRowGap[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var gridRowStart: js.UndefOr[GridRowStart | Double | `false` | Null] = js.native
+  var gridTemplate: js.UndefOr[GridTemplate | Double | `false` | Null] = js.native
+  var gridTemplateAreas: js.UndefOr[GridTemplateAreas | Double | `false` | Null] = js.native
+  var gridTemplateColumns: js.UndefOr[(GridTemplateColumns[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var gridTemplateRows: js.UndefOr[(GridTemplateRows[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var height: js.UndefOr[(Height[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var justifyContent: js.UndefOr[JustifyContent | Double | `false` | Null] = js.native
+  var justifyItems: js.UndefOr[JustifyItems | Double | `false` | Null] = js.native
+  var justifySelf: js.UndefOr[JustifySelf | Double | `false` | Null] = js.native
+  var left: js.UndefOr[(Left[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var letterSpacing: js.UndefOr[(LetterSpacing[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var lineHeight: js.UndefOr[(LineHeight[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var listStyle: js.UndefOr[ListStyle | Double | `false` | Null] = js.native
+  var listStyleImage: js.UndefOr[ListStyleImage | Double | `false` | Null] = js.native
+  var listStylePosition: js.UndefOr[ListStylePosition | Double | `false` | Null] = js.native
+  var listStyleType: js.UndefOr[ListStyleType | Double | `false` | Null] = js.native
+  var margin: js.UndefOr[(Margin[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var marginBottom: js.UndefOr[(MarginBottom[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var marginLeft: js.UndefOr[(MarginLeft[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var marginRight: js.UndefOr[(MarginRight[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var marginTop: js.UndefOr[(MarginTop[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var marginX: js.UndefOr[BoxPropValue] = js.native
+  var marginY: js.UndefOr[BoxPropValue] = js.native
+  var maxHeight: js.UndefOr[(MaxHeight[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var maxWidth: js.UndefOr[(MaxWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var minHeight: js.UndefOr[(MinHeight[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var minWidth: js.UndefOr[(MinWidth[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var opacity: js.UndefOr[Opacity | Double | `false` | Null] = js.native
+  var order: js.UndefOr[Order | Double | `false` | Null] = js.native
+  var outline: js.UndefOr[(Outline[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var overflow: js.UndefOr[Overflow | Double | `false` | Null] = js.native
+  var overflowX: js.UndefOr[OverflowX | Double | `false` | Null] = js.native
+  var overflowY: js.UndefOr[OverflowY | Double | `false` | Null] = js.native
+  var padding: js.UndefOr[(Padding[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var paddingBottom: js.UndefOr[(PaddingBottom[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var paddingLeft: js.UndefOr[(PaddingLeft[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var paddingRight: js.UndefOr[(PaddingRight[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var paddingTop: js.UndefOr[(PaddingTop[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var paddingX: js.UndefOr[BoxPropValue] = js.native
+  var paddingY: js.UndefOr[BoxPropValue] = js.native
+  var placeContent: js.UndefOr[PlaceContent | Double | `false` | Null] = js.native
+  var placeItems: js.UndefOr[PlaceItems | Double | `false` | Null] = js.native
+  var placeSelf: js.UndefOr[PlaceSelf | Double | `false` | Null] = js.native
+  var pointerEvents: js.UndefOr[PointerEvents | Double | `false` | Null] = js.native
+  var position: js.UndefOr[Position | Double | `false` | Null] = js.native
+  var resize: js.UndefOr[Resize | Double | `false` | Null] = js.native
+  var right: js.UndefOr[(Right[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var rowGap: js.UndefOr[(RowGap[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var textAlign: js.UndefOr[TextAlign | Double | `false` | Null] = js.native
+  var textDecoration: js.UndefOr[(TextDecoration[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var textOverflow: js.UndefOr[TextOverflow | Double | `false` | Null] = js.native
+  var textShadow: js.UndefOr[TextShadow | Double | `false` | Null] = js.native
+  var textTransform: js.UndefOr[TextTransform | Double | `false` | Null] = js.native
+  var top: js.UndefOr[(Top[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var transform: js.UndefOr[Transform | Double | `false` | Null] = js.native
+  var transformOrigin: js.UndefOr[(TransformOrigin[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var transition: js.UndefOr[(Transition[String with js.Object]) | Double | `false` | Null] = js.native
+  var transitionDelay: js.UndefOr[(TransitionDelay[String with js.Object]) | Double | `false` | Null] = js.native
+  var transitionDuration: js.UndefOr[(TransitionDuration[String with js.Object]) | Double | `false` | Null] = js.native
+  var transitionProperty: js.UndefOr[TransitionProperty | Double | `false` | Null] = js.native
+  var transitionTimingFunction: js.UndefOr[TransitionTimingFunction | Double | `false` | Null] = js.native
+  var userSelect: js.UndefOr[UserSelect | Double | `false` | Null] = js.native
+  var visibility: js.UndefOr[Visibility | Double | `false` | Null] = js.native
+  var whiteSpace: js.UndefOr[WhiteSpace | Double | `false` | Null] = js.native
+  var width: js.UndefOr[(Width[(String with js.Object) | `0`]) | Double | `false` | Null] = js.native
+  var wordBreak: js.UndefOr[WordBreak | Double | `false` | Null] = js.native
+  var wordWrap: js.UndefOr[WordWrap | Double | `false` | Null] = js.native
+  var zIndex: js.UndefOr[ZIndex | Double | `false` | Null] = js.native
+}
+
+object EnhancerProps {
+  @scala.inline
+  def apply(): EnhancerProps = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[EnhancerProps]
+  }
+  @scala.inline
+  implicit class EnhancerPropsOps[Self <: EnhancerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlignContent(value: AlignContent | Double | `false`): Self = this.set("alignContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlignContent: Self = this.set("alignContent", js.undefined)
+    @scala.inline
+    def setAlignContentNull: Self = this.set("alignContent", null)
+    @scala.inline
+    def setAlignItems(value: AlignItems | Double | `false`): Self = this.set("alignItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlignItems: Self = this.set("alignItems", js.undefined)
+    @scala.inline
+    def setAlignItemsNull: Self = this.set("alignItems", null)
+    @scala.inline
+    def setAlignSelf(value: AlignSelf | Double | `false`): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlignSelf: Self = this.set("alignSelf", js.undefined)
+    @scala.inline
+    def setAlignSelfNull: Self = this.set("alignSelf", null)
+    @scala.inline
+    def setBackground(value: (Background[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackground: Self = this.set("background", js.undefined)
+    @scala.inline
+    def setBackgroundNull: Self = this.set("background", null)
+    @scala.inline
+    def setBackgroundBlendMode(value: BackgroundBlendMode | Double | `false`): Self = this.set("backgroundBlendMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundBlendMode: Self = this.set("backgroundBlendMode", js.undefined)
+    @scala.inline
+    def setBackgroundBlendModeNull: Self = this.set("backgroundBlendMode", null)
+    @scala.inline
+    def setBackgroundClip(value: BackgroundClip | Double | `false`): Self = this.set("backgroundClip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundClip: Self = this.set("backgroundClip", js.undefined)
+    @scala.inline
+    def setBackgroundClipNull: Self = this.set("backgroundClip", null)
+    @scala.inline
+    def setBackgroundColor(value: BackgroundColor | Double | `false`): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    @scala.inline
+    def setBackgroundColorNull: Self = this.set("backgroundColor", null)
+    @scala.inline
+    def setBackgroundImage(value: BackgroundImage | Double | `false`): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundImage: Self = this.set("backgroundImage", js.undefined)
+    @scala.inline
+    def setBackgroundImageNull: Self = this.set("backgroundImage", null)
+    @scala.inline
+    def setBackgroundOrigin(value: BackgroundOrigin | Double | `false`): Self = this.set("backgroundOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundOrigin: Self = this.set("backgroundOrigin", js.undefined)
+    @scala.inline
+    def setBackgroundOriginNull: Self = this.set("backgroundOrigin", null)
+    @scala.inline
+    def setBackgroundPosition(value: (BackgroundPosition[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("backgroundPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundPosition: Self = this.set("backgroundPosition", js.undefined)
+    @scala.inline
+    def setBackgroundPositionNull: Self = this.set("backgroundPosition", null)
+    @scala.inline
+    def setBackgroundRepeat(value: BackgroundRepeat | Double | `false`): Self = this.set("backgroundRepeat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundRepeat: Self = this.set("backgroundRepeat", js.undefined)
+    @scala.inline
+    def setBackgroundRepeatNull: Self = this.set("backgroundRepeat", null)
+    @scala.inline
+    def setBackgroundSize(value: (BackgroundSize[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("backgroundSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundSize: Self = this.set("backgroundSize", js.undefined)
+    @scala.inline
+    def setBackgroundSizeNull: Self = this.set("backgroundSize", null)
+    @scala.inline
+    def setBorder(value: (Border[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorder: Self = this.set("border", js.undefined)
+    @scala.inline
+    def setBorderNull: Self = this.set("border", null)
+    @scala.inline
+    def setBorderBottom(value: (BorderBottom[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottom: Self = this.set("borderBottom", js.undefined)
+    @scala.inline
+    def setBorderBottomNull: Self = this.set("borderBottom", null)
+    @scala.inline
+    def setBorderBottomColor(value: BorderBottomColor | Double | `false`): Self = this.set("borderBottomColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomColor: Self = this.set("borderBottomColor", js.undefined)
+    @scala.inline
+    def setBorderBottomColorNull: Self = this.set("borderBottomColor", null)
+    @scala.inline
+    def setBorderBottomLeftRadius(value: (BorderBottomLeftRadius[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderBottomLeftRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomLeftRadius: Self = this.set("borderBottomLeftRadius", js.undefined)
+    @scala.inline
+    def setBorderBottomLeftRadiusNull: Self = this.set("borderBottomLeftRadius", null)
+    @scala.inline
+    def setBorderBottomRightRadius(value: (BorderBottomRightRadius[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderBottomRightRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomRightRadius: Self = this.set("borderBottomRightRadius", js.undefined)
+    @scala.inline
+    def setBorderBottomRightRadiusNull: Self = this.set("borderBottomRightRadius", null)
+    @scala.inline
+    def setBorderBottomStyle(value: BorderBottomStyle | Double | `false`): Self = this.set("borderBottomStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomStyle: Self = this.set("borderBottomStyle", js.undefined)
+    @scala.inline
+    def setBorderBottomStyleNull: Self = this.set("borderBottomStyle", null)
+    @scala.inline
+    def setBorderBottomWidth(value: (BorderBottomWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderBottomWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomWidth: Self = this.set("borderBottomWidth", js.undefined)
+    @scala.inline
+    def setBorderBottomWidthNull: Self = this.set("borderBottomWidth", null)
+    @scala.inline
+    def setBorderColor(value: BorderColor | Double | `false`): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderColor: Self = this.set("borderColor", js.undefined)
+    @scala.inline
+    def setBorderColorNull: Self = this.set("borderColor", null)
+    @scala.inline
+    def setBorderLeft(value: (BorderLeft[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderLeft: Self = this.set("borderLeft", js.undefined)
+    @scala.inline
+    def setBorderLeftNull: Self = this.set("borderLeft", null)
+    @scala.inline
+    def setBorderLeftColor(value: BorderLeftColor | Double | `false`): Self = this.set("borderLeftColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderLeftColor: Self = this.set("borderLeftColor", js.undefined)
+    @scala.inline
+    def setBorderLeftColorNull: Self = this.set("borderLeftColor", null)
+    @scala.inline
+    def setBorderLeftStyle(value: BorderLeftStyle | Double | `false`): Self = this.set("borderLeftStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderLeftStyle: Self = this.set("borderLeftStyle", js.undefined)
+    @scala.inline
+    def setBorderLeftStyleNull: Self = this.set("borderLeftStyle", null)
+    @scala.inline
+    def setBorderLeftWidth(value: (BorderLeftWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderLeftWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderLeftWidth: Self = this.set("borderLeftWidth", js.undefined)
+    @scala.inline
+    def setBorderLeftWidthNull: Self = this.set("borderLeftWidth", null)
+    @scala.inline
+    def setBorderRadius(value: (BorderRadius[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderRadius: Self = this.set("borderRadius", js.undefined)
+    @scala.inline
+    def setBorderRadiusNull: Self = this.set("borderRadius", null)
+    @scala.inline
+    def setBorderRight(value: (BorderRight[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderRight: Self = this.set("borderRight", js.undefined)
+    @scala.inline
+    def setBorderRightNull: Self = this.set("borderRight", null)
+    @scala.inline
+    def setBorderRightColor(value: BorderRightColor | Double | `false`): Self = this.set("borderRightColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderRightColor: Self = this.set("borderRightColor", js.undefined)
+    @scala.inline
+    def setBorderRightColorNull: Self = this.set("borderRightColor", null)
+    @scala.inline
+    def setBorderRightStyle(value: BorderRightStyle | Double | `false`): Self = this.set("borderRightStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderRightStyle: Self = this.set("borderRightStyle", js.undefined)
+    @scala.inline
+    def setBorderRightStyleNull: Self = this.set("borderRightStyle", null)
+    @scala.inline
+    def setBorderRightWidth(value: (BorderRightWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderRightWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderRightWidth: Self = this.set("borderRightWidth", js.undefined)
+    @scala.inline
+    def setBorderRightWidthNull: Self = this.set("borderRightWidth", null)
+    @scala.inline
+    def setBorderStyle(value: BorderStyle | Double | `false`): Self = this.set("borderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderStyle: Self = this.set("borderStyle", js.undefined)
+    @scala.inline
+    def setBorderStyleNull: Self = this.set("borderStyle", null)
+    @scala.inline
+    def setBorderTop(value: (BorderTop[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTop: Self = this.set("borderTop", js.undefined)
+    @scala.inline
+    def setBorderTopNull: Self = this.set("borderTop", null)
+    @scala.inline
+    def setBorderTopColor(value: BorderTopColor | Double | `false`): Self = this.set("borderTopColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopColor: Self = this.set("borderTopColor", js.undefined)
+    @scala.inline
+    def setBorderTopColorNull: Self = this.set("borderTopColor", null)
+    @scala.inline
+    def setBorderTopLeftRadius(value: (BorderTopLeftRadius[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderTopLeftRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopLeftRadius: Self = this.set("borderTopLeftRadius", js.undefined)
+    @scala.inline
+    def setBorderTopLeftRadiusNull: Self = this.set("borderTopLeftRadius", null)
+    @scala.inline
+    def setBorderTopRightRadius(value: (BorderTopRightRadius[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderTopRightRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopRightRadius: Self = this.set("borderTopRightRadius", js.undefined)
+    @scala.inline
+    def setBorderTopRightRadiusNull: Self = this.set("borderTopRightRadius", null)
+    @scala.inline
+    def setBorderTopStyle(value: BorderTopStyle | Double | `false`): Self = this.set("borderTopStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopStyle: Self = this.set("borderTopStyle", js.undefined)
+    @scala.inline
+    def setBorderTopStyleNull: Self = this.set("borderTopStyle", null)
+    @scala.inline
+    def setBorderTopWidth(value: (BorderTopWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderTopWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopWidth: Self = this.set("borderTopWidth", js.undefined)
+    @scala.inline
+    def setBorderTopWidthNull: Self = this.set("borderTopWidth", null)
+    @scala.inline
+    def setBorderWidth(value: (BorderWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
+    @scala.inline
+    def setBorderWidthNull: Self = this.set("borderWidth", null)
+    @scala.inline
+    def setBottom(value: (Bottom[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("bottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBottom: Self = this.set("bottom", js.undefined)
+    @scala.inline
+    def setBottomNull: Self = this.set("bottom", null)
+    @scala.inline
+    def setBoxShadow(value: BoxShadow | Double | `false`): Self = this.set("boxShadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxShadow: Self = this.set("boxShadow", js.undefined)
+    @scala.inline
+    def setBoxShadowNull: Self = this.set("boxShadow", null)
+    @scala.inline
+    def setBoxSizing(value: BoxSizing | Double | `false`): Self = this.set("boxSizing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxSizing: Self = this.set("boxSizing", js.undefined)
+    @scala.inline
+    def setBoxSizingNull: Self = this.set("boxSizing", null)
+    @scala.inline
+    def setClear(value: Clear | Double | `false`): Self = this.set("clear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClear: Self = this.set("clear", js.undefined)
+    @scala.inline
+    def setClearNull: Self = this.set("clear", null)
+    @scala.inline
+    def setClearfix(value: Boolean): Self = this.set("clearfix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClearfix: Self = this.set("clearfix", js.undefined)
+    @scala.inline
+    def setColor(value: Color | Double | `false`): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    @scala.inline
+    def setColorNull: Self = this.set("color", null)
+    @scala.inline
+    def setColumnGap(value: (ColumnGap[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("columnGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColumnGap: Self = this.set("columnGap", js.undefined)
+    @scala.inline
+    def setColumnGapNull: Self = this.set("columnGap", null)
+    @scala.inline
+    def setCursor(value: Cursor | Double | `false`): Self = this.set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCursor: Self = this.set("cursor", js.undefined)
+    @scala.inline
+    def setCursorNull: Self = this.set("cursor", null)
+    @scala.inline
+    def setDisplay(value: Display | Double | `false`): Self = this.set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisplay: Self = this.set("display", js.undefined)
+    @scala.inline
+    def setDisplayNull: Self = this.set("display", null)
+    @scala.inline
+    def setFlex(value: (Flex[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlex: Self = this.set("flex", js.undefined)
+    @scala.inline
+    def setFlexNull: Self = this.set("flex", null)
+    @scala.inline
+    def setFlexBasis(value: (FlexBasis[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("flexBasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlexBasis: Self = this.set("flexBasis", js.undefined)
+    @scala.inline
+    def setFlexBasisNull: Self = this.set("flexBasis", null)
+    @scala.inline
+    def setFlexDirection(value: FlexDirection | Double | `false`): Self = this.set("flexDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlexDirection: Self = this.set("flexDirection", js.undefined)
+    @scala.inline
+    def setFlexDirectionNull: Self = this.set("flexDirection", null)
+    @scala.inline
+    def setFlexFlow(value: FlexFlow | Double | `false`): Self = this.set("flexFlow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlexFlow: Self = this.set("flexFlow", js.undefined)
+    @scala.inline
+    def setFlexFlowNull: Self = this.set("flexFlow", null)
+    @scala.inline
+    def setFlexGrow(value: FlexGrow | Double | `false`): Self = this.set("flexGrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlexGrow: Self = this.set("flexGrow", js.undefined)
+    @scala.inline
+    def setFlexGrowNull: Self = this.set("flexGrow", null)
+    @scala.inline
+    def setFlexShrink(value: FlexShrink | Double | `false`): Self = this.set("flexShrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlexShrink: Self = this.set("flexShrink", js.undefined)
+    @scala.inline
+    def setFlexShrinkNull: Self = this.set("flexShrink", null)
+    @scala.inline
+    def setFlexWrap(value: FlexWrap | Double | `false`): Self = this.set("flexWrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlexWrap: Self = this.set("flexWrap", js.undefined)
+    @scala.inline
+    def setFlexWrapNull: Self = this.set("flexWrap", null)
+    @scala.inline
+    def setFloat(value: Float | Double | `false`): Self = this.set("float", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloat: Self = this.set("float", js.undefined)
+    @scala.inline
+    def setFloatNull: Self = this.set("float", null)
+    @scala.inline
+    def setFont(value: Font | Double | `false`): Self = this.set("font", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFont: Self = this.set("font", js.undefined)
+    @scala.inline
+    def setFontNull: Self = this.set("font", null)
+    @scala.inline
+    def setFontFamily(value: FontFamily | Double | `false`): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
+    @scala.inline
+    def setFontFamilyNull: Self = this.set("fontFamily", null)
+    @scala.inline
+    def setFontSize(value: (FontSize[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontSize: Self = this.set("fontSize", js.undefined)
+    @scala.inline
+    def setFontSizeNull: Self = this.set("fontSize", null)
+    @scala.inline
+    def setFontStyle(value: FontStyle | Double | `false`): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
+    @scala.inline
+    def setFontStyleNull: Self = this.set("fontStyle", null)
+    @scala.inline
+    def setFontVariant(value: FontVariant | Double | `false`): Self = this.set("fontVariant", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontVariant: Self = this.set("fontVariant", js.undefined)
+    @scala.inline
+    def setFontVariantNull: Self = this.set("fontVariant", null)
+    @scala.inline
+    def setFontWeight(value: FontWeight | Double | `false`): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
+    @scala.inline
+    def setFontWeightNull: Self = this.set("fontWeight", null)
+    @scala.inline
+    def setGap(value: (Gap[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGap: Self = this.set("gap", js.undefined)
+    @scala.inline
+    def setGapNull: Self = this.set("gap", null)
+    @scala.inline
+    def setGrid(value: Grid | Double | `false`): Self = this.set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGrid: Self = this.set("grid", js.undefined)
+    @scala.inline
+    def setGridNull: Self = this.set("grid", null)
+    @scala.inline
+    def setGridArea(value: GridArea | Double | `false`): Self = this.set("gridArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridArea: Self = this.set("gridArea", js.undefined)
+    @scala.inline
+    def setGridAreaNull: Self = this.set("gridArea", null)
+    @scala.inline
+    def setGridAutoColumns(value: (GridAutoColumns[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridAutoColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridAutoColumns: Self = this.set("gridAutoColumns", js.undefined)
+    @scala.inline
+    def setGridAutoColumnsNull: Self = this.set("gridAutoColumns", null)
+    @scala.inline
+    def setGridAutoFlow(value: GridAutoFlow | Double | `false`): Self = this.set("gridAutoFlow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridAutoFlow: Self = this.set("gridAutoFlow", js.undefined)
+    @scala.inline
+    def setGridAutoFlowNull: Self = this.set("gridAutoFlow", null)
+    @scala.inline
+    def setGridAutoRows(value: (GridAutoRows[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridAutoRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridAutoRows: Self = this.set("gridAutoRows", js.undefined)
+    @scala.inline
+    def setGridAutoRowsNull: Self = this.set("gridAutoRows", null)
+    @scala.inline
+    def setGridColumn(value: GridColumn | Double | `false`): Self = this.set("gridColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridColumn: Self = this.set("gridColumn", js.undefined)
+    @scala.inline
+    def setGridColumnNull: Self = this.set("gridColumn", null)
+    @scala.inline
+    def setGridColumnEnd(value: GridColumnEnd | Double | `false`): Self = this.set("gridColumnEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridColumnEnd: Self = this.set("gridColumnEnd", js.undefined)
+    @scala.inline
+    def setGridColumnEndNull: Self = this.set("gridColumnEnd", null)
+    @scala.inline
+    def setGridColumnGap(value: (GridColumnGap[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridColumnGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridColumnGap: Self = this.set("gridColumnGap", js.undefined)
+    @scala.inline
+    def setGridColumnGapNull: Self = this.set("gridColumnGap", null)
+    @scala.inline
+    def setGridColumnStart(value: GridColumnStart | Double | `false`): Self = this.set("gridColumnStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridColumnStart: Self = this.set("gridColumnStart", js.undefined)
+    @scala.inline
+    def setGridColumnStartNull: Self = this.set("gridColumnStart", null)
+    @scala.inline
+    def setGridGap(value: (GridGap[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridGap: Self = this.set("gridGap", js.undefined)
+    @scala.inline
+    def setGridGapNull: Self = this.set("gridGap", null)
+    @scala.inline
+    def setGridRow(value: GridRow | Double | `false`): Self = this.set("gridRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridRow: Self = this.set("gridRow", js.undefined)
+    @scala.inline
+    def setGridRowNull: Self = this.set("gridRow", null)
+    @scala.inline
+    def setGridRowEnd(value: GridRowEnd | Double | `false`): Self = this.set("gridRowEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridRowEnd: Self = this.set("gridRowEnd", js.undefined)
+    @scala.inline
+    def setGridRowEndNull: Self = this.set("gridRowEnd", null)
+    @scala.inline
+    def setGridRowGap(value: (GridRowGap[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridRowGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridRowGap: Self = this.set("gridRowGap", js.undefined)
+    @scala.inline
+    def setGridRowGapNull: Self = this.set("gridRowGap", null)
+    @scala.inline
+    def setGridRowStart(value: GridRowStart | Double | `false`): Self = this.set("gridRowStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridRowStart: Self = this.set("gridRowStart", js.undefined)
+    @scala.inline
+    def setGridRowStartNull: Self = this.set("gridRowStart", null)
+    @scala.inline
+    def setGridTemplate(value: GridTemplate | Double | `false`): Self = this.set("gridTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridTemplate: Self = this.set("gridTemplate", js.undefined)
+    @scala.inline
+    def setGridTemplateNull: Self = this.set("gridTemplate", null)
+    @scala.inline
+    def setGridTemplateAreas(value: GridTemplateAreas | Double | `false`): Self = this.set("gridTemplateAreas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridTemplateAreas: Self = this.set("gridTemplateAreas", js.undefined)
+    @scala.inline
+    def setGridTemplateAreasNull: Self = this.set("gridTemplateAreas", null)
+    @scala.inline
+    def setGridTemplateColumns(value: (GridTemplateColumns[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridTemplateColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridTemplateColumns: Self = this.set("gridTemplateColumns", js.undefined)
+    @scala.inline
+    def setGridTemplateColumnsNull: Self = this.set("gridTemplateColumns", null)
+    @scala.inline
+    def setGridTemplateRows(value: (GridTemplateRows[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("gridTemplateRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridTemplateRows: Self = this.set("gridTemplateRows", js.undefined)
+    @scala.inline
+    def setGridTemplateRowsNull: Self = this.set("gridTemplateRows", null)
+    @scala.inline
+    def setHeight(value: (Height[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setHeightNull: Self = this.set("height", null)
+    @scala.inline
+    def setJustifyContent(value: JustifyContent | Double | `false`): Self = this.set("justifyContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJustifyContent: Self = this.set("justifyContent", js.undefined)
+    @scala.inline
+    def setJustifyContentNull: Self = this.set("justifyContent", null)
+    @scala.inline
+    def setJustifyItems(value: JustifyItems | Double | `false`): Self = this.set("justifyItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJustifyItems: Self = this.set("justifyItems", js.undefined)
+    @scala.inline
+    def setJustifyItemsNull: Self = this.set("justifyItems", null)
+    @scala.inline
+    def setJustifySelf(value: JustifySelf | Double | `false`): Self = this.set("justifySelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJustifySelf: Self = this.set("justifySelf", js.undefined)
+    @scala.inline
+    def setJustifySelfNull: Self = this.set("justifySelf", null)
+    @scala.inline
+    def setLeft(value: (Left[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLeft: Self = this.set("left", js.undefined)
+    @scala.inline
+    def setLeftNull: Self = this.set("left", null)
+    @scala.inline
+    def setLetterSpacing(value: (LetterSpacing[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("letterSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLetterSpacing: Self = this.set("letterSpacing", js.undefined)
+    @scala.inline
+    def setLetterSpacingNull: Self = this.set("letterSpacing", null)
+    @scala.inline
+    def setLineHeight(value: (LineHeight[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("lineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLineHeight: Self = this.set("lineHeight", js.undefined)
+    @scala.inline
+    def setLineHeightNull: Self = this.set("lineHeight", null)
+    @scala.inline
+    def setListStyle(value: ListStyle | Double | `false`): Self = this.set("listStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteListStyle: Self = this.set("listStyle", js.undefined)
+    @scala.inline
+    def setListStyleNull: Self = this.set("listStyle", null)
+    @scala.inline
+    def setListStyleImage(value: ListStyleImage | Double | `false`): Self = this.set("listStyleImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteListStyleImage: Self = this.set("listStyleImage", js.undefined)
+    @scala.inline
+    def setListStyleImageNull: Self = this.set("listStyleImage", null)
+    @scala.inline
+    def setListStylePosition(value: ListStylePosition | Double | `false`): Self = this.set("listStylePosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteListStylePosition: Self = this.set("listStylePosition", js.undefined)
+    @scala.inline
+    def setListStylePositionNull: Self = this.set("listStylePosition", null)
+    @scala.inline
+    def setListStyleType(value: ListStyleType | Double | `false`): Self = this.set("listStyleType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteListStyleType: Self = this.set("listStyleType", js.undefined)
+    @scala.inline
+    def setListStyleTypeNull: Self = this.set("listStyleType", null)
+    @scala.inline
+    def setMargin(value: (Margin[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMargin: Self = this.set("margin", js.undefined)
+    @scala.inline
+    def setMarginNull: Self = this.set("margin", null)
+    @scala.inline
+    def setMarginBottom(value: (MarginBottom[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("marginBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarginBottom: Self = this.set("marginBottom", js.undefined)
+    @scala.inline
+    def setMarginBottomNull: Self = this.set("marginBottom", null)
+    @scala.inline
+    def setMarginLeft(value: (MarginLeft[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("marginLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarginLeft: Self = this.set("marginLeft", js.undefined)
+    @scala.inline
+    def setMarginLeftNull: Self = this.set("marginLeft", null)
+    @scala.inline
+    def setMarginRight(value: (MarginRight[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("marginRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarginRight: Self = this.set("marginRight", js.undefined)
+    @scala.inline
+    def setMarginRightNull: Self = this.set("marginRight", null)
+    @scala.inline
+    def setMarginTop(value: (MarginTop[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("marginTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarginTop: Self = this.set("marginTop", js.undefined)
+    @scala.inline
+    def setMarginTopNull: Self = this.set("marginTop", null)
+    @scala.inline
+    def setMarginX(value: BoxPropValue): Self = this.set("marginX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarginX: Self = this.set("marginX", js.undefined)
+    @scala.inline
+    def setMarginXNull: Self = this.set("marginX", null)
+    @scala.inline
+    def setMarginY(value: BoxPropValue): Self = this.set("marginY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarginY: Self = this.set("marginY", js.undefined)
+    @scala.inline
+    def setMarginYNull: Self = this.set("marginY", null)
+    @scala.inline
+    def setMaxHeight(value: (MaxHeight[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxHeight: Self = this.set("maxHeight", js.undefined)
+    @scala.inline
+    def setMaxHeightNull: Self = this.set("maxHeight", null)
+    @scala.inline
+    def setMaxWidth(value: (MaxWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxWidth: Self = this.set("maxWidth", js.undefined)
+    @scala.inline
+    def setMaxWidthNull: Self = this.set("maxWidth", null)
+    @scala.inline
+    def setMinHeight(value: (MinHeight[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinHeight: Self = this.set("minHeight", js.undefined)
+    @scala.inline
+    def setMinHeightNull: Self = this.set("minHeight", null)
+    @scala.inline
+    def setMinWidth(value: (MinWidth[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinWidth: Self = this.set("minWidth", js.undefined)
+    @scala.inline
+    def setMinWidthNull: Self = this.set("minWidth", null)
+    @scala.inline
+    def setOpacity(value: Opacity | Double | `false`): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
+    @scala.inline
+    def setOpacityNull: Self = this.set("opacity", null)
+    @scala.inline
+    def setOrder(value: Order | Double | `false`): Self = this.set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOrder: Self = this.set("order", js.undefined)
+    @scala.inline
+    def setOrderNull: Self = this.set("order", null)
+    @scala.inline
+    def setOutline(value: (Outline[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("outline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutline: Self = this.set("outline", js.undefined)
+    @scala.inline
+    def setOutlineNull: Self = this.set("outline", null)
+    @scala.inline
+    def setOverflow(value: Overflow | Double | `false`): Self = this.set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverflow: Self = this.set("overflow", js.undefined)
+    @scala.inline
+    def setOverflowNull: Self = this.set("overflow", null)
+    @scala.inline
+    def setOverflowX(value: OverflowX | Double | `false`): Self = this.set("overflowX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverflowX: Self = this.set("overflowX", js.undefined)
+    @scala.inline
+    def setOverflowXNull: Self = this.set("overflowX", null)
+    @scala.inline
+    def setOverflowY(value: OverflowY | Double | `false`): Self = this.set("overflowY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverflowY: Self = this.set("overflowY", js.undefined)
+    @scala.inline
+    def setOverflowYNull: Self = this.set("overflowY", null)
+    @scala.inline
+    def setPadding(value: (Padding[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePadding: Self = this.set("padding", js.undefined)
+    @scala.inline
+    def setPaddingNull: Self = this.set("padding", null)
+    @scala.inline
+    def setPaddingBottom(value: (PaddingBottom[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePaddingBottom: Self = this.set("paddingBottom", js.undefined)
+    @scala.inline
+    def setPaddingBottomNull: Self = this.set("paddingBottom", null)
+    @scala.inline
+    def setPaddingLeft(value: (PaddingLeft[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePaddingLeft: Self = this.set("paddingLeft", js.undefined)
+    @scala.inline
+    def setPaddingLeftNull: Self = this.set("paddingLeft", null)
+    @scala.inline
+    def setPaddingRight(value: (PaddingRight[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePaddingRight: Self = this.set("paddingRight", js.undefined)
+    @scala.inline
+    def setPaddingRightNull: Self = this.set("paddingRight", null)
+    @scala.inline
+    def setPaddingTop(value: (PaddingTop[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("paddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePaddingTop: Self = this.set("paddingTop", js.undefined)
+    @scala.inline
+    def setPaddingTopNull: Self = this.set("paddingTop", null)
+    @scala.inline
+    def setPaddingX(value: BoxPropValue): Self = this.set("paddingX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePaddingX: Self = this.set("paddingX", js.undefined)
+    @scala.inline
+    def setPaddingXNull: Self = this.set("paddingX", null)
+    @scala.inline
+    def setPaddingY(value: BoxPropValue): Self = this.set("paddingY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePaddingY: Self = this.set("paddingY", js.undefined)
+    @scala.inline
+    def setPaddingYNull: Self = this.set("paddingY", null)
+    @scala.inline
+    def setPlaceContent(value: PlaceContent | Double | `false`): Self = this.set("placeContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceContent: Self = this.set("placeContent", js.undefined)
+    @scala.inline
+    def setPlaceContentNull: Self = this.set("placeContent", null)
+    @scala.inline
+    def setPlaceItems(value: PlaceItems | Double | `false`): Self = this.set("placeItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceItems: Self = this.set("placeItems", js.undefined)
+    @scala.inline
+    def setPlaceItemsNull: Self = this.set("placeItems", null)
+    @scala.inline
+    def setPlaceSelf(value: PlaceSelf | Double | `false`): Self = this.set("placeSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceSelf: Self = this.set("placeSelf", js.undefined)
+    @scala.inline
+    def setPlaceSelfNull: Self = this.set("placeSelf", null)
+    @scala.inline
+    def setPointerEvents(value: PointerEvents | Double | `false`): Self = this.set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePointerEvents: Self = this.set("pointerEvents", js.undefined)
+    @scala.inline
+    def setPointerEventsNull: Self = this.set("pointerEvents", null)
+    @scala.inline
+    def setPosition(value: Position | Double | `false`): Self = this.set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePosition: Self = this.set("position", js.undefined)
+    @scala.inline
+    def setPositionNull: Self = this.set("position", null)
+    @scala.inline
+    def setResize(value: Resize | Double | `false`): Self = this.set("resize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResize: Self = this.set("resize", js.undefined)
+    @scala.inline
+    def setResizeNull: Self = this.set("resize", null)
+    @scala.inline
+    def setRight(value: (Right[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRight: Self = this.set("right", js.undefined)
+    @scala.inline
+    def setRightNull: Self = this.set("right", null)
+    @scala.inline
+    def setRowGap(value: (RowGap[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("rowGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowGap: Self = this.set("rowGap", js.undefined)
+    @scala.inline
+    def setRowGapNull: Self = this.set("rowGap", null)
+    @scala.inline
+    def setTextAlign(value: TextAlign | Double | `false`): Self = this.set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextAlign: Self = this.set("textAlign", js.undefined)
+    @scala.inline
+    def setTextAlignNull: Self = this.set("textAlign", null)
+    @scala.inline
+    def setTextDecoration(value: (TextDecoration[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("textDecoration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextDecoration: Self = this.set("textDecoration", js.undefined)
+    @scala.inline
+    def setTextDecorationNull: Self = this.set("textDecoration", null)
+    @scala.inline
+    def setTextOverflow(value: TextOverflow | Double | `false`): Self = this.set("textOverflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextOverflow: Self = this.set("textOverflow", js.undefined)
+    @scala.inline
+    def setTextOverflowNull: Self = this.set("textOverflow", null)
+    @scala.inline
+    def setTextShadow(value: TextShadow | Double | `false`): Self = this.set("textShadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextShadow: Self = this.set("textShadow", js.undefined)
+    @scala.inline
+    def setTextShadowNull: Self = this.set("textShadow", null)
+    @scala.inline
+    def setTextTransform(value: TextTransform | Double | `false`): Self = this.set("textTransform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextTransform: Self = this.set("textTransform", js.undefined)
+    @scala.inline
+    def setTextTransformNull: Self = this.set("textTransform", null)
+    @scala.inline
+    def setTop(value: (Top[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("top", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTop: Self = this.set("top", js.undefined)
+    @scala.inline
+    def setTopNull: Self = this.set("top", null)
+    @scala.inline
+    def setTransform(value: Transform | Double | `false`): Self = this.set("transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransform: Self = this.set("transform", js.undefined)
+    @scala.inline
+    def setTransformNull: Self = this.set("transform", null)
+    @scala.inline
+    def setTransformOrigin(value: (TransformOrigin[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("transformOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransformOrigin: Self = this.set("transformOrigin", js.undefined)
+    @scala.inline
+    def setTransformOriginNull: Self = this.set("transformOrigin", null)
+    @scala.inline
+    def setTransition(value: (Transition[String with js.Object]) | Double | `false`): Self = this.set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransition: Self = this.set("transition", js.undefined)
+    @scala.inline
+    def setTransitionNull: Self = this.set("transition", null)
+    @scala.inline
+    def setTransitionDelay(value: (TransitionDelay[String with js.Object]) | Double | `false`): Self = this.set("transitionDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionDelay: Self = this.set("transitionDelay", js.undefined)
+    @scala.inline
+    def setTransitionDelayNull: Self = this.set("transitionDelay", null)
+    @scala.inline
+    def setTransitionDuration(value: (TransitionDuration[String with js.Object]) | Double | `false`): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
+    @scala.inline
+    def setTransitionDurationNull: Self = this.set("transitionDuration", null)
+    @scala.inline
+    def setTransitionProperty(value: TransitionProperty | Double | `false`): Self = this.set("transitionProperty", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionProperty: Self = this.set("transitionProperty", js.undefined)
+    @scala.inline
+    def setTransitionPropertyNull: Self = this.set("transitionProperty", null)
+    @scala.inline
+    def setTransitionTimingFunction(value: TransitionTimingFunction | Double | `false`): Self = this.set("transitionTimingFunction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionTimingFunction: Self = this.set("transitionTimingFunction", js.undefined)
+    @scala.inline
+    def setTransitionTimingFunctionNull: Self = this.set("transitionTimingFunction", null)
+    @scala.inline
+    def setUserSelect(value: UserSelect | Double | `false`): Self = this.set("userSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUserSelect: Self = this.set("userSelect", js.undefined)
+    @scala.inline
+    def setUserSelectNull: Self = this.set("userSelect", null)
+    @scala.inline
+    def setVisibility(value: Visibility | Double | `false`): Self = this.set("visibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisibility: Self = this.set("visibility", js.undefined)
+    @scala.inline
+    def setVisibilityNull: Self = this.set("visibility", null)
+    @scala.inline
+    def setWhiteSpace(value: WhiteSpace | Double | `false`): Self = this.set("whiteSpace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWhiteSpace: Self = this.set("whiteSpace", js.undefined)
+    @scala.inline
+    def setWhiteSpaceNull: Self = this.set("whiteSpace", null)
+    @scala.inline
+    def setWidth(value: (Width[(String with js.Object) | `0`]) | Double | `false`): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+    @scala.inline
+    def setWidthNull: Self = this.set("width", null)
+    @scala.inline
+    def setWordBreak(value: WordBreak | Double | `false`): Self = this.set("wordBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWordBreak: Self = this.set("wordBreak", js.undefined)
+    @scala.inline
+    def setWordBreakNull: Self = this.set("wordBreak", null)
+    @scala.inline
+    def setWordWrap(value: WordWrap | Double | `false`): Self = this.set("wordWrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWordWrap: Self = this.set("wordWrap", js.undefined)
+    @scala.inline
+    def setWordWrapNull: Self = this.set("wordWrap", null)
+    @scala.inline
+    def setZIndex(value: ZIndex | Double | `false`): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
+    @scala.inline
+    def setZIndexNull: Self = this.set("zIndex", null)
+  }
+  
 }
 

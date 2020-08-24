@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
-import typingsSlinky.vscodeJsonrpc.mod.NotificationType
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolNotificationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol/lib/protocol", "InitializedNotification")
 @js.native
 object InitializedNotification extends js.Object {
-  val `type`: NotificationType[InitializedParams, Unit] = js.native
+  val `type`: ProtocolNotificationType[InitializedParams, Unit] = js.native
 }
 

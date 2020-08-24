@@ -2,7 +2,7 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

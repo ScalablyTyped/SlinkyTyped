@@ -7,50 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CSG.PolygonTreeNode")
 @js.native
 class PolygonTreeNode ()
-  extends typingsSlinky.openjscad.CSG.PolygonTreeNode {
-  /* CompleteClass */
-  override var children: js.Any = js.native
-  /* CompleteClass */
-  override var parent: js.Any = js.native
-  /* CompleteClass */
-  override var polygon: typingsSlinky.openjscad.CSG.Polygon = js.native
-  /* CompleteClass */
-  override var removed: Boolean = js.native
-  /* CompleteClass */
-  override def _splitByPlane(
-    plane: js.Any,
-    coplanarfrontnodes: js.Any,
-    coplanarbacknodes: js.Any,
-    frontnodes: js.Any,
-    backnodes: js.Any
-  ): Unit = js.native
-  /* CompleteClass */
-  override def addChild(polygon: typingsSlinky.openjscad.CSG.Polygon): typingsSlinky.openjscad.CSG.PolygonTreeNode = js.native
-  /* CompleteClass */
-  override def addPolygons(polygons: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def getPolygon(): typingsSlinky.openjscad.CSG.Polygon = js.native
-  /* CompleteClass */
-  override def getPolygons(result: js.Array[typingsSlinky.openjscad.CSG.Polygon]): Unit = js.native
-  /* CompleteClass */
-  override def invert(): Unit = js.native
-  /* CompleteClass */
-  override def invertSub(): Unit = js.native
-  /* CompleteClass */
-  override def isRemoved(): Boolean = js.native
-  /* CompleteClass */
-  override def isRootNode(): Boolean = js.native
-  /* CompleteClass */
-  override def recursivelyInvalidatePolygon(): Unit = js.native
-  /* CompleteClass */
-  override def remove(): Unit = js.native
-  /* CompleteClass */
-  override def splitByPlane(
-    plane: js.Any,
-    coplanarfrontnodes: js.Any,
-    coplanarbacknodes: js.Any,
-    frontnodes: js.Any,
-    backnodes: js.Any
-  ): Unit = js.native
-}
+  extends typingsSlinky.openjscad.CSG.PolygonTreeNode
 

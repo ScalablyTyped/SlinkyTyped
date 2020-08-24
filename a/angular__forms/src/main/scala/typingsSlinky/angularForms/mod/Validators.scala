@@ -12,6 +12,7 @@ class Validators () extends js.Object
 @JSImport("@angular/forms", "Validators")
 @js.native
 object Validators extends js.Object {
+  def compose(validators: js.Array[js.UndefOr[ValidatorFn | Null]]): ValidatorFn | Null = js.native
   /**
     * @description
     * Compose multiple validators into a single function that returns the union
@@ -23,8 +24,7 @@ object Validators extends js.Object {
     * @see `updateValueAndValidity()`
     *
     */
-  def compose(): Null = js.native
-  def compose(validators: js.Array[js.UndefOr[ValidatorFn | Null]]): ValidatorFn | Null = js.native
+  def compose(validators: Null): Null = js.native
   /**
     * @description
     * Compose multiple async validators into a single function that returns the union
@@ -41,11 +41,13 @@ object Validators extends js.Object {
     * @description
     * Validator that requires the control's value pass an email validation test.
     *
-    * Tests the value using a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+    * Tests the value using a [regular
+    * expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
     * pattern suitable for common usecases. The pattern is based on the definition of a valid email
-    * address in the [WHATWG HTML specification](https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address)
-    * with some enhancements to incorporate more RFC rules (such as rules related to domain names and
-    * the lengths of different parts of the address).
+    * address in the [WHATWG HTML
+    * specification](https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address) with
+    * some enhancements to incorporate more RFC rules (such as rules related to domain names and the
+    * lengths of different parts of the address).
     *
     * The differences from the WHATWG version include:
     * - Disallow `local-part` (the part before the `@` symbol) to begin or end with a period (`.`).
@@ -98,7 +100,8 @@ object Validators extends js.Object {
     * @description
     * Validator that requires the length of the control's value to be less than or equal
     * to the provided maximum length. This validator is also provided by default if you use the
-    * the HTML5 `maxlength` attribute.
+    * the HTML5 `maxlength` attribute. Note that the `maxLength` validator is intended to be used
+    * only for types that have a numeric `length` property, such as strings or arrays.
     *
     * @usageNotes
     *
@@ -147,7 +150,11 @@ object Validators extends js.Object {
     * @description
     * Validator that requires the length of the control's value to be greater than or equal
     * to the provided minimum length. This validator is also provided by default if you use the
-    * the HTML5 `minlength` attribute.
+    * the HTML5 `minlength` attribute. Note that the `minLength` validator is intended to be used
+    * only for types that have a numeric `length` property, such as strings or arrays. The
+    * `minLength` validator logic is also not invoked for values when their `length` property is 0
+    * (for example in case of an empty string or an empty array), to support optional controls. You
+    * can use the standard `required` validator if empty values should not be considered valid.
     *
     * @usageNotes
     *

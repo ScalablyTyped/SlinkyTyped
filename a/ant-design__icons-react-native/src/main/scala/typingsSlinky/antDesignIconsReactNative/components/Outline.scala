@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Outline {
-  @JSImport("@ant-design/icons-react-native/lib/outline", JSImport.Default)
+  @JSImport("@ant-design/icons-react-native/es/outline", JSImport.Default)
   @js.native
   object component extends js.Object
   

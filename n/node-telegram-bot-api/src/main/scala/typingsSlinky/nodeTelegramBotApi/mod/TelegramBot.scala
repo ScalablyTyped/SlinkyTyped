@@ -17,6 +17,7 @@ import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.edited_message
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.error
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.inline_query
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.message
+import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.poll_answer
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.polling_error
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.pre_checkout_query
 import typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.shipping_query
@@ -53,6 +54,8 @@ trait TelegramBot extends EventEmitter {
   def addListener_inlinequery(event: inline_query, listener: js.Function1[/* query */ InlineQuery, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
+  @JSName("addListener")
+  def addListener_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
@@ -125,6 +128,7 @@ trait TelegramBot extends EventEmitter {
   def getGameHighScores(userId: String): js.Promise[js.Array[GameHighScore]] = js.native
   def getGameHighScores(userId: String, options: GetGameHighScoresOptions): js.Promise[js.Array[GameHighScore]] = js.native
   def getMe(): js.Promise[User] = js.native
+  def getMyCommands(): js.Promise[js.Array[BotCommand]] = js.native
   def getUpdates(): js.Promise[js.Array[Update]] = js.native
   def getUpdates(options: GetUpdatesOptions): js.Promise[js.Array[Update]] = js.native
   def getUserProfilePhotos(userId: String): js.Promise[UserProfilePhotos] = js.native
@@ -138,12 +142,76 @@ trait TelegramBot extends EventEmitter {
   def kickChatMember(chatId: Double, userId: String): js.Promise[Boolean] = js.native
   def leaveChat(chatId: String): js.Promise[Boolean] = js.native
   def leaveChat(chatId: Double): js.Promise[Boolean] = js.native
-  def listenerCount(
-    event: MessageType | message | callback_query | inline_query | chosen_inline_result | channel_post | edited_message | edited_message_text | edited_message_caption | edited_channel_post | edited_channel_post_text | edited_channel_post_caption | shipping_query | pre_checkout_query | polling_error | webhook_error | error
-  ): Double = js.native
-  def listeners(
-    event: MessageType | message | callback_query | inline_query | chosen_inline_result | channel_post | edited_message | edited_message_text | edited_message_caption | edited_channel_post | edited_channel_post_text | edited_channel_post_caption | shipping_query | pre_checkout_query | polling_error | webhook_error | error
-  ): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  def listenerCount(event: MessageType): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_callbackquery(event: callback_query): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_channelpost(event: channel_post): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_choseninlineresult(event: chosen_inline_result): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_editedchannelpost(event: edited_channel_post): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_editedchannelpostcaption(event: edited_channel_post_caption): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_editedchannelposttext(event: edited_channel_post_text): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_editedmessage(event: edited_message): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_editedmessagecaption(event: edited_message_caption): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_editedmessagetext(event: edited_message_text): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_error(event: error): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_inlinequery(event: inline_query): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_message(event: message): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_pollanswer(event: poll_answer): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_pollingerror(event: polling_error): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_precheckoutquery(event: pre_checkout_query): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_shippingquery(event: shipping_query): Double = js.native
+  @JSName("listenerCount")
+  def listenerCount_webhookerror(event: webhook_error): Double = js.native
+  def listeners(event: MessageType): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_callbackquery(event: callback_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_channelpost(event: channel_post): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_choseninlineresult(event: chosen_inline_result): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_editedchannelpost(event: edited_channel_post): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_editedchannelpostcaption(event: edited_channel_post_caption): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_editedchannelposttext(event: edited_channel_post_text): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_editedmessage(event: edited_message): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_editedmessagecaption(event: edited_message_caption): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_editedmessagetext(event: edited_message_text): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_error(event: error): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_inlinequery(event: inline_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_message(event: message): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_pollanswer(event: poll_answer): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_pollingerror(event: polling_error): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_precheckoutquery(event: pre_checkout_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_shippingquery(event: shipping_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("listeners")
+  def listeners_webhookerror(event: webhook_error): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
   def off(event: MessageType, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
   @JSName("off")
   def off_callbackquery(event: callback_query, listener: js.Function1[/* query */ CallbackQuery, Unit]): this.type = js.native
@@ -169,6 +237,8 @@ trait TelegramBot extends EventEmitter {
   def off_inlinequery(event: inline_query, listener: js.Function1[/* query */ InlineQuery, Unit]): this.type = js.native
   @JSName("off")
   def off_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
+  @JSName("off")
+  def off_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
   @JSName("off")
   def off_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("off")
@@ -211,6 +281,8 @@ trait TelegramBot extends EventEmitter {
   @JSName("on")
   def on_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
   @JSName("on")
+  def on_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
+  @JSName("on")
   def on_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_precheckoutquery(event: pre_checkout_query, listener: js.Function1[/* query */ PreCheckoutQuery, Unit]): this.type = js.native
@@ -243,6 +315,8 @@ trait TelegramBot extends EventEmitter {
   def once_inlinequery(event: inline_query, listener: js.Function1[/* query */ InlineQuery, Unit]): this.type = js.native
   @JSName("once")
   def once_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
+  @JSName("once")
+  def once_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
   @JSName("once")
   def once_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("once")
@@ -280,6 +354,8 @@ trait TelegramBot extends EventEmitter {
   @JSName("prependListener")
   def prependListener_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
   @JSName("prependListener")
+  def prependListener_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
+  @JSName("prependListener")
   def prependListener_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_precheckoutquery(event: pre_checkout_query, listener: js.Function1[/* query */ PreCheckoutQuery, Unit]): this.type = js.native
@@ -313,6 +389,8 @@ trait TelegramBot extends EventEmitter {
   @JSName("prependOnceListener")
   def prependOnceListener_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
   @JSName("prependOnceListener")
+  def prependOnceListener_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
+  @JSName("prependOnceListener")
   def prependOnceListener_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_precheckoutquery(event: pre_checkout_query, listener: js.Function1[/* query */ PreCheckoutQuery, Unit]): this.type = js.native
@@ -325,12 +403,76 @@ trait TelegramBot extends EventEmitter {
   def promoteChatMember(chatId: String, userId: String, options: PromoteChatMemberOptions): js.Promise[Boolean] = js.native
   def promoteChatMember(chatId: Double, userId: String): js.Promise[Boolean] = js.native
   def promoteChatMember(chatId: Double, userId: String, options: PromoteChatMemberOptions): js.Promise[Boolean] = js.native
-  def rawListeners(
-    event: MessageType | message | callback_query | inline_query | chosen_inline_result | channel_post | edited_message | edited_message_text | edited_message_caption | edited_channel_post | edited_channel_post_text | edited_channel_post_caption | shipping_query | pre_checkout_query | polling_error | webhook_error | error
-  ): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
-  def removeAllListeners(
-    event: MessageType | message | callback_query | inline_query | chosen_inline_result | channel_post | edited_message | edited_message_text | edited_message_caption | edited_channel_post | edited_channel_post_text | edited_channel_post_caption | shipping_query | pre_checkout_query | polling_error | webhook_error | error
-  ): this.type = js.native
+  def rawListeners(event: MessageType): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_callbackquery(event: callback_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_channelpost(event: channel_post): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_choseninlineresult(event: chosen_inline_result): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_editedchannelpost(event: edited_channel_post): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_editedchannelpostcaption(event: edited_channel_post_caption): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_editedchannelposttext(event: edited_channel_post_text): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_editedmessage(event: edited_message): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_editedmessagecaption(event: edited_message_caption): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_editedmessagetext(event: edited_message_text): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_error(event: error): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_inlinequery(event: inline_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_message(event: message): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_pollanswer(event: poll_answer): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_pollingerror(event: polling_error): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_precheckoutquery(event: pre_checkout_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_shippingquery(event: shipping_query): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  @JSName("rawListeners")
+  def rawListeners_webhookerror(event: webhook_error): js.Array[js.Function2[/* data */ _, /* metadata */ js.UndefOr[Metadata], Unit]] = js.native
+  def removeAllListeners(event: MessageType): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_callbackquery(event: callback_query): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_channelpost(event: channel_post): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_choseninlineresult(event: chosen_inline_result): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_editedchannelpost(event: edited_channel_post): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_editedchannelpostcaption(event: edited_channel_post_caption): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_editedchannelposttext(event: edited_channel_post_text): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_editedmessage(event: edited_message): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_editedmessagecaption(event: edited_message_caption): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_editedmessagetext(event: edited_message_text): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_error(event: error): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_inlinequery(event: inline_query): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_message(event: message): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_pollanswer(event: poll_answer): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_pollingerror(event: polling_error): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_precheckoutquery(event: pre_checkout_query): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_shippingquery(event: shipping_query): this.type = js.native
+  @JSName("removeAllListeners")
+  def removeAllListeners_webhookerror(event: webhook_error): this.type = js.native
   def removeListener(event: MessageType, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_callbackquery(event: callback_query, listener: js.Function1[/* query */ CallbackQuery, Unit]): this.type = js.native
@@ -357,6 +499,8 @@ trait TelegramBot extends EventEmitter {
   @JSName("removeListener")
   def removeListener_message(event: message, listener: js.Function2[/* message */ Message, /* metadata */ Metadata, Unit]): this.type = js.native
   @JSName("removeListener")
+  def removeListener_pollanswer(event: poll_answer, listener: js.Function1[/* answer */ PollAnswer, Unit]): this.type = js.native
+  @JSName("removeListener")
   def removeListener_pollingerror(event: polling_error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_precheckoutquery(event: pre_checkout_query, listener: js.Function1[/* query */ PreCheckoutQuery, Unit]): this.type = js.native
@@ -370,6 +514,18 @@ trait TelegramBot extends EventEmitter {
   def restrictChatMember(chatId: String, userId: String, options: RestrictChatMemberOptions): js.Promise[Boolean] = js.native
   def restrictChatMember(chatId: Double, userId: String): js.Promise[Boolean] = js.native
   def restrictChatMember(chatId: Double, userId: String, options: RestrictChatMemberOptions): js.Promise[Boolean] = js.native
+  def sendAnimation(chatId: String, animation: String): js.Promise[Message] = js.native
+  def sendAnimation(chatId: String, animation: String, options: SendAnimationOptions): js.Promise[Message] = js.native
+  def sendAnimation(chatId: String, animation: Buffer): js.Promise[Message] = js.native
+  def sendAnimation(chatId: String, animation: Buffer, options: SendAnimationOptions): js.Promise[Message] = js.native
+  def sendAnimation(chatId: String, animation: Stream): js.Promise[Message] = js.native
+  def sendAnimation(chatId: String, animation: Stream, options: SendAnimationOptions): js.Promise[Message] = js.native
+  def sendAnimation(chatId: Double, animation: String): js.Promise[Message] = js.native
+  def sendAnimation(chatId: Double, animation: String, options: SendAnimationOptions): js.Promise[Message] = js.native
+  def sendAnimation(chatId: Double, animation: Buffer): js.Promise[Message] = js.native
+  def sendAnimation(chatId: Double, animation: Buffer, options: SendAnimationOptions): js.Promise[Message] = js.native
+  def sendAnimation(chatId: Double, animation: Stream): js.Promise[Message] = js.native
+  def sendAnimation(chatId: Double, animation: Stream, options: SendAnimationOptions): js.Promise[Message] = js.native
   def sendAudio(chatId: String, audio: String): js.Promise[Message] = js.native
   def sendAudio(chatId: String, audio: String, options: SendAudioOptions): js.Promise[Message] = js.native
   def sendAudio(chatId: String, audio: Buffer): js.Promise[Message] = js.native
@@ -388,22 +544,32 @@ trait TelegramBot extends EventEmitter {
   def sendContact(chatId: String, phoneNumber: String, firstName: String, options: SendContactOptions): js.Promise[Message] = js.native
   def sendContact(chatId: Double, phoneNumber: String, firstName: String): js.Promise[Message] = js.native
   def sendContact(chatId: Double, phoneNumber: String, firstName: String, options: SendContactOptions): js.Promise[Message] = js.native
+  def sendDice(chatId: String): js.Promise[Message] = js.native
+  def sendDice(chatId: String, options: SendDiceOptions): js.Promise[Message] = js.native
+  def sendDice(chatId: Double): js.Promise[Message] = js.native
+  def sendDice(chatId: Double, options: SendDiceOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: String): js.Promise[Message] = js.native
+  def sendDocument(chatId: String, doc: String, options: js.UndefOr[scala.Nothing], fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: String, options: SendDocumentOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: String, options: SendDocumentOptions, fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: Buffer): js.Promise[Message] = js.native
+  def sendDocument(chatId: String, doc: Buffer, options: js.UndefOr[scala.Nothing], fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: Buffer, options: SendDocumentOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: Buffer, options: SendDocumentOptions, fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: Stream): js.Promise[Message] = js.native
+  def sendDocument(chatId: String, doc: Stream, options: js.UndefOr[scala.Nothing], fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: Stream, options: SendDocumentOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: String, doc: Stream, options: SendDocumentOptions, fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: String): js.Promise[Message] = js.native
+  def sendDocument(chatId: Double, doc: String, options: js.UndefOr[scala.Nothing], fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: String, options: SendDocumentOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: String, options: SendDocumentOptions, fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: Buffer): js.Promise[Message] = js.native
+  def sendDocument(chatId: Double, doc: Buffer, options: js.UndefOr[scala.Nothing], fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: Buffer, options: SendDocumentOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: Buffer, options: SendDocumentOptions, fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: Stream): js.Promise[Message] = js.native
+  def sendDocument(chatId: Double, doc: Stream, options: js.UndefOr[scala.Nothing], fileOpts: js.Any): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: Stream, options: SendDocumentOptions): js.Promise[Message] = js.native
   def sendDocument(chatId: Double, doc: Stream, options: SendDocumentOptions, fileOpts: js.Any): js.Promise[Message] = js.native
   def sendGame(chatId: String, gameShortName: String): js.Promise[Message] = js.native
@@ -476,6 +642,10 @@ trait TelegramBot extends EventEmitter {
   def sendPhoto(chatId: Double, photo: Buffer, options: SendPhotoOptions): js.Promise[Message] = js.native
   def sendPhoto(chatId: Double, photo: Stream): js.Promise[Message] = js.native
   def sendPhoto(chatId: Double, photo: Stream, options: SendPhotoOptions): js.Promise[Message] = js.native
+  def sendPoll(chatId: String, question: String, pollOptions: js.Array[String]): js.Promise[Message] = js.native
+  def sendPoll(chatId: String, question: String, pollOptions: js.Array[String], options: SendPollOptions): js.Promise[Message] = js.native
+  def sendPoll(chatId: Double, question: String, pollOptions: js.Array[String]): js.Promise[Message] = js.native
+  def sendPoll(chatId: Double, question: String, pollOptions: js.Array[String], options: SendPollOptions): js.Promise[Message] = js.native
   def sendSticker(chatId: String, sticker: String): js.Promise[Message] = js.native
   def sendSticker(chatId: String, sticker: String, options: SendStickerOptions): js.Promise[Message] = js.native
   def sendSticker(chatId: String, sticker: Buffer): js.Promise[Message] = js.native
@@ -542,8 +712,12 @@ trait TelegramBot extends EventEmitter {
   def sendVoice(chatId: Double, voice: Buffer, options: SendVoiceOptions): js.Promise[Message] = js.native
   def sendVoice(chatId: Double, voice: Stream): js.Promise[Message] = js.native
   def sendVoice(chatId: Double, voice: Stream, options: SendVoiceOptions): js.Promise[Message] = js.native
+  def setChatAdministratorCustomTitle(chatId: String, userId: String, customTitle: String): js.Promise[Boolean] = js.native
+  def setChatAdministratorCustomTitle(chatId: Double, userId: String, customTitle: String): js.Promise[Boolean] = js.native
   def setChatDescription(chatId: String, description: String): js.Promise[Boolean] = js.native
   def setChatDescription(chatId: Double, description: String): js.Promise[Boolean] = js.native
+  def setChatPermissions(chatId: String, chatPermissions: ChatPermissions): js.Promise[Boolean] = js.native
+  def setChatPermissions(chatId: Double, chatPermissions: ChatPermissions): js.Promise[Boolean] = js.native
   def setChatPhoto(chatId: String, photo: String): js.Promise[Boolean] = js.native
   def setChatPhoto(chatId: String, photo: Buffer): js.Promise[Boolean] = js.native
   def setChatPhoto(chatId: String, photo: Stream): js.Promise[Boolean] = js.native
@@ -556,12 +730,20 @@ trait TelegramBot extends EventEmitter {
   def setChatTitle(chatId: Double, title: String): js.Promise[Boolean] = js.native
   def setGameScore(userId: String, score: Double): js.Promise[Message | Boolean] = js.native
   def setGameScore(userId: String, score: Double, options: SetGameScoreOptions): js.Promise[Message | Boolean] = js.native
+  def setMyCommands(commands: js.Array[BotCommand]): js.Promise[Boolean] = js.native
   def setWebHook(url: String): js.Promise[_] = js.native
   def setWebHook(url: String, options: SetWebHookOptions): js.Promise[_] = js.native
   def startPolling(): js.Promise[_] = js.native
   def startPolling(options: StartPollingOptions): js.Promise[_] = js.native
   def stopMessageLiveLocation(): js.Promise[Message | Boolean] = js.native
   def stopMessageLiveLocation(options: StopMessageLiveLocationOptions): js.Promise[Message | Boolean] = js.native
+  def stopPoll(chatId: String, messageId: Double): js.Promise[Poll] = js.native
+  def stopPoll(chatId: String, messageId: Double, options: StopPollOptions): js.Promise[Poll] = js.native
+  // `messageId` was referred to as `pollId` in `node-telegram-bot-api/src/telegram.js`,
+  // but actually `pollId` is another thing, and I believe that's a mistake.
+  // see https://core.telegram.org/bots/api#stoppoll for more info.
+  def stopPoll(chatId: Double, messageId: Double): js.Promise[Poll] = js.native
+  def stopPoll(chatId: Double, messageId: Double, options: StopPollOptions): js.Promise[Poll] = js.native
   def stopPolling(): js.Promise[_] = js.native
   def stopPolling(options: StopPollingOptions): js.Promise[_] = js.native
   def unbanChatMember(chatId: String, userId: String): js.Promise[Boolean] = js.native

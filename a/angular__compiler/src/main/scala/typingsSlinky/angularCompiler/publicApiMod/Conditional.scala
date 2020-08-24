@@ -10,6 +10,7 @@ class Conditional protected ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.Conditional {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     condition: typingsSlinky.angularCompiler.astMod.AST,
     trueExp: typingsSlinky.angularCompiler.astMod.AST,
     falseExp: typingsSlinky.angularCompiler.astMod.AST

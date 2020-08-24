@@ -2,28 +2,26 @@ package typingsSlinky.materialUi.components
 
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Menus.DropDownMenuProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
-import typingsSlinky.materialUi.dropDownMenuMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DropDownMenu {
-  @JSImport("material-ui/DropDownMenu", JSImport.Default)
+  @JSImport("material-ui", "DropDownMenu")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.DropDownMenu] {
     @scala.inline
     def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -37,7 +35,7 @@ object DropDownMenu {
     @scala.inline
     def iconButtonReactElement(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconButton(value: TagMod[Any]): this.type = set("iconButton", value.asInstanceOf[js.Any])
+    def iconButton(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
     @scala.inline

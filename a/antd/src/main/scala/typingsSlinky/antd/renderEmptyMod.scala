@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/config-provider/renderEmpty", JSImport.Namespace)
 @js.native
 object renderEmptyMod extends js.Object {
-  def default(): TagMod[Any] = js.native
-  def default(componentName: String): TagMod[Any] = js.native
-  type RenderEmptyHandler = js.Function1[/* componentName */ js.UndefOr[String], TagMod[Any]]
+  def default(): ReactElement = js.native
+  def default(componentName: String): ReactElement = js.native
+  type RenderEmptyHandler = js.Function1[/* componentName */ js.UndefOr[String], ReactElement]
 }
 

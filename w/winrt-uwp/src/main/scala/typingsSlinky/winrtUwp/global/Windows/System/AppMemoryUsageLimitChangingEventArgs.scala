@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.System.AppMemoryUsageLimitChangingEventArgs")
 @js.native
 abstract class AppMemoryUsageLimitChangingEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.System.AppMemoryUsageLimitChangingEventArgs {
-  /** Gets the new limit for how much total memory the app can use, in bytes. */
-  /* CompleteClass */
-  override var newLimit: Double = js.native
-  /** Gets the old limit for how much total memory the app can use, in bytes. */
-  /* CompleteClass */
-  override var oldLimit: Double = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.System.AppMemoryUsageLimitChangingEventArgs
 

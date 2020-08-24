@@ -12,38 +12,5 @@ class TransformConstraint protected ()
     data: typingsSlinky.phaser.spine.TransformConstraintData,
     skeleton: typingsSlinky.phaser.spine.Skeleton
   ) = this()
-  /* CompleteClass */
-  override var active: Boolean = js.native
-  /* CompleteClass */
-  override var bones: js.Array[typingsSlinky.phaser.spine.Bone] = js.native
-  /* CompleteClass */
-  override var data: typingsSlinky.phaser.spine.TransformConstraintData = js.native
-  /* CompleteClass */
-  override var rotateMix: Double = js.native
-  /* CompleteClass */
-  override var scaleMix: Double = js.native
-  /* CompleteClass */
-  override var shearMix: Double = js.native
-  /* CompleteClass */
-  override var target: typingsSlinky.phaser.spine.Bone = js.native
-  /* CompleteClass */
-  override var temp: typingsSlinky.phaser.spine.Vector2 = js.native
-  /* CompleteClass */
-  override var translateMix: Double = js.native
-  /* CompleteClass */
-  @JSName("apply")
-  override def apply(): Unit = js.native
-  /* CompleteClass */
-  override def applyAbsoluteLocal(): Unit = js.native
-  /* CompleteClass */
-  override def applyAbsoluteWorld(): Unit = js.native
-  /* CompleteClass */
-  override def applyRelativeLocal(): Unit = js.native
-  /* CompleteClass */
-  override def applyRelativeWorld(): Unit = js.native
-  /* CompleteClass */
-  override def isActive(): Boolean = js.native
-  /* CompleteClass */
-  override def update(): Unit = js.native
 }
 

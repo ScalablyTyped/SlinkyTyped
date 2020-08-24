@@ -7,7 +7,6 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.closable
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.link
 import typingsSlinky.antDesignReactNative.marqueeMod.MarqueeProps
 import typingsSlinky.antDesignReactNative.noticeBarMod.NoticeNativeProps
-import typingsSlinky.antDesignReactNative.noticeBarMod.default
 import typingsSlinky.antDesignReactNative.noticeBarStyleMod.NoticeBarStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -17,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NoticeBar {
-  @JSImport("@ant-design/react-native/lib/notice-bar", JSImport.Default)
+  @JSImport("@ant-design/react-native", "NoticeBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.NoticeBar] {
     @scala.inline
     def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline

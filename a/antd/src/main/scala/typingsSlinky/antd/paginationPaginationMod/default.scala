@@ -1,10 +1,12 @@
 package typingsSlinky.antd.paginationPaginationMod
 
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("antd/lib/pagination/Pagination", JSImport.Default)
 @js.native
-class default () extends Pagination
+object default extends TopLevel[ReactComponentClass[PaginationProps]]
 

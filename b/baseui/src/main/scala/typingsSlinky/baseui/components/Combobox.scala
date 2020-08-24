@@ -1,8 +1,9 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.anon.CloseListbox
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -22,11 +23,17 @@ object Combobox {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def autocomplete(value: Boolean): this.type = set("autocomplete", value.asInstanceOf[js.Any])
+    @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def mapOptionToNode(value: /* hasIsSelectedOption */ js.Any => TagMod[Any]): this.type = set("mapOptionToNode", js.Any.fromFunction1(value))
+    def mapOptionToNode(value: /* hasIsSelectedOption */ js.Any => ReactElement): this.type = set("mapOptionToNode", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* string */ js.Any => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* value */ String, /* option */ js.Any | Null) => _): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSubmit(value: /* params */ CloseListbox => _): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: typingsSlinky.baseui.anon.Input): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

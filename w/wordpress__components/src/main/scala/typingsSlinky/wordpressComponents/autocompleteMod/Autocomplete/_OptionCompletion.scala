@@ -1,6 +1,5 @@
 package typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete
 
-import slinky.core.TagMod
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`insert-at-caret`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.replace
 import scala.scalajs.js
@@ -11,9 +10,8 @@ trait _OptionCompletion extends js.Object
 
 object _OptionCompletion {
   @scala.inline
-  def Action(action: `insert-at-caret`, value: TagMod[Any] = null): _OptionCompletion = {
+  def Action(action: `insert-at-caret`): _OptionCompletion = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[_OptionCompletion]
   }
   @scala.inline

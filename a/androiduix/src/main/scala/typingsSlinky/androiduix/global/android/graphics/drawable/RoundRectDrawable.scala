@@ -10,7 +10,34 @@ class RoundRectDrawable protected ()
   extends typingsSlinky.androiduix.android.graphics.drawable.RoundRectDrawable {
   def this(color: Double, radiusTopLeft: Double) = this()
   def this(color: Double, radiusTopLeft: Double, radiusTopRight: Double) = this()
+  def this(
+    color: Double,
+    radiusTopLeft: Double,
+    radiusTopRight: js.UndefOr[scala.Nothing],
+    radiusBottomRight: Double
+  ) = this()
   def this(color: Double, radiusTopLeft: Double, radiusTopRight: Double, radiusBottomRight: Double) = this()
+  def this(
+    color: Double,
+    radiusTopLeft: Double,
+    radiusTopRight: js.UndefOr[scala.Nothing],
+    radiusBottomRight: js.UndefOr[scala.Nothing],
+    radiusBottomLeft: Double
+  ) = this()
+  def this(
+    color: Double,
+    radiusTopLeft: Double,
+    radiusTopRight: js.UndefOr[scala.Nothing],
+    radiusBottomRight: Double,
+    radiusBottomLeft: Double
+  ) = this()
+  def this(
+    color: Double,
+    radiusTopLeft: Double,
+    radiusTopRight: Double,
+    radiusBottomRight: js.UndefOr[scala.Nothing],
+    radiusBottomLeft: Double
+  ) = this()
   def this(
     color: Double,
     radiusTopLeft: Double,

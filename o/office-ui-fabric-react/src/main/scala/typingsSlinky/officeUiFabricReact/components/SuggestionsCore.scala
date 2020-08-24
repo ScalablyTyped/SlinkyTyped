@@ -23,7 +23,7 @@ object SuggestionsCore {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsCore[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsCore[T]] {
     @scala.inline
     def componentRefFunction1(value: /* ref */ js.Object | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     @scala.inline

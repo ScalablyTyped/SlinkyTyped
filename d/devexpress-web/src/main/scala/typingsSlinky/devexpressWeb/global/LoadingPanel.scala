@@ -10,21 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("LoadingPanel")
 @js.native
 class LoadingPanel ()
-  extends typingsSlinky.devexpressWeb.LoadingPanel {
-  /**
-    * Specifies whether the loading panel is enabled in the control.
-    */
-  /* CompleteClass */
-  override var enabled: Boolean = js.native
-  /**
-    * Hides the loading panel.
-    */
-  /* CompleteClass */
-  override def hide(): Unit = js.native
-  /**
-    * Shows the loading panel.
-    */
-  /* CompleteClass */
-  override def show(): Unit = js.native
-}
+  extends typingsSlinky.devexpressWeb.LoadingPanel
 

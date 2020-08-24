@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TrimIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TrimIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TrimIcon")
   @js.native
   object component extends js.Object
   

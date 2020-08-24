@@ -53,15 +53,15 @@ object stateMod extends js.Object {
   @js.native
   class StateRegistry protected ()
     extends typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry {
-    /** @internalapi */
+    /** @internal */
     def this(router: UIRouter) = this()
   }
   
   @js.native
   class StateService protected ()
     extends typingsSlinky.uirouterCore.stateServiceMod.StateService {
-    /** @internalapi */
-    def this(/** @hidden */ router: UIRouter) = this()
+    /** @internal */
+    def this(/** @internal */ router: UIRouter) = this()
   }
   
   @js.native
@@ -79,7 +79,7 @@ object stateMod extends js.Object {
       * @param _params Parameters for the target state
       * @param _options Transition options.
       *
-      * @internalapi
+      * @internal
       */
     def this(
       _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,
@@ -89,6 +89,12 @@ object stateMod extends js.Object {
       _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,
       _identifier: StateOrName,
       _params: RawParams
+    ) = this()
+    def this(
+      _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,
+      _identifier: StateOrName,
+      _params: js.UndefOr[scala.Nothing],
+      _options: TransitionOptions
     ) = this()
     def this(
       _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,

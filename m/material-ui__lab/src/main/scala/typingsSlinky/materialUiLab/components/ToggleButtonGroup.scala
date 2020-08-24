@@ -79,7 +79,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleButtonGroup {
-  @JSImport("@material-ui/lab/ToggleButtonGroup/ToggleButtonGroup", JSImport.Default)
+  @JSImport("@material-ui/lab", "ToggleButtonGroup")
   @js.native
   object component extends js.Object
   
@@ -209,6 +209,8 @@ object ToggleButtonGroup {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -405,6 +407,8 @@ object ToggleButtonGroup {
     def onWaiting(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: horizontal | vertical): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

@@ -88,6 +88,7 @@ object sagemaker extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: NotebookInstanceLifecycleConfigurationArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: NotebookInstanceLifecycleConfigurationArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -101,8 +102,10 @@ object sagemaker extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.sagemakerEndpointMod.Endpoint = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.sagemakerEndpointMod.Endpoint = js.native
     def get(name: String, id: Input[ID], state: EndpointState): typingsSlinky.pulumiAws.sagemakerEndpointMod.Endpoint = js.native
     def get(name: String, id: Input[ID], state: EndpointState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.sagemakerEndpointMod.Endpoint = js.native
     /**
@@ -122,8 +125,10 @@ object sagemaker extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.endpointConfigurationMod.EndpointConfiguration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.endpointConfigurationMod.EndpointConfiguration = js.native
     def get(name: String, id: Input[ID], state: EndpointConfigurationState): typingsSlinky.pulumiAws.endpointConfigurationMod.EndpointConfiguration = js.native
     def get(name: String, id: Input[ID], state: EndpointConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.endpointConfigurationMod.EndpointConfiguration = js.native
     /**
@@ -143,8 +148,10 @@ object sagemaker extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.sagemakerModelMod.Model = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.sagemakerModelMod.Model = js.native
     def get(name: String, id: Input[ID], state: ModelState): typingsSlinky.pulumiAws.sagemakerModelMod.Model = js.native
     def get(name: String, id: Input[ID], state: ModelState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.sagemakerModelMod.Model = js.native
     /**
@@ -164,8 +171,10 @@ object sagemaker extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.notebookInstanceMod.NotebookInstance = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.notebookInstanceMod.NotebookInstance = js.native
     def get(name: String, id: Input[ID], state: NotebookInstanceState): typingsSlinky.pulumiAws.notebookInstanceMod.NotebookInstance = js.native
     def get(name: String, id: Input[ID], state: NotebookInstanceState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.notebookInstanceMod.NotebookInstance = js.native
     /**
@@ -185,8 +194,10 @@ object sagemaker extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.notebookInstanceLifecycleConfigurationMod.NotebookInstanceLifecycleConfiguration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.notebookInstanceLifecycleConfigurationMod.NotebookInstanceLifecycleConfiguration = js.native
     def get(name: String, id: Input[ID], state: NotebookInstanceLifecycleConfigurationState): typingsSlinky.pulumiAws.notebookInstanceLifecycleConfigurationMod.NotebookInstanceLifecycleConfiguration = js.native
     def get(
       name: String,

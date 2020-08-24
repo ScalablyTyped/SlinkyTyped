@@ -1,28 +1,30 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.collapseCollapseMod.CollapseProps
 import typingsSlinky.antd.collapseCollapseMod.ExpandIconPosition
 import typingsSlinky.antd.collapseCollapseMod.PanelProps
-import typingsSlinky.antd.collapseMod.default
+import typingsSlinky.antd.collapsePanelMod.CollapsePanelProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Collapse {
-  @JSImport("antd/lib/collapse", JSImport.Default)
+  @JSImport("antd", "Collapse")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def accordion(value: Boolean): this.type = set("accordion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeKeyVarargs(value: (String | Double)*): this.type = set("activeKey", js.Array(value :_*))
     @scala.inline
     def activeKey(value: (js.Array[String | Double]) | String | Double): this.type = set("activeKey", value.asInstanceOf[js.Any])
     @scala.inline
@@ -30,13 +32,17 @@ object Collapse {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultActiveKeyVarargs(value: (String | Double)*): this.type = set("defaultActiveKey", js.Array(value :_*))
+    @scala.inline
     def defaultActiveKey(value: (js.Array[String | Double]) | String | Double): this.type = set("defaultActiveKey", value.asInstanceOf[js.Any])
     @scala.inline
     def destroyInactivePanel(value: Boolean): this.type = set("destroyInactivePanel", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandIcon(value: /* panelProps */ PanelProps => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+    def expandIcon(value: /* panelProps */ PanelProps => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def expandIconPosition(value: ExpandIconPosition): this.type = set("expandIconPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ghost(value: Boolean): this.type = set("ghost", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: /* key */ String | js.Array[String] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -47,5 +53,14 @@ object Collapse {
   
   def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Panel {
+    @JSImport("antd", "Collapse.Panel")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CollapsePanelProps): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Panel.type): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

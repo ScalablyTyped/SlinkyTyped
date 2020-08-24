@@ -82,119 +82,48 @@ object ExpandableListConnector_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCollapseGroup(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseGroup")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCollapseGroupWithMeta(value: PositionMetadata => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseGroupWithMeta")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setCollapseGroup(value: Double => Boolean): Self = this.set("collapseGroup", js.Any.fromFunction1(value))
     @scala.inline
-    def withExpandGroup(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandGroup")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setCollapseGroupWithMeta(value: PositionMetadata => Boolean): Self = this.set("collapseGroupWithMeta", js.Any.fromFunction1(value))
     @scala.inline
-    def withExpandGroupWithMeta(value: PositionMetadata => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandGroupWithMeta")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setExpandGroup(value: Double => Boolean): Self = this.set("expandGroup", js.Any.fromFunction1(value))
     @scala.inline
-    def withFindGroupPosition(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findGroupPosition")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setExpandGroupWithMeta(value: PositionMetadata => Boolean): Self = this.set("expandGroupWithMeta", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetAdapter(value: () => ExpandableListAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAdapter")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setFindGroupPosition(value: (Double, Double) => Double): Self = this.set("findGroupPosition", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetExpandedGroupMetadataList(value: () => ArrayList[GroupMetadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExpandedGroupMetadataList")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetAdapter(value: () => ExpandableListAdapter): Self = this.set("getAdapter", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetFlattenedPos(value: ExpandableListPosition => PositionMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFlattenedPos")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetExpandedGroupMetadataList(value: () => ArrayList[GroupMetadata]): Self = this.set("getExpandedGroupMetadataList", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetUnflattenedPos(value: Double => PositionMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUnflattenedPos")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetFlattenedPos(value: ExpandableListPosition => PositionMetadata): Self = this.set("getFlattenedPos", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsGroupExpanded(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isGroupExpanded")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetUnflattenedPos(value: Double => PositionMetadata): Self = this.set("getUnflattenedPos", js.Any.fromFunction1(value))
     @scala.inline
-    def withMDataSetObserver(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDataSetObserver")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsGroupExpanded(value: Double => Boolean): Self = this.set("isGroupExpanded", js.Any.fromFunction1(value))
     @scala.inline
-    def withMExpGroupMetadataList(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mExpGroupMetadataList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDataSetObserver(value: js.Any): Self = this.set("mDataSetObserver", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMExpandableListAdapter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mExpandableListAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMExpGroupMetadataList(value: js.Any): Self = this.set("mExpGroupMetadataList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMaxExpGroupCount(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMaxExpGroupCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMExpandableListAdapter(value: js.Any): Self = this.set("mExpandableListAdapter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTotalExpChildrenCount(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTotalExpChildrenCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMaxExpGroupCount(value: js.Any): Self = this.set("mMaxExpGroupCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRefreshExpGroupMetadataList(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshExpGroupMetadataList")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMTotalExpChildrenCount(value: js.Any): Self = this.set("mTotalExpChildrenCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetExpandableListAdapter(value: ExpandableListAdapter => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExpandableListAdapter")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRefreshExpGroupMetadataList(value: (js.Any, js.Any) => js.Any): Self = this.set("refreshExpGroupMetadataList", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetExpandedGroupMetadataList(value: ArrayList[GroupMetadata] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExpandedGroupMetadataList")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetExpandableListAdapter(value: ExpandableListAdapter => Unit): Self = this.set("setExpandableListAdapter", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetMaxExpGroupCount(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxExpGroupCount")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetExpandedGroupMetadataList(value: ArrayList[GroupMetadata] => Unit): Self = this.set("setExpandedGroupMetadataList", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetMaxExpGroupCount(value: Double => Unit): Self = this.set("setMaxExpGroupCount", js.Any.fromFunction1(value))
   }
   
 }

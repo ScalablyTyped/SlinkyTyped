@@ -1,7 +1,5 @@
 package typingsSlinky.breeze.global.breeze
 
-import typingsSlinky.breeze.breeze.Entity
-import typingsSlinky.breeze.breeze.IProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,18 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("breeze.PropertyChangedEventArgs")
 @js.native
 class PropertyChangedEventArgs ()
-  extends typingsSlinky.breeze.breeze.PropertyChangedEventArgs {
-  /* CompleteClass */
-  override var entity: Entity = js.native
-  /* CompleteClass */
-  override var newValue: js.Any = js.native
-  /* CompleteClass */
-  override var oldValue: js.Any = js.native
-  /* CompleteClass */
-  override var parent: js.Any = js.native
-  /* CompleteClass */
-  override var property: IProperty = js.native
-  /* CompleteClass */
-  override var propertyName: String = js.native
-}
+  extends typingsSlinky.breeze.breeze.PropertyChangedEventArgs
 

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object firstMod extends js.Object {
   def first[T, D](): OperatorFunction[T, T | D] = js.native
+  def first[T, D](predicate: js.UndefOr[scala.Nothing], defaultValue: D): OperatorFunction[T, T | D] = js.native
   def first[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
   ): OperatorFunction[T, S] = js.native

@@ -6,8 +6,10 @@ import typingsSlinky.expoFileSystem.anon.Intermediates
 import typingsSlinky.expoFileSystem.anon.Md5
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.DownloadOptions
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.DownloadProgressCallback
-import typingsSlinky.expoFileSystem.fileSystemTypesMod.DownloadResult
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.FileInfo
+import typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemDownloadResult
+import typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemUploadOptions
+import typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemUploadResult
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.ReadingOptions
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.WritingOptions
 import scala.scalajs.js
@@ -22,7 +24,34 @@ object mod extends js.Object {
     extends typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable {
     def this(url: String, fileUri: String) = this()
     def this(url: String, fileUri: String, options: DownloadOptions) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: DownloadProgressCallback
+    ) = this()
     def this(url: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: js.UndefOr[scala.Nothing],
+      resumeData: String
+    ) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: DownloadProgressCallback,
+      resumeData: String
+    ) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: DownloadOptions,
+      callback: js.UndefOr[scala.Nothing],
+      resumeData: String
+    ) = this()
     def this(
       url: String,
       fileUri: String,
@@ -37,7 +66,34 @@ object mod extends js.Object {
   val documentDirectory: String | Null = js.native
   def copyAsync(options: From): js.Promise[Unit] = js.native
   def createDownloadResumable(uri: String, fileUri: String): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    resumeData: String
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: DownloadProgressCallback
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: DownloadProgressCallback,
+    resumeData: String
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: DownloadOptions,
+    callback: js.UndefOr[scala.Nothing],
+    resumeData: String
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(
     uri: String,
@@ -48,8 +104,9 @@ object mod extends js.Object {
   ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def deleteAsync(fileUri: String): js.Promise[Unit] = js.native
   def deleteAsync(fileUri: String, options: Idempotent): js.Promise[Unit] = js.native
-  def downloadAsync(uri: String, fileUri: String): js.Promise[DownloadResult] = js.native
-  def downloadAsync(uri: String, fileUri: String, options: DownloadOptions): js.Promise[DownloadResult] = js.native
+  def deleteLegacyDocumentDirectoryAndroid(): js.Promise[Unit] = js.native
+  def downloadAsync(uri: String, fileUri: String): js.Promise[FileSystemDownloadResult] = js.native
+  def downloadAsync(uri: String, fileUri: String, options: DownloadOptions): js.Promise[FileSystemDownloadResult] = js.native
   def getContentUriAsync(fileUri: String): js.Promise[String] = js.native
   def getFreeDiskStorageAsync(): js.Promise[Double] = js.native
   def getInfoAsync(fileUri: String): js.Promise[FileInfo] = js.native
@@ -61,6 +118,8 @@ object mod extends js.Object {
   def readAsStringAsync(fileUri: String): js.Promise[String] = js.native
   def readAsStringAsync(fileUri: String, options: ReadingOptions): js.Promise[String] = js.native
   def readDirectoryAsync(fileUri: String): js.Promise[js.Array[String]] = js.native
+  def uploadAsync(url: String, fileUri: String): js.Promise[FileSystemUploadResult] = js.native
+  def uploadAsync(url: String, fileUri: String, options: FileSystemUploadOptions): js.Promise[FileSystemUploadResult] = js.native
   def writeAsStringAsync(fileUri: String, contents: String): js.Promise[Unit] = js.native
   def writeAsStringAsync(fileUri: String, contents: String, options: WritingOptions): js.Promise[Unit] = js.native
   @js.native
@@ -69,6 +128,24 @@ object mod extends js.Object {
     /* "utf8" */ val UTF8: typingsSlinky.expoFileSystem.fileSystemTypesMod.EncodingType.UTF8 with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.expoFileSystem.fileSystemTypesMod.EncodingType with String] = js.native
+  }
+  
+  @js.native
+  object FileSystemSessionType extends js.Object {
+    /* 0 */ val BACKGROUND: typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemSessionType.BACKGROUND with Double = js.native
+    /* 1 */ val FOREGROUND: typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemSessionType.FOREGROUND with Double = js.native
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[
+        typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemSessionType with Double
+      ] = js.native
+  }
+  
+  @js.native
+  object FileSystemUploadType extends js.Object {
+    /* 0 */ val BINARY_CONTENT: typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemUploadType.BINARY_CONTENT with Double = js.native
+    /* 1 */ val MULTIPART: typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemUploadType.MULTIPART with Double = js.native
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.expoFileSystem.fileSystemTypesMod.FileSystemUploadType with Double] = js.native
   }
   
 }

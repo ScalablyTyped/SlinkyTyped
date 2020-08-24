@@ -1,7 +1,9 @@
 package typingsSlinky.reactDragtastic.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactDragtastic.anon.StateisActivebooleanevent
 import typingsSlinky.reactDragtastic.mod.DraggableProps
 import typingsSlinky.reactDragtastic.mod.Id
 import typingsSlinky.reactDragtastic.mod.Type
@@ -31,6 +33,8 @@ object Draggable {
     @scala.inline
     def onDragStart(value: /* data */ js.Any => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
     @scala.inline
+    def subscribeToVarargs(value: String*): this.type = set("subscribeTo", js.Array(value :_*))
+    @scala.inline
     def subscribeTo(value: js.Array[String]): this.type = set("subscribeTo", value.asInstanceOf[js.Any])
     @scala.inline
     def subscribeToNull: this.type = set("subscribeTo", null)
@@ -39,6 +43,10 @@ object Draggable {
   }
   
   def withProps(p: DraggableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Draggable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: StateisActivebooleanevent => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DraggableProps]))
+  }
 }
 

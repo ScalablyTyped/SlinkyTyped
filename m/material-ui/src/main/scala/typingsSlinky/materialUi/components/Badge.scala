@@ -1,26 +1,25 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.BadgeProps
-import typingsSlinky.materialUi.badgeMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Badge {
-  @JSImport("material-ui/Badge", JSImport.Default)
+  @JSImport("material-ui", "Badge")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.Badge] {
     @scala.inline
-    def badgeContent(value: TagMod[Any]): this.type = set("badgeContent", value.asInstanceOf[js.Any])
+    def badgeContent(value: ReactElement): this.type = set("badgeContent", value.asInstanceOf[js.Any])
     @scala.inline
     def badgeStyle(value: CSSProperties): this.type = set("badgeStyle", value.asInstanceOf[js.Any])
     @scala.inline

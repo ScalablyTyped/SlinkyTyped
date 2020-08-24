@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "DirectiveAst")
 @js.native
 class DirectiveAst protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.DirectiveAst {
+  extends typingsSlinky.angularCompiler.compilerMod.DirectiveAst {
   def this(
     directive: CompileDirectiveSummary,
     inputs: js.Array[typingsSlinky.angularCompiler.templateAstMod.BoundDirectivePropertyAst],

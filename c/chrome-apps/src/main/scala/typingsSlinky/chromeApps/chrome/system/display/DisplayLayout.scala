@@ -66,25 +66,18 @@ object DisplayLayout {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOffset(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withParentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOffset(value: integer): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPosition(
+    def setParentId(value: String): Self = this.set("parentId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPosition(
       value: ToStringLiteral[
           BOTTOM, 
           /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
@@ -93,11 +86,7 @@ object DisplayLayout {
             top_ | right_ | bottom_ | left_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("position", value.asInstanceOf[js.Any])
   }
   
 }

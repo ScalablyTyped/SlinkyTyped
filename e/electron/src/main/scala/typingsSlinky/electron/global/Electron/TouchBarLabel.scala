@@ -10,6 +10,9 @@ import scala.scalajs.js.annotation._
 class TouchBarLabel protected ()
   extends typingsSlinky.electron.Electron.TouchBarLabel {
   // Docs: http://electronjs.org/docs/api/touch-bar-label
+  /**
+    * TouchBarLabel
+    */
   def this(options: TouchBarLabelConstructorOptions) = this()
 }
 

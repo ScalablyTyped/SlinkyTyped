@@ -20,7 +20,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactSimpleMaps.anon.Default
 import typingsSlinky.reactSimpleMaps.mod.GeographyProps
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings._empty
@@ -103,7 +102,7 @@ object Geography {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, SVGPathElement] {
     @scala.inline
     def accentHeight(value: Double | String): this.type = set("accentHeight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -477,7 +476,7 @@ object Geography {
     @scala.inline
     def onBeforeInput(value: SyntheticEvent[EventTarget with SVGPathElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
     @scala.inline
-    def onBlur(value: SyntheticFocusEvent[SVGPathElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* event */ SyntheticFocusEvent[SVGPathElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onCanPlay(value: SyntheticEvent[Event, SVGPathElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
@@ -527,7 +526,7 @@ object Geography {
     @scala.inline
     def onError(value: SyntheticEvent[Event, SVGPathElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: SyntheticFocusEvent[SVGPathElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* event */ SyntheticFocusEvent[SVGPathElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onInput(value: SyntheticEvent[EventTarget with SVGPathElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline

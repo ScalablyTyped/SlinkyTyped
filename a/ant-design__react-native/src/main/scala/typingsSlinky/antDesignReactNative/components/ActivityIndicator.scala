@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.activityIndicatorMod.ActivityIndicatorNativeProps
-import typingsSlinky.antDesignReactNative.activityIndicatorMod.default
 import typingsSlinky.antDesignReactNative.activityIndicatorStyleMod.ActivityIndicatorStyle
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.large
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.small
@@ -12,14 +11,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActivityIndicator {
-  @JSImport("@ant-design/react-native/lib/activity-indicator", JSImport.Default)
+  @JSImport("@ant-design/react-native", "ActivityIndicator")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.ActivityIndicator] {
     @scala.inline
     def animating(value: Boolean): this.type = set("animating", value.asInstanceOf[js.Any])
     @scala.inline

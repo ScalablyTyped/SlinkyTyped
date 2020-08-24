@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobile.abstractPickerMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -13,7 +12,7 @@ trait AbstractPicker
   var scrollValue: js.Any = js.native
   def fixOnOk(cascader: js.Any): Unit = js.native
   def getPickerCol(): js.Array[ReactElement] = js.native
-  def getSel(): js.UndefOr[String | js.Array[TagMod[Any]]] = js.native
+  def getSel(): js.UndefOr[String | js.Array[ReactElement]] = js.native
   def onOk(v: js.Any): Unit = js.native
   def onPickerChange(v: js.Any): Unit = js.native
   def onVisibleChange(visible: Boolean): Unit = js.native

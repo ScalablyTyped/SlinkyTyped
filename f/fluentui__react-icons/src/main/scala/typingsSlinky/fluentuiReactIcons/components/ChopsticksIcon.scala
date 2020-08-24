@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChopsticksIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ChopsticksIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChopsticksIcon")
   @js.native
   object component extends js.Object
   

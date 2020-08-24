@@ -2,7 +2,6 @@ package typingsSlinky.reactMapGl.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactMapGl.mod.DraggableControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +13,11 @@ object DraggableControl {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: DraggableControlProps] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactMapGl.mod.DraggableControlProps */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.DraggableControl[js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.DraggableControl[T]]
   
-  def apply[T <: DraggableControlProps](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T <: DraggableControlProps](companion: DraggableControl.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactMapGl.mod.DraggableControlProps */ T](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactMapGl.mod.DraggableControlProps */ T](companion: DraggableControl.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

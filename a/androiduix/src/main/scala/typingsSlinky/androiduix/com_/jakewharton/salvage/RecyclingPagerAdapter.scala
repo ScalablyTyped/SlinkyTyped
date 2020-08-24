@@ -48,29 +48,18 @@ object RecyclingPagerAdapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetItemViewType(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemViewType")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetView(value: (Double, View, ViewGroup) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setGetItemViewType(value: Double => Double): Self = this.set("getItemViewType", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetViewTypeCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewTypeCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetView(value: (Double, View, ViewGroup) => View): Self = this.set("getView", js.Any.fromFunction3(value))
     @scala.inline
-    def withRecycleBin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycleBin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetViewTypeCount(value: () => Double): Self = this.set("getViewTypeCount", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRecycleBin(value: js.Any): Self = this.set("recycleBin", value.asInstanceOf[js.Any])
   }
   
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.angularCompiler.srcCompilerMod
 
-import typingsSlinky.angularCompiler.i18nAstMod.Message
-import typingsSlinky.angularCompiler.i18nAstMod.Node
+import typingsSlinky.angularCompiler.i18nAstMod.I18nMeta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +13,7 @@ class Text protected ()
   def this(
     value: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    value: String,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    i18n: Node
+    i18n: I18nMeta
   ) = this()
 }
 

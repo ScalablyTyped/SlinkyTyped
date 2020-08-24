@@ -18,12 +18,14 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonSearchbarElement
+import typingsSlinky.ionicCore.mod.AutocompleteTypes
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicReact.anon.IonSearchbarPickHTMLAttri
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
 import typingsSlinky.ionicReact.ionicReactStrings.all
+import typingsSlinky.ionicReact.ionicReactStrings.always
 import typingsSlinky.ionicReact.ionicReactStrings.ascending
 import typingsSlinky.ionicReact.ionicReactStrings.assertive
 import typingsSlinky.ionicReact.ionicReactStrings.both
@@ -32,8 +34,12 @@ import typingsSlinky.ionicReact.ionicReactStrings.date
 import typingsSlinky.ionicReact.ionicReactStrings.decimal
 import typingsSlinky.ionicReact.ionicReactStrings.descending
 import typingsSlinky.ionicReact.ionicReactStrings.dialog
+import typingsSlinky.ionicReact.ionicReactStrings.done
 import typingsSlinky.ionicReact.ionicReactStrings.email
+import typingsSlinky.ionicReact.ionicReactStrings.enter
 import typingsSlinky.ionicReact.ionicReactStrings.execute
+import typingsSlinky.ionicReact.ionicReactStrings.focus
+import typingsSlinky.ionicReact.ionicReactStrings.go
 import typingsSlinky.ionicReact.ionicReactStrings.grammar
 import typingsSlinky.ionicReact.ionicReactStrings.grid
 import typingsSlinky.ionicReact.ionicReactStrings.horizontal
@@ -47,6 +53,8 @@ import typingsSlinky.ionicReact.ionicReactStrings.md
 import typingsSlinky.ionicReact.ionicReactStrings.menu
 import typingsSlinky.ionicReact.ionicReactStrings.mixed
 import typingsSlinky.ionicReact.ionicReactStrings.move
+import typingsSlinky.ionicReact.ionicReactStrings.never
+import typingsSlinky.ionicReact.ionicReactStrings.next
 import typingsSlinky.ionicReact.ionicReactStrings.no
 import typingsSlinky.ionicReact.ionicReactStrings.none
 import typingsSlinky.ionicReact.ionicReactStrings.number
@@ -58,8 +66,10 @@ import typingsSlinky.ionicReact.ionicReactStrings.page
 import typingsSlinky.ionicReact.ionicReactStrings.password
 import typingsSlinky.ionicReact.ionicReactStrings.polite
 import typingsSlinky.ionicReact.ionicReactStrings.popup
+import typingsSlinky.ionicReact.ionicReactStrings.previous
 import typingsSlinky.ionicReact.ionicReactStrings.removals
 import typingsSlinky.ionicReact.ionicReactStrings.search
+import typingsSlinky.ionicReact.ionicReactStrings.send
 import typingsSlinky.ionicReact.ionicReactStrings.spelling
 import typingsSlinky.ionicReact.ionicReactStrings.step
 import typingsSlinky.ionicReact.ionicReactStrings.tel
@@ -72,7 +82,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,7 +94,7 @@ object IonSearchbar {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonSearchbarElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -195,7 +204,7 @@ object IonSearchbar {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
-    def autocomplete(value: on | off): this.type = set("autocomplete", value.asInstanceOf[js.Any])
+    def autocomplete(value: AutocompleteTypes): this.type = set("autocomplete", value.asInstanceOf[js.Any])
     @scala.inline
     def cancelButtonIcon(value: String): this.type = set("cancelButtonIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -206,8 +215,6 @@ object IonSearchbar {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def clearIcon(value: String): this.type = set("clearIcon", value.asInstanceOf[js.Any])
-    @scala.inline
-    def color(value: Color with String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -221,6 +228,8 @@ object IonSearchbar {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -228,6 +237,8 @@ object IonSearchbar {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterkeyhint(value: enter | done | go | next | previous | search | send): this.type = set("enterkeyhint", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -603,7 +614,7 @@ object IonSearchbar {
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
-    def showCancelButton(value: Boolean | String): this.type = set("showCancelButton", value.asInstanceOf[js.Any])
+    def showCancelButton(value: never | focus | always): this.type = set("showCancelButton", value.asInstanceOf[js.Any])
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
     @scala.inline
@@ -633,6 +644,10 @@ object IonSearchbar {
   }
   
   def withProps(p: IonSearchbarPickHTMLAttri): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: IonSearchbar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(color: js.UndefOr[Color] with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IonSearchbarPickHTMLAttri]))
+  }
 }
 

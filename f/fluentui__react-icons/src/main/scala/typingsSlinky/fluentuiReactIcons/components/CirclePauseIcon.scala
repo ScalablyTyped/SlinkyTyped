@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CirclePauseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CirclePauseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CirclePauseIcon")
   @js.native
   object component extends js.Object
   

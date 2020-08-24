@@ -4,6 +4,7 @@ import typingsSlinky.ecmarkdown.mod.Options
 import typingsSlinky.ecmarkdown.nodeTypesMod.CommentToken
 import typingsSlinky.ecmarkdown.nodeTypesMod.EOFToken
 import typingsSlinky.ecmarkdown.nodeTypesMod.FormatToken
+import typingsSlinky.ecmarkdown.nodeTypesMod.IdToken
 import typingsSlinky.ecmarkdown.nodeTypesMod.LinebreakToken
 import typingsSlinky.ecmarkdown.nodeTypesMod.OpaqueTagToken
 import typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListToken
@@ -42,6 +43,7 @@ object tokenizerMod extends js.Object {
     def enqueue(tok: Token, pos: Position): Unit = js.native
     def enqueueLookahead(tok: Token, pos: Position): Unit = js.native
     def getLocation(): Position = js.native
+    def locate(tok: IdToken, startPos: Position): Unit = js.native
     def locate(tok: Token, startPos: Position): Unit = js.native
     def matchToken(): Unit = js.native
     def next(): Token = js.native
@@ -54,6 +56,7 @@ object tokenizerMod extends js.Object {
     def scanToEndTag(endTag: String): String = js.native
     def scanWhitespace(): String = js.native
     def tryScanComment(): js.UndefOr[String] = js.native
+    def tryScanId(): IdToken | Null = js.native
     def tryScanTag(): js.UndefOr[RegExpMatchArray] = js.native
   }
   

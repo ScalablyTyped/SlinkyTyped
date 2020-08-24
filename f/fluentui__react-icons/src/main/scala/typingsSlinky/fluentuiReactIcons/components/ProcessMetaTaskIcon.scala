@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ProcessMetaTaskIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ProcessMetaTaskIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ProcessMetaTaskIcon")
   @js.native
   object component extends js.Object
   

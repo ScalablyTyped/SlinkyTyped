@@ -39,53 +39,30 @@ object CertPattern {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnrollmentURI(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnrollmentURI")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutEnrollmentURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnrollmentURI")(js.undefined)
-        ret
-    }
+    def setEnrollmentURIVarargs(value: String*): Self = this.set("EnrollmentURI", js.Array(value :_*))
     @scala.inline
-    def withIssuer(value: IssuerSubjectPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEnrollmentURI(value: js.Array[String]): Self = this.set("EnrollmentURI", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Issuer")(js.undefined)
-        ret
-    }
+    def deleteEnrollmentURI: Self = this.set("EnrollmentURI", js.undefined)
     @scala.inline
-    def withIssuerCARef(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IssuerCARef")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIssuer(value: IssuerSubjectPattern): Self = this.set("Issuer", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIssuerCARef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IssuerCARef")(js.undefined)
-        ret
-    }
+    def deleteIssuer: Self = this.set("Issuer", js.undefined)
     @scala.inline
-    def withIssuerSubjectPattern(value: IssuerSubjectPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IssuerSubjectPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIssuerCARefVarargs(value: String*): Self = this.set("IssuerCARef", js.Array(value :_*))
     @scala.inline
-    def withoutIssuerSubjectPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IssuerSubjectPattern")(js.undefined)
-        ret
-    }
+    def setIssuerCARef(value: js.Array[String]): Self = this.set("IssuerCARef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIssuerCARef: Self = this.set("IssuerCARef", js.undefined)
+    @scala.inline
+    def setIssuerSubjectPattern(value: IssuerSubjectPattern): Self = this.set("IssuerSubjectPattern", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIssuerSubjectPattern: Self = this.set("IssuerSubjectPattern", js.undefined)
   }
   
 }

@@ -11,7 +11,6 @@ import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayer
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerProps
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerStyleProps
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerStyles
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -27,7 +26,7 @@ object KeytipLayer {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, IKeytipLayer] {
     @scala.inline
     def componentRefFunction1(value: /* ref */ IKeytipLayer | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
     @scala.inline
@@ -35,9 +34,15 @@ object KeytipLayer {
     @scala.inline
     def componentRef(value: IRefObject[IKeytipLayer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     @scala.inline
+    def keytipExitSequencesVarargs(value: IKeytipTransitionKey*): this.type = set("keytipExitSequences", js.Array(value :_*))
+    @scala.inline
     def keytipExitSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipExitSequences", value.asInstanceOf[js.Any])
     @scala.inline
+    def keytipReturnSequencesVarargs(value: IKeytipTransitionKey*): this.type = set("keytipReturnSequences", js.Array(value :_*))
+    @scala.inline
     def keytipReturnSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipReturnSequences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keytipStartSequencesVarargs(value: IKeytipTransitionKey*): this.type = set("keytipStartSequences", js.Array(value :_*))
     @scala.inline
     def keytipStartSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipStartSequences", value.asInstanceOf[js.Any])
     @scala.inline

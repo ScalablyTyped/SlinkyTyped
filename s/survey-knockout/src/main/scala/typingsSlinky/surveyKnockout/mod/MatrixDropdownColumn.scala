@@ -16,7 +16,6 @@ class MatrixDropdownColumn protected ()
   var colOwner: IMatrixColumnOwner = js.native
   var enableIf: String = js.native
   val fullTitle: String = js.native
-  val hasCondition: Boolean = js.native
   var hasOther: Boolean = js.native
   val hasTotal: Boolean = js.native
   var hasVisibleCell: Boolean = js.native
@@ -51,15 +50,8 @@ class MatrixDropdownColumn protected ()
   def createCellQuestion(data: js.Any): Question = js.native
   /* protected */ def createNewQuestion(cellType: String): Question = js.native
   def defaultCellTypeChanged(): Unit = js.native
-  def getDynamicProperties(): js.Array[String] = js.native
   def getDynamicPropertyName(): String = js.native
   def getDynamicType(): String = js.native
-  /* CompleteClass */
-  override def getLocale(): String = js.native
-  /* CompleteClass */
-  override def getMarkdownHtml(text: String): String = js.native
-  /* CompleteClass */
-  override def getProcessedText(text: String): String = js.native
   def setIndex(`val`: Double): Unit = js.native
   def setIsVisible(newVal: Boolean): Unit = js.native
   /* protected */ def setQuestionProperties(question: Question): Unit = js.native

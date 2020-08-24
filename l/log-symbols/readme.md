@@ -1,7 +1,7 @@
 
 # Scala.js typings for log-symbols
 
-Typings are for version 3.0.0
+Typings are for version 4.0.0
 
 ## Library description:
 Colored symbols for various log levels. Example: `✔︎ Success`

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DelveLogoFillIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DelveLogoFillIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DelveLogoFillIcon")
   @js.native
   object component extends js.Object
   

@@ -1,12 +1,6 @@
 package typingsSlinky.webpackBlocks
 
-import typingsSlinky.webpack.mod.Configuration
-import typingsSlinky.webpack.mod.Entry
-import typingsSlinky.webpack.mod.Options.Devtool
-import typingsSlinky.webpack.mod.Options.Performance
-import typingsSlinky.webpack.mod.Output
-import typingsSlinky.webpack.mod.Plugin
-import typingsSlinky.webpack.mod.Resolve
+import typingsSlinky.std.Plugin
 import typingsSlinky.webpackBlocksAssets.mod.css.CssOptions
 import typingsSlinky.webpackBlocksAssets.mod.css.FileOptions
 import typingsSlinky.webpackBlocksAssets.mod.css.ModuleOptions
@@ -25,13 +19,15 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def addPlugins(plugins: js.Array[Plugin]): Block[Context] = js.native
-  def createConfig(configSetters: js.Array[Block[Context]]): Configuration = js.native
-  def createConfig(configSetters: Block[Context]): Configuration = js.native
-  def customConfig(wpConfig: js.Any): Configuration = js.native
+  def createConfig(configSetters: js.Array[Block[Context]]): js.Any = js.native
+  def createConfig(configSetters: Block[Context]): js.Any = js.native
+  def customConfig(wpConfig: js.Any): js.Any = js.native
   def defineConstants(constants: ConstantOptions): Block[Context] = js.native
   def entryPoint(entry: String): Block[Context] = js.native
+  def entryPoint(
+    entry: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entry */ js.Any
+  ): Block[Context] = js.native
   def entryPoint(entry: js.Array[String]): Block[Context] = js.native
-  def entryPoint(entry: Entry): Block[Context] = js.native
   def env(envName: String, configSetters: js.Array[Block[Context]]): Block[Context] = js.native
   def file(): js.Any = js.native
   def file(options: FileOptions): js.Any = js.native
@@ -41,17 +37,25 @@ object mod extends js.Object {
   def `match`(test: js.Array[String], configSetters: js.Array[Block[Context]]): Block[Context] = js.native
   def `match`(test: js.Array[String], options: MatchOptions, configSetters: js.Array[Block[Context]]): Block[Context] = js.native
   def optimization(optimizationOptions: OptimizationOptions): Block[Context] = js.native
-  def performance(performanceBudget: Performance): Block[Context] = js.native
-  def resolve(config: Resolve): Block[Context] = js.native
+  def performance(
+    performanceBudget: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Options.Performance */ js.Any
+  ): Block[Context] = js.native
+  def resolve(
+    config: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Resolve */ js.Any
+  ): Block[Context] = js.native
   def setContext(contextPath: String): Block[Context] = js.native
   def setDevTool(devtool: String): Block[Context] = js.native
   def setEnv(constants: ConstantOptions): js.Any = js.native
   def setMode(mode: js.Any): Block[Context] = js.native
   def setOutput(): Block[Context] = js.native
   def setOutput(output: String): Block[Context] = js.native
-  def setOutput(output: Output): Block[Context] = js.native
+  def setOutput(
+    output: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Output */ js.Any
+  ): Block[Context] = js.native
   def sourceMaps(): Block[Context] = js.native
-  def sourceMaps(devtool: Devtool): Block[Context] = js.native
+  def sourceMaps(
+    devtool: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Options.Devtool */ js.Any
+  ): Block[Context] = js.native
   def url(): js.Any = js.native
   def url(options: UrlOptions): js.Any = js.native
   def when(condition: Boolean, configSetters: js.Array[Block[Context]]): Block[Context] = js.native
@@ -72,6 +76,8 @@ object mod extends js.Object {
   @js.native
   object devServer extends js.Object {
     def apply(): js.Any = js.native
+    def apply(options: js.UndefOr[scala.Nothing], entry: String): js.Any = js.native
+    def apply(options: js.UndefOr[scala.Nothing], entry: js.Array[String]): js.Any = js.native
     def apply(options: Options): js.Any = js.native
     def apply(options: Options, entry: String): js.Any = js.native
     def apply(options: Options, entry: js.Array[String]): js.Any = js.native

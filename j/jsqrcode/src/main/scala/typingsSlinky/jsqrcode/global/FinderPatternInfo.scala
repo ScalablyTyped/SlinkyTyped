@@ -13,11 +13,5 @@ class FinderPatternInfo protected ()
         typingsSlinky.jsqrcode.AlignmentPattern, 
         typingsSlinky.jsqrcode.AlignmentPattern
       ]) = this()
-  /* CompleteClass */
-  override val BottomLeft: typingsSlinky.jsqrcode.AlignmentPattern = js.native
-  /* CompleteClass */
-  override val TopLeft: typingsSlinky.jsqrcode.AlignmentPattern = js.native
-  /* CompleteClass */
-  override val TopRight: typingsSlinky.jsqrcode.AlignmentPattern = js.native
 }
 

@@ -26,7 +26,26 @@ object calendarMod extends js.Object {
     def onSelectedDate(date: js.Date): Unit = js.native
     def onTimeChange(date: js.Date): Unit = js.native
     def selectDate(date: js.Date): StateType = js.native
+    def selectDate(
+      date: js.Date,
+      useDateTime: js.UndefOr[scala.Nothing],
+      oldState: js.UndefOr[scala.Nothing],
+      props: ReadonlychildrenReactNode
+    ): StateType = js.native
+    def selectDate(date: js.Date, useDateTime: js.UndefOr[scala.Nothing], oldState: EndDate): StateType = js.native
+    def selectDate(
+      date: js.Date,
+      useDateTime: js.UndefOr[scala.Nothing],
+      oldState: EndDate,
+      props: ReadonlychildrenReactNode
+    ): StateType = js.native
     def selectDate(date: js.Date, useDateTime: Boolean): StateType = js.native
+    def selectDate(
+      date: js.Date,
+      useDateTime: Boolean,
+      oldState: js.UndefOr[scala.Nothing],
+      props: ReadonlychildrenReactNode
+    ): StateType = js.native
     def selectDate(date: js.Date, useDateTime: Boolean, oldState: EndDate): StateType = js.native
     def selectDate(date: js.Date, useDateTime: Boolean, oldState: EndDate, props: ReadonlychildrenReactNode): StateType = js.native
     def setClientHeight(height: Double): Unit = js.native

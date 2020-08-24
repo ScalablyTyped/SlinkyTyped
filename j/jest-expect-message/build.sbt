@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-expect-message"
-version := "1.0-dt-20200504Z-1f4b7c"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200504Z-eed89c"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

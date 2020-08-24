@@ -15,36 +15,39 @@ trait Source[Q /* <: BaseQuad */] extends js.Object {
     * @param graph     The optional exact graph or graph regex to match.
     * @return The resulting quad stream.
     */
-  def `match`(): Stream[Q] = js.native
-  def `match`(subject: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: Term, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp, `object`: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: Term, predicate: js.RegExp, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term, `object`: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: Term, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: Term, graph: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: Term, graph: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: js.RegExp): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: js.RegExp, graph: Term): Stream[Q] = js.native
-  def `match`(subject: js.RegExp, predicate: js.RegExp, `object`: js.RegExp, graph: js.RegExp): Stream[Q] = js.native
+  def `match`(
+    subject: js.UndefOr[Term | js.RegExp],
+    predicate: js.UndefOr[Term | js.RegExp],
+    `object`: js.UndefOr[Term | js.RegExp],
+    graph: js.UndefOr[Term | js.RegExp]
+  ): Stream[Q] = js.native
+}
+
+object Source {
+  @scala.inline
+  def apply[/* <: typingsSlinky.rdfJs.mod.BaseQuad */ Q](
+    `match`: (js.UndefOr[Term | js.RegExp], js.UndefOr[Term | js.RegExp], js.UndefOr[Term | js.RegExp], js.UndefOr[Term | js.RegExp]) => Stream[Q]
+  ): Source[Q] = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("match")(js.Any.fromFunction4(`match`))
+    __obj.asInstanceOf[Source[Q]]
+  }
+  @scala.inline
+  implicit class SourceOps[Self <: Source[_], /* <: typingsSlinky.rdfJs.mod.BaseQuad */ Q] (val x: Self with Source[Q]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setMatch(
+      value: (js.UndefOr[Term | js.RegExp], js.UndefOr[Term | js.RegExp], js.UndefOr[Term | js.RegExp], js.UndefOr[Term | js.RegExp]) => Stream[Q]
+    ): Self = this.set("match", js.Any.fromFunction4(value))
+  }
+  
 }
 

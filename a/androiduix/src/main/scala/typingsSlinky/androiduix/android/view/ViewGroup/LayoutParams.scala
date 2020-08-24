@@ -42,47 +42,24 @@ object LayoutParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_attrBinder(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attrBinder")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCreateClassAttrBinder(value: () => ClassBinderMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createClassAttrBinder")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_attrBinder(value: js.Any): Self = this.set("_attrBinder", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetAttrBinder(value: () => AttrBinder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrBinder")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCreateClassAttrBinder(value: () => ClassBinderMap): Self = this.set("createClassAttrBinder", js.Any.fromFunction0(value))
     @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetAttrBinder(value: () => AttrBinder): Self = this.set("getAttrBinder", js.Any.fromFunction0(value))
     @scala.inline
-    def withInitBindAttr(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initBindAttr")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetBaseAttributes(value: (TypedArray, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBaseAttributes")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setInitBindAttr(value: () => js.Any): Self = this.set("initBindAttr", js.Any.fromFunction0(value))
     @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetBaseAttributes(value: (TypedArray, String, String) => Unit): Self = this.set("setBaseAttributes", js.Any.fromFunction3(value))
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
   }
   
 }

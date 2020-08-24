@@ -17,19 +17,25 @@ object Table {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactable.mod.Table[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactable.mod.Table[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnsVarargs(value: ColumnsType*): this.type = set("columns", js.Array(value :_*))
     @scala.inline
     def columns(value: js.Array[ColumnsType]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def currentPage(value: Double): this.type = set("currentPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: T*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[T]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultSort(value: Column): this.type = set("defaultSort", value.asInstanceOf[js.Any])
     @scala.inline
     def filterBy(value: String): this.type = set("filterBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterableVarargs(value: String*): this.type = set("filterable", js.Array(value :_*))
     @scala.inline
     def filterable(value: js.Array[String]): this.type = set("filterable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,6 +52,8 @@ object Table {
     def pageButtonLimit(value: Double): this.type = set("pageButtonLimit", value.asInstanceOf[js.Any])
     @scala.inline
     def sortBy(value: Boolean): this.type = set("sortBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortableVarargs(value: String*): this.type = set("sortable", js.Array(value :_*))
     @scala.inline
     def sortable(value: js.Array[String] | Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
   }

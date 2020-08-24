@@ -3,6 +3,7 @@ package typingsSlinky.jointjs.mod.elementTools.Button
 import typingsSlinky.jointjs.mod.dia.Event
 import typingsSlinky.jointjs.mod.dia.LinkView
 import typingsSlinky.jointjs.mod.dia.MarkupJSON
+import typingsSlinky.jointjs.mod.dia.MarkupNodeJSON
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,89 +33,40 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: (/* evt */ Event, /* view */ LinkView) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
+    def setAction(value: (/* evt */ Event, /* view */ LinkView) => Unit): Self = this.set("action", js.Any.fromFunction2(value))
     @scala.inline
-    def withMarkup(value: MarkupJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
-    def withoutMarkup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markup")(js.undefined)
-        ret
-    }
+    def setMarkupVarargs(value: MarkupNodeJSON*): Self = this.set("markup", js.Array(value :_*))
     @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMarkup(value: MarkupJSON): Self = this.set("markup", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
+    def deleteMarkup: Self = this.set("markup", js.undefined)
     @scala.inline
-    def withRotate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOffset(value: Double): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
+    def deleteOffset: Self = this.set("offset", js.undefined)
     @scala.inline
-    def withUseModelGeometry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useModelGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRotate(value: Boolean): Self = this.set("rotate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutUseModelGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useModelGeometry")(js.undefined)
-        ret
-    }
+    def deleteRotate: Self = this.set("rotate", js.undefined)
     @scala.inline
-    def withX(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUseModelGeometry(value: Boolean): Self = this.set("useModelGeometry", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
+    def deleteUseModelGeometry: Self = this.set("useModelGeometry", js.undefined)
     @scala.inline
-    def withY(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setX(value: Double | String): Self = this.set("x", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
+    def deleteX: Self = this.set("x", js.undefined)
+    @scala.inline
+    def setY(value: Double | String): Self = this.set("y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteY: Self = this.set("y", js.undefined)
   }
   
 }

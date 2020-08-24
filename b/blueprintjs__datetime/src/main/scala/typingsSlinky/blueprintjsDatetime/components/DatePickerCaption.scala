@@ -21,6 +21,8 @@ object DatePickerCaption {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.datePickerCaptionMod.DatePickerCaption] {
     @scala.inline
+    def monthsVarargs(value: String*): this.type = set("months", js.Array(value :_*))
+    @scala.inline
     def months(value: js.Array[String]): this.type = set("months", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))

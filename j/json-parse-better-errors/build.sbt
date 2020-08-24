@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "json-parse-better-errors"
-version := "1.0-dt-20180226Z-b39238"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20180226Z-d4d381"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

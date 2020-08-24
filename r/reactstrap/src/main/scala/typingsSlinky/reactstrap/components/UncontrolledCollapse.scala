@@ -21,6 +21,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -81,10 +82,7 @@ object UncontrolledCollapse {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[
-          slinky.web.html.`*`.tag.type, 
-          typingsSlinky.reactstrap.mod.UncontrolledCollapse[js.Any]
-        ] {
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.UncontrolledCollapse[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -267,6 +265,8 @@ object UncontrolledCollapse {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -646,11 +646,13 @@ object UncontrolledCollapse {
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
-    def tag(value: String | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toggleEventsVarargs(value: String*): this.type = set("toggleEvents", js.Array(value :_*))
     @scala.inline
     def toggleEvents(value: js.Array[String]): this.type = set("toggleEvents", value.asInstanceOf[js.Any])
     @scala.inline
@@ -663,6 +665,8 @@ object UncontrolledCollapse {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

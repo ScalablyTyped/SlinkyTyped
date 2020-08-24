@@ -1,7 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.ionicCoreStrings.ios
-import typingsSlinky.ionicCore.ionicCoreStrings.md
+import typingsSlinky.ionicCore.mod.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ionicGlobalMod extends js.Object {
   def default(): Unit = js.native
-  def getIonMode(): ios | md = js.native
-  def getIonMode(ref: js.Any): ios | md = js.native
+  def getIonMode(): Mode = js.native
+  def getIonMode(ref: js.Any): Mode = js.native
 }
 

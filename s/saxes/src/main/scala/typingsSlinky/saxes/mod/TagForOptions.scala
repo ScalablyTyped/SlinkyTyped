@@ -14,24 +14,12 @@ trait TagForOptions[O /* <: SaxesOptions */] extends js.Object
 
 object TagForOptions {
   @scala.inline
-  def SaxesTag[O](
-    attributes: Record[String, SaxesAttributeNS | String],
-    isSelfClosing: Boolean,
-    name: String,
-    local: String = null,
-    ns: Record[String, String] = null,
-    prefix: String = null,
-    uri: String = null
-  ): TagForOptions[O] = {
+  def SaxesTag[/* <: typingsSlinky.saxes.mod.SaxesOptions */ O](attributes: Record[String, SaxesAttributeNS | String], isSelfClosing: Boolean, name: String): TagForOptions[O] = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], isSelfClosing = isSelfClosing.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (local != null) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
-    if (ns != null) __obj.updateDynamic("ns")(ns.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagForOptions[O]]
   }
   @scala.inline
-  def SaxesTagPlain[O](
+  def SaxesTagPlain[/* <: typingsSlinky.saxes.mod.SaxesOptions */ O](
     attributes: (Record[String, SaxesAttributeNS | String]) with (Record[String, String]),
     isSelfClosing: Boolean,
     name: String
@@ -40,7 +28,7 @@ object TagForOptions {
     __obj.asInstanceOf[TagForOptions[O]]
   }
   @scala.inline
-  def SaxesTagNS[O](
+  def SaxesTagNS[/* <: typingsSlinky.saxes.mod.SaxesOptions */ O](
     attributes: (Record[String, SaxesAttributeNS | String]) with (Record[String, SaxesAttributeNS]),
     isSelfClosing: Boolean,
     local: String,

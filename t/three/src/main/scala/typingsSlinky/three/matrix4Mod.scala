@@ -1,7 +1,6 @@
 package typingsSlinky.three
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.three.bufferAttributeMod.BufferAttribute
 import typingsSlinky.three.eulerMod.Euler
 import typingsSlinky.three.matrix3Mod.Matrix
 import typingsSlinky.three.quaternionMod.Quaternion
@@ -16,13 +15,6 @@ object matrix4Mod extends js.Object {
   @js.native
   class Matrix4 () extends Matrix {
     /**
-    	 * @deprecated Use {@link Matrix4#applyToBufferAttribute matrix4.applyToBufferAttribute( attribute )} instead.
-    	 */
-    def applyToBuffer(buffer: BufferAttribute): BufferAttribute = js.native
-    def applyToBuffer(buffer: BufferAttribute, offset: Double): BufferAttribute = js.native
-    def applyToBuffer(buffer: BufferAttribute, offset: Double, length: Double): BufferAttribute = js.native
-    def applyToBufferAttribute(attribute: BufferAttribute): BufferAttribute = js.native
-    /**
     	 * Sets this matrix to the transformation composed of translation, rotation and scale.
     	 */
     def compose(translation: Vector3, rotation: Quaternion, scale: Vector3): Matrix4 = js.native
@@ -33,13 +25,9 @@ object matrix4Mod extends js.Object {
     	 */
     def crossVector(v: js.Any): Unit = js.native
     /**
-    	 * Decomposes this matrix into the translation, rotation and scale components.
-    	 * If parameters are not passed, new instances will be created.
+    	 * Decomposes this matrix into it's position, quaternion and scale components.
     	 */
-    def decompose(): js.Array[js.Object] = js.native
-    def decompose(translation: Vector3): js.Array[js.Object] = js.native
-    def decompose(translation: Vector3, rotation: Quaternion): js.Array[js.Object] = js.native
-    def decompose(translation: Vector3, rotation: Quaternion, scale: Vector3): js.Array[js.Object] = js.native
+    def decompose(translation: Vector3, rotation: Quaternion, scale: Vector3): Matrix4 = js.native
     def equals(matrix: Matrix4): Boolean = js.native
     def extractBasis(xAxis: Vector3, yAxis: Vector3, zAxis: Vector3): Matrix4 = js.native
     /**
@@ -73,7 +61,6 @@ object matrix4Mod extends js.Object {
     	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm.
     	 */
     def getInverse(m: Matrix4): Matrix4 = js.native
-    def getInverse(m: Matrix4, throwOnDegeneratee: Boolean): Matrix4 = js.native
     def getMaxScaleOnAxis(): Double = js.native
     /**
     	 * Constructs a rotation matrix, looking from eye towards center with defined up vector.
@@ -88,7 +75,6 @@ object matrix4Mod extends js.Object {
     	 * Creates a perspective projection matrix.
     	 */
     def makePerspective(fov: Double, aspect: Double, near: Double, far: Double): Matrix4 = js.native
-     // [Vector3, Quaternion, Vector3]
     /**
     	 * Creates a frustum matrix.
     	 */
@@ -187,12 +173,14 @@ object matrix4Mod extends js.Object {
       n44: Double
     ): Matrix4 = js.native
     def setPosition(v: Double): Matrix4 = js.native
+    def setPosition(v: Double, y: js.UndefOr[scala.Nothing], z: Double): Matrix4 = js.native
     def setPosition(v: Double, y: Double): Matrix4 = js.native
     def setPosition(v: Double, y: Double, z: Double): Matrix4 = js.native
     /**
     	 * Sets the position component for this matrix from vector v.
     	 */
     def setPosition(v: Vector3): Matrix4 = js.native
+    def setPosition(v: Vector3, y: js.UndefOr[scala.Nothing], z: Double): Matrix4 = js.native
     def setPosition(v: Vector3, y: Double): Matrix4 = js.native
     def setPosition(v: Vector3, y: Double, z: Double): Matrix4 = js.native
     /**
@@ -206,6 +194,7 @@ object matrix4Mod extends js.Object {
     	 * @return The provided array-like.
     	 */
     def toArray(): ArrayLike[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): ArrayLike[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     def toArray(array: ArrayLike[Double]): ArrayLike[Double] = js.native
@@ -218,6 +207,8 @@ object matrix4Mod extends js.Object {
     	 */
     @JSName("toArray")
     def toArray_Array(): js.Array[Double] = js.native
+    @JSName("toArray")
+    def toArray_Array(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
   }
   
 }

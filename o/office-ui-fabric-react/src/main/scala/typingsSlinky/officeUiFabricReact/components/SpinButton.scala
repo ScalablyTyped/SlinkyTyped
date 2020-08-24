@@ -328,7 +328,9 @@ object SpinButton {
     @scala.inline
     def onCut(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
     @scala.inline
-    def onDecrement(value: /* value */ String => String | Unit): this.type = set("onDecrement", js.Any.fromFunction1(value))
+    def onDecrement(
+      value: (/* value */ String, /* event */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLElement]]) => String | Unit
+    ): this.type = set("onDecrement", js.Any.fromFunction2(value))
     @scala.inline
     def onDoubleClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -360,7 +362,9 @@ object SpinButton {
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onIncrement(value: /* value */ String => String | Unit): this.type = set("onIncrement", js.Any.fromFunction1(value))
+    def onIncrement(
+      value: (/* value */ String, /* event */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLElement]]) => String | Unit
+    ): this.type = set("onIncrement", js.Any.fromFunction2(value))
     @scala.inline
     def onInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline

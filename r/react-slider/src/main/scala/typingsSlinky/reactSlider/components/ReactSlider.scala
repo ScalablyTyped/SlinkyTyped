@@ -23,6 +23,8 @@ object ReactSlider {
     extends AnyVal
        with StBuildingComponent[tag.type, ^] {
     @scala.inline
+    def ariaLabelVarargs(value: String*): this.type = set("ariaLabel", js.Array(value :_*))
+    @scala.inline
     def ariaLabel(value: String | js.Array[String]): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def ariaValuetextFunction1(value: /* value */ Index => String): this.type = set("ariaValuetext", js.Any.fromFunction1(value))
@@ -30,6 +32,8 @@ object ReactSlider {
     def ariaValuetext(value: String | (js.Function1[/* value */ Index, String])): this.type = set("ariaValuetext", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: Double*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: Double | js.Array[Double]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,6 +74,8 @@ object ReactSlider {
     def thumbClassName(value: String): this.type = set("thumbClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def trackClassName(value: String): this.type = set("trackClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: Double*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: Double | js.Array[Double]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

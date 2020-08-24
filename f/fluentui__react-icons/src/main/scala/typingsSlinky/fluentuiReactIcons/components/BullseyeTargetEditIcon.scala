@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BullseyeTargetEditIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BullseyeTargetEditIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BullseyeTargetEditIcon")
   @js.native
   object component extends js.Object
   

@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.EnterpriseData
 
-import typingsSlinky.winrtUwp.Windows.Storage.StorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.EnterpriseData.ProtectedContainerImportResult")
 @js.native
 abstract class ProtectedContainerImportResult ()
-  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedContainerImportResult {
-  /** The enterprise protected file that has been loaded from a container file. */
-  /* CompleteClass */
-  override var file: StorageFile = js.native
-  /** The protection status after an enterprise protected file has been imported from a container file. */
-  /* CompleteClass */
-  override var status: typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedImportExportStatus = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedContainerImportResult
 

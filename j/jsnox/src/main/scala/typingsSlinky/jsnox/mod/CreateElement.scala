@@ -1,7 +1,6 @@
 package typingsSlinky.jsnox.mod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
@@ -26,9 +25,10 @@ trait CreateElement extends js.Object {
     * @param children A single React node (string or ReactElement) or array of nodes.
     * Note that unlike with React itself, multiple children must be placed into an array.
     */
-  def apply[P](component: ReactComponentClass[P], children: TagMod[Any]): ReactElement = js.native
+  def apply[P](component: ReactComponentClass[P], children: ReactElement): ReactElement = js.native
   def apply[P](component: ReactComponentClass[P], props: P): ReactElement = js.native
-  def apply[P](component: ReactComponentClass[P], props: P, children: TagMod[Any]): ReactElement = js.native
+  def apply[P](component: ReactComponentClass[P], props: P, children: ReactElement): ReactElement = js.native
+  def apply[P](component: ReactComponentClass[P], props: js.UndefOr[scala.Nothing], children: ReactElement): ReactElement = js.native
   /**
     * Renders an HTML element from the given spec string, with optional props
     * and children
@@ -47,8 +47,9 @@ trait CreateElement extends js.Object {
     * @param children A single React node (string or ReactElement) or array of nodes.
     * Note that unlike with React itself, multiple children must be placed into an array.
     */
-  def apply[P](specString: String, children: TagMod[Any]): ReactElement = js.native
+  def apply[P](specString: String, children: ReactElement): ReactElement = js.native
+  def apply[P](specString: String, props: js.UndefOr[scala.Nothing], children: ReactElement): ReactElement = js.native
   def apply[P](specString: String, props: HTMLAttributes[js.Object]): ReactElement = js.native
-  def apply[P](specString: String, props: HTMLAttributes[js.Object], children: TagMod[Any]): ReactElement = js.native
+  def apply[P](specString: String, props: HTMLAttributes[js.Object], children: ReactElement): ReactElement = js.native
 }
 

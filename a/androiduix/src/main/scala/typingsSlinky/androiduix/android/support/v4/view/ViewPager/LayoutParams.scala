@@ -47,41 +47,22 @@ object LayoutParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childIndex")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChildIndex(value: Double): Self = this.set("childIndex", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsDecor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDecor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGravity(value: Double): Self = this.set("gravity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNeedsMeasure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsMeasure")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsDecor(value: Boolean): Self = this.set("isDecor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNeedsMeasure(value: Boolean): Self = this.set("needsMeasure", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWidthFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPosition(value: Double): Self = this.set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWidthFactor(value: Double): Self = this.set("widthFactor", value.asInstanceOf[js.Any])
   }
   
 }

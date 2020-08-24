@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libTableMod.default
-import typingsSlinky.reactToolbox.libTableTableMod.TableProps
-import typingsSlinky.reactToolbox.libTableTableMod.TableTheme
+import typingsSlinky.reactToolbox.tableMod.default
+import typingsSlinky.reactToolbox.tableTableMod.TableProps
+import typingsSlinky.reactToolbox.tableTableMod.TableTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table {
-  @JSImport("react-toolbox/lib/table", JSImport.Default)
+  @JSImport("react-toolbox/components/table", JSImport.Default)
   @js.native
   object component extends js.Object
   

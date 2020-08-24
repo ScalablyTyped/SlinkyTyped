@@ -1,8 +1,5 @@
 package typingsSlinky.lusca.mod
 
-import typingsSlinky.lusca.anon.Name
-import typingsSlinky.lusca.anon.Options
-import typingsSlinky.lusca.luscaBooleans.`false`
 import typingsSlinky.lusca.luscaBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,16 +13,13 @@ trait csrfOptionsAngularOrNonAngular extends js.Object
 
 object csrfOptionsAngularOrNonAngular {
   @scala.inline
-  def csrfOptionsAngular(angular: `true`, cookie: String | Options = null): csrfOptionsAngularOrNonAngular = {
+  def csrfOptionsAngular(angular: `true`): csrfOptionsAngularOrNonAngular = {
     val __obj = js.Dynamic.literal(angular = angular.asInstanceOf[js.Any])
-    if (cookie != null) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
     __obj.asInstanceOf[csrfOptionsAngularOrNonAngular]
   }
   @scala.inline
-  def csrfOptionsNonAngular(angular: `false` = null, cookie: String | Name = null): csrfOptionsAngularOrNonAngular = {
+  def csrfOptionsNonAngular(): csrfOptionsAngularOrNonAngular = {
     val __obj = js.Dynamic.literal()
-    if (angular != null) __obj.updateDynamic("angular")(angular.asInstanceOf[js.Any])
-    if (cookie != null) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
     __obj.asInstanceOf[csrfOptionsAngularOrNonAngular]
   }
 }

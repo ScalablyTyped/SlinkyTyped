@@ -217,18 +217,31 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateBotResponse, Unit]
   ): Request[CreateBotResponse, AWSError] = js.native
   /**
-    * Creates a new Amazon Chime SDK meeting in the specified media Region with no initial attendees. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
+    * Creates a new Amazon Chime SDK meeting in the specified media Region with no initial attendees. For more information about specifying media Regions, see Amazon Chime SDK Media Regions in the Amazon Chime Developer Guide. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
     */
   def createMeeting(): Request[CreateMeetingResponse, AWSError] = js.native
   def createMeeting(callback: js.Function2[/* err */ AWSError, /* data */ CreateMeetingResponse, Unit]): Request[CreateMeetingResponse, AWSError] = js.native
   /**
-    * Creates a new Amazon Chime SDK meeting in the specified media Region with no initial attendees. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
+    * Creates a new Amazon Chime SDK meeting in the specified media Region with no initial attendees. For more information about specifying media Regions, see Amazon Chime SDK Media Regions in the Amazon Chime Developer Guide. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
     */
   def createMeeting(params: CreateMeetingRequest): Request[CreateMeetingResponse, AWSError] = js.native
   def createMeeting(
     params: CreateMeetingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateMeetingResponse, Unit]
   ): Request[CreateMeetingResponse, AWSError] = js.native
+  /**
+    * Creates a new Amazon Chime SDK meeting in the specified media Region, with attendees. For more information about specifying media Regions, see Amazon Chime SDK Media Regions in the Amazon Chime Developer Guide. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
+    */
+  def createMeetingWithAttendees(): Request[CreateMeetingWithAttendeesResponse, AWSError] = js.native
+  def createMeetingWithAttendees(callback: js.Function2[/* err */ AWSError, /* data */ CreateMeetingWithAttendeesResponse, Unit]): Request[CreateMeetingWithAttendeesResponse, AWSError] = js.native
+  /**
+    * Creates a new Amazon Chime SDK meeting in the specified media Region, with attendees. For more information about specifying media Regions, see Amazon Chime SDK Media Regions in the Amazon Chime Developer Guide. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
+    */
+  def createMeetingWithAttendees(params: CreateMeetingWithAttendeesRequest): Request[CreateMeetingWithAttendeesResponse, AWSError] = js.native
+  def createMeetingWithAttendees(
+    params: CreateMeetingWithAttendeesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateMeetingWithAttendeesResponse, Unit]
+  ): Request[CreateMeetingWithAttendeesResponse, AWSError] = js.native
   /**
     * Creates an order for phone numbers to be provisioned. Choose from Amazon Chime Business Calling and Amazon Chime Voice Connector product types. For toll-free numbers, you must use the Amazon Chime Voice Connector product type.
     */
@@ -435,6 +448,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
+    * Deletes the emergency calling configuration details from the specified Amazon Chime Voice Connector.
+    */
+  def deleteVoiceConnectorEmergencyCallingConfiguration(): Request[js.Object, AWSError] = js.native
+  def deleteVoiceConnectorEmergencyCallingConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes the emergency calling configuration details from the specified Amazon Chime Voice Connector.
+    */
+  def deleteVoiceConnectorEmergencyCallingConfiguration(params: DeleteVoiceConnectorEmergencyCallingConfigurationRequest): Request[js.Object, AWSError] = js.native
+  def deleteVoiceConnectorEmergencyCallingConfiguration(
+    params: DeleteVoiceConnectorEmergencyCallingConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  /**
     * Deletes the specified Amazon Chime Voice Connector group. Any VoiceConnectorItems and phone numbers associated with the group must be removed before it can be deleted.
     */
   def deleteVoiceConnectorGroup(): Request[js.Object, AWSError] = js.native
@@ -448,12 +474,12 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the origination settings for the specified Amazon Chime Voice Connector.
+    * Deletes the origination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to deleting the origination settings. 
     */
   def deleteVoiceConnectorOrigination(): Request[js.Object, AWSError] = js.native
   def deleteVoiceConnectorOrigination(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the origination settings for the specified Amazon Chime Voice Connector.
+    * Deletes the origination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to deleting the origination settings. 
     */
   def deleteVoiceConnectorOrigination(params: DeleteVoiceConnectorOriginationRequest): Request[js.Object, AWSError] = js.native
   def deleteVoiceConnectorOrigination(
@@ -487,12 +513,12 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the termination settings for the specified Amazon Chime Voice Connector.
+    * Deletes the termination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to deleting the termination settings. 
     */
   def deleteVoiceConnectorTermination(): Request[js.Object, AWSError] = js.native
   def deleteVoiceConnectorTermination(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the termination settings for the specified Amazon Chime Voice Connector.
+    * Deletes the termination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to deleting the termination settings. 
     */
   def deleteVoiceConnectorTermination(params: DeleteVoiceConnectorTerminationRequest): Request[js.Object, AWSError] = js.native
   def deleteVoiceConnectorTermination(
@@ -785,6 +811,29 @@ trait Chime extends Service {
     params: GetVoiceConnectorRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetVoiceConnectorResponse, Unit]
   ): Request[GetVoiceConnectorResponse, AWSError] = js.native
+  /**
+    * Gets the emergency calling configuration details for the specified Amazon Chime Voice Connector.
+    */
+  def getVoiceConnectorEmergencyCallingConfiguration(): Request[GetVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  def getVoiceConnectorEmergencyCallingConfiguration(
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ GetVoiceConnectorEmergencyCallingConfigurationResponse, 
+      Unit
+    ]
+  ): Request[GetVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  /**
+    * Gets the emergency calling configuration details for the specified Amazon Chime Voice Connector.
+    */
+  def getVoiceConnectorEmergencyCallingConfiguration(params: GetVoiceConnectorEmergencyCallingConfigurationRequest): Request[GetVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  def getVoiceConnectorEmergencyCallingConfiguration(
+    params: GetVoiceConnectorEmergencyCallingConfigurationRequest,
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ GetVoiceConnectorEmergencyCallingConfigurationResponse, 
+      Unit
+    ]
+  ): Request[GetVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
   /**
     * Retrieves details for the specified Amazon Chime Voice Connector group, such as timestamps, name, and associated VoiceConnectorItems.
     */
@@ -1153,6 +1202,29 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ PutRetentionSettingsResponse, Unit]
   ): Request[PutRetentionSettingsResponse, AWSError] = js.native
   /**
+    * Puts emergency calling configuration details to the specified Amazon Chime Voice Connector, such as emergency phone numbers and calling countries. Origination and termination settings must be enabled for the Amazon Chime Voice Connector before emergency calling can be configured.
+    */
+  def putVoiceConnectorEmergencyCallingConfiguration(): Request[PutVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  def putVoiceConnectorEmergencyCallingConfiguration(
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ PutVoiceConnectorEmergencyCallingConfigurationResponse, 
+      Unit
+    ]
+  ): Request[PutVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  /**
+    * Puts emergency calling configuration details to the specified Amazon Chime Voice Connector, such as emergency phone numbers and calling countries. Origination and termination settings must be enabled for the Amazon Chime Voice Connector before emergency calling can be configured.
+    */
+  def putVoiceConnectorEmergencyCallingConfiguration(params: PutVoiceConnectorEmergencyCallingConfigurationRequest): Request[PutVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  def putVoiceConnectorEmergencyCallingConfiguration(
+    params: PutVoiceConnectorEmergencyCallingConfigurationRequest,
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ PutVoiceConnectorEmergencyCallingConfigurationResponse, 
+      Unit
+    ]
+  ): Request[PutVoiceConnectorEmergencyCallingConfigurationResponse, AWSError] = js.native
+  /**
     * Adds a logging configuration for the specified Amazon Chime Voice Connector. The logging configuration specifies whether SIP message logs are enabled for sending to Amazon CloudWatch Logs.
     */
   def putVoiceConnectorLoggingConfiguration(): Request[PutVoiceConnectorLoggingConfigurationResponse, AWSError] = js.native
@@ -1168,12 +1240,12 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorLoggingConfigurationResponse, Unit]
   ): Request[PutVoiceConnectorLoggingConfigurationResponse, AWSError] = js.native
   /**
-    * Adds origination settings for the specified Amazon Chime Voice Connector.
+    * Adds origination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to turning off origination settings. 
     */
   def putVoiceConnectorOrigination(): Request[PutVoiceConnectorOriginationResponse, AWSError] = js.native
   def putVoiceConnectorOrigination(callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorOriginationResponse, Unit]): Request[PutVoiceConnectorOriginationResponse, AWSError] = js.native
   /**
-    * Adds origination settings for the specified Amazon Chime Voice Connector.
+    * Adds origination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to turning off origination settings. 
     */
   def putVoiceConnectorOrigination(params: PutVoiceConnectorOriginationRequest): Request[PutVoiceConnectorOriginationResponse, AWSError] = js.native
   def putVoiceConnectorOrigination(
@@ -1209,12 +1281,12 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorStreamingConfigurationResponse, Unit]
   ): Request[PutVoiceConnectorStreamingConfigurationResponse, AWSError] = js.native
   /**
-    * Adds termination settings for the specified Amazon Chime Voice Connector.
+    * Adds termination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to turning off termination settings. 
     */
   def putVoiceConnectorTermination(): Request[PutVoiceConnectorTerminationResponse, AWSError] = js.native
   def putVoiceConnectorTermination(callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorTerminationResponse, Unit]): Request[PutVoiceConnectorTerminationResponse, AWSError] = js.native
   /**
-    * Adds termination settings for the specified Amazon Chime Voice Connector.
+    * Adds termination settings for the specified Amazon Chime Voice Connector.  If emergency calling is configured for the Amazon Chime Voice Connector, it must be deleted prior to turning off termination settings. 
     */
   def putVoiceConnectorTermination(params: PutVoiceConnectorTerminationRequest): Request[PutVoiceConnectorTerminationResponse, AWSError] = js.native
   def putVoiceConnectorTermination(

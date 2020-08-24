@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Input.EdgeGestureEventArgs")
 @js.native
 abstract class EdgeGestureEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Input.EdgeGestureEventArgs {
-  /** Gets the type of user input that triggered the edge gesture event. */
-  /* CompleteClass */
-  override var kind: typingsSlinky.winrtUwp.Windows.UI.Input.EdgeGestureKind = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.Input.EdgeGestureEventArgs
 

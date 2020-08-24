@@ -1,81 +1,83 @@
 package typingsSlinky.grommet.baseMod
 
-import typingsSlinky.grommet.anon.Active
 import typingsSlinky.grommet.anon.Analog
 import typingsSlinky.grommet.anon.Animation
+import typingsSlinky.grommet.anon.AnimationDisabled
 import typingsSlinky.grommet.anon.Baseline
-import typingsSlinky.grommet.anon.BorderHeading
+import typingsSlinky.grommet.anon.Body
 import typingsSlinky.grommet.anon.Captions
 import typingsSlinky.grommet.anon.Check
-import typingsSlinky.grommet.anon.ColorColors
 import typingsSlinky.grommet.anon.ColorExtend
-import typingsSlinky.grommet.anon.Container
 import typingsSlinky.grommet.anon.Content
 import typingsSlinky.grommet.anon.Continent
 import typingsSlinky.grommet.anon.Control
+import typingsSlinky.grommet.anon.Default
 import typingsSlinky.grommet.anon.DisabledExtend
 import typingsSlinky.grommet.anon.Edge
 import typingsSlinky.grommet.anon.Extend
-import typingsSlinky.grommet.anon.ExtendFont
-import typingsSlinky.grommet.anon.ExtendFontWeight
+import typingsSlinky.grommet.anon.FontWeight
 import typingsSlinky.grommet.anon.Gap
 import typingsSlinky.grommet.anon.GroupEnd
-import typingsSlinky.grommet.anon.Heading
+import typingsSlinky.grommet.anon.HeadingIcons
+import typingsSlinky.grommet.anon.Hover
+import typingsSlinky.grommet.anon.Icon
 import typingsSlinky.grommet.anon.Icons
 import typingsSlinky.grommet.anon.Item
 import typingsSlinky.grommet.anon.Line
-import typingsSlinky.grommet.anon.Margin
 import typingsSlinky.grommet.anon.MaxHeight
-import typingsSlinky.grommet.anon.MinWidth
+import typingsSlinky.grommet.anon.Overlay
 import typingsSlinky.grommet.anon.Panel
 import typingsSlinky.grommet.anon.ResponsiveBreakpoint
-import typingsSlinky.grommet.anon.Row
-import typingsSlinky.grommet.anon.SizeDictxLarge
-import typingsSlinky.grommet.anon.Small
-import typingsSlinky.grommet.anon.Text
+import typingsSlinky.grommet.anon.SizeText
 import typingsSlinky.grommet.anon.Thumb
-import typingsSlinky.grommet.anon.Xxlarge
+import typingsSlinky.grommet.anon.Xlarge
+import typingsSlinky.grommet.anon.Xsmall
+import typingsSlinky.grommet.anon.`10`
+import typingsSlinky.grommet.anon.`18`
+import typingsSlinky.grommet.anon.`21`
 import typingsSlinky.grommet.utilsMod.DeepReadonly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet/themes/base", "base")
+@JSImport("grommet/es6/themes/base", "base")
 @js.native
 object base extends js.Object {
-  val accordion: js.UndefOr[BorderHeading | DeepReadonly[js.UndefOr[BorderHeading]]] = js.native
-  val anchor: js.UndefOr[ExtendFontWeight | DeepReadonly[js.UndefOr[ExtendFontWeight]]] = js.native
-  val avatar: js.UndefOr[Text | DeepReadonly[js.UndefOr[Text]]] = js.native
+  val accordion: js.UndefOr[Panel | DeepReadonly[js.UndefOr[Panel]]] = js.native
+  val anchor: js.UndefOr[FontWeight | DeepReadonly[js.UndefOr[FontWeight]]] = js.native
+  val avatar: js.UndefOr[SizeText | DeepReadonly[js.UndefOr[SizeText]]] = js.native
   val box: js.UndefOr[ResponsiveBreakpoint | DeepReadonly[js.UndefOr[ResponsiveBreakpoint]]] = js.native
-  val button: js.UndefOr[MinWidth | DeepReadonly[js.UndefOr[MinWidth]]] = js.native
-  val calendar: js.UndefOr[Heading | DeepReadonly[js.UndefOr[Heading]]] = js.native
-  val carousel: js.UndefOr[Animation | DeepReadonly[js.UndefOr[Animation]]] = js.native
+  val button: js.UndefOr[Default | DeepReadonly[js.UndefOr[Default]]] = js.native
+  val calendar: js.UndefOr[HeadingIcons | DeepReadonly[js.UndefOr[HeadingIcons]]] = js.native
+  val carousel: js.UndefOr[AnimationDisabled | DeepReadonly[js.UndefOr[AnimationDisabled]]] = js.native
   val chart: js.UndefOr[ColorExtend | DeepReadonly[js.UndefOr[ColorExtend]]] = js.native
-  val checkBox: js.UndefOr[Check | DeepReadonly[js.UndefOr[Check]]] = js.native
+  val checkBox: js.UndefOr[Icon | DeepReadonly[js.UndefOr[Icon]]] = js.native
   val clock: js.UndefOr[Analog | DeepReadonly[js.UndefOr[Analog]]] = js.native
   val collapsible: js.UndefOr[Baseline | DeepReadonly[js.UndefOr[Baseline]]] = js.native
   val dataTable: js.UndefOr[GroupEnd | DeepReadonly[js.UndefOr[GroupEnd]]] = js.native
   val diagram: js.UndefOr[Line | DeepReadonly[js.UndefOr[Line]]] = js.native
   val drop: js.UndefOr[MaxHeight | DeepReadonly[js.UndefOr[MaxHeight]]] = js.native
   val formField: js.UndefOr[Content | DeepReadonly[js.UndefOr[Content]]] = js.native
-  val global: js.UndefOr[Active | DeepReadonly[js.UndefOr[Active]]] = js.native
-  val grommet: js.UndefOr[Extend | DeepReadonly[js.UndefOr[Extend]]] = js.native
-  val heading: js.UndefOr[ExtendFont | DeepReadonly[js.UndefOr[ExtendFont]]] = js.native
-  val icon: js.UndefOr[SizeDictxLarge | DeepReadonly[js.UndefOr[SizeDictxLarge]]] = js.native
-  val layer: js.UndefOr[Container | DeepReadonly[js.UndefOr[Container]]] = js.native
+  val global: js.UndefOr[Animation | DeepReadonly[js.UndefOr[Animation]]] = js.native
+  val grommet: js.UndefOr[`10` | DeepReadonly[js.UndefOr[`10`]]] = js.native
+  val heading: js.UndefOr[Extend | DeepReadonly[js.UndefOr[Extend]]] = js.native
+  val icon: js.UndefOr[`21` | DeepReadonly[js.UndefOr[`21`]]] = js.native
+  val layer: js.UndefOr[Overlay | DeepReadonly[js.UndefOr[Overlay]]] = js.native
   val list: js.UndefOr[Item | DeepReadonly[js.UndefOr[Item]]] = js.native
-  val maskedInput: js.UndefOr[Extend | DeepReadonly[js.UndefOr[Extend]]] = js.native
+  val maskedInput: js.UndefOr[`18` | DeepReadonly[js.UndefOr[`18`]]] = js.native
   val menu: js.UndefOr[Icons | DeepReadonly[js.UndefOr[Icons]]] = js.native
-  val meter: js.UndefOr[ColorColors | DeepReadonly[js.UndefOr[ColorColors]]] = js.native
-  val paragraph: js.UndefOr[Xxlarge | DeepReadonly[js.UndefOr[Xxlarge]]] = js.native
-  val radioButton: js.UndefOr[Gap | DeepReadonly[js.UndefOr[Gap]]] = js.native
+  val meter: js.UndefOr[
+    typingsSlinky.grommet.anon.Colors | DeepReadonly[js.UndefOr[typingsSlinky.grommet.anon.Colors]]
+  ] = js.native
+  val paragraph: js.UndefOr[Xlarge | DeepReadonly[js.UndefOr[Xlarge]]] = js.native
+  val radioButton: js.UndefOr[Check | DeepReadonly[js.UndefOr[Check]]] = js.native
   val rangeInput: js.UndefOr[Thumb | DeepReadonly[js.UndefOr[Thumb]]] = js.native
   val rangeSelector: js.UndefOr[Edge | DeepReadonly[js.UndefOr[Edge]]] = js.native
   val select: js.UndefOr[Control | DeepReadonly[js.UndefOr[Control]]] = js.native
-  val tab: js.UndefOr[Margin | DeepReadonly[js.UndefOr[Margin]]] = js.native
-  val table: js.UndefOr[Row | DeepReadonly[js.UndefOr[Row]]] = js.native
-  val tabs: js.UndefOr[Panel | DeepReadonly[js.UndefOr[Panel]]] = js.native
-  val text: js.UndefOr[Small | DeepReadonly[js.UndefOr[Small]]] = js.native
+  val tab: js.UndefOr[Hover | DeepReadonly[js.UndefOr[Hover]]] = js.native
+  val table: js.UndefOr[Body | DeepReadonly[js.UndefOr[Body]]] = js.native
+  val tabs: js.UndefOr[Gap | DeepReadonly[js.UndefOr[Gap]]] = js.native
+  val text: js.UndefOr[Xsmall | DeepReadonly[js.UndefOr[Xsmall]]] = js.native
   val textArea: js.UndefOr[DisabledExtend | DeepReadonly[js.UndefOr[DisabledExtend]]] = js.native
   val textInput: js.UndefOr[DisabledExtend | DeepReadonly[js.UndefOr[DisabledExtend]]] = js.native
   val video: js.UndefOr[Captions | DeepReadonly[js.UndefOr[Captions]]] = js.native

@@ -28,23 +28,16 @@ object AnimationListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnAnimationEnd(value: typingsSlinky.androiduix.android.view.animation.Animation => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnAnimationRepeat(value: typingsSlinky.androiduix.android.view.animation.Animation => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationRepeat")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnAnimationEnd(value: typingsSlinky.androiduix.android.view.animation.Animation => Unit): Self = this.set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnAnimationStart(value: typingsSlinky.androiduix.android.view.animation.Animation => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnAnimationRepeat(value: typingsSlinky.androiduix.android.view.animation.Animation => Unit): Self = this.set("onAnimationRepeat", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnAnimationStart(value: typingsSlinky.androiduix.android.view.animation.Animation => Unit): Self = this.set("onAnimationStart", js.Any.fromFunction1(value))
   }
   
 }

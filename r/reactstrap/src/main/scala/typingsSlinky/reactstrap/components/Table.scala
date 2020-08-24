@@ -21,6 +21,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -68,20 +69,19 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.tableMod.TableProps
-import typingsSlinky.reactstrap.tableMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table {
-  @JSImport("reactstrap/lib/Table", JSImport.Default)
+  @JSImport("reactstrap", "Table")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.`*`.tag.type, default[js.Any]] {
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.Table[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -208,6 +208,8 @@ object Table {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -411,13 +413,13 @@ object Table {
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
     @scala.inline
-    def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
+    def responsive(value: Boolean | String): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline
     def responsiveTagFunctionComponent(value: ReactComponentClass[_]): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
     @scala.inline
     def responsiveTagComponentClass(value: ReactComponentClass[_]): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
     @scala.inline
-    def responsiveTag(value: ReactComponentClass[_]): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
+    def responsiveTag(value: ReactType[_]): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
     @scala.inline
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     @scala.inline
@@ -445,7 +447,7 @@ object Table {
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
-    def tag(value: String | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

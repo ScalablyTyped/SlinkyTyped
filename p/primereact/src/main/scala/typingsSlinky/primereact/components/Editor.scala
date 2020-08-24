@@ -22,6 +22,8 @@ object Editor {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def formatsVarargs(value: js.Any*): this.type = set("formats", js.Array(value :_*))
+    @scala.inline
     def formats(value: js.Array[_]): this.type = set("formats", value.asInstanceOf[js.Any])
     @scala.inline
     def headerTemplate(value: ReactElement): this.type = set("headerTemplate", value.asInstanceOf[js.Any])
@@ -36,7 +38,7 @@ object Editor {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def readonly(value: Boolean): this.type = set("readonly", value.asInstanceOf[js.Any])
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

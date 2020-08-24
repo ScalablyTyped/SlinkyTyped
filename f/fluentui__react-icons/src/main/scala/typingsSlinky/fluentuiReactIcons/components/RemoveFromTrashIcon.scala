@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RemoveFromTrashIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RemoveFromTrashIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RemoveFromTrashIcon")
   @js.native
   object component extends js.Object
   

@@ -69,7 +69,6 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.FormEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,9 +79,9 @@ object Form {
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.calidation.mod.Form] {
+       with StBuildingComponent[tag.type, typingsSlinky.calidation.mod.Form[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -210,6 +209,8 @@ object Form {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -264,9 +265,7 @@ object Form {
     @scala.inline
     def onCanPlayThrough(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(
-      value: (/* event */ ChangeEvent[HTMLFormElement]) | (SyntheticEvent[EventTarget with HTMLFormElement, Event]) => Unit
-    ): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* event */ ChangeEvent[HTMLFormElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLFormElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -372,11 +371,7 @@ object Form {
     @scala.inline
     def onRateChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onResetFunction1(value: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
-    @scala.inline
-    def onResetFunction0(value: () => Unit): this.type = set("onReset", js.Any.fromFunction0(value))
-    @scala.inline
-    def onReset(value: FormEventHandler[HTMLFormElement] | js.Function0[Unit]): this.type = set("onReset", value.asInstanceOf[js.Any])
+    def onReset(value: () => Unit): this.type = set("onReset", js.Any.fromFunction0(value))
     @scala.inline
     def onScroll(value: SyntheticUIEvent[HTMLFormElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
@@ -388,7 +383,7 @@ object Form {
     @scala.inline
     def onStalled(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmit(value: /* context */ FormContext => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSubmit(value: /* context */ FormContext[T] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
     def onSuspend(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
     @scala.inline
@@ -404,7 +399,7 @@ object Form {
     @scala.inline
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLFormElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onUpdate(value: /* context */ FormContext => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
+    def onUpdate(value: /* context */ FormContext[T] => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
     @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -453,7 +448,12 @@ object Form {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps[/* <: js.Object */ T](p: FormProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[/* <: js.Object */ T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[FormProps[T]]))
+  }
+  implicit def make[/* <: js.Object */ T](companion: Form.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

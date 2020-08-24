@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "leaflet_dot_markercluster_dot_layersupport"
-version := "1.0-dt-20200515Z-841eec"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-3b9f95"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20200515Z-762b9c",
-  "org.scalablytyped.slinky" %%% "leaflet" % "1.5-dt-20200515Z-1234c2",
-  "org.scalablytyped.slinky" %%% "leaflet_dot_markercluster" % "1.4-dt-20200515Z-43a27a",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20200515Z-68144b",
+  "org.scalablytyped.slinky" %%% "leaflet" % "1.5-dt-20200720Z-14f68e",
+  "org.scalablytyped.slinky" %%% "leaflet_dot_markercluster" % "1.4-dt-20200515Z-6f76e0",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

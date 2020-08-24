@@ -15,5 +15,6 @@ class Relation[S /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] *
   extends typingsSlinky.parse.mod.global.Parse.Relation[S, T] {
   def this(parent: S) = this()
   def this(parent: S, key: String) = this()
+  def this(parent: js.UndefOr[scala.Nothing], key: String) = this()
 }
 

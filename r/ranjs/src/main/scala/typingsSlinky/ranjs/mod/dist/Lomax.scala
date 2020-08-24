@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class Lomax ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.Lomax] {
   def this(lambda: Double) = this()
+  def this(lambda: js.UndefOr[scala.Nothing], alpha: Double) = this()
   def this(lambda: Double, alpha: Double) = this()
 }
 

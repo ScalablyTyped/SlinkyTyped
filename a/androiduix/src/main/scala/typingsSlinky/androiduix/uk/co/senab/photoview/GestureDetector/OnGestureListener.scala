@@ -28,23 +28,16 @@ object OnGestureListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnDrag(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnFling(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFling")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnDrag(value: (Double, Double) => Unit): Self = this.set("onDrag", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnScale(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScale")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnFling(value: (Double, Double, Double, Double) => Unit): Self = this.set("onFling", js.Any.fromFunction4(value))
+    @scala.inline
+    def setOnScale(value: (Double, Double, Double) => Unit): Self = this.set("onScale", js.Any.fromFunction3(value))
   }
   
 }

@@ -6,7 +6,6 @@ import typingsSlinky.awsSdk.awsSdkBooleans.`false`
 import typingsSlinky.awsSdk.awsSdkBooleans.`true`
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.std.PromiseConstructor
-import typingsSlinky.std.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,11 +32,11 @@ class ConfigBase () extends ConfigurationOptions {
       /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
       Unit
     ], 
-    Promise[js.Object]
+    js.Promise[js.Object]
   ])) | Unit = js.native
   /**
     * Loads configuration data from a JSON file into this config object.
-    * Loading configuration willr eset all existing configuration on the object.
+    * Loading configuration will reset all existing configuration on the object.
     * This feature is not supported in the browser environment of the SDK.
     *
     * @param {string} path - the path relative to your process's current working directory to load configuration from.

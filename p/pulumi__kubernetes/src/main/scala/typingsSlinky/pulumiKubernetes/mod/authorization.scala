@@ -1,5 +1,9 @@
 package typingsSlinky.pulumiKubernetes.mod
 
+import typingsSlinky.pulumiKubernetes.v1LocalSubjectAccessReviewMod.LocalSubjectAccessReviewArgs
+import typingsSlinky.pulumiKubernetes.v1SelfSubjectAccessReviewMod.SelfSubjectAccessReviewArgs
+import typingsSlinky.pulumiKubernetes.v1SelfSubjectRulesReviewMod.SelfSubjectRulesReviewArgs
+import typingsSlinky.pulumiKubernetes.v1SubjectAccessReviewMod.SubjectAccessReviewArgs
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -16,100 +20,76 @@ object authorization extends js.Object {
     class LocalSubjectAccessReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1.LocalSubjectAccessReview {
       /**
-        * Create a authorization.v1.LocalSubjectAccessReview resource with the given unique name, arguments, and options.
+        * Create a LocalSubjectAccessReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
         * @param opts A bag of options that control this resource's behavior.
         */
       def this(name: String) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.LocalSubjectAccessReview
-      ) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.LocalSubjectAccessReview,
-        opts: CustomResourceOptions
-      ) = this()
+      def this(name: String, args: LocalSubjectAccessReviewArgs) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
+      def this(name: String, args: LocalSubjectAccessReviewArgs, opts: CustomResourceOptions) = this()
     }
     
     @js.native
     class SelfSubjectAccessReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1.SelfSubjectAccessReview {
       /**
-        * Create a authorization.v1.SelfSubjectAccessReview resource with the given unique name, arguments, and options.
+        * Create a SelfSubjectAccessReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
         * @param opts A bag of options that control this resource's behavior.
         */
       def this(name: String) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.SelfSubjectAccessReview
-      ) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.SelfSubjectAccessReview,
-        opts: CustomResourceOptions
-      ) = this()
+      def this(name: String, args: SelfSubjectAccessReviewArgs) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
+      def this(name: String, args: SelfSubjectAccessReviewArgs, opts: CustomResourceOptions) = this()
     }
     
     @js.native
     class SelfSubjectRulesReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1.SelfSubjectRulesReview {
       /**
-        * Create a authorization.v1.SelfSubjectRulesReview resource with the given unique name, arguments, and options.
+        * Create a SelfSubjectRulesReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
         * @param opts A bag of options that control this resource's behavior.
         */
       def this(name: String) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.SelfSubjectRulesReview
-      ) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.SelfSubjectRulesReview,
-        opts: CustomResourceOptions
-      ) = this()
+      def this(name: String, args: SelfSubjectRulesReviewArgs) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
+      def this(name: String, args: SelfSubjectRulesReviewArgs, opts: CustomResourceOptions) = this()
     }
     
     @js.native
     class SubjectAccessReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1.SubjectAccessReview {
       /**
-        * Create a authorization.v1.SubjectAccessReview resource with the given unique name, arguments, and options.
+        * Create a SubjectAccessReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
         * @param opts A bag of options that control this resource's behavior.
         */
       def this(name: String) = this()
-      def this(name: String, args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.SubjectAccessReview) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1.SubjectAccessReview,
-        opts: CustomResourceOptions
-      ) = this()
+      def this(name: String, args: SubjectAccessReviewArgs) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
+      def this(name: String, args: SubjectAccessReviewArgs, opts: CustomResourceOptions) = this()
     }
     
     /* static members */
     @js.native
     object LocalSubjectAccessReview extends js.Object {
       /**
-        * Get the state of an existing `LocalSubjectAccessReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing LocalSubjectAccessReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.v1LocalSubjectAccessReviewMod.LocalSubjectAccessReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.v1LocalSubjectAccessReviewMod.LocalSubjectAccessReview = js.native
@@ -117,22 +97,19 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of LocalSubjectAccessReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/LocalSubjectAccessReview.LocalSubjectAccessReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/localSubjectAccessReview.LocalSubjectAccessReview */ Boolean = js.native
     }
     
     /* static members */
     @js.native
     object SelfSubjectAccessReview extends js.Object {
       /**
-        * Get the state of an existing `SelfSubjectAccessReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing SelfSubjectAccessReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.v1SelfSubjectAccessReviewMod.SelfSubjectAccessReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.v1SelfSubjectAccessReviewMod.SelfSubjectAccessReview = js.native
@@ -140,22 +117,19 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of SelfSubjectAccessReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/SelfSubjectAccessReview.SelfSubjectAccessReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/selfSubjectAccessReview.SelfSubjectAccessReview */ Boolean = js.native
     }
     
     /* static members */
     @js.native
     object SelfSubjectRulesReview extends js.Object {
       /**
-        * Get the state of an existing `SelfSubjectRulesReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing SelfSubjectRulesReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.v1SelfSubjectRulesReviewMod.SelfSubjectRulesReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.v1SelfSubjectRulesReviewMod.SelfSubjectRulesReview = js.native
@@ -163,22 +137,19 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of SelfSubjectRulesReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/SelfSubjectRulesReview.SelfSubjectRulesReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/selfSubjectRulesReview.SelfSubjectRulesReview */ Boolean = js.native
     }
     
     /* static members */
     @js.native
     object SubjectAccessReview extends js.Object {
       /**
-        * Get the state of an existing `SubjectAccessReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing SubjectAccessReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.v1SubjectAccessReviewMod.SubjectAccessReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.v1SubjectAccessReviewMod.SubjectAccessReview = js.native
@@ -186,7 +157,7 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of SubjectAccessReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/SubjectAccessReview.SubjectAccessReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1/subjectAccessReview.SubjectAccessReview */ Boolean = js.native
     }
     
   }
@@ -197,7 +168,7 @@ object authorization extends js.Object {
     class LocalSubjectAccessReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1beta1.LocalSubjectAccessReview {
       /**
-        * Create a authorization.v1beta1.LocalSubjectAccessReview resource with the given unique name, arguments, and options.
+        * Create a LocalSubjectAccessReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
@@ -206,11 +177,12 @@ object authorization extends js.Object {
       def this(name: String) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.LocalSubjectAccessReview
+        args: typingsSlinky.pulumiKubernetes.localSubjectAccessReviewMod.LocalSubjectAccessReviewArgs
       ) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.LocalSubjectAccessReview,
+        args: typingsSlinky.pulumiKubernetes.localSubjectAccessReviewMod.LocalSubjectAccessReviewArgs,
         opts: CustomResourceOptions
       ) = this()
     }
@@ -219,7 +191,7 @@ object authorization extends js.Object {
     class SelfSubjectAccessReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1beta1.SelfSubjectAccessReview {
       /**
-        * Create a authorization.v1beta1.SelfSubjectAccessReview resource with the given unique name, arguments, and options.
+        * Create a SelfSubjectAccessReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
@@ -228,11 +200,12 @@ object authorization extends js.Object {
       def this(name: String) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.SelfSubjectAccessReview
+        args: typingsSlinky.pulumiKubernetes.selfSubjectAccessReviewMod.SelfSubjectAccessReviewArgs
       ) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.SelfSubjectAccessReview,
+        args: typingsSlinky.pulumiKubernetes.selfSubjectAccessReviewMod.SelfSubjectAccessReviewArgs,
         opts: CustomResourceOptions
       ) = this()
     }
@@ -241,7 +214,7 @@ object authorization extends js.Object {
     class SelfSubjectRulesReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1beta1.SelfSubjectRulesReview {
       /**
-        * Create a authorization.v1beta1.SelfSubjectRulesReview resource with the given unique name, arguments, and options.
+        * Create a SelfSubjectRulesReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
@@ -250,11 +223,12 @@ object authorization extends js.Object {
       def this(name: String) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.SelfSubjectRulesReview
+        args: typingsSlinky.pulumiKubernetes.selfSubjectRulesReviewMod.SelfSubjectRulesReviewArgs
       ) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.SelfSubjectRulesReview,
+        args: typingsSlinky.pulumiKubernetes.selfSubjectRulesReviewMod.SelfSubjectRulesReviewArgs,
         opts: CustomResourceOptions
       ) = this()
     }
@@ -263,20 +237,18 @@ object authorization extends js.Object {
     class SubjectAccessReview protected ()
       extends typingsSlinky.pulumiKubernetes.authorizationMod.v1beta1.SubjectAccessReview {
       /**
-        * Create a authorization.v1beta1.SubjectAccessReview resource with the given unique name, arguments, and options.
+        * Create a SubjectAccessReview resource with the given unique name, arguments, and options.
         *
         * @param name The _unique_ name of the resource.
         * @param args The arguments to use to populate this resource's properties.
         * @param opts A bag of options that control this resource's behavior.
         */
       def this(name: String) = this()
+      def this(name: String, args: typingsSlinky.pulumiKubernetes.subjectAccessReviewMod.SubjectAccessReviewArgs) = this()
+      def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
       def this(
         name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.SubjectAccessReview
-      ) = this()
-      def this(
-        name: String,
-        args: typingsSlinky.pulumiKubernetes.inputMod.authorization.v1beta1.SubjectAccessReview,
+        args: typingsSlinky.pulumiKubernetes.subjectAccessReviewMod.SubjectAccessReviewArgs,
         opts: CustomResourceOptions
       ) = this()
     }
@@ -285,15 +257,12 @@ object authorization extends js.Object {
     @js.native
     object LocalSubjectAccessReview extends js.Object {
       /**
-        * Get the state of an existing `LocalSubjectAccessReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing LocalSubjectAccessReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.localSubjectAccessReviewMod.LocalSubjectAccessReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.localSubjectAccessReviewMod.LocalSubjectAccessReview = js.native
@@ -301,22 +270,19 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of LocalSubjectAccessReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/LocalSubjectAccessReview.LocalSubjectAccessReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/localSubjectAccessReview.LocalSubjectAccessReview */ Boolean = js.native
     }
     
     /* static members */
     @js.native
     object SelfSubjectAccessReview extends js.Object {
       /**
-        * Get the state of an existing `SelfSubjectAccessReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing SelfSubjectAccessReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.selfSubjectAccessReviewMod.SelfSubjectAccessReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.selfSubjectAccessReviewMod.SelfSubjectAccessReview = js.native
@@ -324,22 +290,19 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of SelfSubjectAccessReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/SelfSubjectAccessReview.SelfSubjectAccessReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/selfSubjectAccessReview.SelfSubjectAccessReview */ Boolean = js.native
     }
     
     /* static members */
     @js.native
     object SelfSubjectRulesReview extends js.Object {
       /**
-        * Get the state of an existing `SelfSubjectRulesReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing SelfSubjectRulesReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.selfSubjectRulesReviewMod.SelfSubjectRulesReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.selfSubjectRulesReviewMod.SelfSubjectRulesReview = js.native
@@ -347,22 +310,19 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of SelfSubjectRulesReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/SelfSubjectRulesReview.SelfSubjectRulesReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/selfSubjectRulesReview.SelfSubjectRulesReview */ Boolean = js.native
     }
     
     /* static members */
     @js.native
     object SubjectAccessReview extends js.Object {
       /**
-        * Get the state of an existing `SubjectAccessReview` resource, as identified by `id`.
-        * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-        * Kubernetes convention) the ID becomes `default/<name>`.
+        * Get an existing SubjectAccessReview resource's state with the given name, ID, and optional extra
+        * properties used to qualify the lookup.
         *
-        * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-        *
-        * @param name _Unique_ name used to register this resource with Pulumi.
-        * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-        * @param opts Uniquely specifies a CustomResource to select.
+        * @param name The _unique_ name of the resulting resource.
+        * @param id The _unique_ provider ID of the resource to lookup.
+        * @param opts Optional settings to control the behavior of the CustomResource.
         */
       def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.subjectAccessReviewMod.SubjectAccessReview = js.native
       def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.subjectAccessReviewMod.SubjectAccessReview = js.native
@@ -370,7 +330,7 @@ object authorization extends js.Object {
         * Returns true if the given object is an instance of SubjectAccessReview.  This is designed to work even
         * when multiple copies of the Pulumi SDK have been loaded into the same process.
         */
-      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/SubjectAccessReview.SubjectAccessReview */ Boolean = js.native
+      def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/authorization/v1beta1/subjectAccessReview.SubjectAccessReview */ Boolean = js.native
     }
     
   }

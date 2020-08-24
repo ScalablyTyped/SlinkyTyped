@@ -29,6 +29,14 @@ package object appmeshMod {
   */
   type EgressFilterType = typingsSlinky.awsSdk.appmeshMod._EgressFilterType | java.lang.String
   type FilePath = java.lang.String
+  type GatewayRouteList = js.Array[typingsSlinky.awsSdk.appmeshMod.GatewayRouteRef]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
+    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - java.lang.String
+  */
+  type GatewayRouteStatusCode = typingsSlinky.awsSdk.appmeshMod._GatewayRouteStatusCode | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.cancelled__
     - typingsSlinky.awsSdk.awsSdkStrings.`deadline-exceeded`
@@ -68,8 +76,10 @@ package object appmeshMod {
     - java.lang.String
   */
   type HttpScheme = typingsSlinky.awsSdk.appmeshMod._HttpScheme | java.lang.String
+  type ListGatewayRoutesLimit = scala.Double
   type ListMeshesLimit = scala.Double
   type ListRoutesLimit = scala.Double
+  type ListVirtualGatewaysLimit = scala.Double
   type ListVirtualNodesLimit = scala.Double
   type ListVirtualRoutersLimit = scala.Double
   type ListVirtualServicesLimit = scala.Double
@@ -123,6 +133,33 @@ package object appmeshMod {
   type TcpRetryPolicyEvent = typingsSlinky.awsSdk.awsSdkStrings.`connection-error` | java.lang.String
   type TcpRetryPolicyEvents = js.Array[typingsSlinky.awsSdk.appmeshMod.TcpRetryPolicyEvent]
   type Timestamp = js.Date
+  type VirtualGatewayCertificateAuthorityArns = js.Array[typingsSlinky.awsSdk.appmeshMod.Arn]
+  type VirtualGatewayHealthCheckIntervalMillis = scala.Double
+  type VirtualGatewayHealthCheckThreshold = scala.Double
+  type VirtualGatewayHealthCheckTimeoutMillis = scala.Double
+  type VirtualGatewayList = js.Array[typingsSlinky.awsSdk.appmeshMod.VirtualGatewayRef]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.PERMISSIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.STRICT
+    - java.lang.String
+  */
+  type VirtualGatewayListenerTlsMode = typingsSlinky.awsSdk.appmeshMod._VirtualGatewayListenerTlsMode | java.lang.String
+  type VirtualGatewayListeners = js.Array[typingsSlinky.awsSdk.appmeshMod.VirtualGatewayListener]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.grpc
+    - typingsSlinky.awsSdk.awsSdkStrings.http_
+    - typingsSlinky.awsSdk.awsSdkStrings.http2
+    - java.lang.String
+  */
+  type VirtualGatewayPortProtocol = typingsSlinky.awsSdk.appmeshMod._VirtualGatewayPortProtocol | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
+    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - java.lang.String
+  */
+  type VirtualGatewayStatusCode = typingsSlinky.awsSdk.appmeshMod._VirtualGatewayStatusCode | java.lang.String
   type VirtualNodeList = js.Array[typingsSlinky.awsSdk.appmeshMod.VirtualNodeRef]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE

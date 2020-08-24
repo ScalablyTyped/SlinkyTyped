@@ -1,31 +1,31 @@
 package typingsSlinky.maxmind.decoderMod
 
-import typingsSlinky.node.Buffer
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Decoder extends js.Object {
-  var baseOffset: js.Any
-  var cache: js.Any
-  var db: js.Any
-  var telemetry: Record[String, _]
-  def decode(offset: Double): js.Any
-  def decodeArray(size: Double, offset: Double): Cursor
-  def decodeBigUint(offset: Double, size: Double): String
-  def decodeBoolean(size: Double): Boolean
-  def decodeByType(`type`: String, offset: Double, size: Double): Cursor
-  def decodeBytes(offset: Double, size: Double): Buffer
-  def decodeDouble(offset: Double): Double
-  def decodeFast(offset: Double): js.Any
-  def decodeFloat(offset: Double): Double
-  def decodeInt32(offset: Double, size: Double): Double
-  def decodeMap(size: Double, offset: Double): Cursor
-  def decodePointer(ctrlByte: Double, offset: Double): Cursor
-  def decodeString(offset: Double, size: Double): js.Any
-  def decodeUint(offset: Double, size: Double): String | Double
-  def sizeFromCtrlByte(ctrlByte: Double, offset: Double): Cursor
+  var baseOffset: js.Any = js.native
+  var cache: js.Any = js.native
+  var db: js.Any = js.native
+  var decodeArray: js.Any = js.native
+  var decodeBigUint: js.Any = js.native
+  var decodeBoolean: js.Any = js.native
+  var decodeByType: js.Any = js.native
+  var decodeBytes: js.Any = js.native
+  var decodeDouble: js.Any = js.native
+  var decodeFloat: js.Any = js.native
+  var decodeInt32: js.Any = js.native
+  var decodeMap: js.Any = js.native
+  var decodePointer: js.Any = js.native
+  var decodeString: js.Any = js.native
+  var decodeUint: js.Any = js.native
+  var sizeFromCtrlByte: js.Any = js.native
+  var telemetry: Record[String, _] = js.native
+  def decode(offset: Double): js.Any = js.native
+  def decodeFast(offset: Double): js.Any = js.native
 }
 
 object Decoder {
@@ -35,24 +35,75 @@ object Decoder {
     cache: js.Any,
     db: js.Any,
     decode: Double => js.Any,
-    decodeArray: (Double, Double) => Cursor,
-    decodeBigUint: (Double, Double) => String,
-    decodeBoolean: Double => Boolean,
-    decodeByType: (String, Double, Double) => Cursor,
-    decodeBytes: (Double, Double) => Buffer,
-    decodeDouble: Double => Double,
+    decodeArray: js.Any,
+    decodeBigUint: js.Any,
+    decodeBoolean: js.Any,
+    decodeByType: js.Any,
+    decodeBytes: js.Any,
+    decodeDouble: js.Any,
     decodeFast: Double => js.Any,
-    decodeFloat: Double => Double,
-    decodeInt32: (Double, Double) => Double,
-    decodeMap: (Double, Double) => Cursor,
-    decodePointer: (Double, Double) => Cursor,
-    decodeString: (Double, Double) => js.Any,
-    decodeUint: (Double, Double) => String | Double,
-    sizeFromCtrlByte: (Double, Double) => Cursor,
+    decodeFloat: js.Any,
+    decodeInt32: js.Any,
+    decodeMap: js.Any,
+    decodePointer: js.Any,
+    decodeString: js.Any,
+    decodeUint: js.Any,
+    sizeFromCtrlByte: js.Any,
     telemetry: Record[String, _]
   ): Decoder = {
-    val __obj = js.Dynamic.literal(baseOffset = baseOffset.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], db = db.asInstanceOf[js.Any], decode = js.Any.fromFunction1(decode), decodeArray = js.Any.fromFunction2(decodeArray), decodeBigUint = js.Any.fromFunction2(decodeBigUint), decodeBoolean = js.Any.fromFunction1(decodeBoolean), decodeByType = js.Any.fromFunction3(decodeByType), decodeBytes = js.Any.fromFunction2(decodeBytes), decodeDouble = js.Any.fromFunction1(decodeDouble), decodeFast = js.Any.fromFunction1(decodeFast), decodeFloat = js.Any.fromFunction1(decodeFloat), decodeInt32 = js.Any.fromFunction2(decodeInt32), decodeMap = js.Any.fromFunction2(decodeMap), decodePointer = js.Any.fromFunction2(decodePointer), decodeString = js.Any.fromFunction2(decodeString), decodeUint = js.Any.fromFunction2(decodeUint), sizeFromCtrlByte = js.Any.fromFunction2(sizeFromCtrlByte), telemetry = telemetry.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(baseOffset = baseOffset.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], db = db.asInstanceOf[js.Any], decode = js.Any.fromFunction1(decode), decodeArray = decodeArray.asInstanceOf[js.Any], decodeBigUint = decodeBigUint.asInstanceOf[js.Any], decodeBoolean = decodeBoolean.asInstanceOf[js.Any], decodeByType = decodeByType.asInstanceOf[js.Any], decodeBytes = decodeBytes.asInstanceOf[js.Any], decodeDouble = decodeDouble.asInstanceOf[js.Any], decodeFast = js.Any.fromFunction1(decodeFast), decodeFloat = decodeFloat.asInstanceOf[js.Any], decodeInt32 = decodeInt32.asInstanceOf[js.Any], decodeMap = decodeMap.asInstanceOf[js.Any], decodePointer = decodePointer.asInstanceOf[js.Any], decodeString = decodeString.asInstanceOf[js.Any], decodeUint = decodeUint.asInstanceOf[js.Any], sizeFromCtrlByte = sizeFromCtrlByte.asInstanceOf[js.Any], telemetry = telemetry.asInstanceOf[js.Any])
     __obj.asInstanceOf[Decoder]
   }
+  @scala.inline
+  implicit class DecoderOps[Self <: Decoder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBaseOffset(value: js.Any): Self = this.set("baseOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCache(value: js.Any): Self = this.set("cache", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDb(value: js.Any): Self = this.set("db", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecode(value: Double => js.Any): Self = this.set("decode", js.Any.fromFunction1(value))
+    @scala.inline
+    def setDecodeArray(value: js.Any): Self = this.set("decodeArray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeBigUint(value: js.Any): Self = this.set("decodeBigUint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeBoolean(value: js.Any): Self = this.set("decodeBoolean", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeByType(value: js.Any): Self = this.set("decodeByType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeBytes(value: js.Any): Self = this.set("decodeBytes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeDouble(value: js.Any): Self = this.set("decodeDouble", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeFast(value: Double => js.Any): Self = this.set("decodeFast", js.Any.fromFunction1(value))
+    @scala.inline
+    def setDecodeFloat(value: js.Any): Self = this.set("decodeFloat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeInt32(value: js.Any): Self = this.set("decodeInt32", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeMap(value: js.Any): Self = this.set("decodeMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodePointer(value: js.Any): Self = this.set("decodePointer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeString(value: js.Any): Self = this.set("decodeString", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDecodeUint(value: js.Any): Self = this.set("decodeUint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSizeFromCtrlByte(value: js.Any): Self = this.set("sizeFromCtrlByte", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTelemetry(value: Record[String, _]): Self = this.set("telemetry", value.asInstanceOf[js.Any])
+  }
+  
 }
 

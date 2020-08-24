@@ -16,8 +16,8 @@ class Dayjs () extends js.Object {
   def add(value: Double, unit: OpUnitType): Dayjs = js.native
   def add(value: Double, unit: QUnitType): typingsSlinky.dayjs.quarterOfYearMod.dayjsAugmentingMod.Dayjs = js.native
   def calendar(): String = js.native
+  def calendar(referenceTime: js.UndefOr[ConfigType], formats: js.Object): String = js.native
   def calendar(referenceTime: ConfigType): String = js.native
-  def calendar(referenceTime: ConfigType, formats: js.Object): String = js.native
   def date(): Double = js.native
   def date(value: Double): Dayjs = js.native
   def day(): Double = js.native
@@ -26,6 +26,7 @@ class Dayjs () extends js.Object {
   def dayOfYear(value: Double): typingsSlinky.dayjs.dayOfYearMod.dayjsAugmentingMod.Dayjs = js.native
   def daysInMonth(): Double = js.native
   def diff(date: ConfigType): Double = js.native
+  def diff(date: ConfigType, unit: js.UndefOr[scala.Nothing], float: Boolean): Double = js.native
   def diff(date: ConfigType, unit: OpUnitType): Double = js.native
   def diff(date: ConfigType, unit: OpUnitType, float: Boolean): Double = js.native
   def diff(date: ConfigType, unit: QUnitType): Double = js.native
@@ -51,6 +52,7 @@ class Dayjs () extends js.Object {
   def isBefore(date: ConfigType, unit: OpUnitType): Boolean = js.native
   def isBefore(date: ConfigType, unit: QUnitType): Boolean = js.native
   def isBetween(a: ConfigType, b: ConfigType): Boolean = js.native
+  def isBetween(a: ConfigType, b: ConfigType, c: js.UndefOr[scala.Nothing], d: String): Boolean = js.native
   def isBetween(a: ConfigType, b: ConfigType, c: Null, d: String): Boolean = js.native
   def isBetween(a: ConfigType, b: ConfigType, c: OpUnitType): Boolean = js.native
   def isBetween(a: ConfigType, b: ConfigType, c: OpUnitType, d: String): Boolean = js.native

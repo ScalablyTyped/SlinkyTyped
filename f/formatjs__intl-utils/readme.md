@@ -1,7 +1,7 @@
 
 # Scala.js typings for formatjs__intl-utils
 
-Typings are for version 2.2.0
+Typings are for version 3.8.2
 
 ## Library description:
 Smartly determine best unit for relative time format

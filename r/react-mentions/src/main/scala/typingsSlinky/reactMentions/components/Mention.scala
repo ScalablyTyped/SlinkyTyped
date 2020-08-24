@@ -1,6 +1,6 @@
 package typingsSlinky.reactMentions.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMentions.mod.DataFunc
@@ -35,7 +35,7 @@ object Mention {
     def regex(value: js.RegExp): this.type = set("regex", value.asInstanceOf[js.Any])
     @scala.inline
     def renderSuggestion(
-      value: (/* suggestion */ SuggestionDataItem, /* search */ String, /* highlightedDisplay */ TagMod[Any], /* index */ Double, /* focused */ Boolean) => TagMod[Any]
+      value: (/* suggestion */ SuggestionDataItem, /* search */ String, /* highlightedDisplay */ ReactElement, /* index */ Double, /* focused */ Boolean) => ReactElement
     ): this.type = set("renderSuggestion", js.Any.fromFunction5(value))
     @scala.inline
     def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])

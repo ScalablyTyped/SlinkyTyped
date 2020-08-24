@@ -1,12 +1,14 @@
 package typingsSlinky.wouter.preactMod
 
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.preact.mod.FunctionComponent
+import typingsSlinky.preact.mod.VNode
+import typingsSlinky.wouter.useLocationMod.BaseLocationHook
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("wouter/preact", "Redirect")
 @js.native
-object Redirect extends TopLevel[FunctionComponent[RedirectProps]]
+object Redirect extends js.Object {
+  def apply[H /* <: BaseLocationHook */](props: RedirectProps[H]): VNode[_] | Null = js.native
+}
 

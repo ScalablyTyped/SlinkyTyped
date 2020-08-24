@@ -82,9 +82,9 @@ object ReactTextareaAutocomplete {
   object component extends js.Object
   
   @scala.inline
-  class Builder[TItem <: String | js.Object] (val args: js.Array[js.Any])
+  class Builder[/* <: java.lang.String | js.Object */ TItem] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[TItem]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -217,6 +217,8 @@ object ReactTextareaAutocomplete {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -486,6 +488,8 @@ object ReactTextareaAutocomplete {
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -493,9 +497,9 @@ object ReactTextareaAutocomplete {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps[TItem <: String | js.Object](p: TextareaProps[TItem]): Builder[TItem] = new Builder[TItem](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: java.lang.String | js.Object */ TItem](p: TextareaProps[TItem]): Builder[TItem] = new Builder[TItem](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[TItem <: String | js.Object](loadingComponent: ReactComponentClass[js.Object], trigger: TriggerType[TItem]): Builder[TItem] = {
+  def apply[/* <: java.lang.String | js.Object */ TItem](loadingComponent: ReactComponentClass[js.Object], trigger: TriggerType[TItem]): Builder[TItem] = {
     val __props = js.Dynamic.literal(loadingComponent = loadingComponent.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
     new Builder[TItem](js.Array(this.component, __props.asInstanceOf[TextareaProps[TItem]]))
   }

@@ -1,6 +1,5 @@
 package typingsSlinky.rcMenu.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMenu.domwrapMod.DOMWrapProps
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DOMWrap {
-  @JSImport("rc-menu/lib/DOMWrap", JSImport.Default)
+  @JSImport("rc-menu/es/DOMWrap", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -20,6 +19,10 @@ object DOMWrap {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[slinky.web.html.`*`.tag.type, default] {
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -29,7 +32,7 @@ object DOMWrap {
     @scala.inline
     def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def overflowedIndicator(value: TagMod[Any]): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def overflowedIndicator(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

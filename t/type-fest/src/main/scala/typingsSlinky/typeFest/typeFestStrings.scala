@@ -63,7 +63,22 @@ object typeFestStrings {
   sealed trait Exclamationmarkx64 extends js.Object
   
   @js.native
+  sealed trait Mutable extends js.Object
+  
+  @js.native
   sealed trait PackageJson extends js.Object
+  
+  @js.native
+  sealed trait PartialObjectDeep extends js.Object
+  
+  @js.native
+  sealed trait ReadonlyObjectDeep extends js.Object
+  
+  @js.native
+  sealed trait SetOptional extends js.Object
+  
+  @js.native
+  sealed trait SetRequired extends js.Object
   
   @js.native
   sealed trait Without extends js.Object
@@ -161,7 +176,17 @@ object typeFestStrings {
   @scala.inline
   def Exclamationmarkx64: Exclamationmarkx64 = "!x64".asInstanceOf[Exclamationmarkx64]
   @scala.inline
+  def Mutable: Mutable = "Mutable".asInstanceOf[Mutable]
+  @scala.inline
   def PackageJson: PackageJson = "PackageJson".asInstanceOf[PackageJson]
+  @scala.inline
+  def PartialObjectDeep: PartialObjectDeep = "PartialObjectDeep".asInstanceOf[PartialObjectDeep]
+  @scala.inline
+  def ReadonlyObjectDeep: ReadonlyObjectDeep = "ReadonlyObjectDeep".asInstanceOf[ReadonlyObjectDeep]
+  @scala.inline
+  def SetOptional: SetOptional = "SetOptional".asInstanceOf[SetOptional]
+  @scala.inline
+  def SetRequired: SetRequired = "SetRequired".asInstanceOf[SetRequired]
   @scala.inline
   def Without: Without = "Without".asInstanceOf[Without]
   @scala.inline

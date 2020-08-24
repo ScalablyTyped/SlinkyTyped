@@ -26,7 +26,7 @@ object BarChart {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.BarChart[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.BarChart[T]] {
     @scala.inline
     def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline

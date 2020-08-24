@@ -2,7 +2,6 @@ package typingsSlinky.wordpressBlockEditor.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.wordpressBlockEditor.mod.PlainText.^
 import typingsSlinky.wordpressBlockEditor.plainTextMod.PlainText.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,11 +12,11 @@ object PlainText {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): Default[tag.type, ^] = new Default[tag.type, ^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: String => Unit, value: String): Default[tag.type, ^] = {
+  def apply(onChange: String => Unit, value: String): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
-    new Default[tag.type, ^](js.Array(this.component, __props.asInstanceOf[Props]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
 

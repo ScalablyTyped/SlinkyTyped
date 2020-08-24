@@ -5,7 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object webBrowserTypesMod {
-  type CoolDownResult = typingsSlinky.expoWebBrowser.webBrowserTypesMod.ServiceActionResult
-  type MayInitWithUrlResult = typingsSlinky.expoWebBrowser.webBrowserTypesMod.ServiceActionResult
-  type WarmUpResult = typingsSlinky.expoWebBrowser.webBrowserTypesMod.ServiceActionResult
+  type WebBrowserCoolDownResult = typingsSlinky.expoWebBrowser.webBrowserTypesMod.ServiceActionResult
+  type WebBrowserMayInitWithUrlResult = typingsSlinky.expoWebBrowser.webBrowserTypesMod.ServiceActionResult
+  type WebBrowserWarmUpResult = typingsSlinky.expoWebBrowser.webBrowserTypesMod.ServiceActionResult
+  type WebBrowserWindowFeatures = typingsSlinky.std.Record[java.lang.String, scala.Double | scala.Boolean | java.lang.String]
 }

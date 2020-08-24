@@ -1,6 +1,5 @@
 package typingsSlinky.reactSidebar.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -49,7 +48,7 @@ object ReactSidebar {
     @scala.inline
     def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     @scala.inline
-    def sidebar(value: TagMod[Any]): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    def sidebar(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
     @scala.inline
     def sidebarClassName(value: String): this.type = set("sidebarClassName", value.asInstanceOf[js.Any])
     @scala.inline

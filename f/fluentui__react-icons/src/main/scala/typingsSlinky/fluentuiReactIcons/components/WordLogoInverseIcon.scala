@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WordLogoInverseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WordLogoInverseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WordLogoInverseIcon")
   @js.native
   object component extends js.Object
   

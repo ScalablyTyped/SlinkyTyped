@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libChipChipMod.ChipProps
-import typingsSlinky.reactToolbox.libChipChipMod.ChipTheme
-import typingsSlinky.reactToolbox.libChipMod.default
+import typingsSlinky.reactToolbox.chipChipMod.ChipProps
+import typingsSlinky.reactToolbox.chipChipMod.ChipTheme
+import typingsSlinky.reactToolbox.chipMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Chip {
-  @JSImport("react-toolbox/lib/chip", JSImport.Default)
+  @JSImport("react-toolbox/components/chip", JSImport.Default)
   @js.native
   object component extends js.Object
   

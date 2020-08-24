@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Gate11 () extends Element {
   def this(attributes: GenericAttributes[Gate11Selectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
   def this(attributes: GenericAttributes[Gate11Selectors], opt: StringDictionary[js.Any]) = this()
 }
 

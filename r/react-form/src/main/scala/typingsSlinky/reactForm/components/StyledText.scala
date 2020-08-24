@@ -218,6 +218,8 @@ object StyledText {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -227,6 +229,8 @@ object StyledText {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def errorBefore(value: Boolean): this.type = set("errorBefore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fieldVarargs(value: (js.Array[ReactText] | ReactText | String)*): this.type = set("field", js.Array(value :_*))
     @scala.inline
     def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
     @scala.inline
@@ -497,6 +501,8 @@ object StyledText {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

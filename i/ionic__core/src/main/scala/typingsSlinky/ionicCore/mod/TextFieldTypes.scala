@@ -14,6 +14,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ionicCore.ionicCoreStrings.text
   - typingsSlinky.ionicCore.ionicCoreStrings.url
   - typingsSlinky.ionicCore.ionicCoreStrings.time
+  - typingsSlinky.ionicCore.ionicCoreStrings.week
+  - typingsSlinky.ionicCore.ionicCoreStrings.month
+  - typingsSlinky.ionicCore.ionicCoreStrings.`datetime-local`
 */
 trait TextFieldTypes extends js.Object
 
@@ -21,7 +24,11 @@ object TextFieldTypes {
   @scala.inline
   def date: typingsSlinky.ionicCore.ionicCoreStrings.date = "date".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.date]
   @scala.inline
+  def `datetime-local`: typingsSlinky.ionicCore.ionicCoreStrings.`datetime-local` = "datetime-local".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`datetime-local`]
+  @scala.inline
   def email: typingsSlinky.ionicCore.ionicCoreStrings.email = "email".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.email]
+  @scala.inline
+  def month: typingsSlinky.ionicCore.ionicCoreStrings.month = "month".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.month]
   @scala.inline
   def number: typingsSlinky.ionicCore.ionicCoreStrings.number = "number".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.number]
   @scala.inline
@@ -36,5 +43,7 @@ object TextFieldTypes {
   def time: typingsSlinky.ionicCore.ionicCoreStrings.time = "time".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.time]
   @scala.inline
   def url: typingsSlinky.ionicCore.ionicCoreStrings.url = "url".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.url]
+  @scala.inline
+  def week: typingsSlinky.ionicCore.ionicCoreStrings.week = "week".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.week]
 }
 

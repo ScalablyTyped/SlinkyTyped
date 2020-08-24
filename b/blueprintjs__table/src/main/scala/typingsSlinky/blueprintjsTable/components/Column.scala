@@ -27,6 +27,8 @@ object Column {
     @scala.inline
     def id(value: String | Double): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def loadingOptionsVarargs(value: ColumnLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
+    @scala.inline
     def loadingOptions(value: js.Array[ColumnLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])

@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -71,21 +71,20 @@ import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.fadeMod.FadeProps
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.modalMod.ModalProps
-import typingsSlinky.reactstrap.modalMod.default
 import typingsSlinky.reactstrap.reactstrapStrings.static
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Modal {
-  @JSImport("reactstrap/lib/Modal", JSImport.Default)
+  @JSImport("reactstrap", "Modal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.Modal[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -207,6 +206,12 @@ object Modal {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
+    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def container(value: String | HTMLElement | ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
     def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -221,6 +226,8 @@ object Modal {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -229,7 +236,7 @@ object Modal {
     @scala.inline
     def externalReactElement(value: ReactElement): this.type = set("external", value.asInstanceOf[js.Any])
     @scala.inline
-    def external(value: TagMod[Any]): this.type = set("external", value.asInstanceOf[js.Any])
+    def external(value: ReactElement): this.type = set("external", value.asInstanceOf[js.Any])
     @scala.inline
     def fade(value: Boolean): this.type = set("fade", value.asInstanceOf[js.Any])
     @scala.inline

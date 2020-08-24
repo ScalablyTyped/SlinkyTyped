@@ -10,6 +10,7 @@ class Interpolation protected ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.Interpolation {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     strings: js.Array[_],
     expressions: js.Array[_]
   ) = this()

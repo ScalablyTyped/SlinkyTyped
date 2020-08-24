@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
+import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -43,6 +44,8 @@ object Card {
     def featuredTitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredTitleStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def featuredTitleStyleNull: this.type = set("featuredTitleStyle", null)
+    @scala.inline
+    def imageVarargs(value: ImageURISource*): this.type = set("image", js.Array(value :_*))
     @scala.inline
     def image(value: ImageSourcePropType): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline

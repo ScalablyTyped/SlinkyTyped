@@ -3,12 +3,17 @@ package typingsSlinky.highcharts.vwapMod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable5
 import org.scalablytyped.runtime.Instantiable7
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.highcharts.anon.TypeofColor
 import typingsSlinky.highcharts.mod.AnimationOptionsObject
+import typingsSlinky.highcharts.mod.AnnotationControlPointOptionsObject
+import typingsSlinky.highcharts.mod.AnnotationControllable
 import typingsSlinky.highcharts.mod.AnnotationsOptions
 import typingsSlinky.highcharts.mod.AxisOptions
 import typingsSlinky.highcharts.mod.AxisPlotBandsOptions
@@ -36,6 +41,7 @@ import typingsSlinky.highcharts.mod.TimeOptions
 import typingsSlinky.highcharts.mod.Time_
 import typingsSlinky.highcharts.mod.TooltipOptions
 import typingsSlinky.highcharts.mod.WrapProceedFunction
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,6 +64,34 @@ object Highcharts extends js.Object {
       *        the options object
       */
     def this(chart: Chart_, userOptions: AnnotationsOptions) = this()
+  }
+  
+  @js.native
+  class AnnotationControlPoint protected ()
+    extends typingsSlinky.highcharts.mod.AnnotationControlPoint {
+    /**
+      * A control point class which is a connection between controllable
+      * transform methods and a user actions.
+      *
+      * @param chart
+      *        A chart instance.
+      *
+      * @param target
+      *        A controllable instance which is a target for a control point.
+      *
+      * @param options
+      *        An options object.
+      *
+      * @param index
+      *        Point index.
+      */
+    def this(chart: Chart_, target: AnnotationControllable, options: AnnotationControlPointOptionsObject) = this()
+    def this(
+      chart: Chart_,
+      target: AnnotationControllable,
+      options: AnnotationControlPointOptionsObject,
+      index: Double
+    ) = this()
   }
   
   @js.native
@@ -89,10 +123,10 @@ object Highcharts extends js.Object {
       * @param chart
       *        The Chart instance to apply the axis on.
       *
-      * @param options
+      * @param userOptions
       *        Axis options.
       */
-    def this(chart: Chart_, options: AxisOptions) = this()
+    def this(chart: Chart_, userOptions: AxisOptions) = this()
   }
   
   @js.native
@@ -110,17 +144,6 @@ object Highcharts extends js.Object {
       */
     def this(options: Options) = this()
     def this(options: Options, callback: ChartCallbackFunction) = this()
-  }
-  
-  @js.native
-  class Color protected () extends Color_ {
-    /**
-      * Handle color operations. Some object methods are chainable.
-      *
-      * @param input
-      *        The input color in either rbga or hex format
-      */
-    def this(input: ColorType) = this()
   }
   
   @js.native
@@ -178,7 +201,7 @@ object Highcharts extends js.Object {
       * Pointer item that can be accessed from the Chart.pointer property.
       *
       * @param chart
-      *        The Chart instance.
+      *        The chart instance.
       *
       * @param options
       *        The root options object. The pointer uses options from the chart
@@ -230,7 +253,38 @@ object Highcharts extends js.Object {
       */
     def this(container: HTMLElement, width: Double, height: Double) = this()
     def this(container: HTMLElement, width: Double, height: Double, style: CSSObject) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: Boolean
+    ) = this()
     def this(container: HTMLElement, width: Double, height: Double, style: CSSObject, forExport: Boolean) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: js.UndefOr[scala.Nothing],
+      allowHTML: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: Boolean,
+      allowHTML: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: CSSObject,
+      forExport: js.UndefOr[scala.Nothing],
+      allowHTML: Boolean
+    ) = this()
     def this(
       container: HTMLElement,
       width: Double,
@@ -238,6 +292,69 @@ object Highcharts extends js.Object {
       style: CSSObject,
       forExport: Boolean,
       allowHTML: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: js.UndefOr[scala.Nothing],
+      allowHTML: js.UndefOr[scala.Nothing],
+      styledMode: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: js.UndefOr[scala.Nothing],
+      allowHTML: Boolean,
+      styledMode: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: Boolean,
+      allowHTML: js.UndefOr[scala.Nothing],
+      styledMode: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: js.UndefOr[scala.Nothing],
+      forExport: Boolean,
+      allowHTML: Boolean,
+      styledMode: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: CSSObject,
+      forExport: js.UndefOr[scala.Nothing],
+      allowHTML: js.UndefOr[scala.Nothing],
+      styledMode: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: CSSObject,
+      forExport: js.UndefOr[scala.Nothing],
+      allowHTML: Boolean,
+      styledMode: Boolean
+    ) = this()
+    def this(
+      container: HTMLElement,
+      width: Double,
+      height: Double,
+      style: CSSObject,
+      forExport: Boolean,
+      allowHTML: js.UndefOr[scala.Nothing],
+      styledMode: Boolean
     ) = this()
     def this(
       container: HTMLElement,
@@ -331,7 +448,34 @@ object Highcharts extends js.Object {
       */
     def this(axis: typingsSlinky.highcharts.mod.Axis, pos: Double) = this()
     def this(axis: typingsSlinky.highcharts.mod.Axis, pos: Double, `type`: String) = this()
+    def this(
+      axis: typingsSlinky.highcharts.mod.Axis,
+      pos: Double,
+      `type`: js.UndefOr[scala.Nothing],
+      noLabel: Boolean
+    ) = this()
     def this(axis: typingsSlinky.highcharts.mod.Axis, pos: Double, `type`: String, noLabel: Boolean) = this()
+    def this(
+      axis: typingsSlinky.highcharts.mod.Axis,
+      pos: Double,
+      `type`: js.UndefOr[scala.Nothing],
+      noLabel: js.UndefOr[scala.Nothing],
+      parameters: js.Object
+    ) = this()
+    def this(
+      axis: typingsSlinky.highcharts.mod.Axis,
+      pos: Double,
+      `type`: js.UndefOr[scala.Nothing],
+      noLabel: Boolean,
+      parameters: js.Object
+    ) = this()
+    def this(
+      axis: typingsSlinky.highcharts.mod.Axis,
+      pos: Double,
+      `type`: String,
+      noLabel: js.UndefOr[scala.Nothing],
+      parameters: js.Object
+    ) = this()
     def this(
       axis: typingsSlinky.highcharts.mod.Axis,
       pos: Double,
@@ -372,6 +516,7 @@ object Highcharts extends js.Object {
     def this(chart: Chart_, options: TooltipOptions) = this()
   }
   
+  var Color: TypeofColor = js.native
   var charts: js.Array[js.UndefOr[Chart_]] = js.native
   var dateFormats: Dictionary[TimeFormatCallbackFunction] = js.native
   var defaultOptions: Options = js.native
@@ -398,6 +543,8 @@ object Highcharts extends js.Object {
   def arrayMax(data: js.Array[_]): Double = js.native
   def arrayMin(data: js.Array[_]): Double = js.native
   def attr(elem: HTMLElement): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
   def attr(elem: HTMLElement, prop: String): js.UndefOr[String | Null] = js.native
   def attr(elem: HTMLElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
   def attr(elem: HTMLElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
@@ -408,6 +555,8 @@ object Highcharts extends js.Object {
   def attr(elem: HTMLElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
   def attr(elem: HTMLElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
   def attr(elem: org.scalajs.dom.raw.SVGElement): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
   def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String): js.UndefOr[String | Null] = js.native
   def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
   def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
@@ -428,8 +577,66 @@ object Highcharts extends js.Object {
   def correctFloat(num: Double): Double = js.native
   def correctFloat(num: Double, prec: Double): Double = js.native
   def createElement(tag: String): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: js.UndefOr[scala.Nothing],
+    parent: HTMLElement
+  ): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: js.UndefOr[scala.Nothing],
+    parent: HTMLElement,
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: js.UndefOr[scala.Nothing], styles: CSSObject): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: CSSObject,
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: js.UndefOr[scala.Nothing], styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: CSSObject,
+    parent: HTMLElement,
+    nopad: Boolean
+  ): HTMLElement = js.native
   def createElement(tag: String, attribs: HTMLAttributes): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: HTMLAttributes,
+    styles: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: HTMLAttributes, styles: js.UndefOr[scala.Nothing], parent: HTMLElement): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: HTMLAttributes,
+    styles: js.UndefOr[scala.Nothing],
+    parent: HTMLElement,
+    nopad: Boolean
+  ): HTMLElement = js.native
   def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: HTMLAttributes,
+    styles: CSSObject,
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
   def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
   def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement, nopad: Boolean): HTMLElement = js.native
   def css(el: HTMLElement, styles: CSSObject): Unit = js.native
@@ -444,27 +651,51 @@ object Highcharts extends js.Object {
   def each(arr: js.Array[_], fn: js.Function, ctx: js.Any): Unit = js.native
   def erase(arr: js.Array[_], item: js.Any): Unit = js.native
   def error(code: String): Unit = js.native
+  def error(
+    code: String,
+    stop: js.UndefOr[scala.Nothing],
+    chart: js.UndefOr[scala.Nothing],
+    params: Dictionary[String]
+  ): Unit = js.native
+  def error(code: String, stop: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
+  def error(code: String, stop: js.UndefOr[scala.Nothing], chart: Chart_, params: Dictionary[String]): Unit = js.native
   def error(code: String, stop: Boolean): Unit = js.native
+  def error(code: String, stop: Boolean, chart: js.UndefOr[scala.Nothing], params: Dictionary[String]): Unit = js.native
   def error(code: String, stop: Boolean, chart: Chart_): Unit = js.native
   def error(code: String, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
   def error(code: Double): Unit = js.native
+  def error(
+    code: Double,
+    stop: js.UndefOr[scala.Nothing],
+    chart: js.UndefOr[scala.Nothing],
+    params: Dictionary[String]
+  ): Unit = js.native
+  def error(code: Double, stop: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
+  def error(code: Double, stop: js.UndefOr[scala.Nothing], chart: Chart_, params: Dictionary[String]): Unit = js.native
   def error(code: Double, stop: Boolean): Unit = js.native
+  def error(code: Double, stop: Boolean, chart: js.UndefOr[scala.Nothing], params: Dictionary[String]): Unit = js.native
   def error(code: Double, stop: Boolean, chart: Chart_): Unit = js.native
   def error(code: Double, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
-  def extend[T](a: js.UndefOr[T], b: js.Object): T = js.native
+  def extend[T](a: T, b: js.Object): T = js.native
+  def extend[T](a: js.UndefOr[scala.Nothing], b: js.Object): T = js.native
   def extendClass[T](parent: Class[T], members: Dictionary[_]): Class[T] = js.native
   def find[T](arr: js.Array[T], callback: js.Function): js.UndefOr[T] = js.native
   def fireEvent[T](el: T, `type`: String): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: js.UndefOr[scala.Nothing], defaultFunction: js.Function): Unit = js.native
+  def fireEvent[T](
+    el: T,
+    `type`: String,
+    eventArguments: js.UndefOr[scala.Nothing],
+    defaultFunction: EventCallbackFunction[T]
+  ): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_]): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: js.Function): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: EventCallbackFunction[T]): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Event): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: js.Function): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: EventCallbackFunction[T]): Unit = js.native
-  def format(str: String, ctx: js.Any): String = js.native
-  def format(str: String, ctx: js.Any, time: Time_): String = js.native
-  def formatSingle(format: String, `val`: js.Any): String = js.native
-  def formatSingle(format: String, `val`: js.Any, time: Time_): String = js.native
+  def format(str: String, ctx: Record[String, _]): String = js.native
+  def format(str: String, ctx: Record[String, _], chart: Chart_): String = js.native
   def getMagnitude(num: Double): Double = js.native
   def getOptions(): Options = js.native
   def getStyle(el: HTMLElement, prop: String): Double | String = js.native
@@ -482,13 +713,76 @@ object Highcharts extends js.Object {
   def isString(s: js.Any): Boolean = js.native
   def keys(obj: js.Any): js.Array[String] = js.native
   def map(arr: js.Array[_], fn: js.Function): js.Array[_] = js.native
-  def merge[T](): T = js.native
   def merge[T](a: T, n: js.UndefOr[js.Object]*): T = js.native
-  def merge[T](extend: Boolean): T = js.native
+  def merge[T](a: js.UndefOr[scala.Nothing], n: js.UndefOr[js.Object]*): T = js.native
   def merge[T](extend: Boolean, a: T, n: js.UndefOr[js.Object]*): T = js.native
+  def merge[T](extend: Boolean, a: js.UndefOr[scala.Nothing], n: js.UndefOr[js.Object]*): T = js.native
   def normalizeTickInterval(interval: Double): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.UndefOr[scala.Nothing], magnitude: Double): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: Double,
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.UndefOr[scala.Nothing], magnitude: Double, allowDecimals: Boolean): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: Double,
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
   def normalizeTickInterval(interval: Double, multiples: js.Array[_]): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
   def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: Double,
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
   def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double, allowDecimals: Boolean): Double = js.native
   def normalizeTickInterval(
     interval: Double,
@@ -498,12 +792,14 @@ object Highcharts extends js.Object {
     hasTickAmount: Boolean
   ): Double = js.native
   def numberFormat(number: Double, decimals: Double): String = js.native
+  def numberFormat(number: Double, decimals: Double, decimalPoint: js.UndefOr[scala.Nothing], thousandsSep: String): String = js.native
   def numberFormat(number: Double, decimals: Double, decimalPoint: String): String = js.native
   def numberFormat(number: Double, decimals: Double, decimalPoint: String, thousandsSep: String): String = js.native
   def objectEach[T](obj: js.Any, fn: ObjectEachCallbackFunction[T]): Unit = js.native
   def objectEach[T](obj: js.Any, fn: ObjectEachCallbackFunction[T], ctx: T): Unit = js.native
-  def offset(el: HTMLElement): OffsetObject = js.native
+  def offset(el: Element): OffsetObject = js.native
   def pad(number: Double): String = js.native
+  def pad(number: Double, length: js.UndefOr[scala.Nothing], padder: String): String = js.native
   def pad(number: Double, length: Double): String = js.native
   def pad(number: Double, length: Double, padder: String): String = js.native
   def pick[T](items: (js.UndefOr[T | Null])*): T = js.native
@@ -511,12 +807,21 @@ object Highcharts extends js.Object {
   def relativeLength(value: RelativeSize, base: Double): Double = js.native
   def relativeLength(value: RelativeSize, base: Double, offset: Double): Double = js.native
   def removeEvent[T](el: T): Unit = js.native
+  def removeEvent[T](el: T, `type`: js.UndefOr[scala.Nothing], fn: EventCallbackFunction[T]): Unit = js.native
   def removeEvent[T](el: T, `type`: String): Unit = js.native
   def removeEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T]): Unit = js.native
   def removeEvent[T](el: Class[T]): Unit = js.native
+  def removeEvent[T](el: Class[T], `type`: js.UndefOr[scala.Nothing], fn: EventCallbackFunction[T]): Unit = js.native
   def removeEvent[T](el: Class[T], `type`: String): Unit = js.native
   def removeEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T]): Unit = js.native
   def seriesType(`type`: String, parent: String, options: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(
+    `type`: String,
+    parent: String,
+    options: Dictionary[_],
+    props: js.UndefOr[scala.Nothing],
+    pointProps: Dictionary[_]
+  ): typingsSlinky.highcharts.mod.Series = js.native
   def seriesType(`type`: String, parent: String, options: Dictionary[_], props: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
   def seriesType(
     `type`: String,
@@ -526,6 +831,13 @@ object Highcharts extends js.Object {
     pointProps: Dictionary[_]
   ): typingsSlinky.highcharts.mod.Series = js.native
   def seriesType(`type`: String, parent: String, options: SeriesOptionsType): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(
+    `type`: String,
+    parent: String,
+    options: SeriesOptionsType,
+    props: js.UndefOr[scala.Nothing],
+    pointProps: Dictionary[_]
+  ): typingsSlinky.highcharts.mod.Series = js.native
   def seriesType(`type`: String, parent: String, options: SeriesOptionsType, props: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
   def seriesType(
     `type`: String,
@@ -534,7 +846,9 @@ object Highcharts extends js.Object {
     props: Dictionary[_],
     pointProps: Dictionary[_]
   ): typingsSlinky.highcharts.mod.Series = js.native
-  def setAnimation(animation: js.UndefOr[AnimationOptionsObject | Boolean], chart: Chart_): Unit = js.native
+  def setAnimation(animation: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
+  def setAnimation(animation: Boolean, chart: Chart_): Unit = js.native
+  def setAnimation(animation: AnimationOptionsObject, chart: Chart_): Unit = js.native
   def setOptions(options: Options): Options = js.native
   def some(arr: js.Array[_], fn: js.Function, ctx: js.Any): Boolean = js.native
   def splat(obj: js.Any): js.Array[_] = js.native
@@ -544,6 +858,8 @@ object Highcharts extends js.Object {
   def syncTimeout(fn: js.Function, delay: Double): Double = js.native
   def syncTimeout(fn: js.Function, delay: Double, context: js.Any): Double = js.native
   def uniqueKey(): String = js.native
+  def useSerialIds(): js.UndefOr[Boolean] = js.native
+  def useSerialIds(mode: Boolean): js.UndefOr[Boolean] = js.native
   def wrap(obj: js.Any, method: String, func: WrapProceedFunction): Unit = js.native
   @js.native
   object Annotation
@@ -556,19 +872,28 @@ object Highcharts extends js.Object {
         ]
   
   @js.native
+  object AnnotationControlPoint
+    extends TopLevel[
+          Instantiable4[
+            /* chart */ Chart_, 
+            /* target */ AnnotationControllable, 
+            /* options */ AnnotationControlPointOptionsObject, 
+            /* index */ js.UndefOr[Double], 
+            typingsSlinky.highcharts.mod.AnnotationControlPoint
+          ]
+        ]
+  
+  @js.native
   object Axis
     extends TopLevel[
-          Instantiable2[/* chart */ Chart_, /* options */ AxisOptions, typingsSlinky.highcharts.mod.Axis]
+          Instantiable2[/* chart */ Chart_, /* userOptions */ AxisOptions, typingsSlinky.highcharts.mod.Axis]
         ]
   
   @js.native
   object Chart
     extends TopLevel[
-          Instantiable2[/* options */ Options, js.UndefOr[/* callback */ ChartCallbackFunction], Chart_]
+          Instantiable2[/* options */ Options, /* callback */ js.UndefOr[ChartCallbackFunction], Chart_]
         ]
-  
-  @js.native
-  object Color extends TopLevel[Instantiable1[/* input */ ColorType, Color_]]
   
   @js.native
   object ColorAxis
@@ -591,7 +916,7 @@ object Highcharts extends js.Object {
     extends TopLevel[
           Instantiable2[
             /* axis */ typingsSlinky.highcharts.mod.Axis, 
-            js.UndefOr[AxisPlotBandsOptions | AxisPlotLinesOptions], 
+            /* options */ js.UndefOr[AxisPlotBandsOptions | AxisPlotLinesOptions], 
             typingsSlinky.highcharts.mod.PlotLineOrBand
           ]
         ]
@@ -617,10 +942,10 @@ object Highcharts extends js.Object {
             HTMLElement, 
             /* width */ Double, 
             /* height */ Double, 
-            js.UndefOr[/* style */ CSSObject], 
-            js.UndefOr[/* forExport */ Boolean], 
-            js.UndefOr[/* allowHTML */ Boolean], 
-            js.UndefOr[/* styledMode */ Boolean], 
+            /* style */ js.UndefOr[CSSObject], 
+            /* forExport */ js.UndefOr[Boolean], 
+            /* allowHTML */ js.UndefOr[Boolean], 
+            /* styledMode */ js.UndefOr[Boolean], 
             typingsSlinky.highcharts.mod.SVGRenderer
           ]
         ]
@@ -641,9 +966,9 @@ object Highcharts extends js.Object {
           Instantiable5[
             /* axis */ typingsSlinky.highcharts.mod.Axis, 
             /* pos */ Double, 
-            js.UndefOr[/* type */ String], 
-            js.UndefOr[/* noLabel */ Boolean], 
-            js.UndefOr[/* parameters */ js.Object], 
+            /* type */ js.UndefOr[String], 
+            /* noLabel */ js.UndefOr[Boolean], 
+            /* parameters */ js.UndefOr[js.Object], 
             typingsSlinky.highcharts.mod.Tick
           ]
         ]

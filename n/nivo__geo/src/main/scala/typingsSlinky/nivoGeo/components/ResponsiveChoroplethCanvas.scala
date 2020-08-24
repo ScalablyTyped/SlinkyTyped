@@ -34,6 +34,8 @@ object ResponsiveChoroplethCanvas {
     @scala.inline
     def borderWidth(value: Double | (FeatureAccessor[ChoroplethBoundFeature, Double])): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: String | js.Array[String] | (FeatureAccessor[_, String])): this.type = set("colors", value.asInstanceOf[js.Any])

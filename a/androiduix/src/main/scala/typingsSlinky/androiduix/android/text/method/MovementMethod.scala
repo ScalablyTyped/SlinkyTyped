@@ -44,59 +44,28 @@ object MovementMethod {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCanSelectArbitrarily(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canSelectArbitrarily")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withInitialize(value: (TextView, Spannable) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setCanSelectArbitrarily(value: () => Boolean): Self = this.set("canSelectArbitrarily", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnGenericMotionEvent(value: (TextView, Spannable, MotionEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGenericMotionEvent")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setInitialize(value: (TextView, Spannable) => Unit): Self = this.set("initialize", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnKeyDown(value: (TextView, Spannable, Double, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnGenericMotionEvent(value: (TextView, Spannable, MotionEvent) => Boolean): Self = this.set("onGenericMotionEvent", js.Any.fromFunction3(value))
     @scala.inline
-    def withOnKeyOther(value: (TextView, Spannable, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyOther")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnKeyDown(value: (TextView, Spannable, Double, KeyEvent) => Boolean): Self = this.set("onKeyDown", js.Any.fromFunction4(value))
     @scala.inline
-    def withOnKeyUp(value: (TextView, Spannable, Double, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnKeyOther(value: (TextView, Spannable, KeyEvent) => Boolean): Self = this.set("onKeyOther", js.Any.fromFunction3(value))
     @scala.inline
-    def withOnTakeFocus(value: (TextView, Spannable, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTakeFocus")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnKeyUp(value: (TextView, Spannable, Double, KeyEvent) => Boolean): Self = this.set("onKeyUp", js.Any.fromFunction4(value))
     @scala.inline
-    def withOnTouchEvent(value: (TextView, Spannable, MotionEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEvent")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnTakeFocus(value: (TextView, Spannable, Double) => Unit): Self = this.set("onTakeFocus", js.Any.fromFunction3(value))
     @scala.inline
-    def withOnTrackballEvent(value: (TextView, Spannable, MotionEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTrackballEvent")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnTouchEvent(value: (TextView, Spannable, MotionEvent) => Boolean): Self = this.set("onTouchEvent", js.Any.fromFunction3(value))
+    @scala.inline
+    def setOnTrackballEvent(value: (TextView, Spannable, MotionEvent) => Boolean): Self = this.set("onTrackballEvent", js.Any.fromFunction3(value))
   }
   
 }

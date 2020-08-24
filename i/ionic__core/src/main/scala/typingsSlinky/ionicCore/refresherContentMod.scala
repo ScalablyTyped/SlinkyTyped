@@ -1,7 +1,9 @@
 package typingsSlinky.ionicCore
 
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRefresherContentElement
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +13,13 @@ import scala.scalajs.js.annotation._
 object refresherContentMod extends js.Object {
   @js.native
   class RefresherContent () extends ComponentInterface {
+    var el: HTMLIonRefresherContentElement = js.native
     /**
-      * A static icon to display when you begin to pull down
+      * A static icon or a spinner to display when you begin to pull down.
+      * A spinner name can be provided to gradually show tick marks
+      * when pulling down on iOS devices.
       */
-    var pullingIcon: js.UndefOr[String | Null] = js.native
+    var pullingIcon: js.UndefOr[SpinnerTypes | String | Null] = js.native
     /**
       * The text you want to display when you begin to pull down.
       * `pullingText` can accept either plaintext or HTML as a string.
@@ -24,7 +29,7 @@ object refresherContentMod extends js.Object {
       *
       * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
       */
-    var pullingText: js.UndefOr[String] = js.native
+    var pullingText: js.UndefOr[String | IonicSafeString] = js.native
     /**
       * An animated SVG spinner that shows when refreshing begins
       */
@@ -38,7 +43,7 @@ object refresherContentMod extends js.Object {
       *
       * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
       */
-    var refreshingText: js.UndefOr[String] = js.native
+    var refreshingText: js.UndefOr[String | IonicSafeString] = js.native
     @JSName("componentWillLoad")
     def componentWillLoad_MRefresherContent(): Unit = js.native
     @JSName("render")

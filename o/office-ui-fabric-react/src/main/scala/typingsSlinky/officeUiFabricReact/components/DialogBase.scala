@@ -104,6 +104,8 @@ object DialogBase {
     @scala.inline
     def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
+    def topButtonsPropsVarargs(value: IButtonProps*): this.type = set("topButtonsProps", js.Array(value :_*))
+    @scala.inline
     def topButtonsProps(value: js.Array[IButtonProps]): this.type = set("topButtonsProps", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: DialogType): this.type = set("type", value.asInstanceOf[js.Any])

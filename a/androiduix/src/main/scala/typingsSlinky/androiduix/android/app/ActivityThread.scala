@@ -31,7 +31,6 @@ trait ActivityThread extends js.Object {
   /* private */ def handleLaunchActivity(intent: js.Any): js.Any = js.native
   /* private */ def handlePauseActivity(activity: js.Any): js.Any = js.native
   /* private */ def handleResumeActivity(a: js.Any, launching: js.Any): js.Any = js.native
-  /* private */ def handleStopActivity(activity: js.Any): js.Any = js.native
   /* private */ def handleStopActivity(activity: js.Any, show: js.Any): js.Any = js.native
   /* private */ def initWithPageStack(): js.Any = js.native
   /* private */ def isRootActivity(activity: js.Any): js.Any = js.native

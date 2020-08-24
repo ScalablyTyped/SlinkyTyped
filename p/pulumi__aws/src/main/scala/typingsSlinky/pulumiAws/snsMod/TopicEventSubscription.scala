@@ -22,6 +22,13 @@ class TopicEventSubscription protected ()
     name: String,
     topic: typingsSlinky.pulumiAws.topicMod.Topic,
     handler: TopicEventHandler,
+    args: js.UndefOr[scala.Nothing],
+    opts: ComponentResourceOptions
+  ) = this()
+  def this(
+    name: String,
+    topic: typingsSlinky.pulumiAws.topicMod.Topic,
+    handler: TopicEventHandler,
     args: TopicEventSubscriptionArgs,
     opts: ComponentResourceOptions
   ) = this()

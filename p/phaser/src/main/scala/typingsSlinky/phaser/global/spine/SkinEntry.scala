@@ -9,11 +9,5 @@ import scala.scalajs.js.annotation._
 class SkinEntry protected ()
   extends typingsSlinky.phaser.spine.SkinEntry {
   def this(slotIndex: Double, name: String, attachment: typingsSlinky.phaser.spine.Attachment) = this()
-  /* CompleteClass */
-  override var attachment: typingsSlinky.phaser.spine.Attachment = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override var slotIndex: Double = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.apigatewayMod
 
-import typingsSlinky.pulumiAws.vpcLinkMod.VpcLinkArgs
-import typingsSlinky.pulumiAws.vpcLinkMod.VpcLinkState
+import typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLinkArgs
+import typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLinkState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@pulumi/aws/apigateway", "VpcLink")
 @js.native
 class VpcLink protected ()
-  extends typingsSlinky.pulumiAws.vpcLinkMod.VpcLink {
+  extends typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLink {
   /**
     * Create a VpcLink resource with the given unique name, arguments, and options.
     *
@@ -35,10 +35,12 @@ object VpcLink extends js.Object {
     * @param name The _unique_ name of the resulting resource.
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param state Any extra arguments used during the lookup.
+    * @param opts Optional settings to control the behavior of the CustomResource.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.vpcLinkMod.VpcLink = js.native
-  def get(name: String, id: Input[ID], state: VpcLinkState): typingsSlinky.pulumiAws.vpcLinkMod.VpcLink = js.native
-  def get(name: String, id: Input[ID], state: VpcLinkState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.vpcLinkMod.VpcLink = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLink = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLink = js.native
+  def get(name: String, id: Input[ID], state: VpcLinkState): typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLink = js.native
+  def get(name: String, id: Input[ID], state: VpcLinkState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayVpcLinkMod.VpcLink = js.native
   /**
     * Returns true if the given object is an instance of VpcLink.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.

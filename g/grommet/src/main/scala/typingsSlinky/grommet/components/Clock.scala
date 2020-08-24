@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 
 /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Support for combinations of intersection and union types not implemented */
 object Clock {
-  @JSImport("grommet", "Clock")
+  @JSImport("grommet/es6", "Clock")
   @js.native
   object component extends js.Object
   

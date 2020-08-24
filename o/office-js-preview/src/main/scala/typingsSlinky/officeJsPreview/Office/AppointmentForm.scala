@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
+@js.native
 trait AppointmentForm extends js.Object {
   /**
     * Gets an object that provides methods for manipulating the body of an item.
@@ -25,7 +26,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var body: Body | String
+  var body: Body | String = js.native
   /**
     * Gets or sets the date and time that the appointment is to end.
     *
@@ -49,7 +50,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var end: Time | js.Date
+  var end: Time | js.Date = js.native
   /**
     * Gets or sets the location of an appointment.
     *
@@ -67,7 +68,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var location: Location | String
+  var location: Location | String = js.native
   /**
     * Provides access to the optional attendees of an event. The type of object and level of access depends on the mode of the current item.
     *
@@ -91,7 +92,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var optionalAttendees: js.Array[EmailAddressDetails | Recipients]
+  var optionalAttendees: js.Array[EmailAddressDetails | Recipients] = js.native
   /**
     * Provides access to the required attendees of an event. The type of object and level of access depends on the mode of the current item.
     *
@@ -115,7 +116,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var requiredAttendees: js.Array[EmailAddressDetails | Recipients]
+  var requiredAttendees: js.Array[EmailAddressDetails | Recipients] = js.native
   /**
     * Provides access to the resources of an event. Returns an array of strings containing the resources required for the appointment.
     *
@@ -125,7 +126,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var resources: js.Array[String]
+  var resources: js.Array[String] = js.native
   /**
     * Gets or sets the date and time that the appointment is to begin.
     *
@@ -149,7 +150,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var start: Time | js.Date
+  var start: Time | js.Date = js.native
   /**
     * Gets or sets the description that appears in the subject field of an item.
     *
@@ -169,7 +170,7 @@ trait AppointmentForm extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var subject: Subject | String
+  var subject: Subject | String = js.native
 }
 
 object AppointmentForm {
@@ -187,5 +188,44 @@ object AppointmentForm {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], optionalAttendees = optionalAttendees.asInstanceOf[js.Any], requiredAttendees = requiredAttendees.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentForm]
   }
+  @scala.inline
+  implicit class AppointmentFormOps[Self <: AppointmentForm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBody(value: Body | String): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEndDate(value: js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnd(value: Time | js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocation(value: Location | String): Self = this.set("location", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOptionalAttendeesVarargs(value: (EmailAddressDetails | Recipients)*): Self = this.set("optionalAttendees", js.Array(value :_*))
+    @scala.inline
+    def setOptionalAttendees(value: js.Array[EmailAddressDetails | Recipients]): Self = this.set("optionalAttendees", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRequiredAttendeesVarargs(value: (EmailAddressDetails | Recipients)*): Self = this.set("requiredAttendees", js.Array(value :_*))
+    @scala.inline
+    def setRequiredAttendees(value: js.Array[EmailAddressDetails | Recipients]): Self = this.set("requiredAttendees", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setResourcesVarargs(value: String*): Self = this.set("resources", js.Array(value :_*))
+    @scala.inline
+    def setResources(value: js.Array[String]): Self = this.set("resources", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStartDate(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStart(value: Time | js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSubject(value: Subject | String): Self = this.set("subject", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 /* Inlined jointjs.jointjs.anchors.GenericAnchorArguments<jointjs.jointjs.anchors.AnchorType> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.jointjs.jointjsStrings.fallbackAt
-  - typingsSlinky.jointjs.jointjsStrings.dy
-  - typingsSlinky.jointjs.jointjsStrings.padding
-  - typingsSlinky.jointjs.jointjsStrings.fixedAt
-  - typingsSlinky.jointjs.jointjsStrings.dx
   - typingsSlinky.jointjs.jointjsStrings.length
+  - typingsSlinky.jointjs.jointjsStrings.dx
+  - typingsSlinky.jointjs.jointjsStrings.padding
+  - typingsSlinky.jointjs.jointjsStrings.fallbackAt
+  - typingsSlinky.jointjs.jointjsStrings.fixedAt
+  - typingsSlinky.jointjs.jointjsStrings.dy
 */
 trait AnchorArguments extends js.Object
 

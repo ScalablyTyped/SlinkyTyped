@@ -7,22 +7,21 @@ import typingsSlinky.reactToolbox.reactToolboxStrings.asc
 import typingsSlinky.reactToolbox.reactToolboxStrings.desc
 import typingsSlinky.reactToolbox.reactToolboxStrings.td
 import typingsSlinky.reactToolbox.reactToolboxStrings.th
-import typingsSlinky.reactToolbox.tableTableCellMod.TableCellProps
-import typingsSlinky.reactToolbox.tableTableCellMod.TableCellTheme
-import typingsSlinky.reactToolbox.tableTableCellMod.default
+import typingsSlinky.reactToolbox.tableCellMod.TableCellProps
+import typingsSlinky.reactToolbox.tableCellMod.TableCellTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TableCell {
-  @JSImport("react-toolbox/lib/table/TableCell", JSImport.Default)
+  @JSImport("react-toolbox/components/table", "TableCell")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.tableMod.TableCell] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

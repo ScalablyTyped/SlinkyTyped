@@ -1,5 +1,6 @@
 package typingsSlinky.stellarSdk
 
+import typingsSlinky.stellarBase.mod.Asset
 import typingsSlinky.stellarSdk.callBuilderMod.CallBuilder
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.CollectionPage
 import typingsSlinky.stellarSdk.serverApiMod.ServerApi.OfferRecord
@@ -12,11 +13,11 @@ import scala.scalajs.js.annotation._
 object offerCallBuilderMod extends js.Object {
   @js.native
   class OfferCallBuilder protected () extends CallBuilder[CollectionPage[OfferRecord]] {
-    def this(
-      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any,
-      resource: String,
-      resourceParams: String*
-    ) = this()
+    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any) = this()
+    def buying(asset: Asset): this.type = js.native
+    def forAccount(id: String): this.type = js.native
+    def offer(offerId: String): CallBuilder[OfferRecord] = js.native
+    def selling(asset: Asset): this.type = js.native
   }
   
 }

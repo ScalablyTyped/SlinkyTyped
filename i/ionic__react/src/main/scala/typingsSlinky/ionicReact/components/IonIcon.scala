@@ -17,7 +17,6 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicReact.anon.IonIconPropsIonicReactPro
-import typingsSlinky.ionicReact.anon.Ios
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
@@ -69,7 +68,6 @@ import typingsSlinky.ionicons.componentsMod.global.HTMLIonIconElement
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,7 +80,7 @@ object IonIcon {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonIconElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -208,6 +206,8 @@ object IonIcon {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -218,7 +218,7 @@ object IonIcon {
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: Ios | String): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: String): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -226,7 +226,7 @@ object IonIcon {
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def ios(value: Ios | String): this.type = set("ios", value.asInstanceOf[js.Any])
+    def ios(value: String): this.type = set("ios", value.asInstanceOf[js.Any])
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
     @scala.inline
@@ -244,7 +244,7 @@ object IonIcon {
     @scala.inline
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
     @scala.inline
-    def md(value: Ios | String): this.type = set("md", value.asInstanceOf[js.Any])
+    def md(value: String): this.type = set("md", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: ios | md): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline

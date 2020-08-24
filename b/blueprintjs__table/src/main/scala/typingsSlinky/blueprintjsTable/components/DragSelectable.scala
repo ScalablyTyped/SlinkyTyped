@@ -30,6 +30,8 @@ object DragSelectable {
     @scala.inline
     def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
     @scala.inline
+    def ignoredSelectorsVarargs(value: String*): this.type = set("ignoredSelectors", js.Array(value :_*))
+    @scala.inline
     def ignoredSelectors(value: js.Array[String]): this.type = set("ignoredSelectors", value.asInstanceOf[js.Any])
     @scala.inline
     def onSelectionEnd(value: /* regions */ js.Array[IRegion] => Unit): this.type = set("onSelectionEnd", js.Any.fromFunction1(value))
@@ -37,6 +39,8 @@ object DragSelectable {
     def selectedRegionTransform(
       value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
+    @scala.inline
+    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
     @scala.inline
     def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
   }

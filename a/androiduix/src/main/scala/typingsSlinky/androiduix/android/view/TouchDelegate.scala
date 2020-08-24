@@ -34,41 +34,22 @@ object TouchDelegate {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMBounds(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mBounds")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMDelegateTargeted(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDelegateTargeted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMBounds(value: js.Any): Self = this.set("mBounds", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDelegateView(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDelegateView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDelegateTargeted(value: js.Any): Self = this.set("mDelegateTargeted", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSlop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDelegateView(value: js.Any): Self = this.set("mDelegateView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSlopBounds(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSlopBounds")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMSlop(value: js.Any): Self = this.set("mSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnTouchEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMSlopBounds(value: js.Any): Self = this.set("mSlopBounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnTouchEvent(value: MotionEvent => Boolean): Self = this.set("onTouchEvent", js.Any.fromFunction1(value))
   }
   
 }

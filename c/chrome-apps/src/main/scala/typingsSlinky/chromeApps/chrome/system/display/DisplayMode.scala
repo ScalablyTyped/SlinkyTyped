@@ -60,59 +60,28 @@ object DisplayMode {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeviceScaleFactor(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceScaleFactor")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withHeight(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDeviceScaleFactor(value: integer): Self = this.set("deviceScaleFactor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHeightInNativePixels(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightInNativePixels")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHeight(value: integer): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsNative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNative")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHeightInNativePixels(value: integer): Self = this.set("heightInNativePixels", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsNative(value: Boolean): Self = this.set("isNative", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRefreshRate(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshRate")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsSelected(value: Boolean): Self = this.set("isSelected", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUiScale(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uiScale")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRefreshRate(value: double): Self = this.set("refreshRate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWidth(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUiScale(value: integer): Self = this.set("uiScale", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWidthInNativePixels(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthInNativePixels")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWidth(value: integer): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWidthInNativePixels(value: integer): Self = this.set("widthInNativePixels", value.asInstanceOf[js.Any])
   }
   
 }

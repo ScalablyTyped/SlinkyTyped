@@ -25,17 +25,14 @@ object PERMISSIONSINCREASE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPERMISSIONS_INCREASE(value: permissions_increase_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PERMISSIONS_INCREASE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withUNKNOWN(value: unknown__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UNKNOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPERMISSIONS_INCREASE(value: permissions_increase_): Self = this.set("PERMISSIONS_INCREASE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUNKNOWN(value: unknown__): Self = this.set("UNKNOWN", value.asInstanceOf[js.Any])
   }
   
 }

@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 trait LolexWithContext extends js.Object {
   var timers: GlobalTimers[TimerId] = js.native
   def createClock[TClock /* <: Clock */](): TClock = js.native
+  def createClock[TClock /* <: Clock */](now: js.UndefOr[scala.Nothing], loopLimit: Double): TClock = js.native
   def createClock[TClock /* <: Clock */](now: Double): TClock = js.native
   def createClock[TClock /* <: Clock */](now: Double, loopLimit: Double): TClock = js.native
   def createClock[TClock /* <: Clock */](now: js.Date): TClock = js.native

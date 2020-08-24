@@ -14,13 +14,13 @@ object strictReceivePathCallBuilderMod extends js.Object {
   @js.native
   class StrictReceivePathCallBuilder protected () extends CallBuilder[CollectionPage[PaymentPathRecord]] {
     def this(
-      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any,
+      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any,
       source: String,
       destinationAsset: Asset,
       destinationAmount: String
     ) = this()
     def this(
-      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any,
+      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any,
       source: js.Array[Asset],
       destinationAsset: Asset,
       destinationAmount: String

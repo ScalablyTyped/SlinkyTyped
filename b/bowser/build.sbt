@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "bowser"
-version := "2.9.0-7c7fa4"
-scalaVersion := "2.13.2"
+version := "2.10.0-fbc7eb"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

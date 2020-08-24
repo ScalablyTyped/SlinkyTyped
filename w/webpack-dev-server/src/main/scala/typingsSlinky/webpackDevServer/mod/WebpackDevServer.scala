@@ -1,6 +1,6 @@
 package typingsSlinky.webpackDevServer.mod
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.node.httpMod.Server
 import scala.scalajs.js
 import scala.scalajs.js.`|`

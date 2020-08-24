@@ -1,6 +1,7 @@
 package typingsSlinky.expect.typesMod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.std.BigInt
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -76,10 +77,12 @@ trait Matchers[R] extends js.Object {
     * For comparing floating point numbers.
     */
   def toBeGreaterThan(expected: Double): R = js.native
+  def toBeGreaterThan(expected: BigInt): R = js.native
   /**
     * For comparing floating point numbers.
     */
   def toBeGreaterThanOrEqual(expected: Double): R = js.native
+  def toBeGreaterThanOrEqual(expected: BigInt): R = js.native
   /**
     * Ensure that an object is an instance of a class.
     * This matcher uses `instanceof` underneath.
@@ -89,10 +92,12 @@ trait Matchers[R] extends js.Object {
     * For comparing floating point numbers.
     */
   def toBeLessThan(expected: Double): R = js.native
+  def toBeLessThan(expected: BigInt): R = js.native
   /**
     * For comparing floating point numbers.
     */
   def toBeLessThanOrEqual(expected: Double): R = js.native
+  def toBeLessThanOrEqual(expected: BigInt): R = js.native
   /**
     * Used to check that a variable is NaN.
     */

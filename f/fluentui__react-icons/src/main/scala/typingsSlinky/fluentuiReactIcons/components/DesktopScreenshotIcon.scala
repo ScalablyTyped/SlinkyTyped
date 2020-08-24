@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DesktopScreenshotIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DesktopScreenshotIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DesktopScreenshotIcon")
   @js.native
   object component extends js.Object
   

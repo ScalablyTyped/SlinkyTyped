@@ -1,6 +1,8 @@
 package typingsSlinky.aframe.mod.THREE
 
+import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.three.constantsMod.Mapping
 import typingsSlinky.three.constantsMod.PixelFormat
 import typingsSlinky.three.constantsMod.TextureDataType
@@ -15,7 +17,7 @@ import scala.scalajs.js.annotation._
 class CanvasTexture protected ()
   extends typingsSlinky.three.mod.CanvasTexture {
   def this(
-    canvas: HTMLImageElement,
+    canvas: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement,
     mapping: js.UndefOr[Mapping],
     wrapS: js.UndefOr[Wrapping],
     wrapT: js.UndefOr[Wrapping],

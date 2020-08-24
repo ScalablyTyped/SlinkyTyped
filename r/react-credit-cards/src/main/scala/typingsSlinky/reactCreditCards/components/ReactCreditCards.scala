@@ -22,6 +22,8 @@ object ReactCreditCards {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def acceptedCardsVarargs(value: String*): this.type = set("acceptedCards", js.Array(value :_*))
+    @scala.inline
     def acceptedCards(value: js.Array[String]): this.type = set("acceptedCards", value.asInstanceOf[js.Any])
     @scala.inline
     def callback(value: (/* type */ CallbackArgument, /* isValid */ Boolean) => Unit): this.type = set("callback", js.Any.fromFunction2(value))

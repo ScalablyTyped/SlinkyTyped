@@ -26,7 +26,6 @@ object Canvas extends js.Object {
   /* protected */ def getMeasureTextFontFamily(): String = js.native
   def measureText(text: String, textSize: Double): Double = js.native
   /* protected */ def measureTextImpl(text: String, textSize: Double): Double = js.native
-  /* private */ def obtainRect(): js.Any = js.native
   /* private */ def obtainRect(copy: js.Any): js.Any = js.native
   /* private */ def recycleRect(rect: js.Any): js.Any = js.native
 }

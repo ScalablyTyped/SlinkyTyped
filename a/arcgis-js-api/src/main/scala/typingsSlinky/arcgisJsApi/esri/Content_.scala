@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.attachments
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.custom
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.fields
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.media
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.text
@@ -17,6 +18,6 @@ trait Content_
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-Content.html#type)
     */
-  val `type`: text | fields | media | attachments = js.native
+  val `type`: text | fields | media | attachments | custom = js.native
 }
 

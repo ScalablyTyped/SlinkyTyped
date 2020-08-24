@@ -20,6 +20,8 @@ object FlexBar {
     def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def border(value: Boolean): this.type = set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FlexBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

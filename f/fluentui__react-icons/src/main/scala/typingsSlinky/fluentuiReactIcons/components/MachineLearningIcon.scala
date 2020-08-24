@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MachineLearningIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MachineLearningIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MachineLearningIcon")
   @js.native
   object component extends js.Object
   

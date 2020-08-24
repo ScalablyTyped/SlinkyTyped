@@ -3,7 +3,6 @@ package typingsSlinky.reactDayPicker.components
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -49,6 +48,8 @@ class SharedBuilder_DayPickerProps821347195[R <: js.Object] (val args: js.Array[
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
   @scala.inline
+  def disabledDaysVarargs(value: Modifier*): this.type = set("disabledDays", js.Array(value :_*))
+  @scala.inline
   def disabledDaysDate(value: js.Date): this.type = set("disabledDays", value.asInstanceOf[js.Any])
   @scala.inline
   def disabledDaysFunction1(value: /* date */ js.Date => Boolean): this.type = set("disabledDays", js.Any.fromFunction1(value))
@@ -76,6 +77,8 @@ class SharedBuilder_DayPickerProps821347195[R <: js.Object] (val args: js.Array[
   def modifiersStyles(value: js.Object): this.type = set("modifiersStyles", value.asInstanceOf[js.Any])
   @scala.inline
   def month(value: js.Date): this.type = set("month", value.asInstanceOf[js.Any])
+  @scala.inline
+  def monthsVarargs(value: String*): this.type = set("months", js.Array(value :_*))
   @scala.inline
   def months(value: js.Array[String]): this.type = set("months", value.asInstanceOf[js.Any])
   @scala.inline
@@ -141,11 +144,15 @@ class SharedBuilder_DayPickerProps821347195[R <: js.Object] (val args: js.Array[
   @scala.inline
   def pagedNavigation(value: Boolean): this.type = set("pagedNavigation", value.asInstanceOf[js.Any])
   @scala.inline
-  def renderDay(value: (/* date */ js.Date, /* modifiers */ DayModifiers) => TagMod[Any]): this.type = set("renderDay", js.Any.fromFunction2(value))
+  def renderDay(value: (/* date */ js.Date, /* modifiers */ DayModifiers) => ReactElement): this.type = set("renderDay", js.Any.fromFunction2(value))
   @scala.inline
-  def renderWeek(value: (/* weekNumber */ Double, /* week */ js.Array[js.Date], /* month */ js.Date) => TagMod[Any]): this.type = set("renderWeek", js.Any.fromFunction3(value))
+  def renderWeek(
+    value: (/* weekNumber */ Double, /* week */ js.Array[js.Date], /* month */ js.Date) => ReactElement
+  ): this.type = set("renderWeek", js.Any.fromFunction3(value))
   @scala.inline
   def reverseMonths(value: Boolean): this.type = set("reverseMonths", value.asInstanceOf[js.Any])
+  @scala.inline
+  def selectedDaysVarargs(value: Modifier*): this.type = set("selectedDays", js.Array(value :_*))
   @scala.inline
   def selectedDaysDate(value: js.Date): this.type = set("selectedDays", value.asInstanceOf[js.Any])
   @scala.inline
@@ -173,7 +180,11 @@ class SharedBuilder_DayPickerProps821347195[R <: js.Object] (val args: js.Array[
   @scala.inline
   def weekdayElement(value: ReactElement | ReactComponentClass[WeekdayElementProps]): this.type = set("weekdayElement", value.asInstanceOf[js.Any])
   @scala.inline
+  def weekdaysLongVarargs(value: String*): this.type = set("weekdaysLong", js.Array(value :_*))
+  @scala.inline
   def weekdaysLong(value: js.Array[String]): this.type = set("weekdaysLong", value.asInstanceOf[js.Any])
+  @scala.inline
+  def weekdaysShortVarargs(value: String*): this.type = set("weekdaysShort", js.Array(value :_*))
   @scala.inline
   def weekdaysShort(value: js.Array[String]): this.type = set("weekdaysShort", value.asInstanceOf[js.Any])
 }

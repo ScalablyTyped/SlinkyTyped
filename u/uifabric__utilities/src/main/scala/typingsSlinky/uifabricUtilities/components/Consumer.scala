@@ -1,0 +1,24 @@
+package typingsSlinky.uifabricUtilities.components
+
+import slinky.core.facade.ReactElement
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.react.mod.ConsumerProps
+import typingsSlinky.uifabricUtilities.customizerContextMod.ICustomizerContext
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Consumer {
+  @JSImport("@uifabric/utilities/lib/customizations/CustomizerContext", "CustomizerContext.Consumer")
+  @js.native
+  object component extends js.Object
+  
+  def withProps(p: ConsumerProps[ICustomizerContext]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(children: ICustomizerContext => ReactElement): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ConsumerProps[ICustomizerContext]]))
+  }
+}
+

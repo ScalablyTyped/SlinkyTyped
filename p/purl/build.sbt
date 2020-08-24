@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "purl"
-version := "2.3.1-dt-20200515Z-04161e"
-scalaVersion := "2.13.2"
+version := "2.3.1-dt-20200515Z-0637b6"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

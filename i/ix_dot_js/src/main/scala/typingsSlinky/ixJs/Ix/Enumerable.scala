@@ -35,6 +35,7 @@ trait Enumerable[T] extends js.Object {
   def all(predicate: EnumerablePredicate[T], thisArg: js.Any): Boolean = js.native
    // alias
   def any(): Boolean = js.native
+  def any(predicate: js.UndefOr[scala.Nothing], thisArg: js.Any): Boolean = js.native
   def any(predicate: EnumerablePredicate[T]): Boolean = js.native
   def any(predicate: EnumerablePredicate[T], thisArg: js.Any): Boolean = js.native
    // alias
@@ -50,6 +51,7 @@ trait Enumerable[T] extends js.Object {
   def contains(value: T): Boolean = js.native
   def contains[TValue](value: TValue, comparer: EqualityComparer[T, TValue]): Boolean = js.native
   def count(): Double = js.native
+  def count(predicate: js.UndefOr[scala.Nothing], thisArg: js.Any): Double = js.native
   def count(predicate: EnumerablePredicate[T]): Double = js.native
   def count(predicate: EnumerablePredicate[T], thisArg: js.Any): Double = js.native
   def defaultIfEmpty(): Enumerable[T] = js.native
@@ -64,6 +66,11 @@ trait Enumerable[T] extends js.Object {
   def distinctUntilChanged[TKey](keySelector: js.Function1[/* item */ T, TKey]): Enumerable[T] = js.native
   def distinctUntilChanged[TKey](keySelector: js.Function1[/* item */ T, TKey], comparer: EqualityComparer[TKey, TKey]): Enumerable[T] = js.native
   def `do`(onNext: js.Function1[/* value */ T, Unit]): Enumerable[T] = js.native
+  def `do`(
+    onNext: js.Function1[/* value */ T, Unit],
+    onError: js.UndefOr[scala.Nothing],
+    onCompleted: js.Function0[Unit]
+  ): Enumerable[T] = js.native
   def `do`(onNext: js.Function1[/* value */ T, Unit], onError: js.Function1[/* error */ js.Error, Unit]): Enumerable[T] = js.native
   def `do`(
     onNext: js.Function1[/* value */ T, Unit],
@@ -72,6 +79,11 @@ trait Enumerable[T] extends js.Object {
   ): Enumerable[T] = js.native
   def `do`(onbserver: Observer[T]): Enumerable[T] = js.native
   def doAction(onNext: js.Function1[/* value */ T, Unit]): Enumerable[T] = js.native
+  def doAction(
+    onNext: js.Function1[/* value */ T, Unit],
+    onError: js.UndefOr[scala.Nothing],
+    onCompleted: js.Function0[Unit]
+  ): Enumerable[T] = js.native
   def doAction(onNext: js.Function1[/* value */ T, Unit], onError: js.Function1[/* error */ js.Error, Unit]): Enumerable[T] = js.native
   def doAction(
     onNext: js.Function1[/* value */ T, Unit],
@@ -234,6 +246,7 @@ trait Enumerable[T] extends js.Object {
   def skipWhile(selector: EnumerablePredicate[T]): Enumerable[T] = js.native
   def skipWhile(selector: EnumerablePredicate[T], thisArg: js.Any): Enumerable[T] = js.native
   def some(): Boolean = js.native
+  def some(predicate: js.UndefOr[scala.Nothing], thisArg: js.Any): Boolean = js.native
   def some(predicate: EnumerablePredicate[T]): Boolean = js.native
   def some(predicate: EnumerablePredicate[T], thisArg: js.Any): Boolean = js.native
   def startWith(values: T*): Enumerable[T] = js.native

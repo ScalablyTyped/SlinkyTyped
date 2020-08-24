@@ -32,35 +32,20 @@ object Callback {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInvalidateDrawable(value: typingsSlinky.androiduix.android.graphics.drawable.Drawable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidateDrawable")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withScheduleDrawable(value: (typingsSlinky.androiduix.android.graphics.drawable.Drawable, Runnable, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleDrawable")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setInvalidateDrawable(value: typingsSlinky.androiduix.android.graphics.drawable.Drawable => Unit): Self = this.set("invalidateDrawable", js.Any.fromFunction1(value))
     @scala.inline
-    def withUnscheduleDrawable(value: (typingsSlinky.androiduix.android.graphics.drawable.Drawable, Runnable) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unscheduleDrawable")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setScheduleDrawable(value: (typingsSlinky.androiduix.android.graphics.drawable.Drawable, Runnable, Double) => Unit): Self = this.set("scheduleDrawable", js.Any.fromFunction3(value))
     @scala.inline
-    def withDrawableSizeChange(value: /* who */ typingsSlinky.androiduix.android.graphics.drawable.Drawable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawableSizeChange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setUnscheduleDrawable(value: (typingsSlinky.androiduix.android.graphics.drawable.Drawable, Runnable) => Unit): Self = this.set("unscheduleDrawable", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutDrawableSizeChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawableSizeChange")(js.undefined)
-        ret
-    }
+    def setDrawableSizeChange(value: /* who */ typingsSlinky.androiduix.android.graphics.drawable.Drawable => Unit): Self = this.set("drawableSizeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDrawableSizeChange: Self = this.set("drawableSizeChange", js.undefined)
   }
   
 }

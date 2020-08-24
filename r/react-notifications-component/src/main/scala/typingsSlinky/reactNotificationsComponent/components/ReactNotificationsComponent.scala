@@ -26,6 +26,8 @@ object ReactNotificationsComponent {
     @scala.inline
     def isMobile(value: Boolean): this.type = set("isMobile", value.asInstanceOf[js.Any])
     @scala.inline
+    def typesVarargs(value: String*): this.type = set("types", js.Array(value :_*))
+    @scala.inline
     def types(value: js.Array[String]): this.type = set("types", value.asInstanceOf[js.Any])
   }
   

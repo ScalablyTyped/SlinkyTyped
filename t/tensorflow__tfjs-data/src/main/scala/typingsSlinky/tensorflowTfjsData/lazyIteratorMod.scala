@@ -6,7 +6,6 @@ import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.TensorContainer
 import typingsSlinky.tensorflowTfjsData.deepMapMod.DeepMapResult
 import typingsSlinky.tensorflowTfjsData.ringBufferMod.RingBuffer
 import typingsSlinky.tensorflowTfjsData.typesMod.Container
-import typingsSlinky.tensorflowTfjsData.typesMod.DataElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +20,7 @@ object lazyIteratorMod extends js.Object {
       iterators: LazyIterator[LazyIterator[T]],
       baseErrorHandler: js.Function1[/* e */ js.Error, Boolean]
     ) = this()
-    val baseErrorHandler: js.UndefOr[js.Any] = js.native
+    val baseErrorHandler: js.Any = js.native
     var iterator: js.Any = js.native
     var lastRead: js.Any = js.native
     var moreIterators: js.Any = js.native
@@ -63,6 +62,11 @@ object lazyIteratorMod extends js.Object {
       *   with collections at the leaves.
       */
     def columnMajorBatch(batchSize: Double): LazyIterator[TensorContainer] = js.native
+    def columnMajorBatch(
+      batchSize: Double,
+      smallLastBatch: js.UndefOr[scala.Nothing],
+      zipFn: js.Function1[/* xs */ js.Array[_], DeepMapResult]
+    ): LazyIterator[TensorContainer] = js.native
     def columnMajorBatch(batchSize: Double, smallLastBatch: Boolean): LazyIterator[TensorContainer] = js.native
     def columnMajorBatch(
       batchSize: Double,
@@ -351,6 +355,6 @@ object lazyIteratorMod extends js.Object {
     
   }
   
-  type IteratorContainer = Container[LazyIterator[DataElement]]
+  type IteratorContainer = Container[LazyIterator[TensorContainer]]
 }
 

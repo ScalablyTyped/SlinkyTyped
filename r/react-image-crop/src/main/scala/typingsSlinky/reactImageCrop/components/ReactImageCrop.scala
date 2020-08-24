@@ -3,7 +3,6 @@ package typingsSlinky.reactImageCrop.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.img.tag
 import typingsSlinky.StBuildingComponent
@@ -66,9 +65,9 @@ object ReactImageCrop {
     @scala.inline
     def renderComponentReactElement(value: ReactElement): this.type = set("renderComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderComponent(value: TagMod[Any]): this.type = set("renderComponent", value.asInstanceOf[js.Any])
+    def renderComponent(value: ReactElement): this.type = set("renderComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderSelectionAddon(value: /* state */ js.Any => TagMod[Any]): this.type = set("renderSelectionAddon", js.Any.fromFunction1(value))
+    def renderSelectionAddon(value: /* state */ js.Any => ReactElement): this.type = set("renderSelectionAddon", js.Any.fromFunction1(value))
     @scala.inline
     def ruleOfThirds(value: Boolean): this.type = set("ruleOfThirds", value.asInstanceOf[js.Any])
     @scala.inline

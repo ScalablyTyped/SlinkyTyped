@@ -25,6 +25,13 @@ object SymbolInformation extends js.Object {
     name: String,
     kind: typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind,
     range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
+    uri: js.UndefOr[scala.Nothing],
+    containerName: String
+  ): typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation = js.native
+  def create(
+    name: String,
+    kind: typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind,
+    range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
     uri: String
   ): typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation = js.native
   def create(

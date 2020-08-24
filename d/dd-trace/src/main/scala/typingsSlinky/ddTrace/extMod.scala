@@ -5,8 +5,9 @@ import typingsSlinky.ddTrace.ddTraceNumbers.`0`
 import typingsSlinky.ddTrace.ddTraceNumbers.`1`
 import typingsSlinky.ddTrace.ddTraceNumbers.`2`
 import typingsSlinky.ddTrace.ddTraceStrings._dd1DotsrDoteausr
-import typingsSlinky.ddTrace.ddTraceStrings.`agent-exporter`
-import typingsSlinky.ddTrace.ddTraceStrings.`log-exporter`
+import typingsSlinky.ddTrace.ddTraceStrings._ddDotmeasured
+import typingsSlinky.ddTrace.ddTraceStrings.agent
+import typingsSlinky.ddTrace.ddTraceStrings.browser
 import typingsSlinky.ddTrace.ddTraceStrings.client
 import typingsSlinky.ddTrace.ddTraceStrings.consumer
 import typingsSlinky.ddTrace.ddTraceStrings.error
@@ -37,8 +38,9 @@ import scala.scalajs.js.annotation._
 object extMod extends js.Object {
   @js.native
   object exporters extends js.Object {
-    var AGENT: `agent-exporter` = js.native
-    var LOG: `log-exporter` = js.native
+    var AGENT: agent = js.native
+    var BROWSER: browser = js.native
+    var LOG: log = js.native
   }
   
   @js.native
@@ -77,6 +79,7 @@ object extMod extends js.Object {
     var HTTP_URL: httpDoturl = js.native
     var MANUAL_DROP: manualDotdrop = js.native
     var MANUAL_KEEP: manualDotkeep = js.native
+    var MEASURED: _ddDotmeasured = js.native
     var RESOURCE_NAME: resourceDotname = js.native
     var SAMPLING_PRIORITY: samplingDotpriority = js.native
     var SERVICE_NAME: serviceDotname = js.native

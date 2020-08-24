@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ReadKeyExpr")
 @js.native
 class ReadKeyExpr protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ReadKeyExpr {
+  extends typingsSlinky.angularCompiler.compilerMod.ReadKeyExpr {
   def this(
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
     index: typingsSlinky.angularCompiler.outputAstMod.Expression
@@ -16,6 +16,12 @@ class ReadKeyExpr protected ()
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
     index: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    index: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,

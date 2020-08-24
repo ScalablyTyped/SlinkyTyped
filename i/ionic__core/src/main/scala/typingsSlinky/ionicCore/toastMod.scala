@@ -3,16 +3,14 @@ package typingsSlinky.ionicCore
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.ionicCoreStrings.bottom
 import typingsSlinky.ionicCore.ionicCoreStrings.end
-import typingsSlinky.ionicCore.ionicCoreStrings.ios
-import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.ionicCoreStrings.middle
 import typingsSlinky.ionicCore.ionicCoreStrings.start
 import typingsSlinky.ionicCore.ionicCoreStrings.top
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastButton
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,18 +23,12 @@ object toastMod extends js.Object {
   class Toast ()
     extends ComponentInterface
        with OverlayInterface {
-    @JSName("animation")
-    var animation_Toast: js.UndefOr[Animation] = js.native
     var buttonClick: js.Any = js.native
     /**
       * An array of buttons for the toast.
       */
     var buttons: js.UndefOr[js.Array[ToastButton | String]] = js.native
     var callButtonHandler: js.Any = js.native
-    /**
-      * @deprecated Use `buttons` instead. Text to display in the close button.
-      */
-    var closeButtonText: js.UndefOr[String] = js.native
     /**
       * The color to use from your application's color palette.
       * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
@@ -48,6 +40,7 @@ object toastMod extends js.Object {
       * provided they should be separated by spaces.
       */
     var cssClass: js.UndefOr[String | js.Array[String]] = js.native
+    var dispatchCancelHandler: js.Any = js.native
     /**
       * How many milliseconds to wait before hiding the toast. By default, it will show
       * until `dismiss()` is called.
@@ -64,31 +57,27 @@ object toastMod extends js.Object {
     /**
       * Message to be shown in the toast.
       */
-    var message: js.UndefOr[String] = js.native
-    @JSName("mode")
-    var mode_Toast: ios | md = js.native
+    var message: js.UndefOr[String | IonicSafeString] = js.native
     /**
       * The position of the toast on the screen.
       */
     var position: top | bottom | middle = js.native
-    /**
-      * @deprecated Use `buttons` instead. If `true`, the close button will be displayed.
-      */
-    var showCloseButton: Boolean = js.native
     /**
       * If `true`, the toast will be translucent.
       * Only applies when the mode is `"ios"` and the device supports
       * [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
       */
     var translucent: Boolean = js.native
+    @JSName("connectedCallback")
+    def connectedCallback_MToast(): Unit = js.native
     /**
       * Returns a promise that resolves when the toast did dismiss.
       */
-    def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     /**
       * Returns a promise that resolves when the toast will dismiss.
       */
-    def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     @JSName("renderButtons")
     def renderButtons_end(buttons: js.Array[ToastButton], side: end): js.Any = js.native
     @JSName("renderButtons")

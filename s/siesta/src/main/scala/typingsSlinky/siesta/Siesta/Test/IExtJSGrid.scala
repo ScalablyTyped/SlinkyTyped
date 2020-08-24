@@ -20,6 +20,7 @@ trait IExtJSGrid extends js.Object {
   def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: js.RegExp): Unit = js.native
   def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: js.RegExp, description: String): Unit = js.native
   def waitForRowsVisible(panel: js.Any, callback: js.Function): Unit = js.native
+  def waitForRowsVisible(panel: js.Any, callback: js.Function, scope: js.UndefOr[scala.Nothing], timeout: Double): Unit = js.native
   def waitForRowsVisible(panel: js.Any, callback: js.Function, scope: js.Any): Unit = js.native
   def waitForRowsVisible(panel: js.Any, callback: js.Function, scope: js.Any, timeout: Double): Unit = js.native
 }

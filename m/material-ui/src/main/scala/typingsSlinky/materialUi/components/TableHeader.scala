@@ -3,21 +3,20 @@ package typingsSlinky.materialUi.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Table.TableHeaderProps
-import typingsSlinky.materialUi.tableHeaderMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TableHeader {
-  @JSImport("material-ui/Table/TableHeader", JSImport.Default)
+  @JSImport("material-ui", "TableHeader")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.TableHeader] {
     @scala.inline
     def adjustForCheckbox(value: Boolean): this.type = set("adjustForCheckbox", value.asInstanceOf[js.Any])
     @scala.inline

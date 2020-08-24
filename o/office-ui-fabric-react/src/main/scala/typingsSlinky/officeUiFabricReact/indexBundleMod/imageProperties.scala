@@ -1,12 +1,12 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "imageProperties")
 @js.native
-object imageProperties
-  extends TopLevel[js.Array[String]]
+object imageProperties extends TopLevel[Record[String, Double]]
 

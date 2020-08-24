@@ -34,6 +34,13 @@ trait PlayMusic extends js.Object {
     songIds: String,
     playlistId: String,
     callback: js.Function2[/* error */ js.Error, /* mutateResponses */ MutateResponses, Unit],
+    entryBeforeClientId: js.UndefOr[scala.Nothing],
+    entryAfterClientId: String
+  ): Unit = js.native
+  def addTrackToPlayList(
+    songIds: String,
+    playlistId: String,
+    callback: js.Function2[/* error */ js.Error, /* mutateResponses */ MutateResponses, Unit],
     entryBeforeClientId: String
   ): Unit = js.native
   def addTrackToPlayList(
@@ -47,6 +54,13 @@ trait PlayMusic extends js.Object {
     songIds: js.Array[String],
     playlistId: String,
     callback: js.Function2[/* error */ js.Error, /* mutateResponses */ MutateResponses, Unit]
+  ): Unit = js.native
+  def addTrackToPlayList(
+    songIds: js.Array[String],
+    playlistId: String,
+    callback: js.Function2[/* error */ js.Error, /* mutateResponses */ MutateResponses, Unit],
+    entryBeforeClientId: js.UndefOr[scala.Nothing],
+    entryAfterClientId: String
   ): Unit = js.native
   def addTrackToPlayList(
     songIds: js.Array[String],

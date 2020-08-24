@@ -1,5 +1,6 @@
 package typingsSlinky.reactVirtualized.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -37,6 +38,10 @@ object AutoSizer {
   }
   
   def withProps(p: AutoSizerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: AutoSizer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: Size => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[AutoSizerProps]))
+  }
 }
 

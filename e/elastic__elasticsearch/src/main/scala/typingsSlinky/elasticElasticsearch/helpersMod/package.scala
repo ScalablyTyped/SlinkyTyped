@@ -17,4 +17,9 @@ package object helpersMod {
     typingsSlinky.elasticElasticsearch.helpersMod.UpdateActionOperation, 
     typingsSlinky.std.Record[java.lang.String, js.Any]
   ]
+  type callbackFn[Response, Context] = js.Function2[
+    /* err */ typingsSlinky.elasticElasticsearch.transportMod.ApiError, 
+    /* result */ typingsSlinky.elasticElasticsearch.transportMod.ApiResponse[Response, Context], 
+    scala.Unit
+  ]
 }

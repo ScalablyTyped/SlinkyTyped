@@ -2,7 +2,6 @@ package typingsSlinky.googleDriveRealtimeApi.global
 
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.googleDriveRealtimeApi.anon.SHIFTAFTERDELETE
-import typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.ErrorType
 import typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.databinding.Binding
 import typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.EditableString
 import typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.List
@@ -60,35 +59,6 @@ object gapi extends js.Object {
           photoUrl: String,
           permissionId: String
         ) = this()
-        // The HTML color associated with this collaborator. When possible, collaborators are assigned unique colors.
-        /* CompleteClass */
-        override var color: String = js.native
-        // The display name for this collaborator.
-        /* CompleteClass */
-        override var displayName: String = js.native
-        // True if this collaborator is anonymous, false otherwise.
-        /* CompleteClass */
-        override var isAnonymous: Boolean = js.native
-        // True if this collaborator is the local user, false otherwise.
-        /* CompleteClass */
-        override var isMe: Boolean = js.native
-        // The permission ID for this collaborator. This ID is stable for a given user and is compatible with the
-        // Drive API permissions APIs. Use the userId property for all other uses.
-        /* CompleteClass */
-        override var permissionId: String = js.native
-        // A URL that points to the profile photo for this collaborator, or to a generic profile photo for
-        // anonymous collaborators.
-        /* CompleteClass */
-        override var photoUrl: String = js.native
-        // The session ID for this collaborator. A single user may have multiple sessions if they have the same document
-        // open on multiple devices or in multiple browser tabs.
-        /* CompleteClass */
-        override var sessionId: String = js.native
-        // The user ID for this collaborator. This ID is stable for a given user and is compatible with most Google APIs
-        // except the Drive API permission APIs. For an ID which is compatible with the Drive API permission APIs,
-        // use the permissionId property.
-        /* CompleteClass */
-        override var userId: String = js.native
       }
       
       @js.native
@@ -99,16 +69,6 @@ object gapi extends js.Object {
       class Error protected ()
         extends typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error {
         def this(`type`: String, message: String, isFatal: Boolean) = this()
-        // Whether the error is fatal. Fatal errors cannot be recovered
-        // from and require the document to be reloaded.
-        /* CompleteClass */
-        override var isFatal: Boolean = js.native
-        // A message describing the error.
-        /* CompleteClass */
-        override var message: String = js.native
-        // The type of the error that occurred.
-        /* CompleteClass */
-        override var `type`: ErrorType = js.native
       }
       
       @js.native
@@ -123,7 +83,30 @@ object gapi extends js.Object {
       def load(fileId: String): Unit = js.native
       def load(
         fileId: String,
+        onLoaded: js.UndefOr[scala.Nothing],
+        opt_initializerFn: js.UndefOr[scala.Nothing],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
+      ): Unit = js.native
+      def load(
+        fileId: String,
+        onLoaded: js.UndefOr[scala.Nothing],
+        opt_initializerFn: js.Function1[/* m */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Model, Unit]
+      ): Unit = js.native
+      def load(
+        fileId: String,
+        onLoaded: js.UndefOr[scala.Nothing],
+        opt_initializerFn: js.Function1[/* m */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Model, Unit],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
+      ): Unit = js.native
+      def load(
+        fileId: String,
         onLoaded: js.Function1[/* d */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit]
+      ): Unit = js.native
+      def load(
+        fileId: String,
+        onLoaded: js.Function1[/* d */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit],
+        opt_initializerFn: js.UndefOr[scala.Nothing],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
       ): Unit = js.native
       def load(
         fileId: String,
@@ -141,6 +124,11 @@ object gapi extends js.Object {
       ): Unit = js.native
       def loadAppDataDocument(
         onLoaded: js.Function1[/* x */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit],
+        opt_initializerFn: js.UndefOr[scala.Nothing],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
+      ): Unit = js.native
+      def loadAppDataDocument(
+        onLoaded: js.Function1[/* x */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit],
         opt_initializerFn: js.Function1[/* x */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Model, Unit]
       ): Unit = js.native
       def loadAppDataDocument(
@@ -155,7 +143,26 @@ object gapi extends js.Object {
       ): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
       def newInMemoryDocument(): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
       def newInMemoryDocument(
+        opt_onLoaded: js.UndefOr[scala.Nothing],
+        opt_initializerFn: js.UndefOr[scala.Nothing],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
+      ): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
+      def newInMemoryDocument(
+        opt_onLoaded: js.UndefOr[scala.Nothing],
+        opt_initializerFn: js.Function1[/* m */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Model, Unit]
+      ): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
+      def newInMemoryDocument(
+        opt_onLoaded: js.UndefOr[scala.Nothing],
+        opt_initializerFn: js.Function1[/* m */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Model, Unit],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
+      ): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
+      def newInMemoryDocument(
         opt_onLoaded: js.Function1[/* d */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit]
+      ): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
+      def newInMemoryDocument(
+        opt_onLoaded: js.Function1[/* d */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit],
+        opt_initializerFn: js.UndefOr[scala.Nothing],
+        opt_errorFn: js.Function1[/* e */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Error, Unit]
       ): typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document = js.native
       def newInMemoryDocument(
         opt_onLoaded: js.Function1[/* d */ typingsSlinky.googleDriveRealtimeApi.gapi.drive.realtime.Document, Unit],

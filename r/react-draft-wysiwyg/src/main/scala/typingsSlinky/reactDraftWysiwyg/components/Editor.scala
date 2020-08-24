@@ -44,6 +44,8 @@ object Editor {
     @scala.inline
     def customBlockRenderFunc(value: /* block */ ContentBlock => _): this.type = set("customBlockRenderFunc", js.Any.fromFunction1(value))
     @scala.inline
+    def customDecoratorsVarargs(value: js.Object*): this.type = set("customDecorators", js.Array(value :_*))
+    @scala.inline
     def customDecorators(value: js.Array[js.Object]): this.type = set("customDecorators", value.asInstanceOf[js.Any])
     @scala.inline
     def customStyleMap(value: js.Object): this.type = set("customStyleMap", value.asInstanceOf[js.Any])
@@ -101,6 +103,8 @@ object Editor {
     def toolbar(value: js.Object): this.type = set("toolbar", value.asInstanceOf[js.Any])
     @scala.inline
     def toolbarClassName(value: String): this.type = set("toolbarClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarCustomButtonsVarargs(value: ReactElement*): this.type = set("toolbarCustomButtons", js.Array(value :_*))
     @scala.inline
     def toolbarCustomButtons(value: js.Array[ReactElement]): this.type = set("toolbarCustomButtons", value.asInstanceOf[js.Any])
     @scala.inline

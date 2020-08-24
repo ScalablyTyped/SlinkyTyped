@@ -71,6 +71,7 @@ package object imagebuilderMod {
   type ImageSummaryList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.ImageSummary]
   type ImageTestsTimeoutMinutes = scala.Double
   type ImageVersionArn = java.lang.String
+  type ImageVersionArnOrBuildVersionArn = java.lang.String
   type ImageVersionList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.ImageVersion]
   type InfrastructureConfigurationArn = java.lang.String
   type InfrastructureConfigurationSummaryList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.InfrastructureConfigurationSummary]
@@ -109,6 +110,7 @@ package object imagebuilderMod {
   type Platform = typingsSlinky.awsSdk.imagebuilderMod._Platform | java.lang.String
   type ResourceName = java.lang.String
   type ResourcePolicyDocument = java.lang.String
+  type ResourceTagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.imagebuilderMod.TagValue]
   type RestrictedInteger = scala.Double
   type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.imagebuilderMod.NonEmptyString]
   type SnsTopicArn = java.lang.String

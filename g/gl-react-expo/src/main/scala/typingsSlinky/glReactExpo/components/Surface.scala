@@ -18,9 +18,13 @@ object Surface {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.glReactExpo.mod.Surface] {
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
     @scala.inline
     def onLoadError(value: /* e */ js.Error => Unit): this.type = set("onLoadError", js.Any.fromFunction1(value))
+    @scala.inline
+    def preloadVarargs(value: js.Any*): this.type = set("preload", js.Array(value :_*))
     @scala.inline
     def preload(value: js.Array[_]): this.type = set("preload", value.asInstanceOf[js.Any])
     @scala.inline

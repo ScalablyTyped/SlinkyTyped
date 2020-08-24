@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "BoundEventAst")
 @js.native
 class BoundEventAst protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.BoundEventAst {
+  extends typingsSlinky.angularCompiler.compilerMod.BoundEventAst {
   def this(
     name: String,
     target: String,
     phase: String,
-    handler: typingsSlinky.angularCompiler.astMod.AST,
+    handler: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     handlerSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -20,7 +20,7 @@ class BoundEventAst protected ()
     name: String,
     target: String,
     phase: Null,
-    handler: typingsSlinky.angularCompiler.astMod.AST,
+    handler: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     handlerSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -28,7 +28,7 @@ class BoundEventAst protected ()
     name: String,
     target: Null,
     phase: String,
-    handler: typingsSlinky.angularCompiler.astMod.AST,
+    handler: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     handlerSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -36,7 +36,7 @@ class BoundEventAst protected ()
     name: String,
     target: Null,
     phase: Null,
-    handler: typingsSlinky.angularCompiler.astMod.AST,
+    handler: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     handlerSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

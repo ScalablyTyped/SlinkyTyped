@@ -32,29 +32,18 @@ object GroupMetadata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFlPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flPos")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFlPos(value: Double): Self = this.set("flPos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gPos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGId(value: Double): Self = this.set("gId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLastChildFlPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChildFlPos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGPos(value: Double): Self = this.set("gPos", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLastChildFlPos(value: Double): Self = this.set("lastChildFlPos", value.asInstanceOf[js.Any])
   }
   
 }

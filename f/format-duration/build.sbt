@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "format-duration"
-version := "1.0-dt-20200515Z-aaa4f2"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-e298a4"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

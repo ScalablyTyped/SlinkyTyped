@@ -18,6 +18,8 @@ object LiveUpdate {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.solidReact.mod.LiveUpdate] {
     @scala.inline
+    def subscribeVarargs(value: String*): this.type = set("subscribe", js.Array(value :_*))
+    @scala.inline
     def subscribe(value: Asterisk | String | js.Array[String]): this.type = set("subscribe", value.asInstanceOf[js.Any])
   }
   

@@ -1,7 +1,6 @@
 package typingsSlinky.antdMobileRn.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -86,6 +85,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
@@ -102,6 +102,7 @@ import typingsSlinky.reactNative.mod.TextInputKeyPressEventData
 import typingsSlinky.reactNative.mod.TextInputScrollEventData
 import typingsSlinky.reactNative.mod.TextInputSelectionChangeEventData
 import typingsSlinky.reactNative.mod.TextInputSubmitEditingEventData
+import typingsSlinky.reactNative.mod.TextInputTextInputEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -116,6 +117,8 @@ object InputItem {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.InputItem] {
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -134,6 +137,8 @@ object InputItem {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -169,6 +174,8 @@ object InputItem {
     @scala.inline
     def contextMenuHidden(value: Boolean): this.type = set("contextMenuHidden", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
+    @scala.inline
     def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
@@ -185,7 +192,9 @@ object InputItem {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -216,6 +225,8 @@ object InputItem {
     def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def maxFontSizeMultiplier(value: Double): this.type = set("maxFontSizeMultiplier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxFontSizeMultiplierNull: this.type = set("maxFontSizeMultiplier", null)
     @scala.inline
     def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     @scala.inline
@@ -287,6 +298,8 @@ object InputItem {
     @scala.inline
     def onSubmitEditing(value: SyntheticEvent[NodeHandle, TextInputSubmitEditingEventData] => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
     @scala.inline
+    def onTextInput(value: SyntheticEvent[NodeHandle, TextInputTextInputEventData] => Unit): this.type = set("onTextInput", js.Any.fromFunction1(value))
+    @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
@@ -301,13 +314,17 @@ object InputItem {
     @scala.inline
     def passwordRules(value: String): this.type = set("passwordRules", value.asInstanceOf[js.Any])
     @scala.inline
+    def passwordRulesNull: this.type = set("passwordRules", null)
+    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholderTextColor(value: String): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
+    def placeholderTextColor(value: ColorValue): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
     def rejectResponderTermination(value: Boolean): this.type = set("rejectResponderTermination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rejectResponderTerminationNull: this.type = set("rejectResponderTermination", null)
     @scala.inline
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
     @scala.inline
@@ -325,7 +342,7 @@ object InputItem {
     @scala.inline
     def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+    def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionState(value: DocumentSelectionState): this.type = set("selectionState", value.asInstanceOf[js.Any])
     @scala.inline
@@ -365,7 +382,7 @@ object InputItem {
     @scala.inline
     def `type`(value: text | bankCard | phone | password | number | digit): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def underlineColorAndroid(value: String): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
+    def underlineColorAndroid(value: ColorValue): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
     @scala.inline
     def updatePlaceholder(value: Boolean): this.type = set("updatePlaceholder", value.asInstanceOf[js.Any])
     @scala.inline

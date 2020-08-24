@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GlobalNavButtonActiveIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GlobalNavButtonActiveIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GlobalNavButtonActiveIcon")
   @js.native
   object component extends js.Object
   

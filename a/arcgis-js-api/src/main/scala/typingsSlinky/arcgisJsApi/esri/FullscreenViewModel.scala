@@ -1,6 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`feature-unsupported`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.active
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +18,13 @@ trait FullscreenViewModel extends Accessor {
     */
   var element: HTMLElement = js.native
   /**
-    * The view model's state.  **Possible Values:** active | ready | feature-unsupported | disabled
+    * The view model's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Fullscreen-FullscreenViewModel.html#state)
     *
     * @default disabled
     */
-  val state: String = js.native
+  val state: active | ready | `feature-unsupported` | disabled = js.native
   /**
     * The view associated with the widget instance.
     *

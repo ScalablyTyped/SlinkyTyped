@@ -2,7 +2,7 @@ package typingsSlinky.libphonenumberJs
 
 import typingsSlinky.libphonenumberJs.anon.DefaultCallingCode
 import typingsSlinky.libphonenumberJs.anon.DefaultCountry
-import typingsSlinky.libphonenumberJs.anon.DefaultCountryCountryCode
+import typingsSlinky.libphonenumberJs.anon.`0`
 import typingsSlinky.libphonenumberJs.anon.countryinCountryCodeNatio
 import typingsSlinky.libphonenumberJs.typesMod.CountryCallingCode
 import typingsSlinky.libphonenumberJs.typesMod.CountryCode
@@ -20,7 +20,9 @@ import scala.scalajs.js.annotation._
 object coreMod extends js.Object {
   @js.native
   class AsYouType protected () extends js.Object {
-    def this(defaultCountryCode: js.UndefOr[CountryCode | DefaultCallingCode], metadata: Metadata) = this()
+    def this(defaultCountryCode: js.UndefOr[scala.Nothing], metadata: Metadata) = this()
+    def this(defaultCountryCode: DefaultCallingCode, metadata: Metadata) = this()
+    def this(defaultCountryCode: CountryCode, metadata: Metadata) = this()
     def getNumber(): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
     def getTemplate(): js.UndefOr[String] = js.native
     def input(text: String): String = js.native
@@ -54,7 +56,7 @@ object coreMod extends js.Object {
   def findNumbers(text: String, options: DefaultCountry, metadata: Metadata): js.Array[NumberFound] = js.native
   def findNumbers(text: String, options: CountryCode, metadata: Metadata): js.Array[NumberFound] = js.native
   def findPhoneNumbersInText(text: String, metadata: Metadata): js.Array[NumberFound] = js.native
-  def findPhoneNumbersInText(text: String, options: DefaultCountryCountryCode, metadata: Metadata): js.Array[NumberFound] = js.native
+  def findPhoneNumbersInText(text: String, options: `0`, metadata: Metadata): js.Array[NumberFound] = js.native
   def findPhoneNumbersInText(text: String, options: CountryCode, metadata: Metadata): js.Array[NumberFound] = js.native
   def formatIncompletePhoneNumber(number: String, countryCode: CountryCode, metadata: Metadata): String = js.native
   def formatIncompletePhoneNumber(number: String, metadata: Metadata): String = js.native
@@ -74,7 +76,7 @@ object coreMod extends js.Object {
   def searchNumbers(text: String, options: DefaultCountry, metadata: Metadata): IterableIterator[NumberFound] = js.native
   def searchNumbers(text: String, options: CountryCode, metadata: Metadata): IterableIterator[NumberFound] = js.native
   def searchPhoneNumbersInText(text: String, metadata: Metadata): IterableIterator[NumberFound] = js.native
-  def searchPhoneNumbersInText(text: String, options: DefaultCountryCountryCode, metadata: Metadata): IterableIterator[NumberFound] = js.native
+  def searchPhoneNumbersInText(text: String, options: `0`, metadata: Metadata): IterableIterator[NumberFound] = js.native
   def searchPhoneNumbersInText(text: String, options: CountryCode, metadata: Metadata): IterableIterator[NumberFound] = js.native
 }
 

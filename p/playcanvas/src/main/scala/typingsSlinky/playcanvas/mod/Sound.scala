@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * @property audio - If the Web Audio API is not supported this contains the audio data.
   * @property duration - Returns the duration of the sound. If the sound is not loaded it returns 0.
   * @param resource - If the Web Audio API is supported, pass an AudioBuffer object, otherwise
-  * an Audio object.
+  an Audio object.
   */
 @JSImport("playcanvas", "Sound")
 @js.native
@@ -20,20 +20,5 @@ class Sound protected ()
   extends typingsSlinky.playcanvas.pc.Sound {
   def this(resource: AudioBuffer) = this()
   def this(resource: HTMLAudioElement) = this()
-  /**
-    * If the Web Audio API is not supported this contains the audio data.
-    */
-  /* CompleteClass */
-  override var audio: HTMLAudioElement = js.native
-  /**
-    * If the Web Audio API is supported this contains the audio data.
-    */
-  /* CompleteClass */
-  override var buffer: AudioBuffer = js.native
-  /**
-    * Returns the duration of the sound. If the sound is not loaded it returns 0.
-    */
-  /* CompleteClass */
-  override var duration: Double = js.native
 }
 

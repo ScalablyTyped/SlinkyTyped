@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "treeify"
-version := "1.0-dt-20190102Z-2aa5aa"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190102Z-ee25c7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

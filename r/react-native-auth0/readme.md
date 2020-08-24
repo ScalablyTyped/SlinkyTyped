@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-auth0
 
-Typings are for version 2.0
+Typings are for version 2.5
 
 ## Library description:
 React Native toolkit for Auth0 API

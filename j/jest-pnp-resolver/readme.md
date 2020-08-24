@@ -1,7 +1,7 @@
 
 # Scala.js typings for jest-pnp-resolver
 
-Typings are for version 1.2.1
+Typings are for version 1.2.2
 
 ## Library description:
 plug'n'play resolver for Webpack

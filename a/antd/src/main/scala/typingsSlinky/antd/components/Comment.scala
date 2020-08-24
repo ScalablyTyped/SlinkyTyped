@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -11,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Comment {
-  @JSImport("antd/lib/comment", JSImport.Default)
+  @JSImport("antd", "Comment")
   @js.native
   object component extends js.Object
   
@@ -20,23 +19,25 @@ object Comment {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
-    def actions(value: js.Array[TagMod[Any]]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
+    @scala.inline
+    def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def authorReactElement(value: ReactElement): this.type = set("author", value.asInstanceOf[js.Any])
     @scala.inline
-    def author(value: TagMod[Any]): this.type = set("author", value.asInstanceOf[js.Any])
+    def author(value: ReactElement): this.type = set("author", value.asInstanceOf[js.Any])
     @scala.inline
     def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def avatar(value: TagMod[Any]): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def datetimeReactElement(value: ReactElement): this.type = set("datetime", value.asInstanceOf[js.Any])
     @scala.inline
-    def datetime(value: TagMod[Any]): this.type = set("datetime", value.asInstanceOf[js.Any])
+    def datetime(value: ReactElement): this.type = set("datetime", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

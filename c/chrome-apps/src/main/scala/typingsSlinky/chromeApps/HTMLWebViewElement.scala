@@ -2000,6 +2000,11 @@ trait HTMLWebViewElement extends HTMLElement {
     *                 e.g. if the callback is only used to discern when the find request has completed.
     */
   def find(searchText: String): Unit = js.native
+  def find(
+    searchText: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* results */ js.UndefOr[FindCallbackResults], Unit]
+  ): Unit = js.native
   def find(searchText: String, options: FindOptions): Unit = js.native
   def find(
     searchText: String,

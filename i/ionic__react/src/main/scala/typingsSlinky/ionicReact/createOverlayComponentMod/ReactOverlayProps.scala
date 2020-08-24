@@ -1,37 +1,63 @@
 package typingsSlinky.ionicReact.createOverlayComponentMod
 
 import org.scalajs.dom.raw.CustomEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReactOverlayProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var isOpen: Boolean
-  var onDidDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
-  var onDidPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
-  var onWillDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
-  var onWillPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.native
+  var isOpen: Boolean = js.native
+  var onDidDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onDidPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onWillDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onWillPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
 }
 
 object ReactOverlayProps {
   @scala.inline
-  def apply(
-    isOpen: Boolean,
-    children: TagMod[Any] = null,
-    onDidDismiss: /* event */ CustomEvent => Unit = null,
-    onDidPresent: /* event */ CustomEvent => Unit = null,
-    onWillDismiss: /* event */ CustomEvent => Unit = null,
-    onWillPresent: /* event */ CustomEvent => Unit = null
-  ): ReactOverlayProps = {
+  def apply(isOpen: Boolean): ReactOverlayProps = {
     val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (onDidDismiss != null) __obj.updateDynamic("onDidDismiss")(js.Any.fromFunction1(onDidDismiss))
-    if (onDidPresent != null) __obj.updateDynamic("onDidPresent")(js.Any.fromFunction1(onDidPresent))
-    if (onWillDismiss != null) __obj.updateDynamic("onWillDismiss")(js.Any.fromFunction1(onWillDismiss))
-    if (onWillPresent != null) __obj.updateDynamic("onWillPresent")(js.Any.fromFunction1(onWillPresent))
     __obj.asInstanceOf[ReactOverlayProps]
   }
+  @scala.inline
+  implicit class ReactOverlayPropsOps[Self <: ReactOverlayProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIsOpen(value: Boolean): Self = this.set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setOnDidDismiss(value: /* event */ CustomEvent => Unit): Self = this.set("onDidDismiss", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDidDismiss: Self = this.set("onDidDismiss", js.undefined)
+    @scala.inline
+    def setOnDidPresent(value: /* event */ CustomEvent => Unit): Self = this.set("onDidPresent", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDidPresent: Self = this.set("onDidPresent", js.undefined)
+    @scala.inline
+    def setOnWillDismiss(value: /* event */ CustomEvent => Unit): Self = this.set("onWillDismiss", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnWillDismiss: Self = this.set("onWillDismiss", js.undefined)
+    @scala.inline
+    def setOnWillPresent(value: /* event */ CustomEvent => Unit): Self = this.set("onWillPresent", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnWillPresent: Self = this.set("onWillPresent", js.undefined)
+  }
+  
 }
 

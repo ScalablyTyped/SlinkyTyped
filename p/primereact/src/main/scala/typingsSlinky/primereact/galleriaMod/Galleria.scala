@@ -1,0 +1,18 @@
+package typingsSlinky.primereact.galleriaMod
+
+import typingsSlinky.react.mod.Component
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("primereact/components/galleria/Galleria", "Galleria")
+@js.native
+class Galleria ()
+  extends Component[GalleriaProps, js.Any, js.Any] {
+  def hide(): Unit = js.native
+  def isAutoPlayActive(): Boolean = js.native
+  def show(): Unit = js.native
+  def startSlideShow(): Unit = js.native
+  def stopSlideShow(): Unit = js.native
+}
+

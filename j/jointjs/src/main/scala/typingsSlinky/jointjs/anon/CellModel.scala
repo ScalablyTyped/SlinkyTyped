@@ -23,29 +23,18 @@ object CellModel {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCellModel(value: TypeofCell): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellModel")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutCellModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellModel")(js.undefined)
-        ret
-    }
+    def setCellModel(value: TypeofCell): Self = this.set("cellModel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCellNamespace(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCellModel: Self = this.set("cellModel", js.undefined)
     @scala.inline
-    def withoutCellNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellNamespace")(js.undefined)
-        ret
-    }
+    def setCellNamespace(value: js.Any): Self = this.set("cellNamespace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCellNamespace: Self = this.set("cellNamespace", js.undefined)
   }
   
 }

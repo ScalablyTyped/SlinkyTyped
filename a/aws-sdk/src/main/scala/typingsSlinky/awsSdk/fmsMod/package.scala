@@ -15,7 +15,11 @@ package object fmsMod {
     - java.lang.String
   */
   type AccountRoleStatus = typingsSlinky.awsSdk.fmsMod._AccountRoleStatus | java.lang.String
+  type AppsList = js.Array[typingsSlinky.awsSdk.fmsMod.App]
+  type AppsListsData = js.Array[typingsSlinky.awsSdk.fmsMod.AppsListDataSummary]
+  type AwsEc2NetworkInterfaceViolations = js.Array[typingsSlinky.awsSdk.fmsMod.AwsEc2NetworkInterfaceViolation]
   type Boolean = scala.Boolean
+  type CIDR = java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.fmsMod.ClientApiVersions
   type ComplianceViolators = js.Array[typingsSlinky.awsSdk.fmsMod.ComplianceViolator]
   type CustomerPolicyScopeId = java.lang.String
@@ -37,11 +41,15 @@ package object fmsMod {
   type DependentServiceName = typingsSlinky.awsSdk.fmsMod._DependentServiceName | java.lang.String
   type DetailedInfo = java.lang.String
   type EvaluationResults = js.Array[typingsSlinky.awsSdk.fmsMod.EvaluationResult]
+  type IPPortNumber = scala.Double
   type IssueInfoMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.fmsMod.DetailedInfo]
+  type LengthBoundedString = java.lang.String
+  type ListId = java.lang.String
   type ManagedServiceData = java.lang.String
   type MemberAccounts = js.Array[typingsSlinky.awsSdk.fmsMod.AWSAccountId]
   type PaginationMaxResults = scala.Double
   type PaginationToken = java.lang.String
+  type PartialMatches = js.Array[typingsSlinky.awsSdk.fmsMod.PartialMatch]
   type PolicyComplianceStatusList = js.Array[typingsSlinky.awsSdk.fmsMod.PolicyComplianceStatus]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLIANT
@@ -52,16 +60,33 @@ package object fmsMod {
   type PolicyId = java.lang.String
   type PolicySummaryList = js.Array[typingsSlinky.awsSdk.fmsMod.PolicySummary]
   type PolicyUpdateToken = java.lang.String
+  type PreviousAppsList = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.fmsMod.AppsList]
+  type PreviousListVersion = java.lang.String
+  type PreviousProtocolsList = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.fmsMod.ProtocolsList]
   type ProtectionData = java.lang.String
+  type Protocol = java.lang.String
+  type ProtocolsList = js.Array[typingsSlinky.awsSdk.fmsMod.Protocol]
+  type ProtocolsListsData = js.Array[typingsSlinky.awsSdk.fmsMod.ProtocolsListDataSummary]
+  type ReferenceRule = java.lang.String
+  type RemediationActionDescription = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.REMOVE
+    - typingsSlinky.awsSdk.awsSdkStrings.MODIFY
+    - java.lang.String
+  */
+  type RemediationActionType = typingsSlinky.awsSdk.fmsMod._RemediationActionType | java.lang.String
   type ResourceArn = java.lang.String
   type ResourceCount = scala.Double
   type ResourceId = java.lang.String
+  type ResourceIdList = js.Array[typingsSlinky.awsSdk.fmsMod.ResourceId]
   type ResourceName = java.lang.String
   type ResourceTagKey = java.lang.String
   type ResourceTagValue = java.lang.String
   type ResourceTags = js.Array[typingsSlinky.awsSdk.fmsMod.ResourceTag]
   type ResourceType = java.lang.String
   type ResourceTypeList = js.Array[typingsSlinky.awsSdk.fmsMod.ResourceType]
+  type ResourceViolations = js.Array[typingsSlinky.awsSdk.fmsMod.ResourceViolation]
+  type SecurityGroupRemediationActions = js.Array[typingsSlinky.awsSdk.fmsMod.SecurityGroupRemediationAction]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.WAF
     - typingsSlinky.awsSdk.awsSdkStrings.WAFV2
@@ -76,7 +101,10 @@ package object fmsMod {
   type TagKeyList = js.Array[typingsSlinky.awsSdk.fmsMod.TagKey]
   type TagList = js.Array[typingsSlinky.awsSdk.fmsMod.Tag]
   type TagValue = java.lang.String
+  type TargetViolationReason = java.lang.String
+  type TargetViolationReasons = js.Array[typingsSlinky.awsSdk.fmsMod.TargetViolationReason]
   type TimeStamp = js.Date
+  type UpdateToken = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.WEB_ACL_MISSING_RULE_GROUP
     - typingsSlinky.awsSdk.awsSdkStrings.RESOURCE_MISSING_WEB_ACL
@@ -90,6 +118,7 @@ package object fmsMod {
     - java.lang.String
   */
   type ViolationReason = typingsSlinky.awsSdk.fmsMod._ViolationReason | java.lang.String
+  type ViolationTarget = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-01-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

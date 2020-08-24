@@ -2,112 +2,113 @@ package typingsSlinky.mdxJsReact.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MDXProviderComponents extends /**
   * Any other components we wish to define
   */
-/* key */ StringDictionary[TagMod[Any]] {
+/* key */ StringDictionary[ReactElement] {
   /**
     * Link    <https://mdxjs.com> or [MDX](https://mdxjs.com)
     */
-  var a: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var a: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Blockquote    >
     */
-  var blockquote: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var blockquote: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Code    `\code```
     */
-  var code: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var code: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Delete    ~~strikethrough~~
     */
-  var delete: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var delete: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Emphasis    _emphasis_
     */
-  var em: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var em: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 1    #
     */
-  var h1: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h1: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 2    ##
     */
-  var h2: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h2: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 3    ###
     */
-  var h3: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h3: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 4    ####
     */
-  var h4: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h4: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 5    #####
     */
-  var h5: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h5: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 6    ######
     */
-  var h6: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h6: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Break    ---
     */
-  var hr: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var hr: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Image    ![alt](https://mdx-logo.now.sh)
     */
-  var img: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var img: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * InlineCode    `inlineCode`
     */
-  var inlineCode: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var inlineCode: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * List item
     */
-  var li: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var li: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Ordered list    1.
     */
-  var ol: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var ol: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Paragraph
     */
-  var p: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var p: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Pre
     */
-  var pre: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var pre: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Strong    **strong**
     */
-  var strong: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var strong: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Table
     */
-  var table: js.UndefOr[ReactComponentClass[_]] = js.undefined
-  var td: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var table: js.UndefOr[ReactComponentClass[_]] = js.native
+  var td: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Table Cell
     */
-  var th: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var th: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Thematic break    ***
     */
-  var thematicBreak: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var thematicBreak: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Table row
     */
-  var tr: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var tr: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * List    -
     */
-  var ul: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var ul: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * The wrapper component can be used to set the layout for the MDX document.
     * It’s often used to set container width, borders, background colors, etc.
@@ -117,72 +118,235 @@ trait MDXProviderComponents extends /**
     * This means that you can do powerful things with the MDX document
     * elements.
     */
-  var wrapper: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var wrapper: js.UndefOr[ReactComponentClass[_]] = js.native
 }
 
 object MDXProviderComponents {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * Any other components we wish to define
-    */
-  /* key */ StringDictionary[TagMod[Any]] = null,
-    a: ReactComponentClass[_] = null,
-    blockquote: ReactComponentClass[_] = null,
-    code: ReactComponentClass[_] = null,
-    delete: ReactComponentClass[_] = null,
-    em: ReactComponentClass[_] = null,
-    h1: ReactComponentClass[_] = null,
-    h2: ReactComponentClass[_] = null,
-    h3: ReactComponentClass[_] = null,
-    h4: ReactComponentClass[_] = null,
-    h5: ReactComponentClass[_] = null,
-    h6: ReactComponentClass[_] = null,
-    hr: ReactComponentClass[_] = null,
-    img: ReactComponentClass[_] = null,
-    inlineCode: ReactComponentClass[_] = null,
-    li: ReactComponentClass[_] = null,
-    ol: ReactComponentClass[_] = null,
-    p: ReactComponentClass[_] = null,
-    pre: ReactComponentClass[_] = null,
-    strong: ReactComponentClass[_] = null,
-    table: ReactComponentClass[_] = null,
-    td: ReactComponentClass[_] = null,
-    th: ReactComponentClass[_] = null,
-    thematicBreak: ReactComponentClass[_] = null,
-    tr: ReactComponentClass[_] = null,
-    ul: ReactComponentClass[_] = null,
-    wrapper: ReactComponentClass[_] = null
-  ): MDXProviderComponents = {
+  def apply(): MDXProviderComponents = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (a != null) __obj.updateDynamic("a")(a.asInstanceOf[js.Any])
-    if (blockquote != null) __obj.updateDynamic("blockquote")(blockquote.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
-    if (em != null) __obj.updateDynamic("em")(em.asInstanceOf[js.Any])
-    if (h1 != null) __obj.updateDynamic("h1")(h1.asInstanceOf[js.Any])
-    if (h2 != null) __obj.updateDynamic("h2")(h2.asInstanceOf[js.Any])
-    if (h3 != null) __obj.updateDynamic("h3")(h3.asInstanceOf[js.Any])
-    if (h4 != null) __obj.updateDynamic("h4")(h4.asInstanceOf[js.Any])
-    if (h5 != null) __obj.updateDynamic("h5")(h5.asInstanceOf[js.Any])
-    if (h6 != null) __obj.updateDynamic("h6")(h6.asInstanceOf[js.Any])
-    if (hr != null) __obj.updateDynamic("hr")(hr.asInstanceOf[js.Any])
-    if (img != null) __obj.updateDynamic("img")(img.asInstanceOf[js.Any])
-    if (inlineCode != null) __obj.updateDynamic("inlineCode")(inlineCode.asInstanceOf[js.Any])
-    if (li != null) __obj.updateDynamic("li")(li.asInstanceOf[js.Any])
-    if (ol != null) __obj.updateDynamic("ol")(ol.asInstanceOf[js.Any])
-    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
-    if (pre != null) __obj.updateDynamic("pre")(pre.asInstanceOf[js.Any])
-    if (strong != null) __obj.updateDynamic("strong")(strong.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
-    if (td != null) __obj.updateDynamic("td")(td.asInstanceOf[js.Any])
-    if (th != null) __obj.updateDynamic("th")(th.asInstanceOf[js.Any])
-    if (thematicBreak != null) __obj.updateDynamic("thematicBreak")(thematicBreak.asInstanceOf[js.Any])
-    if (tr != null) __obj.updateDynamic("tr")(tr.asInstanceOf[js.Any])
-    if (ul != null) __obj.updateDynamic("ul")(ul.asInstanceOf[js.Any])
-    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[MDXProviderComponents]
   }
+  @scala.inline
+  implicit class MDXProviderComponentsOps[Self <: MDXProviderComponents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAFunctionComponent(value: ReactComponentClass[_]): Self = this.set("a", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAComponentClass(value: ReactComponentClass[_]): Self = this.set("a", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setA(value: ReactComponentClass[_]): Self = this.set("a", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteA: Self = this.set("a", js.undefined)
+    @scala.inline
+    def setBlockquoteFunctionComponent(value: ReactComponentClass[_]): Self = this.set("blockquote", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBlockquoteComponentClass(value: ReactComponentClass[_]): Self = this.set("blockquote", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBlockquote(value: ReactComponentClass[_]): Self = this.set("blockquote", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBlockquote: Self = this.set("blockquote", js.undefined)
+    @scala.inline
+    def setCodeFunctionComponent(value: ReactComponentClass[_]): Self = this.set("code", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCodeComponentClass(value: ReactComponentClass[_]): Self = this.set("code", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCode(value: ReactComponentClass[_]): Self = this.set("code", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCode: Self = this.set("code", js.undefined)
+    @scala.inline
+    def setDeleteFunctionComponent(value: ReactComponentClass[_]): Self = this.set("delete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeleteComponentClass(value: ReactComponentClass[_]): Self = this.set("delete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDelete(value: ReactComponentClass[_]): Self = this.set("delete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDelete: Self = this.set("delete", js.undefined)
+    @scala.inline
+    def setEmFunctionComponent(value: ReactComponentClass[_]): Self = this.set("em", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEmComponentClass(value: ReactComponentClass[_]): Self = this.set("em", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEm(value: ReactComponentClass[_]): Self = this.set("em", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEm: Self = this.set("em", js.undefined)
+    @scala.inline
+    def setH1FunctionComponent(value: ReactComponentClass[_]): Self = this.set("h1", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH1ComponentClass(value: ReactComponentClass[_]): Self = this.set("h1", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH1(value: ReactComponentClass[_]): Self = this.set("h1", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteH1: Self = this.set("h1", js.undefined)
+    @scala.inline
+    def setH2FunctionComponent(value: ReactComponentClass[_]): Self = this.set("h2", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH2ComponentClass(value: ReactComponentClass[_]): Self = this.set("h2", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH2(value: ReactComponentClass[_]): Self = this.set("h2", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteH2: Self = this.set("h2", js.undefined)
+    @scala.inline
+    def setH3FunctionComponent(value: ReactComponentClass[_]): Self = this.set("h3", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH3ComponentClass(value: ReactComponentClass[_]): Self = this.set("h3", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH3(value: ReactComponentClass[_]): Self = this.set("h3", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteH3: Self = this.set("h3", js.undefined)
+    @scala.inline
+    def setH4FunctionComponent(value: ReactComponentClass[_]): Self = this.set("h4", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH4ComponentClass(value: ReactComponentClass[_]): Self = this.set("h4", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH4(value: ReactComponentClass[_]): Self = this.set("h4", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteH4: Self = this.set("h4", js.undefined)
+    @scala.inline
+    def setH5FunctionComponent(value: ReactComponentClass[_]): Self = this.set("h5", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH5ComponentClass(value: ReactComponentClass[_]): Self = this.set("h5", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH5(value: ReactComponentClass[_]): Self = this.set("h5", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteH5: Self = this.set("h5", js.undefined)
+    @scala.inline
+    def setH6FunctionComponent(value: ReactComponentClass[_]): Self = this.set("h6", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH6ComponentClass(value: ReactComponentClass[_]): Self = this.set("h6", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setH6(value: ReactComponentClass[_]): Self = this.set("h6", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteH6: Self = this.set("h6", js.undefined)
+    @scala.inline
+    def setHrFunctionComponent(value: ReactComponentClass[_]): Self = this.set("hr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHrComponentClass(value: ReactComponentClass[_]): Self = this.set("hr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHr(value: ReactComponentClass[_]): Self = this.set("hr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHr: Self = this.set("hr", js.undefined)
+    @scala.inline
+    def setImgFunctionComponent(value: ReactComponentClass[_]): Self = this.set("img", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImgComponentClass(value: ReactComponentClass[_]): Self = this.set("img", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImg(value: ReactComponentClass[_]): Self = this.set("img", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImg: Self = this.set("img", js.undefined)
+    @scala.inline
+    def setInlineCodeFunctionComponent(value: ReactComponentClass[_]): Self = this.set("inlineCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInlineCodeComponentClass(value: ReactComponentClass[_]): Self = this.set("inlineCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInlineCode(value: ReactComponentClass[_]): Self = this.set("inlineCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInlineCode: Self = this.set("inlineCode", js.undefined)
+    @scala.inline
+    def setLiFunctionComponent(value: ReactComponentClass[_]): Self = this.set("li", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLiComponentClass(value: ReactComponentClass[_]): Self = this.set("li", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLi(value: ReactComponentClass[_]): Self = this.set("li", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLi: Self = this.set("li", js.undefined)
+    @scala.inline
+    def setOlFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOlComponentClass(value: ReactComponentClass[_]): Self = this.set("ol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOl(value: ReactComponentClass[_]): Self = this.set("ol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOl: Self = this.set("ol", js.undefined)
+    @scala.inline
+    def setPFunctionComponent(value: ReactComponentClass[_]): Self = this.set("p", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPComponentClass(value: ReactComponentClass[_]): Self = this.set("p", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setP(value: ReactComponentClass[_]): Self = this.set("p", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteP: Self = this.set("p", js.undefined)
+    @scala.inline
+    def setPreFunctionComponent(value: ReactComponentClass[_]): Self = this.set("pre", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreComponentClass(value: ReactComponentClass[_]): Self = this.set("pre", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPre(value: ReactComponentClass[_]): Self = this.set("pre", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePre: Self = this.set("pre", js.undefined)
+    @scala.inline
+    def setStrongFunctionComponent(value: ReactComponentClass[_]): Self = this.set("strong", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStrongComponentClass(value: ReactComponentClass[_]): Self = this.set("strong", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStrong(value: ReactComponentClass[_]): Self = this.set("strong", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrong: Self = this.set("strong", js.undefined)
+    @scala.inline
+    def setTableFunctionComponent(value: ReactComponentClass[_]): Self = this.set("table", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTableComponentClass(value: ReactComponentClass[_]): Self = this.set("table", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTable(value: ReactComponentClass[_]): Self = this.set("table", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTable: Self = this.set("table", js.undefined)
+    @scala.inline
+    def setTdFunctionComponent(value: ReactComponentClass[_]): Self = this.set("td", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTdComponentClass(value: ReactComponentClass[_]): Self = this.set("td", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTd(value: ReactComponentClass[_]): Self = this.set("td", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTd: Self = this.set("td", js.undefined)
+    @scala.inline
+    def setThFunctionComponent(value: ReactComponentClass[_]): Self = this.set("th", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThComponentClass(value: ReactComponentClass[_]): Self = this.set("th", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTh(value: ReactComponentClass[_]): Self = this.set("th", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTh: Self = this.set("th", js.undefined)
+    @scala.inline
+    def setThematicBreakFunctionComponent(value: ReactComponentClass[_]): Self = this.set("thematicBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThematicBreakComponentClass(value: ReactComponentClass[_]): Self = this.set("thematicBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThematicBreak(value: ReactComponentClass[_]): Self = this.set("thematicBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThematicBreak: Self = this.set("thematicBreak", js.undefined)
+    @scala.inline
+    def setTrFunctionComponent(value: ReactComponentClass[_]): Self = this.set("tr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTrComponentClass(value: ReactComponentClass[_]): Self = this.set("tr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTr(value: ReactComponentClass[_]): Self = this.set("tr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTr: Self = this.set("tr", js.undefined)
+    @scala.inline
+    def setUlFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ul", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUlComponentClass(value: ReactComponentClass[_]): Self = this.set("ul", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUl(value: ReactComponentClass[_]): Self = this.set("ul", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUl: Self = this.set("ul", js.undefined)
+    @scala.inline
+    def setWrapperFunctionComponent(value: ReactComponentClass[_]): Self = this.set("wrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWrapperComponentClass(value: ReactComponentClass[_]): Self = this.set("wrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWrapper(value: ReactComponentClass[_]): Self = this.set("wrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWrapper: Self = this.set("wrapper", js.undefined)
+  }
+  
 }
 

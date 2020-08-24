@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/optimizer_config.OptimizerSerialization['class_name'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adam
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adadelta
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Momentum
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SGD
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adagrad
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adamax
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SGD
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adadelta
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RMSProp
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adam
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Adamax
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Momentum
 */
 trait OptimizerClassName extends js.Object
 

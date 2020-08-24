@@ -28,6 +28,11 @@ trait ChromeAppWindow extends AppWindow {
     * @param [callback] Called in the creating window (parent) before the load event is called in the created window (child). The parent can set fields or functions on the child usable from onload. E.g. background.js: function(createdWindow) { createdWindow.contentWindow.foo = function () { }; }; window.js: window.onload = function () { foo(); } If you specify the callback parameter, it should be a function that looks like this: function(AppWindow createdWindow) {...};
     */
   def create(url: String): Unit = js.native
+  def create(
+    url: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* created_window */ AppWindow, Unit]
+  ): Unit = js.native
   def create(url: String, options: CreateWindowOptions): Unit = js.native
   def create(
     url: String,

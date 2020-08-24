@@ -2,6 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import typingsSlinky.pixiJs.anon.HeightWidth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +20,7 @@ class TilingSprite protected ()
   extends typingsSlinky.pixiJs.PIXI.TilingSprite {
   def this(texture: typingsSlinky.pixiJs.PIXI.Texture) = this()
   def this(texture: typingsSlinky.pixiJs.PIXI.Texture, width: Double) = this()
+  def this(texture: typingsSlinky.pixiJs.PIXI.Texture, width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(texture: typingsSlinky.pixiJs.PIXI.Texture, width: Double, height: Double) = this()
 }
 
@@ -34,47 +36,24 @@ object TilingSprite extends js.Object {
     *
     * @static
     * @param {string|PIXI.Texture|HTMLCanvasElement|HTMLVideoElement} source - Source to create texture from
-    * @param {number} width - the width of the tiling sprite
-    * @param {number} height - the height of the tiling sprite
+    * @param {Object} options - See {@link PIXI.BaseTexture}'s constructor for options.
+    * @param {number} options.width - required width of the tiling sprite
+    * @param {number} options.height - required height of the tiling sprite
     * @return {PIXI.TilingSprite} The newly created texture
     */
-  def from(source: String, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
+  def from(source: String, options: HeightWidth): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
   def from(source: Double): typingsSlinky.pixiJs.PIXI.Sprite = js.native
   def from(source: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
   def from(source: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.Sprite = js.native
   def from(source: typingsSlinky.pixiJs.PIXI.Texture, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  def from(source: typingsSlinky.pixiJs.PIXI.Texture, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
+  def from(source: typingsSlinky.pixiJs.PIXI.Texture, options: HeightWidth): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
   def from(source: HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.Sprite = js.native
   def from(source: HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  def from(source: HTMLCanvasElement, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
+  def from(source: HTMLCanvasElement, options: HeightWidth): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
   def from(source: HTMLVideoElement): typingsSlinky.pixiJs.PIXI.Sprite = js.native
   def from(source: HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  def from(source: HTMLVideoElement, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
+  def from(source: HTMLVideoElement, options: HeightWidth): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
   def fromFrame(): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  /**
-    * Helper function that creates a tiling sprite that will use a texture from the TextureCache based on the frameId
-    * The frame ids are created when a Texture packer file has been loaded
-    *
-    * @static
-    * @param {string} frameId - The frame Id of the texture in the cache
-    * @param {number} width - the width of the tiling sprite
-    * @param {number} height - the height of the tiling sprite
-    * @return {PIXI.TilingSprite} A new TilingSprite using a texture from the texture cache matching the frameId
-    */
-  def fromFrame(frameId: String, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
   def fromImage(): typingsSlinky.pixiJs.PIXI.Sprite = js.native
-  /**
-    * Helper function that creates a sprite that will contain a texture based on an image url
-    * If the image is not in the texture cache it will be loaded
-    *
-    * @static
-    * @param {string} imageId - The image url of the texture
-    * @param {number} width - the width of the tiling sprite
-    * @param {number} height - the height of the tiling sprite
-    * @param {Object} [options] - See {@link PIXI.BaseTexture}'s constructor for options.
-    * @return {PIXI.TilingSprite} A new TilingSprite using a texture from the texture cache matching the image id
-    */
-  def fromImage(imageId: String, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
-  def fromImage(imageId: String, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.TilingSprite = js.native
 }
 

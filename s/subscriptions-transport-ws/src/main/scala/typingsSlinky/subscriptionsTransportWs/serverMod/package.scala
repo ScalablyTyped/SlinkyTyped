@@ -15,16 +15,28 @@ package object serverMod {
     /* fieldResolver */ js.UndefOr[
       typingsSlinky.graphql.definitionMod.GraphQLFieldResolver[js.Any, js.Any, org.scalablytyped.runtime.StringDictionary[js.Any]]
     ], 
-    typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault] | (js.Promise[
-      typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault]
+    (typingsSlinky.graphql.executeMod.ExecutionResult[
+      org.scalablytyped.runtime.StringDictionary[js.Any], 
+      org.scalablytyped.runtime.StringDictionary[js.Any]
+    ]) | (js.Promise[
+      typingsSlinky.graphql.executeMod.ExecutionResult[
+        org.scalablytyped.runtime.StringDictionary[js.Any], 
+        org.scalablytyped.runtime.StringDictionary[js.Any]
+      ]
     ]) | (typingsSlinky.std.AsyncIterator[
-      typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault], 
+      typingsSlinky.graphql.executeMod.ExecutionResult[
+        org.scalablytyped.runtime.StringDictionary[js.Any], 
+        org.scalablytyped.runtime.StringDictionary[js.Any]
+      ], 
       js.Any, 
       js.UndefOr[scala.Nothing]
     ])
   ]
   type ExecutionIterator = typingsSlinky.std.AsyncIterator[
-    typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault], 
+    typingsSlinky.graphql.executeMod.ExecutionResult[
+      org.scalablytyped.runtime.StringDictionary[js.Any], 
+      org.scalablytyped.runtime.StringDictionary[js.Any]
+    ], 
     js.Any, 
     js.UndefOr[scala.Nothing]
   ]
@@ -42,15 +54,24 @@ package object serverMod {
       typingsSlinky.graphql.definitionMod.GraphQLFieldResolver[js.Any, js.Any, org.scalablytyped.runtime.StringDictionary[js.Any]]
     ], 
     (typingsSlinky.std.AsyncIterator[
-      typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault], 
+      typingsSlinky.graphql.executeMod.ExecutionResult[
+        org.scalablytyped.runtime.StringDictionary[js.Any], 
+        org.scalablytyped.runtime.StringDictionary[js.Any]
+      ], 
       js.Any, 
       js.UndefOr[scala.Nothing]
     ]) | (js.Promise[
       (typingsSlinky.std.AsyncIterator[
-        typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault], 
+        typingsSlinky.graphql.executeMod.ExecutionResult[
+          org.scalablytyped.runtime.StringDictionary[js.Any], 
+          org.scalablytyped.runtime.StringDictionary[js.Any]
+        ], 
         js.Any, 
         js.UndefOr[scala.Nothing]
-      ]) | typingsSlinky.graphql.executeMod.ExecutionResult[typingsSlinky.graphql.executeMod.ExecutionResultDataDefault]
+      ]) | (typingsSlinky.graphql.executeMod.ExecutionResult[
+        org.scalablytyped.runtime.StringDictionary[js.Any], 
+        org.scalablytyped.runtime.StringDictionary[js.Any]
+      ])
     ])
   ]
 }

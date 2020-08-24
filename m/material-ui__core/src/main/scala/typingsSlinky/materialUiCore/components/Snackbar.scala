@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -69,7 +68,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.snackbarMod.default
 import typingsSlinky.materialUiCore.snackbarSnackbarMod.SnackbarOrigin
 import typingsSlinky.materialUiCore.snackbarSnackbarMod.SnackbarProps
 import typingsSlinky.materialUiCore.transitionMod.TransitionProps
@@ -83,14 +81,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Snackbar {
-  @JSImport("@material-ui/core/Snackbar", JSImport.Default)
+  @JSImport("@material-ui/core", "Snackbar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def ClickAwayListenerProps(value: PartialClickAwayListenerP): this.type = set("ClickAwayListenerProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -110,7 +108,7 @@ object Snackbar {
     @scala.inline
     def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def anchorOrigin(value: SnackbarOrigin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -234,6 +232,8 @@ object Snackbar {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -274,7 +274,7 @@ object Snackbar {
     @scala.inline
     def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline

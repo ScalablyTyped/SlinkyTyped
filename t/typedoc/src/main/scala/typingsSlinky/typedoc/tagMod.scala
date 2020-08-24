@@ -11,11 +11,11 @@ object tagMod extends js.Object {
   class CommentTag protected () extends js.Object {
     def this(tagName: String) = this()
     def this(tagName: String, paramName: String) = this()
+    def this(tagName: String, paramName: js.UndefOr[scala.Nothing], text: String) = this()
     def this(tagName: String, paramName: String, text: String) = this()
     var paramName: String = js.native
     var tagName: String = js.native
     var text: String = js.native
-    def toObject(): js.Any = js.native
   }
   
 }

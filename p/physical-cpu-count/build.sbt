@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "physical-cpu-count"
-version := "2.0-dt-20200427Z-823029"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200427Z-15107e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,14 +1,13 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libAutocompleteAutocompleteMod.AutocompleteProps
-import typingsSlinky.reactToolbox.libAutocompleteAutocompleteMod.AutocompleteTheme
-import typingsSlinky.reactToolbox.libAutocompleteMod.default
-import typingsSlinky.reactToolbox.libInputInputMod.InputTheme
+import typingsSlinky.reactToolbox.autocompleteAutocompleteMod.AutocompleteProps
+import typingsSlinky.reactToolbox.autocompleteAutocompleteMod.AutocompleteTheme
+import typingsSlinky.reactToolbox.autocompleteMod.default
+import typingsSlinky.reactToolbox.inputInputMod.InputTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.above
 import typingsSlinky.reactToolbox.reactToolboxStrings.anywhere
 import typingsSlinky.reactToolbox.reactToolboxStrings.auto
@@ -24,7 +23,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Autocomplete {
-  @JSImport("react-toolbox/lib/autocomplete", JSImport.Default)
+  @JSImport("react-toolbox/components/autocomplete", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -43,23 +42,23 @@ object Autocomplete {
     @scala.inline
     def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
     def floating(value: Boolean): this.type = set("floating", value.asInstanceOf[js.Any])
     @scala.inline
     def hintReactElement(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
     @scala.inline
-    def hint(value: TagMod[Any]): this.type = set("hint", value.asInstanceOf[js.Any])
+    def hint(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def keepFocusOnChange(value: Boolean): this.type = set("keepFocusOnChange", value.asInstanceOf[js.Any])
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     @scala.inline

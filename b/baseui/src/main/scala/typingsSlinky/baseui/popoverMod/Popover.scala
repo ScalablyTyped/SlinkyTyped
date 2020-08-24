@@ -3,7 +3,7 @@ package typingsSlinky.baseui.popoverMod
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.ArrowOffset
 import typingsSlinky.baseui.anon.SharedStylePropsArgchildrArrowOffset
 import typingsSlinky.baseui.layerMod.NormalizedOffsets
@@ -21,7 +21,7 @@ class Popover ()
   def animateIn(): Unit = js.native
   def animateOut(): Unit = js.native
   def clearTimers(): Unit = js.native
-  def getAnchorFromChildren(): TagMod[Any] = js.native
+  def getAnchorFromChildren(): ReactElement = js.native
   def getAnchorIdAttr(): String | Null = js.native
   def getAnchorProps(): js.Object = js.native
   def getDefaultState(props: PopoverProps): ArrowOffset = js.native
@@ -42,8 +42,8 @@ class Popover ()
   def onPopoverMouseLeave(): Unit = js.native
   def onPopperUpdate(normalizedOffsets: NormalizedOffsets, data: PopperDataObject): Unit = js.native
   def removeDomEvents(): Unit = js.native
-  def renderAnchor(): TagMod[Any] = js.native
-  def renderPopover(): TagMod[Any] = js.native
+  def renderAnchor(): ReactElement = js.native
+  def renderPopover(): ReactElement = js.native
   def triggerOnMouseEnter(): Unit = js.native
   def triggerOnMouseEnterWithDelay(): Unit = js.native
   def triggerOnMouseLeave(): Unit = js.native

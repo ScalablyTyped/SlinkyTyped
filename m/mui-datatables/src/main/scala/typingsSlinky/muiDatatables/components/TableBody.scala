@@ -19,6 +19,8 @@ object TableBody {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def filterListVarargs(value: js.Array[String]*): this.type = set("filterList", js.Array(value :_*))
+    @scala.inline
     def filterList(value: js.Array[js.Array[String]]): this.type = set("filterList", value.asInstanceOf[js.Any])
     @scala.inline
     def onRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ RowIndex) => Unit): this.type = set("onRowClick", js.Any.fromFunction2(value))

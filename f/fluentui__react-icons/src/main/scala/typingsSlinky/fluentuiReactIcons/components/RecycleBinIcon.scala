@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RecycleBinIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RecycleBinIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RecycleBinIcon")
   @js.native
   object component extends js.Object
   

@@ -23,7 +23,7 @@ class TargetState protected ()
     * @param _params Parameters for the target state
     * @param _options Transition options.
     *
-    * @internalapi
+    * @internal
     */
   def this(
     _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,
@@ -33,6 +33,12 @@ class TargetState protected ()
     _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,
     _identifier: StateOrName,
     _params: RawParams
+  ) = this()
+  def this(
+    _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,
+    _identifier: StateOrName,
+    _params: js.UndefOr[scala.Nothing],
+    _options: TransitionOptions
   ) = this()
   def this(
     _stateRegistry: typingsSlinky.uirouterCore.stateRegistryMod.StateRegistry,

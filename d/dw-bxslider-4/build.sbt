@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "dw-bxslider-4"
-version := "v4.2.5-dt-20200515Z-b30d75"
-scalaVersion := "2.13.2"
+version := "v4.2.5-dt-20200515Z-ca698e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

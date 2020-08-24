@@ -21,7 +21,7 @@ package object objectTypeComposerMod {
   type ComposeFieldConfigMap[TSource, TContext] = typingsSlinky.graphqlCompose.definitionsMod.ObjMap[
     typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfig[TSource, TContext, typingsSlinky.graphqlCompose.objectTypeComposerMod.ArgsMap]
   ]
-  type ComposeObjectType = (typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer[js.Any, js.Any]) | (typingsSlinky.graphql.mod.GraphQLObjectType[js.Any, js.Any, org.scalablytyped.runtime.StringDictionary[js.Any]]) | typingsSlinky.graphqlCompose.typeMapperMod.TypeDefinitionString | typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString
+  type ComposeObjectType = (typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer[js.Any, js.Any]) | (typingsSlinky.graphql.mod.GraphQLObjectType[js.Any, js.Any]) | typingsSlinky.graphqlCompose.typeMapperMod.TypeDefinitionString | typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.graphql.definitionMod.GraphQLOutputType
     - typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer[TReturn, TContext]
@@ -38,7 +38,7 @@ package object objectTypeComposerMod {
     typingsSlinky.graphql.definitionMod.GraphQLOutputType | (typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer[TReturn, TContext]) | typingsSlinky.graphqlCompose.enumTypeComposerMod.EnumTypeComposer[TContext] | typingsSlinky.graphqlCompose.scalarTypeComposerMod.ScalarTypeComposer[TContext] | typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString | (typingsSlinky.graphqlCompose.resolverMod.Resolver[js.Any, TContext, js.Any, js.Any]) | (typingsSlinky.graphqlCompose.interfaceTypeComposerMod.InterfaceTypeComposer[TReturn, TContext]) | (typingsSlinky.graphqlCompose.unionTypeComposerMod.UnionTypeComposer[TReturn, TContext])
   ]) | typingsSlinky.graphql.definitionMod.GraphQLOutputType | typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString
   type GetRecordIdFn[TSource, TContext] = js.Function3[/* source */ TSource, /* args */ js.Any, /* context */ TContext, java.lang.String]
-  type ObjectTypeComposeDefinition[TSource, TContext] = typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString | (typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeObjectTypeConfig[TSource, TContext]) | (typingsSlinky.graphql.mod.GraphQLObjectType[js.Any, js.Any, org.scalablytyped.runtime.StringDictionary[js.Any]])
+  type ObjectTypeComposeDefinition[TSource, TContext] = typingsSlinky.graphqlCompose.typeMapperMod.TypeAsString | (typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeObjectTypeConfig[TSource, TContext]) | (typingsSlinky.graphql.mod.GraphQLObjectType[js.Any, js.Any])
   type RelationArgsMapper[TSource, TContext, TArgs] = org.scalablytyped.runtime.StringDictionary[
     org.scalablytyped.runtime.StringDictionary[js.Any] | (typingsSlinky.graphqlCompose.objectTypeComposerMod.RelationArgsMapperFn[TSource, TContext, TArgs]) | scala.Null | scala.Unit | java.lang.String | scala.Double | js.Array[js.Any]
   ]

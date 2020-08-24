@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -176,7 +175,7 @@ object ReferenceDot {
     @scala.inline
     def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline
-    def shapeFunction1(value: EventAttributesPartialPre => TagMod[Any]): this.type = set("shape", js.Any.fromFunction1(value))
+    def shapeFunction1(value: EventAttributesPartialPre => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     @scala.inline
     def shape(value: ContentRenderer[EventAttributesPartialPre] | ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline

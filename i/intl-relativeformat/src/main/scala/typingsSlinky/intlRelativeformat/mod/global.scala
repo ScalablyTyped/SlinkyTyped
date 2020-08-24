@@ -2,8 +2,8 @@ package typingsSlinky.intlRelativeformat.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.formatjsIntlRelativetimeformat.anon.PickIntlRelativeTimeForma
-import typingsSlinky.formatjsIntlUtils.relativeTimeTypesMod.RelativeTimeLocaleData
-import typingsSlinky.formatjsIntlUtils.relativeTimeTypesMod.UnpackedLocaleFieldsData
+import typingsSlinky.formatjsIntlRelativetimeformat.mod.LocaleFieldsData
+import typingsSlinky.formatjsIntlRelativetimeformat.mod.RelativeTimeLocaleData
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ object global extends js.Object {
       var __defaultLocale: js.Any = js.native
       var availableLocales: js.Any = js.native
       var getDefaultLocale: js.Any = js.native
-      var localeData: Record[String, UnpackedLocaleFieldsData] = js.native
+      var localeData: Record[String, LocaleFieldsData] = js.native
       var polyfilled: Boolean = js.native
       var relevantExtensionKeys: js.Any = js.native
       def __addLocaleData(data: RelativeTimeLocaleData*): Unit = js.native

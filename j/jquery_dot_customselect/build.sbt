@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_customselect"
-version := "0.5.1-dt-20200515Z-8f1a96"
-scalaVersion := "2.13.2"
+version := "0.5.1-dt-20200515Z-273a40"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

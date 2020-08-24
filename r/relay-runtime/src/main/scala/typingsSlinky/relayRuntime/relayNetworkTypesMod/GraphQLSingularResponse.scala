@@ -1,0 +1,31 @@
+package typingsSlinky.relayRuntime.relayNetworkTypesMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponseWithData
+  - typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponseWithExtensionsOnly
+  - typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponseWithoutData
+*/
+trait GraphQLSingularResponse extends js.Object
+
+object GraphQLSingularResponse {
+  @scala.inline
+  def GraphQLResponseWithData(data: PayloadData): GraphQLSingularResponse = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GraphQLSingularResponse]
+  }
+  @scala.inline
+  def GraphQLResponseWithExtensionsOnly(data: Null, extensions: PayloadExtensions): GraphQLSingularResponse = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], extensions = extensions.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GraphQLSingularResponse]
+  }
+  @scala.inline
+  def GraphQLResponseWithoutData(errors: js.Array[PayloadError]): GraphQLSingularResponse = {
+    val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GraphQLSingularResponse]
+  }
+}
+

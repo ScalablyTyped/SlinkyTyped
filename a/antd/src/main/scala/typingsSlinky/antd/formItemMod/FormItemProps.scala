@@ -1,74 +1,102 @@
 package typingsSlinky.antd.formItemMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.formItemInputMod.FormItemInputProps
 import typingsSlinky.antd.formItemLabelMod.FormItemLabelProps
-import typingsSlinky.antd.gridColMod.ColProps
-import typingsSlinky.antd.interfaceMod.FormLabelAlign
+import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FieldProps * / any, 'children'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FieldProps * / any[P]} */ trait FormItemProps
+@js.native
+trait FormItemProps
   extends FormItemLabelProps
-     with FormItemInputProps {
-  var children: ChildrenType
-  var className: js.UndefOr[String] = js.undefined
+     with FormItemInputProps
+     with RcFieldProps {
+  var children: js.UndefOr[ChildrenType] = js.native
+  var className: js.UndefOr[String] = js.native
   /** Auto passed by List render props. User should not use this. */
-  var fieldKey: js.UndefOr[Double] = js.undefined
-  var hasFeedback: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var noStyle: js.UndefOr[Boolean] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var required: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var validateStatus: js.UndefOr[ValidateStatus] = js.undefined
+  var fieldKey: js.UndefOr[Key | js.Array[Key]] = js.native
+  var hasFeedback: js.UndefOr[Boolean] = js.native
+  var hidden: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var noStyle: js.UndefOr[Boolean] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var required: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var validateStatus: js.UndefOr[ValidateStatus] = js.native
 }
 
 object FormItemProps {
   @scala.inline
-  def apply(
-    children: ChildrenType = null,
-    className: String = null,
-    colon: js.UndefOr[Boolean] = js.undefined,
-    extra: TagMod[Any] = null,
-    fieldKey: js.UndefOr[Double] = js.undefined,
-    hasFeedback: js.UndefOr[Boolean] = js.undefined,
-    help: TagMod[Any] = null,
-    htmlFor: String = null,
-    id: String = null,
-    label: TagMod[Any] = null,
-    labelAlign: FormLabelAlign = null,
-    labelCol: ColProps = null,
-    noStyle: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    required: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    validateStatus: ValidateStatus = null,
-    wrapperCol: ColProps = null
-  ): FormItemProps = {
+  def apply(): FormItemProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(colon)) __obj.updateDynamic("colon")(colon.get.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(fieldKey)) __obj.updateDynamic("fieldKey")(fieldKey.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasFeedback)) __obj.updateDynamic("hasFeedback")(hasFeedback.get.asInstanceOf[js.Any])
-    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (htmlFor != null) __obj.updateDynamic("htmlFor")(htmlFor.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelAlign != null) __obj.updateDynamic("labelAlign")(labelAlign.asInstanceOf[js.Any])
-    if (labelCol != null) __obj.updateDynamic("labelCol")(labelCol.asInstanceOf[js.Any])
-    if (!js.isUndefined(noStyle)) __obj.updateDynamic("noStyle")(noStyle.get.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (validateStatus != null) __obj.updateDynamic("validateStatus")(validateStatus.asInstanceOf[js.Any])
-    if (wrapperCol != null) __obj.updateDynamic("wrapperCol")(wrapperCol.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormItemProps]
   }
+  @scala.inline
+  implicit class FormItemPropsOps[Self <: FormItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenFunction1(value: /* form */ FormInstance => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def setChildren(value: ChildrenType): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setFieldKeyVarargs(value: Key*): Self = this.set("fieldKey", js.Array(value :_*))
+    @scala.inline
+    def setFieldKey(value: Key | js.Array[Key]): Self = this.set("fieldKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFieldKey: Self = this.set("fieldKey", js.undefined)
+    @scala.inline
+    def setHasFeedback(value: Boolean): Self = this.set("hasFeedback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasFeedback: Self = this.set("hasFeedback", js.undefined)
+    @scala.inline
+    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHidden: Self = this.set("hidden", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setNoStyle(value: Boolean): Self = this.set("noStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNoStyle: Self = this.set("noStyle", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRequired(value: Boolean): Self = this.set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequired: Self = this.set("required", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setValidateStatus(value: ValidateStatus): Self = this.set("validateStatus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidateStatus: Self = this.set("validateStatus", js.undefined)
+  }
+  
 }
 

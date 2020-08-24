@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "trim-newlines"
-version := "3.0.0-fe391a"
-scalaVersion := "2.13.2"
+version := "3.0.0-90f63f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

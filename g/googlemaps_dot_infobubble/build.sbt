@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "googlemaps_dot_infobubble"
-version := "3.0-dt-20200515Z-75364e"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200515Z-25f4da"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "googlemaps" % "3.39-dt-20200518Z-621fb6",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "googlemaps" % "3.39-dt-20200723Z-ef1cad",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

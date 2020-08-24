@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cryptiles"
-version := "3.1-dt-20200515Z-288f81"
-scalaVersion := "2.13.2"
+version := "3.1-dt-20200515Z-6192f0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

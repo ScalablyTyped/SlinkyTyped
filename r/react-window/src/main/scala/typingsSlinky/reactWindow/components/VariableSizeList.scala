@@ -10,6 +10,7 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactWindow.mod.CSSDirection
 import typingsSlinky.reactWindow.mod.Direction
 import typingsSlinky.reactWindow.mod.Layout
+import typingsSlinky.reactWindow.mod.ListChildComponentProps
 import typingsSlinky.reactWindow.mod.ListOnItemsRenderedProps
 import typingsSlinky.reactWindow.mod.ListOnScrollProps
 import typingsSlinky.reactWindow.mod.ReactElementType
@@ -87,8 +88,14 @@ object VariableSizeList {
   
   def withProps(p: VariableSizeListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(height: Double | String, itemCount: Double, itemSize: Double => Double, width: Double | String): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], itemCount = itemCount.asInstanceOf[js.Any], itemSize = js.Any.fromFunction1(itemSize), width = width.asInstanceOf[js.Any])
+  def apply(
+    children: ReactComponentClass[ListChildComponentProps],
+    height: Double | String,
+    itemCount: Double,
+    itemSize: Double => Double,
+    width: Double | String
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], itemCount = itemCount.asInstanceOf[js.Any], itemSize = js.Any.fromFunction1(itemSize), width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[VariableSizeListProps]))
   }
 }

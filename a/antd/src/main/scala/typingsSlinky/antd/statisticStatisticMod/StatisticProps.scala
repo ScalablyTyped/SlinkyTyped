@@ -1,57 +1,94 @@
 package typingsSlinky.antd.statisticStatisticMod
 
-import slinky.core.TagMod
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.statisticUtilsMod.FormatConfig
-import typingsSlinky.antd.statisticUtilsMod.Formatter
 import typingsSlinky.antd.statisticUtilsMod.valueType
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StatisticProps extends FormatConfig {
-  var className: js.UndefOr[String] = js.undefined
-  var prefix: js.UndefOr[TagMod[Any]] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var suffix: js.UndefOr[TagMod[Any]] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
-  var value: js.UndefOr[valueType] = js.undefined
-  var valueRender: js.UndefOr[js.Function1[/* node */ TagMod[Any], TagMod[Any]]] = js.undefined
-  var valueStyle: js.UndefOr[CSSProperties] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  var prefix: js.UndefOr[ReactElement] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var suffix: js.UndefOr[ReactElement] = js.native
+  var title: js.UndefOr[ReactElement] = js.native
+  var value: js.UndefOr[valueType] = js.native
+  var valueRender: js.UndefOr[js.Function1[/* node */ ReactElement, ReactElement]] = js.native
+  var valueStyle: js.UndefOr[CSSProperties] = js.native
 }
 
 object StatisticProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    decimalSeparator: String = null,
-    formatter: Formatter = null,
-    groupSeparator: String = null,
-    precision: js.UndefOr[Double] = js.undefined,
-    prefix: TagMod[Any] = null,
-    prefixCls: String = null,
-    style: CSSProperties = null,
-    suffix: TagMod[Any] = null,
-    title: TagMod[Any] = null,
-    value: valueType = null,
-    valueRender: /* node */ TagMod[Any] => TagMod[Any] = null,
-    valueStyle: CSSProperties = null
-  ): StatisticProps = {
+  def apply(): StatisticProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])
-    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueRender != null) __obj.updateDynamic("valueRender")(js.Any.fromFunction1(valueRender))
-    if (valueStyle != null) __obj.updateDynamic("valueStyle")(valueStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatisticProps]
   }
+  @scala.inline
+  implicit class StatisticPropsOps[Self <: StatisticProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setOnMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseEnter: Self = this.set("onMouseEnter", js.undefined)
+    @scala.inline
+    def setOnMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseLeave: Self = this.set("onMouseLeave", js.undefined)
+    @scala.inline
+    def setPrefixReactElement(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefix(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefix: Self = this.set("prefix", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSuffixReactElement(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuffix(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuffix: Self = this.set("suffix", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setValue(value: valueType): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueRender(value: /* node */ ReactElement => ReactElement): Self = this.set("valueRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteValueRender: Self = this.set("valueRender", js.undefined)
+    @scala.inline
+    def setValueStyle(value: CSSProperties): Self = this.set("valueStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValueStyle: Self = this.set("valueStyle", js.undefined)
+  }
+  
 }
 

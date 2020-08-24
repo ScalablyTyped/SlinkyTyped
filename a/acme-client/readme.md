@@ -1,7 +1,7 @@
 
 # Scala.js typings for acme-client
 
-Typings are for version 3.3.1
+Typings are for version 4.0.0
 
 ## Library description:
 Simple and unopinionated ACME client

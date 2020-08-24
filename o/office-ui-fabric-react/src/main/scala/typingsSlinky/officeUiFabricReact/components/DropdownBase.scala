@@ -228,11 +228,17 @@ object DropdownBase {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultSelectedKeyVarargs(value: (Double | String)*): this.type = set("defaultSelectedKey", js.Array(value :_*))
+    @scala.inline
     def defaultSelectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("defaultSelectedKey", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultSelectedKeyNull: this.type = set("defaultSelectedKey", null)
     @scala.inline
+    def defaultSelectedKeysVarargs(value: (Double | String)*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
+    @scala.inline
     def defaultSelectedKeys(value: js.Array[Double | String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -512,9 +518,13 @@ object DropdownBase {
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectedKeyVarargs(value: (Double | String)*): this.type = set("selectedKey", js.Array(value :_*))
+    @scala.inline
     def selectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("selectedKey", value.asInstanceOf[js.Any])
     @scala.inline
     def selectedKeyNull: this.type = set("selectedKey", null)
+    @scala.inline
+    def selectedKeysVarargs(value: (Double | String)*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[Double | String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

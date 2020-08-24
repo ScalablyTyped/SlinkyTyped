@@ -35,6 +35,11 @@ trait IotaApi extends IriApi {
     callback: js.Function2[/* error */ js.Error, /* transactions */ js.Array[TransactionObject], Unit]
   ): Unit = js.native
   def getAccountData(seed: String): Unit = js.native
+  def getAccountData(
+    seed: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* response */ Balance, Unit]
+  ): Unit = js.native
   def getAccountData(seed: String, options: typingsSlinky.iotaLibJs.anon.Security): Unit = js.native
   def getAccountData(
     seed: String,
@@ -47,6 +52,11 @@ trait IotaApi extends IriApi {
     callback: js.Function2[/* error */ js.Error, /* bundle */ js.Array[TransactionObject], Unit]
   ): Unit = js.native
   def getInputs(seed: String): Unit = js.native
+  def getInputs(
+    seed: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* response */ Inputs, Unit]
+  ): Unit = js.native
   def getInputs(seed: String, options: End): Unit = js.native
   def getInputs(
     seed: String,
@@ -59,6 +69,11 @@ trait IotaApi extends IriApi {
     callback: js.Function2[/* error */ js.Error, /* states */ js.Array[Boolean], Unit]
   ): Unit = js.native
   def getNewAddress(seed: String): Unit = js.native
+  def getNewAddress(
+    seed: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* response */ String | js.Array[String], Unit]
+  ): Unit = js.native
   def getNewAddress(seed: String, options: Checksum): Unit = js.native
   def getNewAddress(
     seed: String,
@@ -71,6 +86,11 @@ trait IotaApi extends IriApi {
     callback: js.Function2[/* error */ js.Error, /* transactions */ js.Array[TransactionObject], Unit]
   ): Unit = js.native
   def getTransfers(seed: String): Unit = js.native
+  def getTransfers(
+    seed: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* transfers */ js.Array[js.Array[TransactionObject]], Unit]
+  ): Unit = js.native
   def getTransfers(seed: String, options: InclusionStates): Unit = js.native
   def getTransfers(
     seed: String,
@@ -88,6 +108,12 @@ trait IotaApi extends IriApi {
     callback: js.Function2[/* error */ js.Error, /* response */ Boolean | js.Array[Boolean], Unit]
   ): Unit = js.native
   def prepareTransfers(seed: String, transfers: js.Array[TransferObject]): Unit = js.native
+  def prepareTransfers(
+    seed: String,
+    transfers: js.Array[TransferObject],
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* response */ Trytes, Unit]
+  ): Unit = js.native
   def prepareTransfers(seed: String, transfers: js.Array[TransferObject], options: Address): Unit = js.native
   def prepareTransfers(
     seed: String,
@@ -103,6 +129,14 @@ trait IotaApi extends IriApi {
     callback: js.Function2[/* error */ js.Error, /* response */ js.Object, Unit]
   ): Unit = js.native
   def sendTransfer(seed: String, depth: Double, minWeightMagnitude: Double, transfers: js.Array[TransferObject]): Unit = js.native
+  def sendTransfer(
+    seed: String,
+    depth: Double,
+    minWeightMagnitude: Double,
+    transfers: js.Array[TransferObject],
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* response */ InputsArray, Unit]
+  ): Unit = js.native
   def sendTransfer(
     seed: String,
     depth: Double,

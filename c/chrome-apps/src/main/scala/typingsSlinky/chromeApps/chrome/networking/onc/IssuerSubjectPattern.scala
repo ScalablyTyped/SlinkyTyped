@@ -35,53 +35,26 @@ object IssuerSubjectPattern {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCommonName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutCommonName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(js.undefined)
-        ret
-    }
+    def setCommonName(value: String): Self = this.set("CommonName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLocality(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locality")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCommonName: Self = this.set("CommonName", js.undefined)
     @scala.inline
-    def withoutLocality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locality")(js.undefined)
-        ret
-    }
+    def setLocality(value: String): Self = this.set("Locality", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOrganization(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Organization")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLocality: Self = this.set("Locality", js.undefined)
     @scala.inline
-    def withoutOrganization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Organization")(js.undefined)
-        ret
-    }
+    def setOrganization(value: String): Self = this.set("Organization", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOrganizationalUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOrganization: Self = this.set("Organization", js.undefined)
     @scala.inline
-    def withoutOrganizationalUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnit")(js.undefined)
-        ret
-    }
+    def setOrganizationalUnit(value: String): Self = this.set("OrganizationalUnit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOrganizationalUnit: Self = this.set("OrganizationalUnit", js.undefined)
   }
   
 }

@@ -11,7 +11,7 @@ import typingsSlinky.wegameApi.anon.Bottom
 import typingsSlinky.wegameApi.anon.BuyQuantity
 import typingsSlinky.wegameApi.anon.CallbacksWithTypeopenIdLi
 import typingsSlinky.wegameApi.anon.CallbacksmuteConfigmuteMi
-import typingsSlinky.wegameApi.anon.Callbacksxnumberynumberwi
+import typingsSlinky.wegameApi.anon.Callbacksxnumberundefined
 import typingsSlinky.wegameApi.anon.CancelColor
 import typingsSlinky.wegameApi.anon.Code
 import typingsSlinky.wegameApi.anon.Complete
@@ -59,7 +59,7 @@ import typingsSlinky.wegameApi.anon.WindowHeight
 import typingsSlinky.wegameApi.anon.WithShareTicket
 import typingsSlinky.wegameApi.anon.X
 import typingsSlinky.wegameApi.anon.`3`
-import typingsSlinky.wegameApi.anon.appIdstringpathstringextr
+import typingsSlinky.wegameApi.anon.appIdstringpathstringunde
 import typingsSlinky.wegameApi.anon.cardListReadonlyArraycard
 import typingsSlinky.wegameApi.anon.cardListReadonlyArraycardCardList
 import typingsSlinky.wegameApi.anon.intervalgameuinormalCallb
@@ -153,7 +153,7 @@ object wx extends js.Object {
     * @param param 创建相机所需的初始化信息
     */
   def createCamera(): typingsSlinky.wegameApi.Camera = js.native
-  def createCamera(param: Callbacksxnumberynumberwi): typingsSlinky.wegameApi.Camera = js.native
+  def createCamera(param: Callbacksxnumberundefined): typingsSlinky.wegameApi.Camera = js.native
   /**
     * 创建一个画布对象。首次调用创建的是显示在屏幕上的画布，之后调用创建的都是离屏画布。
     */
@@ -475,7 +475,7 @@ object wx extends js.Object {
     * 打开另一个小程序
     * @param param 跳转参数
     */
-  def navigateToMiniProgram(param: appIdstringpathstringextr): Unit = js.native
+  def navigateToMiniProgram(param: appIdstringpathstringunde): Unit = js.native
   /**
     * 取消监听音频因为受到系统占用而被中断开始，以下场景会触发此事件：闹钟、电话、FaceTime 通话、微信语音聊天、微信视频聊天。此事件触发后，小程序内所有音频会暂停。
     */

@@ -6,89 +6,89 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Exclude<screeps.ResourceConstant, screeps.RESOURCE_ENERGY> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.screeps.screepsStrings.machine
-  - typingsSlinky.screeps.screepsStrings.OH
-  - typingsSlinky.screeps.screepsStrings.XLH2O
   - typingsSlinky.screeps.screepsStrings.ZH
+  - typingsSlinky.screeps.screepsStrings.organoid
   - typingsSlinky.screeps.screepsStrings.GH
-  - typingsSlinky.screeps.screepsStrings.extract
-  - typingsSlinky.screeps.screepsStrings.tube
-  - typingsSlinky.screeps.screepsStrings.XGHO2
-  - typingsSlinky.screeps.screepsStrings.KH2O
-  - typingsSlinky.screeps.screepsStrings.microchip
-  - typingsSlinky.screeps.screepsStrings.lemergium_bar
-  - typingsSlinky.screeps.screepsStrings.KO
-  - typingsSlinky.screeps.screepsStrings.phlegm
-  - typingsSlinky.screeps.screepsStrings.muscle
-  - typingsSlinky.screeps.screepsStrings.zynthium_bar
-  - typingsSlinky.screeps.screepsStrings.UHO2
-  - typingsSlinky.screeps.screepsStrings.XZH2O
-  - typingsSlinky.screeps.screepsStrings.GHO2
-  - typingsSlinky.screeps.screepsStrings.UL
-  - typingsSlinky.screeps.screepsStrings.keanium_bar
-  - typingsSlinky.screeps.screepsStrings.hydraulics
-  - typingsSlinky.screeps.screepsStrings.alloy
-  - typingsSlinky.screeps.screepsStrings.UH
-  - typingsSlinky.screeps.screepsStrings.purifier
-  - typingsSlinky.screeps.screepsStrings.biomass
-  - typingsSlinky.screeps.screepsStrings.circuit
-  - typingsSlinky.screeps.screepsStrings.XKH2O
-  - typingsSlinky.screeps.screepsStrings.battery
-  - typingsSlinky.screeps.screepsStrings.reductant
-  - typingsSlinky.screeps.screepsStrings.LH2O
-  - typingsSlinky.screeps.screepsStrings.ZK
-  - typingsSlinky.screeps.screepsStrings.concentrate
-  - typingsSlinky.screeps.screepsStrings.U
-  - typingsSlinky.screeps.screepsStrings.organism
-  - typingsSlinky.screeps.screepsStrings.switch
-  - typingsSlinky.screeps.screepsStrings.ZH2O
-  - typingsSlinky.screeps.screepsStrings.X
-  - typingsSlinky.screeps.screepsStrings.XUH2O
+  - typingsSlinky.screeps.screepsStrings.LO
   - typingsSlinky.screeps.screepsStrings.GO
-  - typingsSlinky.screeps.screepsStrings.tissue
-  - typingsSlinky.screeps.screepsStrings.emanation
   - typingsSlinky.screeps.screepsStrings.condensate
+  - typingsSlinky.screeps.screepsStrings.K
+  - typingsSlinky.screeps.screepsStrings.ghodium_melt
+  - typingsSlinky.screeps.screepsStrings.XGHO2
+  - typingsSlinky.screeps.screepsStrings.ZO
+  - typingsSlinky.screeps.screepsStrings.microchip
+  - typingsSlinky.screeps.screepsStrings.phlegm
   - typingsSlinky.screeps.screepsStrings.LH
-  - typingsSlinky.screeps.screepsStrings.UO
-  - typingsSlinky.screeps.screepsStrings.crystal
-  - typingsSlinky.screeps.screepsStrings.device
-  - typingsSlinky.screeps.screepsStrings.mist
-  - typingsSlinky.screeps.screepsStrings.KHO2
-  - typingsSlinky.screeps.screepsStrings.essence
-  - typingsSlinky.screeps.screepsStrings.fixtures
-  - typingsSlinky.screeps.screepsStrings.GH2O
+  - typingsSlinky.screeps.screepsStrings.silicon
+  - typingsSlinky.screeps.screepsStrings.KH2O
+  - typingsSlinky.screeps.screepsStrings.hydraulics
+  - typingsSlinky.screeps.screepsStrings.liquid
+  - typingsSlinky.screeps.screepsStrings.lemergium_bar
   - typingsSlinky.screeps.screepsStrings.XUHO2
   - typingsSlinky.screeps.screepsStrings.L
-  - typingsSlinky.screeps.screepsStrings.metal
-  - typingsSlinky.screeps.screepsStrings.O
-  - typingsSlinky.screeps.screepsStrings.utrium_bar
-  - typingsSlinky.screeps.screepsStrings.spirit
-  - typingsSlinky.screeps.screepsStrings.organoid
-  - typingsSlinky.screeps.screepsStrings.liquid
-  - typingsSlinky.screeps.screepsStrings.wire
-  - typingsSlinky.screeps.screepsStrings.XLHO2
-  - typingsSlinky.screeps.screepsStrings.H
-  - typingsSlinky.screeps.screepsStrings.G
-  - typingsSlinky.screeps.screepsStrings.cell
-  - typingsSlinky.screeps.screepsStrings.XZHO2
-  - typingsSlinky.screeps.screepsStrings.power
-  - typingsSlinky.screeps.screepsStrings.ZHO2
-  - typingsSlinky.screeps.screepsStrings.ZO
+  - typingsSlinky.screeps.screepsStrings.battery
   - typingsSlinky.screeps.screepsStrings.composite
-  - typingsSlinky.screeps.screepsStrings.LHO2
-  - typingsSlinky.screeps.screepsStrings.silicon
-  - typingsSlinky.screeps.screepsStrings.UH2O
-  - typingsSlinky.screeps.screepsStrings.LO
-  - typingsSlinky.screeps.screepsStrings.transistor
-  - typingsSlinky.screeps.screepsStrings.oxidant
-  - typingsSlinky.screeps.screepsStrings.ghodium_melt
+  - typingsSlinky.screeps.screepsStrings.metal
+  - typingsSlinky.screeps.screepsStrings.XLH2O
+  - typingsSlinky.screeps.screepsStrings.crystal
   - typingsSlinky.screeps.screepsStrings.KH
-  - typingsSlinky.screeps.screepsStrings.XGH2O
-  - typingsSlinky.screeps.screepsStrings.K
-  - typingsSlinky.screeps.screepsStrings.frame
-  - typingsSlinky.screeps.screepsStrings.ops
-  - typingsSlinky.screeps.screepsStrings.XKHO2
+  - typingsSlinky.screeps.screepsStrings.XLHO2
+  - typingsSlinky.screeps.screepsStrings.UH2O
+  - typingsSlinky.screeps.screepsStrings.power
+  - typingsSlinky.screeps.screepsStrings.LH2O
+  - typingsSlinky.screeps.screepsStrings.transistor
+  - typingsSlinky.screeps.screepsStrings.muscle
+  - typingsSlinky.screeps.screepsStrings.keanium_bar
+  - typingsSlinky.screeps.screepsStrings.emanation
+  - typingsSlinky.screeps.screepsStrings.spirit
+  - typingsSlinky.screeps.screepsStrings.LHO2
+  - typingsSlinky.screeps.screepsStrings.XKH2O
+  - typingsSlinky.screeps.screepsStrings.cell
+  - typingsSlinky.screeps.screepsStrings.UL
+  - typingsSlinky.screeps.screepsStrings.biomass
+  - typingsSlinky.screeps.screepsStrings.essence
   - typingsSlinky.screeps.screepsStrings.Z
+  - typingsSlinky.screeps.screepsStrings.oxidant
+  - typingsSlinky.screeps.screepsStrings.UHO2
+  - typingsSlinky.screeps.screepsStrings.O
+  - typingsSlinky.screeps.screepsStrings.organism
+  - typingsSlinky.screeps.screepsStrings.XKHO2
+  - typingsSlinky.screeps.screepsStrings.XUH2O
+  - typingsSlinky.screeps.screepsStrings.tissue
+  - typingsSlinky.screeps.screepsStrings.reductant
+  - typingsSlinky.screeps.screepsStrings.wire
+  - typingsSlinky.screeps.screepsStrings.GH2O
+  - typingsSlinky.screeps.screepsStrings.switch
+  - typingsSlinky.screeps.screepsStrings.ZK
+  - typingsSlinky.screeps.screepsStrings.extract
+  - typingsSlinky.screeps.screepsStrings.machine
+  - typingsSlinky.screeps.screepsStrings.concentrate
+  - typingsSlinky.screeps.screepsStrings.KHO2
+  - typingsSlinky.screeps.screepsStrings.alloy
+  - typingsSlinky.screeps.screepsStrings.utrium_bar
+  - typingsSlinky.screeps.screepsStrings.OH
+  - typingsSlinky.screeps.screepsStrings.tube
+  - typingsSlinky.screeps.screepsStrings.UH
+  - typingsSlinky.screeps.screepsStrings.X
+  - typingsSlinky.screeps.screepsStrings.XZH2O
+  - typingsSlinky.screeps.screepsStrings.ZH2O
+  - typingsSlinky.screeps.screepsStrings.zynthium_bar
+  - typingsSlinky.screeps.screepsStrings.XGH2O
+  - typingsSlinky.screeps.screepsStrings.H
+  - typingsSlinky.screeps.screepsStrings.U
+  - typingsSlinky.screeps.screepsStrings.ops
+  - typingsSlinky.screeps.screepsStrings.purifier
+  - typingsSlinky.screeps.screepsStrings.frame
+  - typingsSlinky.screeps.screepsStrings.ZHO2
+  - typingsSlinky.screeps.screepsStrings.device
+  - typingsSlinky.screeps.screepsStrings.circuit
+  - typingsSlinky.screeps.screepsStrings.mist
+  - typingsSlinky.screeps.screepsStrings.UO
+  - typingsSlinky.screeps.screepsStrings.fixtures
+  - typingsSlinky.screeps.screepsStrings.GHO2
+  - typingsSlinky.screeps.screepsStrings.G
+  - typingsSlinky.screeps.screepsStrings.XZHO2
+  - typingsSlinky.screeps.screepsStrings.KO
 */
 trait ResourceConstantSansEnergy extends js.Object
 

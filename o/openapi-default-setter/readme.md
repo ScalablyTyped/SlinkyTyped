@@ -1,7 +1,7 @@
 
 # Scala.js typings for openapi-default-setter
 
-Typings are for version 2.1.0
+Typings are for version 7.0.0
 
 ## Library description:
 Sets default values in request properties according to defaults defined in openapi parameter lists.

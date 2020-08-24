@@ -15,6 +15,12 @@ package object ecrMod {
   type BatchedOperationLayerDigestList = js.Array[typingsSlinky.awsSdk.ecrMod.BatchedOperationLayerDigest]
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.ecrMod.ClientApiVersions
   type CreationTimestamp = js.Date
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AES256
+    - typingsSlinky.awsSdk.awsSdkStrings.KMS
+    - java.lang.String
+  */
+  type EncryptionType = typingsSlinky.awsSdk.ecrMod._EncryptionType | java.lang.String
   type EvaluationTimestamp = js.Date
   type ExpirationTimestamp = js.Date
   type FindingDescription = java.lang.String
@@ -43,6 +49,7 @@ package object ecrMod {
     - typingsSlinky.awsSdk.awsSdkStrings.ImageNotFound
     - typingsSlinky.awsSdk.awsSdkStrings.MissingDigestAndTag
     - typingsSlinky.awsSdk.awsSdkStrings.ImageReferencedByManifestList
+    - typingsSlinky.awsSdk.awsSdkStrings.KmsError
     - java.lang.String
   */
   type ImageFailureCode = typingsSlinky.awsSdk.ecrMod._ImageFailureCode | java.lang.String
@@ -61,6 +68,7 @@ package object ecrMod {
     - java.lang.String
   */
   type ImageTagMutability = typingsSlinky.awsSdk.ecrMod._ImageTagMutability | java.lang.String
+  type KmsKey = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
     - typingsSlinky.awsSdk.awsSdkStrings.UNAVAILABLE

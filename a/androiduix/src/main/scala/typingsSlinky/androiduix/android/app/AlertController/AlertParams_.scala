@@ -113,239 +113,92 @@ object AlertParams_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApply(value: typingsSlinky.androiduix.android.app.AlertController => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCreateListView(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createListView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setApply(value: typingsSlinky.androiduix.android.app.AlertController => Unit): Self = this.set("apply", js.Any.fromFunction1(value))
     @scala.inline
-    def withMAdapter(value: ListAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCreateListView(value: js.Any => js.Any): Self = this.set("createListView", js.Any.fromFunction1(value))
     @scala.inline
-    def withMCancelable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCancelable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAdapter(value: ListAdapter): Self = this.set("mAdapter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCheckedItem(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedItem")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCancelable(value: Boolean): Self = this.set("mCancelable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCheckedItems(value: js.Array[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedItem(value: Double): Self = this.set("mCheckedItem", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMContext(value: Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mContext")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedItemsVarargs(value: Boolean*): Self = this.set("mCheckedItems", js.Array(value :_*))
     @scala.inline
-    def withMCustomTitleView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCustomTitleView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedItems(value: js.Array[Boolean]): Self = this.set("mCheckedItems", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMForceInverseBackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mForceInverseBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMContext(value: Context): Self = this.set("mContext", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIcon(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCustomTitleView(value: View): Self = this.set("mCustomTitleView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIconId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIconId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMForceInverseBackground(value: Boolean): Self = this.set("mForceInverseBackground", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInflater(value: LayoutInflater): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInflater")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIcon(value: Drawable): Self = this.set("mIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsCheckedColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsCheckedColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIconId(value: Double): Self = this.set("mIconId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsMultiChoice(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsMultiChoice")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInflater(value: LayoutInflater): Self = this.set("mInflater", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsSingleChoice(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsSingleChoice")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsCheckedColumn(value: String): Self = this.set("mIsCheckedColumn", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMItems(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mItems")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsMultiChoice(value: Boolean): Self = this.set("mIsMultiChoice", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLabelColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLabelColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsSingleChoice(value: Boolean): Self = this.set("mIsSingleChoice", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMItemsVarargs(value: String*): Self = this.set("mItems", js.Array(value :_*))
     @scala.inline
-    def withMNegativeButtonListener(value: OnClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNegativeButtonListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMItems(value: js.Array[String]): Self = this.set("mItems", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNegativeButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNegativeButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLabelColumn(value: String): Self = this.set("mLabelColumn", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNeutralButtonListener(value: OnClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNeutralButtonListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMessage(value: String): Self = this.set("mMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNeutralButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNeutralButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNegativeButtonListener(value: OnClickListener): Self = this.set("mNegativeButtonListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnCancelListener(value: OnCancelListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnCancelListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNegativeButtonText(value: String): Self = this.set("mNegativeButtonText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnCheckboxClickListener(value: OnMultiChoiceClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnCheckboxClickListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNeutralButtonListener(value: OnClickListener): Self = this.set("mNeutralButtonListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnClickListener(value: OnClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnClickListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNeutralButtonText(value: String): Self = this.set("mNeutralButtonText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnDismissListener(value: OnDismissListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnDismissListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnCancelListener(value: OnCancelListener): Self = this.set("mOnCancelListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnItemSelectedListener(value: OnItemSelectedListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnItemSelectedListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnCheckboxClickListener(value: OnMultiChoiceClickListener): Self = this.set("mOnCheckboxClickListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnKeyListener(value: OnKeyListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnKeyListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnClickListener(value: OnClickListener): Self = this.set("mOnClickListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnPrepareListViewListener(value: OnPrepareListViewListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnPrepareListViewListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnDismissListener(value: OnDismissListener): Self = this.set("mOnDismissListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPositiveButtonListener(value: OnClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPositiveButtonListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnItemSelectedListener(value: OnItemSelectedListener): Self = this.set("mOnItemSelectedListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPositiveButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPositiveButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnKeyListener(value: OnKeyListener): Self = this.set("mOnKeyListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRecycleOnMeasure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRecycleOnMeasure")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnPrepareListViewListener(value: OnPrepareListViewListener): Self = this.set("mOnPrepareListViewListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPositiveButtonListener(value: OnClickListener): Self = this.set("mPositiveButtonListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPositiveButtonText(value: String): Self = this.set("mPositiveButtonText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewSpacingBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewSpacingBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRecycleOnMeasure(value: Boolean): Self = this.set("mRecycleOnMeasure", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewSpacingLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewSpacingLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTitle(value: String): Self = this.set("mTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewSpacingRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewSpacingRight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMView(value: View): Self = this.set("mView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewSpacingSpecified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewSpacingSpecified")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMViewSpacingBottom(value: Double): Self = this.set("mViewSpacingBottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewSpacingTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewSpacingTop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMViewSpacingLeft(value: Double): Self = this.set("mViewSpacingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMViewSpacingRight(value: Double): Self = this.set("mViewSpacingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMViewSpacingSpecified(value: Boolean): Self = this.set("mViewSpacingSpecified", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMViewSpacingTop(value: Double): Self = this.set("mViewSpacingTop", value.asInstanceOf[js.Any])
   }
   
 }

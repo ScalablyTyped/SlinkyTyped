@@ -1,28 +1,26 @@
 package typingsSlinky.materialUi.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Menus.DropDownMenuProps
 import typingsSlinky.materialUi.MaterialUI.SelectFieldProps
-import typingsSlinky.materialUi.selectFieldMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SelectField {
-  @JSImport("material-ui/SelectField", JSImport.Default)
+  @JSImport("material-ui", "SelectField")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.SelectField] {
     @scala.inline
     def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,7 +34,7 @@ object SelectField {
     @scala.inline
     def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
     def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
     @scala.inline
@@ -44,7 +42,7 @@ object SelectField {
     @scala.inline
     def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,7 +50,7 @@ object SelectField {
     @scala.inline
     def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -86,7 +84,7 @@ object SelectField {
     @scala.inline
     def selectedMenuItemStyle(value: CSSProperties): this.type = set("selectedMenuItemStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionRenderer(value: /* value */ js.Any => TagMod[Any]): this.type = set("selectionRenderer", js.Any.fromFunction1(value))
+    def selectionRenderer(value: /* value */ js.Any => ReactElement): this.type = set("selectionRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

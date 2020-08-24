@@ -28,6 +28,7 @@ import scala.scalajs.js.annotation._
 class Geometry ()
   extends typingsSlinky.pixiJs.PIXI.Geometry {
   def this(buffers: js.Array[typingsSlinky.pixiJs.PIXI.Buffer]) = this()
+  def this(buffers: js.UndefOr[scala.Nothing], attributes: js.Any) = this()
   def this(buffers: js.Array[typingsSlinky.pixiJs.PIXI.Buffer], attributes: js.Any) = this()
 }
 
@@ -39,7 +40,7 @@ object Geometry extends js.Object {
     * merges an array of geometries into a new single one
     * geometry attribute styles must match for this operation to work
     *
-    * @param {PIXI.Geometry[]} geometries array of geometries to merge
+    * @param {PIXI.Geometry[]} geometries - array of geometries to merge
     * @returns {PIXI.Geometry} shiny new geometry!
     */
   def merge(geometries: js.Array[typingsSlinky.pixiJs.PIXI.Geometry]): typingsSlinky.pixiJs.PIXI.Geometry = js.native

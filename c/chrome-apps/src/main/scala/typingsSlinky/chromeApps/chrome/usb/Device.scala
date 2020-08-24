@@ -59,47 +59,24 @@ object Device {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDevice(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withManufacturerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDevice(value: integer): Self = this.set("device", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProductId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setManufacturerName(value: String): Self = this.set("manufacturerName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProductName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProductId(value: integer): Self = this.set("productId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSerialNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProductName(value: String): Self = this.set("productName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVendorId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSerialNumber(value: String): Self = this.set("serialNumber", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVersion(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVendorId(value: integer): Self = this.set("vendorId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVersion(value: integer): Self = this.set("version", value.asInstanceOf[js.Any])
   }
   
 }

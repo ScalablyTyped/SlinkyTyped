@@ -11,18 +11,37 @@ trait PredictedItem extends js.Object {
     */
   var itemId: js.UndefOr[ItemID] = js.native
   /**
-    * A numeric representation of the model's certainty in the item's suitability. For more information on scoring logic, see how-scores-work.
+    * A numeric representation of the model's certainty that the item will be the next user selection. For more information on scoring logic, see how-scores-work.
     */
   var score: js.UndefOr[Score] = js.native
 }
 
 object PredictedItem {
   @scala.inline
-  def apply(itemId: ItemID = null, score: js.UndefOr[Score] = js.undefined): PredictedItem = {
+  def apply(): PredictedItem = {
     val __obj = js.Dynamic.literal()
-    if (itemId != null) __obj.updateDynamic("itemId")(itemId.asInstanceOf[js.Any])
-    if (!js.isUndefined(score)) __obj.updateDynamic("score")(score.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PredictedItem]
   }
+  @scala.inline
+  implicit class PredictedItemOps[Self <: PredictedItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setItemId(value: ItemID): Self = this.set("itemId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItemId: Self = this.set("itemId", js.undefined)
+    @scala.inline
+    def setScore(value: Score): Self = this.set("score", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScore: Self = this.set("score", js.undefined)
+  }
+  
 }
 

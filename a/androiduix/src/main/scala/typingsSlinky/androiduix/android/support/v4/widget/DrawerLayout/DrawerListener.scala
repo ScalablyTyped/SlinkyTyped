@@ -31,29 +31,18 @@ object DrawerListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnDrawerClosed(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrawerClosed")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnDrawerOpened(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrawerOpened")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDrawerClosed(value: View => Unit): Self = this.set("onDrawerClosed", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnDrawerSlide(value: (View, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrawerSlide")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnDrawerOpened(value: View => Unit): Self = this.set("onDrawerOpened", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnDrawerStateChanged(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrawerStateChanged")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDrawerSlide(value: (View, Double) => Unit): Self = this.set("onDrawerSlide", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnDrawerStateChanged(value: Double => Unit): Self = this.set("onDrawerStateChanged", js.Any.fromFunction1(value))
   }
   
 }

@@ -29,6 +29,7 @@ object mod extends js.Object {
   type Colors = typingsSlinky.prettyFormat.typesMod.Colors
   type Config = typingsSlinky.prettyFormat.typesMod.Config
   type NewPlugin = typingsSlinky.prettyFormat.typesMod.NewPlugin
+  type OldPlugin = typingsSlinky.prettyFormat.typesMod.OldPlugin
   type Options = typingsSlinky.prettyFormat.typesMod.Options
   type OptionsReceived = typingsSlinky.prettyFormat.typesMod.OptionsReceived
   type Plugin = typingsSlinky.prettyFormat.typesMod.Plugin

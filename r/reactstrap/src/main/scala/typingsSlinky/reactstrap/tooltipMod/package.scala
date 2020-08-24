@@ -6,4 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object tooltipMod {
   type Tooltip[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tooltipMod.TooltipProps]
+  type TooltipChildren = (js.Function1[
+    /* props */ typingsSlinky.reactstrap.tooltipMod.TooltipChildrenRenderProps, 
+    slinky.core.facade.ReactElement
+  ]) | slinky.core.facade.ReactElement
 }

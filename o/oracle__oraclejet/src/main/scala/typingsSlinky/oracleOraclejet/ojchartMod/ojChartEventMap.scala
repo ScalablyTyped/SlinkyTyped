@@ -21,56 +21,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojChartEventMap[K, D] extends dvtBaseComponentEventMap[ojChartSettableProperties[K, D]] {
-  var animationOnDataChangeChanged: CustomEvent
-  var animationOnDisplayChanged: CustomEvent
-  var asChanged: CustomEvent
-  var coordinateSystemChanged: CustomEvent
-  var dataChanged: CustomEvent
-  var dataCursorBehaviorChanged: CustomEvent
-  var dataCursorChanged: CustomEvent
-  var dataCursorPositionChanged: CustomEvent
-  var dataLabelChanged: CustomEvent
-  var dndChanged: CustomEvent
-  var dragModeChanged: CustomEvent
-  var drillingChanged: CustomEvent
-  var groupComparatorChanged: CustomEvent
-  var hiddenCategoriesChanged: CustomEvent
-  var hideAndShowBehaviorChanged: CustomEvent
-  var highlightMatchChanged: CustomEvent
-  var highlightedCategoriesChanged: CustomEvent
-  var hoverBehaviorChanged: CustomEvent
-  var initialZoomingChanged: CustomEvent
-  var legendChanged: CustomEvent
-  var ojDrill: CustomEvent
-  var ojSelectInput: CustomEvent
-  var ojViewportChange: CustomEvent
-  var ojViewportChangeInput: CustomEvent
-  var orientationChanged: CustomEvent
-  var otherThresholdChanged: CustomEvent
-  var overviewChanged: CustomEvent
-  var pieCenterChanged: CustomEvent
-  var plotAreaChanged: CustomEvent
-  var polarGridShapeChanged: CustomEvent
-  var selectionChanged: CustomEvent
-  var selectionModeChanged: CustomEvent
-  var seriesComparatorChanged: CustomEvent
-  var sortingChanged: CustomEvent
-  var splitDualYChanged: CustomEvent
-  var splitterPositionChanged: CustomEvent
-  var stackChanged: CustomEvent
-  var stackLabelChanged: CustomEvent
-  var styleDefaultsChanged: CustomEvent
-  var timeAxisTypeChanged: CustomEvent
-  var tooltipChanged: CustomEvent
-  var touchResponseChanged: CustomEvent
-  var typeChanged: CustomEvent
-  var valueFormatsChanged: CustomEvent
-  var xAxisChanged: CustomEvent
-  var y2AxisChanged: CustomEvent
-  var yAxisChanged: CustomEvent
-  var zoomAndScrollChanged: CustomEvent
-  var zoomDirectionChanged: CustomEvent
+  var animationOnDataChangeChanged: CustomEvent = js.native
+  var animationOnDisplayChanged: CustomEvent = js.native
+  var asChanged: CustomEvent = js.native
+  var coordinateSystemChanged: CustomEvent = js.native
+  var dataChanged: CustomEvent = js.native
+  var dataCursorBehaviorChanged: CustomEvent = js.native
+  var dataCursorChanged: CustomEvent = js.native
+  var dataCursorPositionChanged: CustomEvent = js.native
+  var dataLabelChanged: CustomEvent = js.native
+  var dndChanged: CustomEvent = js.native
+  var dragModeChanged: CustomEvent = js.native
+  var drillingChanged: CustomEvent = js.native
+  var groupComparatorChanged: CustomEvent = js.native
+  var hiddenCategoriesChanged: CustomEvent = js.native
+  var hideAndShowBehaviorChanged: CustomEvent = js.native
+  var highlightMatchChanged: CustomEvent = js.native
+  var highlightedCategoriesChanged: CustomEvent = js.native
+  var hoverBehaviorChanged: CustomEvent = js.native
+  var initialZoomingChanged: CustomEvent = js.native
+  var legendChanged: CustomEvent = js.native
+  var ojDrill: CustomEvent = js.native
+  var ojSelectInput: CustomEvent = js.native
+  var ojViewportChange: CustomEvent = js.native
+  var ojViewportChangeInput: CustomEvent = js.native
+  var orientationChanged: CustomEvent = js.native
+  var otherThresholdChanged: CustomEvent = js.native
+  var overviewChanged: CustomEvent = js.native
+  var pieCenterChanged: CustomEvent = js.native
+  var plotAreaChanged: CustomEvent = js.native
+  var polarGridShapeChanged: CustomEvent = js.native
+  var selectionChanged: CustomEvent = js.native
+  var selectionModeChanged: CustomEvent = js.native
+  var seriesComparatorChanged: CustomEvent = js.native
+  var sortingChanged: CustomEvent = js.native
+  var splitDualYChanged: CustomEvent = js.native
+  var splitterPositionChanged: CustomEvent = js.native
+  var stackChanged: CustomEvent = js.native
+  var stackLabelChanged: CustomEvent = js.native
+  var styleDefaultsChanged: CustomEvent = js.native
+  var timeAxisTypeChanged: CustomEvent = js.native
+  var tooltipChanged: CustomEvent = js.native
+  var touchResponseChanged: CustomEvent = js.native
+  var typeChanged: CustomEvent = js.native
+  var valueFormatsChanged: CustomEvent = js.native
+  var xAxisChanged: CustomEvent = js.native
+  var y2AxisChanged: CustomEvent = js.native
+  var yAxisChanged: CustomEvent = js.native
+  var zoomAndScrollChanged: CustomEvent = js.native
+  var zoomDirectionChanged: CustomEvent = js.native
 }
 
 object ojChartEventMap {
@@ -223,5 +224,116 @@ object ojChartEventMap {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationOnDataChangeChanged = animationOnDataChangeChanged.asInstanceOf[js.Any], animationOnDisplayChanged = animationOnDisplayChanged.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], asChanged = asChanged.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], coordinateSystemChanged = coordinateSystemChanged.asInstanceOf[js.Any], copy = copy.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], cut = cut.asInstanceOf[js.Any], dataChanged = dataChanged.asInstanceOf[js.Any], dataCursorBehaviorChanged = dataCursorBehaviorChanged.asInstanceOf[js.Any], dataCursorChanged = dataCursorChanged.asInstanceOf[js.Any], dataCursorPositionChanged = dataCursorPositionChanged.asInstanceOf[js.Any], dataLabelChanged = dataLabelChanged.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], dndChanged = dndChanged.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragModeChanged = dragModeChanged.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drillingChanged = drillingChanged.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], fullscreenchange = fullscreenchange.asInstanceOf[js.Any], fullscreenerror = fullscreenerror.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], groupComparatorChanged = groupComparatorChanged.asInstanceOf[js.Any], hiddenCategoriesChanged = hiddenCategoriesChanged.asInstanceOf[js.Any], hideAndShowBehaviorChanged = hideAndShowBehaviorChanged.asInstanceOf[js.Any], highlightMatchChanged = highlightMatchChanged.asInstanceOf[js.Any], highlightedCategoriesChanged = highlightedCategoriesChanged.asInstanceOf[js.Any], hoverBehaviorChanged = hoverBehaviorChanged.asInstanceOf[js.Any], initialZoomingChanged = initialZoomingChanged.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], legendChanged = legendChanged.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], ojDrill = ojDrill.asInstanceOf[js.Any], ojSelectInput = ojSelectInput.asInstanceOf[js.Any], ojViewportChange = ojViewportChange.asInstanceOf[js.Any], ojViewportChangeInput = ojViewportChangeInput.asInstanceOf[js.Any], orientationChanged = orientationChanged.asInstanceOf[js.Any], otherThresholdChanged = otherThresholdChanged.asInstanceOf[js.Any], overviewChanged = overviewChanged.asInstanceOf[js.Any], paste = paste.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], pieCenterChanged = pieCenterChanged.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], plotAreaChanged = plotAreaChanged.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], polarGridShapeChanged = polarGridShapeChanged.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionChanged = selectionChanged.asInstanceOf[js.Any], selectionModeChanged = selectionModeChanged.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], seriesComparatorChanged = seriesComparatorChanged.asInstanceOf[js.Any], sortingChanged = sortingChanged.asInstanceOf[js.Any], splitDualYChanged = splitDualYChanged.asInstanceOf[js.Any], splitterPositionChanged = splitterPositionChanged.asInstanceOf[js.Any], stackChanged = stackChanged.asInstanceOf[js.Any], stackLabelChanged = stackLabelChanged.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], styleDefaultsChanged = styleDefaultsChanged.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], timeAxisTypeChanged = timeAxisTypeChanged.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], tooltipChanged = tooltipChanged.asInstanceOf[js.Any], touchResponseChanged = touchResponseChanged.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], trackResizeChanged = trackResizeChanged.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], translationsChanged = translationsChanged.asInstanceOf[js.Any], typeChanged = typeChanged.asInstanceOf[js.Any], valueFormatsChanged = valueFormatsChanged.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any], xAxisChanged = xAxisChanged.asInstanceOf[js.Any], y2AxisChanged = y2AxisChanged.asInstanceOf[js.Any], yAxisChanged = yAxisChanged.asInstanceOf[js.Any], zoomAndScrollChanged = zoomAndScrollChanged.asInstanceOf[js.Any], zoomDirectionChanged = zoomDirectionChanged.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojChartEventMap[K, D]]
   }
+  @scala.inline
+  implicit class ojChartEventMapOps[Self <: ojChartEventMap[_, _], K, D] (val x: Self with (ojChartEventMap[K, D])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimationOnDataChangeChanged(value: CustomEvent): Self = this.set("animationOnDataChangeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAnimationOnDisplayChanged(value: CustomEvent): Self = this.set("animationOnDisplayChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAsChanged(value: CustomEvent): Self = this.set("asChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCoordinateSystemChanged(value: CustomEvent): Self = this.set("coordinateSystemChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDataChanged(value: CustomEvent): Self = this.set("dataChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDataCursorBehaviorChanged(value: CustomEvent): Self = this.set("dataCursorBehaviorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDataCursorChanged(value: CustomEvent): Self = this.set("dataCursorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDataCursorPositionChanged(value: CustomEvent): Self = this.set("dataCursorPositionChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDataLabelChanged(value: CustomEvent): Self = this.set("dataLabelChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDndChanged(value: CustomEvent): Self = this.set("dndChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDragModeChanged(value: CustomEvent): Self = this.set("dragModeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDrillingChanged(value: CustomEvent): Self = this.set("drillingChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGroupComparatorChanged(value: CustomEvent): Self = this.set("groupComparatorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHiddenCategoriesChanged(value: CustomEvent): Self = this.set("hiddenCategoriesChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHideAndShowBehaviorChanged(value: CustomEvent): Self = this.set("hideAndShowBehaviorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHighlightMatchChanged(value: CustomEvent): Self = this.set("highlightMatchChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHighlightedCategoriesChanged(value: CustomEvent): Self = this.set("highlightedCategoriesChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHoverBehaviorChanged(value: CustomEvent): Self = this.set("hoverBehaviorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInitialZoomingChanged(value: CustomEvent): Self = this.set("initialZoomingChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLegendChanged(value: CustomEvent): Self = this.set("legendChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOjDrill(value: CustomEvent): Self = this.set("ojDrill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOjSelectInput(value: CustomEvent): Self = this.set("ojSelectInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOjViewportChange(value: CustomEvent): Self = this.set("ojViewportChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOjViewportChangeInput(value: CustomEvent): Self = this.set("ojViewportChangeInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOrientationChanged(value: CustomEvent): Self = this.set("orientationChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOtherThresholdChanged(value: CustomEvent): Self = this.set("otherThresholdChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverviewChanged(value: CustomEvent): Self = this.set("overviewChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPieCenterChanged(value: CustomEvent): Self = this.set("pieCenterChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPlotAreaChanged(value: CustomEvent): Self = this.set("plotAreaChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPolarGridShapeChanged(value: CustomEvent): Self = this.set("polarGridShapeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelectionChanged(value: CustomEvent): Self = this.set("selectionChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelectionModeChanged(value: CustomEvent): Self = this.set("selectionModeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSeriesComparatorChanged(value: CustomEvent): Self = this.set("seriesComparatorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSortingChanged(value: CustomEvent): Self = this.set("sortingChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSplitDualYChanged(value: CustomEvent): Self = this.set("splitDualYChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSplitterPositionChanged(value: CustomEvent): Self = this.set("splitterPositionChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStackChanged(value: CustomEvent): Self = this.set("stackChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStackLabelChanged(value: CustomEvent): Self = this.set("stackLabelChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStyleDefaultsChanged(value: CustomEvent): Self = this.set("styleDefaultsChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTimeAxisTypeChanged(value: CustomEvent): Self = this.set("timeAxisTypeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTooltipChanged(value: CustomEvent): Self = this.set("tooltipChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchResponseChanged(value: CustomEvent): Self = this.set("touchResponseChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypeChanged(value: CustomEvent): Self = this.set("typeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setValueFormatsChanged(value: CustomEvent): Self = this.set("valueFormatsChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setXAxisChanged(value: CustomEvent): Self = this.set("xAxisChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setY2AxisChanged(value: CustomEvent): Self = this.set("y2AxisChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setYAxisChanged(value: CustomEvent): Self = this.set("yAxisChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZoomAndScrollChanged(value: CustomEvent): Self = this.set("zoomAndScrollChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZoomDirectionChanged(value: CustomEvent): Self = this.set("zoomDirectionChanged", value.asInstanceOf[js.Any])
+  }
+  
 }
 

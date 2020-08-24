@@ -19,6 +19,7 @@ class Ellipse protected () extends js.Object {
   def containsPoint(p: PlainPoint): Boolean = js.native
   def equals(ellipse: Ellipse): Boolean = js.native
   def inflate(): this.type = js.native
+  def inflate(dx: js.UndefOr[scala.Nothing], dy: Double): this.type = js.native
   def inflate(dx: Double): this.type = js.native
   def inflate(dx: Double, dy: Double): this.type = js.native
   def intersectionWithLine(l: Line): js.Array[Point] | Null = js.native

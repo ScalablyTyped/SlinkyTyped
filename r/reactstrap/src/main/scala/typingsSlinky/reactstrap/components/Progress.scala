@@ -67,20 +67,19 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.progressMod.ProgressProps
-import typingsSlinky.reactstrap.progressMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Progress {
-  @JSImport("reactstrap/lib/Progress", JSImport.Default)
+  @JSImport("reactstrap", "Progress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.`*`.tag.type, default[js.Any]] {
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.Progress[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -192,6 +191,10 @@ object Progress {
     @scala.inline
     def bar(value: Boolean): this.type = set("bar", value.asInstanceOf[js.Any])
     @scala.inline
+    def barAriaLabelledBy(value: String): this.type = set("barAriaLabelledBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barAriaValueText(value: String): this.type = set("barAriaValueText", value.asInstanceOf[js.Any])
+    @scala.inline
     def barClassName(value: String): this.type = set("barClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -209,6 +212,8 @@ object Progress {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -239,6 +244,8 @@ object Progress {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
     def max(value: String | Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: String | Double): this.type = set("min", value.asInstanceOf[js.Any])
     @scala.inline
     def multi(value: Boolean): this.type = set("multi", value.asInstanceOf[js.Any])
     @scala.inline

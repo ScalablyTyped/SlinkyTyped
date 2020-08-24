@@ -4,6 +4,7 @@ import typingsSlinky.tslint.anon.PropertiesLocations
 import typingsSlinky.tslint.anon.PropertiesOverloads
 import typingsSlinky.tslint.anon.PropertiesPrivacies
 import typingsSlinky.tslint.anon.PropertiesType
+import typingsSlinky.tslint.anon.PropertiesVisibilities
 import typingsSlinky.tslint.exclusionDescriptorsMod.IInputExclusionDescriptors
 import typingsSlinky.tslint.mod.Rules.AbstractRule
 import typingsSlinky.tslint.ruleMod.IRuleMetadata
@@ -22,6 +23,7 @@ object completedDocsRuleMod extends js.Object {
   @JSName("ALL")
   val ALL_ : /* "all" */ String = js.native
   val ARGUMENT_CLASSES: /* "classes" */ String = js.native
+  val ARGUMENT_CONSTRUCTORS: /* "constructors" */ String = js.native
   val ARGUMENT_ENUMS: /* "enums" */ String = js.native
   val ARGUMENT_ENUM_MEMBERS: /* "enum-members" */ String = js.native
   val ARGUMENT_FUNCTIONS: /* "functions" */ String = js.native
@@ -50,7 +52,8 @@ object completedDocsRuleMod extends js.Object {
   object Rule extends js.Object {
     var ARGUMENT_DESCRIPTOR_BLOCK: PropertiesType = js.native
     var ARGUMENT_DESCRIPTOR_CLASS: PropertiesLocations = js.native
-    var ARGUMENT_DESCRIPTOR_FUNCTION: PropertiesOverloads = js.native
+    var ARGUMENT_DESCRIPTOR_CONSTRUCTOR: PropertiesOverloads = js.native
+    var ARGUMENT_DESCRIPTOR_FUNCTION: PropertiesVisibilities = js.native
     var ARGUMENT_DESCRIPTOR_METHOD: PropertiesPrivacies = js.native
     var FAILURE_STRING_EXIST: String = js.native
     var defaultArguments: IInputExclusionDescriptors = js.native

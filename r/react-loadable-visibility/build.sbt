@@ -1,25 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "react-loadable-visibility"
-version := "3.0-dt-20200515Z-4721d6"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200522Z-2083bb"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "anymatch" % "1.3-dt-20200515Z-2c3c09",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "loadable__component" % "5.10-dt-20190711Z-2d07b0",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "react-loadable" % "5.5-dt-20200515Z-8cbbc5",
-  "org.scalablytyped.slinky" %%% "source-list-map" % "v0.1.6-dt-20200515Z-c6cc21",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-ba4eed",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "tapable" % "v1.0.0-dt-20200515Z-780548",
-  "org.scalablytyped.slinky" %%% "uglify-js" % "3.9-dt-20200519Z-6f8d3e",
-  "org.scalablytyped.slinky" %%% "webpack" % "4.41-dt-20200515Z-8e5d2e",
-  "org.scalablytyped.slinky" %%% "webpack-sources" % "0.1-dt-20200515Z-96d9b2")
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
+  "org.scalablytyped.slinky" %%% "loadable__component" % "5.13-dt-20200710Z-4065c2",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
+  "org.scalablytyped.slinky" %%% "react-loadable" % "5.5-dt-20200515Z-18cb16",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

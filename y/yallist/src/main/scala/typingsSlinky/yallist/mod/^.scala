@@ -17,7 +17,21 @@ object ^ extends js.Object {
   @JSName("Node")
   var Node_Original: NodeConstructor = js.native
   def Node[T](value: T): typingsSlinky.yallist.mod.Node[T] = js.native
+  def Node[T](value: T, prev: js.UndefOr[scala.Nothing], next: js.UndefOr[scala.Nothing], list: Yallist[T]): typingsSlinky.yallist.mod.Node[T] = js.native
+  def Node[T](value: T, prev: js.UndefOr[scala.Nothing], next: typingsSlinky.yallist.mod.Node[T]): typingsSlinky.yallist.mod.Node[T] = js.native
+  def Node[T](
+    value: T,
+    prev: js.UndefOr[scala.Nothing],
+    next: typingsSlinky.yallist.mod.Node[T],
+    list: Yallist[T]
+  ): typingsSlinky.yallist.mod.Node[T] = js.native
   def Node[T](value: T, prev: typingsSlinky.yallist.mod.Node[T]): typingsSlinky.yallist.mod.Node[T] = js.native
+  def Node[T](
+    value: T,
+    prev: typingsSlinky.yallist.mod.Node[T],
+    next: js.UndefOr[scala.Nothing],
+    list: Yallist[T]
+  ): typingsSlinky.yallist.mod.Node[T] = js.native
   def Node[T](value: T, prev: typingsSlinky.yallist.mod.Node[T], next: typingsSlinky.yallist.mod.Node[T]): typingsSlinky.yallist.mod.Node[T] = js.native
   def Node[T](
     value: T,

@@ -49,7 +49,13 @@ object Column {
     @scala.inline
     def filterElement(value: js.Object): this.type = set("filterElement", value.asInstanceOf[js.Any])
     @scala.inline
+    def filterField(value: String): this.type = set("filterField", value.asInstanceOf[js.Any])
+    @scala.inline
     def filterFunction(value: (/* value */ js.Any, /* filter */ js.Any) => Unit): this.type = set("filterFunction", js.Any.fromFunction2(value))
+    @scala.inline
+    def filterHeaderClassName(value: String): this.type = set("filterHeaderClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterHeaderStyle(value: js.Object): this.type = set("filterHeaderStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def filterMatchMode(value: String): this.type = set("filterMatchMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -78,6 +84,8 @@ object Column {
     def onEditorCancel(value: /* props */ js.Any => Unit): this.type = set("onEditorCancel", js.Any.fromFunction1(value))
     @scala.inline
     def onEditorSubmit(value: /* props */ js.Any => Unit): this.type = set("onEditorSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def reorderable(value: Boolean): this.type = set("reorderable", value.asInstanceOf[js.Any])
     @scala.inline
     def rowEditor(value: Boolean): this.type = set("rowEditor", value.asInstanceOf[js.Any])
     @scala.inline

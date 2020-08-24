@@ -20,9 +20,13 @@ object TableToolbar {
     @scala.inline
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def filterData(value: js.Any): this.type = set("filterData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterListVarargs(value: js.Array[String]*): this.type = set("filterList", js.Array(value :_*))
     @scala.inline
     def filterList(value: js.Array[js.Array[String]]): this.type = set("filterList", value.asInstanceOf[js.Any])
     @scala.inline

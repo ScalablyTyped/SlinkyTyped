@@ -17,7 +17,7 @@ package object mod {
   type InferredArrayType[T] = T
   type InnerInferType[T] = (typingsSlinky.yup.mod.Id[
     typingsSlinky.yup.mod.NotRequiredProps[_] with typingsSlinky.yup.mod.RequiredProps[_]
-  ]) | js.Array[js.Any] | typingsSlinky.yup.mod.PreserveOptionals[T]
+  ]) | typingsSlinky.yup.mod.InnerInferTypeArray[js.Any] | typingsSlinky.yup.mod.PreserveOptionals[T]
   type KeyOfUndefined[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ P in keyof T ]: -? undefined extends T[P]? P : never}[keyof T] */ js.Any
   type Lazy_ = typingsSlinky.yup.mod.Schema[js.Any]
   type LocaleValue = java.lang.String | (js.Function1[/* params */ typingsSlinky.yup.mod.FormatErrorParams, java.lang.String])

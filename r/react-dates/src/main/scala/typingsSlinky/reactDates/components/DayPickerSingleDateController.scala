@@ -7,7 +7,6 @@ import typingsSlinky.reactDates.anon.Date
 import typingsSlinky.reactDates.anon.Focused
 import typingsSlinky.reactDates.anon.IsVisible
 import typingsSlinky.reactDates.mod.CalendarInfoPositionShape
-import typingsSlinky.reactDates.mod.DayPickerSingleDateControllerCls
 import typingsSlinky.reactDates.mod.DayPickerSingleDateControllerShape
 import typingsSlinky.reactDates.mod.ScrollableOrientationShape
 import typingsSlinky.reactDates.mod.SingleDatePickerPhrases
@@ -31,7 +30,7 @@ object DayPickerSingleDateController {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, DayPickerSingleDateControllerCls] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def calendarInfoPosition(value: CalendarInfoPositionShape): this.type = set("calendarInfoPosition", value.asInstanceOf[js.Any])
     @scala.inline

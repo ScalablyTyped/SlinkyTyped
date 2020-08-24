@@ -71,25 +71,18 @@ object RequestPinDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSignRequestId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signRequestId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAttemptsLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptsLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSignRequestId(value: Double): Self = this.set("signRequestId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAttemptsLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptsLeft")(js.undefined)
-        ret
-    }
+    def setAttemptsLeft(value: Double): Self = this.set("attemptsLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def withErrorType(
+    def deleteAttemptsLeft: Self = this.set("attemptsLeft", js.undefined)
+    @scala.inline
+    def setErrorType(
       value: ToStringLiteral[
           INVALIDPIN, 
           /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
@@ -98,19 +91,11 @@ object RequestPinDetails {
             INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("errorType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutErrorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(js.undefined)
-        ret
-    }
+    def deleteErrorType: Self = this.set("errorType", js.undefined)
     @scala.inline
-    def withRequestType(
+    def setRequestType(
       value: ToStringLiteral[
           PIN, 
           /* keyof chrome-apps.anon.PIN */ typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK, 
@@ -119,17 +104,9 @@ object RequestPinDetails {
             typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("requestType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRequestType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
-        ret
-    }
+    def deleteRequestType: Self = this.set("requestType", js.undefined)
   }
   
 }

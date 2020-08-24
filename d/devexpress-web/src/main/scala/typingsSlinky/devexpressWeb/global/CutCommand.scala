@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CutCommand")
 @js.native
 class CutCommand ()
-  extends typingsSlinky.devexpressWeb.CutCommand {
-  /**
-    * Executes the CutCommand command.
-    */
-  /* CompleteClass */
-  override def execute(): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.CutCommand
 

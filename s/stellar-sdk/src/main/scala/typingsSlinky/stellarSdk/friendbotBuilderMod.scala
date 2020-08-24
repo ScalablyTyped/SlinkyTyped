@@ -12,7 +12,7 @@ object friendbotBuilderMod extends js.Object {
   class FriendbotBuilder protected ()
     extends CallBuilder[js.Any] {
     def this(
-      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any,
+      serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any,
       address: String
     ) = this()
   }

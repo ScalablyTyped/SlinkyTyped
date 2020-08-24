@@ -2,21 +2,30 @@ package typingsSlinky.ink.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.ink.anon.readonlymarginnumberundef
+import typingsSlinky.ink.domMod.DOMElement
 import typingsSlinky.ink.inkStrings.`column-reverse`
 import typingsSlinky.ink.inkStrings.`flex-end`
 import typingsSlinky.ink.inkStrings.`flex-start`
 import typingsSlinky.ink.inkStrings.`row-reverse`
 import typingsSlinky.ink.inkStrings.`space-around`
 import typingsSlinky.ink.inkStrings.`space-between`
-import typingsSlinky.ink.inkStrings.`truncate-end`
-import typingsSlinky.ink.inkStrings.`truncate-middle`
-import typingsSlinky.ink.inkStrings.`truncate-start`
+import typingsSlinky.ink.inkStrings.absolute
+import typingsSlinky.ink.inkStrings.auto
+import typingsSlinky.ink.inkStrings.bold
 import typingsSlinky.ink.inkStrings.center
+import typingsSlinky.ink.inkStrings.classic
 import typingsSlinky.ink.inkStrings.column
+import typingsSlinky.ink.inkStrings.double
+import typingsSlinky.ink.inkStrings.doubleSingle
+import typingsSlinky.ink.inkStrings.flex
+import typingsSlinky.ink.inkStrings.none
+import typingsSlinky.ink.inkStrings.relative
+import typingsSlinky.ink.inkStrings.round
 import typingsSlinky.ink.inkStrings.row
-import typingsSlinky.ink.inkStrings.truncate
-import typingsSlinky.ink.inkStrings.wrap
-import typingsSlinky.ink.mod.BoxProps
+import typingsSlinky.ink.inkStrings.single
+import typingsSlinky.ink.inkStrings.singleDouble
+import typingsSlinky.ink.inkStrings.stretch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +38,23 @@ object Box {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.ink.mod.Box] {
+       with StBuildingComponent[tag.type, DOMElement] {
     @scala.inline
-    def alignItems(value: `flex-start` | center | `flex-end`): this.type = set("alignItems", value.asInstanceOf[js.Any])
+    def alignItems(value: `flex-start` | center | `flex-end` | stretch): this.type = set("alignItems", value.asInstanceOf[js.Any])
     @scala.inline
-    def flexBasis(value: String | Double): this.type = set("flexBasis", value.asInstanceOf[js.Any])
+    def alignSelf(value: `flex-start` | center | `flex-end` | auto): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
-    def flexDirection(value: row | `row-reverse` | column | `column-reverse`): this.type = set("flexDirection", value.asInstanceOf[js.Any])
+    def borderColor(
+      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+    ): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderStyle(value: single | double | round | bold | singleDouble | doubleSingle | classic): this.type = set("borderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def display(value: flex | none): this.type = set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexBasis(value: Double | String): this.type = set("flexBasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexDirection(value: row | column | `row-reverse` | `column-reverse`): this.type = set("flexDirection", value.asInstanceOf[js.Any])
     @scala.inline
     def flexGrow(value: Double): this.type = set("flexGrow", value.asInstanceOf[js.Any])
     @scala.inline
@@ -43,7 +62,7 @@ object Box {
     @scala.inline
     def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def justifyContent(value: `flex-start` | center | `flex-end` | `space-between` | `space-around`): this.type = set("justifyContent", value.asInstanceOf[js.Any])
+    def justifyContent(value: `flex-start` | `flex-end` | `space-between` | `space-around` | center): this.type = set("justifyContent", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: Double): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -59,9 +78,9 @@ object Box {
     @scala.inline
     def marginY(value: Double): this.type = set("marginY", value.asInstanceOf[js.Any])
     @scala.inline
-    def minHeight(value: Double): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    def minHeight(value: Double | String): this.type = set("minHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def minWidth(value: Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    def minWidth(value: Double | String): this.type = set("minWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def padding(value: Double): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline
@@ -77,12 +96,12 @@ object Box {
     @scala.inline
     def paddingY(value: Double): this.type = set("paddingY", value.asInstanceOf[js.Any])
     @scala.inline
-    def textWrap(value: wrap | truncate | `truncate-start` | `truncate-middle` | `truncate-end`): this.type = set("textWrap", value.asInstanceOf[js.Any])
+    def position(value: absolute | relative): this.type = set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: readonlymarginnumberundef): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Box.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

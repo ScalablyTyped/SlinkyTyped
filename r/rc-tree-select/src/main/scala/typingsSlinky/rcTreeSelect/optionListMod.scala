@@ -1,7 +1,8 @@
 package typingsSlinky.rcTreeSelect
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.rcSelect.optionListMod.RefOptionListProps
 import typingsSlinky.rcTreeSelect.anon.Selected
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
@@ -14,7 +15,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-tree-select/lib/OptionList", JSImport.Namespace)
+@JSImport("rc-tree-select/es/OptionList", JSImport.Namespace)
 @js.native
 object optionListMod extends js.Object {
   @js.native
@@ -27,7 +28,7 @@ object optionListMod extends js.Object {
     var itemHeight: Double = js.native
     var menuItemSelectedIcon: js.UndefOr[js.Any] = js.native
     var multiple: Boolean = js.native
-    var notFoundContent: js.UndefOr[TagMod[Any]] = js.native
+    var notFoundContent: js.UndefOr[ReactElement] = js.native
     var onScroll: UIEventHandler[HTMLDivElement] = js.native
     var open: Boolean = js.native
     var options: OptionsType = js.native
@@ -37,15 +38,12 @@ object optionListMod extends js.Object {
     var virtual: js.UndefOr[Boolean] = js.native
     /** Tell Select that some value is now active to make accessibility work */
     def onActiveValue(value: RawValueType, index: Double): Unit = js.native
+    def onMouseEnter(): Unit = js.native
     def onSelect(value: RawValueType, option: Selected): Unit = js.native
     def onToggleOpen(): Unit = js.native
     def onToggleOpen(open: Boolean): Unit = js.native
   }
   
-  val default: ForwardRefExoticComponent[
-    OptionListProps[js.Array[DataNode]] with (RefAttributes[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RefOptionListProps */ _
-    ])
-  ] = js.native
+  val default: ForwardRefExoticComponent[OptionListProps[js.Array[DataNode]] with RefAttributes[RefOptionListProps]] = js.native
 }
 

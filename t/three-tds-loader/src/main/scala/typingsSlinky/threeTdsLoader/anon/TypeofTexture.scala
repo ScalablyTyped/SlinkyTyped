@@ -1,7 +1,9 @@
 package typingsSlinky.threeTdsLoader.anon
 
 import org.scalablytyped.runtime.Instantiable10
+import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.three.constantsMod.Mapping
 import typingsSlinky.three.constantsMod.PixelFormat
 import typingsSlinky.three.constantsMod.TextureDataType
@@ -16,16 +18,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TypeofTexture
   extends Instantiable10[
-      js.UndefOr[/* image */ HTMLImageElement], 
-      js.UndefOr[/* mapping */ Mapping], 
-      js.UndefOr[/* wrapS */ Wrapping], 
-      js.UndefOr[/* wrapT */ Wrapping], 
-      js.UndefOr[/* magFilter */ TextureFilter], 
-      js.UndefOr[/* minFilter */ TextureFilter], 
-      js.UndefOr[/* format */ PixelFormat], 
-      js.UndefOr[/* type */ TextureDataType], 
-      js.UndefOr[/* anisotropy */ Double], 
-      js.UndefOr[/* encoding */ TextureEncoding], 
+      /* image */ js.UndefOr[HTMLImageElement | HTMLCanvasElement | HTMLVideoElement], 
+      /* mapping */ js.UndefOr[Mapping], 
+      /* wrapS */ js.UndefOr[Wrapping], 
+      /* wrapT */ js.UndefOr[Wrapping], 
+      /* magFilter */ js.UndefOr[TextureFilter], 
+      /* minFilter */ js.UndefOr[TextureFilter], 
+      /* format */ js.UndefOr[PixelFormat], 
+      /* type */ js.UndefOr[TextureDataType], 
+      /* anisotropy */ js.UndefOr[Double], 
+      /* encoding */ js.UndefOr[TextureEncoding], 
       Texture
     ] {
   var DEFAULT_IMAGE: js.Any = js.native

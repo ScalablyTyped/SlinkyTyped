@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class DataTable ()
   extends typingsSlinky.googleVisualization.google.visualization.DataTable {
   def this(data: js.Any) = this()
+  def this(data: js.UndefOr[scala.Nothing], version: js.Any) = this()
   def this(data: js.Any, version: js.Any) = this()
 }
 

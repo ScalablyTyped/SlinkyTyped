@@ -10,6 +10,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
@@ -29,6 +30,7 @@ import typingsSlinky.reactNative.mod.TextInputProps
 import typingsSlinky.reactNative.mod.TextInputScrollEventData
 import typingsSlinky.reactNative.mod.TextInputSelectionChangeEventData
 import typingsSlinky.reactNative.mod.TextInputSubmitEditingEventData
+import typingsSlinky.reactNative.mod.TextInputTextInputEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.reactNativeStrings.URL
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
@@ -113,6 +115,8 @@ object MKTextField {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialKit.mod.MKTextField] {
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -130,6 +134,8 @@ object MKTextField {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -165,6 +171,8 @@ object MKTextField {
     @scala.inline
     def contextMenuHidden(value: Boolean): this.type = set("contextMenuHidden", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
+    @scala.inline
     def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
@@ -182,6 +190,8 @@ object MKTextField {
     def floatingLabelEnabled(value: Boolean): this.type = set("floatingLabelEnabled", value.asInstanceOf[js.Any])
     @scala.inline
     def floatingLabelFont(value: font): this.type = set("floatingLabelFont", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -275,6 +285,8 @@ object MKTextField {
     @scala.inline
     def onTextChange(value: /* val */ String => Unit): this.type = set("onTextChange", js.Any.fromFunction1(value))
     @scala.inline
+    def onTextInput(value: SyntheticEvent[NodeHandle, TextInputTextInputEventData] => Unit): this.type = set("onTextInput", js.Any.fromFunction1(value))
+    @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
@@ -293,7 +305,7 @@ object MKTextField {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholderTextColor(value: String): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
+    def placeholderTextColor(value: ColorValue): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
@@ -317,7 +329,7 @@ object MKTextField {
     @scala.inline
     def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+    def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionState(value: DocumentSelectionState): this.type = set("selectionState", value.asInstanceOf[js.Any])
     @scala.inline
@@ -357,7 +369,7 @@ object MKTextField {
     @scala.inline
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
     @scala.inline
-    def underlineColorAndroid(value: String): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
+    def underlineColorAndroid(value: ColorValue): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
     @scala.inline
     def underlineEnabled(value: Boolean): this.type = set("underlineEnabled", value.asInstanceOf[js.Any])
     @scala.inline

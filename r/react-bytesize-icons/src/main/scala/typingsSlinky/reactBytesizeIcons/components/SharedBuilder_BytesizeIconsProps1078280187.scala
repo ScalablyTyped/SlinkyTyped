@@ -13,9 +13,13 @@ class SharedBuilder_BytesizeIconsProps1078280187[R <: js.Object] (val args: js.A
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  @scala.inline
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   @scala.inline
   def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+  @scala.inline
+  def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
   @scala.inline
   def strokeLinecap(value: StrokeLinecap): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
   @scala.inline

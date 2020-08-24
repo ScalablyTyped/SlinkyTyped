@@ -30,17 +30,14 @@ object PassThroughHierarchyChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_RadioGroup_this(value: typingsSlinky.androiduix.android.widget.RadioGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_RadioGroup_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMOnHierarchyChangeListener(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnHierarchyChangeListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_RadioGroup_this(value: typingsSlinky.androiduix.android.widget.RadioGroup): Self = this.set("_RadioGroup_this", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMOnHierarchyChangeListener(value: js.Any): Self = this.set("mOnHierarchyChangeListener", value.asInstanceOf[js.Any])
   }
   
 }

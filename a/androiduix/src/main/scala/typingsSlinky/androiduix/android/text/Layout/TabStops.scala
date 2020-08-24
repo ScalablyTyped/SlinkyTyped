@@ -32,35 +32,20 @@ object TabStops {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMIncrement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIncrement")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMNumStops(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNumStops")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIncrement(value: js.Any): Self = this.set("mIncrement", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStops(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStops")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNumStops(value: js.Any): Self = this.set("mNumStops", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNextTab(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextTab")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMStops(value: js.Any): Self = this.set("mStops", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReset(value: (Double, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setNextTab(value: Double => Double): Self = this.set("nextTab", js.Any.fromFunction1(value))
+    @scala.inline
+    def setReset(value: (Double, js.Array[_]) => Unit): Self = this.set("reset", js.Any.fromFunction2(value))
   }
   
 }

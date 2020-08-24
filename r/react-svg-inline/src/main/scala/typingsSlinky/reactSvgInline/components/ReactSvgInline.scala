@@ -1,6 +1,5 @@
 package typingsSlinky.reactSvgInline.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -38,11 +37,19 @@ object ReactSvgInline {
     @scala.inline
     def classSuffix(value: String): this.type = set("classSuffix", value.asInstanceOf[js.Any])
     @scala.inline
+    def cleanupVarargs(
+      value: (title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup)*
+    ): this.type = set("cleanup", js.Array(value :_*))
+    @scala.inline
     def cleanup(
       value: Boolean | (js.Array[
           title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup
         ])
     ): this.type = set("cleanup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cleanupExceptionsVarargs(
+      value: (title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup)*
+    ): this.type = set("cleanupExceptions", js.Array(value :_*))
     @scala.inline
     def cleanupExceptions(
       value: js.Array[
@@ -52,7 +59,7 @@ object ReactSvgInline {
     @scala.inline
     def componentReactElement(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: TagMod[Any]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline

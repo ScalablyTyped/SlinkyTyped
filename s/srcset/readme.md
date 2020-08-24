@@ -1,7 +1,7 @@
 
 # Scala.js typings for srcset
 
-Typings are for version 2.0.1
+Typings are for version 3.0.0
 
 ## Library description:
 Parse and stringify the HTML <img> srcset attribute

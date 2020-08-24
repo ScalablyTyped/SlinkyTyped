@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.twilioChat.twilioChatStrings.body
   - typingsSlinky.twilioChat.twilioChatStrings.lastUpdatedBy
+  - typingsSlinky.twilioChat.twilioChatStrings.dateCreated
   - typingsSlinky.twilioChat.twilioChatStrings.dateUpdated
-  - typingsSlinky.twilioChat.twilioChatStrings.timestamp
   - typingsSlinky.twilioChat.twilioChatStrings.attributes
   - typingsSlinky.twilioChat.twilioChatStrings.author
 */
@@ -22,10 +22,10 @@ object UpdateReason {
   @scala.inline
   def body: typingsSlinky.twilioChat.twilioChatStrings.body = "body".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.body]
   @scala.inline
+  def dateCreated: typingsSlinky.twilioChat.twilioChatStrings.dateCreated = "dateCreated".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.dateCreated]
+  @scala.inline
   def dateUpdated: typingsSlinky.twilioChat.twilioChatStrings.dateUpdated = "dateUpdated".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.dateUpdated]
   @scala.inline
   def lastUpdatedBy: typingsSlinky.twilioChat.twilioChatStrings.lastUpdatedBy = "lastUpdatedBy".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.lastUpdatedBy]
-  @scala.inline
-  def timestamp: typingsSlinky.twilioChat.twilioChatStrings.timestamp = "timestamp".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.timestamp]
 }
 

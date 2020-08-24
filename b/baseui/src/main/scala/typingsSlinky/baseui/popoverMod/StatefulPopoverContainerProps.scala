@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.popoverMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.Close
 import typingsSlinky.baseui.anon.PopoverPropschildrennever
 import typingsSlinky.baseui.baseuiStrings.auto
@@ -26,14 +26,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined baseui.baseui/popover.StatefulPopoverProps & {children (props : baseui.baseui/popover.PopoverProps & {  children  :never}): react.react.ReactNode} */
+/* Inlined baseui.baseui/popover.StatefulPopoverProps & {children (props : baseui.baseui/popover.PopoverProps & {  children :never}): react.react.ReactNode} */
 @js.native
 trait StatefulPopoverContainerProps extends js.Object {
   var accessibilityType: js.UndefOr[none | menu | tooltip] = js.native
   var animateOutTime: js.UndefOr[Double] = js.native
   var autoFocus: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var content: js.UndefOr[TagMod[Any] | (js.Function1[/* args */ Close, TagMod[Any]])] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
+  var content: js.UndefOr[ReactElement | (js.Function1[/* args */ Close, ReactElement])] = js.native
   var `data-baseweb`: js.UndefOr[String] = js.native
   var dismissOnClickOutside: js.UndefOr[Boolean] = js.native
   var dismissOnEsc: js.UndefOr[Boolean] = js.native
@@ -56,6 +56,6 @@ trait StatefulPopoverContainerProps extends js.Object {
   var showArrow: js.UndefOr[Boolean] = js.native
   var stateReducer: js.UndefOr[StateReducer] = js.native
   var triggerType: js.UndefOr[click | hover] = js.native
-  def children(props: PopoverPropschildrennever): TagMod[Any] = js.native
+  def children(props: PopoverPropschildrennever): ReactElement = js.native
 }
 

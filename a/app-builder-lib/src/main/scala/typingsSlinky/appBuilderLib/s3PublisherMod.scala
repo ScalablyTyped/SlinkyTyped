@@ -13,6 +13,8 @@ object s3PublisherMod extends js.Object {
   @js.native
   trait S3Publisher extends BaseS3Publisher {
     val info: js.Any = js.native
+    @JSName("providerName")
+    val providerName_FS3Publisher: /* "S3" */ String = js.native
   }
   
   @js.native

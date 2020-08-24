@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -64,7 +63,6 @@ import typingsSlinky.antdMobile.antdMobileStrings.url
 import typingsSlinky.antdMobile.antdMobileStrings.vertical
 import typingsSlinky.antdMobile.antdMobileStrings.yes
 import typingsSlinky.antdMobile.textareaItemMod.TextareaItemProps
-import typingsSlinky.antdMobile.textareaItemMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -74,14 +72,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextareaItem {
-  @JSImport("antd-mobile/lib/textarea-item", JSImport.Default)
+  @JSImport("antd-mobile", "TextareaItem")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.TextareaItem] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -635,7 +633,7 @@ object TextareaItem {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     @scala.inline

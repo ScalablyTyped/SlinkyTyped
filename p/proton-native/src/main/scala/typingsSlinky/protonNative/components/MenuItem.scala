@@ -24,6 +24,8 @@ object MenuItem {
     @scala.inline
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: String): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def onClick(value: /* checked */ Boolean => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def `type`(

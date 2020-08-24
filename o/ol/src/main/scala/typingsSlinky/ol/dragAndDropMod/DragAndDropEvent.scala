@@ -19,6 +19,12 @@ class DragAndDropEvent protected ()
   def this(
     `type`: DragAndDropEventType,
     file: File,
+    opt_features: js.UndefOr[scala.Nothing],
+    opt_projection: typingsSlinky.ol.projectionMod.default
+  ) = this()
+  def this(
+    `type`: DragAndDropEventType,
+    file: File,
     opt_features: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]],
     opt_projection: typingsSlinky.ol.projectionMod.default
   ) = this()

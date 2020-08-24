@@ -3,7 +3,6 @@ package typingsSlinky.wordpressEditor.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressBlockEditor.dropdownMod.BlockNavigationDropdown.Props
-import typingsSlinky.wordpressEditor.mod.BlockNavigationDropdown.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object BlockNavigationDropdown {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
   }

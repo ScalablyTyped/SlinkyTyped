@@ -24,8 +24,6 @@ object maxMessageSizeFilterMod extends js.Object {
   class MaxMessageSizeFilterFactory protected () extends FilterFactory[MaxMessageSizeFilter] {
     def this(options: ChannelOptions) = this()
     val options: js.Any = js.native
-    /* CompleteClass */
-    override def createFilter(callStream: Call): MaxMessageSizeFilter = js.native
   }
   
 }

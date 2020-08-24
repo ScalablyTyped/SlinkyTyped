@@ -29,6 +29,7 @@ package object pinpointMod {
   */
   type CampaignStatus = typingsSlinky.awsSdk.pinpointMod._CampaignStatus | java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PUSH
     - typingsSlinky.awsSdk.awsSdkStrings.GCM
     - typingsSlinky.awsSdk.awsSdkStrings.APNS
     - typingsSlinky.awsSdk.awsSdkStrings.APNS_SANDBOX
@@ -70,6 +71,7 @@ package object pinpointMod {
   */
   type Duration = typingsSlinky.awsSdk.pinpointMod._Duration | java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PUSH
     - typingsSlinky.awsSdk.awsSdkStrings.GCM
     - typingsSlinky.awsSdk.awsSdkStrings.APNS
     - typingsSlinky.awsSdk.awsSdkStrings.APNS_SANDBOX

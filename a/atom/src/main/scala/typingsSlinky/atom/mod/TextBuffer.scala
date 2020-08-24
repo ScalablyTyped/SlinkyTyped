@@ -1,12 +1,12 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.anon.ExclusiveBoolean
 import typingsSlinky.atom.anon.ExclusiveInvalidate
 import typingsSlinky.atom.anon.History
 import typingsSlinky.atom.anon.NewExtent
 import typingsSlinky.atom.anon.Role
 import typingsSlinky.atom.anon.ShouldDestroyOnFileDelete
-import typingsSlinky.atom.anon.groupingIntervalnumberHis
+import typingsSlinky.atom.anon.`27`
+import typingsSlinky.atom.anon.groupingIntervalnumberund
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -226,7 +226,7 @@ class TextBuffer () extends js.Object {
   def lineLengthForRow(row: Double): Double = js.native
   /** Create a marker at the given position with no tail in the default marker layer. */
   def markPosition(position: PointCompatible): Marker = js.native
-  def markPosition(position: PointCompatible, options: ExclusiveBoolean): Marker = js.native
+  def markPosition(position: PointCompatible, options: `27`): Marker = js.native
   /** Create a marker with the given range in the default marker layer. */
   def markRange(range: RangeCompatible): Marker = js.native
   def markRange(range: RangeCompatible, properties: ExclusiveInvalidate): Marker = js.native
@@ -405,7 +405,7 @@ class TextBuffer () extends js.Object {
   def transact[T](fn: js.Function0[T]): T = js.native
   /** Batch multiple operations as a single undo/redo step. */
   def transact[T](optionsOrInterval: Double, fn: js.Function0[T]): T = js.native
-  def transact[T](optionsOrInterval: groupingIntervalnumberHis, fn: js.Function0[T]): T = js.native
+  def transact[T](optionsOrInterval: groupingIntervalnumberund, fn: js.Function0[T]): T = js.native
   // History
   /**
     *  Undo the last operation. If a transaction is in progress, aborts it.

@@ -14,9 +14,24 @@ trait Classes[T /* <: String | StyleRules[String] | StyleRulesCallback[String] *
 
 object Classes {
   @scala.inline
-  def apply[T](classes: ClassNameMap[_ | T]): Classes[T] = {
+  def apply[/* <: java.lang.String | typingsSlinky.materialUiCore.withStylesMod.StyleRules[java.lang.String] | typingsSlinky.materialUiCore.withStylesMod.StyleRulesCallback[java.lang.String] */ T](classes: ClassNameMap[_ | T]): Classes[T] = {
     val __obj = js.Dynamic.literal(classes = classes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Classes[T]]
   }
+  @scala.inline
+  implicit class ClassesOps[Self <: Classes[_], /* <: java.lang.String | typingsSlinky.materialUiCore.withStylesMod.StyleRules[java.lang.String] | typingsSlinky.materialUiCore.withStylesMod.StyleRulesCallback[java.lang.String] */ T] (val x: Self with Classes[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClasses(value: ClassNameMap[_ | T]): Self = this.set("classes", value.asInstanceOf[js.Any])
+  }
+  
 }
 

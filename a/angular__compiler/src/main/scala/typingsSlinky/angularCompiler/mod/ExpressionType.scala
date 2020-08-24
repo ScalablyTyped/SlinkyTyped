@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ExpressionType")
 @js.native
 class ExpressionType protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ExpressionType {
+  extends typingsSlinky.angularCompiler.compilerMod.ExpressionType {
   def this(value: typingsSlinky.angularCompiler.outputAstMod.Expression) = this()
   def this(value: typingsSlinky.angularCompiler.outputAstMod.Expression, modifiers: js.Array[TypeModifier]) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    modifiers: js.UndefOr[scala.Nothing],
+    typeParams: js.Array[typingsSlinky.angularCompiler.outputAstMod.Type]
+  ) = this()
   def this(
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     modifiers: js.Array[TypeModifier],

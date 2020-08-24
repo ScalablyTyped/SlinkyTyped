@@ -56,6 +56,72 @@ object TextUtils extends js.Object {
     paint: typingsSlinky.androiduix.android.text.TextPaint,
     avail: Double,
     where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    textDir: js.UndefOr[scala.Nothing],
+    ellipsis: js.Any
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    textDir: TextDirectionHeuristic
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    textDir: TextDirectionHeuristic,
+    ellipsis: js.Any
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: EllipsizeCallback
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: EllipsizeCallback,
+    textDir: js.UndefOr[scala.Nothing],
+    ellipsis: js.Any
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: EllipsizeCallback,
+    textDir: TextDirectionHeuristic
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: js.UndefOr[scala.Nothing],
+    callback: EllipsizeCallback,
+    textDir: TextDirectionHeuristic,
+    ellipsis: js.Any
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
     preserveLength: Boolean
   ): String = js.native
   def ellipsize(
@@ -64,7 +130,46 @@ object TextUtils extends js.Object {
     avail: Double,
     where: TruncateAt,
     preserveLength: Boolean,
+    callback: js.UndefOr[scala.Nothing],
+    textDir: js.UndefOr[scala.Nothing],
+    ellipsis: js.Any
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: Boolean,
+    callback: js.UndefOr[scala.Nothing],
+    textDir: TextDirectionHeuristic
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: Boolean,
+    callback: js.UndefOr[scala.Nothing],
+    textDir: TextDirectionHeuristic,
+    ellipsis: js.Any
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: Boolean,
     callback: EllipsizeCallback
+  ): String = js.native
+  def ellipsize(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    avail: Double,
+    where: TruncateAt,
+    preserveLength: Boolean,
+    callback: EllipsizeCallback,
+    textDir: js.UndefOr[scala.Nothing],
+    ellipsis: js.Any
   ): String = js.native
   def ellipsize(
     text: String,

@@ -2,7 +2,6 @@ package typingsSlinky.reactRouterNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactRouter.mod.RouteProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +13,11 @@ object Route {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: RouteProps] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactRouter.mod.RouteProps */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.Route[js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.Route[T]]
   
-  def apply[T <: RouteProps](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T <: RouteProps](companion: Route.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactRouter.mod.RouteProps */ T](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactRouter.mod.RouteProps */ T](companion: Route.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

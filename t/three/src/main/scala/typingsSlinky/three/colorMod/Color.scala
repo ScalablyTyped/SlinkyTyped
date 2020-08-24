@@ -1,6 +1,9 @@
 package typingsSlinky.three.colorMod
 
 import typingsSlinky.std.ArrayLike
+import typingsSlinky.std.Record
+import typingsSlinky.three.bufferAttributeMod.BufferAttribute
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +23,7 @@ class Color () extends js.Object {
   	 * Green channel value between 0 and 1. Default is 1.
   	 */
   var g: Double = js.native
-  var isColor: Boolean = js.native
+  val isColor: `true` = js.native
   /**
   	 * Red channel value between 0 and 1. Default is 1.
   	 */
@@ -88,6 +91,7 @@ class Color () extends js.Object {
   	 */
   def fromArray(array: ArrayLike[Double]): this.type = js.native
   def fromArray(array: ArrayLike[Double], offset: Double): this.type = js.native
+  def fromBufferAttribute(attribute: BufferAttribute, index: Double): this.type = js.native
   def getHSL(target: HSL): HSL = js.native
   /**
   	 * Returns the hexadecimal value of this color.
@@ -110,6 +114,12 @@ class Color () extends js.Object {
   def set(color: String): Color = js.native
   def set(color: Double): Color = js.native
   def set(color: Color): Color = js.native
+  /**
+  	 * Sets this color from a color name.
+  	 * Faster than {@link Color#setStyle .setStyle()} method if you don't need the other CSS-style formats.
+  	 * @param style Color name in X11 format.
+  	 */
+  def setColorName(style: String): Color = js.native
   /**
   	 * Sets this color from HSL values.
   	 * Based on MochiKit implementation by Bob Ippolito.
@@ -141,6 +151,7 @@ class Color () extends js.Object {
   	 * @return The created or provided array.
   	 */
   def toArray(): js.Array[Double] = js.native
+  def toArray(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
   def toArray(array: js.Array[Double]): js.Array[Double] = js.native
   def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
   /**
@@ -151,5 +162,15 @@ class Color () extends js.Object {
   	 */
   def toArray(xyz: ArrayLike[Double]): ArrayLike[Double] = js.native
   def toArray(xyz: ArrayLike[Double], offset: Double): ArrayLike[Double] = js.native
+}
+
+/* static members */
+@JSImport("three/src/math/Color", "Color")
+@js.native
+object Color extends js.Object {
+  /**
+  	 * List of X11 color names.
+  	 */
+  var NAMES: Record[String, Double] = js.native
 }
 

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "xsockets"
-version := "3.0-dt-20200515Z-0b2422"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200515Z-fe7ad0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/convolutional_serialization.ConvolutionalLayerSerialization['class_name'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SeparableConv2D
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2DTranspose
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2D
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv1D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Cropping2D
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.UpSampling2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Cropping2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SeparableConv2D
 */
 trait ConvolutionalLayerClassName extends js.Object
 

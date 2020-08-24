@@ -1,7 +1,7 @@
 package typingsSlinky.puppeteer.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.puppeteer.anon.`0`
+import typingsSlinky.puppeteer.anon.DelayNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,7 +90,7 @@ trait FrameBase
     * @param options: The typing parameters.
     */
   def `type`(selector: String, text: String): js.Promise[Unit] = js.native
-  def `type`(selector: String, text: String, options: `0`): js.Promise[Unit] = js.native
+  def `type`(selector: String, text: String, options: DelayNumber): js.Promise[Unit] = js.native
   /** Returns frame's url. */
   def url(): String = js.native
   /**
@@ -104,15 +104,15 @@ trait FrameBase
     * Shortcut for waitForSelector and waitForXPath
     */
   def waitFor(selector: String, options: WaitForSelectorOptionsHidden): js.Promise[ElementHandle[Element] | Null] = js.native
+  def waitFor(selector: EvaluateFn[_], options: js.UndefOr[scala.Nothing], args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
   /**
     * Shortcut for waitForFunction.
     */
-  def waitFor(selector: EvaluateFn[_]): js.Promise[JSHandle[_]] = js.native
   def waitFor(selector: EvaluateFn[_], options: WaitForSelectorOptions, args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
+  def waitForFunction(fn: EvaluateFn[_], options: js.UndefOr[scala.Nothing], args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
   /**
     * Allows waiting for various conditions.
     */
-  def waitForFunction(fn: EvaluateFn[_]): js.Promise[JSHandle[_]] = js.native
   def waitForFunction(fn: EvaluateFn[_], options: PageFnOptions, args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
   /**
     * Wait for the page navigation occur.

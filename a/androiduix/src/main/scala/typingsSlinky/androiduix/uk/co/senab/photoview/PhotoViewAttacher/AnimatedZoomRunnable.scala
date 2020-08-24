@@ -38,47 +38,24 @@ object AnimatedZoomRunnable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_PhotoViewAttacher_this(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_PhotoViewAttacher_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withInterpolate(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_PhotoViewAttacher_this(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher): Self = this.set("_PhotoViewAttacher_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFocalX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFocalX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInterpolate(value: () => js.Any): Self = this.set("interpolate", js.Any.fromFunction0(value))
     @scala.inline
-    def withMFocalY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFocalY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFocalX(value: js.Any): Self = this.set("mFocalX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStartTime(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFocalY(value: js.Any): Self = this.set("mFocalY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMZoomEnd(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mZoomEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMStartTime(value: js.Any): Self = this.set("mStartTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMZoomStart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mZoomStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMZoomEnd(value: js.Any): Self = this.set("mZoomEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMZoomStart(value: js.Any): Self = this.set("mZoomStart", value.asInstanceOf[js.Any])
   }
   
 }

@@ -37,101 +37,46 @@ object HeaderFilter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNameContains(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameContains")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutNameContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameContains")(js.undefined)
-        ret
-    }
+    def setNameContainsVarargs(value: String*): Self = this.set("nameContains", js.Array(value :_*))
     @scala.inline
-    def withNameEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNameContains(value: String | js.Array[String]): Self = this.set("nameContains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutNameEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameEquals")(js.undefined)
-        ret
-    }
+    def deleteNameContains: Self = this.set("nameContains", js.undefined)
     @scala.inline
-    def withNamePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNameEquals(value: String): Self = this.set("nameEquals", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
-        ret
-    }
+    def deleteNameEquals: Self = this.set("nameEquals", js.undefined)
     @scala.inline
-    def withNameSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNamePrefix(value: String): Self = this.set("namePrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutNameSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameSuffix")(js.undefined)
-        ret
-    }
+    def deleteNamePrefix: Self = this.set("namePrefix", js.undefined)
     @scala.inline
-    def withValueContains(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueContains")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNameSuffix(value: String): Self = this.set("nameSuffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutValueContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueContains")(js.undefined)
-        ret
-    }
+    def deleteNameSuffix: Self = this.set("nameSuffix", js.undefined)
     @scala.inline
-    def withValueEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setValueContainsVarargs(value: String*): Self = this.set("valueContains", js.Array(value :_*))
     @scala.inline
-    def withoutValueEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueEquals")(js.undefined)
-        ret
-    }
+    def setValueContains(value: String | js.Array[String]): Self = this.set("valueContains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withValuePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteValueContains: Self = this.set("valueContains", js.undefined)
     @scala.inline
-    def withoutValuePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(js.undefined)
-        ret
-    }
+    def setValueEquals(value: String): Self = this.set("valueEquals", value.asInstanceOf[js.Any])
     @scala.inline
-    def withValueSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteValueEquals: Self = this.set("valueEquals", js.undefined)
     @scala.inline
-    def withoutValueSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(js.undefined)
-        ret
-    }
+    def setValuePrefix(value: String): Self = this.set("valuePrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValuePrefix: Self = this.set("valuePrefix", js.undefined)
+    @scala.inline
+    def setValueSuffix(value: String): Self = this.set("valueSuffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValueSuffix: Self = this.set("valueSuffix", js.undefined)
   }
   
 }

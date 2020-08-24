@@ -36,7 +36,7 @@ object mod extends js.Object {
   class Response ()
     extends typingsSlinky.apolloServerEnv.fetchMod.Response {
     def this(body: BodyInit) = this()
-    def this(body: BodyInit, init: ResponseInit) = this()
+    def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   }
   
   @js.native
@@ -54,8 +54,8 @@ object mod extends js.Object {
   }
   
   def fetch(): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
+  def fetch(input: js.UndefOr[RequestInfo], init: RequestInit): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
   def fetch(input: RequestInfo): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
-  def fetch(input: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
   /* static members */
   @js.native
   object Response extends js.Object {

@@ -17,7 +17,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.formik.anon.PickFormHTMLAttributesHTM
+import typingsSlinky.formik.anon.PickDetailedHTMLPropsForm
 import typingsSlinky.formik.formikStrings.`additions text`
 import typingsSlinky.formik.formikStrings.`inline`
 import typingsSlinky.formik.formikStrings.additions
@@ -43,6 +43,7 @@ import typingsSlinky.formik.formikStrings.location
 import typingsSlinky.formik.formikStrings.menu
 import typingsSlinky.formik.formikStrings.mixed
 import typingsSlinky.formik.formikStrings.move
+import typingsSlinky.formik.formikStrings.no
 import typingsSlinky.formik.formikStrings.none
 import typingsSlinky.formik.formikStrings.numeric
 import typingsSlinky.formik.formikStrings.off
@@ -61,6 +62,7 @@ import typingsSlinky.formik.formikStrings.time
 import typingsSlinky.formik.formikStrings.tree
 import typingsSlinky.formik.formikStrings.url
 import typingsSlinky.formik.formikStrings.vertical
+import typingsSlinky.formik.formikStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -77,7 +79,7 @@ object Form {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.formik.mod.Form] {
+       with StBuildingComponent[tag.type, HTMLFormElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -205,6 +207,8 @@ object Form {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -256,6 +260,14 @@ object Form {
     def onAnimationStart(value: SyntheticAnimationEvent[HTMLFormElement] => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
     @scala.inline
     def onAnimationStartCapture(value: js.Any): this.type = set("onAnimationStartCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAuxClick(value: SyntheticMouseEvent[HTMLFormElement] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAuxClickCapture(value: js.Any): this.type = set("onAuxClickCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBeforeInputCapture(value: js.Any): this.type = set("onBeforeInputCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLFormElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
@@ -485,6 +497,8 @@ object Form {
     @scala.inline
     def onRateChangeCapture(value: js.Any): this.type = set("onRateChangeCapture", value.asInstanceOf[js.Any])
     @scala.inline
+    def onReset(value: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
     def onResetCapture(value: js.Any): this.type = set("onResetCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onScroll(value: SyntheticUIEvent[HTMLFormElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
@@ -506,6 +520,8 @@ object Form {
     def onStalled(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
     def onStalledCapture(value: js.Any): this.type = set("onStalledCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSubmit(value: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
     def onSubmitCapture(value: js.Any): this.type = set("onSubmitCapture", value.asInstanceOf[js.Any])
     @scala.inline
@@ -581,6 +597,8 @@ object Form {
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
+    def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
+    @scala.inline
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
@@ -588,7 +606,7 @@ object Form {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PickFormHTMLAttributesHTM): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PickDetailedHTMLPropsForm): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Rectangle () extends Element {
   def this(attributes: GenericAttributes[RectangleSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[RectangleSelectors], opt: Options) = this()
 }
 

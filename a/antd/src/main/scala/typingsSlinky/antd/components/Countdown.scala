@@ -1,8 +1,9 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.countdownMod.CountdownProps
 import typingsSlinky.antd.countdownMod.default
@@ -31,7 +32,7 @@ object Countdown {
     @scala.inline
     def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
     @scala.inline
-    def formatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): this.type = set("formatter", js.Any.fromFunction2(value))
+    def formatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => ReactElement): this.type = set("formatter", js.Any.fromFunction2(value))
     @scala.inline
     def formatter(value: Formatter): this.type = set("formatter", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,11 +40,15 @@ object Countdown {
     @scala.inline
     def onFinish(value: () => Unit): this.type = set("onFinish", js.Any.fromFunction0(value))
     @scala.inline
+    def onMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
     def precision(value: Double): this.type = set("precision", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def prefix(value: TagMod[Any]): this.type = set("prefix", value.asInstanceOf[js.Any])
+    def prefix(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,15 +56,15 @@ object Countdown {
     @scala.inline
     def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def suffix(value: TagMod[Any]): this.type = set("suffix", value.asInstanceOf[js.Any])
+    def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: countdownValueType): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
-    def valueRender(value: /* node */ TagMod[Any] => TagMod[Any]): this.type = set("valueRender", js.Any.fromFunction1(value))
+    def valueRender(value: /* node */ ReactElement => ReactElement): this.type = set("valueRender", js.Any.fromFunction1(value))
     @scala.inline
     def valueStyle(value: CSSProperties): this.type = set("valueStyle", value.asInstanceOf[js.Any])
   }

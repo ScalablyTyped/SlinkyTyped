@@ -36,6 +36,8 @@ object AutoComplete {
     @scala.inline
     def onKeyDown(value: () => Unit): this.type = set("onKeyDown", js.Any.fromFunction0(value))
     @scala.inline
+    def optionsVarargs(value: Id*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[Id]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def resultIdentifier(value: String): this.type = set("resultIdentifier", value.asInstanceOf[js.Any])
@@ -43,6 +45,8 @@ object AutoComplete {
     def search(value: String): this.type = set("search", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueParamsVarargs(value: String*): this.type = set("valueParams", js.Array(value :_*))
     @scala.inline
     def valueParams(value: js.Array[String]): this.type = set("valueParams", value.asInstanceOf[js.Any])
   }

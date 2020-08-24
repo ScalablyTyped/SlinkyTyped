@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ViewCompiler")
 @js.native
 class ViewCompiler protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ViewCompiler {
+  extends typingsSlinky.angularCompiler.compilerMod.ViewCompiler {
   def this(_reflector: typingsSlinky.angularCompiler.compileReflectorMod.CompileReflector) = this()
 }
 

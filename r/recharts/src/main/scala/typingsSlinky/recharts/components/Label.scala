@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -49,6 +48,12 @@ object Label {
     @scala.inline
     def baselineShift(value: String): this.type = set("baselineShift", value.asInstanceOf[js.Any])
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def clip(value: String): this.type = set("clip", value.asInstanceOf[js.Any])
@@ -69,7 +74,7 @@ object Label {
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction1(value: _ => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    def contentFunction1(value: _ => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     @scala.inline
     def content(value: ReactElement | ContentRenderer[_]): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
@@ -115,7 +120,7 @@ object Label {
       value: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit
     ): this.type = set("fontWeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def formatter(value: /* label */ String | Double => TagMod[Any]): this.type = set("formatter", js.Any.fromFunction1(value))
+    def formatter(value: /* label */ String | Double => ReactElement): this.type = set("formatter", js.Any.fromFunction1(value))
     @scala.inline
     def glyphOrientationVertical(value: String): this.type = set("glyphOrientationVertical", value.asInstanceOf[js.Any])
     @scala.inline

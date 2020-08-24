@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object formatDate extends js.Object {
   def apply(date: Double): Unit = js.native
+  def apply(date: Double, formatString: js.UndefOr[scala.Nothing], culture: String): Unit = js.native
   def apply(date: Double, formatString: String): Unit = js.native
   def apply(date: Double, formatString: String, culture: String): Unit = js.native
   /**
@@ -17,6 +18,7 @@ object formatDate extends js.Object {
     * @param culture Default culture is “en”.
     */
   def apply(date: js.Date): Unit = js.native
+  def apply(date: js.Date, formatString: js.UndefOr[scala.Nothing], culture: String): Unit = js.native
   def apply(date: js.Date, formatString: String): Unit = js.native
   def apply(date: js.Date, formatString: String, culture: String): Unit = js.native
 }

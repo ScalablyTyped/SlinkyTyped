@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -42,6 +43,8 @@ object TouchableHighlight {
       extends AnyVal
          with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableHighlight] {
       @scala.inline
+      def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+      @scala.inline
       def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
       @scala.inline
       def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -60,6 +63,8 @@ object TouchableHighlight {
       @scala.inline
       def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
       @scala.inline
+      def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+      @scala.inline
       def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
       @scala.inline
       def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -77,6 +82,8 @@ object TouchableHighlight {
       def delayPressOut(value: Double): this.type = set("delayPressOut", value.asInstanceOf[js.Any])
       @scala.inline
       def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+      @scala.inline
+      def disabledNull: this.type = set("disabled", null)
       @scala.inline
       def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
       @scala.inline
@@ -118,9 +125,13 @@ object TouchableHighlight {
       @scala.inline
       def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
       @scala.inline
+      def touchSoundDisabled(value: Boolean): this.type = set("touchSoundDisabled", value.asInstanceOf[js.Any])
+      @scala.inline
+      def touchSoundDisabledNull: this.type = set("touchSoundDisabled", null)
+      @scala.inline
       def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
       @scala.inline
-      def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
+      def underlayColor(value: ColorValue): this.type = set("underlayColor", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.reactNative.mod.TouchableHighlightProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

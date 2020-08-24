@@ -5,21 +5,20 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.jss.mod.Jss
 import typingsSlinky.jss.mod.Rule
 import typingsSlinky.jss.mod.StyleSheet
-import typingsSlinky.materialUiStyles.stylesProviderMod.default
 import typingsSlinky.materialUiStyles.stylesProviderStylesProviderMod.StylesProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StylesProvider {
-  @JSImport("@material-ui/styles/StylesProvider", JSImport.Default)
+  @JSImport("@material-ui/styles", "StylesProvider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def disableGeneration(value: Boolean): this.type = set("disableGeneration", value.asInstanceOf[js.Any])
     @scala.inline

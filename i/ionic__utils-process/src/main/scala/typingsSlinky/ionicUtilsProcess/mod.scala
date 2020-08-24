@@ -2,7 +2,7 @@ package typingsSlinky.ionicUtilsProcess
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ionicUtilsProcess.anon.Interval
-import typingsSlinky.node.NodeJS.ProcessEnv
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

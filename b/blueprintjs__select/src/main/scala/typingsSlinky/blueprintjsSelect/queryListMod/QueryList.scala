@@ -39,7 +39,22 @@ class QueryList[T] protected ()
   var handleKeyUp: js.Any = js.native
   var handlePaste: js.Any = js.native
   var isCreateItemRendered: js.Any = js.native
-  var itemsParentRef: js.UndefOr[js.Any] = js.native
+  /**
+    * Flag which is set to true while in between an ENTER "keydown" event and its
+    * corresponding "keyup" event.
+    *
+    * When entering text via an IME (https://en.wikipedia.org/wiki/Input_method),
+    * the ENTER key is pressed to confirm the character(s) to be input from a list
+    * of options. The operating system intercepts the ENTER "keydown" event and
+    * prevents it from propagating to the application, but "keyup" is still
+    * fired, triggering a spurious event which this component does not expect.
+    *
+    * To work around this quirk, we keep track of "real" key presses by setting
+    * this flag in handleKeyDown.
+    */
+  var isEnterKeyPressed: js.Any = js.native
+  var itemsParentRef: js.Any = js.native
+  var maybeResetQuery: js.Any = js.native
   var refHandlers: js.Any = js.native
   var renderCreateItemMenuItem: js.Any = js.native
   /** wrapper around `itemRenderer` to inject props */
@@ -60,6 +75,11 @@ class QueryList[T] protected ()
   def setActiveItem(activeItem: T): Unit = js.native
   def setActiveItem(activeItem: ICreateNewItem): Unit = js.native
   def setQuery(query: String): Unit = js.native
+  def setQuery(
+    query: String,
+    resetActiveItem: js.UndefOr[scala.Nothing],
+    props: IQueryListProps[T] with ReadonlychildrenReactNode
+  ): Unit = js.native
   def setQuery(query: String, resetActiveItem: Boolean): Unit = js.native
   def setQuery(query: String, resetActiveItem: Boolean, props: IQueryListProps[T] with ReadonlychildrenReactNode): Unit = js.native
 }

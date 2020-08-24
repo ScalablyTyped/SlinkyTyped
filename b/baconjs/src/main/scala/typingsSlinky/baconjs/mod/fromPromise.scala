@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object fromPromise extends js.Object {
   def apply[V](promise: js.Promise[V]): typingsSlinky.baconjs.observableMod.EventStream[V] = js.native
+  def apply[V](promise: js.Promise[V], abort: js.UndefOr[scala.Nothing], eventTransformer: EventTransformer[V]): typingsSlinky.baconjs.observableMod.EventStream[V] = js.native
   def apply[V](promise: js.Promise[V], abort: Boolean): typingsSlinky.baconjs.observableMod.EventStream[V] = js.native
   def apply[V](promise: js.Promise[V], abort: Boolean, eventTransformer: EventTransformer[V]): typingsSlinky.baconjs.observableMod.EventStream[V] = js.native
 }

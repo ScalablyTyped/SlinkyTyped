@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -39,7 +38,7 @@ object Legend {
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction1(value: LegendProps => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    def contentFunction1(value: LegendProps => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     @scala.inline
     def content(value: ReactElement | ContentRenderer[LegendProps]): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,6 +65,8 @@ object Legend {
     def onMouseEnter(value: /* repeated */ js.Any => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseLeave(value: /* repeated */ js.Any => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def payloadVarargs(value: LegendPayload*): this.type = set("payload", js.Array(value :_*))
     @scala.inline
     def payload(value: js.Array[LegendPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
     @scala.inline

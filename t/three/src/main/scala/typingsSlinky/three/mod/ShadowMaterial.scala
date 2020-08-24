@@ -1,6 +1,6 @@
 package typingsSlinky.three.mod
 
-import typingsSlinky.three.shaderMaterialMod.ShaderMaterialParameters
+import typingsSlinky.three.shadowMaterialMod.ShadowMaterialParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class ShadowMaterial ()
   extends typingsSlinky.three.materialsMod.ShadowMaterial {
-  def this(parameters: ShaderMaterialParameters) = this()
+  def this(parameters: ShadowMaterialParameters) = this()
 }
 

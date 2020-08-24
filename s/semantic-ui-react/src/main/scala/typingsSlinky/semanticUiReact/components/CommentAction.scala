@@ -4,21 +4,20 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.commentActionMod.CommentActionProps
-import typingsSlinky.semanticUiReact.commentActionMod.default
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CommentAction {
-  @JSImport("semantic-ui-react/dist/commonjs/views/Comment/CommentAction", JSImport.Default)
+  @JSImport("semantic-ui-react", "CommentAction")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.CommentAction] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline

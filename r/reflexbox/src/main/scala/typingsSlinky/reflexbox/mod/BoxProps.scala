@@ -1,15 +1,7 @@
 package typingsSlinky.reflexbox.mod
 
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.csstype.mod.FlexBasisProperty
-import typingsSlinky.csstype.mod.FlexProperty
-import typingsSlinky.csstype.mod.HeightProperty
-import typingsSlinky.csstype.mod.MaxHeightProperty
-import typingsSlinky.csstype.mod.MaxWidthProperty
-import typingsSlinky.csstype.mod.MinHeightProperty
-import typingsSlinky.csstype.mod.MinWidthProperty
-import typingsSlinky.csstype.mod.VerticalAlignProperty
-import typingsSlinky.csstype.mod.WidthProperty
 import typingsSlinky.reflexbox.reflexboxStrings.colors
 import typingsSlinky.reflexbox.reflexboxStrings.fontSizes
 import typingsSlinky.reflexbox.reflexboxStrings.fontWeights
@@ -47,7 +39,6 @@ import typingsSlinky.styledSystem.mod.OverflowProps
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.SizeProps
 import typingsSlinky.styledSystem.mod.SpaceProps
-import typingsSlinky.styledSystem.mod.TLengthStyledSystem
 import typingsSlinky.styledSystem.mod.TextAlignProps
 import typingsSlinky.styledSystem.mod.TextColorProps
 import typingsSlinky.styledSystem.mod.ThemeValue
@@ -57,17 +48,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BoxProps
   extends SpaceProps[RequiredTheme, ThemeValue[space, RequiredTheme, js.Any]]
-     with WidthProps[RequiredTheme, WidthProperty[TLengthStyledSystem]]
-     with HeightProps[RequiredTheme, HeightProperty[TLengthStyledSystem]]
-     with MinWidthProps[RequiredTheme, MinWidthProperty[TLengthStyledSystem]]
-     with MinHeightProps[RequiredTheme, MinHeightProperty[TLengthStyledSystem]]
-     with MaxWidthProps[RequiredTheme, MaxWidthProperty[TLengthStyledSystem]]
-     with MaxHeightProps[RequiredTheme, MaxHeightProperty[TLengthStyledSystem]]
+     with WidthProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ js.Any
+    ]
+     with HeightProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
+    ]
+     with MinWidthProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any
+    ]
+     with MinHeightProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any
+    ]
+     with MaxWidthProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any
+    ]
+     with MaxHeightProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any
+    ]
      with DisplayProps[RequiredTheme]
-     with VerticalAlignProps[RequiredTheme, VerticalAlignProperty[TLengthStyledSystem]]
-     with SizeProps[RequiredTheme, HeightProperty[TLengthStyledSystem]]
+     with VerticalAlignProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any
+    ]
+     with SizeProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
+    ]
      with OverflowProps[RequiredTheme]
      with FontFamilyProps[RequiredTheme]
      with FontSizeProps[RequiredTheme, ThemeValue[fontSizes, RequiredTheme, js.Any]]
@@ -85,13 +101,48 @@ trait BoxProps
      with JustifyContentProps[RequiredTheme]
      with FlexWrapProps[RequiredTheme]
      with FlexDirectionProps[RequiredTheme]
-     with FlexProps[RequiredTheme, FlexProperty[TLengthStyledSystem]]
+     with FlexProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ js.Any
+    ]
      with FlexGrowProps[RequiredTheme]
      with FlexShrinkProps[RequiredTheme]
-     with FlexBasisProps[RequiredTheme, FlexBasisProperty[TLengthStyledSystem]]
+     with FlexBasisProps[
+      RequiredTheme, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexBasisProperty<TLengthStyledSystem> */ js.Any
+    ]
      with JustifySelfProps[RequiredTheme]
      with AlignSelfProps[RequiredTheme]
      with OrderProps[RequiredTheme] {
-  var as: js.UndefOr[ReactElement] = js.undefined
+  var as: js.UndefOr[ReactElement] = js.native
+}
+
+object BoxProps {
+  @scala.inline
+  def apply(): BoxProps = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[BoxProps]
+  }
+  @scala.inline
+  implicit class BoxPropsOps[Self <: BoxProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAsFunctionComponent(value: ReactComponentClass[_]): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAsComponentClass(value: ReactComponentClass[_]): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAs(value: ReactElement): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+  }
+  
 }
 

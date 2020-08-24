@@ -48,6 +48,8 @@ object Curve {
     @scala.inline
     def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
     @scala.inline
+    def baseLineVarargs(value: js.Any*): this.type = set("baseLine", js.Array(value :_*))
+    @scala.inline
     def baseLine(value: Double | js.Array[_]): this.type = set("baseLine", value.asInstanceOf[js.Any])
     @scala.inline
     def baselineShift(value: String): this.type = set("baselineShift", value.asInstanceOf[js.Any])
@@ -175,6 +177,8 @@ object Curve {
     def pathRefNull: this.type = set("pathRef", null)
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointsVarargs(value: js.Object*): this.type = set("points", js.Array(value :_*))
     @scala.inline
     def points(value: js.Array[js.Object]): this.type = set("points", value.asInstanceOf[js.Any])
     @scala.inline

@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 class DoubleLink ()
   extends typingsSlinky.jointjs.mod.dia.Link {
   def this(attributes: GenericAttributes[DoubleLinkSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[DoubleLinkSelectors], opt: Options) = this()
 }
 

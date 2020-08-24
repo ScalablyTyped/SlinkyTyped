@@ -1,7 +1,6 @@
 package typingsSlinky.fundamentalReact.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
@@ -13,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ComboboxInput {
-  @JSImport("fundamental-react/lib/ComboboxInput/ComboboxInput", JSImport.Default)
+  @JSImport("fundamental-react", "ComboboxInput")
   @js.native
   object component extends js.Object
   
@@ -32,7 +31,7 @@ object ComboboxInput {
     @scala.inline
     def inputProps(value: js.Object): this.type = set("inputProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def list(value: TagMod[Any]): this.type = set("list", value.asInstanceOf[js.Any])
+    def list(value: ReactElement): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: /* event */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline

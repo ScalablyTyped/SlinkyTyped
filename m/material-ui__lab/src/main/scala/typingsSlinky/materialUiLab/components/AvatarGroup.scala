@@ -77,7 +77,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AvatarGroup {
-  @JSImport("@material-ui/lab/AvatarGroup/AvatarGroup", JSImport.Default)
+  @JSImport("@material-ui/lab", "AvatarGroup")
   @js.native
   object component extends js.Object
   
@@ -207,6 +207,8 @@ object AvatarGroup {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

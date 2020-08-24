@@ -3,8 +3,8 @@ package typingsSlinky.graphql
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.definitionMod.GraphQLEnumType
 import typingsSlinky.graphql.definitionMod.GraphQLField
+import typingsSlinky.graphql.definitionMod.GraphQLNamedType
 import typingsSlinky.graphql.definitionMod.GraphQLObjectType
-import typingsSlinky.graphql.definitionMod.GraphQLType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,26 +13,26 @@ import scala.scalajs.js.annotation._
 @js.native
 object introspectionMod extends js.Object {
   @JSName("__Directive")
-  val Directive: GraphQLObjectType[js.Any, js.Any, StringDictionary[js.Any]] = js.native
+  val Directive: GraphQLObjectType[js.Any, js.Any] = js.native
   @JSName("__DirectiveLocation")
   val DirectiveLocation: GraphQLEnumType = js.native
   @JSName("__EnumValue")
-  val EnumValue: GraphQLObjectType[js.Any, js.Any, StringDictionary[js.Any]] = js.native
+  val EnumValue: GraphQLObjectType[js.Any, js.Any] = js.native
   @JSName("__Field")
-  val Field: GraphQLObjectType[js.Any, js.Any, StringDictionary[js.Any]] = js.native
+  val Field: GraphQLObjectType[js.Any, js.Any] = js.native
   @JSName("__InputValue")
-  val InputValue: GraphQLObjectType[js.Any, js.Any, StringDictionary[js.Any]] = js.native
+  val InputValue: GraphQLObjectType[js.Any, js.Any] = js.native
   @JSName("__Schema")
-  val Schema: GraphQLObjectType[js.Any, js.Any, StringDictionary[js.Any]] = js.native
+  val Schema: GraphQLObjectType[js.Any, js.Any] = js.native
   val SchemaMetaFieldDef: GraphQLField[js.Any, js.Any, StringDictionary[js.Any]] = js.native
   @JSName("__Type")
-  val Type: GraphQLObjectType[js.Any, js.Any, StringDictionary[js.Any]] = js.native
+  val Type: GraphQLObjectType[js.Any, js.Any] = js.native
   val TypeMetaFieldDef: GraphQLField[js.Any, js.Any, StringDictionary[js.Any]] = js.native
   val TypeNameMetaFieldDef: GraphQLField[js.Any, js.Any, StringDictionary[js.Any]] = js.native
   @JSName("__TypeKind")
   val _TypeKind: GraphQLEnumType = js.native
-  val introspectionTypes: js.Array[GraphQLType] = js.native
-  def isIntrospectionType(`type`: js.Any): Boolean = js.native
+  val introspectionTypes: js.Array[GraphQLNamedType] = js.native
+  def isIntrospectionType(`type`: GraphQLNamedType): Boolean = js.native
   @js.native
   object TypeKind extends js.Object {
     var ENUM: typingsSlinky.graphql.graphqlStrings.ENUM = js.native

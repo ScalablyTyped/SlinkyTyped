@@ -4,6 +4,7 @@ import typingsSlinky.mosca.moscaStrings.clientConnected
 import typingsSlinky.mosca.moscaStrings.clientDisconnected
 import typingsSlinky.mosca.moscaStrings.clientDisconnecting
 import typingsSlinky.mosca.moscaStrings.published
+import typingsSlinky.mosca.moscaStrings.ready
 import typingsSlinky.mosca.moscaStrings.subscribed
 import typingsSlinky.mosca.moscaStrings.unsubscribed
 import scala.scalajs.js
@@ -60,6 +61,8 @@ class Server protected () extends js.Object {
   def on_clientDisconnecting(when: clientDisconnecting, callback: js.Function1[/* client */ Client, Unit]): Unit = js.native
   @JSName("on")
   def on_published(when: published, callback: js.Function2[/* packet */ Packet, /* client */ Client, Unit]): Unit = js.native
+  @JSName("on")
+  def on_ready(when: ready, callback: js.Function0[Unit]): Unit = js.native
   @JSName("on")
   def on_subscribed(when: subscribed, callback: js.Function2[/* topic */ String, /* client */ Client, Unit]): Unit = js.native
   @JSName("on")

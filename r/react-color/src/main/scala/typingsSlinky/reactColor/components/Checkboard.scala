@@ -3,20 +3,19 @@ package typingsSlinky.reactColor.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactColor.checkboardMod.CheckboardProps
-import typingsSlinky.reactColor.checkboardMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Checkboard {
-  @JSImport("react-color/lib/components/common/Checkboard", JSImport.Default)
+  @JSImport("react-color", "Checkboard")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactColor.mod.Checkboard] {
     @scala.inline
     def grey(value: String): this.type = set("grey", value.asInstanceOf[js.Any])
     @scala.inline

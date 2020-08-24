@@ -16,17 +16,18 @@ object Comparable {
     __obj.asInstanceOf[Comparable[T]]
   }
   @scala.inline
-  implicit class ComparableOps[Self[t] <: Comparable[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class ComparableOps[Self <: Comparable[_], T] (val x: Self with Comparable[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCompareTo(value: T => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setCompareTo(value: T => Double): Self = this.set("compareTo", js.Any.fromFunction1(value))
   }
   
 }

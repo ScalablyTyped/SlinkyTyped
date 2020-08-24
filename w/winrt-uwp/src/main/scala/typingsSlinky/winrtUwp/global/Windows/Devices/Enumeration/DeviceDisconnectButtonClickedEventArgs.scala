@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs")
 @js.native
 abstract class DeviceDisconnectButtonClickedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs {
-  /** The device that the user clicked the disconnect button for. */
-  /* CompleteClass */
-  override var device: typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceInformation = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs
 

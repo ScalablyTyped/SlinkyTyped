@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormLegend {
-  @JSImport("fundamental-react/lib/Forms/FormLegend", JSImport.Default)
+  @JSImport("fundamental-react", "FormLegend")
   @js.native
   object component extends js.Object
   

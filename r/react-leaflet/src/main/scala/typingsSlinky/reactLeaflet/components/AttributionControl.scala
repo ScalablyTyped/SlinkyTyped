@@ -2,8 +2,6 @@ package typingsSlinky.reactLeaflet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.leaflet.mod.Control_.Attribution
-import typingsSlinky.reactLeaflet.mod.AttributionControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +13,11 @@ object AttributionControl {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: AttributionControlProps, E <: Attribution] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.AttributionControl[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.AttributionControl[P, E]]
   
-  def apply[P <: AttributionControlProps, E <: Attribution](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: AttributionControlProps, E <: Attribution](companion: AttributionControl.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E](companion: AttributionControl.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
 }
 

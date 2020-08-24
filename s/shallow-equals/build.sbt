@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "shallow-equals"
-version := "1.0-dt-20180815Z-19258f"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20180815Z-3f1ecf"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

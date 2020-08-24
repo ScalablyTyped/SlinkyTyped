@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetEC2InstanceRecommendationsRequest extends js.Object {
   /**
-    * The AWS account IDs for which to return instance recommendations. Only one account ID can be specified per request.
+    * The IDs of the AWS accounts for which to return instance recommendations. If your account is the master account of an organization, use this parameter to specify the member accounts for which you want to return instance recommendations. Only one account ID can be specified per request.
     */
   var accountIds: js.UndefOr[AccountIds] = js.native
   /**
@@ -19,7 +19,7 @@ trait GetEC2InstanceRecommendationsRequest extends js.Object {
     */
   var instanceArns: js.UndefOr[InstanceArns] = js.native
   /**
-    * The maximum number of instance recommendations to return with a single call. To retrieve the remaining results, make another call with the returned NextToken value.
+    * The maximum number of instance recommendations to return with a single request. To retrieve the remaining results, make another request with the returned NextToken value.
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
   /**
@@ -30,20 +30,48 @@ trait GetEC2InstanceRecommendationsRequest extends js.Object {
 
 object GetEC2InstanceRecommendationsRequest {
   @scala.inline
-  def apply(
-    accountIds: AccountIds = null,
-    filters: Filters = null,
-    instanceArns: InstanceArns = null,
-    maxResults: js.UndefOr[MaxResults] = js.undefined,
-    nextToken: NextToken = null
-  ): GetEC2InstanceRecommendationsRequest = {
+  def apply(): GetEC2InstanceRecommendationsRequest = {
     val __obj = js.Dynamic.literal()
-    if (accountIds != null) __obj.updateDynamic("accountIds")(accountIds.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (instanceArns != null) __obj.updateDynamic("instanceArns")(instanceArns.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEC2InstanceRecommendationsRequest]
   }
+  @scala.inline
+  implicit class GetEC2InstanceRecommendationsRequestOps[Self <: GetEC2InstanceRecommendationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccountIdsVarargs(value: AccountId*): Self = this.set("accountIds", js.Array(value :_*))
+    @scala.inline
+    def setAccountIds(value: AccountIds): Self = this.set("accountIds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccountIds: Self = this.set("accountIds", js.undefined)
+    @scala.inline
+    def setFiltersVarargs(value: Filter*): Self = this.set("filters", js.Array(value :_*))
+    @scala.inline
+    def setFilters(value: Filters): Self = this.set("filters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilters: Self = this.set("filters", js.undefined)
+    @scala.inline
+    def setInstanceArnsVarargs(value: InstanceArn*): Self = this.set("instanceArns", js.Array(value :_*))
+    @scala.inline
+    def setInstanceArns(value: InstanceArns): Self = this.set("instanceArns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInstanceArns: Self = this.set("instanceArns", js.undefined)
+    @scala.inline
+    def setMaxResults(value: MaxResults): Self = this.set("maxResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxResults: Self = this.set("maxResults", js.undefined)
+    @scala.inline
+    def setNextToken(value: NextToken): Self = this.set("nextToken", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNextToken: Self = this.set("nextToken", js.undefined)
+  }
+  
 }
 

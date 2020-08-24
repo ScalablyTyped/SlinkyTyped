@@ -1,12 +1,10 @@
 package typingsSlinky.wordpressComponents.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.dropdownMod.Dropdown.Props
 import typingsSlinky.wordpressComponents.dropdownMod.Dropdown.RenderProps
-import typingsSlinky.wordpressComponents.mod.Dropdown.^
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.wordpressComponentsBooleans.`false`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.container
@@ -23,7 +21,7 @@ object Dropdown {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -35,7 +33,7 @@ object Dropdown {
     @scala.inline
     def headerTitleReactElement(value: ReactElement): this.type = set("headerTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def headerTitle(value: TagMod[Any]): this.type = set("headerTitle", value.asInstanceOf[js.Any])
+    def headerTitle(value: ReactElement): this.type = set("headerTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
   }

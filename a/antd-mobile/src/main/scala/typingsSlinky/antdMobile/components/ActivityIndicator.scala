@@ -3,7 +3,6 @@ package typingsSlinky.antdMobile.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.activityIndicatorMod.ActivityIndicatorProps
-import typingsSlinky.antdMobile.activityIndicatorMod.default
 import typingsSlinky.antdMobile.antdMobileStrings.large
 import typingsSlinky.antdMobile.antdMobileStrings.small
 import scala.scalajs.js
@@ -11,14 +10,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActivityIndicator {
-  @JSImport("antd-mobile/lib/activity-indicator", JSImport.Default)
+  @JSImport("antd-mobile", "ActivityIndicator")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.ActivityIndicator] {
     @scala.inline
     def animating(value: Boolean): this.type = set("animating", value.asInstanceOf[js.Any])
     @scala.inline

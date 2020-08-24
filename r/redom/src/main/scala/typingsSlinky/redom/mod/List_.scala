@@ -1,6 +1,7 @@
 package typingsSlinky.redom.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.SVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +11,10 @@ import scala.scalajs.js.annotation._
 class List_ protected () extends RedomComponent {
   def this(parent: RedomQuery, View: RedomComponentCreator) = this()
   def this(parent: RedomQuery, View: RedomComponentCreator, key: String) = this()
+  def this(parent: RedomQuery, View: RedomComponentCreator, key: js.UndefOr[scala.Nothing], initData: js.Any) = this()
   def this(parent: RedomQuery, View: RedomComponentCreator, key: String, initData: js.Any) = this()
-  /* CompleteClass */
-  override var el: HTMLElement = js.native
+  @JSName("el")
+  var el_List_ : HTMLElement | SVGElement = js.native
   @JSName("update")
   def update_MList_(data: js.Array[_]): Unit = js.native
   @JSName("update")
@@ -24,6 +26,12 @@ class List_ protected () extends RedomComponent {
 @js.native
 object List_ extends js.Object {
   def extend(parent: RedomQuery, View: RedomComponentConstructor): RedomComponentConstructor = js.native
+  def extend(
+    parent: RedomQuery,
+    View: RedomComponentConstructor,
+    key: js.UndefOr[scala.Nothing],
+    initData: js.Any
+  ): RedomComponentConstructor = js.native
   def extend(parent: RedomQuery, View: RedomComponentConstructor, key: String): RedomComponentConstructor = js.native
   def extend(parent: RedomQuery, View: RedomComponentConstructor, key: String, initData: js.Any): RedomComponentConstructor = js.native
 }

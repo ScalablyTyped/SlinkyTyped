@@ -3,7 +3,6 @@ package typingsSlinky.wordpressComponents.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.dateTimeMod.DateTimePicker.Props
-import typingsSlinky.wordpressComponents.mod.DateTimePicker.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object DateTimePicker {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def currentDate(value: String): this.type = set("currentDate", value.asInstanceOf[js.Any])
     @scala.inline

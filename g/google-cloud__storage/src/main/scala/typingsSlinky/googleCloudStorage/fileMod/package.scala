@@ -31,6 +31,15 @@ package object fileMod {
   type DownloadResponse = js.Array[typingsSlinky.node.Buffer]
   type FileExistsCallback = js.Function2[/* err */ js.Error | scala.Null, /* exists */ js.UndefOr[scala.Boolean], scala.Unit]
   type FileExistsResponse = js.Array[scala.Boolean]
+  type GenerateSignedPostPolicyV2Callback = typingsSlinky.googleCloudStorage.fileMod.GetSignedPolicyCallback
+  type GenerateSignedPostPolicyV2Options = typingsSlinky.googleCloudStorage.fileMod.GetSignedPolicyOptions
+  type GenerateSignedPostPolicyV2Response = typingsSlinky.googleCloudStorage.fileMod.GetSignedPolicyResponse
+  type GenerateSignedPostPolicyV4Callback = js.Function2[
+    /* err */ js.Error | scala.Null, 
+    /* output */ js.UndefOr[typingsSlinky.googleCloudStorage.fileMod.SignedPostPolicyV4Output], 
+    scala.Unit
+  ]
+  type GenerateSignedPostPolicyV4Response = js.Array[typingsSlinky.googleCloudStorage.fileMod.SignedPostPolicyV4Output]
   type GetExpirationDateCallback = js.Function3[
     /* err */ js.Error | scala.Null, 
     /* expirationDate */ js.UndefOr[js.Date | scala.Null], 
@@ -64,8 +73,6 @@ package object fileMod {
     scala.Unit
   ]
   type GetSignedPolicyResponse = js.Array[typingsSlinky.googleCloudStorage.fileMod.PolicyDocument]
-  type GetSignedUrlCallback = js.Function2[/* err */ js.Error | scala.Null, /* url */ js.UndefOr[java.lang.String], scala.Unit]
-  type GetSignedUrlResponse = js.Array[java.lang.String]
   type IsPublicCallback = js.Function2[/* err */ js.Error | scala.Null, /* resp */ js.UndefOr[scala.Boolean], scala.Unit]
   type IsPublicResponse = js.Array[scala.Boolean]
   type MakeFilePrivateCallback = typingsSlinky.googleCloudStorage.fileMod.SetFileMetadataCallback
@@ -83,11 +90,11 @@ package object fileMod {
     scala.Unit
   ]
   type MoveResponse = js.Array[typingsSlinky.googleCloudCommon.serviceObjectMod.Metadata]
+  type PolicyFields = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type RotateEncryptionKeyCallback = typingsSlinky.googleCloudStorage.fileMod.CopyCallback
   type RotateEncryptionKeyOptions = java.lang.String | typingsSlinky.node.Buffer | typingsSlinky.googleCloudStorage.fileMod.EncryptionKeyOptions
   type RotateEncryptionKeyResponse = typingsSlinky.googleCloudStorage.fileMod.CopyResponse
   type SaveCallback = js.Function1[/* err */ js.UndefOr[js.Error | scala.Null], scala.Unit]
-  type SaveOptions = typingsSlinky.googleCloudStorage.fileMod.CreateWriteStreamOptions
   type SetFileMetadataCallback = js.Function2[
     /* err */ js.UndefOr[js.Error | scala.Null], 
     /* apiResponse */ js.UndefOr[typingsSlinky.googleCloudCommon.serviceObjectMod.Metadata], 

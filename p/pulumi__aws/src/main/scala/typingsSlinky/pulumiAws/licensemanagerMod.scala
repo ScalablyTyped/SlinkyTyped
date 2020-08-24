@@ -52,8 +52,10 @@ object licensemanagerMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.associationMod.Association = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.associationMod.Association = js.native
     def get(name: String, id: Input[ID], state: AssociationState): typingsSlinky.pulumiAws.associationMod.Association = js.native
     def get(name: String, id: Input[ID], state: AssociationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.associationMod.Association = js.native
     /**
@@ -73,8 +75,10 @@ object licensemanagerMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.licenseConfigurationMod.LicenseConfiguration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.licenseConfigurationMod.LicenseConfiguration = js.native
     def get(name: String, id: Input[ID], state: LicenseConfigurationState): typingsSlinky.pulumiAws.licenseConfigurationMod.LicenseConfiguration = js.native
     def get(name: String, id: Input[ID], state: LicenseConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.licenseConfigurationMod.LicenseConfiguration = js.native
     /**

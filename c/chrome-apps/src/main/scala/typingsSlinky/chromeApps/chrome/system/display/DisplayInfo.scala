@@ -102,119 +102,54 @@ object DisplayInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAvailableDisplayZoomFactors(value: js.Array[double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableDisplayZoomFactors")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBounds(value: Bounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAvailableDisplayZoomFactorsVarargs(value: double*): Self = this.set("availableDisplayZoomFactors", js.Array(value :_*))
     @scala.inline
-    def withDisplayZoomFactor(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayZoomFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAvailableDisplayZoomFactors(value: js.Array[double]): Self = this.set("availableDisplayZoomFactors", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDpiX(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dpiX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBounds(value: Bounds): Self = this.set("bounds", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDpiY(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dpiY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplayZoomFactor(value: double): Self = this.set("displayZoomFactor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHasTouchSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTouchSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDpiX(value: integer): Self = this.set("dpiX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDpiY(value: integer): Self = this.set("dpiY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHasTouchSupport(value: Boolean): Self = this.set("hasTouchSupport", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsInternal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInternal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsEnabled(value: Boolean): Self = this.set("isEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMirroringDestinationIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringDestinationIds")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsInternal(value: Boolean): Self = this.set("isInternal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMirroringSourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsPrimary(value: Boolean): Self = this.set("isPrimary", value.asInstanceOf[js.Any])
     @scala.inline
-    def withModes(value: js.Array[DisplayMode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMirroringDestinationIdsVarargs(value: String*): Self = this.set("mirroringDestinationIds", js.Array(value :_*))
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMirroringDestinationIds(value: js.Array[String]): Self = this.set("mirroringDestinationIds", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOverscan(value: Insets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMirroringSourceId(value: String): Self = this.set("mirroringSourceId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRotation(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setModesVarargs(value: DisplayMode*): Self = this.set("modes", js.Array(value :_*))
     @scala.inline
-    def withWorkArea(value: Bounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workArea")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setModes(value: js.Array[DisplayMode]): Self = this.set("modes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEdid(value: ManufacturerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEdid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edid")(js.undefined)
-        ret
-    }
+    def setOverscan(value: Insets): Self = this.set("overscan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRotation(value: integer): Self = this.set("rotation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWorkArea(value: Bounds): Self = this.set("workArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEdid(value: ManufacturerId): Self = this.set("edid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEdid: Self = this.set("edid", js.undefined)
   }
   
 }

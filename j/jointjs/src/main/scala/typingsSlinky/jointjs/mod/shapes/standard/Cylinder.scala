@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Cylinder () extends Element {
   def this(attributes: GenericAttributes[CylinderSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[CylinderSelectors], opt: Options) = this()
   def topRy(): String | Double = js.native
   def topRy(t: String): this.type = js.native

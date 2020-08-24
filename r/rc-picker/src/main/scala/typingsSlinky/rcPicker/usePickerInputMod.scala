@@ -8,11 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-picker/lib/hooks/usePickerInput", JSImport.Namespace)
+@JSImport("rc-picker/es/hooks/usePickerInput", JSImport.Namespace)
 @js.native
 object usePickerInputMod extends js.Object {
   def default(
-    hasOpenIsClickOutsideTriggerOpenForwardKeyDownBlurToCancelOnSubmitOnCancelOnFocusOnBlur: BlurToCancel
+    hasOpenValueIsClickOutsideTriggerOpenForwardKeyDownBlurToCancelOnSubmitOnCancelOnFocusOnBlur: BlurToCancel
   ): js.Tuple2[DOMAttributes[HTMLInputElement], Focused] = js.native
 }
 

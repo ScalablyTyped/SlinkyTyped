@@ -68,8 +68,10 @@ object appautoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.policyMod.Policy = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.policyMod.Policy = js.native
     def get(name: String, id: Input[ID], state: PolicyState): typingsSlinky.pulumiAws.policyMod.Policy = js.native
     def get(name: String, id: Input[ID], state: PolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.policyMod.Policy = js.native
     /**
@@ -89,8 +91,10 @@ object appautoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.scheduledActionMod.ScheduledAction = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.scheduledActionMod.ScheduledAction = js.native
     def get(name: String, id: Input[ID], state: ScheduledActionState): typingsSlinky.pulumiAws.scheduledActionMod.ScheduledAction = js.native
     def get(name: String, id: Input[ID], state: ScheduledActionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.scheduledActionMod.ScheduledAction = js.native
     /**
@@ -110,8 +114,10 @@ object appautoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.targetMod.Target = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.targetMod.Target = js.native
     def get(name: String, id: Input[ID], state: TargetState): typingsSlinky.pulumiAws.targetMod.Target = js.native
     def get(name: String, id: Input[ID], state: TargetState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.targetMod.Target = js.native
     /**

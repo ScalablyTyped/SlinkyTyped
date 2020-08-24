@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("sip.js", "NameAddrHeader")
 @js.native
 class NameAddrHeader protected ()
-  extends typingsSlinky.sipJs.coreMod.NameAddrHeader {
+  extends typingsSlinky.sipJs.grammarMod.NameAddrHeader {
   /**
     * Constructor
     * @param uri -

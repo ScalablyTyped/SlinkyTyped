@@ -1,5 +1,6 @@
 package typingsSlinky.reactStickynode.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactStickynode.mod.Props
@@ -23,9 +24,17 @@ object ReactStickynode {
     @scala.inline
     def bottomBoundary(value: Double | String): this.type = set("bottomBoundary", value.asInstanceOf[js.Any])
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* status */ Status => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: ReactElement | (js.Function1[/* status */ Status, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def enableTransforms(value: Boolean): this.type = set("enableTransforms", value.asInstanceOf[js.Any])
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerClass(value: String): this.type = set("innerClass", value.asInstanceOf[js.Any])
     @scala.inline
     def innerZ(value: Double | String): this.type = set("innerZ", value.asInstanceOf[js.Any])
     @scala.inline

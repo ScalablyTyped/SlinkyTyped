@@ -29,6 +29,7 @@ class ElementView_ () extends CellViewGeneric[Element] {
   def setInteractivity(value: Boolean): Unit = js.native
   def setInteractivity(value: InteractivityOptions): Unit = js.native
   def update(): Unit = js.native
+  def update(element: js.UndefOr[scala.Nothing], renderingOnlyAttrs: StringDictionary[js.Any]): Unit = js.native
   def update(element: Element): Unit = js.native
   def update(element: Element, renderingOnlyAttrs: StringDictionary[js.Any]): Unit = js.native
 }

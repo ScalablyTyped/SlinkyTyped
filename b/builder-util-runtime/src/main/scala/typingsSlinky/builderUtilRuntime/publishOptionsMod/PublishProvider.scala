@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces
   - typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.generic
   - typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.custom
+  - typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.snapStore
 */
 trait PublishProvider extends js.Object
 
@@ -25,6 +26,8 @@ object PublishProvider {
   def github: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.github = "github".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.github]
   @scala.inline
   def s3: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.s3 = "s3".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.s3]
+  @scala.inline
+  def snapStore: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.snapStore = "snapStore".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.snapStore]
   @scala.inline
   def spaces: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces = "spaces".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces]
 }

@@ -275,6 +275,12 @@ trait AppointmentCompose extends Item {
     attachmentName: String,
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
+  def addFileAttachmentAsync(
+    uri: String,
+    attachmentName: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
+  ): Unit = js.native
   def addFileAttachmentAsync(uri: String, attachmentName: String, options: AsyncContextOptionsisInli): Unit = js.native
   def addFileAttachmentAsync(
     uri: String,
@@ -327,6 +333,12 @@ trait AppointmentCompose extends Item {
     attachmentName: String,
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
+  def addFileAttachmentFromBase64Async(
+    base64File: String,
+    attachmentName: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
+  ): Unit = js.native
   def addFileAttachmentFromBase64Async(base64File: String, attachmentName: String, options: AsyncContextOptionsisInli): Unit = js.native
   def addFileAttachmentFromBase64Async(
     base64File: String,
@@ -340,6 +352,12 @@ trait AppointmentCompose extends Item {
     handler: js.Any,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  def addHandlerAsync(
+    eventType: String,
+    handler: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def addHandlerAsync(eventType: String, handler: js.Any, options: AsyncContextOptions): Unit = js.native
   def addHandlerAsync(
     eventType: String,
@@ -350,7 +368,7 @@ trait AppointmentCompose extends Item {
   /**
     * Adds an event handler for a supported event. **Note**: Events are available only with task pane.
     * 
-    * To see which event types are supported, see `Office.EventType` for details.
+    * Refer to the Item object model {@link https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/office.context.mailbox.item#events | events section} for supported events.
     * 
     * [Api set: Mailbox 1.7]
     *
@@ -372,6 +390,12 @@ trait AppointmentCompose extends Item {
   def addHandlerAsync(
     eventType: EventType,
     handler: js.Any,
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
+  def addHandlerAsync(
+    eventType: EventType,
+    handler: js.Any,
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
   def addHandlerAsync(eventType: EventType, handler: js.Any, options: AsyncContextOptions): Unit = js.native
@@ -420,6 +444,12 @@ trait AppointmentCompose extends Item {
   def addItemAttachmentAsync(
     itemId: js.Any,
     attachmentName: String,
+    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
+  ): Unit = js.native
+  def addItemAttachmentAsync(
+    itemId: js.Any,
+    attachmentName: String,
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
   def addItemAttachmentAsync(itemId: js.Any, attachmentName: String, options: AsyncContextOptions): Unit = js.native
@@ -485,6 +515,11 @@ trait AppointmentCompose extends Item {
     attachmentId: String,
     callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
   ): Unit = js.native
+  def getAttachmentContentAsync(
+    attachmentId: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
+  ): Unit = js.native
   def getAttachmentContentAsync(attachmentId: String, options: AsyncContextOptions): Unit = js.native
   def getAttachmentContentAsync(
     attachmentId: String,
@@ -510,6 +545,10 @@ trait AppointmentCompose extends Item {
     */
   def getAttachmentsAsync(): Unit = js.native
   def getAttachmentsAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]): Unit = js.native
+  def getAttachmentsAsync(
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]
+  ): Unit = js.native
   def getAttachmentsAsync(options: AsyncContextOptions): Unit = js.native
   def getAttachmentsAsync(
     options: AsyncContextOptions,
@@ -726,6 +765,11 @@ trait AppointmentCompose extends Item {
     */
   def removeAttachmentAsync(attachmentId: String): Unit = js.native
   def removeAttachmentAsync(attachmentId: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  def removeAttachmentAsync(
+    attachmentId: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def removeAttachmentAsync(attachmentId: String, options: AsyncContextOptions): Unit = js.native
   def removeAttachmentAsync(
     attachmentId: String,
@@ -734,6 +778,11 @@ trait AppointmentCompose extends Item {
   ): Unit = js.native
   def removeHandlerAsync(eventType: String): Unit = js.native
   def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  def removeHandlerAsync(
+    eventType: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def removeHandlerAsync(eventType: String, options: AsyncContextOptions): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
@@ -743,7 +792,7 @@ trait AppointmentCompose extends Item {
   /**
     * Removes the event handlers for a supported event type. **Note**: Events are available only with task pane.
     * 
-    * To see which event types are supported, see `Office.EventType` for details.
+    * Refer to the Item object model {@link https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/office.context.mailbox.item#events | events section} for supported events.
     * 
     * [Api set: Mailbox 1.7]
     *
@@ -761,6 +810,11 @@ trait AppointmentCompose extends Item {
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
   def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  def removeHandlerAsync(
+    eventType: EventType,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def removeHandlerAsync(eventType: EventType, options: AsyncContextOptions): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
@@ -781,13 +835,9 @@ trait AppointmentCompose extends Item {
     * when Outlook is in cached mode, it may take some time before the item is actually synced to the server. 
     * Until the item is synced, using the item ID will return an error.
     *
-    * **Note**: The following clients have different behavior for `saveAsync` on appointments in compose mode:
-    *
-    * - In Outlook on Mac, only build 16.35.308 or later supports saving a meeting.
+    * **Note**: In Outlook on Mac, only build 16.35.308 or later supports saving a meeting.
     * Otherwise, the `saveAsync` method fails when called from a meeting in compose mode.
     * For a workaround, see {@link https://support.microsoft.com/help/4505745 | Cannot save a meeting as a draft in Outlook for Mac by using Office JS API}.
-    *
-    * - Outlook on the web always sends an invitation or update when `saveAsync` is called on an appointment in compose mode.
     *
     * [Api set: Mailbox 1.3]
     *
@@ -820,13 +870,9 @@ trait AppointmentCompose extends Item {
     * that when Outlook is in cached mode, it may take some time before the item is actually synced to the server. 
     * Until the item is synced, using the item ID will return an error.
     *
-    * **Note**: The following clients have different behavior for `saveAsync` on appointments in compose mode:
-    *
-    * - In Outlook on Mac, only build 16.35.308 or later supports saving a meeting.
+    * **Note**: In Outlook on Mac, only build 16.35.308 or later supports saving a meeting.
     * Otherwise, the `saveAsync` method fails when called from a meeting in compose mode.
     * For a workaround, see {@link https://support.microsoft.com/help/4505745 | Cannot save a meeting as a draft in Outlook for Mac by using Office JS API}.
-    *
-    * - Outlook on the web always sends an invitation or update when `saveAsync` is called on an appointment in compose mode.
     *
     * [Api set: Mailbox 1.3]
     *
@@ -885,6 +931,11 @@ trait AppointmentCompose extends Item {
   def setSelectedDataAsync(
     data: String,
     options: AsyncContextOptions with CoercionTypeOptions,
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
+  def setSelectedDataAsync(
+    data: String,
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }

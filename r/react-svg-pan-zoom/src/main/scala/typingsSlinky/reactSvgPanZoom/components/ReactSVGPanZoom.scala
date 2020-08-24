@@ -54,6 +54,8 @@ object ReactSVGPanZoom {
     @scala.inline
     def miniatureProps(value: Background): this.type = set("miniatureProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def modifierKeysVarargs(value: String*): this.type = set("modifierKeys", js.Array(value :_*))
+    @scala.inline
     def modifierKeys(value: js.Array[String]): this.type = set("modifierKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: /* event */ ViewerMouseEvent[_] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))

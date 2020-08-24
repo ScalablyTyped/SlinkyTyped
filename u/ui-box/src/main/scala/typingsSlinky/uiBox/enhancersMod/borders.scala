@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ui-box/dist/enhancers", "borders")
+@JSImport("ui-box/dist/src/enhancers", "borders")
 @js.native
 object borders extends js.Object {
   val propEnhancers: PropEnhancers = js.native

@@ -63,6 +63,8 @@ object Ellipse {
     @scala.inline
     def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
     @scala.inline
+    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
+    @scala.inline
     def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
     @scala.inline
     def strokeDashoffset(value: NumberProp): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])

@@ -23,17 +23,14 @@ object Scale_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSx(value: Double): Self = this.set("sx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSy(value: Double): Self = this.set("sy", value.asInstanceOf[js.Any])
   }
   
 }

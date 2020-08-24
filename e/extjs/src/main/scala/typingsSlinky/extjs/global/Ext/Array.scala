@@ -26,6 +26,7 @@ object Array extends js.Object {
     * @returns Boolean True if the array contains the item, false otherwise
     */
   def contains(): Boolean = js.native
+  def contains(array: js.UndefOr[scala.Nothing], item: js.Any): Boolean = js.native
   def contains(array: typingsSlinky.extjs.Ext.Array): Boolean = js.native
   def contains(array: typingsSlinky.extjs.Ext.Array, item: js.Any): Boolean = js.native
   /** [Method] Perform a set difference A B by subtracting all items in array B from array A
@@ -34,6 +35,7 @@ object Array extends js.Object {
     * @returns Array difference
     */
   def difference(): typingsSlinky.extjs.Ext.Array = js.native
+  def difference(arrayA: js.UndefOr[scala.Nothing], arrayB: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def difference(arrayA: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def difference(arrayA: typingsSlinky.extjs.Ext.Array, arrayB: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Iterates an array or an iterable value and invoke the given callback function for each item
@@ -44,8 +46,39 @@ object Array extends js.Object {
     * @returns Boolean See description for the fn parameter.
     */
   def each(): Boolean = js.native
+  def each(
+    iterable: js.UndefOr[scala.Nothing],
+    fn: js.UndefOr[scala.Nothing],
+    scope: js.UndefOr[scala.Nothing],
+    reverse: Boolean
+  ): Boolean = js.native
+  def each(iterable: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): Boolean = js.native
+  def each(
+    iterable: js.UndefOr[scala.Nothing],
+    fn: js.UndefOr[scala.Nothing],
+    scope: js.Any,
+    reverse: Boolean
+  ): Boolean = js.native
+  def each(iterable: js.UndefOr[scala.Nothing], fn: js.Any): Boolean = js.native
+  def each(
+    iterable: js.UndefOr[scala.Nothing],
+    fn: js.Any,
+    scope: js.UndefOr[scala.Nothing],
+    reverse: Boolean
+  ): Boolean = js.native
+  def each(iterable: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): Boolean = js.native
+  def each(iterable: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any, reverse: Boolean): Boolean = js.native
   def each(iterable: js.Any): Boolean = js.native
+  def each(
+    iterable: js.Any,
+    fn: js.UndefOr[scala.Nothing],
+    scope: js.UndefOr[scala.Nothing],
+    reverse: Boolean
+  ): Boolean = js.native
+  def each(iterable: js.Any, fn: js.UndefOr[scala.Nothing], scope: js.Any): Boolean = js.native
+  def each(iterable: js.Any, fn: js.UndefOr[scala.Nothing], scope: js.Any, reverse: Boolean): Boolean = js.native
   def each(iterable: js.Any, fn: js.Any): Boolean = js.native
+  def each(iterable: js.Any, fn: js.Any, scope: js.UndefOr[scala.Nothing], reverse: Boolean): Boolean = js.native
   def each(iterable: js.Any, fn: js.Any, scope: js.Any): Boolean = js.native
   def each(iterable: js.Any, fn: js.Any, scope: js.Any, reverse: Boolean): Boolean = js.native
   /** [Method] Shallow compares the contents of 2 arrays using strict equality
@@ -54,6 +87,7 @@ object Array extends js.Object {
     * @returns Boolean true if the arrays are equal.
     */
   def equals(): Boolean = js.native
+  def equals(array1: js.UndefOr[scala.Nothing], array2: typingsSlinky.extjs.Ext.Array): Boolean = js.native
   def equals(array1: typingsSlinky.extjs.Ext.Array): Boolean = js.native
   def equals(array1: typingsSlinky.extjs.Ext.Array, array2: typingsSlinky.extjs.Ext.Array): Boolean = js.native
   /** [Method] Removes items from an array
@@ -63,7 +97,11 @@ object Array extends js.Object {
     * @returns Array The array passed.
     */
   def erase(): typingsSlinky.extjs.Ext.Array = js.native
+  def erase(array: js.UndefOr[scala.Nothing], index: js.UndefOr[scala.Nothing], removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def erase(array: js.UndefOr[scala.Nothing], index: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def erase(array: js.UndefOr[scala.Nothing], index: Double, removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
   def erase(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def erase(array: typingsSlinky.extjs.Ext.Array, index: js.UndefOr[scala.Nothing], removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
   def erase(array: typingsSlinky.extjs.Ext.Array, index: Double): typingsSlinky.extjs.Ext.Array = js.native
   def erase(array: typingsSlinky.extjs.Ext.Array, index: Double, removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Executes the specified function for each array element until the function returns a falsy value
@@ -73,7 +111,11 @@ object Array extends js.Object {
     * @returns Boolean True if no false value is returned by the callback function.
     */
   def every(): Boolean = js.native
+  def every(array: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): Boolean = js.native
+  def every(array: js.UndefOr[scala.Nothing], fn: js.Any): Boolean = js.native
+  def every(array: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): Boolean = js.native
   def every(array: typingsSlinky.extjs.Ext.Array): Boolean = js.native
+  def every(array: typingsSlinky.extjs.Ext.Array, fn: js.UndefOr[scala.Nothing], scope: js.Any): Boolean = js.native
   def every(array: typingsSlinky.extjs.Ext.Array, fn: js.Any): Boolean = js.native
   def every(array: typingsSlinky.extjs.Ext.Array, fn: js.Any, scope: js.Any): Boolean = js.native
   /** [Method] Creates a new array with all of the elements of this array for which the provided filtering function returns true
@@ -83,7 +125,11 @@ object Array extends js.Object {
     * @returns Array results
     */
   def filter(): typingsSlinky.extjs.Ext.Array = js.native
+  def filter(array: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
+  def filter(array: js.UndefOr[scala.Nothing], fn: js.Any): typingsSlinky.extjs.Ext.Array = js.native
+  def filter(array: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def filter(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def filter(array: typingsSlinky.extjs.Ext.Array, fn: js.UndefOr[scala.Nothing], scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def filter(array: typingsSlinky.extjs.Ext.Array, fn: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def filter(array: typingsSlinky.extjs.Ext.Array, fn: js.Any, scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Returns the first item in the array which elicits a true return value from the passed selection function
@@ -93,7 +139,11 @@ object Array extends js.Object {
     * @returns Object The first item in the array which returned true from the selection function, or null if none was found.
     */
   def findBy(): js.Any = js.native
+  def findBy(array: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  def findBy(array: js.UndefOr[scala.Nothing], fn: js.Any): js.Any = js.native
+  def findBy(array: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): js.Any = js.native
   def findBy(array: typingsSlinky.extjs.Ext.Array): js.Any = js.native
+  def findBy(array: typingsSlinky.extjs.Ext.Array, fn: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
   def findBy(array: typingsSlinky.extjs.Ext.Array, fn: js.Any): js.Any = js.native
   def findBy(array: typingsSlinky.extjs.Ext.Array, fn: js.Any, scope: js.Any): js.Any = js.native
   /** [Method] Recursively flattens into 1 d Array
@@ -108,7 +158,11 @@ object Array extends js.Object {
     * @param scope Object The execution scope (this) in which the specified function is executed.
     */
   def forEach(): Unit = js.native
+  def forEach(array: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): Unit = js.native
+  def forEach(array: js.UndefOr[scala.Nothing], fn: js.Any): Unit = js.native
+  def forEach(array: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): Unit = js.native
   def forEach(array: typingsSlinky.extjs.Ext.Array): Unit = js.native
+  def forEach(array: typingsSlinky.extjs.Ext.Array, fn: js.UndefOr[scala.Nothing], scope: js.Any): Unit = js.native
   def forEach(array: typingsSlinky.extjs.Ext.Array, fn: js.Any): Unit = js.native
   def forEach(array: typingsSlinky.extjs.Ext.Array, fn: js.Any, scope: js.Any): Unit = js.native
   /** [Method] Converts a value to an array if it s not already an array returns An empty array if given value is undefined or n
@@ -117,6 +171,7 @@ object Array extends js.Object {
     * @returns Array array
     */
   def from(): typingsSlinky.extjs.Ext.Array = js.native
+  def from(value: js.UndefOr[scala.Nothing], newReference: Boolean): typingsSlinky.extjs.Ext.Array = js.native
   def from(value: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def from(value: js.Any, newReference: Boolean): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Push an item into the array only if the array doesn t contain it yet
@@ -124,6 +179,7 @@ object Array extends js.Object {
     * @param item Object The item to include
     */
   def include(): Unit = js.native
+  def include(array: js.UndefOr[scala.Nothing], item: js.Any): Unit = js.native
   def include(array: typingsSlinky.extjs.Ext.Array): Unit = js.native
   def include(array: typingsSlinky.extjs.Ext.Array, item: js.Any): Unit = js.native
   /** [Method] Get the index of the provided item in the given array a supplement for the missing arrayPrototype indexOf in Interne
@@ -133,7 +189,11 @@ object Array extends js.Object {
     * @returns Number The index of item in the array (or -1 if it is not found)
     */
   def indexOf(): Double = js.native
+  def indexOf(array: js.UndefOr[scala.Nothing], item: js.UndefOr[scala.Nothing], from: Double): Double = js.native
+  def indexOf(array: js.UndefOr[scala.Nothing], item: js.Any): Double = js.native
+  def indexOf(array: js.UndefOr[scala.Nothing], item: js.Any, from: Double): Double = js.native
   def indexOf(array: typingsSlinky.extjs.Ext.Array): Double = js.native
+  def indexOf(array: typingsSlinky.extjs.Ext.Array, item: js.UndefOr[scala.Nothing], from: Double): Double = js.native
   def indexOf(array: typingsSlinky.extjs.Ext.Array, item: js.Any): Double = js.native
   def indexOf(array: typingsSlinky.extjs.Ext.Array, item: js.Any, from: Double): Double = js.native
   /** [Method] Inserts items in to an array
@@ -143,7 +203,19 @@ object Array extends js.Object {
     * @returns Array The array passed.
     */
   def insert(): typingsSlinky.extjs.Ext.Array = js.native
+  def insert(
+    array: js.UndefOr[scala.Nothing],
+    index: js.UndefOr[scala.Nothing],
+    items: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def insert(array: js.UndefOr[scala.Nothing], index: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def insert(array: js.UndefOr[scala.Nothing], index: Double, items: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def insert(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def insert(
+    array: typingsSlinky.extjs.Ext.Array,
+    index: js.UndefOr[scala.Nothing],
+    items: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def insert(array: typingsSlinky.extjs.Ext.Array, index: Double): typingsSlinky.extjs.Ext.Array = js.native
   def insert(array: typingsSlinky.extjs.Ext.Array, index: Double, items: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Merge multiple arrays into one with unique items that exist in all of the arrays
@@ -153,7 +225,23 @@ object Array extends js.Object {
     * @returns Array intersect
     */
   def intersect(): typingsSlinky.extjs.Ext.Array = js.native
+  def intersect(
+    array1: js.UndefOr[scala.Nothing],
+    array2: js.UndefOr[scala.Nothing],
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def intersect(array1: js.UndefOr[scala.Nothing], array2: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def intersect(
+    array1: js.UndefOr[scala.Nothing],
+    array2: typingsSlinky.extjs.Ext.Array,
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def intersect(array1: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def intersect(
+    array1: typingsSlinky.extjs.Ext.Array,
+    array2: js.UndefOr[scala.Nothing],
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def intersect(array1: typingsSlinky.extjs.Ext.Array, array2: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def intersect(
     array1: typingsSlinky.extjs.Ext.Array,
@@ -167,7 +255,11 @@ object Array extends js.Object {
     * @returns Array results
     */
   def map(): typingsSlinky.extjs.Ext.Array = js.native
+  def map(array: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
+  def map(array: js.UndefOr[scala.Nothing], fn: js.Any): typingsSlinky.extjs.Ext.Array = js.native
+  def map(array: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def map(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def map(array: typingsSlinky.extjs.Ext.Array, fn: js.UndefOr[scala.Nothing], scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def map(array: typingsSlinky.extjs.Ext.Array, fn: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def map(array: typingsSlinky.extjs.Ext.Array, fn: js.Any, scope: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Returns the maximum value in the Array
@@ -176,6 +268,7 @@ object Array extends js.Object {
     * @returns Object maxValue The maximum value
     */
   def max(): js.Any = js.native
+  def max(array: js.UndefOr[scala.Nothing], comparisonFn: js.Any): js.Any = js.native
   def max(array: js.Any): js.Any = js.native
   def max(array: js.Any, comparisonFn: js.Any): js.Any = js.native
   /** [Method] Calculates the mean of all items in the array
@@ -191,7 +284,23 @@ object Array extends js.Object {
     * @returns Array merged
     */
   def merge(): typingsSlinky.extjs.Ext.Array = js.native
+  def merge(
+    array1: js.UndefOr[scala.Nothing],
+    array2: js.UndefOr[scala.Nothing],
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def merge(array1: js.UndefOr[scala.Nothing], array2: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def merge(
+    array1: js.UndefOr[scala.Nothing],
+    array2: typingsSlinky.extjs.Ext.Array,
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def merge(array1: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def merge(
+    array1: typingsSlinky.extjs.Ext.Array,
+    array2: js.UndefOr[scala.Nothing],
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def merge(array1: typingsSlinky.extjs.Ext.Array, array2: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def merge(
     array1: typingsSlinky.extjs.Ext.Array,
@@ -204,6 +313,7 @@ object Array extends js.Object {
     * @returns Object minValue The minimum value
     */
   def min(): js.Any = js.native
+  def min(array: js.UndefOr[scala.Nothing], comparisonFn: js.Any): js.Any = js.native
   def min(array: js.Any): js.Any = js.native
   def min(array: js.Any, comparisonFn: js.Any): js.Any = js.native
   /** [Method] Plucks the value of a property from each item in the Array
@@ -212,6 +322,7 @@ object Array extends js.Object {
     * @returns Array The value from each item in the Array.
     */
   def pluck(): typingsSlinky.extjs.Ext.Array = js.native
+  def pluck(array: js.UndefOr[scala.Nothing], propertyName: java.lang.String): typingsSlinky.extjs.Ext.Array = js.native
   def pluck(array: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def pluck(array: js.Any, propertyName: java.lang.String): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Pushes new items onto the end of an Array
@@ -226,6 +337,7 @@ object Array extends js.Object {
     * @returns Array The passed array itself
     */
   def remove(): typingsSlinky.extjs.Ext.Array = js.native
+  def remove(array: js.UndefOr[scala.Nothing], item: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def remove(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def remove(array: typingsSlinky.extjs.Ext.Array, item: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Replaces items in an array
@@ -236,8 +348,54 @@ object Array extends js.Object {
     * @returns Array The array passed.
     */
   def replace(): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: js.UndefOr[scala.Nothing],
+    index: js.UndefOr[scala.Nothing],
+    removeCount: js.UndefOr[scala.Nothing],
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(array: js.UndefOr[scala.Nothing], index: js.UndefOr[scala.Nothing], removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: js.UndefOr[scala.Nothing],
+    index: js.UndefOr[scala.Nothing],
+    removeCount: Double,
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(array: js.UndefOr[scala.Nothing], index: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: js.UndefOr[scala.Nothing],
+    index: Double,
+    removeCount: js.UndefOr[scala.Nothing],
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(array: js.UndefOr[scala.Nothing], index: Double, removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: js.UndefOr[scala.Nothing],
+    index: Double,
+    removeCount: Double,
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def replace(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: typingsSlinky.extjs.Ext.Array,
+    index: js.UndefOr[scala.Nothing],
+    removeCount: js.UndefOr[scala.Nothing],
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(array: typingsSlinky.extjs.Ext.Array, index: js.UndefOr[scala.Nothing], removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: typingsSlinky.extjs.Ext.Array,
+    index: js.UndefOr[scala.Nothing],
+    removeCount: Double,
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def replace(array: typingsSlinky.extjs.Ext.Array, index: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def replace(
+    array: typingsSlinky.extjs.Ext.Array,
+    index: Double,
+    removeCount: js.UndefOr[scala.Nothing],
+    insert: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def replace(array: typingsSlinky.extjs.Ext.Array, index: Double, removeCount: Double): typingsSlinky.extjs.Ext.Array = js.native
   def replace(
     array: typingsSlinky.extjs.Ext.Array,
@@ -252,7 +410,11 @@ object Array extends js.Object {
     * @returns Array The copied piece of the array.
     */
   def slice(): typingsSlinky.extjs.Ext.Array = js.native
+  def slice(array: js.UndefOr[scala.Nothing], begin: js.UndefOr[scala.Nothing], end: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def slice(array: js.UndefOr[scala.Nothing], begin: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def slice(array: js.UndefOr[scala.Nothing], begin: Double, end: Double): typingsSlinky.extjs.Ext.Array = js.native
   def slice(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def slice(array: typingsSlinky.extjs.Ext.Array, begin: js.UndefOr[scala.Nothing], end: Double): typingsSlinky.extjs.Ext.Array = js.native
   def slice(array: typingsSlinky.extjs.Ext.Array, begin: Double): typingsSlinky.extjs.Ext.Array = js.native
   def slice(array: typingsSlinky.extjs.Ext.Array, begin: Double, end: Double): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Executes the specified function for each array element until the function returns a truthy value
@@ -262,7 +424,11 @@ object Array extends js.Object {
     * @returns Boolean True if the callback function returns a truthy value.
     */
   def some(): Boolean = js.native
+  def some(array: js.UndefOr[scala.Nothing], fn: js.UndefOr[scala.Nothing], scope: js.Any): Boolean = js.native
+  def some(array: js.UndefOr[scala.Nothing], fn: js.Any): Boolean = js.native
+  def some(array: js.UndefOr[scala.Nothing], fn: js.Any, scope: js.Any): Boolean = js.native
   def some(array: typingsSlinky.extjs.Ext.Array): Boolean = js.native
+  def some(array: typingsSlinky.extjs.Ext.Array, fn: js.UndefOr[scala.Nothing], scope: js.Any): Boolean = js.native
   def some(array: typingsSlinky.extjs.Ext.Array, fn: js.Any): Boolean = js.native
   def some(array: typingsSlinky.extjs.Ext.Array, fn: js.Any, scope: js.Any): Boolean = js.native
   /** [Method] Sorts the elements of an Array
@@ -271,6 +437,7 @@ object Array extends js.Object {
     * @returns Array The sorted array.
     */
   def sort(): typingsSlinky.extjs.Ext.Array = js.native
+  def sort(array: js.UndefOr[scala.Nothing], sortFn: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def sort(array: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def sort(array: typingsSlinky.extjs.Ext.Array, sortFn: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Replaces items in an array
@@ -294,7 +461,11 @@ object Array extends js.Object {
     * @returns Array array
     */
   def toArray(): typingsSlinky.extjs.Ext.Array = js.native
+  def toArray(iterable: js.UndefOr[scala.Nothing], start: js.UndefOr[scala.Nothing], end: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def toArray(iterable: js.UndefOr[scala.Nothing], start: Double): typingsSlinky.extjs.Ext.Array = js.native
+  def toArray(iterable: js.UndefOr[scala.Nothing], start: Double, end: Double): typingsSlinky.extjs.Ext.Array = js.native
   def toArray(iterable: js.Any): typingsSlinky.extjs.Ext.Array = js.native
+  def toArray(iterable: js.Any, start: js.UndefOr[scala.Nothing], end: Double): typingsSlinky.extjs.Ext.Array = js.native
   def toArray(iterable: js.Any, start: Double): typingsSlinky.extjs.Ext.Array = js.native
   def toArray(iterable: js.Any, start: Double, end: Double): typingsSlinky.extjs.Ext.Array = js.native
   /** [Method] Creates a map object keyed by the elements of the given array
@@ -304,7 +475,11 @@ object Array extends js.Object {
     * @returns Object The resulting map.
     */
   def toMap(): js.Any = js.native
+  def toMap(array: js.UndefOr[scala.Nothing], getKey: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  def toMap(array: js.UndefOr[scala.Nothing], getKey: js.Any): js.Any = js.native
+  def toMap(array: js.UndefOr[scala.Nothing], getKey: js.Any, scope: js.Any): js.Any = js.native
   def toMap(array: typingsSlinky.extjs.Ext.Array): js.Any = js.native
+  def toMap(array: typingsSlinky.extjs.Ext.Array, getKey: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
   def toMap(array: typingsSlinky.extjs.Ext.Array, getKey: js.Any): js.Any = js.native
   def toMap(array: typingsSlinky.extjs.Ext.Array, getKey: js.Any, scope: js.Any): js.Any = js.native
   /** [Method] Creates a map object keyed by a property of elements of the given array
@@ -314,7 +489,11 @@ object Array extends js.Object {
     * @returns Object The resulting map.
     */
   def toValueMap(): js.Any = js.native
+  def toValueMap(array: js.UndefOr[scala.Nothing], getKey: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  def toValueMap(array: js.UndefOr[scala.Nothing], getKey: js.Any): js.Any = js.native
+  def toValueMap(array: js.UndefOr[scala.Nothing], getKey: js.Any, scope: js.Any): js.Any = js.native
   def toValueMap(array: typingsSlinky.extjs.Ext.Array): js.Any = js.native
+  def toValueMap(array: typingsSlinky.extjs.Ext.Array, getKey: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
   def toValueMap(array: typingsSlinky.extjs.Ext.Array, getKey: js.Any): js.Any = js.native
   def toValueMap(array: typingsSlinky.extjs.Ext.Array, getKey: js.Any, scope: js.Any): js.Any = js.native
   /** [Method] Merge multiple arrays into one with unique items
@@ -324,7 +503,23 @@ object Array extends js.Object {
     * @returns Array merged
     */
   def union(): typingsSlinky.extjs.Ext.Array = js.native
+  def union(
+    array1: js.UndefOr[scala.Nothing],
+    array2: js.UndefOr[scala.Nothing],
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
+  def union(array1: js.UndefOr[scala.Nothing], array2: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def union(
+    array1: js.UndefOr[scala.Nothing],
+    array2: typingsSlinky.extjs.Ext.Array,
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def union(array1: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
+  def union(
+    array1: typingsSlinky.extjs.Ext.Array,
+    array2: js.UndefOr[scala.Nothing],
+    etc: typingsSlinky.extjs.Ext.Array
+  ): typingsSlinky.extjs.Ext.Array = js.native
   def union(array1: typingsSlinky.extjs.Ext.Array, array2: typingsSlinky.extjs.Ext.Array): typingsSlinky.extjs.Ext.Array = js.native
   def union(
     array1: typingsSlinky.extjs.Ext.Array,

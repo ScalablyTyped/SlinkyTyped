@@ -127,6 +127,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.semanticUiReact.semanticUiReactStrings.algeria
   - typingsSlinky.semanticUiReact.semanticUiReactStrings.ec
   - typingsSlinky.semanticUiReact.semanticUiReactStrings.ecuador
+  - typingsSlinky.semanticUiReact.semanticUiReactStrings.england
+  - typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb eng`
   - typingsSlinky.semanticUiReact.semanticUiReactStrings.ee
   - typingsSlinky.semanticUiReact.semanticUiReactStrings.estonia
   - typingsSlinky.semanticUiReact.semanticUiReactStrings.eg
@@ -764,6 +766,8 @@ object FlagNameValues {
   @scala.inline
   def `el salvador`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`el salvador` = ("el salvador").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`el salvador`]
   @scala.inline
+  def england: typingsSlinky.semanticUiReact.semanticUiReactStrings.england = "england".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.england]
+  @scala.inline
   def `equatorial guinea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`equatorial guinea` = ("equatorial guinea").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`equatorial guinea`]
   @scala.inline
   def er: typingsSlinky.semanticUiReact.semanticUiReactStrings.er = "er".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.er]
@@ -817,6 +821,8 @@ object FlagNameValues {
   def gambia: typingsSlinky.semanticUiReact.semanticUiReactStrings.gambia = "gambia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gambia]
   @scala.inline
   def gb: typingsSlinky.semanticUiReact.semanticUiReactStrings.gb = "gb".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gb]
+  @scala.inline
+  def `gb eng`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb eng` = ("gb eng").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb eng`]
   @scala.inline
   def `gb sct`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb sct` = ("gb sct").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb sct`]
   @scala.inline

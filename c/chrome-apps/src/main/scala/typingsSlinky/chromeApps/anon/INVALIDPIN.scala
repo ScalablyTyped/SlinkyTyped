@@ -34,29 +34,18 @@ object INVALIDPIN {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withINVALID_PIN(value: INVALID_PIN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INVALID_PIN")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withINVALID_PUK(value: INVALID_PUK): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INVALID_PUK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINVALID_PIN(value: INVALID_PIN): Self = this.set("INVALID_PIN", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMAX_ATTEMPTS_EXCEEDED(value: MAX_ATTEMPTS_EXCEEDED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAX_ATTEMPTS_EXCEEDED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINVALID_PUK(value: INVALID_PUK): Self = this.set("INVALID_PUK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUNKNOWN_ERROR(value: UNKNOWN_ERROR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UNKNOWN_ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAX_ATTEMPTS_EXCEEDED(value: MAX_ATTEMPTS_EXCEEDED): Self = this.set("MAX_ATTEMPTS_EXCEEDED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUNKNOWN_ERROR(value: UNKNOWN_ERROR): Self = this.set("UNKNOWN_ERROR", value.asInstanceOf[js.Any])
   }
   
 }

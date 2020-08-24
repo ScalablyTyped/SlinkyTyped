@@ -1,8 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.System
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
-import typingsSlinky.winrtUwp.Windows.Storage.IStorageItem
-import typingsSlinky.winrtUwp.Windows.UI.ViewManagement.ViewSizePreference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Initializes a new instance of the FolderLauncherOptions class. */
 class FolderLauncherOptions ()
-  extends typingsSlinky.winrtUwp.Windows.System.FolderLauncherOptions {
-  /** Specifies how much space on the screen to leave for the calling app when launching File Explorer. The calling app can take up more or less space than File Explorer, or File Explorer can fill the entire screen. */
-  /* CompleteClass */
-  override var desiredRemainingView: ViewSizePreference = js.native
-  /** Provides the list of items to select when File Explorer displays the contents of the specified folder. */
-  /* CompleteClass */
-  override var itemsToSelect: IVector[IStorageItem] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.System.FolderLauncherOptions
 

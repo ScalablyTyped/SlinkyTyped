@@ -11,11 +11,11 @@ trait Volume extends js.Object {
     */
   var dockerVolumeConfiguration: js.UndefOr[DockerVolumeConfiguration] = js.native
   /**
-    * This parameter is specified when you are using an Amazon Elastic File System (Amazon EFS) file storage. Amazon EFS file systems are only supported when you are using the EC2 launch type.   EFSVolumeConfiguration remains in preview and is a Beta Service as defined by and subject to the Beta Service Participation Service Terms located at https://aws.amazon.com/service-terms ("Beta Terms"). These Beta Terms apply to your participation in this preview of EFSVolumeConfiguration. 
+    * This parameter is specified when you are using an Amazon Elastic File System file system for task storage.
     */
   var efsVolumeConfiguration: js.UndefOr[EFSVolumeConfiguration] = js.native
   /**
-    * This parameter is specified when you are using bind mount host volumes. Bind mount host volumes are supported when you are using either the EC2 or Fargate launch types. The contents of the host parameter determine whether your bind mount host volume persists on the host container instance and where it is stored. If the host parameter is empty, then the Docker daemon assigns a host path for your data volume. However, the data is not guaranteed to persist after the containers associated with it stop running. Windows containers can mount whole directories on the same drive as $env:ProgramData. Windows containers cannot mount directories on a different drive, and mount point cannot be across drives. For example, you can mount C:\my\path:C:\my\path and D:\:D:\, but not D:\my\path:C:\my\path or D:\:C:\my\path.
+    * This parameter is specified when you are using bind mount host volumes. The contents of the host parameter determine whether your bind mount host volume persists on the host container instance and where it is stored. If the host parameter is empty, then the Docker daemon assigns a host path for your data volume. However, the data is not guaranteed to persist after the containers associated with it stop running. Windows containers can mount whole directories on the same drive as $env:ProgramData. Windows containers cannot mount directories on a different drive, and mount point cannot be across drives. For example, you can mount C:\my\path:C:\my\path and D:\:D:\, but not D:\my\path:C:\my\path or D:\:C:\my\path.
     */
   var host: js.UndefOr[HostVolumeProperties] = js.native
   /**
@@ -26,18 +26,38 @@ trait Volume extends js.Object {
 
 object Volume {
   @scala.inline
-  def apply(
-    dockerVolumeConfiguration: DockerVolumeConfiguration = null,
-    efsVolumeConfiguration: EFSVolumeConfiguration = null,
-    host: HostVolumeProperties = null,
-    name: String = null
-  ): Volume = {
+  def apply(): Volume = {
     val __obj = js.Dynamic.literal()
-    if (dockerVolumeConfiguration != null) __obj.updateDynamic("dockerVolumeConfiguration")(dockerVolumeConfiguration.asInstanceOf[js.Any])
-    if (efsVolumeConfiguration != null) __obj.updateDynamic("efsVolumeConfiguration")(efsVolumeConfiguration.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Volume]
   }
+  @scala.inline
+  implicit class VolumeOps[Self <: Volume] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDockerVolumeConfiguration(value: DockerVolumeConfiguration): Self = this.set("dockerVolumeConfiguration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDockerVolumeConfiguration: Self = this.set("dockerVolumeConfiguration", js.undefined)
+    @scala.inline
+    def setEfsVolumeConfiguration(value: EFSVolumeConfiguration): Self = this.set("efsVolumeConfiguration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEfsVolumeConfiguration: Self = this.set("efsVolumeConfiguration", js.undefined)
+    @scala.inline
+    def setHost(value: HostVolumeProperties): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHost: Self = this.set("host", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+  }
+  
 }
 

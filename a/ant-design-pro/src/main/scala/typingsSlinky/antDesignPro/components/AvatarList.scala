@@ -5,21 +5,20 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.avatarItemMod.SizeType
 import typingsSlinky.antDesignPro.avatarListMod.AvatarListProps
-import typingsSlinky.antDesignPro.avatarListMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AvatarList {
-  @JSImport("ant-design-pro/lib/AvatarList", JSImport.Default)
+  @JSImport("ant-design-pro", "AvatarList")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.AvatarList] {
     @scala.inline
     def Item(value: ReactElement): this.type = set("Item", value.asInstanceOf[js.Any])
     @scala.inline
@@ -33,6 +32,10 @@ object AvatarList {
   }
   
   def withProps(p: AvatarListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: AvatarList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: ReactElement | js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarListProps]))
+  }
 }
 

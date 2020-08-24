@@ -44,6 +44,7 @@ object devUtils extends js.Object {
   def parse(data: String, options: LastRangeBackward): Text | Element | DocumentFragment | js.Object = js.native
   def setData(view: View, data: String, options: RootName): Unit = js.native
   def stringify(node: DocumentFragment): String = js.native
+  def stringify(node: DocumentFragment, selectionOrPositionOrRange: js.UndefOr[scala.Nothing], options: IgnoreRoot): String = js.native
   def stringify(node: DocumentFragment, selectionOrPositionOrRange: DocumentSelection): String = js.native
   def stringify(node: DocumentFragment, selectionOrPositionOrRange: DocumentSelection, options: IgnoreRoot): String = js.native
   def stringify(node: DocumentFragment, selectionOrPositionOrRange: Position): String = js.native
@@ -51,6 +52,7 @@ object devUtils extends js.Object {
   def stringify(node: DocumentFragment, selectionOrPositionOrRange: Range): String = js.native
   def stringify(node: DocumentFragment, selectionOrPositionOrRange: Range, options: IgnoreRoot): String = js.native
   def stringify(node: Element): String = js.native
+  def stringify(node: Element, selectionOrPositionOrRange: js.UndefOr[scala.Nothing], options: IgnoreRoot): String = js.native
   def stringify(node: Element, selectionOrPositionOrRange: DocumentSelection): String = js.native
   def stringify(node: Element, selectionOrPositionOrRange: DocumentSelection, options: IgnoreRoot): String = js.native
   def stringify(node: Element, selectionOrPositionOrRange: Position): String = js.native
@@ -58,6 +60,7 @@ object devUtils extends js.Object {
   def stringify(node: Element, selectionOrPositionOrRange: Range): String = js.native
   def stringify(node: Element, selectionOrPositionOrRange: Range, options: IgnoreRoot): String = js.native
   def stringify(node: Text): String = js.native
+  def stringify(node: Text, selectionOrPositionOrRange: js.UndefOr[scala.Nothing], options: IgnoreRoot): String = js.native
   def stringify(node: Text, selectionOrPositionOrRange: DocumentSelection): String = js.native
   def stringify(node: Text, selectionOrPositionOrRange: DocumentSelection, options: IgnoreRoot): String = js.native
   def stringify(node: Text, selectionOrPositionOrRange: Position): String = js.native
@@ -73,14 +76,132 @@ object devUtils extends js.Object {
     def parse(data: String, schema: Schema, batch: Batch, options: Context): typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text | typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment | js.Object = js.native
     def setData(model: String, data: js.Object, options: BatchType): Unit = js.native
     def stringify(
-      node: RootElement | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text | typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
        // TODO optional
-    selectionOrPositionOrRange: Selection | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position
     ): String = js.native
     def stringify(
-      node: RootElement | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text | typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
        // TODO optional
-    selectionOrPositionOrRange: Selection | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position | typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range,
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
+       // TODO optional
+    selectionOrPositionOrRange: Selection
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.DocumentFragment,
+       // TODO optional
+    selectionOrPositionOrRange: Selection,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element,
+       // TODO optional
+    selectionOrPositionOrRange: Selection
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element,
+       // TODO optional
+    selectionOrPositionOrRange: Selection,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: RootElement,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position
+    ): String = js.native
+    def stringify(
+      node: RootElement,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: RootElement,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range
+    ): String = js.native
+    def stringify(
+      node: RootElement,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(node: RootElement,  // TODO optional
+    selectionOrPositionOrRange: Selection): String = js.native
+    def stringify(
+      node: RootElement,
+       // TODO optional
+    selectionOrPositionOrRange: Selection,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text,
+       // TODO optional
+    selectionOrPositionOrRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range,
+      markers: js.Iterable[Marker]
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text,
+       // TODO optional
+    selectionOrPositionOrRange: Selection
+    ): String = js.native
+    def stringify(
+      node: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Text,
+       // TODO optional
+    selectionOrPositionOrRange: Selection,
       markers: js.Iterable[Marker]
     ): String = js.native
   }

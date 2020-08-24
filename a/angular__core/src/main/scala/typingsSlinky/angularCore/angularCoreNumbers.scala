@@ -6,18 +6,17 @@ import typingsSlinky.angularCore.mod.OutputType
 import typingsSlinky.angularCore.mod.PreOrderHookFlags
 import typingsSlinky.angularCore.mod.RootContextFlags
 import typingsSlinky.angularCore.mod.SelectorFlags
-import typingsSlinky.angularCore.mod.StyleSanitizeMode
-import typingsSlinky.angularCore.mod.StylingMapArrayIndex
 import typingsSlinky.angularCore.mod.TNodeFlags
 import typingsSlinky.angularCore.mod.TNodeProviderIndexes
 import typingsSlinky.angularCore.mod.TNodeType
-import typingsSlinky.angularCore.mod.TStylingConfigFlags
-import typingsSlinky.angularCore.mod.TStylingContextIndex
+import typingsSlinky.angularCore.mod.TViewType
 import typingsSlinky.angularCore.mod.ViewState
 import typingsSlinky.angularCore.mod.ɵArgumentType
 import typingsSlinky.angularCore.mod.ɵAttributeMarker
 import typingsSlinky.angularCore.mod.ɵBindingFlags
+import typingsSlinky.angularCore.mod.ɵCurrencyIndex
 import typingsSlinky.angularCore.mod.ɵDepFlags
+import typingsSlinky.angularCore.mod.ɵExtraLocaleDataIndex
 import typingsSlinky.angularCore.mod.ɵNodeFlags
 import typingsSlinky.angularCore.mod.ɵPlayState
 import typingsSlinky.angularCore.mod.ɵQueryBindingType
@@ -30,18 +29,21 @@ import scala.scalajs.js.annotation._
 
 object angularCoreNumbers {
   @js.native
+  sealed trait `-1` extends ɵAttributeMarker
+  
+  @js.native
   sealed trait `0`
     extends IcuType
        with OutputType
        with RootContextFlags
-       with StylingMapArrayIndex
        with TNodeType
-       with TStylingConfigFlags
-       with TStylingContextIndex
+       with TViewType
        with ViewState
        with ɵArgumentType
        with ɵAttributeMarker
+       with ɵCurrencyIndex
        with ɵDepFlags
+       with ɵExtraLocaleDataIndex
        with ɵNodeFlags
        with ɵPlayState
        with ɵQueryBindingType
@@ -55,17 +57,16 @@ object angularCoreNumbers {
        with OutputType
        with RootContextFlags
        with SelectorFlags
-       with StyleSanitizeMode
-       with StylingMapArrayIndex
        with TNodeFlags
        with TNodeType
-       with TStylingConfigFlags
-       with TStylingContextIndex
+       with TViewType
        with ViewState
        with ɵArgumentType
        with ɵAttributeMarker
        with ɵBindingFlags
+       with ɵCurrencyIndex
        with ɵDepFlags
+       with ɵExtraLocaleDataIndex
        with ɵNodeFlags
        with ɵPlayState
        with ɵQueryBindingType
@@ -73,13 +74,7 @@ object angularCoreNumbers {
        with ɵRenderFlags
   
   @js.native
-  sealed trait `10` extends LViewFlags
-  
-  @js.native
   sealed trait `100` extends ɵPlayState
-  
-  @js.native
-  sealed trait `1023` extends LViewFlags
   
   @js.native
   sealed trait `1024`
@@ -88,10 +83,18 @@ object angularCoreNumbers {
        with ɵNodeFlags
   
   @js.native
-  sealed trait `1048576` extends ɵNodeFlags
+  sealed trait `1048575` extends TNodeProviderIndexes
+  
+  @js.native
+  sealed trait `1048576`
+    extends TNodeProviderIndexes
+       with ɵNodeFlags
   
   @js.native
   sealed trait `1073741824` extends ɵNodeFlags
+  
+  @js.native
+  sealed trait `11` extends LViewFlags
   
   @js.native
   sealed trait `12` extends ViewState
@@ -99,6 +102,7 @@ object angularCoreNumbers {
   @js.native
   sealed trait `128`
     extends LViewFlags
+       with TNodeFlags
        with ViewState
        with ɵNodeFlags
   
@@ -119,7 +123,6 @@ object angularCoreNumbers {
     extends LViewFlags
        with PreOrderHookFlags
        with TNodeFlags
-       with TNodeProviderIndexes
        with ViewState
        with ɵBindingFlags
        with ɵNodeFlags
@@ -137,21 +140,23 @@ object angularCoreNumbers {
   sealed trait `2`
     extends RootContextFlags
        with SelectorFlags
-       with StyleSanitizeMode
-       with StylingMapArrayIndex
        with TNodeFlags
        with TNodeType
-       with TStylingConfigFlags
-       with TStylingContextIndex
+       with TViewType
        with ViewState
        with ɵAttributeMarker
        with ɵBindingFlags
+       with ɵCurrencyIndex
        with ɵDepFlags
+       with ɵExtraLocaleDataIndex
        with ɵNodeFlags
        with ɵPlayState
        with ɵQueryValueType
        with ɵRenderFlags
        with ɵViewFlags
+  
+  @js.native
+  sealed trait `20` extends TNodeProviderIndexes
   
   @js.native
   sealed trait `200` extends ɵPlayState
@@ -166,7 +171,12 @@ object angularCoreNumbers {
   sealed trait `20224` extends ɵNodeFlags
   
   @js.native
-  sealed trait `2048` extends ɵNodeFlags
+  sealed trait `2047` extends LViewFlags
+  
+  @js.native
+  sealed trait `2048`
+    extends LViewFlags
+       with ɵNodeFlags
   
   @js.native
   sealed trait `2097152` extends ɵNodeFlags
@@ -189,10 +199,7 @@ object angularCoreNumbers {
   @js.native
   sealed trait `3`
     extends LViewFlags
-       with StyleSanitizeMode
        with TNodeType
-       with TStylingConfigFlags
-       with TStylingContextIndex
        with ɵAttributeMarker
        with ɵNodeFlags
        with ɵQueryValueType
@@ -220,7 +227,6 @@ object angularCoreNumbers {
        with SelectorFlags
        with TNodeFlags
        with TNodeType
-       with TStylingContextIndex
        with ViewState
        with ɵAttributeMarker
        with ɵBindingFlags
@@ -240,7 +246,6 @@ object angularCoreNumbers {
   @js.native
   sealed trait `5`
     extends TNodeType
-       with TStylingContextIndex
        with ɵAttributeMarker
   
   @js.native
@@ -256,25 +261,21 @@ object angularCoreNumbers {
   sealed trait `536870912` extends ɵNodeFlags
   
   @js.native
-  sealed trait `6`
-    extends TStylingContextIndex
-       with ɵAttributeMarker
+  sealed trait `6` extends ɵAttributeMarker
   
   @js.native
   sealed trait `64`
     extends LViewFlags
+       with TNodeFlags
        with ViewState
        with ɵNodeFlags
   
   @js.native
-  sealed trait `65535`
-    extends PreOrderHookFlags
-       with TNodeProviderIndexes
+  sealed trait `65535` extends PreOrderHookFlags
   
   @js.native
   sealed trait `65536`
     extends PreOrderHookFlags
-       with TNodeProviderIndexes
        with ɵNodeFlags
   
   @js.native
@@ -303,21 +304,23 @@ object angularCoreNumbers {
   sealed trait _4294901760 extends PreOrderHookFlags
   
   @scala.inline
+  def `-1`: `-1` = -1.asInstanceOf[`-1`]
+  @scala.inline
   def `0`: `0` = 0.asInstanceOf[`0`]
   @scala.inline
   def `1`: `1` = 1.asInstanceOf[`1`]
   @scala.inline
-  def `10`: `10` = 10.asInstanceOf[`10`]
-  @scala.inline
   def `100`: `100` = 100.asInstanceOf[`100`]
   @scala.inline
-  def `1023`: `1023` = 1023.asInstanceOf[`1023`]
-  @scala.inline
   def `1024`: `1024` = 1024.asInstanceOf[`1024`]
+  @scala.inline
+  def `1048575`: `1048575` = 1048575.asInstanceOf[`1048575`]
   @scala.inline
   def `1048576`: `1048576` = 1048576.asInstanceOf[`1048576`]
   @scala.inline
   def `1073741824`: `1073741824` = 1073741824.asInstanceOf[`1073741824`]
+  @scala.inline
+  def `11`: `11` = 11.asInstanceOf[`11`]
   @scala.inline
   def `12`: `12` = 12.asInstanceOf[`12`]
   @scala.inline
@@ -341,6 +344,8 @@ object angularCoreNumbers {
   @scala.inline
   def `2`: `2` = 2.asInstanceOf[`2`]
   @scala.inline
+  def `20`: `20` = 20.asInstanceOf[`20`]
+  @scala.inline
   def `200`: `200` = 200.asInstanceOf[`200`]
   @scala.inline
   def `201326592`: `201326592` = 201326592.asInstanceOf[`201326592`]
@@ -348,6 +353,8 @@ object angularCoreNumbers {
   def `201347067`: `201347067` = 201347067.asInstanceOf[`201347067`]
   @scala.inline
   def `20224`: `20224` = 20224.asInstanceOf[`20224`]
+  @scala.inline
+  def `2047`: `2047` = 2047.asInstanceOf[`2047`]
   @scala.inline
   def `2048`: `2048` = 2048.asInstanceOf[`2048`]
   @scala.inline

@@ -118,79 +118,38 @@ object LaunchData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActionData(value: ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionData")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutActionData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionData")(js.undefined)
-        ret
-    }
+    def setActionData(value: ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]): Self = this.set("actionData", value.asInstanceOf[js.Any])
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteActionData: Self = this.set("actionData", js.undefined)
     @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsKioskSession(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isKioskSession")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteId: Self = this.set("id", js.undefined)
     @scala.inline
-    def withoutIsKioskSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isKioskSession")(js.undefined)
-        ret
-    }
+    def setIsKioskSession(value: Boolean): Self = this.set("isKioskSession", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsPublicSession(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPublicSession")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIsKioskSession: Self = this.set("isKioskSession", js.undefined)
     @scala.inline
-    def withoutIsPublicSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPublicSession")(js.undefined)
-        ret
-    }
+    def setIsPublicSession(value: Boolean): Self = this.set("isPublicSession", value.asInstanceOf[js.Any])
     @scala.inline
-    def withItems(value: js.Array[LaunchDataItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIsPublicSession: Self = this.set("isPublicSession", js.undefined)
     @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
+    def setItemsVarargs(value: LaunchDataItem*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
-    def withReferrerUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setItems(value: js.Array[LaunchDataItem]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutReferrerUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerUrl")(js.undefined)
-        ret
-    }
+    def deleteItems: Self = this.set("items", js.undefined)
     @scala.inline
-    def withSource(
+    def setReferrerUrl(value: String): Self = this.set("referrerUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReferrerUrl: Self = this.set("referrerUrl", js.undefined)
+    @scala.inline
+    def setSource(
       value: ToStringLiteral[
           ABOUTPAGE, 
           /* keyof chrome-apps.anon.ABOUTPAGE */ ABOUT_PAGE | APP_LAUNCHER | BACKGROUND | CHROME_INTERNAL | COMMAND_LINE | CONTEXT_MENU | EPHEMERAL_APP | EXTENSIONS_PAGE | FILE_HANDLER | INSTALLED_NOTIFICATION | KEYBOARD | KIOSK | LOAD_AND_LAUNCH | MANAGEMENT_API | NEW_TAB_PAGE | RELOAD | RESTART | SYSTEM_TRAY | TEST | UNTRACKED | URL_HANDLER, 
@@ -199,29 +158,13 @@ object LaunchData {
             command_line_ | background_ | url_handler_ | system_tray_ | context_menu_ | chrome_internal_ | installed_notification_ | kiosk_ | restart_ | reload_ | new_tab_page_ | test_ | extensions_page_ | file_handler_ | management_api_ | about_page_ | load_and_launch_ | untracked_ | app_launcher_ | keyboard_ | ephemeral_app_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("source", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
+    def deleteSource: Self = this.set("source", js.undefined)
     @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
+    def deleteUrl: Self = this.set("url", js.undefined)
   }
   
 }

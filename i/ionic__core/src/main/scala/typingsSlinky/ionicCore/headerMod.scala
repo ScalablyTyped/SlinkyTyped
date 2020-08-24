@@ -2,7 +2,7 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.ionicCoreStrings.condense
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,11 +21,12 @@ object headerMod extends js.Object {
       */
     var collapse: js.UndefOr[condense] = js.native
     var collapsibleHeaderInitialized: js.Any = js.native
-    var contentScrollCallback: js.UndefOr[js.Any] = js.native
+    var collapsibleMainHeader: js.Any = js.native
+    var contentScrollCallback: js.Any = js.native
     var destroyCollapsibleHeader: js.Any = js.native
     var el: HTMLElement = js.native
-    var intersectionObserver: js.UndefOr[js.Any] = js.native
-    var scrollEl: js.UndefOr[js.Any] = js.native
+    var intersectionObserver: js.Any = js.native
+    var scrollEl: js.Any = js.native
     var setupCollapsibleHeader: js.Any = js.native
     /**
       * If `true`, the header will be translucent.

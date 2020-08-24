@@ -1,10 +1,10 @@
 package typingsSlinky.reactSketchapp.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSketchapp.mod.Style
 import typingsSlinky.reactSketchapp.mod.StyleReference
-import typingsSlinky.reactSketchapp.svgMod.default
 import typingsSlinky.reactSketchapp.svgSvgMod.SvgProps
 import typingsSlinky.reactSketchapp.typesMod.ResizeConstraints
 import typingsSlinky.reactSketchapp.typesMod.SketchShadow
@@ -13,14 +13,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Svg {
-  @JSImport("react-sketchapp/lib/components/Svg", JSImport.Default)
+  @JSImport("react-sketchapp", "Svg")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactSketchapp.mod.Svg] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
@@ -31,6 +37,8 @@ object Svg {
     def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
     @scala.inline
     def resizingConstraint(value: ResizeConstraints): this.type = set("resizingConstraint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shadowsVarargs(value: SketchShadow*): this.type = set("shadows", js.Array(value :_*))
     @scala.inline
     def shadows(value: js.Array[SketchShadow]): this.type = set("shadows", value.asInstanceOf[js.Any])
     @scala.inline

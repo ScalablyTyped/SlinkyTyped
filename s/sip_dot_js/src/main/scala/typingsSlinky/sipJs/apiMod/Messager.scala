@@ -29,6 +29,13 @@ class Messager protected ()
     userAgent: typingsSlinky.sipJs.userAgentMod.UserAgent,
     targetURI: URI,
     content: String,
+    contentType: js.UndefOr[scala.Nothing],
+    options: MessagerOptions
+  ) = this()
+  def this(
+    userAgent: typingsSlinky.sipJs.userAgentMod.UserAgent,
+    targetURI: URI,
+    content: String,
     contentType: String,
     options: MessagerOptions
   ) = this()

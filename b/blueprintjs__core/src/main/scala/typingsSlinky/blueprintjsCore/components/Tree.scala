@@ -18,7 +18,7 @@ object Tree {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Tree[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Tree[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

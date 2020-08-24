@@ -1,18 +1,18 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.cardCardMod.CardProps
+import typingsSlinky.semanticUiReact.cardContentMod.CardContentProps
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
+import typingsSlinky.semanticUiReact.cardGroupMod.CardGroupProps
 import typingsSlinky.semanticUiReact.cardHeaderMod.CardHeaderProps
 import typingsSlinky.semanticUiReact.cardMetaMod.CardMetaProps
-import typingsSlinky.semanticUiReact.cardMod.default
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -22,14 +22,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Card {
-  @JSImport("semantic-ui-react/dist/commonjs/views/Card", JSImport.Default)
+  @JSImport("semantic-ui-react", "Card")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Card] {
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,7 +46,7 @@ object Card {
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactComponentClass[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     @scala.inline
     def description(value: SemanticShorthandItem[CardDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
@@ -60,7 +60,7 @@ object Card {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactComponentClass[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[CardHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
@@ -70,7 +70,7 @@ object Card {
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def imageFunction3(
-      value: (/* component */ ReactComponentClass[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("image", js.Any.fromFunction3(value))
     @scala.inline
     def image(value: SemanticShorthandItem[ImageProps]): this.type = set("image", value.asInstanceOf[js.Any])
@@ -80,7 +80,7 @@ object Card {
     def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
     @scala.inline
     def metaFunction3(
-      value: (/* component */ ReactComponentClass[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("meta", js.Any.fromFunction3(value))
     @scala.inline
     def meta(value: SemanticShorthandItem[CardMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
@@ -92,5 +92,50 @@ object Card {
   
   def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react", "Card.Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardContentProps): SharedBuilder_CardContentProps516196698 = new SharedBuilder_CardContentProps516196698(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_CardContentProps516196698 = new SharedBuilder_CardContentProps516196698(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Description {
+    @JSImport("semantic-ui-react", "Card.Description")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardDescriptionProps): SharedBuilder_CardDescriptionProps1426981333 = new SharedBuilder_CardDescriptionProps1426981333(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Description.type): SharedBuilder_CardDescriptionProps1426981333 = new SharedBuilder_CardDescriptionProps1426981333(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react", "Card.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardGroupProps): SharedBuilder_CardGroupProps495383547 = new SharedBuilder_CardGroupProps495383547(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_CardGroupProps495383547 = new SharedBuilder_CardGroupProps495383547(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("semantic-ui-react", "Card.Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardHeaderProps): SharedBuilder_CardHeaderProps899634192 = new SharedBuilder_CardHeaderProps899634192(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_CardHeaderProps899634192 = new SharedBuilder_CardHeaderProps899634192(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Meta {
+    @JSImport("semantic-ui-react", "Card.Meta")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardMetaProps): SharedBuilder_CardMetaProps_1971303307 = new SharedBuilder_CardMetaProps_1971303307(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Meta.type): SharedBuilder_CardMetaProps_1971303307 = new SharedBuilder_CardMetaProps_1971303307(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

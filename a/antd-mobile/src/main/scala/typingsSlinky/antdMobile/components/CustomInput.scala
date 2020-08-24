@@ -1,7 +1,6 @@
 package typingsSlinky.antdMobile.components
 
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
@@ -30,6 +29,8 @@ object CustomInput {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def disabledKeysVarargs(value: InputKey*): this.type = set("disabledKeys", js.Array(value :_*))
+    @scala.inline
     def disabledKeys(value: js.Array[InputKey]): this.type = set("disabledKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def disabledKeysNull: this.type = set("disabledKeys", null)
@@ -44,7 +45,7 @@ object CustomInput {
     @scala.inline
     def moneyKeyboardHeaderReactElement(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     @scala.inline
-    def moneyKeyboardHeader(value: TagMod[Any]): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
+    def moneyKeyboardHeader(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     @scala.inline
     def moneyKeyboardWrapProps(value: js.Object): this.type = set("moneyKeyboardWrapProps", value.asInstanceOf[js.Any])
     @scala.inline

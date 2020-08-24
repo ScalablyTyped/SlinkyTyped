@@ -1,7 +1,7 @@
 package typingsSlinky.antd.formFormMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.antd.formUtilMod.FormInstance
+import typingsSlinky.antd.useFormMod.FormInstance
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js

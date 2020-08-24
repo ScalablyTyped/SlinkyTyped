@@ -28,38 +28,95 @@ trait OnRequestActions extends js.Object
 
 object OnRequestActions {
   @scala.inline
-  implicit def apply(value: AddRequestCookie): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RedirectByRegEx(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RedirectByRegEx): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: AddResponseCookie): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def AddResponseHeader(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.AddResponseHeader): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: AddResponseHeader): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RedirectToEmptyDocument(
+    instanceType: String,
+    typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RedirectToEmptyDocument
+  ): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: CancelRequest): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def CancelRequest(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.CancelRequest): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: EditRequestCookie): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RemoveRequestHeader(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RemoveRequestHeader): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: EditResponseCookie): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RedirectToTransparentImage(
+    instanceType: String,
+    typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RedirectToTransparentImage
+  ): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: IgnoreRules): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def SendMessageToExtension(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.SendMessageToExtension): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RedirectByRegEx): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def AddResponseCookie(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.AddResponseCookie): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RedirectRequest): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RedirectRequest(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RedirectRequest): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RedirectToEmptyDocument): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RemoveRequestCookie(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RemoveRequestCookie): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RedirectToTransparentImage): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def AddRequestCookie(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.AddRequestCookie): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RemoveRequestCookie): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RemoveResponseCookie(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RemoveResponseCookie): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RemoveRequestHeader): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def EditResponseCookie(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.EditResponseCookie): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RemoveResponseCookie): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def IgnoreRules(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.IgnoreRules): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: RemoveResponseHeader): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def EditRequestCookie(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.EditRequestCookie): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: SendMessageToExtension): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def SetRequestHeader(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.SetRequestHeader): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
   @scala.inline
-  implicit def apply(value: SetRequestHeader): OnRequestActions = value.asInstanceOf[OnRequestActions]
+  def RemoveResponseHeader(instanceType: String, typeGuard: typingsSlinky.chromeApps.chromeAppsStrings.RemoveResponseHeader): OnRequestActions = {
+    val __obj = js.Dynamic.literal(instanceType = instanceType.asInstanceOf[js.Any], typeGuard = typeGuard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OnRequestActions]
+  }
 }
 

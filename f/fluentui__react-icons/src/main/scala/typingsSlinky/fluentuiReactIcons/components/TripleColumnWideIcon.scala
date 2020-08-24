@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TripleColumnWideIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TripleColumnWideIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TripleColumnWideIcon")
   @js.native
   object component extends js.Object
   

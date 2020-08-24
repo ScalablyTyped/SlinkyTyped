@@ -12,7 +12,6 @@ package object mod {
   type BridgeParseLocation = js.Any
   type BridgeParseUser = js.Any
   type BridgeThirdPartyProtocolResult = js.Any
-  type Controller = js.Any
   type Datastore = js.Any
   type EntryDict = org.scalablytyped.runtime.StringDictionary[js.Array[typingsSlinky.matrixAppserviceBridge.mod.Entry]]
   type RemoteRoomDict = org.scalablytyped.runtime.StringDictionary[typingsSlinky.matrixAppserviceBridge.mod.RemoteRoom]

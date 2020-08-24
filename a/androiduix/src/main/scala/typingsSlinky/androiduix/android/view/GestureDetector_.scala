@@ -85,191 +85,72 @@ object GestureDetector_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCancel(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCancelTaps(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelTaps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCancel(value: () => js.Any): Self = this.set("cancel", js.Any.fromFunction0(value))
     @scala.inline
-    def withDispatchLongPress(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchLongPress")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCancelTaps(value: () => js.Any): Self = this.set("cancelTaps", js.Any.fromFunction0(value))
     @scala.inline
-    def withInit(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDispatchLongPress(value: () => js.Any): Self = this.set("dispatchLongPress", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsConsideredDoubleTap(value: (js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConsideredDoubleTap")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setInit(value: () => js.Any): Self = this.set("init", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsLongpressEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLongpressEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsConsideredDoubleTap(value: (js.Any, js.Any, js.Any) => js.Any): Self = this.set("isConsideredDoubleTap", js.Any.fromFunction3(value))
     @scala.inline
-    def withMAlwaysInBiggerTapRegion(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAlwaysInBiggerTapRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsLongpressEnabled(value: () => Boolean): Self = this.set("isLongpressEnabled", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAlwaysInTapRegion(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAlwaysInTapRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAlwaysInBiggerTapRegion(value: js.Any): Self = this.set("mAlwaysInBiggerTapRegion", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCurrentDownEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrentDownEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAlwaysInTapRegion(value: js.Any): Self = this.set("mAlwaysInTapRegion", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDeferConfirmSingleTap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDeferConfirmSingleTap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrentDownEvent(value: js.Any): Self = this.set("mCurrentDownEvent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDoubleTapListener(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDeferConfirmSingleTap(value: js.Any): Self = this.set("mDeferConfirmSingleTap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDoubleTapSlopSquare(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapSlopSquare")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapListener(value: js.Any): Self = this.set("mDoubleTapListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDoubleTapTouchSlopSquare(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapTouchSlopSquare")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapSlopSquare(value: js.Any): Self = this.set("mDoubleTapSlopSquare", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDownFocusX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDownFocusX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapTouchSlopSquare(value: js.Any): Self = this.set("mDoubleTapTouchSlopSquare", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDownFocusY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDownFocusY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDownFocusX(value: js.Any): Self = this.set("mDownFocusX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHandler(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDownFocusY(value: js.Any): Self = this.set("mDownFocusY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInLongPress(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInLongPress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHandler(value: js.Any): Self = this.set("mHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsDoubleTapping(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsDoubleTapping")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInLongPress(value: js.Any): Self = this.set("mInLongPress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsLongpressEnabled(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsLongpressEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsDoubleTapping(value: js.Any): Self = this.set("mIsDoubleTapping", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLastFocusX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLastFocusX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsLongpressEnabled(value: js.Any): Self = this.set("mIsLongpressEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLastFocusY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLastFocusY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLastFocusX(value: js.Any): Self = this.set("mLastFocusX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMListener(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLastFocusY(value: js.Any): Self = this.set("mLastFocusY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMaximumFlingVelocity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMaximumFlingVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMListener(value: js.Any): Self = this.set("mListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMinimumFlingVelocity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMinimumFlingVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMaximumFlingVelocity(value: js.Any): Self = this.set("mMaximumFlingVelocity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPreviousUpEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPreviousUpEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMinimumFlingVelocity(value: js.Any): Self = this.set("mMinimumFlingVelocity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStillDown(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStillDown")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPreviousUpEvent(value: js.Any): Self = this.set("mPreviousUpEvent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchSlopSquare(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchSlopSquare")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMStillDown(value: js.Any): Self = this.set("mStillDown", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMVelocityTracker(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mVelocityTracker")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchSlopSquare(value: js.Any): Self = this.set("mTouchSlopSquare", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnTouchEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMVelocityTracker(value: js.Any): Self = this.set("mVelocityTracker", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetIsLongpressEnabled(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIsLongpressEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnTouchEvent(value: MotionEvent => Boolean): Self = this.set("onTouchEvent", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetOnDoubleTapListener(value: OnDoubleTapListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnDoubleTapListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetIsLongpressEnabled(value: Boolean => Unit): Self = this.set("setIsLongpressEnabled", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetOnDoubleTapListener(value: OnDoubleTapListener => Unit): Self = this.set("setOnDoubleTapListener", js.Any.fromFunction1(value))
   }
   
 }

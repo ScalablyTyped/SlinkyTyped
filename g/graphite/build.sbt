@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "graphite"
-version := "0.1-dt-20200206Z-42e45a"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20200206Z-72fff5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

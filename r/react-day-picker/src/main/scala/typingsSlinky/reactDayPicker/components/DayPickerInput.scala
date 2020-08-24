@@ -31,6 +31,8 @@ object DayPickerInput {
     @scala.inline
     def dayPickerProps(value: DayPickerProps): this.type = set("dayPickerProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+    @scala.inline
     def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
     @scala.inline
     def formatDate(value: (/* date */ js.Date, /* format */ String, /* locale */ String) => String): this.type = set("formatDate", js.Any.fromFunction3(value))

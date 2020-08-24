@@ -1,7 +1,6 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IObjectTypeAdmin
 import typingsSlinky.mfiles.IObjectTypesAdmin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,12 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.ObjTypesAdmin")
 @js.native
-class ObjTypesAdmin () extends IObjectTypesAdmin {
-  /* CompleteClass */
-  override val Count: Double = js.native
-  /* CompleteClass */
-  override def Item(Index: Double): IObjectTypeAdmin = js.native
-}
+class ObjTypesAdmin () extends IObjectTypesAdmin
 
 @JSGlobal("MFiles.ObjTypesAdmin")
 @js.native

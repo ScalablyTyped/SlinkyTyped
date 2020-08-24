@@ -2,6 +2,7 @@ package typingsSlinky.rcPicker.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcPicker.anon.Label
 import typingsSlinky.rcPicker.getRangesMod.RangesProps
 import typingsSlinky.rcPicker.interfaceMod.Components
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -12,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GetRanges {
-  @JSImport("rc-picker/lib/utils/getRanges", JSImport.Default)
+  @JSImport("rc-picker/es/utils/getRanges", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -37,7 +38,11 @@ object GetRanges {
     @scala.inline
     def onOkNull: this.type = set("onOk", null)
     @scala.inline
+    def rangeListVarargs(value: Label*): this.type = set("rangeList", js.Array(value :_*))
+    @scala.inline
     def rangeList(value: RangeList): this.type = set("rangeList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: RangesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

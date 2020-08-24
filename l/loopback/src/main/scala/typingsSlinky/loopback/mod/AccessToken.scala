@@ -61,6 +61,11 @@ object AccessToken extends js.Object {
     * @param {AccessToken} toke
     */
   def findForRequest(req: js.Any): Unit = js.native
+  def findForRequest(
+    req: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* err */ js.Error, /* token */ this.type, Unit]
+  ): Unit = js.native
   def findForRequest(req: js.Any, options: js.Any): Unit = js.native
   def findForRequest(
     req: js.Any,

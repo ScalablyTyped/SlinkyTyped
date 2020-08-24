@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 /* Inlined stripe.stripe.paymentMethods.CardWallet['type'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.stripe.stripeStrings.masterpass
   - typingsSlinky.stripe.stripeStrings.apple_pay
-  - typingsSlinky.stripe.stripeStrings.amex_express_checkout
-  - typingsSlinky.stripe.stripeStrings.google_pay
-  - typingsSlinky.stripe.stripeStrings.visa_checkout
   - typingsSlinky.stripe.stripeStrings.samsung_pay
+  - typingsSlinky.stripe.stripeStrings.masterpass
+  - typingsSlinky.stripe.stripeStrings.visa_checkout
+  - typingsSlinky.stripe.stripeStrings.google_pay
+  - typingsSlinky.stripe.stripeStrings.amex_express_checkout
 */
 trait CardWalletType extends js.Object
 

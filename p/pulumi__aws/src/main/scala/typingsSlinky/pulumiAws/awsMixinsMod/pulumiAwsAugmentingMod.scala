@@ -47,6 +47,7 @@ import typingsSlinky.pulumiAws.anon.TypeofCloudTrail
 import typingsSlinky.pulumiAws.anon.TypeofCloudWatch
 import typingsSlinky.pulumiAws.anon.TypeofCloudWatchEvents
 import typingsSlinky.pulumiAws.anon.TypeofCloudWatchLogs
+import typingsSlinky.pulumiAws.anon.TypeofCodeArtifact
 import typingsSlinky.pulumiAws.anon.TypeofCodeBuild
 import typingsSlinky.pulumiAws.anon.TypeofCodeCommit
 import typingsSlinky.pulumiAws.anon.TypeofCodeDeploy
@@ -113,7 +114,9 @@ import typingsSlinky.pulumiAws.anon.TypeofGreengrass
 import typingsSlinky.pulumiAws.anon.TypeofGroundStation
 import typingsSlinky.pulumiAws.anon.TypeofGuardDuty
 import typingsSlinky.pulumiAws.anon.TypeofHealth
+import typingsSlinky.pulumiAws.anon.TypeofHoneycode
 import typingsSlinky.pulumiAws.anon.TypeofIAM
+import typingsSlinky.pulumiAws.anon.TypeofIVS
 import typingsSlinky.pulumiAws.anon.TypeofImagebuilder
 import typingsSlinky.pulumiAws.anon.TypeofImportExport
 import typingsSlinky.pulumiAws.anon.TypeofInspector
@@ -307,6 +310,7 @@ object pulumiAwsAugmentingMod extends js.Object {
     var CloudWatch: Instantiable0[typingsSlinky.awsSdk.mod.CloudWatch] | TypeofCloudWatch = js.native
     var CloudWatchEvents: Instantiable0[typingsSlinky.awsSdk.mod.CloudWatchEvents] | TypeofCloudWatchEvents = js.native
     var CloudWatchLogs: Instantiable0[typingsSlinky.awsSdk.mod.CloudWatchLogs] | TypeofCloudWatchLogs = js.native
+    var CodeArtifact: Instantiable0[typingsSlinky.awsSdk.mod.CodeArtifact] | TypeofCodeArtifact = js.native
     var CodeBuild: Instantiable0[typingsSlinky.awsSdk.mod.CodeBuild] | TypeofCodeBuild = js.native
     var CodeCommit: Instantiable0[typingsSlinky.awsSdk.mod.CodeCommit] | TypeofCodeCommit = js.native
     var CodeDeploy: Instantiable0[typingsSlinky.awsSdk.mod.CodeDeploy] | TypeofCodeDeploy = js.native
@@ -384,9 +388,11 @@ object pulumiAwsAugmentingMod extends js.Object {
     var GroundStation: Instantiable0[typingsSlinky.awsSdk.mod.GroundStation] | TypeofGroundStation = js.native
     var GuardDuty: Instantiable0[typingsSlinky.awsSdk.mod.GuardDuty] | TypeofGuardDuty = js.native
     var Health: Instantiable0[typingsSlinky.awsSdk.mod.Health] | TypeofHealth = js.native
+    var Honeycode: Instantiable0[typingsSlinky.awsSdk.mod.Honeycode] | TypeofHoneycode = js.native
     var HttpRequest: Instantiable2[/* endpoint */ Endpoint, /* region */ String, typingsSlinky.awsSdk.mod.HttpRequest] = js.native
     var HttpResponse: Instantiable0[typingsSlinky.awsSdk.mod.HttpResponse] = js.native
     var IAM: Instantiable0[typingsSlinky.awsSdk.mod.IAM] | TypeofIAM = js.native
+    var IVS: Instantiable0[typingsSlinky.awsSdk.mod.IVS] | TypeofIVS = js.native
     var Imagebuilder: Instantiable0[typingsSlinky.awsSdk.mod.Imagebuilder] | TypeofImagebuilder = js.native
     var ImportExport: Instantiable0[typingsSlinky.awsSdk.mod.ImportExport] | TypeofImportExport = js.native
     var IniLoader: Instantiable0[typingsSlinky.awsSdk.mod.IniLoader] = js.native
@@ -517,6 +523,7 @@ object pulumiAwsAugmentingMod extends js.Object {
         typingsSlinky.awsSdk.mod.TemporaryCredentials
       ]) = js.native
     var Textract: Instantiable0[typingsSlinky.awsSdk.mod.Textract] | TypeofTextract = js.native
+    var TokenFileWebIdentityCredentials: Instantiable0[typingsSlinky.awsSdk.mod.TokenFileWebIdentityCredentials] = js.native
     var TranscribeService: Instantiable0[typingsSlinky.awsSdk.mod.TranscribeService] | TypeofTranscribeService = js.native
     var Transfer: Instantiable0[typingsSlinky.awsSdk.mod.Transfer] | TypeofTransfer = js.native
     var Translate: Instantiable0[typingsSlinky.awsSdk.mod.Translate] | TypeofTranslate = js.native

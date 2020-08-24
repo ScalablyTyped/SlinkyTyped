@@ -1,43 +1,30 @@
 package typingsSlinky.uiBox
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.ComponentPropsWithoutRef
-import typingsSlinky.react.mod.WeakValidationMap
+import typingsSlinky.react.mod.ComponentPropsWithRef
+import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.Exclude
-import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import typingsSlinky.uiBox.anon.AllowUnsafeHref
 import typingsSlinky.uiBox.typesEnhancersMod.EnhancerProps
-import typingsSlinky.uiBox.uiBoxStrings.innerRef
-import typingsSlinky.uiBox.uiBoxStrings.is
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ui-box/dist/types/box-types", JSImport.Namespace)
+@JSImport("ui-box/dist/src/types/box-types", JSImport.Namespace)
 @js.native
 object boxTypesMod extends js.Object {
-  @js.native
-  trait BoxComponent extends js.Object {
-    var defaultProps: js.UndefOr[Partial[js.Object]] = js.native
-    var displayName: js.UndefOr[String] = js.native
-    var propTypes: js.UndefOr[WeakValidationMap[js.Object]] = js.native
-    def apply[T /* <: Is[_] */](props: BoxProps[T]): ReactElement | Null = js.native
-  }
-  
-  type BoxProps[T /* <: Is[_] */] = InheritedProps[T] with EnhancerProps with AllowUnsafeHref[T]
-  /**
-    * Grab components passed to the `is` prop and return their props
-    * @template T Component type
-    */
-  type InheritedProps[T /* <: Is[_] */] = WithoutBoxProps[ComponentPropsWithoutRef[T]]
-  type Is[P] = ReactElement
-  type RefType[T] = /* import warning: importer.ImportType#apply Failed type conversion: T['prototype'] */ js.Any
+  type BoxComponent[P, D /* <: ReactElement */] = js.Function1[/* props */ PolymorphicBoxProps[D, P], ReactElement]
+  type BoxOwnProps[E /* <: ReactElement */, P] = (Without[EnhancerProps, /* keyof P */ String]) with AllowUnsafeHref[E]
+  type BoxProps[E /* <: ReactElement */] = (BoxOwnProps[E, js.Object]) with (Without[
+    PropsOf[E], 
+    /* keyof ui-box.anon.BoxOwnPropsElementTypeany */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 144 */ js.Any
+  ])
+  type PolymorphicBoxProps[E /* <: ReactElement */, P] = (BoxOwnProps[E, P]) with (Without[
+    PropsOf[E], 
+    /* keyof ui-box.anon.BoxOwnPropsElementTypeany & P */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 144 */ js.Any
+  ]) with P
+  type PropsOf[E /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = LibraryManagedAttributes[E, ComponentPropsWithRef[E]]
   type Without[T, K] = Pick[T, Exclude[/* keyof T */ String, K]]
-  /**
-    * Remove box props from object `T` if they're present
-    * @template T Object
-    */
-  type WithoutBoxProps[T] = Without[T, is | innerRef]
 }
 

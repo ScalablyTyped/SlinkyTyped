@@ -10,11 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDashboardStateChangedEventArgs")
 @js.native
 class ASPxClientDashboardStateChangedEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDashboardStateChangedEventArgs {
-  /**
-    * Gets the current state of the dashboard.
-    */
-  /* CompleteClass */
-  override var DashboardState: String = js.native
-}
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardStateChangedEventArgs
 

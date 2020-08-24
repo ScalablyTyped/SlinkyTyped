@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -15,7 +15,6 @@ import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListStylePr
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListStyles
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -35,7 +34,7 @@ object GroupedList {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.groupedListBaseMod.GroupedListBase] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,11 +50,15 @@ object GroupedList {
     @scala.inline
     def dragDropHelper(value: IDragDropHelper): this.type = set("dragDropHelper", value.asInstanceOf[js.Any])
     @scala.inline
+    def eventsToRegisterVarargs(value: Callback*): this.type = set("eventsToRegister", js.Array(value :_*))
+    @scala.inline
     def eventsToRegister(value: js.Array[Callback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
     @scala.inline
     def getGroupHeight(value: (/* group */ IGroup, /* groupIndex */ Double) => Double): this.type = set("getGroupHeight", js.Any.fromFunction2(value))
     @scala.inline
     def groupProps(value: IGroupRenderProps): this.type = set("groupProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
     @scala.inline
     def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     @scala.inline
@@ -84,7 +87,7 @@ object GroupedList {
   @scala.inline
   def apply(
     items: js.Array[_],
-    onRenderCell: (js.UndefOr[Double], js.UndefOr[js.Any], js.UndefOr[Double]) => TagMod[Any]
+    onRenderCell: (js.UndefOr[Double], js.UndefOr[js.Any], js.UndefOr[Double]) => ReactElement
   ): Builder = {
     val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onRenderCell = js.Any.fromFunction3(onRenderCell))
     new Builder(js.Array(this.component, __props.asInstanceOf[IGroupedListProps]))

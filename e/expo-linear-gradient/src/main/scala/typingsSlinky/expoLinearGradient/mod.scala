@@ -1,7 +1,5 @@
 package typingsSlinky.expoLinearGradient
 
-import typingsSlinky.expoLinearGradient.anon.AccessibilityActions
-import typingsSlinky.expoLinearGradient.linearGradientMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class LinearGradient () extends default
-  
-  /* static members */
-  @js.native
-  object LinearGradient extends js.Object {
-    var propTypes: AccessibilityActions = js.native
-  }
+  class LinearGradient ()
+    extends typingsSlinky.expoLinearGradient.linearGradientMod.LinearGradient
   
 }
 

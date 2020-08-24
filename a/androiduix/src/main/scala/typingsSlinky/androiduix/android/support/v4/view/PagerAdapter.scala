@@ -53,89 +53,38 @@ object PagerAdapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDestroyItem(value: (ViewGroup, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyItem")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFinishUpdate(value: ViewGroup => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finishUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDestroyItem(value: (ViewGroup, Double, js.Any) => Unit): Self = this.set("destroyItem", js.Any.fromFunction3(value))
     @scala.inline
-    def withGetCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setFinishUpdate(value: ViewGroup => Unit): Self = this.set("finishUpdate", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetItemPosition(value: js.Any => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemPosition")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetCount(value: () => Double): Self = this.set("getCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetPageTitle(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPageTitle")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetItemPosition(value: js.Any => Double): Self = this.set("getItemPosition", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetPageWidth(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPageWidth")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetPageTitle(value: Double => String): Self = this.set("getPageTitle", js.Any.fromFunction1(value))
     @scala.inline
-    def withInstantiateItem(value: (ViewGroup, Double) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiateItem")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetPageWidth(value: Double => Double): Self = this.set("getPageWidth", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsViewFromObject(value: (View, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isViewFromObject")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setInstantiateItem(value: (ViewGroup, Double) => js.Any): Self = this.set("instantiateItem", js.Any.fromFunction2(value))
     @scala.inline
-    def withMObservable(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mObservable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsViewFromObject(value: (View, js.Any) => Boolean): Self = this.set("isViewFromObject", js.Any.fromFunction2(value))
     @scala.inline
-    def withNotifyDataSetChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyDataSetChanged")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMObservable(value: js.Any): Self = this.set("mObservable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRegisterDataSetObserver(value: DataSetObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerDataSetObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setNotifyDataSetChanged(value: () => Unit): Self = this.set("notifyDataSetChanged", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetPrimaryItem(value: (ViewGroup, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrimaryItem")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setRegisterDataSetObserver(value: DataSetObserver => Unit): Self = this.set("registerDataSetObserver", js.Any.fromFunction1(value))
     @scala.inline
-    def withStartUpdate(value: ViewGroup => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetPrimaryItem(value: (ViewGroup, Double, js.Any) => Unit): Self = this.set("setPrimaryItem", js.Any.fromFunction3(value))
     @scala.inline
-    def withUnregisterDataSetObserver(value: DataSetObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unregisterDataSetObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setStartUpdate(value: ViewGroup => Unit): Self = this.set("startUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUnregisterDataSetObserver(value: DataSetObserver => Unit): Self = this.set("unregisterDataSetObserver", js.Any.fromFunction1(value))
   }
   
 }

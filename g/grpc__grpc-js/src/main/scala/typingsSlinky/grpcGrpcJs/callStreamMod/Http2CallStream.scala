@@ -2,12 +2,10 @@ package typingsSlinky.grpcGrpcJs.callStreamMod
 
 import typingsSlinky.grpcGrpcJs.callCredentialsMod.CallCredentials
 import typingsSlinky.grpcGrpcJs.channelMod.ChannelImplementation
-import typingsSlinky.grpcGrpcJs.constantsMod.Status
 import typingsSlinky.grpcGrpcJs.filterMod.Filter
+import typingsSlinky.grpcGrpcJs.filterMod.FilterFactory
 import typingsSlinky.grpcGrpcJs.filterStackMod.FilterStackFactory
-import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
 import typingsSlinky.grpcGrpcJs.subchannelMod.Subchannel
-import typingsSlinky.node.Buffer
 import typingsSlinky.node.http2Mod.ClientHttp2Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -71,28 +69,7 @@ class Http2CallStream protected () extends Call {
   var unpushedReadMessages: js.Any = js.native
   var writesClosed: js.Any = js.native
   def attachHttp2Stream(stream: ClientHttp2Stream, subchannel: Subchannel): Unit = js.native
-  /* CompleteClass */
-  override def cancelWithStatus(status: Status, details: String): Unit = js.native
-  /* CompleteClass */
-  override def getCredentials(): CallCredentials = js.native
-  /* CompleteClass */
-  override def getDeadline(): Deadline = js.native
-  /* CompleteClass */
-  override def getHost(): String = js.native
-  /* CompleteClass */
-  override def getMethod(): String = js.native
-  /* CompleteClass */
-  override def getPeer(): String = js.native
+  def attachHttp2Stream(stream: ClientHttp2Stream, subchannel: Subchannel, extraFilterFactory: FilterFactory[Filter]): Unit = js.native
   def getStatus(): StatusObject | Null = js.native
-  /* CompleteClass */
-  override def halfClose(): Unit = js.native
-  /* CompleteClass */
-  override def sendMessageWithContext(context: MessageContext, message: Buffer): Unit = js.native
-  /* CompleteClass */
-  override def setCredentials(credentials: CallCredentials): Unit = js.native
-  /* CompleteClass */
-  override def start(metadata: Metadata, listener: InterceptingListener): Unit = js.native
-  /* CompleteClass */
-  override def startRead(): Unit = js.native
 }
 

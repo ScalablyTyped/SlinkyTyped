@@ -21,6 +21,7 @@ import scala.scalajs.js.annotation._
 class Socket () extends Stream {
   def this(options: SocketOptions) = this()
   def this(url: String) = this()
+  def this(url: js.UndefOr[scala.Nothing], options: SocketOptions) = this()
   def this(url: String, options: SocketOptions) = this()
   @JSName("emits")
   var emits_Original: typingsSlinky.primus.mod.emits.emits = js.native
@@ -55,6 +56,7 @@ class Socket () extends Stream {
     event: `reconnect timeout`,
     handler: js.Function2[/* err */ js.Error, /* opts */ ReconnectEventOpts, Unit]
   ): this.type = js.native
+  def open(): this.type = js.native
   def write(data: js.Any): this.type = js.native
 }
 

@@ -28,23 +28,16 @@ object TextWatcher {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAfterTextChanged(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTextChanged")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBeforeTextChanged(value: (String, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTextChanged")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setAfterTextChanged(value: String => Unit): Self = this.set("afterTextChanged", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnTextChanged(value: (String, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTextChanged")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setBeforeTextChanged(value: (String, Double, Double, Double) => Unit): Self = this.set("beforeTextChanged", js.Any.fromFunction4(value))
+    @scala.inline
+    def setOnTextChanged(value: (String, Double, Double, Double) => Unit): Self = this.set("onTextChanged", js.Any.fromFunction4(value))
   }
   
 }

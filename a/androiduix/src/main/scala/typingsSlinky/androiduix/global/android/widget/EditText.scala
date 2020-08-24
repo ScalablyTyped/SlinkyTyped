@@ -12,6 +12,7 @@ class EditText protected ()
   extends typingsSlinky.androiduix.android.widget.EditText {
   def this(context: Context) = this()
   def this(context: Context, bindElement: HTMLElement) = this()
+  def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: js.Any) = this()
   def this(context: Context, bindElement: HTMLElement, defStyle: js.Any) = this()
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OfficeVideoLogoInverseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OfficeVideoLogoInverseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OfficeVideoLogoInverseIcon")
   @js.native
   object component extends js.Object
   

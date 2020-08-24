@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ariaQuery.ariaQueryStrings.tree
   - typingsSlinky.ariaQuery.ariaQueryStrings.treegrid
 */
-trait ARIACompositeWidgetRole extends js.Object
+trait ARIACompositeWidgetRole extends _ARIARole
 
 object ARIACompositeWidgetRole {
   @scala.inline

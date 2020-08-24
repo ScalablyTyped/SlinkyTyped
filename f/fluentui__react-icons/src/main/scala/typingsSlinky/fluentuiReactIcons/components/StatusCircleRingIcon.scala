@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StatusCircleRingIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StatusCircleRingIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StatusCircleRingIcon")
   @js.native
   object component extends js.Object
   

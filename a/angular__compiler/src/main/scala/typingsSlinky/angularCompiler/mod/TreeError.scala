@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TreeError")
 @js.native
 class TreeError protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TreeError {
+  extends typingsSlinky.angularCompiler.compilerMod.TreeError {
   def this(
     elementName: String,
     span: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,

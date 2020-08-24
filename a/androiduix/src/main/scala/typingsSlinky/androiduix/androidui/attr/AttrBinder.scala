@@ -34,6 +34,7 @@ trait AttrBinder extends js.Object {
   def parseColor(value: String, defaultValue: Double): Double = js.native
   def parseColorList(value: String): ColorStateList = js.native
   def parseDimension(value: js.Any): Double = js.native
+  def parseDimension(value: js.Any, defaultValue: js.UndefOr[scala.Nothing], baseValue: Double): Double = js.native
   def parseDimension(value: js.Any, defaultValue: Double): Double = js.native
   def parseDimension(value: js.Any, defaultValue: Double, baseValue: Double): Double = js.native
   def parseDrawable(s: String): Drawable = js.native
@@ -45,9 +46,11 @@ trait AttrBinder extends js.Object {
   def parseInt(value: js.Any): Double = js.native
   def parseInt(value: js.Any, defaultValue: Double): Double = js.native
   def parseNumberPixelOffset(value: js.Any): Double = js.native
+  def parseNumberPixelOffset(value: js.Any, defaultValue: js.UndefOr[scala.Nothing], baseValue: Double): Double = js.native
   def parseNumberPixelOffset(value: js.Any, defaultValue: Double): Double = js.native
   def parseNumberPixelOffset(value: js.Any, defaultValue: Double, baseValue: Double): Double = js.native
   def parseNumberPixelSize(value: js.Any): Double = js.native
+  def parseNumberPixelSize(value: js.Any, defaultValue: js.UndefOr[scala.Nothing], baseValue: Double): Double = js.native
   def parseNumberPixelSize(value: js.Any, defaultValue: Double): Double = js.native
   def parseNumberPixelSize(value: js.Any, defaultValue: Double, baseValue: Double): Double = js.native
   def parsePaddingMarginTRBL(value: js.Any): js.Array[Double] = js.native

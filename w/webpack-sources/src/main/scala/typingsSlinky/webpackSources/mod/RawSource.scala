@@ -1,5 +1,6 @@
 package typingsSlinky.webpackSources.mod
 
+import typingsSlinky.sourceListMap.mod.SourceListMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class RawSource protected () extends Source {
   def this(value: String) = this()
-  var _value: String = js.native
+  def listMap(options: MapOptions): SourceListMap = js.native
 }
 

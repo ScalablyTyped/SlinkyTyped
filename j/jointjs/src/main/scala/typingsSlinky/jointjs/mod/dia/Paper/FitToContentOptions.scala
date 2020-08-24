@@ -36,125 +36,50 @@ object FitToContentOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllowNewOrigin(value: negative | positive | any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNewOrigin")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAllowNewOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNewOrigin")(js.undefined)
-        ret
-    }
+    def setAllowNewOrigin(value: negative | positive | any): Self = this.set("allowNewOrigin", value.asInstanceOf[js.Any])
     @scala.inline
-    def withContentArea(value: BBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentArea")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAllowNewOrigin: Self = this.set("allowNewOrigin", js.undefined)
     @scala.inline
-    def withoutContentArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentArea")(js.undefined)
-        ret
-    }
+    def setContentArea(value: BBox): Self = this.set("contentArea", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGridHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteContentArea: Self = this.set("contentArea", js.undefined)
     @scala.inline
-    def withoutGridHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridHeight")(js.undefined)
-        ret
-    }
+    def setGridHeight(value: Double): Self = this.set("gridHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGridWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGridHeight: Self = this.set("gridHeight", js.undefined)
     @scala.inline
-    def withoutGridWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridWidth")(js.undefined)
-        ret
-    }
+    def setGridWidth(value: Double): Self = this.set("gridWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGridWidth: Self = this.set("gridWidth", js.undefined)
     @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
+    def setMaxHeight(value: Double): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxHeight: Self = this.set("maxHeight", js.undefined)
     @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
+    def setMaxWidth(value: Double): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxWidth: Self = this.set("maxWidth", js.undefined)
     @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
+    def setMinHeight(value: Double): Self = this.set("minHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinHeight: Self = this.set("minHeight", js.undefined)
     @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
+    def setMinWidth(value: Double): Self = this.set("minWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPadding(value: Padding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinWidth: Self = this.set("minWidth", js.undefined)
     @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
+    def setPadding(value: Padding): Self = this.set("padding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUseModelGeometry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useModelGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePadding: Self = this.set("padding", js.undefined)
     @scala.inline
-    def withoutUseModelGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useModelGeometry")(js.undefined)
-        ret
-    }
+    def setUseModelGeometry(value: Boolean): Self = this.set("useModelGeometry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseModelGeometry: Self = this.set("useModelGeometry", js.undefined)
   }
   
 }

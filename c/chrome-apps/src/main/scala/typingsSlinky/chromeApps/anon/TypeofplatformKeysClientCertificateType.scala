@@ -96,37 +96,22 @@ object TypeofplatformKeysClientCertificateType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClientCertificateType(value: ECDSASIGN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertificateType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetKeyPair(
+    def setClientCertificateType(value: ECDSASIGN): Self = this.set("ClientCertificateType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGetKeyPair(
       value: (js.typedarray.ArrayBuffer, js.Object, js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyPair")(js.Any.fromFunction3(value))
-        ret
-    }
+    ): Self = this.set("getKeyPair", js.Any.fromFunction3(value))
     @scala.inline
-    def withSelectClientCertificates(value: (SelectDetails, js.Function1[/* matches */ js.Array[Match], Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectClientCertificates")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSelectClientCertificates(value: (SelectDetails, js.Function1[/* matches */ js.Array[Match], Unit]) => Unit): Self = this.set("selectClientCertificates", js.Any.fromFunction2(value))
     @scala.inline
-    def withSubtleCrypto(value: () => SubtleCrypto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtleCrypto")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSubtleCrypto(value: () => SubtleCrypto): Self = this.set("subtleCrypto", js.Any.fromFunction0(value))
     @scala.inline
-    def withVerifyTLSServerCertificate(value: (VerificationDetails, js.Function1[/* result */ VerificationResult, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyTLSServerCertificate")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setVerifyTLSServerCertificate(value: (VerificationDetails, js.Function1[/* result */ VerificationResult, Unit]) => Unit): Self = this.set("verifyTLSServerCertificate", js.Any.fromFunction2(value))
   }
   
 }

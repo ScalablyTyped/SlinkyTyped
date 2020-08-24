@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StepSharedInsertIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StepSharedInsertIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StepSharedInsertIcon")
   @js.native
   object component extends js.Object
   

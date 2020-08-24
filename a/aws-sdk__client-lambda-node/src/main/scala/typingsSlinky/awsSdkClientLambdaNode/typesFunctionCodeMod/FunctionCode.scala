@@ -4,39 +4,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FunctionCode extends js.Object {
   /**
     * <p>An Amazon S3 bucket in the same region as your function.</p>
     */
-  var S3Bucket: js.UndefOr[String] = js.undefined
+  var S3Bucket: js.UndefOr[String] = js.native
   /**
     * <p>The Amazon S3 key of the deployment package.</p>
     */
-  var S3Key: js.UndefOr[String] = js.undefined
+  var S3Key: js.UndefOr[String] = js.native
   /**
     * <p>For versioned objects, the version of the deployment package object to use.</p>
     */
-  var S3ObjectVersion: js.UndefOr[String] = js.undefined
+  var S3ObjectVersion: js.UndefOr[String] = js.native
   /**
     * <p>The base64-encoded contents of your zip file containing your deployment package. AWS SDK and AWS CLI clients handle the encoding for you.</p>
     */
-  var ZipFile: js.UndefOr[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String] = js.undefined
+  var ZipFile: js.UndefOr[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String] = js.native
 }
 
 object FunctionCode {
   @scala.inline
-  def apply(
-    S3Bucket: String = null,
-    S3Key: String = null,
-    S3ObjectVersion: String = null,
-    ZipFile: js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String = null
-  ): FunctionCode = {
+  def apply(): FunctionCode = {
     val __obj = js.Dynamic.literal()
-    if (S3Bucket != null) __obj.updateDynamic("S3Bucket")(S3Bucket.asInstanceOf[js.Any])
-    if (S3Key != null) __obj.updateDynamic("S3Key")(S3Key.asInstanceOf[js.Any])
-    if (S3ObjectVersion != null) __obj.updateDynamic("S3ObjectVersion")(S3ObjectVersion.asInstanceOf[js.Any])
-    if (ZipFile != null) __obj.updateDynamic("ZipFile")(ZipFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionCode]
   }
+  @scala.inline
+  implicit class FunctionCodeOps[Self <: FunctionCode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setS3Bucket(value: String): Self = this.set("S3Bucket", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteS3Bucket: Self = this.set("S3Bucket", js.undefined)
+    @scala.inline
+    def setS3Key(value: String): Self = this.set("S3Key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteS3Key: Self = this.set("S3Key", js.undefined)
+    @scala.inline
+    def setS3ObjectVersion(value: String): Self = this.set("S3ObjectVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteS3ObjectVersion: Self = this.set("S3ObjectVersion", js.undefined)
+    @scala.inline
+    def setZipFileArrayBufferView(value: js.typedarray.ArrayBufferView): Self = this.set("ZipFile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZipFileArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("ZipFile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZipFile(value: js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String): Self = this.set("ZipFile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZipFile: Self = this.set("ZipFile", js.undefined)
+  }
+  
 }
 

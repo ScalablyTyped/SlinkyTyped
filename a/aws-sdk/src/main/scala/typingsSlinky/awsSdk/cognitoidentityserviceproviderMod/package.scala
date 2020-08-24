@@ -58,8 +58,7 @@ package object cognitoidentityserviceproviderMod {
     - java.lang.String
   */
   type AuthFlowType = typingsSlinky.awsSdk.cognitoidentityserviceproviderMod._AuthFlowType | java.lang.String
-  type AuthParametersType = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.AuthParametersValueType]
-  type AuthParametersValueType = java.lang.String
+  type AuthParametersType = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.StringType]
   type BlockedIPRangeListType = js.Array[typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.StringType]
   type BooleanType = scala.Boolean
   type CSSType = java.lang.String

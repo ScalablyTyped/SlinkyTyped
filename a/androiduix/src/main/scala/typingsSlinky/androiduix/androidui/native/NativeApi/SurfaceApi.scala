@@ -32,35 +32,20 @@ object SurfaceApi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreateSurface(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSurface")(js.Any.fromFunction5(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withLockCanvas(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockCanvas")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setCreateSurface(value: (Double, Double, Double, Double, Double) => Unit): Self = this.set("createSurface", js.Any.fromFunction5(value))
     @scala.inline
-    def withOnSurfaceBoundChange(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSurfaceBoundChange")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setLockCanvas(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = this.set("lockCanvas", js.Any.fromFunction6(value))
     @scala.inline
-    def withShowFps(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFps")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnSurfaceBoundChange(value: (Double, Double, Double, Double, Double) => Unit): Self = this.set("onSurfaceBoundChange", js.Any.fromFunction5(value))
     @scala.inline
-    def withUnlockCanvasAndPost(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlockCanvasAndPost")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setShowFps(value: Double => Unit): Self = this.set("showFps", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUnlockCanvasAndPost(value: (Double, Double) => Unit): Self = this.set("unlockCanvasAndPost", js.Any.fromFunction2(value))
   }
   
 }

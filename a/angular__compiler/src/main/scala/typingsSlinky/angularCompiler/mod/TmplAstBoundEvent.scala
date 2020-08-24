@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TmplAstBoundEvent")
 @js.native
 class TmplAstBoundEvent protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TmplAstBoundEvent {
+  extends typingsSlinky.angularCompiler.compilerMod.TmplAstBoundEvent {
   def this(
     name: String,
     `type`: ParsedEventType,

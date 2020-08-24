@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CropIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CropIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CropIcon")
   @js.native
   object component extends js.Object
   

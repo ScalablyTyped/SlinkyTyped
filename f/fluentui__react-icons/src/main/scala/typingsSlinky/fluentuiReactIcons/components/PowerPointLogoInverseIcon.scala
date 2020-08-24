@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PowerPointLogoInverseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PowerPointLogoInverseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PowerPointLogoInverseIcon")
   @js.native
   object component extends js.Object
   

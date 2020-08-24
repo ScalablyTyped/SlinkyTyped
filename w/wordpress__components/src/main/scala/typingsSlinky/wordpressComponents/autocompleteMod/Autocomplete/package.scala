@@ -10,5 +10,5 @@ package object Autocomplete {
     - typingsSlinky.wordpressComponents.anon.Action
     - typingsSlinky.wordpressComponents.anon.Value
   */
-  type OptionCompletion = typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete._OptionCompletion | slinky.core.TagMod[scala.Any]
+  type OptionCompletion = typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete._OptionCompletion | slinky.core.facade.ReactElement
 }

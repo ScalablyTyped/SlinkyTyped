@@ -3,6 +3,7 @@ package typingsSlinky.ionicReact.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -16,9 +17,9 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRouterOutletElement
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
-import typingsSlinky.ionicReact.anon.IonRouterOutletPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonRouterOutletsetRefvalH
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
@@ -69,7 +70,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,7 +82,7 @@ object IonRouterOutletInner {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonRouterOutletElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,9 +90,7 @@ object IonRouterOutletInner {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
-    def animation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): this.type = set("animation", js.Any.fromFunction3(value))
+    def animation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("animation", js.Any.fromFunction2(value))
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -212,11 +210,15 @@ object IonRouterOutletInner {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forwardedRef(value: ReactRef[HTMLIonRouterOutletElement]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -578,6 +580,8 @@ object IonRouterOutletInner {
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRef(value: /* val */ HTMLIonRouterOutletElement => Unit): this.type = set("setRef", js.Any.fromFunction1(value))
+    @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
     @scala.inline
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])
@@ -599,7 +603,7 @@ object IonRouterOutletInner {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: IonRouterOutletPickHTMLAt): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: IonRouterOutletsetRefvalH): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: IonRouterOutletInner.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

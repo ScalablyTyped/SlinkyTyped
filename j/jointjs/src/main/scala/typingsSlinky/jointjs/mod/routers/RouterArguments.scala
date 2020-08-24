@@ -6,17 +6,17 @@ import scala.scalajs.js.annotation._
 
 /* Inlined jointjs.jointjs.routers.GenericRouterArguments<jointjs.jointjs.routers.RouterType> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.jointjs.jointjsStrings.side
-  - typingsSlinky.jointjs.jointjsStrings.maximumLoops
-  - typingsSlinky.jointjs.jointjsStrings.perpendicular
-  - typingsSlinky.jointjs.jointjsStrings.padding
   - typingsSlinky.jointjs.jointjsStrings.excludeTypes
-  - typingsSlinky.jointjs.jointjsStrings.step
-  - typingsSlinky.jointjs.jointjsStrings.elementPadding
-  - typingsSlinky.jointjs.jointjsStrings.endDirections
-  - typingsSlinky.jointjs.jointjsStrings.excludeEnds
-  - typingsSlinky.jointjs.jointjsStrings.startDirections
   - typingsSlinky.jointjs.jointjsStrings.maxAllowedDirectionChange
+  - typingsSlinky.jointjs.jointjsStrings.startDirections
+  - typingsSlinky.jointjs.jointjsStrings.elementPadding
+  - typingsSlinky.jointjs.jointjsStrings.maximumLoops
+  - typingsSlinky.jointjs.jointjsStrings.step
+  - typingsSlinky.jointjs.jointjsStrings.padding
+  - typingsSlinky.jointjs.jointjsStrings.endDirections
+  - typingsSlinky.jointjs.jointjsStrings.perpendicular
+  - typingsSlinky.jointjs.jointjsStrings.excludeEnds
+  - typingsSlinky.jointjs.jointjsStrings.side
 */
 trait RouterArguments extends js.Object
 

@@ -44,7 +44,38 @@ class SVGRenderer protected () extends js.Object {
     */
   def this(container: HTMLElement, width: Double, height: Double) = this()
   def this(container: HTMLElement, width: Double, height: Double, style: CSSObject) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean
+  ) = this()
   def this(container: HTMLElement, width: Double, height: Double, style: CSSObject, forExport: Boolean) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean,
+    allowHTML: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean
+  ) = this()
   def this(
     container: HTMLElement,
     width: Double,
@@ -52,6 +83,69 @@ class SVGRenderer protected () extends js.Object {
     style: CSSObject,
     forExport: Boolean,
     allowHTML: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean,
+    styledMode: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean,
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean,
+    allowHTML: Boolean,
+    styledMode: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean,
+    styledMode: Boolean
+  ) = this()
+  def this(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: Boolean,
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
   ) = this()
   def this(
     container: HTMLElement,
@@ -189,7 +283,11 @@ class SVGRenderer protected () extends js.Object {
     */
   def circle(): SVGElement = js.native
   def circle(attribs: SVGAttributes): SVGElement = js.native
+  def circle(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], r: Double): SVGElement = js.native
+  def circle(x: js.UndefOr[scala.Nothing], y: Double): SVGElement = js.native
+  def circle(x: js.UndefOr[scala.Nothing], y: Double, r: Double): SVGElement = js.native
   def circle(x: Double): SVGElement = js.native
+  def circle(x: Double, y: js.UndefOr[scala.Nothing], r: Double): SVGElement = js.native
   def circle(x: Double, y: Double): SVGElement = js.native
   def circle(x: Double, y: Double, r: Double): SVGElement = js.native
   /**
@@ -199,8 +297,24 @@ class SVGRenderer protected () extends js.Object {
     * @return A clipping rectangle.
     */
   def clipRect(): ClipRectElement = js.native
+  def clipRect(
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): ClipRectElement = js.native
+  def clipRect(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], width: Double): ClipRectElement = js.native
+  def clipRect(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], width: Double, height: Double): ClipRectElement = js.native
+  def clipRect(x: js.UndefOr[scala.Nothing], y: Double): ClipRectElement = js.native
+  def clipRect(x: js.UndefOr[scala.Nothing], y: Double, width: js.UndefOr[scala.Nothing], height: Double): ClipRectElement = js.native
+  def clipRect(x: js.UndefOr[scala.Nothing], y: Double, width: Double): ClipRectElement = js.native
+  def clipRect(x: js.UndefOr[scala.Nothing], y: Double, width: Double, height: Double): ClipRectElement = js.native
   def clipRect(x: Double): ClipRectElement = js.native
+  def clipRect(x: Double, y: js.UndefOr[scala.Nothing], width: js.UndefOr[scala.Nothing], height: Double): ClipRectElement = js.native
+  def clipRect(x: Double, y: js.UndefOr[scala.Nothing], width: Double): ClipRectElement = js.native
+  def clipRect(x: Double, y: js.UndefOr[scala.Nothing], width: Double, height: Double): ClipRectElement = js.native
   def clipRect(x: Double, y: Double): ClipRectElement = js.native
+  def clipRect(x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double): ClipRectElement = js.native
   def clipRect(x: Double, y: Double, width: Double): ClipRectElement = js.native
   def clipRect(x: Double, y: Double, width: Double, height: Double): ClipRectElement = js.native
   /**
@@ -218,14 +332,18 @@ class SVGRenderer protected () extends js.Object {
     * Make a straight line crisper by not spilling out to neighbour pixels.
     *
     * @param points
-    *        The original points on the format `['M', 0, 0, 'L', 100, 0]`.
+    *        The original points on the format `[['M', 0, 0], ['L', 100, 0]]`.
     *
     * @param width
     *        The width of the line.
     *
+    * @param roundingFunction
+    *        The rounding function name on the `Math` object, can be one of
+    *        `round`, `floor` or `ceil`.
+    *
     * @return The original points array, but modified to render crisply.
     */
-  def crispLine(points: SVGPathArray, width: Double): SVGPathArray = js.native
+  def crispLine(points: SVGPathArray, width: Double, roundingFunction: String): SVGPathArray = js.native
   /**
     * General method for adding a definition to the SVG `defs` tag. Can be used
     * for gradients, fills, filters etc. Styled mode only. A hook for adding
@@ -262,6 +380,8 @@ class SVGRenderer protected () extends js.Object {
     * @return The font metrics.
     */
   def fontMetrics(): FontMetricsObject = js.native
+  def fontMetrics(fontSize: js.UndefOr[scala.Nothing], elem: org.scalajs.dom.raw.SVGElement): FontMetricsObject = js.native
+  def fontMetrics(fontSize: js.UndefOr[scala.Nothing], elem: SVGElement): FontMetricsObject = js.native
   def fontMetrics(fontSize: String): FontMetricsObject = js.native
   def fontMetrics(fontSize: String, elem: org.scalajs.dom.raw.SVGElement): FontMetricsObject = js.native
   def fontMetrics(fontSize: String, elem: SVGElement): FontMetricsObject = js.native
@@ -314,9 +434,164 @@ class SVGRenderer protected () extends js.Object {
     * @return The generated wrapper element.
     */
   def image(src: String): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], width: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: Double
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: js.UndefOr[scala.Nothing], y: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: js.UndefOr[scala.Nothing], y: Double, width: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: js.UndefOr[scala.Nothing], y: Double, width: Double, height: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: Double,
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
   def image(src: String, x: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: Double, y: js.UndefOr[scala.Nothing], width: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: Double, y: js.UndefOr[scala.Nothing], width: Double, height: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
   def image(src: String, x: Double, y: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
+  def image(src: String, x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    onload: js.Function
+  ): SVGElement = js.native
   def image(src: String, x: Double, y: Double, width: Double): SVGElement = js.native
+  def image(
+    src: String,
+    x: Double,
+    y: Double,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    onload: js.Function
+  ): SVGElement = js.native
   def image(src: String, x: Double, y: Double, width: Double, height: Double): SVGElement = js.native
   def image(src: String, x: Double, y: Double, width: Double, height: Double, onload: js.Function): SVGElement = js.native
   /**
@@ -348,8 +623,102 @@ class SVGRenderer protected () extends js.Object {
     *        cases, but not when set explicitly through `.attr` and `.css` etc.
     */
   def init(container: HTMLElement, width: Double, height: Double): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean,
+    styledMode: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean,
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean,
+    allowHTML: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: js.UndefOr[scala.Nothing],
+    forExport: Boolean,
+    allowHTML: Boolean,
+    styledMode: Boolean
+  ): Unit = js.native
   def init(container: HTMLElement, width: Double, height: Double, style: CSSObject): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean
+  ): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: js.UndefOr[scala.Nothing],
+    allowHTML: Boolean,
+    styledMode: Boolean
+  ): Unit = js.native
   def init(container: HTMLElement, width: Double, height: Double, style: CSSObject, forExport: Boolean): Unit = js.native
+  def init(
+    container: HTMLElement,
+    width: Double,
+    height: Double,
+    style: CSSObject,
+    forExport: Boolean,
+    allowHTML: js.UndefOr[scala.Nothing],
+    styledMode: Boolean
+  ): Unit = js.native
   def init(
     container: HTMLElement,
     width: Double,
@@ -433,8 +802,8 @@ class SVGRenderer protected () extends js.Object {
   /**
     * Draw a path, wraps the SVG `path` element.
     *
-    * @param attribs
-    *        The initial attributes.
+    * @param path
+    *        An SVG path definition in array form.
     *
     * @return The generated wrapper element.
     */
@@ -528,9 +897,164 @@ class SVGRenderer protected () extends js.Object {
     *        Additional options, depending on the actual symbol drawn.
     */
   def symbol(symbol: String): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], width: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: Double
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: js.UndefOr[scala.Nothing], y: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: js.UndefOr[scala.Nothing], y: Double, width: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: js.UndefOr[scala.Nothing], y: Double, width: Double, height: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: js.UndefOr[scala.Nothing],
+    y: Double,
+    width: Double,
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
   def symbol(symbol: String, x: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: Double, y: js.UndefOr[scala.Nothing], width: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: Double, y: js.UndefOr[scala.Nothing], width: Double, height: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: js.UndefOr[scala.Nothing],
+    width: Double,
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
   def symbol(symbol: String, x: Double, y: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
+  def symbol(symbol: String, x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: Double,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
   def symbol(symbol: String, x: Double, y: Double, width: Double): SVGElement = js.native
+  def symbol(
+    symbol: String,
+    x: Double,
+    y: Double,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    options: SymbolOptionsObject
+  ): SVGElement = js.native
   def symbol(symbol: String, x: Double, y: Double, width: Double, height: Double): SVGElement = js.native
   def symbol(symbol: String, x: Double, y: Double, width: Double, height: Double, options: SymbolOptionsObject): SVGElement = js.native
   /**
@@ -554,8 +1078,24 @@ class SVGRenderer protected () extends js.Object {
     * @return The text object.
     */
   def text(): SVGElement = js.native
+  def text(
+    str: js.UndefOr[scala.Nothing],
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    useHTML: Boolean
+  ): SVGElement = js.native
+  def text(str: js.UndefOr[scala.Nothing], x: js.UndefOr[scala.Nothing], y: Double): SVGElement = js.native
+  def text(str: js.UndefOr[scala.Nothing], x: js.UndefOr[scala.Nothing], y: Double, useHTML: Boolean): SVGElement = js.native
+  def text(str: js.UndefOr[scala.Nothing], x: Double): SVGElement = js.native
+  def text(str: js.UndefOr[scala.Nothing], x: Double, y: js.UndefOr[scala.Nothing], useHTML: Boolean): SVGElement = js.native
+  def text(str: js.UndefOr[scala.Nothing], x: Double, y: Double): SVGElement = js.native
+  def text(str: js.UndefOr[scala.Nothing], x: Double, y: Double, useHTML: Boolean): SVGElement = js.native
   def text(str: String): SVGElement = js.native
+  def text(str: String, x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], useHTML: Boolean): SVGElement = js.native
+  def text(str: String, x: js.UndefOr[scala.Nothing], y: Double): SVGElement = js.native
+  def text(str: String, x: js.UndefOr[scala.Nothing], y: Double, useHTML: Boolean): SVGElement = js.native
   def text(str: String, x: Double): SVGElement = js.native
+  def text(str: String, x: Double, y: js.UndefOr[scala.Nothing], useHTML: Boolean): SVGElement = js.native
   def text(str: String, x: Double, y: Double): SVGElement = js.native
   def text(str: String, x: Double, y: Double, useHTML: Boolean): SVGElement = js.native
 }

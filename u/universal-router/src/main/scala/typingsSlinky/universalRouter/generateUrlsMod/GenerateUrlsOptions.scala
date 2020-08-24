@@ -1,36 +1,43 @@
 package typingsSlinky.universalRouter.generateUrlsMod
 
-import typingsSlinky.pathToRegexp.mod.Key
 import typingsSlinky.pathToRegexp.mod.ParseOptions
-import typingsSlinky.pathToRegexp.mod.PathFunctionOptions
 import typingsSlinky.pathToRegexp.mod.TokensToFunctionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GenerateUrlsOptions
-  extends PathFunctionOptions
-     with TokensToFunctionOptions
-     with ParseOptions {
-  var stringifyQueryParams: js.UndefOr[js.Function1[/* params */ Params, String]] = js.undefined
+  extends ParseOptions
+     with TokensToFunctionOptions {
+  /**
+    * Add a query string to generated url based on unknown route params.
+    */
+  var stringifyQueryParams: js.UndefOr[js.Function1[/* params */ UrlParams, String]] = js.native
 }
 
 object GenerateUrlsOptions {
   @scala.inline
-  def apply(
-    delimiter: String = null,
-    encode: (/* value */ String, /* token */ Key) => String = null,
-    sensitive: js.UndefOr[Boolean] = js.undefined,
-    stringifyQueryParams: /* params */ Params => String = null,
-    validate: js.UndefOr[Boolean] = js.undefined
-  ): GenerateUrlsOptions = {
+  def apply(): GenerateUrlsOptions = {
     val __obj = js.Dynamic.literal()
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (encode != null) __obj.updateDynamic("encode")(js.Any.fromFunction2(encode))
-    if (!js.isUndefined(sensitive)) __obj.updateDynamic("sensitive")(sensitive.get.asInstanceOf[js.Any])
-    if (stringifyQueryParams != null) __obj.updateDynamic("stringifyQueryParams")(js.Any.fromFunction1(stringifyQueryParams))
-    if (!js.isUndefined(validate)) __obj.updateDynamic("validate")(validate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateUrlsOptions]
   }
+  @scala.inline
+  implicit class GenerateUrlsOptionsOps[Self <: GenerateUrlsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setStringifyQueryParams(value: /* params */ UrlParams => String): Self = this.set("stringifyQueryParams", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteStringifyQueryParams: Self = this.set("stringifyQueryParams", js.undefined)
+  }
+  
 }
 

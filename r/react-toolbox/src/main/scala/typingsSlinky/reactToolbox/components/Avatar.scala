@@ -1,19 +1,18 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libAvatarAvatarMod.AvatarProps
-import typingsSlinky.reactToolbox.libAvatarAvatarMod.AvatarTheme
-import typingsSlinky.reactToolbox.libAvatarMod.default
+import typingsSlinky.reactToolbox.avatarAvatarMod.AvatarProps
+import typingsSlinky.reactToolbox.avatarAvatarMod.AvatarTheme
+import typingsSlinky.reactToolbox.avatarMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Avatar {
-  @JSImport("react-toolbox/lib/avatar", JSImport.Default)
+  @JSImport("react-toolbox/components/avatar", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -28,11 +27,11 @@ object Avatar {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def image(value: TagMod[Any]): this.type = set("image", value.asInstanceOf[js.Any])
+    def image(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: js.Function): this.type = set("onClick", value.asInstanceOf[js.Any])
     @scala.inline

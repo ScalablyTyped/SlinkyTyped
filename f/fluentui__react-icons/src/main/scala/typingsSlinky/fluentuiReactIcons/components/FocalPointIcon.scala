@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FocalPointIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FocalPointIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FocalPointIcon")
   @js.native
   object component extends js.Object
   

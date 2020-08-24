@@ -2,7 +2,7 @@ package typingsSlinky.wordpressComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.wordpressComponents.mod.ResponsiveWrapper.^
+import typingsSlinky.react.mod.ReactChild
 import typingsSlinky.wordpressComponents.responsiveWrapperMod.ResponsiveWrapper.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,11 +13,11 @@ object ResponsiveWrapper {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): Default[tag.type, ^] = new Default[tag.type, ^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(naturalHeight: Double, naturalWidth: Double): Default[tag.type, ^] = {
-    val __props = js.Dynamic.literal(naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any])
-    new Default[tag.type, ^](js.Array(this.component, __props.asInstanceOf[Props]))
+  def apply(children: ReactChild, naturalHeight: Double, naturalWidth: Double): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any])
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
 

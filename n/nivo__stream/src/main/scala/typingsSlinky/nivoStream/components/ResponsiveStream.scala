@@ -1,6 +1,6 @@
 package typingsSlinky.nivoStream.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAxes.mod.AxisProps
@@ -35,17 +35,25 @@ object ResponsiveStream {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.nivoStream.mod.ResponsiveStream[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.nivoStream.mod.ResponsiveStream[T]] {
     @scala.inline
     def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
     def axisBottom(value: AxisProps): this.type = set("axisBottom", value.asInstanceOf[js.Any])
     @scala.inline
+    def axisBottomNull: this.type = set("axisBottom", null)
+    @scala.inline
     def axisLeft(value: AxisProps): this.type = set("axisLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLeftNull: this.type = set("axisLeft", null)
     @scala.inline
     def axisRight(value: AxisProps): this.type = set("axisRight", value.asInstanceOf[js.Any])
     @scala.inline
+    def axisRightNull: this.type = set("axisRight", null)
+    @scala.inline
     def axisTop(value: AxisProps): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisTopNull: this.type = set("axisTop", null)
     @scala.inline
     def borderColorFunction1(value: _ => String): this.type = set("borderColor", js.Any.fromFunction1(value))
     @scala.inline
@@ -53,11 +61,15 @@ object ResponsiveStream {
     @scala.inline
     def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def curve(value: AreaCurve): this.type = set("curve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defsVarargs(value: Dictkey*): this.type = set("defs", js.Array(value :_*))
     @scala.inline
     def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
@@ -87,11 +99,15 @@ object ResponsiveStream {
     @scala.inline
     def enableStackTooltip(value: Boolean): this.type = set("enableStackTooltip", value.asInstanceOf[js.Any])
     @scala.inline
+    def fillVarargs(value: Id[T]*): this.type = set("fill", js.Array(value :_*))
+    @scala.inline
     def fill(value: js.Array[Id[T]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def fillOpacity(value: Double): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
     @scala.inline
     def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legendsVarargs(value: LegendProps*): this.type = set("legends", js.Array(value :_*))
     @scala.inline
     def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
     @scala.inline
@@ -111,7 +127,7 @@ object ResponsiveStream {
     @scala.inline
     def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltipFormatFunction1(value: T => TagMod[Any]): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    def tooltipFormatFunction1(value: T => ReactElement): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
     @scala.inline
     def tooltipFormat(value: TooltipFormatter[T] | String): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
     @scala.inline

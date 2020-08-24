@@ -7,7 +7,6 @@ import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooter
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterProps
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterStyleProps
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterStyles
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -24,7 +23,7 @@ object DialogFooter {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.dialogFooterBaseMod.DialogFooterBase] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

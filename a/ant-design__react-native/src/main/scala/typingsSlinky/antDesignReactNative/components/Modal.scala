@@ -1,10 +1,8 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.modalMod.default
 import typingsSlinky.antDesignReactNative.modalModalMod.ModalProps
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.Action
 import typingsSlinky.antDesignReactNative.modalStyleMod.ModalStyle
@@ -17,14 +15,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Modal {
-  @JSImport("@ant-design/react-native/lib/modal", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Modal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Modal] {
     @scala.inline
     def animateAppear(value: Boolean): this.type = set("animateAppear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -38,6 +36,8 @@ object Modal {
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     @scala.inline
+    def footerVarargs(value: Action[TextStyle]*): this.type = set("footer", js.Array(value :_*))
+    @scala.inline
     def footer(value: js.Array[Action[TextStyle]]): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
@@ -47,6 +47,8 @@ object Modal {
     def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
     def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onRequestClose(value: () => Boolean): this.type = set("onRequestClose", js.Any.fromFunction0(value))
     @scala.inline
     def operation(value: Boolean): this.type = set("operation", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,7 +62,7 @@ object Modal {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
   }

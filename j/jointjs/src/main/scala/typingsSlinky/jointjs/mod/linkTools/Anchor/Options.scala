@@ -20,6 +20,7 @@ trait Options
   var customAnchorAttributes: js.UndefOr[NativeSVGAttributes] = js.native
   var defaultAnchorAttributes: js.UndefOr[NativeSVGAttributes] = js.native
   var redundancyRemoval: js.UndefOr[Boolean] = js.native
+  var resetAnchor: js.UndefOr[Boolean | AnchorJSON] = js.native
   var restrictArea: js.UndefOr[Boolean] = js.native
   var snap: js.UndefOr[AnchorCallback[Point]] = js.native
   var snapRadius: js.UndefOr[Double] = js.native
@@ -38,105 +39,50 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnchor(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnchor(
       value: (/* coords */ typingsSlinky.jointjs.mod.g.Point, /* view */ CellView, /* magnet */ SVGElement, /* type */ String, /* linkView */ LinkView, /* toolView */ ToolView) => AnchorJSON
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.Any.fromFunction6(value))
-        ret
-    }
+    ): Self = this.set("anchor", js.Any.fromFunction6(value))
     @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
+    def deleteAnchor: Self = this.set("anchor", js.undefined)
     @scala.inline
-    def withAreaPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAreaPadding(value: Double): Self = this.set("areaPadding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAreaPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaPadding")(js.undefined)
-        ret
-    }
+    def deleteAreaPadding: Self = this.set("areaPadding", js.undefined)
     @scala.inline
-    def withCustomAnchorAttributes(value: NativeSVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAnchorAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCustomAnchorAttributes(value: NativeSVGAttributes): Self = this.set("customAnchorAttributes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutCustomAnchorAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAnchorAttributes")(js.undefined)
-        ret
-    }
+    def deleteCustomAnchorAttributes: Self = this.set("customAnchorAttributes", js.undefined)
     @scala.inline
-    def withDefaultAnchorAttributes(value: NativeSVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAnchorAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultAnchorAttributes(value: NativeSVGAttributes): Self = this.set("defaultAnchorAttributes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultAnchorAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAnchorAttributes")(js.undefined)
-        ret
-    }
+    def deleteDefaultAnchorAttributes: Self = this.set("defaultAnchorAttributes", js.undefined)
     @scala.inline
-    def withRedundancyRemoval(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redundancyRemoval")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRedundancyRemoval(value: Boolean): Self = this.set("redundancyRemoval", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRedundancyRemoval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redundancyRemoval")(js.undefined)
-        ret
-    }
+    def deleteRedundancyRemoval: Self = this.set("redundancyRemoval", js.undefined)
     @scala.inline
-    def withRestrictArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictArea")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setResetAnchor(value: Boolean | AnchorJSON): Self = this.set("resetAnchor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRestrictArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictArea")(js.undefined)
-        ret
-    }
+    def deleteResetAnchor: Self = this.set("resetAnchor", js.undefined)
     @scala.inline
-    def withSnap(
+    def setRestrictArea(value: Boolean): Self = this.set("restrictArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRestrictArea: Self = this.set("restrictArea", js.undefined)
+    @scala.inline
+    def setSnap(
       value: (/* coords */ typingsSlinky.jointjs.mod.g.Point, /* view */ CellView, /* magnet */ SVGElement, /* type */ String, /* linkView */ LinkView, /* toolView */ ToolView) => Point
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.Any.fromFunction6(value))
-        ret
-    }
+    ): Self = this.set("snap", js.Any.fromFunction6(value))
     @scala.inline
-    def withoutSnap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.undefined)
-        ret
-    }
+    def deleteSnap: Self = this.set("snap", js.undefined)
     @scala.inline
-    def withSnapRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSnapRadius(value: Double): Self = this.set("snapRadius", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSnapRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapRadius")(js.undefined)
-        ret
-    }
+    def deleteSnapRadius: Self = this.set("snapRadius", js.undefined)
   }
   
 }

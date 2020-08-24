@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.toastMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.Placement
 import typingsSlinky.baseui.anon.ReadonlyToastPropskeyKey
 import typingsSlinky.baseui.anon.ReadonlyToasterProps
@@ -23,7 +23,7 @@ class ToasterContainer ()
   def getSharedProps(): Placement = js.native
   def getToastProps(props: ToastProps): ReadonlyToastPropskeyKey = js.native
   def internalOnClose(key: Key): Unit = js.native
-  def renderToast(toastProps: ToastPropskeyKey): TagMod[Any] = js.native
+  def renderToast(toastProps: ToastPropskeyKey): ReactElement = js.native
   def show(props: ToastProps): Key = js.native
   def update(key: Key, props: ToastProps): Unit = js.native
 }

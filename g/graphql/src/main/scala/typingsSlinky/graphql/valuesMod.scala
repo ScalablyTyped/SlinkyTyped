@@ -18,8 +18,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object valuesMod extends js.Object {
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.graphql.anon.Errors
     - typingsSlinky.graphql.anon.Coerced
+    - typingsSlinky.graphql.anon.Errors
   */
   trait CoercedVariableValues extends js.Object
   

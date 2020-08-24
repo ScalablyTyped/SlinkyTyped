@@ -10,107 +10,35 @@ import scala.scalajs.js.annotation._
 object Permissions extends js.Object {
   @js.native
   class Class ()
-    extends typingsSlinky.realm.Realm.Permissions.Class {
-    /* CompleteClass */
-    override var class_name: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-    /* CompleteClass */
-    override var permissions: js.Array[typingsSlinky.realm.Realm.Permissions.Permission] = js.native
-    /* CompleteClass */
-    override def findOrCreate(roleName: String): typingsSlinky.realm.Realm.Permissions.Permission = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.Class
   
   @js.native
   class ClassPrivileges ()
-    extends typingsSlinky.realm.Realm.Permissions.ClassPrivileges {
-    /* CompleteClass */
-    override var canCreate: Boolean = js.native
-    /* CompleteClass */
-    override var canModifySchema: Boolean = js.native
-    /* CompleteClass */
-    override var canQuery: Boolean = js.native
-    /* CompleteClass */
-    override var canRead: Boolean = js.native
-    /* CompleteClass */
-    override var canSetPermissions: Boolean = js.native
-    /* CompleteClass */
-    override var canUpdate: Boolean = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.ClassPrivileges
   
   @js.native
   class ObjectPrivileges ()
-    extends typingsSlinky.realm.Realm.Permissions.ObjectPrivileges {
-    /* CompleteClass */
-    override var canDelete: Boolean = js.native
-    /* CompleteClass */
-    override var canRead: Boolean = js.native
-    /* CompleteClass */
-    override var canSetPermissions: Boolean = js.native
-    /* CompleteClass */
-    override var canUpdate: Boolean = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.ObjectPrivileges
   
   @js.native
   class Permission ()
-    extends typingsSlinky.realm.Realm.Permissions.Permission {
-    /* CompleteClass */
-    override var canCreate: Boolean = js.native
-    /* CompleteClass */
-    override var canDelete: Boolean = js.native
-    /* CompleteClass */
-    override var canModifySchema: Boolean = js.native
-    /* CompleteClass */
-    override var canQuery: Boolean = js.native
-    /* CompleteClass */
-    override var canRead: Boolean = js.native
-    /* CompleteClass */
-    override var canSetPermissions: Boolean = js.native
-    /* CompleteClass */
-    override var canUpdate: Boolean = js.native
-    /* CompleteClass */
-    override var role: typingsSlinky.realm.Realm.Permissions.Role = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.Permission
   
   @js.native
   class Realm ()
-    extends typingsSlinky.realm.Realm.Permissions.Realm {
-    /* CompleteClass */
-    override var id: Double = js.native
-    /* CompleteClass */
-    override var permissions: js.Array[typingsSlinky.realm.Realm.Permissions.Permission] = js.native
-    /* CompleteClass */
-    override def findOrCreate(roleName: String): typingsSlinky.realm.Realm.Permissions.Permission = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.Realm
   
   @js.native
   class RealmPrivileges ()
-    extends typingsSlinky.realm.Realm.Permissions.RealmPrivileges {
-    /* CompleteClass */
-    override var canModifySchema: Boolean = js.native
-    /* CompleteClass */
-    override var canRead: Boolean = js.native
-    /* CompleteClass */
-    override var canSetPermissions: Boolean = js.native
-    /* CompleteClass */
-    override var canUpdate: Boolean = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.RealmPrivileges
   
   @js.native
   class Role ()
-    extends typingsSlinky.realm.Realm.Permissions.Role {
-    /* CompleteClass */
-    override var members: js.Array[typingsSlinky.realm.Realm.Permissions.User] = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.Role
   
   @js.native
   class User ()
-    extends typingsSlinky.realm.Realm.Permissions.User {
-    /* CompleteClass */
-    override var id: String = js.native
-  }
+    extends typingsSlinky.realm.Realm.Permissions.User
   
   /* static members */
   @js.native

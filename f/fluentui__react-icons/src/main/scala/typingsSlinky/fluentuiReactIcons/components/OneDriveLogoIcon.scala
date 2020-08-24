@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OneDriveLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OneDriveLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OneDriveLogoIcon")
   @js.native
   object component extends js.Object
   

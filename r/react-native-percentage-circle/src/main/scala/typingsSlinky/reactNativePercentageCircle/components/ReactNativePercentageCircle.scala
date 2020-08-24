@@ -33,6 +33,8 @@ object ReactNativePercentageCircle {
     @scala.inline
     def radius(value: Double): this.type = set("radius", value.asInstanceOf[js.Any])
     @scala.inline
+    def textStyleVarargs(value: TextStyle*): this.type = set("textStyle", js.Array(value :_*))
+    @scala.inline
     def textStyle(value: js.Array[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
   }
   

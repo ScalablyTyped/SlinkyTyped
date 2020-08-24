@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_third_party
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.allow_visited
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_trackers
+  - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_trackers_and_partition_foreign
 */
 trait CookieConfigBehavior extends js.Object
 
@@ -25,5 +26,7 @@ object CookieConfigBehavior {
   def reject_third_party: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_third_party = "reject_third_party".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_third_party]
   @scala.inline
   def reject_trackers: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_trackers = "reject_trackers".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_trackers]
+  @scala.inline
+  def reject_trackers_and_partition_foreign: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_trackers_and_partition_foreign = "reject_trackers_and_partition_foreign".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.reject_trackers_and_partition_foreign]
 }
 

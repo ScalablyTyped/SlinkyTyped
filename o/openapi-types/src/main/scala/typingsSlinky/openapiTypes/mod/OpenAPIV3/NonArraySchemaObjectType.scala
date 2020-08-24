@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.openapiTypes.openapiTypesStrings.`null`
   - typingsSlinky.openapiTypes.openapiTypesStrings.boolean
   - typingsSlinky.openapiTypes.openapiTypesStrings.`object`
   - typingsSlinky.openapiTypes.openapiTypesStrings.number
@@ -19,8 +18,6 @@ object NonArraySchemaObjectType {
   def boolean: typingsSlinky.openapiTypes.openapiTypesStrings.boolean = "boolean".asInstanceOf[typingsSlinky.openapiTypes.openapiTypesStrings.boolean]
   @scala.inline
   def integer: typingsSlinky.openapiTypes.openapiTypesStrings.integer = "integer".asInstanceOf[typingsSlinky.openapiTypes.openapiTypesStrings.integer]
-  @scala.inline
-  def `null`: typingsSlinky.openapiTypes.openapiTypesStrings.`null` = "null".asInstanceOf[typingsSlinky.openapiTypes.openapiTypesStrings.`null`]
   @scala.inline
   def number: typingsSlinky.openapiTypes.openapiTypesStrings.number = "number".asInstanceOf[typingsSlinky.openapiTypes.openapiTypesStrings.number]
   @scala.inline

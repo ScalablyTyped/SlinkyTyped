@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.RowData
@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table {
-  @JSImport("fundamental-react/lib/Table/Table", JSImport.Default)
+  @JSImport("fundamental-react", "Table")
   @js.native
   object component extends js.Object
   
@@ -37,6 +37,8 @@ object Table {
     @scala.inline
     def tableCellClassName(value: String): this.type = set("tableCellClassName", value.asInstanceOf[js.Any])
     @scala.inline
+    def tableDataVarargs(value: RowData*): this.type = set("tableData", js.Array(value :_*))
+    @scala.inline
     def tableData(value: js.Array[RowData]): this.type = set("tableData", value.asInstanceOf[js.Any])
     @scala.inline
     def tableHeaderClassName(value: String): this.type = set("tableHeaderClassName", value.asInstanceOf[js.Any])
@@ -52,7 +54,7 @@ object Table {
   
   def withProps(p: PropsWithChildren[TableProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(headers: js.Array[String | TagMod[Any]]): Builder = {
+  def apply(headers: js.Array[String | ReactElement]): Builder = {
     val __props = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[TableProps]]))
   }

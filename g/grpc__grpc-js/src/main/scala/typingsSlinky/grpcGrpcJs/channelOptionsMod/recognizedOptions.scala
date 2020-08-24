@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation._
 object recognizedOptions extends js.Object {
   @JSName("grpc.default_authority")
   var grpcDotdefault_authority: Boolean = js.native
+  @JSName("grpc.enable_http_proxy")
+  var grpcDotenable_http_proxy: Boolean = js.native
   @JSName("grpc.initial_reconnect_backoff_ms")
   var grpcDotinitial_reconnect_backoff_ms: Boolean = js.native
   @JSName("grpc.keepalive_time_ms")

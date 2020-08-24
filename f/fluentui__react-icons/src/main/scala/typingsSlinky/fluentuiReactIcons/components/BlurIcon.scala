@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BlurIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BlurIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BlurIcon")
   @js.native
   object component extends js.Object
   

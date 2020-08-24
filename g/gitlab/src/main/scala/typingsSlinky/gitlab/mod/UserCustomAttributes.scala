@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("gitlab", "UserCustomAttributes")
 @js.native
-class UserCustomAttributes ()
+class UserCustomAttributes protected ()
   extends typingsSlinky.gitlab.servicesMod.UserCustomAttributes {
   def this(options: BaseServiceOptions) = this()
 }

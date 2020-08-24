@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RecurringTaskIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RecurringTaskIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RecurringTaskIcon")
   @js.native
   object component extends js.Object
   

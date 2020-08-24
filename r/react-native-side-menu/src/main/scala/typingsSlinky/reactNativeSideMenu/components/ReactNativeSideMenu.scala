@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeSideMenu.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.CompositeAnimation
@@ -44,7 +44,7 @@ object ReactNativeSideMenu {
     @scala.inline
     def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def menu(value: TagMod[Any]): this.type = set("menu", value.asInstanceOf[js.Any])
+    def menu(value: ReactElement): this.type = set("menu", value.asInstanceOf[js.Any])
     @scala.inline
     def menuPosition(value: left | right): this.type = set("menuPosition", value.asInstanceOf[js.Any])
     @scala.inline

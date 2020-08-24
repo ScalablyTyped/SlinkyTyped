@@ -34,9 +34,13 @@ object ReactGeosuggest {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def countryVarargs(value: String*): this.type = set("country", js.Array(value :_*))
+    @scala.inline
     def country(value: String | js.Array[String]): this.type = set("country", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixturesVarargs(value: Fixture*): this.type = set("fixtures", js.Array(value :_*))
     @scala.inline
     def fixtures(value: js.Array[Fixture]): this.type = set("fixtures", value.asInstanceOf[js.Any])
     @scala.inline
@@ -99,6 +103,8 @@ object ReactGeosuggest {
     def suggestsClassName(value: String): this.type = set("suggestsClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def suggestsHiddenClassName(value: String): this.type = set("suggestsHiddenClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typesVarargs(value: QueryType*): this.type = set("types", js.Array(value :_*))
     @scala.inline
     def types(value: js.Array[QueryType]): this.type = set("types", value.asInstanceOf[js.Any])
   }

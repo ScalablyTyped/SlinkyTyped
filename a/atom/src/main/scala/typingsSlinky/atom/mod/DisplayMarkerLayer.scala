@@ -1,9 +1,9 @@
 package typingsSlinky.atom.mod
 
 import typingsSlinky.atom.anon.Exclusive
-import typingsSlinky.atom.anon.ExclusiveBoolean
 import typingsSlinky.atom.anon.ExclusiveInvalidate
 import typingsSlinky.atom.anon.Invalidate
+import typingsSlinky.atom.anon.`27`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +40,7 @@ trait DisplayMarkerLayer extends js.Object {
     *  and no tail.
     */
   def markBufferPosition(bufferPosition: PointCompatible): DisplayMarker = js.native
-  def markBufferPosition(bufferPosition: PointCompatible, options: ExclusiveBoolean): DisplayMarker = js.native
+  def markBufferPosition(bufferPosition: PointCompatible, options: `27`): DisplayMarker = js.native
   /** Create a marker with the given buffer range. */
   def markBufferRange(range: RangeCompatible): DisplayMarker = js.native
   def markBufferRange(range: RangeCompatible, options: ExclusiveInvalidate): DisplayMarker = js.native

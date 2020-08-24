@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -27,7 +26,6 @@ import typingsSlinky.materialUiCore.anon.Disabled
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapInputC
 import typingsSlinky.materialUiCore.inputBaseInputBaseMod.InputBaseComponentProps
 import typingsSlinky.materialUiCore.inputInputMod.InputProps
-import typingsSlinky.materialUiCore.inputMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -79,20 +77,21 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Input {
-  @JSImport("@material-ui/core/Input", JSImport.Default)
+  @JSImport("@material-ui/core", "Input")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -220,6 +219,8 @@ object Input {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -232,7 +233,7 @@ object Input {
     @scala.inline
     def endAdornmentReactElement(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def endAdornment(value: TagMod[Any]): this.type = set("endAdornment", value.asInstanceOf[js.Any])
+    def endAdornment(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
@@ -256,7 +257,7 @@ object Input {
     @scala.inline
     def inputComponentComponentClass(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
+    def inputComponent(value: ReactType[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -460,7 +461,7 @@ object Input {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderPrefix(value: /* state */ Disabled => TagMod[Any]): this.type = set("renderPrefix", js.Any.fromFunction1(value))
+    def renderPrefix(value: /* state */ Disabled => ReactElement): this.type = set("renderPrefix", js.Any.fromFunction1(value))
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline
@@ -482,7 +483,7 @@ object Input {
     @scala.inline
     def startAdornmentReactElement(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def startAdornment(value: TagMod[Any]): this.type = set("startAdornment", value.asInstanceOf[js.Any])
+    def startAdornment(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
@@ -501,6 +502,8 @@ object Input {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

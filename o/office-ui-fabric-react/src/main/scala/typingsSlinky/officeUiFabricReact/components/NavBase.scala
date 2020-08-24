@@ -47,6 +47,8 @@ object NavBase {
     @scala.inline
     def expandButtonAriaLabel(value: String): this.type = set("expandButtonAriaLabel", value.asInstanceOf[js.Any])
     @scala.inline
+    def groupsVarargs(value: INavLinkGroup*): this.type = set("groups", js.Array(value :_*))
+    @scala.inline
     def groups(value: js.Array[INavLinkGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     @scala.inline
     def groupsNull: this.type = set("groups", null)

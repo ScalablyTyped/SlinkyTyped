@@ -8,33 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("DebugSymbol")
 @js.native
 class DebugSymbol ()
-  extends typingsSlinky.fridaGum.DebugSymbol {
-  /**
-    * Address that this symbol is for.
-    */
-  /* CompleteClass */
-  override var address: typingsSlinky.fridaGum.NativePointer = js.native
-  /**
-    * File name owning this symbol, or `null` if unknown.
-    */
-  /* CompleteClass */
-  override var fileName: String | Null = js.native
-  /**
-    * Line number in `fileName`, or `null` if unknown.
-    */
-  /* CompleteClass */
-  override var lineNumber: Double | Null = js.native
-  /**
-    * Module name owning this symbol, or `null` if unknown.
-    */
-  /* CompleteClass */
-  override var moduleName: String | Null = js.native
-  /**
-    * Name of the symbol, or `null` if unknown.
-    */
-  /* CompleteClass */
-  override var name: String | Null = js.native
-}
+  extends typingsSlinky.fridaGum.DebugSymbol
 
 /* static members */
 @JSGlobal("DebugSymbol")
@@ -72,5 +46,11 @@ object DebugSymbol extends js.Object {
     * @param name Function name to resolve the address of.
     */
   def getFunctionByName(name: String): typingsSlinky.fridaGum.NativePointer = js.native
+  /**
+    * Loads debug symbols for a specific module.
+    *
+    * @param path Path of module to load symbols for.
+    */
+  def load(path: String): Unit = js.native
 }
 

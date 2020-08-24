@@ -16,7 +16,7 @@ trait Dinero extends js.Object {
   def divide(divisor: Double, roundingMode: RoundingMode): Dinero = js.native
   def equalsTo(comparator: Dinero): Boolean = js.native
   def getAmount(): Double = js.native
-  def getCurrency(): String = js.native
+  def getCurrency(): Currency = js.native
   def getLocale(): String = js.native
   def getPrecision(): Double = js.native
   def greaterThan(comparator: Dinero): Boolean = js.native
@@ -39,6 +39,7 @@ trait Dinero extends js.Object {
   def setLocale(newLocale: String): Dinero = js.native
   def subtract(subtrahend: Dinero): Dinero = js.native
   def toFormat(): String = js.native
+  def toFormat(format: js.UndefOr[scala.Nothing], roundingMode: RoundingMode): String = js.native
   def toFormat(format: String): String = js.native
   def toFormat(format: String, roundingMode: RoundingMode): String = js.native
   def toJSON(): DineroObject = js.native

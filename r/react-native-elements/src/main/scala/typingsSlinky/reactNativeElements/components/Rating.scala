@@ -2,10 +2,8 @@ package typingsSlinky.reactNativeElements.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.propTypes.mod.Validator
+import typingsSlinky.propTypes.mod.Requireable
 import typingsSlinky.reactNative.mod.ImageURISource
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeRatings.mod.RatingProps
 import typingsSlinky.reactNativeRatings.reactNativeRatingsStrings.bell
 import typingsSlinky.reactNativeRatings.reactNativeRatingsStrings.custom
@@ -52,7 +50,7 @@ object Rating {
     @scala.inline
     def startingValue(value: Double): this.type = set("startingValue", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: Validator[js.UndefOr[StyleProp[ViewStyle]]]): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Requireable[js.Object]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline

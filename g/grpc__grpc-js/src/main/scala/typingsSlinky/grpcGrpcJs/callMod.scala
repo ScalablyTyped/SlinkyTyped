@@ -50,6 +50,9 @@ object callMod extends js.Object {
     var call: js.UndefOr[InterceptingCallInterface] = js.native
     var destroyed: Boolean = js.native
     var readable: Boolean = js.native
+    val readableEncoding: BufferEncoding | Null = js.native
+    val readableEnded: Boolean = js.native
+    val readableFlowing: Boolean | Null = js.native
     val readableHighWaterMark: Double = js.native
     val readableLength: Double = js.native
     val readableObjectMode: Boolean = js.native
@@ -148,9 +151,11 @@ object callMod extends js.Object {
     def end(cb: js.Function0[Unit]): Unit = js.native
     def end(chunk: RequestType): Unit = js.native
     def end(chunk: RequestType, cb: js.Function): Unit = js.native
+    def end(chunk: RequestType, encoding: js.UndefOr[scala.Nothing], cb: js.Function): Unit = js.native
     def end(chunk: RequestType, encoding: js.Any): Unit = js.native
     def end(chunk: RequestType, encoding: js.Any, cb: js.Function): Unit = js.native
     def end(chunk: js.Any with RequestType, cb: js.Function): Unit = js.native
+    def end(chunk: js.Any with RequestType, encoding: js.UndefOr[scala.Nothing], cb: js.Function): Unit = js.native
     def end(chunk: js.Any with RequestType, encoding: js.Any): Unit = js.native
     def end(chunk: js.Any with RequestType, encoding: js.Any, cb: js.Function): Unit = js.native
     def end(chunk: (js.Any with RequestType) | js.Any): Unit = js.native
@@ -161,6 +166,7 @@ object callMod extends js.Object {
     def end(data: String, cb: js.Function0[Unit]): Unit = js.native
     def end(data: js.typedarray.Uint8Array): Unit = js.native
     def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
+    def end(str: String, encoding: js.UndefOr[scala.Nothing], cb: js.Function0[Unit]): Unit = js.native
     def end(str: String, encoding: BufferEncoding): Unit = js.native
     def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
     def eventNames(): js.Array[String | js.Symbol] = js.native
@@ -360,8 +366,10 @@ object callMod extends js.Object {
     def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
     def write(chunk: RequestType): Boolean = js.native
     def write(chunk: RequestType, cb: js.Function): Boolean = js.native
+    def write(chunk: RequestType, encoding: js.UndefOr[scala.Nothing], cb: js.Function): Boolean = js.native
     def write(chunk: RequestType, encoding: js.Any): Boolean = js.native
     def write(chunk: RequestType, encoding: js.Any, cb: js.Function): Boolean = js.native
+    def write(chunk: js.Any with RequestType, encoding: js.UndefOr[scala.Nothing], cb: WriteCallback): Boolean = js.native
     def write(chunk: js.Any with RequestType, encoding: js.Any): Boolean = js.native
     def write(chunk: js.Any with RequestType, encoding: js.Any, cb: WriteCallback): Boolean = js.native
     def write(chunk: (js.Any with RequestType) | js.Any): Boolean = js.native
@@ -374,6 +382,11 @@ object callMod extends js.Object {
       chunk: js.Any,
       encoding: BufferEncoding,
       cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+    ): Boolean = js.native
+    def write(
+      str: String,
+      encoding: js.UndefOr[scala.Nothing],
+      cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
     ): Boolean = js.native
     def write(str: String, encoding: BufferEncoding): Boolean = js.native
     def write(
@@ -433,6 +446,9 @@ object callMod extends js.Object {
     var call: js.UndefOr[InterceptingCallInterface] = js.native
     var destroyed: Boolean = js.native
     var readable: Boolean = js.native
+    val readableEncoding: BufferEncoding | Null = js.native
+    val readableEnded: Boolean = js.native
+    val readableFlowing: Boolean | Null = js.native
     val readableHighWaterMark: Double = js.native
     val readableLength: Double = js.native
     val readableObjectMode: Boolean = js.native
@@ -894,9 +910,11 @@ object callMod extends js.Object {
     def end(cb: js.Function0[Unit]): Unit = js.native
     def end(chunk: RequestType): Unit = js.native
     def end(chunk: RequestType, cb: js.Function): Unit = js.native
+    def end(chunk: RequestType, encoding: js.UndefOr[scala.Nothing], cb: js.Function): Unit = js.native
     def end(chunk: RequestType, encoding: js.Any): Unit = js.native
     def end(chunk: RequestType, encoding: js.Any, cb: js.Function): Unit = js.native
     def end(chunk: js.Any with RequestType, cb: js.Function): Unit = js.native
+    def end(chunk: js.Any with RequestType, encoding: js.UndefOr[scala.Nothing], cb: js.Function): Unit = js.native
     def end(chunk: js.Any with RequestType, encoding: js.Any): Unit = js.native
     def end(chunk: js.Any with RequestType, encoding: js.Any, cb: js.Function): Unit = js.native
     def end(chunk: (js.Any with RequestType) | js.Any): Unit = js.native
@@ -907,6 +925,7 @@ object callMod extends js.Object {
     def end(data: String, cb: js.Function0[Unit]): Unit = js.native
     def end(data: js.typedarray.Uint8Array): Unit = js.native
     def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
+    def end(str: String, encoding: js.UndefOr[scala.Nothing], cb: js.Function0[Unit]): Unit = js.native
     def end(str: String, encoding: BufferEncoding): Unit = js.native
     def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
     def eventNames(): js.Array[String | js.Symbol] = js.native
@@ -1027,8 +1046,10 @@ object callMod extends js.Object {
     def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
     def write(chunk: RequestType): Boolean = js.native
     def write(chunk: RequestType, cb: js.Function): Boolean = js.native
+    def write(chunk: RequestType, encoding: js.UndefOr[scala.Nothing], cb: js.Function): Boolean = js.native
     def write(chunk: RequestType, encoding: js.Any): Boolean = js.native
     def write(chunk: RequestType, encoding: js.Any, cb: js.Function): Boolean = js.native
+    def write(chunk: js.Any with RequestType, encoding: js.UndefOr[scala.Nothing], cb: WriteCallback): Boolean = js.native
     def write(chunk: js.Any with RequestType, encoding: js.Any): Boolean = js.native
     def write(chunk: js.Any with RequestType, encoding: js.Any, cb: WriteCallback): Boolean = js.native
     def write(chunk: (js.Any with RequestType) | js.Any): Boolean = js.native
@@ -1041,6 +1062,11 @@ object callMod extends js.Object {
       chunk: js.Any,
       encoding: BufferEncoding,
       cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+    ): Boolean = js.native
+    def write(
+      str: String,
+      encoding: js.UndefOr[scala.Nothing],
+      cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
     ): Boolean = js.native
     def write(str: String, encoding: BufferEncoding): Boolean = js.native
     def write(
@@ -1090,7 +1116,7 @@ object callMod extends js.Object {
     def serialize(value: RequestType): Buffer = js.native
   }
   
-  /* Inlined {  call ? :@grpc/grpc-js.@grpc/grpc-js/build/src/client-interceptors.InterceptingCallInterface, cancel (): void, getPeer (): string} & @grpc/grpc-js.@grpc/grpc-js/build/src/events.EmitterAugmentation1<'metadata', @grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata> & @grpc/grpc-js.@grpc/grpc-js/build/src/events.EmitterAugmentation1<'status', @grpc/grpc-js.@grpc/grpc-js/build/src/call-stream.StatusObject> & node.events.EventEmitter */
+  /* Inlined {  call :@grpc/grpc-js.@grpc/grpc-js/build/src/client-interceptors.InterceptingCallInterface | undefined, cancel (): void, getPeer (): string} & @grpc/grpc-js.@grpc/grpc-js/build/src/events.EmitterAugmentation1<'metadata', @grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata> & @grpc/grpc-js.@grpc/grpc-js/build/src/events.EmitterAugmentation1<'status', @grpc/grpc-js.@grpc/grpc-js/build/src/call-stream.StatusObject> & node.events.EventEmitter */
   @js.native
   trait SurfaceCall extends js.Object {
     var call: js.UndefOr[InterceptingCallInterface] = js.native

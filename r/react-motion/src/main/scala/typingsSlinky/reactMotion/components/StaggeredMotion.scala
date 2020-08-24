@@ -19,6 +19,8 @@ object StaggeredMotion {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMotion.mod.StaggeredMotion] {
     @scala.inline
+    def defaultStylesVarargs(value: PlainStyle*): this.type = set("defaultStyles", js.Array(value :_*))
+    @scala.inline
     def defaultStyles(value: js.Array[PlainStyle]): this.type = set("defaultStyles", value.asInstanceOf[js.Any])
   }
   

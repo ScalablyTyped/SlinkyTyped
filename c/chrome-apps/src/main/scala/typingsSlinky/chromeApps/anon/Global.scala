@@ -35,41 +35,22 @@ object Global {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGlobal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
-    def withoutGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(js.undefined)
-        ret
-    }
+    def setGlobal(value: Boolean): Self = this.set("global", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSuggested_key(value: Chromeos): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggested_key")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGlobal: Self = this.set("global", js.undefined)
     @scala.inline
-    def withoutSuggested_key: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggested_key")(js.undefined)
-        ret
-    }
+    def setSuggested_key(value: Chromeos): Self = this.set("suggested_key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuggested_key: Self = this.set("suggested_key", js.undefined)
   }
   
 }

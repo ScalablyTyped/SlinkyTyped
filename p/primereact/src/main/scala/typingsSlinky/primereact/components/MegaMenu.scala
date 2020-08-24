@@ -22,6 +22,8 @@ object MegaMenu {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def modelVarargs(value: MenuItem*): this.type = set("model", js.Array(value :_*))
+    @scala.inline
     def model(value: js.Array[MenuItem]): this.type = set("model", value.asInstanceOf[js.Any])
     @scala.inline
     def orientation(value: String): this.type = set("orientation", value.asInstanceOf[js.Any])

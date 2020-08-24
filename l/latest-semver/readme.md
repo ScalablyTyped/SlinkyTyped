@@ -1,7 +1,7 @@
 
 # Scala.js typings for latest-semver
 
-Typings are for version 2.0.0
+Typings are for version 3.0.0
 
 ## Library description:
 Get the latest stable semver version from an array of versions

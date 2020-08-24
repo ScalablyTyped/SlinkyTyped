@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation._
 /* Inlined jointjs.jointjs.highlighters.GenericHighlighterArguments<jointjs.jointjs.highlighters.HighlighterType> */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.jointjs.jointjsStrings.rx
-  - typingsSlinky.jointjs.jointjsStrings.ry
-  - typingsSlinky.jointjs.jointjsStrings.padding
-  - typingsSlinky.jointjs.jointjsStrings.attrs
   - typingsSlinky.jointjs.jointjsStrings.className
+  - typingsSlinky.jointjs.jointjsStrings.ry
+  - typingsSlinky.jointjs.jointjsStrings.attrs
+  - typingsSlinky.jointjs.jointjsStrings.padding
 */
 trait HighlighterArguments extends js.Object
 

@@ -1,64 +1,114 @@
 package typingsSlinky.antd.pageHeaderMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.avatarMod.AvatarProps
+import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PageHeaderProps extends js.Object {
-  var avatar: js.UndefOr[AvatarProps] = js.undefined
-  var backIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var breadcrumb: js.UndefOr[BreadcrumbProps] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
-  var footer: js.UndefOr[TagMod[Any]] = js.undefined
-  var ghost: js.UndefOr[Boolean] = js.undefined
-  var onBack: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var subTitle: js.UndefOr[TagMod[Any]] = js.undefined
-  var tags: js.UndefOr[ReactElement | js.Array[ReactElement]] = js.undefined
-  var title: TagMod[Any]
+  var avatar: js.UndefOr[AvatarProps] = js.native
+  var backIcon: js.UndefOr[ReactElement] = js.native
+  var breadcrumb: js.UndefOr[BreadcrumbProps] = js.native
+  var className: js.UndefOr[String] = js.native
+  var extra: js.UndefOr[ReactElement] = js.native
+  var footer: js.UndefOr[ReactElement] = js.native
+  var ghost: js.UndefOr[Boolean] = js.native
+  var onBack: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var subTitle: js.UndefOr[ReactElement] = js.native
+  var tags: js.UndefOr[ReactElement | js.Array[ReactElement]] = js.native
+  var title: ReactElement = js.native
 }
 
 object PageHeaderProps {
   @scala.inline
-  def apply(
-    avatar: AvatarProps = null,
-    backIcon: TagMod[Any] = null,
-    breadcrumb: BreadcrumbProps = null,
-    className: String = null,
-    extra: TagMod[Any] = null,
-    footer: TagMod[Any] = null,
-    ghost: js.UndefOr[Boolean] = js.undefined,
-    onBack: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    prefixCls: String = null,
-    style: CSSProperties = null,
-    subTitle: TagMod[Any] = null,
-    tags: ReactElement | js.Array[ReactElement] = null,
-    title: TagMod[Any] = null
-  ): PageHeaderProps = {
+  def apply(): PageHeaderProps = {
     val __obj = js.Dynamic.literal()
-    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
-    if (backIcon != null) __obj.updateDynamic("backIcon")(backIcon.asInstanceOf[js.Any])
-    if (breadcrumb != null) __obj.updateDynamic("breadcrumb")(breadcrumb.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (!js.isUndefined(ghost)) __obj.updateDynamic("ghost")(ghost.get.asInstanceOf[js.Any])
-    if (onBack != null) __obj.updateDynamic("onBack")(js.Any.fromFunction1(onBack))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (subTitle != null) __obj.updateDynamic("subTitle")(subTitle.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageHeaderProps]
   }
+  @scala.inline
+  implicit class PageHeaderPropsOps[Self <: PageHeaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAvatar(value: AvatarProps): Self = this.set("avatar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAvatar: Self = this.set("avatar", js.undefined)
+    @scala.inline
+    def setBackIconReactElement(value: ReactElement): Self = this.set("backIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBackIcon(value: ReactElement): Self = this.set("backIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackIcon: Self = this.set("backIcon", js.undefined)
+    @scala.inline
+    def setBreadcrumb(value: BreadcrumbProps): Self = this.set("breadcrumb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBreadcrumb: Self = this.set("breadcrumb", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExtra: Self = this.set("extra", js.undefined)
+    @scala.inline
+    def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFooter(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFooter: Self = this.set("footer", js.undefined)
+    @scala.inline
+    def setGhost(value: Boolean): Self = this.set("ghost", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGhost: Self = this.set("ghost", js.undefined)
+    @scala.inline
+    def setOnBack(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onBack", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnBack: Self = this.set("onBack", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSubTitleReactElement(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSubTitle(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSubTitle: Self = this.set("subTitle", js.undefined)
+    @scala.inline
+    def setTagsReactElement(value: ReactElement): Self = this.set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTagsVarargs(value: ReactElement*): Self = this.set("tags", js.Array(value :_*))
+    @scala.inline
+    def setTags(value: ReactElement | js.Array[ReactElement]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
+    @scala.inline
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

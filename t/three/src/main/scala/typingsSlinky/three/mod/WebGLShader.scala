@@ -1,5 +1,6 @@
 package typingsSlinky.three.mod
 
+import org.scalajs.dom.raw.WebGLRenderingContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class WebGLShader protected ()
   extends typingsSlinky.three.webGLShaderMod.WebGLShader {
-  def this(gl: js.Any, `type`: String, string: String) = this()
+  def this(gl: WebGLRenderingContext, `type`: String, string: String) = this()
 }
 

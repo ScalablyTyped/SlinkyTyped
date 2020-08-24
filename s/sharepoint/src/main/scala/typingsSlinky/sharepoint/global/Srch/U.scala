@@ -65,14 +65,7 @@ object U extends js.Object {
   
   @js.native
   class LoadScriptsState ()
-    extends typingsSlinky.sharepoint.Srch.U.LoadScriptsState {
-    /* CompleteClass */
-    override var progress: Double = js.native
-    /* CompleteClass */
-    override var scriptsToLoad: js.Any = js.native
-    /* CompleteClass */
-    override var timeoutHandle: js.Any = js.native
-  }
+    extends typingsSlinky.sharepoint.Srch.U.LoadScriptsState
   
   @js.native
   class PropNames ()
@@ -315,7 +308,17 @@ object U extends js.Object {
   def selectText(text: String, el: Element): Unit = js.native
   /** Adds cookie with specified parameters */
   def setCookie(name: String, value: String): Unit = js.native
+  def setCookie(
+    name: String,
+    value: String,
+    expires: js.UndefOr[scala.Nothing],
+    domain: js.UndefOr[scala.Nothing],
+    path: String
+  ): Unit = js.native
+  def setCookie(name: String, value: String, expires: js.UndefOr[scala.Nothing], domain: String): Unit = js.native
+  def setCookie(name: String, value: String, expires: js.UndefOr[scala.Nothing], domain: String, path: String): Unit = js.native
   def setCookie(name: String, value: String, expires: js.Date): Unit = js.native
+  def setCookie(name: String, value: String, expires: js.Date, domain: js.UndefOr[scala.Nothing], path: String): Unit = js.native
   def setCookie(name: String, value: String, expires: js.Date, domain: String): Unit = js.native
   def setCookie(name: String, value: String, expires: js.Date, domain: String, path: String): Unit = js.native
   /** Safely sets field of an object (does nothing if either object or fieldName is null/empty); returns true if value was set */

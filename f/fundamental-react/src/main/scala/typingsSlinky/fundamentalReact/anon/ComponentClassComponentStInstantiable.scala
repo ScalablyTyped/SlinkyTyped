@@ -12,7 +12,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react.react.ComponentClass<{}, react.react.ComponentState> & {  displayName  :'TreeView.Branch'} */
+/* Inlined react.react.ComponentClass<{}, react.react.ComponentState> & {  displayName :'TreeView.Branch'} */
 @js.native
 trait ComponentClassComponentStInstantiable
   extends Instantiable1[/* props */ js.Object, ReactComponentClass[js.Object]]
@@ -21,7 +21,7 @@ trait ComponentClassComponentStInstantiable
   var contextType: js.UndefOr[Context[_]] = js.native
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var defaultProps: js.UndefOr[js.Object] = js.native
-  var displayName: js.UndefOr[String with TreeViewDotBranch] = js.native
+  var displayName: js.UndefOr[String] with TreeViewDotBranch = js.native
   var getDerivedStateFromError: js.UndefOr[GetDerivedStateFromError[js.Object, js.Object]] = js.native
   var getDerivedStateFromProps: js.UndefOr[GetDerivedStateFromProps[js.Object, js.Object]] = js.native
   var propTypes: js.UndefOr[js.Object] = js.native

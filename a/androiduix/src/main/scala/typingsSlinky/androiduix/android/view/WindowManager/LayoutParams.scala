@@ -85,119 +85,48 @@ object LayoutParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCopyFrom(value: LayoutParams => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFrom")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDimAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCopyFrom(value: LayoutParams => Double): Self = this.set("copyFrom", js.Any.fromFunction1(value))
     @scala.inline
-    def withEnterAnimation(value: Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDimAmount(value: Double): Self = this.set("dimAmount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExitAnimation(value: Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEnterAnimation(value: Animation): Self = this.set("enterAnimation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFlags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExitAnimation(value: Animation): Self = this.set("exitAnimation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setFlags(value: Double): Self = this.set("flags", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHideAnimation(value: Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetTitle(value: () => String): Self = this.set("getTitle", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsFloating(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFloating")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHideAnimation(value: Animation): Self = this.set("hideAnimation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsFocusable(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocusable")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsFloating(value: () => js.Any): Self = this.set("isFloating", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsSplitTouch(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSplitTouch")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsFocusable(value: () => js.Any): Self = this.set("isFocusable", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsTouchModal(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTouchModal")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsSplitTouch(value: () => js.Any): Self = this.set("isSplitTouch", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsTouchable(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTouchable")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsTouchModal(value: () => js.Any): Self = this.set("isTouchModal", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsWatchTouchOutside(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWatchTouchOutside")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsTouchable(value: () => js.Any): Self = this.set("isTouchable", js.Any.fromFunction0(value))
     @scala.inline
-    def withMTitle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsWatchTouchOutside(value: () => js.Any): Self = this.set("isWatchTouchOutside", js.Any.fromFunction0(value))
     @scala.inline
-    def withResumeAnimation(value: Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTitle(value: js.Any): Self = this.set("mTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetTitle(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setResumeAnimation(value: Animation): Self = this.set("resumeAnimation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetTitle(value: String => Unit): Self = this.set("setTitle", js.Any.fromFunction1(value))
     @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
   }
   
 }

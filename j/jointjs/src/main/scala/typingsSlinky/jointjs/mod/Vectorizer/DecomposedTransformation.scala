@@ -36,47 +36,24 @@ object DecomposedTransformation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withScaleX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScaleY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScaleX(value: Double): Self = this.set("scaleX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSkewX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScaleY(value: Double): Self = this.set("scaleY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSkewY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSkewX(value: Double): Self = this.set("skewX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTranslateX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSkewY(value: Double): Self = this.set("skewY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTranslateY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTranslateX(value: Double): Self = this.set("translateX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTranslateY(value: Double): Self = this.set("translateY", value.asInstanceOf[js.Any])
   }
   
 }

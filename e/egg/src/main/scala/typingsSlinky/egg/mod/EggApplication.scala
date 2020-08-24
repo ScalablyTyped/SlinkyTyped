@@ -2,14 +2,17 @@ package typingsSlinky.egg.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.egg.anon.FnCall
 import typingsSlinky.eggCookies.mod.^
 import typingsSlinky.eggCore.mod.EggCoreBase
 import typingsSlinky.eggCore.mod.EggCoreOptions
 import typingsSlinky.eggLogger.mod.EggContextLogger
-import typingsSlinky.eggLogger.mod.EggLogger
 import typingsSlinky.eggLogger.mod.EggLoggers
 import typingsSlinky.eggLogger.mod.Logger
 import typingsSlinky.eggLogger.mod.LoggerOptions
+import typingsSlinky.node.urlMod.URL_
+import typingsSlinky.urllib.mod.Callback
+import typingsSlinky.urllib.mod.HttpClientResponse
 import typingsSlinky.urllib.mod.RequestOptions2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,6 +36,13 @@ class EggApplication () extends EggCoreBase[EggAppConfig] {
     * core logger for framework and plugins, log file is $HOME/logs/{appname}/egg-web
     */
   var coreLogger: EggLogger = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  @JSName("curl")
+  var curl_Original: FnCall = js.native
   // tslint:disable-line
   /**
     * HttpClient instance
@@ -80,8 +90,49 @@ class EggApplication () extends EggCoreBase[EggAppConfig] {
     * Keep the same api with httpclient.request(url, args).
     * See https://github.com/node-modules/urllib#api-doc for more details.
     */
-  def curl[T](url: String): js.Promise[T] = js.native
-  def curl[T](url: String, opt: RequestOptions2): js.Promise[T] = js.native
+  def curl[T](url: String): js.Promise[HttpClientResponse[T]] = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: String, callback: Callback[T]): Unit = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: String, options: RequestOptions2): js.Promise[HttpClientResponse[T]] = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: String, options: RequestOptions2, callback: Callback[T]): Unit = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: URL_): js.Promise[HttpClientResponse[T]] = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: URL_, callback: Callback[T]): Unit = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: URL_, options: RequestOptions2): js.Promise[HttpClientResponse[T]] = js.native
+  /**
+    * http request helper base on httpclient, it will auto save httpclient log.
+    * Keep the same api with httpclient.request(url, args).
+    * See https://github.com/node-modules/urllib#api-doc for more details.
+    */
+  def curl[T](url: URL_, options: RequestOptions2, callback: Callback[T]): Unit = js.native
   /**
     * Get logger by name, it's equal to app.loggers['name'], but you can extend it with your own logical
     */

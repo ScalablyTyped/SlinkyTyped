@@ -5,6 +5,7 @@ import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Camera
 import typingsSlinky.phaser.Phaser.Data.DataManager
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Physics.Arcade.Body
+import typingsSlinky.phaser.Phaser.Physics.Arcade.StaticBody
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.GameObjects.JSONGameObject
 import typingsSlinky.phaser.Phaser.Types.Input.HitAreaCallback
@@ -36,7 +37,7 @@ trait GameObject
   /**
     * If this Game Object is enabled for Arcade or Matter Physics then this property will contain a reference to a Physics Body.
     */
-  var body: js.Object | Body | BodyType = js.native
+  var body: Body | StaticBody | BodyType = js.native
   /**
     * A bitmask that controls if this Game Object is drawn by a Camera or not.
     * Not usually set directly, instead call `Camera.ignore`, however you can
@@ -257,10 +258,15 @@ trait GameObject
     * @param dropZone Should this Game Object be treated as a drop zone target? Default false.
     */
   def setInteractive(): this.type = js.native
+  def setInteractive(shape: js.UndefOr[scala.Nothing], callback: js.UndefOr[scala.Nothing], dropZone: Boolean): this.type = js.native
+  def setInteractive(shape: js.UndefOr[scala.Nothing], callback: HitAreaCallback): this.type = js.native
+  def setInteractive(shape: js.UndefOr[scala.Nothing], callback: HitAreaCallback, dropZone: Boolean): this.type = js.native
   def setInteractive(shape: js.Any): this.type = js.native
+  def setInteractive(shape: js.Any, callback: js.UndefOr[scala.Nothing], dropZone: Boolean): this.type = js.native
   def setInteractive(shape: js.Any, callback: HitAreaCallback): this.type = js.native
   def setInteractive(shape: js.Any, callback: HitAreaCallback, dropZone: Boolean): this.type = js.native
   def setInteractive(shape: InputConfiguration): this.type = js.native
+  def setInteractive(shape: InputConfiguration, callback: js.UndefOr[scala.Nothing], dropZone: Boolean): this.type = js.native
   def setInteractive(shape: InputConfiguration, callback: HitAreaCallback): this.type = js.native
   def setInteractive(shape: InputConfiguration, callback: HitAreaCallback, dropZone: Boolean): this.type = js.native
   /**

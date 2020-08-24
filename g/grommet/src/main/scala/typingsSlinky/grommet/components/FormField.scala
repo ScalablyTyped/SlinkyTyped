@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -82,7 +81,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormField {
-  @JSImport("grommet", "FormField")
+  @JSImport("grommet/es6", "FormField")
   @js.native
   object component extends js.Object
   
@@ -227,6 +226,8 @@ object FormField {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -237,7 +238,7 @@ object FormField {
     @scala.inline
     def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def error(value: String | TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: String | ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
     @scala.inline
@@ -255,7 +256,7 @@ object FormField {
     @scala.inline
     def helpReactElement(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
-    def help(value: String | TagMod[Any]): this.type = set("help", value.asInstanceOf[js.Any])
+    def help(value: String | ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -265,7 +266,7 @@ object FormField {
     @scala.inline
     def infoReactElement(value: ReactElement): this.type = set("info", value.asInstanceOf[js.Any])
     @scala.inline
-    def info(value: String | TagMod[Any]): this.type = set("info", value.asInstanceOf[js.Any])
+    def info(value: String | ReactElement): this.type = set("info", value.asInstanceOf[js.Any])
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     @scala.inline
@@ -285,7 +286,7 @@ object FormField {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: String | TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
@@ -463,6 +464,8 @@ object FormField {
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLInputElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
+    def optionsVarargs(value: String*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[String]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def pad(value: Boolean): this.type = set("pad", value.asInstanceOf[js.Any])
@@ -519,11 +522,15 @@ object FormField {
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
+    def validateVarargs(value: (Message | (js.Function1[js.Any, js.Any]))*): this.type = set("validate", js.Array(value :_*))
+    @scala.inline
     def validateFunction1(value: /* repeated */ js.Any => _): this.type = set("validate", js.Any.fromFunction1(value))
     @scala.inline
     def validate(
       value: Message | (js.Function1[/* repeated */ js.Any, _]) | (js.Array[Message | (js.Function1[/* repeated */ _, _])])
     ): this.type = set("validate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

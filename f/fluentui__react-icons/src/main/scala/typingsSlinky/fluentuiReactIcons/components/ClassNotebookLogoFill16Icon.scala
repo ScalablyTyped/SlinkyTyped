@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClassNotebookLogoFill16Icon {
-  @JSImport("@fluentui/react-icons/lib/components/ClassNotebookLogoFill16Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ClassNotebookLogoFill16Icon")
   @js.native
   object component extends js.Object
   

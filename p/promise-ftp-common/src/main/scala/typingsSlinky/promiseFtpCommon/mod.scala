@@ -10,31 +10,33 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class FtpConnectionError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class FtpConnectionError () extends Error
   
   @js.native
   class FtpReconnectError () extends Error {
     def this(disconnectError: String) = this()
     def this(disconnectError: js.Error) = this()
+    def this(disconnectError: js.UndefOr[scala.Nothing], connectError: String) = this()
+    def this(disconnectError: js.UndefOr[scala.Nothing], connectError: js.Error) = this()
     def this(disconnectError: String, connectError: String) = this()
     def this(disconnectError: String, connectError: js.Error) = this()
     def this(disconnectError: js.Error, connectError: String) = this()
     def this(disconnectError: js.Error, connectError: js.Error) = this()
+    def this(
+      disconnectError: js.UndefOr[scala.Nothing],
+      connectError: js.UndefOr[scala.Nothing],
+      onCwd: Boolean
+    ) = this()
+    def this(disconnectError: js.UndefOr[scala.Nothing], connectError: String, onCwd: Boolean) = this()
+    def this(disconnectError: js.UndefOr[scala.Nothing], connectError: js.Error, onCwd: Boolean) = this()
+    def this(disconnectError: String, connectError: js.UndefOr[scala.Nothing], onCwd: Boolean) = this()
     def this(disconnectError: String, connectError: String, onCwd: Boolean) = this()
     def this(disconnectError: String, connectError: js.Error, onCwd: Boolean) = this()
+    def this(disconnectError: js.Error, connectError: js.UndefOr[scala.Nothing], onCwd: Boolean) = this()
     def this(disconnectError: js.Error, connectError: String, onCwd: Boolean) = this()
     def this(disconnectError: js.Error, connectError: js.Error, onCwd: Boolean) = this()
     var connectError: String | js.Error = js.native
     var disconnectError: String | js.Error = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   @js.native

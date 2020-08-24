@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SnapToGridIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SnapToGridIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SnapToGridIcon")
   @js.native
   object component extends js.Object
   

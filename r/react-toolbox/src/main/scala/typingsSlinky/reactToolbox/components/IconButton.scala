@@ -1,26 +1,24 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.buttonIconButtonMod.IconButtonProps
-import typingsSlinky.reactToolbox.buttonIconButtonMod.IconButtonTheme
-import typingsSlinky.reactToolbox.buttonIconButtonMod.default
+import typingsSlinky.reactToolbox.iconButtonMod.IconButtonProps
+import typingsSlinky.reactToolbox.iconButtonMod.IconButtonTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IconButton {
-  @JSImport("react-toolbox/lib/button/IconButton", JSImport.Default)
+  @JSImport("react-toolbox/components/button", "IconButton")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.buttonMod.IconButton] {
     @scala.inline
     def accent(value: Boolean): this.type = set("accent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -32,7 +30,7 @@ object IconButton {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def inverse(value: Boolean): this.type = set("inverse", value.asInstanceOf[js.Any])
     @scala.inline

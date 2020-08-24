@@ -2,7 +2,7 @@ package typingsSlinky.webtorrent.mod
 
 import typingsSlinky.bittorrentProtocol.mod.Wire
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.webtorrent.webtorrentStrings.dht
@@ -80,6 +80,7 @@ trait Torrent extends EventEmitter {
   def removePeer(peer: typingsSlinky.simplePeer.mod.Instance): Unit = js.native
   def resume(): Unit = js.native
   def select(start: Double, end: Double): Unit = js.native
+  def select(start: Double, end: Double, priority: js.UndefOr[scala.Nothing], notify: js.Function0[Unit]): Unit = js.native
   def select(start: Double, end: Double, priority: Double): Unit = js.native
   def select(start: Double, end: Double, priority: Double, notify: js.Function0[Unit]): Unit = js.native
 }

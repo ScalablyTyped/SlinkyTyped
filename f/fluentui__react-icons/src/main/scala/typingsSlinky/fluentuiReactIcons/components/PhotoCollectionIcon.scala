@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PhotoCollectionIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PhotoCollectionIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PhotoCollectionIcon")
   @js.native
   object component extends js.Object
   

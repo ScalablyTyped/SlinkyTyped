@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "uritemplate"
-version := "0.3-dt-20200515Z-c4e891"
-scalaVersion := "2.13.2"
+version := "0.3-dt-20200515Z-de77f3"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

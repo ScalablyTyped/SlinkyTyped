@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "winston-loggly-bulk"
-version := "3.0-dt-20200131Z-a7f3bf"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200131Z-0c04f4"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "logform" % "2.1.2-a7fa2f",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "winston-transport" % "4.3.0-39c0d1")
+  "org.scalablytyped.slinky" %%% "logform" % "2.2.0-36629d",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
+  "org.scalablytyped.slinky" %%% "winston-transport" % "4.4.0-3d97f2")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

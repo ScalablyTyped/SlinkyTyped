@@ -7,7 +7,6 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationScreenProp
 import typingsSlinky.reactNavigationDrawer.drawerSidebarMod.Props
-import typingsSlinky.reactNavigationDrawer.drawerSidebarMod.default
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.left
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.right
 import typingsSlinky.reactNavigationDrawer.typesMod.DrawerContentComponentProps
@@ -18,14 +17,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DrawerSidebar {
-  @JSImport("react-navigation-drawer/lib/typescript/src/views/DrawerSidebar", JSImport.Default)
+  @JSImport("react-navigation-drawer", "DrawerSidebar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNavigationDrawer.mod.DrawerSidebar] {
     @scala.inline
     def contentComponentFunctionComponent(value: ReactComponentClass[DrawerContentComponentProps]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
     @scala.inline

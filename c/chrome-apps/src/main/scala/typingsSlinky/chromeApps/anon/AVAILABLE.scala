@@ -27,23 +27,16 @@ object AVAILABLE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAVAILABLE(value: available): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AVAILABLE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withENABLED(value: enabled_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENABLED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAVAILABLE(value: available): Self = this.set("AVAILABLE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUNKNOWN(value: unknown__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UNKNOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setENABLED(value: enabled_): Self = this.set("ENABLED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUNKNOWN(value: unknown__): Self = this.set("UNKNOWN", value.asInstanceOf[js.Any])
   }
   
 }

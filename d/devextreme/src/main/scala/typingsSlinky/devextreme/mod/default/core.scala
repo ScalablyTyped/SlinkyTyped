@@ -9,10 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object core extends js.Object {
   @js.native
-  class EventsMixin ()
-    extends typingsSlinky.devextreme.mod.DevExpress.core.EventsMixin
-  
-  @js.native
   class dxTemplate ()
     extends typingsSlinky.devextreme.mod.DevExpress.core.dxTemplate {
     def this(options: dxTemplateOptions) = this()

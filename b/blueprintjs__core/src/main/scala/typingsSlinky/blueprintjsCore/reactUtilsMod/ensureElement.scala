@@ -1,6 +1,5 @@
 package typingsSlinky.blueprintjsCore.reactUtilsMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,10 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object ensureElement extends js.Object {
   def apply(): ReactElement = js.native
-  def apply(child: TagMod[Any]): ReactElement = js.native
   def apply(
-    child: TagMod[Any],
+    child: js.UndefOr[ReactElement],
     tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any
   ): ReactElement = js.native
+  def apply(child: ReactElement): ReactElement = js.native
 }
 

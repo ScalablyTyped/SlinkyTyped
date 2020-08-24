@@ -1,7 +1,9 @@
 package typingsSlinky.vscodeLanguageserverProtocol.mod
 
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentFormattingParams
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentFormattingRegistrationOptions
+import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashformatting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +11,13 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol", "DocumentFormattingRequest")
 @js.native
 object DocumentFormattingRequest extends js.Object {
-  val `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[
+  val method: textDocumentSlashformatting = js.native
+  val `type`: ProtocolRequestType[
     DocumentFormattingParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit] | Null, 
+    scala.Nothing, 
     Unit, 
-    TextDocumentRegistrationOptions
+    DocumentFormattingRegistrationOptions
   ] = js.native
 }
 

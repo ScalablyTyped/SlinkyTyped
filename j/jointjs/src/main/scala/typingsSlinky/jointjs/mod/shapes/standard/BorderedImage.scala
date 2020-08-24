@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class BorderedImage () extends Element {
   def this(attributes: GenericAttributes[BorderedImageSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[BorderedImageSelectors], opt: Options) = this()
 }
 

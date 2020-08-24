@@ -64,6 +64,7 @@ class WPRequest protected ()
     * request
     */
   def delete(): js.Promise[_] = js.native
+  def delete(data: js.UndefOr[scala.Nothing], callback: WPRequestCallback): js.Promise[_] = js.native
   def delete(data: js.Any): js.Promise[_] = js.native
   def delete(data: js.Any, callback: WPRequestCallback): js.Promise[_] = js.native
   /**
@@ -223,6 +224,10 @@ class WPRequest protected ()
     * by the request
     */
   def `then`(): js.Promise[_] = js.native
+  def `then`(
+    successCallback: js.UndefOr[scala.Nothing],
+    failureCallback: js.Function1[/* error */ js.Error, Unit]
+  ): js.Promise[_] = js.native
   def `then`(successCallback: js.Function1[/* data */ js.Any, Unit]): js.Promise[_] = js.native
   def `then`(
     successCallback: js.Function1[/* data */ js.Any, Unit],

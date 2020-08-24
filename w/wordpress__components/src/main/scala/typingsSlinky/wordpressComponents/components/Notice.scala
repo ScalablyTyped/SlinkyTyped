@@ -2,7 +2,6 @@ package typingsSlinky.wordpressComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressComponents.mod.Notice.^
 import typingsSlinky.wordpressComponents.noticeMod.Notice.Action
 import typingsSlinky.wordpressComponents.noticeMod.Notice.Props
 import typingsSlinky.wordpressNotices.mod.Status
@@ -18,7 +17,9 @@ object Notice {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def actionsVarargs(value: Action*): this.type = set("actions", js.Array(value :_*))
     @scala.inline
     def actions(value: js.Array[Action]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,7 +1,7 @@
 package typingsSlinky.vscodeLanguageclient.clientMod
 
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.ColorPresentationParams
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,12 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageclient/lib/client", "ColorPresentationRequest")
 @js.native
 object ColorPresentationRequest extends js.Object {
-  val `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[
+  val `type`: ProtocolRequestType[
     ColorPresentationParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.ColorPresentation], 
+    js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.ColorPresentation], 
     Unit, 
-    TextDocumentRegistrationOptions
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.WorkDoneProgressOptions with typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
   ] = js.native
 }
 

@@ -4,7 +4,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.anon.Hex
 import typingsSlinky.wordpressComponents.colorPickerMod.ColorPicker.Props
-import typingsSlinky.wordpressComponents.mod.ColorPicker.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ object ColorPicker {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def disableAlpha(value: Boolean): this.type = set("disableAlpha", value.asInstanceOf[js.Any])
   }

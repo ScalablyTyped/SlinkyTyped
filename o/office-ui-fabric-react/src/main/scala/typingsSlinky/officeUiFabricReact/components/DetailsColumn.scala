@@ -14,7 +14,6 @@ import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnSty
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -30,7 +29,7 @@ object DetailsColumn {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.detailsColumnBaseMod.DetailsColumnBase] {
     @scala.inline
     def cellStyleProps(value: ICellStyleProps): this.type = set("cellStyleProps", value.asInstanceOf[js.Any])
     @scala.inline

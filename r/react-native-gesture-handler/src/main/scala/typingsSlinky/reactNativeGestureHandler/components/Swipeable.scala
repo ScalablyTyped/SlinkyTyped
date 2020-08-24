@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeGestureHandler.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -29,7 +29,11 @@ object Swipeable {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def activeOffsetXVarargs(value: Double*): this.type = set("activeOffsetX", js.Array(value :_*))
+    @scala.inline
     def activeOffsetX(value: Double | js.Array[Double]): this.type = set("activeOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeOffsetYVarargs(value: Double*): this.type = set("activeOffsetY", js.Array(value :_*))
     @scala.inline
     def activeOffsetY(value: Double | js.Array[Double]): this.type = set("activeOffsetY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +49,11 @@ object Swipeable {
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def failOffsetXVarargs(value: Double*): this.type = set("failOffsetX", js.Array(value :_*))
+    @scala.inline
     def failOffsetX(value: Double | js.Array[Double]): this.type = set("failOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def failOffsetYVarargs(value: Double*): this.type = set("failOffsetY", js.Array(value :_*))
     @scala.inline
     def failOffsetY(value: Double | js.Array[Double]): this.type = set("failOffsetY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -104,16 +112,18 @@ object Swipeable {
     def overshootRight(value: Boolean): this.type = set("overshootRight", value.asInstanceOf[js.Any])
     @scala.inline
     def renderLeftActions(
-      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
+      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => ReactElement
     ): this.type = set("renderLeftActions", js.Any.fromFunction2(value))
     @scala.inline
     def renderRightActions(
-      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
+      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => ReactElement
     ): this.type = set("renderRightActions", js.Any.fromFunction2(value))
     @scala.inline
     def rightThreshold(value: Double): this.type = set("rightThreshold", value.asInstanceOf[js.Any])
     @scala.inline
     def shouldCancelWhenOutside(value: Boolean): this.type = set("shouldCancelWhenOutside", value.asInstanceOf[js.Any])
+    @scala.inline
+    def simultaneousHandlersVarargs(value: Ref[js.Any]*): this.type = set("simultaneousHandlers", js.Array(value :_*))
     @scala.inline
     def simultaneousHandlersRefObject(value: ReactRef[_]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
@@ -124,6 +134,8 @@ object Swipeable {
     def simultaneousHandlersNull: this.type = set("simultaneousHandlers", null)
     @scala.inline
     def useNativeAnimations(value: Boolean): this.type = set("useNativeAnimations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def waitForVarargs(value: Ref[js.Any]*): this.type = set("waitFor", js.Array(value :_*))
     @scala.inline
     def waitForRefObject(value: ReactRef[_]): this.type = set("waitFor", value.asInstanceOf[js.Any])
     @scala.inline

@@ -10,8 +10,8 @@ package object mod {
     typingsSlinky.webpackMerge.mod.ConfigurationMergeFunction
   ]
   type ConfigurationMergeFunction = js.Function1[
-    /* repeated */ typingsSlinky.webpack.mod.Configuration, 
-    typingsSlinky.webpack.mod.Configuration
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Configuration */ /* repeated */ js.Any, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Configuration */ js.Any
   ]
   type CustomizeArrayFunction = js.Function3[
     /* a */ js.Array[js.Any], 
@@ -26,10 +26,14 @@ package object mod {
     js.UndefOr[js.Object | scala.Null]
   ]
   type MergeFunction = typingsSlinky.webpackMerge.mod.ConfigurationMergeFunction | typingsSlinky.webpackMerge.mod.ConfigurationMergeConfigFunction
-  type MultipleConfiguration = org.scalablytyped.runtime.StringDictionary[typingsSlinky.webpack.mod.Configuration]
+  type MultipleConfiguration = org.scalablytyped.runtime.StringDictionary[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Configuration */ js.Any
+  ]
   type MultipleConfigurationMergeFunction = js.Function1[
     /* repeated */ typingsSlinky.webpackMerge.mod.MultipleConfiguration, 
-    js.Array[typingsSlinky.webpack.mod.Configuration]
+    js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Configuration */ js.Any
+    ]
   ]
   type UniqueFunction = js.Function3[
     /* field */ java.lang.String, 

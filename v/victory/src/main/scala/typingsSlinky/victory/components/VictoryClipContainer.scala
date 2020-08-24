@@ -21,6 +21,12 @@ object VictoryClipContainer {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryClipContainer] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def circleComponent(value: ReactElement): this.type = set("circleComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

@@ -17,52 +17,33 @@ trait WiMAXProperties[M /* <: ManagedObject */, B] extends js.Object {
 
 object WiMAXProperties {
   @scala.inline
-  def apply[M, B](): WiMAXProperties[M, B] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, B](): WiMAXProperties[M, B] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[WiMAXProperties[M, B]]
   }
   @scala.inline
-  implicit class WiMAXPropertiesOps[Self[m, b] <: WiMAXProperties[m, b], M, B] (val x: Self[M, B]) extends AnyVal {
+  implicit class WiMAXPropertiesOps[Self <: WiMAXProperties[_, _], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, B] (val x: Self with (WiMAXProperties[M, B])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, B] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, B]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, B]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, B]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAutoConnect(value: B): Self[M, B] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAutoConnect: Self[M, B] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(js.undefined)
-        ret
-    }
+    def setAutoConnect(value: B): Self = this.set("AutoConnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEAP(value: EAPProperties): Self[M, B] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EAP")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoConnect: Self = this.set("AutoConnect", js.undefined)
     @scala.inline
-    def withoutEAP: Self[M, B] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EAP")(js.undefined)
-        ret
-    }
+    def setEAP(value: EAPProperties): Self = this.set("EAP", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSignalStrength(value: integer): Self[M, B] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalStrength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEAP: Self = this.set("EAP", js.undefined)
     @scala.inline
-    def withoutSignalStrength: Self[M, B] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalStrength")(js.undefined)
-        ret
-    }
+    def setSignalStrength(value: integer): Self = this.set("SignalStrength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSignalStrength: Self = this.set("SignalStrength", js.undefined)
   }
   
 }

@@ -3,7 +3,6 @@ package typingsSlinky.quill.mod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.Node
-import typingsSlinky.parchment.blotMod.Blot
 import typingsSlinky.quill.quillBooleans.`false`
 import typingsSlinky.quill.quillBooleans.`true`
 import scala.scalajs.js
@@ -23,7 +22,7 @@ class Quill protected () extends EventEmitter {
     * @private Internal API
     */
   var root: HTMLDivElement = js.native
-  var scroll: Blot = js.native
+  var scroll: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Blot */ js.Any = js.native
   def addContainer(classNameOrDomNode: String): js.Any = js.native
   def addContainer(classNameOrDomNode: String, refNode: Node): js.Any = js.native
   def addContainer(classNameOrDomNode: Node): js.Any = js.native
@@ -56,6 +55,7 @@ class Quill protected () extends EventEmitter {
   def getBounds(index: Double): BoundsStatic = js.native
   def getBounds(index: Double, length: Double): BoundsStatic = js.native
   def getContents(): js.Any = js.native
+  def getContents(index: js.UndefOr[scala.Nothing], length: Double): js.Any = js.native
   def getContents(index: Double): js.Any = js.native
   def getContents(index: Double, length: Double): js.Any = js.native
   def getFormat(): StringMap = js.native
@@ -68,6 +68,7 @@ class Quill protected () extends EventEmitter {
   def getLength(): Double = js.native
   def getLine(index: Double): js.Tuple2[_, Double] = js.native
   def getLines(): js.Array[_] = js.native
+  def getLines(index: js.UndefOr[scala.Nothing], length: Double): js.Array[_] = js.native
   def getLines(index: Double): js.Array[_] = js.native
   def getLines(index: Double, length: Double): js.Array[_] = js.native
   def getLines(range: RangeStatic): js.Array[_] = js.native
@@ -78,6 +79,7 @@ class Quill protected () extends EventEmitter {
   @JSName("getSelection")
   def getSelection_true(focus: `true`): RangeStatic = js.native
   def getText(): String = js.native
+  def getText(index: js.UndefOr[scala.Nothing], length: Double): String = js.native
   def getText(index: Double): String = js.native
   def getText(index: Double, length: Double): String = js.native
   def hasFocus(): Boolean = js.native

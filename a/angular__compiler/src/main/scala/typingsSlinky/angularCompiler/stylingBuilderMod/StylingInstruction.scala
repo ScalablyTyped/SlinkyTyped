@@ -1,32 +1,41 @@
 package typingsSlinky.angularCompiler.stylingBuilderMod
 
-import typingsSlinky.angularCompiler.outputAstMod.Expression
 import typingsSlinky.angularCompiler.outputAstMod.ExternalReference
-import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StylingInstruction extends js.Object {
-  var allocateBindingSlots: Double
-  var reference: ExternalReference
-  var sourceSpan: ParseSourceSpan | Null
-  var supportsInterpolation: js.UndefOr[Boolean] = js.undefined
-  def params(convertFn: js.Function1[/* value */ js.Any, Expression | js.Array[Expression]]): js.Array[Expression]
+  /** Calls to individual styling instructions. Used when chaining calls to the same instruction. */
+  var calls: js.Array[StylingInstructionCall] = js.native
+  var reference: ExternalReference = js.native
 }
 
 object StylingInstruction {
   @scala.inline
-  def apply(
-    allocateBindingSlots: Double,
-    params: js.Function1[/* value */ js.Any, Expression | js.Array[Expression]] => js.Array[Expression],
-    reference: ExternalReference,
-    sourceSpan: ParseSourceSpan = null,
-    supportsInterpolation: js.UndefOr[Boolean] = js.undefined
-  ): StylingInstruction = {
-    val __obj = js.Dynamic.literal(allocateBindingSlots = allocateBindingSlots.asInstanceOf[js.Any], params = js.Any.fromFunction1(params), reference = reference.asInstanceOf[js.Any], sourceSpan = sourceSpan.asInstanceOf[js.Any])
-    if (!js.isUndefined(supportsInterpolation)) __obj.updateDynamic("supportsInterpolation")(supportsInterpolation.get.asInstanceOf[js.Any])
+  def apply(calls: js.Array[StylingInstructionCall], reference: ExternalReference): StylingInstruction = {
+    val __obj = js.Dynamic.literal(calls = calls.asInstanceOf[js.Any], reference = reference.asInstanceOf[js.Any])
     __obj.asInstanceOf[StylingInstruction]
   }
+  @scala.inline
+  implicit class StylingInstructionOps[Self <: StylingInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallsVarargs(value: StylingInstructionCall*): Self = this.set("calls", js.Array(value :_*))
+    @scala.inline
+    def setCalls(value: js.Array[StylingInstructionCall]): Self = this.set("calls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setReference(value: ExternalReference): Self = this.set("reference", value.asInstanceOf[js.Any])
+  }
+  
 }
 

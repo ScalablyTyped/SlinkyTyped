@@ -43,6 +43,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.butt
 import typingsSlinky.materialUiCore.materialUiCoreStrings.central
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.disabled
@@ -94,26 +95,26 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.mod.PropTypes.Color
-import typingsSlinky.materialUiCore.svgIconMod.default
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SvgIcon {
-  @JSImport("@material-ui/core/SvgIcon", JSImport.Default)
+  @JSImport("@material-ui/core", "SvgIcon")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, SVGSVGElement] {
     @scala.inline
     def accentHeight(value: Double | String): this.type = set("accentHeight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -283,7 +284,7 @@ object SvgIcon {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentScriptType(value: Double | String): this.type = set("contentScriptType", value.asInstanceOf[js.Any])
     @scala.inline
@@ -353,7 +354,7 @@ object SvgIcon {
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
     @scala.inline
-    def fontSize(value: inherit | typingsSlinky.materialUiCore.materialUiCoreStrings.default | small | large): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    def fontSize(value: inherit | default | small | large): this.type = set("fontSize", value.asInstanceOf[js.Any])
     @scala.inline
     def fontSizeAdjust(value: Double | String): this.type = set("fontSizeAdjust", value.asInstanceOf[js.Any])
     @scala.inline

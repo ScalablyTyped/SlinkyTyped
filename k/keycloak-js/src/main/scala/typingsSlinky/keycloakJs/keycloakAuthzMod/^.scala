@@ -12,6 +12,6 @@ object ^ extends js.Object {
     * Creates a new Keycloak client instance.
     * @param config Path to a JSON config file or a plain config object.
     */
-  def apply(keycloak: KeycloakInstance[js.UndefOr[scala.Nothing]]): KeycloakAuthorizationInstance = js.native
+  def apply(keycloak: KeycloakInstance): KeycloakAuthorizationInstance = js.native
 }
 

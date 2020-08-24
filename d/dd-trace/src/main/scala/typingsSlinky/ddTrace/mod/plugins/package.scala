@@ -39,6 +39,11 @@ package object plugins {
   type genericPool = typingsSlinky.ddTrace.mod.plugins.Integration
   /**
     * This plugin automatically instruments the
+    * [@google-cloud/pubsub](https://github.com/googleapis/nodejs-pubsub) module.
+    */
+  type googleCloudPubsub = typingsSlinky.ddTrace.mod.plugins.Integration
+  /**
+    * This plugin automatically instruments the
     * [hapi](https://hapijs.com/) module.
     */
   type hapi = typingsSlinky.ddTrace.mod.plugins.HttpServer
@@ -57,6 +62,11 @@ package object plugins {
     * [limitd-client](https://github.com/limitd/node-client) module.
     */
   type limitdClient = typingsSlinky.ddTrace.mod.plugins.Integration
+  /**
+    * This plugin automatically instruments the
+    * [microgateway-core](https://github.com/apigee/microgateway-core) module.
+    */
+  type microgatewayCore = typingsSlinky.ddTrace.mod.plugins.HttpServer
   /**
     * This plugin automatically instruments the
     * [paperplane](https://github.com/articulate/paperplane) module.

@@ -19,7 +19,6 @@ package object requestParamsMod {
   type LicenseDelete = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   type LicenseGetBasicStatus = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   type LicenseGetTrialStatus = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
-  type MlDeleteExpiredData = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   type MlInfo = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   type Ping = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   type SecurityAuthenticate = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic

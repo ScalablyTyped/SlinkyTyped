@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-menu/lib/MenuItem", "MenuItem")
+@JSImport("rc-menu/es/MenuItem", "MenuItem")
 @js.native
 class MenuItem ()
   extends Component[MenuItemProps, js.Object, js.Any] {
@@ -22,19 +22,19 @@ class MenuItem ()
   @JSName("componentDidMount")
   def componentDidMount_MMenuItem(): Unit = js.native
   @JSName("componentDidUpdate")
-  def componentDidUpdate_MMenuItem(prevProps: MenuItemProps): Unit = js.native
+  def componentDidUpdate_MMenuItem(): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MMenuItem(): Unit = js.native
   def getActiveClassName(): String = js.native
   def getDisabledClassName(): String = js.native
   def getPrefixCls(): String = js.native
   def getSelectedClassName(): String = js.native
-  def onKeyDown(e: SyntheticKeyboardEvent[HTMLElement]): Boolean = js.native
+  def onKeyDown(e: SyntheticKeyboardEvent[HTMLElement]): js.UndefOr[Boolean] = js.native
   def saveNode(node: HTMLLIElement): Unit = js.native
 }
 
 /* static members */
-@JSImport("rc-menu/lib/MenuItem", "MenuItem")
+@JSImport("rc-menu/es/MenuItem", "MenuItem")
 @js.native
 object MenuItem extends js.Object {
   var defaultProps: ManualRef = js.native

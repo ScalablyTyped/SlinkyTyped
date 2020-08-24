@@ -50,6 +50,16 @@ class ClassStmt protected ()
     getters: js.Array[ClassGetter],
     constructorMethod: typingsSlinky.angularCompiler.outputAstMod.ClassMethod,
     methods: js.Array[typingsSlinky.angularCompiler.outputAstMod.ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    parent: Null,
+    fields: js.Array[typingsSlinky.angularCompiler.outputAstMod.ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: typingsSlinky.angularCompiler.outputAstMod.ClassMethod,
+    methods: js.Array[typingsSlinky.angularCompiler.outputAstMod.ClassMethod],
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -61,6 +71,16 @@ class ClassStmt protected ()
     constructorMethod: typingsSlinky.angularCompiler.outputAstMod.ClassMethod,
     methods: js.Array[typingsSlinky.angularCompiler.outputAstMod.ClassMethod],
     modifiers: Null,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    parent: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    fields: js.Array[typingsSlinky.angularCompiler.outputAstMod.ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: typingsSlinky.angularCompiler.outputAstMod.ClassMethod,
+    methods: js.Array[typingsSlinky.angularCompiler.outputAstMod.ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(

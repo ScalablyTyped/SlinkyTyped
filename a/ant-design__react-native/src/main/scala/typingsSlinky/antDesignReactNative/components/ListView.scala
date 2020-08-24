@@ -5,20 +5,19 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.anon.Highlight
 import typingsSlinky.antDesignReactNative.listViewMod.ListViewProps
-import typingsSlinky.antDesignReactNative.listViewMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListView {
-  @JSImport("@ant-design/react-native/lib/list-view", JSImport.Default)
+  @JSImport("@ant-design/react-native", "ListView")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.ListView[T]] {
     @scala.inline
     def allLoadedText(value: js.Any): this.type = set("allLoadedText", value.asInstanceOf[js.Any])
     @scala.inline

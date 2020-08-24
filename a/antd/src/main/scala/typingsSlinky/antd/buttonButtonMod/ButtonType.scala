@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antd.antdStrings.ghost
   - typingsSlinky.antd.antdStrings.dashed
   - typingsSlinky.antd.antdStrings.link
+  - typingsSlinky.antd.antdStrings.text
 */
 trait ButtonType extends LegacyButtonType
 

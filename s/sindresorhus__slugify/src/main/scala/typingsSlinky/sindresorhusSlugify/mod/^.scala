@@ -1,5 +1,6 @@
 package typingsSlinky.sindresorhusSlugify.mod
 
+import typingsSlinky.sindresorhusSlugify.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,16 +8,9 @@ import scala.scalajs.js.annotation._
 @JSImport("@sindresorhus/slugify", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  // TODO: Remove this for the next major release, refactor the whole definition to:
-  // declare function slugify(
-  // 	input: string,
-  // 	options?: slugify.Options
-  // ): string;
-  // export = slugify;
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof slugify */ js.Any = js.native
   /**
   	Slugify a string.
-  	@param input - The string to slugify.
+  	@param string - String to slugify.
   	@example
   	```
   	import slugify = require('@sindresorhus/slugify');
@@ -26,15 +20,37 @@ object ^ extends js.Object {
   	//=> 'deja-vu'
   	slugify('fooBar 123 $#%');
   	//=> 'foo-bar-123'
-  	slugify('I ♥ 🦄 & 🐶', {
-  		customReplacements: [
-  			['🐶', 'dog']
-  		]
-  	});
-  	//=> 'i-love-unicorn-and-dog'
+  	slugify('я люблю единорогов');
+  	//=> 'ya-lyublyu-edinorogov'
   	```
   	*/
-  def apply(input: String): String = js.native
-  def apply(input: String, options: Options): String = js.native
+  def apply(string: String): String = js.native
+  def apply(string: String, options: Options): String = js.native
+  /**
+  	Returns a new instance of `slugify(string, options?)` with a counter to handle multiple occurences of the same string.
+  	@param string - String to slugify.
+  	@example
+  	```
+  	import slugify = require('@sindresorhus/slugify');
+  	const countableSlugify = slugify.counter();
+  	countableSlugify('foo bar');
+  	//=> 'foo-bar'
+  	countableSlugify('foo bar');
+  	//=> 'foo-bar-2'
+  	countableSlugify.reset();
+  	countableSlugify('foo bar');
+  	//=> 'foo-bar'
+  	```
+  	__Use case example of counter__
+  	If, for example, you have a document with multiple sections where each subsection has an example.
+  	```
+  	## Section 1
+  	### Example
+  	## Section 2
+  	### Example
+  	```
+  	You can then use `slugify.counter()` to generate unique HTML `id`'s to ensure anchors will link to the right headline.
+  	*/
+  def counter(): Call = js.native
 }
 

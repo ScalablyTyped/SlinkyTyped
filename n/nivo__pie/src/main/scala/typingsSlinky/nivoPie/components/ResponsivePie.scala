@@ -39,11 +39,15 @@ object ResponsivePie {
     @scala.inline
     def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: PieDatum => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[PieDatum]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def cornerRadius(value: Double): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defsVarargs(value: Dictkey*): this.type = set("defs", js.Array(value :_*))
     @scala.inline
     def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,6 +57,8 @@ object ResponsivePie {
     @scala.inline
     def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
     @scala.inline
+    def fillVarargs(value: Id[PieDatum]*): this.type = set("fill", js.Array(value :_*))
+    @scala.inline
     def fill(value: js.Array[Id[PieDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def fit(value: Boolean): this.type = set("fit", value.asInstanceOf[js.Any])
@@ -60,6 +66,8 @@ object ResponsivePie {
     def innerRadius(value: Double): this.type = set("innerRadius", value.asInstanceOf[js.Any])
     @scala.inline
     def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legendsVarargs(value: LegendProps*): this.type = set("legends", js.Array(value :_*))
     @scala.inline
     def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,6 +78,10 @@ object ResponsivePie {
     def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseEnter(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit): this.type = set("onMouseEnter", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseLeave(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit): this.type = set("onMouseLeave", js.Any.fromFunction2(value))
     @scala.inline
     def padAngle(value: Double): this.type = set("padAngle", value.asInstanceOf[js.Any])
     @scala.inline

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeleteRowsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DeleteRowsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DeleteRowsIcon")
   @js.native
   object component extends js.Object
   

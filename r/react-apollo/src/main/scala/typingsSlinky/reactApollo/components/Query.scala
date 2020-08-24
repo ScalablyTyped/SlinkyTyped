@@ -1,5 +1,6 @@
 package typingsSlinky.reactApollo.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.apolloClient.mod.ApolloError
@@ -7,6 +8,7 @@ import typingsSlinky.apolloClient.mod.default
 import typingsSlinky.apolloClient.watchQueryOptionsMod.ErrorPolicy
 import typingsSlinky.apolloClient.watchQueryOptionsMod.WatchQueryFetchPolicy
 import typingsSlinky.apolloReactCommon.typesMod.Context
+import typingsSlinky.apolloReactCommon.typesMod.QueryResult
 import typingsSlinky.apolloReactComponents.typesMod.QueryComponentOptions
 import typingsSlinky.graphql.astMod.DocumentNode
 import scala.scalajs.js
@@ -54,8 +56,8 @@ object Query {
   
   def withProps[TData, TVariables](p: QueryComponentOptions[TData, TVariables]): Builder[TData, TVariables] = new Builder[TData, TVariables](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[TData, TVariables](query: DocumentNode): Builder[TData, TVariables] = {
-    val __props = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+  def apply[TData, TVariables](children: QueryResult[TData, TVariables] => ReactElement | Null, query: DocumentNode): Builder[TData, TVariables] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), query = query.asInstanceOf[js.Any])
     new Builder[TData, TVariables](js.Array(this.component, __props.asInstanceOf[QueryComponentOptions[TData, TVariables]]))
   }
 }

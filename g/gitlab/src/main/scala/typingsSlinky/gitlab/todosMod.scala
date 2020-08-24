@@ -1,6 +1,6 @@
 package typingsSlinky.gitlab
 
-import typingsSlinky.gitlab.anon.todoIdnumberSudo
+import typingsSlinky.gitlab.anon.todoIdnumberundefinedSudo
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
@@ -20,7 +20,7 @@ object todosMod extends js.Object {
     def create(projectId: String, mergerequestId: Double, options: Sudo): js.Promise[js.Object] = js.native
     def create(projectId: Double, mergerequestId: Double): js.Promise[js.Object] = js.native
     def create(projectId: Double, mergerequestId: Double, options: Sudo): js.Promise[js.Object] = js.native
-    def done(hasTodoIdOptions: todoIdnumberSudo): js.Promise[js.Object] = js.native
+    def done(hasTodoIdOptions: todoIdnumberundefinedSudo): js.Promise[js.Object] = js.native
   }
   
 }

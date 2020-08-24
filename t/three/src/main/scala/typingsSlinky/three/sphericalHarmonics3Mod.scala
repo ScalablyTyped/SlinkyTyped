@@ -1,6 +1,7 @@
 package typingsSlinky.three
 
 import typingsSlinky.std.ArrayLike
+import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.vector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,8 +13,9 @@ object sphericalHarmonics3Mod extends js.Object {
   @js.native
   class SphericalHarmonics3 () extends js.Object {
     var coefficients: js.Array[Vector3] = js.native
-    var isSphericalHarmonics3: Boolean = js.native
+    val isSphericalHarmonics3: `true` = js.native
     def add(sh: SphericalHarmonics3): SphericalHarmonics3 = js.native
+    def addScaledSH(sh: SphericalHarmonics3, s: Double): SphericalHarmonics3 = js.native
     def copy(sh: SphericalHarmonics3): SphericalHarmonics3 = js.native
     def equals(sh: SphericalHarmonics3): Boolean = js.native
     /**
@@ -42,6 +44,7 @@ object sphericalHarmonics3Mod extends js.Object {
     	 * @return The created or provided array.
     	 */
     def toArray(): js.Array[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     /**

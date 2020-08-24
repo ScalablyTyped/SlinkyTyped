@@ -14,6 +14,12 @@ object when extends js.Object {
   def apply[T, U](
     value: IWhenable[T],
     onFulfilled: js.Function1[/* val */ T, IWhenable[U]],
+    onRejected: js.UndefOr[scala.Nothing],
+    onProgress: js.Function1[/* progress */ js.Any, _]
+  ): typingsSlinky.q.mod.Promise[U] = js.native
+  def apply[T, U](
+    value: IWhenable[T],
+    onFulfilled: js.Function1[/* val */ T, IWhenable[U]],
     onRejected: js.Function1[/* reason */ js.Any, IWhenable[U]]
   ): typingsSlinky.q.mod.Promise[U] = js.native
   def apply[T, U](

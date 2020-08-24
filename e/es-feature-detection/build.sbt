@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "es-feature-detection"
-version := "2.0-dt-20181219Z-4fcf2e"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20181219Z-5b9895"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

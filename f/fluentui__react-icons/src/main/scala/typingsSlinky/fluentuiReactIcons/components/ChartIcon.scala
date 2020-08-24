@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChartIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ChartIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChartIcon")
   @js.native
   object component extends js.Object
   

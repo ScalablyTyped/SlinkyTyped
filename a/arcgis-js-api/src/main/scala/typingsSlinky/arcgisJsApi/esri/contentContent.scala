@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.arcgisJsApi.esri.MediaContent
   - typingsSlinky.arcgisJsApi.esri.FieldsContent
   - typingsSlinky.arcgisJsApi.esri.AttachmentsContent
+  - typingsSlinky.arcgisJsApi.esri.CustomContent
 */
 trait contentContent extends js.Object
 

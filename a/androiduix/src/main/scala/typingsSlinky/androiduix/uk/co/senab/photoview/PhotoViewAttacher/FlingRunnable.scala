@@ -36,41 +36,22 @@ object FlingRunnable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_PhotoViewAttacher_this(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_PhotoViewAttacher_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCancelFling(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelFling")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_PhotoViewAttacher_this(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher): Self = this.set("_PhotoViewAttacher_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFling(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fling")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setCancelFling(value: () => Unit): Self = this.set("cancelFling", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCurrentX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrentX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFling(value: (Double, Double, Double, Double) => Unit): Self = this.set("fling", js.Any.fromFunction4(value))
     @scala.inline
-    def withMCurrentY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrentY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrentX(value: js.Any): Self = this.set("mCurrentX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScroller(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScroller")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrentY(value: js.Any): Self = this.set("mCurrentY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMScroller(value: js.Any): Self = this.set("mScroller", value.asInstanceOf[js.Any])
   }
   
 }

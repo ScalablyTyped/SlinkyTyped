@@ -36,7 +36,23 @@ object templateParserMod extends js.Object {
   @js.native
   class TemplateParseResult () extends js.Object {
     def this(templateAst: js.Array[TemplateAst]) = this()
+    def this(templateAst: js.UndefOr[scala.Nothing], usedPipes: js.Array[CompilePipeSummary]) = this()
     def this(templateAst: js.Array[TemplateAst], usedPipes: js.Array[CompilePipeSummary]) = this()
+    def this(
+      templateAst: js.UndefOr[scala.Nothing],
+      usedPipes: js.UndefOr[scala.Nothing],
+      errors: js.Array[ParseError]
+    ) = this()
+    def this(
+      templateAst: js.UndefOr[scala.Nothing],
+      usedPipes: js.Array[CompilePipeSummary],
+      errors: js.Array[ParseError]
+    ) = this()
+    def this(
+      templateAst: js.Array[TemplateAst],
+      usedPipes: js.UndefOr[scala.Nothing],
+      errors: js.Array[ParseError]
+    ) = this()
     def this(
       templateAst: js.Array[TemplateAst],
       usedPipes: js.Array[CompilePipeSummary],
@@ -55,6 +71,15 @@ object templateParserMod extends js.Object {
       _exprParser: Parser,
       _schemaRegistry: ElementSchemaRegistry,
       _htmlParser: HtmlParser,
+      _console: Null,
+      transforms: js.Array[TemplateAstVisitor]
+    ) = this()
+    def this(
+      _config: CompilerConfig,
+      _reflector: CompileReflector,
+      _exprParser: Parser,
+      _schemaRegistry: ElementSchemaRegistry,
+      _htmlParser: HtmlParser,
       _console: Console,
       transforms: js.Array[TemplateAstVisitor]
     ) = this()
@@ -64,10 +89,10 @@ object templateParserMod extends js.Object {
     var _htmlParser: js.Any = js.native
     var _reflector: js.Any = js.native
     var _schemaRegistry: js.Any = js.native
-    val expressionParser: Parser = js.native
     var transforms: js.Array[TemplateAstVisitor] = js.native
     def expandHtml(htmlAstWithErrors: ParseTreeResult): ParseTreeResult = js.native
     def expandHtml(htmlAstWithErrors: ParseTreeResult, forced: Boolean): ParseTreeResult = js.native
+    def expressionParser: Parser = js.native
     def getInterpolationConfig(component: CompileDirectiveMetadata): js.UndefOr[InterpolationConfig] = js.native
     def parse(
       component: CompileDirectiveMetadata,

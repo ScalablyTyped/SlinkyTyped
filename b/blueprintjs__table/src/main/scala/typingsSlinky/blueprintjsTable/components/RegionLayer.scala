@@ -21,7 +21,11 @@ object RegionLayer {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def regionStylesVarargs(value: CSSProperties*): this.type = set("regionStyles", js.Array(value :_*))
+    @scala.inline
     def regionStyles(value: js.Array[CSSProperties]): this.type = set("regionStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def regionsVarargs(value: IRegion*): this.type = set("regions", js.Array(value :_*))
     @scala.inline
     def regions(value: js.Array[IRegion]): this.type = set("regions", value.asInstanceOf[js.Any])
   }

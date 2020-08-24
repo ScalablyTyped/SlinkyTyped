@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LinkedDatabaseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LinkedDatabaseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LinkedDatabaseIcon")
   @js.native
   object component extends js.Object
   

@@ -31,6 +31,8 @@ object Navigator {
     @scala.inline
     def initialRoute(value: js.Any): this.type = set("initialRoute", value.asInstanceOf[js.Any])
     @scala.inline
+    def initialRouteStackVarargs(value: String*): this.type = set("initialRouteStack", js.Array(value :_*))
+    @scala.inline
     def initialRouteStack(value: js.Array[String]): this.type = set("initialRouteStack", value.asInstanceOf[js.Any])
     @scala.inline
     def onPostPop(value: () => Unit): this.type = set("onPostPop", js.Any.fromFunction0(value))

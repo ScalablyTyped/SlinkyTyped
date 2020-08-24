@@ -1,7 +1,8 @@
 package typingsSlinky.reactNativeKeepAwake.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeKeepAwake.anon.Children
 import typingsSlinky.reactNativeKeepAwake.mod.default
 import scala.scalajs.js
@@ -13,7 +14,15 @@ object ReactNativeKeepAwake {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Children): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ReactNativeKeepAwake.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def children(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: Children): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeKeepAwake.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -28,41 +28,22 @@ object AlarmCreateInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelayInMinutes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayInMinutes")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDelayInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayInMinutes")(js.undefined)
-        ret
-    }
+    def setDelayInMinutes(value: integer): Self = this.set("delayInMinutes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPeriodInMinutes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("periodInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDelayInMinutes: Self = this.set("delayInMinutes", js.undefined)
     @scala.inline
-    def withoutPeriodInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("periodInMinutes")(js.undefined)
-        ret
-    }
+    def setPeriodInMinutes(value: integer): Self = this.set("periodInMinutes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWhen(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePeriodInMinutes: Self = this.set("periodInMinutes", js.undefined)
     @scala.inline
-    def withoutWhen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.undefined)
-        ret
-    }
+    def setWhen(value: integer): Self = this.set("when", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWhen: Self = this.set("when", js.undefined)
   }
   
 }

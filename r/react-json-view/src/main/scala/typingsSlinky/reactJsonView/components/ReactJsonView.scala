@@ -11,7 +11,6 @@ import typingsSlinky.reactJsonView.mod.ReactJsonViewProps
 import typingsSlinky.reactJsonView.mod.ThemeKeys
 import typingsSlinky.reactJsonView.mod.ThemeObject
 import typingsSlinky.reactJsonView.mod.TypeDefaultValue
-import typingsSlinky.reactJsonView.mod.default
 import typingsSlinky.reactJsonView.reactJsonViewBooleans.`false`
 import typingsSlinky.reactJsonView.reactJsonViewStrings.circle
 import typingsSlinky.reactJsonView.reactJsonViewStrings.square
@@ -28,11 +27,13 @@ object ReactJsonView {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def collapseStringsAfterLength(value: Double | `false`): this.type = set("collapseStringsAfterLength", value.asInstanceOf[js.Any])
     @scala.inline
     def collapsed(value: Boolean | Double): this.type = set("collapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: TypeDefaultValue*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: TypeDefaultValue | js.Array[TypeDefaultValue]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

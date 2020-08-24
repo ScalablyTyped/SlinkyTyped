@@ -21,7 +21,6 @@ package object mod {
   */
   type CellValue = typingsSlinky.exceljs.mod._CellValue | scala.Null | scala.Double | java.lang.String | scala.Boolean | js.Date
   type DefinedNamesModel = js.Array[typingsSlinky.exceljs.mod.DefinedNamesRanges]
-  type DocumentType = typingsSlinky.exceljs.exceljsNumbers.`1`
   // https://c2fo.io/fast-csv/docs/parsing/options
   type HeaderArray = js.Array[js.UndefOr[java.lang.String | scala.Null]]
   type HeaderTransformFunction = js.Function1[

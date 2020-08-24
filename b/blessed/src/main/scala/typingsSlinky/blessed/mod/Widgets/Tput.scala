@@ -12,8 +12,6 @@ class Tput protected () extends IHasOptions[TputsOptions] {
   var debug: Boolean = js.native
   var error: js.Error = js.native
   var extended: Boolean = js.native
-  /* CompleteClass */
-  override var options: TputsOptions = js.native
   var padding: Boolean = js.native
   var printf: Boolean = js.native
   var termcap: String = js.native

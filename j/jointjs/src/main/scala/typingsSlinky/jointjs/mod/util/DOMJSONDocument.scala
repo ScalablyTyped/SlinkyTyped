@@ -31,23 +31,16 @@ object DOMJSONDocument {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFragment(value: DocumentFragment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGroupSelectors(value: StringDictionary[js.Array[Element]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFragment(value: DocumentFragment): Self = this.set("fragment", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelectors(value: StringDictionary[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGroupSelectors(value: StringDictionary[js.Array[Element]]): Self = this.set("groupSelectors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelectors(value: StringDictionary[Element]): Self = this.set("selectors", value.asInstanceOf[js.Any])
   }
   
 }

@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit because Already inherited
-- typingsSlinky.mendixmodelsdk.securityMod.security.IModuleSecurity because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsModule, moduleRoles */ @JSImport("mendixmodelsdk/dist/gen/security", "security.ModuleSecurity")
+- typingsSlinky.mendixmodelsdk.securityMod.security.IModuleSecurity because var conflicts: id, isLoadable, isLoaded, isReadOnly, model, structureTypeName, unit. Inlined containerAsModule, moduleRoles */ @JSImport("mendixmodelsdk/dist/gen/security", "security.ModuleSecurity")
 @js.native
 class ModuleSecurity protected () extends ModelUnit {
   def this(

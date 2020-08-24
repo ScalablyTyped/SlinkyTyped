@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object attr extends js.Object {
   def apply(elem: HTMLElement): js.UndefOr[String | Null] = js.native
+  def apply(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
+  def apply(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
   def apply(elem: HTMLElement, prop: String): js.UndefOr[String | Null] = js.native
   def apply(elem: HTMLElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
   def apply(elem: HTMLElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
@@ -19,6 +21,8 @@ object attr extends js.Object {
   def apply(elem: HTMLElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
   def apply(elem: HTMLElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
   def apply(elem: org.scalajs.dom.raw.SVGElement): js.UndefOr[String | Null] = js.native
+  def apply(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
+  def apply(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
   def apply(elem: org.scalajs.dom.raw.SVGElement, prop: String): js.UndefOr[String | Null] = js.native
   def apply(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
   def apply(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native

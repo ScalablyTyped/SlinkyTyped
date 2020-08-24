@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignPro.breadcrumbMod.default
 import typingsSlinky.antDesignPro.pageHeaderMod.PageHeaderProps
 import scala.scalajs.js
@@ -14,7 +14,7 @@ object Breadcrumb {
   
   def withProps(p: PageHeaderProps): SharedBuilder_PageHeaderProps65645423[default] = new SharedBuilder_PageHeaderProps65645423[default](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(itemRender: js.Any => TagMod[Any]): SharedBuilder_PageHeaderProps65645423[default] = {
+  def apply(itemRender: js.Any => ReactElement): SharedBuilder_PageHeaderProps65645423[default] = {
     val __props = js.Dynamic.literal(itemRender = js.Any.fromFunction1(itemRender))
     new SharedBuilder_PageHeaderProps65645423[default](js.Array(this.component, __props.asInstanceOf[PageHeaderProps]))
   }

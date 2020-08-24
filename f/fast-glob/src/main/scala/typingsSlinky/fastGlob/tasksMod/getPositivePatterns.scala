@@ -1,6 +1,6 @@
 package typingsSlinky.fastGlob.tasksMod
 
-import typingsSlinky.fastGlob.patternsMod.Pattern
+import typingsSlinky.fastGlob.typesMod.Pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

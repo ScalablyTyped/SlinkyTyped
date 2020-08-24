@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RerunIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RerunIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RerunIcon")
   @js.native
   object component extends js.Object
   

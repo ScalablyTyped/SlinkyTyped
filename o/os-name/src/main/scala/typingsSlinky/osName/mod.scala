@@ -1,6 +1,6 @@
 package typingsSlinky.osName
 
-import typingsSlinky.node.NodeJS.Platform
+import typingsSlinky.node.processMod.global.NodeJS.Platform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -51,7 +51,11 @@ object GoogleMapReact {
     @scala.inline
     def hoverDistance(value: Double): this.type = set("hoverDistance", value.asInstanceOf[js.Any])
     @scala.inline
+    def layerTypesVarargs(value: String*): this.type = set("layerTypes", js.Array(value :_*))
+    @scala.inline
     def layerTypes(value: js.Array[String]): this.type = set("layerTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginVarargs(value: js.Any*): this.type = set("margin", js.Array(value :_*))
     @scala.inline
     def margin(value: js.Array[_]): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline

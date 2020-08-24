@@ -6,6 +6,7 @@ import typingsSlinky.dateIoCore.dateIoCoreStrings.fullDate
 import typingsSlinky.dateIoCore.dateIoCoreStrings.fullDateTime
 import typingsSlinky.dateIoCore.dateIoCoreStrings.fullDateTime12h
 import typingsSlinky.dateIoCore.dateIoCoreStrings.fullDateTime24h
+import typingsSlinky.dateIoCore.dateIoCoreStrings.fullDateWithWeekday
 import typingsSlinky.dateIoCore.dateIoCoreStrings.fullTime
 import typingsSlinky.dateIoCore.dateIoCoreStrings.fullTime12h
 import typingsSlinky.dateIoCore.dateIoCoreStrings.fullTime24h
@@ -25,6 +26,8 @@ import typingsSlinky.dateIoCore.dateIoCoreStrings.normalDateWithWeekday
 import typingsSlinky.dateIoCore.dateIoCoreStrings.pm
 import typingsSlinky.dateIoCore.dateIoCoreStrings.seconds
 import typingsSlinky.dateIoCore.dateIoCoreStrings.shortDate
+import typingsSlinky.dateIoCore.dateIoCoreStrings.weekday
+import typingsSlinky.dateIoCore.dateIoCoreStrings.weekdayShort
 import typingsSlinky.dateIoCore.dateIoCoreStrings.year
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,6 +37,8 @@ import scala.scalajs.js.annotation._
 trait IUtils[TDate] extends js.Object {
   var dayjs: js.UndefOr[js.Any] = js.native
   var formats: DateIOFormats[_] = js.native
+  /** Name of the library that is used right now */
+  var lib: String = js.native
   var locale: js.UndefOr[js.Any] = js.native
   var moment: js.UndefOr[js.Any] = js.native
   def addDays(value: TDate, count: Double): TDate = js.native
@@ -46,7 +51,7 @@ trait IUtils[TDate] extends js.Object {
   def endOfWeek(value: TDate): TDate = js.native
   def format(
     value: TDate,
-    formatKey: /* keyof @date-io/core.@date-io/core/IUtils.DateIOFormats<string> */ fullDate | normalDate | normalDateWithWeekday | shortDate | year | month | monthShort | monthAndYear | monthAndDate | dayOfMonth | hours12h | hours24h | minutes | seconds | fullTime | fullTime12h | fullTime24h | fullDateTime | fullDateTime12h | fullDateTime24h | keyboardDate | keyboardDateTime | keyboardDateTime12h | keyboardDateTime24h
+    formatKey: /* keyof @date-io/core.@date-io/core/IUtils.DateIOFormats<string> */ fullDate | fullDateWithWeekday | normalDate | normalDateWithWeekday | shortDate | year | month | monthShort | monthAndYear | monthAndDate | weekday | weekdayShort | dayOfMonth | hours12h | hours24h | minutes | seconds | fullTime | fullTime12h | fullTime24h | fullDateTime | fullDateTime12h | fullDateTime24h | keyboardDate | keyboardDateTime | keyboardDateTime12h | keyboardDateTime24h
   ): String = js.native
   def formatByString(value: TDate, formatString: String): String = js.native
   def formatNumber(numberToFormat: String): String = js.native

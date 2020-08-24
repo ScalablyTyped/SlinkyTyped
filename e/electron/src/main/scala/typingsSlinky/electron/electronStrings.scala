@@ -36,6 +36,15 @@ object electronStrings {
   sealed trait MHTML extends js.Object
   
   @js.native
+  sealed trait `Pepper Plugin` extends js.Object
+  
+  @js.native
+  sealed trait `Pepper Plugin Broker` extends js.Object
+  
+  @js.native
+  sealed trait `Sandbox helper` extends js.Object
+  
+  @js.native
   sealed trait Tab extends js.Object
   
   @js.native
@@ -46,6 +55,9 @@ object electronStrings {
   
   @js.native
   sealed trait Zygote extends js.Object
+  
+  @js.native
+  sealed trait `abnormal-exit` extends js.Object
   
   @js.native
   sealed trait abort extends js.Object
@@ -61,6 +73,9 @@ object electronStrings {
   
   @js.native
   sealed trait `accessibility-support-changed` extends js.Object
+  
+  @js.native
+  sealed trait accessory extends js.Object
   
   @js.native
   sealed trait action extends js.Object
@@ -87,10 +102,10 @@ object electronStrings {
   sealed trait `activity-was-continued` extends js.Object
   
   @js.native
-  sealed trait `alternate-selected-control-text` extends js.Object
+  sealed trait alt extends js.Object
   
   @js.native
-  sealed trait always extends js.Object
+  sealed trait `alternate-selected-control-text` extends js.Object
   
   @js.native
   sealed trait `always-on-top-changed` extends js.Object
@@ -108,10 +123,16 @@ object electronStrings {
   sealed trait animationstart extends js.Object
   
   @js.native
+  sealed trait `app-cache` extends js.Object
+  
+  @js.native
   sealed trait `app-command` extends js.Object
   
   @js.native
   sealed trait `app-workspace` extends js.Object
+  
+  @js.native
+  sealed trait appData extends js.Object
   
   @js.native
   sealed trait appMenu extends js.Object
@@ -133,6 +154,9 @@ object electronStrings {
   
   @js.native
   sealed trait available extends js.Object
+  
+  @js.native
+  sealed trait background extends js.Object
   
   @js.native
   sealed trait `background-tab` extends js.Object
@@ -201,6 +225,15 @@ object electronStrings {
   sealed trait buttons extends js.Object
   
   @js.native
+  sealed trait bypassHeatCheck extends js.Object
+  
+  @js.native
+  sealed trait bypassHeatCheckAndEagerCompile extends js.Object
+  
+  @js.native
+  sealed trait cache extends js.Object
+  
+  @js.native
   sealed trait camera extends js.Object
   
   @js.native
@@ -219,6 +252,9 @@ object electronStrings {
   sealed trait canvas extends js.Object
   
   @js.native
+  sealed trait capsLock extends js.Object
+  
+  @js.native
   sealed trait capsule extends js.Object
   
   @js.native
@@ -234,10 +270,16 @@ object electronStrings {
   sealed trait changed extends js.Object
   
   @js.native
+  sealed trait char extends js.Object
+  
+  @js.native
   sealed trait checkbox extends js.Object
   
   @js.native
   sealed trait `checking-for-update` extends js.Object
+  
+  @js.native
+  sealed trait `clean-exit` extends js.Object
   
   @js.native
   sealed trait clearRecentDocuments extends js.Object
@@ -258,19 +300,40 @@ object electronStrings {
   sealed trait closed extends js.Object
   
   @js.native
+  sealed trait cmd extends js.Object
+  
+  @js.native
+  sealed trait code extends js.Object
+  
+  @js.native
   sealed trait `color-changed` extends js.Object
+  
+  @js.native
+  sealed trait command extends js.Object
+  
+  @js.native
+  sealed trait complete extends js.Object
   
   @js.native
   sealed trait completed extends js.Object
   
   @js.native
+  sealed trait `console-api` extends js.Object
+  
+  @js.native
   sealed trait `console-message` extends js.Object
+  
+  @js.native
+  sealed trait content extends js.Object
   
   @js.native
   sealed trait `context-menu` extends js.Object
   
   @js.native
-  sealed trait contextmenu extends js.Object
+  sealed trait contextMenu extends js.Object
+  
+  @js.native
+  sealed trait contextmenu_ extends js.Object
   
   @js.native
   sealed trait `continue-activity` extends js.Object
@@ -291,6 +354,9 @@ object electronStrings {
   sealed trait copy extends js.Object
   
   @js.native
+  sealed trait crashDumps extends js.Object
+  
+  @js.native
   sealed trait crashed extends js.Object
   
   @js.native
@@ -301,6 +367,9 @@ object electronStrings {
   
   @js.native
   sealed trait critical extends js.Object
+  
+  @js.native
+  sealed trait ctrl extends js.Object
   
   @js.native
   sealed trait cuechange extends js.Object
@@ -345,6 +414,9 @@ object electronStrings {
   sealed trait denied extends js.Object
   
   @js.native
+  sealed trait deprecation extends js.Object
+  
+  @js.native
   sealed trait desktop extends js.Object
   
   @js.native
@@ -379,6 +451,9 @@ object electronStrings {
   
   @js.native
   sealed trait `did-fail-load` extends js.Object
+  
+  @js.native
+  sealed trait `did-fail-provisional-load` extends js.Object
   
   @js.native
   sealed trait `did-finish-load` extends js.Object
@@ -432,16 +507,25 @@ object electronStrings {
   sealed trait `document-user-activation-required` extends js.Object
   
   @js.native
+  sealed trait documents extends js.Object
+  
+  @js.native
   sealed trait `dom-ready` extends js.Object
   
   @js.native
   sealed trait done extends js.Object
   
   @js.native
+  sealed trait dontAddToRecent extends js.Object
+  
+  @js.native
   sealed trait double extends js.Object
   
   @js.native
   sealed trait `double-click` extends js.Object
+  
+  @js.native
+  sealed trait downloads extends js.Object
   
   @js.native
   sealed trait drag extends js.Object
@@ -510,16 +594,16 @@ object electronStrings {
   sealed trait error extends js.Object
   
   @js.native
-  sealed trait evicted extends js.Object
+  sealed trait everything extends js.Object
   
   @js.native
-  sealed trait expired extends js.Object
+  sealed trait exe extends js.Object
   
   @js.native
-  sealed trait `expired-overwrite` extends js.Object
+  sealed trait exists extends js.Object
   
   @js.native
-  sealed trait explicit extends js.Object
+  sealed trait existsAndRunning extends js.Object
   
   @js.native
   sealed trait failed extends js.Object
@@ -535,6 +619,9 @@ object electronStrings {
   
   @js.native
   sealed trait finish extends js.Object
+  
+  @js.native
+  sealed trait fixed extends js.Object
   
   @js.native
   sealed trait flexible extends js.Object
@@ -564,10 +651,16 @@ object electronStrings {
   sealed trait `found-in-page` extends js.Object
   
   @js.native
+  sealed trait free extends js.Object
+  
+  @js.native
   sealed trait frequent extends js.Object
   
   @js.native
   sealed trait front extends js.Object
+  
+  @js.native
+  sealed trait `fullscreen-ui` extends js.Object
   
   @js.native
   sealed trait fullscreenchange extends js.Object
@@ -577,6 +670,9 @@ object electronStrings {
   
   @js.native
   sealed trait gotpointercapture extends js.Object
+  
+  @js.native
+  sealed trait `gpu-info-update` extends js.Object
   
   @js.native
   sealed trait `gpu-process-crashed` extends js.Object
@@ -592,6 +688,9 @@ object electronStrings {
   
   @js.native
   sealed trait grid extends js.Object
+  
+  @js.native
+  sealed trait header extends js.Object
   
   @js.native
   sealed trait `header-text` extends js.Object
@@ -612,6 +711,9 @@ object electronStrings {
   sealed trait hideOthers extends js.Object
   
   @js.native
+  sealed trait high extends js.Object
+  
+  @js.native
   sealed trait `high-contrast-color-scheme-changed` extends js.Object
   
   @js.native
@@ -621,19 +723,22 @@ object electronStrings {
   sealed trait `highlight-text` extends js.Object
   
   @js.native
-  sealed trait host extends js.Object
-  
-  @js.native
-  sealed trait hostname extends js.Object
+  sealed trait home extends js.Object
   
   @js.native
   sealed trait hotlight extends js.Object
+  
+  @js.native
+  sealed trait hud extends js.Object
   
   @js.native
   sealed trait idle extends js.Object
   
   @js.native
   sealed trait image extends js.Object
+  
+  @js.native
+  sealed trait in extends js.Object
   
   @js.native
   sealed trait `inactive-border` extends js.Object
@@ -648,7 +753,13 @@ object electronStrings {
   sealed trait `inactive-caption-text` extends js.Object
   
   @js.native
+  sealed trait includeSensitive extends js.Object
+  
+  @js.native
   sealed trait indeterminate extends js.Object
+  
+  @js.native
+  sealed trait info extends js.Object
   
   @js.native
   sealed trait `info-background` extends js.Object
@@ -666,7 +777,13 @@ object electronStrings {
   sealed trait integer extends js.Object
   
   @js.native
+  sealed trait `integrity-failure` extends js.Object
+  
+  @js.native
   sealed trait interrupted extends js.Object
+  
+  @js.native
+  sealed trait intervention extends js.Object
   
   @js.native
   sealed trait invalid extends js.Object
@@ -681,7 +798,22 @@ object electronStrings {
   sealed trait `ipc-message-sync` extends js.Object
   
   @js.native
+  sealed trait isAutoRepeat extends js.Object
+  
+  @js.native
+  sealed trait isKeypad extends js.Object
+  
+  @js.native
+  sealed trait javascript extends js.Object
+  
+  @js.native
   sealed trait keepSelection extends js.Object
+  
+  @js.native
+  sealed trait keyDown extends js.Object
+  
+  @js.native
+  sealed trait keyUp extends js.Object
   
   @js.native
   sealed trait keyboard extends js.Object
@@ -690,19 +822,25 @@ object electronStrings {
   sealed trait `keyboard-focus-indicator` extends js.Object
   
   @js.native
-  sealed trait keydown extends js.Object
+  sealed trait keydown_ extends js.Object
   
   @js.native
   sealed trait keypress extends js.Object
   
   @js.native
-  sealed trait keyup extends js.Object
+  sealed trait keyup_ extends js.Object
+  
+  @js.native
+  sealed trait killed extends js.Object
   
   @js.native
   sealed trait label extends js.Object
   
   @js.native
   sealed trait large extends js.Object
+  
+  @js.native
+  sealed trait `launch-failure` extends js.Object
   
   @js.native
   sealed trait `leave-full-screen` extends js.Object
@@ -712,6 +850,9 @@ object electronStrings {
   
   @js.native
   sealed trait left extends js.Object
+  
+  @js.native
+  sealed trait leftButtonDown extends js.Object
   
   @js.native
   sealed trait light extends js.Object
@@ -747,7 +888,16 @@ object electronStrings {
   sealed trait login extends js.Object
   
   @js.native
+  sealed trait logs extends js.Object
+  
+  @js.native
+  sealed trait longEdge extends js.Object
+  
+  @js.native
   sealed trait lostpointercapture extends js.Object
+  
+  @js.native
+  sealed trait low extends js.Object
   
   @js.native
   sealed trait `main-menu` extends js.Object
@@ -760,6 +910,9 @@ object electronStrings {
   
   @js.native
   sealed trait `media-started-playing` extends js.Object
+  
+  @js.native
+  sealed trait medium extends js.Object
   
   @js.native
   sealed trait `medium-light` extends js.Object
@@ -789,10 +942,16 @@ object electronStrings {
   sealed trait message extends js.Object
   
   @js.native
-  sealed trait method extends js.Object
+  sealed trait meta extends js.Object
   
   @js.native
   sealed trait microphone extends js.Object
+  
+  @js.native
+  sealed trait middle extends js.Object
+  
+  @js.native
+  sealed trait middleButtonDown extends js.Object
   
   @js.native
   sealed trait minimize extends js.Object
@@ -804,7 +963,13 @@ object electronStrings {
   sealed trait `modal-panel` extends js.Object
   
   @js.native
+  sealed trait module extends js.Object
+  
+  @js.native
   sealed trait mouse extends js.Object
+  
+  @js.native
+  sealed trait `mouse-down` extends js.Object
   
   @js.native
   sealed trait `mouse-enter` extends js.Object
@@ -816,16 +981,37 @@ object electronStrings {
   sealed trait `mouse-move` extends js.Object
   
   @js.native
-  sealed trait mousedown extends js.Object
+  sealed trait `mouse-up` extends js.Object
   
   @js.native
-  sealed trait mouseenter extends js.Object
+  sealed trait mouseDown extends js.Object
   
   @js.native
-  sealed trait mouseleave extends js.Object
+  sealed trait mouseEnter extends js.Object
   
   @js.native
-  sealed trait mousemove extends js.Object
+  sealed trait mouseLeave extends js.Object
+  
+  @js.native
+  sealed trait mouseMove extends js.Object
+  
+  @js.native
+  sealed trait mouseUp extends js.Object
+  
+  @js.native
+  sealed trait mouseWheel extends js.Object
+  
+  @js.native
+  sealed trait mousedown_ extends js.Object
+  
+  @js.native
+  sealed trait mouseenter_ extends js.Object
+  
+  @js.native
+  sealed trait mouseleave_ extends js.Object
+  
+  @js.native
+  sealed trait mousemove_ extends js.Object
   
   @js.native
   sealed trait mouseout extends js.Object
@@ -834,7 +1020,7 @@ object electronStrings {
   sealed trait mouseover extends js.Object
   
   @js.native
-  sealed trait mouseup extends js.Object
+  sealed trait mouseup_ extends js.Object
   
   @js.native
   sealed trait move extends js.Object
@@ -852,7 +1038,13 @@ object electronStrings {
   sealed trait multiple extends js.Object
   
   @js.native
+  sealed trait music extends js.Object
+  
+  @js.native
   sealed trait negotiate extends js.Object
+  
+  @js.native
+  sealed trait network extends js.Object
   
   @js.native
   sealed trait never extends js.Object
@@ -888,6 +1080,9 @@ object electronStrings {
   sealed trait ntlm extends js.Object
   
   @js.native
+  sealed trait numLock extends js.Object
+  
+  @js.native
   sealed trait offscreen extends js.Object
   
   @js.native
@@ -895,6 +1090,9 @@ object electronStrings {
   
   @js.native
   sealed trait `on-battery` extends js.Object
+  
+  @js.native
+  sealed trait oom extends js.Object
   
   @js.native
   sealed trait `open-file` extends js.Object
@@ -918,10 +1116,13 @@ object electronStrings {
   sealed trait other extends js.Object
   
   @js.native
-  sealed trait overlay extends js.Object
+  sealed trait out extends js.Object
   
   @js.native
-  sealed trait overwrite extends js.Object
+  sealed trait outline extends js.Object
+  
+  @js.native
+  sealed trait overlay extends js.Object
   
   @js.native
   sealed trait `page-favicon-updated` extends js.Object
@@ -933,22 +1134,22 @@ object electronStrings {
   sealed trait paint extends js.Object
   
   @js.native
-  sealed trait partition extends js.Object
-  
-  @js.native
   sealed trait paste extends js.Object
   
   @js.native
   sealed trait pasteAndMatchStyle extends js.Object
   
   @js.native
-  sealed trait path extends js.Object
-  
-  @js.native
   sealed trait pause extends js.Object
   
   @js.native
   sealed trait paused extends js.Object
+  
+  @js.native
+  sealed trait pepperFlashSystemPlugin extends js.Object
+  
+  @js.native
+  sealed trait pictures extends js.Object
   
   @js.native
   sealed trait pink extends js.Object
@@ -999,7 +1200,7 @@ object electronStrings {
   sealed trait popover extends js.Object
   
   @js.native
-  sealed trait port extends js.Object
+  sealed trait preconnect extends js.Object
   
   @js.native
   sealed trait `preload-error` extends js.Object
@@ -1011,16 +1212,19 @@ object electronStrings {
   sealed trait `prevent-display-sleep` extends js.Object
   
   @js.native
+  sealed trait printableArea extends js.Object
+  
+  @js.native
   sealed trait progress extends js.Object
   
   @js.native
   sealed trait progressing extends js.Object
   
   @js.native
-  sealed trait promptToCreate extends js.Object
+  sealed trait prohibited extends js.Object
   
   @js.native
-  sealed trait protocol extends js.Object
+  sealed trait promptToCreate extends js.Object
   
   @js.native
   sealed trait purchased extends js.Object
@@ -1056,6 +1260,18 @@ object electronStrings {
   sealed trait recentDocuments extends js.Object
   
   @js.native
+  sealed trait recommendation extends js.Object
+  
+  @js.native
+  sealed trait `record-as-much-as-possible` extends js.Object
+  
+  @js.native
+  sealed trait `record-continuously` extends js.Object
+  
+  @js.native
+  sealed trait `record-until-full` extends js.Object
+  
+  @js.native
   sealed trait red extends js.Object
   
   @js.native
@@ -1063,6 +1279,9 @@ object electronStrings {
   
   @js.native
   sealed trait redo extends js.Object
+  
+  @js.native
+  sealed trait regular extends js.Object
   
   @js.native
   sealed trait reload extends js.Object
@@ -1083,13 +1302,16 @@ object electronStrings {
   sealed trait `remote-get-global` extends js.Object
   
   @js.native
-  sealed trait `remote-get-guest-web-contents` extends js.Object
-  
-  @js.native
   sealed trait `remote-require` extends js.Object
   
   @js.native
+  sealed trait `render-process-gone` extends js.Object
+  
+  @js.native
   sealed trait `renderer-process-crashed` extends js.Object
+  
+  @js.native
+  sealed trait rendering extends js.Object
   
   @js.native
   sealed trait replace extends js.Object
@@ -1131,6 +1353,12 @@ object electronStrings {
   sealed trait `right-click` extends js.Object
   
   @js.native
+  sealed trait rightButtonDown extends js.Object
+  
+  @js.native
+  sealed trait `rotate-gesture` extends js.Object
+  
+  @js.native
   sealed trait `round-rect` extends js.Object
   
   @js.native
@@ -1141,6 +1369,9 @@ object electronStrings {
   
   @js.native
   sealed trait `save-to-disk` extends js.Object
+  
+  @js.native
+  sealed trait screen extends js.Object
   
   @js.native
   sealed trait `screen-saver` extends js.Object
@@ -1168,6 +1399,9 @@ object electronStrings {
   
   @js.native
   sealed trait `secondary-label` extends js.Object
+  
+  @js.native
+  sealed trait security extends js.Object
   
   @js.native
   sealed trait securitypolicyviolation extends js.Object
@@ -1206,7 +1440,7 @@ object electronStrings {
   sealed trait `selected-control-text` extends js.Object
   
   @js.native
-  sealed trait `selected-menu-item` extends js.Object
+  sealed trait `selected-menu-item-text` extends js.Object
   
   @js.native
   sealed trait `selected-text` extends js.Object
@@ -1233,9 +1467,6 @@ object electronStrings {
   sealed trait services extends js.Object
   
   @js.native
-  sealed trait session extends js.Object
-  
-  @js.native
   sealed trait `session-created` extends js.Object
   
   @js.native
@@ -1245,10 +1476,19 @@ object electronStrings {
   sealed trait shadow extends js.Object
   
   @js.native
+  sealed trait sheet extends js.Object
+  
+  @js.native
   sealed trait `sheet-begin` extends js.Object
   
   @js.native
   sealed trait `sheet-end` extends js.Object
+  
+  @js.native
+  sealed trait shift extends js.Object
+  
+  @js.native
+  sealed trait shortEdge extends js.Object
   
   @js.native
   sealed trait show extends js.Object
@@ -1257,10 +1497,16 @@ object electronStrings {
   sealed trait showHiddenFiles extends js.Object
   
   @js.native
+  sealed trait showOverwriteConfirmation extends js.Object
+  
+  @js.native
   sealed trait shutdown extends js.Object
   
   @js.native
   sealed trait sidebar extends js.Object
+  
+  @js.native
+  sealed trait simplex extends js.Object
   
   @js.native
   sealed trait single extends js.Object
@@ -1270,6 +1516,18 @@ object electronStrings {
   
   @js.native
   sealed trait `small-square` extends js.Object
+  
+  @js.native
+  sealed trait `spellcheck-dictionary-download-begin` extends js.Object
+  
+  @js.native
+  sealed trait `spellcheck-dictionary-download-failure` extends js.Object
+  
+  @js.native
+  sealed trait `spellcheck-dictionary-download-success` extends js.Object
+  
+  @js.native
+  sealed trait `spellcheck-dictionary-initialized` extends js.Object
   
   @js.native
   sealed trait stalled extends js.Object
@@ -1282,6 +1540,9 @@ object electronStrings {
   
   @js.native
   sealed trait stopSpeaking extends js.Object
+  
+  @js.native
+  sealed trait storage extends js.Object
   
   @js.native
   sealed trait `strict-origin` extends js.Object
@@ -1305,10 +1566,16 @@ object electronStrings {
   sealed trait swipe extends js.Object
   
   @js.native
+  sealed trait system extends js.Object
+  
+  @js.native
   sealed trait task extends js.Object
   
   @js.native
   sealed trait tasks extends js.Object
+  
+  @js.native
+  sealed trait temp extends js.Object
   
   @js.native
   sealed trait `tertiary-label` extends js.Object
@@ -1344,6 +1611,9 @@ object electronStrings {
   sealed trait togglefullscreen extends js.Object
   
   @js.native
+  sealed trait tooltip extends js.Object
+  
+  @js.native
   sealed trait `torn-off-menu` extends js.Object
   
   @js.native
@@ -1363,6 +1633,9 @@ object electronStrings {
   
   @js.native
   sealed trait touchstart extends js.Object
+  
+  @js.native
+  sealed trait `trace-to-console` extends js.Object
   
   @js.native
   sealed trait `transactions-updated` extends js.Object
@@ -1389,7 +1662,13 @@ object electronStrings {
   sealed trait unavailable extends js.Object
   
   @js.native
+  sealed trait `under-page` extends js.Object
+  
+  @js.native
   sealed trait `under-page-background` extends js.Object
+  
+  @js.native
+  sealed trait `under-window` extends js.Object
   
   @js.native
   sealed trait undo extends js.Object
@@ -1425,6 +1704,9 @@ object electronStrings {
   sealed trait `unsafe-url` extends js.Object
   
   @js.native
+  sealed trait untrusted extends js.Object
+  
+  @js.native
   sealed trait update extends js.Object
   
   @js.native
@@ -1452,16 +1734,28 @@ object electronStrings {
   sealed trait `user-gesture-required` extends js.Object
   
   @js.native
+  sealed trait userData extends js.Object
+  
+  @js.native
   sealed trait video extends js.Object
   
   @js.native
+  sealed trait videos extends js.Object
+  
+  @js.native
   sealed trait viewMenu extends js.Object
+  
+  @js.native
+  sealed trait violation extends js.Object
   
   @js.native
   sealed trait volumechange extends js.Object
   
   @js.native
   sealed trait waiting extends js.Object
+  
+  @js.native
+  sealed trait warning extends js.Object
   
   @js.native
   sealed trait `web-contents-created` extends js.Object
@@ -1524,10 +1818,19 @@ object electronStrings {
   sealed trait windowMenu extends js.Object
   
   @js.native
+  sealed trait worker extends js.Object
+  
+  @js.native
+  sealed trait xml extends js.Object
+  
+  @js.native
   sealed trait yellow extends js.Object
   
   @js.native
   sealed trait zoom extends js.Object
+  
+  @js.native
+  sealed trait `zoom-changed` extends js.Object
   
   @js.native
   sealed trait zoomIn extends js.Object
@@ -1556,6 +1859,12 @@ object electronStrings {
   @scala.inline
   def MHTML: MHTML = "MHTML".asInstanceOf[MHTML]
   @scala.inline
+  def `Pepper Plugin`: `Pepper Plugin` = ("Pepper Plugin").asInstanceOf[`Pepper Plugin`]
+  @scala.inline
+  def `Pepper Plugin Broker`: `Pepper Plugin Broker` = ("Pepper Plugin Broker").asInstanceOf[`Pepper Plugin Broker`]
+  @scala.inline
+  def `Sandbox helper`: `Sandbox helper` = ("Sandbox helper").asInstanceOf[`Sandbox helper`]
+  @scala.inline
   def Tab: Tab = "Tab".asInstanceOf[Tab]
   @scala.inline
   def Unknown: Unknown = "Unknown".asInstanceOf[Unknown]
@@ -1563,6 +1872,8 @@ object electronStrings {
   def Utility: Utility = "Utility".asInstanceOf[Utility]
   @scala.inline
   def Zygote: Zygote = "Zygote".asInstanceOf[Zygote]
+  @scala.inline
+  def `abnormal-exit`: `abnormal-exit` = "abnormal-exit".asInstanceOf[`abnormal-exit`]
   @scala.inline
   def abort: abort = "abort".asInstanceOf[abort]
   @scala.inline
@@ -1573,6 +1884,8 @@ object electronStrings {
   def `accent-color-changed`: `accent-color-changed` = "accent-color-changed".asInstanceOf[`accent-color-changed`]
   @scala.inline
   def `accessibility-support-changed`: `accessibility-support-changed` = "accessibility-support-changed".asInstanceOf[`accessibility-support-changed`]
+  @scala.inline
+  def accessory: accessory = "accessory".asInstanceOf[accessory]
   @scala.inline
   def action: action = "action".asInstanceOf[action]
   @scala.inline
@@ -1590,9 +1903,9 @@ object electronStrings {
   @scala.inline
   def `activity-was-continued`: `activity-was-continued` = "activity-was-continued".asInstanceOf[`activity-was-continued`]
   @scala.inline
-  def `alternate-selected-control-text`: `alternate-selected-control-text` = "alternate-selected-control-text".asInstanceOf[`alternate-selected-control-text`]
+  def alt: alt = "alt".asInstanceOf[alt]
   @scala.inline
-  def always: always = "always".asInstanceOf[always]
+  def `alternate-selected-control-text`: `alternate-selected-control-text` = "alternate-selected-control-text".asInstanceOf[`alternate-selected-control-text`]
   @scala.inline
   def `always-on-top-changed`: `always-on-top-changed` = "always-on-top-changed".asInstanceOf[`always-on-top-changed`]
   @scala.inline
@@ -1604,9 +1917,13 @@ object electronStrings {
   @scala.inline
   def animationstart: animationstart = "animationstart".asInstanceOf[animationstart]
   @scala.inline
+  def `app-cache`: `app-cache` = "app-cache".asInstanceOf[`app-cache`]
+  @scala.inline
   def `app-command`: `app-command` = "app-command".asInstanceOf[`app-command`]
   @scala.inline
   def `app-workspace`: `app-workspace` = "app-workspace".asInstanceOf[`app-workspace`]
+  @scala.inline
+  def appData: appData = "appData".asInstanceOf[appData]
   @scala.inline
   def appMenu: appMenu = "appMenu".asInstanceOf[appMenu]
   @scala.inline
@@ -1621,6 +1938,8 @@ object electronStrings {
   def auxclick: auxclick = "auxclick".asInstanceOf[auxclick]
   @scala.inline
   def available: available = "available".asInstanceOf[available]
+  @scala.inline
+  def background: background = "background".asInstanceOf[background]
   @scala.inline
   def `background-tab`: `background-tab` = "background-tab".asInstanceOf[`background-tab`]
   @scala.inline
@@ -1666,6 +1985,12 @@ object electronStrings {
   @scala.inline
   def buttons: buttons = "buttons".asInstanceOf[buttons]
   @scala.inline
+  def bypassHeatCheck: bypassHeatCheck = "bypassHeatCheck".asInstanceOf[bypassHeatCheck]
+  @scala.inline
+  def bypassHeatCheckAndEagerCompile: bypassHeatCheckAndEagerCompile = "bypassHeatCheckAndEagerCompile".asInstanceOf[bypassHeatCheckAndEagerCompile]
+  @scala.inline
+  def cache: cache = "cache".asInstanceOf[cache]
+  @scala.inline
   def camera: camera = "camera".asInstanceOf[camera]
   @scala.inline
   def cancel: cancel = "cancel".asInstanceOf[cancel]
@@ -1678,6 +2003,8 @@ object electronStrings {
   @scala.inline
   def canvas: canvas = "canvas".asInstanceOf[canvas]
   @scala.inline
+  def capsLock: capsLock = "capsLock".asInstanceOf[capsLock]
+  @scala.inline
   def capsule: capsule = "capsule".asInstanceOf[capsule]
   @scala.inline
   def `caption-text`: `caption-text` = "caption-text".asInstanceOf[`caption-text`]
@@ -1688,9 +2015,13 @@ object electronStrings {
   @scala.inline
   def changed: changed = "changed".asInstanceOf[changed]
   @scala.inline
+  def char: char = "char".asInstanceOf[char]
+  @scala.inline
   def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
   @scala.inline
   def `checking-for-update`: `checking-for-update` = "checking-for-update".asInstanceOf[`checking-for-update`]
+  @scala.inline
+  def `clean-exit`: `clean-exit` = "clean-exit".asInstanceOf[`clean-exit`]
   @scala.inline
   def clearRecentDocuments: clearRecentDocuments = "clearRecentDocuments".asInstanceOf[clearRecentDocuments]
   @scala.inline
@@ -1704,15 +2035,29 @@ object electronStrings {
   @scala.inline
   def closed: closed = "closed".asInstanceOf[closed]
   @scala.inline
+  def cmd: cmd = "cmd".asInstanceOf[cmd]
+  @scala.inline
+  def code: code = "code".asInstanceOf[code]
+  @scala.inline
   def `color-changed`: `color-changed` = "color-changed".asInstanceOf[`color-changed`]
+  @scala.inline
+  def command: command = "command".asInstanceOf[command]
+  @scala.inline
+  def complete: complete = "complete".asInstanceOf[complete]
   @scala.inline
   def completed: completed = "completed".asInstanceOf[completed]
   @scala.inline
+  def `console-api`: `console-api` = "console-api".asInstanceOf[`console-api`]
+  @scala.inline
   def `console-message`: `console-message` = "console-message".asInstanceOf[`console-message`]
+  @scala.inline
+  def content: content = "content".asInstanceOf[content]
   @scala.inline
   def `context-menu`: `context-menu` = "context-menu".asInstanceOf[`context-menu`]
   @scala.inline
-  def contextmenu: contextmenu = "contextmenu".asInstanceOf[contextmenu]
+  def contextMenu: contextMenu = "contextMenu".asInstanceOf[contextMenu]
+  @scala.inline
+  def contextmenu_ : contextmenu_ = "contextmenu".asInstanceOf[contextmenu_]
   @scala.inline
   def `continue-activity`: `continue-activity` = "continue-activity".asInstanceOf[`continue-activity`]
   @scala.inline
@@ -1726,6 +2071,8 @@ object electronStrings {
   @scala.inline
   def copy: copy = "copy".asInstanceOf[copy]
   @scala.inline
+  def crashDumps: crashDumps = "crashDumps".asInstanceOf[crashDumps]
+  @scala.inline
   def crashed: crashed = "crashed".asInstanceOf[crashed]
   @scala.inline
   def create: create = "create".asInstanceOf[create]
@@ -1733,6 +2080,8 @@ object electronStrings {
   def createDirectory: createDirectory = "createDirectory".asInstanceOf[createDirectory]
   @scala.inline
   def critical: critical = "critical".asInstanceOf[critical]
+  @scala.inline
+  def ctrl: ctrl = "ctrl".asInstanceOf[ctrl]
   @scala.inline
   def cuechange: cuechange = "cuechange".asInstanceOf[cuechange]
   @scala.inline
@@ -1762,6 +2111,8 @@ object electronStrings {
   @scala.inline
   def denied: denied = "denied".asInstanceOf[denied]
   @scala.inline
+  def deprecation: deprecation = "deprecation".asInstanceOf[deprecation]
+  @scala.inline
   def desktop: desktop = "desktop".asInstanceOf[desktop]
   @scala.inline
   def `desktop-capturer-get-sources`: `desktop-capturer-get-sources` = "desktop-capturer-get-sources".asInstanceOf[`desktop-capturer-get-sources`]
@@ -1785,6 +2136,8 @@ object electronStrings {
   def `did-change-theme-color`: `did-change-theme-color` = "did-change-theme-color".asInstanceOf[`did-change-theme-color`]
   @scala.inline
   def `did-fail-load`: `did-fail-load` = "did-fail-load".asInstanceOf[`did-fail-load`]
+  @scala.inline
+  def `did-fail-provisional-load`: `did-fail-provisional-load` = "did-fail-provisional-load".asInstanceOf[`did-fail-provisional-load`]
   @scala.inline
   def `did-finish-load`: `did-finish-load` = "did-finish-load".asInstanceOf[`did-finish-load`]
   @scala.inline
@@ -1820,13 +2173,19 @@ object electronStrings {
   @scala.inline
   def `document-user-activation-required`: `document-user-activation-required` = "document-user-activation-required".asInstanceOf[`document-user-activation-required`]
   @scala.inline
+  def documents: documents = "documents".asInstanceOf[documents]
+  @scala.inline
   def `dom-ready`: `dom-ready` = "dom-ready".asInstanceOf[`dom-ready`]
   @scala.inline
   def done: done = "done".asInstanceOf[done]
   @scala.inline
+  def dontAddToRecent: dontAddToRecent = "dontAddToRecent".asInstanceOf[dontAddToRecent]
+  @scala.inline
   def double: double = "double".asInstanceOf[double]
   @scala.inline
   def `double-click`: `double-click` = "double-click".asInstanceOf[`double-click`]
+  @scala.inline
+  def downloads: downloads = "downloads".asInstanceOf[downloads]
   @scala.inline
   def drag: drag = "drag".asInstanceOf[drag]
   @scala.inline
@@ -1872,13 +2231,13 @@ object electronStrings {
   @scala.inline
   def error: error = "error".asInstanceOf[error]
   @scala.inline
-  def evicted: evicted = "evicted".asInstanceOf[evicted]
+  def everything: everything = "everything".asInstanceOf[everything]
   @scala.inline
-  def expired: expired = "expired".asInstanceOf[expired]
+  def exe: exe = "exe".asInstanceOf[exe]
   @scala.inline
-  def `expired-overwrite`: `expired-overwrite` = "expired-overwrite".asInstanceOf[`expired-overwrite`]
+  def exists: exists = "exists".asInstanceOf[exists]
   @scala.inline
-  def explicit: explicit = "explicit".asInstanceOf[explicit]
+  def existsAndRunning: existsAndRunning = "existsAndRunning".asInstanceOf[existsAndRunning]
   @scala.inline
   def failed: failed = "failed".asInstanceOf[failed]
   @scala.inline
@@ -1889,6 +2248,8 @@ object electronStrings {
   def `find-highlight`: `find-highlight` = "find-highlight".asInstanceOf[`find-highlight`]
   @scala.inline
   def finish: finish = "finish".asInstanceOf[finish]
+  @scala.inline
+  def fixed: fixed = "fixed".asInstanceOf[fixed]
   @scala.inline
   def flexible: flexible = "flexible".asInstanceOf[flexible]
   @scala.inline
@@ -1908,15 +2269,21 @@ object electronStrings {
   @scala.inline
   def `found-in-page`: `found-in-page` = "found-in-page".asInstanceOf[`found-in-page`]
   @scala.inline
+  def free: free = "free".asInstanceOf[free]
+  @scala.inline
   def frequent: frequent = "frequent".asInstanceOf[frequent]
   @scala.inline
   def front: front = "front".asInstanceOf[front]
+  @scala.inline
+  def `fullscreen-ui`: `fullscreen-ui` = "fullscreen-ui".asInstanceOf[`fullscreen-ui`]
   @scala.inline
   def fullscreenchange: fullscreenchange = "fullscreenchange".asInstanceOf[fullscreenchange]
   @scala.inline
   def fullscreenerror: fullscreenerror = "fullscreenerror".asInstanceOf[fullscreenerror]
   @scala.inline
   def gotpointercapture: gotpointercapture = "gotpointercapture".asInstanceOf[gotpointercapture]
+  @scala.inline
+  def `gpu-info-update`: `gpu-info-update` = "gpu-info-update".asInstanceOf[`gpu-info-update`]
   @scala.inline
   def `gpu-process-crashed`: `gpu-process-crashed` = "gpu-process-crashed".asInstanceOf[`gpu-process-crashed`]
   @scala.inline
@@ -1927,6 +2294,8 @@ object electronStrings {
   def green: green = "green".asInstanceOf[green]
   @scala.inline
   def grid: grid = "grid".asInstanceOf[grid]
+  @scala.inline
+  def header: header = "header".asInstanceOf[header]
   @scala.inline
   def `header-text`: `header-text` = "header-text".asInstanceOf[`header-text`]
   @scala.inline
@@ -1940,21 +2309,25 @@ object electronStrings {
   @scala.inline
   def hideOthers: hideOthers = "hideOthers".asInstanceOf[hideOthers]
   @scala.inline
+  def high: high = "high".asInstanceOf[high]
+  @scala.inline
   def `high-contrast-color-scheme-changed`: `high-contrast-color-scheme-changed` = "high-contrast-color-scheme-changed".asInstanceOf[`high-contrast-color-scheme-changed`]
   @scala.inline
   def highlight: highlight = "highlight".asInstanceOf[highlight]
   @scala.inline
   def `highlight-text`: `highlight-text` = "highlight-text".asInstanceOf[`highlight-text`]
   @scala.inline
-  def host: host = "host".asInstanceOf[host]
-  @scala.inline
-  def hostname: hostname = "hostname".asInstanceOf[hostname]
+  def home: home = "home".asInstanceOf[home]
   @scala.inline
   def hotlight: hotlight = "hotlight".asInstanceOf[hotlight]
+  @scala.inline
+  def hud: hud = "hud".asInstanceOf[hud]
   @scala.inline
   def idle: idle = "idle".asInstanceOf[idle]
   @scala.inline
   def image: image = "image".asInstanceOf[image]
+  @scala.inline
+  def in: in = "in".asInstanceOf[in]
   @scala.inline
   def `inactive-border`: `inactive-border` = "inactive-border".asInstanceOf[`inactive-border`]
   @scala.inline
@@ -1964,7 +2337,11 @@ object electronStrings {
   @scala.inline
   def `inactive-caption-text`: `inactive-caption-text` = "inactive-caption-text".asInstanceOf[`inactive-caption-text`]
   @scala.inline
+  def includeSensitive: includeSensitive = "includeSensitive".asInstanceOf[includeSensitive]
+  @scala.inline
   def indeterminate: indeterminate = "indeterminate".asInstanceOf[indeterminate]
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
   @scala.inline
   def `info-background`: `info-background` = "info-background".asInstanceOf[`info-background`]
   @scala.inline
@@ -1976,7 +2353,11 @@ object electronStrings {
   @scala.inline
   def integer: integer = "integer".asInstanceOf[integer]
   @scala.inline
+  def `integrity-failure`: `integrity-failure` = "integrity-failure".asInstanceOf[`integrity-failure`]
+  @scala.inline
   def interrupted: interrupted = "interrupted".asInstanceOf[interrupted]
+  @scala.inline
+  def intervention: intervention = "intervention".asInstanceOf[intervention]
   @scala.inline
   def invalid: invalid = "invalid".asInstanceOf[invalid]
   @scala.inline
@@ -1986,27 +2367,43 @@ object electronStrings {
   @scala.inline
   def `ipc-message-sync`: `ipc-message-sync` = "ipc-message-sync".asInstanceOf[`ipc-message-sync`]
   @scala.inline
+  def isAutoRepeat: isAutoRepeat = "isAutoRepeat".asInstanceOf[isAutoRepeat]
+  @scala.inline
+  def isKeypad: isKeypad = "isKeypad".asInstanceOf[isKeypad]
+  @scala.inline
+  def javascript: javascript = "javascript".asInstanceOf[javascript]
+  @scala.inline
   def keepSelection: keepSelection = "keepSelection".asInstanceOf[keepSelection]
+  @scala.inline
+  def keyDown: keyDown = "keyDown".asInstanceOf[keyDown]
+  @scala.inline
+  def keyUp: keyUp = "keyUp".asInstanceOf[keyUp]
   @scala.inline
   def keyboard: keyboard = "keyboard".asInstanceOf[keyboard]
   @scala.inline
   def `keyboard-focus-indicator`: `keyboard-focus-indicator` = "keyboard-focus-indicator".asInstanceOf[`keyboard-focus-indicator`]
   @scala.inline
-  def keydown: keydown = "keydown".asInstanceOf[keydown]
+  def keydown_ : keydown_ = "keydown".asInstanceOf[keydown_]
   @scala.inline
   def keypress: keypress = "keypress".asInstanceOf[keypress]
   @scala.inline
-  def keyup: keyup = "keyup".asInstanceOf[keyup]
+  def keyup_ : keyup_ = "keyup".asInstanceOf[keyup_]
+  @scala.inline
+  def killed: killed = "killed".asInstanceOf[killed]
   @scala.inline
   def label: label = "label".asInstanceOf[label]
   @scala.inline
   def large: large = "large".asInstanceOf[large]
+  @scala.inline
+  def `launch-failure`: `launch-failure` = "launch-failure".asInstanceOf[`launch-failure`]
   @scala.inline
   def `leave-full-screen`: `leave-full-screen` = "leave-full-screen".asInstanceOf[`leave-full-screen`]
   @scala.inline
   def `leave-html-full-screen`: `leave-html-full-screen` = "leave-html-full-screen".asInstanceOf[`leave-html-full-screen`]
   @scala.inline
   def left: left = "left".asInstanceOf[left]
+  @scala.inline
+  def leftButtonDown: leftButtonDown = "leftButtonDown".asInstanceOf[leftButtonDown]
   @scala.inline
   def light: light = "light".asInstanceOf[light]
   @scala.inline
@@ -2030,7 +2427,13 @@ object electronStrings {
   @scala.inline
   def login: login = "login".asInstanceOf[login]
   @scala.inline
+  def logs: logs = "logs".asInstanceOf[logs]
+  @scala.inline
+  def longEdge: longEdge = "longEdge".asInstanceOf[longEdge]
+  @scala.inline
   def lostpointercapture: lostpointercapture = "lostpointercapture".asInstanceOf[lostpointercapture]
+  @scala.inline
+  def low: low = "low".asInstanceOf[low]
   @scala.inline
   def `main-menu`: `main-menu` = "main-menu".asInstanceOf[`main-menu`]
   @scala.inline
@@ -2039,6 +2442,8 @@ object electronStrings {
   def `media-paused`: `media-paused` = "media-paused".asInstanceOf[`media-paused`]
   @scala.inline
   def `media-started-playing`: `media-started-playing` = "media-started-playing".asInstanceOf[`media-started-playing`]
+  @scala.inline
+  def medium: medium = "medium".asInstanceOf[medium]
   @scala.inline
   def `medium-light`: `medium-light` = "medium-light".asInstanceOf[`medium-light`]
   @scala.inline
@@ -2058,9 +2463,13 @@ object electronStrings {
   @scala.inline
   def message: message = "message".asInstanceOf[message]
   @scala.inline
-  def method: method = "method".asInstanceOf[method]
+  def meta: meta = "meta".asInstanceOf[meta]
   @scala.inline
   def microphone: microphone = "microphone".asInstanceOf[microphone]
+  @scala.inline
+  def middle: middle = "middle".asInstanceOf[middle]
+  @scala.inline
+  def middleButtonDown: middleButtonDown = "middleButtonDown".asInstanceOf[middleButtonDown]
   @scala.inline
   def minimize: minimize = "minimize".asInstanceOf[minimize]
   @scala.inline
@@ -2068,7 +2477,11 @@ object electronStrings {
   @scala.inline
   def `modal-panel`: `modal-panel` = "modal-panel".asInstanceOf[`modal-panel`]
   @scala.inline
+  def module: module = "module".asInstanceOf[module]
+  @scala.inline
   def mouse: mouse = "mouse".asInstanceOf[mouse]
+  @scala.inline
+  def `mouse-down`: `mouse-down` = "mouse-down".asInstanceOf[`mouse-down`]
   @scala.inline
   def `mouse-enter`: `mouse-enter` = "mouse-enter".asInstanceOf[`mouse-enter`]
   @scala.inline
@@ -2076,19 +2489,33 @@ object electronStrings {
   @scala.inline
   def `mouse-move`: `mouse-move` = "mouse-move".asInstanceOf[`mouse-move`]
   @scala.inline
-  def mousedown: mousedown = "mousedown".asInstanceOf[mousedown]
+  def `mouse-up`: `mouse-up` = "mouse-up".asInstanceOf[`mouse-up`]
   @scala.inline
-  def mouseenter: mouseenter = "mouseenter".asInstanceOf[mouseenter]
+  def mouseDown: mouseDown = "mouseDown".asInstanceOf[mouseDown]
   @scala.inline
-  def mouseleave: mouseleave = "mouseleave".asInstanceOf[mouseleave]
+  def mouseEnter: mouseEnter = "mouseEnter".asInstanceOf[mouseEnter]
   @scala.inline
-  def mousemove: mousemove = "mousemove".asInstanceOf[mousemove]
+  def mouseLeave: mouseLeave = "mouseLeave".asInstanceOf[mouseLeave]
+  @scala.inline
+  def mouseMove: mouseMove = "mouseMove".asInstanceOf[mouseMove]
+  @scala.inline
+  def mouseUp: mouseUp = "mouseUp".asInstanceOf[mouseUp]
+  @scala.inline
+  def mouseWheel: mouseWheel = "mouseWheel".asInstanceOf[mouseWheel]
+  @scala.inline
+  def mousedown_ : mousedown_ = "mousedown".asInstanceOf[mousedown_]
+  @scala.inline
+  def mouseenter_ : mouseenter_ = "mouseenter".asInstanceOf[mouseenter_]
+  @scala.inline
+  def mouseleave_ : mouseleave_ = "mouseleave".asInstanceOf[mouseleave_]
+  @scala.inline
+  def mousemove_ : mousemove_ = "mousemove".asInstanceOf[mousemove_]
   @scala.inline
   def mouseout: mouseout = "mouseout".asInstanceOf[mouseout]
   @scala.inline
   def mouseover: mouseover = "mouseover".asInstanceOf[mouseover]
   @scala.inline
-  def mouseup: mouseup = "mouseup".asInstanceOf[mouseup]
+  def mouseup_ : mouseup_ = "mouseup".asInstanceOf[mouseup_]
   @scala.inline
   def move: move = "move".asInstanceOf[move]
   @scala.inline
@@ -2100,7 +2527,11 @@ object electronStrings {
   @scala.inline
   def multiple: multiple = "multiple".asInstanceOf[multiple]
   @scala.inline
+  def music: music = "music".asInstanceOf[music]
+  @scala.inline
   def negotiate: negotiate = "negotiate".asInstanceOf[negotiate]
+  @scala.inline
+  def network: network = "network".asInstanceOf[network]
   @scala.inline
   def never: never = "never".asInstanceOf[never]
   @scala.inline
@@ -2124,11 +2555,15 @@ object electronStrings {
   @scala.inline
   def ntlm: ntlm = "ntlm".asInstanceOf[ntlm]
   @scala.inline
+  def numLock: numLock = "numLock".asInstanceOf[numLock]
+  @scala.inline
   def offscreen: offscreen = "offscreen".asInstanceOf[offscreen]
   @scala.inline
   def `on-ac`: `on-ac` = "on-ac".asInstanceOf[`on-ac`]
   @scala.inline
   def `on-battery`: `on-battery` = "on-battery".asInstanceOf[`on-battery`]
+  @scala.inline
+  def oom: oom = "oom".asInstanceOf[oom]
   @scala.inline
   def `open-file`: `open-file` = "open-file".asInstanceOf[`open-file`]
   @scala.inline
@@ -2144,9 +2579,11 @@ object electronStrings {
   @scala.inline
   def other: other = "other".asInstanceOf[other]
   @scala.inline
-  def overlay: overlay = "overlay".asInstanceOf[overlay]
+  def out: out = "out".asInstanceOf[out]
   @scala.inline
-  def overwrite: overwrite = "overwrite".asInstanceOf[overwrite]
+  def outline: outline = "outline".asInstanceOf[outline]
+  @scala.inline
+  def overlay: overlay = "overlay".asInstanceOf[overlay]
   @scala.inline
   def `page-favicon-updated`: `page-favicon-updated` = "page-favicon-updated".asInstanceOf[`page-favicon-updated`]
   @scala.inline
@@ -2154,17 +2591,17 @@ object electronStrings {
   @scala.inline
   def paint: paint = "paint".asInstanceOf[paint]
   @scala.inline
-  def partition: partition = "partition".asInstanceOf[partition]
-  @scala.inline
   def paste: paste = "paste".asInstanceOf[paste]
   @scala.inline
   def pasteAndMatchStyle: pasteAndMatchStyle = "pasteAndMatchStyle".asInstanceOf[pasteAndMatchStyle]
   @scala.inline
-  def path: path = "path".asInstanceOf[path]
-  @scala.inline
   def pause: pause = "pause".asInstanceOf[pause]
   @scala.inline
   def paused: paused = "paused".asInstanceOf[paused]
+  @scala.inline
+  def pepperFlashSystemPlugin: pepperFlashSystemPlugin = "pepperFlashSystemPlugin".asInstanceOf[pepperFlashSystemPlugin]
+  @scala.inline
+  def pictures: pictures = "pictures".asInstanceOf[pictures]
   @scala.inline
   def pink: pink = "pink".asInstanceOf[pink]
   @scala.inline
@@ -2198,7 +2635,7 @@ object electronStrings {
   @scala.inline
   def popover: popover = "popover".asInstanceOf[popover]
   @scala.inline
-  def port: port = "port".asInstanceOf[port]
+  def preconnect: preconnect = "preconnect".asInstanceOf[preconnect]
   @scala.inline
   def `preload-error`: `preload-error` = "preload-error".asInstanceOf[`preload-error`]
   @scala.inline
@@ -2206,13 +2643,15 @@ object electronStrings {
   @scala.inline
   def `prevent-display-sleep`: `prevent-display-sleep` = "prevent-display-sleep".asInstanceOf[`prevent-display-sleep`]
   @scala.inline
+  def printableArea: printableArea = "printableArea".asInstanceOf[printableArea]
+  @scala.inline
   def progress: progress = "progress".asInstanceOf[progress]
   @scala.inline
   def progressing: progressing = "progressing".asInstanceOf[progressing]
   @scala.inline
-  def promptToCreate: promptToCreate = "promptToCreate".asInstanceOf[promptToCreate]
+  def prohibited: prohibited = "prohibited".asInstanceOf[prohibited]
   @scala.inline
-  def protocol: protocol = "protocol".asInstanceOf[protocol]
+  def promptToCreate: promptToCreate = "promptToCreate".asInstanceOf[promptToCreate]
   @scala.inline
   def purchased: purchased = "purchased".asInstanceOf[purchased]
   @scala.inline
@@ -2236,11 +2675,21 @@ object electronStrings {
   @scala.inline
   def recentDocuments: recentDocuments = "recentDocuments".asInstanceOf[recentDocuments]
   @scala.inline
+  def recommendation: recommendation = "recommendation".asInstanceOf[recommendation]
+  @scala.inline
+  def `record-as-much-as-possible`: `record-as-much-as-possible` = "record-as-much-as-possible".asInstanceOf[`record-as-much-as-possible`]
+  @scala.inline
+  def `record-continuously`: `record-continuously` = "record-continuously".asInstanceOf[`record-continuously`]
+  @scala.inline
+  def `record-until-full`: `record-until-full` = "record-until-full".asInstanceOf[`record-until-full`]
+  @scala.inline
   def red: red = "red".asInstanceOf[red]
   @scala.inline
   def redirect: redirect = "redirect".asInstanceOf[redirect]
   @scala.inline
   def redo: redo = "redo".asInstanceOf[redo]
+  @scala.inline
+  def regular: regular = "regular".asInstanceOf[regular]
   @scala.inline
   def reload: reload = "reload".asInstanceOf[reload]
   @scala.inline
@@ -2254,11 +2703,13 @@ object electronStrings {
   @scala.inline
   def `remote-get-global`: `remote-get-global` = "remote-get-global".asInstanceOf[`remote-get-global`]
   @scala.inline
-  def `remote-get-guest-web-contents`: `remote-get-guest-web-contents` = "remote-get-guest-web-contents".asInstanceOf[`remote-get-guest-web-contents`]
-  @scala.inline
   def `remote-require`: `remote-require` = "remote-require".asInstanceOf[`remote-require`]
   @scala.inline
+  def `render-process-gone`: `render-process-gone` = "render-process-gone".asInstanceOf[`render-process-gone`]
+  @scala.inline
   def `renderer-process-crashed`: `renderer-process-crashed` = "renderer-process-crashed".asInstanceOf[`renderer-process-crashed`]
+  @scala.inline
+  def rendering: rendering = "rendering".asInstanceOf[rendering]
   @scala.inline
   def replace: replace = "replace".asInstanceOf[replace]
   @scala.inline
@@ -2286,6 +2737,10 @@ object electronStrings {
   @scala.inline
   def `right-click`: `right-click` = "right-click".asInstanceOf[`right-click`]
   @scala.inline
+  def rightButtonDown: rightButtonDown = "rightButtonDown".asInstanceOf[rightButtonDown]
+  @scala.inline
+  def `rotate-gesture`: `rotate-gesture` = "rotate-gesture".asInstanceOf[`rotate-gesture`]
+  @scala.inline
   def `round-rect`: `round-rect` = "round-rect".asInstanceOf[`round-rect`]
   @scala.inline
   def rounded: rounded = "rounded".asInstanceOf[rounded]
@@ -2293,6 +2748,8 @@ object electronStrings {
   def `same-origin`: `same-origin` = "same-origin".asInstanceOf[`same-origin`]
   @scala.inline
   def `save-to-disk`: `save-to-disk` = "save-to-disk".asInstanceOf[`save-to-disk`]
+  @scala.inline
+  def screen: screen = "screen".asInstanceOf[screen]
   @scala.inline
   def `screen-saver`: `screen-saver` = "screen-saver".asInstanceOf[`screen-saver`]
   @scala.inline
@@ -2311,6 +2768,8 @@ object electronStrings {
   def `second-instance`: `second-instance` = "second-instance".asInstanceOf[`second-instance`]
   @scala.inline
   def `secondary-label`: `secondary-label` = "secondary-label".asInstanceOf[`secondary-label`]
+  @scala.inline
+  def security: security = "security".asInstanceOf[security]
   @scala.inline
   def securitypolicyviolation: securitypolicyviolation = "securitypolicyviolation".asInstanceOf[securitypolicyviolation]
   @scala.inline
@@ -2336,7 +2795,7 @@ object electronStrings {
   @scala.inline
   def `selected-control-text`: `selected-control-text` = "selected-control-text".asInstanceOf[`selected-control-text`]
   @scala.inline
-  def `selected-menu-item`: `selected-menu-item` = "selected-menu-item".asInstanceOf[`selected-menu-item`]
+  def `selected-menu-item-text`: `selected-menu-item-text` = "selected-menu-item-text".asInstanceOf[`selected-menu-item-text`]
   @scala.inline
   def `selected-text`: `selected-text` = "selected-text".asInstanceOf[`selected-text`]
   @scala.inline
@@ -2354,31 +2813,47 @@ object electronStrings {
   @scala.inline
   def services: services = "services".asInstanceOf[services]
   @scala.inline
-  def session: session = "session".asInstanceOf[session]
-  @scala.inline
   def `session-created`: `session-created` = "session-created".asInstanceOf[`session-created`]
   @scala.inline
   def `session-end`: `session-end` = "session-end".asInstanceOf[`session-end`]
   @scala.inline
   def shadow: shadow = "shadow".asInstanceOf[shadow]
   @scala.inline
+  def sheet: sheet = "sheet".asInstanceOf[sheet]
+  @scala.inline
   def `sheet-begin`: `sheet-begin` = "sheet-begin".asInstanceOf[`sheet-begin`]
   @scala.inline
   def `sheet-end`: `sheet-end` = "sheet-end".asInstanceOf[`sheet-end`]
+  @scala.inline
+  def shift: shift = "shift".asInstanceOf[shift]
+  @scala.inline
+  def shortEdge: shortEdge = "shortEdge".asInstanceOf[shortEdge]
   @scala.inline
   def show: show = "show".asInstanceOf[show]
   @scala.inline
   def showHiddenFiles: showHiddenFiles = "showHiddenFiles".asInstanceOf[showHiddenFiles]
   @scala.inline
+  def showOverwriteConfirmation: showOverwriteConfirmation = "showOverwriteConfirmation".asInstanceOf[showOverwriteConfirmation]
+  @scala.inline
   def shutdown: shutdown = "shutdown".asInstanceOf[shutdown]
   @scala.inline
   def sidebar: sidebar = "sidebar".asInstanceOf[sidebar]
+  @scala.inline
+  def simplex: simplex = "simplex".asInstanceOf[simplex]
   @scala.inline
   def single: single = "single".asInstanceOf[single]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline
   def `small-square`: `small-square` = "small-square".asInstanceOf[`small-square`]
+  @scala.inline
+  def `spellcheck-dictionary-download-begin`: `spellcheck-dictionary-download-begin` = "spellcheck-dictionary-download-begin".asInstanceOf[`spellcheck-dictionary-download-begin`]
+  @scala.inline
+  def `spellcheck-dictionary-download-failure`: `spellcheck-dictionary-download-failure` = "spellcheck-dictionary-download-failure".asInstanceOf[`spellcheck-dictionary-download-failure`]
+  @scala.inline
+  def `spellcheck-dictionary-download-success`: `spellcheck-dictionary-download-success` = "spellcheck-dictionary-download-success".asInstanceOf[`spellcheck-dictionary-download-success`]
+  @scala.inline
+  def `spellcheck-dictionary-initialized`: `spellcheck-dictionary-initialized` = "spellcheck-dictionary-initialized".asInstanceOf[`spellcheck-dictionary-initialized`]
   @scala.inline
   def stalled: stalled = "stalled".asInstanceOf[stalled]
   @scala.inline
@@ -2387,6 +2862,8 @@ object electronStrings {
   def status: status = "status".asInstanceOf[status]
   @scala.inline
   def stopSpeaking: stopSpeaking = "stopSpeaking".asInstanceOf[stopSpeaking]
+  @scala.inline
+  def storage: storage = "storage".asInstanceOf[storage]
   @scala.inline
   def `strict-origin`: `strict-origin` = "strict-origin".asInstanceOf[`strict-origin`]
   @scala.inline
@@ -2402,9 +2879,13 @@ object electronStrings {
   @scala.inline
   def swipe: swipe = "swipe".asInstanceOf[swipe]
   @scala.inline
+  def system: system = "system".asInstanceOf[system]
+  @scala.inline
   def task: task = "task".asInstanceOf[task]
   @scala.inline
   def tasks: tasks = "tasks".asInstanceOf[tasks]
+  @scala.inline
+  def temp: temp = "temp".asInstanceOf[temp]
   @scala.inline
   def `tertiary-label`: `tertiary-label` = "tertiary-label".asInstanceOf[`tertiary-label`]
   @scala.inline
@@ -2428,6 +2909,8 @@ object electronStrings {
   @scala.inline
   def togglefullscreen: togglefullscreen = "togglefullscreen".asInstanceOf[togglefullscreen]
   @scala.inline
+  def tooltip: tooltip = "tooltip".asInstanceOf[tooltip]
+  @scala.inline
   def `torn-off-menu`: `torn-off-menu` = "torn-off-menu".asInstanceOf[`torn-off-menu`]
   @scala.inline
   def touch: touch = "touch".asInstanceOf[touch]
@@ -2441,6 +2924,8 @@ object electronStrings {
   def touchmove: touchmove = "touchmove".asInstanceOf[touchmove]
   @scala.inline
   def touchstart: touchstart = "touchstart".asInstanceOf[touchstart]
+  @scala.inline
+  def `trace-to-console`: `trace-to-console` = "trace-to-console".asInstanceOf[`trace-to-console`]
   @scala.inline
   def `transactions-updated`: `transactions-updated` = "transactions-updated".asInstanceOf[`transactions-updated`]
   @scala.inline
@@ -2458,7 +2943,11 @@ object electronStrings {
   @scala.inline
   def unavailable: unavailable = "unavailable".asInstanceOf[unavailable]
   @scala.inline
+  def `under-page`: `under-page` = "under-page".asInstanceOf[`under-page`]
+  @scala.inline
   def `under-page-background`: `under-page-background` = "under-page-background".asInstanceOf[`under-page-background`]
+  @scala.inline
+  def `under-window`: `under-window` = "under-window".asInstanceOf[`under-window`]
   @scala.inline
   def undo: undo = "undo".asInstanceOf[undo]
   @scala.inline
@@ -2482,6 +2971,8 @@ object electronStrings {
   @scala.inline
   def `unsafe-url`: `unsafe-url` = "unsafe-url".asInstanceOf[`unsafe-url`]
   @scala.inline
+  def untrusted: untrusted = "untrusted".asInstanceOf[untrusted]
+  @scala.inline
   def update: update = "update".asInstanceOf[update]
   @scala.inline
   def `update-activity-state`: `update-activity-state` = "update-activity-state".asInstanceOf[`update-activity-state`]
@@ -2500,13 +2991,21 @@ object electronStrings {
   @scala.inline
   def `user-gesture-required`: `user-gesture-required` = "user-gesture-required".asInstanceOf[`user-gesture-required`]
   @scala.inline
+  def userData: userData = "userData".asInstanceOf[userData]
+  @scala.inline
   def video: video = "video".asInstanceOf[video]
   @scala.inline
+  def videos: videos = "videos".asInstanceOf[videos]
+  @scala.inline
   def viewMenu: viewMenu = "viewMenu".asInstanceOf[viewMenu]
+  @scala.inline
+  def violation: violation = "violation".asInstanceOf[violation]
   @scala.inline
   def volumechange: volumechange = "volumechange".asInstanceOf[volumechange]
   @scala.inline
   def waiting: waiting = "waiting".asInstanceOf[waiting]
+  @scala.inline
+  def warning: warning = "warning".asInstanceOf[warning]
   @scala.inline
   def `web-contents-created`: `web-contents-created` = "web-contents-created".asInstanceOf[`web-contents-created`]
   @scala.inline
@@ -2548,9 +3047,15 @@ object electronStrings {
   @scala.inline
   def windowMenu: windowMenu = "windowMenu".asInstanceOf[windowMenu]
   @scala.inline
+  def worker: worker = "worker".asInstanceOf[worker]
+  @scala.inline
+  def xml: xml = "xml".asInstanceOf[xml]
+  @scala.inline
   def yellow: yellow = "yellow".asInstanceOf[yellow]
   @scala.inline
   def zoom: zoom = "zoom".asInstanceOf[zoom]
+  @scala.inline
+  def `zoom-changed`: `zoom-changed` = "zoom-changed".asInstanceOf[`zoom-changed`]
   @scala.inline
   def zoomIn: zoomIn = "zoomIn".asInstanceOf[zoomIn]
   @scala.inline

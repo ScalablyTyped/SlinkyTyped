@@ -1,7 +1,6 @@
 package typingsSlinky.antDesignReactNative.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -53,7 +52,7 @@ object ListItem {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def multipleLine(value: Boolean): this.type = set("multipleLine", value.asInstanceOf[js.Any])
     @scala.inline
@@ -75,7 +74,7 @@ object ListItem {
     @scala.inline
     def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumb(value: TagMod[Any]): this.type = set("thumb", value.asInstanceOf[js.Any])
+    def thumb(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
     @scala.inline
     def thumbNull: this.type = set("thumb", null)
     @scala.inline

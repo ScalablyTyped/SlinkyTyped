@@ -44,47 +44,24 @@ object Port {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDisconnect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnect")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisconnect(value: () => Unit): Self = this.set("disconnect", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnDisconnect(value: Event[js.Function1[Port, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisconnect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnMessage(value: Event[js.Function2[/* message */ _, Port, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnDisconnect(value: Event[js.Function1[Port, Unit]]): Self = this.set("onDisconnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPostMessage(value: js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postMessage")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnMessage(value: Event[js.Function2[/* message */ _, Port, Unit]]): Self = this.set("onMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSender(value: MessageSender): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPostMessage(value: js.Object => Unit): Self = this.set("postMessage", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutSender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(js.undefined)
-        ret
-    }
+    def setSender(value: MessageSender): Self = this.set("sender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSender: Self = this.set("sender", js.undefined)
   }
   
 }

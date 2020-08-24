@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libSliderMod.default
-import typingsSlinky.reactToolbox.libSliderSliderMod.SliderProps
-import typingsSlinky.reactToolbox.libSliderSliderMod.SliderTheme
+import typingsSlinky.reactToolbox.sliderMod.default
+import typingsSlinky.reactToolbox.sliderSliderMod.SliderProps
+import typingsSlinky.reactToolbox.sliderSliderMod.SliderTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Slider {
-  @JSImport("react-toolbox/lib/slider", JSImport.Default)
+  @JSImport("react-toolbox/components/slider", JSImport.Default)
   @js.native
   object component extends js.Object
   

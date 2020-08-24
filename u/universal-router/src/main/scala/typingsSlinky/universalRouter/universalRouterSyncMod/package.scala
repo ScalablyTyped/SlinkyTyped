@@ -5,18 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object universalRouterSyncMod {
-  type Context = org.scalablytyped.runtime.StringDictionary[js.Any]
-  type ErrorHandler[C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.Context */, R] = js.Function2[
-    /* error */ typingsSlinky.universalRouter.anon.Errorstatusnumber, 
-    /* context */ C with (typingsSlinky.universalRouter.universalRouterSyncMod.RouteContext[C, R]), 
-    typingsSlinky.universalRouter.universalRouterSyncMod.Result[R]
+  type ErrorHandler[R] = js.Function2[
+    /* error */ typingsSlinky.universalRouter.universalRouterSyncMod.RouteError, 
+    /* context */ typingsSlinky.universalRouter.universalRouterSyncMod.ResolveContext, 
+    typingsSlinky.universalRouter.universalRouterSyncMod.RouteResultSync[R]
   ]
-  type QueryParams = org.scalablytyped.runtime.StringDictionary[java.lang.String | js.Array[java.lang.String]]
-  type ResolveRoute[C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.Context */, R] = js.Function2[
-    /* context */ C with (typingsSlinky.universalRouter.universalRouterSyncMod.RouteContext[C, R]), 
-    /* params */ typingsSlinky.universalRouter.universalRouterSyncMod.QueryParams, 
-    typingsSlinky.universalRouter.universalRouterSyncMod.Result[R]
+  type ResolveRoute[R, C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.RouterContext */] = js.Function2[
+    /* context */ typingsSlinky.universalRouter.universalRouterSyncMod.RouteContext[R, C], 
+    /* params */ typingsSlinky.universalRouter.universalRouterSyncMod.RouteParams, 
+    typingsSlinky.universalRouter.universalRouterSyncMod.RouteResultSync[R]
   ]
-  type Result[T] = T | scala.Unit
-  type Routes[C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.Context */, R] = js.Array[typingsSlinky.universalRouter.universalRouterSyncMod.Route[C, R]]
+  type RouteParams = org.scalablytyped.runtime.StringDictionary[java.lang.String | js.Array[java.lang.String]]
+  type RouteResultSync[T] = js.UndefOr[T | scala.Null]
+  type RouterContext = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type Routes[R, C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.RouterContext */] = js.Array[typingsSlinky.universalRouter.universalRouterSyncMod.Route[R, C]]
 }

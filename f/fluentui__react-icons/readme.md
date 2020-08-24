@@ -1,7 +1,7 @@
 
 # Scala.js typings for fluentui__react-icons
 
-Typings are for version 0.1.18
+Typings are for version 0.1.41
 
 ## Library description:
 React components for building web experiences.

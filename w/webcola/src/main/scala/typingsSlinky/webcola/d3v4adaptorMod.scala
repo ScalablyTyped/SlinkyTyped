@@ -1,7 +1,6 @@
 package typingsSlinky.webcola
 
 import org.scalajs.dom.raw.Element
-import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.d3Dispatch.mod.Dispatch_
 import typingsSlinky.d3Drag.mod.DragBehavior
 import typingsSlinky.d3Drag.mod.SubjectPosition
@@ -28,11 +27,12 @@ object d3v4adaptorMod extends js.Object {
     var event: js.Any = js.native
     @JSName("timer")
     var timer_Original: FnCall = js.native
-    def dispatch[T /* <: EventTarget */](types: String*): Dispatch_[T] = js.native
+    def dispatch[T /* <: js.Object */](types: String*): Dispatch_[T] = js.native
     def drag[GElement /* <: Element */, Datum](): DragBehavior[GElement, Datum, Datum | SubjectPosition] = js.native
     @JSName("drag")
     def drag_GElement_DraggedElementBaseTypeDatumSubject[GElement /* <: Element */, Datum, Subject](): DragBehavior[GElement, Datum, Subject] = js.native
     def timer(callback: js.Function1[/* elapsed */ Double, Unit]): Timer_ = js.native
+    def timer(callback: js.Function1[/* elapsed */ Double, Unit], delay: js.UndefOr[scala.Nothing], time: Double): Timer_ = js.native
     def timer(callback: js.Function1[/* elapsed */ Double, Unit], delay: Double): Timer_ = js.native
     def timer(callback: js.Function1[/* elapsed */ Double, Unit], delay: Double, time: Double): Timer_ = js.native
   }

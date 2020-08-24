@@ -53,59 +53,30 @@ object InterfaceDescriptor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlternateSetting(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateSetting")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withEndpoints(value: js.Array[EndpointDescriptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAlternateSetting(value: integer): Self = this.set("alternateSetting", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExtra_data(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_data")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEndpointsVarargs(value: EndpointDescriptor*): Self = this.set("endpoints", js.Array(value :_*))
     @scala.inline
-    def withInterfaceClass(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEndpoints(value: js.Array[EndpointDescriptor]): Self = this.set("endpoints", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaceNumber(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtra_data(value: js.typedarray.ArrayBuffer): Self = this.set("extra_data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaceProtocol(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInterfaceClass(value: integer): Self = this.set("interfaceClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaceSubclass(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceSubclass")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInterfaceNumber(value: integer): Self = this.set("interfaceNumber", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInterfaceProtocol(value: integer): Self = this.set("interfaceProtocol", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
+    def setInterfaceSubclass(value: integer): Self = this.set("interfaceSubclass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
   }
   
 }

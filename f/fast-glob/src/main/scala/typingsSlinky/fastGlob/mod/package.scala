@@ -5,6 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Task = typingsSlinky.fastGlob.tasksMod.ITask
-  type TransformFunction[T] = typingsSlinky.fastGlob.optionsMod.TransformFunction[T]
+  type Entry = typingsSlinky.fastGlob.typesMod.Entry
+  type FileSystemAdapter = typingsSlinky.fastGlob.typesMod.FileSystemAdapter
+  type Options = typingsSlinky.fastGlob.settingsMod.Options
+  type Pattern = typingsSlinky.fastGlob.typesMod.Pattern
+  type Task = typingsSlinky.fastGlob.tasksMod.Task
 }

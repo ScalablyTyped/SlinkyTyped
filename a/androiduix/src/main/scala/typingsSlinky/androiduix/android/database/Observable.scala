@@ -25,35 +25,24 @@ object Observable {
     __obj.asInstanceOf[Observable[T]]
   }
   @scala.inline
-  implicit class ObservableOps[Self[t] <: Observable[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class ObservableOps[Self <: Observable[_], T] (val x: Self with Observable[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMObservers(value: ArrayList[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mObservers")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRegisterObserver(value: T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMObservers(value: ArrayList[T]): Self = this.set("mObservers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUnregisterAll(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unregisterAll")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setRegisterObserver(value: T => Unit): Self = this.set("registerObserver", js.Any.fromFunction1(value))
     @scala.inline
-    def withUnregisterObserver(value: T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unregisterObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setUnregisterAll(value: () => Unit): Self = this.set("unregisterAll", js.Any.fromFunction0(value))
+    @scala.inline
+    def setUnregisterObserver(value: T => Unit): Self = this.set("unregisterObserver", js.Any.fromFunction1(value))
   }
   
 }

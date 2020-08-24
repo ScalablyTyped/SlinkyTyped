@@ -3,8 +3,7 @@ package typingsSlinky.materialUiCore.tablePaginationTablePaginationMod
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
-import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapTableP
@@ -83,6 +82,7 @@ import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
@@ -96,7 +96,7 @@ import scala.scalajs.js.annotation._
 /* Inlined parent @material-ui/core.@material-ui/core.StandardProps<@material-ui/core.@material-ui/core/TablePagination/TablePagination.TablePaginationBaseProps, @material-ui/core.@material-ui/core/TablePagination/TablePagination.TablePaginationClassKey, 'component'> */
 @js.native
 trait TablePaginationProps extends js.Object {
-  var ActionsComponent: js.UndefOr[ReactComponentClass[TablePaginationActionsProps]] = js.native
+  var ActionsComponent: js.UndefOr[ReactType[TablePaginationActionsProps]] = js.native
   var SelectProps: js.UndefOr[PartialSelectProps] = js.native
   var abbr: js.UndefOr[String] = js.native
   var about: js.UndefOr[String] = js.native
@@ -154,12 +154,12 @@ trait TablePaginationProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
   var backIconButtonProps: js.UndefOr[PartialIconButtonProps] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapTableP] = js.native
   var colSpan: js.UndefOr[Double] = js.native
   var color: js.UndefOr[String] = js.native
-  var component: js.UndefOr[ReactComponentClass[TablePaginationBaseProps]] = js.native
+  var component: js.UndefOr[ReactType[TablePaginationBaseProps]] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var count: Double = js.native
@@ -170,6 +170,7 @@ trait TablePaginationProps extends js.Object {
   var dir: js.UndefOr[String] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
   var headers: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double | String] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var inlist: js.UndefOr[js.Any] = js.native
@@ -181,8 +182,8 @@ trait TablePaginationProps extends js.Object {
   var itemRef: js.UndefOr[String] = js.native
   var itemScope: js.UndefOr[Boolean] = js.native
   var itemType: js.UndefOr[String] = js.native
-  var labelDisplayedRows: js.UndefOr[js.Function1[/* paginationInfo */ LabelDisplayedRowsArgs, TagMod[Any]]] = js.native
-  var labelRowsPerPage: js.UndefOr[TagMod[Any]] = js.native
+  var labelDisplayedRows: js.UndefOr[js.Function1[/* paginationInfo */ LabelDisplayedRowsArgs, ReactElement]] = js.native
+  var labelRowsPerPage: js.UndefOr[ReactElement] = js.native
   var lang: js.UndefOr[String] = js.native
   var nextIconButtonProps: js.UndefOr[PartialIconButtonProps] = js.native
   var numeric: js.UndefOr[Boolean] = js.native
@@ -294,6 +295,7 @@ trait TablePaginationProps extends js.Object {
   var valign: js.UndefOr[top | middle | bottom | baseline] = js.native
   var variant: js.UndefOr[head | body | footer] = js.native
   var vocab: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double | String] = js.native
   def onChangePage(event: Null, page: Double): Unit = js.native
   def onChangePage(event: SyntheticMouseEvent[HTMLButtonElement], page: Double): Unit = js.native
 }

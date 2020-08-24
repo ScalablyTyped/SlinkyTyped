@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GripperBarVerticalIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GripperBarVerticalIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GripperBarVerticalIcon")
   @js.native
   object component extends js.Object
   

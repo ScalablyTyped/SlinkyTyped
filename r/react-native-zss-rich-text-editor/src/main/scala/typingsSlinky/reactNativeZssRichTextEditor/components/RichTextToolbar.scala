@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeZssRichTextEditor.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeZssRichTextEditor.anon.PartialRichTextToolbarPro
@@ -21,6 +21,8 @@ object RichTextToolbar {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeZssRichTextEditor.mod.RichTextToolbar] {
     @scala.inline
+    def actionsVarargs(value: ACTIONS*): this.type = set("actions", js.Array(value :_*))
+    @scala.inline
     def actions(value: js.Array[ACTIONS]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def getEditor(value: () => typingsSlinky.reactNativeZssRichTextEditor.mod.RichTextEditor): this.type = set("getEditor", js.Any.fromFunction0(value))
@@ -33,7 +35,7 @@ object RichTextToolbar {
     @scala.inline
     def onPressAddLink(value: () => Unit): this.type = set("onPressAddLink", js.Any.fromFunction0(value))
     @scala.inline
-    def renderAction(value: () => TagMod[Any]): this.type = set("renderAction", js.Any.fromFunction0(value))
+    def renderAction(value: () => ReactElement): this.type = set("renderAction", js.Any.fromFunction0(value))
     @scala.inline
     def selectedButtonStyle(value: ElementStyles): this.type = set("selectedButtonStyle", value.asInstanceOf[js.Any])
     @scala.inline

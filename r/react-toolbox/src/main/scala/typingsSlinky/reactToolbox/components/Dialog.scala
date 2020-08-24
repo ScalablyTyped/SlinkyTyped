@@ -3,10 +3,10 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libDialogDialogMod.DialogActionProps
-import typingsSlinky.reactToolbox.libDialogDialogMod.DialogProps
-import typingsSlinky.reactToolbox.libDialogDialogMod.DialogTheme
-import typingsSlinky.reactToolbox.libDialogMod.default
+import typingsSlinky.reactToolbox.dialogDialogMod.DialogActionProps
+import typingsSlinky.reactToolbox.dialogDialogMod.DialogProps
+import typingsSlinky.reactToolbox.dialogDialogMod.DialogTheme
+import typingsSlinky.reactToolbox.dialogMod.default
 import typingsSlinky.reactToolbox.reactToolboxStrings.large
 import typingsSlinky.reactToolbox.reactToolboxStrings.normal
 import typingsSlinky.reactToolbox.reactToolboxStrings.small
@@ -15,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dialog {
-  @JSImport("react-toolbox/lib/dialog", JSImport.Default)
+  @JSImport("react-toolbox/components/dialog", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -23,6 +23,8 @@ object Dialog {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionsVarargs(value: DialogActionProps*): this.type = set("actions", js.Array(value :_*))
     @scala.inline
     def actions(value: js.Array[DialogActionProps]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline

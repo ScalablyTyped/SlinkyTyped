@@ -24,6 +24,8 @@ object Header {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def headerRowsVarargs(value: Column*): this.type = set("headerRows", js.Array(value :_*))
+    @scala.inline
     def headerRows(value: js.Array[Column]): this.type = set("headerRows", value.asInstanceOf[js.Any])
     @scala.inline
     def onScroll(value: /* e */ PartialUIEvent => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))

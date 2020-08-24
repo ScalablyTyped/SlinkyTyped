@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -11,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InfiniteScroll {
-  @JSImport("grommet", "InfiniteScroll")
+  @JSImport("grommet/es6", "InfiniteScroll")
   @js.native
   object component extends js.Object
   
@@ -19,6 +18,10 @@ object InfiniteScroll {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] {
+    @scala.inline
+    def children(value: /* repeated */ js.Any => _): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
     @scala.inline
     def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
@@ -30,7 +33,7 @@ object InfiniteScroll {
     @scala.inline
     def scrollableAncestorReactElement(value: ReactElement): this.type = set("scrollableAncestor", value.asInstanceOf[js.Any])
     @scala.inline
-    def scrollableAncestor(value: TagMod[Any] | window): this.type = set("scrollableAncestor", value.asInstanceOf[js.Any])
+    def scrollableAncestor(value: ReactElement | window): this.type = set("scrollableAncestor", value.asInstanceOf[js.Any])
     @scala.inline
     def show(value: Double): this.type = set("show", value.asInstanceOf[js.Any])
     @scala.inline

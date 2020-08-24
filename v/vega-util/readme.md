@@ -1,7 +1,7 @@
 
 # Scala.js typings for vega-util
 
-Typings are for version 1.14.0
+Typings are for version 1.14.1
 
 ## Library description:
 JavaScript utilities for Vega.

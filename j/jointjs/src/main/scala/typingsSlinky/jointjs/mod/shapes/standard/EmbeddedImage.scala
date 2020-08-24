@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class EmbeddedImage () extends Element {
   def this(attributes: GenericAttributes[EmbeddedImageSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[EmbeddedImageSelectors], opt: Options) = this()
 }
 

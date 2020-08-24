@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MobileAngledIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MobileAngledIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MobileAngledIcon")
   @js.native
   object component extends js.Object
   

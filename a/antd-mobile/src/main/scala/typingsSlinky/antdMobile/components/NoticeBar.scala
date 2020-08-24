@@ -7,21 +7,20 @@ import typingsSlinky.antdMobile.antdMobileStrings.closable
 import typingsSlinky.antdMobile.antdMobileStrings.link
 import typingsSlinky.antdMobile.marqueeMod.MarqueeProps
 import typingsSlinky.antdMobile.noticeBarMod.NoticeWebProps
-import typingsSlinky.antdMobile.noticeBarMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NoticeBar {
-  @JSImport("antd-mobile/lib/notice-bar", JSImport.Default)
+  @JSImport("antd-mobile", "NoticeBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.NoticeBar] {
     @scala.inline
     def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline

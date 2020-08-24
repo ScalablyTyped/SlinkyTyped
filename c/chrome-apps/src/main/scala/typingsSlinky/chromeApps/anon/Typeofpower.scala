@@ -58,19 +58,16 @@ object Typeofpower {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLevel(value: DISPLAY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Level")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withReleaseKeepAwake(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseKeepAwake")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setLevel(value: DISPLAY): Self = this.set("Level", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequestKeepAwake(
+    def setReleaseKeepAwake(value: () => Unit): Self = this.set("releaseKeepAwake", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRequestKeepAwake(
       value: ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof Level */ js.Any, 
           /* keyof typeof Level */ String, 
@@ -79,11 +76,7 @@ object Typeofpower {
             /* import warning: importer.ImportType#apply Failed type conversion: typeof Level[keyof typeof Level] */ js.Any
           ]
         ] => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestKeepAwake")(js.Any.fromFunction1(value))
-        ret
-    }
+    ): Self = this.set("requestKeepAwake", js.Any.fromFunction1(value))
   }
   
 }

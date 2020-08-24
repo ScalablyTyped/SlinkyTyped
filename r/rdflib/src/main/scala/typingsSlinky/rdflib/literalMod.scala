@@ -46,7 +46,7 @@ object literalMod extends js.Object {
       * @deprecated use {language} instead
       */
     def lang: String = js.native
-    def lang(language: String): js.Any = js.native
+    def lang_=(language: String): Unit = js.native
   }
   
   @js.native
@@ -62,6 +62,7 @@ object literalMod extends js.Object {
       */
     def this(value: String) = this()
     def this(value: String, language: String) = this()
+    def this(value: String, language: js.UndefOr[scala.Nothing], datatype: js.Any) = this()
     def this(value: String, language: String, datatype: js.Any) = this()
     def this(value: String, language: Null, datatype: js.Any) = this()
   }

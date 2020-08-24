@@ -32,8 +32,8 @@ package object mod {
   ]
   ///////////////////////////////////////////////////////////////////////////
   // CompileService
-  // see http://docs.angularjs.org/api/ng.$compile
-  // see http://docs.angularjs.org/api/ng.$compileProvider
+  // see http://docs.angularjs.org/api/ng/service/$compile
+  // see http://docs.angularjs.org/api/ng/provider/$compileProvider
   ///////////////////////////////////////////////////////////////////////////
   type ICompileService = js.Function3[
     /* element */ java.lang.String | org.scalajs.dom.raw.Element | typingsSlinky.angular.JQuery, 
@@ -54,7 +54,7 @@ package object mod {
   ]
   ///////////////////////////////////////////////////////////////////////////
   // Directive
-  // see http://docs.angularjs.org/api/ng.$compileProvider#directive
+  // see http://docs.angularjs.org/api/ng/provider/$compileProvider#directive
   // and http://docs.angularjs.org/guide/directive
   ///////////////////////////////////////////////////////////////////////////
   type IDirectiveController = typingsSlinky.angular.mod.IController | js.Array[typingsSlinky.angular.mod.IController] | org.scalablytyped.runtime.StringDictionary[typingsSlinky.angular.mod.IController]
@@ -72,7 +72,7 @@ package object mod {
   ]
   ///////////////////////////////////////////////////////////////////////////
   // ExceptionHandlerService
-  // see http://docs.angularjs.org/api/ng.$exceptionHandler
+  // see http://docs.angularjs.org/api/ng/service/$exceptionHandler
   ///////////////////////////////////////////////////////////////////////////
   type IExceptionHandlerService = js.Function2[/* exception */ js.Error, /* cause */ js.UndefOr[java.lang.String], scala.Unit]
   type IFilterCurrency = js.Function3[
@@ -118,7 +118,7 @@ package object mod {
   type IFilterUppercase = js.Function1[/* value */ java.lang.String, java.lang.String]
   ///////////////////////////////////////////////////////////////////////////
   // HttpBackendService
-  // see http://docs.angularjs.org/api/ng.$httpBackend
+  // see http://docs.angularjs.org/api/ng/service/$httpBackend
   // You should never need to use this service directly.
   ///////////////////////////////////////////////////////////////////////////
   type IHttpBackendService = js.Function7[
@@ -174,8 +174,8 @@ package object mod {
   type IOnChangesObject = org.scalablytyped.runtime.StringDictionary[typingsSlinky.angular.mod.IChangesObject[js.Any]]
   ///////////////////////////////////////////////////////////////////////////
   // ParseService
-  // see http://docs.angularjs.org/api/ng.$parse
-  // see http://docs.angularjs.org/api/ng.$parseProvider
+  // see http://docs.angularjs.org/api/ng/service/$parse
+  // see http://docs.angularjs.org/api/ng/provider/$parseProvider
   ///////////////////////////////////////////////////////////////////////////
   type IParseService = js.Function3[
     /* expression */ java.lang.String, 
@@ -192,14 +192,14 @@ package object mod {
   ]
   ///////////////////////////////////////////////////////////////////////////
   // RootElementService
-  // see http://docs.angularjs.org/api/ng.$rootElement
+  // see http://docs.angularjs.org/api/ng/service/$rootElement
   ///////////////////////////////////////////////////////////////////////////
   type IRootElementService = typingsSlinky.angular.JQLite
   type IScope = typingsSlinky.angular.mod.IRootScopeService
   type IServiceProviderFactory = js.Function1[/* repeated */ js.Any, typingsSlinky.angular.mod.IServiceProvider]
   ///////////////////////////////////////////////////////////////////////////
   // TemplateCacheService
-  // see http://docs.angularjs.org/api/ng.$templateCache
+  // see http://docs.angularjs.org/api/ng/service/$templateCache
   ///////////////////////////////////////////////////////////////////////////
   type ITemplateCacheService = typingsSlinky.angular.mod.ICacheObject
   // This corresponds to the "publicLinkFn" returned by $compile.

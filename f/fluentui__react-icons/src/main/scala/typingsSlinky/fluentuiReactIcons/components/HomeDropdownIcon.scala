@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HomeDropdownIcon {
-  @JSImport("@fluentui/react-icons/lib/components/HomeDropdownIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "HomeDropdownIcon")
   @js.native
   object component extends js.Object
   

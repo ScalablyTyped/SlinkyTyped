@@ -1,5 +1,6 @@
 package typingsSlinky.materialTopAppBar
 
+import typingsSlinky.materialTopAppBar.standardFoundationMod.MDCTopAppBarFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object foundationMod extends js.Object {
   @js.native
-  class default ()
-    extends typingsSlinky.materialTopAppBar.materialTopAppBarMod.default
+  class MDCFixedTopAppBarFoundation () extends MDCTopAppBarFoundation
   
-  type MDCFixedTopAppBarFoundation = typingsSlinky.materialTopAppBar.materialTopAppBarMod.default
+  @js.native
+  class default () extends MDCFixedTopAppBarFoundation
+  
 }
 

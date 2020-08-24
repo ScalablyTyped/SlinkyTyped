@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -24,7 +23,6 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.wordpressComponents.menuItemMod.MenuItem.Props
-import typingsSlinky.wordpressComponents.mod.MenuItem.^
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`additions text`
@@ -84,7 +82,7 @@ object MenuItem {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, HTMLButtonElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -262,6 +260,8 @@ object MenuItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -312,7 +312,7 @@ object MenuItem {
     @scala.inline
     def infoReactElement(value: ReactElement): this.type = set("info", value.asInstanceOf[js.Any])
     @scala.inline
-    def info(value: TagMod[Any]): this.type = set("info", value.asInstanceOf[js.Any])
+    def info(value: ReactElement): this.type = set("info", value.asInstanceOf[js.Any])
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     @scala.inline
@@ -333,6 +333,8 @@ object MenuItem {
     def isLink(value: Boolean): this.type = set("isLink", value.asInstanceOf[js.Any])
     @scala.inline
     def isPrimary(value: Boolean): this.type = set("isPrimary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isSecondary(value: Boolean): this.type = set("isSecondary", value.asInstanceOf[js.Any])
     @scala.inline
     def isSelected(value: Boolean): this.type = set("isSelected", value.asInstanceOf[js.Any])
     @scala.inline
@@ -661,6 +663,8 @@ object MenuItem {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

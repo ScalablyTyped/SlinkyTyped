@@ -7,13 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InfoPath.InputParameterObject")
 @js.native
 class InputParameterObject protected ()
-  extends typingsSlinky.activexInfopath.InfoPath.InputParameterObject {
-  /* CompleteClass */
-  @JSName("InfoPath.InputParameterObject_typekey")
-  override var InfoPathDotInputParameterObject_typekey: typingsSlinky.activexInfopath.InfoPath.InputParameterObject = js.native
-  /* CompleteClass */
-  override val Name: String = js.native
-  /* CompleteClass */
-  override val Value: String = js.native
-}
+  extends typingsSlinky.activexInfopath.InfoPath.InputParameterObject
 

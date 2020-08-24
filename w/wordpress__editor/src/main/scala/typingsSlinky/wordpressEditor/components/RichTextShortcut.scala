@@ -13,7 +13,6 @@ import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.primaryShi
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.secondary
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.shift
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.shiftAlt
-import typingsSlinky.wordpressEditor.mod.RichTextShortcut.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,16 +22,16 @@ object RichTextShortcut {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): Default[tag.type, ^] = new Default[tag.type, ^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
     character: String,
     onUse: () => Unit,
     `type`: /* keyof @wordpress/block-editor.anon.Access */ primary | primaryShift | primaryAlt | secondary | access | ctrl | alt | ctrlShift | shift | shiftAlt
-  ): Default[tag.type, ^] = {
+  ): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(character = character.asInstanceOf[js.Any], onUse = js.Any.fromFunction0(onUse))
     __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Default[tag.type, ^](js.Array(this.component, __props.asInstanceOf[Props]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
 

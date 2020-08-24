@@ -51,17 +51,14 @@ object Typeofnetworking {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConfig(value: Typeofconfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnc(value: Typeofonc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onc")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConfig(value: Typeofconfig): Self = this.set("config", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnc(value: Typeofonc): Self = this.set("onc", value.asInstanceOf[js.Any])
   }
   
 }

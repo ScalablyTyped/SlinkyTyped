@@ -1,7 +1,7 @@
 
 # Scala.js typings for use-callback-ref
 
-Typings are for version 1.2.3
+Typings are for version 1.2.4
 
 ## Library description:
 The same useRef, but with callback

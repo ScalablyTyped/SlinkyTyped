@@ -68,6 +68,8 @@ object BootstrapTable {
     @scala.inline
     def footer(value: Boolean): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
+    def footerDataVarargs(value: js.Array[FooterData]*): this.type = set("footerData", js.Array(value :_*))
+    @scala.inline
     def footerData(value: js.Array[js.Array[FooterData]]): this.type = set("footerData", value.asInstanceOf[js.Any])
     @scala.inline
     def headerContainerClass(value: String): this.type = set("headerContainerClass", value.asInstanceOf[js.Any])

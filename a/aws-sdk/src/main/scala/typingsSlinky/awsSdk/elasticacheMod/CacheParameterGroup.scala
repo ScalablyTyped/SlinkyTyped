@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CacheParameterGroup extends js.Object {
   /**
+    * The ARN (Amazon Resource Name) of the cache parameter group.
+    */
+  var ARN: js.UndefOr[String] = js.native
+  /**
     * The name of the cache parameter group family that this cache parameter group is compatible with. Valid values are: memcached1.4 | memcached1.5 | redis2.6 | redis2.8 | redis3.2 | redis4.0 | redis5.0 | 
     */
   var CacheParameterGroupFamily: js.UndefOr[String] = js.native
@@ -26,18 +30,42 @@ trait CacheParameterGroup extends js.Object {
 
 object CacheParameterGroup {
   @scala.inline
-  def apply(
-    CacheParameterGroupFamily: String = null,
-    CacheParameterGroupName: String = null,
-    Description: String = null,
-    IsGlobal: js.UndefOr[Boolean] = js.undefined
-  ): CacheParameterGroup = {
+  def apply(): CacheParameterGroup = {
     val __obj = js.Dynamic.literal()
-    if (CacheParameterGroupFamily != null) __obj.updateDynamic("CacheParameterGroupFamily")(CacheParameterGroupFamily.asInstanceOf[js.Any])
-    if (CacheParameterGroupName != null) __obj.updateDynamic("CacheParameterGroupName")(CacheParameterGroupName.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsGlobal)) __obj.updateDynamic("IsGlobal")(IsGlobal.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheParameterGroup]
   }
+  @scala.inline
+  implicit class CacheParameterGroupOps[Self <: CacheParameterGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setARN(value: String): Self = this.set("ARN", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteARN: Self = this.set("ARN", js.undefined)
+    @scala.inline
+    def setCacheParameterGroupFamily(value: String): Self = this.set("CacheParameterGroupFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCacheParameterGroupFamily: Self = this.set("CacheParameterGroupFamily", js.undefined)
+    @scala.inline
+    def setCacheParameterGroupName(value: String): Self = this.set("CacheParameterGroupName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCacheParameterGroupName: Self = this.set("CacheParameterGroupName", js.undefined)
+    @scala.inline
+    def setDescription(value: String): Self = this.set("Description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
+    @scala.inline
+    def setIsGlobal(value: Boolean): Self = this.set("IsGlobal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsGlobal: Self = this.set("IsGlobal", js.undefined)
+  }
+  
 }
 

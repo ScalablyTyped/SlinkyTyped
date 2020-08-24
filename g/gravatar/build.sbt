@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "gravatar"
-version := "1.8-dt-20200305Z-f28431"
-scalaVersion := "2.13.2"
+version := "1.8-dt-20200305Z-a3bae6"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

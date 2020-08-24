@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
 class DateInput ()
   extends AbstractPureComponent2[IDateInputProps, IDateInputState, js.Object] {
   var formatDate: js.Any = js.native
-  var getInputRefHandler: js.Any = js.native
   var handleClosePopover: js.Any = js.native
   var handleDateChange: js.Any = js.native
   var handleInputBlur: js.Any = js.native
@@ -35,8 +34,6 @@ class DateInput ()
   var unregisterPopoverBlurHandler: js.Any = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MDateInput(prevProps: IDateInputProps, prevState: IDateInputState): Unit = js.native
-  @JSName("componentDidUpdate")
-  def componentDidUpdate_MDateInput(prevProps: IDateInputProps, prevState: IDateInputState, snapshot: js.Object): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MDateInput(): Unit = js.native
 }

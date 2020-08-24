@@ -39,41 +39,24 @@ object GlobalPolicy {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllowOnlyPolicyNetworksToAutoconnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowOnlyPolicyNetworksToAutoconnect")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAllowOnlyPolicyNetworksToAutoconnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowOnlyPolicyNetworksToAutoconnect")(js.undefined)
-        ret
-    }
+    def setAllowOnlyPolicyNetworksToAutoconnect(value: Boolean): Self = this.set("AllowOnlyPolicyNetworksToAutoconnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAllowOnlyPolicyNetworksToConnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowOnlyPolicyNetworksToConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAllowOnlyPolicyNetworksToAutoconnect: Self = this.set("AllowOnlyPolicyNetworksToAutoconnect", js.undefined)
     @scala.inline
-    def withoutAllowOnlyPolicyNetworksToConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowOnlyPolicyNetworksToConnect")(js.undefined)
-        ret
-    }
+    def setAllowOnlyPolicyNetworksToConnect(value: Boolean): Self = this.set("AllowOnlyPolicyNetworksToConnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBlacklistedHexSSIDs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlacklistedHexSSIDs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAllowOnlyPolicyNetworksToConnect: Self = this.set("AllowOnlyPolicyNetworksToConnect", js.undefined)
     @scala.inline
-    def withoutBlacklistedHexSSIDs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlacklistedHexSSIDs")(js.undefined)
-        ret
-    }
+    def setBlacklistedHexSSIDsVarargs(value: String*): Self = this.set("BlacklistedHexSSIDs", js.Array(value :_*))
+    @scala.inline
+    def setBlacklistedHexSSIDs(value: js.Array[String]): Self = this.set("BlacklistedHexSSIDs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBlacklistedHexSSIDs: Self = this.set("BlacklistedHexSSIDs", js.undefined)
   }
   
 }

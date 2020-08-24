@@ -3,7 +3,6 @@ package typingsSlinky.materialUiLab.speedDialSpeedDialMod
 import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.anon.ClassName
 import typingsSlinky.materialUiCore.withStylesMod.StyledComponentProps
@@ -12,8 +11,6 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.down
 import typingsSlinky.materialUiLab.materialUiLabStrings.left
 import typingsSlinky.materialUiLab.materialUiLabStrings.right
 import typingsSlinky.materialUiLab.materialUiLabStrings.up
-import typingsSlinky.reactTransitionGroup.anon.Appear
-import typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,11 +28,17 @@ trait SpeedDialProps
     * The component used for the transition.
     * [Follow this guide](/components/transitions/#transitioncomponent-prop) to learn more about the requirements for this component.
     */
-  var TransitionComponent: js.UndefOr[ReactComponentClass[TransitionProps]] = js.native
+  var TransitionComponent: js.UndefOr[
+    ReactComponentClass[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+    ]
+  ] = js.native
   /**
     * Props applied to the [`Transition`](http://reactcommunity.org/react-transition-group/transition#Transition-props) element.
     */
-  var TransitionProps: js.UndefOr[typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps] = js.native
+  var TransitionProps: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ js.Any
+  ] = js.native
   /**
     * The aria-label of the button element.
     * Also used to provide the `id` for the `SpeedDial` element and its children.
@@ -44,7 +47,7 @@ trait SpeedDialProps
   /**
     * SpeedDialActions to display when the SpeedDial is `open`.
     */
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   /**
     * The direction the actions open relative to the floating action button.
     */
@@ -57,7 +60,7 @@ trait SpeedDialProps
     * The icon to display in the SpeedDial Fab. The `SpeedDialIcon` component
     * provides a default Icon with animation.
     */
-  var icon: js.UndefOr[TagMod[Any]] = js.native
+  var icon: js.UndefOr[ReactElement] = js.native
   /**
     * Callback fired when the component requests to be closed.
     *
@@ -83,12 +86,14 @@ trait SpeedDialProps
   /**
     * The icon to display in the SpeedDial Fab when the SpeedDial is open.
     */
-  var openIcon: js.UndefOr[TagMod[Any]] = js.native
+  var openIcon: js.UndefOr[ReactElement] = js.native
   /**
     * The duration for the transition, in milliseconds.
     * You may specify a single timeout for all transitions, or individually with an object.
     */
-  var transitionDuration: js.UndefOr[Double | Appear] = js.native
+  var transitionDuration: js.UndefOr[
+    /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps * / any['timeout'] */ js.Any
+  ] = js.native
 }
 
 object SpeedDialProps {
@@ -104,179 +109,84 @@ object SpeedDialProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabel")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAriaLabel(value: String): Self = this.set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFabProps(value: PartialFabProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FabProps")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFabProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FabProps")(js.undefined)
-        ret
-    }
+    def setFabProps(value: PartialFabProps): Self = this.set("FabProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFabProps: Self = this.set("FabProps", js.undefined)
     @scala.inline
-    def withTransitionComponentComponentClass(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTransitionComponentFunctionComponent(
+      value: ReactComponentClass[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+        ]
+    ): Self = this.set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTransitionComponent(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTransitionComponentComponentClass(
+      value: ReactComponentClass[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+        ]
+    ): Self = this.set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTransitionComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionComponent")(js.undefined)
-        ret
-    }
+    def setTransitionComponent(
+      value: ReactComponentClass[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+        ]
+    ): Self = this.set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTransitionProps(value: TransitionProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionProps")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTransitionComponent: Self = this.set("TransitionComponent", js.undefined)
     @scala.inline
-    def withoutTransitionProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionProps")(js.undefined)
-        ret
-    }
+    def setTransitionProps(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ js.Any
+    ): Self = this.set("TransitionProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTransitionProps: Self = this.set("TransitionProps", js.undefined)
     @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDirection(value: up | down | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
+    def setDirection(value: up | down | left | right): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDirection: Self = this.set("direction", js.undefined)
     @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
+    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHidden: Self = this.set("hidden", js.undefined)
     @scala.inline
-    def withIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnClose(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ CloseReason) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
-        ret
-    }
+    def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
+    def setOnClose(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ CloseReason) => Unit): Self = this.set("onClose", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnOpen(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ OpenReason) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction2(value))
-        ret
-    }
+    def deleteOnClose: Self = this.set("onClose", js.undefined)
     @scala.inline
-    def withoutOnOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
-        ret
-    }
+    def setOnOpen(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ OpenReason) => Unit): Self = this.set("onOpen", js.Any.fromFunction2(value))
     @scala.inline
-    def withOpenIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOnOpen: Self = this.set("onOpen", js.undefined)
     @scala.inline
-    def withOpenIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpenIconReactElement(value: ReactElement): Self = this.set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOpenIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIcon")(js.undefined)
-        ret
-    }
+    def setOpenIcon(value: ReactElement): Self = this.set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTransitionDuration(value: Double | Appear): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOpenIcon: Self = this.set("openIcon", js.undefined)
     @scala.inline
-    def withoutTransitionDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
-        ret
-    }
+    def setTransitionDuration(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps * / any['timeout'] */ js.Any
+    ): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
   }
   
 }

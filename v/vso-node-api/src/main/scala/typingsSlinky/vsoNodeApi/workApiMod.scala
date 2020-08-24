@@ -63,7 +63,29 @@ object workApiMod extends js.Object {
     def getColumnSuggestedValues(): js.Promise[js.Array[BoardSuggestedValue]] = js.native
     def getColumnSuggestedValues(project: String): js.Promise[js.Array[BoardSuggestedValue]] = js.native
     def getDeliveryTimelineData(project: String, id: String): js.Promise[DeliveryViewData] = js.native
+    def getDeliveryTimelineData(
+      project: String,
+      id: String,
+      revision: js.UndefOr[scala.Nothing],
+      startDate: js.UndefOr[scala.Nothing],
+      endDate: js.Date
+    ): js.Promise[DeliveryViewData] = js.native
+    def getDeliveryTimelineData(project: String, id: String, revision: js.UndefOr[scala.Nothing], startDate: js.Date): js.Promise[DeliveryViewData] = js.native
+    def getDeliveryTimelineData(
+      project: String,
+      id: String,
+      revision: js.UndefOr[scala.Nothing],
+      startDate: js.Date,
+      endDate: js.Date
+    ): js.Promise[DeliveryViewData] = js.native
     def getDeliveryTimelineData(project: String, id: String, revision: Double): js.Promise[DeliveryViewData] = js.native
+    def getDeliveryTimelineData(
+      project: String,
+      id: String,
+      revision: Double,
+      startDate: js.UndefOr[scala.Nothing],
+      endDate: js.Date
+    ): js.Promise[DeliveryViewData] = js.native
     def getDeliveryTimelineData(project: String, id: String, revision: Double, startDate: js.Date): js.Promise[DeliveryViewData] = js.native
     def getDeliveryTimelineData(project: String, id: String, revision: Double, startDate: js.Date, endDate: js.Date): js.Promise[DeliveryViewData] = js.native
     def getPlan(project: String, id: String): js.Promise[Plan] = js.native

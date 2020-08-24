@@ -1,14 +1,14 @@
 package typingsSlinky.grommet
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.grommet.boxMod.BoxProps
+import typingsSlinky.grommet.boxMod.BoxTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet/components/Header", JSImport.Namespace)
+@JSImport("grommet/es6/components/Header", JSImport.Namespace)
 @js.native
 object headerMod extends js.Object {
-  val Header: ReactComponentClass[BoxProps] = js.native
+  val Header: ReactComponentClass[BoxTypes] = js.native
 }
 

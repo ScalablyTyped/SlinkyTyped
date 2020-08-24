@@ -52,59 +52,28 @@ object MarginLayoutParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBottomMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomMargin")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetLayoutDirection(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLayoutDirection")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setBottomMargin(value: Double): Self = this.set("bottomMargin", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsLayoutRtl(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLayoutRtl")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetLayoutDirection(value: () => Double): Self = this.set("getLayoutDirection", js.Any.fromFunction0(value))
     @scala.inline
-    def withLeftMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsLayoutRtl(value: () => Boolean): Self = this.set("isLayoutRtl", js.Any.fromFunction0(value))
     @scala.inline
-    def withResolveLayoutDirection(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLayoutDirection")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLeftMargin(value: Double): Self = this.set("leftMargin", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRightMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setResolveLayoutDirection(value: Double => Unit): Self = this.set("resolveLayoutDirection", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetLayoutDirection(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLayoutDirection")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRightMargin(value: Double): Self = this.set("rightMargin", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetMargins(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMargins")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setSetLayoutDirection(value: Double => Unit): Self = this.set("setLayoutDirection", js.Any.fromFunction1(value))
     @scala.inline
-    def withTopMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetMargins(value: (Double, Double, Double, Double) => Unit): Self = this.set("setMargins", js.Any.fromFunction4(value))
+    @scala.inline
+    def setTopMargin(value: Double): Self = this.set("topMargin", value.asInstanceOf[js.Any])
   }
   
 }

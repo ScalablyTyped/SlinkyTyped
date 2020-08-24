@@ -50,71 +50,32 @@ object FilterArgumentsMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBlur(value: Y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBrightness(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brightness")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBlur(value: Y): Self = this.set("blur", value.asInstanceOf[js.Any])
     @scala.inline
-    def withContrast(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contrast")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBrightness(value: Amount): Self = this.set("brightness", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDropShadow(value: Dx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setContrast(value: Amount): Self = this.set("contrast", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGrayscale(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grayscale")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDropShadow(value: Dx): Self = this.set("dropShadow", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHighlight(value: Blur): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGrayscale(value: Amount): Self = this.set("grayscale", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHueRotate(value: Angle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hueRotate")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHighlight(value: Blur): Self = this.set("highlight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInvert(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHueRotate(value: Angle): Self = this.set("hueRotate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOutline(value: Margin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInvert(value: Amount): Self = this.set("invert", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSaturate(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saturate")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOutline(value: Margin): Self = this.set("outline", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSepia(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sepia")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSaturate(value: Amount): Self = this.set("saturate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSepia(value: Amount): Self = this.set("sepia", value.asInstanceOf[js.Any])
   }
   
 }

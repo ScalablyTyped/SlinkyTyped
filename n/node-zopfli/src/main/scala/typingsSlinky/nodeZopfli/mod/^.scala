@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ () extends Transform {
   def this(format: Format) = this()
+  def this(format: js.UndefOr[scala.Nothing], options: Options) = this()
   def this(format: Format, options: Options) = this()
 }
 

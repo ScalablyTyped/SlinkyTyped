@@ -28,21 +28,22 @@ import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.polite
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.radiobutton_checked
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.radiobutton_unchecked
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.yes
-import typingsSlinky.reactNavigationStack.touchableItemMod.Props
-import typingsSlinky.reactNavigationStack.touchableItemMod.default
+import typingsSlinky.reactNavigationStack.touchableItemNativeMod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TouchableItem {
-  @JSImport("react-navigation-stack/lib/typescript/views/TouchableItem", JSImport.Default)
+  @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/TouchableItem", "TouchableItem")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNavigationStack.touchableItemMod.TouchableItem] {
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,6 +63,8 @@ object TouchableItem {
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -77,6 +80,8 @@ object TouchableItem {
     def delayPressIn(value: Double): this.type = set("delayPressIn", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline

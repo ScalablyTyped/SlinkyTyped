@@ -21,6 +21,8 @@ object Container {
     @scala.inline
     def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
     @scala.inline
+    def hideVarargs(value: String*): this.type = set("hide", js.Array(value :_*))
+    @scala.inline
     def hide(value: BreakpointsType | js.Array[String]): this.type = set("hide", value.asInstanceOf[js.Any])
     @scala.inline
     def `no-gutters`(value: Boolean): this.type = set("no-gutters", value.asInstanceOf[js.Any])

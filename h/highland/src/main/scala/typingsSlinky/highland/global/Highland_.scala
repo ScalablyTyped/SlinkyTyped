@@ -17,8 +17,6 @@ object Highland_ extends js.Object {
   class StreamError protected ()
     extends typingsSlinky.highland.Highland.StreamError {
     def this(err: js.Error) = this()
-    /* CompleteClass */
-    override var error: js.Error = js.native
   }
   
   /**
@@ -29,8 +27,6 @@ object Highland_ extends js.Object {
   class StreamRedirect[R] protected ()
     extends typingsSlinky.highland.Highland.StreamRedirect[R] {
     def this(to: Stream[R]) = this()
-    /* CompleteClass */
-    override var to: Stream[R] = js.native
   }
   
 }

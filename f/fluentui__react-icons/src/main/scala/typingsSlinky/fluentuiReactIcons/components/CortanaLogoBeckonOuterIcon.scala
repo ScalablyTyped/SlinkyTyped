@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CortanaLogoBeckonOuterIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CortanaLogoBeckonOuterIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CortanaLogoBeckonOuterIcon")
   @js.native
   object component extends js.Object
   

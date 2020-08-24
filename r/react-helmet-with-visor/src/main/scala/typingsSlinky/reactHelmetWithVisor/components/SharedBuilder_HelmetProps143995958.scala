@@ -30,15 +30,25 @@ class SharedBuilder_HelmetProps143995958[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def htmlAttributes(value: HtmlProps): this.type = set("htmlAttributes", value.asInstanceOf[js.Any])
   @scala.inline
+  def linkVarargs(value: LinkProps*): this.type = set("link", js.Array(value :_*))
+  @scala.inline
   def link(value: js.Array[LinkProps]): this.type = set("link", value.asInstanceOf[js.Any])
   @scala.inline
+  def metaVarargs(value: MetaProps*): this.type = set("meta", js.Array(value :_*))
+  @scala.inline
   def meta(value: js.Array[MetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
+  @scala.inline
+  def noscriptVarargs(value: js.Any*): this.type = set("noscript", js.Array(value :_*))
   @scala.inline
   def noscript(value: js.Array[_]): this.type = set("noscript", value.asInstanceOf[js.Any])
   @scala.inline
   def onChangeClientState(value: (/* newState */ js.Any, /* addedTags */ HelmetTags, /* removedTags */ HelmetTags) => Unit): this.type = set("onChangeClientState", js.Any.fromFunction3(value))
   @scala.inline
+  def scriptVarargs(value: js.Any*): this.type = set("script", js.Array(value :_*))
+  @scala.inline
   def script(value: js.Array[_]): this.type = set("script", value.asInstanceOf[js.Any])
+  @scala.inline
+  def styleVarargs(value: js.Any*): this.type = set("style", js.Array(value :_*))
   @scala.inline
   def style(value: js.Array[_]): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline

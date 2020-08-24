@@ -1,7 +1,7 @@
 
 # Scala.js typings for date-fns
 
-Typings are for version 2.14.0
+Typings are for version 2.15.0
 
 ## Library description:
 Modern JavaScript date utility library

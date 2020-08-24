@@ -1458,6 +1458,8 @@ import typingsSlinky.igniteUi.igniteUiStrings.nullTexts
 import typingsSlinky.igniteUi.igniteUiStrings.nullValue
 import typingsSlinky.igniteUi.igniteUiStrings.number
 import typingsSlinky.igniteUi.igniteUiStrings.odata
+import typingsSlinky.igniteUi.igniteUiStrings.onAttachedToUI
+import typingsSlinky.igniteUi.igniteUiStrings.onDetachedFromUI
 import typingsSlinky.igniteUi.igniteUiStrings.onError
 import typingsSlinky.igniteUi.igniteUiStrings.onFormDataSubmit
 import typingsSlinky.igniteUi.igniteUiStrings.onXHRLoad
@@ -7464,11 +7466,15 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_clearInput(methodName: clearInput): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_clearInput(methodName: clearInput, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_clearInput(methodName: clearInput, options: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_clearInput(methodName: clearInput, options: js.Object, event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_closeDropDown(methodName: closeDropDown): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_closeDropDown(methodName: closeDropDown, callback: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_closeDropDown(methodName: closeDropDown, callback: js.Function): js.Object = js.native
   @JSName("igCombo")
@@ -7484,11 +7490,15 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_deselect(methodName: deselect, $items: js.Object): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_deselect(methodName: deselect, $items: js.Object, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_deselect(methodName: deselect, $items: js.Object, options: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_deselect(methodName: deselect, $items: js.Object, options: js.Object, event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_deselectAll(methodName: deselectAll): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_deselectAll(methodName: deselectAll, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_deselectAll(methodName: deselectAll, options: js.Object): js.Object = js.native
   @JSName("igCombo")
@@ -7496,11 +7506,25 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_deselectByIndex(methodName: deselectByIndex, index: js.Object): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_deselectByIndex(
+    methodName: deselectByIndex,
+    index: js.Object,
+    options: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_deselectByIndex(methodName: deselectByIndex, index: js.Object, options: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_deselectByIndex(methodName: deselectByIndex, index: js.Object, options: js.Object, event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_deselectByValue(methodName: deselectByValue, value: js.Object): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_deselectByValue(
+    methodName: deselectByValue,
+    value: js.Object,
+    options: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): js.Object = js.native
   @JSName("igCombo")
   def igCombo_deselectByValue(methodName: deselectByValue, value: js.Object, options: js.Object): js.Object = js.native
   @JSName("igCombo")
@@ -7514,6 +7538,8 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_filter(methodName: filter): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_filter(methodName: filter, texts: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_filter(methodName: filter, texts: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_filter(methodName: filter, texts: js.Object, event: js.Object): js.Object = js.native
@@ -7526,7 +7552,20 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_index(methodName: index): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_index(
+    methodName: index,
+    index: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_index(methodName: index, index: js.UndefOr[scala.Nothing], options: js.Object): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_index(methodName: index, index: js.UndefOr[scala.Nothing], options: js.Object, event: js.Object): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_index(methodName: index, index: js.Object): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_index(methodName: index, index: js.Object, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_index(methodName: index, index: js.Object, options: js.Object): js.Object = js.native
   @JSName("igCombo")
@@ -7556,7 +7595,30 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_openDropDown(methodName: openDropDown): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_openDropDown(
+    methodName: openDropDown,
+    callback: js.UndefOr[scala.Nothing],
+    focusCombo: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_openDropDown(methodName: openDropDown, callback: js.UndefOr[scala.Nothing], focusCombo: Boolean): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_openDropDown(
+    methodName: openDropDown,
+    callback: js.UndefOr[scala.Nothing],
+    focusCombo: Boolean,
+    event: js.Object
+  ): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_openDropDown(methodName: openDropDown, callback: js.Function): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_openDropDown(
+    methodName: openDropDown,
+    callback: js.Function,
+    focusCombo: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): js.Object = js.native
   @JSName("igCombo")
   def igCombo_openDropDown(methodName: openDropDown, callback: js.Function, focusCombo: Boolean): js.Object = js.native
   @JSName("igCombo")
@@ -7574,11 +7636,15 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_select(methodName: select, $items: js.Object): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_select(methodName: select, $items: js.Object, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_select(methodName: select, $items: js.Object, options: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_select(methodName: select, $items: js.Object, options: js.Object, event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_selectAll(methodName: selectAll): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_selectAll(methodName: selectAll, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_selectAll(methodName: selectAll, options: js.Object): js.Object = js.native
   @JSName("igCombo")
@@ -7600,7 +7666,20 @@ trait JQuery extends js.Object {
   @JSName("igCombo")
   def igCombo_value(methodName: value): js.Object = js.native
   @JSName("igCombo")
+  def igCombo_value(
+    methodName: value,
+    value: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_value(methodName: value, value: js.UndefOr[scala.Nothing], options: js.Object): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_value(methodName: value, value: js.UndefOr[scala.Nothing], options: js.Object, event: js.Object): js.Object = js.native
+  @JSName("igCombo")
   def igCombo_value(methodName: value, value: js.Object): js.Object = js.native
+  @JSName("igCombo")
+  def igCombo_value(methodName: value, value: js.Object, options: js.UndefOr[scala.Nothing], event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_value(methodName: value, value: js.Object, options: js.Object): js.Object = js.native
   @JSName("igCombo")
@@ -7665,7 +7744,7 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the character, which is used as decimal separator.
     * Note: this option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     */
@@ -7673,7 +7752,7 @@ trait JQuery extends js.Object {
   /**
     * /Sets the character, which is used as decimal separator.
     * Note: this option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     *
@@ -7705,7 +7784,7 @@ trait JQuery extends js.Object {
     */
   def igCurrencyEditor(optionLiteral: option, optionName: dropDownAnimationDuration, optionValue: Double): Unit = js.native
   /**
-    * Gets wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Gets whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -7713,7 +7792,7 @@ trait JQuery extends js.Object {
     */
   def igCurrencyEditor(optionLiteral: option, optionName: dropDownAttachedToBody): Boolean = js.native
   /**
-    * Wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -7724,14 +7803,14 @@ trait JQuery extends js.Object {
   def igCurrencyEditor(optionLiteral: option, optionName: dropDownAttachedToBody, optionValue: Boolean): Unit = js.native
   /**
     * Gets the ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     */
   def igCurrencyEditor(optionLiteral: option, optionName: dropDownOnReadOnly): Boolean = js.native
   /**
     * The ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     *
@@ -7764,7 +7843,7 @@ trait JQuery extends js.Object {
     * Gets/Sets the character, which is used as separator for groups (like thousands).
     * That option has effect only in display mode(no focus).
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     */
@@ -7773,7 +7852,7 @@ trait JQuery extends js.Object {
     * /Sets the character, which is used as separator for groups (like thousands).
     * That option has effect only in display mode(no focus).
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     *
@@ -7788,7 +7867,7 @@ trait JQuery extends js.Object {
     * That option has effect only in display mode(no focus).
     * Note: The numbers in the array must be positive integers.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igCurrencyEditor(optionLiteral: option, optionName: groups): js.Array[_] = js.native
@@ -7800,7 +7879,7 @@ trait JQuery extends js.Object {
     * That option has effect only in display mode(no focus).
     * Note: The numbers in the array must be positive integers.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
@@ -7919,7 +7998,7 @@ trait JQuery extends js.Object {
     * Gets/Sets the maximum number of decimal places supported by the editor.
     * Note: this option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     */
@@ -7928,7 +8007,7 @@ trait JQuery extends js.Object {
     * /Sets the maximum number of decimal places supported by the editor.
     * Note: this option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     *
@@ -7962,7 +8041,7 @@ trait JQuery extends js.Object {
     * If number of digits in fractional part of number is less than the value of this option, then the "0" characters are used to fill missing digits.
     * Note: This option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     */
@@ -7972,7 +8051,7 @@ trait JQuery extends js.Object {
     * If number of digits in fractional part of number is less than the value of this option, then the "0" characters are used to fill missing digits.
     * Note: This option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     *
@@ -7994,14 +8073,14 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the string, which is used as negative pattern. The "n" flag represents the value of number. The "-" and "()" flags are static part of pattern.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igCurrencyEditor(optionLiteral: option, optionName: negativePattern): String = js.native
   /**
     * /Sets the string, which is used as negative pattern. The "n" flag represents the value of number. The "-" and "()" flags are static part of pattern.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
@@ -8010,7 +8089,7 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the character, which is used as negative sign.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) options.
     *
     */
@@ -8018,7 +8097,7 @@ trait JQuery extends js.Object {
   /**
     * /Sets the character, which is used as negative sign.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) options.
     *
     *
@@ -8053,26 +8132,26 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the string, which is used as positive pattern. The "n" flag represents the value of number.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igCurrencyEditor(optionLiteral: option, optionName: positivePattern): String = js.native
   /**
     * /Sets the string, which is used as positive pattern. The "n" flag represents the value of number.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
     */
   def igCurrencyEditor(optionLiteral: option, optionName: positivePattern, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igCurrencyEditor(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -8104,12 +8183,12 @@ trait JQuery extends js.Object {
   def igCurrencyEditor(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igCurrencyEditor(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igCurrencyEditor(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -9837,6 +9916,8 @@ trait JQuery extends js.Object {
   @JSName("igDataChart")
   def igDataChart_exportImage(methodName: exportImage): js.Object = js.native
   @JSName("igDataChart")
+  def igDataChart_exportImage(methodName: exportImage, width: js.UndefOr[scala.Nothing], height: js.Object): js.Object = js.native
+  @JSName("igDataChart")
   def igDataChart_exportImage(methodName: exportImage, width: js.Object): js.Object = js.native
   @JSName("igDataChart")
   def igDataChart_exportImage(methodName: exportImage, width: js.Object, height: js.Object): js.Object = js.native
@@ -10615,12 +10696,12 @@ trait JQuery extends js.Object {
     */
   def igDateEditor(optionLiteral: option, optionName: placeHolder, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igDateEditor(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -10652,12 +10733,12 @@ trait JQuery extends js.Object {
   def igDateEditor(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igDateEditor(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igDateEditor(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -10713,11 +10794,11 @@ trait JQuery extends js.Object {
     */
   def igDateEditor(optionLiteral: option, optionName: spinDelta, optionValue: Double): Unit = js.native
   /**
-    * Gets/Sets the ability of the editor to automatically change the hoverd item into the opened dropdown list to its oposide side.
+    * Gets/Sets the ability of the editor to automatically change the hovered item into the opened dropdown list to its opposite side.
     */
   def igDateEditor(optionLiteral: option, optionName: spinWrapAround): Boolean = js.native
   /**
-    * /Sets the ability of the editor to automatically change the hoverd item into the opened dropdown list to its oposide side.
+    * /Sets the ability of the editor to automatically change the hovered item into the opened dropdown list to its opposite side.
     *
     * @optionValue New value to be set.
     */
@@ -11521,12 +11602,12 @@ trait JQuery extends js.Object {
     */
   def igDatePicker(optionLiteral: option, optionName: placeHolder, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igDatePicker(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -11558,12 +11639,12 @@ trait JQuery extends js.Object {
   def igDatePicker(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igDatePicker(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igDatePicker(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -11619,11 +11700,11 @@ trait JQuery extends js.Object {
     */
   def igDatePicker(optionLiteral: option, optionName: spinDelta, optionValue: Double): Unit = js.native
   /**
-    * Gets/Sets the ability of the editor to automatically change the hoverd item into the opened dropdown list to its oposide side.
+    * Gets/Sets the ability of the editor to automatically change the hovered item into the opened dropdown list to its opposite side.
     */
   def igDatePicker(optionLiteral: option, optionName: spinWrapAround): Boolean = js.native
   /**
-    * /Sets the ability of the editor to automatically change the hoverd item into the opened dropdown list to its oposide side.
+    * /Sets the ability of the editor to automatically change the hovered item into the opened dropdown list to its opposite side.
     *
     * @optionValue New value to be set.
     */
@@ -16972,6 +17053,8 @@ trait JQuery extends js.Object {
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object): js.Object = js.native
   @JSName("igGridColumnFixing")
+  def igGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object, target: js.UndefOr[scala.Nothing], after: Boolean): js.Object = js.native
+  @JSName("igGridColumnFixing")
   def igGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object, target: String): js.Object = js.native
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object, target: String, after: Boolean): js.Object = js.native
@@ -16982,7 +17065,34 @@ trait JQuery extends js.Object {
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_getWidthOfFixedColumns(methodName: getWidthOfFixedColumns): Double = js.native
   @JSName("igGridColumnFixing")
+  def igGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.UndefOr[scala.Nothing],
+    excludeNonDataColumns: js.UndefOr[scala.Nothing],
+    includeHidden: Boolean
+  ): Double = js.native
+  @JSName("igGridColumnFixing")
+  def igGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.UndefOr[scala.Nothing],
+    excludeNonDataColumns: Boolean
+  ): Double = js.native
+  @JSName("igGridColumnFixing")
+  def igGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.UndefOr[scala.Nothing],
+    excludeNonDataColumns: Boolean,
+    includeHidden: Boolean
+  ): Double = js.native
+  @JSName("igGridColumnFixing")
   def igGridColumnFixing_getWidthOfFixedColumns(methodName: getWidthOfFixedColumns, fCols: js.Array[_]): Double = js.native
+  @JSName("igGridColumnFixing")
+  def igGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.Array[_],
+    excludeNonDataColumns: js.UndefOr[scala.Nothing],
+    includeHidden: Boolean
+  ): Double = js.native
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_getWidthOfFixedColumns(methodName: getWidthOfFixedColumns, fCols: js.Array[_], excludeNonDataColumns: Boolean): Double = js.native
   @JSName("igGridColumnFixing")
@@ -17003,6 +17113,8 @@ trait JQuery extends js.Object {
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_syncHeights(methodName: syncHeights): Unit = js.native
   @JSName("igGridColumnFixing")
+  def igGridColumnFixing_syncHeights(methodName: syncHeights, check: js.UndefOr[scala.Nothing], clearRowsHeights: Boolean): Unit = js.native
+  @JSName("igGridColumnFixing")
   def igGridColumnFixing_syncHeights(methodName: syncHeights, check: Boolean): Unit = js.native
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_syncHeights(methodName: syncHeights, check: Boolean, clearRowsHeights: Boolean): Unit = js.native
@@ -17012,6 +17124,13 @@ trait JQuery extends js.Object {
   def igGridColumnFixing_unfixAllColumns(methodName: unfixAllColumns): Unit = js.native
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_unfixColumn(methodName: unfixColumn, colIdentifier: js.Object): js.Object = js.native
+  @JSName("igGridColumnFixing")
+  def igGridColumnFixing_unfixColumn(
+    methodName: unfixColumn,
+    colIdentifier: js.Object,
+    target: js.UndefOr[scala.Nothing],
+    after: Boolean
+  ): js.Object = js.native
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_unfixColumn(methodName: unfixColumn, colIdentifier: js.Object, target: String): js.Object = js.native
   @JSName("igGridColumnFixing")
@@ -17592,7 +17711,42 @@ trait JQuery extends js.Object {
   @JSName("igGridColumnMoving")
   def igGridColumnMoving_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object): Unit = js.native
   @JSName("igGridColumnMoving")
+  def igGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igGridColumnMoving")
+  def igGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean
+  ): Unit = js.native
+  @JSName("igGridColumnMoving")
+  def igGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean,
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igGridColumnMoving")
   def igGridColumnMoving_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean): Unit = js.native
+  @JSName("igGridColumnMoving")
+  def igGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: Boolean,
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
   @JSName("igGridColumnMoving")
   def igGridColumnMoving_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean, inDom: Boolean): Unit = js.native
   @JSName("igGridColumnMoving")
@@ -17938,6 +18092,8 @@ trait JQuery extends js.Object {
   def igGridFeatureChooserPopover_setCoordinates(methodName: setCoordinates, pos: js.Object): Unit = js.native
   @JSName("igGridFeatureChooserPopover")
   def igGridFeatureChooserPopover_show(methodName: show): Unit = js.native
+  @JSName("igGridFeatureChooserPopover")
+  def igGridFeatureChooserPopover_show(methodName: show, trg: js.UndefOr[scala.Nothing], content: String): Unit = js.native
   @JSName("igGridFeatureChooserPopover")
   def igGridFeatureChooserPopover_show(methodName: show, trg: Element): Unit = js.native
   @JSName("igGridFeatureChooserPopover")
@@ -18739,6 +18895,13 @@ trait JQuery extends js.Object {
   def igGridFiltering_destroy(methodName: destroy): Unit = js.native
   @JSName("igGridFiltering")
   def igGridFiltering_filter(methodName: filter, expressions: js.Array[_]): Unit = js.native
+  @JSName("igGridFiltering")
+  def igGridFiltering_filter(
+    methodName: filter,
+    expressions: js.Array[_],
+    updateUI: js.UndefOr[scala.Nothing],
+    addedFromAdvanced: Boolean
+  ): Unit = js.native
   @JSName("igGridFiltering")
   def igGridFiltering_filter(methodName: filter, expressions: js.Array[_], updateUI: Boolean): Unit = js.native
   @JSName("igGridFiltering")
@@ -19560,6 +19723,13 @@ trait JQuery extends js.Object {
   def igGridGroupBy_getGroupedData(methodName: getGroupedData, data: js.Array[_], colKey: String, idval: String): js.Array[_] = js.native
   @JSName("igGridGroupBy")
   def igGridGroupBy_groupByColumn(methodName: groupByColumn, key: String): Unit = js.native
+  @JSName("igGridGroupBy")
+  def igGridGroupBy_groupByColumn(
+    methodName: groupByColumn,
+    key: String,
+    layout: js.UndefOr[scala.Nothing],
+    sortingDirection: js.Object
+  ): Unit = js.native
   @JSName("igGridGroupBy")
   def igGridGroupBy_groupByColumn(methodName: groupByColumn, key: String, layout: String): Unit = js.native
   @JSName("igGridGroupBy")
@@ -23550,6 +23720,8 @@ trait JQuery extends js.Object {
   @JSName("igGridUpdating")
   def igGridUpdating_endEdit(methodName: endEdit): Boolean = js.native
   @JSName("igGridUpdating")
+  def igGridUpdating_endEdit(methodName: endEdit, update: js.UndefOr[scala.Nothing], raiseEvents: Boolean): Boolean = js.native
+  @JSName("igGridUpdating")
   def igGridUpdating_endEdit(methodName: endEdit, update: Boolean): Boolean = js.native
   @JSName("igGridUpdating")
   def igGridUpdating_endEdit(methodName: endEdit, update: Boolean, raiseEvents: Boolean): Boolean = js.native
@@ -23688,7 +23860,42 @@ trait JQuery extends js.Object {
   @JSName("igGrid")
   def igGrid_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object): Unit = js.native
   @JSName("igGrid")
+  def igGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igGrid")
+  def igGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean
+  ): Unit = js.native
+  @JSName("igGrid")
+  def igGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean,
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igGrid")
   def igGrid_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean): Unit = js.native
+  @JSName("igGrid")
+  def igGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: Boolean,
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
   @JSName("igGrid")
   def igGrid_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean, inDom: Boolean): Unit = js.native
   @JSName("igGrid")
@@ -23718,6 +23925,8 @@ trait JQuery extends js.Object {
   def igGrid_resizeContainer(methodName: resizeContainer): Unit = js.native
   @JSName("igGrid")
   def igGrid_rollback(methodName: rollback): js.Array[_] = js.native
+  @JSName("igGrid")
+  def igGrid_rollback(methodName: rollback, rowId: js.UndefOr[scala.Nothing], updateUI: Boolean): js.Array[_] = js.native
   @JSName("igGrid")
   def igGrid_rollback(methodName: rollback, rowId: js.Object): js.Array[_] = js.native
   @JSName("igGrid")
@@ -25633,7 +25842,30 @@ trait JQuery extends js.Object {
   @JSName("igLayoutManager")
   def igLayoutManager_reflow(methodName: reflow): Unit = js.native
   @JSName("igLayoutManager")
+  def igLayoutManager_reflow(
+    methodName: reflow,
+    forceReflow: js.UndefOr[scala.Nothing],
+    animationDuration: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): Unit = js.native
+  @JSName("igLayoutManager")
+  def igLayoutManager_reflow(methodName: reflow, forceReflow: js.UndefOr[scala.Nothing], animationDuration: Double): Unit = js.native
+  @JSName("igLayoutManager")
+  def igLayoutManager_reflow(
+    methodName: reflow,
+    forceReflow: js.UndefOr[scala.Nothing],
+    animationDuration: Double,
+    event: js.Object
+  ): Unit = js.native
+  @JSName("igLayoutManager")
   def igLayoutManager_reflow(methodName: reflow, forceReflow: Boolean): Unit = js.native
+  @JSName("igLayoutManager")
+  def igLayoutManager_reflow(
+    methodName: reflow,
+    forceReflow: Boolean,
+    animationDuration: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): Unit = js.native
   @JSName("igLayoutManager")
   def igLayoutManager_reflow(methodName: reflow, forceReflow: Boolean, animationDuration: Double): Unit = js.native
   @JSName("igLayoutManager")
@@ -27426,6 +27658,8 @@ trait JQuery extends js.Object {
   @JSName("igMap")
   def igMap_exportImage(methodName: exportImage): js.Object = js.native
   @JSName("igMap")
+  def igMap_exportImage(methodName: exportImage, width: js.UndefOr[scala.Nothing], height: js.Object): js.Object = js.native
+  @JSName("igMap")
   def igMap_exportImage(methodName: exportImage, width: js.Object): js.Object = js.native
   @JSName("igMap")
   def igMap_exportImage(methodName: exportImage, width: js.Object, height: js.Object): js.Object = js.native
@@ -27712,11 +27946,11 @@ trait JQuery extends js.Object {
     */
   def igMaskEditor(optionLiteral: option, optionName: inputName, optionValue: String): Unit = js.native
   /**
-    * Sets the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed
+    * Sets the ability to allow values only set into the list items. This validation is done only when the editor is blurred, or enter key is pressed
     */
   def igMaskEditor(optionLiteral: option, optionName: isLimitedToListValues): Boolean = js.native
   /**
-    * Sets the ability to allow values only set into the list items. This validation is done only when the editor is blured, or enter key is pressed
+    * Sets the ability to allow values only set into the list items. This validation is done only when the editor is blurred, or enter key is pressed
     *
     * @optionValue New value to be set.
     */
@@ -27825,12 +28059,12 @@ trait JQuery extends js.Object {
     */
   def igMaskEditor(optionLiteral: option, optionName: placeHolder, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igMaskEditor(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -27862,12 +28096,12 @@ trait JQuery extends js.Object {
   def igMaskEditor(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igMaskEditor(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igMaskEditor(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -27886,11 +28120,11 @@ trait JQuery extends js.Object {
     */
   def igMaskEditor(optionLiteral: option, optionName: selectionOnFocus, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets the ability of the editor to automatically change the hoverd item into the opened dropdown list to its oposide side.
+    * Gets/Sets the ability of the editor to automatically change the hovered item into the opened dropdown list to its opposite side.
     */
   def igMaskEditor(optionLiteral: option, optionName: spinWrapAround): Boolean = js.native
   /**
-    * /Sets the ability of the editor to automatically change the hoverd item into the opened dropdown list to its oposide side.
+    * /Sets the ability of the editor to automatically change the hovered item into the opened dropdown list to its opposite side.
     *
     * @optionValue New value to be set.
     */
@@ -28443,6 +28677,8 @@ trait JQuery extends js.Object {
   @JSName("igNotifier")
   def igNotifier_show(methodName: show): Unit = js.native
   @JSName("igNotifier")
+  def igNotifier_show(methodName: show, trg: js.UndefOr[scala.Nothing], content: String): Unit = js.native
+  @JSName("igNotifier")
   def igNotifier_show(methodName: show, trg: Element): Unit = js.native
   @JSName("igNotifier")
   def igNotifier_show(methodName: show, trg: Element, content: String): Unit = js.native
@@ -28494,7 +28730,7 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the character, which is used as decimal separator.
     * Note: this option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     */
@@ -28502,7 +28738,7 @@ trait JQuery extends js.Object {
   /**
     * /Sets the character, which is used as decimal separator.
     * Note: this option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     *
@@ -28534,7 +28770,7 @@ trait JQuery extends js.Object {
     */
   def igNumericEditor(optionLiteral: option, optionName: dropDownAnimationDuration, optionValue: Double): Unit = js.native
   /**
-    * Gets wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Gets whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -28542,7 +28778,7 @@ trait JQuery extends js.Object {
     */
   def igNumericEditor(optionLiteral: option, optionName: dropDownAttachedToBody): Boolean = js.native
   /**
-    * Wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -28613,14 +28849,14 @@ trait JQuery extends js.Object {
   def igNumericEditor(optionLiteral: option, optionName: dropDownListOpening, optionValue: DropDownListOpeningEvent): Unit = js.native
   /**
     * Gets the ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     */
   def igNumericEditor(optionLiteral: option, optionName: dropDownOnReadOnly): Boolean = js.native
   /**
     * The ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     *
@@ -28653,7 +28889,7 @@ trait JQuery extends js.Object {
     * Gets/Sets the character, which is used as separator for groups (like thousands).
     * That option has effect only in display mode(no focus).
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     */
@@ -28662,7 +28898,7 @@ trait JQuery extends js.Object {
     * /Sets the character, which is used as separator for groups (like thousands).
     * That option has effect only in display mode(no focus).
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     *
@@ -28677,7 +28913,7 @@ trait JQuery extends js.Object {
     * That option has effect only in display mode(no focus).
     * Note: The numbers in the array must be positive integers.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igNumericEditor(optionLiteral: option, optionName: groups): js.Array[_] = js.native
@@ -28689,7 +28925,7 @@ trait JQuery extends js.Object {
     * That option has effect only in display mode(no focus).
     * Note: The numbers in the array must be positive integers.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
@@ -28808,7 +29044,7 @@ trait JQuery extends js.Object {
     * Gets/Sets the maximum number of decimal places supported by the editor.
     * Note: this option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     */
@@ -28817,7 +29053,7 @@ trait JQuery extends js.Object {
     * /Sets the maximum number of decimal places supported by the editor.
     * Note: this option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     *
@@ -28851,7 +29087,7 @@ trait JQuery extends js.Object {
     * If number of digits in fractional part of number is less than the value of this option, then the "0" characters are used to fill missing digits.
     * Note: This option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     */
@@ -28861,7 +29097,7 @@ trait JQuery extends js.Object {
     * If number of digits in fractional part of number is less than the value of this option, then the "0" characters are used to fill missing digits.
     * Note: This option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     *
@@ -28883,14 +29119,14 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the string, which is used as negative pattern. The "n" flag represents the value of number. The "-" and "()" flags are static part of pattern.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igNumericEditor(optionLiteral: option, optionName: negativePattern): String = js.native
   /**
     * /Sets the string, which is used as negative pattern. The "n" flag represents the value of number. The "-" and "()" flags are static part of pattern.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
@@ -28899,7 +29135,7 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the character, which is used as negative sign.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) options.
     *
     */
@@ -28907,7 +29143,7 @@ trait JQuery extends js.Object {
   /**
     * /Sets the character, which is used as negative sign.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) options.
     *
     *
@@ -28940,12 +29176,12 @@ trait JQuery extends js.Object {
     */
   def igNumericEditor(optionLiteral: option, optionName: placeHolder, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igNumericEditor(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -28977,12 +29213,12 @@ trait JQuery extends js.Object {
   def igNumericEditor(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igNumericEditor(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igNumericEditor(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -29326,7 +29562,7 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the character, which is used as decimal separator.
     * Note: this option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     */
@@ -29334,7 +29570,7 @@ trait JQuery extends js.Object {
   /**
     * /Sets the character, which is used as decimal separator.
     * Note: this option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     *
@@ -29386,7 +29622,7 @@ trait JQuery extends js.Object {
     */
   def igPercentEditor(optionLiteral: option, optionName: dropDownAnimationDuration, optionValue: Double): Unit = js.native
   /**
-    * Gets wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Gets whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -29394,7 +29630,7 @@ trait JQuery extends js.Object {
     */
   def igPercentEditor(optionLiteral: option, optionName: dropDownAttachedToBody): Boolean = js.native
   /**
-    * Wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -29405,14 +29641,14 @@ trait JQuery extends js.Object {
   def igPercentEditor(optionLiteral: option, optionName: dropDownAttachedToBody, optionValue: Boolean): Unit = js.native
   /**
     * Gets the ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     */
   def igPercentEditor(optionLiteral: option, optionName: dropDownOnReadOnly): Boolean = js.native
   /**
     * The ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     *
@@ -29445,7 +29681,7 @@ trait JQuery extends js.Object {
     * Gets/Sets the character, which is used as separator for groups (like thousands).
     * That option has effect only in display mode(no focus).
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     */
@@ -29454,7 +29690,7 @@ trait JQuery extends js.Object {
     * /Sets the character, which is used as separator for groups (like thousands).
     * That option has effect only in display mode(no focus).
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) or [negativeSign](ui.igNumericEditor#options:negativeSign) options.
     *
     *
@@ -29469,7 +29705,7 @@ trait JQuery extends js.Object {
     * That option has effect only in display mode(no focus).
     * Note: The numbers in the array must be positive integers.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igPercentEditor(optionLiteral: option, optionName: groups): js.Array[_] = js.native
@@ -29481,7 +29717,7 @@ trait JQuery extends js.Object {
     * That option has effect only in display mode(no focus).
     * Note: The numbers in the array must be positive integers.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
@@ -29600,7 +29836,7 @@ trait JQuery extends js.Object {
     * Gets/Sets the maximum number of decimal places supported by the editor.
     * Note: this option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     */
@@ -29609,7 +29845,7 @@ trait JQuery extends js.Object {
     * /Sets the maximum number of decimal places supported by the editor.
     * Note: this option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     *
@@ -29643,7 +29879,7 @@ trait JQuery extends js.Object {
     * If number of digits in fractional part of number is less than the value of this option, then the "0" characters are used to fill missing digits.
     * Note: This option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     */
@@ -29653,7 +29889,7 @@ trait JQuery extends js.Object {
     * If number of digits in fractional part of number is less than the value of this option, then the "0" characters are used to fill missing digits.
     * Note: This option has priority over possible regional settings.
     * Note: In case of min decimals value higher than max decimals - max decimals are equaled to min decimals property.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option supports values between 0 and 15, when dataMode is 'double' (default) and values between 0 and 7 in 'float' mode.
     *
     *
@@ -29675,14 +29911,14 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the string, which is used as negative pattern. The "n" flag represents the value of number. The "-" and "()" flags are static part of pattern.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     */
   def igPercentEditor(optionLiteral: option, optionName: negativePattern): String = js.native
   /**
     * /Sets the string, which is used as negative pattern. The "n" flag represents the value of number. The "-" and "()" flags are static part of pattern.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     *
     *
     * @optionValue New value to be set.
@@ -29691,7 +29927,7 @@ trait JQuery extends js.Object {
   /**
     * Gets/Sets the character, which is used as negative sign.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) options.
     *
     */
@@ -29699,7 +29935,7 @@ trait JQuery extends js.Object {
   /**
     * /Sets the character, which is used as negative sign.
     * Note: This option has priority over possible regional settings.
-    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are imlicitly set.
+    * Note: Even if the default value is null - if internationalization file is provided and it contains default values for those properties the values are implicitly set.
     * Note: This option's value should not be equal to the value of [groupSeparator](ui.igNumericEditor#options:groupSeparator) or [decimalSeparator](ui.igNumericEditor#options:decimalSeparator) options.
     *
     *
@@ -29762,12 +29998,12 @@ trait JQuery extends js.Object {
     */
   def igPercentEditor(optionLiteral: option, optionName: positivePattern, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igPercentEditor(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -29799,12 +30035,12 @@ trait JQuery extends js.Object {
   def igPercentEditor(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igPercentEditor(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igPercentEditor(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -30793,6 +31029,8 @@ trait JQuery extends js.Object {
   def igPieChart_destroy(methodName: destroy): Unit = js.native
   @JSName("igPieChart")
   def igPieChart_exportImage(methodName: exportImage): js.Object = js.native
+  @JSName("igPieChart")
+  def igPieChart_exportImage(methodName: exportImage, width: js.UndefOr[scala.Nothing], height: js.Object): js.Object = js.native
   @JSName("igPieChart")
   def igPieChart_exportImage(methodName: exportImage, width: js.Object): js.Object = js.native
   @JSName("igPieChart")
@@ -32444,6 +32682,8 @@ trait JQuery extends js.Object {
   def igPopover_setCoordinates(methodName: setCoordinates, pos: js.Object): Unit = js.native
   @JSName("igPopover")
   def igPopover_show(methodName: show): Unit = js.native
+  @JSName("igPopover")
+  def igPopover_show(methodName: show, trg: js.UndefOr[scala.Nothing], content: String): Unit = js.native
   @JSName("igPopover")
   def igPopover_show(methodName: show, trg: Element): Unit = js.native
   @JSName("igPopover")
@@ -39178,7 +39418,7 @@ trait JQuery extends js.Object {
     */
   def igTextEditor(optionLiteral: option, optionName: dropDownAnimationDuration, optionValue: Double): Unit = js.native
   /**
-    * Gets wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Gets whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -39186,7 +39426,7 @@ trait JQuery extends js.Object {
     */
   def igTextEditor(optionLiteral: option, optionName: dropDownAttachedToBody): Boolean = js.native
   /**
-    * Wheather the drop-down list element is attached to the body of the document, or to the editor container element.
+    * Whether the drop-down list element is attached to the body of the document, or to the editor container element.
     * If the option is set to false the editor will attach the drop-down list element to the editor container
     * If the option is set to true the editor will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -39257,14 +39497,14 @@ trait JQuery extends js.Object {
   def igTextEditor(optionLiteral: option, optionName: dropDownListOpening, optionValue: DropDownListOpeningEvent): Unit = js.native
   /**
     * Gets the ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     */
   def igTextEditor(optionLiteral: option, optionName: dropDownOnReadOnly): Boolean = js.native
   /**
     * The ability to limit the editor to be used only as a dropdown list. When set to true the editor input is not editable.
-    * Note! In case there are no list items - the editor will reamin readonly
+    * Note! In case there are no list items - the editor will remain readonly
     * Note! This option can not be set runtime.
     *
     *
@@ -39464,13 +39704,13 @@ trait JQuery extends js.Object {
   def igTextEditor(optionLiteral: option, optionName: locale, optionValue: js.Any): Unit = js.native
   /**
     * Gets/Sets the maximum length of a text which can be entered by the user.
-    * Negative values or 0 disables that behavior. If set at runtime the editor doesn't apply the option to the cuurent value.
+    * Negative values or 0 disables that behavior. If set at runtime the editor doesn't apply the option to the current value.
     *
     */
   def igTextEditor(optionLiteral: option, optionName: maxLength): Double = js.native
   /**
     * /Sets the maximum length of a text which can be entered by the user.
-    * Negative values or 0 disables that behavior. If set at runtime the editor doesn't apply the option to the cuurent value.
+    * Negative values or 0 disables that behavior. If set at runtime the editor doesn't apply the option to the current value.
     *
     *
     * @optionValue New value to be set.
@@ -39552,12 +39792,12 @@ trait JQuery extends js.Object {
     */
   def igTextEditor(optionLiteral: option, optionName: placeHolder, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igTextEditor(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -39609,12 +39849,12 @@ trait JQuery extends js.Object {
     */
   def igTextEditor(optionLiteral: option, optionName: rendering, optionValue: RenderingEvent): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igTextEditor(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -40484,6 +40724,13 @@ trait JQuery extends js.Object {
   @JSName("igTileManager")
   def igTileManager_maximize(methodName: maximize, $tileToMaximize: js.Object): Unit = js.native
   @JSName("igTileManager")
+  def igTileManager_maximize(
+    methodName: maximize,
+    $tileToMaximize: js.Object,
+    animDuration: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): Unit = js.native
+  @JSName("igTileManager")
   def igTileManager_maximize(methodName: maximize, $tileToMaximize: js.Object, animDuration: Double): Unit = js.native
   @JSName("igTileManager")
   def igTileManager_maximize(methodName: maximize, $tileToMaximize: js.Object, animDuration: Double, event: js.Object): Unit = js.native
@@ -40491,6 +40738,8 @@ trait JQuery extends js.Object {
   def igTileManager_maximizedTile(methodName: maximizedTile): js.Object = js.native
   @JSName("igTileManager")
   def igTileManager_minimize(methodName: minimize): Unit = js.native
+  @JSName("igTileManager")
+  def igTileManager_minimize(methodName: minimize, animDuration: js.UndefOr[scala.Nothing], event: js.Object): Unit = js.native
   @JSName("igTileManager")
   def igTileManager_minimize(methodName: minimize, animDuration: Double): Unit = js.native
   @JSName("igTileManager")
@@ -40506,7 +40755,30 @@ trait JQuery extends js.Object {
   @JSName("igTileManager")
   def igTileManager_reflow(methodName: reflow): Unit = js.native
   @JSName("igTileManager")
+  def igTileManager_reflow(
+    methodName: reflow,
+    forceReflow: js.UndefOr[scala.Nothing],
+    animationDuration: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): Unit = js.native
+  @JSName("igTileManager")
+  def igTileManager_reflow(methodName: reflow, forceReflow: js.UndefOr[scala.Nothing], animationDuration: Double): Unit = js.native
+  @JSName("igTileManager")
+  def igTileManager_reflow(
+    methodName: reflow,
+    forceReflow: js.UndefOr[scala.Nothing],
+    animationDuration: Double,
+    event: js.Object
+  ): Unit = js.native
+  @JSName("igTileManager")
   def igTileManager_reflow(methodName: reflow, forceReflow: js.Object): Unit = js.native
+  @JSName("igTileManager")
+  def igTileManager_reflow(
+    methodName: reflow,
+    forceReflow: js.Object,
+    animationDuration: js.UndefOr[scala.Nothing],
+    event: js.Object
+  ): Unit = js.native
   @JSName("igTileManager")
   def igTileManager_reflow(methodName: reflow, forceReflow: js.Object, animationDuration: Double): Unit = js.native
   @JSName("igTileManager")
@@ -40633,7 +40905,7 @@ trait JQuery extends js.Object {
     */
   def igTimePicker(optionLiteral: option, optionName: dropDownAnimationDuration, optionValue: Double): Unit = js.native
   /**
-    * Gets wheather the drop-down list element is attached to the body of the document, or to the timepicker container element.
+    * Gets whether the drop-down list element is attached to the body of the document, or to the timepicker container element.
     * If the option is set to false the timepicker will attach the drop-down list element to the timepicker container
     * If the option is set to true the timepicker will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -40641,7 +40913,7 @@ trait JQuery extends js.Object {
     */
   def igTimePicker(optionLiteral: option, optionName: dropDownAttachedToBody): Boolean = js.native
   /**
-    * Wheather the drop-down list element is attached to the body of the document, or to the timepicker container element.
+    * Whether the drop-down list element is attached to the body of the document, or to the timepicker container element.
     * If the option is set to false the timepicker will attach the drop-down list element to the timepicker container
     * If the option is set to true the timepicker will attach its drop-down list to as a child of the body.
     * Note! This option can not be set runtime.
@@ -41014,12 +41286,12 @@ trait JQuery extends js.Object {
     */
   def igTimePicker(optionLiteral: option, optionName: placeHolder, optionValue: String): Unit = js.native
   /**
-    * Gets/Sets if the editor should prevent form submition when enter key is pressed.
+    * Gets/Sets if the editor should prevent form submit when enter key is pressed.
     *
     */
   def igTimePicker(optionLiteral: option, optionName: preventSubmitOnEnter): Boolean = js.native
   /**
-    * /Sets if the editor should prevent form submition when enter key is pressed.
+    * /Sets if the editor should prevent form submit when enter key is pressed.
     *
     *
     * @optionValue New value to be set.
@@ -41051,12 +41323,12 @@ trait JQuery extends js.Object {
   def igTimePicker(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igTimePicker(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   /**
-    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * Gets/Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     */
   def igTimePicker(optionLiteral: option, optionName: revertIfNotValid): Boolean = js.native
   /**
-    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the opiton is set to false, editor calls clear functionality.
+    * /Sets if the editor should revert it's value to the previously valid value in case the value on blur, or enter key is not valid. If the option is set to false, editor calls clear functionality.
     *
     *
     * @optionValue New value to be set.
@@ -43671,6 +43943,8 @@ trait JQuery extends js.Object {
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object): js.Object = js.native
   @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object, target: js.UndefOr[scala.Nothing], after: Boolean): js.Object = js.native
+  @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object, target: String): js.Object = js.native
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_fixColumn(methodName: fixColumn, colIdentifier: js.Object, target: String, after: Boolean): js.Object = js.native
@@ -43681,7 +43955,34 @@ trait JQuery extends js.Object {
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_getWidthOfFixedColumns(methodName: getWidthOfFixedColumns): Double = js.native
   @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.UndefOr[scala.Nothing],
+    excludeNonDataColumns: js.UndefOr[scala.Nothing],
+    includeHidden: Boolean
+  ): Double = js.native
+  @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.UndefOr[scala.Nothing],
+    excludeNonDataColumns: Boolean
+  ): Double = js.native
+  @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.UndefOr[scala.Nothing],
+    excludeNonDataColumns: Boolean,
+    includeHidden: Boolean
+  ): Double = js.native
+  @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_getWidthOfFixedColumns(methodName: getWidthOfFixedColumns, fCols: js.Array[_]): Double = js.native
+  @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_getWidthOfFixedColumns(
+    methodName: getWidthOfFixedColumns,
+    fCols: js.Array[_],
+    excludeNonDataColumns: js.UndefOr[scala.Nothing],
+    includeHidden: Boolean
+  ): Double = js.native
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_getWidthOfFixedColumns(methodName: getWidthOfFixedColumns, fCols: js.Array[_], excludeNonDataColumns: Boolean): Double = js.native
   @JSName("igTreeGridColumnFixing")
@@ -43702,6 +44003,8 @@ trait JQuery extends js.Object {
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_syncHeights(methodName: syncHeights): Unit = js.native
   @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_syncHeights(methodName: syncHeights, check: js.UndefOr[scala.Nothing], clearRowsHeights: Boolean): Unit = js.native
+  @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_syncHeights(methodName: syncHeights, check: Boolean): Unit = js.native
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_syncHeights(methodName: syncHeights, check: Boolean, clearRowsHeights: Boolean): Unit = js.native
@@ -43711,6 +44014,13 @@ trait JQuery extends js.Object {
   def igTreeGridColumnFixing_unfixAllColumns(methodName: unfixAllColumns): Unit = js.native
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_unfixColumn(methodName: unfixColumn, colIdentifier: js.Object): js.Object = js.native
+  @JSName("igTreeGridColumnFixing")
+  def igTreeGridColumnFixing_unfixColumn(
+    methodName: unfixColumn,
+    colIdentifier: js.Object,
+    target: js.UndefOr[scala.Nothing],
+    after: Boolean
+  ): js.Object = js.native
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_unfixColumn(methodName: unfixColumn, colIdentifier: js.Object, target: String): js.Object = js.native
   @JSName("igTreeGridColumnFixing")
@@ -44266,7 +44576,42 @@ trait JQuery extends js.Object {
   @JSName("igTreeGridColumnMoving")
   def igTreeGridColumnMoving_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object): Unit = js.native
   @JSName("igTreeGridColumnMoving")
+  def igTreeGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igTreeGridColumnMoving")
+  def igTreeGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean
+  ): Unit = js.native
+  @JSName("igTreeGridColumnMoving")
+  def igTreeGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean,
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igTreeGridColumnMoving")
   def igTreeGridColumnMoving_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean): Unit = js.native
+  @JSName("igTreeGridColumnMoving")
+  def igTreeGridColumnMoving_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: Boolean,
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
   @JSName("igTreeGridColumnMoving")
   def igTreeGridColumnMoving_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean, inDom: Boolean): Unit = js.native
   @JSName("igTreeGridColumnMoving")
@@ -45118,6 +45463,13 @@ trait JQuery extends js.Object {
   def igTreeGridFiltering_destroy(methodName: destroy): Unit = js.native
   @JSName("igTreeGridFiltering")
   def igTreeGridFiltering_filter(methodName: filter, expressions: js.Array[_]): Unit = js.native
+  @JSName("igTreeGridFiltering")
+  def igTreeGridFiltering_filter(
+    methodName: filter,
+    expressions: js.Array[_],
+    updateUI: js.UndefOr[scala.Nothing],
+    addedFromAdvanced: Boolean
+  ): Unit = js.native
   @JSName("igTreeGridFiltering")
   def igTreeGridFiltering_filter(methodName: filter, expressions: js.Array[_], updateUI: Boolean): Unit = js.native
   @JSName("igTreeGridFiltering")
@@ -48283,6 +48635,8 @@ trait JQuery extends js.Object {
   @JSName("igTreeGridUpdating")
   def igTreeGridUpdating_endEdit(methodName: endEdit): Boolean = js.native
   @JSName("igTreeGridUpdating")
+  def igTreeGridUpdating_endEdit(methodName: endEdit, update: js.UndefOr[scala.Nothing], raiseEvents: Boolean): Boolean = js.native
+  @JSName("igTreeGridUpdating")
   def igTreeGridUpdating_endEdit(methodName: endEdit, update: Boolean): Boolean = js.native
   @JSName("igTreeGridUpdating")
   def igTreeGridUpdating_endEdit(methodName: endEdit, update: Boolean, raiseEvents: Boolean): Boolean = js.native
@@ -48431,7 +48785,42 @@ trait JQuery extends js.Object {
   @JSName("igTreeGrid")
   def igTreeGrid_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object): Unit = js.native
   @JSName("igTreeGrid")
+  def igTreeGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igTreeGrid")
+  def igTreeGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean
+  ): Unit = js.native
+  @JSName("igTreeGrid")
+  def igTreeGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: js.UndefOr[scala.Nothing],
+    inDom: Boolean,
+    callback: js.Function
+  ): Unit = js.native
+  @JSName("igTreeGrid")
   def igTreeGrid_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean): Unit = js.native
+  @JSName("igTreeGrid")
+  def igTreeGrid_moveColumn(
+    methodName: moveColumn,
+    column: js.Object,
+    target: js.Object,
+    after: Boolean,
+    inDom: js.UndefOr[scala.Nothing],
+    callback: js.Function
+  ): Unit = js.native
   @JSName("igTreeGrid")
   def igTreeGrid_moveColumn(methodName: moveColumn, column: js.Object, target: js.Object, after: Boolean, inDom: Boolean): Unit = js.native
   @JSName("igTreeGrid")
@@ -48465,6 +48854,8 @@ trait JQuery extends js.Object {
   def igTreeGrid_resizeContainer(methodName: resizeContainer): Unit = js.native
   @JSName("igTreeGrid")
   def igTreeGrid_rollback(methodName: rollback): js.Array[_] = js.native
+  @JSName("igTreeGrid")
+  def igTreeGrid_rollback(methodName: rollback, rowId: js.UndefOr[scala.Nothing], updateUI: Boolean): js.Array[_] = js.native
   @JSName("igTreeGrid")
   def igTreeGrid_rollback(methodName: rollback, rowId: js.Object): js.Array[_] = js.native
   @JSName("igTreeGrid")
@@ -48519,6 +48910,8 @@ trait JQuery extends js.Object {
   def igTreeGrid_widget(methodName: widget): Unit = js.native
   @JSName("igTree")
   def igTree_addNode(methodName: addNode, node: js.Object): Unit = js.native
+  @JSName("igTree")
+  def igTree_addNode(methodName: addNode, node: js.Object, parent: js.UndefOr[scala.Nothing], nodeIndex: Double): Unit = js.native
   @JSName("igTree")
   def igTree_addNode(methodName: addNode, node: js.Object, parent: js.Object): Unit = js.native
   @JSName("igTree")
@@ -50693,6 +51086,10 @@ trait JQuery extends js.Object {
   @JSName("igZoomSlider")
   def igZoomSlider_notifySizeChanged(methodName: notifySizeChanged): Unit = js.native
   @JSName("igZoomSlider")
+  def igZoomSlider_onAttachedToUI(methodName: onAttachedToUI): Unit = js.native
+  @JSName("igZoomSlider")
+  def igZoomSlider_onDetachedFromUI(methodName: onDetachedFromUI): Unit = js.native
+  @JSName("igZoomSlider")
   def igZoomSlider_option(optionLiteral: option, optionName: String): js.Any = js.native
   @JSName("igZoomSlider")
   def igZoomSlider_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
@@ -51015,6 +51412,8 @@ trait JQuery extends js.Object {
   def igZoombar_widget(methodName: widget): Unit = js.native
   @JSName("igZoombar")
   def igZoombar_zoom(methodName: zoom): js.Object = js.native
+  @JSName("igZoombar")
+  def igZoombar_zoom(methodName: zoom, left: js.UndefOr[scala.Nothing], width: Double): js.Object = js.native
   @JSName("igZoombar")
   def igZoombar_zoom(methodName: zoom, left: Double): js.Object = js.native
   @JSName("igZoombar")

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DecimalsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DecimalsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DecimalsIcon")
   @js.native
   object component extends js.Object
   

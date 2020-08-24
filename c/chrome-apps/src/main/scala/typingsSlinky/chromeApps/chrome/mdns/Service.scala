@@ -29,29 +29,20 @@ object Service {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIpAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withServiceData(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIpAddress(value: String): Self = this.set("ipAddress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withServiceHostPort(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceHostPort")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServiceDataVarargs(value: String*): Self = this.set("serviceData", js.Array(value :_*))
     @scala.inline
-    def withServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServiceData(value: js.Array[String]): Self = this.set("serviceData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setServiceHostPort(value: String): Self = this.set("serviceHostPort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setServiceName(value: String): Self = this.set("serviceName", value.asInstanceOf[js.Any])
   }
   
 }

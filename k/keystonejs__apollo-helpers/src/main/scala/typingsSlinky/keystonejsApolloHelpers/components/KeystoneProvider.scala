@@ -11,7 +11,7 @@ object KeystoneProvider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: js.Object): Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.KeystoneProvider] = new Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.KeystoneProvider](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: KeystoneProvider.type): Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.KeystoneProvider] = new Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.KeystoneProvider](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: KeystoneProvider.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

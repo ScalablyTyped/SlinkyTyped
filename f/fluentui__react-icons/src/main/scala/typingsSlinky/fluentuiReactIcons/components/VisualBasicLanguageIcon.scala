@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VisualBasicLanguageIcon {
-  @JSImport("@fluentui/react-icons/lib/components/VisualBasicLanguageIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "VisualBasicLanguageIcon")
   @js.native
   object component extends js.Object
   

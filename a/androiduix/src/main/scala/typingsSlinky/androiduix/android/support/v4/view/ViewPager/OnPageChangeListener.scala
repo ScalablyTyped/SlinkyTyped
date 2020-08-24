@@ -28,23 +28,16 @@ object OnPageChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnPageScrollStateChanged(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageScrollStateChanged")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnPageScrolled(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageScrolled")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnPageScrollStateChanged(value: Double => Unit): Self = this.set("onPageScrollStateChanged", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnPageSelected(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageSelected")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnPageScrolled(value: (Double, Double, Double) => Unit): Self = this.set("onPageScrolled", js.Any.fromFunction3(value))
+    @scala.inline
+    def setOnPageSelected(value: Double => Unit): Self = this.set("onPageSelected", js.Any.fromFunction1(value))
   }
   
 }

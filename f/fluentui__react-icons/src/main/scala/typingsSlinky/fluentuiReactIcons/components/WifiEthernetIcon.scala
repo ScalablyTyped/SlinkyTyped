@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WifiEthernetIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WifiEthernetIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WifiEthernetIcon")
   @js.native
   object component extends js.Object
   

@@ -25,29 +25,18 @@ object InterfaceId {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withProductId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withVendorId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProductId(value: integer): Self = this.set("productId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaceId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVendorId(value: integer): Self = this.set("vendorId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInterfaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceId")(js.undefined)
-        ret
-    }
+    def setInterfaceId(value: integer): Self = this.set("interfaceId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInterfaceId: Self = this.set("interfaceId", js.undefined)
   }
   
 }

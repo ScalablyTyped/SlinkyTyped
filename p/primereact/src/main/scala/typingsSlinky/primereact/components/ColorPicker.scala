@@ -2,6 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.primereact.anon.Id
 import typingsSlinky.primereact.colorpickerColorPickerMod.ColorPickerProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -34,7 +35,7 @@ object ColorPicker {
     @scala.inline
     def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* value */ js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: (/* value */ js.Any, /* target */ Id) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,31 +1,35 @@
 package typingsSlinky.routeNode
 
-import typingsSlinky.routeNode.mod.MatchOptions
-import typingsSlinky.routeNode.mod.MatchResponse
+import typingsSlinky.routeNode.routeNodeMod.MatchOptions
+import typingsSlinky.routeNode.routeNodeMod.MatchResponse
+import typingsSlinky.routeNode.routeNodeMod.RouteNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("route-node/typings/matchChildren", JSImport.Namespace)
+@JSImport("route-node/dist/matchChildren", JSImport.Namespace)
 @js.native
 object matchChildrenMod extends js.Object {
+  def default(nodes: js.Array[RouteNode], pathSegment: String, currentMatch: MatchResponse): MatchResponse | Null = js.native
   def default(
-    nodes: js.Array[typingsSlinky.routeNode.mod.default],
+    nodes: js.Array[RouteNode],
     pathSegment: String,
-    currentMatch: MatchResponse
-  ): js.Any = js.native
+    currentMatch: MatchResponse,
+    options: js.UndefOr[scala.Nothing],
+    consumedBefore: String
+  ): MatchResponse | Null = js.native
   def default(
-    nodes: js.Array[typingsSlinky.routeNode.mod.default],
+    nodes: js.Array[RouteNode],
     pathSegment: String,
     currentMatch: MatchResponse,
     options: MatchOptions
-  ): js.Any = js.native
+  ): MatchResponse | Null = js.native
   def default(
-    nodes: js.Array[typingsSlinky.routeNode.mod.default],
+    nodes: js.Array[RouteNode],
     pathSegment: String,
     currentMatch: MatchResponse,
     options: MatchOptions,
     consumedBefore: String
-  ): js.Any = js.native
+  ): MatchResponse | Null = js.native
 }
 

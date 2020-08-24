@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StripeProvider {
-  object apiKeyneverstripeStripenu {
+  object apiKeyneverundefinedstrip {
     @JSImport("react-stripe-elements", "StripeProvider")
     @js.native
     object component extends js.Object
@@ -25,11 +25,11 @@ object StripeProvider {
       def stripeAccount(value: String): this.type = set("stripeAccount", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactStripeElements.anon.apiKeyneverstripeStripenu): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: apiKeyneverstripeStripenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: typingsSlinky.reactStripeElements.anon.apiKeyneverundefinedstrip): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: apiKeyneverundefinedstrip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
-  object apiKeystringstripeneverSt {
+  object apiKeystringstripeneverun {
     @JSImport("react-stripe-elements", "StripeProvider")
     @js.native
     object component extends js.Object
@@ -42,11 +42,11 @@ object StripeProvider {
       def stripeAccount(value: String): this.type = set("stripeAccount", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactStripeElements.anon.apiKeystringstripeneverSt): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactStripeElements.anon.apiKeystringstripeneverun): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
     def apply(apiKey: String): Builder = {
         val __props = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
-        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactStripeElements.anon.apiKeystringstripeneverSt]))
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactStripeElements.anon.apiKeystringstripeneverun]))
     }
   }
   

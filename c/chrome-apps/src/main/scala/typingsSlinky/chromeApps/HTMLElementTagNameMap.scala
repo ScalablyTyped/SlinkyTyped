@@ -23,17 +23,14 @@ object HTMLElementTagNameMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAppview(value: HTMLAppViewElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appview")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withWebview(value: HTMLWebViewElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webview")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAppview(value: HTMLAppViewElement): Self = this.set("appview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebview(value: HTMLWebViewElement): Self = this.set("webview", value.asInstanceOf[js.Any])
   }
   
 }

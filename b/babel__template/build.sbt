@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "babel__template"
-version := "7.0-dt-20190213Z-09ee6d"
-scalaVersion := "2.13.2"
+version := "7.0-dt-20190213Z-34b16a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "babel__parser" % "7.9.6-a526a0",
-  "org.scalablytyped.slinky" %%% "babel__types" % "7.9.6-f0c07e",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "babel__parser" % "7.11.0-267e63",
+  "org.scalablytyped.slinky" %%% "babel__types" % "7.11.0-e8c905",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

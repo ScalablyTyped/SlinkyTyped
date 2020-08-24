@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet", "WorldMap")
+@JSImport("grommet/es6", "WorldMap")
 @js.native
 class WorldMap protected ()
   extends Component[WorldMapProps with SVGProps[SVGSVGElement], js.Object, js.Any] {
@@ -18,7 +18,7 @@ class WorldMap protected ()
   def this(props: WorldMapProps with SVGProps[SVGSVGElement], context: js.Any) = this()
 }
 
-@JSImport("grommet", "WorldMap")
+@JSImport("grommet/es6", "WorldMap")
 @js.native
 object WorldMap extends TopLevel[ReactComponentClass[WorldMapProps with SVGProps[SVGSVGElement]]]
 

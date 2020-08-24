@@ -3,9 +3,9 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libProgressBarMod.default
-import typingsSlinky.reactToolbox.libProgressBarProgressBarMod.ProgressBarProps
-import typingsSlinky.reactToolbox.libProgressBarProgressBarMod.ProgressBarTheme
+import typingsSlinky.reactToolbox.progressBarMod.default
+import typingsSlinky.reactToolbox.progressBarProgressBarMod.ProgressBarProps
+import typingsSlinky.reactToolbox.progressBarProgressBarMod.ProgressBarTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.circular
 import typingsSlinky.reactToolbox.reactToolboxStrings.determinate
 import typingsSlinky.reactToolbox.reactToolboxStrings.indeterminate
@@ -15,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ProgressBar {
-  @JSImport("react-toolbox/lib/progress_bar", JSImport.Default)
+  @JSImport("react-toolbox/components/progress_bar", JSImport.Default)
   @js.native
   object component extends js.Object
   

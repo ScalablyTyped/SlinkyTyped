@@ -25,6 +25,8 @@ object Tabs {
     @scala.inline
     def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
+    def optionsVarargs(value: LabelValue*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[LabelValue]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])

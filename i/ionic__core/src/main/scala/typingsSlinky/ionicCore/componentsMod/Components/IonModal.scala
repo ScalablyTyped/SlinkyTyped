@@ -1,11 +1,12 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,25 +53,34 @@ trait IonModal extends js.Object {
   var mode: js.UndefOr[ios | md] = js.native
   var overlayIndex: Double = js.native
   /**
+    * The element that presented the modal. This is used for card presentation effects and for stacking multiple modals on top of each other. Only applies in iOS mode.
+    */
+  var presentingElement: js.UndefOr[HTMLElement] = js.native
+  /**
     * If `true`, a backdrop will be displayed behind the modal.
     */
   var showBackdrop: Boolean = js.native
+  /**
+    * If `true`, the modal can be swiped to dismiss. Only applies in iOS mode.
+    */
+  var swipeToClose: Boolean = js.native
   /**
     * Dismiss the modal overlay after it has been presented.
     * @param data Any data to emit in the dismiss events.
     * @param role The role of the element that is dismissing the modal. For example, 'cancel' or 'backdrop'.
     */
   def dismiss(): js.Promise[Boolean] = js.native
+  def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   /**
     * Returns a promise that resolves when the modal did dismiss.
     */
-  def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+  def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
   /**
     * Returns a promise that resolves when the modal will dismiss.
     */
-  def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+  def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
   /**
     * Present the modal overlay after it has been created.
     */

@@ -6,7 +6,6 @@ import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationScreenProp
 import typingsSlinky.reactNavigationDrawer.anon.DrawerOptionscontentCompo
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.Props
-import typingsSlinky.reactNavigationDrawer.drawerViewMod.default
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerState
 import typingsSlinky.reactNavigationDrawer.typesMod.SceneDescriptorMap
 import scala.scalajs.js
@@ -14,11 +13,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DrawerView {
-  @JSImport("react-navigation-drawer/lib/typescript/src/views/DrawerView", JSImport.Default)
+  @JSImport("react-navigation-drawer", "DrawerView")
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): Default[tag.type, typingsSlinky.reactNavigationDrawer.mod.DrawerView] = new Default[tag.type, typingsSlinky.reactNavigationDrawer.mod.DrawerView](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
     descriptors: SceneDescriptorMap,
@@ -26,10 +25,10 @@ object DrawerView {
     navigation: NavigationScreenProp[NavigationDrawerState, NavigationParams],
     navigationConfig: DrawerOptionscontentCompo,
     screenProps: js.Any
-  ): Default[tag.type, default] = {
+  ): Default[tag.type, typingsSlinky.reactNavigationDrawer.mod.DrawerView] = {
     val __props = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], navigationConfig = navigationConfig.asInstanceOf[js.Any], screenProps = screenProps.asInstanceOf[js.Any])
     __props.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[Props]))
+    new Default[tag.type, typingsSlinky.reactNavigationDrawer.mod.DrawerView](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
 

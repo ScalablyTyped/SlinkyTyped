@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.AutoRepeatModeChangeRequestedEventArgs")
 @js.native
 abstract class AutoRepeatModeChangeRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.AutoRepeatModeChangeRequestedEventArgs {
-  /** Gets a value indicating the requested auto-repeat mode. */
-  /* CompleteClass */
-  override var requestedAutoRepeatMode: typingsSlinky.winrtUwp.Windows.Media.MediaPlaybackAutoRepeatMode = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.AutoRepeatModeChangeRequestedEventArgs
 

@@ -13,6 +13,7 @@ import typingsSlinky.jszip.jszipStrings.base64
 import typingsSlinky.jszip.jszipStrings.binarystring
 import typingsSlinky.jszip.jszipStrings.blob
 import typingsSlinky.jszip.jszipStrings.nodebuffer
+import typingsSlinky.jszip.jszipStrings.string
 import typingsSlinky.jszip.jszipStrings.text
 import typingsSlinky.jszip.jszipStrings.uint8array
 import typingsSlinky.node.Buffer
@@ -35,7 +36,7 @@ trait JSZip
   */
 Instantiable0[JSZip]
      with Instantiable1[/* data */ InputFileFormat, JSZip]
-     with Instantiable2[/* data */ InputFileFormat, /* options */ JSZipLoadOptions, JSZip] {
+     with Instantiable2[js.UndefOr[/* data */ InputFileFormat], /* options */ JSZipLoadOptions, JSZip] {
   var external: Promise = js.native
   var files: StringDictionary[JSZipObject] = js.native
   var support: JSZipSupport = js.native
@@ -90,7 +91,7 @@ Instantiable0[JSZip]
     * @return File matching path, null if no file found
     */
   @JSName("file")
-  def file_JSZipObject(path: String): JSZipObject = js.native
+  def file_Union(path: String): JSZipObject | Null = js.native
   /**
     * Get all files which match the given filter function
     *
@@ -104,7 +105,7 @@ Instantiable0[JSZip]
     * @param name Name of the folder
     * @return New JSZip object with the given folder as root or null
     */
-  def folder(name: String): JSZip = js.native
+  def folder(name: String): JSZip | Null = js.native
   /**
     * Returns new JSZip instances with the matching folders as root
     *
@@ -126,6 +127,7 @@ Instantiable0[JSZip]
     * @return The serialized archive
     */
   def generateAsync(): js.Promise[String] = js.native
+  def generateAsync(options: js.UndefOr[scala.Nothing], onUpdate: OnUpdateCallback): js.Promise[String] = js.native
   @JSName("generateAsync")
   def generateAsync_array(options: JSZipGeneratorOptions[array]): js.Promise[js.Array[Double]] = js.native
   @JSName("generateAsync")
@@ -151,6 +153,10 @@ Instantiable0[JSZip]
   @JSName("generateAsync")
   def generateAsync_nodebuffer(options: JSZipGeneratorOptions[nodebuffer], onUpdate: OnUpdateCallback): js.Promise[Buffer] = js.native
   @JSName("generateAsync")
+  def generateAsync_string(options: JSZipGeneratorOptions[string]): js.Promise[String] = js.native
+  @JSName("generateAsync")
+  def generateAsync_string(options: JSZipGeneratorOptions[string], onUpdate: OnUpdateCallback): js.Promise[String] = js.native
+  @JSName("generateAsync")
   def generateAsync_text(options: JSZipGeneratorOptions[text]): js.Promise[String] = js.native
   @JSName("generateAsync")
   def generateAsync_text(options: JSZipGeneratorOptions[text], onUpdate: OnUpdateCallback): js.Promise[String] = js.native
@@ -166,6 +172,7 @@ Instantiable0[JSZip]
     * @return A Node.js `ReadableStream`
     */
   def generateNodeStream(): ReadableStream = js.native
+  def generateNodeStream(options: js.UndefOr[scala.Nothing], onUpdate: OnUpdateCallback): ReadableStream = js.native
   @JSName("generateNodeStream")
   def generateNodeStream_nodebuffer(options: JSZipGeneratorOptions[nodebuffer]): ReadableStream = js.native
   @JSName("generateNodeStream")

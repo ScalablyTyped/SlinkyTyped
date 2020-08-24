@@ -11,5 +11,7 @@ import scala.scalajs.js.annotation._
 class SnapStorePublisher protected () extends Publisher {
   def this(context: PublishContext, options: SnapStoreOptions) = this()
   var options: js.Any = js.native
+  @JSName("providerName")
+  val providerName_FSnapStorePublisher: /* "snapStore" */ String = js.native
 }
 

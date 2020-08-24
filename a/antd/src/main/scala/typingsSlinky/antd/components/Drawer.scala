@@ -1,13 +1,13 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.drawerMod.DrawerProps
 import typingsSlinky.antd.drawerMod.EventType
+import typingsSlinky.antd.drawerMod.PushState
 import typingsSlinky.antd.drawerMod.getContainerFunc
 import typingsSlinky.antd.drawerMod.placementType
 import typingsSlinky.react.mod.CSSProperties
@@ -16,7 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Drawer {
-  @JSImport("antd/lib/drawer", JSImport.Default)
+  @JSImport("antd", "Drawer")
   @js.native
   object component extends js.Object
   
@@ -33,13 +33,17 @@ object Drawer {
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     @scala.inline
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def destroyOnClose(value: Boolean): this.type = set("destroyOnClose", value.asInstanceOf[js.Any])
     @scala.inline
     def drawerStyle(value: CSSProperties): this.type = set("drawerStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def footerStyle(value: CSSProperties): this.type = set("footerStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +57,7 @@ object Drawer {
     @scala.inline
     def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
     @scala.inline
-    def handler(value: TagMod[Any]): this.type = set("handler", value.asInstanceOf[js.Any])
+    def handler(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
     @scala.inline
     def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -73,13 +77,13 @@ object Drawer {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def push(value: Boolean): this.type = set("push", value.asInstanceOf[js.Any])
+    def push(value: Boolean | PushState): this.type = set("push", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
     @scala.inline

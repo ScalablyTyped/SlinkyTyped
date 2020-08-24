@@ -71,7 +71,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -84,7 +83,7 @@ object IonRange {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonRangeElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -196,8 +195,6 @@ object IonRange {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: Color with String): this.type = set("color", value.asInstanceOf[js.Any])
-    @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -209,6 +206,8 @@ object IonRange {
     def debounce(value: Double): this.type = set("debounce", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -624,6 +623,10 @@ object IonRange {
   }
   
   def withProps(p: IonRangePickHTMLAttribute): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: IonRange.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(color: js.UndefOr[Color] with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IonRangePickHTMLAttribute]))
+  }
 }
 

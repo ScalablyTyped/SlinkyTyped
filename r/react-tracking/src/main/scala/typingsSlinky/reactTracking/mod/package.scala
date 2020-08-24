@@ -30,10 +30,11 @@ package object mod {
     typingsSlinky.reactTracking.mod.Decorator
   ]
   type TrackingContext[T] = typingsSlinky.react.mod.Context[typingsSlinky.reactTracking.anon.Tracking[T]]
-  type TrackingInfo[T, P, S] = T | (js.Function3[
+  type TrackingInfo[T, P, S] = T | (js.Function4[
     /* props */ P, 
     /* state */ S, 
     /* import warning: importer.ImportType#apply Failed type conversion: any[any] */ /* args */ js.Any, 
+    /* hasValueErr */ js.Tuple2[js.Any, js.Any], 
     T | typingsSlinky.reactTracking.mod.Falsy
   ])
 }

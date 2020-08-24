@@ -25,11 +25,15 @@ object SwipeAction {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def leftVarargs(value: ClassName[TextStyle]*): this.type = set("left", js.Array(value :_*))
+    @scala.inline
     def left(value: js.Array[ClassName[TextStyle]]): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline
     def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
     @scala.inline
     def onOpen(value: () => Unit): this.type = set("onOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def rightVarargs(value: ClassName[TextStyle]*): this.type = set("right", js.Array(value :_*))
     @scala.inline
     def right(value: js.Array[ClassName[TextStyle]]): this.type = set("right", value.asInstanceOf[js.Any])
     @scala.inline

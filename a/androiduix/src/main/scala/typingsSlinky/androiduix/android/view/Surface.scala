@@ -54,95 +54,40 @@ object Surface {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_showFPSNode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_showFPSNode")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withInitCanvasBound(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initCanvasBound")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_showFPSNode(value: js.Any): Self = this.set("_showFPSNode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInitImpl(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initImpl")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInitCanvasBound(value: () => Unit): Self = this.set("initCanvasBound", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsValid(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInitImpl(value: () => Unit): Self = this.set("initImpl", js.Any.fromFunction0(value))
     @scala.inline
-    def withLockCanvas(value: Rect => Canvas): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockCanvas")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsValid(value: () => Boolean): Self = this.set("isValid", js.Any.fromFunction0(value))
     @scala.inline
-    def withLockCanvasImpl(value: (Double, Double, Double, Double) => Canvas): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockCanvasImpl")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setLockCanvas(value: Rect => Canvas): Self = this.set("lockCanvas", js.Any.fromFunction1(value))
     @scala.inline
-    def withMCanvasBound(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCanvasBound")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLockCanvasImpl(value: (Double, Double, Double, Double) => Canvas): Self = this.set("lockCanvasImpl", js.Any.fromFunction4(value))
     @scala.inline
-    def withMCanvasElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCanvasElement")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCanvasBound(value: Rect): Self = this.set("mCanvasBound", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLockSaveCount(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLockSaveCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCanvasElement(value: js.Any): Self = this.set("mCanvasElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLockedRect(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLockedRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLockSaveCount(value: js.Any): Self = this.set("mLockSaveCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSupportDirtyDraw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSupportDirtyDraw")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLockedRect(value: js.Any): Self = this.set("mLockedRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNotifyBoundChange(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyBoundChange")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMSupportDirtyDraw(value: Boolean): Self = this.set("mSupportDirtyDraw", value.asInstanceOf[js.Any])
     @scala.inline
-    def withShowFps(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFps")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setNotifyBoundChange(value: () => Unit): Self = this.set("notifyBoundChange", js.Any.fromFunction0(value))
     @scala.inline
-    def withUnlockCanvasAndPost(value: Canvas => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlockCanvasAndPost")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setShowFps(value: Double => Unit): Self = this.set("showFps", js.Any.fromFunction1(value))
     @scala.inline
-    def withViewRoot(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUnlockCanvasAndPost(value: Canvas => Unit): Self = this.set("unlockCanvasAndPost", js.Any.fromFunction1(value))
+    @scala.inline
+    def setViewRoot(value: js.Any): Self = this.set("viewRoot", value.asInstanceOf[js.Any])
   }
   
 }

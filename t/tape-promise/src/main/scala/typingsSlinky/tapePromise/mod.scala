@@ -49,6 +49,7 @@ object mod extends js.Object {
   trait Test
     extends typingsSlinky.tape.mod.Test {
     def doesNotReject(promise: js.Function0[js.Thenable[_]]): js.Promise[Unit] = js.native
+    def doesNotReject(promise: js.Function0[js.Thenable[_]], expected: js.UndefOr[scala.Nothing], msg: String): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Function0[js.Thenable[_]], expected: js.Function): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Function0[js.Thenable[_]], expected: js.Function, msg: String): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Function0[js.Thenable[_]], expected: js.RegExp): js.Promise[Unit] = js.native
@@ -58,12 +59,14 @@ object mod extends js.Object {
       * Assert that the promise resolves successfully.
       */
     def doesNotReject(promise: js.Thenable[_]): js.Promise[Unit] = js.native
+    def doesNotReject(promise: js.Thenable[_], expected: js.UndefOr[scala.Nothing], msg: String): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Thenable[_], expected: js.Function): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Thenable[_], expected: js.Function, msg: String): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Thenable[_], expected: js.RegExp): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Thenable[_], expected: js.RegExp, msg: String): js.Promise[Unit] = js.native
     def doesNotReject(promise: js.Thenable[_], msg: String): js.Promise[Unit] = js.native
     def rejects(promise: js.Function0[js.Thenable[_]]): js.Promise[Unit] = js.native
+    def rejects(promise: js.Function0[js.Thenable[_]], expected: js.UndefOr[scala.Nothing], msg: String): js.Promise[Unit] = js.native
     def rejects(promise: js.Function0[js.Thenable[_]], expected: js.Function): js.Promise[Unit] = js.native
     def rejects(promise: js.Function0[js.Thenable[_]], expected: js.Function, msg: String): js.Promise[Unit] = js.native
     def rejects(promise: js.Function0[js.Thenable[_]], expected: js.RegExp): js.Promise[Unit] = js.native
@@ -75,6 +78,7 @@ object mod extends js.Object {
       * @param expected if present, must be a RegExp or Function, which is used to test the exception object.
       */
     def rejects(promise: js.Thenable[_]): js.Promise[Unit] = js.native
+    def rejects(promise: js.Thenable[_], expected: js.UndefOr[scala.Nothing], msg: String): js.Promise[Unit] = js.native
     def rejects(promise: js.Thenable[_], expected: js.Function): js.Promise[Unit] = js.native
     def rejects(promise: js.Thenable[_], expected: js.Function, msg: String): js.Promise[Unit] = js.native
     def rejects(promise: js.Thenable[_], expected: js.RegExp): js.Promise[Unit] = js.native

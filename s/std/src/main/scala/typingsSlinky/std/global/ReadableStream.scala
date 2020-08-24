@@ -16,6 +16,7 @@ import scala.scalajs.js.annotation._
 class ReadableStream[R] ()
   extends typingsSlinky.std.ReadableStream[R] {
   def this(underlyingSource: UnderlyingSource[R]) = this()
+  def this(underlyingSource: js.UndefOr[scala.Nothing], strategy: QueuingStrategy[R]) = this()
   def this(underlyingSource: UnderlyingSource[R], strategy: QueuingStrategy[R]) = this()
 }
 
@@ -28,7 +29,9 @@ object ReadableStream
       org.scalajs.dom.experimental.ReadableStream[js.Object | js.typedarray.Uint8Array]
     ]
      with Instantiable2[
-      (/* underlyingSource */ UnderlyingByteSource) | (/* underlyingSource */ UnderlyingSource[js.Object]), 
+      js.UndefOr[
+        (/* underlyingSource */ UnderlyingByteSource) | (/* underlyingSource */ UnderlyingSource[js.Object])
+      ], 
       (/* strategy */ QueuingStrategy[js.Object]) | (/* strategy */ Size), 
       org.scalajs.dom.experimental.ReadableStream[js.Object | js.typedarray.Uint8Array]
     ]

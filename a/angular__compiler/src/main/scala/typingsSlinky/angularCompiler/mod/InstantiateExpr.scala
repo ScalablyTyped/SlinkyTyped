@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "InstantiateExpr")
 @js.native
 class InstantiateExpr protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.InstantiateExpr {
+  extends typingsSlinky.angularCompiler.compilerMod.InstantiateExpr {
   def this(
     classExpr: typingsSlinky.angularCompiler.outputAstMod.Expression,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression]
@@ -16,6 +16,12 @@ class InstantiateExpr protected ()
     classExpr: typingsSlinky.angularCompiler.outputAstMod.Expression,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type
+  ) = this()
+  def this(
+    classExpr: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     classExpr: typingsSlinky.angularCompiler.outputAstMod.Expression,

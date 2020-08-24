@@ -27,13 +27,6 @@ object BitmapFontLoader extends js.Object {
     */
   def add(): Unit = js.native
   /**
-    * Register a BitmapText font from loader resource.
-    *
-    * @param {PIXI.LoaderResource} resource - Loader resource.
-    * @param {PIXI.Texture} texture - Reference to texture.
-    */
-  def parse(resource: typingsSlinky.pixiJs.PIXI.LoaderResource, texture: typingsSlinky.pixiJs.PIXI.Texture): Unit = js.native
-  /**
     * Called after a resource is loaded.
     * @see PIXI.Loader.loaderMiddleware
     * @param {PIXI.LoaderResource} resource

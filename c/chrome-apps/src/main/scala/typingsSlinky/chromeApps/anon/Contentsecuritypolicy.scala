@@ -26,23 +26,18 @@ object Contentsecuritypolicy {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withContent_security_policy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_security_policy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPagesVarargs(value: String*): Self = this.set("pages", js.Array(value :_*))
     @scala.inline
-    def withoutContent_security_policy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_security_policy")(js.undefined)
-        ret
-    }
+    def setPages(value: js.Array[String]): Self = this.set("pages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent_security_policy(value: String): Self = this.set("content_security_policy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent_security_policy: Self = this.set("content_security_policy", js.undefined)
   }
   
 }

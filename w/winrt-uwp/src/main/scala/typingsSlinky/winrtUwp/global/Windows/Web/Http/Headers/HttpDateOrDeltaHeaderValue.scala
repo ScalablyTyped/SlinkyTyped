@@ -9,14 +9,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue")
 @js.native
 abstract class HttpDateOrDeltaHeaderValue ()
-  extends typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue {
-  /** Gets the value of the HTTP-date information used in the Retry-After HTTP header. */
-  /* CompleteClass */
-  override var date: js.Date = js.native
-  /** Gets the value of the delta-seconds information used in the Retry-After HTTP header. */
-  /* CompleteClass */
-  override var delta: Double = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue
 
 /* static members */
 @JSGlobal("Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue")

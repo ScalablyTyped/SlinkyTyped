@@ -13,6 +13,7 @@ class ExpandableListView protected ()
   extends typingsSlinky.androiduix.android.widget.ExpandableListView {
   def this(context: Context) = this()
   def this(context: Context, attrs: HTMLElement) = this()
+  def this(context: Context, attrs: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
   def this(context: Context, attrs: HTMLElement, defStyle: Map[String, String]) = this()
 }
 

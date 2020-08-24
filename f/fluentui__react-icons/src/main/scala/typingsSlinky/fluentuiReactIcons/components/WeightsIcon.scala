@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WeightsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WeightsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WeightsIcon")
   @js.native
   object component extends js.Object
   

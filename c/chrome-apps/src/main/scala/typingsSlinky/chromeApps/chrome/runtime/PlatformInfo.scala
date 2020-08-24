@@ -110,7 +110,12 @@ object PlatformInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArch(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setArch(
       value: ToStringLiteral[
           ARM, 
           /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
@@ -119,13 +124,9 @@ object PlatformInfo {
             mips64_ | arm_ | `x86-64` | `x86-32` | mips_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arch")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("arch", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNacl_arch(
+    def setNacl_arch(
       value: ToStringLiteral[
           ARM, 
           /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
@@ -134,13 +135,9 @@ object PlatformInfo {
             mips64_ | arm_ | `x86-64` | `x86-32` | mips_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_arch")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("nacl_arch", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOs(
+    def setOs(
       value: ToStringLiteral[
           ANDROID, 
           /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
@@ -149,11 +146,7 @@ object PlatformInfo {
             linux_ | openbsd_ | android_ | win_ | cros_ | mac_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("os", value.asInstanceOf[js.Any])
   }
   
 }

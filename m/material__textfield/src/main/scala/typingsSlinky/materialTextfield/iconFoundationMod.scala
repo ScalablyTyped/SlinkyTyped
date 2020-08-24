@@ -1,6 +1,11 @@
 package typingsSlinky.materialTextfield
 
-import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
+import typingsSlinky.materialBase.foundationMod.MDCFoundation
+import typingsSlinky.materialTextfield.anon.ICONEVENT
+import typingsSlinky.materialTextfield.anon.PartialMDCTextFieldIconAd
+import typingsSlinky.materialTextfield.anon.ROOT
 import typingsSlinky.materialTextfield.iconAdapterMod.MDCTextFieldIconAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,26 +15,40 @@ import scala.scalajs.js.annotation._
 @js.native
 object iconFoundationMod extends js.Object {
   @js.native
-  trait MDCTextFieldIconFoundation
-    extends typingsSlinky.materialBase.foundationMod.default[MDCTextFieldIconAdapter] {
-    /**
-      * Handles an interaction event
-      */
-    def handleInteraction(evt: Event): Unit = js.native
-    /**
-      * Sets the content of the helper text field.
-      */
+  class MDCTextFieldIconFoundation () extends MDCFoundation[MDCTextFieldIconAdapter] {
+    def this(adapter: PartialMDCTextFieldIconAd) = this()
+    def handleInteraction(evt: KeyboardEvent): Unit = js.native
+    def handleInteraction(evt: MouseEvent): Unit = js.native
+    def setAriaLabel(label: String): Unit = js.native
+    def setContent(content: String): Unit = js.native
     def setDisabled(disabled: Boolean): Unit = js.native
   }
   
   @js.native
-  class default () extends MDCTextFieldIconFoundation
+  class default () extends MDCTextFieldIconFoundation {
+    def this(adapter: PartialMDCTextFieldIconAd) = this()
+  }
+  
+  /* static members */
+  @js.native
+  object MDCTextFieldIconFoundation extends js.Object {
+    def cssClasses: ROOT = js.native
+    /**
+      * See {@link MDCTextFieldIconAdapter} for typing information on parameters and return types.
+      */
+    def defaultAdapter: MDCTextFieldIconAdapter = js.native
+    def strings: ICONEVENT = js.native
+  }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    val defaultAdapter: MDCTextFieldIconAdapter = js.native
-    val strings: typingsSlinky.materialTextfield.iconConstantsMod.strings = js.native
+    def cssClasses: ROOT = js.native
+    /**
+      * See {@link MDCTextFieldIconAdapter} for typing information on parameters and return types.
+      */
+    def defaultAdapter: MDCTextFieldIconAdapter = js.native
+    def strings: ICONEVENT = js.native
   }
   
 }

@@ -1,19 +1,15 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.anon.Gutter
-import typingsSlinky.antd.libRowMod.default
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLDivElement
+import typingsSlinky.antd.gridRowMod.RowProps
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("antd", "Row")
 @js.native
-class Row () extends default
-
-/* static members */
-@JSImport("antd", "Row")
-@js.native
-object Row extends js.Object {
-  var defaultProps: Gutter = js.native
-}
+object Row extends TopLevel[ForwardRefExoticComponent[RowProps with RefAttributes[HTMLDivElement]]]
 

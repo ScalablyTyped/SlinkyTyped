@@ -49,77 +49,36 @@ object LayerState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCanConstantState(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canConstantState")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetOpacity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpacity")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCanConstantState(value: () => Boolean): Self = this.set("canConstantState", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsStateful(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateful")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetOpacity(value: () => Double): Self = this.set("getOpacity", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAutoMirrored(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAutoMirrored")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsStateful(value: () => Boolean): Self = this.set("isStateful", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCanConstantState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCanConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAutoMirrored(value: js.Any): Self = this.set("mAutoMirrored", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCheckedConstantState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCanConstantState(value: js.Any): Self = this.set("mCanConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMChildren(value: js.Array[ChildDrawable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedConstantState(value: js.Any): Self = this.set("mCheckedConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHaveOpacity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHaveOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMChildrenVarargs(value: ChildDrawable*): Self = this.set("mChildren", js.Array(value :_*))
     @scala.inline
-    def withMHaveStateful(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHaveStateful")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMChildren(value: js.Array[ChildDrawable]): Self = this.set("mChildren", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNum")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHaveOpacity(value: js.Any): Self = this.set("mHaveOpacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOpacity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHaveStateful(value: js.Any): Self = this.set("mHaveStateful", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStateful(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStateful")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNum(value: Double): Self = this.set("mNum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMOpacity(value: js.Any): Self = this.set("mOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMStateful(value: js.Any): Self = this.set("mStateful", value.asInstanceOf[js.Any])
   }
   
 }

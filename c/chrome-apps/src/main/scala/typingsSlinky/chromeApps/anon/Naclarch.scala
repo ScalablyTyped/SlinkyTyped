@@ -51,7 +51,12 @@ object Naclarch {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNacl_arch(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setNacl_arch(
       value: ToStringLiteral[
           ARM, 
           /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
@@ -60,17 +65,9 @@ object Naclarch {
             mips64_ | arm_ | `x86-64` | `x86-32` | mips_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_arch")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("nacl_arch", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSub_package_path(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sub_package_path")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSub_package_path(value: String): Self = this.set("sub_package_path", value.asInstanceOf[js.Any])
   }
   
 }

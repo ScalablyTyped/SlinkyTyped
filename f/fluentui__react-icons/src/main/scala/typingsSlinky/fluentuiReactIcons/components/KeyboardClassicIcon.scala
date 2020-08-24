@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object KeyboardClassicIcon {
-  @JSImport("@fluentui/react-icons/lib/components/KeyboardClassicIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "KeyboardClassicIcon")
   @js.native
   object component extends js.Object
   

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery-toast-plugin"
-version := "1.3-dt-20190212Z-2bfa59"
-scalaVersion := "2.13.2"
+version := "1.3-dt-20190212Z-03882a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

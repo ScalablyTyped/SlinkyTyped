@@ -7,14 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TypeScript.SourceMapping")
 @js.native
 class SourceMapping ()
-  extends typingsSlinky.typescriptServices.TypeScript.SourceMapping {
-  /* CompleteClass */
-  override var childMappings: js.Array[typingsSlinky.typescriptServices.TypeScript.SourceMapping] = js.native
-  /* CompleteClass */
-  override var end: typingsSlinky.typescriptServices.TypeScript.SourceMapPosition = js.native
-  /* CompleteClass */
-  override var nameIndex: Double = js.native
-  /* CompleteClass */
-  override var start: typingsSlinky.typescriptServices.TypeScript.SourceMapPosition = js.native
-}
+  extends typingsSlinky.typescriptServices.TypeScript.SourceMapping
 

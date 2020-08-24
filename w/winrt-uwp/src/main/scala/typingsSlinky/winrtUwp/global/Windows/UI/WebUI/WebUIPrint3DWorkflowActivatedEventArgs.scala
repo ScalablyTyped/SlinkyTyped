@@ -1,9 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.UI.WebUI
 
-import typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ActivationKind
-import typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ApplicationExecutionState
-import typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.SplashScreen
-import typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,21 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs")
 @js.native
 abstract class WebUIPrint3DWorkflowActivatedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs {
-  /** Gets the activated operation. */
-  /* CompleteClass */
-  override var activatedOperation: typingsSlinky.winrtUwp.Windows.UI.WebUI.ActivatedOperation = js.native
-  /** Gets the kind of activation. */
-  /* CompleteClass */
-  override var kind: ActivationKind = js.native
-  /** Gets the previous execution state. */
-  /* CompleteClass */
-  override var previousExecutionState: ApplicationExecutionState = js.native
-  /** Gets the splash screen object that provides information about the transition from the splash screen to the activated app. */
-  /* CompleteClass */
-  override var splashScreen: SplashScreen = js.native
-  /** Gets the print workflow. */
-  /* CompleteClass */
-  override var workflow: Print3DWorkflow = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs
 

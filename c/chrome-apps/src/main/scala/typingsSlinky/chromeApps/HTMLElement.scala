@@ -58,35 +58,20 @@ object HTMLElement {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExitPointerLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitPointerLock")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withExitrequestFullscreen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitrequestFullscreen")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setExitPointerLock(value: () => Unit): Self = this.set("exitPointerLock", js.Any.fromFunction0(value))
     @scala.inline
-    def withRequestFullscreen(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullscreen")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setExitrequestFullscreen(value: () => Unit): Self = this.set("exitrequestFullscreen", js.Any.fromFunction0(value))
     @scala.inline
-    def withRequestPointerLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setRequestFullscreen(value: () => js.Promise[Unit]): Self = this.set("requestFullscreen", js.Any.fromFunction0(value))
     @scala.inline
-    def withWebkitRequestFullscreen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitRequestFullscreen")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setRequestPointerLock(value: () => Unit): Self = this.set("requestPointerLock", js.Any.fromFunction0(value))
+    @scala.inline
+    def setWebkitRequestFullscreen(value: () => Unit): Self = this.set("webkitRequestFullscreen", js.Any.fromFunction0(value))
   }
   
 }

@@ -26,29 +26,18 @@ object OnloadT {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnloadT(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadT")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPageT(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageT")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnloadT(value: integer): Self = this.set("onloadT", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStartE(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPageT(value: integer): Self = this.set("pageT", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTran(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tran")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStartE(value: integer): Self = this.set("startE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTran(value: integer): Self = this.set("tran", value.asInstanceOf[js.Any])
   }
   
 }

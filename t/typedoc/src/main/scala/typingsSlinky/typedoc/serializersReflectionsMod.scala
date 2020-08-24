@@ -24,6 +24,10 @@ object serializersReflectionsMod extends js.Object {
     extends typingsSlinky.typedoc.reflectionsProjectMod.ProjectReflectionSerializer
   
   @js.native
+  class ReferenceReflectionSerializer ()
+    extends typingsSlinky.typedoc.serializersReflectionsReferenceMod.ReferenceReflectionSerializer
+  
+  @js.native
   class ReflectionSerializer ()
     extends typingsSlinky.typedoc.reflectionsAbstractMod.ReflectionSerializer
   
@@ -44,6 +48,12 @@ object serializersReflectionsMod extends js.Object {
   /* static members */
   @js.native
   object ProjectReflectionSerializer extends js.Object {
+    var PRIORITY: Double = js.native
+  }
+  
+  /* static members */
+  @js.native
+  object ReferenceReflectionSerializer extends js.Object {
     var PRIORITY: Double = js.native
   }
   

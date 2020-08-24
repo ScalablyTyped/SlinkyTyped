@@ -1,42 +1,22 @@
 package typingsSlinky.highchartsReactOfficial.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
-import typingsSlinky.highcharts.mod.Chart_
-import typingsSlinky.highcharts.mod.Options
-import typingsSlinky.highchartsReactOfficial.anon.TypeofHighcharts
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.highchartsReactOfficial.anon.Chart
 import typingsSlinky.highchartsReactOfficial.highchartsReactMod.HighchartsReact.Props
-import typingsSlinky.highchartsReactOfficial.highchartsReactMod.default
+import typingsSlinky.react.mod.PropsWithoutRef
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Support for combinations of intersection and union types not implemented */
 object HighchartsReact {
   @JSImport("highcharts-react-official/dist/highcharts-react", JSImport.Default)
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, default] {
-    @scala.inline
-    def allowChartUpdate(value: Boolean): this.type = set("allowChartUpdate", value.asInstanceOf[js.Any])
-    @scala.inline
-    def callback(value: /* chart */ Chart_ => Unit): this.type = set("callback", js.Any.fromFunction1(value))
-    @scala.inline
-    def constructorType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 78 */ js.Any): this.type = set("constructorType", value.asInstanceOf[js.Any])
-    @scala.inline
-    def highcharts(value: TypeofHighcharts): this.type = set("highcharts", value.asInstanceOf[js.Any])
-    @scala.inline
-    def immutable(value: Boolean): this.type = set("immutable", value.asInstanceOf[js.Any])
-    @scala.inline
-    def options(value: Options): this.type = set("options", value.asInstanceOf[js.Any])
-    @scala.inline
-    def updateArgs(value: js.Array[Boolean] | (js.Tuple2[Boolean, Boolean]) | (js.Tuple3[Boolean, Boolean, Boolean])): this.type = set("updateArgs", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: HighchartsReact.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: PropsWithoutRef[Props] with RefAttributes[Chart]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: HighchartsReact.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,12 +1,14 @@
 package typingsSlinky.reactMeasure.components
 
 import org.scalajs.dom.raw.Element
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactMeasure.mod.ContentRect
 import typingsSlinky.reactMeasure.mod.MeasureProps
+import typingsSlinky.reactMeasure.mod.MeasuredComponentProps
 import typingsSlinky.reactMeasure.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,6 +25,8 @@ object ReactMeasure {
        with StBuildingComponent[tag.type, default] {
     @scala.inline
     def bounds(value: Boolean): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: ReactComponentClass[MeasuredComponentProps]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def client(value: Boolean): this.type = set("client", value.asInstanceOf[js.Any])
     @scala.inline

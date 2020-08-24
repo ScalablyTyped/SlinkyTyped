@@ -35,6 +35,8 @@ package object personalizeMod {
   type FailureReason = java.lang.String
   type FeatureTransformationParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.personalizeMod.ParameterValue]
   type FeaturizationParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.personalizeMod.ParameterValue]
+  type FilterExpression = java.lang.String
+  type Filters = js.Array[typingsSlinky.awsSdk.personalizeMod.FilterSummary]
   type HPOObjectiveType = java.lang.String
   type HPOResource = java.lang.String
   type HyperParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.personalizeMod.ParameterValue]

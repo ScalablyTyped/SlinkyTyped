@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeTabView.components
 
 import org.scalablytyped.runtime.Instantiable0
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
@@ -11,29 +11,28 @@ import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
 import typingsSlinky.reactNativeTabView.anon.Damping
 import typingsSlinky.reactNativeTabView.anon.Duration
 import typingsSlinky.reactNativeTabView.anon.Height
+import typingsSlinky.reactNativeTabView.anon.Route
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.bottom
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.none
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.top
 import typingsSlinky.reactNativeTabView.tabViewMod.Props
-import typingsSlinky.reactNativeTabView.tabViewMod.default
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
-import typingsSlinky.reactNativeTabView.typesMod.Route
 import typingsSlinky.reactNativeTabView.typesMod.SceneRendererProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabView {
-  @JSImport("react-native-tab-view/lib/typescript/src/TabView", JSImport.Default)
+  @JSImport("react-native-tab-view", "TabView")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: Route] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeTabView.mod.TabView[T]] {
     @scala.inline
     def initialLayout(value: Height): this.type = set("initialLayout", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,19 +59,19 @@ object TabView {
     def swipeVelocityImpact(value: Double): this.type = set("swipeVelocityImpact", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: Route](
+  def apply[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](
     gestureHandlerProps: ComponentProps[Instantiable0[PanGestureHandler]],
     keyboardDismissMode: none | `on-drag` | auto,
     `lazy`: Boolean,
     lazyPreloadDistance: Double,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
-    renderLazyPlaceholder: typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any],
-    renderPager: typingsSlinky.reactNativeTabView.pagerMod.Props[T] => TagMod[Any],
-    renderScene: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any],
-    renderTabBar: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.NavigationState[T] => TagMod[Any],
+    renderLazyPlaceholder: Route[T] => ReactElement,
+    renderPager: typingsSlinky.reactNativeTabView.pagerMod.Props[T] => ReactElement,
+    renderScene: SceneRendererProps with Route[T] => ReactElement,
+    renderTabBar: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.NavigationState[T] => ReactElement,
     springConfig: Damping,
     swipeEnabled: Boolean,
     tabBarPosition: top | bottom,

@@ -19,7 +19,7 @@ object ConnectedRouter {
   @scala.inline
   class Builder[State] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRouterRedux.mod.ConnectedRouter[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterRedux.mod.ConnectedRouter[State]] {
     @scala.inline
     def store(value: Store[State, AnyAction]): this.type = set("store", value.asInstanceOf[js.Any])
   }

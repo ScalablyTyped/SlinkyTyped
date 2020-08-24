@@ -7,13 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.SVGPathSeg")
 @js.native
 class SVGPathSeg protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.SVGPathSeg {
-  /* CompleteClass */
-  @JSName("MSHTML.SVGPathSeg_typekey")
-  override var MSHTMLDotSVGPathSeg_typekey: typingsSlinky.activexMshtml.MSHTML.SVGPathSeg = js.native
-  /* CompleteClass */
-  override var pathSegType: Double = js.native
-  /* CompleteClass */
-  override val pathSegTypeAsLetter: String = js.native
-}
+  extends typingsSlinky.activexMshtml.MSHTML.SVGPathSeg
 

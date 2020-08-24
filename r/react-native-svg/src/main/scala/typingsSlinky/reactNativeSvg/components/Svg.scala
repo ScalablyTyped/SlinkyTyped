@@ -10,7 +10,7 @@ object Svg {
   @js.native
   object component extends js.Object
   
-  def withProps(p: SvgProps): SharedBuilder_SvgProps426770904[typingsSlinky.reactNativeSvg.mod.Svg] = new SharedBuilder_SvgProps426770904[typingsSlinky.reactNativeSvg.mod.Svg](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Svg.type): SharedBuilder_SvgProps426770904[typingsSlinky.reactNativeSvg.mod.Svg] = new SharedBuilder_SvgProps426770904[typingsSlinky.reactNativeSvg.mod.Svg](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: SvgProps): SharedBuilder_SvgProps_1156027433 = new SharedBuilder_SvgProps_1156027433(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Svg.type): SharedBuilder_SvgProps_1156027433 = new SharedBuilder_SvgProps_1156027433(js.Array(this.component, js.Dictionary.empty))()
 }
 

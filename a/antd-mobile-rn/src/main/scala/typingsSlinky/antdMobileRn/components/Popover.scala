@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobileRn.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -31,7 +30,7 @@ object Popover {
     @scala.inline
     def onSelect(value: (/* node */ js.Any, /* index */ js.UndefOr[Double]) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
     @scala.inline
-    def overlay(value: TagMod[Any]): this.type = set("overlay", value.asInstanceOf[js.Any])
+    def overlay(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def overlayStyle(value: StyleProp[ViewStyle]): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
     @scala.inline

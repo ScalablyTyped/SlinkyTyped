@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@lumino/commands" : "1.11.3"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@lumino/commands" : "1.11.3"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

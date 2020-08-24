@@ -2,7 +2,7 @@ package typingsSlinky.expressWechatAccess.mod
 
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.express.mod.NextFunction
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`

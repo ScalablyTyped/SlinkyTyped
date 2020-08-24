@@ -17,7 +17,7 @@ package object mod {
     * a single argument, which is useful for many top-level API defs.
     * See https://github.com/Microsoft/TypeScript/issues/7234 for more info.
     */
-  type ClassType[P, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */, C /* <: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState] */] = C with (org.scalablytyped.runtime.Instantiable2[/* props */ P, js.UndefOr[/* context */ js.Any], T])
+  type ClassType[P, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */, C /* <: typingsSlinky.rax.mod.ComponentClass[P, typingsSlinky.rax.mod.ComponentState] */] = C with (org.scalablytyped.runtime.Instantiable2[/* props */ P, /* context */ js.UndefOr[js.Any], T])
   type ClassicElement[P] = typingsSlinky.rax.mod.CElement[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]]
   type ClassicFactory[P] = typingsSlinky.rax.mod.CFactory[P, typingsSlinky.rax.mod.ClassicComponent[P, typingsSlinky.rax.mod.ComponentState]]
   type ClipboardEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.ClipboardEvent[T]]
@@ -211,7 +211,7 @@ package object mod {
   type PointerEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.PointerEvent[T]]
   type PropsWithChildren[P] = P with typingsSlinky.rax.anon.Children
   /** Ensures that the props do not include string ref, which cannot be forwarded */
-  type PropsWithRef[P] = P | (typingsSlinky.rax.mod.PropsWithoutRef[P] with typingsSlinky.rax.anon.RefExclude)
+  type PropsWithRef[P] = P | (typingsSlinky.rax.mod.PropsWithoutRef[P] with typingsSlinky.rax.anon.`0`)
   /** Ensures that the props do not include ref at all */
   type PropsWithoutRef[P] = P | (typingsSlinky.std.Pick[
     P, 

@@ -46,6 +46,12 @@ object clipboard extends js.Object {
     * @param [callback]
     */
   def setImageData(imageData: js.typedarray.ArrayBuffer, `type`: ImageType): Unit = js.native
+  def setImageData(
+    imageData: js.typedarray.ArrayBuffer,
+    `type`: ImageType,
+    additionalItems: js.UndefOr[scala.Nothing],
+    callback: js.Function0[Unit]
+  ): Unit = js.native
   def setImageData(imageData: js.typedarray.ArrayBuffer, `type`: ImageType, additionalItems: AdditionalItems): Unit = js.native
   def setImageData(
     imageData: js.typedarray.ArrayBuffer,

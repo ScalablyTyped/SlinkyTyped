@@ -32,11 +32,14 @@ object SocketPermission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSocket(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setSocketVarargs(value: String*): Self = this.set("socket", js.Array(value :_*))
+    @scala.inline
+    def setSocket(value: js.Array[String]): Self = this.set("socket", value.asInstanceOf[js.Any])
   }
   
 }

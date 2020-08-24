@@ -72,7 +72,6 @@ trait PopupWindow_ extends Callback {
     gravity: js.Any
   ): js.Any = js.native
   /* private */ def _update_w_h(width: js.Any, height: js.Any): js.Any = js.native
-  /* private */ def _update_x_y_w_h_f(x: js.Any, y: js.Any, width: js.Any, height: js.Any): js.Any = js.native
   /* private */ def _update_x_y_w_h_f(x: js.Any, y: js.Any, width: js.Any, height: js.Any, force: js.Any): js.Any = js.native
   /* private */ def computeFlags(curFlags: js.Any): js.Any = js.native
   /* private */ def computeWindowEnterAnimation(): js.Any = js.native
@@ -87,6 +86,7 @@ trait PopupWindow_ extends Callback {
   def getHeight(): Double = js.native
   def getInputMethodMode(): Double = js.native
   def getMaxAvailableHeight(anchor: View): Double = js.native
+  def getMaxAvailableHeight(anchor: View, yOffset: js.UndefOr[scala.Nothing], ignoreBottomDecorations: Boolean): Double = js.native
   def getMaxAvailableHeight(anchor: View, yOffset: Double): Double = js.native
   def getMaxAvailableHeight(anchor: View, yOffset: Double, ignoreBottomDecorations: Boolean): Double = js.native
   def getWidth(): Double = js.native
@@ -121,7 +121,11 @@ trait PopupWindow_ extends Callback {
   def setWindowLayoutMode(widthSpec: Double, heightSpec: Double): Unit = js.native
   def setWindowLayoutType(layoutType: Double): Unit = js.native
   def showAsDropDown(anchor: View): Unit = js.native
+  def showAsDropDown(anchor: View, xoff: js.UndefOr[scala.Nothing], yoff: js.UndefOr[scala.Nothing], gravity: Double): Unit = js.native
+  def showAsDropDown(anchor: View, xoff: js.UndefOr[scala.Nothing], yoff: Double): Unit = js.native
+  def showAsDropDown(anchor: View, xoff: js.UndefOr[scala.Nothing], yoff: Double, gravity: Double): Unit = js.native
   def showAsDropDown(anchor: View, xoff: Double): Unit = js.native
+  def showAsDropDown(anchor: View, xoff: Double, yoff: js.UndefOr[scala.Nothing], gravity: Double): Unit = js.native
   def showAsDropDown(anchor: View, xoff: Double, yoff: Double): Unit = js.native
   def showAsDropDown(anchor: View, xoff: Double, yoff: Double, gravity: Double): Unit = js.native
   def showAtLocation(parent: View, gravity: Double, x: Double, y: Double): Unit = js.native

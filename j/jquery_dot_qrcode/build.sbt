@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_qrcode"
-version := "v0.12.0-dt-20200515Z-a44365"
-scalaVersion := "2.13.2"
+version := "v0.12.0-dt-20200515Z-1f132b"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

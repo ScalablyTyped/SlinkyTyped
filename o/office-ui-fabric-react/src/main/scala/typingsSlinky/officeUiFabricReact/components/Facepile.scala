@@ -13,7 +13,6 @@ import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepileStyles
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.OverflowButtonType
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaSharedProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -30,7 +29,7 @@ object Facepile {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.facepileBaseMod.FacepileBase] {
     @scala.inline
     def addButtonProps(value: IButtonProps): this.type = set("addButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,6 +62,8 @@ object Facepile {
     def overflowButtonProps(value: IButtonProps): this.type = set("overflowButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowButtonType(value: OverflowButtonType): this.type = set("overflowButtonType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowPersonasVarargs(value: IFacepilePersona*): this.type = set("overflowPersonas", js.Array(value :_*))
     @scala.inline
     def overflowPersonas(value: js.Array[IFacepilePersona]): this.type = set("overflowPersonas", value.asInstanceOf[js.Any])
     @scala.inline

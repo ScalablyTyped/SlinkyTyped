@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "deep-freeze-es6"
-version := "1.3.1-5db30c"
-scalaVersion := "2.13.2"
+version := "1.3.1-f348df"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

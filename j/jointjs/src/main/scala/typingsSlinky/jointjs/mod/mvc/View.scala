@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import typingsSlinky.backbone.mod.EventsHash
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.jointjs.anon.Override
 import typingsSlinky.jointjs.mod.Vectorizer
 import typingsSlinky.jointjs.mod.dia.Event
@@ -14,9 +15,12 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jointjs", "mvc.View")
 @js.native
-class View[T /* <: Model */] ()
+class View[T /* <: Model[_, ModelSetOptions] */] ()
   extends typingsSlinky.backbone.mod.View[T] {
   def this(opt: ViewOptions[T]) = this()
+  var DETACHABLE: Boolean = js.native
+  var FLAG_INSERT: Double = js.native
+  var FLAG_REMOVE: Double = js.native
   var UPDATE_PRIORITY: Double = js.native
   var childNodes: js.UndefOr[StringDictionary[Element] | Null] = js.native
   var children: js.UndefOr[MarkupJSON] = js.native
@@ -29,9 +33,11 @@ class View[T /* <: Model */] ()
   var vel: Vectorizer | Null = js.native
   def confirmUpdate(flag: Double, opt: StringDictionary[js.Any]): Double = js.native
   def delegateDocumentEvents(): this.type = js.native
+  def delegateDocumentEvents(events: js.UndefOr[scala.Nothing], data: viewEventData): this.type = js.native
   def delegateDocumentEvents(events: EventsHash): this.type = js.native
   def delegateDocumentEvents(events: EventsHash, data: viewEventData): this.type = js.native
   def delegateElementEvents(element: Element): this.type = js.native
+  def delegateElementEvents(element: Element, events: js.UndefOr[scala.Nothing], data: viewEventData): this.type = js.native
   def delegateElementEvents(element: Element, events: EventsHash): this.type = js.native
   def delegateElementEvents(element: Element, events: EventsHash, data: viewEventData): this.type = js.native
   def eventData(evt: Event): viewEventData = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.bottom
@@ -12,20 +12,19 @@ import typingsSlinky.antdMobile.antdMobileStrings.top
 import typingsSlinky.antdMobile.antdMobileStrings.topLeft
 import typingsSlinky.antdMobile.antdMobileStrings.topRight
 import typingsSlinky.antdMobile.popoverMod.PopOverPropsType
-import typingsSlinky.antdMobile.popoverMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Popover {
-  @JSImport("antd-mobile/lib/popover", JSImport.Default)
+  @JSImport("antd-mobile", "Popover")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Popover] {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -35,7 +34,7 @@ object Popover {
     @scala.inline
     def onVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("onVisibleChange", js.Any.fromFunction1(value))
     @scala.inline
-    def overlay(value: TagMod[Any]): this.type = set("overlay", value.asInstanceOf[js.Any])
+    def overlay(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def placement(value: left | right | top | bottom | topLeft | topRight | bottomLeft | bottomRight): this.type = set("placement", value.asInstanceOf[js.Any])
     @scala.inline

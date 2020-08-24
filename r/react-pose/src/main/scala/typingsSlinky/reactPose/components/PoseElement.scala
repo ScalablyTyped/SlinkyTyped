@@ -25,11 +25,17 @@ object PoseElement {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactPose.poseElementMod.PoseElement] {
     @scala.inline
+    def _poseVarargs(value: String*): this.type = set("_pose", js.Array(value :_*))
+    @scala.inline
     def _pose(value: CurrentPose): this.type = set("_pose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def getInitialPoseFromParent(value: () => CurrentPose | Unit): this.type = set("getInitialPoseFromParent", js.Any.fromFunction0(value))
     @scala.inline
     def getParentPoseConfig(value: () => DomPopmotionConfig): this.type = set("getParentPoseConfig", js.Any.fromFunction0(value))
+    @scala.inline
+    def initialPoseVarargs(value: String*): this.type = set("initialPose", js.Array(value :_*))
     @scala.inline
     def initialPose(value: CurrentPose): this.type = set("initialPose", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,6 +46,8 @@ object PoseElement {
     def onPoseComplete(value: /* pose */ CurrentPose => _): this.type = set("onPoseComplete", js.Any.fromFunction1(value))
     @scala.inline
     def onUnmount(value: /* child */ DomPopmotionPoser => _): this.type = set("onUnmount", js.Any.fromFunction1(value))
+    @scala.inline
+    def poseVarargs(value: String*): this.type = set("pose", js.Array(value :_*))
     @scala.inline
     def pose(value: CurrentPose): this.type = set("pose", value.asInstanceOf[js.Any])
     @scala.inline

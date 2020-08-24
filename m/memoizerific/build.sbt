@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "memoizerific"
-version := "1.11.3-a61c8c"
-scalaVersion := "2.13.2"
+version := "1.11.3-ed9820"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

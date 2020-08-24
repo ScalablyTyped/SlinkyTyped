@@ -78,6 +78,7 @@ trait Request
   var writable: Boolean = js.native
   def abort(): Unit = js.native
   def auth(username: String, password: String): Request = js.native
+  def auth(username: String, password: String, sendImmediately: js.UndefOr[scala.Nothing], bearer: String): Request = js.native
   def auth(username: String, password: String, sendImmediately: Boolean): Request = js.native
   def auth(username: String, password: String, sendImmediately: Boolean, bearer: String): Request = js.native
   def aws(opts: AWSOptions): Request = js.native
@@ -90,6 +91,7 @@ trait Request
   def end(chunk: String, cb: js.Function0[Unit]): Unit = js.native
   def end(chunk: Buffer): Unit = js.native
   def end(chunk: Buffer, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: String, encoding: js.UndefOr[scala.Nothing], cb: js.Function0[Unit]): Unit = js.native
   def end(str: String, encoding: String): Unit = js.native
   def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   def form(): typingsSlinky.formData.mod.^ = js.native
@@ -126,6 +128,11 @@ trait Request
   def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
   def write(buffer: Buffer): Boolean = js.native
   def write(buffer: Buffer, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
+  def write(
+    str: String,
+    encoding: js.UndefOr[scala.Nothing],
+    cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Boolean = js.native
   def write(str: String, encoding: String): Boolean = js.native
   def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
 }

@@ -22,7 +22,6 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactstrap.buttonToggleMod.ButtonToggleProps
-import typingsSlinky.reactstrap.buttonToggleMod.default
 import typingsSlinky.reactstrap.reactstrapStrings.`additions text`
 import typingsSlinky.reactstrap.reactstrapStrings.`inline`
 import typingsSlinky.reactstrap.reactstrapStrings.additions
@@ -76,14 +75,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ButtonToggle {
-  @JSImport("reactstrap/lib/ButtonToggle", JSImport.Default)
+  @JSImport("reactstrap", "ButtonToggle")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.ButtonToggle[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -446,6 +445,8 @@ object ButtonToggle {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

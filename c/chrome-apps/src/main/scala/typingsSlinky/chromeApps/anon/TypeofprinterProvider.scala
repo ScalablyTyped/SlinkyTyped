@@ -88,7 +88,12 @@ object TypeofprinterProvider {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnGetCapabilityRequested(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnGetCapabilityRequested(
       value: Event[
           js.Function2[
             /* printerId */ String, 
@@ -96,26 +101,18 @@ object TypeofprinterProvider {
             Unit
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGetCapabilityRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onGetCapabilityRequested", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnGetPrintersRequested(
+    def setOnGetPrintersRequested(
       value: Event[
           js.Function1[
             /* resultCallback */ js.Function1[/* printerInfo */ js.Array[PrinterInfo], Unit], 
             Unit
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGetPrintersRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onGetPrintersRequested", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnGetUsbPrinterInfoRequested(
+    def setOnGetUsbPrinterInfoRequested(
       value: Event[
           js.Function2[
             /* device */ _, 
@@ -123,13 +120,9 @@ object TypeofprinterProvider {
             Unit
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGetUsbPrinterInfoRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onGetUsbPrinterInfoRequested", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnPrintRequested(
+    def setOnPrintRequested(
       value: Event[
           js.Function2[
             /* printJob */ PrintJob, 
@@ -137,11 +130,7 @@ object TypeofprinterProvider {
             Unit
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrintRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onPrintRequested", value.asInstanceOf[js.Any])
   }
   
 }

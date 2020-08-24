@@ -160,16 +160,15 @@ trait Queryany extends js.Object {
   def elemMatch(path: js.Any, criteria: js.Function1[/* elem */ Query[_], Unit]): this.type = js.native
   def elemMatch(path: js.Function, criteria: js.Any): this.type = js.native
   def elemMatch(path: js.Function, criteria: js.Function1[/* elem */ Query[_], Unit]): this.type = js.native
-  /** Unset the error flag set on this query */
-  def error(): this.type = js.native
+  /** Get the current error flag value */
+  def error(): Error | Null = js.native
   /**
     * Set the error flag on this query
     * @param err The error flag
     */
   def error(err: Error): this.type = js.native
-  /** Get the current error flag value */
-  @JSName("error")
-  def error_Union(): Error | Null = js.native
+  /** Unset the error flag set on this query */
+  def error(unset: Null): this.type = js.native
   /**
     * Estimates the number of documents in the MongoDB collection. Faster than
     * using `countDocuments()` for large collections because
@@ -341,6 +340,11 @@ trait Queryany extends js.Object {
     */
   def geometry(`object`: Coordinates): this.type = js.native
   /**
+    * Returns the current query filter (also known as conditions) as a POJO.
+    * @returns current query filter
+    */
+  def getFilter(): js.Any = js.native
+  /**
     * Returns the current query options as a JSON object.
     * @returns current query options
     */
@@ -348,6 +352,7 @@ trait Queryany extends js.Object {
   /**
     * Returns the current query conditions as a JSON object.
     * @returns current query conditions
+    * @deprecated You should use getFilter() instead of getQuery() where possible. getQuery() will likely be deprecated in a future release.
     */
   def getQuery(): js.Any = js.native
   /**
@@ -505,21 +510,111 @@ trait Queryany extends js.Object {
     * @param options Options for the population query (sort, etc)
     */
   def populate(path: String): this.type = js.native
+  def populate(
+    path: String,
+    select: js.UndefOr[scala.Nothing],
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: String, select: js.UndefOr[scala.Nothing], model: js.UndefOr[scala.Nothing], `match`: js.Any): this.type = js.native
+  def populate(
+    path: String,
+    select: js.UndefOr[scala.Nothing],
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.Any,
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: String, select: js.UndefOr[scala.Nothing], model: js.Any): this.type = js.native
+  def populate(
+    path: String,
+    select: js.UndefOr[scala.Nothing],
+    model: js.Any,
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: String, select: js.UndefOr[scala.Nothing], model: js.Any, `match`: js.Any): this.type = js.native
+  def populate(path: String, select: js.UndefOr[scala.Nothing], model: js.Any, `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: String, select: String): this.type = js.native
+  def populate(
+    path: String,
+    select: String,
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: String, select: String, model: js.UndefOr[scala.Nothing], `match`: js.Any): this.type = js.native
+  def populate(path: String, select: String, model: js.UndefOr[scala.Nothing], `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: String, select: String, model: js.Any): this.type = js.native
+  def populate(path: String, select: String, model: js.Any, `match`: js.UndefOr[scala.Nothing], options: js.Any): this.type = js.native
   def populate(path: String, select: String, model: js.Any, `match`: js.Any): this.type = js.native
   def populate(path: String, select: String, model: js.Any, `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: String, select: js.Any): this.type = js.native
+  def populate(
+    path: String,
+    select: js.Any,
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: String, select: js.Any, model: js.UndefOr[scala.Nothing], `match`: js.Any): this.type = js.native
+  def populate(path: String, select: js.Any, model: js.UndefOr[scala.Nothing], `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: String, select: js.Any, model: js.Any): this.type = js.native
+  def populate(path: String, select: js.Any, model: js.Any, `match`: js.UndefOr[scala.Nothing], options: js.Any): this.type = js.native
   def populate(path: String, select: js.Any, model: js.Any, `match`: js.Any): this.type = js.native
   def populate(path: String, select: js.Any, model: js.Any, `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: js.Any): this.type = js.native
+  def populate(
+    path: js.Any,
+    select: js.UndefOr[scala.Nothing],
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: js.Any, select: js.UndefOr[scala.Nothing], model: js.UndefOr[scala.Nothing], `match`: js.Any): this.type = js.native
+  def populate(
+    path: js.Any,
+    select: js.UndefOr[scala.Nothing],
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.Any,
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: js.Any, select: js.UndefOr[scala.Nothing], model: js.Any): this.type = js.native
+  def populate(
+    path: js.Any,
+    select: js.UndefOr[scala.Nothing],
+    model: js.Any,
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: js.Any, select: js.UndefOr[scala.Nothing], model: js.Any, `match`: js.Any): this.type = js.native
+  def populate(path: js.Any, select: js.UndefOr[scala.Nothing], model: js.Any, `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: js.Any, select: String): this.type = js.native
+  def populate(
+    path: js.Any,
+    select: String,
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: js.Any, select: String, model: js.UndefOr[scala.Nothing], `match`: js.Any): this.type = js.native
+  def populate(path: js.Any, select: String, model: js.UndefOr[scala.Nothing], `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: js.Any, select: String, model: js.Any): this.type = js.native
+  def populate(path: js.Any, select: String, model: js.Any, `match`: js.UndefOr[scala.Nothing], options: js.Any): this.type = js.native
   def populate(path: js.Any, select: String, model: js.Any, `match`: js.Any): this.type = js.native
   def populate(path: js.Any, select: String, model: js.Any, `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: js.Any, select: js.Any): this.type = js.native
+  def populate(
+    path: js.Any,
+    select: js.Any,
+    model: js.UndefOr[scala.Nothing],
+    `match`: js.UndefOr[scala.Nothing],
+    options: js.Any
+  ): this.type = js.native
+  def populate(path: js.Any, select: js.Any, model: js.UndefOr[scala.Nothing], `match`: js.Any): this.type = js.native
+  def populate(path: js.Any, select: js.Any, model: js.UndefOr[scala.Nothing], `match`: js.Any, options: js.Any): this.type = js.native
   def populate(path: js.Any, select: js.Any, model: js.Any): this.type = js.native
+  def populate(path: js.Any, select: js.Any, model: js.Any, `match`: js.UndefOr[scala.Nothing], options: js.Any): this.type = js.native
   def populate(path: js.Any, select: js.Any, model: js.Any, `match`: js.Any): this.type = js.native
   def populate(path: js.Any, select: js.Any, model: js.Any, `match`: js.Any, options: js.Any): this.type = js.native
   /**
@@ -561,12 +656,12 @@ trait Queryany extends js.Object {
   def selectedExclusively(): Boolean = js.native
   /** Determines if inclusive field selection has been made. */
   def selectedInclusively(): Boolean = js.native
-  def session(): this.type = js.native
   /**
     * Sets the [MongoDB session](https://docs.mongodb.com/manual/reference/server-sessions/)
     * associated with this query. Sessions are how you mark a query as part of a
     * [transaction](/docs/transactions.html).
     */
+  def session(): this.type = js.native
   def session(session: ClientSession): this.type = js.native
   /** Sets query options. */
   def setOptions(options: js.Any): this.type = js.native
@@ -615,10 +710,16 @@ trait Queryany extends js.Object {
     * @param opts.tailableRetryInterval if cursor is exhausted, wait this many milliseconds before retrying
     */
   def tailable(): this.type = js.native
+  def tailable(bool: js.UndefOr[scala.Nothing], opts: NumberOfRetries): this.type = js.native
   def tailable(bool: Boolean): this.type = js.native
   def tailable(bool: Boolean, opts: NumberOfRetries): this.type = js.native
   /** Executes this query and returns a promise */
   def `then`[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
+  /** Executes this query and returns a promise */
+  def `then`[TResult1, TResult2](
+    onfulfilled: js.UndefOr[scala.Nothing],
+    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
+  ): js.Promise[TResult1 | TResult2] = js.native
   /** Executes this query and returns a promise */
   def `then`[TResult1, TResult2](onfulfilled: js.Function1[/* value */ js.Any, TResult1 | js.Thenable[TResult1]]): js.Promise[TResult1 | TResult2] = js.native
   /** Executes this query and returns a promise */
@@ -659,6 +760,7 @@ trait Queryany extends js.Object {
   def update(doc: UpdateQuery[_], callback: js.Function2[/* err */ js.Any, /* affectedRows */ Double, Unit]): QuerynumberAll = js.native
   /** Specifies a path for use with chaining. */
   def where(): this.type = js.native
+  def where(path: js.UndefOr[scala.Nothing], `val`: js.Any): this.type = js.native
   def where(path: String): this.type = js.native
   def where(path: String, `val`: js.Any): this.type = js.native
   def where(path: js.Any): this.type = js.native

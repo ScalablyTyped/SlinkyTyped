@@ -1,6 +1,7 @@
 package typingsSlinky.vscodeLanguageclient.mod
 
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashwillSaveWaitUntil
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.WillSaveTextDocumentParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,11 +10,13 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageclient", "WillSaveTextDocumentWaitUntilRequest")
 @js.native
 object WillSaveTextDocumentWaitUntilRequest extends js.Object {
-  val `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[
+  val method: textDocumentSlashwillSaveWaitUntil = js.native
+  val `type`: ProtocolRequestType[
     WillSaveTextDocumentParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit] | Null, 
+    scala.Nothing, 
     Unit, 
-    TextDocumentRegistrationOptions
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
   ] = js.native
 }
 

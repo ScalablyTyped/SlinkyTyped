@@ -131,7 +131,6 @@ object allMod extends js.Object {
     var `no-unsafe-any`: Boolean = js.native
     var `no-unsafe-finally`: Boolean = js.native
     var `no-unused-expression`: Boolean = js.native
-    var `no-use-before-declare`: Boolean = js.native
     var `no-var-keyword`: Boolean = js.native
     var `no-var-requires`: Boolean = js.native
     var `no-void-expression`: Boolean = js.native

@@ -8,7 +8,6 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -76,33 +75,33 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.nativeSelectMod.default
 import typingsSlinky.materialUiCore.nativeSelectNativeSelectMod.NativeSelectProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NativeSelect {
-  @JSImport("@material-ui/core/NativeSelect", JSImport.Default)
+  @JSImport("@material-ui/core", "NativeSelect")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def IconComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -230,6 +229,8 @@ object NativeSelect {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: (String | Double | Boolean | js.Object)*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -242,7 +243,7 @@ object NativeSelect {
     @scala.inline
     def endAdornmentReactElement(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def endAdornment(value: TagMod[Any]): this.type = set("endAdornment", value.asInstanceOf[js.Any])
+    def endAdornment(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
@@ -264,13 +265,13 @@ object NativeSelect {
     @scala.inline
     def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
     @scala.inline
-    def input(value: TagMod[Any]): this.type = set("input", value.asInstanceOf[js.Any])
+    def input(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def inputComponentFunctionComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def inputComponentComponentClass(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
+    def inputComponent(value: ReactType[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -322,7 +323,7 @@ object NativeSelect {
     @scala.inline
     def onCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -474,7 +475,7 @@ object NativeSelect {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderPrefix(value: /* state */ Disabled => TagMod[Any]): this.type = set("renderPrefix", js.Any.fromFunction1(value))
+    def renderPrefix(value: /* state */ Disabled => ReactElement): this.type = set("renderPrefix", js.Any.fromFunction1(value))
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline
@@ -496,7 +497,7 @@ object NativeSelect {
     @scala.inline
     def startAdornmentReactElement(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def startAdornment(value: TagMod[Any]): this.type = set("startAdornment", value.asInstanceOf[js.Any])
+    def startAdornment(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
@@ -515,6 +516,8 @@ object NativeSelect {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

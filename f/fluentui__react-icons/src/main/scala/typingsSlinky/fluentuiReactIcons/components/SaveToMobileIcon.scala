@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SaveToMobileIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SaveToMobileIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SaveToMobileIcon")
   @js.native
   object component extends js.Object
   

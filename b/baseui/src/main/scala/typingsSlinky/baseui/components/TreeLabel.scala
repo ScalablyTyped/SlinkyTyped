@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.treeViewMod.TreeLabelOverrides
@@ -29,7 +29,7 @@ object TreeLabel {
   @scala.inline
   def apply(
     hasChildren: Boolean,
-    label: (js.Function1[/* node */ TreeNode[_], TagMod[Any]]) | String,
+    label: (js.Function1[/* node */ TreeNode[_], ReactElement]) | String,
     node: TreeNode[_]
   ): Builder = {
     val __props = js.Dynamic.literal(hasChildren = hasChildren.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])

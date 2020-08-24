@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonTabs")
 @js.native
 class IonTabs protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonTabs {
+  extends typingsSlinky.ionicAngular.ionTabsMod.IonTabs {
   def this(navCtrl: typingsSlinky.ionicAngular.navControllerMod.NavController) = this()
 }
 

@@ -12,13 +12,13 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/execution/execute", "resolveFieldValueOrError")
 @js.native
 object resolveFieldValueOrError extends js.Object {
-  def apply[TSource](
+  def apply(
     exeContext: ExecutionContext,
-    fieldDef: GraphQLField[TSource, _, StringDictionary[_]],
+    fieldDef: GraphQLField[_, _, StringDictionary[_]],
     fieldNodes: js.Array[FieldNode],
-    resolveFn: GraphQLFieldResolver[TSource, _, StringDictionary[_]],
-    source: TSource,
+    resolveFn: GraphQLFieldResolver[_, _, StringDictionary[_]],
+    source: js.Any,
     info: GraphQLResolveInfo
-  ): js.Error | js.Any = js.native
+  ): js.Any = js.native
 }
 

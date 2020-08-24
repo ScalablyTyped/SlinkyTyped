@@ -23,11 +23,12 @@ object OnEditorActionListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnEditorAction(value: (typingsSlinky.androiduix.android.widget.TextView, Double, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorAction")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnEditorAction(value: (typingsSlinky.androiduix.android.widget.TextView, Double, KeyEvent) => Boolean): Self = this.set("onEditorAction", js.Any.fromFunction3(value))
   }
   
 }

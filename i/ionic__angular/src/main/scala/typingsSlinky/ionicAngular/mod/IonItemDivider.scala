@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonItemDivider")
 @js.native
 class IonItemDivider protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonItemDivider {
+  extends typingsSlinky.ionicAngular.proxiesMod.IonItemDivider {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
 }
 

@@ -3,21 +3,21 @@ package typingsSlinky.reactAce.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAce.diffMod.IDiffEditorProps
-import typingsSlinky.reactAce.diffMod.default
+import typingsSlinky.reactAce.mod.diff
 import typingsSlinky.reactAce.typesMod.IEditorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Diff {
-  @JSImport("react-ace/lib/diff", JSImport.Default)
+  @JSImport("react-ace", "diff")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, diff] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -25,7 +25,11 @@ object Diff {
     @scala.inline
     def editorProps(value: js.Object): this.type = set("editorProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
+    @scala.inline
     def enableBasicAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableBasicAutocompletion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
     @scala.inline
     def enableLiveAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableLiveAutocompletion", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,6 +61,8 @@ object Diff {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
+    def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
+    @scala.inline
     def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
     @scala.inline
     def setOptions(value: js.Object): this.type = set("setOptions", value.asInstanceOf[js.Any])
@@ -72,6 +78,8 @@ object Diff {
     def tabSize(value: Double): this.type = set("tabSize", value.asInstanceOf[js.Any])
     @scala.inline
     def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StepInput {
-  @JSImport("fundamental-react/lib/StepInput/StepInput", JSImport.Default)
+  @JSImport("fundamental-react", "StepInput")
   @js.native
   object component extends js.Object
   

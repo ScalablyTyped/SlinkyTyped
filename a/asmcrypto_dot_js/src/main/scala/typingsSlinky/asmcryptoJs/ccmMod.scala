@@ -13,8 +13,29 @@ object ccmMod extends js.Object {
     def this(
       key: js.typedarray.Uint8Array,
       nonce: js.typedarray.Uint8Array,
-      adata: js.UndefOr[js.typedarray.Uint8Array],
-      tagSize: js.UndefOr[Double],
+      adata: js.UndefOr[scala.Nothing],
+      tagSize: js.UndefOr[scala.Nothing],
+      dataLength: Double
+    ) = this()
+    def this(
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
+      adata: js.UndefOr[scala.Nothing],
+      tagSize: Double,
+      dataLength: Double
+    ) = this()
+    def this(
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
+      adata: js.typedarray.Uint8Array,
+      tagSize: js.UndefOr[scala.Nothing],
+      dataLength: Double
+    ) = this()
+    def this(
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
+      adata: js.typedarray.Uint8Array,
+      tagSize: Double,
       dataLength: Double
     ) = this()
     var AES_CTR_set_options: js.Any = js.native
@@ -42,6 +63,13 @@ object ccmMod extends js.Object {
       cipher: js.typedarray.Uint8Array,
       key: js.typedarray.Uint8Array,
       nonce: js.typedarray.Uint8Array,
+      adata: js.UndefOr[scala.Nothing],
+      tagsize: Double
+    ): js.typedarray.Uint8Array = js.native
+    def decrypt(
+      cipher: js.typedarray.Uint8Array,
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
       adata: js.typedarray.Uint8Array
     ): js.typedarray.Uint8Array = js.native
     def decrypt(
@@ -52,6 +80,13 @@ object ccmMod extends js.Object {
       tagsize: Double
     ): js.typedarray.Uint8Array = js.native
     def encrypt(clear: js.typedarray.Uint8Array, key: js.typedarray.Uint8Array, nonce: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+    def encrypt(
+      clear: js.typedarray.Uint8Array,
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
+      adata: js.UndefOr[scala.Nothing],
+      tagsize: Double
+    ): js.typedarray.Uint8Array = js.native
     def encrypt(
       clear: js.typedarray.Uint8Array,
       key: js.typedarray.Uint8Array,

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TmplAstVariable")
 @js.native
 class TmplAstVariable protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TmplAstVariable {
+  extends typingsSlinky.angularCompiler.compilerMod.TmplAstVariable {
   def this(
     name: String,
     value: String,

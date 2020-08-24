@@ -19,6 +19,8 @@ object List {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.solidReact.mod.List] {
     @scala.inline
+    def children(value: (/* listItem */ LDflexValue, /* index */ Double) => ReactElement): this.type = set("children", js.Any.fromFunction2(value))
+    @scala.inline
     def container(value: ReactElement => ReactElement): this.type = set("container", js.Any.fromFunction1(value))
     @scala.inline
     def filter(

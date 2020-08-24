@@ -1,8 +1,10 @@
 package typingsSlinky.reactVirtualized.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualized.esColumnSizerMod.ColumnSizerProps
+import typingsSlinky.reactVirtualized.esColumnSizerMod.SizedColumnProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,8 +28,8 @@ object ColumnSizer {
   
   def withProps(p: ColumnSizerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(width: Double): Builder = {
-    val __props = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
+  def apply(children: SizedColumnProps => ReactElement, width: Double): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ColumnSizerProps]))
   }
 }

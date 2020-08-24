@@ -1,7 +1,7 @@
 package typingsSlinky.uifabricFoundation
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Attributes
 import typingsSlinky.std.Required
 import typingsSlinky.std.ReturnType
@@ -23,14 +23,14 @@ object slotsMod extends js.Object {
   def createFactory[TProps /* <: ValidProps */, TShorthandProp /* <: ValidShorthand */](DefaultComponent: ReactComponentClass[TProps]): ISlotFactory[TProps, TShorthandProp] = js.native
   def createFactory[TProps /* <: ValidProps */, TShorthandProp /* <: ValidShorthand */](DefaultComponent: ReactComponentClass[TProps], options: IFactoryOptions[TProps]): ISlotFactory[TProps, TShorthandProp] = js.native
   def getSlots[TComponentProps /* <: ISlottableProps[TComponentSlots] */, TComponentSlots](userProps: TComponentProps, slots: ISlotDefinition[Required[TComponentSlots]]): ISlots[Required[TComponentSlots]] = js.native
-  def withSlots[P](`type`: String): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: String, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: String, props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ReactComponentClass[P]): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ReactComponentClass[P], children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ReactComponentClass[P], props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ISlot[P]): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ISlot[P], children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ISlot[P], props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: String, props: Attributes with P, children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: String, props: js.UndefOr[scala.Nothing], children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: String, props: Null, children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ReactComponentClass[P], props: Attributes with P, children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ReactComponentClass[P], props: js.UndefOr[scala.Nothing], children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ReactComponentClass[P], props: Null, children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ISlot[P], props: Attributes with P, children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ISlot[P], props: js.UndefOr[scala.Nothing], children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ISlot[P], props: Null, children: ReactElement*): ReturnType[ReactComponentClass[P]] = js.native
 }
 

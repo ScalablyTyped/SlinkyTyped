@@ -1,6 +1,5 @@
 package typingsSlinky.vscodeLanguageserverProtocol.mod
 
-import typingsSlinky.vscodeJsonrpc.Thenable
 import typingsSlinky.vscodeJsonrpc.messagesMod.Message
 import typingsSlinky.vscodeJsonrpc.messagesMod.NotificationMessage
 import typingsSlinky.vscodeJsonrpc.mod.GenericNotificationHandler
@@ -50,6 +49,11 @@ trait ProtocolConnection extends js.Object {
     * An event emitter firing when the connection got closed.
     */
   def onClose(listener: js.Function1[/* e */ Unit, _]): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onClose(
+    listener: js.Function1[/* e */ Unit, _],
+    thisArgs: js.UndefOr[scala.Nothing],
+    disposables: js.Array[typingsSlinky.vscodeJsonrpc.eventsMod.Disposable]
+  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onClose(
     listener: js.Function1[/* e */ Unit, _],
@@ -60,6 +64,11 @@ trait ProtocolConnection extends js.Object {
     * An event emitter firing when the connection got disposed.
     */
   def onDispose(listener: js.Function1[/* e */ Unit, _]): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onDispose(
+    listener: js.Function1[/* e */ Unit, _],
+    thisArgs: js.UndefOr[scala.Nothing],
+    disposables: js.Array[typingsSlinky.vscodeJsonrpc.eventsMod.Disposable]
+  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onDispose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onDispose(
     listener: js.Function1[/* e */ Unit, _],
@@ -70,6 +79,11 @@ trait ProtocolConnection extends js.Object {
     * An event emitter firing when an error occurs on the connection.
     */
   def onError(listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _]): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onError(
+    listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
+    thisArgs: js.UndefOr[scala.Nothing],
+    disposables: js.Array[typingsSlinky.vscodeJsonrpc.eventsMod.Disposable]
+  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onError(
     listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
     thisArgs: js.Any
@@ -101,6 +115,22 @@ trait ProtocolConnection extends js.Object {
     */
   def onNotification[P, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.NotificationType[P, RO], handler: NotificationHandler[P]): Unit = js.native
   /**
+    * Installs a progress handler for a given token.
+    * @param type the progress type
+    * @param token the token
+    * @param handler the handler
+    */
+  def onProgress[P](
+    `type`: typingsSlinky.vscodeJsonrpc.mod.ProgressType[P],
+    token: String,
+    handler: NotificationHandler[P]
+  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onProgress[P](
+    `type`: typingsSlinky.vscodeJsonrpc.mod.ProgressType[P],
+    token: Double,
+    handler: NotificationHandler[P]
+  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  /**
     * Installs a request handler.
     *
     * @param methods The method name to install the handler for.
@@ -126,6 +156,11 @@ trait ProtocolConnection extends js.Object {
     * handled.
     */
   def onUnhandledNotification(listener: js.Function1[/* e */ NotificationMessage, _]): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onUnhandledNotification(
+    listener: js.Function1[/* e */ NotificationMessage, _],
+    thisArgs: js.UndefOr[scala.Nothing],
+    disposables: js.Array[typingsSlinky.vscodeJsonrpc.eventsMod.Disposable]
+  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onUnhandledNotification(listener: js.Function1[/* e */ NotificationMessage, _], thisArgs: js.Any): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
   def onUnhandledNotification(
     listener: js.Function1[/* e */ NotificationMessage, _],
@@ -160,13 +195,21 @@ trait ProtocolConnection extends js.Object {
   def sendNotification[P, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.NotificationType[P, RO]): Unit = js.native
   def sendNotification[P, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.NotificationType[P, RO], params: P): Unit = js.native
   /**
+    * Sends progress.
+    * @param type the progress type
+    * @param token the token to use
+    * @param value the progress value
+    */
+  def sendProgress[P](`type`: typingsSlinky.vscodeJsonrpc.mod.ProgressType[P], token: String, value: P): Unit = js.native
+  def sendProgress[P](`type`: typingsSlinky.vscodeJsonrpc.mod.ProgressType[P], token: Double, value: P): Unit = js.native
+  /**
     * Sends a request and returns a promise resolving to the result of the request.
     *
     * @param method the request's method name.
     * @param token An optional cancellation token.
     * @returns A promise resolving to the request's result.
     */
-  def sendRequest[R](method: String): Thenable[R] = js.native
+  def sendRequest[R](method: String): js.Promise[R] = js.native
   /**
     * Sends a request and returns a promise resolving to the result of the request.
     *
@@ -175,13 +218,13 @@ trait ProtocolConnection extends js.Object {
     * @param token An optional cancellation token.
     * @returns A promise resolving to the request's result.
     */
-  def sendRequest[R](method: String, param: js.Any): Thenable[R] = js.native
+  def sendRequest[R](method: String, param: js.Any): js.Promise[R] = js.native
   def sendRequest[R](
     method: String,
     param: js.Any,
     token: typingsSlinky.vscodeJsonrpc.cancellationMod.CancellationToken
-  ): Thenable[R] = js.native
-  def sendRequest[R](method: String, token: typingsSlinky.vscodeJsonrpc.cancellationMod.CancellationToken): Thenable[R] = js.native
+  ): js.Promise[R] = js.native
+  def sendRequest[R](method: String, token: typingsSlinky.vscodeJsonrpc.cancellationMod.CancellationToken): js.Promise[R] = js.native
   /**
     * Sends a request and returns a promise resolving to the result of the request.
     *
@@ -189,11 +232,11 @@ trait ProtocolConnection extends js.Object {
     * @param token An optional cancellation token.
     * @returns A promise resolving to the request's result.
     */
-  def sendRequest[R, E, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.RequestType0[R, E, RO]): Thenable[R] = js.native
+  def sendRequest[R, E, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.RequestType0[R, E, RO]): js.Promise[R] = js.native
   def sendRequest[R, E, RO](
     `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType0[R, E, RO],
     token: typingsSlinky.vscodeJsonrpc.cancellationMod.CancellationToken
-  ): Thenable[R] = js.native
+  ): js.Promise[R] = js.native
   /**
     * Sends a request and returns a promise resolving to the result of the request.
     *
@@ -202,12 +245,12 @@ trait ProtocolConnection extends js.Object {
     * @param token An optional cancellation token.
     * @returns A promise resolving to the request's result.
     */
-  def sendRequest[P, R, E, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[P, R, E, RO], params: P): Thenable[R] = js.native
+  def sendRequest[P, R, E, RO](`type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[P, R, E, RO], params: P): js.Promise[R] = js.native
   def sendRequest[P, R, E, RO](
     `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[P, R, E, RO],
     params: P,
     token: typingsSlinky.vscodeJsonrpc.cancellationMod.CancellationToken
-  ): Thenable[R] = js.native
+  ): js.Promise[R] = js.native
   /**
     * Enables tracing mode for the connection.
     */

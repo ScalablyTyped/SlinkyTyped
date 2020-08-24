@@ -116,10 +116,11 @@ package object Tabulator {
   */
   type EditorParams = typingsSlinky.tabulatorTables.Tabulator._EditorParams | (js.Function1[/* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, js.Object])
   type EmptyCallback = js.Function1[/* callback */ js.Function0[scala.Unit], scala.Unit]
-  type FilterFunction = js.Function3[
+  type FilterFunction = js.Function4[
     /* field */ java.lang.String, 
     /* type */ typingsSlinky.tabulatorTables.Tabulator.FilterType, 
     /* value */ js.Any, 
+    /* filterParams */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.FilterParams], 
     scala.Unit
   ]
   /* Rewritten from type alias, can be one of: 

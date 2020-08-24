@@ -38,29 +38,22 @@ object Accepttlschannelid {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withId(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMatches(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIdVarargs(value: String*): Self = this.set("id", js.Array(value :_*))
     @scala.inline
-    def withAccept_tls_channel_id(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept_tls_channel_id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setId(value: js.Array[String]): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAccept_tls_channel_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept_tls_channel_id")(js.undefined)
-        ret
-    }
+    def setMatchesVarargs(value: String*): Self = this.set("matches", js.Array(value :_*))
+    @scala.inline
+    def setMatches(value: js.Array[String]): Self = this.set("matches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAccept_tls_channel_id(value: Boolean): Self = this.set("accept_tls_channel_id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccept_tls_channel_id: Self = this.set("accept_tls_channel_id", js.undefined)
   }
   
 }

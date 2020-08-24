@@ -19,15 +19,5 @@ class ECPointFp protected ()
     y: typingsSlinky.jsrsasign.jsrsasign.ECFieldElementFp,
     z: typingsSlinky.jsrsasign.jsrsasign.BigInteger
   ) = this()
-  /* CompleteClass */
-  override var curve: typingsSlinky.jsrsasign.jsrsasign.ECFieldElementFp = js.native
-  /* CompleteClass */
-  override var x: typingsSlinky.jsrsasign.jsrsasign.ECFieldElementFp = js.native
-  /* CompleteClass */
-  override var y: typingsSlinky.jsrsasign.jsrsasign.ECFieldElementFp = js.native
-  /* CompleteClass */
-  override var z: typingsSlinky.jsrsasign.jsrsasign.BigInteger = js.native
-  /* CompleteClass */
-  override var zinv: typingsSlinky.jsrsasign.jsrsasign.BigInteger | Null = js.native
 }
 

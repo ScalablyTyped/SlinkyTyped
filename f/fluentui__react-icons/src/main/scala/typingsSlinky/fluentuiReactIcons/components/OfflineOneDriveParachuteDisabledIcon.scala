@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OfflineOneDriveParachuteDisabledIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OfflineOneDriveParachuteDisabledIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OfflineOneDriveParachuteDisabledIcon")
   @js.native
   object component extends js.Object
   

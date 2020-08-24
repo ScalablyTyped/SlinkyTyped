@@ -11,16 +11,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MediaUpload {
-  @JSImport("@wordpress/block-editor/components/media-upload", JSImport.Default)
+  @JSImport("@wordpress/block-editor", "MediaUpload")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: Boolean] (val args: js.Array[js.Any])
+  class Builder[/* <: scala.Boolean */ T] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def addToGallery(value: Boolean): this.type = set("addToGallery", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowedTypesVarargs(value: String*): this.type = set("allowedTypes", js.Array(value :_*))
     @scala.inline
     def allowedTypes(value: js.Array[String]): this.type = set("allowedTypes", value.asInstanceOf[js.Any])
     @scala.inline
@@ -32,12 +34,14 @@ object MediaUpload {
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: Double*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: Double | js.Array[Double]): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: Boolean](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: scala.Boolean */ T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: Boolean](onSelect: /* value */ Dictk | js.Array[Dictk] => Unit, render: Open => ReactElement): Builder[T] = {
+  def apply[/* <: scala.Boolean */ T](onSelect: /* value */ Dictk | js.Array[Dictk] => Unit, render: Open => ReactElement): Builder[T] = {
     val __props = js.Dynamic.literal(onSelect = js.Any.fromFunction1(onSelect), render = js.Any.fromFunction1(render))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
   }

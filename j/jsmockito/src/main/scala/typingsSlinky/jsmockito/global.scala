@@ -152,32 +152,7 @@ object global extends js.Object {
   object JsMockito extends js.Object {
     @js.native
     class JsMockitoStubBuilder ()
-      extends typingsSlinky.jsmockito.JsMockito.JsMockitoStubBuilder {
-      /**
-        * Provide functions to be run in place of the mocked method.
-        *
-        * @param func Functions to be run in order of execution.
-        * @return {JsMockitoStubBuilder} Itself for method chaining
-        */
-      /* CompleteClass */
-      override def `then`(func: (js.Function1[/* obj */ js.Any, _])*): typingsSlinky.jsmockito.JsMockito.JsMockitoStubBuilder = js.native
-      /**
-        * Provide values to be returned by the mocked function.
-        *
-        * @param obj Values to be returned in order of execution.
-        * @return {JsMockitoStubBuilder} Itself for method chaining
-        */
-      /* CompleteClass */
-      override def thenReturn(obj: js.Any*): typingsSlinky.jsmockito.JsMockito.JsMockitoStubBuilder = js.native
-      /**
-        * Provide exceptions to be thrown by the mocked function.
-        *
-        * @param obj Exceptions to be thrown in order of execution.
-        * @return {JsMockitoStubBuilder} Itself for method chaining
-        */
-      /* CompleteClass */
-      override def thenThrow(obj: js.Error*): typingsSlinky.jsmockito.JsMockito.JsMockitoStubBuilder = js.native
-    }
+      extends typingsSlinky.jsmockito.JsMockito.JsMockitoStubBuilder
     
     var version: String = js.native
     def isMock(maybeMock: js.Any): Boolean = js.native

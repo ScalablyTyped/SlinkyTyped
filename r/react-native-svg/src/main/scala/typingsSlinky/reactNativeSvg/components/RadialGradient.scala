@@ -18,7 +18,7 @@ object RadialGradient {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.RadialGradient] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def cx(value: NumberProp): this.type = set("cx", value.asInstanceOf[js.Any])
     @scala.inline

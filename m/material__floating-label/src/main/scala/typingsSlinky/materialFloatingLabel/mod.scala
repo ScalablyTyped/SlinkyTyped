@@ -2,7 +2,8 @@ package typingsSlinky.materialFloatingLabel
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialFloatingLabel.adapterMod.MDCFloatingLabelAdapter
-import typingsSlinky.materialFloatingLabel.foundationMod.default
+import typingsSlinky.materialFloatingLabel.anon.LABELFLOATABOVE
+import typingsSlinky.materialFloatingLabel.anon.PartialMDCFloatingLabelAd
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,36 +13,36 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class MDCFloatingLabel ()
-    extends typingsSlinky.materialBase.componentMod.default[MDCFloatingLabelAdapter, default] {
-    /**
-      * Styles label to float/dock.
-      * @param shouldFloat styles the label to float by adding float class
-      * if true, otherwise docks the label by removing the float class.
-      */
-    def float(shouldFloat: Boolean): Unit = js.native
-    def getWidth(): Double = js.native
-    /**
-      * Styles the label to produce the label shake for errors.
-      * @param  shouldShake styles the label to shake by adding shake class
-      * if true, otherwise will stop shaking by removing shake class.
-      */
-    def shake(shouldShake: Boolean): Unit = js.native
-  }
+    extends typingsSlinky.materialFloatingLabel.componentMod.MDCFloatingLabel
   
   @js.native
-  class MDCFloatingLabelFoundation () extends default
+  class MDCFloatingLabelFoundation ()
+    extends typingsSlinky.materialFloatingLabel.foundationMod.MDCFloatingLabelFoundation {
+    def this(adapter: PartialMDCFloatingLabelAd) = this()
+  }
   
   /* static members */
   @js.native
   object MDCFloatingLabel extends js.Object {
-    def attachTo(root: Element): MDCFloatingLabel = js.native
+    def attachTo(root: Element): typingsSlinky.materialFloatingLabel.componentMod.MDCFloatingLabel = js.native
   }
   
   /* static members */
   @js.native
   object MDCFloatingLabelFoundation extends js.Object {
-    val cssClasses: typingsSlinky.materialFloatingLabel.constantsMod.cssClasses = js.native
-    val defaultAdapter: MDCFloatingLabelAdapter = js.native
+    def cssClasses: LABELFLOATABOVE = js.native
+    /**
+      * See {@link MDCFloatingLabelAdapter} for typing information on parameters and return types.
+      */
+    def defaultAdapter: MDCFloatingLabelAdapter = js.native
+  }
+  
+  @js.native
+  object cssClasses extends js.Object {
+    var LABEL_FLOAT_ABOVE: String = js.native
+    var LABEL_REQUIRED: String = js.native
+    var LABEL_SHAKE: String = js.native
+    var ROOT: String = js.native
   }
   
 }

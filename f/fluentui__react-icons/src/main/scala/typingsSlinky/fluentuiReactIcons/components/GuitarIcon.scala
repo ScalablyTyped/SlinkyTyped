@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GuitarIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GuitarIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GuitarIcon")
   @js.native
   object component extends js.Object
   

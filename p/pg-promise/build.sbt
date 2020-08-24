@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "pg-promise"
-version := "9.3.6-25f0d1"
-scalaVersion := "2.13.2"
+version := "10.5.8-0896b7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "pg-minify" % "1.5.1-60b3e3",
-  "org.scalablytyped.slinky" %%% "spex" % "3.0.0-effe64",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
+  "org.scalablytyped.slinky" %%% "pg-minify" % "1.6.1-b77829",
+  "org.scalablytyped.slinky" %%% "spex" % "3.0.2-597148",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

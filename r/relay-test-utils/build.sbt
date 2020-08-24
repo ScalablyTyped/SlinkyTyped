@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "relay-test-utils"
-version := "6.0-dt-20200327Z-307a55"
-scalaVersion := "2.13.2"
+version := "6.0-dt-20200327Z-f1bf8b"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "react-relay" % "7.0-dt-20200520Z-2f52e4",
-  "org.scalablytyped.slinky" %%% "relay-runtime" % "8.0-dt-20200519Z-58a678",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
+  "org.scalablytyped.slinky" %%% "react-relay" % "7.0-dt-20200520Z-dcdb77",
+  "org.scalablytyped.slinky" %%% "relay-runtime" % "10.0-dt-20200715Z-778784",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

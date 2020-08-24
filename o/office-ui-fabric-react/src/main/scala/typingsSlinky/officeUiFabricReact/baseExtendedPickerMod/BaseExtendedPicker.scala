@@ -57,9 +57,6 @@ class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
   def clearInput(): Unit = js.native
   @JSName("componentDidMount")
   def componentDidMount_MBaseExtendedPicker(): Unit = js.native
-  /** Sets focus to the input. */
-  /* CompleteClass */
-  override def focus(): Unit = js.native
   /* protected */ def onBackspace(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   /* protected */ def onCopy(ev: SyntheticClipboardEvent[HTMLElement]): Unit = js.native
   /* protected */ def onInputChange(value: String): Unit = js.native

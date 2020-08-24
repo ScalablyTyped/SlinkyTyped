@@ -27,6 +27,11 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     failure: js.Function0[_]
   ): Unit = js.native
   def disconnect(device_id: String): Unit = js.native
+  def disconnect(
+    device_id: String,
+    success: js.UndefOr[scala.Nothing],
+    failure: js.Function1[/* error */ String | BLEError, _]
+  ): Unit = js.native
   def disconnect(device_id: String, success: js.Function0[_]): Unit = js.native
   def disconnect(
     device_id: String,
@@ -54,6 +59,13 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
+    success: js.UndefOr[scala.Nothing],
+    failure: js.Function1[/* error */ String | BLEError, _]
+  ): Unit = js.native
+  def read(
+    device_id: String,
+    service_uuid: String,
+    characteristic_uuid: String,
     success: js.Function1[/* rawData */ js.typedarray.ArrayBuffer, _]
   ): Unit = js.native
   def read(
@@ -76,6 +88,12 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
   def refreshDeviceCache(
     device_id: String,
     timeout_millis: Double,
+    success: js.UndefOr[scala.Nothing],
+    failure: js.Function1[/* error */ String | BLEError, _]
+  ): Unit = js.native
+  def refreshDeviceCache(
+    device_id: String,
+    timeout_millis: Double,
     success: js.Function1[/* data */ PeripheralDataExtended, _]
   ): Unit = js.native
   def refreshDeviceCache(
@@ -87,12 +105,20 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
   /* May be used to request (on Android) a larger MTU size to be able to send more data at once
     [iOS] requestMtu is not supported on iOS. */
   def requestMtu(device_id: String, mtu: Double): Unit = js.native
+  def requestMtu(device_id: String, mtu: Double, success: js.UndefOr[scala.Nothing], failure: js.Function0[_]): Unit = js.native
   def requestMtu(device_id: String, mtu: Double, success: js.Function0[_]): Unit = js.native
   def requestMtu(device_id: String, mtu: Double, success: js.Function0[_], failure: js.Function0[_]): Unit = js.native
   /* Opens the Bluetooth settings for the operating systems.
     [iOS] showBluetoothSettings is not supported on iOS. */
   def showBluetoothSettings(success: js.Function0[_], failure: js.Function0[_]): Unit = js.native
   def stopNotification(device_id: String, service_uuid: String, characteristic_uuid: String): Unit = js.native
+  def stopNotification(
+    device_id: String,
+    service_uuid: String,
+    characteristic_uuid: String,
+    success: js.UndefOr[scala.Nothing],
+    failure: js.Function1[/* error */ String | BLEError, _]
+  ): Unit = js.native
   def stopNotification(device_id: String, service_uuid: String, characteristic_uuid: String, success: js.Function0[_]): Unit = js.native
   def stopNotification(
     device_id: String,
@@ -105,6 +131,7 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
   def stopScan(success: js.Function0[_]): Unit = js.native
   def stopScan(success: js.Function0[_], failure: js.Function0[_]): Unit = js.native
   def stopStateNotifications(): Unit = js.native
+  def stopStateNotifications(success: js.UndefOr[scala.Nothing], failure: js.Function0[_]): Unit = js.native
   def stopStateNotifications(success: js.Function0[_]): Unit = js.native
   def stopStateNotifications(success: js.Function0[_], failure: js.Function0[_]): Unit = js.native
   def write(
@@ -112,6 +139,14 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     service_uuid: String,
     characteristic_uuid: String,
     data: js.typedarray.ArrayBuffer
+  ): Unit = js.native
+  def write(
+    device_id: String,
+    service_uuid: String,
+    characteristic_uuid: String,
+    data: js.typedarray.ArrayBuffer,
+    success: js.UndefOr[scala.Nothing],
+    failure: js.Function1[/* error */ String | BLEError, _]
   ): Unit = js.native
   def write(
     device_id: String,
@@ -135,6 +170,14 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     service_uuid: String,
     characteristic_uuid: String,
     data: js.typedarray.ArrayBuffer
+  ): Unit = js.native
+  def writeWithoutResponse(
+    device_id: String,
+    service_uuid: String,
+    characteristic_uuid: String,
+    data: js.typedarray.ArrayBuffer,
+    success: js.UndefOr[scala.Nothing],
+    failure: js.Function1[/* error */ String, _]
   ): Unit = js.native
   def writeWithoutResponse(
     device_id: String,

@@ -17,6 +17,6 @@ package object mod {
     /* nodeB */ typingsSlinky.nivoSankey.mod.SankeyDataNode, 
     scala.Double
   ]
-  type TooltipFormat = js.Function1[/* value */ scala.Double, slinky.core.TagMod[scala.Any]]
-  type TooltipRenderer[T] = js.Function1[/* data */ T, slinky.core.TagMod[scala.Any]]
+  type TooltipFormat = js.Function1[/* value */ scala.Double, slinky.core.facade.ReactElement]
+  type TooltipRenderer[T] = js.Function1[/* data */ T, slinky.core.facade.ReactElement]
 }

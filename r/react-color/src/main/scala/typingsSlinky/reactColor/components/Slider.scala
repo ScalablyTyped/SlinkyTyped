@@ -1,6 +1,6 @@
 package typingsSlinky.reactColor.components
 
-import typingsSlinky.reactColor.mod.ColorPickerProps
+import typingsSlinky.reactColor.sliderMod.SliderPickerProps
 import typingsSlinky.reactColor.sliderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ object Slider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ColorPickerProps[typingsSlinky.reactColor.sliderMod.SliderPicker]): SharedBuilder_SliderPickerProps_2143603056[default] = new SharedBuilder_SliderPickerProps_2143603056[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: SliderPickerProps): SharedBuilder_SliderPickerProps_2143603056[default] = new SharedBuilder_SliderPickerProps_2143603056[default](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Slider.type): SharedBuilder_SliderPickerProps_2143603056[default] = new SharedBuilder_SliderPickerProps_2143603056[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UnsyncOccurenceIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UnsyncOccurenceIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UnsyncOccurenceIcon")
   @js.native
   object component extends js.Object
   

@@ -73,137 +73,70 @@ object RequestMatcherFields {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentType(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
+    def setContentTypeVarargs(value: String*): Self = this.set("contentType", js.Array(value :_*))
     @scala.inline
-    def withExcludeContentType(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setContentType(value: js.Array[String]): Self = this.set("contentType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutExcludeContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeContentType")(js.undefined)
-        ret
-    }
+    def deleteContentType: Self = this.set("contentType", js.undefined)
     @scala.inline
-    def withExcludeRequestHeaders(value: js.Array[HeaderFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeRequestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExcludeContentTypeVarargs(value: String*): Self = this.set("excludeContentType", js.Array(value :_*))
     @scala.inline
-    def withoutExcludeRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeRequestHeaders")(js.undefined)
-        ret
-    }
+    def setExcludeContentType(value: js.Array[String]): Self = this.set("excludeContentType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExcludeResponseHeaders(value: js.Array[HeaderFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeResponseHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExcludeContentType: Self = this.set("excludeContentType", js.undefined)
     @scala.inline
-    def withoutExcludeResponseHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeResponseHeaders")(js.undefined)
-        ret
-    }
+    def setExcludeRequestHeadersVarargs(value: HeaderFilter*): Self = this.set("excludeRequestHeaders", js.Array(value :_*))
     @scala.inline
-    def withFirstPartyForCookiesUrl(value: UrlFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPartyForCookiesUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExcludeRequestHeaders(value: js.Array[HeaderFilter]): Self = this.set("excludeRequestHeaders", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFirstPartyForCookiesUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPartyForCookiesUrl")(js.undefined)
-        ret
-    }
+    def deleteExcludeRequestHeaders: Self = this.set("excludeRequestHeaders", js.undefined)
     @scala.inline
-    def withRequestHeaders(value: js.Array[HeaderFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExcludeResponseHeadersVarargs(value: HeaderFilter*): Self = this.set("excludeResponseHeaders", js.Array(value :_*))
     @scala.inline
-    def withoutRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(js.undefined)
-        ret
-    }
+    def setExcludeResponseHeaders(value: js.Array[HeaderFilter]): Self = this.set("excludeResponseHeaders", value.asInstanceOf[js.Any])
     @scala.inline
-    def withResourceType(value: js.Array[ResourceType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExcludeResponseHeaders: Self = this.set("excludeResponseHeaders", js.undefined)
     @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
-        ret
-    }
+    def setFirstPartyForCookiesUrl(value: UrlFilter): Self = this.set("firstPartyForCookiesUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withResponseHeaders(value: js.Array[HeaderFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFirstPartyForCookiesUrl: Self = this.set("firstPartyForCookiesUrl", js.undefined)
     @scala.inline
-    def withoutResponseHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(js.undefined)
-        ret
-    }
+    def setRequestHeadersVarargs(value: HeaderFilter*): Self = this.set("requestHeaders", js.Array(value :_*))
     @scala.inline
-    def withStages(value: js.Array[Stage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stages")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRequestHeaders(value: js.Array[HeaderFilter]): Self = this.set("requestHeaders", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutStages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stages")(js.undefined)
-        ret
-    }
+    def deleteRequestHeaders: Self = this.set("requestHeaders", js.undefined)
     @scala.inline
-    def withThirdPartyForCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyForCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setResourceTypeVarargs(value: ResourceType*): Self = this.set("resourceType", js.Array(value :_*))
     @scala.inline
-    def withoutThirdPartyForCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyForCookies")(js.undefined)
-        ret
-    }
+    def setResourceType(value: js.Array[ResourceType]): Self = this.set("resourceType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrl(value: UrlFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteResourceType: Self = this.set("resourceType", js.undefined)
     @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
+    def setResponseHeadersVarargs(value: HeaderFilter*): Self = this.set("responseHeaders", js.Array(value :_*))
+    @scala.inline
+    def setResponseHeaders(value: js.Array[HeaderFilter]): Self = this.set("responseHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResponseHeaders: Self = this.set("responseHeaders", js.undefined)
+    @scala.inline
+    def setStagesVarargs(value: Stage*): Self = this.set("stages", js.Array(value :_*))
+    @scala.inline
+    def setStages(value: js.Array[Stage]): Self = this.set("stages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStages: Self = this.set("stages", js.undefined)
+    @scala.inline
+    def setThirdPartyForCookies(value: Boolean): Self = this.set("thirdPartyForCookies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThirdPartyForCookies: Self = this.set("thirdPartyForCookies", js.undefined)
+    @scala.inline
+    def setUrl(value: UrlFilter): Self = this.set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUrl: Self = this.set("url", js.undefined)
   }
   
 }

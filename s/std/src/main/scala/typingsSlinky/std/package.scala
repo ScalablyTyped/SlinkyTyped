@@ -7,32 +7,29 @@ import scala.scalajs.js.annotation._
 package object std {
   type AAGUID = typingsSlinky.std.BufferSource
   type AlgorithmIdentifier = java.lang.String | org.scalajs.dom.crypto.Algorithm
+  type ArrayBufferLike = typingsSlinky.std.SharedArrayBuffer | js.typedarray.ArrayBuffer
   type AudioWorklet = typingsSlinky.std.Worklet
   type AuthenticationExtensionsSupported = js.Array[java.lang.String]
   type AuthenticatorSelectionList = js.Array[typingsSlinky.std.AAGUID]
   type AutoKeyword = typingsSlinky.std.stdStrings.auto
   type BigInteger = js.typedarray.Uint8Array
   type BlobCallback = js.Function1[/* blob */ org.scalajs.dom.raw.Blob | scala.Null, scala.Unit]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.std.BufferSource
-    - typingsSlinky.std.Blob
-    - java.lang.String
-  */
-  type BlobPart = typingsSlinky.std._BlobPart | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.std.Blob
-    - typingsSlinky.std.BufferSource
-    - typingsSlinky.std.FormData
-    - typingsSlinky.std.URLSearchParams
-    - typingsSlinky.std.ReadableStream[typingsSlinky.std.Uint8Array]
-    - java.lang.String
-  */
-  type BodyInit = typingsSlinky.std._BodyInit | org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | java.lang.String
+  type BlobPart = typingsSlinky.std.BufferSource | org.scalajs.dom.raw.Blob | java.lang.String
+  type BodyInit = org.scalajs.dom.raw.Blob | typingsSlinky.std.BufferSource | org.scalajs.dom.raw.FormData | typingsSlinky.std.URLSearchParams | org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | java.lang.String
+  type BufferSource = js.typedarray.ArrayBufferView | js.typedarray.ArrayBuffer
   /** A CDATA section that can be used within XML to include extended portions of unescaped text. The symbols < and & don’t need escaping as they normally do when inside a CDATA section. */
   type CDATASection = org.scalajs.dom.raw.Text
   type COSEAlgorithmIdentifier = scala.Double
   /** An object representing a single CSS @supports at-rule. It implements the CSSConditionRule interface, and therefore the CSSRule and CSSGroupingRule interfaces with a type value of 12 (CSSRule.SUPPORTS_RULE). */
   type CSSSupportsRule = typingsSlinky.std.CSSConditionRule
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.HTMLOrSVGImageElement
+    - typingsSlinky.std.HTMLVideoElement
+    - typingsSlinky.std.HTMLCanvasElement
+    - typingsSlinky.std.ImageBitmap
+    - typingsSlinky.std.OffscreenCanvas
+  */
+  type CanvasImageSource = typingsSlinky.std._CanvasImageSource | typingsSlinky.std.HTMLOrSVGImageElement | org.scalajs.dom.raw.HTMLVideoElement | org.scalajs.dom.raw.HTMLCanvasElement
   /** The ChannelMergerNode interface, often used in conjunction with its opposite, ChannelSplitterNode, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
   type ChannelMergerNode = org.scalajs.dom.raw.AudioNode
   /** The ChannelSplitterNode interface, often used in conjunction with its opposite, ChannelMergerNode, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
@@ -98,17 +95,13 @@ package object std {
   type GLuint = scala.Double
   type GLuint64 = scala.Double
   type GamepadHapticActuatorType = typingsSlinky.std.stdStrings.vibration
+  type HTMLOrSVGImageElement = org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.SVGImageElement
+  type HTMLOrSVGScriptElement = org.scalajs.dom.raw.HTMLScriptElement | org.scalajs.dom.raw.SVGScriptElement
   type HashAlgorithmIdentifier = typingsSlinky.std.AlgorithmIdentifier
   type HeadersInit = org.scalajs.dom.experimental.Headers | js.Array[js.Array[java.lang.String]] | (typingsSlinky.std.Record[java.lang.String, java.lang.String])
   type IDBKeyPath = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - scala.Double
-    - java.lang.String
-    - typingsSlinky.std.Date
-    - typingsSlinky.std.BufferSource
-    - typingsSlinky.std.IDBArrayKey
-  */
-  type IDBValidKey = typingsSlinky.std._IDBValidKey | scala.Double | java.lang.String
+  type IDBValidKey = scala.Double | java.lang.String | js.Date | typingsSlinky.std.BufferSource | typingsSlinky.std.IDBArrayKey
+  type ImageBitmapSource = typingsSlinky.std.CanvasImageSource | org.scalajs.dom.raw.Blob | org.scalajs.dom.raw.ImageData
   /**
     * Obtain the return type of a constructor function type
     */
@@ -122,13 +115,9 @@ package object std {
   type LineAndPositionSetting = scala.Double | typingsSlinky.std.AutoKeyword
   type MSCredentialType = typingsSlinky.std.stdStrings.FIDO_2_0
   type MSLaunchUriCallback = js.Function0[scala.Unit]
+  type MediaProvider = org.scalajs.dom.experimental.mediastream.MediaStream | typingsSlinky.std.MediaSource | org.scalajs.dom.raw.Blob
   type MediaStreamTrackAudioSourceNode = org.scalajs.dom.raw.AudioNode
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.std.WindowProxy
-    - typingsSlinky.std.MessagePort
-    - typingsSlinky.std.ServiceWorker
-  */
-  type MessageEventSource = typingsSlinky.std._MessageEventSource | org.scalajs.dom.raw.Window
+  type MessageEventSource = org.scalajs.dom.raw.Window | org.scalajs.dom.raw.MessagePort | org.scalajs.dom.experimental.serviceworkers.ServiceWorker
   type MethodDecorator = js.Function3[
     /* target */ js.Object, 
     /* propertyKey */ java.lang.String | js.Symbol, 
@@ -150,6 +139,13 @@ package object std {
     */
   type NonNullable[T] = T
   type NotificationPermissionCallback = js.Function1[/* permission */ typingsSlinky.std.NotificationPermission, scala.Unit]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.OffscreenCanvasRenderingContext2D
+    - typingsSlinky.std.ImageBitmapRenderingContext
+    - typingsSlinky.std.WebGLRenderingContext
+    - typingsSlinky.std.WebGL2RenderingContext
+  */
+  type OffscreenRenderingContext = typingsSlinky.std._OffscreenRenderingContext | org.scalajs.dom.raw.WebGLRenderingContext
   /**
     * Construct a type with the properties of T except for those in type K.
     */
@@ -246,6 +242,13 @@ package object std {
     */
   type Record[K /* <: /* keyof any */ java.lang.String */, T] = org.scalablytyped.runtime.StringDictionary[T]
   type ReferenceError = js.Error
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.CanvasRenderingContext2D
+    - typingsSlinky.std.ImageBitmapRenderingContext
+    - typingsSlinky.std.WebGLRenderingContext
+    - typingsSlinky.std.WebGL2RenderingContext
+  */
+  type RenderingContext = typingsSlinky.std._RenderingContext | org.scalajs.dom.raw.CanvasRenderingContext2D | org.scalajs.dom.raw.WebGLRenderingContext
   type RequestInfo = org.scalajs.dom.experimental.Request | java.lang.String
   /**
     * Make all properties in T required
@@ -264,11 +267,27 @@ package object std {
   type ScopedCredentialType = typingsSlinky.std.stdStrings.ScopedCred
   type StaticRange = typingsSlinky.std.AbstractRange
   type SyntaxError = js.Error
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.ImageBitmap
+    - typingsSlinky.std.ImageData
+    - typingsSlinky.std.HTMLImageElement
+    - typingsSlinky.std.HTMLCanvasElement
+    - typingsSlinky.std.HTMLVideoElement
+    - typingsSlinky.std.OffscreenCanvas
+  */
+  type TexImageSource = typingsSlinky.std._TexImageSource | org.scalajs.dom.raw.ImageData | org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.HTMLCanvasElement | org.scalajs.dom.raw.HTMLVideoElement
   /**
     * Extracts the type of the 'this' parameter of a function type, or 'unknown' if the function type has no 'this' parameter.
     */
   type ThisParameterType[T] = js.Any
   type TimerHandler = java.lang.String | js.Function
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.ArrayBuffer
+    - typingsSlinky.std.MessagePort
+    - typingsSlinky.std.ImageBitmap
+    - typingsSlinky.std.OffscreenCanvas
+  */
+  type Transferable = typingsSlinky.std._Transferable | js.typedarray.ArrayBuffer | org.scalajs.dom.raw.MessagePort
   type TransformStreamDefaultControllerCallback[O] = js.Function1[
     /* controller */ typingsSlinky.std.TransformStreamDefaultController[O], 
     scala.Unit | js.Thenable[scala.Unit]

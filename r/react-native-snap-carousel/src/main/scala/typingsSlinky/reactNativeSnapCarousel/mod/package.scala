@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Carousel[T] = slinky.core.ReactComponentClass[typingsSlinky.reactNativeSnapCarousel.mod.CarouselProperties[T]]
-  type CarouselProperties[T] = typingsSlinky.reactNative.mod.ScrollViewProps with typingsSlinky.reactNativeSnapCarousel.mod.CarouselProps[T] with typingsSlinky.react.mod.Props[typingsSlinky.reactNativeSnapCarousel.mod.CarouselStatic[T]]
+  type CarouselProperties[T] = typingsSlinky.reactNative.mod.ScrollViewProps with typingsSlinky.reactNative.mod.FlatListProps[T] with typingsSlinky.reactNativeSnapCarousel.mod.CarouselProps[T]
   type PaginationProperties = typingsSlinky.reactNativeSnapCarousel.mod.PaginationProps with (typingsSlinky.react.mod.Props[
     slinky.core.ReactComponentClass[typingsSlinky.reactNativeSnapCarousel.mod.PaginationProps]
   ])

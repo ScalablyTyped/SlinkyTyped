@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RustLanguageLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RustLanguageLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RustLanguageLogoIcon")
   @js.native
   object component extends js.Object
   

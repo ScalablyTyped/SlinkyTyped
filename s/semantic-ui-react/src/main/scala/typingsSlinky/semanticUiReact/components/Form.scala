@@ -66,15 +66,25 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
+import typingsSlinky.semanticUiReact.formButtonMod.FormButtonProps
+import typingsSlinky.semanticUiReact.formCheckboxMod.FormCheckboxProps
+import typingsSlinky.semanticUiReact.formDropdownMod.FormDropdownProps
+import typingsSlinky.semanticUiReact.formFieldMod.FormFieldProps
 import typingsSlinky.semanticUiReact.formFormMod.FormProps
 import typingsSlinky.semanticUiReact.formFormMod.StrictFormProps
+import typingsSlinky.semanticUiReact.formGroupMod.FormGroupProps
+import typingsSlinky.semanticUiReact.formInputMod.FormInputProps
+import typingsSlinky.semanticUiReact.formRadioMod.FormRadioProps
+import typingsSlinky.semanticUiReact.formSelectMod.FormSelectProps
+import typingsSlinky.semanticUiReact.formTextAreaMod.FormTextAreaProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.equal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Form {
-  @JSImport("semantic-ui-react/dist/commonjs/collections/Form", JSImport.Default)
+  @JSImport("semantic-ui-react", "Form")
   @js.native
   object component extends js.Object
   
@@ -210,6 +220,8 @@ object Form {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -466,5 +478,90 @@ object Form {
   
   def withProps(p: StrictFormProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Dropdown {
+    @JSImport("semantic-ui-react", "Form.Dropdown")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormDropdownProps): SharedBuilder_FormDropdownProps_700647571 = new SharedBuilder_FormDropdownProps_700647571(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Dropdown.type): SharedBuilder_FormDropdownProps_700647571 = new SharedBuilder_FormDropdownProps_700647571(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Select {
+    @JSImport("semantic-ui-react", "Form.Select")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormSelectProps): SharedBuilder_FormSelectProps1696265872 = new SharedBuilder_FormSelectProps1696265872(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(options: js.Array[DropdownItemProps]): SharedBuilder_FormSelectProps1696265872 = {
+        val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+        new SharedBuilder_FormSelectProps1696265872(js.Array(this.component, __props.asInstanceOf[FormSelectProps]))
+    }
+  }
+  
+  object Field {
+    @JSImport("semantic-ui-react", "Form.Field")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormFieldProps): SharedBuilder_FormFieldProps19006573 = new SharedBuilder_FormFieldProps19006573(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Field.type): SharedBuilder_FormFieldProps19006573 = new SharedBuilder_FormFieldProps19006573(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Input {
+    @JSImport("semantic-ui-react", "Form.Input")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormInputProps): SharedBuilder_FormInputProps_1386816201 = new SharedBuilder_FormInputProps_1386816201(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Input.type): SharedBuilder_FormInputProps_1386816201 = new SharedBuilder_FormInputProps_1386816201(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Button {
+    @JSImport("semantic-ui-react", "Form.Button")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormButtonProps): SharedBuilder_FormButtonProps766293977 = new SharedBuilder_FormButtonProps766293977(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Button.type): SharedBuilder_FormButtonProps766293977 = new SharedBuilder_FormButtonProps766293977(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Checkbox {
+    @JSImport("semantic-ui-react", "Form.Checkbox")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormCheckboxProps): SharedBuilder_FormCheckboxProps_2041231147 = new SharedBuilder_FormCheckboxProps_2041231147(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Checkbox.type): SharedBuilder_FormCheckboxProps_2041231147 = new SharedBuilder_FormCheckboxProps_2041231147(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react", "Form.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormGroupProps): SharedBuilder_FormGroupProps1620924271 = new SharedBuilder_FormGroupProps1620924271(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_FormGroupProps1620924271 = new SharedBuilder_FormGroupProps1620924271(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Radio {
+    @JSImport("semantic-ui-react", "Form.Radio")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormRadioProps): SharedBuilder_FormRadioProps_70699414 = new SharedBuilder_FormRadioProps_70699414(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Radio.type): SharedBuilder_FormRadioProps_70699414 = new SharedBuilder_FormRadioProps_70699414(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object TextArea {
+    @JSImport("semantic-ui-react", "Form.TextArea")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormTextAreaProps): SharedBuilder_FormTextAreaProps637495390 = new SharedBuilder_FormTextAreaProps637495390(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: TextArea.type): SharedBuilder_FormTextAreaProps637495390 = new SharedBuilder_FormTextAreaProps637495390(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

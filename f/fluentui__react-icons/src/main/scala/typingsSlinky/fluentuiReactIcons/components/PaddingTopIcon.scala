@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PaddingTopIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PaddingTopIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PaddingTopIcon")
   @js.native
   object component extends js.Object
   

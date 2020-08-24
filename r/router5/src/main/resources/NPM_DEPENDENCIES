@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "router5" : "7.0.2"
+      "router5" : "8.0.1"
     }
   ],
   "test-dependencies" : [
     {
-      "router5" : "7.0.2"
+      "router5" : "8.0.1"
     }
   ],
   "compile-devDependencies" : [

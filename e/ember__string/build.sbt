@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "ember__string"
-version := "3.0-dt-20200328Z-bdc03d"
-scalaVersion := "2.13.2"
+version := "3.16-dt-20200610Z-1e75ab"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "ember__template" % "3.0-dt-20200515Z-e75258",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "ember__template" % "3.16-dt-20200610Z-0351e2",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

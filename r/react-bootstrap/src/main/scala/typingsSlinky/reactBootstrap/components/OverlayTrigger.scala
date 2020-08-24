@@ -47,6 +47,8 @@ object OverlayTrigger {
     @scala.inline
     def rootClose(value: Boolean): this.type = set("rootClose", value.asInstanceOf[js.Any])
     @scala.inline
+    def triggerVarargs(value: String*): this.type = set("trigger", js.Array(value :_*))
+    @scala.inline
     def trigger(value: String | js.Array[String]): this.type = set("trigger", value.asInstanceOf[js.Any])
   }
   

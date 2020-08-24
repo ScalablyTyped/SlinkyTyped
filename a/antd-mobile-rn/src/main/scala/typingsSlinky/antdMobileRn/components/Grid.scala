@@ -28,6 +28,8 @@ object Grid {
     @scala.inline
     def columnNum(value: Double): this.type = set("columnNum", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def hasLine(value: Boolean): this.type = set("hasLine", value.asInstanceOf[js.Any])

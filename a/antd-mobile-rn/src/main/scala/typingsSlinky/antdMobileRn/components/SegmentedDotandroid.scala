@@ -37,6 +37,8 @@ object SegmentedDotandroid {
     @scala.inline
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
+    def valuesVarargs(value: String*): this.type = set("values", js.Array(value :_*))
+    @scala.inline
     def values(value: js.Array[String]): this.type = set("values", value.asInstanceOf[js.Any])
   }
   

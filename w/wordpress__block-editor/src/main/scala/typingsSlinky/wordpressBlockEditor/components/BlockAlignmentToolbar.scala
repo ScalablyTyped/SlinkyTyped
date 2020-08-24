@@ -4,7 +4,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressBlockEditor.blockAlignmentToolbarMod.BlockAlignmentToolbar.Control
 import typingsSlinky.wordpressBlockEditor.blockAlignmentToolbarMod.BlockAlignmentToolbar.Props
-import typingsSlinky.wordpressBlockEditor.mod.BlockAlignmentToolbar.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,9 @@ object BlockAlignmentToolbar {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def controlsVarargs(value: Control*): this.type = set("controls", js.Array(value :_*))
     @scala.inline
     def controls(value: js.Array[Control]): this.type = set("controls", value.asInstanceOf[js.Any])
     @scala.inline

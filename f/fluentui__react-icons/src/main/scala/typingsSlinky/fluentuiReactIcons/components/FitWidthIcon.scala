@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FitWidthIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FitWidthIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FitWidthIcon")
   @js.native
   object component extends js.Object
   

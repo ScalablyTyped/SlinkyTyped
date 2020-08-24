@@ -13,11 +13,11 @@ object DefaultToastContainer {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ToastContainerProps): Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer] = new Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ToastContainerProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(hasToasts: Boolean, placement: Placement): Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer] = {
+  def apply(hasToasts: Boolean, placement: Placement): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(hasToasts = hasToasts.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer](js.Array(this.component, __props.asInstanceOf[ToastContainerProps]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ToastContainerProps]))
   }
 }
 

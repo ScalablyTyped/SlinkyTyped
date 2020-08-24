@@ -1,7 +1,7 @@
 
 # Scala.js typings for loadable__component
 
-Typings are for version 5.10
+Typings are for version 5.13
 
 ## Library description:
 React code splitting made easy.

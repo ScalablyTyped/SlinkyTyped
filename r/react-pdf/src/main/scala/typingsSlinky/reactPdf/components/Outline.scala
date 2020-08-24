@@ -5,20 +5,21 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.pdfjsDist.mod.PDFTreeNode
 import typingsSlinky.reactPdf.anon.PageNumber
 import typingsSlinky.reactPdf.outlineMod.Props
-import typingsSlinky.reactPdf.outlineMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Outline {
-  @JSImport("react-pdf/dist/Outline", JSImport.Default)
+  @JSImport("react-pdf", "Outline")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactPdf.mod.Outline] {
+    @scala.inline
+    def classNameVarargs(value: String*): this.type = set("className", js.Array(value :_*))
     @scala.inline
     def className(value: String | js.Array[String]): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

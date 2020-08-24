@@ -1,26 +1,24 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.bottom
 import typingsSlinky.antdMobile.antdMobileStrings.top
 import typingsSlinky.antdMobile.tabBarMod.AntTabbarProps
-import typingsSlinky.antdMobile.tabBarMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabBar {
-  @JSImport("antd-mobile/lib/tab-bar", JSImport.Default)
+  @JSImport("antd-mobile", "TabBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.TabBar] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +32,7 @@ object TabBar {
     @scala.inline
     def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

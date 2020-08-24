@@ -1,18 +1,17 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libFontIconFontIconMod.FontIconProps
-import typingsSlinky.reactToolbox.libFontIconMod.default
+import typingsSlinky.reactToolbox.fontIconFontIconMod.FontIconProps
+import typingsSlinky.reactToolbox.fontIconMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FontIcon {
-  @JSImport("react-toolbox/lib/font_icon", JSImport.Default)
+  @JSImport("react-toolbox/components/font_icon", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -71,7 +70,7 @@ object FontIcon {
     @scala.inline
     def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
-    def value(value: TagMod[Any]): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FontIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

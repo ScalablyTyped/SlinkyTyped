@@ -45,35 +45,20 @@ object LayoutParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withForceAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAdd")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withItemId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setForceAdd(value: Boolean): Self = this.set("forceAdd", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRecycledHeaderFooter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycledHeaderFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setItemId(value: Double): Self = this.set("itemId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScrappedFromPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrappedFromPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRecycledHeaderFooter(value: Boolean): Self = this.set("recycledHeaderFooter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withViewType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScrappedFromPosition(value: Double): Self = this.set("scrappedFromPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewType(value: Double): Self = this.set("viewType", value.asInstanceOf[js.Any])
   }
   
 }

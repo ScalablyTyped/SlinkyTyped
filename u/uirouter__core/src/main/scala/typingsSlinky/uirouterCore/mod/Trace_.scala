@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@uirouter/core", "Trace")
 @js.native
-/** @hidden */
+/** @internal */
 class Trace_ ()
   extends typingsSlinky.uirouterCore.commonMod.Trace_
 

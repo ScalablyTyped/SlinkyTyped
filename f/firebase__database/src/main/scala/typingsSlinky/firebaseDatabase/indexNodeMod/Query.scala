@@ -41,8 +41,8 @@ object Query extends js.Object {
     */
   var validateQueryEndpoints_ : js.Any = js.native
   def __referenceConstructor: Instantiable2[/* repo */ Repo, /* path */ Path, typingsSlinky.firebaseDatabase.queryMod.Query] = js.native
-  def __referenceConstructor(
+  def __referenceConstructor_=(
     `val`: Instantiable2[/* repo */ Repo, /* path */ Path, typingsSlinky.firebaseDatabase.queryMod.Query]
-  ): js.Any = js.native
+  ): Unit = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.shelljs.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.node.NodeJS.ProcessEnv
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

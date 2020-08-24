@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "json-templates"
-version := "3.0-dt-20200515Z-b8a23b"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200515Z-2f2f2c"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

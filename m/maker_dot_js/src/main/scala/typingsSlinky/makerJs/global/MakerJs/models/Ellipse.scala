@@ -1,6 +1,5 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
-import typingsSlinky.makerJs.MakerJs.IModelMap
 import typingsSlinky.makerJs.MakerJs.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,11 +39,5 @@ class Ellipse protected ()
   def this(cx: Double, cy: Double, rx: Double, ry: Double) = this()
   def this(origin: IPoint, radiusX: Double, radiusY: Double, accuracy: Double) = this()
   def this(cx: Double, cy: Double, rx: Double, ry: Double, accuracy: Double) = this()
-  /* CompleteClass */
-  @JSName("models")
-  override var models_Ellipse: IModelMap = js.native
-  /* CompleteClass */
-  @JSName("origin")
-  override var origin_Ellipse: IPoint = js.native
 }
 

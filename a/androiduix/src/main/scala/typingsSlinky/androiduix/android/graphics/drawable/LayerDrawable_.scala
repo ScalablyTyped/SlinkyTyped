@@ -23,10 +23,6 @@ trait LayerDrawable_
   var mPaddingR: js.Any = js.native
   var mPaddingT: js.Any = js.native
   var mTmpRect: js.Any = js.native
-  /* private */ def addLayer(layer: js.Any, id: js.Any): js.Any = js.native
-  /* private */ def addLayer(layer: js.Any, id: js.Any, left: js.Any): js.Any = js.native
-  /* private */ def addLayer(layer: js.Any, id: js.Any, left: js.Any, top: js.Any): js.Any = js.native
-  /* private */ def addLayer(layer: js.Any, id: js.Any, left: js.Any, top: js.Any, right: js.Any): js.Any = js.native
   /* private */ def addLayer(layer: js.Any, id: js.Any, left: js.Any, top: js.Any, right: js.Any, bottom: js.Any): js.Any = js.native
   /* InferMemberOverrides */
   override def copyBounds(): Rect = js.native

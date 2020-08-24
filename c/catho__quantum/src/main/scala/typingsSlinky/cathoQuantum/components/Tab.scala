@@ -1,6 +1,5 @@
 package typingsSlinky.cathoQuantum.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -21,11 +20,17 @@ object Tab {
     @scala.inline
     def badgeReactElement(value: ReactElement): this.type = set("badge", value.asInstanceOf[js.Any])
     @scala.inline
-    def badge(value: TagMod[Any]): this.type = set("badge", value.asInstanceOf[js.Any])
+    def badge(value: ReactElement): this.type = set("badge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

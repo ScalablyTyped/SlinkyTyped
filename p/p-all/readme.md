@@ -1,7 +1,7 @@
 
 # Scala.js typings for p-all
 
-Typings are for version 2.1.0
+Typings are for version 3.0.0
 
 ## Library description:
 Run promise-returning & async functions concurrently with optional limited concurrency

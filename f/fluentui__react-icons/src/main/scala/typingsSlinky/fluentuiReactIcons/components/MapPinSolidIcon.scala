@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MapPinSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MapPinSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MapPinSolidIcon")
   @js.native
   object component extends js.Object
   

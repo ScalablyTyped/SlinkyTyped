@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeModalDropdown.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
@@ -48,7 +48,9 @@ object ReactNativeModalDropdown {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -67,6 +69,8 @@ object ReactNativeModalDropdown {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -99,6 +103,8 @@ object ReactNativeModalDropdown {
     def dropdownTextStyle(value: StyleProp[TextStyle]): this.type = set("dropdownTextStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def dropdownTextStyleNull: this.type = set("dropdownTextStyle", null)
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -164,6 +170,8 @@ object ReactNativeModalDropdown {
     @scala.inline
     def onTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
     @scala.inline
+    def optionsVarargs(value: T*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[T]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
@@ -172,10 +180,10 @@ object ReactNativeModalDropdown {
     @scala.inline
     def renderButtonText(value: /* text */ String => String): this.type = set("renderButtonText", js.Any.fromFunction1(value))
     @scala.inline
-    def renderRow(value: (T, /* index */ String, /* isSelected */ Boolean) => TagMod[Any]): this.type = set("renderRow", js.Any.fromFunction3(value))
+    def renderRow(value: (T, /* index */ String, /* isSelected */ Boolean) => ReactElement): this.type = set("renderRow", js.Any.fromFunction3(value))
     @scala.inline
     def renderSeparator(
-      value: (/* sectionID */ String, /* index */ String, /* adjacentRowHighlighted */ Boolean) => TagMod[Any]
+      value: (/* sectionID */ String, /* index */ String, /* adjacentRowHighlighted */ Boolean) => ReactElement
     ): this.type = set("renderSeparator", js.Any.fromFunction3(value))
     @scala.inline
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])

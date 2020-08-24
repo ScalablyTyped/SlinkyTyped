@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "html-truncate"
-version := "1.2-dt-20200515Z-f438af"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20200515Z-20309d"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

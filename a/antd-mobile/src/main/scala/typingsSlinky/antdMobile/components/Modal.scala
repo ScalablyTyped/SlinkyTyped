@@ -1,11 +1,9 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.anon.PartialHTMLPropsHTMLDivEl
-import typingsSlinky.antdMobile.modalMod.default
 import typingsSlinky.antdMobile.modalModalMod.ModalProps
 import typingsSlinky.antdMobile.modalPropsTypeMod.Action
 import typingsSlinky.react.mod.CSSProperties
@@ -14,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Modal {
-  @JSImport("antd-mobile/lib/modal", JSImport.Default)
+  @JSImport("antd-mobile", "Modal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Modal] {
     @scala.inline
     def animateAppear(value: Boolean): this.type = set("animateAppear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,6 +32,8 @@ object Modal {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerVarargs(value: Action[CSSProperties]*): this.type = set("footer", js.Array(value :_*))
     @scala.inline
     def footer(value: js.Array[Action[CSSProperties]]): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +57,7 @@ object Modal {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline

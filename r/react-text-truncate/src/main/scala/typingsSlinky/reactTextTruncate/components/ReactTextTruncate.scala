@@ -1,6 +1,5 @@
 package typingsSlinky.reactTextTruncate.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -38,11 +37,11 @@ object ReactTextTruncate {
     @scala.inline
     def textElementReactElement(value: ReactElement): this.type = set("textElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def textElement(value: TagMod[Any]): this.type = set("textElement", value.asInstanceOf[js.Any])
+    def textElement(value: ReactElement): this.type = set("textElement", value.asInstanceOf[js.Any])
     @scala.inline
     def textTruncateChildReactElement(value: ReactElement): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
     @scala.inline
-    def textTruncateChild(value: TagMod[Any]): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
+    def textTruncateChild(value: ReactElement): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
     @scala.inline
     def truncateText(value: String): this.type = set("truncateText", value.asInstanceOf[js.Any])
   }

@@ -1,7 +1,10 @@
 package typingsSlinky.jestReporters
 
+import typingsSlinky.jestReporters.typesMod.Test
+import typingsSlinky.jestTestResult.typesMod.AggregatedResult
 import typingsSlinky.jestTestResult.typesMod.AssertionResult
 import typingsSlinky.jestTestResult.typesMod.Suite
+import typingsSlinky.jestTestResult.typesMod.TestResult
 import typingsSlinky.jestTypes.configMod.GlobalConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,6 +23,8 @@ object verboseReporterMod extends js.Object {
     var _logTestResults: js.Any = js.native
     var _logTests: js.Any = js.native
     var _logTodoOrPendingTest: js.Any = js.native
+    @JSName("onTestResult")
+    def onTestResult_MVerboseReporter(test: Test, result: TestResult, aggregatedResults: AggregatedResult): Unit = js.native
   }
   
   @js.native

@@ -238,9 +238,13 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultSelectedKeyVarargs(value: (Double | String)*): this.type = set("defaultSelectedKey", js.Array(value :_*))
+  @scala.inline
   def defaultSelectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("defaultSelectedKey", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultSelectedKeyNull: this.type = set("defaultSelectedKey", null)
+  @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
@@ -291,6 +295,8 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
   @scala.inline
   def multiSelect(value: Boolean): this.type = set("multiSelect", value.asInstanceOf[js.Any])
+  @scala.inline
+  def multiSelectDelimiter(value: String): this.type = set("multiSelectDelimiter", value.asInstanceOf[js.Any])
   @scala.inline
   def onAbort(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
   @scala.inline
@@ -539,6 +545,8 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   def scrollSelectedToTop(value: Boolean): this.type = set("scrollSelectedToTop", value.asInstanceOf[js.Any])
   @scala.inline
   def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
+  @scala.inline
+  def selectedKeyVarargs(value: (Double | String)*): this.type = set("selectedKey", js.Array(value :_*))
   @scala.inline
   def selectedKey(value: String | Double | (js.Array[Double | String])): this.type = set("selectedKey", value.asInstanceOf[js.Any])
   @scala.inline

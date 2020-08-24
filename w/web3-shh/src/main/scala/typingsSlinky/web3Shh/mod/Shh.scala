@@ -53,6 +53,10 @@ class Shh () extends js.Object {
   def newKeyPair(): js.Promise[String] = js.native
   def newKeyPair(callback: js.Function2[/* error */ js.Error, /* key */ String, Unit]): js.Promise[String] = js.native
   def newMessageFilter(): js.Promise[String] = js.native
+  def newMessageFilter(
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* result */ String, Unit]
+  ): js.Promise[String] = js.native
   def newMessageFilter(options: SubscriptionOptions): js.Promise[String] = js.native
   def newMessageFilter(
     options: SubscriptionOptions,

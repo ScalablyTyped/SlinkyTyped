@@ -46,9 +46,11 @@ object Matrix extends js.Object {
   def getRotate_2(sin: Double, cos: Double): js.Array[Double] = js.native
   def getRotate_3(degrees: Double, px: Double, py: Double): js.Array[Double] = js.native
   def getScale(sx: Double, sy: Double): js.Array[Double] = js.native
+  def getScale(sx: Double, sy: Double, px: js.UndefOr[scala.Nothing], py: Double): js.Array[Double] = js.native
   def getScale(sx: Double, sy: Double, px: Double): js.Array[Double] = js.native
   def getScale(sx: Double, sy: Double, px: Double, py: Double): js.Array[Double] = js.native
   def getSkew(kx: Double, ky: Double): js.Array[Double] = js.native
+  def getSkew(kx: Double, ky: Double, px: js.UndefOr[scala.Nothing], py: Double): js.Array[Double] = js.native
   def getSkew(kx: Double, ky: Double, px: Double): js.Array[Double] = js.native
   def getSkew(kx: Double, ky: Double, px: Double, py: Double): js.Array[Double] = js.native
   def getTranslate(dx: Double, dy: Double): js.Array[Double] = js.native

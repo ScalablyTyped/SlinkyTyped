@@ -35,41 +35,22 @@ object ChildDrawable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMDrawable(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawable")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawable(value: Drawable): Self = this.set("mDrawable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInsetB(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInsetB")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMId(value: String): Self = this.set("mId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInsetL(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInsetL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInsetB(value: Double): Self = this.set("mInsetB", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInsetR(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInsetR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInsetL(value: Double): Self = this.set("mInsetL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInsetT(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInsetT")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInsetR(value: Double): Self = this.set("mInsetR", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMInsetT(value: Double): Self = this.set("mInsetT", value.asInstanceOf[js.Any])
   }
   
 }

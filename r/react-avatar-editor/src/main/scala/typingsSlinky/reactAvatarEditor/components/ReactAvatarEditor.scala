@@ -23,11 +23,15 @@ object ReactAvatarEditor {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def borderVarargs(value: Double*): this.type = set("border", js.Array(value :_*))
+    @scala.inline
     def border(value: Double | js.Array[Double]): this.type = set("border", value.asInstanceOf[js.Any])
     @scala.inline
     def borderRadius(value: Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorVarargs(value: Double*): this.type = set("color", js.Array(value :_*))
     @scala.inline
     def color(value: js.Array[Double]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline

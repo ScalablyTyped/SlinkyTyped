@@ -45,11 +45,17 @@ object Input {
     @scala.inline
     def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
+    def maskVarargs(value: Mask*): this.type = set("mask", js.Array(value :_*))
+    @scala.inline
     def maskFunction1(value: /* rawValue */ String => js.Array[String]): this.type = set("mask", js.Any.fromFunction1(value))
     @scala.inline
     def maskRegExp(value: js.RegExp): this.type = set("mask", value.asInstanceOf[js.Any])
     @scala.inline
     def mask(value: Mask | js.Array[Mask]): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxLength(value: Double | String): this.type = set("maxLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLength(value: Double | String): this.type = set("minLength", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
@@ -64,6 +70,8 @@ object Input {
     def theme(value: BaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: email | text | tel | number | password | search): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validateVarargs(value: (Validate | CustomValidate)*): this.type = set("validate", js.Array(value :_*))
     @scala.inline
     def validateFunction2(value: (/* params */ Value, /* cpf */ js.UndefOr[String]) => String): this.type = set("validate", js.Any.fromFunction2(value))
     @scala.inline

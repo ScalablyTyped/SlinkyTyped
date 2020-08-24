@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "zurb-twentytwenty"
-version := "0.1-dt-20200407Z-28f64d"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20200407Z-305ec1"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

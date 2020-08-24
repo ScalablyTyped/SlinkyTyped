@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GitForkIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GitForkIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GitForkIcon")
   @js.native
   object component extends js.Object
   

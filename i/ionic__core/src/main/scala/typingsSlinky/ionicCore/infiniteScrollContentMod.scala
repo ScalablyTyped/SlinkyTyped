@@ -1,7 +1,8 @@
 package typingsSlinky.ionicCore
 
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +25,7 @@ object infiniteScrollContentMod extends js.Object {
       *
       * For more information: [Security Documentation](https://ionicframework.com/docs/faq/security)
       */
-    var loadingText: js.UndefOr[String] = js.native
+    var loadingText: js.UndefOr[String | IonicSafeString] = js.native
     @JSName("componentDidLoad")
     def componentDidLoad_MInfiniteScrollContent(): Unit = js.native
     @JSName("render")

@@ -19,6 +19,8 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCallbacks
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
@@ -27,8 +29,6 @@ import typingsSlinky.officeUiFabricReact.datePickerTypesMod.IDatePickerProps
 import typingsSlinky.officeUiFabricReact.datePickerTypesMod.IDatePickerStrings
 import typingsSlinky.officeUiFabricReact.datePickerTypesMod.IDatePickerStyleProps
 import typingsSlinky.officeUiFabricReact.datePickerTypesMod.IDatePickerStyles
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
-import typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextFieldProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -244,6 +244,8 @@ object DatePicker {
     def dateTimeFormatter(value: ICalendarFormatDateCallbacks): this.type = set("dateTimeFormatter", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

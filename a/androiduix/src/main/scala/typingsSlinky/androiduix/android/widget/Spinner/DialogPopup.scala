@@ -49,29 +49,18 @@ object DialogPopup {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_Spinner_this(value: typingsSlinky.androiduix.android.widget.Spinner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_Spinner_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMListAdapter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mListAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_Spinner_this(value: typingsSlinky.androiduix.android.widget.Spinner): Self = this.set("_Spinner_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPopup(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPopup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMListAdapter(value: js.Any): Self = this.set("mListAdapter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrompt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrompt")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPopup(value: js.Any): Self = this.set("mPopup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMPrompt(value: js.Any): Self = this.set("mPrompt", value.asInstanceOf[js.Any])
   }
   
 }

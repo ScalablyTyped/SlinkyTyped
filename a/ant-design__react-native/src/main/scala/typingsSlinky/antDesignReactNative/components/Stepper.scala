@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.stepperMod.StepProps
-import typingsSlinky.antDesignReactNative.stepperMod.default
 import typingsSlinky.antDesignReactNative.stepperStyleMod.StepperStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
@@ -14,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Stepper {
-  @JSImport("@ant-design/react-native/lib/stepper", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Stepper")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Stepper] {
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline

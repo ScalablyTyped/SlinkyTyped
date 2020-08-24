@@ -8,7 +8,7 @@ package object mod {
   type Carousel = slinky.core.ReactComponentClass[typingsSlinky.nukaCarousel.mod.CarouselProps]
   type CarouselRenderControl = js.Function1[
     /* props */ typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type CarouselSlideWidthProp = java.lang.String | scala.Double
   type CarouselSlidesToScrollProp = scala.Double | typingsSlinky.nukaCarousel.nukaCarouselStrings.auto

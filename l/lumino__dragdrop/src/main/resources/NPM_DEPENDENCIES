@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@lumino/dragdrop" : "1.6.4"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@lumino/dragdrop" : "1.6.4"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

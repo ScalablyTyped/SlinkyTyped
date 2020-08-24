@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EqualizerIcon {
-  @JSImport("@fluentui/react-icons/lib/components/EqualizerIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "EqualizerIcon")
   @js.native
   object component extends js.Object
   

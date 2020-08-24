@@ -24,7 +24,7 @@ object SuggestionsControl {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsControl[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsControl[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +34,11 @@ object SuggestionsControl {
     @scala.inline
     def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     @scala.inline
+    def footerItemsPropsVarargs(value: ISuggestionsHeaderFooterProps*): this.type = set("footerItemsProps", js.Array(value :_*))
+    @scala.inline
     def footerItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): this.type = set("footerItemsProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerItemsPropsVarargs(value: ISuggestionsHeaderFooterProps*): this.type = set("headerItemsProps", js.Array(value :_*))
     @scala.inline
     def headerItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): this.type = set("headerItemsProps", value.asInstanceOf[js.Any])
     @scala.inline

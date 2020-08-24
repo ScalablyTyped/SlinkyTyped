@@ -1,42 +1,47 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.baseMod.ExtendType
 import typingsSlinky.grommet.utilsMod.BackgroundType
-import typingsSlinky.grommet.utilsMod.PadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BackgroundBorder extends js.Object {
-  var align: js.UndefOr[String] = js.undefined
-  var background: js.UndefOr[BackgroundType] = js.undefined
-  var border: js.UndefOr[String] = js.undefined
-  var extend: js.UndefOr[ExtendType] = js.undefined
-  var fill: js.UndefOr[String] = js.undefined
-  var pad: js.UndefOr[PadType] = js.undefined
-  var verticalAlign: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[BackgroundType] = js.native
+  var border: js.UndefOr[`0`] = js.native
+  var label: js.UndefOr[`0`] = js.native
 }
 
 object BackgroundBorder {
   @scala.inline
-  def apply(
-    align: String = null,
-    background: BackgroundType = null,
-    border: String = null,
-    extend: ExtendType = null,
-    fill: String = null,
-    pad: PadType = null,
-    verticalAlign: String = null
-  ): BackgroundBorder = {
+  def apply(): BackgroundBorder = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (pad != null) __obj.updateDynamic("pad")(pad.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundBorder]
   }
+  @scala.inline
+  implicit class BackgroundBorderOps[Self <: BackgroundBorder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBackground(value: BackgroundType): Self = this.set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackground: Self = this.set("background", js.undefined)
+    @scala.inline
+    def setBorder(value: `0`): Self = this.set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorder: Self = this.set("border", js.undefined)
+    @scala.inline
+    def setLabel(value: `0`): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+  }
+  
 }
 

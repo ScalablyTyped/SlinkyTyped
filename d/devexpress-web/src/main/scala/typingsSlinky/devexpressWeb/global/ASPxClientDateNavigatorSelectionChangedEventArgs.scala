@@ -10,11 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDateNavigatorSelectionChangedEventArgs")
 @js.native
 class ASPxClientDateNavigatorSelectionChangedEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDateNavigatorSelectionChangedEventArgs {
-  /**
-    * Returns the selected dates related to the event.
-    */
-  /* CompleteClass */
-  override var selectedDates: js.Array[js.Date] = js.native
-}
+  extends typingsSlinky.devexpressWeb.ASPxClientDateNavigatorSelectionChangedEventArgs
 

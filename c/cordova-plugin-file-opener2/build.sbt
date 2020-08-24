@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cordova-plugin-file-opener2"
-version := "2.0-dt-20200515Z-f22168"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200515Z-602af7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

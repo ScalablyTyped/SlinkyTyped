@@ -1,7 +1,7 @@
 package typingsSlinky.reactFns.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFns.deviceOrientationDeviceOrientationMod.DeviceOrientationProps
@@ -20,6 +20,12 @@ object DeviceOrientation {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactFns.mod.DeviceOrientation] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: DeviceOrientationProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: (js.Function1[DeviceOrientationProps, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[DeviceOrientationProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[DeviceOrientationProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
@@ -28,7 +34,7 @@ object DeviceOrientation {
     @scala.inline
     def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
     @scala.inline
-    def render(value: DeviceOrientationProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: DeviceOrientationProps => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
   }
   
   def withProps(p: SharedRenderProps[DeviceOrientationProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

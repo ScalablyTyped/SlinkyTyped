@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cybozulabs-md5"
-version := "0.0-unknown-dt-20200515Z-d74e82"
-scalaVersion := "2.13.2"
+version := "0.0-unknown-dt-20200515Z-d4b266"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

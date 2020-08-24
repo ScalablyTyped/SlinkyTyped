@@ -8,15 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs")
 @js.native
 abstract class LockScreenCallEndRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs {
-  /** Gets the deadline by which the app must complete the deferral. */
-  /* CompleteClass */
-  override var deadline: js.Date = js.native
-  /**
-    * Requests to defer the default behavior of removing the app from the lock screen.
-    * @return When this method completes, it returns a LockScreenCallEndCallDeferral object that signals when the app no longer needs to defer the removal of itself from the lock screen.
-    */
-  /* CompleteClass */
-  override def getDeferral(): typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs
 

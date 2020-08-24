@@ -56,7 +56,7 @@ object remotebuildexecutionMod extends js.Object {
       extends TopLevel[
               Instantiable2[
                 /* options */ GlobalOptions, 
-                js.UndefOr[/* google */ GoogleConfigurable], 
+                /* google */ js.UndefOr[GoogleConfigurable], 
                 Remotebuildexecution
               ]
             ]
@@ -66,7 +66,7 @@ object remotebuildexecutionMod extends js.Object {
       extends TopLevel[
               Instantiable2[
                 /* options */ GlobalOptions, 
-                js.UndefOr[/* google */ GoogleConfigurable], 
+                /* google */ js.UndefOr[GoogleConfigurable], 
                 typingsSlinky.googleapis.remotebuildexecutionV1alphaMod.remotebuildexecutionV1alpha.Remotebuildexecution
               ]
             ]
@@ -76,7 +76,7 @@ object remotebuildexecutionMod extends js.Object {
       extends TopLevel[
               Instantiable2[
                 /* options */ GlobalOptions, 
-                js.UndefOr[/* google */ GoogleConfigurable], 
+                /* google */ js.UndefOr[GoogleConfigurable], 
                 typingsSlinky.googleapis.remotebuildexecutionV2Mod.remotebuildexecutionV2.Remotebuildexecution
               ]
             ]

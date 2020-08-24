@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativePhoneInput.components
 
-import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
@@ -19,9 +18,9 @@ object ReactNativePhoneInput {
   object component extends js.Object
   
   @scala.inline
-  class Builder[TextComponentType <: ReactComponentClass[js.Object]] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.react.mod.ComponentType[js.Object] */ TextComponentType] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[TextComponentType]] {
     @scala.inline
     def allowZeroAfterCountryCode(value: Boolean): this.type = set("allowZeroAfterCountryCode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -32,6 +31,8 @@ object ReactNativePhoneInput {
     def cancelText(value: String): this.type = set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
     def confirmText(value: String): this.type = set("confirmText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def countriesListVarargs(value: CountriesListItem*): this.type = set("countriesList", js.Array(value :_*))
     @scala.inline
     def countriesList(value: js.Array[CountriesListItem]): this.type = set("countriesList", value.asInstanceOf[js.Any])
     @scala.inline
@@ -78,12 +79,12 @@ object ReactNativePhoneInput {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps[TextComponentType <: ReactComponentClass[js.Object]](p: ReactNativePhoneInputProps[TextComponentType]): Builder[TextComponentType] = new Builder[TextComponentType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.react.mod.ComponentType[js.Object] */ TextComponentType](p: ReactNativePhoneInputProps[TextComponentType]): Builder[TextComponentType] = new Builder[TextComponentType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[TextComponentType <: ReactComponentClass[js.Object]](): Builder[TextComponentType] = {
+  def apply[/* <: typingsSlinky.react.mod.ComponentType[js.Object] */ TextComponentType](): Builder[TextComponentType] = {
     val __props = js.Dynamic.literal()
     new Builder[TextComponentType](js.Array(this.component, __props.asInstanceOf[ReactNativePhoneInputProps[TextComponentType]]))
   }
-  implicit def make[TextComponentType <: ReactComponentClass[js.Object]](companion: ReactNativePhoneInput.type): Builder[TextComponentType] = new Builder[TextComponentType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: typingsSlinky.react.mod.ComponentType[js.Object] */ TextComponentType](companion: ReactNativePhoneInput.type): Builder[TextComponentType] = new Builder[TextComponentType](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -9,18 +9,38 @@ trait ImageFile extends js.Object {
   /**
     * The image file contents, represented as a base64-encoded string. The file size must be less than 1 MB.
     */
-  var encodedString: ImageFileData = js.native
+  var data: ImageFileData = js.native
   /**
     * The file type of the image.
     */
-  var fileType: ImageFileType = js.native
+  var `type`: ImageFileType = js.native
 }
 
 object ImageFile {
   @scala.inline
-  def apply(encodedString: ImageFileData, fileType: ImageFileType): ImageFile = {
-    val __obj = js.Dynamic.literal(encodedString = encodedString.asInstanceOf[js.Any], fileType = fileType.asInstanceOf[js.Any])
+  def apply(data: ImageFileData, `type`: ImageFileType): ImageFile = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageFile]
   }
+  @scala.inline
+  implicit class ImageFileOps[Self <: ImageFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDataUint8Array(value: js.typedarray.Uint8Array): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setData(value: ImageFileData): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: ImageFileType): Self = this.set("type", value.asInstanceOf[js.Any])
+  }
+  
 }
 

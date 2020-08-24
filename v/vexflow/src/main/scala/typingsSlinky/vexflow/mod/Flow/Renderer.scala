@@ -13,10 +13,6 @@ import scala.scalajs.js.annotation._
 class Renderer protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Renderer {
   def this(sel: HTMLElement, backend: Backends) = this()
-  /* CompleteClass */
-  override def getContext(): IRenderContext = js.native
-  /* CompleteClass */
-  override def resize(width: Double, height: Double): typingsSlinky.vexflow.Vex.Flow.Renderer = js.native
 }
 
 /* static members */
@@ -26,7 +22,29 @@ object Renderer extends js.Object {
   var USE_CANVAS_PROXY: Boolean = js.native
   def bolsterCanvasContext(ctx: CanvasRenderingContext2D): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
   def buildContext(sel: HTMLElement, backend: Backends): IRenderContext = js.native
+  def buildContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): IRenderContext = js.native
+  def buildContext(sel: HTMLElement, backend: Backends, width: js.UndefOr[scala.Nothing], height: Double): IRenderContext = js.native
+  def buildContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    background: String
+  ): IRenderContext = js.native
   def buildContext(sel: HTMLElement, backend: Backends, width: Double): IRenderContext = js.native
+  def buildContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): IRenderContext = js.native
   def buildContext(sel: HTMLElement, backend: Backends, width: Double, height: Double): IRenderContext = js.native
   def buildContext(sel: HTMLElement, backend: Backends, width: Double, height: Double, background: String): IRenderContext = js.native
   def drawDashedLine(
@@ -38,15 +56,81 @@ object Renderer extends js.Object {
     dashPattern: js.Array[Double]
   ): Unit = js.native
   def getCanvasContext(sel: HTMLElement, backend: Backends): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
+  def getCanvasContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
+  def getCanvasContext(sel: HTMLElement, backend: Backends, width: js.UndefOr[scala.Nothing], height: Double): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
+  def getCanvasContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
   def getCanvasContext(sel: HTMLElement, backend: Backends, width: Double): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
+  def getCanvasContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
   def getCanvasContext(sel: HTMLElement, backend: Backends, width: Double, height: Double): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
   def getCanvasContext(sel: HTMLElement, backend: Backends, width: Double, height: Double, background: String): typingsSlinky.vexflow.Vex.Flow.CanvasContext = js.native
   def getRaphaelContext(sel: HTMLElement, backend: Backends): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
+  def getRaphaelContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
+  def getRaphaelContext(sel: HTMLElement, backend: Backends, width: js.UndefOr[scala.Nothing], height: Double): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
+  def getRaphaelContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
   def getRaphaelContext(sel: HTMLElement, backend: Backends, width: Double): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
+  def getRaphaelContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
   def getRaphaelContext(sel: HTMLElement, backend: Backends, width: Double, height: Double): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
   def getRaphaelContext(sel: HTMLElement, backend: Backends, width: Double, height: Double, background: String): typingsSlinky.vexflow.Vex.Flow.RaphaelContext = js.native
   def getSVGContext(sel: HTMLElement, backend: Backends): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
+  def getSVGContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
+  def getSVGContext(sel: HTMLElement, backend: Backends, width: js.UndefOr[scala.Nothing], height: Double): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
+  def getSVGContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: js.UndefOr[scala.Nothing],
+    height: Double,
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
   def getSVGContext(sel: HTMLElement, backend: Backends, width: Double): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
+  def getSVGContext(
+    sel: HTMLElement,
+    backend: Backends,
+    width: Double,
+    height: js.UndefOr[scala.Nothing],
+    background: String
+  ): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
   def getSVGContext(sel: HTMLElement, backend: Backends, width: Double, height: Double): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
   def getSVGContext(sel: HTMLElement, backend: Backends, width: Double, height: Double, background: String): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
   @js.native

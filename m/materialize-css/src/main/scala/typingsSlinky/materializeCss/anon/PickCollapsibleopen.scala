@@ -7,8 +7,31 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Pick<materialize-css.M.Collapsible, 'open'> */
 @js.native
 trait PickCollapsibleopen extends js.Object {
-  @JSName("open")
-  var open_Original: js.Function1[/* n */ Double, Unit] = js.native
-  def open(n: Double): Unit = js.native
+  var open: js.UndefOr[js.Any] = js.native
+}
+
+object PickCollapsibleopen {
+  @scala.inline
+  def apply(): PickCollapsibleopen = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[PickCollapsibleopen]
+  }
+  @scala.inline
+  implicit class PickCollapsibleopenOps[Self <: PickCollapsibleopen] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOpen(value: js.Any): Self = this.set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpen: Self = this.set("open", js.undefined)
+  }
+  
 }
 

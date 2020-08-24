@@ -1,26 +1,24 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.rateMod.RateProps
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Rate {
-  @JSImport("antd/lib/rate", JSImport.Default)
+  @JSImport("antd", "Rate")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -28,7 +26,7 @@ object Rate {
     @scala.inline
     def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
     @scala.inline
-    def character(value: TagMod[Any]): this.type = set("character", value.asInstanceOf[js.Any])
+    def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,6 +43,8 @@ object Rate {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipsVarargs(value: String*): this.type = set("tooltips", js.Array(value :_*))
     @scala.inline
     def tooltips(value: js.Array[String]): this.type = set("tooltips", value.asInstanceOf[js.Any])
     @scala.inline

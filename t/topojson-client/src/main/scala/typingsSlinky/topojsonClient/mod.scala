@@ -45,6 +45,15 @@ object mod extends js.Object {
   def mesh(topology: Topology[Objects[Properties]]): typingsSlinky.geojson.mod.MultiLineString = js.native
   def mesh(
     topology: Topology[Objects[Properties]],
+    obj: js.UndefOr[scala.Nothing],
+    filter: js.Function2[
+      /* a */ typingsSlinky.topojsonSpecification.mod.GeometryObject[js.Object], 
+      /* b */ typingsSlinky.topojsonSpecification.mod.GeometryObject[js.Object], 
+      Boolean
+    ]
+  ): typingsSlinky.geojson.mod.MultiLineString = js.native
+  def mesh(
+    topology: Topology[Objects[Properties]],
     obj: typingsSlinky.topojsonSpecification.mod.GeometryObject[js.Object]
   ): typingsSlinky.geojson.mod.MultiLineString = js.native
   def mesh(
@@ -57,6 +66,15 @@ object mod extends js.Object {
     ]
   ): typingsSlinky.geojson.mod.MultiLineString = js.native
   def meshArcs(topology: Topology[Objects[Properties]]): MultiLineString[js.Object] = js.native
+  def meshArcs(
+    topology: Topology[Objects[Properties]],
+    obj: js.UndefOr[scala.Nothing],
+    filter: js.Function2[
+      /* a */ typingsSlinky.topojsonSpecification.mod.GeometryObject[js.Object], 
+      /* b */ typingsSlinky.topojsonSpecification.mod.GeometryObject[js.Object], 
+      Boolean
+    ]
+  ): MultiLineString[js.Object] = js.native
   def meshArcs(
     topology: Topology[Objects[Properties]],
     obj: typingsSlinky.topojsonSpecification.mod.GeometryObject[js.Object]

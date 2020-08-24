@@ -144,197 +144,74 @@ object CanvasApi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClearColor(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearColor")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClipRect(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipRect")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setClearColor(value: Double => Unit): Self = this.set("clearColor", js.Any.fromFunction1(value))
     @scala.inline
-    def withClipRoundRectImpl(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipRoundRectImpl")(js.Any.fromFunction9(value))
-        ret
-    }
+    def setClipRect(value: (Double, Double, Double, Double, Double) => Unit): Self = this.set("clipRect", js.Any.fromFunction5(value))
     @scala.inline
-    def withConcat(value: (Double, Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concat")(js.Any.fromFunction7(value))
-        ret
-    }
+    def setClipRoundRectImpl(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double) => Unit): Self = this.set("clipRoundRectImpl", js.Any.fromFunction9(value))
     @scala.inline
-    def withCreateCanvas(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCanvas")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setConcat(value: (Double, Double, Double, Double, Double, Double, Double) => Unit): Self = this.set("concat", js.Any.fromFunction7(value))
     @scala.inline
-    def withDrawArc(value: (Double, Double, Double, Double, Double, Double, Double, Boolean, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawArc")(js.Any.fromFunction9(value))
-        ret
-    }
+    def setCreateCanvas(value: (Double, Double, Double) => Unit): Self = this.set("createCanvas", js.Any.fromFunction3(value))
     @scala.inline
-    def withDrawCanvas(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCanvas")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setDrawArc(value: (Double, Double, Double, Double, Double, Double, Double, Boolean, Style) => Unit): Self = this.set("drawArc", js.Any.fromFunction9(value))
     @scala.inline
-    def withDrawCircle(value: (Double, Double, Double, Double, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCircle")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setDrawCanvas(value: (Double, Double, Double, Double) => Unit): Self = this.set("drawCanvas", js.Any.fromFunction4(value))
     @scala.inline
-    def withDrawColor(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawColor")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setDrawCircle(value: (Double, Double, Double, Double, Style) => Unit): Self = this.set("drawCircle", js.Any.fromFunction5(value))
     @scala.inline
-    def withDrawImage2args(value: (Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage2args")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setDrawColor(value: (Double, Double) => Unit): Self = this.set("drawColor", js.Any.fromFunction2(value))
     @scala.inline
-    def withDrawImage4args(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage4args")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setDrawImage2args(value: (Double, Double, Double, Double) => Unit): Self = this.set("drawImage2args", js.Any.fromFunction4(value))
     @scala.inline
-    def withDrawImage8args(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage8args")(js.Any.fromFunction10(value))
-        ret
-    }
+    def setDrawImage4args(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = this.set("drawImage4args", js.Any.fromFunction6(value))
     @scala.inline
-    def withDrawOval(value: (Double, Double, Double, Double, Double, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawOval")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setDrawImage8args(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double, Double) => Unit): Self = this.set("drawImage8args", js.Any.fromFunction10(value))
     @scala.inline
-    def withDrawRect(value: (Double, Double, Double, Double, Double, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawRect")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setDrawOval(value: (Double, Double, Double, Double, Double, Style) => Unit): Self = this.set("drawOval", js.Any.fromFunction6(value))
     @scala.inline
-    def withDrawRoundRectImpl(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawRoundRectImpl")(js.Any.fromFunction10(value))
-        ret
-    }
+    def setDrawRect(value: (Double, Double, Double, Double, Double, Style) => Unit): Self = this.set("drawRect", js.Any.fromFunction6(value))
     @scala.inline
-    def withDrawText(value: (Double, String, Double, Double, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawText")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setDrawRoundRectImpl(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double, Style) => Unit): Self = this.set("drawRoundRectImpl", js.Any.fromFunction10(value))
     @scala.inline
-    def withMultiplyGlobalAlpha(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiplyGlobalAlpha")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setDrawText(value: (Double, String, Double, Double, Style) => Unit): Self = this.set("drawText", js.Any.fromFunction5(value))
     @scala.inline
-    def withRecycleCanvas(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycleCanvas")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMultiplyGlobalAlpha(value: (Double, Double) => Unit): Self = this.set("multiplyGlobalAlpha", js.Any.fromFunction2(value))
     @scala.inline
-    def withRestore(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRecycleCanvas(value: Double => Unit): Self = this.set("recycleCanvas", js.Any.fromFunction1(value))
     @scala.inline
-    def withRotate(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setRestore(value: Double => Unit): Self = this.set("restore", js.Any.fromFunction1(value))
     @scala.inline
-    def withSave(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRotate(value: (Double, Double) => Unit): Self = this.set("rotate", js.Any.fromFunction2(value))
     @scala.inline
-    def withScale(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setSave(value: Double => Unit): Self = this.set("save", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetFillColor(value: (Double, Double, Style) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFillColor")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setScale(value: (Double, Double, Double) => Unit): Self = this.set("scale", js.Any.fromFunction3(value))
     @scala.inline
-    def withSetFont(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFont")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetFillColor(value: (Double, Double, Style) => Unit): Self = this.set("setFillColor", js.Any.fromFunction3(value))
     @scala.inline
-    def withSetFontSize(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFontSize")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetFont(value: (Double, String) => Unit): Self = this.set("setFont", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetGlobalAlpha(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGlobalAlpha")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetFontSize(value: (Double, Double) => Unit): Self = this.set("setFontSize", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetLineCap(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineCap")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetGlobalAlpha(value: (Double, Double) => Unit): Self = this.set("setGlobalAlpha", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetLineJoin(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineJoin")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetLineCap(value: (Double, String) => Unit): Self = this.set("setLineCap", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetLineWidth(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineWidth")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetLineJoin(value: (Double, String) => Unit): Self = this.set("setLineJoin", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetShadow(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setShadow")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setSetLineWidth(value: (Double, Double) => Unit): Self = this.set("setLineWidth", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetTextAlign(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlign")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetShadow(value: (Double, Double, Double, Double, Double) => Unit): Self = this.set("setShadow", js.Any.fromFunction5(value))
     @scala.inline
-    def withTranslate(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setSetTextAlign(value: (Double, String) => Unit): Self = this.set("setTextAlign", js.Any.fromFunction2(value))
+    @scala.inline
+    def setTranslate(value: (Double, Double, Double) => Unit): Self = this.set("translate", js.Any.fromFunction3(value))
   }
   
 }

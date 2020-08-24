@@ -1,12 +1,13 @@
 package typingsSlinky.spectacle.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.spectacle.anon.ContainsSlides
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("spectacle", "Markdown")
 @js.native
-class Markdown ()
-  extends Component[MarkdownProps, js.Object, js.Any]
+object Markdown extends TopLevel[ReactComponentClass[ContainsSlides]]
 

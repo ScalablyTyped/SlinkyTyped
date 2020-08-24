@@ -1,7 +1,7 @@
 
 # Scala.js typings for binary-extensions
 
-Typings are for version 2.0.0
+Typings are for version 2.1.0
 
 ## Library description:
 List of binary file extensions

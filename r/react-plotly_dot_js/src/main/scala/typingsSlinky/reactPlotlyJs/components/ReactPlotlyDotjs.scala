@@ -45,6 +45,8 @@ object ReactPlotlyDotjs {
     @scala.inline
     def divId(value: String): this.type = set("divId", value.asInstanceOf[js.Any])
     @scala.inline
+    def framesVarargs(value: Frame*): this.type = set("frames", js.Array(value :_*))
+    @scala.inline
     def frames(value: js.Array[Frame]): this.type = set("frames", value.asInstanceOf[js.Any])
     @scala.inline
     def onAfterExport(value: () => Unit): this.type = set("onAfterExport", js.Any.fromFunction0(value))

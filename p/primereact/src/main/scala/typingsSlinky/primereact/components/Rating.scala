@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.ValueNumber
+import typingsSlinky.primereact.anon.OriginalEventTargetValue
 import typingsSlinky.primereact.ratingMod.RatingProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object Rating {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ ValueNumber => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ OriginalEventTargetValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def readonly(value: Boolean): this.type = set("readonly", value.asInstanceOf[js.Any])
     @scala.inline

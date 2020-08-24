@@ -12,9 +12,12 @@ package object mod {
   ]
   type CustomSvgLayer = js.Function1[
     /* props */ typingsSlinky.nivoScatterplot.mod.CustomSvgLayerProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
-  type CustomTooltip = js.Function1[/* hasNode */ js.Any, slinky.core.TagMod[scala.Any]]
+  type CustomTooltip = js.Function1[
+    /* props */ typingsSlinky.nivoScatterplot.mod.TooltipProps, 
+    slinky.core.facade.ReactElement
+  ]
   type DerivedDatumProp[T] = js.Function1[/* node */ typingsSlinky.nivoScatterplot.mod.Datum, T]
   type DerivedNodeProp[T] = js.Function1[/* node */ typingsSlinky.nivoScatterplot.mod.Node, T]
   type MouseHandler = js.Function2[
@@ -29,9 +32,8 @@ package object mod {
   ]
   type NodeComponent = js.Function1[
     /* props */ typingsSlinky.nivoScatterplot.mod.NodeProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
-  type Scale = js.Function1[/* value */ typingsSlinky.nivoScatterplot.mod.Value, scala.Double]
   type Value = scala.Double | java.lang.String | js.Date
   type ValueFormatter = js.Function1[
     /* value */ typingsSlinky.nivoScatterplot.mod.Value, 

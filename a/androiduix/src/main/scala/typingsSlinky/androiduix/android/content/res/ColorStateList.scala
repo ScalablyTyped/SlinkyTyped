@@ -36,47 +36,28 @@ object ColorStateList {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetColorForState(value: (js.Array[Double], Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColorForState")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetDefaultColor(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultColor")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetColorForState(value: (js.Array[Double], Double) => Double): Self = this.set("getColorForState", js.Any.fromFunction2(value))
     @scala.inline
-    def withIsStateful(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateful")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetDefaultColor(value: () => Double): Self = this.set("getDefaultColor", js.Any.fromFunction0(value))
     @scala.inline
-    def withMColors(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mColors")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsStateful(value: () => Boolean): Self = this.set("isStateful", js.Any.fromFunction0(value))
     @scala.inline
-    def withMDefaultColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDefaultColor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMColorsVarargs(value: Double*): Self = this.set("mColors", js.Array(value :_*))
     @scala.inline
-    def withMStateSpecs(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStateSpecs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMColors(value: js.Array[Double]): Self = this.set("mColors", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWithAlpha(value: Double => ColorStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withAlpha")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMDefaultColor(value: Double): Self = this.set("mDefaultColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMStateSpecsVarargs(value: js.Array[Double]*): Self = this.set("mStateSpecs", js.Array(value :_*))
+    @scala.inline
+    def setMStateSpecs(value: js.Array[js.Array[Double]]): Self = this.set("mStateSpecs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWithAlpha(value: Double => ColorStateList): Self = this.set("withAlpha", js.Any.fromFunction1(value))
   }
   
 }

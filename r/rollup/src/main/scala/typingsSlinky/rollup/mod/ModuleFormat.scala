@@ -5,13 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.rollup.rollupStrings.commonjs
+  - typingsSlinky.rollup.rollupStrings.esm
+  - typingsSlinky.rollup.rollupStrings.module
+  - typingsSlinky.rollup.rollupStrings.systemjs
   - typingsSlinky.rollup.rollupStrings.amd
   - typingsSlinky.rollup.rollupStrings.cjs
-  - typingsSlinky.rollup.rollupStrings.commonjs
   - typingsSlinky.rollup.rollupStrings.es
-  - typingsSlinky.rollup.rollupStrings.esm
   - typingsSlinky.rollup.rollupStrings.iife
-  - typingsSlinky.rollup.rollupStrings.module
   - typingsSlinky.rollup.rollupStrings.system
   - typingsSlinky.rollup.rollupStrings.umd
 */
@@ -34,6 +35,8 @@ object ModuleFormat {
   def module: typingsSlinky.rollup.rollupStrings.module = "module".asInstanceOf[typingsSlinky.rollup.rollupStrings.module]
   @scala.inline
   def system: typingsSlinky.rollup.rollupStrings.system = "system".asInstanceOf[typingsSlinky.rollup.rollupStrings.system]
+  @scala.inline
+  def systemjs: typingsSlinky.rollup.rollupStrings.systemjs = "systemjs".asInstanceOf[typingsSlinky.rollup.rollupStrings.systemjs]
   @scala.inline
   def umd: typingsSlinky.rollup.rollupStrings.umd = "umd".asInstanceOf[typingsSlinky.rollup.rollupStrings.umd]
 }

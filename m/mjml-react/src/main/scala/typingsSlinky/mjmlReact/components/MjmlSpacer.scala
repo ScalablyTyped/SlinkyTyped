@@ -2,8 +2,8 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.VerticalAlignProperty
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.VerticalAlign
 import typingsSlinky.mjmlReact.mod.BorderProps
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlSpacerProps
@@ -34,7 +34,7 @@ object MjmlSpacer {
     @scala.inline
     def borderTop(value: String): this.type = set("borderTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def containerBackgroundColor(value: BackgroundColor): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,7 +50,7 @@ object MjmlSpacer {
     @scala.inline
     def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    def verticalAlign(value: VerticalAlign[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }

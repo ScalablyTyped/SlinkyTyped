@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StreetsideSplitMinimizeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StreetsideSplitMinimizeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StreetsideSplitMinimizeIcon")
   @js.native
   object component extends js.Object
   

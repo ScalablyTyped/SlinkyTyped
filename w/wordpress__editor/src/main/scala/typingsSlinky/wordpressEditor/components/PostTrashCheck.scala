@@ -1,6 +1,7 @@
 package typingsSlinky.wordpressEditor.components
 
-import typingsSlinky.wordpressEditor.mod.PostTrashCheck.^
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.wordpressEditor.postTrashCheckMod.PostTrashCheck.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ object PostTrashCheck {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props_691280260[^] = new SharedBuilder_Props_691280260[^](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PostTrashCheck.type): SharedBuilder_Props_691280260[^] = new SharedBuilder_Props_691280260[^](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PostTrashCheck.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

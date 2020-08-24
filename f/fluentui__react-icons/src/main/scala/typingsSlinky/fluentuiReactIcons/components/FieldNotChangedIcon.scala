@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FieldNotChangedIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FieldNotChangedIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FieldNotChangedIcon")
   @js.native
   object component extends js.Object
   

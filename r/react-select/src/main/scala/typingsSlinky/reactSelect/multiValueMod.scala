@@ -1,7 +1,7 @@
 package typingsSlinky.reactSelect
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactSelect.anon.OnClick
 import typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueProps
 import typingsSlinky.reactSelect.selectMod.Props
@@ -18,10 +18,10 @@ import scala.scalajs.js.annotation._
 @JSImport("react-select/src/animated/MultiValue", JSImport.Namespace)
 @js.native
 object multiValueMod extends js.Object {
-  /* Inlined {  in  :boolean,   onExited  :react-select.react-select/src/animated/transitions.fn} & react-select.react-select/src/components/MultiValue.MultiValueProps<OptionType> */
+  /* Inlined {  in :boolean,   onExited :react-select.react-select/src/animated/transitions.fn} & react-select.react-select/src/components/MultiValue.MultiValueProps<OptionType> */
   @js.native
   trait AnimatedMultiValueProps[OptionType /* <: OptionTypeBase */] extends js.Object {
-    var children: TagMod[Any] = js.native
+    var children: ReactElement = js.native
     var className: js.UndefOr[String] = js.native
     var components: js.Any = js.native
     var cropWithEllipsis: Boolean = js.native
@@ -37,12 +37,9 @@ object multiValueMod extends js.Object {
     var removeProps: OnClick = js.native
     var selectProps: Props[OptionType] = js.native
     def clearValue(): Unit = js.native
-    def cx(): String | Unit = js.native
-    def cx(a: String): String | Unit = js.native
-    def cx(a: String, b: ClassNamesState): String | Unit = js.native
-    def cx(a: String, b: ClassNamesState, c: String): String | Unit = js.native
-    def cx(a: Null, b: ClassNamesState): String | Unit = js.native
-    def cx(a: Null, b: ClassNamesState, c: String): String | Unit = js.native
+    def cx(): String = js.native
+    def cx(state: js.UndefOr[ClassNamesState], className: String): String = js.native
+    def cx(state: ClassNamesState): String = js.native
     /*
       Get the styles of a particular part of the select. Pass in the name of the
       property as the first argument, and the current props as the second argument.

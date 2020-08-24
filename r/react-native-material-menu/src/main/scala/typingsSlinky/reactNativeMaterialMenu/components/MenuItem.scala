@@ -2,6 +2,7 @@ package typingsSlinky.reactNativeMaterialMenu.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeMaterialMenu.mod.MenuItemProps
@@ -31,7 +32,11 @@ object MenuItem {
     @scala.inline
     def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     @scala.inline
-    def style(value: ViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
     def textStyle(value: TextStyle): this.type = set("textStyle", value.asInstanceOf[js.Any])
     @scala.inline

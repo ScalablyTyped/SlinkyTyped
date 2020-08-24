@@ -1,6 +1,6 @@
 package typingsSlinky.reactTable.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactTable.reactTableStrings.Footer
 import typingsSlinky.reactTable.reactTableStrings.Header
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait HeaderGroup[D /* <: js.Object */] extends js.Object {
   var Header: js.UndefOr[Renderer[HeaderProps[D]]] = js.native
   var columns: js.Array[ColumnInstance[D]] = js.native
   var depth: Double = js.native
-  var headers: js.Array[ColumnInstance[D]] = js.native
+  var headers: js.Array[HeaderGroup[D]] = js.native
   var id: IdType[D] = js.native
    // not documented
   var index: Double = js.native
@@ -42,16 +42,16 @@ trait HeaderGroup[D /* <: js.Object */] extends js.Object {
    // not documented
   def getToggleHiddenProps(): js.Any = js.native
   def getToggleHiddenProps(userProps: js.Any): js.Any = js.native
-  def render(`type`: String): TagMod[Any] = js.native
-  def render(`type`: String, props: js.Object): TagMod[Any] = js.native
+  def render(`type`: String): ReactElement = js.native
+  def render(`type`: String, props: js.Object): ReactElement = js.native
   @JSName("render")
-  def render_Footer(`type`: Footer): TagMod[Any] = js.native
+  def render_Footer(`type`: Footer): ReactElement = js.native
   @JSName("render")
-  def render_Footer(`type`: Footer, props: js.Object): TagMod[Any] = js.native
+  def render_Footer(`type`: Footer, props: js.Object): ReactElement = js.native
   @JSName("render")
-  def render_Header(`type`: Header): TagMod[Any] = js.native
+  def render_Header(`type`: Header): ReactElement = js.native
   @JSName("render")
-  def render_Header(`type`: Header, props: js.Object): TagMod[Any] = js.native
+  def render_Header(`type`: Header, props: js.Object): ReactElement = js.native
   def toggleHidden(): Unit = js.native
   def toggleHidden(value: Boolean): Unit = js.native
 }

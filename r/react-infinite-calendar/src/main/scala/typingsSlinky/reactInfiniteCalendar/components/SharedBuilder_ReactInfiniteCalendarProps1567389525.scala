@@ -37,7 +37,11 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
+  def disabledDatesVarargs(value: DateType*): this.type = set("disabledDates", js.Array(value :_*))
+  @scala.inline
   def disabledDates(value: js.Array[DateType]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
+  @scala.inline
+  def disabledDaysVarargs(value: (`0` | `1` | `2` | `3` | `4` | `5` | `6`)*): this.type = set("disabledDays", js.Array(value :_*))
   @scala.inline
   def disabledDays(value: js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`]): this.type = set("disabledDays", value.asInstanceOf[js.Any])
   @scala.inline

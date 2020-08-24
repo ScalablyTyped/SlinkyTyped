@@ -118,12 +118,12 @@ object global extends js.Object {
     * @param timeout Custom timeout for an async spec.
     */
   def fit(expectation: String): Unit = js.native
-  def fit(expectation: String, assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback): Unit = js.native
   def fit(
     expectation: String,
-    assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback,
+    assertion: js.UndefOr[typingsSlinky.jasmine.jasmine.ImplementationCallback],
     timeout: Double
   ): Unit = js.native
+  def fit(expectation: String, assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback): Unit = js.native
   /**
     * Define a single spec. A spec should contain one or more expectations that test the state of the code.
     * A spec whose expectations all succeed will be passing and a spec with any failures will fail.
@@ -132,12 +132,12 @@ object global extends js.Object {
     * @param timeout Custom timeout for an async spec.
     */
   def it(expectation: String): Unit = js.native
-  def it(expectation: String, assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback): Unit = js.native
   def it(
     expectation: String,
-    assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback,
+    assertion: js.UndefOr[typingsSlinky.jasmine.jasmine.ImplementationCallback],
     timeout: Double
   ): Unit = js.native
+  def it(expectation: String, assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback): Unit = js.native
   /**
     * Mark a spec as pending, expectation results will be ignored.
     * If you call the function pending anywhere in the spec body, no matter the expectations, the spec will be marked pending.
@@ -171,6 +171,7 @@ object global extends js.Object {
   def waits(): Unit = js.native
   def waits(timeout: Double): Unit = js.native
   def waitsFor(latchMethod: js.Function0[Boolean]): Unit = js.native
+  def waitsFor(latchMethod: js.Function0[Boolean], failureMessage: js.UndefOr[scala.Nothing], timeout: Double): Unit = js.native
   def waitsFor(latchMethod: js.Function0[Boolean], failureMessage: String): Unit = js.native
   def waitsFor(latchMethod: js.Function0[Boolean], failureMessage: String, timeout: Double): Unit = js.native
   /**
@@ -186,12 +187,12 @@ object global extends js.Object {
     * @param timeout Custom timeout for an async spec.
     */
   def xit(expectation: String): Unit = js.native
-  def xit(expectation: String, assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback): Unit = js.native
   def xit(
     expectation: String,
-    assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback,
+    assertion: js.UndefOr[typingsSlinky.jasmine.jasmine.ImplementationCallback],
     timeout: Double
   ): Unit = js.native
+  def xit(expectation: String, assertion: typingsSlinky.jasmine.jasmine.ImplementationCallback): Unit = js.native
   @js.native
   object jasmine extends js.Object {
     /**
@@ -233,6 +234,7 @@ object global extends js.Object {
     def arrayWithExactContents[T](sample: typingsSlinky.jasmine.jasmine.ArrayLike[T]): ArrayContaining[T] = js.native
     def clock(): Clock = js.native
     def createSpy(): Spy = js.native
+    def createSpy(name: js.UndefOr[scala.Nothing], originalFn: js.Function): Spy = js.native
     def createSpy(name: String): Spy = js.native
     def createSpy(name: String, originalFn: js.Function): Spy = js.native
     def createSpyObj(baseName: String, methodNames: SpyObjMethodNames[js.UndefOr[scala.Nothing]]): js.Any = js.native
@@ -289,12 +291,7 @@ object global extends js.Object {
     object errors extends js.Object {
       @js.native
       class ExpectationFailed ()
-        extends typingsSlinky.jasmine.jasmine.errors.ExpectationFailed {
-        /* CompleteClass */
-        override var message: String = js.native
-        /* CompleteClass */
-        override var name: String = js.native
-      }
+        extends typingsSlinky.jasmine.jasmine.errors.ExpectationFailed
       
     }
     

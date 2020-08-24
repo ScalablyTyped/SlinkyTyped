@@ -1,6 +1,5 @@
 package typingsSlinky.reactPaginate.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -29,7 +28,7 @@ object ReactPaginate {
     @scala.inline
     def breakLabelReactElement(value: ReactElement): this.type = set("breakLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def breakLabel(value: String | TagMod[Any]): this.type = set("breakLabel", value.asInstanceOf[js.Any])
+    def breakLabel(value: String | ReactElement): this.type = set("breakLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def breakLinkClassName(value: String): this.type = set("breakLinkClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,7 +50,7 @@ object ReactPaginate {
     @scala.inline
     def nextLabelReactElement(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextLabel(value: TagMod[Any]): this.type = set("nextLabel", value.asInstanceOf[js.Any])
+    def nextLabel(value: ReactElement): this.type = set("nextLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def nextLinkClassName(value: String): this.type = set("nextLinkClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,7 +64,7 @@ object ReactPaginate {
     @scala.inline
     def previousLabelReactElement(value: ReactElement): this.type = set("previousLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def previousLabel(value: TagMod[Any]): this.type = set("previousLabel", value.asInstanceOf[js.Any])
+    def previousLabel(value: ReactElement): this.type = set("previousLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def previousLinkClassName(value: String): this.type = set("previousLinkClassName", value.asInstanceOf[js.Any])
   }

@@ -38,6 +38,8 @@ class SharedBuilder_ISelectedPeopleProps528717756[R <: js.Object] (val args: js.
     value: (/* input */ String, /* ValidationState */ ValidationState) => ISuggestionModel[IExtendedPersonaProps]
   ): this.type = set("createGenericItem", js.Any.fromFunction2(value))
   @scala.inline
+  def defaultSelectedItemsVarargs(value: IExtendedPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+  @scala.inline
   def defaultSelectedItems(value: js.Array[IExtendedPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
   @scala.inline
   def editMenuItemText(value: String): this.type = set("editMenuItemText", value.asInstanceOf[js.Any])
@@ -71,6 +73,8 @@ class SharedBuilder_ISelectedPeopleProps528717756[R <: js.Object] (val args: js.
   def removeButtonAriaLabel(value: String): this.type = set("removeButtonAriaLabel", value.asInstanceOf[js.Any])
   @scala.inline
   def removeMenuItemText(value: String): this.type = set("removeMenuItemText", value.asInstanceOf[js.Any])
+  @scala.inline
+  def selectedItemsVarargs(value: IExtendedPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
   @scala.inline
   def selectedItems(value: js.Array[IExtendedPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
   @scala.inline

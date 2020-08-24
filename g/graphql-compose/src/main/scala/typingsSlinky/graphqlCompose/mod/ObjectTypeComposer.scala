@@ -1,6 +1,5 @@
 package typingsSlinky.graphqlCompose.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.mod.GraphQLObjectType
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposeDefinition
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ObjectTypeComposer[TSource, TContext] protected ()
   extends typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer[TSource, TContext] {
-  def this(gqType: GraphQLObjectType[_, _, StringDictionary[_]], schemaComposer: SchemaComposer[TContext]) = this()
+  def this(gqType: GraphQLObjectType[_, _], schemaComposer: SchemaComposer[TContext]) = this()
 }
 
 /* static members */

@@ -21,6 +21,8 @@ object Breadcrumbs {
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def overrides(value: BreadcrumbsOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showTrailingSeparator(value: Boolean): this.type = set("showTrailingSeparator", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BreadcrumbsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

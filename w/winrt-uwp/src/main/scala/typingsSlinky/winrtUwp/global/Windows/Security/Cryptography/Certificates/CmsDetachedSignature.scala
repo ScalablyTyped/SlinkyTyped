@@ -1,7 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.Cryptography.Certificates
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
@@ -19,21 +18,6 @@ class CmsDetachedSignature protected ()
     * @param inputBlob A signed CMS message blob.
     */
   def this(inputBlob: IBuffer) = this()
-  /** Gets the list of certificates that are used for chain building for the signer certificate. */
-  /* CompleteClass */
-  override var certificates: IVectorView[typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.Certificate] = js.native
-  /** Gets the list of signers that are used for creating or verifying the signature. */
-  /* CompleteClass */
-  override var signers: IVectorView[typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.CmsSignerInfo] = js.native
-  /**
-    * Verifies a signed CMS message against the original streaming input.
-    * @param data The original input stream for the signed CMS message.
-    * @return An asynchronous operation to retrieve the result of the signature validation operation.
-    */
-  /* CompleteClass */
-  override def verifySignatureAsync(data: IInputStream): IPromiseWithIAsyncOperation[
-    typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.SignatureValidationResult
-  ] = js.native
 }
 
 /* static members */

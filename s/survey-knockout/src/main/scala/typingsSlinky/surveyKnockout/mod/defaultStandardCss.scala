@@ -1,13 +1,14 @@
 package typingsSlinky.surveyKnockout.mod
 
+import typingsSlinky.surveyKnockout.anon.AsCell
 import typingsSlinky.surveyKnockout.anon.Body
 import typingsSlinky.surveyKnockout.anon.Button
 import typingsSlinky.surveyKnockout.anon.ButtonAdd
+import typingsSlinky.surveyKnockout.anon.Cell
 import typingsSlinky.surveyKnockout.anon.CellLabel
 import typingsSlinky.surveyKnockout.anon.ChooseFile
 import typingsSlinky.surveyKnockout.anon.ClearButton
 import typingsSlinky.surveyKnockout.anon.Column
-import typingsSlinky.surveyKnockout.anon.Comment
 import typingsSlinky.surveyKnockout.anon.Complete
 import typingsSlinky.surveyKnockout.anon.Container
 import typingsSlinky.surveyKnockout.anon.Control
@@ -49,7 +50,7 @@ object defaultStandardCss extends js.Object {
   var logo: String = js.native
   var logoImage: String = js.native
   var matrix: CellLabel = js.native
-  var matrixdropdown: Root = js.native
+  var matrixdropdown: Cell = js.native
   var matrixdynamic: Button = js.native
   var multipletext: ItemTitle = js.native
   var navigation: Complete = js.native
@@ -62,7 +63,7 @@ object defaultStandardCss extends js.Object {
   var progress: String = js.native
   var progressBar: String = js.native
   var progressTextInBar: String = js.native
-  var question: Comment = js.native
+  var question: AsCell = js.native
   var radiogroup: ClearButton = js.native
   var rating: Disabled = js.native
   var root: String = js.native

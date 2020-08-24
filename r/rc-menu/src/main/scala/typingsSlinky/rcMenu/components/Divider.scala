@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Divider {
-  @JSImport("rc-menu/lib/Divider", JSImport.Default)
+  @JSImport("rc-menu", "Divider")
   @js.native
   object component extends js.Object
   

@@ -35,7 +35,7 @@ Instantiable1[
     ]
      with Instantiable3[
       /* player */ typingsSlinky.videoJs.mod.videojs.Player, 
-      /* options */ ComponentOptions, 
+      js.UndefOr[/* options */ ComponentOptions], 
       /* ready */ ReadyCallback, 
       typingsSlinky.videoJs.mod.videojs.Spacer
     ]

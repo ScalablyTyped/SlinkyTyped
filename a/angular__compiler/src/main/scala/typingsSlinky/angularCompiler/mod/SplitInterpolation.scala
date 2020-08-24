@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "SplitInterpolation")
 @js.native
 class SplitInterpolation protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.SplitInterpolation {
+  extends typingsSlinky.angularCompiler.compilerMod.SplitInterpolation {
   def this(strings: js.Array[String], expressions: js.Array[String], offsets: js.Array[Double]) = this()
 }
 

@@ -21,6 +21,7 @@ trait Context extends js.Object {
   // as of the 12.x runtime, so they are not removed from the types.
   /** @deprecated Use handler callback or promise result */
   def done(): Unit = js.native
+  def done(error: js.UndefOr[scala.Nothing], result: js.Any): Unit = js.native
   def done(error: js.Error): Unit = js.native
   def done(error: js.Error, result: js.Any): Unit = js.native
   def fail(error: String): Unit = js.native

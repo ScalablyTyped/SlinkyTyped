@@ -27,23 +27,16 @@ object CONFLICTING {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCONFLICTING(value: conflicting_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONFLICTING")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPENDING(value: pending_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PENDING")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCONFLICTING(value: conflicting_): Self = this.set("CONFLICTING", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSYNCED(value: synced_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SYNCED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPENDING(value: pending_): Self = this.set("PENDING", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSYNCED(value: synced_): Self = this.set("SYNCED", value.asInstanceOf[js.Any])
   }
   
 }

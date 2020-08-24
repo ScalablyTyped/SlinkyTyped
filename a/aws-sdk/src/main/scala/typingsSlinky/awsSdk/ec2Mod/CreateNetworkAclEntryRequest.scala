@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreateNetworkAclEntryRequest extends js.Object {
   /**
-    * The IPv4 network range to allow or deny, in CIDR notation (for example 172.16.0.0/24).
+    * The IPv4 network range to allow or deny, in CIDR notation (for example 172.16.0.0/24). We modify the specified CIDR block to its canonical form; for example, if you specify 100.68.0.18/18, we modify it to 100.68.0.0/18.
     */
   var CidrBlock: js.UndefOr[String] = js.native
   /**
@@ -55,20 +55,53 @@ object CreateNetworkAclEntryRequest {
     NetworkAclId: NetworkAclId,
     Protocol: String,
     RuleAction: RuleAction,
-    RuleNumber: Integer,
-    CidrBlock: String = null,
-    DryRun: js.UndefOr[Boolean] = js.undefined,
-    IcmpTypeCode: IcmpTypeCode = null,
-    Ipv6CidrBlock: String = null,
-    PortRange: PortRange = null
+    RuleNumber: Integer
   ): CreateNetworkAclEntryRequest = {
     val __obj = js.Dynamic.literal(Egress = Egress.asInstanceOf[js.Any], NetworkAclId = NetworkAclId.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any], RuleAction = RuleAction.asInstanceOf[js.Any], RuleNumber = RuleNumber.asInstanceOf[js.Any])
-    if (CidrBlock != null) __obj.updateDynamic("CidrBlock")(CidrBlock.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
-    if (IcmpTypeCode != null) __obj.updateDynamic("IcmpTypeCode")(IcmpTypeCode.asInstanceOf[js.Any])
-    if (Ipv6CidrBlock != null) __obj.updateDynamic("Ipv6CidrBlock")(Ipv6CidrBlock.asInstanceOf[js.Any])
-    if (PortRange != null) __obj.updateDynamic("PortRange")(PortRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNetworkAclEntryRequest]
   }
+  @scala.inline
+  implicit class CreateNetworkAclEntryRequestOps[Self <: CreateNetworkAclEntryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEgress(value: Boolean): Self = this.set("Egress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNetworkAclId(value: NetworkAclId): Self = this.set("NetworkAclId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProtocol(value: String): Self = this.set("Protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRuleAction(value: RuleAction): Self = this.set("RuleAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRuleNumber(value: Integer): Self = this.set("RuleNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCidrBlock(value: String): Self = this.set("CidrBlock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCidrBlock: Self = this.set("CidrBlock", js.undefined)
+    @scala.inline
+    def setDryRun(value: Boolean): Self = this.set("DryRun", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDryRun: Self = this.set("DryRun", js.undefined)
+    @scala.inline
+    def setIcmpTypeCode(value: IcmpTypeCode): Self = this.set("IcmpTypeCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcmpTypeCode: Self = this.set("IcmpTypeCode", js.undefined)
+    @scala.inline
+    def setIpv6CidrBlock(value: String): Self = this.set("Ipv6CidrBlock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIpv6CidrBlock: Self = this.set("Ipv6CidrBlock", js.undefined)
+    @scala.inline
+    def setPortRange(value: PortRange): Self = this.set("PortRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePortRange: Self = this.set("PortRange", js.undefined)
+  }
+  
 }
 

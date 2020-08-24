@@ -1,13 +1,14 @@
 package typingsSlinky.angularCore.mod
 
 import typingsSlinky.rxjs.mod.Observable_
+import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@angular/core", "QueryList")
 @js.native
-class QueryList[T] () extends js.Object {
+class QueryList[T] () extends Iterable[T] {
   var _results: js.Any = js.native
   val changes: Observable_[_] = js.native
   val dirty: /* true */ Boolean = js.native

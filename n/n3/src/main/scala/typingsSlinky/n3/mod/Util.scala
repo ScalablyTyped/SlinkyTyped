@@ -23,14 +23,14 @@ object Util extends js.Object {
     iri: String,
     factory: typingsSlinky.rdfJs.mod.DataFactory[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad]
   ): PrefixedToIri = js.native
-  def prefix(iri: typingsSlinky.rdfJs.mod.NamedNode): PrefixedToIri = js.native
+  def prefix(iri: typingsSlinky.rdfJs.mod.NamedNode[String]): PrefixedToIri = js.native
   def prefix(
-    iri: typingsSlinky.rdfJs.mod.NamedNode,
+    iri: typingsSlinky.rdfJs.mod.NamedNode[String],
     factory: typingsSlinky.rdfJs.mod.DataFactory[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad]
   ): PrefixedToIri = js.native
-  def prefixes(defaultPrefixes: Prefixes[typingsSlinky.rdfJs.mod.NamedNode | String]): js.Function1[/* prefix */ String, PrefixedToIri] = js.native
+  def prefixes(defaultPrefixes: Prefixes[typingsSlinky.rdfJs.mod.NamedNode[String] | String]): js.Function1[/* prefix */ String, PrefixedToIri] = js.native
   def prefixes(
-    defaultPrefixes: Prefixes[typingsSlinky.rdfJs.mod.NamedNode | String],
+    defaultPrefixes: Prefixes[typingsSlinky.rdfJs.mod.NamedNode[String] | String],
     factory: typingsSlinky.rdfJs.mod.DataFactory[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad]
   ): js.Function1[/* prefix */ String, PrefixedToIri] = js.native
 }

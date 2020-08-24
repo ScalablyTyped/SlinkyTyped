@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateVTLDeviceTypeInput extends js.Object {
   /**
-    * The type of medium changer you want to select.  Valid Values: "STK-L700", "AWS-Gateway-VTL"
+    * The type of medium changer you want to select. Valid Values: STK-L700 | AWS-Gateway-VTL 
     */
   var DeviceType: typingsSlinky.awsSdk.storagegatewayMod.DeviceType = js.native
   /**
@@ -22,5 +22,22 @@ object UpdateVTLDeviceTypeInput {
     val __obj = js.Dynamic.literal(DeviceType = DeviceType.asInstanceOf[js.Any], VTLDeviceARN = VTLDeviceARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVTLDeviceTypeInput]
   }
+  @scala.inline
+  implicit class UpdateVTLDeviceTypeInputOps[Self <: UpdateVTLDeviceTypeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDeviceType(value: DeviceType): Self = this.set("DeviceType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVTLDeviceARN(value: VTLDeviceARN): Self = this.set("VTLDeviceARN", value.asInstanceOf[js.Any])
+  }
+  
 }
 

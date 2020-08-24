@@ -66,7 +66,6 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.semanticUiReact.textAreaMod.default
 import typingsSlinky.semanticUiReact.textAreaTextAreaMod.StrictTextAreaProps
 import typingsSlinky.semanticUiReact.textAreaTextAreaMod.TextAreaProps
 import scala.scalajs.js
@@ -74,14 +73,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextArea {
-  @JSImport("semantic-ui-react/dist/commonjs/addons/TextArea", JSImport.Default)
+  @JSImport("semantic-ui-react", "TextArea")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.TextArea] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -210,6 +209,8 @@ object TextArea {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

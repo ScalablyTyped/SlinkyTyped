@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MiniLinkIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MiniLinkIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MiniLinkIcon")
   @js.native
   object component extends js.Object
   

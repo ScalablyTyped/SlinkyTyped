@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "babel-plugin-glaze"
-version := "0.5-dt-20200427Z-a04b50"
-scalaVersion := "2.13.2"
+version := "0.5-dt-20200427Z-cd1e49"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

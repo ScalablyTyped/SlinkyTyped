@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "BoundElementPropertyAst")
 @js.native
 class BoundElementPropertyAst protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.BoundElementPropertyAst {
+  extends typingsSlinky.angularCompiler.compilerMod.BoundElementPropertyAst {
   def this(
     name: String,
     `type`: PropertyBindingType,
     securityContext: SecurityContext,
-    value: typingsSlinky.angularCompiler.astMod.AST,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     unit: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -22,7 +22,7 @@ class BoundElementPropertyAst protected ()
     name: String,
     `type`: PropertyBindingType,
     securityContext: SecurityContext,
-    value: typingsSlinky.angularCompiler.astMod.AST,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     unit: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

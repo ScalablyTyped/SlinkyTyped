@@ -6,15 +6,15 @@ import scala.scalajs.js.annotation._
 
 /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/initializer_config.InitializerSerialization['class_name'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Identity
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RandomUniform
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Orthogonal
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.VarianceScaling
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Ones
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RandomNormal
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Zeros
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Constant
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.TruncatedNormal
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Ones
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Constant
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RandomNormal
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Orthogonal
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RandomUniform
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Identity
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Zeros
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.VarianceScaling
 */
 trait InitializerClassName extends js.Object
 

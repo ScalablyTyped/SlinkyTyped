@@ -3,21 +3,20 @@ package typingsSlinky.antDesignPro.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.countDownMod.ICountDownProps
-import typingsSlinky.antDesignPro.countDownMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CountDown {
-  @JSImport("ant-design-pro/lib/CountDown", JSImport.Default)
+  @JSImport("ant-design-pro", "CountDown")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.CountDown] {
     @scala.inline
     def format(value: /* time */ Double => Unit): this.type = set("format", js.Any.fromFunction1(value))
     @scala.inline

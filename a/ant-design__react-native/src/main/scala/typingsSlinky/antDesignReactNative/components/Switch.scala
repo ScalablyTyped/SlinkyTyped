@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Switch {
-  @JSImport("@ant-design/react-native/lib/switch", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Switch")
   @js.native
   object component extends js.Object
   

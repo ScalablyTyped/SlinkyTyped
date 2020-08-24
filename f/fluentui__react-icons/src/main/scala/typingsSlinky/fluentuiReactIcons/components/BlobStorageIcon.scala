@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BlobStorageIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BlobStorageIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BlobStorageIcon")
   @js.native
   object component extends js.Object
   

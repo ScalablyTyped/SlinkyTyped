@@ -47,8 +47,67 @@ class StaticLayout protected ()
     spacingmult: Double,
     spacingadd: Double,
     includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: Double
+  ) = this()
+  def this(
+    source: String,
+    bufstart: Double,
+    bufend: Double,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    textDir: TextDirectionHeuristic,
+    spacingmult: Double,
+    spacingadd: Double,
+    includepad: Boolean,
     ellipsize: TruncateAt,
     ellipsizedWidth: Double
+  ) = this()
+  def this(
+    source: String,
+    bufstart: Double,
+    bufend: Double,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    textDir: TextDirectionHeuristic,
+    spacingmult: Double,
+    spacingadd: Double,
+    includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: js.UndefOr[scala.Nothing],
+    maxLines: Double
+  ) = this()
+  def this(
+    source: String,
+    bufstart: Double,
+    bufend: Double,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    textDir: TextDirectionHeuristic,
+    spacingmult: Double,
+    spacingadd: Double,
+    includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: Double,
+    maxLines: Double
+  ) = this()
+  def this(
+    source: String,
+    bufstart: Double,
+    bufend: Double,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    textDir: TextDirectionHeuristic,
+    spacingmult: Double,
+    spacingadd: Double,
+    includepad: Boolean,
+    ellipsize: TruncateAt,
+    ellipsizedWidth: js.UndefOr[scala.Nothing],
+    maxLines: Double
   ) = this()
   def this(
     source: String,

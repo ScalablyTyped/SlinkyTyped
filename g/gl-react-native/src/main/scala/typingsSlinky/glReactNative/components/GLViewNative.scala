@@ -18,6 +18,8 @@ object GLViewNative {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.glReactNative.glviewnativeMod.GLViewNative] {
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def onContextCreate(value: /* gl */ WebGLRenderingContext => Unit): this.type = set("onContextCreate", js.Any.fromFunction1(value))
     @scala.inline
     def onContextFailure(value: /* e */ js.Error => Unit): this.type = set("onContextFailure", js.Any.fromFunction1(value))

@@ -1,6 +1,7 @@
 package typingsSlinky.typedoc
 
 import typingsSlinky.handlebars.Handlebars.TemplateDelegate
+import typingsSlinky.typedoc.legendPluginMod.LegendItem
 import typingsSlinky.typedoc.navigationItemMod.NavigationItem
 import typingsSlinky.typedoc.projectMod.ProjectReflection
 import typingsSlinky.typedoc.urlMappingMod.UrlMapping
@@ -23,6 +24,7 @@ object eventsMod extends js.Object {
   class PageEvent () extends Event {
     var contents: js.UndefOr[String] = js.native
     var filename: String = js.native
+    var legend: js.UndefOr[js.Array[js.Array[LegendItem]]] = js.native
     var model: js.Any = js.native
     var navigation: js.UndefOr[NavigationItem] = js.native
     var project: ProjectReflection = js.native

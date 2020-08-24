@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ExternalReference")
 @js.native
 class ExternalReference ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ExternalReference {
+  extends typingsSlinky.angularCompiler.compilerMod.ExternalReference {
   def this(moduleName: String) = this()
   def this(moduleName: String, name: String) = this()
   def this(moduleName: Null, name: String) = this()

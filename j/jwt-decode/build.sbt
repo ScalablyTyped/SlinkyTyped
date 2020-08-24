@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jwt-decode"
-version := "2.2-dt-20200515Z-c3a203"
-scalaVersion := "2.13.2"
+version := "2.2-dt-20200515Z-559af9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IPropertySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,21 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Initializes a new instance of the PlayReadyITADataGenerator class. */
 class PlayReadyITADataGenerator ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator {
-  /**
-    * Returns a serialized blob of the specified IPropertySet data that the PlayReady ITA can consume if wrapped in a content protection instantiation format.
-    * @param guidCPSystemId The content protection system GUID.
-    * @param countOfStreams The stream count.
-    * @param configuration The data to be returned as a serialized blob.
-    * @param format The format for the ITA serialized data.
-    * @return The serialized blob. See Remarks.
-    */
-  /* CompleteClass */
-  override def generateData(
-    guidCPSystemId: String,
-    countOfStreams: Double,
-    configuration: IPropertySet,
-    format: typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.PlayReadyITADataFormat
-  ): js.Array[Double] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator
 

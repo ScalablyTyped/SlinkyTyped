@@ -66,65 +66,30 @@ object OnMessageEventDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFrameId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFrameId(value: integer): Self = this.set("frameId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def withParentFrameId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFrameId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setParentFrameId(value: integer): Self = this.set("parentFrameId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStage(value: Stage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRequestId(value: String): Self = this.set("requestId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTabId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStage(value: Stage): Self = this.set("stage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTimeStamp(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTabId(value: integer): Self = this.set("tabId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTimeStamp(value: double): Self = this.set("timeStamp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: ResourceType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
   }
   
 }

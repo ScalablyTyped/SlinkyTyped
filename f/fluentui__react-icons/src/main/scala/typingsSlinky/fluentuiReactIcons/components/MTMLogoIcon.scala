@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MTMLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MTMLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MTMLogoIcon")
   @js.native
   object component extends js.Object
   

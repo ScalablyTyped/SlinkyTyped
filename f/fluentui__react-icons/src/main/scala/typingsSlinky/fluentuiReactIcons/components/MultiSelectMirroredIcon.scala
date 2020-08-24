@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MultiSelectMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MultiSelectMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MultiSelectMirroredIcon")
   @js.native
   object component extends js.Object
   

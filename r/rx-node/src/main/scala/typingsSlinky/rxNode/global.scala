@@ -3,8 +3,8 @@ package typingsSlinky.rxNode
 import typingsSlinky.node.NodeJS.ReadWriteStream
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.rxLite.Rx.Disposable
-import typingsSlinky.rxLiteAggregates.Rx.Observable
+import typingsSlinky.rx.Rx.Disposable
+import typingsSlinky.rx.Rx.Observable
 import typingsSlinky.rxNode.RxNode.PublishableEventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,6 +37,7 @@ object global extends js.Object {
       * @returns {Observable} An observable sequence which fires on each 'data' event as well as handling 'error' and finish events like `end` or `finish`.
       */
     def fromStream[T](stream: ReadableStream): Observable[T] = js.native
+    def fromStream[T](stream: ReadableStream, finishEventName: js.UndefOr[scala.Nothing], dataEventName: String): Observable[T] = js.native
     def fromStream[T](stream: ReadableStream, finishEventName: String): Observable[T] = js.native
     def fromStream[T](stream: ReadableStream, finishEventName: String, dataEventName: String): Observable[T] = js.native
     /**

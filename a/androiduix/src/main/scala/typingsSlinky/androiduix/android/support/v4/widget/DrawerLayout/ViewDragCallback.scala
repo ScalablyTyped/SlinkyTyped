@@ -54,53 +54,26 @@ object ViewDragCallback {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_DrawerLayout_this(value: typingsSlinky.androiduix.android.support.v4.widget.DrawerLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_DrawerLayout_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCloseOtherDrawer(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOtherDrawer")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_DrawerLayout_this(value: typingsSlinky.androiduix.android.support.v4.widget.DrawerLayout): Self = this.set("_DrawerLayout_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMAbsGravity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAbsGravity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCloseOtherDrawer(value: () => js.Any): Self = this.set("closeOtherDrawer", js.Any.fromFunction0(value))
     @scala.inline
-    def withMDragger(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDragger")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAbsGravity(value: js.Any): Self = this.set("mAbsGravity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPeekRunnable(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPeekRunnable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDragger(value: js.Any): Self = this.set("mDragger", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPeekDrawer(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peekDrawer")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMPeekRunnable(value: js.Any): Self = this.set("mPeekRunnable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveCallbacks(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCallbacks")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setPeekDrawer(value: () => js.Any): Self = this.set("peekDrawer", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetDragger(value: ViewDragHelper => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDragger")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveCallbacks(value: () => Unit): Self = this.set("removeCallbacks", js.Any.fromFunction0(value))
+    @scala.inline
+    def setSetDragger(value: ViewDragHelper => Unit): Self = this.set("setDragger", js.Any.fromFunction1(value))
   }
   
 }

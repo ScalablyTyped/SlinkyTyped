@@ -1,0 +1,13 @@
+package typingsSlinky.jestCore
+
+import typingsSlinky.jestTypes.configMod.ProjectConfig
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@jest/core/build/getProjectNamesMissingWarning", JSImport.Namespace)
+@js.native
+object getProjectNamesMissingWarningMod extends js.Object {
+  def default(projectConfigs: js.Array[ProjectConfig]): js.UndefOr[String] = js.native
+}
+

@@ -18,6 +18,8 @@ object EventType extends js.Object {
   /* "CommentAdded" */ val commentAdded: typingsSlinky.officeJsPreview.Excel.EventType.commentAdded with String = js.native
   /* "CommentChanged" */ val commentChanged: typingsSlinky.officeJsPreview.Excel.EventType.commentChanged with String = js.native
   /* "CommentDeleted" */ val commentDeleted: typingsSlinky.officeJsPreview.Excel.EventType.commentDeleted with String = js.native
+  /* "LinkedDataTypeLinkedDataTypeAdded" */ val linkedDataTypeLinkedDataTypeAdded: typingsSlinky.officeJsPreview.Excel.EventType.linkedDataTypeLinkedDataTypeAdded with String = js.native
+  /* "LinkedDataTypeRefreshModeChanged" */ val linkedDataTypeRefreshModeChanged: typingsSlinky.officeJsPreview.Excel.EventType.linkedDataTypeRefreshModeChanged with String = js.native
   /* "LinkedDataTypeRefreshRequestCompleted" */ val linkedDataTypeRefreshRequestCompleted: typingsSlinky.officeJsPreview.Excel.EventType.linkedDataTypeRefreshRequestCompleted with String = js.native
   /* "RibbonCommandExecuted" */ val ribbonCommandExecuted: typingsSlinky.officeJsPreview.Excel.EventType.ribbonCommandExecuted with String = js.native
   /* "ShapeActivated" */ val shapeActivated: typingsSlinky.officeJsPreview.Excel.EventType.shapeActivated with String = js.native
@@ -29,7 +31,6 @@ object EventType extends js.Object {
   /* "TableSelectionChanged" */ val tableSelectionChanged: typingsSlinky.officeJsPreview.Excel.EventType.tableSelectionChanged with String = js.native
   /* "VisualChange" */ val visualChange: typingsSlinky.officeJsPreview.Excel.EventType.visualChange with String = js.native
   /* "VisualSelectionChanged" */ val visualSelectionChanged: typingsSlinky.officeJsPreview.Excel.EventType.visualSelectionChanged with String = js.native
-  /* "WACOperationEvent" */ val wacoperationEvent: typingsSlinky.officeJsPreview.Excel.EventType.wacoperationEvent with String = js.native
   /* "WorkbookAutoSaveSettingChanged" */ val workbookAutoSaveSettingChanged: typingsSlinky.officeJsPreview.Excel.EventType.workbookAutoSaveSettingChanged with String = js.native
   /* "WorksheetActivated" */ val worksheetActivated: typingsSlinky.officeJsPreview.Excel.EventType.worksheetActivated with String = js.native
   /* "WorksheetAdded" */ val worksheetAdded: typingsSlinky.officeJsPreview.Excel.EventType.worksheetAdded with String = js.native

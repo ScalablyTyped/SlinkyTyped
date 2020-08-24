@@ -1,7 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
-import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.fabricTypesMod.IFabricProps
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,8 @@ object fabricMod extends js.Object {
   class FabricBase ()
     extends typingsSlinky.officeUiFabricReact.fabricBaseMod.FabricBase
   
-  val Fabric: ReactComponentClass[IFabricProps] = js.native
+  val Fabric: ForwardRefExoticComponent[
+    IFabricProps with RefAttributes[typingsSlinky.officeUiFabricReact.fabricBaseMod.FabricBase]
+  ] = js.native
 }
 

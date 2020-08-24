@@ -37,29 +37,20 @@ object SelectDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInteractive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRequest(value: ClientCertificateRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInteractive(value: Boolean): Self = this.set("interactive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClientCerts(value: js.Array[js.typedarray.ArrayBuffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCerts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRequest(value: ClientCertificateRequest): Self = this.set("request", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutClientCerts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCerts")(js.undefined)
-        ret
-    }
+    def setClientCertsVarargs(value: js.typedarray.ArrayBuffer*): Self = this.set("clientCerts", js.Array(value :_*))
+    @scala.inline
+    def setClientCerts(value: js.Array[js.typedarray.ArrayBuffer]): Self = this.set("clientCerts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClientCerts: Self = this.set("clientCerts", js.undefined)
   }
   
 }

@@ -1,7 +1,5 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Formatter
-import typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Type
 import typingsSlinky.echarts.echartsStrings.axis
 import typingsSlinky.echarts.echartsStrings.click
 import typingsSlinky.echarts.echartsStrings.html
@@ -13,7 +11,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait Tooltip_ extends js.Object {
+@js.native
+trait Tooltip_ extends BaseTooltip {
   /**
     * Whether to show tooltip content all the time.
     * By default, it will be hidden after `tooltip.hideDelay`.
@@ -22,7 +21,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default false
     */
-  var alwaysShowContent: js.UndefOr[Boolean] = js.undefined
+  var alwaysShowContent: js.UndefOr[Boolean] = js.native
   /**
     * `axisPointer` is a tool for displaying reference line
     * and axis value under mouse pointer.
@@ -40,25 +39,7 @@ trait Tooltip_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#tooltip.axisPointer
     */
-  var axisPointer: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer] = js.undefined
-  /**
-    * The background color of tooltip's floating layer.
-    *
-    * @default 'rgba(50, 50, 50, 0.7)'
-    */
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  /**
-    * The border color of tooltip's floating layer.
-    *
-    * @default '#333'
-    */
-  var borderColor: js.UndefOr[String] = js.undefined
-  /**
-    * The border width of tooltip's floating layer.
-    *
-    * @default 0
-    */
-  var borderWidth: js.UndefOr[Double] = js.undefined
+  var axisPointer: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer] = js.native
   /**
     * Whether confine tooltip content in the view rect
     * of chart instance.
@@ -68,7 +49,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default false
     */
-  var confine: js.UndefOr[Boolean] = js.undefined
+  var confine: js.UndefOr[Boolean] = js.native
   /**
     * Whether mouse is allowed to enter the floating layer
     * of tooltip, whose default value is false.
@@ -77,151 +58,14 @@ trait Tooltip_ extends js.Object {
     *
     * @default true
     */
-  var enterable: js.UndefOr[Boolean] = js.undefined
-  /**
-    * Extra CSS style for floating layer.
-    * The following is an example for adding shadow.
-    *
-    * @example
-    * extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);'
-    */
-  var extraCssText: js.UndefOr[String] = js.undefined
-  /**
-    * The content formatter of tooltip's floating layer
-    * which supports string template and callback function.
-    *
-    * Types:
-    * 1. String.
-    * The template variables are `{a}`, `{b}`, `{c}`, `{d}` and `{e}`,
-    * which stands for series name, data name and data value and ect.
-    * When trigger is set to be `'axis'`, there may be data
-    * from multiple series. In this time, series index can be refered
-    * as `{a0}`, `{a1}`, or `{a2}`.
-    * `{a}`, `{b}`, `{c}`, `{d}` have different meanings
-    * for different series types:
-    *   + Line (area) charts, bar (column) charts, K charts:
-    *   `{a}` for series name,
-    *   `{b}` for category name,
-    *   `{c}` for data value,
-    *   `{d}` for none;
-    *   + Scatter (bubble) charts:
-    *   `{a}` for series name,
-    *   `{b}` for data name,
-    *   `{c}` for data value,
-    *   `{d}` for none;
-    *   + Map:
-    *   `{a}` for series name,
-    *   `{b}` for area name,
-    *   `{c}` for merging data,
-    *   `{d}` for none;
-    *   + Pie charts, gauge charts, funnel charts:
-    *   `{a}` for series name,
-    *   `{b}` for data item name,
-    *   `{c}` for data value,
-    *   `{d}` for percentage.
-    *
-    * 2. Function.
-    * The first parameter params is the data that the formatter needs.
-    * Its format is shown as {Format}
-    * When trigger is `'axis'`, or when tooltip is triggered by
-    * `axisPointer`, params is the data array of multiple series.
-    * `Note`: Using array to present all the parameters in ECharts 2.x
-    * is not supported anymore.
-    * The second parameter ticket is the asynchronous callback flag
-    * which should be used along with the third parameter callback
-    * when it is used.
-    * The third parameter callback is asynchronous callback.
-    * When the content of tooltip is acquired asynchronously,
-    * ticket and htm as introduced above can be used to update tooltip
-    * with callback.
-    *
-    * @example
-    * ```
-    *
-    * //string
-    * formatter: '{b0}: {c0}<br />{b1}: {c1}'
-    *
-    * // function
-    * formatter: function (params, ticket, callback) {
-    *     $.get('detail?name=' + params.name, function (content) {
-    *         callback(ticket, toHTML(content));
-    *     });
-    *     return 'Loading';
-    * }
-    * ```
-    */
-  var formatter: js.UndefOr[String | Formatter] = js.undefined
+  var enterable: js.UndefOr[Boolean] = js.native
   /**
     * Delay time for hiding tooltip, in ms.
     * It will be invalid when `alwaysShowContent` is `true`.
     *
     * @default 100
     */
-  var hideDelay: js.UndefOr[Double] = js.undefined
-  /**
-    * The floating layer of tooltip space around content.
-    * The unit is px. Default values for each position are 5.
-    * And they can be set to different values with left, right,
-    * top, and bottom.
-    *
-    * @example
-    * // Set padding to be 5
-    * padding: 5
-    * // Set the top and bottom paddings to be 5, and left and right paddings to be 10
-    * padding: [5, 10]
-    * // Set each of the four paddings seperately
-    * padding: [
-    *     5,  // up
-    *     10, // right
-    *     5,  // down
-    *     10, // left
-    * ]
-    *
-    * @default 5
-    */
-  var padding: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  /**
-    * The position of the tooltip's floating layer,
-    * which would follow the position of mouse by default.
-    *
-    * Options:
-    * 1. String.
-    *   + 'inside' - Center position of the graphic element
-    *   where the mouse is in, which is only valid when trigger
-    *   is 'item'.
-    *   + 'top' - Top position of the graphic element where the mouse
-    *   is in, which is only valid when trigger is 'item'.
-    *   + 'left' - Left position of the graphic element where the mouse
-    *   is in, which is only valid when trigger is 'item'.
-    *   + 'right' - Right position of the graphic element where
-    *   the mouse is in, which is only valid when trigger is 'item'.
-    *   + 'bottom' - Bottom position of the graphic element where
-    *   the mouse is in, which is only valid when trigger is 'item'.
-    *
-    * 2. Object - Object with optional properties such as `top`,
-    * `left`, `right` and `bottom` that could be `string` or `number`.
-    * e.g. `{left: 10, top: 30}`, or `{right: '20%', bottom: 40}`
-    *
-    * 3. Array - Display the position of tooltip's floating layer
-    * through array, which supports absolute position
-    * and relative percentage.
-    *
-    * 4. Function.
-    *   + Parameters:
-    *     + point: Mouse position.
-    *     + param: The same as formatter.
-    *     + dom: The DOM object of tooltip.
-    *     + rect: It is valid only when mouse is on graphic elements,
-    *       which stands for a bounding box with x, y, width, and height.
-    *     + size: The size of dom echarts container.
-    *       For example:
-    *       `{contentSize: [width, height], viewSize: [width, height]}`
-    *   + Return:
-    *     position as `String`, `Array` or `Object` described above
-    *
-    * @see https://echarts.apache.org/en/option.html#tooltip.position
-    */
-  var position: js.UndefOr[Type] = js.undefined
+  var hideDelay: js.UndefOr[Double] = js.native
   /**
     * Render mode for tooltip.
     * By default, it is set to be `'html'` so that extra DOM element
@@ -234,14 +78,14 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'html'
     */
-  var renderMode: js.UndefOr[html] = js.undefined
+  var renderMode: js.UndefOr[html] = js.native
   /**
     * Whether to show the tooltip component,
     * including tooltip floating layer and `axisPointer`.
     *
     * @default true
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
   /**
     * Whether to show the tooltip floating layer,
     * whose default value is true.
@@ -251,7 +95,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default true
     */
-  var showContent: js.UndefOr[Boolean] = js.undefined
+  var showContent: js.UndefOr[Boolean] = js.native
   /**
     * Delay time for showing tooltip, in ms.
     * No delay by default, and it is not recommended to set.
@@ -259,18 +103,14 @@ trait Tooltip_ extends js.Object {
     *
     * @default 0
     */
-  var showDelay: js.UndefOr[Double] = js.undefined
-  /**
-    * The text style of tooltip's floating layer.
-    */
-  var textStyle: js.UndefOr[BaseTextStyle] = js.undefined
+  var showDelay: js.UndefOr[Double] = js.native
   /**
     * The transition duration of tooltip's animation, in seconds.
     * When it is set to be 0, it would move closely with the mouse.
     *
     * @default 0.4
     */
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var transitionDuration: js.UndefOr[Double] = js.native
   /**
     * Type of triggering.
     * Options:
@@ -287,7 +127,7 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'item'
     */
-  var trigger: js.UndefOr[item | axis | none] = js.undefined
+  var trigger: js.UndefOr[item | axis | none] = js.native
   /**
     * Conditions to trigger tooltip.
     * Options:
@@ -303,55 +143,75 @@ trait Tooltip_ extends js.Object {
     *
     * @default 'mousemove|click'
     */
-  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.undefined
+  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.native
 }
 
 object Tooltip_ {
   @scala.inline
-  def apply(
-    alwaysShowContent: js.UndefOr[Boolean] = js.undefined,
-    axisPointer: typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer = null,
-    backgroundColor: String = null,
-    borderColor: String = null,
-    borderWidth: js.UndefOr[Double] = js.undefined,
-    confine: js.UndefOr[Boolean] = js.undefined,
-    enterable: js.UndefOr[Boolean] = js.undefined,
-    extraCssText: String = null,
-    formatter: String | Formatter = null,
-    hideDelay: js.UndefOr[Double] = js.undefined,
-    padding: Double | js.Array[Double] = null,
-    position: Type = null,
-    renderMode: html = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    showContent: js.UndefOr[Boolean] = js.undefined,
-    showDelay: js.UndefOr[Double] = js.undefined,
-    textStyle: BaseTextStyle = null,
-    transitionDuration: js.UndefOr[Double] = js.undefined,
-    trigger: item | axis | none = null,
-    triggerOn: mousemove | click | mousemoveVerticallineclick | none = null
-  ): Tooltip_ = {
+  def apply(): Tooltip_ = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysShowContent)) __obj.updateDynamic("alwaysShowContent")(alwaysShowContent.get.asInstanceOf[js.Any])
-    if (axisPointer != null) __obj.updateDynamic("axisPointer")(axisPointer.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(confine)) __obj.updateDynamic("confine")(confine.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(enterable)) __obj.updateDynamic("enterable")(enterable.get.asInstanceOf[js.Any])
-    if (extraCssText != null) __obj.updateDynamic("extraCssText")(extraCssText.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideDelay)) __obj.updateDynamic("hideDelay")(hideDelay.get.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showContent)) __obj.updateDynamic("showContent")(showContent.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDelay)) __obj.updateDynamic("showDelay")(showDelay.get.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitionDuration)) __obj.updateDynamic("transitionDuration")(transitionDuration.get.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (triggerOn != null) __obj.updateDynamic("triggerOn")(triggerOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tooltip_]
   }
+  @scala.inline
+  implicit class Tooltip_Ops[Self <: Tooltip_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlwaysShowContent(value: Boolean): Self = this.set("alwaysShowContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlwaysShowContent: Self = this.set("alwaysShowContent", js.undefined)
+    @scala.inline
+    def setAxisPointer(value: typingsSlinky.echarts.echarts.EChartOption.Tooltip.AxisPointer): Self = this.set("axisPointer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAxisPointer: Self = this.set("axisPointer", js.undefined)
+    @scala.inline
+    def setConfine(value: Boolean): Self = this.set("confine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConfine: Self = this.set("confine", js.undefined)
+    @scala.inline
+    def setEnterable(value: Boolean): Self = this.set("enterable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnterable: Self = this.set("enterable", js.undefined)
+    @scala.inline
+    def setHideDelay(value: Double): Self = this.set("hideDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHideDelay: Self = this.set("hideDelay", js.undefined)
+    @scala.inline
+    def setRenderMode(value: html): Self = this.set("renderMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenderMode: Self = this.set("renderMode", js.undefined)
+    @scala.inline
+    def setShow(value: Boolean): Self = this.set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShow: Self = this.set("show", js.undefined)
+    @scala.inline
+    def setShowContent(value: Boolean): Self = this.set("showContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowContent: Self = this.set("showContent", js.undefined)
+    @scala.inline
+    def setShowDelay(value: Double): Self = this.set("showDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowDelay: Self = this.set("showDelay", js.undefined)
+    @scala.inline
+    def setTransitionDuration(value: Double): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
+    @scala.inline
+    def setTrigger(value: item | axis | none): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrigger: Self = this.set("trigger", js.undefined)
+    @scala.inline
+    def setTriggerOn(value: mousemove | click | mousemoveVerticallineclick | none): Self = this.set("triggerOn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTriggerOn: Self = this.set("triggerOn", js.undefined)
+  }
+  
 }
 

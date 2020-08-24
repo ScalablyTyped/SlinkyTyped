@@ -1,0 +1,12 @@
+package typingsSlinky.creditCardType
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.creditCardType.typesMod.CardCollection
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("credit-card-type/dist/lib/card-types", JSImport.Namespace)
+@js.native
+object cardTypesMod extends TopLevel[CardCollection]
+

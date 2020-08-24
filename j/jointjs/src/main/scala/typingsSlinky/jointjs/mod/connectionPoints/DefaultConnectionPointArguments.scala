@@ -1,12 +1,13 @@
 package typingsSlinky.jointjs.mod.connectionPoints
 
+import typingsSlinky.jointjs.mod.dia.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DefaultConnectionPointArguments extends js.Object {
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double | Point] = js.native
 }
 
 object DefaultConnectionPointArguments {
@@ -22,17 +23,14 @@ object DefaultConnectionPointArguments {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
+    def setOffset(value: Double | Point): Self = this.set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffset: Self = this.set("offset", js.undefined)
   }
   
 }

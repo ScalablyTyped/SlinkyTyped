@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet", "Calendar")
+@JSImport("grommet/es6", "Calendar")
 @js.native
 class Calendar protected ()
   extends Component[
@@ -26,7 +26,7 @@ class Calendar protected ()
   ) = this()
 }
 
-@JSImport("grommet", "Calendar")
+@JSImport("grommet/es6", "Calendar")
 @js.native
 object Calendar extends TopLevel[
       ReactComponentClass[

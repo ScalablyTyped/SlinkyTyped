@@ -1,5 +1,6 @@
 package typingsSlinky.react.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder
@@ -27,8 +28,8 @@ object UnstableSuspenseList {
     
     def withProps(p: typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply(revealOrder: forwards | backwards): Builder = {
-        val __props = js.Dynamic.literal(revealOrder = revealOrder.asInstanceOf[js.Any])
+    def apply(children: ReactElement | js.Iterable[ReactElement], revealOrder: forwards | backwards): Builder = {
+        val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], revealOrder = revealOrder.asInstanceOf[js.Any])
         new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps]))
     }
   }
@@ -47,7 +48,11 @@ object UnstableSuspenseList {
     }
     
     def withProps(p: typingsSlinky.react.experimentalMod.reactAugmentingMod.NonDirectionalSuspenseListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: NonDirectionalSuspenseListProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    @scala.inline
+    def apply(children: ReactElement | js.Iterable[ReactElement]): Builder = {
+        val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.NonDirectionalSuspenseListProps]))
+    }
   }
   
 }

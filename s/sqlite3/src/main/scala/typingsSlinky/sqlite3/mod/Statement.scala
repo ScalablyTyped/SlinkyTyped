@@ -19,6 +19,10 @@ class Statement () extends js.Object {
   def bind(callback: js.Function1[/* err */ js.Error | Null, Unit]): this.type = js.native
   def bind(params: js.Any*): this.type = js.native
   def each(): this.type = js.native
+  def each(
+    callback: js.UndefOr[scala.Nothing],
+    complete: js.Function2[/* err */ js.Error | Null, /* count */ Double, Unit]
+  ): this.type = js.native
   def each(callback: js.Function2[/* err */ js.Error | Null, /* row */ js.Any, Unit]): this.type = js.native
   def each(
     callback: js.Function2[/* err */ js.Error | Null, /* row */ js.Any, Unit],
@@ -26,6 +30,11 @@ class Statement () extends js.Object {
   ): this.type = js.native
   def each(params: js.Any*): this.type = js.native
   def each(params: js.Any): this.type = js.native
+  def each(
+    params: js.Any,
+    callback: js.UndefOr[scala.Nothing],
+    complete: js.Function2[/* err */ js.Error | Null, /* count */ Double, Unit]
+  ): this.type = js.native
   def each(
     params: js.Any,
     callback: js.ThisFunction2[/* this */ RunResult, /* err */ js.Error | Null, /* row */ js.Any, Unit]

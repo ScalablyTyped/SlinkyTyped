@@ -6,6 +6,12 @@ import scala.scalajs.js.annotation._
 
 package object mqMod {
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SIMPLE
+    - typingsSlinky.awsSdk.awsSdkStrings.LDAP
+    - java.lang.String
+  */
+  type AuthenticationStrategy = typingsSlinky.awsSdk.mqMod._AuthenticationStrategy | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CREATION_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.CREATION_FAILED
     - typingsSlinky.awsSdk.awsSdkStrings.DELETION_IN_PROGRESS

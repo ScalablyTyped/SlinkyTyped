@@ -11,12 +11,6 @@ import scala.scalajs.js.annotation._
 class ByteLengthQueuingStrategy protected ()
   extends typingsSlinky.std.ByteLengthQueuingStrategy {
   def this(options: HighWaterMark) = this()
-  /* CompleteClass */
-  @JSName("highWaterMark")
-  override var highWaterMark_ByteLengthQueuingStrategy: Double = js.native
-  /* CompleteClass */
-  @JSName("size")
-  override def size_MByteLengthQueuingStrategy(chunk: js.typedarray.ArrayBufferView): Double = js.native
 }
 
 @JSGlobal("ByteLengthQueuingStrategy")

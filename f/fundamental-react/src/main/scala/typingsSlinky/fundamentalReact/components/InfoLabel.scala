@@ -19,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InfoLabel {
-  @JSImport("fundamental-react/lib/InfoLabel/InfoLabel", JSImport.Default)
+  @JSImport("fundamental-react", "InfoLabel")
   @js.native
   object component extends js.Object
   

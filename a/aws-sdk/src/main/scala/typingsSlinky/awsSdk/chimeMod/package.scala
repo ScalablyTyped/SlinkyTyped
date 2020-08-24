@@ -15,6 +15,7 @@ package object chimeMod {
     - java.lang.String
   */
   type AccountType = typingsSlinky.awsSdk.chimeMod._AccountType | java.lang.String
+  type Alpha2CountryCode = java.lang.String
   type AreaCode = java.lang.String
   type Arn = java.lang.String
   type AttendeeList = js.Array[typingsSlinky.awsSdk.chimeMod.Attendee]
@@ -48,7 +49,9 @@ package object chimeMod {
   type CountryList = js.Array[typingsSlinky.awsSdk.chimeMod.Country]
   type CpsLimit = scala.Double
   type CreateAttendeeRequestItemList = js.Array[typingsSlinky.awsSdk.chimeMod.CreateAttendeeRequestItem]
+  type CreateMeetingWithAttendeesRequestItemList = js.Array[typingsSlinky.awsSdk.chimeMod.CreateAttendeeRequestItem]
   type CredentialList = js.Array[typingsSlinky.awsSdk.chimeMod.Credential]
+  type DNISEmergencyCallingConfigurationList = js.Array[typingsSlinky.awsSdk.chimeMod.DNISEmergencyCallingConfiguration]
   type DataRetentionInHours = scala.Double
   type E164PhoneNumber = java.lang.String
   type E164PhoneNumberList = js.Array[typingsSlinky.awsSdk.chimeMod.E164PhoneNumber]
@@ -71,6 +74,7 @@ package object chimeMod {
     - typingsSlinky.awsSdk.awsSdkStrings.AccessDenied
     - typingsSlinky.awsSdk.awsSdkStrings.ServiceUnavailable
     - typingsSlinky.awsSdk.awsSdkStrings.Throttled_
+    - typingsSlinky.awsSdk.awsSdkStrings.Throttling_
     - typingsSlinky.awsSdk.awsSdkStrings.Unauthorized_
     - typingsSlinky.awsSdk.awsSdkStrings.Unprocessable
     - typingsSlinky.awsSdk.awsSdkStrings.VoiceConnectorGroupAssociationsExist

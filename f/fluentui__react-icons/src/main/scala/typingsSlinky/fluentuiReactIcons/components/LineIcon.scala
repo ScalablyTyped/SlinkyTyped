@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LineIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LineIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LineIcon")
   @js.native
   object component extends js.Object
   

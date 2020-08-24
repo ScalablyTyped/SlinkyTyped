@@ -29,29 +29,18 @@ object FAILURE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFAILURE(value: failure_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILURE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withIN_USE(value: in_use_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IN_USE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFAILURE(value: failure_): Self = this.set("FAILURE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNO_SUCH_DEVICE(value: no_such_device_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NO_SUCH_DEVICE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIN_USE(value: in_use_): Self = this.set("IN_USE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSUCCESS(value: success_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNO_SUCH_DEVICE(value: no_such_device_): Self = this.set("NO_SUCH_DEVICE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSUCCESS(value: success_): Self = this.set("SUCCESS", value.asInstanceOf[js.Any])
   }
   
 }

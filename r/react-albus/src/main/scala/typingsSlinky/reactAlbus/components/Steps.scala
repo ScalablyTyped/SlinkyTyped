@@ -16,7 +16,7 @@ object Steps {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactAlbus.mod.Steps] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def step(value: StepObject): this.type = set("step", value.asInstanceOf[js.Any])
   }

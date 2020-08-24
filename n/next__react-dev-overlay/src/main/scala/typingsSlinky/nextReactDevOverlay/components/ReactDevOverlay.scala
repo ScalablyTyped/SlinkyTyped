@@ -13,6 +13,10 @@ object ReactDevOverlay {
   object component extends js.Object
   
   def withProps(p: Children): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ReactDevOverlay.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: js.Any): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Children]))
+  }
 }
 

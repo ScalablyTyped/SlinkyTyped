@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloServerExpress.apolloServerExpressStrings.Mutation
 import typingsSlinky.apolloServerExpress.apolloServerExpressStrings.Query
 import typingsSlinky.apolloServerExpress.apolloServerExpressStrings.Subscription
-import typingsSlinky.graphql.definitionMod.GraphQLField
+import typingsSlinky.graphql.definitionMod.GraphQLFieldConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class RenameRootFields protected ()
   def this(renamer: js.Function3[
         /* operation */ Query | Mutation | Subscription, 
         /* name */ String, 
-        /* field */ GraphQLField[_, _, StringDictionary[_]], 
+        /* fieldConfig */ GraphQLFieldConfig[_, _, StringDictionary[_]], 
         String
       ]) = this()
 }

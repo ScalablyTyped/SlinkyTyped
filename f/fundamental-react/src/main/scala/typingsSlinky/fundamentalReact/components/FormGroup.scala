@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormGroup {
-  @JSImport("fundamental-react/lib/Forms/FormGroup", JSImport.Default)
+  @JSImport("fundamental-react", "FormGroup")
   @js.native
   object component extends js.Object
   

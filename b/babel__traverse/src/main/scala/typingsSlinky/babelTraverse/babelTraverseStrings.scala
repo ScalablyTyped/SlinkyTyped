@@ -96,6 +96,9 @@ object babelTraverseStrings {
   sealed trait DebuggerStatement extends js.Object
   
   @js.native
+  sealed trait DecimalLiteral extends js.Object
+  
+  @js.native
   sealed trait DeclareClass extends js.Object
   
   @js.native
@@ -235,6 +238,9 @@ object babelTraverseStrings {
   
   @js.native
   sealed trait Import extends js.Object
+  
+  @js.native
+  sealed trait ImportAttribute extends js.Object
   
   @js.native
   sealed trait ImportDeclaration extends js.Object
@@ -546,6 +552,9 @@ object babelTraverseStrings {
   sealed trait TSModuleDeclaration extends js.Object
   
   @js.native
+  sealed trait TSNamedTupleMember extends js.Object
+  
+  @js.native
   sealed trait TSNamespaceExportDeclaration extends js.Object
   
   @js.native
@@ -792,6 +801,8 @@ object babelTraverseStrings {
   @scala.inline
   def DebuggerStatement: DebuggerStatement = "DebuggerStatement".asInstanceOf[DebuggerStatement]
   @scala.inline
+  def DecimalLiteral: DecimalLiteral = "DecimalLiteral".asInstanceOf[DecimalLiteral]
+  @scala.inline
   def DeclareClass: DeclareClass = "DeclareClass".asInstanceOf[DeclareClass]
   @scala.inline
   def DeclareExportAllDeclaration: DeclareExportAllDeclaration = "DeclareExportAllDeclaration".asInstanceOf[DeclareExportAllDeclaration]
@@ -885,6 +896,8 @@ object babelTraverseStrings {
   def IfStatement: IfStatement = "IfStatement".asInstanceOf[IfStatement]
   @scala.inline
   def Import: Import = "Import".asInstanceOf[Import]
+  @scala.inline
+  def ImportAttribute: ImportAttribute = "ImportAttribute".asInstanceOf[ImportAttribute]
   @scala.inline
   def ImportDeclaration: ImportDeclaration = "ImportDeclaration".asInstanceOf[ImportDeclaration]
   @scala.inline
@@ -1091,6 +1104,8 @@ object babelTraverseStrings {
   def TSModuleBlock: TSModuleBlock = "TSModuleBlock".asInstanceOf[TSModuleBlock]
   @scala.inline
   def TSModuleDeclaration: TSModuleDeclaration = "TSModuleDeclaration".asInstanceOf[TSModuleDeclaration]
+  @scala.inline
+  def TSNamedTupleMember: TSNamedTupleMember = "TSNamedTupleMember".asInstanceOf[TSNamedTupleMember]
   @scala.inline
   def TSNamespaceExportDeclaration: TSNamespaceExportDeclaration = "TSNamespaceExportDeclaration".asInstanceOf[TSNamespaceExportDeclaration]
   @scala.inline

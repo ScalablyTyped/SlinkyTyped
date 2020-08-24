@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object XamarinLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/XamarinLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "XamarinLogoIcon")
   @js.native
   object component extends js.Object
   

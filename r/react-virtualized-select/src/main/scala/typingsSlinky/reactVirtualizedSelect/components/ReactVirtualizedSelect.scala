@@ -17,7 +17,7 @@ object ReactVirtualizedSelect {
   @scala.inline
   class Builder[TValue] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]]
+       with StBuildingComponent[tag.type, default[TValue]]
   
   def apply[TValue](p: VirtualizedSelectProps[TValue]): Builder[TValue] = new Builder[TValue](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[TValue](companion: ReactVirtualizedSelect.type): Builder[TValue] = new Builder[TValue](js.Array(this.component, js.Dictionary.empty))()

@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
@@ -19,7 +20,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.anon.IButtonPropskeystringstri
+import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.pivotItemTypesMod.IPivotItemProps
 import typingsSlinky.react.anon.Html
@@ -89,6 +90,8 @@ object PivotItem {
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alwaysRender(value: Boolean): this.type = set("alwaysRender", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -214,13 +217,15 @@ object PivotItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def headerButtonProps(value: IButtonPropskeystringstri): this.type = set("headerButtonProps", value.asInstanceOf[js.Any])
+    def headerButtonProps(value: IButtonProps | (StringDictionary[String | Double | Boolean])): this.type = set("headerButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
     def headerText(value: String): this.type = set("headerText", value.asInstanceOf[js.Any])
     @scala.inline

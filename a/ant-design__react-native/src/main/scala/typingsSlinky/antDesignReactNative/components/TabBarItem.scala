@@ -7,7 +7,9 @@ import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.antDesignReactNative.tabBarItemMod.TabBarItemProps
 import typingsSlinky.antDesignReactNative.tabBarItemMod.default
 import typingsSlinky.antDesignReactNative.tabBarPropsTypeMod.TabBarIcon
+import typingsSlinky.antDesignReactNative.tabBarStyleMod.TabBarStyle
 import typingsSlinky.reactNative.mod.ImageStyle
+import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
@@ -28,6 +30,8 @@ object TabBarItem {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
+    def iconVarargs(value: ImageURISource*): this.type = set("icon", js.Array(value :_*))
+    @scala.inline
     def icon(value: TabBarIcon): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconStyle(value: StyleProp[ImageStyle]): this.type = set("iconStyle", value.asInstanceOf[js.Any])
@@ -42,9 +46,11 @@ object TabBarItem {
     @scala.inline
     def selectedIconReactElement(value: ReactElement): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectedIconVarargs(value: ImageURISource*): this.type = set("selectedIcon", js.Array(value :_*))
+    @scala.inline
     def selectedIcon(value: TabBarIcon): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def styles(value: ReturnType[js.Function1[/* theme */ Theme, typingsSlinky.antDesignReactNative.anon.Badge]]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def styles(value: ReturnType[js.Function1[/* theme */ Theme, TabBarStyle]]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline

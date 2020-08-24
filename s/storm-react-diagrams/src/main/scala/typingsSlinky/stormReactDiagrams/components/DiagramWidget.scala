@@ -35,6 +35,8 @@ object DiagramWidget {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def deleteKeysVarargs(value: Double*): this.type = set("deleteKeys", js.Array(value :_*))
+    @scala.inline
     def deleteKeys(value: js.Array[Double]): this.type = set("deleteKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def extraProps(value: js.Any): this.type = set("extraProps", value.asInstanceOf[js.Any])

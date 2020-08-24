@@ -27,7 +27,7 @@ trait PutAlarmRequest extends js.Object {
     */
   var evaluationPeriods: integer = js.native
   /**
-    * The name of the metric to associate with the alarm. You can configure up to two alarms per metric. The following metrics are available for each resource type:    Instances: CPUUtilization, NetworkIn, NetworkOut, StatusCheckFailed, StatusCheckFailed_Instance, and StatusCheckFailed_System.    Load balancers: ClientTLSNegotiationErrorCount, HealthyHostCount, UnhealthyHostCount, HTTPCode_LB_4XX_Count, HTTPCode_LB_5XX_Count, HTTPCode_Instance_2XX_Count, HTTPCode_Instance_3XX_Count, HTTPCode_Instance_4XX_Count, HTTPCode_Instance_5XX_Count, InstanceResponseTime, RejectedConnectionCount, and RequestCount.    Relational databases: CPUUtilization, DatabaseConnections, DiskQueueDepth, FreeStorageSpace, NetworkReceiveThroughput, and NetworkTransmitThroughput.  
+    * The name of the metric to associate with the alarm. You can configure up to two alarms per metric. The following metrics are available for each resource type:    Instances: BurstCapacityPercentage, BurstCapacityTime, CPUUtilization, NetworkIn, NetworkOut, StatusCheckFailed, StatusCheckFailed_Instance, and StatusCheckFailed_System.    Load balancers: ClientTLSNegotiationErrorCount, HealthyHostCount, UnhealthyHostCount, HTTPCode_LB_4XX_Count, HTTPCode_LB_5XX_Count, HTTPCode_Instance_2XX_Count, HTTPCode_Instance_3XX_Count, HTTPCode_Instance_4XX_Count, HTTPCode_Instance_5XX_Count, InstanceResponseTime, RejectedConnectionCount, and RequestCount.    Relational databases: CPUUtilization, DatabaseConnections, DiskQueueDepth, FreeStorageSpace, NetworkReceiveThroughput, and NetworkTransmitThroughput.   For more information about these metrics, see Metrics available in Lightsail.
     */
   var metricName: MetricName = js.native
   /**
@@ -60,20 +60,59 @@ object PutAlarmRequest {
     evaluationPeriods: integer,
     metricName: MetricName,
     monitoredResourceName: ResourceName,
-    threshold: double,
-    contactProtocols: ContactProtocolsList = null,
-    datapointsToAlarm: js.UndefOr[integer] = js.undefined,
-    notificationEnabled: js.UndefOr[Boolean] = js.undefined,
-    notificationTriggers: NotificationTriggerList = null,
-    treatMissingData: TreatMissingData = null
+    threshold: double
   ): PutAlarmRequest = {
     val __obj = js.Dynamic.literal(alarmName = alarmName.asInstanceOf[js.Any], comparisonOperator = comparisonOperator.asInstanceOf[js.Any], evaluationPeriods = evaluationPeriods.asInstanceOf[js.Any], metricName = metricName.asInstanceOf[js.Any], monitoredResourceName = monitoredResourceName.asInstanceOf[js.Any], threshold = threshold.asInstanceOf[js.Any])
-    if (contactProtocols != null) __obj.updateDynamic("contactProtocols")(contactProtocols.asInstanceOf[js.Any])
-    if (!js.isUndefined(datapointsToAlarm)) __obj.updateDynamic("datapointsToAlarm")(datapointsToAlarm.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(notificationEnabled)) __obj.updateDynamic("notificationEnabled")(notificationEnabled.get.asInstanceOf[js.Any])
-    if (notificationTriggers != null) __obj.updateDynamic("notificationTriggers")(notificationTriggers.asInstanceOf[js.Any])
-    if (treatMissingData != null) __obj.updateDynamic("treatMissingData")(treatMissingData.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutAlarmRequest]
   }
+  @scala.inline
+  implicit class PutAlarmRequestOps[Self <: PutAlarmRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlarmName(value: ResourceName): Self = this.set("alarmName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComparisonOperator(value: ComparisonOperator): Self = this.set("comparisonOperator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEvaluationPeriods(value: integer): Self = this.set("evaluationPeriods", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMetricName(value: MetricName): Self = this.set("metricName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMonitoredResourceName(value: ResourceName): Self = this.set("monitoredResourceName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThreshold(value: double): Self = this.set("threshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContactProtocolsVarargs(value: ContactProtocol*): Self = this.set("contactProtocols", js.Array(value :_*))
+    @scala.inline
+    def setContactProtocols(value: ContactProtocolsList): Self = this.set("contactProtocols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContactProtocols: Self = this.set("contactProtocols", js.undefined)
+    @scala.inline
+    def setDatapointsToAlarm(value: integer): Self = this.set("datapointsToAlarm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDatapointsToAlarm: Self = this.set("datapointsToAlarm", js.undefined)
+    @scala.inline
+    def setNotificationEnabled(value: Boolean): Self = this.set("notificationEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNotificationEnabled: Self = this.set("notificationEnabled", js.undefined)
+    @scala.inline
+    def setNotificationTriggersVarargs(value: AlarmState*): Self = this.set("notificationTriggers", js.Array(value :_*))
+    @scala.inline
+    def setNotificationTriggers(value: NotificationTriggerList): Self = this.set("notificationTriggers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNotificationTriggers: Self = this.set("notificationTriggers", js.undefined)
+    @scala.inline
+    def setTreatMissingData(value: TreatMissingData): Self = this.set("treatMissingData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreatMissingData: Self = this.set("treatMissingData", js.undefined)
+  }
+  
 }
 

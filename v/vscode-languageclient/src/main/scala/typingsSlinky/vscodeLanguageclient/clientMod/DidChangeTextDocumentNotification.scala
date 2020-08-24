@@ -1,5 +1,7 @@
 package typingsSlinky.vscodeLanguageclient.clientMod
 
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdidChange
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolNotificationType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DidChangeTextDocumentParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentChangeRegistrationOptions
 import scala.scalajs.js
@@ -9,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageclient/lib/client", "DidChangeTextDocumentNotification")
 @js.native
 object DidChangeTextDocumentNotification extends js.Object {
-  val `type`: typingsSlinky.vscodeJsonrpc.mod.NotificationType[DidChangeTextDocumentParams, TextDocumentChangeRegistrationOptions] = js.native
+  val method: textDocumentSlashdidChange = js.native
+  val `type`: ProtocolNotificationType[DidChangeTextDocumentParams, TextDocumentChangeRegistrationOptions] = js.native
 }
 

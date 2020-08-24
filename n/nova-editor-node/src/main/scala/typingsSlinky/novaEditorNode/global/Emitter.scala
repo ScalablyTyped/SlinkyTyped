@@ -8,8 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Emitter")
 @js.native
 class Emitter ()
-  extends typingsSlinky.novaEditorNode.Emitter {
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
-}
+  extends typingsSlinky.novaEditorNode.Emitter
 

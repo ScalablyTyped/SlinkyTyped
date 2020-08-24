@@ -4,7 +4,7 @@ import typingsSlinky.jquery.BaseJQueryEventObject
 import typingsSlinky.jquery.JQueryInputEventObject
 import typingsSlinky.jquery.JQueryKeyEventObject
 import typingsSlinky.jquery.JQueryMouseEventObject
-import typingsSlinky.rxLiteAggregates.Rx.Observable
+import typingsSlinky.rx.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,6 +60,7 @@ trait JQuery extends js.Object {
   def mouseupAsObservable(): Observable[JQueryMouseEventObject] = js.native
   def mouseupAsObservable(eventData: js.Any): Observable[JQueryMouseEventObject] = js.native
   def onAsObservable[T /* <: BaseJQueryEventObject */](events: String): Observable[T] = js.native
+  def onAsObservable[T /* <: BaseJQueryEventObject */](events: String, selector: js.UndefOr[scala.Nothing], eventData: js.Any): Observable[T] = js.native
   def onAsObservable[T /* <: BaseJQueryEventObject */](events: String, selector: String): Observable[T] = js.native
   def onAsObservable[T /* <: BaseJQueryEventObject */](events: String, selector: String, eventData: js.Any): Observable[T] = js.native
   def readyAsObservable(): Observable[_] = js.native

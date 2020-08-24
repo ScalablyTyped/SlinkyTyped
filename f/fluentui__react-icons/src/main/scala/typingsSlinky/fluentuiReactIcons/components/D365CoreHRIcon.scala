@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object D365CoreHRIcon {
-  @JSImport("@fluentui/react-icons/lib/components/D365CoreHRIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "D365CoreHRIcon")
   @js.native
   object component extends js.Object
   

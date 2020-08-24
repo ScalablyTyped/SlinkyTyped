@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object parseExactDate extends js.Object {
   def apply(value: String): js.Date = js.native
+  def apply(value: String, formats: js.UndefOr[scala.Nothing], culture: String): js.Date = js.native
   def apply(value: String, formats: String): js.Date = js.native
   def apply(value: String, formats: String, culture: String): js.Date = js.native
   def apply(value: String, formats: js.Any): js.Date = js.native

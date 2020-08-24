@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CommentUrgentIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CommentUrgentIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CommentUrgentIcon")
   @js.native
   object component extends js.Object
   

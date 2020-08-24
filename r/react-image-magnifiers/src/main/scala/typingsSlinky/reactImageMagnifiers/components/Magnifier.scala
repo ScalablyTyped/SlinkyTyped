@@ -3,7 +3,7 @@ package typingsSlinky.reactImageMagnifiers.components
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -23,7 +23,7 @@ object Magnifier {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactImageMagnifiers.mod.Magnifier] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,7 +49,7 @@ object Magnifier {
     @scala.inline
     def onZoomStart(value: () => Unit): this.type = set("onZoomStart", js.Any.fromFunction0(value))
     @scala.inline
-    def renderOverlay(value: /* state */ Boolean => TagMod[Any]): this.type = set("renderOverlay", js.Any.fromFunction1(value))
+    def renderOverlay(value: /* state */ Boolean => ReactElement): this.type = set("renderOverlay", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsSelect.multiSelectMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsSelect.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsSelect.anon.PartialITagInputProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.IListItemsProps
@@ -16,7 +16,15 @@ trait IMultiSelectProps[T] extends IListItemsProps[T] {
     */
   var fill: js.UndefOr[Boolean] = js.native
   /**
-    * Whether the popover opens on key down or when `TagInput` is focused.
+    * If true, the component waits until a keydown event in the TagInput
+    * before opening its popover.
+    *
+    * If false, the popover opens immediately after a mouse click focuses
+    * the component's TagInput.
+    *
+    * N.B. the behavior of this prop differs slightly from the same one
+    * in the Suggest component; see https://github.com/palantir/blueprint/issues/4152.
+    *
     * @default false
     */
   var openOnKeyDown: js.UndefOr[Boolean] = js.native
@@ -32,6 +40,6 @@ trait IMultiSelectProps[T] extends IListItemsProps[T] {
   /** Props to spread to `TagInput`. Use `query` and `onQueryChange` to control the input. */
   var tagInputProps: js.UndefOr[PartialITagInputProps with js.Object] = js.native
   /** Custom renderer to transform an item into tag content. */
-  def tagRenderer(item: T): TagMod[Any] = js.native
+  def tagRenderer(item: T): ReactElement = js.native
 }
 

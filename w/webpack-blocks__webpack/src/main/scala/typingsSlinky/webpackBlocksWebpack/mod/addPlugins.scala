@@ -1,6 +1,6 @@
 package typingsSlinky.webpackBlocksWebpack.mod
 
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import typingsSlinky.webpackBlocksCore.mod.Block
 import typingsSlinky.webpackBlocksCore.mod.Context
 import scala.scalajs.js

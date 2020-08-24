@@ -1,0 +1,10 @@
+package typingsSlinky.rx.Rx
+
+import org.scalablytyped.runtime.Instantiable0
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait SingleAssignmentDisposableStatic extends Instantiable0[SingleAssignmentDisposable]
+

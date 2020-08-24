@@ -11,7 +11,7 @@ trait CreateCrawlerRequest extends js.Object {
     */
   var Classifiers: js.UndefOr[ClassifierNameList] = js.native
   /**
-    * The crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's behavior. For more information, see Configuring a Crawler.
+    * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's behavior. For more information, see Configuring a Crawler.
     */
   var Configuration: js.UndefOr[CrawlerConfiguration] = js.native
   /**
@@ -35,7 +35,7 @@ trait CreateCrawlerRequest extends js.Object {
     */
   var Role: typingsSlinky.awsSdk.glueMod.Role = js.native
   /**
-    * A cron expression used to specify the schedule. For more information, see Time-Based Schedules for Jobs and Crawlers. For example, to run something every day at 12:15 UTC, specify cron(15 12 * * ? *).
+    * A cron expression used to specify the schedule (see Time-Based Schedules for Jobs and Crawlers. For example, to run something every day at 12:15 UTC, you would specify: cron(15 12 * * ? *).
     */
   var Schedule: js.UndefOr[CronExpression] = js.native
   /**
@@ -47,7 +47,7 @@ trait CreateCrawlerRequest extends js.Object {
     */
   var TablePrefix: js.UndefOr[typingsSlinky.awsSdk.glueMod.TablePrefix] = js.native
   /**
-    * The tags to use with this crawler request. You can use tags to limit access to the crawler. For more information, see AWS Tags in AWS Glue.
+    * The tags to use with this crawler request. You may use tags to limit access to the crawler. For more information about tags in AWS Glue, see AWS Tags in AWS Glue in the developer guide.
     */
   var Tags: js.UndefOr[TagsMap] = js.native
   /**
@@ -58,31 +58,66 @@ trait CreateCrawlerRequest extends js.Object {
 
 object CreateCrawlerRequest {
   @scala.inline
-  def apply(
-    Name: NameString,
-    Role: Role,
-    Targets: CrawlerTargets,
-    Classifiers: ClassifierNameList = null,
-    Configuration: CrawlerConfiguration = null,
-    CrawlerSecurityConfiguration: CrawlerSecurityConfiguration = null,
-    DatabaseName: DatabaseName = null,
-    Description: DescriptionString = null,
-    Schedule: CronExpression = null,
-    SchemaChangePolicy: SchemaChangePolicy = null,
-    TablePrefix: TablePrefix = null,
-    Tags: TagsMap = null
-  ): CreateCrawlerRequest = {
+  def apply(Name: NameString, Role: Role, Targets: CrawlerTargets): CreateCrawlerRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Role = Role.asInstanceOf[js.Any], Targets = Targets.asInstanceOf[js.Any])
-    if (Classifiers != null) __obj.updateDynamic("Classifiers")(Classifiers.asInstanceOf[js.Any])
-    if (Configuration != null) __obj.updateDynamic("Configuration")(Configuration.asInstanceOf[js.Any])
-    if (CrawlerSecurityConfiguration != null) __obj.updateDynamic("CrawlerSecurityConfiguration")(CrawlerSecurityConfiguration.asInstanceOf[js.Any])
-    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
-    if (SchemaChangePolicy != null) __obj.updateDynamic("SchemaChangePolicy")(SchemaChangePolicy.asInstanceOf[js.Any])
-    if (TablePrefix != null) __obj.updateDynamic("TablePrefix")(TablePrefix.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCrawlerRequest]
   }
+  @scala.inline
+  implicit class CreateCrawlerRequestOps[Self <: CreateCrawlerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: NameString): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRole(value: Role): Self = this.set("Role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTargets(value: CrawlerTargets): Self = this.set("Targets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClassifiersVarargs(value: NameString*): Self = this.set("Classifiers", js.Array(value :_*))
+    @scala.inline
+    def setClassifiers(value: ClassifierNameList): Self = this.set("Classifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassifiers: Self = this.set("Classifiers", js.undefined)
+    @scala.inline
+    def setConfiguration(value: CrawlerConfiguration): Self = this.set("Configuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConfiguration: Self = this.set("Configuration", js.undefined)
+    @scala.inline
+    def setCrawlerSecurityConfiguration(value: CrawlerSecurityConfiguration): Self = this.set("CrawlerSecurityConfiguration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCrawlerSecurityConfiguration: Self = this.set("CrawlerSecurityConfiguration", js.undefined)
+    @scala.inline
+    def setDatabaseName(value: DatabaseName): Self = this.set("DatabaseName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDatabaseName: Self = this.set("DatabaseName", js.undefined)
+    @scala.inline
+    def setDescription(value: DescriptionString): Self = this.set("Description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
+    @scala.inline
+    def setSchedule(value: CronExpression): Self = this.set("Schedule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSchedule: Self = this.set("Schedule", js.undefined)
+    @scala.inline
+    def setSchemaChangePolicy(value: SchemaChangePolicy): Self = this.set("SchemaChangePolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSchemaChangePolicy: Self = this.set("SchemaChangePolicy", js.undefined)
+    @scala.inline
+    def setTablePrefix(value: TablePrefix): Self = this.set("TablePrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTablePrefix: Self = this.set("TablePrefix", js.undefined)
+    @scala.inline
+    def setTags(value: TagsMap): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
+  }
+  
 }
 

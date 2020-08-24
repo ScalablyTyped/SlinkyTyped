@@ -12,6 +12,7 @@ class AlertDialog protected ()
   extends typingsSlinky.androiduix.android.app.AlertDialog {
   def this(context: Context) = this()
   def this(context: Context, cancelable: Boolean) = this()
+  def this(context: Context, cancelable: js.UndefOr[scala.Nothing], cancelListener: OnCancelListener) = this()
   def this(context: Context, cancelable: Boolean, cancelListener: OnCancelListener) = this()
 }
 

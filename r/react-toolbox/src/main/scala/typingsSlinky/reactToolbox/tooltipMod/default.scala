@@ -1,6 +1,6 @@
 package typingsSlinky.reactToolbox.tooltipMod
 
-import slinky.core.ReactComponentClass
+import typingsSlinky.react.mod.ReactType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("react-toolbox/components/tooltip", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply[P](component: ReactComponentClass[_]): TooltippedComponentClass[P] = js.native
+  def apply[P](component: ReactType[_]): TooltippedComponentClass[P] = js.native
 }
 

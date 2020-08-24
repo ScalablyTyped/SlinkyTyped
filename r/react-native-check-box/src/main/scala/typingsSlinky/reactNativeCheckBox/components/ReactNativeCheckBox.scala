@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeCheckBox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -39,7 +38,7 @@ object ReactNativeCheckBox {
     @scala.inline
     def leftTextViewReactElement(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
     @scala.inline
-    def leftTextView(value: TagMod[Any]): this.type = set("leftTextView", value.asInstanceOf[js.Any])
+    def leftTextView(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
     @scala.inline
     def rightText(value: String): this.type = set("rightText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,7 +48,7 @@ object ReactNativeCheckBox {
     @scala.inline
     def rightTextViewReactElement(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
     @scala.inline
-    def rightTextView(value: TagMod[Any]): this.type = set("rightTextView", value.asInstanceOf[js.Any])
+    def rightTextView(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

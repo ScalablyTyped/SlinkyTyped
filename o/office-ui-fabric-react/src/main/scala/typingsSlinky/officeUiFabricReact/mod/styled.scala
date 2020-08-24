@@ -22,7 +22,34 @@ object styled extends js.Object {
   def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
     Component: ComponentClass[TComponentProps, js.Object],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.UndefOr[scala.Nothing],
+    customizable: js.UndefOr[scala.Nothing],
+    pure: Boolean
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: ComponentClass[TComponentProps, js.Object],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.UndefOr[scala.Nothing],
+    customizable: ICustomizableProps
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: ComponentClass[TComponentProps, js.Object],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.UndefOr[scala.Nothing],
+    customizable: ICustomizableProps,
+    pure: Boolean
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: ComponentClass[TComponentProps, js.Object],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
     getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]]
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: ComponentClass[TComponentProps, js.Object],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]],
+    customizable: js.UndefOr[scala.Nothing],
+    pure: Boolean
   ): ReactComponentClass[TComponentProps] = js.native
   def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
     Component: ComponentClass[TComponentProps, js.Object],
@@ -44,7 +71,34 @@ object styled extends js.Object {
   def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
     Component: FunctionComponent[TComponentProps],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.UndefOr[scala.Nothing],
+    customizable: js.UndefOr[scala.Nothing],
+    pure: Boolean
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: FunctionComponent[TComponentProps],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.UndefOr[scala.Nothing],
+    customizable: ICustomizableProps
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: FunctionComponent[TComponentProps],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.UndefOr[scala.Nothing],
+    customizable: ICustomizableProps,
+    pure: Boolean
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: FunctionComponent[TComponentProps],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
     getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]]
+  ): ReactComponentClass[TComponentProps] = js.native
+  def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
+    Component: FunctionComponent[TComponentProps],
+    baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
+    getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]],
+    customizable: js.UndefOr[scala.Nothing],
+    pure: Boolean
   ): ReactComponentClass[TComponentProps] = js.native
   def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
     Component: FunctionComponent[TComponentProps],

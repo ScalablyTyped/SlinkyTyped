@@ -107,7 +107,34 @@ object Stream extends js.Object {
   def read(
     sourceStream: typingsSlinky.titanium.Titanium.IOStream,
     buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: js.UndefOr[scala.Nothing],
+    resultsCallback: js.Function1[/* param0 */ ReadCallbackArgs, Unit]
+  ): Unit = js.native
+  def read(
+    sourceStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: Double
+  ): Unit = js.native
+  def read(
+    sourceStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: Double,
+    resultsCallback: js.Function1[/* param0 */ ReadCallbackArgs, Unit]
+  ): Unit = js.native
+  def read(
+    sourceStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
     offset: Double
+  ): Unit = js.native
+  def read(
+    sourceStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: Double,
+    length: js.UndefOr[scala.Nothing],
+    resultsCallback: js.Function1[/* param0 */ ReadCallbackArgs, Unit]
   ): Unit = js.native
   def read(
     sourceStream: typingsSlinky.titanium.Titanium.IOStream,
@@ -126,6 +153,11 @@ object Stream extends js.Object {
     * Reads all data from the specified [IOStream](Titanium.IOStream).
     */
   def readAll(sourceStream: typingsSlinky.titanium.Titanium.IOStream): typingsSlinky.titanium.Titanium.Buffer | Unit = js.native
+  def readAll(
+    sourceStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: js.UndefOr[scala.Nothing],
+    resultsCallback: js.Function1[/* param0 */ ReadCallbackArgs, Unit]
+  ): typingsSlinky.titanium.Titanium.Buffer | Unit = js.native
   def readAll(
     sourceStream: typingsSlinky.titanium.Titanium.IOStream,
     buffer: typingsSlinky.titanium.Titanium.Buffer
@@ -160,7 +192,34 @@ object Stream extends js.Object {
   def write(
     outputStream: typingsSlinky.titanium.Titanium.IOStream,
     buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: js.UndefOr[scala.Nothing],
+    resultsCallback: js.Function1[/* param0 */ WriteCallbackArgs, Unit]
+  ): Unit = js.native
+  def write(
+    outputStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: Double
+  ): Unit = js.native
+  def write(
+    outputStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: js.UndefOr[scala.Nothing],
+    length: Double,
+    resultsCallback: js.Function1[/* param0 */ WriteCallbackArgs, Unit]
+  ): Unit = js.native
+  def write(
+    outputStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
     offset: Double
+  ): Unit = js.native
+  def write(
+    outputStream: typingsSlinky.titanium.Titanium.IOStream,
+    buffer: typingsSlinky.titanium.Titanium.Buffer,
+    offset: Double,
+    length: js.UndefOr[scala.Nothing],
+    resultsCallback: js.Function1[/* param0 */ WriteCallbackArgs, Unit]
   ): Unit = js.native
   def write(
     outputStream: typingsSlinky.titanium.Titanium.IOStream,

@@ -12,11 +12,11 @@ object Query {
   @js.native
   object component extends js.Object
   
-  def withProps(p: KeystoneQueryTypeProps): Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query] = new Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: KeystoneQueryTypeProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(query: String): Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query] = {
+  def apply(query: String): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query](js.Array(this.component, __props.asInstanceOf[KeystoneQueryTypeProps]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[KeystoneQueryTypeProps]))
   }
 }
 

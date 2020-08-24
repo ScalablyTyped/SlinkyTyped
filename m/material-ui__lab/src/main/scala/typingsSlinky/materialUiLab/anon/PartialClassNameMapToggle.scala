@@ -8,9 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PartialClassNameMapToggle extends js.Object {
   var grouped: js.UndefOr[String] = js.native
-  var groupedSizeLarge: js.UndefOr[String] = js.native
-  var groupedSizeSmall: js.UndefOr[String] = js.native
+  var groupedHorizontal: js.UndefOr[String] = js.native
+  var groupedVertical: js.UndefOr[String] = js.native
   var root: js.UndefOr[String] = js.native
+  var vertical: js.UndefOr[String] = js.native
 }
 
 object PartialClassNameMapToggle {
@@ -26,53 +27,30 @@ object PartialClassNameMapToggle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGrouped(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouped")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutGrouped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouped")(js.undefined)
-        ret
-    }
+    def setGrouped(value: String): Self = this.set("grouped", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGroupedSizeLarge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedSizeLarge")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGrouped: Self = this.set("grouped", js.undefined)
     @scala.inline
-    def withoutGroupedSizeLarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedSizeLarge")(js.undefined)
-        ret
-    }
+    def setGroupedHorizontal(value: String): Self = this.set("groupedHorizontal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGroupedSizeSmall(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedSizeSmall")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGroupedHorizontal: Self = this.set("groupedHorizontal", js.undefined)
     @scala.inline
-    def withoutGroupedSizeSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedSizeSmall")(js.undefined)
-        ret
-    }
+    def setGroupedVertical(value: String): Self = this.set("groupedVertical", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGroupedVertical: Self = this.set("groupedVertical", js.undefined)
     @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
+    def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRoot: Self = this.set("root", js.undefined)
+    @scala.inline
+    def setVertical(value: String): Self = this.set("vertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVertical: Self = this.set("vertical", js.undefined)
   }
   
 }

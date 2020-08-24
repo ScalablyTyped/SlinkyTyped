@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ApacheMavenLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ApacheMavenLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ApacheMavenLogoIcon")
   @js.native
   object component extends js.Object
   

@@ -1,7 +1,6 @@
 package typingsSlinky.rcPagination.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -32,7 +31,7 @@ object RcPagination {
     @scala.inline
     def hideOnSinglePage(value: Boolean): this.type = set("hideOnSinglePage", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemRender(value: (/* page */ Double, /* type */ String, /* element */ TagMod[Any]) => TagMod[Any]): this.type = set("itemRender", js.Any.fromFunction3(value))
+    def itemRender(value: (/* page */ Double, /* type */ String, /* element */ ReactElement) => ReactElement): this.type = set("itemRender", js.Any.fromFunction3(value))
     @scala.inline
     def jumpNextIconReactElement(value: ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,7 +39,7 @@ object RcPagination {
     @scala.inline
     def jumpNextIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def jumpNextIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    def jumpNextIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def jumpPrevIconReactElement(value: ReactElement): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,7 +47,7 @@ object RcPagination {
     @scala.inline
     def jumpPrevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def jumpPrevIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    def jumpPrevIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,13 +57,15 @@ object RcPagination {
     @scala.inline
     def nextIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: (/* page */ Double, /* pageSize */ Double) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onShowSizeChange(value: (/* current */ Double, /* size */ Double) => Unit): this.type = set("onShowSizeChange", js.Any.fromFunction2(value))
     @scala.inline
     def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageSizeOptionsVarargs(value: String*): this.type = set("pageSizeOptions", js.Array(value :_*))
     @scala.inline
     def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -76,7 +77,7 @@ object RcPagination {
     @scala.inline
     def prevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def prevIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIcon(value: ReactComponentClass[js.Object] | ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def selectComponentClassFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
     @scala.inline
@@ -96,7 +97,7 @@ object RcPagination {
     @scala.inline
     def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): this.type = set("showTotal", js.Any.fromFunction2(value))
+    def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => ReactElement): this.type = set("showTotal", js.Any.fromFunction2(value))
     @scala.inline
     def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
     @scala.inline

@@ -30,41 +30,22 @@ object Tcp {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTcp(value: SocketTcpPermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcp")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutTcp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcp")(js.undefined)
-        ret
-    }
+    def setTcp(value: SocketTcpPermission): Self = this.set("tcp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTcpServer(value: SocketTcpServerPermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpServer")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTcp: Self = this.set("tcp", js.undefined)
     @scala.inline
-    def withoutTcpServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpServer")(js.undefined)
-        ret
-    }
+    def setTcpServer(value: SocketTcpServerPermission): Self = this.set("tcpServer", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUdp(value: SocketUdpPermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("udp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTcpServer: Self = this.set("tcpServer", js.undefined)
     @scala.inline
-    def withoutUdp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("udp")(js.undefined)
-        ret
-    }
+    def setUdp(value: SocketUdpPermission): Self = this.set("udp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUdp: Self = this.set("udp", js.undefined)
   }
   
 }

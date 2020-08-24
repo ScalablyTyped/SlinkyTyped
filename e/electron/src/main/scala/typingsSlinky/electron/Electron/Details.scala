@@ -1,67 +1,48 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.electron.electronStrings.`abnormal-exit`
+import typingsSlinky.electron.electronStrings.`clean-exit`
+import typingsSlinky.electron.electronStrings.`integrity-failure`
+import typingsSlinky.electron.electronStrings.`launch-failure`
+import typingsSlinky.electron.electronStrings.crashed
+import typingsSlinky.electron.electronStrings.killed
+import typingsSlinky.electron.electronStrings.oom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Details extends js.Object {
   /**
-    * The domain of the cookie. Empty by default if omitted.
+    * The reason the render process is gone.  Possible values:
     */
-  var domain: js.UndefOr[String] = js.undefined
-  /**
-    * The expiration date of the cookie as the number of seconds since the UNIX epoch.
-    * If omitted then the cookie becomes a session cookie and will not be retained
-    * between sessions.
-    */
-  var expirationDate: js.UndefOr[Double] = js.undefined
-  /**
-    * Whether the cookie should be marked as HTTP only. Defaults to false.
-    */
-  var httpOnly: js.UndefOr[Boolean] = js.undefined
-  /**
-    * The name of the cookie. Empty by default if omitted.
-    */
-  var name: js.UndefOr[String] = js.undefined
-  /**
-    * The path of the cookie. Empty by default if omitted.
-    */
-  var path: js.UndefOr[String] = js.undefined
-  /**
-    * Whether the cookie should be marked as Secure. Defaults to false.
-    */
-  var secure: js.UndefOr[Boolean] = js.undefined
-  /**
-    * The url to associate the cookie with.
-    */
-  var url: String
-  /**
-    * The value of the cookie. Empty by default if omitted.
-    */
-  var value: js.UndefOr[String] = js.undefined
+  var reason: `clean-exit` | `abnormal-exit` | killed | crashed | oom | `launch-failure` | `integrity-failure` = js.native
 }
 
 object Details {
   @scala.inline
   def apply(
-    url: String,
-    domain: String = null,
-    expirationDate: js.UndefOr[Double] = js.undefined,
-    httpOnly: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    path: String = null,
-    secure: js.UndefOr[Boolean] = js.undefined,
-    value: String = null
+    reason: `clean-exit` | `abnormal-exit` | killed | crashed | oom | `launch-failure` | `integrity-failure`
   ): Details = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (!js.isUndefined(expirationDate)) __obj.updateDynamic("expirationDate")(expirationDate.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(httpOnly)) __obj.updateDynamic("httpOnly")(httpOnly.get.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.get.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[Details]
   }
+  @scala.inline
+  implicit class DetailsOps[Self <: Details] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setReason(
+      value: `clean-exit` | `abnormal-exit` | killed | crashed | oom | `launch-failure` | `integrity-failure`
+    ): Self = this.set("reason", value.asInstanceOf[js.Any])
+  }
+  
 }
 

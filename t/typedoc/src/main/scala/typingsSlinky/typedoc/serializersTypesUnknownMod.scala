@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.anon.PickUnknownTypetype
 import typingsSlinky.typedoc.modelsMod.UnknownType
 import typingsSlinky.typedoc.serializationComponentsMod.TypeSerializerComponent
 import scala.scalajs.js
@@ -10,7 +11,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object serializersTypesUnknownMod extends js.Object {
   @js.native
-  class UnknownTypeSerializer () extends TypeSerializerComponent[UnknownType]
+  class UnknownTypeSerializer () extends TypeSerializerComponent[UnknownType] {
+    def toObject(`type`: UnknownType, obj: PickUnknownTypetype): typingsSlinky.typedoc.schemaMod.UnknownType = js.native
+  }
   
 }
 

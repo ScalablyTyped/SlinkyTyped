@@ -2,11 +2,7 @@ package typingsSlinky.teechart.global.Tee
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.teechart.Tee.IAxis
-import typingsSlinky.teechart.Tee.IChart
 import typingsSlinky.teechart.Tee.ICursorTool
-import typingsSlinky.teechart.Tee.IFormat
-import typingsSlinky.teechart.Tee.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,38 +11,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class CursorTool () extends ICursorTool {
   def this(chart: typingsSlinky.teechart.Tee.Chart) = this()
-  /* CompleteClass */
-  override var active: Boolean = js.native
-  /* CompleteClass */
-  override var chart: IChart = js.native
-  /* CompleteClass */
-  override var direction: String = js.native
-  /* CompleteClass */
-  override var dragging: Double = js.native
-  /* CompleteClass */
-  override var followMouse: Boolean = js.native
-  /* CompleteClass */
-  override var format: IFormat = js.native
-  /* CompleteClass */
-  override var horizAxis: IAxis = js.native
-  /* CompleteClass */
-  override var render: String = js.native
-  /* CompleteClass */
-  override var size: IPoint = js.native
-  /* CompleteClass */
-  override var vertAxis: IAxis = js.native
-  /* CompleteClass */
-  override def clicked(p: IPoint): Boolean = js.native
-  /* CompleteClass */
-  override def draw(): Unit = js.native
-  /* CompleteClass */
-  override def mousedown(event: js.Any): Boolean = js.native
-  /* CompleteClass */
-  override def mousemove(event: js.Any): Boolean = js.native
-  /* CompleteClass */
-  override def over(point: IPoint): Boolean = js.native
-  /* CompleteClass */
-  override def setRender(render: String): Unit = js.native
 }
 
 // TOOLS

@@ -18,6 +18,8 @@ object TableFilter {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactTableFilter.mod.TableFilter] {
     @scala.inline
+    def initialFiltersVarargs(value: String*): this.type = set("initialFilters", js.Array(value :_*))
+    @scala.inline
     def initialFilters(value: String | js.Array[String] | StringDictionary[Boolean]): this.type = set("initialFilters", value.asInstanceOf[js.Any])
     @scala.inline
     def rowClass(value: String): this.type = set("rowClass", value.asInstanceOf[js.Any])

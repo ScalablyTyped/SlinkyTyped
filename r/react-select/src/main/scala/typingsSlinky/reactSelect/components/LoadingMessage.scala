@@ -11,15 +11,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LoadingMessage {
-  @JSImport("react-select/src/components/Menu", "LoadingMessage")
+  @JSImport("react-select", "components.LoadingMessage")
   @js.native
   object component extends js.Object
   
-  def withProps(p: NoticeProps[js.Any]): SharedBuilder_NoticeProps_1947114659[typingsSlinky.reactSelect.menuMod.LoadingMessage] = new SharedBuilder_NoticeProps_1947114659[typingsSlinky.reactSelect.menuMod.LoadingMessage](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: NoticeProps[js.Any]): SharedBuilder_NoticeProps1503326161 = new SharedBuilder_NoticeProps1503326161(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
     clearValue: () => Unit,
-    cx: (js.UndefOr[Null | String], js.UndefOr[ClassNamesState], js.UndefOr[String]) => String | Unit,
+    cx: (js.UndefOr[ClassNamesState], js.UndefOr[String]) => String,
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
@@ -28,9 +28,9 @@ object LoadingMessage {
     selectOption: js.Any => Unit,
     selectProps: Props[js.Any],
     setValue: (ValueType[js.Any], ActionTypes) => Unit
-  ): SharedBuilder_NoticeProps_1947114659[typingsSlinky.reactSelect.menuMod.LoadingMessage] = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction3(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
-    new SharedBuilder_NoticeProps_1947114659[typingsSlinky.reactSelect.menuMod.LoadingMessage](js.Array(this.component, __props.asInstanceOf[NoticeProps[js.Any]]))
+  ): SharedBuilder_NoticeProps1503326161 = {
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    new SharedBuilder_NoticeProps1503326161(js.Array(this.component, __props.asInstanceOf[NoticeProps[js.Any]]))
   }
 }
 

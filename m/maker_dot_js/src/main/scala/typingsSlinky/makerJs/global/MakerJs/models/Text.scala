@@ -1,6 +1,5 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
-import typingsSlinky.makerJs.MakerJs.IModelMap
 import typingsSlinky.opentypeJs.mod.Font
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +11,38 @@ class Text protected ()
   extends typingsSlinky.makerJs.MakerJs.models.Text {
   def this(font: Font, text: String, fontSize: Double) = this()
   def this(font: Font, text: String, fontSize: Double, combine: Boolean) = this()
+  def this(
+    font: Font,
+    text: String,
+    fontSize: Double,
+    combine: js.UndefOr[scala.Nothing],
+    centerCharacterOrigin: Boolean
+  ) = this()
   def this(font: Font, text: String, fontSize: Double, combine: Boolean, centerCharacterOrigin: Boolean) = this()
+  def this(
+    font: Font,
+    text: String,
+    fontSize: Double,
+    combine: js.UndefOr[scala.Nothing],
+    centerCharacterOrigin: js.UndefOr[scala.Nothing],
+    bezierAccuracy: Double
+  ) = this()
+  def this(
+    font: Font,
+    text: String,
+    fontSize: Double,
+    combine: js.UndefOr[scala.Nothing],
+    centerCharacterOrigin: Boolean,
+    bezierAccuracy: Double
+  ) = this()
+  def this(
+    font: Font,
+    text: String,
+    fontSize: Double,
+    combine: Boolean,
+    centerCharacterOrigin: js.UndefOr[scala.Nothing],
+    bezierAccuracy: Double
+  ) = this()
   def this(
     font: Font,
     text: String,
@@ -21,8 +51,5 @@ class Text protected ()
     centerCharacterOrigin: Boolean,
     bezierAccuracy: Double
   ) = this()
-  /* CompleteClass */
-  @JSName("models")
-  override var models_Text: IModelMap = js.native
 }
 

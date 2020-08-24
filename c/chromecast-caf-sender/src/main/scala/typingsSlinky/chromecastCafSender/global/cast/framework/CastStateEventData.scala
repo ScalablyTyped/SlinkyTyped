@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 class CastStateEventData protected ()
   extends typingsSlinky.chromecastCafSender.cast.framework.CastStateEventData {
   def this(castState: typingsSlinky.chromecastCafSender.cast.framework.CastState) = this()
-  /* CompleteClass */
-  override var castState: typingsSlinky.chromecastCafSender.cast.framework.CastState = js.native
-  /* CompleteClass */
-  override var `type`: String = js.native
 }
 

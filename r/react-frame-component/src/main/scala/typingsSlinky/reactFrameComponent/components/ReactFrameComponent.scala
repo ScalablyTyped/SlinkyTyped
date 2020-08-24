@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLIFrameElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -214,6 +213,8 @@ object ReactFrameComponent {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -224,7 +225,7 @@ object ReactFrameComponent {
     @scala.inline
     def headReactElement(value: ReactElement): this.type = set("head", value.asInstanceOf[js.Any])
     @scala.inline
-    def head(value: TagMod[Any]): this.type = set("head", value.asInstanceOf[js.Any])
+    def head(value: ReactElement): this.type = set("head", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline

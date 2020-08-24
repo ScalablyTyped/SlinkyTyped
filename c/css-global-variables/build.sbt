@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "css-global-variables"
-version := "3.0-dt-20200519Z-adc4b8"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200519Z-b007ed"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

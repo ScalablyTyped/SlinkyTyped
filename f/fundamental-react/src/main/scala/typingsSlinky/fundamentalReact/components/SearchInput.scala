@@ -6,21 +6,20 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Callback
 import typingsSlinky.fundamentalReact.anon.Text
 import typingsSlinky.fundamentalReact.searchInputMod.SearchInputProps
-import typingsSlinky.fundamentalReact.searchInputMod.default
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SearchInput {
-  @JSImport("fundamental-react/lib/SearchInput/SearchInput", JSImport.Default)
+  @JSImport("fundamental-react", "SearchInput")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.SearchInput] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,6 +48,8 @@ object SearchInput {
     def popoverProps(value: js.Any): this.type = set("popoverProps", value.asInstanceOf[js.Any])
     @scala.inline
     def searchBtnProps(value: js.Any): this.type = set("searchBtnProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchListVarargs(value: Callback*): this.type = set("searchList", js.Array(value :_*))
     @scala.inline
     def searchList(value: js.Array[Callback]): this.type = set("searchList", value.asInstanceOf[js.Any])
     @scala.inline

@@ -15,6 +15,9 @@ import scala.scalajs.js.annotation._
 
 object twilioChatStrings {
   @js.native
+  sealed trait active extends js.Object
+  
+  @js.native
   sealed trait ascending extends ChannelSortingOrder
   
   @js.native
@@ -36,12 +39,16 @@ object twilioChatStrings {
        with Type
   
   @js.native
+  sealed trait closed extends js.Object
+  
+  @js.native
   sealed trait createdBy
     extends typingsSlinky.twilioChat.channelMod.Channel.UpdateReason
   
   @js.native
   sealed trait dateCreated
-    extends typingsSlinky.twilioChat.channelMod.Channel.UpdateReason
+    extends UpdateReason
+       with typingsSlinky.twilioChat.channelMod.Channel.UpdateReason
        with typingsSlinky.twilioChat.memberMod.Member.UpdateReason
   
   @js.native
@@ -69,6 +76,9 @@ object twilioChatStrings {
        with typingsSlinky.twilioChat.userMod.User.UpdateReason
   
   @js.native
+  sealed trait inactive extends js.Object
+  
+  @js.native
   sealed trait info extends _LogLevel
   
   @js.native
@@ -79,9 +89,6 @@ object twilioChatStrings {
   
   @js.native
   sealed trait joined extends Status
-  
-  @js.native
-  sealed trait known extends Status
   
   @js.native
   sealed trait lastConsumedMessageIndex
@@ -106,6 +113,9 @@ object twilioChatStrings {
   
   @js.native
   sealed trait muted extends NotificationLevel
+  
+  @js.native
+  sealed trait notParticipating extends Status
   
   @js.native
   sealed trait notifiable
@@ -138,6 +148,10 @@ object twilioChatStrings {
   sealed trait sms extends Type
   
   @js.native
+  sealed trait state
+    extends typingsSlinky.twilioChat.channelMod.Channel.UpdateReason
+  
+  @js.native
   sealed trait status
     extends typingsSlinky.twilioChat.channelMod.Channel.UpdateReason
   
@@ -153,9 +167,6 @@ object twilioChatStrings {
   @js.native
   sealed trait text
     extends typingsSlinky.twilioChat.messageMod.Message.Type
-  
-  @js.native
-  sealed trait timestamp extends UpdateReason
   
   @js.native
   sealed trait trace extends _LogLevel
@@ -194,6 +205,8 @@ object twilioChatStrings {
   sealed trait whatsapp extends Type
   
   @scala.inline
+  def active: active = "active".asInstanceOf[active]
+  @scala.inline
   def ascending: ascending = "ascending".asInstanceOf[ascending]
   @scala.inline
   def attributes: attributes = "attributes".asInstanceOf[attributes]
@@ -203,6 +216,8 @@ object twilioChatStrings {
   def body: body = "body".asInstanceOf[body]
   @scala.inline
   def chat: chat = "chat".asInstanceOf[chat]
+  @scala.inline
+  def closed: closed = "closed".asInstanceOf[closed]
   @scala.inline
   def createdBy: createdBy = "createdBy".asInstanceOf[createdBy]
   @scala.inline
@@ -220,6 +235,8 @@ object twilioChatStrings {
   @scala.inline
   def friendlyName: friendlyName = "friendlyName".asInstanceOf[friendlyName]
   @scala.inline
+  def inactive: inactive = "inactive".asInstanceOf[inactive]
+  @scala.inline
   def info: info = "info".asInstanceOf[info]
   @scala.inline
   def initializing: initializing = "initializing".asInstanceOf[initializing]
@@ -227,8 +244,6 @@ object twilioChatStrings {
   def invited: invited = "invited".asInstanceOf[invited]
   @scala.inline
   def joined: joined = "joined".asInstanceOf[joined]
-  @scala.inline
-  def known: known = "known".asInstanceOf[known]
   @scala.inline
   def lastConsumedMessageIndex: lastConsumedMessageIndex = "lastConsumedMessageIndex".asInstanceOf[lastConsumedMessageIndex]
   @scala.inline
@@ -241,6 +256,8 @@ object twilioChatStrings {
   def media: media = "media".asInstanceOf[media]
   @scala.inline
   def muted: muted = "muted".asInstanceOf[muted]
+  @scala.inline
+  def notParticipating: notParticipating = "notParticipating".asInstanceOf[notParticipating]
   @scala.inline
   def notifiable: notifiable = "notifiable".asInstanceOf[notifiable]
   @scala.inline
@@ -258,6 +275,8 @@ object twilioChatStrings {
   @scala.inline
   def sms: sms = "sms".asInstanceOf[sms]
   @scala.inline
+  def state: state = "state".asInstanceOf[state]
+  @scala.inline
   def status: status = "status".asInstanceOf[status]
   @scala.inline
   def subscribed: subscribed = "subscribed".asInstanceOf[subscribed]
@@ -267,8 +286,6 @@ object twilioChatStrings {
   def synclist: synclist = "synclist".asInstanceOf[synclist]
   @scala.inline
   def text: text = "text".asInstanceOf[text]
-  @scala.inline
-  def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
   @scala.inline
   def trace: trace = "trace".asInstanceOf[trace]
   @scala.inline

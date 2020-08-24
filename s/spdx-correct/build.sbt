@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "spdx-correct"
-version := "2.0-dt-20200515Z-c3d12b"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200515Z-fd3ed2"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

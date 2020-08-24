@@ -41,7 +41,6 @@ object os extends js.Object {
   /* static members */
   @js.native
   object Handler extends js.Object {
-    /* private */ def getPostMessage(r: js.Any): js.Any = js.native
     /* private */ def getPostMessage(r: js.Any, token: js.Any): js.Any = js.native
   }
   

@@ -2,7 +2,7 @@ package typingsSlinky.reactImageCrop.mod
 
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactImageCrop.anon.Height
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReactCrop
   extends Component[ReactCropProps, js.Object, js.Any] {
-  def createCropSelection(): TagMod[Any] = js.native
+  def createCropSelection(): ReactElement = js.native
   def crossOverCheck(): Unit = js.native
   def dragCrop(): Crop = js.native
   def getCropStyle(): CSSProperties = js.native

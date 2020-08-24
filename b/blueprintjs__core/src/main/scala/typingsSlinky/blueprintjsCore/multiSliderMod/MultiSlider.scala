@@ -35,7 +35,7 @@ class MultiSlider ()
   @JSName("componentDidMount")
   def componentDidMount_MMultiSlider(): Unit = js.native
   @JSName("componentDidUpdate")
-  def componentDidUpdate_MMultiSlider(prevProps: IMultiSliderProps, prevState: ISliderState, ss: js.Object): Unit = js.native
+  def componentDidUpdate_MMultiSlider(prevProps: IMultiSliderProps, prevState: ISliderState): Unit = js.native
   @JSName("getSnapshotBeforeUpdate")
   def getSnapshotBeforeUpdate_MMultiSlider(prevProps: IMultiSliderProps): Null = js.native
 }

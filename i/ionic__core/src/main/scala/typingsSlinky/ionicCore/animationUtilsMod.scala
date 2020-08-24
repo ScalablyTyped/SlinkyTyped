@@ -2,6 +2,7 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TransitionEvent
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationKeyFrames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object animationUtilsMod extends js.Object {
   def addClassToArray(): js.Array[String] = js.native
+  def addClassToArray(classes: js.UndefOr[scala.Nothing], className: String): js.Array[String] = js.native
+  def addClassToArray(classes: js.UndefOr[scala.Nothing], className: js.Array[String]): js.Array[String] = js.native
   def addClassToArray(classes: js.Array[String]): js.Array[String] = js.native
   def addClassToArray(classes: js.Array[String], className: String): js.Array[String] = js.native
   def addClassToArray(classes: js.Array[String], className: js.Array[String]): js.Array[String] = js.native
@@ -19,7 +22,9 @@ object animationUtilsMod extends js.Object {
   def generateKeyframeName(keyframeRules: String): String = js.native
   def generateKeyframeRules(): String = js.native
   def generateKeyframeRules(keyframes: js.Array[_]): String = js.native
+  def getAnimationPrefix(el: HTMLElement): String = js.native
   def getStyleContainer(element: HTMLElement): js.Any = js.native
+  def processKeyframes(keyframes: AnimationKeyFrames): AnimationKeyFrames = js.native
   def removeStyleProperty(element: HTMLElement, propertyName: String): Unit = js.native
   def setStyleProperty(element: HTMLElement, propertyName: String): Unit = js.native
   def setStyleProperty(element: HTMLElement, propertyName: String, value: String): Unit = js.native

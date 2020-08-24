@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.baseSelectedItemsListTypesMod.IBaseSelectedItemsListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +13,11 @@ object BaseSelectedItemsList {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T, P <: IBaseSelectedItemsListProps[T]] (val args: js.Array[js.Any])
+  class Builder[T, /* <: typingsSlinky.officeUiFabricReact.baseExtendedPickerTypesMod.IBaseExtendedPickerProps[T] */ P] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[
-          tag.type, 
-          typingsSlinky.officeUiFabricReact.mod.BaseSelectedItemsList[js.Any, js.Any]
-        ]
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.BaseSelectedItemsList[T, P]]
   
-  def apply[T, P <: IBaseSelectedItemsListProps[T]](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T, P <: IBaseSelectedItemsListProps[T]](companion: BaseSelectedItemsList.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
+  def apply[T, /* <: typingsSlinky.officeUiFabricReact.baseSelectedItemsListTypesMod.IBaseSelectedItemsListProps[T] */ P](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T, /* <: typingsSlinky.officeUiFabricReact.baseSelectedItemsListTypesMod.IBaseSelectedItemsListProps[T] */ P](companion: BaseSelectedItemsList.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
 }
 

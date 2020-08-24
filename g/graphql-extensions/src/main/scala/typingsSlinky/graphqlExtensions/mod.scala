@@ -9,7 +9,6 @@ import typingsSlinky.graphqlExtensions.anon.Context
 import typingsSlinky.graphqlExtensions.anon.ExecutionArgs
 import typingsSlinky.graphqlExtensions.anon.Extensions
 import typingsSlinky.graphqlExtensions.anon.GraphQLSchemaextensionsEn
-import typingsSlinky.graphqlExtensions.anon.GraphQLSchemaextensionsEnAstNode
 import typingsSlinky.graphqlExtensions.anon.GraphqlResponse
 import typingsSlinky.graphqlExtensions.anon.QueryString
 import scala.scalajs.js
@@ -57,7 +56,7 @@ object mod extends js.Object {
     def willSendResponse(o: GraphqlResponse[TContext]): GraphqlResponse[TContext] = js.native
   }
   
-  def enableGraphQLExtensions(schema: GraphQLSchemaextensionsEn): GraphQLSchemaextensionsEnAstNode = js.native
+  def enableGraphQLExtensions(schema: GraphQLSchemaextensionsEn): GraphQLSchemaextensionsEn = js.native
   type EndHandler = js.Function1[/* repeated */ js.Error, Unit]
   type FieldIteratorFn = js.Function3[
     /* fieldDef */ GraphQLField[js.Any, js.Any, StringDictionary[js.Any]], 

@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object pluginMod {
-  type SVGSpriteLoaderPlugin = typingsSlinky.webpack.mod.Plugin
+  type SVGSpriteLoaderPlugin = typingsSlinky.std.Plugin
 }

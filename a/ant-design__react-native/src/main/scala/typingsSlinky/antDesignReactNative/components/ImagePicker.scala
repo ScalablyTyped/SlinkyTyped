@@ -1,31 +1,31 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.cameraRollPickerMod.CameraRollPickerProps
 import typingsSlinky.antDesignReactNative.imagePickerMod.ImagePickerProps
-import typingsSlinky.antDesignReactNative.imagePickerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImagePicker {
-  @JSImport("@ant-design/react-native/lib/image-picker", JSImport.Default)
+  @JSImport("@ant-design/react-native", "ImagePicker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.ImagePicker] {
     @scala.inline
     def cameraPickerProps(value: CameraRollPickerProps): this.type = set("cameraPickerProps", value.asInstanceOf[js.Any])
     @scala.inline
     def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def cancelText(value: TagMod[Any]): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    def cancelText(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filesVarargs(value: js.Object*): this.type = set("files", js.Array(value :_*))
     @scala.inline
     def files(value: js.Array[js.Object]): this.type = set("files", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +45,7 @@ object ImagePicker {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ImagePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

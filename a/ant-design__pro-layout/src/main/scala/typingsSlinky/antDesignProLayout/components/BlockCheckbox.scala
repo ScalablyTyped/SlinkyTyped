@@ -18,13 +18,15 @@ object BlockCheckbox {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def listVarargs(value: Key*): this.type = set("list", js.Array(value :_*))
+    @scala.inline
     def list(value: js.Array[Key]): this.type = set("list", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BlockCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: String => Unit, value: String): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
+  def apply(onChange: String => Unit, prefixCls: String, value: String): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[BlockCheckboxProps]))
   }
 }

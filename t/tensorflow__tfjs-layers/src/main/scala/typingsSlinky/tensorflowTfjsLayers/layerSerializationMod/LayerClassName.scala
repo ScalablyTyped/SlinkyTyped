@@ -6,49 +6,49 @@ import scala.scalajs.js.annotation._
 
 /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/layer_serialization.LayerSerialization['class_name'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dot
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalMaxPooling2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SeparableConv2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Concatenate
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ZeroPadding2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GRU
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.PReLU
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalAveragePooling2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalMaxPooling1D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Activation
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.MaxPooling1D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.InputLayer
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Flatten
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2DTranspose
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dense
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SimpleRNN
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ThresholdedReLU
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.LSTM
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ELU
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Maximum
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.AveragePooling2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv1D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.MaxPooling2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ReLU
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Embedding
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dropout
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Reshape
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Masking
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Permute
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.AveragePooling1D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.BatchNormalization
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.InputLayer
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.PReLU
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalAveragePooling1D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.DepthwiseConv2D
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Average
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Concatenate
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.MaxPooling2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dropout
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Softmax
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.LeakyReLU
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Multiply
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Minimum
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RepeatVector
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Add
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Cropping2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2DTranspose
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ZeroPadding2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Minimum
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Multiply
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Activation
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.BatchNormalization
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Masking
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ReLU
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.AveragePooling1D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalMaxPooling1D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Permute
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalAveragePooling2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Reshape
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.LeakyReLU
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.MaxPooling1D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dot
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.DepthwiseConv2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SimpleRNN
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ELU
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GlobalMaxPooling2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RepeatVector
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv1D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.LSTM
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Maximum
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Average
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.ThresholdedReLU
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.AveragePooling2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Embedding
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.GRU
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.UpSampling2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dense
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Cropping2D
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SeparableConv2D
 */
 trait LayerClassName extends js.Object
 

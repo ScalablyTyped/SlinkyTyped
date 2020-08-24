@@ -42,23 +42,16 @@ object Typeofapp {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_State(value: FULLSCREEN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_State")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRuntime(value: Typeofruntime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_State(value: FULLSCREEN): Self = this.set("_State", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWindow(value: ChromeAppWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRuntime(value: Typeofruntime): Self = this.set("runtime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWindow(value: ChromeAppWindow): Self = this.set("window", value.asInstanceOf[js.Any])
   }
   
 }

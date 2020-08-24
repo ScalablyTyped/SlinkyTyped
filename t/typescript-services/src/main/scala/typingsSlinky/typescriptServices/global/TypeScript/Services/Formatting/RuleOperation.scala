@@ -7,12 +7,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TypeScript.Services.Formatting.RuleOperation")
 @js.native
 class RuleOperation ()
-  extends typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleOperation {
-  /* CompleteClass */
-  override var Action: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleAction = js.native
-  /* CompleteClass */
-  override var Context: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleOperationContext = js.native
-}
+  extends typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleOperation
 
 /* static members */
 @JSGlobal("TypeScript.Services.Formatting.RuleOperation")

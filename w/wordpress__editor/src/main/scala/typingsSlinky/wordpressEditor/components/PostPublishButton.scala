@@ -2,7 +2,6 @@ package typingsSlinky.wordpressEditor.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressEditor.mod.PostPublishButton.^
 import typingsSlinky.wordpressEditor.wordpressEditorBooleans.`false`
 import typingsSlinky.wordpressEditor.wordpressEditorBooleans.`true`
 import scala.scalajs.js
@@ -18,7 +17,7 @@ object PostPublishButton {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def focusOnMount(value: Boolean): this.type = set("focusOnMount", value.asInstanceOf[js.Any])
       @scala.inline
@@ -45,7 +44,7 @@ object PostPublishButton {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def focusOnMount(value: Boolean): this.type = set("focusOnMount", value.asInstanceOf[js.Any])
       @scala.inline

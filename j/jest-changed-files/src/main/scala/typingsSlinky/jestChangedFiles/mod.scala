@@ -1,8 +1,9 @@
 package typingsSlinky.jestChangedFiles
 
-import typingsSlinky.jestChangedFiles.typesMod.ChangedFiles
+import typingsSlinky.jestChangedFiles.typesMod.ChangedFilesPromise
 import typingsSlinky.jestChangedFiles.typesMod.Options
 import typingsSlinky.jestChangedFiles.typesMod.Repos
+import typingsSlinky.jestTypes.configMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-changed-files", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  def findRepos(roots: js.Array[String]): js.Promise[Repos] = js.native
-  def getChangedFilesForRoots(roots: js.Array[String], options: Options): js.Promise[ChangedFiles] = js.native
+  def findRepos(roots: js.Array[Path]): js.Promise[Repos] = js.native
+  def getChangedFilesForRoots(roots: js.Array[Path], options: Options): ChangedFilesPromise = js.native
 }
 

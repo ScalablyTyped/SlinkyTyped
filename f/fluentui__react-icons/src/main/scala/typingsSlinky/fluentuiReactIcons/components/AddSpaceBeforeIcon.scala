@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AddSpaceBeforeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AddSpaceBeforeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AddSpaceBeforeIcon")
   @js.native
   object component extends js.Object
   

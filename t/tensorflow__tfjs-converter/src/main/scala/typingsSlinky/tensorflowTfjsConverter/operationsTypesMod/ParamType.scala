@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensors
   - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dtype
   - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`dtype[]`
+  - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.func
 */
 trait ParamType extends js.Object
 
@@ -29,6 +30,8 @@ object ParamType {
   def dtype: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dtype = "dtype".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dtype]
   @scala.inline
   def `dtype[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`dtype[]` = "dtype[]".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`dtype[]`]
+  @scala.inline
+  def func: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.func = "func".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.func]
   @scala.inline
   def number: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.number = "number".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.number]
   @scala.inline

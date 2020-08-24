@@ -14,7 +14,6 @@ import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalStyleProps
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalStyles
 import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -24,14 +23,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Modal {
-  @JSImport("office-ui-fabric-react/lib/Modal", JSImport.Default)
+  @JSImport("office-ui-fabric-react", "Modal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.modalBaseMod.ModalBase] {
     @scala.inline
     def allowTouchBodyScroll(value: Boolean): this.type = set("allowTouchBodyScroll", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,6 +49,8 @@ object Modal {
     def dragOptions(value: IDragOptions): this.type = set("dragOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def elementToFocusOnDismiss(value: HTMLElement): this.type = set("elementToFocusOnDismiss", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableAriaHiddenSiblings(value: Boolean): this.type = set("enableAriaHiddenSiblings", value.asInstanceOf[js.Any])
     @scala.inline
     def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
     @scala.inline

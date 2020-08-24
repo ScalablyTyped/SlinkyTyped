@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "semver-diff"
-version := "3.1.1-6689ed"
-scalaVersion := "2.13.2"
+version := "3.1.1-b3bd5c"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

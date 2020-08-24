@@ -15,7 +15,16 @@ class PopupWindow protected ()
   def this(context: Context) = this()
   def this(contentView: View, width: Double) = this()
   def this(context: Context, styleAttr: Map[String, String]) = this()
+  def this(contentView: View, width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(contentView: View, width: Double, height: Double) = this()
+  def this(
+    contentView: View,
+    width: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    focusable: Boolean
+  ) = this()
+  def this(contentView: View, width: js.UndefOr[scala.Nothing], height: Double, focusable: Boolean) = this()
+  def this(contentView: View, width: Double, height: js.UndefOr[scala.Nothing], focusable: Boolean) = this()
   def this(contentView: View, width: Double, height: Double, focusable: Boolean) = this()
 }
 

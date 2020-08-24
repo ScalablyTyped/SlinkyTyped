@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SDCardIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SDCardIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SDCardIcon")
   @js.native
   object component extends js.Object
   

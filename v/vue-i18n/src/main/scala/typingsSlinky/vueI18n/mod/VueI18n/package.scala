@@ -6,6 +6,11 @@ import scala.scalajs.js.annotation._
 
 package object VueI18n {
   type Choice = scala.Double
+  type ComponentInstanceCreatedListener = js.Function2[
+    /* newVm */ typingsSlinky.vueI18n.mod.VueI18n with typingsSlinky.vueI18n.mod.IVueI18n, 
+    /* rootVm */ typingsSlinky.vueI18n.mod.VueI18n with typingsSlinky.vueI18n.mod.IVueI18n, 
+    scala.Unit
+  ]
   type DateTimeFormat = org.scalablytyped.runtime.StringDictionary[typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatOptions]
   type DateTimeFormatOptions = typingsSlinky.std.Intl.DateTimeFormatOptions | typingsSlinky.vueI18n.mod.VueI18n.SpecificDateTimeFormatOptions
   type DateTimeFormatResult = java.lang.String

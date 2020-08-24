@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
-- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflowTaskOutcome because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsWorkflowTask, name */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.WorkflowTaskOutcome")
+- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflowTaskOutcome because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsWorkflowTask, name, caption */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.WorkflowTaskOutcome")
 @js.native
 class WorkflowTaskOutcome protected ()
   extends Element
@@ -34,6 +34,11 @@ class WorkflowTaskOutcome protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  /**
+    * In version 8.11.0: introduced
+    */
+  @JSName("caption")
+  val caption_FWorkflowTaskOutcome: String = js.native
   @JSName("containerAsWorkflowTask")
   val containerAsWorkflowTask_FWorkflowTaskOutcome: IWorkflowTask = js.native
   @JSName("model")
@@ -41,16 +46,13 @@ class WorkflowTaskOutcome protected ()
   @JSName("name")
   val name_FWorkflowTaskOutcome: String = js.native
   /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
+    * In version 8.11.0: introduced
     */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
+  def caption: String = js.native
+  def caption_=(newValue: String): Unit = js.native
   def containerAsWorkflowTask: WorkflowTask = js.native
   def name: String = js.native
-  def name(newValue: String): js.Any = js.native
+  def name_=(newValue: String): Unit = js.native
   @JSName("qualifiedName")
   def qualifiedName_MWorkflowTaskOutcome: String | Null = js.native
 }

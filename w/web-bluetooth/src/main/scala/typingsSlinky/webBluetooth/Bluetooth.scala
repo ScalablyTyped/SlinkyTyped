@@ -2,6 +2,7 @@ package typingsSlinky.webBluetooth
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventTarget
+import typingsSlinky.webBluetooth.webBluetoothStrings.advertisementreceived
 import typingsSlinky.webBluetooth.webBluetoothStrings.availabilitychanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +16,17 @@ trait Bluetooth
      with ServiceEventHandlers {
   val referringDevice: js.UndefOr[BluetoothDevice] = js.native
   @JSName("addEventListener")
+  def addEventListener_advertisementreceived(
+    `type`: advertisementreceived,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ BluetoothAdvertisementEvent, _]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_advertisementreceived(
+    `type`: advertisementreceived,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ BluetoothAdvertisementEvent, _],
+    useCapture: Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
   def addEventListener_availabilitychanged(`type`: availabilitychanged, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_availabilitychanged(
@@ -26,5 +38,7 @@ trait Bluetooth
   def onavailabilitychanged(ev: Event): js.Any = js.native
   def requestDevice(): js.Promise[BluetoothDevice] = js.native
   def requestDevice(options: RequestDeviceOptions): js.Promise[BluetoothDevice] = js.native
+  def requestLEScan(): js.Promise[BluetoothLEScan] = js.native
+  def requestLEScan(options: RequestLEScanOptions): js.Promise[BluetoothLEScan] = js.native
 }
 

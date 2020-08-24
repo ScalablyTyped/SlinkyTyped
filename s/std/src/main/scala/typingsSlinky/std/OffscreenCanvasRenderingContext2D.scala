@@ -21,7 +21,7 @@ trait OffscreenCanvasRenderingContext2D
      with CanvasText
      with CanvasTextDrawingStyles
      with CanvasTransform
-     with OffscreenRenderingContext {
+     with _OffscreenRenderingContext {
   val canvas: OffscreenCanvas = js.native
   def commit(): Unit = js.native
 }

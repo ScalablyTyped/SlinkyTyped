@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "bootstrap-validator"
-version := "0.11-dt-20200515Z-267de5"
-scalaVersion := "2.13.2"
+version := "0.11-dt-20200515Z-22a17a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

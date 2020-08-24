@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs")
 @js.native
 abstract class CoreTextSelectionRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs {
-  /** Gets information about a SelectionRequested event. */
-  /* CompleteClass */
-  override var request: typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextSelectionRequest = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs
 

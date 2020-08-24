@@ -10,21 +10,20 @@ import typingsSlinky.antdMobile.antdMobileStrings.sm
 import typingsSlinky.antdMobile.antdMobileStrings.xl
 import typingsSlinky.antdMobile.antdMobileStrings.xs
 import typingsSlinky.antdMobile.whiteSpaceMod.WhiteSpaceProps
-import typingsSlinky.antdMobile.whiteSpaceMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WhiteSpace {
-  @JSImport("antd-mobile/lib/white-space", JSImport.Default)
+  @JSImport("antd-mobile", "WhiteSpace")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.WhiteSpace] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

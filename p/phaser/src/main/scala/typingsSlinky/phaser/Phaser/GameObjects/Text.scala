@@ -18,6 +18,7 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
+import typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextMetrics
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextPadding
 import typingsSlinky.phaser.TextStyleWordWrapCallback
 import typingsSlinky.phaser.integer
@@ -149,7 +150,7 @@ trait Text
   /**
     * Get the current text metrics.
     */
-  def getTextMetrics(): js.Object = js.native
+  def getTextMetrics(): TextMetrics = js.native
   /**
     * Runs the given text through this Text objects word wrapping and returns the results as an
     * array, where each element of the array corresponds to a wrapped line of text.

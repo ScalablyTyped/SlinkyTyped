@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LinkedInLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LinkedInLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LinkedInLogoIcon")
   @js.native
   object component extends js.Object
   

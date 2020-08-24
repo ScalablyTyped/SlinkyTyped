@@ -53,12 +53,36 @@ package object mod {
     */
   type CssSelector = js.Array[java.lang.String | typingsSlinky.angularCore.mod.SelectorFlags]
   /**
+    * An object literal of this type is used to represent the metadata of a constructor dependency.
+    * The type itself is never referred to from generated code.
+    */
+  type CtorDependency = typingsSlinky.angularCore.anon.Attribute | scala.Null
+  /**
     * Factory for ViewDefinitions/NgModuleDefinitions.
     * We use a function so we can reexeute it in case an error happens and use the given logger
     * function to log the error from the definition of the node, which is shown in all browser
     * logs.
     */
   type DefinitionFactory[D /* <: typingsSlinky.angularCore.mod.Definition[_] */] = js.Function1[/* logger */ typingsSlinky.angularCore.mod.NodeLogger, D]
+  /**
+    * Array of destroy hooks that should be executed for a view and their directive indices.
+    *
+    * The array is set up as a series of number/function or number/(number|function)[]:
+    * - Even indices represent the context with which hooks should be called.
+    * - Odd indices are the hook functions themselves. If a value at an odd index is an array,
+    *   it represents the destroy hooks of a `multi` provider where:
+    *     - Even indices represent the index of the provider for which we've registered a destroy hook,
+    *       inside of the `multi` provider array.
+    *     - Odd indices are the destroy hook functions.
+    * For example:
+    * LView: `[0, 1, 2, AService, 4, [BService, CService, DService]]`
+    * destroyHooks: `[3, AService.ngOnDestroy, 5, [0, BService.ngOnDestroy, 2, DService.ngOnDestroy]]`
+    *
+    * In the example above `AService` is a type provider with an `ngOnDestroy`, whereas `BService`,
+    * `CService` and `DService` are part of a `multi` provider where only `BService` and `DService`
+    * have an `ngOnDestroy` hook.
+    */
+  type DestroyHookData = js.Array[typingsSlinky.angularCore.mod.HookEntry | typingsSlinky.angularCore.mod.HookData]
   type DirectiveDefList = js.Array[
     typingsSlinky.angularCore.mod.ɵDirectiveDef[js.Any] | typingsSlinky.angularCore.mod.ɵComponentDef[js.Any]
   ]
@@ -102,13 +126,15 @@ package object mod {
     * Special cases:
     *  - a negative directive index flags an init hook (ngOnInit, ngAfterContentInit, ngAfterViewInit)
     */
-  type HookData = js.Array[scala.Double | js.Function0[scala.Unit]]
-  type HostBindingsFunction[T] = js.Function3[
-    /* rf */ typingsSlinky.angularCore.mod.ɵRenderFlags, 
-    /* ctx */ T, 
-    /* elementIndex */ scala.Double, 
-    scala.Unit
-  ]
+  type HookData = js.Array[typingsSlinky.angularCore.mod.HookEntry]
+  /**
+    * Information necessary to call a hook. E.g. the callback that
+    * needs to invoked and the index at which to find its context.
+    */
+  type HookEntry = scala.Double | typingsSlinky.angularCore.mod.HookFn
+  /** Single hook callback function. */
+  type HookFn = js.Function0[scala.Unit]
+  type HostBindingsFunction[T] = js.Function2[/* rf */ typingsSlinky.angularCore.mod.ɵRenderFlags, /* ctx */ T, scala.Unit]
   /** See CreateComponentOptions.hostFeatures */
   type HostFeature = js.Function2[
     /* component */ js.Any, 
@@ -208,10 +234,10 @@ package object mod {
     * Assume
     * ```ts
     *   if (rf & RenderFlags.Update) {
-    *    i18nExp(bind(ctx.exp1)); // If changed set mask bit 1
-    *    i18nExp(bind(ctx.exp2)); // If changed set mask bit 2
-    *    i18nExp(bind(ctx.exp3)); // If changed set mask bit 3
-    *    i18nExp(bind(ctx.exp4)); // If changed set mask bit 4
+    *    i18nExp(ctx.exp1); // If changed set mask bit 1
+    *    i18nExp(ctx.exp2); // If changed set mask bit 2
+    *    i18nExp(ctx.exp3); // If changed set mask bit 3
+    *    i18nExp(ctx.exp4); // If changed set mask bit 4
     *    i18nApply(0);            // Apply all changes by executing the OpCodes.
     *  }
     * ```
@@ -301,7 +327,7 @@ package object mod {
     */
   type LocalRefExtractor = js.Function2[
     /* tNode */ typingsSlinky.angularCore.mod.TNodeWithLocalRefs, 
-    /* currentView */ typingsSlinky.angularCore.mod.ɵangularPackagesCoreCoreBj, 
+    /* currentView */ typingsSlinky.angularCore.mod.ɵangularPackagesCoreCoreBp, 
     js.Any
   ]
   type NgIterable[T] = js.Array[T] | js.Iterable[T]
@@ -346,10 +372,9 @@ package object mod {
     * Store the runtime input or output names for all the directives.
     *
     * i+0: directive instance index
-    * i+1: publicName
-    * i+2: privateName
+    * i+1: privateName
     *
-    * e.g. [0, 'change', 'change-minified']
+    * e.g. [0, 'change-minified']
     */
   type PropertyAliasValue = js.Array[scala.Double | java.lang.String]
   /**
@@ -382,7 +407,6 @@ package object mod {
     /* propName */ js.UndefOr[java.lang.String], 
     java.lang.String
   ]
-  type Scope = js.Function1[/* repeated */ js.Any, js.Any]
   type SimpleChanges = org.scalablytyped.runtime.StringDictionary[typingsSlinky.angularCore.mod.SimpleChange]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.angularCore.mod.ValueProvider
@@ -394,19 +418,6 @@ package object mod {
   */
   type StaticProvider = typingsSlinky.angularCore.mod._StaticProvider | js.Array[js.Any]
   /**
-    * Used to intercept and sanitize style values before they are written to the renderer.
-    *
-    * This function is designed to be called in two modes. When a value is not provided
-    * then the function will return a boolean whether a property will be sanitized later.
-    * If a value is provided then the sanitized version of that will be returned.
-    */
-  type StyleSanitizeFn = js.Function3[
-    /* prop */ java.lang.String, 
-    /* value */ java.lang.String | scala.Null, 
-    /* mode */ js.UndefOr[typingsSlinky.angularCore.mod.StyleSanitizeMode], 
-    js.Any
-  ]
-  /**
     * A combination of:
     * - Attribute names and values.
     * - Special markers acting as flags to alter attributes processing.
@@ -415,6 +426,12 @@ package object mod {
   type TAttributes = js.Array[
     java.lang.String | typingsSlinky.angularCore.mod.ɵAttributeMarker | typingsSlinky.angularCore.mod.CssSelector
   ]
+  /**
+    * Constants that are associated with a view. Includes:
+    * - Attribute arrays.
+    * - Local definition arrays.
+    */
+  type TConstants = js.Array[typingsSlinky.angularCore.mod.TAttributes | java.lang.String]
   /**
     * Static data that corresponds to the instance-specific data array on an LView.
     *
@@ -443,15 +460,87 @@ package object mod {
     * Injector bloom filters are also stored here.
     */
   type TData = js.Array[
-    typingsSlinky.angularCore.mod.TNode | typingsSlinky.angularCore.mod.ɵPipeDef[js.Any] | typingsSlinky.angularCore.mod.ɵDirectiveDef[js.Any] | typingsSlinky.angularCore.mod.ɵComponentDef[js.Any] | scala.Double | typingsSlinky.angularCore.mod.Type[js.Any] | typingsSlinky.angularCore.mod.InjectionToken[js.Any] | typingsSlinky.angularCore.mod.TI18n | typingsSlinky.angularCore.mod.I18nUpdateOpCodes | scala.Null | java.lang.String
+    typingsSlinky.angularCore.mod.TNode | typingsSlinky.angularCore.mod.ɵPipeDef[js.Any] | typingsSlinky.angularCore.mod.ɵDirectiveDef[js.Any] | typingsSlinky.angularCore.mod.ɵComponentDef[js.Any] | scala.Double | typingsSlinky.angularCore.mod.TStylingRange | typingsSlinky.angularCore.mod.TStylingKey | typingsSlinky.angularCore.mod.Type[js.Any] | typingsSlinky.angularCore.mod.InjectionToken[js.Any] | typingsSlinky.angularCore.mod.TI18n | typingsSlinky.angularCore.mod.I18nUpdateOpCodes | scala.Null | java.lang.String
   ]
-  type TrackByFunction[T] = js.Function2[/* index */ scala.Double, /* item */ T, js.Any]
   /**
-    * Tsickle has a bug where it creates an infinite loop for a function returning itself.
-    * This is a temporary type that will be removed when the issue is resolved.
-    * https://github.com/angular/tsickle/issues/1009)
+    * Value stored in the `TData` which is needed to re-concatenate the styling.
+    *
+    * See: `TStylingKeyPrimitive` and `TStylingStatic`
     */
-  type TsickleIssue1009 = js.Any
+  type TStylingKey = typingsSlinky.angularCore.mod.TStylingKeyPrimitive | typingsSlinky.angularCore.mod.TStylingStatic
+  /**
+    * The primitive portion (`TStylingStatic` removed) of the value stored in the `TData` which is
+    * needed to re-concatenate the styling.
+    *
+    * - `string`: Stores the property name. Used with `ɵɵstyleProp`/`ɵɵclassProp` instruction.
+    * - `null`: Represents map, so there is no name. Used with `ɵɵstyleMap`/`ɵɵclassMap`.
+    * - `false`: Represents an ignore case. This happens when `ɵɵstyleProp`/`ɵɵclassProp` instruction
+    *   is combined with directive which shadows its input `@Input('class')`. That way the binding
+    *   should not participate in the styling resolution.
+    */
+  type TStylingKeyPrimitive = java.lang.String | scala.Null | typingsSlinky.angularCore.angularCoreBooleans.`false`
+  /**
+    * Store the static values for the styling binding.
+    *
+    * The `TStylingStatic` is just `KeyValueArray` where key `""` (stored at location 0) contains the
+    * `TStylingKey` (stored at location 1). In other words this wraps the `TStylingKey` such that the
+    * `""` contains the wrapped value.
+    *
+    * When instructions are resolving styling they may need to look forward or backwards in the linked
+    * list to resolve the value. For this reason we have to make sure that he linked list also contains
+    * the static values. However the list only has space for one item per styling instruction. For this
+    * reason we store the static values here as part of the `TStylingKey`. This means that the
+    * resolution function when looking for a value needs to first look at the binding value, and than
+    * at `TStylingKey` (if it exists).
+    *
+    * Imagine we have:
+    *
+    * ```
+    * <div class="TEMPLATE" my-dir>
+    *
+    * @Directive({
+    *   host: {
+    *     class: 'DIR',
+    *     '[class.dynamic]': 'exp' // ɵɵclassProp('dynamic', ctx.exp);
+    *   }
+    * })
+    * ```
+    *
+    * In the above case the linked list will contain one item:
+    *
+    * ```
+    *   // assume binding location: 10 for `ɵɵclassProp('dynamic', ctx.exp);`
+    *   tData[10] = <TStylingStatic>[
+    *     '': 'dynamic', // This is the wrapped value of `TStylingKey`
+    *     'DIR': true,   // This is the default static value of directive binding.
+    *   ];
+    *   tData[10 + 1] = 0; // We don't have prev/next.
+    *
+    *   lView[10] = undefined;     // assume `ctx.exp` is `undefined`
+    *   lView[10 + 1] = undefined; // Just normalized `lView[10]`
+    * ```
+    *
+    * So when the function is resolving styling value, it first needs to look into the linked list
+    * (there is none) and than into the static `TStylingStatic` too see if there is a default value for
+    * `dynamic` (there is not). Therefore it is safe to remove it.
+    *
+    * If setting `true` case:
+    * ```
+    *   lView[10] = true;     // assume `ctx.exp` is `true`
+    *   lView[10 + 1] = true; // Just normalized `lView[10]`
+    * ```
+    * So when the function is resolving styling value, it first needs to look into the linked list
+    * (there is none) and than into `TNode.residualClass` (TNode.residualStyle) which contains
+    * ```
+    *   tNode.residualClass = [
+    *     'TEMPLATE': true,
+    *   ];
+    * ```
+    *
+    * This means that it is safe to add class.
+    */
+  type TStylingStatic = typingsSlinky.angularCore.mod.KeyValueArray[js.Any]
+  type TrackByFunction[T] = js.Function2[/* index */ scala.Double, /* item */ T, js.Any]
   type TypeProvider = typingsSlinky.angularCore.mod.Type[js.Any]
   type ViewChild = typingsSlinky.angularCore.mod.Query
   type ViewChildren = typingsSlinky.angularCore.mod.Query
@@ -471,14 +560,19 @@ package object mod {
     /* view */ typingsSlinky.angularCore.mod.ViewData, 
     scala.Unit
   ]
-  type WtfScopeFn = js.Function2[/* arg0 */ js.UndefOr[js.Any], /* arg1 */ js.UndefOr[js.Any], js.Any]
   type viewEngineChangeDetectorRefInterface = typingsSlinky.angularCore.mod.ChangeDetectorRef
   type ɵCssSelectorList = js.Array[typingsSlinky.angularCore.mod.CssSelector]
   type ɵGetterFn = js.Function1[/* obj */ js.Any, js.Any]
   type ɵMethodFn = js.Function2[/* obj */ js.Any, /* args */ js.Array[js.Any], js.Any]
+  type ɵSafeHtml = typingsSlinky.angularCore.mod.ɵSafeValue
+  type ɵSafeResourceUrl = typingsSlinky.angularCore.mod.ɵSafeValue
+  type ɵSafeScript = typingsSlinky.angularCore.mod.ɵSafeValue
+  type ɵSafeStyle = typingsSlinky.angularCore.mod.ɵSafeValue
+  type ɵSafeUrl = typingsSlinky.angularCore.mod.ɵSafeValue
   type ɵSetterFn = js.Function2[/* obj */ js.Any, /* value */ js.Any, scala.Unit]
-  type ɵɵComponentDefWithMeta[T, Selector /* <: java.lang.String */, ExportAs /* <: js.Array[java.lang.String] */, InputMap /* <: org.scalablytyped.runtime.StringDictionary[java.lang.String] */, OutputMap /* <: org.scalablytyped.runtime.StringDictionary[java.lang.String] */, QueryFields /* <: js.Array[java.lang.String] */] = typingsSlinky.angularCore.mod.ɵComponentDef[T]
+  type ɵɵComponentDefWithMeta[T, Selector /* <: java.lang.String */, ExportAs /* <: js.Array[java.lang.String] */, InputMap /* <: org.scalablytyped.runtime.StringDictionary[java.lang.String] */, OutputMap /* <: org.scalablytyped.runtime.StringDictionary[java.lang.String] */, QueryFields /* <: js.Array[java.lang.String] */, NgContentSelectors /* <: js.Array[java.lang.String] */] = typingsSlinky.angularCore.mod.ɵComponentDef[T]
   type ɵɵDirectiveDefWithMeta[T, Selector /* <: java.lang.String */, ExportAs /* <: js.Array[java.lang.String] */, InputMap /* <: org.scalablytyped.runtime.StringDictionary[java.lang.String] */, OutputMap /* <: org.scalablytyped.runtime.StringDictionary[java.lang.String] */, QueryFields /* <: js.Array[java.lang.String] */] = typingsSlinky.angularCore.mod.ɵDirectiveDef[T]
+  type ɵɵFactoryDef[T, CtorDependencies /* <: js.Array[typingsSlinky.angularCore.mod.CtorDependency] */] = js.Function0[T]
   type ɵɵNgModuleDefWithMeta[T, Declarations, Imports, Exports] = typingsSlinky.angularCore.mod.ɵNgModuleDef[T]
   type ɵɵPipeDefWithMeta[T, Name /* <: java.lang.String */] = typingsSlinky.angularCore.mod.ɵPipeDef[T]
 }

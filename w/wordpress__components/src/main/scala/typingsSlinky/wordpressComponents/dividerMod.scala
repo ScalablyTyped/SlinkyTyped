@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressComponents
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.wordpressComponents.anon.AsClassName
+import typingsSlinky.wordpressComponents.anon.Children
 import typingsSlinky.wordpressComponents.dividerMod.CardDivider.Props
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`object`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`var`
@@ -187,7 +187,7 @@ import scala.scalajs.js.annotation._
 object dividerMod extends js.Object {
   @js.native
   object CardDivider extends js.Object {
-    type Props[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = AsClassName[T] with (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] */ js.Any)
+    type Props[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = Children[T] with (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] */ js.Any)
   }
   
   @js.native

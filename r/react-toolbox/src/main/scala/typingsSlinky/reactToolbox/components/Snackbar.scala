@@ -4,18 +4,18 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libSnackbarMod.default
-import typingsSlinky.reactToolbox.libSnackbarSnackbarMod.SnackbarProps
-import typingsSlinky.reactToolbox.libSnackbarSnackbarMod.SnackbarTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.accept
 import typingsSlinky.reactToolbox.reactToolboxStrings.cancel
 import typingsSlinky.reactToolbox.reactToolboxStrings.warning
+import typingsSlinky.reactToolbox.snackbarMod.default
+import typingsSlinky.reactToolbox.snackbarSnackbarMod.SnackbarProps
+import typingsSlinky.reactToolbox.snackbarSnackbarMod.SnackbarTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Snackbar {
-  @JSImport("react-toolbox/lib/snackbar", JSImport.Default)
+  @JSImport("react-toolbox/components/snackbar", JSImport.Default)
   @js.native
   object component extends js.Object
   

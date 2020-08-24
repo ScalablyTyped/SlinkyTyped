@@ -1,13 +1,13 @@
 package typingsSlinky.downshift.mod
 
-import typingsSlinky.downshift.anon.FunctionClearKeysSoFar
+import typingsSlinky.downshift.anon.FunctionCloseMenu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait UseSelectInterface extends js.Object {
-  var stateChangeTypes: FunctionClearKeysSoFar = js.native
+  var stateChangeTypes: FunctionCloseMenu = js.native
   def apply[Item](props: UseSelectProps[Item]): UseSelectReturnValue[Item] = js.native
 }
 

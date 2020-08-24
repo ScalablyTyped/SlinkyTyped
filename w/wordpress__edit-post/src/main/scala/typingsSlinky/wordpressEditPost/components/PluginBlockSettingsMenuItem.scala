@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
-import typingsSlinky.wordpressEditPost.mod.PluginBlockSettingsMenuItem.^
 import typingsSlinky.wordpressEditPost.pluginBlockSettingsMenuItemMod.PluginBlockSettingsMenuItem.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +19,9 @@ object PluginBlockSettingsMenuItem {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def allowedBlocksVarargs(value: String*): this.type = set("allowedBlocks", js.Array(value :_*))
     @scala.inline
     def allowedBlocks(value: js.Array[String]): this.type = set("allowedBlocks", value.asInstanceOf[js.Any])
     @scala.inline

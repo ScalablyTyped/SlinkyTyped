@@ -12,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderProps
 import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderStyleProps
 import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderStyles
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -29,7 +28,7 @@ object Slider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.sliderBaseMod.SliderBase] {
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline

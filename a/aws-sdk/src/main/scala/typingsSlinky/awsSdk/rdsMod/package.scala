@@ -188,6 +188,15 @@ package object rdsMod {
   type VpcSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type VpcSecurityGroupMembershipList = js.Array[typingsSlinky.awsSdk.rdsMod.VpcSecurityGroupMembership]
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.enabled__
+    - typingsSlinky.awsSdk.awsSdkStrings.disabled__
+    - typingsSlinky.awsSdk.awsSdkStrings.enabling__
+    - typingsSlinky.awsSdk.awsSdkStrings.disabling_
+    - typingsSlinky.awsSdk.awsSdkStrings.unknown__
+    - java.lang.String
+  */
+  type WriteForwardingStatus = typingsSlinky.awsSdk.rdsMod._WriteForwardingStatus | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-01-10`
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-02-12`
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-09-09`

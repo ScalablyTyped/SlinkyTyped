@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiCore
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.createGenerateClassNameMod.GenerateClassNameOptions
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
@@ -14,7 +13,6 @@ import typingsSlinky.materialUiCore.withStylesMod.WithStyles
 import typingsSlinky.materialUiCore.withStylesMod.WithStylesOptions
 import typingsSlinky.materialUiCore.withThemeMod.ThemedComponentProps
 import typingsSlinky.materialUiCore.withThemeMod.WithTheme
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,13 +20,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/styles", JSImport.Namespace)
 @js.native
 object stylesMod extends js.Object {
-  @js.native
-  class MuiThemeProvider protected ()
-    extends Component[MuiThemeProviderProps, js.Object, js.Any] {
-    def this(props: MuiThemeProviderProps) = this()
-    def this(props: MuiThemeProviderProps, context: js.Any) = this()
-  }
-  
+  val MuiThemeProvider: ReactComponentClass[MuiThemeProviderProps] = js.native
   def createGenerateClassName(): js.Any = js.native
   def createGenerateClassName(options: GenerateClassNameOptions): js.Any = js.native
   def createMuiTheme(): Theme = js.native
@@ -64,8 +56,5 @@ object stylesMod extends js.Object {
     StyledComponentProps[ClassKey]
   ] = js.native
   def withTheme(): PropInjector[WithTheme, ThemedComponentProps] = js.native
-  @js.native
-  object MuiThemeProvider extends TopLevel[ReactComponentClass[MuiThemeProviderProps]]
-  
 }
 

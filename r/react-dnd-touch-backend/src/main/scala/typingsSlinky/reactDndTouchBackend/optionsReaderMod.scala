@@ -1,6 +1,8 @@
 package typingsSlinky.reactDndTouchBackend
 
-import typingsSlinky.reactDndTouchBackend.interfacesMod.AngleRange
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Window
+import typingsSlinky.reactDndTouchBackend.interfacesMod.TouchBackendContext
 import typingsSlinky.reactDndTouchBackend.interfacesMod.TouchBackendOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,8 +13,7 @@ import scala.scalajs.js.annotation._
 object optionsReaderMod extends js.Object {
   @js.native
   class OptionsReader protected () extends TouchBackendOptions {
-    def this(incoming: TouchBackendOptions) = this()
-    def this(incoming: TouchBackendOptions, context: js.Any) = this()
+    def this(incoming: TouchBackendOptions, context: TouchBackendContext) = this()
     var context: js.Any = js.native
     @JSName("delayMouseStart")
     var delayMouseStart_OptionsReader: Double = js.native
@@ -28,12 +29,10 @@ object optionsReaderMod extends js.Object {
     var enableTouchEvents_OptionsReader: Boolean = js.native
     @JSName("ignoreContextMenu")
     var ignoreContextMenu_OptionsReader: Boolean = js.native
-    @JSName("scrollAngleRanges")
-    var scrollAngleRanges_OptionsReader: js.UndefOr[js.Array[AngleRange]] = js.native
     @JSName("touchSlop")
     var touchSlop_OptionsReader: Double = js.native
-    def document: js.Any = js.native
-    def window: js.Any = js.native
+    def document: js.UndefOr[Document] = js.native
+    def window: js.UndefOr[Window] = js.native
   }
   
 }

@@ -8,9 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.node.NodeJS.EventEmitter because Already inherited
+- typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter because Already inherited
 - typingsSlinky.node.eventsMod.EventEmitter because Already inherited
-- typingsSlinky.node.NodeJS.EventEmitter because Already inherited
+- typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter because Already inherited
 - typingsSlinky.node.childProcessMod.StdioNull because Already inherited
 - typingsSlinky.node.streamMod.internal because Already inherited
 - typingsSlinky.node.NodeJS.ReadableStream because Already inherited

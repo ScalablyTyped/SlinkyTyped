@@ -25,6 +25,7 @@ object electronMod extends js.Object {
   object app extends js.Object {
     var getAppPath: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jest.Mock<string, []> */ js.Any = js.native
     def isReady(): js.Promise[Unit] = js.native
+    def on(): Unit = js.native
   }
   
 }

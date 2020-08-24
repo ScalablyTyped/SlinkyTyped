@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MSNVideosSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MSNVideosSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MSNVideosSolidIcon")
   @js.native
   object component extends js.Object
   

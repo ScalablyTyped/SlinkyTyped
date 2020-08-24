@@ -1,10 +1,10 @@
 package typingsSlinky.ionicReact
 
 import org.scalajs.dom.raw.DOMTokenList
-import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Config_
+import typingsSlinky.ionicCore.platformMod.Platforms
 import typingsSlinky.ionicReact.anon.ElementeventskeystringeEv
 import typingsSlinky.ionicReact.ionicReactPropsMod.IonicReactProps
 import typingsSlinky.ionicReact.ionicReactStrings.android
@@ -46,11 +46,14 @@ object utilsMod extends js.Object {
   def getPlatforms(): js.Array[
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
+  def ionRenderToString(html: String, userAgent: String): js.Promise[String] = js.native
+  def ionRenderToString(
+    html: String,
+    userAgent: String,
+    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SerializeDocumentOptions */ js.Any
+  ): js.Promise[String] = js.native
   def isCoveredByReact(eventNameSuffix: String): Boolean = js.native
-  def isCoveredByReact(eventNameSuffix: String, doc: Document): Boolean = js.native
-  def isPlatform(
-    platform: ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
-  ): Boolean = js.native
+  def isPlatform(platform: Platforms): Boolean = js.native
   def syncEvent(node: ElementeventskeystringeEv, eventName: String): Unit = js.native
   def syncEvent(
     node: ElementeventskeystringeEv,

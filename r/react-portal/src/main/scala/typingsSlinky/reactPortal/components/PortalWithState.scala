@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactPortal.mod.PortalFunctionParams
 import typingsSlinky.reactPortal.mod.PortalWithStateProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,6 +38,10 @@ object PortalWithState {
   }
   
   def withProps(p: PortalWithStateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PortalWithState.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: PortalFunctionParams => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PortalWithStateProps]))
+  }
 }
 

@@ -1,8 +1,10 @@
 package typingsSlinky.reactBootstrapTable2Paginator.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable2Paginator.anon.Children
+import typingsSlinky.reactBootstrapTable2Paginator.anon.PaginationProps
 import typingsSlinky.reactBootstrapTable2Paginator.mod.PaginationCtxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,6 +24,10 @@ object PaginationProvider {
   }
   
   def withProps(p: Children): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PaginationProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: PaginationProps => ReactElement | Null): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Children]))
+  }
 }
 

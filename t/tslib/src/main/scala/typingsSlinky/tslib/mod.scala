@@ -1,7 +1,10 @@
 package typingsSlinky.tslib
 
+import typingsSlinky.std.PropertyKey
 import typingsSlinky.std.TemplateStringsArray
 import typingsSlinky.tslib.anon.Default
+import typingsSlinky.tslib.anon.Get
+import typingsSlinky.tslib.anon.Has
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,8 +24,18 @@ object mod extends js.Object {
   def await(v: js.Any): js.Any = js.native
   @JSName("__awaiter")
   def awaiter(thisArg: js.Any, _arguments: js.Any, P: js.Function, generator: js.Function): js.Any = js.native
+  @JSName("__classPrivateFieldGet")
+  def classPrivateFieldGet[T /* <: js.Object */, V](receiver: T, privateMap: Get[T, V]): V = js.native
+  @JSName("__classPrivateFieldSet")
+  def classPrivateFieldSet[T /* <: js.Object */, V](receiver: T, privateMap: Has[T, V], value: V): V = js.native
+  @JSName("__createBinding")
+  def createBinding(`object`: js.Object, target: js.Object, key: PropertyKey): Unit = js.native
+  @JSName("__createBinding")
+  def createBinding(`object`: js.Object, target: js.Object, key: PropertyKey, objectKey: PropertyKey): Unit = js.native
   @JSName("__decorate")
   def decorate(decorators: js.Array[js.Function], target: js.Any): js.Any = js.native
+  @JSName("__decorate")
+  def decorate(decorators: js.Array[js.Function], target: js.Any, key: js.UndefOr[scala.Nothing], desc: js.Any): js.Any = js.native
   @JSName("__decorate")
   def decorate(decorators: js.Array[js.Function], target: js.Any, key: String): js.Any = js.native
   @JSName("__decorate")

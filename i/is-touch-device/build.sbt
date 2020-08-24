@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "is-touch-device"
-version := "1.0-dt-20180607Z-641663"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20180607Z-0d5f68"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

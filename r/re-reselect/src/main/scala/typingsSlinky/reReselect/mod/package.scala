@@ -11,18 +11,12 @@ package object mod {
     typingsSlinky.reReselect.mod.KeySelector[S]
   ]
   type ObjectCacheKey = java.lang.String | scala.Double
-  type OutputCachedSelector[S, R, C, D] = js.Function2[
+  type OutputCachedSelector[S, R, C, D] = js.Function1[
     /* options */ typingsSlinky.reReselect.mod.KeySelector[S] | (typingsSlinky.reReselect.mod.Options[S, C, D]), 
-    /* legacyOptions */ js.UndefOr[
-      (typingsSlinky.reReselect.mod.Options[S, C, D]) | typingsSlinky.reReselect.mod.CreateSelectorInstance
-    ], 
     (typingsSlinky.reReselect.mod.OutputSelector[S, R, C, D]) with (typingsSlinky.reReselect.anon.Cache[S, R, C, D])
   ]
-  type OutputParametricCachedSelector[S, P, R, C, D] = js.Function2[
+  type OutputParametricCachedSelector[S, P, R, C, D] = js.Function1[
     /* options */ (typingsSlinky.reReselect.mod.ParametricKeySelector[S, P]) | (typingsSlinky.reReselect.mod.ParametricOptions[S, P, C, D]), 
-    /* legacyOptions */ js.UndefOr[
-      (typingsSlinky.reReselect.mod.ParametricOptions[S, P, C, D]) | typingsSlinky.reReselect.mod.CreateSelectorInstance
-    ], 
     (typingsSlinky.reReselect.mod.OutputParametricSelector[S, P, R, C, D]) with (typingsSlinky.reReselect.anon.ClearCache[S, P, R, C, D])
   ]
   type OutputParametricSelector[S, P, R, C, D] = (typingsSlinky.reReselect.mod.ParametricSelector[S, P, R]) with (typingsSlinky.reReselect.anon.Dependencies[C, D])

@@ -1,5 +1,6 @@
 package typingsSlinky.reactCountTo.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCountTo.mod.Props
@@ -17,6 +18,8 @@ object ReactCountTo {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def children(value: /* value */ Double => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

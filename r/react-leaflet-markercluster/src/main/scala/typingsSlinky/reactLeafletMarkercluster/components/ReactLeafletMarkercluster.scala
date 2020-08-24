@@ -2,7 +2,6 @@ package typingsSlinky.reactLeafletMarkercluster.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactLeafletMarkercluster.mod.MarkerClusterGroupProps
 import typingsSlinky.reactLeafletMarkercluster.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,11 +14,11 @@ object ReactLeafletMarkercluster {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: MarkerClusterGroupProps] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeafletMarkercluster.mod.MarkerClusterGroupProps */ P] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]]
+       with StBuildingComponent[tag.type, default[P]]
   
-  def apply[P <: MarkerClusterGroupProps](p: P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: MarkerClusterGroupProps](companion: ReactLeafletMarkercluster.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeafletMarkercluster.mod.MarkerClusterGroupProps */ P](p: P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeafletMarkercluster.mod.MarkerClusterGroupProps */ P](companion: ReactLeafletMarkercluster.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }
 

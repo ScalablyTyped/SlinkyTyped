@@ -1,7 +1,7 @@
 package typingsSlinky.openfin
 
 import typingsSlinky.openfin.environmentMod.Environment
-import typingsSlinky.openfin.platformPlatformMod.OverrideCallback
+import typingsSlinky.openfin.shapesPlatformMod.OverrideCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

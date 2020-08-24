@@ -1,6 +1,6 @@
 package typingsSlinky.reactToastNotifications.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ToastProps extends js.Object {
    // inherited from ToastProvider
   var autoDismissTimeout: Double = js.native
    // inherited from ToastProvider
-  var children: TagMod[Any] = js.native
+  var children: ReactElement = js.native
   var isRunning: Boolean = js.native
   var placement: Placement = js.native
   var transitionDuration: Double = js.native

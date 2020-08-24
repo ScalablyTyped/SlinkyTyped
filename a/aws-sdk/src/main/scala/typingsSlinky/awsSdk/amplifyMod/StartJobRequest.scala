@@ -7,58 +7,83 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StartJobRequest extends js.Object {
   /**
-    *  Unique Id for an Amplify App. 
+    *  The unique ID for an Amplify app. 
     */
   var appId: AppId = js.native
   /**
-    *  Name for the branch, for the Job. 
+    *  The branch name for the job. 
     */
   var branchName: BranchName = js.native
   /**
-    *  Commit Id from 3rd party repository provider for the Job. 
+    *  The commit ID from a third-party repository provider for the job. 
     */
   var commitId: js.UndefOr[CommitId] = js.native
   /**
-    *  Commit message from 3rd party repository provider for the Job. 
+    *  The commit message from a third-party repository provider for the job. 
     */
   var commitMessage: js.UndefOr[CommitMessage] = js.native
   /**
-    *  Commit date / time for the Job. 
+    *  The commit date and time for the job. 
     */
   var commitTime: js.UndefOr[js.Date] = js.native
   /**
-    *  Unique Id for an existing job. Required for "RETRY" JobType. 
+    *  The unique ID for an existing job. This is required if the value of jobType is RETRY. 
     */
   var jobId: js.UndefOr[JobId] = js.native
   /**
-    *  Descriptive reason for starting this job. 
+    *  A descriptive reason for starting this job. 
     */
   var jobReason: js.UndefOr[JobReason] = js.native
   /**
-    *  Type for the Job. Available JobTypes are: \n "RELEASE": Start a new job with the latest change from the specified branch. Only available for apps that have connected to a repository. "RETRY": Retry an existing job. JobId is required for this type of job. 
+    *  Describes the type for the job. The job type RELEASE starts a new job with the latest change from the specified branch. This value is available only for apps that are connected to a repository. The job type RETRY retries an existing job. If the job type value is RETRY, the jobId is also required. 
     */
   var jobType: JobType = js.native
 }
 
 object StartJobRequest {
   @scala.inline
-  def apply(
-    appId: AppId,
-    branchName: BranchName,
-    jobType: JobType,
-    commitId: CommitId = null,
-    commitMessage: CommitMessage = null,
-    commitTime: js.Date = null,
-    jobId: JobId = null,
-    jobReason: JobReason = null
-  ): StartJobRequest = {
+  def apply(appId: AppId, branchName: BranchName, jobType: JobType): StartJobRequest = {
     val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], branchName = branchName.asInstanceOf[js.Any], jobType = jobType.asInstanceOf[js.Any])
-    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
-    if (commitMessage != null) __obj.updateDynamic("commitMessage")(commitMessage.asInstanceOf[js.Any])
-    if (commitTime != null) __obj.updateDynamic("commitTime")(commitTime.asInstanceOf[js.Any])
-    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
-    if (jobReason != null) __obj.updateDynamic("jobReason")(jobReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartJobRequest]
   }
+  @scala.inline
+  implicit class StartJobRequestOps[Self <: StartJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAppId(value: AppId): Self = this.set("appId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBranchName(value: BranchName): Self = this.set("branchName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJobType(value: JobType): Self = this.set("jobType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCommitId(value: CommitId): Self = this.set("commitId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCommitId: Self = this.set("commitId", js.undefined)
+    @scala.inline
+    def setCommitMessage(value: CommitMessage): Self = this.set("commitMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCommitMessage: Self = this.set("commitMessage", js.undefined)
+    @scala.inline
+    def setCommitTime(value: js.Date): Self = this.set("commitTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCommitTime: Self = this.set("commitTime", js.undefined)
+    @scala.inline
+    def setJobId(value: JobId): Self = this.set("jobId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJobId: Self = this.set("jobId", js.undefined)
+    @scala.inline
+    def setJobReason(value: JobReason): Self = this.set("jobReason", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJobReason: Self = this.set("jobReason", js.undefined)
+  }
+  
 }
 

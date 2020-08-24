@@ -1,6 +1,5 @@
 package typingsSlinky.typescriptServices.global.TypeScript
 
-import typingsSlinky.typescriptServices.TypeScript.TypeArgumentMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,6 @@ class PullSignatureSymbol protected ()
   extends typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol {
   def this(kind: typingsSlinky.typescriptServices.TypeScript.PullElementKind) = this()
   def this(kind: typingsSlinky.typescriptServices.TypeScript.PullElementKind, _isDefinition: Boolean) = this()
-  /* CompleteClass */
-  override def getAllowedToReferenceTypeParameters(): js.Array[typingsSlinky.typescriptServices.TypeScript.PullTypeParameterSymbol] = js.native
-  /* CompleteClass */
-  override def getIsSpecialized(): Boolean = js.native
-  /* CompleteClass */
-  override def getTypeParameterArgumentMap(): TypeArgumentMap = js.native
 }
 
 /* static members */
@@ -39,7 +32,42 @@ object PullSignatureSymbol extends js.Object {
     prefix: String,
     shortform: Boolean,
     brackets: Boolean,
+    scopeSymbol: js.UndefOr[scala.Nothing],
+    getPrettyTypeName: js.UndefOr[scala.Nothing],
+    candidateSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol
+  ): js.Array[typingsSlinky.typescriptServices.TypeScript.MemberName] = js.native
+  def getSignaturesTypeNameEx(
+    signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],
+    prefix: String,
+    shortform: Boolean,
+    brackets: Boolean,
+    scopeSymbol: js.UndefOr[scala.Nothing],
+    getPrettyTypeName: Boolean
+  ): js.Array[typingsSlinky.typescriptServices.TypeScript.MemberName] = js.native
+  def getSignaturesTypeNameEx(
+    signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],
+    prefix: String,
+    shortform: Boolean,
+    brackets: Boolean,
+    scopeSymbol: js.UndefOr[scala.Nothing],
+    getPrettyTypeName: Boolean,
+    candidateSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol
+  ): js.Array[typingsSlinky.typescriptServices.TypeScript.MemberName] = js.native
+  def getSignaturesTypeNameEx(
+    signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],
+    prefix: String,
+    shortform: Boolean,
+    brackets: Boolean,
     scopeSymbol: typingsSlinky.typescriptServices.TypeScript.PullSymbol
+  ): js.Array[typingsSlinky.typescriptServices.TypeScript.MemberName] = js.native
+  def getSignaturesTypeNameEx(
+    signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],
+    prefix: String,
+    shortform: Boolean,
+    brackets: Boolean,
+    scopeSymbol: typingsSlinky.typescriptServices.TypeScript.PullSymbol,
+    getPrettyTypeName: js.UndefOr[scala.Nothing],
+    candidateSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol
   ): js.Array[typingsSlinky.typescriptServices.TypeScript.MemberName] = js.native
   def getSignaturesTypeNameEx(
     signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],

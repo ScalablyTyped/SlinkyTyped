@@ -1,7 +1,8 @@
 package typingsSlinky.reactPose.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.mod.ConsumerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,15 +13,11 @@ object PoseParentConsumer {
   @js.native
   object component extends js.Object
   
+  def withProps(p: ConsumerProps[js.Object]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def unstable_observedBits(value: Double): this.type = set("unstable_observedBits", value.asInstanceOf[js.Any])
+  def apply(children: js.Object => ReactElement): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ConsumerProps[js.Object]]))
   }
-  
-  def withProps(p: ConsumerProps[js.Object]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PoseParentConsumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

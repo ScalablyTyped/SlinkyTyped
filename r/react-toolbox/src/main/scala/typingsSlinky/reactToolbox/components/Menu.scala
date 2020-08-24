@@ -3,9 +3,8 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libMenuMenuMod.MenuProps
-import typingsSlinky.reactToolbox.libMenuMenuMod.MenuTheme
-import typingsSlinky.reactToolbox.libMenuMenuMod.default
+import typingsSlinky.reactToolbox.menuMenuMod.MenuProps
+import typingsSlinky.reactToolbox.menuMenuMod.MenuTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.auto
 import typingsSlinky.reactToolbox.reactToolboxStrings.bottomLeft
 import typingsSlinky.reactToolbox.reactToolboxStrings.bottomRight
@@ -17,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Menu {
-  @JSImport("react-toolbox/lib/menu/Menu", JSImport.Default)
+  @JSImport("react-toolbox/components/menu", "Menu")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.menuMod.Menu] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline

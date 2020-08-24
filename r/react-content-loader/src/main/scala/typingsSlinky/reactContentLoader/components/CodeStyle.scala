@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CodeStyle {
-  @JSImport("react-content-loader/dist/stylized/CodeStyle", JSImport.Default)
+  @JSImport("react-content-loader/dist/web/presets/CodeStyle", JSImport.Default)
   @js.native
   object component extends js.Object
   

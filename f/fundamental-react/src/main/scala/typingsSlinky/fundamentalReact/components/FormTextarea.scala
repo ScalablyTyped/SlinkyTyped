@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormTextarea {
-  @JSImport("fundamental-react/lib/Forms/FormTextarea", JSImport.Default)
+  @JSImport("fundamental-react", "FormTextarea")
   @js.native
   object component extends js.Object
   

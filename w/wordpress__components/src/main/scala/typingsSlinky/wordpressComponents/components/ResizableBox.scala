@@ -20,7 +20,6 @@ import typingsSlinky.reResizable.reResizableStrings.parent
 import typingsSlinky.reResizable.reResizableStrings.window
 import typingsSlinky.reResizable.resizerMod.Direction
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.wordpressComponents.mod.ResizableBox.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,7 @@ object ResizableBox {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def boundsHTMLElement(value: HTMLElement): this.type = set("bounds", value.asInstanceOf[js.Any])
     @scala.inline

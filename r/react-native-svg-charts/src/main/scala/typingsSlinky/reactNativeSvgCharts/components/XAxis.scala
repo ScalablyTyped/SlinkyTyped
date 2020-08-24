@@ -22,7 +22,7 @@ object XAxis {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.XAxis[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.XAxis[T]] {
     @scala.inline
     def contentInset(value: Left): this.type = set("contentInset", value.asInstanceOf[js.Any])
     @scala.inline

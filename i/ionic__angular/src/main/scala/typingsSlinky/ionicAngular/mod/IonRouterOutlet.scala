@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonRouterOutlet")
 @js.native
 class IonRouterOutlet protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonRouterOutlet {
+  extends typingsSlinky.ionicAngular.ionRouterOutletMod.IonRouterOutlet {
   def this(
     parentContexts: ChildrenOutletContexts,
     location: ViewContainerRef,

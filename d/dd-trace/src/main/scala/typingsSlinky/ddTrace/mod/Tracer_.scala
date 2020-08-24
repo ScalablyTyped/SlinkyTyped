@@ -1,8 +1,11 @@
 package typingsSlinky.ddTrace.mod
 
+import typingsSlinky.ddTrace.ddTraceStrings.`aws-sdk`
 import typingsSlinky.ddTrace.ddTraceStrings.`cassandra-driver`
 import typingsSlinky.ddTrace.ddTraceStrings.`generic-pool`
+import typingsSlinky.ddTrace.ddTraceStrings.`google-cloud-pubsub`
 import typingsSlinky.ddTrace.ddTraceStrings.`limitd-client`
+import typingsSlinky.ddTrace.ddTraceStrings.`microgateway-core`
 import typingsSlinky.ddTrace.ddTraceStrings.`mongodb-core`
 import typingsSlinky.ddTrace.ddTraceStrings.`promise-js`
 import typingsSlinky.ddTrace.ddTraceStrings.amqp10
@@ -15,6 +18,7 @@ import typingsSlinky.ddTrace.ddTraceStrings.dns
 import typingsSlinky.ddTrace.ddTraceStrings.elasticsearch
 import typingsSlinky.ddTrace.ddTraceStrings.express
 import typingsSlinky.ddTrace.ddTraceStrings.fastify
+import typingsSlinky.ddTrace.ddTraceStrings.fs
 import typingsSlinky.ddTrace.ddTraceStrings.graphql
 import typingsSlinky.ddTrace.ddTraceStrings.grpc
 import typingsSlinky.ddTrace.ddTraceStrings.hapi
@@ -34,13 +38,17 @@ import typingsSlinky.ddTrace.ddTraceStrings.promise
 import typingsSlinky.ddTrace.ddTraceStrings.q
 import typingsSlinky.ddTrace.ddTraceStrings.redis
 import typingsSlinky.ddTrace.ddTraceStrings.restify
+import typingsSlinky.ddTrace.ddTraceStrings.rhea
 import typingsSlinky.ddTrace.ddTraceStrings.router
 import typingsSlinky.ddTrace.ddTraceStrings.tedious
 import typingsSlinky.ddTrace.ddTraceStrings.when
 import typingsSlinky.ddTrace.ddTraceStrings.winston
+import typingsSlinky.ddTrace.mod.plugins.awsSdk
 import typingsSlinky.ddTrace.mod.plugins.cassandraDriver
 import typingsSlinky.ddTrace.mod.plugins.genericPool
+import typingsSlinky.ddTrace.mod.plugins.googleCloudPubsub
 import typingsSlinky.ddTrace.mod.plugins.limitdClient
+import typingsSlinky.ddTrace.mod.plugins.microgatewayCore
 import typingsSlinky.ddTrace.mod.plugins.mongodbCore
 import typingsSlinky.ddTrace.mod.plugins.promiseJs
 import typingsSlinky.opentracing.tracerMod.SpanOptions
@@ -85,6 +93,9 @@ trait Tracer_ extends Tracer {
     * span will finish when that callback is called.
     * * The function doesn't accept a callback and doesn't return a promise, in
     * which case the span will finish at the end of the function execution.
+    *
+    * If the `orphanable` option is set to false, the function will not be traced
+    * unless there is already an active span or `childOf` option.
     */
   def trace[T](
     name: String,
@@ -120,6 +131,12 @@ trait Tracer_ extends Tracer {
   def use_amqplib(plugin: amqplib, config: Boolean): this.type = js.native
   @JSName("use")
   def use_amqplib(plugin: amqplib, config: typingsSlinky.ddTrace.mod.plugins.amqplib): this.type = js.native
+  @JSName("use")
+  def use_awssdk(plugin: `aws-sdk`): this.type = js.native
+  @JSName("use")
+  def use_awssdk(plugin: `aws-sdk`, config: Boolean): this.type = js.native
+  @JSName("use")
+  def use_awssdk(plugin: `aws-sdk`, config: awsSdk): this.type = js.native
   @JSName("use")
   def use_bluebird(plugin: bluebird): this.type = js.native
   @JSName("use")
@@ -175,11 +192,23 @@ trait Tracer_ extends Tracer {
   @JSName("use")
   def use_fastify(plugin: fastify, config: typingsSlinky.ddTrace.mod.plugins.fastify): this.type = js.native
   @JSName("use")
+  def use_fs(plugin: fs): this.type = js.native
+  @JSName("use")
+  def use_fs(plugin: fs, config: Boolean): this.type = js.native
+  @JSName("use")
+  def use_fs(plugin: fs, config: typingsSlinky.ddTrace.mod.plugins.fs): this.type = js.native
+  @JSName("use")
   def use_genericpool(plugin: `generic-pool`): this.type = js.native
   @JSName("use")
   def use_genericpool(plugin: `generic-pool`, config: Boolean): this.type = js.native
   @JSName("use")
   def use_genericpool(plugin: `generic-pool`, config: genericPool): this.type = js.native
+  @JSName("use")
+  def use_googlecloudpubsub(plugin: `google-cloud-pubsub`): this.type = js.native
+  @JSName("use")
+  def use_googlecloudpubsub(plugin: `google-cloud-pubsub`, config: Boolean): this.type = js.native
+  @JSName("use")
+  def use_googlecloudpubsub(plugin: `google-cloud-pubsub`, config: googleCloudPubsub): this.type = js.native
   @JSName("use")
   def use_graphql(plugin: graphql): this.type = js.native
   @JSName("use")
@@ -240,6 +269,12 @@ trait Tracer_ extends Tracer {
   def use_memcached(plugin: memcached, config: Boolean): this.type = js.native
   @JSName("use")
   def use_memcached(plugin: memcached, config: typingsSlinky.ddTrace.mod.plugins.memcached): this.type = js.native
+  @JSName("use")
+  def use_microgatewaycore(plugin: `microgateway-core`): this.type = js.native
+  @JSName("use")
+  def use_microgatewaycore(plugin: `microgateway-core`, config: Boolean): this.type = js.native
+  @JSName("use")
+  def use_microgatewaycore(plugin: `microgateway-core`, config: microgatewayCore): this.type = js.native
   @JSName("use")
   def use_mongodbcore(plugin: `mongodb-core`): this.type = js.native
   @JSName("use")
@@ -313,6 +348,12 @@ trait Tracer_ extends Tracer {
   @JSName("use")
   def use_restify(plugin: restify, config: typingsSlinky.ddTrace.mod.plugins.restify): this.type = js.native
   @JSName("use")
+  def use_rhea(plugin: rhea): this.type = js.native
+  @JSName("use")
+  def use_rhea(plugin: rhea, config: Boolean): this.type = js.native
+  @JSName("use")
+  def use_rhea(plugin: rhea, config: typingsSlinky.ddTrace.mod.plugins.rhea): this.type = js.native
+  @JSName("use")
   def use_router(plugin: router): this.type = js.native
   @JSName("use")
   def use_router(plugin: router, config: Boolean): this.type = js.native
@@ -351,6 +392,8 @@ trait Tracer_ extends Tracer {
     * which case the span will finish at the end of the function execution.
     */
   def wrap[T](name: String, fn: T): T = js.native
+  def wrap[T](name: String, fn: T, requiresParent: Boolean): T = js.native
   def wrap[T](name: String, options: TraceOptions with SpanOptions, fn: T): T = js.native
+  def wrap[T](name: String, options: js.Function1[/* repeated */ js.Any, TraceOptions with SpanOptions], fn: T): T = js.native
 }
 

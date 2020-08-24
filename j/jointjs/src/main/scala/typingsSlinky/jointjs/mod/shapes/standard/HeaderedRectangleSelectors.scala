@@ -29,65 +29,30 @@ object HeaderedRectangleSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: SVGRectAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
+    def setBody(value: SVGRectAttributes): Self = this.set("body", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBodyText(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBody: Self = this.set("body", js.undefined)
     @scala.inline
-    def withoutBodyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(js.undefined)
-        ret
-    }
+    def setBodyText(value: SVGTextAttributes): Self = this.set("bodyText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHeader(value: SVGRectAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBodyText: Self = this.set("bodyText", js.undefined)
     @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
+    def setHeader(value: SVGRectAttributes): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHeaderText(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHeader: Self = this.set("header", js.undefined)
     @scala.inline
-    def withoutHeaderText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(js.undefined)
-        ret
-    }
+    def setHeaderText(value: SVGTextAttributes): Self = this.set("headerText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoot(value: SVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHeaderText: Self = this.set("headerText", js.undefined)
     @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
+    def setRoot(value: SVGAttributes): Self = this.set("root", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRoot: Self = this.set("root", js.undefined)
   }
   
 }

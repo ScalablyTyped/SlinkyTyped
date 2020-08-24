@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChromeBackMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ChromeBackMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChromeBackMirroredIcon")
   @js.native
   object component extends js.Object
   

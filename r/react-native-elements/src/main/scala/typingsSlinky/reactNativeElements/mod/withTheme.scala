@@ -18,5 +18,11 @@ object withTheme extends js.Object {
       /* keyof react-native-elements.react-native-elements.ThemeProps<T> */ theme | updateTheme | replaceTheme
     ]
   ] = js.native
+  def apply[P, T](component: ReactComponentClass[P with ThemeProps[T]], themeKey: String): ReactComponentClass[
+    Omit[
+      P, 
+      /* keyof react-native-elements.react-native-elements.ThemeProps<T> */ theme | updateTheme | replaceTheme
+    ]
+  ] = js.native
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EgnyteLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/EgnyteLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "EgnyteLogoIcon")
   @js.native
   object component extends js.Object
   

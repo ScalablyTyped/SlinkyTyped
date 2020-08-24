@@ -30,10 +30,22 @@ package object ecsMod {
   type BoxedInteger = scala.Double
   type CapacityProviderField = typingsSlinky.awsSdk.awsSdkStrings.TAGS | java.lang.String
   type CapacityProviderFieldList = js.Array[typingsSlinky.awsSdk.ecsMod.CapacityProviderField]
-  type CapacityProviderStatus = typingsSlinky.awsSdk.awsSdkStrings.ACTIVE | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - java.lang.String
+  */
+  type CapacityProviderStatus = typingsSlinky.awsSdk.ecsMod._CapacityProviderStatus | java.lang.String
   type CapacityProviderStrategy = js.Array[typingsSlinky.awsSdk.ecsMod.CapacityProviderStrategyItem]
   type CapacityProviderStrategyItemBase = scala.Double
   type CapacityProviderStrategyItemWeight = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_IN_PROGRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_COMPLETE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FAILED
+    - java.lang.String
+  */
+  type CapacityProviderUpdateStatus = typingsSlinky.awsSdk.ecsMod._CapacityProviderUpdateStatus | java.lang.String
   type CapacityProviders = js.Array[typingsSlinky.awsSdk.ecsMod.CapacityProvider]
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.ecsMod.ClientApiVersions
   /* Rewritten from type alias, can be one of: 
@@ -148,7 +160,7 @@ package object ecsMod {
   type InferenceAccelerators = js.Array[typingsSlinky.awsSdk.ecsMod.InferenceAccelerator]
   type Integer = scala.Double
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.host_
+    - typingsSlinky.awsSdk.awsSdkStrings.host__
     - typingsSlinky.awsSdk.awsSdkStrings.task_
     - typingsSlinky.awsSdk.awsSdkStrings.none__
     - java.lang.String
@@ -194,14 +206,14 @@ package object ecsMod {
   type NetworkInterfaces = js.Array[typingsSlinky.awsSdk.ecsMod.NetworkInterface]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.bridge
-    - typingsSlinky.awsSdk.awsSdkStrings.host_
+    - typingsSlinky.awsSdk.awsSdkStrings.host__
     - typingsSlinky.awsSdk.awsSdkStrings.awsvpc_
     - typingsSlinky.awsSdk.awsSdkStrings.none__
     - java.lang.String
   */
   type NetworkMode = typingsSlinky.awsSdk.ecsMod._NetworkMode | java.lang.String
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.host_
+    - typingsSlinky.awsSdk.awsSdkStrings.host__
     - typingsSlinky.awsSdk.awsSdkStrings.task_
     - java.lang.String
   */

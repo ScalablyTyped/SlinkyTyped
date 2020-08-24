@@ -32,12 +32,14 @@ trait SignalR_ extends js.Object {
     * @param logging [Optional] A flag indicating whether connection logging is enabled to the browser console/log. Defaults to false.
     */
   def apply(url: String): typingsSlinky.signalr.SignalR.Connection = js.native
+  def apply(url: String, queryString: js.UndefOr[scala.Nothing], logging: Boolean): typingsSlinky.signalr.SignalR.Connection = js.native
   def apply(url: String, queryString: String): typingsSlinky.signalr.SignalR.Connection = js.native
   def apply(url: String, queryString: String, logging: Boolean): typingsSlinky.signalr.SignalR.Connection = js.native
   def apply(url: String, queryString: js.Object): typingsSlinky.signalr.SignalR.Connection = js.native
   def apply(url: String, queryString: js.Object, logging: Boolean): typingsSlinky.signalr.SignalR.Connection = js.native
   def changeState(connection: typingsSlinky.signalr.SignalR.Connection, expectedState: Double, newState: Double): Unit = js.native
   def hubConnection(): Connection = js.native
+  def hubConnection(url: js.UndefOr[scala.Nothing], options: Options): Connection = js.native
   def hubConnection(url: String): Connection = js.native
   def hubConnection(url: String, options: Options): Connection = js.native
   def isDisconnecting(connection: typingsSlinky.signalr.SignalR.Connection): Boolean = js.native

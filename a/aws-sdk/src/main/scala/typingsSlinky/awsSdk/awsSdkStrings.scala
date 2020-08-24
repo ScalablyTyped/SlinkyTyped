@@ -82,6 +82,7 @@ import typingsSlinky.awsSdk.applicationinsightsMod._LogFilter
 import typingsSlinky.awsSdk.applicationinsightsMod._SeverityLevel
 import typingsSlinky.awsSdk.appmeshMod._DurationUnit
 import typingsSlinky.awsSdk.appmeshMod._EgressFilterType
+import typingsSlinky.awsSdk.appmeshMod._GatewayRouteStatusCode
 import typingsSlinky.awsSdk.appmeshMod._GrpcRetryPolicyEvent
 import typingsSlinky.awsSdk.appmeshMod._HttpMethod
 import typingsSlinky.awsSdk.appmeshMod._HttpScheme
@@ -89,6 +90,9 @@ import typingsSlinky.awsSdk.appmeshMod._ListenerTlsMode
 import typingsSlinky.awsSdk.appmeshMod._MeshStatusCode
 import typingsSlinky.awsSdk.appmeshMod._PortProtocol
 import typingsSlinky.awsSdk.appmeshMod._RouteStatusCode
+import typingsSlinky.awsSdk.appmeshMod._VirtualGatewayListenerTlsMode
+import typingsSlinky.awsSdk.appmeshMod._VirtualGatewayPortProtocol
+import typingsSlinky.awsSdk.appmeshMod._VirtualGatewayStatusCode
 import typingsSlinky.awsSdk.appmeshMod._VirtualNodeStatusCode
 import typingsSlinky.awsSdk.appmeshMod._VirtualRouterStatusCode
 import typingsSlinky.awsSdk.appmeshMod._VirtualServiceStatusCode
@@ -123,12 +127,16 @@ import typingsSlinky.awsSdk.appsyncMod._ResolverKind
 import typingsSlinky.awsSdk.appsyncMod._SchemaStatus
 import typingsSlinky.awsSdk.appsyncMod._TypeDefinitionFormat
 import typingsSlinky.awsSdk.athenaMod._ColumnNullable
+import typingsSlinky.awsSdk.athenaMod._DataCatalogType
 import typingsSlinky.awsSdk.athenaMod._EncryptionOption
 import typingsSlinky.awsSdk.athenaMod._QueryExecutionState
 import typingsSlinky.awsSdk.athenaMod._StatementType
 import typingsSlinky.awsSdk.athenaMod._WorkGroupState
 import typingsSlinky.awsSdk.augmentedairuntimeMod._ContentClassifier
 import typingsSlinky.awsSdk.augmentedairuntimeMod._HumanLoopStatus
+import typingsSlinky.awsSdk.autoscalingMod._InstanceMetadataEndpointState
+import typingsSlinky.awsSdk.autoscalingMod._InstanceMetadataHttpTokensState
+import typingsSlinky.awsSdk.autoscalingMod._InstanceRefreshStatus
 import typingsSlinky.awsSdk.autoscalingMod._LifecycleState
 import typingsSlinky.awsSdk.autoscalingMod._MetricStatistic
 import typingsSlinky.awsSdk.autoscalingMod._MetricType
@@ -209,6 +217,7 @@ import typingsSlinky.awsSdk.cloudformationMod._RegistrationStatus
 import typingsSlinky.awsSdk.cloudformationMod._ResourceSignalStatus
 import typingsSlinky.awsSdk.cloudformationMod._StackDriftDetectionStatus
 import typingsSlinky.awsSdk.cloudformationMod._StackDriftStatus
+import typingsSlinky.awsSdk.cloudformationMod._StackInstanceDetailedStatus
 import typingsSlinky.awsSdk.cloudformationMod._StackResourceDriftStatus
 import typingsSlinky.awsSdk.cloudformationMod._StackSetDriftDetectionStatus
 import typingsSlinky.awsSdk.cloudformationMod._StackSetDriftStatus
@@ -219,6 +228,10 @@ import typingsSlinky.awsSdk.cloudformationMod._StackSetStatus
 import typingsSlinky.awsSdk.cloudformationMod._StackStatus
 import typingsSlinky.awsSdk.cloudformationMod._TemplateStage
 import typingsSlinky.awsSdk.cloudformationMod._Visibility
+import typingsSlinky.awsSdk.cloudfrontMod._CachePolicyCookieBehavior
+import typingsSlinky.awsSdk.cloudfrontMod._CachePolicyHeaderBehavior
+import typingsSlinky.awsSdk.cloudfrontMod._CachePolicyQueryStringBehavior
+import typingsSlinky.awsSdk.cloudfrontMod._CachePolicyType
 import typingsSlinky.awsSdk.cloudfrontMod._CertificateSource
 import typingsSlinky.awsSdk.cloudfrontMod._GeoRestrictionType
 import typingsSlinky.awsSdk.cloudfrontMod._HttpVersion
@@ -227,6 +240,10 @@ import typingsSlinky.awsSdk.cloudfrontMod._ItemSelection
 import typingsSlinky.awsSdk.cloudfrontMod._Method
 import typingsSlinky.awsSdk.cloudfrontMod._MinimumProtocolVersion
 import typingsSlinky.awsSdk.cloudfrontMod._OriginProtocolPolicy
+import typingsSlinky.awsSdk.cloudfrontMod._OriginRequestPolicyCookieBehavior
+import typingsSlinky.awsSdk.cloudfrontMod._OriginRequestPolicyHeaderBehavior
+import typingsSlinky.awsSdk.cloudfrontMod._OriginRequestPolicyQueryStringBehavior
+import typingsSlinky.awsSdk.cloudfrontMod._OriginRequestPolicyType
 import typingsSlinky.awsSdk.cloudfrontMod._PriceClass
 import typingsSlinky.awsSdk.cloudfrontMod._SSLSupportMethod
 import typingsSlinky.awsSdk.cloudfrontMod._SslProtocol
@@ -258,10 +275,15 @@ import typingsSlinky.awsSdk.cloudwatcheventsMod._RuleState
 import typingsSlinky.awsSdk.cloudwatchlogsMod._Distribution
 import typingsSlinky.awsSdk.cloudwatchlogsMod._ExportTaskStatusCode
 import typingsSlinky.awsSdk.cloudwatchlogsMod._QueryStatus
+import typingsSlinky.awsSdk.codeartifactMod._HashAlgorithm
+import typingsSlinky.awsSdk.codeartifactMod._PackageFormat
+import typingsSlinky.awsSdk.codeartifactMod._PackageVersionErrorCode
+import typingsSlinky.awsSdk.codeartifactMod._PackageVersionStatus
 import typingsSlinky.awsSdk.codebuildMod._ArtifactNamespace
 import typingsSlinky.awsSdk.codebuildMod._ArtifactPackaging
 import typingsSlinky.awsSdk.codebuildMod._ArtifactsType
 import typingsSlinky.awsSdk.codebuildMod._AuthType
+import typingsSlinky.awsSdk.codebuildMod._BuildBatchPhaseType
 import typingsSlinky.awsSdk.codebuildMod._BuildPhaseType
 import typingsSlinky.awsSdk.codebuildMod._CacheMode
 import typingsSlinky.awsSdk.codebuildMod._CacheType
@@ -272,13 +294,17 @@ import typingsSlinky.awsSdk.codebuildMod._LanguageType
 import typingsSlinky.awsSdk.codebuildMod._LogsConfigStatusType
 import typingsSlinky.awsSdk.codebuildMod._PlatformType
 import typingsSlinky.awsSdk.codebuildMod._ProjectSortByType
+import typingsSlinky.awsSdk.codebuildMod._ReportCodeCoverageSortByType
 import typingsSlinky.awsSdk.codebuildMod._ReportExportConfigType
 import typingsSlinky.awsSdk.codebuildMod._ReportGroupSortByType
 import typingsSlinky.awsSdk.codebuildMod._ReportPackagingType
 import typingsSlinky.awsSdk.codebuildMod._ReportStatusType
+import typingsSlinky.awsSdk.codebuildMod._ReportType
+import typingsSlinky.awsSdk.codebuildMod._RetryBuildBatchType
 import typingsSlinky.awsSdk.codebuildMod._ServerType
 import typingsSlinky.awsSdk.codebuildMod._SharedResourceSortByType
 import typingsSlinky.awsSdk.codebuildMod._SortOrderType
+import typingsSlinky.awsSdk.codebuildMod._WebhookBuildType
 import typingsSlinky.awsSdk.codebuildMod._WebhookFilterType
 import typingsSlinky.awsSdk.codecommitMod._ApprovalState
 import typingsSlinky.awsSdk.codecommitMod._ChangeTypeEnum
@@ -298,7 +324,6 @@ import typingsSlinky.awsSdk.codecommitMod._SortByEnum
 import typingsSlinky.awsSdk.codedeployMod._ApplicationRevisionSortBy
 import typingsSlinky.awsSdk.codedeployMod._AutoRollbackEvent
 import typingsSlinky.awsSdk.codedeployMod._BundleType
-import typingsSlinky.awsSdk.codedeployMod._ComputePlatform
 import typingsSlinky.awsSdk.codedeployMod._DeploymentCreator
 import typingsSlinky.awsSdk.codedeployMod._DeploymentOption
 import typingsSlinky.awsSdk.codedeployMod._DeploymentReadyAction
@@ -323,8 +348,11 @@ import typingsSlinky.awsSdk.codedeployMod._TargetFilterName
 import typingsSlinky.awsSdk.codedeployMod._TargetLabel
 import typingsSlinky.awsSdk.codedeployMod._TrafficRoutingType
 import typingsSlinky.awsSdk.codedeployMod._TriggerEventType
+import typingsSlinky.awsSdk.codeguruprofilerMod._AgentParameterField
 import typingsSlinky.awsSdk.codeguruprofilerMod._AggregationPeriod
-import typingsSlinky.awsSdk.codegurureviewerMod._ProviderType
+import typingsSlinky.awsSdk.codeguruprofilerMod._ComputePlatform
+import typingsSlinky.awsSdk.codeguruprofilerMod._FeedbackType
+import typingsSlinky.awsSdk.codeguruprofilerMod._MetadataField
 import typingsSlinky.awsSdk.codegurureviewerMod._Reaction
 import typingsSlinky.awsSdk.codegurureviewerMod._RepositoryAssociationState
 import typingsSlinky.awsSdk.codepipelineMod._ActionCategory
@@ -337,6 +365,7 @@ import typingsSlinky.awsSdk.codepipelineMod._StageExecutionStatus
 import typingsSlinky.awsSdk.codepipelineMod._StageTransitionType
 import typingsSlinky.awsSdk.codepipelineMod._WebhookAuthenticationType
 import typingsSlinky.awsSdk.codestarconnectionsMod._ConnectionStatus
+import typingsSlinky.awsSdk.codestarconnectionsMod._ProviderType
 import typingsSlinky.awsSdk.codestarnotificationsMod._DetailType
 import typingsSlinky.awsSdk.codestarnotificationsMod._ListEventTypesFilterName
 import typingsSlinky.awsSdk.codestarnotificationsMod._ListNotificationRulesFilterName
@@ -394,8 +423,11 @@ import typingsSlinky.awsSdk.comprehendmedicalMod._ICD10CMTraitName
 import typingsSlinky.awsSdk.comprehendmedicalMod._RelationshipType
 import typingsSlinky.awsSdk.comprehendmedicalMod._RxNormAttributeType
 import typingsSlinky.awsSdk.comprehendmedicalMod._RxNormEntityType
+import typingsSlinky.awsSdk.computeoptimizerMod._ExportableAutoScalingGroupField
+import typingsSlinky.awsSdk.computeoptimizerMod._ExportableInstanceField
 import typingsSlinky.awsSdk.computeoptimizerMod._FilterName
 import typingsSlinky.awsSdk.computeoptimizerMod._Finding
+import typingsSlinky.awsSdk.computeoptimizerMod._JobFilterName
 import typingsSlinky.awsSdk.computeoptimizerMod._RecommendationSourceType
 import typingsSlinky.awsSdk.configserviceMod._AggregatedSourceStatusType
 import typingsSlinky.awsSdk.configserviceMod._AggregatedSourceType
@@ -427,6 +459,7 @@ import typingsSlinky.awsSdk.connectMod._PhoneNumberCountryCode
 import typingsSlinky.awsSdk.connectMod._PhoneNumberType
 import typingsSlinky.awsSdk.connectMod._PhoneType
 import typingsSlinky.awsSdk.connectMod._QueueType
+import typingsSlinky.awsSdk.connectMod._VoiceRecordingTrack
 import typingsSlinky.awsSdk.connectparticipantMod._ChatItemType
 import typingsSlinky.awsSdk.connectparticipantMod._ConnectionType
 import typingsSlinky.awsSdk.connectparticipantMod._ParticipantRole
@@ -461,6 +494,7 @@ import typingsSlinky.awsSdk.datasyncMod._Atime
 import typingsSlinky.awsSdk.datasyncMod._Gid
 import typingsSlinky.awsSdk.datasyncMod._Mtime
 import typingsSlinky.awsSdk.datasyncMod._NfsVersion
+import typingsSlinky.awsSdk.datasyncMod._ObjectStorageServerProtocol
 import typingsSlinky.awsSdk.datasyncMod._OverwriteMode
 import typingsSlinky.awsSdk.datasyncMod._PhaseStatus
 import typingsSlinky.awsSdk.datasyncMod._PosixPermissions
@@ -471,6 +505,7 @@ import typingsSlinky.awsSdk.datasyncMod._SmbVersion
 import typingsSlinky.awsSdk.datasyncMod._TaskExecutionStatus
 import typingsSlinky.awsSdk.datasyncMod._TaskQueueing
 import typingsSlinky.awsSdk.datasyncMod._TaskStatus
+import typingsSlinky.awsSdk.datasyncMod._TransferMode
 import typingsSlinky.awsSdk.datasyncMod._Uid
 import typingsSlinky.awsSdk.datasyncMod._VerifyMode
 import typingsSlinky.awsSdk.daxMod._IsModifiable
@@ -622,6 +657,7 @@ import typingsSlinky.awsSdk.ec2Mod._DiskType
 import typingsSlinky.awsSdk.ec2Mod._DnsNameState
 import typingsSlinky.awsSdk.ec2Mod._DnsSupportValue
 import typingsSlinky.awsSdk.ec2Mod._EbsEncryptionSupport
+import typingsSlinky.awsSdk.ec2Mod._EbsNvmeSupport
 import typingsSlinky.awsSdk.ec2Mod._EbsOptimizedSupport
 import typingsSlinky.awsSdk.ec2Mod._ElasticGpuStatus
 import typingsSlinky.awsSdk.ec2Mod._EnaSupport
@@ -651,7 +687,6 @@ import typingsSlinky.awsSdk.ec2Mod._InstanceInterruptionBehavior
 import typingsSlinky.awsSdk.ec2Mod._InstanceLifecycle
 import typingsSlinky.awsSdk.ec2Mod._InstanceLifecycleType
 import typingsSlinky.awsSdk.ec2Mod._InstanceMatchCriteria
-import typingsSlinky.awsSdk.ec2Mod._InstanceMetadataEndpointState
 import typingsSlinky.awsSdk.ec2Mod._InstanceMetadataOptionsState
 import typingsSlinky.awsSdk.ec2Mod._InstanceStateName
 import typingsSlinky.awsSdk.ec2Mod._InstanceTypeHypervisor
@@ -683,6 +718,7 @@ import typingsSlinky.awsSdk.ec2Mod._OnDemandAllocationStrategy
 import typingsSlinky.awsSdk.ec2Mod._PlacementGroupState
 import typingsSlinky.awsSdk.ec2Mod._PlacementGroupStrategy
 import typingsSlinky.awsSdk.ec2Mod._PlacementStrategy
+import typingsSlinky.awsSdk.ec2Mod._PrefixListState
 import typingsSlinky.awsSdk.ec2Mod._ProductCodeValues
 import typingsSlinky.awsSdk.ec2Mod._RIProductDescription
 import typingsSlinky.awsSdk.ec2Mod._ReportInstanceReasonCodes
@@ -737,6 +773,7 @@ import typingsSlinky.awsSdk.ec2Mod._VpcState
 import typingsSlinky.awsSdk.ec2Mod._VpnEcmpSupportValue
 import typingsSlinky.awsSdk.ec2Mod._VpnState
 import typingsSlinky.awsSdk.ec2Mod._scope
+import typingsSlinky.awsSdk.ecrMod._EncryptionType
 import typingsSlinky.awsSdk.ecrMod._FindingSeverity
 import typingsSlinky.awsSdk.ecrMod._ImageFailureCode
 import typingsSlinky.awsSdk.ecrMod._ImageTagMutability
@@ -746,6 +783,8 @@ import typingsSlinky.awsSdk.ecrMod._LifecyclePolicyPreviewStatus
 import typingsSlinky.awsSdk.ecrMod._ScanStatus
 import typingsSlinky.awsSdk.ecrMod._TagStatus
 import typingsSlinky.awsSdk.ecsMod._AgentUpdateStatus
+import typingsSlinky.awsSdk.ecsMod._CapacityProviderStatus
+import typingsSlinky.awsSdk.ecsMod._CapacityProviderUpdateStatus
 import typingsSlinky.awsSdk.ecsMod._ClusterField
 import typingsSlinky.awsSdk.ecsMod._Compatibility
 import typingsSlinky.awsSdk.ecsMod._Connectivity
@@ -767,7 +806,6 @@ import typingsSlinky.awsSdk.ecsMod._PlacementStrategyType
 import typingsSlinky.awsSdk.ecsMod._PropagateTags
 import typingsSlinky.awsSdk.ecsMod._SchedulingStrategy
 import typingsSlinky.awsSdk.ecsMod._SettingName
-import typingsSlinky.awsSdk.ecsMod._SortOrder
 import typingsSlinky.awsSdk.ecsMod._StabilityStatus
 import typingsSlinky.awsSdk.ecsMod._TaskDefinitionFamilyStatus
 import typingsSlinky.awsSdk.ecsMod._TaskDefinitionStatus
@@ -789,6 +827,7 @@ import typingsSlinky.awsSdk.elasticacheMod._AZMode
 import typingsSlinky.awsSdk.elasticacheMod._AuthTokenUpdateStatus
 import typingsSlinky.awsSdk.elasticacheMod._AuthTokenUpdateStrategyType
 import typingsSlinky.awsSdk.elasticacheMod._AutomaticFailoverStatus
+import typingsSlinky.awsSdk.elasticacheMod._MultiAZStatus
 import typingsSlinky.awsSdk.elasticacheMod._NodeUpdateInitiatedBy
 import typingsSlinky.awsSdk.elasticacheMod._NodeUpdateStatus
 import typingsSlinky.awsSdk.elasticacheMod._PendingAutomaticFailoverStatus
@@ -855,12 +894,15 @@ import typingsSlinky.awsSdk.esMod._DescribePackagesFilterName
 import typingsSlinky.awsSdk.esMod._DomainPackageStatus
 import typingsSlinky.awsSdk.esMod._ESPartitionInstanceType
 import typingsSlinky.awsSdk.esMod._ESWarmPartitionInstanceType
+import typingsSlinky.awsSdk.esMod._InboundCrossClusterSearchConnectionStatusCode
 import typingsSlinky.awsSdk.esMod._OptionState
+import typingsSlinky.awsSdk.esMod._OutboundCrossClusterSearchConnectionStatusCode
 import typingsSlinky.awsSdk.esMod._PackageStatus
 import typingsSlinky.awsSdk.esMod._ReservedElasticsearchInstancePaymentOption
 import typingsSlinky.awsSdk.esMod._TLSSecurityPolicy
 import typingsSlinky.awsSdk.esMod._UpgradeStatus
 import typingsSlinky.awsSdk.esMod._UpgradeStep
+import typingsSlinky.awsSdk.firehoseMod._ContentEncoding
 import typingsSlinky.awsSdk.firehoseMod._DeliveryStreamEncryptionStatus
 import typingsSlinky.awsSdk.firehoseMod._DeliveryStreamFailureType
 import typingsSlinky.awsSdk.firehoseMod._DeliveryStreamStatus
@@ -868,6 +910,7 @@ import typingsSlinky.awsSdk.firehoseMod._DeliveryStreamType
 import typingsSlinky.awsSdk.firehoseMod._ElasticsearchIndexRotationPeriod
 import typingsSlinky.awsSdk.firehoseMod._ElasticsearchS3BackupMode
 import typingsSlinky.awsSdk.firehoseMod._HECEndpointType
+import typingsSlinky.awsSdk.firehoseMod._HttpEndpointS3BackupMode
 import typingsSlinky.awsSdk.firehoseMod._KeyType
 import typingsSlinky.awsSdk.firehoseMod._OrcCompression
 import typingsSlinky.awsSdk.firehoseMod._OrcFormatVersion
@@ -881,6 +924,7 @@ import typingsSlinky.awsSdk.fmsMod._AccountRoleStatus
 import typingsSlinky.awsSdk.fmsMod._CustomerPolicyScopeIdType
 import typingsSlinky.awsSdk.fmsMod._DependentServiceName
 import typingsSlinky.awsSdk.fmsMod._PolicyComplianceStatusType
+import typingsSlinky.awsSdk.fmsMod._RemediationActionType
 import typingsSlinky.awsSdk.fmsMod._SecurityServiceType
 import typingsSlinky.awsSdk.fmsMod._ViolationReason
 import typingsSlinky.awsSdk.forecastserviceMod._DatasetType
@@ -888,7 +932,6 @@ import typingsSlinky.awsSdk.forecastserviceMod._Domain
 import typingsSlinky.awsSdk.forecastserviceMod._EvaluationType
 import typingsSlinky.awsSdk.forecastserviceMod._FilterConditionString
 import typingsSlinky.awsSdk.forecastserviceMod._ScalingType
-import typingsSlinky.awsSdk.frauddetectorMod._DataSource
 import typingsSlinky.awsSdk.frauddetectorMod._DataType
 import typingsSlinky.awsSdk.frauddetectorMod._DetectorVersionStatus
 import typingsSlinky.awsSdk.frauddetectorMod._ModelEndpointStatus
@@ -896,7 +939,10 @@ import typingsSlinky.awsSdk.frauddetectorMod._ModelInputDataFormat
 import typingsSlinky.awsSdk.frauddetectorMod._ModelOutputDataFormat
 import typingsSlinky.awsSdk.frauddetectorMod._ModelVersionStatus
 import typingsSlinky.awsSdk.frauddetectorMod._RuleExecutionMode
+import typingsSlinky.awsSdk.fsxMod._AdministrativeActionType
+import typingsSlinky.awsSdk.fsxMod._AutoImportPolicyType
 import typingsSlinky.awsSdk.fsxMod._BackupLifecycle
+import typingsSlinky.awsSdk.fsxMod._DataRepositoryLifecycle
 import typingsSlinky.awsSdk.fsxMod._DataRepositoryTaskFilterName
 import typingsSlinky.awsSdk.fsxMod._DataRepositoryTaskLifecycle
 import typingsSlinky.awsSdk.fsxMod._FileSystemLifecycle
@@ -925,7 +971,6 @@ import typingsSlinky.awsSdk.gameliftMod._MatchmakingConfigurationStatus
 import typingsSlinky.awsSdk.gameliftMod._MetricName
 import typingsSlinky.awsSdk.gameliftMod._PlayerSessionCreationPolicy
 import typingsSlinky.awsSdk.gameliftMod._PlayerSessionStatus
-import typingsSlinky.awsSdk.gameliftMod._PolicyType
 import typingsSlinky.awsSdk.gameliftMod._ProtectionPolicy
 import typingsSlinky.awsSdk.gameliftMod._RoutingStrategyType
 import typingsSlinky.awsSdk.gameliftMod._ScalingAdjustmentType
@@ -939,11 +984,13 @@ import typingsSlinky.awsSdk.globalacceleratorMod._HealthCheckProtocol
 import typingsSlinky.awsSdk.globalacceleratorMod._HealthState
 import typingsSlinky.awsSdk.glueMod._CatalogEncryptionMode
 import typingsSlinky.awsSdk.glueMod._CloudWatchEncryptionMode
+import typingsSlinky.awsSdk.glueMod._ColumnStatisticsType
 import typingsSlinky.awsSdk.glueMod._ConnectionPropertyKey
 import typingsSlinky.awsSdk.glueMod._CrawlState
 import typingsSlinky.awsSdk.glueMod._CrawlerState
 import typingsSlinky.awsSdk.glueMod._CsvHeaderOption
 import typingsSlinky.awsSdk.glueMod._DeleteBehavior
+import typingsSlinky.awsSdk.glueMod._EnableHybridValues
 import typingsSlinky.awsSdk.glueMod._ExistCondition
 import typingsSlinky.awsSdk.glueMod._JobBookmarksEncryptionMode
 import typingsSlinky.awsSdk.glueMod._JobRunState
@@ -951,6 +998,7 @@ import typingsSlinky.awsSdk.glueMod._Language
 import typingsSlinky.awsSdk.glueMod._LastCrawlStatus
 import typingsSlinky.awsSdk.glueMod._Logical
 import typingsSlinky.awsSdk.glueMod._NodeType
+import typingsSlinky.awsSdk.glueMod._ResourceShareType
 import typingsSlinky.awsSdk.glueMod._S3EncryptionMode
 import typingsSlinky.awsSdk.glueMod._Sort
 import typingsSlinky.awsSdk.glueMod._SortDirectionType
@@ -982,6 +1030,7 @@ import typingsSlinky.awsSdk.groundstationMod._Criticality
 import typingsSlinky.awsSdk.groundstationMod._FrequencyUnits
 import typingsSlinky.awsSdk.groundstationMod._Polarization
 import typingsSlinky.awsSdk.guarddutyMod._AdminStatus
+import typingsSlinky.awsSdk.guarddutyMod._DataSource
 import typingsSlinky.awsSdk.guarddutyMod._DetectorStatus
 import typingsSlinky.awsSdk.guarddutyMod._Feedback
 import typingsSlinky.awsSdk.guarddutyMod._FilterAction
@@ -992,10 +1041,13 @@ import typingsSlinky.awsSdk.guarddutyMod._OrderBy
 import typingsSlinky.awsSdk.guarddutyMod._PublishingStatus
 import typingsSlinky.awsSdk.guarddutyMod._ThreatIntelSetFormat
 import typingsSlinky.awsSdk.guarddutyMod._ThreatIntelSetStatus
+import typingsSlinky.awsSdk.guarddutyMod._UsageStatisticType
 import typingsSlinky.awsSdk.healthMod._entityStatusCode
 import typingsSlinky.awsSdk.healthMod._eventScopeCode
 import typingsSlinky.awsSdk.healthMod._eventStatusCode
 import typingsSlinky.awsSdk.healthMod._eventTypeCategory
+import typingsSlinky.awsSdk.honeycodeMod._Format
+import typingsSlinky.awsSdk.iamMod._AccessAdvisorUsageGranularityType
 import typingsSlinky.awsSdk.iamMod._ContextKeyTypeEnum
 import typingsSlinky.awsSdk.iamMod._DeletionTaskStatusType
 import typingsSlinky.awsSdk.iamMod._PolicyEvaluationDecisionType
@@ -1040,6 +1092,7 @@ import typingsSlinky.awsSdk.iotMod._AuditTaskType
 import typingsSlinky.awsSdk.iotMod._AuthDecision
 import typingsSlinky.awsSdk.iotMod._AuthorizerStatus
 import typingsSlinky.awsSdk.iotMod._AutoRegistrationStatus
+import typingsSlinky.awsSdk.iotMod._AwsJobAbortCriteriaFailureType
 import typingsSlinky.awsSdk.iotMod._CACertificateStatus
 import typingsSlinky.awsSdk.iotMod._CannedAccessControlList
 import typingsSlinky.awsSdk.iotMod._CertificateMode
@@ -1056,7 +1109,6 @@ import typingsSlinky.awsSdk.iotMod._LogTargetType
 import typingsSlinky.awsSdk.iotMod._MessageFormat
 import typingsSlinky.awsSdk.iotMod._MitigationActionType
 import typingsSlinky.awsSdk.iotMod._OTAUpdateStatus
-import typingsSlinky.awsSdk.iotMod._ReportType
 import typingsSlinky.awsSdk.iotMod._ResourceType
 import typingsSlinky.awsSdk.iotMod._ServerCertificateStatus
 import typingsSlinky.awsSdk.iotMod._ServiceType
@@ -1101,6 +1153,9 @@ import typingsSlinky.awsSdk.iotthingsgraphMod._NamespaceDeletionStatus
 import typingsSlinky.awsSdk.iotthingsgraphMod._SystemInstanceDeploymentStatus
 import typingsSlinky.awsSdk.iotthingsgraphMod._SystemInstanceFilterName
 import typingsSlinky.awsSdk.iotthingsgraphMod._UploadStatus
+import typingsSlinky.awsSdk.ivsMod._ChannelLatencyMode
+import typingsSlinky.awsSdk.ivsMod._StreamHealth
+import typingsSlinky.awsSdk.ivsMod._StreamState
 import typingsSlinky.awsSdk.kafkaMod._ClientBroker
 import typingsSlinky.awsSdk.kafkaMod._ClusterState
 import typingsSlinky.awsSdk.kafkaMod._EnhancedMonitoring
@@ -1111,6 +1166,7 @@ import typingsSlinky.awsSdk.kendraMod._DatabaseEngineType
 import typingsSlinky.awsSdk.kendraMod._DocumentAttributeValueType
 import typingsSlinky.awsSdk.kendraMod._FaqStatus
 import typingsSlinky.awsSdk.kendraMod._IndexEdition
+import typingsSlinky.awsSdk.kendraMod._QueryIdentifiersEnclosingOption
 import typingsSlinky.awsSdk.kendraMod._QueryResultType
 import typingsSlinky.awsSdk.kendraMod._ReadAccessType
 import typingsSlinky.awsSdk.kendraMod._RelevanceType
@@ -1118,6 +1174,7 @@ import typingsSlinky.awsSdk.kendraMod._SalesforceChatterFeedIncludeFilterType
 import typingsSlinky.awsSdk.kendraMod._SalesforceKnowledgeArticleState
 import typingsSlinky.awsSdk.kendraMod._SalesforceStandardObjectName
 import typingsSlinky.awsSdk.kendraMod._ServiceNowBuildVersionType
+import typingsSlinky.awsSdk.kendraMod._SortOrder
 import typingsSlinky.awsSdk.kinesisMod._ConsumerStatus
 import typingsSlinky.awsSdk.kinesisMod._MetricsName
 import typingsSlinky.awsSdk.kinesisMod._ShardIteratorType
@@ -1195,12 +1252,16 @@ import typingsSlinky.awsSdk.licensemanagerMod._LicenseCountingType
 import typingsSlinky.awsSdk.lightsailMod._AccessDirection
 import typingsSlinky.awsSdk.lightsailMod._AlarmState
 import typingsSlinky.awsSdk.lightsailMod._AutoSnapshotStatus
+import typingsSlinky.awsSdk.lightsailMod._BehaviorEnum
 import typingsSlinky.awsSdk.lightsailMod._BlueprintType
 import typingsSlinky.awsSdk.lightsailMod._ContactMethodStatus
 import typingsSlinky.awsSdk.lightsailMod._ContactProtocol
 import typingsSlinky.awsSdk.lightsailMod._DiskSnapshotState
 import typingsSlinky.awsSdk.lightsailMod._DiskState
+import typingsSlinky.awsSdk.lightsailMod._DistributionMetricName
 import typingsSlinky.awsSdk.lightsailMod._ExportSnapshotRecordSourceType
+import typingsSlinky.awsSdk.lightsailMod._ForwardValues
+import typingsSlinky.awsSdk.lightsailMod._HeaderEnum
 import typingsSlinky.awsSdk.lightsailMod._InstanceAccessProtocol
 import typingsSlinky.awsSdk.lightsailMod._InstanceHealthReason
 import typingsSlinky.awsSdk.lightsailMod._InstanceHealthState
@@ -1219,6 +1280,7 @@ import typingsSlinky.awsSdk.lightsailMod._LoadBalancerTlsCertificateStatus
 import typingsSlinky.awsSdk.lightsailMod._MetricUnit
 import typingsSlinky.awsSdk.lightsailMod._NetworkProtocol
 import typingsSlinky.awsSdk.lightsailMod._OperationStatus
+import typingsSlinky.awsSdk.lightsailMod._OriginProtocolPolicyEnum
 import typingsSlinky.awsSdk.lightsailMod._PortAccessType
 import typingsSlinky.awsSdk.lightsailMod._PortInfoSourceType
 import typingsSlinky.awsSdk.lightsailMod._PortState
@@ -1236,7 +1298,6 @@ import typingsSlinky.awsSdk.machinelearningMod._MLModelType
 import typingsSlinky.awsSdk.machinelearningMod._RealtimeEndpointStatus
 import typingsSlinky.awsSdk.machinelearningMod._TaggableResourceType
 import typingsSlinky.awsSdk.macie2Mod._EffectivePermission
-import typingsSlinky.awsSdk.macie2Mod._EncryptionType
 import typingsSlinky.awsSdk.macie2Mod._FindingCategory
 import typingsSlinky.awsSdk.macie2Mod._FindingStatisticsSortAttributeName
 import typingsSlinky.awsSdk.macie2Mod._FindingType
@@ -1251,11 +1312,12 @@ import typingsSlinky.awsSdk.macie2Mod._ScopeFilterKey
 import typingsSlinky.awsSdk.macie2Mod._SensitiveDataItemCategory
 import typingsSlinky.awsSdk.macie2Mod._SeverityDescription
 import typingsSlinky.awsSdk.macie2Mod._SharedAccess
+import typingsSlinky.awsSdk.macie2Mod._UsageStatisticsFilterComparator
+import typingsSlinky.awsSdk.macie2Mod._UsageStatisticsFilterKey
 import typingsSlinky.awsSdk.macie2Mod._UsageStatisticsSortKey
 import typingsSlinky.awsSdk.macie2Mod._UsageType
 import typingsSlinky.awsSdk.macie2Mod._UserIdentityType
 import typingsSlinky.awsSdk.macieMod._S3OneTimeClassificationType
-import typingsSlinky.awsSdk.managedblockchainMod._Edition
 import typingsSlinky.awsSdk.managedblockchainMod._InvitationStatus
 import typingsSlinky.awsSdk.managedblockchainMod._NetworkStatus
 import typingsSlinky.awsSdk.managedblockchainMod._NodeStatus
@@ -1268,6 +1330,7 @@ import typingsSlinky.awsSdk.marketplacecommerceanalyticsMod._SupportDataSetType
 import typingsSlinky.awsSdk.marketplaceentitlementserviceMod._GetEntitlementFilterName
 import typingsSlinky.awsSdk.marketplacemeteringMod._UsageRecordResultStatus
 import typingsSlinky.awsSdk.mediaconnectMod._Algorithm
+import typingsSlinky.awsSdk.mediaconnectMod._EntitlementStatus
 import typingsSlinky.awsSdk.mediaconvertMod._AacAudioDescriptionBroadcasterMix
 import typingsSlinky.awsSdk.mediaconvertMod._AacCodecProfile
 import typingsSlinky.awsSdk.mediaconvertMod._AacCodingMode
@@ -1497,6 +1560,7 @@ import typingsSlinky.awsSdk.mediaconvertMod._Mpeg2TemporalAdaptiveQuantization
 import typingsSlinky.awsSdk.mediaconvertMod._MsSmoothAudioDeduplication
 import typingsSlinky.awsSdk.mediaconvertMod._MsSmoothManifestEncoding
 import typingsSlinky.awsSdk.mediaconvertMod._MxfAfdSignaling
+import typingsSlinky.awsSdk.mediaconvertMod._NoiseFilterPostTemporalSharpening
 import typingsSlinky.awsSdk.mediaconvertMod._NoiseReducerFilter
 import typingsSlinky.awsSdk.mediaconvertMod._Order
 import typingsSlinky.awsSdk.mediaconvertMod._OutputGroupType
@@ -1528,6 +1592,15 @@ import typingsSlinky.awsSdk.mediaconvertMod._TimedMetadata
 import typingsSlinky.awsSdk.mediaconvertMod._TtmlStylePassthrough
 import typingsSlinky.awsSdk.mediaconvertMod._VideoCodec
 import typingsSlinky.awsSdk.mediaconvertMod._VideoTimecodeInsertion
+import typingsSlinky.awsSdk.mediaconvertMod._Vp8FramerateControl
+import typingsSlinky.awsSdk.mediaconvertMod._Vp8FramerateConversionAlgorithm
+import typingsSlinky.awsSdk.mediaconvertMod._Vp8ParControl
+import typingsSlinky.awsSdk.mediaconvertMod._Vp8QualityTuningLevel
+import typingsSlinky.awsSdk.mediaconvertMod._Vp9FramerateControl
+import typingsSlinky.awsSdk.mediaconvertMod._Vp9FramerateConversionAlgorithm
+import typingsSlinky.awsSdk.mediaconvertMod._Vp9ParControl
+import typingsSlinky.awsSdk.mediaconvertMod._Vp9QualityTuningLevel
+import typingsSlinky.awsSdk.mediaconvertMod._WatermarkingStrength
 import typingsSlinky.awsSdk.mediaconvertMod._WavFormat
 import typingsSlinky.awsSdk.medialiveMod._AacInputType
 import typingsSlinky.awsSdk.medialiveMod._AacProfile
@@ -1562,7 +1635,10 @@ import typingsSlinky.awsSdk.medialiveMod._DvbSubDestinationShadowColor
 import typingsSlinky.awsSdk.medialiveMod._DvbSubDestinationTeletextGridControl
 import typingsSlinky.awsSdk.medialiveMod._Eac3DrcLine
 import typingsSlinky.awsSdk.medialiveMod._Eac3DrcRf
+import typingsSlinky.awsSdk.medialiveMod._EbuTtDDestinationStyleControl
+import typingsSlinky.awsSdk.medialiveMod._EbuTtDFillLineGapControl
 import typingsSlinky.awsSdk.medialiveMod._EmbeddedScte20Detection
+import typingsSlinky.awsSdk.medialiveMod._FeatureActivationsInputPrepareScheduleActions
 import typingsSlinky.awsSdk.medialiveMod._FecOutputIncludeFec
 import typingsSlinky.awsSdk.medialiveMod._FixedAfd
 import typingsSlinky.awsSdk.medialiveMod._Fmp4NielsenId3Behavior
@@ -1591,6 +1667,7 @@ import typingsSlinky.awsSdk.medialiveMod._H265FlickerAq
 import typingsSlinky.awsSdk.medialiveMod._H265Level
 import typingsSlinky.awsSdk.medialiveMod._H265LookAheadRateControl
 import typingsSlinky.awsSdk.medialiveMod._H265Profile
+import typingsSlinky.awsSdk.medialiveMod._H265ScanType
 import typingsSlinky.awsSdk.medialiveMod._H265Tier
 import typingsSlinky.awsSdk.medialiveMod._H265TimecodeInsertionBehavior
 import typingsSlinky.awsSdk.medialiveMod._HlsAdMarkers
@@ -1708,6 +1785,7 @@ import typingsSlinky.awsSdk.mediatailorMod._OriginManifestType
 import typingsSlinky.awsSdk.migrationhubMod._ApplicationStatus
 import typingsSlinky.awsSdk.migrationhubMod._ResourceAttributeType
 import typingsSlinky.awsSdk.mobileMod._ProjectState
+import typingsSlinky.awsSdk.mqMod._AuthenticationStrategy
 import typingsSlinky.awsSdk.mqMod._BrokerState
 import typingsSlinky.awsSdk.mqMod._BrokerStorageType
 import typingsSlinky.awsSdk.mqMod._ChangeType
@@ -1754,12 +1832,14 @@ import typingsSlinky.awsSdk.organizationsMod._ActionType
 import typingsSlinky.awsSdk.organizationsMod._ChildType
 import typingsSlinky.awsSdk.organizationsMod._CreateAccountFailureReason
 import typingsSlinky.awsSdk.organizationsMod._CreateAccountState
+import typingsSlinky.awsSdk.organizationsMod._EffectivePolicyType
 import typingsSlinky.awsSdk.organizationsMod._HandshakePartyType
 import typingsSlinky.awsSdk.organizationsMod._HandshakeResourceType
 import typingsSlinky.awsSdk.organizationsMod._HandshakeState
 import typingsSlinky.awsSdk.organizationsMod._IAMUserAccessToBilling
 import typingsSlinky.awsSdk.organizationsMod._OrganizationFeatureSet
 import typingsSlinky.awsSdk.organizationsMod._ParentType
+import typingsSlinky.awsSdk.organizationsMod._PolicyType
 import typingsSlinky.awsSdk.organizationsMod._PolicyTypeStatus
 import typingsSlinky.awsSdk.organizationsMod._TargetType
 import typingsSlinky.awsSdk.personalizeMod._TrainingMode
@@ -1771,7 +1851,6 @@ import typingsSlinky.awsSdk.pinpointMod._DimensionType
 import typingsSlinky.awsSdk.pinpointMod._Duration
 import typingsSlinky.awsSdk.pinpointMod._EndpointTypesElement
 import typingsSlinky.awsSdk.pinpointMod._FilterType
-import typingsSlinky.awsSdk.pinpointMod._Format
 import typingsSlinky.awsSdk.pinpointMod._Frequency
 import typingsSlinky.awsSdk.pinpointMod._Include
 import typingsSlinky.awsSdk.pinpointMod._Operator
@@ -1806,6 +1885,7 @@ import typingsSlinky.awsSdk.quicksightMod._DashboardUIState
 import typingsSlinky.awsSdk.quicksightMod._DataSetImportMode
 import typingsSlinky.awsSdk.quicksightMod._DataSourceErrorInfoType
 import typingsSlinky.awsSdk.quicksightMod._DataSourceType
+import typingsSlinky.awsSdk.quicksightMod._Edition
 import typingsSlinky.awsSdk.quicksightMod._FileFormat
 import typingsSlinky.awsSdk.quicksightMod._GeoSpatialDataRole
 import typingsSlinky.awsSdk.quicksightMod._IngestionErrorType
@@ -1814,9 +1894,12 @@ import typingsSlinky.awsSdk.quicksightMod._IngestionRequestType
 import typingsSlinky.awsSdk.quicksightMod._IngestionStatus
 import typingsSlinky.awsSdk.quicksightMod._InputColumnDataType
 import typingsSlinky.awsSdk.quicksightMod._JoinType
+import typingsSlinky.awsSdk.quicksightMod._NamespaceErrorType
+import typingsSlinky.awsSdk.quicksightMod._NamespaceStatus
 import typingsSlinky.awsSdk.quicksightMod._RowLevelPermissionPolicy
 import typingsSlinky.awsSdk.quicksightMod._TemplateErrorType
 import typingsSlinky.awsSdk.quicksightMod._TextQualifier
+import typingsSlinky.awsSdk.quicksightMod._ThemeType
 import typingsSlinky.awsSdk.quicksightMod._UserRole
 import typingsSlinky.awsSdk.ramMod._ResourceOwner
 import typingsSlinky.awsSdk.ramMod._ResourceShareAssociationStatus
@@ -1832,6 +1915,7 @@ import typingsSlinky.awsSdk.rdsMod._EngineFamily
 import typingsSlinky.awsSdk.rdsMod._IAMAuthMode
 import typingsSlinky.awsSdk.rdsMod._TargetHealthReason
 import typingsSlinky.awsSdk.rdsMod._TargetState
+import typingsSlinky.awsSdk.rdsMod._WriteForwardingStatus
 import typingsSlinky.awsSdk.rdsdataserviceMod._DecimalReturnType
 import typingsSlinky.awsSdk.rdsdataserviceMod._TypeHint
 import typingsSlinky.awsSdk.redshiftMod._NodeConfigurationOptionsFilterName
@@ -1864,8 +1948,11 @@ import typingsSlinky.awsSdk.rekognitionMod._ProjectVersionStatus
 import typingsSlinky.awsSdk.rekognitionMod._QualityFilter
 import typingsSlinky.awsSdk.rekognitionMod._Reason
 import typingsSlinky.awsSdk.rekognitionMod._StreamProcessorStatus
+import typingsSlinky.awsSdk.rekognitionMod._TechnicalCueType
 import typingsSlinky.awsSdk.rekognitionMod._TextTypes
 import typingsSlinky.awsSdk.rekognitionMod._VideoJobStatus
+import typingsSlinky.awsSdk.resourcegroupsMod._GroupConfigurationStatus
+import typingsSlinky.awsSdk.resourcegroupsMod._GroupFilterName
 import typingsSlinky.awsSdk.resourcegroupsMod._QueryErrorCode
 import typingsSlinky.awsSdk.resourcegroupsMod._QueryType
 import typingsSlinky.awsSdk.resourcegroupstaggingapiMod._GroupByAttribute
@@ -1993,6 +2080,7 @@ import typingsSlinky.awsSdk.sagemakerMod._FileSystemAccessMode
 import typingsSlinky.awsSdk.sagemakerMod._FileSystemType
 import typingsSlinky.awsSdk.sagemakerMod._FlowDefinitionStatus
 import typingsSlinky.awsSdk.sagemakerMod._Framework
+import typingsSlinky.awsSdk.sagemakerMod._HumanTaskUiStatus
 import typingsSlinky.awsSdk.sagemakerMod._HyperParameterScalingType
 import typingsSlinky.awsSdk.sagemakerMod._HyperParameterTuningJobObjectiveType
 import typingsSlinky.awsSdk.sagemakerMod._HyperParameterTuningJobSortByOptions
@@ -2002,6 +2090,7 @@ import typingsSlinky.awsSdk.sagemakerMod._HyperParameterTuningJobWarmStartType
 import typingsSlinky.awsSdk.sagemakerMod._JoinSource
 import typingsSlinky.awsSdk.sagemakerMod._LabelingJobStatus
 import typingsSlinky.awsSdk.sagemakerMod._ListCompilationJobsSortBy
+import typingsSlinky.awsSdk.sagemakerMod._ListWorkforcesSortByOptions
 import typingsSlinky.awsSdk.sagemakerMod._ListWorkteamsSortByOptions
 import typingsSlinky.awsSdk.sagemakerMod._ModelPackageSortBy
 import typingsSlinky.awsSdk.sagemakerMod._ModelPackageStatus
@@ -2043,6 +2132,9 @@ import typingsSlinky.awsSdk.sagemakerMod._SortTrialComponentsBy
 import typingsSlinky.awsSdk.sagemakerMod._SortTrialsBy
 import typingsSlinky.awsSdk.sagemakerMod._SplitType
 import typingsSlinky.awsSdk.sagemakerMod._TargetDevice
+import typingsSlinky.awsSdk.sagemakerMod._TargetPlatformAccelerator
+import typingsSlinky.awsSdk.sagemakerMod._TargetPlatformArch
+import typingsSlinky.awsSdk.sagemakerMod._TargetPlatformOs
 import typingsSlinky.awsSdk.sagemakerMod._TrainingInputMode
 import typingsSlinky.awsSdk.sagemakerMod._TrainingInstanceType
 import typingsSlinky.awsSdk.sagemakerMod._TrainingJobEarlyStoppingType
@@ -2069,6 +2161,7 @@ import typingsSlinky.awsSdk.savingsplansMod._SavingsPlanType
 import typingsSlinky.awsSdk.savingsplansMod._SavingsPlansFilterName
 import typingsSlinky.awsSdk.schemasMod._CodeGenerationStatus
 import typingsSlinky.awsSdk.schemasMod._DiscovererState
+import typingsSlinky.awsSdk.secretsmanagerMod._FilterNameStringType
 import typingsSlinky.awsSdk.securityhubMod._AwsIamAccessKeyStatus
 import typingsSlinky.awsSdk.securityhubMod._ControlStatus
 import typingsSlinky.awsSdk.securityhubMod._MalwareState
@@ -2121,22 +2214,25 @@ import typingsSlinky.awsSdk.servicequotasMod._RequestStatus
 import typingsSlinky.awsSdk.servicequotasMod._ServiceQuotaTemplateAssociationStatus
 import typingsSlinky.awsSdk.sesMod._BehaviorOnMXFailure
 import typingsSlinky.awsSdk.sesMod._BounceType
-import typingsSlinky.awsSdk.sesMod._BulkEmailStatus
 import typingsSlinky.awsSdk.sesMod._ConfigurationSetAttribute
 import typingsSlinky.awsSdk.sesMod._CustomMailFromStatus
 import typingsSlinky.awsSdk.sesMod._DsnAction
 import typingsSlinky.awsSdk.sesMod._ReceiptFilterPolicy
 import typingsSlinky.awsSdk.sesMod._SNSActionEncoding
 import typingsSlinky.awsSdk.sesMod._VerificationStatus
+import typingsSlinky.awsSdk.sesv2Mod._BulkEmailStatus
+import typingsSlinky.awsSdk.sesv2Mod._ContactLanguage
 import typingsSlinky.awsSdk.sesv2Mod._DkimSigningAttributesOrigin
+import typingsSlinky.awsSdk.sesv2Mod._MailType
+import typingsSlinky.awsSdk.sesv2Mod._ReviewStatus
 import typingsSlinky.awsSdk.sesv2Mod._SuppressionListReason
 import typingsSlinky.awsSdk.shieldMod._AttackLayer
 import typingsSlinky.awsSdk.shieldMod._AttackPropertyIdentifier
 import typingsSlinky.awsSdk.shieldMod._AutoRenew
+import typingsSlinky.awsSdk.shieldMod._ProactiveEngagementStatus
 import typingsSlinky.awsSdk.shieldMod._SubResourceType
 import typingsSlinky.awsSdk.shieldMod._SubscriptionState
 import typingsSlinky.awsSdk.signerMod._EncryptionAlgorithm
-import typingsSlinky.awsSdk.signerMod._HashAlgorithm
 import typingsSlinky.awsSdk.signerMod._ImageFormat
 import typingsSlinky.awsSdk.signerMod._SigningProfileStatus
 import typingsSlinky.awsSdk.signerMod._SigningStatus
@@ -2230,6 +2326,7 @@ import typingsSlinky.awsSdk.stepfunctionsMod._StateMachineStatus
 import typingsSlinky.awsSdk.stepfunctionsMod._StateMachineType
 import typingsSlinky.awsSdk.storagegatewayMod._ActiveDirectoryStatus
 import typingsSlinky.awsSdk.storagegatewayMod._AvailabilityMonitorTestStatus
+import typingsSlinky.awsSdk.storagegatewayMod._CaseSensitivity
 import typingsSlinky.awsSdk.storagegatewayMod._FileShareType
 import typingsSlinky.awsSdk.storagegatewayMod._HostEnvironment
 import typingsSlinky.awsSdk.storagegatewayMod._ObjectACL
@@ -2277,7 +2374,10 @@ import typingsSlinky.awsSdk.wafMod._TextTransformation
 import typingsSlinky.awsSdk.wafMod._WafActionType
 import typingsSlinky.awsSdk.wafMod._WafOverrideActionType
 import typingsSlinky.awsSdk.wafMod._WafRuleType
+import typingsSlinky.awsSdk.wafv2Mod._FallbackBehavior
+import typingsSlinky.awsSdk.wafv2Mod._ForwardedIPPosition
 import typingsSlinky.awsSdk.wafv2Mod._IPAddressVersion
+import typingsSlinky.awsSdk.wafv2Mod._RateBasedStatementAggregateKeyType
 import typingsSlinky.awsSdk.wafv2Mod._Scope
 import typingsSlinky.awsSdk.wafv2Mod._TextTransformationType
 import typingsSlinky.awsSdk.workdocsMod._ActivityType
@@ -2304,12 +2404,15 @@ import typingsSlinky.awsSdk.worklinkMod._DeviceStatus
 import typingsSlinky.awsSdk.worklinkMod._DomainStatus
 import typingsSlinky.awsSdk.workmailMod._AccessControlRuleEffect
 import typingsSlinky.awsSdk.workmailMod._EntityState
+import typingsSlinky.awsSdk.workmailMod._FolderName
 import typingsSlinky.awsSdk.workmailMod._PermissionType
+import typingsSlinky.awsSdk.workmailMod._RetentionAction
 import typingsSlinky.awsSdk.workspacesMod._AccessPropertyValue
 import typingsSlinky.awsSdk.workspacesMod._Compute
 import typingsSlinky.awsSdk.workspacesMod._ConnectionState
 import typingsSlinky.awsSdk.workspacesMod._DedicatedTenancyModificationStateEnum
 import typingsSlinky.awsSdk.workspacesMod._DedicatedTenancySupportResultEnum
+import typingsSlinky.awsSdk.workspacesMod._ImageType
 import typingsSlinky.awsSdk.workspacesMod._ModificationResourceEnum
 import typingsSlinky.awsSdk.workspacesMod._ModificationStateEnum
 import typingsSlinky.awsSdk.workspacesMod._OperatingSystemType
@@ -3115,6 +3218,10 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.marketplacecatalogMod._apiVersion
   
   @js.native
+  sealed trait `2018-09-22`
+    extends typingsSlinky.awsSdk.codeartifactMod._apiVersion
+  
+  @js.native
   sealed trait `2018-09-24`
     extends typingsSlinky.awsSdk.managedblockchainMod._apiVersion
   
@@ -3287,6 +3394,18 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.macie2Mod._apiVersion
   
   @js.native
+  sealed trait `2020-03-01`
+    extends typingsSlinky.awsSdk.honeycodeMod._apiVersion
+  
+  @js.native
+  sealed trait `2020-05-31`
+    extends typingsSlinky.awsSdk.cloudfrontMod._apiVersion
+  
+  @js.native
+  sealed trait `2020-07-14`
+    extends typingsSlinky.awsSdk.ivsMod._apiVersion
+  
+  @js.native
   sealed trait `237` extends _CacheClusterSize
   
   @js.native
@@ -3389,6 +3508,8 @@ object awsSdkStrings {
     extends _ActiveDirectoryStatus
        with _AssessmentRunNotificationSnsStatusCode
        with _BusinessReportFailureCode
+       with _DashboardErrorType
+       with _DataSourceErrorInfoType
        with _FailedItemErrorCode
        with _GatewayResponseType
        with _UsageReportExecutionErrorCode
@@ -3413,7 +3534,13 @@ object awsSdkStrings {
        with _Type
   
   @js.native
+  sealed trait ACCOUNTING extends _Format
+  
+  @js.native
   sealed trait ACCOUNT_CAPACITY_LIMIT_EXCEEDED extends _IngestionErrorType
+  
+  @js.native
+  sealed trait ACCOUNT_DAILY_QUOTA_EXCEEDED extends _BulkEmailStatus
   
   @js.native
   sealed trait ACCOUNT_ID
@@ -3424,10 +3551,19 @@ object awsSdkStrings {
   sealed trait ACCOUNT_LIMIT_EXCEEDED extends _CreateAccountFailureReason
   
   @js.native
+  sealed trait ACCOUNT_SENDING_PAUSED extends _BulkEmailStatus
+  
+  @js.native
   sealed trait ACCOUNT_SETTINGS extends _ResourceType
   
   @js.native
   sealed trait ACCOUNT_SPECIFIC extends _eventScopeCode
+  
+  @js.native
+  sealed trait ACCOUNT_SUSPENDED extends _BulkEmailStatus
+  
+  @js.native
+  sealed trait ACCOUNT_THROTTLED extends _BulkEmailStatus
   
   @js.native
   sealed trait ACKNOWLEDGE_TASK_MESSAGE extends _FlowExecutionEventType
@@ -3439,16 +3575,13 @@ object awsSdkStrings {
   sealed trait ACTION_FAILED extends _ProposalStatus
   
   @js.native
+  sealed trait ACTION_LEVEL extends _AccessAdvisorUsageGranularityType
+  
+  @js.native
   sealed trait ACTION_NEEDED extends _ResolverEndpointStatus
   
   @js.native
   sealed trait ACTIVATED extends _TriggerState
-  
-  @js.native
-  sealed trait ACTIVATE_IN_PROGRESS extends _ModelVersionStatus
-  
-  @js.native
-  sealed trait ACTIVATE_REQUESTED extends _ModelVersionStatus
   
   @js.native
   sealed trait ACTIVATING
@@ -3469,6 +3602,7 @@ object awsSdkStrings {
        with _AssetState
        with _AuthorizerStatus
        with _CACertificateStatus
+       with _CapacityProviderStatus
        with _CertificateAuthorityStatus
        with _CertificateStatus
        with _ChannelStatus
@@ -3505,6 +3639,7 @@ object awsSdkStrings {
        with _FleetStatus
        with _GameServerGroupStatus
        with _GameSessionStatus
+       with _GatewayRouteStatusCode
        with _GlobalTableStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._GlobalTableStatus
        with _HsmState
@@ -3520,6 +3655,7 @@ object awsSdkStrings {
        with _MeshStatusCode
        with _ModelVersionStatus
        with _NodegroupStatus
+       with _OutboundCrossClusterSearchConnectionStatusCode
        with _PlayerSessionStatus
        with _PortalState
        with _QueueStatus
@@ -3556,6 +3692,7 @@ object awsSdkStrings {
        with _TestGridSessionStatus
        with _ThreatIntelSetStatus
        with _UserStatusType
+       with _VirtualGatewayStatusCode
        with _VirtualNodeStatusCode
        with _VirtualRouterStatusCode
        with _VirtualServiceStatusCode
@@ -3742,6 +3879,7 @@ object awsSdkStrings {
   @js.native
   sealed trait AES256
     extends _EncryptionType
+       with typingsSlinky.awsSdk.macie2Mod._EncryptionType
        with typingsSlinky.awsSdk.glacierMod._EncryptionType
        with _S3SSEAlgorithm
        with _SSEType
@@ -3909,6 +4047,11 @@ object awsSdkStrings {
   sealed trait AIFF extends _AudioCodec
   
   @js.native
+  sealed trait AISERVICES_OPT_OUT_POLICY
+    extends _EffectivePolicyType
+       with _PolicyType
+  
+  @js.native
   sealed trait AKA extends _LanguageCode
   
   @js.native
@@ -3960,6 +4103,7 @@ object awsSdkStrings {
   @js.native
   sealed trait ALL
     extends _Attribute
+       with _AwsJobAbortCriteriaFailureType
        with _BackupTypeFilter
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._BackupTypeFilter
        with _FaceAttributes
@@ -3978,13 +4122,17 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.lakeformationMod._Permission
        with _ProjectionType
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._ProjectionType
+       with _ResourceShareType
        with _RtmpCaptionData
        with _SkillTypeFilter
        with _SourceType
        with _TaskDefinitionFamilyStatus
+       with _ThemeType
        with _TrafficType
+       with _TransferMode
        with typingsSlinky.awsSdk.pinpointMod._Type
        with _UserFilterType
+       with _VoiceRecordingTrack
   
   @js.native
   sealed trait ALLOW
@@ -4058,6 +4206,9 @@ object awsSdkStrings {
   sealed trait ALL_UPFRONT
     extends _PaymentOption
        with _ReservedElasticsearchInstancePaymentOption
+  
+  @js.native
+  sealed trait ALREADY_EXISTS extends _PackageVersionErrorCode
   
   @js.native
   sealed trait ALTER
@@ -4161,6 +4312,7 @@ object awsSdkStrings {
     extends _DevicePlatform
        with _LanguageType
        with typingsSlinky.awsSdk.mobileMod._Platform
+       with _TargetPlatformOs
   
   @js.native
   sealed trait ANDROID_APP extends _UploadType
@@ -4189,6 +4341,7 @@ object awsSdkStrings {
   @js.native
   sealed trait ANY
     extends _ExtendedKeyUsageName
+       with _ForwardedIPPosition
        with _Include
        with _KeyUsageName
        with _Logical
@@ -4406,6 +4559,7 @@ object awsSdkStrings {
   @js.native
   sealed trait APPROVED
     extends _ICPRecordalStatus
+       with _InboundCrossClusterSearchConnectionStatusCode
        with _PatchDeploymentStatus
        with _ProposalStatus
        with _RequestStatus
@@ -4463,13 +4617,21 @@ object awsSdkStrings {
   sealed trait ARG extends _LanguageCode
   
   @js.native
-  sealed trait ARM64 extends _Architecture
+  sealed trait ARM64
+    extends _Architecture
+       with _TargetPlatformArch
   
   @js.native
   sealed trait ARMHF extends _Architecture
   
   @js.native
   sealed trait ARM_CONTAINER extends _EnvironmentType
+  
+  @js.native
+  sealed trait ARM_EABI extends _TargetPlatformArch
+  
+  @js.native
+  sealed trait ARM_EABIHF extends _TargetPlatformArch
   
   @js.native
   sealed trait ARN
@@ -4496,6 +4658,7 @@ object awsSdkStrings {
        with _Sort
        with _SortByOrder
        with _SortOrder
+       with typingsSlinky.awsSdk.ecsMod._SortOrder
        with _SortValue
        with _orderString
   
@@ -4690,6 +4853,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.medialiveMod._AfdSignaling
        with _AssociationSyncCompliance
        with _EmbeddedScte20Detection
+       with _Format
        with _H264CodecLevel
        with _H265CodecLevel
        with _InputDeviceConfiguredInput
@@ -4699,6 +4863,7 @@ object awsSdkStrings {
        with _M2tsAribCaptionsPidControl
        with _Mpeg2CodecLevel
        with _Mpeg2IntraDcPrecision
+       with _NoiseFilterPostTemporalSharpening
        with _QualityFilter
        with _TemporalFilterPostFilterSharpening
        with _TemporalFilterStrength
@@ -4778,6 +4943,7 @@ object awsSdkStrings {
        with _ConnectionStatus
        with _ContactStatus
        with _CustomerGatewayAssociationState
+       with _DataRepositoryLifecycle
        with _DeviceAvailability
        with _DeviceState
        with _DomainAvailability
@@ -5143,12 +5309,20 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.accessanalyzerMod._ResourceType
   
   @js.native
+  sealed trait AWSColonColonSNSColonColonTopic
+    extends typingsSlinky.awsSdk.configserviceMod._ResourceType
+  
+  @js.native
   sealed trait AWSColonColonSQSColonColonQueue
     extends typingsSlinky.awsSdk.configserviceMod._ResourceType
        with typingsSlinky.awsSdk.accessanalyzerMod._ResourceType
   
   @js.native
   sealed trait AWSColonColonSSMColonColonAssociationCompliance
+    extends typingsSlinky.awsSdk.configserviceMod._ResourceType
+  
+  @js.native
+  sealed trait AWSColonColonSSMColonColonFileData
     extends typingsSlinky.awsSdk.configserviceMod._ResourceType
   
   @js.native
@@ -5167,6 +5341,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait AWSColonColonSageMakerColonColonTransformJob extends _CandidateStepType
+  
+  @js.native
+  sealed trait AWSColonColonSecretsManagerColonColonSecret
+    extends typingsSlinky.awsSdk.configserviceMod._ResourceType
   
   @js.native
   sealed trait AWSColonColonServiceCatalogColonColonCloudFormationProduct
@@ -5248,7 +5426,9 @@ object awsSdkStrings {
   sealed trait AWSIoT extends js.Object
   
   @js.native
-  sealed trait AWSLambda extends _SavingsPlanRateServiceCode
+  sealed trait AWSLambda
+    extends _ComputePlatform
+       with _SavingsPlanRateServiceCode
   
   @js.native
   sealed trait AWSManagedPolicy
@@ -5365,7 +5545,21 @@ object awsSdkStrings {
   sealed trait Abandoned extends _ActionExecutionStatus
   
   @js.native
-  sealed trait Accept_ extends _HITAccessActions
+  sealed trait `Accept-Charset` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `Accept-Datetime` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `Accept-Encoding` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `Accept-Language` extends _HeaderEnum
+  
+  @js.native
+  sealed trait Accept_
+    extends _HITAccessActions
+       with _HeaderEnum
   
   @js.native
   sealed trait Accepted_ extends _InviteStatus
@@ -5393,28 +5587,36 @@ object awsSdkStrings {
   sealed trait AccountAccessKeysPresent extends _summaryKeyType
   
   @js.native
-  sealed trait AccountDailyQuotaExceeded extends _BulkEmailStatus
+  sealed trait AccountDailyQuotaExceeded
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
-  sealed trait AccountId extends _PhoneNumberAssociationName
+  sealed trait AccountId
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+       with _PhoneNumberAssociationName
   
   @js.native
   sealed trait AccountMFAEnabled extends _summaryKeyType
   
   @js.native
-  sealed trait AccountSendingPaused extends _BulkEmailStatus
+  sealed trait AccountSendingPaused
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait AccountSigningCertificatesPresent extends _summaryKeyType
   
   @js.native
-  sealed trait AccountSuspended extends _BulkEmailStatus
+  sealed trait AccountSuspended
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
+       with _RelationshipStatus
   
   @js.native
   sealed trait AccountTakeover extends _RiskDecisionType
   
   @js.native
-  sealed trait AccountThrottled extends _BulkEmailStatus
+  sealed trait AccountThrottled
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait Account_
@@ -5462,7 +5664,9 @@ object awsSdkStrings {
        with _DirectoryStage
        with _DocumentStatus
        with _DomainControllerStatus
+       with typingsSlinky.awsSdk.codeartifactMod._DomainStatus
        with _FlowDefinitionStatus
+       with _HumanTaskUiStatus
        with _JobStatus
        with _OptionState
        with typingsSlinky.awsSdk.cloudsearchMod._OptionState
@@ -5545,7 +5749,13 @@ object awsSdkStrings {
   sealed trait Advanced extends _ParameterTier
   
   @js.native
+  sealed trait AgentId extends _MetadataField
+  
+  @js.native
   sealed trait AgentVersion extends _InstanceInformationFilterKey
+  
+  @js.native
+  sealed trait AggregatedRelativeTotalTime extends js.Object
   
   @js.native
   sealed trait Alarm_
@@ -5563,6 +5773,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait AllAtOnce extends _TrafficRoutingType
+  
+  @js.native
+  sealed trait AllData extends _HttpEndpointS3BackupMode
   
   @js.native
   sealed trait AllDocuments extends _ElasticsearchS3BackupMode
@@ -5629,6 +5842,9 @@ object awsSdkStrings {
   sealed trait And_ extends _BooleanOperator
   
   @js.native
+  sealed trait AnomalyDetection extends js.Object
+  
+  @js.native
   sealed trait Any_ extends _assignmentStatusType
   
   @js.native
@@ -5680,6 +5896,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait ArchiveRetrieval extends _ActionCode
+  
+  @js.native
+  sealed trait Archived_ extends _PackageVersionStatus
   
   @js.native
   sealed trait AreaCode extends _GeoMatchLevel
@@ -5767,6 +5986,10 @@ object awsSdkStrings {
   sealed trait Astrid extends _VoiceId
   
   @js.native
+  sealed trait AttachCertificateToDistribution
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
   sealed trait AttachDisk
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
@@ -5801,13 +6024,24 @@ object awsSdkStrings {
   sealed trait AuthenticatedRole extends _AmbiguousRoleResolutionType
   
   @js.native
+  sealed trait Authorization extends _HeaderEnum
+  
+  @js.native
   sealed trait AutoBundleOnDeploy extends _AppAttributesKeys
   
   @js.native
-  sealed trait AutoScalingGroup extends _RecommendationSourceType
+  sealed trait AutoScalingGroup
+    extends _RecommendationSourceType
+       with typingsSlinky.awsSdk.computeoptimizerMod._ResourceType
+  
+  @js.native
+  sealed trait AutoScalingGroupArn extends _ExportableAutoScalingGroupField
   
   @js.native
   sealed trait AutoScalingGroupInvalidConfiguration extends _NodegroupIssueCode
+  
+  @js.native
+  sealed trait AutoScalingGroupName extends _ExportableAutoScalingGroupField
   
   @js.native
   sealed trait AutoScalingGroupNotFound extends _NodegroupIssueCode
@@ -5875,6 +6109,9 @@ object awsSdkStrings {
   sealed trait AwsFlowRubySettings extends _AppAttributesKeys
   
   @js.native
+  sealed trait AwsRequestId extends _MetadataField
+  
+  @js.native
   sealed trait B
     extends _ScalarAttributeType
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._ScalarAttributeType
@@ -5915,6 +6152,11 @@ object awsSdkStrings {
   
   @js.native
   sealed trait BACKUP_PLAN_MODIFIED extends _BackupVaultEvent
+  
+  @js.native
+  sealed trait BACKUP_POLICY
+    extends _EffectivePolicyType
+       with _PolicyType
   
   @js.native
   sealed trait BACKWARD extends _ScanDirection
@@ -5958,7 +6200,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait BASIC
-    extends _DetailType
+    extends typingsSlinky.awsSdk.ivsMod._ChannelType
+       with _DetailType
        with typingsSlinky.awsSdk.datasyncMod._LogLevel
   
   @js.native
@@ -6079,7 +6322,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait BINARY
-    extends _FacetAttributeType
+    extends _ColumnStatisticsType
+       with _FacetAttributeType
        with _MLModelType
   
   @js.native
@@ -6237,7 +6481,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait BOOLEAN
-    extends _DataType
+    extends _ColumnStatisticsType
+       with _DataType
        with _FacetAttributeType
        with _InputColumnDataType
        with _PropertyDataType
@@ -6365,6 +6610,7 @@ object awsSdkStrings {
     extends _BuildPhaseType
        with _ComponentType
        with _ProcessBehavior
+       with _WebhookBuildType
   
   @js.native
   sealed trait BUILDING
@@ -6373,6 +6619,9 @@ object awsSdkStrings {
        with _ImageStatus
        with typingsSlinky.awsSdk.iotMod._IndexStatus
        with typingsSlinky.awsSdk.lexmodelbuildingserviceMod._Status
+  
+  @js.native
+  sealed trait BUILD_BATCH extends _WebhookBuildType
   
   @js.native
   sealed trait BUILD_GENERAL1_2XLARGE
@@ -6530,7 +6779,9 @@ object awsSdkStrings {
   sealed trait Binary_ extends js.Object
   
   @js.native
-  sealed trait Bitbucket_ extends _ProviderType
+  sealed trait Bitbucket_
+    extends _ProviderType
+       with typingsSlinky.awsSdk.codegurureviewerMod._ProviderType
   
   @js.native
   sealed trait BitsSlashSecond
@@ -6541,6 +6792,9 @@ object awsSdkStrings {
   sealed trait Bits_
     extends _MetricUnit
        with _StandardUnit
+  
+  @js.native
+  sealed trait BlackFrames extends _TechnicalCueType
   
   @js.native
   sealed trait Block_
@@ -6593,6 +6847,16 @@ object awsSdkStrings {
   sealed trait BundlerVersion extends _LayerAttributesKeys
   
   @js.native
+  sealed trait BurstCapacityPercentage
+    extends _InstanceMetricName
+       with typingsSlinky.awsSdk.lightsailMod._MetricName
+  
+  @js.native
+  sealed trait BurstCapacityTime
+    extends _InstanceMetricName
+       with typingsSlinky.awsSdk.lightsailMod._MetricName
+  
+  @js.native
   sealed trait BusinessCalling extends _PhoneNumberProductType
   
   @js.native
@@ -6604,9 +6868,15 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.wafregionalMod._PredicateType
   
   @js.native
+  sealed trait BytesDownloaded extends _DistributionMetricName
+  
+  @js.native
   sealed trait BytesSlashSecond
     extends _MetricUnit
        with _StandardUnit
+  
+  @js.native
+  sealed trait BytesUploaded extends _DistributionMetricName
   
   @js.native
   sealed trait Bytes_
@@ -6709,6 +6979,7 @@ object awsSdkStrings {
        with _MatchmakingConfigurationStatus
        with _QueryExecutionState
        with _ReprocessingStatus
+       with _StackInstanceDetailedStatus
        with _StackSetOperationResultStatus
        with _State
        with typingsSlinky.awsSdk.dataexchangeMod._State
@@ -6857,6 +7128,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.iotMod._EventType
   
   @js.native
+  sealed trait CERTIFICATE_AUTHORITY_ACCESS_DENIED extends _DeviceStatusDetailCode
+  
+  @js.native
   sealed trait CERTIFICATE_AUTHORITY_COMPROMISE
     extends typingsSlinky.awsSdk.acmpcaMod._RevocationReason
   
@@ -6906,6 +7180,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait CHA extends _LanguageCode
+  
+  @js.native
+  sealed trait CHANGED extends _TransferMode
   
   @js.native
   sealed trait CHANGE_DOMAIN_OWNER extends _OperationType
@@ -7069,6 +7346,9 @@ object awsSdkStrings {
        with _ProvisioningArtifactType
   
   @js.native
+  sealed trait CLOUD_TRAIL extends _DataSource
+  
+  @js.native
   sealed trait CLUSTER
     extends typingsSlinky.awsSdk.daxMod._SourceType
   
@@ -7139,6 +7419,9 @@ object awsSdkStrings {
   sealed trait CODEPIPELINE
     extends _ArtifactsType
        with typingsSlinky.awsSdk.codebuildMod._SourceType
+  
+  @js.native
+  sealed trait CODE_COVERAGE extends _ReportType
   
   @js.native
   sealed trait CODE_DEPLOY
@@ -7231,6 +7514,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait COLUMN_TYPE_MISMATCH extends _DashboardErrorType
+  
+  @js.native
+  sealed trait COMBINE_ARTIFACTS extends _BuildBatchPhaseType
   
   @js.native
   sealed trait COMBINE_DUPLICATE_STREAMS extends _MsSmoothAudioDeduplication
@@ -7327,6 +7613,7 @@ object awsSdkStrings {
        with _StackSetDriftDetectionStatus
        with _State
        with typingsSlinky.awsSdk.dataexchangeMod._State
+       with typingsSlinky.awsSdk.fsxMod._Status
        with typingsSlinky.awsSdk.migrationhubMod._Status
        with _StepExecutionState
        with _StepState
@@ -7423,6 +7710,12 @@ object awsSdkStrings {
        with _AppReplicationStatus
   
   @js.native
+  sealed trait CONFIGURATION_SET_NOT_FOUND extends _BulkEmailStatus
+  
+  @js.native
+  sealed trait CONFIGURATION_SET_SENDING_PAUSED extends _BulkEmailStatus
+  
+  @js.native
   sealed trait CONFIGURED_PCR_PERIOD
     extends _M2tsPcrControl
        with typingsSlinky.awsSdk.medialiveMod._M2tsPcrControl
@@ -7499,7 +7792,9 @@ object awsSdkStrings {
   sealed trait CONSOLIDATED_BILLING extends _OrganizationFeatureSet
   
   @js.native
-  sealed trait CONTACT extends _SalesforceStandardObjectName
+  sealed trait CONTACT
+    extends _Format
+       with _SalesforceStandardObjectName
   
   @js.native
   sealed trait CONTACTS_ABANDONED extends _HistoricalMetricName
@@ -7567,6 +7862,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.wafregionalMod._PositionalConstraint
        with typingsSlinky.awsSdk.wafv2Mod._PositionalConstraint
        with _RuleOperator
+       with _UsageStatisticsFilterComparator
   
   @js.native
   sealed trait CONTAINS_WORD
@@ -7649,6 +7945,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait COPY_JOB_SUCCESSFUL extends _BackupVaultEvent
+  
+  @js.native
+  sealed trait COPY_SOURCE_NOT_FOUND extends _DataSourceErrorInfoType
   
   @js.native
   sealed trait COR extends _LanguageCode
@@ -7738,6 +8037,7 @@ object awsSdkStrings {
        with _CopyJobState
        with _EnvironmentLifecycleStatus
        with typingsSlinky.awsSdk.pinpointMod._JobStatus
+       with _NamespaceStatus
        with _ProjectStatus
        with _RecordStatus
        with _TransformSortColumnType
@@ -7867,6 +8167,7 @@ object awsSdkStrings {
        with _ClusterStatus
        with _ConsumerStatus
        with _ContainerStatus
+       with _DataRepositoryLifecycle
        with _DataSourceStatus
        with _DatasetContentState
        with _DatasetStatus
@@ -7893,6 +8194,7 @@ object awsSdkStrings {
        with _LedgerState
        with typingsSlinky.awsSdk.managedblockchainMod._MemberStatus
        with _MultiplexState
+       with _NamespaceStatus
        with _NetworkStatus
        with _NodeStatus
        with _NodegroupStatus
@@ -7977,7 +8279,7 @@ object awsSdkStrings {
        with _BusinessReportFormat
        with _ExportDataFormat
        with _FileFormat
-       with _Format
+       with typingsSlinky.awsSdk.pinpointMod._Format
        with _InventoryFormat
        with _RecordFormatType
        with typingsSlinky.awsSdk.kinesisanalyticsv2Mod._RecordFormatType
@@ -8001,6 +8303,9 @@ object awsSdkStrings {
        with _UploadCategory
   
   @js.native
+  sealed trait CURRENCY extends _Format
+  
+  @js.native
   sealed trait CURRENT
     extends _RelationalDatabasePasswordVersion
        with _StackInstanceStatus
@@ -8019,6 +8324,7 @@ object awsSdkStrings {
        with _EndpointTypesElement
        with _ExtendedKeyUsageName
        with _KeyUsageName
+       with _ThemeType
        with typingsSlinky.awsSdk.mediaconvertMod._Type
   
   @js.native
@@ -8165,6 +8471,7 @@ object awsSdkStrings {
        with _CommandInvocationStatus
        with _CommandPluginStatus
        with _CommandStatus
+       with _InstanceRefreshStatus
        with _JobState
        with _JobStatus
        with _NotificationEvent
@@ -8181,6 +8488,7 @@ object awsSdkStrings {
     extends _AutomationExecutionStatus
        with _CommandInvocationStatus
        with _CommandStatus
+       with _InstanceRefreshStatus
        with _JobStatus
        with typingsSlinky.awsSdk.iotMod._Status
   
@@ -8205,6 +8513,9 @@ object awsSdkStrings {
   sealed trait Carmen extends _VoiceId
   
   @js.native
+  sealed trait CaseSensitive extends _CaseSensitivity
+  
+  @js.native
   sealed trait CassandraReadCapacityUtilization
     extends typingsSlinky.awsSdk.applicationautoscalingMod._MetricType
   
@@ -8225,6 +8536,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait Celine extends _VoiceId
+  
+  @js.native
+  sealed trait Certificate_
+    extends typingsSlinky.awsSdk.lightsailMod._ResourceType
   
   @js.native
   sealed trait ChangeCalendar extends _DocumentType
@@ -8281,7 +8596,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.macie2Mod._ErrorCode
   
   @js.native
-  sealed trait ClientSpecified extends _SMBSecurityStrategy
+  sealed trait ClientSpecified
+    extends _CaseSensitivity
+       with _SMBSecurityStrategy
   
   @js.native
   sealed trait ClientTLSNegotiationErrorCount
@@ -8312,6 +8629,24 @@ object awsSdkStrings {
   sealed trait CloudFormation_ extends _DeploymentCreator
   
   @js.native
+  sealed trait `CloudFront-Forwarded-Proto` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `CloudFront-Is-Desktop-Viewer` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `CloudFront-Is-Mobile-Viewer` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `CloudFront-Is-SmartTV-Viewer` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `CloudFront-Is-Tablet-Viewer` extends _HeaderEnum
+  
+  @js.native
+  sealed trait `CloudFront-Viewer-Country` extends _HeaderEnum
+  
+  @js.native
   sealed trait CloudWatchEvent
     extends typingsSlinky.awsSdk.codepipelineMod._TriggerType
   
@@ -8320,7 +8655,7 @@ object awsSdkStrings {
   
   @js.native
   sealed trait CodeCommit_
-    extends _ProviderType
+    extends typingsSlinky.awsSdk.codegurureviewerMod._ProviderType
        with _SourceRepository
   
   @js.native
@@ -8328,6 +8663,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait CodeHook extends _FulfillmentActivityType
+  
+  @js.native
+  sealed trait ColorBars extends _TechnicalCueType
   
   @js.native
   sealed trait Color_
@@ -8355,6 +8693,7 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.snowballMod._ClusterState
        with _InventoryDeletionStatus
        with _JobState
+       with typingsSlinky.awsSdk.computeoptimizerMod._JobStatus
        with _JobStatus
        with _QueryStatus
        with _StatusCode
@@ -8411,6 +8750,9 @@ object awsSdkStrings {
   sealed trait Compute extends _SavingsPlanType
   
   @js.native
+  sealed trait ComputePlatform extends _MetadataField
+  
+  @js.native
   sealed trait Conchita extends _VoiceId
   
   @js.native
@@ -8434,10 +8776,12 @@ object awsSdkStrings {
        with _OrganizationConfigRuleTriggerType
   
   @js.native
-  sealed trait ConfigurationSetDoesNotExist extends _BulkEmailStatus
+  sealed trait ConfigurationSetDoesNotExist
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
-  sealed trait ConfigurationSetSendingPaused extends _BulkEmailStatus
+  sealed trait ConfigurationSetSendingPaused
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait ConfigurationSnapshotDeliveryCompleted extends _MessageType
@@ -8529,11 +8873,17 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.computeoptimizerMod._MetricName
   
   @js.native
+  sealed trait CreateCertificate
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
   sealed trait CreateContactMethod
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
   @js.native
-  sealed trait CreateDate extends _ListWorkteamsSortByOptions
+  sealed trait CreateDate
+    extends _ListWorkforcesSortByOptions
+       with _ListWorkteamsSortByOptions
   
   @js.native
   sealed trait CreateDisk
@@ -8545,6 +8895,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait CreateDiskSnapshot
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
+  sealed trait CreateDistribution
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
   @js.native
@@ -8681,10 +9035,63 @@ object awsSdkStrings {
   sealed trait CrossAccount extends _AutomationType
   
   @js.native
+  sealed trait Csv_ extends js.Object
+  
+  @js.native
   sealed trait CurrentAction extends _AutomationExecutionFilterKey
   
   @js.native
+  sealed trait CurrentConfigurationDesiredCapacity extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait CurrentConfigurationInstanceType extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait CurrentConfigurationMaxSize extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait CurrentConfigurationMinSize extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait CurrentInstanceType extends _ExportableInstanceField
+  
+  @js.native
+  sealed trait CurrentMemory
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait CurrentNetwork
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait CurrentOnDemandPrice
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
   sealed trait CurrentPlayerSessions extends _MetricName
+  
+  @js.native
+  sealed trait CurrentStandardOneYearNoUpfrontReservedPrice
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait CurrentStandardThreeYearNoUpfrontReservedPrice
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait CurrentStorage
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait CurrentVCpus
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
   
   @js.native
   sealed trait Current_ extends _InventoryIncludedObjectVersions
@@ -8776,16 +9183,24 @@ object awsSdkStrings {
   
   @js.native
   sealed trait DATE
-    extends _EntitySubType
+    extends _ColumnStatisticsType
+       with _EntitySubType
        with typingsSlinky.awsSdk.comprehendMod._EntityType
+       with _Format
        with _ResourceSortType
        with _TypeHint
+  
+  @js.native
+  sealed trait DATERANGE extends _AdMarkers
   
   @js.native
   sealed trait DATETIME
     extends _ColumnDataType
        with _FacetAttributeType
        with _InputColumnDataType
+  
+  @js.native
+  sealed trait DATE_TIME extends _Format
   
   @js.native
   sealed trait DATE_VALUE extends _DocumentAttributeValueType
@@ -8852,6 +9267,7 @@ object awsSdkStrings {
   @js.native
   sealed trait DECIMAL
     extends _ColumnDataType
+       with _ColumnStatisticsType
        with _InputColumnDataType
        with _TypeHint
   
@@ -8903,6 +9319,7 @@ object awsSdkStrings {
        with _ScalingBehavior
        with typingsSlinky.awsSdk.applicationinsightsMod._Tier
        with _VideoDescriptionScalingBehavior
+       with _WatermarkingStrength
        with _WorkspaceImageRequiredTenancy
   
   @js.native
@@ -8993,6 +9410,7 @@ object awsSdkStrings {
        with _OnFailure
        with typingsSlinky.awsSdk.glueMod._Permission
        with typingsSlinky.awsSdk.lakeformationMod._Permission
+       with _RetentionAction
        with _StackSetOperationAction
        with _StackSetOperationType
        with _UpdateActionType
@@ -9019,8 +9437,10 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.eventbridgeMod._EventSourceState
        with typingsSlinky.awsSdk.worklinkMod._FleetStatus
        with _GameServerGroupStatus
+       with _GatewayRouteStatusCode
        with _HsmState
        with _ImageStatus
+       with _InboundCrossClusterSearchConnectionStatusCode
        with _InputSecurityGroupState
        with _InputState
        with _IpSetStatus
@@ -9032,6 +9452,7 @@ object awsSdkStrings {
        with _MultiplexState
        with _NetworkStatus
        with _NodeStatus
+       with _OutboundCrossClusterSearchConnectionStatusCode
        with _PackageStatus
        with _ReplicationJobState
        with _ReplicationRunState
@@ -9045,6 +9466,7 @@ object awsSdkStrings {
        with _StorageClass
        with _ThreatIntelSetStatus
        with _TransitGatewayRegistrationState
+       with _VirtualGatewayStatusCode
        with _VirtualNodeStatusCode
        with _VirtualRouterStatusCode
        with _VirtualServiceStatusCode
@@ -9053,8 +9475,12 @@ object awsSdkStrings {
   sealed trait DELETED_IN_TARGET extends _SystemInstanceDeploymentStatus
   
   @js.native
+  sealed trait DELETED_ITEMS extends _FolderName
+  
+  @js.native
   sealed trait DELETE_COMPLETE
-    extends _ChangeSetStatus
+    extends _CapacityProviderUpdateStatus
+       with _ChangeSetStatus
        with typingsSlinky.awsSdk.discoveryMod._ImportStatus
        with typingsSlinky.awsSdk.cloudformationMod._ResourceStatus
        with _StackStatus
@@ -9068,6 +9494,7 @@ object awsSdkStrings {
   @js.native
   sealed trait DELETE_FAILED
     extends _AppStatus
+       with _CapacityProviderUpdateStatus
        with _ConformancePackState
        with _EnvironmentLifecycleStatus
        with _FargateProfileStatus
@@ -9094,6 +9521,7 @@ object awsSdkStrings {
   @js.native
   sealed trait DELETE_IN_PROGRESS
     extends _CacheClusterStatus
+       with _CapacityProviderUpdateStatus
        with typingsSlinky.awsSdk.cloudhsmv2Mod._ClusterState
        with _ConformancePackState
        with _HsmState
@@ -9151,6 +9579,7 @@ object awsSdkStrings {
        with _ConsumerStatus
        with _ContainerStatus
        with _CustomerGatewayAssociationState
+       with _DataRepositoryLifecycle
        with _DataSourceStatus
        with _DatasetStatus
        with _DatastoreStatus
@@ -9170,6 +9599,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._GlobalTableStatus
        with _ImageBuilderState
        with _ImageState
+       with _InboundCrossClusterSearchConnectionStatusCode
        with _IndexStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._IndexStatus
        with typingsSlinky.awsSdk.kendraMod._IndexStatus
@@ -9183,9 +9613,11 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.managedblockchainMod._MemberStatus
        with _ModelStatus
        with _MultiplexState
+       with _NamespaceStatus
        with _NetworkStatus
        with _NodeStatus
        with _NodegroupStatus
+       with _OutboundCrossClusterSearchConnectionStatusCode
        with _PackageStatus
        with _PortalState
        with _ProjectStatus
@@ -9239,6 +9671,10 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.pinpointMod._Mode
   
   @js.native
+  sealed trait DELIVERY_DELAY
+    extends typingsSlinky.awsSdk.sesv2Mod._EventType
+  
+  @js.native
   sealed trait DELTA_LAUNCH_FAILED extends _AppLaunchStatus
   
   @js.native
@@ -9254,7 +9690,9 @@ object awsSdkStrings {
   sealed trait DELTA_REPLICATION_IN_PROGRESS extends _AppReplicationStatus
   
   @js.native
-  sealed trait DENIED extends _RequestStatus
+  sealed trait DENIED
+    extends _RequestStatus
+       with _ReviewStatus
   
   @js.native
   sealed trait DENY
@@ -9358,6 +9796,7 @@ object awsSdkStrings {
        with _Sort
        with _SortByOrder
        with _SortOrder
+       with typingsSlinky.awsSdk.ecsMod._SortOrder
        with _SortValue
        with _orderString
   
@@ -9373,6 +9812,10 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.gameliftMod._SortOrder
        with _SortOrderType
        with _TimeOrdering
+  
+  @js.native
+  sealed trait DESCRIBE
+    extends typingsSlinky.awsSdk.lakeformationMod._Permission
   
   @js.native
   sealed trait DESK_PHONE extends _PhoneType
@@ -9393,6 +9836,9 @@ object awsSdkStrings {
   sealed trait DETACHING
     extends _AutoScalingPolicyState
        with _IpAddressStatus
+  
+  @js.native
+  sealed trait DETAILED_STATUS extends js.Object
   
   @js.native
   sealed trait DETECTION_COMPLETE extends _StackDriftDetectionStatus
@@ -9548,6 +9994,7 @@ object awsSdkStrings {
        with _ControlStatus
        with _DashIsoWriteSegmentTimelineInRepresentation
        with _DashboardBehavior
+       with typingsSlinky.awsSdk.guarddutyMod._DataSourceStatus
        with _DedicatedTenancySupportResultEnum
        with _DeliverabilityDashboardAccountStatus
        with typingsSlinky.awsSdk.sesv2Mod._DeliverabilityDashboardAccountStatus
@@ -9568,10 +10015,13 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.medialiveMod._Eac3SurroundExMode
        with _Eac3SurroundMode
        with typingsSlinky.awsSdk.medialiveMod._Eac3SurroundMode
+       with _EbuTtDFillLineGapControl
        with _EmbeddedConvert608To708
        with typingsSlinky.awsSdk.medialiveMod._EmbeddedConvert608To708
        with _EmbeddedTerminateCaptions
+       with _EntitlementStatus
        with _EntityState
+       with _FeatureActivationsInputPrepareScheduleActions
        with _FileSourceConvert608To708
        with _GettablePolicyStateValues
        with _GlobalConfigurationLowFramerateInputs
@@ -9632,11 +10082,13 @@ object awsSdkStrings {
        with _Mpeg2SpatialAdaptiveQuantization
        with _Mpeg2TemporalAdaptiveQuantization
        with _NielsenPcmToId3TaggingState
+       with _NoiseFilterPostTemporalSharpening
        with _NotificationRuleStatus
        with typingsSlinky.awsSdk.appstreamMod._Permission
        with _PipelineStatus
        with _PointInTimeRecoveryStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._PointInTimeRecoveryStatus
+       with _ProactiveEngagementStatus
        with _PropertyNotificationState
        with _ProresSlowPal
        with _ReconnectEnum
@@ -9651,6 +10103,7 @@ object awsSdkStrings {
        with _SettablePolicyStateValues
        with _SimulateReservedQueue
        with typingsSlinky.awsSdk.mediaconnectMod._State
+       with typingsSlinky.awsSdk.efsMod._Status
        with typingsSlinky.awsSdk.dynamodbstreamsMod._StreamStatus
        with _StreamingStatus
        with _TaskQueueing
@@ -9660,6 +10113,7 @@ object awsSdkStrings {
        with _TopicRuleDestinationStatus
        with _TtmlStylePassthrough
        with _VideoTimecodeInsertion
+       with _VirtualGatewayListenerTlsMode
        with _WorkGroupState
   
   @js.native
@@ -9679,6 +10133,7 @@ object awsSdkStrings {
        with _SSEStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._SSEStatus
        with typingsSlinky.awsSdk.daxMod._SSEStatus
+       with typingsSlinky.awsSdk.efsMod._Status
        with typingsSlinky.awsSdk.dynamodbstreamsMod._StreamStatus
        with _TimeToLiveStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._TimeToLiveStatus
@@ -9790,6 +10245,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait DNS_FAILURE extends _DeviceStatusDetailCode
+  
+  @js.native
+  sealed trait DNS_LOGS extends _DataSource
   
   @js.native
   sealed trait DNS_PRIVATE extends _NamespaceType
@@ -9977,7 +10435,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.applicationinsightsMod._Tier
   
   @js.native
-  sealed trait DOUBLE extends _PropertyDataType
+  sealed trait DOUBLE
+    extends _ColumnStatisticsType
+       with _PropertyDataType
   
   @js.native
   sealed trait DOUBLE_OR_LONG extends _DecimalReturnType
@@ -9986,10 +10446,16 @@ object awsSdkStrings {
   sealed trait DOUBLE_QUOTE extends _TextQualifier
   
   @js.native
+  sealed trait DOUBLE_QUOTES extends _QueryIdentifiersEnclosingOption
+  
+  @js.native
   sealed trait DOWN extends _TelemetryStatus
   
   @js.native
   sealed trait DOWNLOADING extends _FleetStatus
+  
+  @js.native
+  sealed trait DOWNLOAD_BATCHSPEC extends _BuildBatchPhaseType
   
   @js.native
   sealed trait DOWNLOAD_SOURCE extends _BuildPhaseType
@@ -10014,6 +10480,9 @@ object awsSdkStrings {
        with _DetectorVersionStatus
        with _SalesforceKnowledgeArticleState
        with _State
+  
+  @js.native
+  sealed trait DRAFTS extends _FolderName
   
   @js.native
   sealed trait DRAINING extends _ContainerInstanceStatus
@@ -10057,6 +10526,8 @@ object awsSdkStrings {
        with _H265FramerateConversionAlgorithm
        with _Mpeg2FramerateConversionAlgorithm
        with _ProresFramerateConversionAlgorithm
+       with _Vp8FramerateConversionAlgorithm
+       with _Vp9FramerateConversionAlgorithm
   
   @js.native
   sealed trait DUPLICATE_RESOURCE extends _ServiceActionAssociationErrorCode
@@ -10158,6 +10629,9 @@ object awsSdkStrings {
   sealed trait DefaultInstanceName extends _DescribeActivationsFilterKeys
   
   @js.native
+  sealed trait Default_ extends _ComputePlatform
+  
+  @js.native
   sealed trait Degraded_ extends _EnvironmentHealthStatus
   
   @js.native
@@ -10174,6 +10648,10 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
   @js.native
+  sealed trait DeleteCertificate
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
   sealed trait DeleteContactMethod
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
@@ -10183,6 +10661,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait DeleteDiskSnapshot
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
+  sealed trait DeleteDistribution
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
   @js.native
@@ -10238,6 +10720,8 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.sagemakerMod._AppStatus
        with _DirectoryStage
        with _DomainControllerStatus
+       with typingsSlinky.awsSdk.codeartifactMod._DomainStatus
+       with _PackageVersionStatus
        with _PlatformStatus
        with _ServiceState
        with typingsSlinky.awsSdk.directoryserviceMod._ShareStatus
@@ -10255,6 +10739,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.sagemakerMod._DomainStatus
        with typingsSlinky.awsSdk.sagemakerMod._EndpointStatus
        with _FlowDefinitionStatus
+       with _HumanTaskUiStatus
        with typingsSlinky.awsSdk.codegurureviewerMod._JobState
        with _ModelPackageStatus
        with _NotebookInstanceStatus
@@ -10353,6 +10838,10 @@ object awsSdkStrings {
   sealed trait Destination extends js.Object
   
   @js.native
+  sealed trait DetachCertificateFromDistribution
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
   sealed trait DetachDisk
     extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
@@ -10439,7 +10928,13 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.codepipelineMod._JobStatus
   
   @js.native
-  sealed trait Disposed extends _HITStatus
+  sealed trait Disposed
+    extends _HITStatus
+       with _PackageVersionStatus
+  
+  @js.native
+  sealed trait Distribution
+    extends typingsSlinky.awsSdk.lightsailMod._ResourceType
   
   @js.native
   sealed trait DocumentName extends _CommandFilterKey
@@ -10625,7 +11120,7 @@ object awsSdkStrings {
   
   @js.native
   sealed trait ECS
-    extends _ComputePlatform
+    extends typingsSlinky.awsSdk.codedeployMod._ComputePlatform
        with _DeploymentControllerType
   
   @js.native
@@ -10794,6 +11289,9 @@ object awsSdkStrings {
   sealed trait EMIT_PROGRAM extends _InputLossActionForUdpOut
   
   @js.native
+  sealed trait EN extends _ContactLanguage
+  
+  @js.native
   sealed trait ENABLE
     extends _AutoRegistrationStatus
        with _ContributorInsightsAction
@@ -10831,6 +11329,7 @@ object awsSdkStrings {
        with _ControlStatus
        with _DashIsoWriteSegmentTimelineInRepresentation
        with _DashboardBehavior
+       with typingsSlinky.awsSdk.guarddutyMod._DataSourceStatus
        with _DedicatedTenancySupportResultEnum
        with _DeliveryStreamEncryptionStatus
        with _DetectorStatus
@@ -10849,9 +11348,12 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.medialiveMod._Eac3SurroundExMode
        with _Eac3SurroundMode
        with typingsSlinky.awsSdk.medialiveMod._Eac3SurroundMode
+       with _EbuTtDFillLineGapControl
        with _EnablementType
        with _EnablementTypeFilter
+       with _EntitlementStatus
        with _EntityState
+       with _FeatureActivationsInputPrepareScheduleActions
        with _GettablePolicyStateValues
        with _GlobalConfigurationLowFramerateInputs
        with _H264FlickerAdaptiveQuantization
@@ -10903,6 +11405,7 @@ object awsSdkStrings {
        with _Mpeg2SpatialAdaptiveQuantization
        with _Mpeg2TemporalAdaptiveQuantization
        with _NielsenPcmToId3TaggingState
+       with _NoiseFilterPostTemporalSharpening
        with _NotificationRuleStatus
        with typingsSlinky.awsSdk.appstreamMod._Permission
        with _PipelineStatus
@@ -10910,6 +11413,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._PointInTimeRecoveryStatus
        with _PolicyTypeStatus
        with _PreventUserExistenceErrorTypes
+       with _ProactiveEngagementStatus
        with _PropertyNotificationState
        with _ProresSlowPal
        with _ReconnectEnum
@@ -10921,6 +11425,7 @@ object awsSdkStrings {
        with _SettablePolicyStateValues
        with _SimulateReservedQueue
        with typingsSlinky.awsSdk.mediaconnectMod._State
+       with typingsSlinky.awsSdk.efsMod._Status
        with typingsSlinky.awsSdk.dynamodbstreamsMod._StreamStatus
        with _StreamingStatus
        with _TaskQueueing
@@ -10948,6 +11453,7 @@ object awsSdkStrings {
        with _SSEStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._SSEStatus
        with typingsSlinky.awsSdk.daxMod._SSEStatus
+       with typingsSlinky.awsSdk.efsMod._Status
        with typingsSlinky.awsSdk.dynamodbstreamsMod._StreamStatus
        with _TimeToLiveStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._TimeToLiveStatus
@@ -11018,6 +11524,9 @@ object awsSdkStrings {
   sealed trait ENM extends _LanguageCode
   
   @js.native
+  sealed trait ENTERPRISE extends _Edition
+  
+  @js.native
   sealed trait ENTERPRISE_EDITION extends _IndexEdition
   
   @js.native
@@ -11048,6 +11557,7 @@ object awsSdkStrings {
        with _FilterCondition
        with _JobComparator
        with _OperatorType
+       with _UsageStatisticsFilterComparator
   
   @js.native
   sealed trait EQUAL
@@ -11105,7 +11615,6 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.iotsitewiseMod._LoggingLevel
        with typingsSlinky.awsSdk.apigatewayv2Mod._LoggingLevel
        with _LoggingLevel
-       with _ModelVersionStatus
        with typingsSlinky.awsSdk.route53domainsMod._OperationStatus
        with _PhaseStatus
        with _ProvisionedProductStatus
@@ -11128,7 +11637,8 @@ object awsSdkStrings {
        with _TestGridSessionStatus
   
   @js.native
-  sealed trait ERRORS extends _ReportType
+  sealed trait ERRORS
+    extends typingsSlinky.awsSdk.iotMod._ReportType
   
   @js.native
   sealed trait ES
@@ -11183,7 +11693,7 @@ object awsSdkStrings {
   @js.native
   sealed trait EVENT
     extends _ChatItemType
-       with _DataSource
+       with typingsSlinky.awsSdk.frauddetectorMod._DataSource
        with _EntityType
        with typingsSlinky.awsSdk.comprehendMod._EntityType
        with _Frequency
@@ -11221,6 +11731,7 @@ object awsSdkStrings {
   sealed trait EXCLUDE
     extends _CmafInitializationVectorInManifest
        with _CmafStreamInfResolution
+       with _EbuTtDDestinationStyleControl
        with _HlsIFrameOnlyManifest
        with _HlsInitializationVectorInManifest
        with _HlsIvInManifest
@@ -11301,6 +11812,7 @@ object awsSdkStrings {
     extends _BackupJobState
        with _CertificateAuthorityStatus
        with typingsSlinky.awsSdk.acmMod._CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with _HandshakeState
        with _InvitationStatus
        with _LifecyclePolicyPreviewStatus
@@ -11388,13 +11900,19 @@ object awsSdkStrings {
   sealed trait EXTERNAL_DATA extends _UploadType
   
   @js.native
-  sealed trait EXTERNAL_MODEL_SCORE extends _DataSource
+  sealed trait EXTERNAL_EVENTS extends js.Object
+  
+  @js.native
+  sealed trait EXTERNAL_MODEL_SCORE
+    extends typingsSlinky.awsSdk.frauddetectorMod._DataSource
   
   @js.native
   sealed trait EXTREME_POSE extends _Reason
   
   @js.native
-  sealed trait Ec2Instance_ extends _RecommendationSourceType
+  sealed trait Ec2Instance_
+    extends _RecommendationSourceType
+       with typingsSlinky.awsSdk.computeoptimizerMod._ResourceType
   
   @js.native
   sealed trait Ec2LaunchTemplateNotFound extends _NodegroupIssueCode
@@ -11501,6 +12019,9 @@ object awsSdkStrings {
   sealed trait EncryptionStatus extends _InventoryOptionalField
   
   @js.native
+  sealed trait EndCredits extends _TechnicalCueType
+  
+  @js.native
   sealed trait EndOfJob extends _ProcessingS3UploadMode
   
   @js.native
@@ -11528,9 +12049,6 @@ object awsSdkStrings {
   sealed trait EnteringStandby extends _LifecycleState
   
   @js.native
-  sealed trait Enterprise extends _DirectoryEdition
-  
-  @js.native
   sealed trait EnterpriseDirectory extends _AccountType
   
   @js.native
@@ -11538,6 +12056,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait EnterpriseOIDC extends _AccountType
+  
+  @js.native
+  sealed trait Enterprise_ extends _DirectoryEdition
   
   @js.native
   sealed trait EnvironmentSetupError extends _DeploymentJobErrorCode
@@ -11613,6 +12134,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait ExecutionAborted extends _HistoryEventType
+  
+  @js.native
+  sealed trait ExecutionEnvironment extends _MetadataField
   
   @js.native
   sealed trait ExecutionFailed extends _HistoryEventType
@@ -11719,16 +12243,20 @@ object awsSdkStrings {
        with _AuditTaskStatus
        with _AutoScalingPolicyState
        with _AvailabilityMonitorTestStatus
+       with _AwsJobAbortCriteriaFailureType
        with _BackupJobState
        with _BackupLifecycle
        with typingsSlinky.awsSdk.opsworkscmMod._BackupStatus
+       with _BuildBatchPhaseType
        with _BuildStatus
+       with _BulkEmailStatus
        with _BulkPublishStatus
        with _BusinessReportStatus
        with _CanaryRunState
        with _CancelStepsRequestStatus
        with _CertificateAuthorityStatus
        with typingsSlinky.awsSdk.acmMod._CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with _ChangeSetStatus
        with _ChangeStatus
        with typingsSlinky.awsSdk.lexmodelbuildingserviceMod._ChannelStatus
@@ -11826,16 +12354,19 @@ object awsSdkStrings {
        with _ResourceShareAssociationStatus
        with _ResourceShareStatus
        with _RestoreJobStatus
+       with _ReviewStatus
        with _ScanStatus
        with _ScheduleState
        with _SchemaStatus
        with _ServerStatus
        with _SnapshotStatus
+       with _StackInstanceDetailedStatus
        with _StackSetDriftDetectionStatus
        with _StackSetOperationResultStatus
        with _StackSetOperationStatus
        with _StandardsStatus
        with typingsSlinky.awsSdk.servicecatalogMod._Status
+       with typingsSlinky.awsSdk.fsxMod._Status
        with typingsSlinky.awsSdk.lexmodelbuildingserviceMod._Status
        with typingsSlinky.awsSdk.mediapackageMod._Status
        with typingsSlinky.awsSdk.migrationhubMod._Status
@@ -11930,6 +12461,7 @@ object awsSdkStrings {
   @js.native
   sealed trait FALSE
     extends _BooleanEnumType
+       with _EnableHybridValues
        with _IsModifiable
        with _Replacement
        with typingsSlinky.awsSdk.datapipelineMod._TaskStatus
@@ -12011,7 +12543,12 @@ object awsSdkStrings {
   sealed trait FILE_LEVEL extends _ConflictDetailLevelTypeEnum
   
   @js.native
-  sealed trait FILE_PATH extends _WebhookFilterType
+  sealed trait FILE_PATH
+    extends _ReportCodeCoverageSortByType
+       with _WebhookFilterType
+  
+  @js.native
+  sealed trait FILE_SYSTEM_UPDATE extends _AdministrativeActionType
   
   @js.native
   sealed trait FILE_UPLOAD extends _Action
@@ -12073,7 +12610,9 @@ object awsSdkStrings {
        with _ThreatIntelSetFormat
   
   @js.native
-  sealed trait FIRST extends _RangeMode
+  sealed trait FIRST
+    extends _ForwardedIPPosition
+       with _RangeMode
   
   @js.native
   sealed trait FIRST_MATCHED extends _RuleExecutionMode
@@ -12210,6 +12749,9 @@ object awsSdkStrings {
     extends _CmafManifestDurationFormat
        with _HlsManifestDurationFormat
        with typingsSlinky.awsSdk.medialiveMod._HlsManifestDurationFormat
+  
+  @js.native
+  sealed trait FLOW_LOGS extends _DataSource
   
   @js.native
   sealed trait FLOW_TEMPLATE_ID extends js.Object
@@ -12357,6 +12899,9 @@ object awsSdkStrings {
   sealed trait FORECASTED extends _NotificationType
   
   @js.native
+  sealed trait FOREIGN extends _ResourceShareType
+  
+  @js.native
   sealed trait FORM
     extends _EntitySubType
        with _RelationshipType
@@ -12374,6 +12919,9 @@ object awsSdkStrings {
   sealed trait FORWARD
     extends _RuleTypeOption
        with _ScanDirection
+  
+  @js.native
+  sealed trait FORWARDED_IP extends _RateBasedStatementAggregateKeyType
   
   @js.native
   sealed trait FQDN extends _ResourceAttributeType
@@ -12439,6 +12987,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait FRM extends _LanguageCode
+  
+  @js.native
+  sealed trait FROM_AGENT extends _VoiceRecordingTrack
   
   @js.native
   sealed trait FRY extends _LanguageCode
@@ -12517,6 +13068,9 @@ object awsSdkStrings {
   sealed trait Fail_ extends _FailureBehavior
   
   @js.native
+  sealed trait FailedDataOnly extends _HttpEndpointS3BackupMode
+  
+  @js.native
   sealed trait FailedDocumentsOnly extends _ElasticsearchS3BackupMode
   
   @js.native
@@ -12542,7 +13096,7 @@ object awsSdkStrings {
        with _AutoSnapshotStatus
        with _AutomationExecutionStatus
        with _BulkDeploymentStatus
-       with _BulkEmailStatus
+       with typingsSlinky.awsSdk.sesMod._BulkEmailStatus
        with _CandidateStatus
        with _CommandInvocationStatus
        with _CommandPluginStatus
@@ -12564,9 +13118,11 @@ object awsSdkStrings {
        with _FulfillmentState
        with _HumanLoopStatus
        with _HyperParameterTuningJobStatus
+       with _InstanceRefreshStatus
        with typingsSlinky.awsSdk.codedeployMod._InstanceStatus
        with _InviteStatus
        with typingsSlinky.awsSdk.codegurureviewerMod._JobState
+       with typingsSlinky.awsSdk.computeoptimizerMod._JobStatus
        with _JobStatus
        with typingsSlinky.awsSdk.codepipelineMod._JobStatus
        with _LabelingJobStatus
@@ -12586,6 +13142,7 @@ object awsSdkStrings {
        with _QueryStatus
        with _RadiusStatus
        with typingsSlinky.awsSdk.lightsailMod._RecordState
+       with typingsSlinky.awsSdk.lightsailMod._RenewalStatus
        with _RepositoryAssociationState
        with _ReviewActionStatus
        with _RobotStatus
@@ -12668,7 +13225,10 @@ object awsSdkStrings {
        with _TrainingJobSortByOptions
   
   @js.native
-  sealed trait Finding_ extends _FilterName
+  sealed trait Finding_
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+       with _FilterName
   
   @js.native
   sealed trait Finished_ extends _RobotDeploymentStep
@@ -12933,6 +13493,9 @@ object awsSdkStrings {
   sealed trait GLG extends _LanguageCode
   
   @js.native
+  sealed trait GLUE extends _DataCatalogType
+  
+  @js.native
   sealed trait GLV extends _LanguageCode
   
   @js.native
@@ -12998,6 +13561,9 @@ object awsSdkStrings {
        with _GeoMatchConstraintValue
        with typingsSlinky.awsSdk.wafregionalMod._GeoMatchConstraintValue
        with _PhoneNumberCountryCode
+  
+  @js.native
+  sealed trait GRANTED extends _ReviewStatus
   
   @js.native
   sealed trait GRANT_ACCESS extends _RowLevelPermissionPolicy
@@ -13090,9 +13656,12 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.wafregionalMod._GeoMatchConstraintValue
        with _JobComparator
        with _PhoneNumberCountryCode
+       with _UsageStatisticsFilterComparator
   
   @js.native
-  sealed trait GTE extends _JobComparator
+  sealed trait GTE
+    extends _JobComparator
+       with _UsageStatisticsFilterComparator
   
   @js.native
   sealed trait GU
@@ -13127,6 +13696,7 @@ object awsSdkStrings {
        with _CompressionFormat
        with typingsSlinky.awsSdk.firehoseMod._CompressionFormat
        with _CompressionType
+       with _ContentEncoding
        with _HlsManifestCompression
        with typingsSlinky.awsSdk.medialiveMod._HlsManifestCompression
        with _ParquetCompression
@@ -13214,8 +13784,13 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.elasticbeanstalkMod._SourceType
   
   @js.native
-  sealed trait GitHub_
+  sealed trait GitHubEnterpriseServer
     extends _ProviderType
+       with typingsSlinky.awsSdk.codegurureviewerMod._ProviderType
+  
+  @js.native
+  sealed trait GitHub_
+    extends typingsSlinky.awsSdk.codegurureviewerMod._ProviderType
        with _RevisionLocationType
   
   @js.native
@@ -13225,7 +13800,7 @@ object awsSdkStrings {
   sealed trait Google extends _IdentityProviderTypeType
   
   @js.native
-  sealed trait Granted extends _QualificationStatus
+  sealed trait Granted_ extends _QualificationStatus
   
   @js.native
   sealed trait GreaterThan
@@ -13504,6 +14079,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.ecsMod._HealthStatus
        with _HealthStatusFilter
        with _ServerStatus
+       with _StreamHealth
   
   @js.native
   sealed trait HEALTH_CONSTRAINTS extends _ErrorCode
@@ -13631,6 +14207,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.mturkMod._EventType
   
   @js.native
+  sealed trait HIVE extends _DataCatalogType
+  
+  @js.native
   sealed trait HK
     extends _CountryCode
        with typingsSlinky.awsSdk.wafv2Mod._CountryCode
@@ -13735,6 +14314,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.apigatewayMod._IntegrationType
        with _LoadBalancerProtocol
        with _NamespaceType
+       with _ObjectStorageServerProtocol
        with typingsSlinky.awsSdk.iotMod._Protocol
        with _ProtocolEnum
        with _ProtocolType
@@ -13775,6 +14355,7 @@ object awsSdkStrings {
        with _HealthCheckProtocol
        with typingsSlinky.awsSdk.servicediscoveryMod._HealthCheckType
        with _HealthCheckType
+       with _ObjectStorageServerProtocol
        with _ProtocolEnum
   
   @js.native
@@ -13886,10 +14467,19 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ssmMod._SessionState
   
   @js.native
+  sealed trait Host_ extends _HeaderEnum
+  
+  @js.native
   sealed trait Hourly_ extends js.Object
   
   @js.native
   sealed trait Hrs extends _SavingsPlanRateUnit
+  
+  @js.native
+  sealed trait Http4xxErrorRate extends _DistributionMetricName
+  
+  @js.native
+  sealed trait Http5xxErrorRate extends _DistributionMetricName
   
   @js.native
   sealed trait IAM
@@ -14165,18 +14755,18 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._TableStatus
   
   @js.native
-  sealed trait INACTIVATE_IN_PROGRESS extends _ModelVersionStatus
-  
-  @js.native
   sealed trait INACTIVE
     extends _AuthorizerStatus
        with _CACertificateStatus
+       with _CapacityProviderStatus
        with typingsSlinky.awsSdk.acmMod._CertificateStatus
        with _CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with _ContinuousExportStatus
        with _DetectorModelVersionStatus
        with _DetectorVersionStatus
        with _DomainStatus
+       with _GatewayRouteStatusCode
        with _IpSetStatus
        with _LoadBalancerTlsCertificateStatus
        with _MeshStatusCode
@@ -14189,6 +14779,7 @@ object awsSdkStrings {
        with _TaskDefinitionStatus
        with _ThreatIntelSetStatus
        with _UserStatusType
+       with _VirtualGatewayStatusCode
        with _VirtualNodeStatusCode
        with _VirtualRouterStatusCode
        with _VirtualServiceStatusCode
@@ -14198,9 +14789,13 @@ object awsSdkStrings {
   sealed trait INBOUND extends _ResolverEndpointDirection
   
   @js.native
+  sealed trait INBOX extends _FolderName
+  
+  @js.native
   sealed trait INCLUDE
     extends _CmafInitializationVectorInManifest
        with _CmafStreamInfResolution
+       with _EbuTtDDestinationStyleControl
        with _HlsIFrameOnlyManifest
        with _HlsInitializationVectorInManifest
        with _HlsIvInManifest
@@ -14314,6 +14909,10 @@ object awsSdkStrings {
        with _Mpeg2ParControl
        with _ProresFramerateControl
        with _ProresParControl
+       with _Vp8FramerateControl
+       with _Vp8ParControl
+       with _Vp9FramerateControl
+       with _Vp9ParControl
   
   @js.native
   sealed trait INITIALIZE_IN_PROGRESS
@@ -14337,7 +14936,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait INOPERABLE
-    extends _StackInstanceStatus
+    extends _StackInstanceDetailedStatus
+       with _StackInstanceStatus
        with typingsSlinky.awsSdk.cloudformationMod._StackInstanceStatus
   
   @js.native
@@ -14497,6 +15097,9 @@ object awsSdkStrings {
        with _TransitionStorageClass
   
   @js.native
+  sealed trait INTEL_GRAPHICS extends _TargetPlatformAccelerator
+  
+  @js.native
   sealed trait INTENT
     extends typingsSlinky.awsSdk.lexmodelbuildingserviceMod._ResourceType
   
@@ -14512,6 +15115,7 @@ object awsSdkStrings {
   @js.native
   sealed trait INTERLACED
     extends _H264ScanType
+       with _H265ScanType
        with _InputDeviceScanType
   
   @js.native
@@ -14552,6 +15156,7 @@ object awsSdkStrings {
   sealed trait INTERNAL_SERVICE_ERROR
     extends _FleetErrorCode
        with _IngestionErrorType
+       with _NamespaceErrorType
        with _StackErrorCode
        with _UsageReportExecutionErrorCode
   
@@ -14577,6 +15182,8 @@ object awsSdkStrings {
        with _H265FramerateConversionAlgorithm
        with _Mpeg2FramerateConversionAlgorithm
        with _ProresFramerateConversionAlgorithm
+       with _Vp8FramerateConversionAlgorithm
+       with _Vp9FramerateConversionAlgorithm
   
   @js.native
   sealed trait INTERPOLATE_TICKER extends _DeinterlaceAlgorithm
@@ -14655,6 +15262,9 @@ object awsSdkStrings {
   sealed trait INVALID_LAMBDA_FUNCTION extends _ErrorCode
   
   @js.native
+  sealed trait INVALID_PARAMETER extends _BulkEmailStatus
+  
+  @js.native
   sealed trait INVALID_PASSWORD_STATE extends _DeviceStatusDetailCode
   
   @js.native
@@ -14667,6 +15277,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait INVALID_REVISION extends _ErrorCode
+  
+  @js.native
+  sealed trait INVALID_SENDING_POOL_NAME extends _BulkEmailStatus
   
   @js.native
   sealed trait INVALID_SIGNATURE extends _GatewayResponseType
@@ -14706,6 +15319,7 @@ object awsSdkStrings {
        with _AuditMitigationActionsTaskStatus
        with _AuditTaskStatus
        with typingsSlinky.awsSdk.opsworkscmMod._BackupStatus
+       with _BuildBatchPhaseType
        with _BulkPublishStatus
        with typingsSlinky.awsSdk.lexmodelbuildingserviceMod._ChannelStatus
        with _CopyProductStatus
@@ -14741,6 +15355,7 @@ object awsSdkStrings {
        with _ShareStatus
        with _StackSetDriftDetectionStatus
        with typingsSlinky.awsSdk.dataexchangeMod._State
+       with typingsSlinky.awsSdk.fsxMod._Status
        with typingsSlinky.awsSdk.mediapackageMod._Status
        with typingsSlinky.awsSdk.migrationhubMod._Status
        with typingsSlinky.awsSdk.codebuildMod._StatusType
@@ -14797,7 +15412,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait IP
-    extends _SubResourceType
+    extends _RateBasedStatementAggregateKeyType
+       with _SubResourceType
        with _WebhookAuthenticationType
   
   @js.native
@@ -14873,6 +15489,7 @@ object awsSdkStrings {
   @js.native
   sealed trait ISSUED
     extends typingsSlinky.awsSdk.acmMod._CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with _LoadBalancerTlsCertificateStatus
   
   @js.native
@@ -15000,9 +15617,11 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.sagemakerMod._ExecutionStatus
        with _HumanLoopStatus
        with _HyperParameterTuningJobStatus
+       with _InstanceRefreshStatus
        with typingsSlinky.awsSdk.codedeployMod._InstanceStatus
        with _InventoryDeletionStatus
        with _JobState
+       with typingsSlinky.awsSdk.computeoptimizerMod._JobStatus
        with typingsSlinky.awsSdk.codepipelineMod._JobStatus
        with _LabelingJobStatus
        with _LastResourceDataSyncStatus
@@ -15100,6 +15719,7 @@ object awsSdkStrings {
   sealed trait Initializing_
     extends _BulkDeploymentStatus
        with _FlowDefinitionStatus
+       with _LabelingJobStatus
        with _SchemaExtensionStatus
   
   @js.native
@@ -15112,6 +15732,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait Install_ extends _PatchOperationType
+  
+  @js.native
+  sealed trait InstanceArn extends _ExportableInstanceField
   
   @js.native
   sealed trait InstanceCreditSpecificationDotNotSupported extends _UnsuccessfulInstanceCreditSpecificationErrorCode
@@ -15154,6 +15777,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait InstanceLimitExceeded extends _NodegroupIssueCode
+  
+  @js.native
+  sealed trait InstanceName extends _ExportableInstanceField
   
   @js.native
   sealed trait InstanceReady extends _TriggerEventType
@@ -15312,7 +15938,8 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.resourcegroupstaggingapiMod._ErrorCode
   
   @js.native
-  sealed trait InvalidParameterValue extends _BulkEmailStatus
+  sealed trait InvalidParameterValue
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait InvalidRequest
@@ -15333,7 +15960,8 @@ object awsSdkStrings {
        with _StateReasonCode
   
   @js.native
-  sealed trait InvalidSendingPoolName extends _BulkEmailStatus
+  sealed trait InvalidSendingPoolName
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait InvalidSubnet
@@ -15387,6 +16015,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait Ivy extends _VoiceId
+  
+  @js.native
+  sealed trait JA extends _ContactLanguage
   
   @js.native
   sealed trait JAR
@@ -15489,7 +16120,7 @@ object awsSdkStrings {
        with _BundleType
        with _DocumentFormat
        with _FileFormat
-       with _Format
+       with typingsSlinky.awsSdk.pinpointMod._Format
        with _ImageFormat
        with _InputColumnDataType
        with _MessageFormat
@@ -15508,6 +16139,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait JSON_SCHEMA extends _ValidatorType
+  
+  @js.native
+  sealed trait JUNK_EMAIL extends _FolderName
   
   @js.native
   sealed trait JWT
@@ -15532,6 +16166,9 @@ object awsSdkStrings {
   @js.native
   sealed trait JobFailed
     extends typingsSlinky.awsSdk.codepipelineMod._FailureType
+  
+  @js.native
+  sealed trait JobStatus extends _JobFilterName
   
   @js.native
   sealed trait Joey extends _VoiceId
@@ -15560,6 +16197,15 @@ object awsSdkStrings {
   
   @js.native
   sealed trait KAFKA_BOOTSTRAP_SERVERS extends _ConnectionPropertyKey
+  
+  @js.native
+  sealed trait KAFKA_CUSTOM_CERT extends _ConnectionPropertyKey
+  
+  @js.native
+  sealed trait KAFKA_SKIP_CUSTOM_CERT_VALIDATION extends _ConnectionPropertyKey
+  
+  @js.native
+  sealed trait KAFKA_SSL_ENABLED extends _ConnectionPropertyKey
   
   @js.native
   sealed trait KAL extends _LanguageCode
@@ -15711,7 +16357,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait KMS
-    extends typingsSlinky.awsSdk.xrayMod._EncryptionType
+    extends _EncryptionType
+       with typingsSlinky.awsSdk.xrayMod._EncryptionType
        with typingsSlinky.awsSdk.kinesisMod._EncryptionType
        with _S3SSEAlgorithm
        with _SSEType
@@ -15808,6 +16455,9 @@ object awsSdkStrings {
   sealed trait KernelGateway extends _AppType
   
   @js.native
+  sealed trait Kevin extends _VoiceId
+  
+  @js.native
   sealed trait KeyId extends _ParametersFilterKey
   
   @js.native
@@ -15854,6 +16504,9 @@ object awsSdkStrings {
   sealed trait KmsDataKeyReusePeriodSeconds extends _QueueAttributeName
   
   @js.native
+  sealed trait KmsError extends _ImageFailureCode
+  
+  @js.native
   sealed trait KmsMasterKeyId extends _QueueAttributeName
   
   @js.native
@@ -15870,6 +16523,7 @@ object awsSdkStrings {
   @js.native
   sealed trait LAMBDA
     extends _ConflictHandlerType
+       with _DataCatalogType
        with _MaintenanceWindowTaskType
        with _ValidatorType
   
@@ -15889,10 +16543,26 @@ object awsSdkStrings {
   sealed trait LAO extends _LanguageCode
   
   @js.native
-  sealed trait LARGE extends _DocumentThumbnailType
+  sealed trait LARGE
+    extends _ApiCacheType
+       with _DocumentThumbnailType
   
   @js.native
-  sealed trait LAST extends _RangeMode
+  sealed trait LARGE_12X extends _ApiCacheType
+  
+  @js.native
+  sealed trait LARGE_2X extends _ApiCacheType
+  
+  @js.native
+  sealed trait LARGE_4X extends _ApiCacheType
+  
+  @js.native
+  sealed trait LARGE_8X extends _ApiCacheType
+  
+  @js.native
+  sealed trait LAST
+    extends _ForwardedIPPosition
+       with _RangeMode
   
   @js.native
   sealed trait LAST_AUTHENTICATED_TIME_ASCENDING extends _sortKeyType
@@ -15970,6 +16640,9 @@ object awsSdkStrings {
        with _GeoMatchConstraintValue
        with typingsSlinky.awsSdk.wafregionalMod._GeoMatchConstraintValue
        with _PhoneNumberCountryCode
+  
+  @js.native
+  sealed trait LDAP extends _AuthenticationStrategy
   
   @js.native
   sealed trait LE
@@ -16121,6 +16794,12 @@ object awsSdkStrings {
        with _PhoneNumberCountryCode
   
   @js.native
+  sealed trait LIGHTER extends _WatermarkingStrength
+  
+  @js.native
+  sealed trait LIGHTEST extends _WatermarkingStrength
+  
+  @js.native
   sealed trait LIGHT_UTILIZATION extends _PaymentOption
   
   @js.native
@@ -16147,6 +16826,9 @@ object awsSdkStrings {
   sealed trait LINES extends _JSONType
   
   @js.native
+  sealed trait LINE_COVERAGE_PERCENTAGE extends _ReportCodeCoverageSortByType
+  
+  @js.native
   sealed trait LINE_LEVEL extends _ConflictDetailLevelTypeEnum
   
   @js.native
@@ -16167,6 +16849,7 @@ object awsSdkStrings {
   sealed trait LINUX
     extends _OperatingSystemType
        with typingsSlinky.awsSdk.mobileMod._Platform
+       with _TargetPlatformOs
   
   @js.native
   sealed trait LINUX_CONTAINER extends _EnvironmentType
@@ -16192,6 +16875,7 @@ object awsSdkStrings {
        with _DeprecatedStatus
        with _HLSPlaybackMode
        with _HlsMode
+       with _StreamState
   
   @js.native
   sealed trait LIVE_REPLAY
@@ -16242,6 +16926,9 @@ object awsSdkStrings {
   sealed trait LONDON extends _ServiceNowBuildVersionType
   
   @js.native
+  sealed trait LONG extends _ColumnStatisticsType
+  
+  @js.native
   sealed trait LONGITUDE extends _GeoSpatialDataRole
   
   @js.native
@@ -16260,6 +16947,7 @@ object awsSdkStrings {
        with _AssociationComplianceSeverity
        with _AuditFindingSeverity
        with _Av1AdaptiveQuantization
+       with _ChannelLatencyMode
        with _ComplianceSeverity
        with _FindingSeverity
        with _H264AdaptiveQuantization
@@ -16328,9 +17016,12 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.wafregionalMod._GeoMatchConstraintValue
        with _JobComparator
        with _PhoneNumberCountryCode
+       with _UsageStatisticsFilterComparator
   
   @js.native
-  sealed trait LTE extends _JobComparator
+  sealed trait LTE
+    extends _JobComparator
+       with _UsageStatisticsFilterComparator
   
   @js.native
   sealed trait LTZ extends _LanguageCode
@@ -16390,6 +17081,9 @@ object awsSdkStrings {
   sealed trait LambdaDeleted extends _DeploymentJobErrorCode
   
   @js.native
+  sealed trait LambdaFunctionArn extends _MetadataField
+  
+  @js.native
   sealed trait LambdaFunctionCompleted
     extends typingsSlinky.awsSdk.swfMod._EventType
   
@@ -16426,15 +17120,27 @@ object awsSdkStrings {
   sealed trait LambdaInvoke extends _OperationName
   
   @js.native
+  sealed trait LambdaMemoryLimitInMB extends _MetadataField
+  
+  @js.native
+  sealed trait LambdaPreviousExecutionTimeInMilliseconds extends _MetadataField
+  
+  @js.native
   sealed trait LambdaProvisionedConcurrencyUtilization
     extends typingsSlinky.awsSdk.applicationautoscalingMod._MetricType
+  
+  @js.native
+  sealed trait LambdaRemainingTimeInMilliseconds extends _MetadataField
   
   @js.native
   sealed trait LambdaTarget extends _DeploymentTargetType
   
   @js.native
+  sealed trait LambdaTimeGapBetweenInvokesInMilliseconds extends _MetadataField
+  
+  @js.native
   sealed trait Lambda_
-    extends _ComputePlatform
+    extends typingsSlinky.awsSdk.codedeployMod._ComputePlatform
        with _LoggerComponent
        with _SavingsPlanProductType
   
@@ -16466,6 +17172,11 @@ object awsSdkStrings {
   
   @js.native
   sealed trait LastModifiedTimestamp extends _QueueAttributeName
+  
+  @js.native
+  sealed trait LastRefreshTimestamp
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
   
   @js.native
   sealed trait LastUpdatedAt
@@ -16626,6 +17337,11 @@ object awsSdkStrings {
   sealed trait LoginWithAmazon extends _IdentityProviderTypeType
   
   @js.native
+  sealed trait LookbackPeriodInDays
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
   sealed trait Lotte extends _VoiceId
   
   @js.native
@@ -16671,6 +17387,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait MAH extends _LanguageCode
+  
+  @js.native
+  sealed trait MAIL_FROM_DOMAIN_NOT_VERIFIED extends _BulkEmailStatus
   
   @js.native
   sealed trait MAIN
@@ -16725,6 +17444,9 @@ object awsSdkStrings {
   sealed trait MAL extends _LanguageCode
   
   @js.native
+  sealed trait MALI extends _TargetPlatformAccelerator
+  
+  @js.native
   sealed trait MALWARE_DETECTED extends _Code
   
   @js.native
@@ -16771,6 +17493,9 @@ object awsSdkStrings {
   sealed trait MARIADB extends _DataSourceType
   
   @js.native
+  sealed trait MARKETING extends _MailType
+  
+  @js.native
   sealed trait MARKETPLACE extends _ProductType
   
   @js.native
@@ -16791,6 +17516,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait MASTER_NAME extends _HandshakeResourceType
+  
+  @js.native
+  sealed trait MATCH extends _FallbackBehavior
   
   @js.native
   sealed trait MAX
@@ -16868,6 +17596,9 @@ object awsSdkStrings {
        with _PhoneNumberCountryCode
   
   @js.native
+  sealed trait MD5 extends _HashAlgorithm
+  
+  @js.native
   sealed trait ME
     extends _CountryCode
        with typingsSlinky.awsSdk.wafv2Mod._CountryCode
@@ -16894,7 +17625,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait MEDIUM
-    extends _AssociationComplianceSeverity
+    extends _ApiCacheType
+       with _AssociationComplianceSeverity
        with _AuditFindingSeverity
        with _Av1AdaptiveQuantization
        with _ComplianceSeverity
@@ -16944,6 +17676,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait MESSAGE_LOG extends _ArtifactType
+  
+  @js.native
+  sealed trait MESSAGE_REJECTED extends _BulkEmailStatus
   
   @js.native
   sealed trait MESSAGE_TAG
@@ -17048,7 +17783,15 @@ object awsSdkStrings {
   sealed trait MINUTE extends _PeriodUnit
   
   @js.native
-  sealed trait MISCONFIGURED extends _FileSystemLifecycle
+  sealed trait MISCONFIGURED
+    extends _DataRepositoryLifecycle
+       with _FileSystemLifecycle
+  
+  @js.native
+  sealed trait MISMATCHED_REVISION extends _PackageVersionErrorCode
+  
+  @js.native
+  sealed trait MISMATCHED_STATUS extends _PackageVersionErrorCode
   
   @js.native
   sealed trait MISSED extends _ReplicationRunState
@@ -17150,7 +17893,8 @@ object awsSdkStrings {
        with _DocumentationPartType
   
   @js.native
-  sealed trait MODEL_SCORE extends _DataSource
+  sealed trait MODEL_SCORE
+    extends typingsSlinky.awsSdk.frauddetectorMod._DataSource
   
   @js.native
   sealed trait MODIFIED extends _StackResourceDriftStatus
@@ -17162,6 +17906,7 @@ object awsSdkStrings {
   sealed trait MODIFY
     extends _ChangeAction
        with typingsSlinky.awsSdk.dynamodbstreamsMod._OperationType
+       with _RemediationActionType
        with _RightsizingType
   
   @js.native
@@ -17342,12 +18087,17 @@ object awsSdkStrings {
   sealed trait MULTI_LABEL extends _DocumentClassifierMode
   
   @js.native
-  sealed trait MULTI_PASS extends _Mpeg2QualityTuningLevel
+  sealed trait MULTI_PASS
+    extends _Mpeg2QualityTuningLevel
+       with _Vp8QualityTuningLevel
+       with _Vp9QualityTuningLevel
   
   @js.native
   sealed trait MULTI_PASS_HQ
     extends _H264QualityTuningLevel
        with _H265QualityTuningLevel
+       with _Vp8QualityTuningLevel
+       with _Vp9QualityTuningLevel
   
   @js.native
   sealed trait MULTI_PERIOD extends _OriginManifestType
@@ -17443,7 +18193,8 @@ object awsSdkStrings {
   sealed trait Mads extends _VoiceId
   
   @js.native
-  sealed trait MailFromDomainNotVerified extends _BulkEmailStatus
+  sealed trait MailFromDomainNotVerified
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait MaintenanceWindow extends _ResourceTypeForTagging
@@ -17538,6 +18289,9 @@ object awsSdkStrings {
   sealed trait MaxSize extends _UpdateParamType
   
   @js.native
+  sealed trait MaxStackDepth extends _AgentParameterField
+  
+  @js.native
   sealed trait MaxWaitTimeExceeded extends _SecondaryStatus
   
   @js.native
@@ -17602,6 +18356,9 @@ object awsSdkStrings {
   sealed trait MemcachedMemory extends _LayerAttributesKeys
   
   @js.native
+  sealed trait MemoryUsageLimitPercent extends _AgentParameterField
+  
+  @js.native
   sealed trait Memory_
     extends typingsSlinky.awsSdk.computeoptimizerMod._MetricName
   
@@ -17612,7 +18369,8 @@ object awsSdkStrings {
   sealed trait MessageGroupId extends _MessageSystemAttributeName
   
   @js.native
-  sealed trait MessageRejected extends _BulkEmailStatus
+  sealed trait MessageRejected
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait MessageRetentionPeriod extends _QueueAttributeName
@@ -17659,6 +18417,9 @@ object awsSdkStrings {
   sealed trait Minimize
     extends _AutoMLJobObjectiveType
        with _HyperParameterTuningJobObjectiveType
+  
+  @js.native
+  sealed trait MinimumTimeForReportingInMilliseconds extends _AgentParameterField
   
   @js.native
   sealed trait Minimum_
@@ -17816,6 +18577,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.wafregionalMod._GeoMatchConstraintValue
        with _JobComparator
        with _PhoneNumberCountryCode
+       with _UsageStatisticsFilterComparator
   
   @js.native
   sealed trait NEGATION
@@ -17869,7 +18631,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait NEW
-    extends _FleetStatus
+    extends _AutoImportPolicyType
+       with _FleetStatus
        with _GameServerGroupStatus
        with _WorkflowState
        with _WorkflowStatus
@@ -17879,6 +18642,9 @@ object awsSdkStrings {
     extends _StreamViewType
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._StreamViewType
        with typingsSlinky.awsSdk.dynamodbstreamsMod._StreamViewType
+  
+  @js.native
+  sealed trait NEW_CHANGED extends _AutoImportPolicyType
   
   @js.native
   sealed trait NEW_IMAGE
@@ -17979,6 +18745,7 @@ object awsSdkStrings {
        with _Atime
        with _AudioNormalizationPeakCalculation
        with _AuthorizationType
+       with _AutoImportPolicyType
        with _BurnInBackgroundColor
        with _BurnInShadowColor
        with _BurninSubtitleBackgroundColor
@@ -17992,6 +18759,7 @@ object awsSdkStrings {
        with _ConflictDetectionType
        with _ConflictHandlerType
        with _ConflictResolutionStrategyTypeEnum
+       with _ContentEncoding
        with _DashIsoHbbtvCompliance
        with typingsSlinky.awsSdk.appsyncMod._DataSourceType
        with _DvbSubDestinationBackgroundColor
@@ -18006,7 +18774,7 @@ object awsSdkStrings {
        with _Eac3DrcRf
        with _Eac3DynamicRangeCompressionLine
        with _Eac3DynamicRangeCompressionRf
-       with _EncryptionType
+       with typingsSlinky.awsSdk.macie2Mod._EncryptionType
        with typingsSlinky.awsSdk.xrayMod._EncryptionType
        with typingsSlinky.awsSdk.kinesisMod._EncryptionType
        with _ExistCondition
@@ -18053,11 +18821,13 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.mediapackagevodMod._Profile
        with _ProresTelecine
        with _QualityFilter
+       with _QueryIdentifiersEnclosingOption
        with _RealtimeEndpointStatus
        with _ReplicateTo
        with _RepoUpgradeOnBoot
        with _ReportPackagingType
        with _RespondToAfd
+       with _RetentionAction
        with _ReturnConsumedCapacity
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._ReturnConsumedCapacity
        with _ReturnItemCollectionMetrics
@@ -18105,6 +18875,9 @@ object awsSdkStrings {
   sealed trait NON_REPUDIATION extends _KeyUsageName
   
   @js.native
+  sealed trait NON_RETRYABLE_FAILURE extends _NamespaceStatus
+  
+  @js.native
   sealed trait NOOP
     extends _FilterAction
        with _FindingsFilterAction
@@ -18116,6 +18889,7 @@ object awsSdkStrings {
   sealed trait NORMAL
     extends _AacAudioDescriptionBroadcasterMix
        with _AacInputType
+       with _ChannelLatencyMode
        with _DeinterlacerControl
        with _F4vMoovPlacement
        with _FileModeTypeEnum
@@ -18136,6 +18910,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait NOT_ACCELERATED extends _AccelerationStatus
+  
+  @js.native
+  sealed trait NOT_ALLOWED extends _PackageVersionErrorCode
   
   @js.native
   sealed trait NOT_APPLICABLE
@@ -18191,7 +18968,9 @@ object awsSdkStrings {
   sealed trait NOT_EXIST extends _ExistCondition
   
   @js.native
-  sealed trait NOT_FOUND extends _BatchDeleteImportDataErrorCode
+  sealed trait NOT_FOUND
+    extends _BatchDeleteImportDataErrorCode
+       with _PackageVersionErrorCode
   
   @js.native
   sealed trait NOT_IMPORTED extends _ServerCatalogStatus
@@ -18312,6 +19091,9 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.medialiveMod._Eac3LfeControl
   
   @js.native
+  sealed trait NO_MATCH extends _FallbackBehavior
+  
+  @js.native
   sealed trait NO_PASSTHROUGH
     extends _Eac3PassthroughControl
        with typingsSlinky.awsSdk.medialiveMod._Eac3PassthroughControl
@@ -18394,6 +19176,7 @@ object awsSdkStrings {
   sealed trait NUMBER
     extends _DynamoKeyType
        with _FacetAttributeType
+       with _Format
   
   @js.native
   sealed trait NUMBER_COMPARISON extends _RuleType
@@ -18407,6 +19190,9 @@ object awsSdkStrings {
   sealed trait NUMBER_WITH_TIMELINE
     extends _SegmentTemplateFormat
        with typingsSlinky.awsSdk.mediapackagevodMod._SegmentTemplateFormat
+  
+  @js.native
+  sealed trait NVIDIA extends _TargetPlatformAccelerator
   
   @js.native
   sealed trait NYA extends _LanguageCode
@@ -18439,6 +19225,7 @@ object awsSdkStrings {
        with _EvaluationFilterVariable
        with _HyperParameterTuningJobSortByOptions
        with _ListCompilationJobsSortBy
+       with _ListWorkforcesSortByOptions
        with _ListWorkteamsSortByOptions
        with _MLModelFilterVariable
        with _ModelPackageSortBy
@@ -18453,6 +19240,9 @@ object awsSdkStrings {
        with _SortTrialComponentsBy
        with _SortTrialsBy
        with _TrainingJobSortByOptions
+  
+  @js.native
+  sealed trait Negative_ extends _FeedbackType
   
   @js.native
   sealed trait NetworkFailure extends _HandlerErrorCode
@@ -18706,6 +19496,7 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.datasyncMod._AgentStatus
        with typingsSlinky.awsSdk.alexaforbusinessMod._ConnectionStatus
        with typingsSlinky.awsSdk.transferMod._State
+       with _StreamState
   
   @js.native
   sealed trait OGRE extends js.Object
@@ -18939,6 +19730,9 @@ object awsSdkStrings {
   sealed trait OPT_OUT extends _DeliveryStatus
   
   @js.native
+  sealed trait OPUS extends _AudioCodec
+  
+  @js.native
   sealed trait OR
     extends _ConditionalOperator
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._ConditionalOperator
@@ -19084,7 +19878,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait OWNED
-    extends _Origin
+    extends _ImageType
+       with _Origin
        with typingsSlinky.awsSdk.mediaconnectMod._SourceType
   
   @js.native
@@ -19174,6 +19969,9 @@ object awsSdkStrings {
   @js.native
   sealed trait OrganizationUnit
     extends typingsSlinky.awsSdk.ec2Mod._PrincipalType
+  
+  @js.native
+  sealed trait Origin extends _HeaderEnum
   
   @js.native
   sealed trait Original_ extends _TemplateStage
@@ -19346,6 +20144,9 @@ object awsSdkStrings {
   sealed trait PASSWORD_CHANGE extends _EventFilterType
   
   @js.native
+  sealed trait PASSWORD_MANAGER_ACCESS_DENIED extends _DeviceStatusDetailCode
+  
+  @js.native
   sealed trait PASSWORD_NOT_FOUND extends _DeviceStatusDetailCode
   
   @js.native
@@ -19498,6 +20299,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.servicediscoveryMod._OperationStatus
        with typingsSlinky.awsSdk.cloudformationMod._OperationStatus
        with _PhaseStatus
+       with _ProactiveEngagementStatus
        with _ReachabilityStatus
        with _RelationalDatabasePasswordVersion
        with _RemediationExecutionStepState
@@ -19509,10 +20311,13 @@ object awsSdkStrings {
        with _ResourceShareStatus
        with _ResourceStatus
        with _RestoreJobStatus
+       with _ReviewStatus
        with _SessionState
        with _SiteState
+       with _StackInstanceDetailedStatus
        with _StackSetOperationResultStatus
        with _StandardsStatus
+       with typingsSlinky.awsSdk.fsxMod._Status
        with typingsSlinky.awsSdk.applicationinsightsMod._Status
        with _StepExecutionState
        with _StepState
@@ -19525,6 +20330,11 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.apigatewayMod._VpcLinkStatus
        with _WorkspaceImageState
        with _WorkspaceState
+  
+  @js.native
+  sealed trait PENDING_ACCEPTANCE
+    extends _InboundCrossClusterSearchConnectionStatusCode
+       with _OutboundCrossClusterSearchConnectionStatusCode
   
   @js.native
   sealed trait PENDING_ACTIVATION extends _CertificateStatus
@@ -19606,6 +20416,7 @@ object awsSdkStrings {
   @js.native
   sealed trait PENDING_VALIDATION
     extends typingsSlinky.awsSdk.acmMod._CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with typingsSlinky.awsSdk.acmMod._DomainStatus
        with _DomainStatus
        with _LoadBalancerTlsCertificateDomainStatus
@@ -19627,7 +20438,9 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.connectMod._Unit
   
   @js.native
-  sealed trait PERCENTAGE extends _ThresholdType
+  sealed trait PERCENTAGE
+    extends _Format
+       with _ThresholdType
   
   @js.native
   sealed trait PERCENTAGE_UPDATED extends _DeploymentEventType
@@ -19639,13 +20452,20 @@ object awsSdkStrings {
   sealed trait PERFORMANCE extends _Compute
   
   @js.native
+  sealed trait PERMANENTLY_DELETE extends _RetentionAction
+  
+  @js.native
   sealed trait PERMANENT_FAILURE extends _DeliveryStatus
   
   @js.native
-  sealed trait PERMISSION_DENIED extends _IngestionErrorType
+  sealed trait PERMISSION_DENIED
+    extends _IngestionErrorType
+       with _NamespaceErrorType
   
   @js.native
-  sealed trait PERMISSIVE extends _ListenerTlsMode
+  sealed trait PERMISSIVE
+    extends _ListenerTlsMode
+       with _VirtualGatewayListenerTlsMode
   
   @js.native
   sealed trait PERSISTENT_1 extends _LustreDeploymentType
@@ -20027,6 +20847,7 @@ object awsSdkStrings {
     extends _H264InterlaceMode
        with _H264ScanType
        with _H265InterlaceMode
+       with _H265ScanType
        with _InputDeviceScanType
        with _Mpeg2InterlaceMode
        with _ProresInterlaceMode
@@ -20102,6 +20923,7 @@ object awsSdkStrings {
        with _InstanceGroupState
        with _InstanceState
        with typingsSlinky.awsSdk.amplifyMod._JobStatus
+       with _OutboundCrossClusterSearchConnectionStatusCode
   
   @js.native
   sealed trait PROVISION_FAILURE extends _AutoScalingPolicyStateChangeReasonCode
@@ -20127,6 +20949,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait PT1H extends _AggregationPeriod
+  
+  @js.native
+  sealed trait PT3H extends js.Object
   
   @js.native
   sealed trait PT5M extends _AggregationPeriod
@@ -20160,6 +20985,9 @@ object awsSdkStrings {
   sealed trait PUBLISHED
     extends _CommentStatusType
        with _SalesforceKnowledgeArticleState
+  
+  @js.native
+  sealed trait PUBLISHED_TIME extends js.Object
   
   @js.native
   sealed trait PUBLISHING extends _PublishingStatus
@@ -20210,7 +21038,10 @@ object awsSdkStrings {
   sealed trait PUS extends _LanguageCode
   
   @js.native
-  sealed trait PUSH extends _TemplateType
+  sealed trait PUSH
+    extends _ChannelType
+       with _EndpointTypesElement
+       with _TemplateType
   
   @js.native
   sealed trait PUSH_DOMAIN extends _OperationType
@@ -20358,6 +21189,10 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.ec2Mod._State
   
   @js.native
+  sealed trait PendingAutoRenewal
+    extends typingsSlinky.awsSdk.lightsailMod._RenewalStatus
+  
+  @js.native
   sealed trait PendingColonProceed extends _LifecycleState
   
   @js.native
@@ -20374,6 +21209,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait PendingSpotBidPlacement extends _ScalingActivityStatusCode
+  
+  @js.native
+  sealed trait PendingValidation
+    extends typingsSlinky.awsSdk.lightsailMod._RenewalStatus
   
   @js.native
   sealed trait PendingVerification extends _ContactMethodStatus
@@ -20394,6 +21233,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.sagemakerMod._DomainStatus
        with _EnvironmentHealthStatus
        with typingsSlinky.awsSdk.sagemakerMod._ExecutionStatus
+       with _InstanceRefreshStatus
        with typingsSlinky.awsSdk.codedeployMod._InstanceStatus
        with _InviteStatus
        with _JobState
@@ -20543,6 +21383,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.codepipelineMod._TriggerType
   
   @js.native
+  sealed trait Positive_ extends _FeedbackType
+  
+  @js.native
   sealed trait PostLaunchFileFailure extends _DeploymentJobErrorCode
   
   @js.native
@@ -20632,6 +21475,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait Public_ extends _PortAccessType
+  
+  @js.native
+  sealed trait Published_ extends _PackageVersionStatus
   
   @js.native
   sealed trait PullRequest extends js.Object
@@ -20728,6 +21574,7 @@ object awsSdkStrings {
   sealed trait QUICKSIGHT
     extends _AdditionalArtifact
        with typingsSlinky.awsSdk.quicksightMod._IdentityType
+       with _ThemeType
   
   @js.native
   sealed trait QUICKSIGHT_USER extends js.Object
@@ -20758,6 +21605,7 @@ object awsSdkStrings {
   @js.native
   sealed trait Queued_
     extends _DeploymentStatus
+       with typingsSlinky.awsSdk.computeoptimizerMod._JobStatus
        with typingsSlinky.awsSdk.codepipelineMod._JobStatus
   
   @js.native
@@ -21086,12 +21934,18 @@ object awsSdkStrings {
   
   @js.native
   sealed trait REJECTED
-    extends _InvitationStatus
+    extends _AwsJobAbortCriteriaFailureType
+       with _InboundCrossClusterSearchConnectionStatusCode
+       with _InvitationStatus
        with _JobExecutionFailureType
        with _JobExecutionStatus
        with typingsSlinky.awsSdk.iotMod._JobExecutionStatus
+       with _OutboundCrossClusterSearchConnectionStatusCode
        with _ProposalStatus
        with _ResourceShareInvitationStatus
+  
+  @js.native
+  sealed trait REJECTING extends _InboundCrossClusterSearchConnectionStatusCode
   
   @js.native
   sealed trait REJECT_MESSAGE
@@ -21149,6 +22003,7 @@ object awsSdkStrings {
        with _DifferenceType
        with typingsSlinky.awsSdk.dynamodbstreamsMod._OperationType
        with _PreserveDeletedFiles
+       with _RemediationActionType
   
   @js.native
   sealed trait REMOVED
@@ -21428,7 +22283,8 @@ object awsSdkStrings {
   sealed trait RESTRICT_GROUP2 extends _Scte35DeviceRestrictions
   
   @js.native
-  sealed trait RESULTS extends _ReportType
+  sealed trait RESULTS
+    extends typingsSlinky.awsSdk.iotMod._ReportType
   
   @js.native
   sealed trait RESULT_LOG extends _ArtifactType
@@ -21449,6 +22305,15 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.amplifyMod._JobType
   
   @js.native
+  sealed trait RETRYABLE_FAILURE extends _NamespaceStatus
+  
+  @js.native
+  sealed trait RETRY_ALL_BUILDS extends _RetryBuildBatchType
+  
+  @js.native
+  sealed trait RETRY_FAILED_BUILDS extends _RetryBuildBatchType
+  
+  @js.native
   sealed trait REVIEW_IN_PROGRESS extends _StackStatus
   
   @js.native
@@ -21466,6 +22331,7 @@ object awsSdkStrings {
   sealed trait REVOKED
     extends typingsSlinky.awsSdk.acmMod._CertificateStatus
        with _CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with _LoadBalancerTlsCertificateStatus
   
   @js.native
@@ -21608,6 +22474,9 @@ object awsSdkStrings {
        with _RxNormAttributeType
   
   @js.native
+  sealed trait ROWLINK extends _Format
+  
+  @js.native
   sealed trait ROW_SIZE_LIMIT_EXCEEDED extends _IngestionErrorType
   
   @js.native
@@ -21748,6 +22617,7 @@ object awsSdkStrings {
        with _ReprocessingStatus
        with _RestoreJobStatus
        with _ServerStatus
+       with _StackInstanceDetailedStatus
        with _StackSetOperationResultStatus
        with _StackSetOperationStatus
        with _StepExecutionState
@@ -21844,7 +22714,78 @@ object awsSdkStrings {
   sealed trait ReceiveMessageWaitTimeSeconds extends _QueueAttributeName
   
   @js.native
+  sealed trait RecommendationOptionsConfigurationDesiredCapacity extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait RecommendationOptionsConfigurationInstanceType extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait RecommendationOptionsConfigurationMaxSize extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait RecommendationOptionsConfigurationMinSize extends _ExportableAutoScalingGroupField
+  
+  @js.native
+  sealed trait RecommendationOptionsInstanceType extends _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsMemory
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsNetwork
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsOnDemandPrice
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsPerformanceRisk
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsProjectedUtilizationMetricsCpuMaximum
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsStandardOneYearNoUpfrontReservedPrice
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsStorage
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationOptionsVcpus
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
   sealed trait RecommendationSourceType extends _FilterName
+  
+  @js.native
+  sealed trait RecommendationsSourcesRecommendationSourceArn extends _ExportableInstanceField
+  
+  @js.native
+  sealed trait RecommendationsSourcesRecommendationSourceType extends _ExportableInstanceField
   
   @js.native
   sealed trait RecordIO
@@ -21872,6 +22813,9 @@ object awsSdkStrings {
   sealed trait RedrivePolicy extends _QueueAttributeName
   
   @js.native
+  sealed trait Referer extends _HeaderEnum
+  
+  @js.native
   sealed trait RefreshedAt
     extends _EnvironmentHealthAttribute
        with _InstancesHealthAttribute
@@ -21880,6 +22824,9 @@ object awsSdkStrings {
   sealed trait RegexMatch
     extends _PredicateType
        with typingsSlinky.awsSdk.wafregionalMod._PredicateType
+  
+  @js.native
+  sealed trait RegionDisabled extends _RelationshipStatus
   
   @js.native
   sealed trait Region_ extends _scope
@@ -21930,7 +22877,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.ec2Mod._State
   
   @js.native
-  sealed trait Rejecting
+  sealed trait Rejecting_
     extends typingsSlinky.awsSdk.directoryserviceMod._ShareStatus
   
   @js.native
@@ -21982,6 +22929,9 @@ object awsSdkStrings {
   sealed trait Report_CSV_20180820 extends js.Object
   
   @js.native
+  sealed trait ReportingIntervalInMilliseconds extends _AgentParameterField
+  
+  @js.native
   sealed trait RequestCancelActivityTask extends _DecisionType
   
   @js.native
@@ -22022,6 +22972,9 @@ object awsSdkStrings {
   sealed trait Requester extends _Payer
   
   @js.native
+  sealed trait Requests_ extends _DistributionMetricName
+  
+  @js.native
   sealed trait Require_
     extends typingsSlinky.awsSdk.sesMod._TlsPolicy
   
@@ -22036,6 +22989,10 @@ object awsSdkStrings {
   @js.native
   sealed trait ResetDeployment
     extends typingsSlinky.awsSdk.greengrassMod._DeploymentType
+  
+  @js.native
+  sealed trait ResetDistributionCache
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
   @js.native
   sealed trait Resigned extends _RelationshipStatus
@@ -22100,6 +23057,7 @@ object awsSdkStrings {
   sealed trait ResourceType
     extends _AssociationExecutionTargetsFilterKey
        with _InstanceInformationFilterKey
+       with _JobFilterName
        with _LookupAttributeKey
   
   @js.native
@@ -22204,6 +23162,9 @@ object awsSdkStrings {
   sealed trait RollbackSuccessful extends _FailureType
   
   @js.native
+  sealed trait Rolling extends js.Object
+  
+  @js.native
   sealed trait RollingBack
     extends typingsSlinky.awsSdk.sagemakerMod._EndpointStatus
   
@@ -22223,7 +23184,8 @@ object awsSdkStrings {
   sealed trait RubygemsVersion extends _LayerAttributesKeys
   
   @js.native
-  sealed trait RuleBased extends _PolicyType
+  sealed trait RuleBased
+    extends typingsSlinky.awsSdk.gameliftMod._PolicyType
   
   @js.native
   sealed trait RuleSet extends js.Object
@@ -22299,6 +23261,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait S3_FILE_INACCESSIBLE extends _IngestionErrorType
+  
+  @js.native
+  sealed trait S3_LOGS extends _DataSource
   
   @js.native
   sealed trait S3_MANIFEST_ERROR extends _IngestionErrorType
@@ -22713,6 +23678,9 @@ object awsSdkStrings {
   sealed trait SENSITIVE_DATA_DISCOVERY extends _UsageType
   
   @js.native
+  sealed trait SENT_ITEMS extends _FolderName
+  
+  @js.native
   sealed trait SEQUENTIAL extends _ArrayJobDependency
   
   @js.native
@@ -22778,14 +23746,15 @@ object awsSdkStrings {
   sealed trait SERVICE_CODE extends _Dimension
   
   @js.native
-  sealed trait SERVICE_CONTROL_POLICY
-    extends typingsSlinky.awsSdk.organizationsMod._PolicyType
+  sealed trait SERVICE_CONTROL_POLICY extends _PolicyType
   
   @js.native
   sealed trait SERVICE_ID extends _OperationFilterName
   
   @js.native
-  sealed trait SERVICE_LEVEL extends _HistoricalMetricName
+  sealed trait SERVICE_LEVEL
+    extends _AccessAdvisorUsageGranularityType
+       with _HistoricalMetricName
   
   @js.native
   sealed trait SERVICE_LINKED_ROLE_CREATION_FAILED extends _ReasonCode
@@ -22867,10 +23836,21 @@ object awsSdkStrings {
        with _PhoneNumberCountryCode
   
   @js.native
-  sealed trait SHA1 extends _HashAlgorithm
+  sealed trait `SHA-1` extends _HashAlgorithm
   
   @js.native
-  sealed trait SHA256 extends _HashAlgorithm
+  sealed trait `SHA-256` extends _HashAlgorithm
+  
+  @js.native
+  sealed trait `SHA-512` extends _HashAlgorithm
+  
+  @js.native
+  sealed trait SHA1
+    extends typingsSlinky.awsSdk.signerMod._HashAlgorithm
+  
+  @js.native
+  sealed trait SHA256
+    extends typingsSlinky.awsSdk.signerMod._HashAlgorithm
   
   @js.native
   sealed trait SHA256WITHECDSA extends _SigningAlgorithm
@@ -22892,7 +23872,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait SHARED
-    extends _Tenancy
+    extends _ImageType
+       with _Tenancy
        with _VisibilityType
   
   @js.native
@@ -22923,6 +23904,10 @@ object awsSdkStrings {
   sealed trait SHIFT_90_DEGREES
     extends _Eac3PhaseControl
        with typingsSlinky.awsSdk.medialiveMod._Eac3PhaseControl
+  
+  @js.native
+  sealed trait SHOT
+    extends typingsSlinky.awsSdk.rekognitionMod._SegmentType
   
   @js.native
   sealed trait SHUTDOWN
@@ -22963,7 +23948,9 @@ object awsSdkStrings {
   sealed trait SIGN_VERIFY extends _KeyUsageType
   
   @js.native
-  sealed trait SIMPLE extends _RoutingStrategyType
+  sealed trait SIMPLE
+    extends _AuthenticationStrategy
+       with _RoutingStrategyType
   
   @js.native
   sealed trait SIMPLE_AD extends _WorkspaceDirectoryType
@@ -23067,6 +24054,7 @@ object awsSdkStrings {
     extends _AccountGateStatus
        with _AuditMitigationActionsExecutionStatus
        with _ExecutionResult
+       with _PackageVersionErrorCode
   
   @js.native
   sealed trait SKIPPED_OVERLAPPING extends _MaintenanceWindowExecutionStatus
@@ -23119,7 +24107,9 @@ object awsSdkStrings {
        with _PhoneNumberCountryCode
   
   @js.native
-  sealed trait SMALL extends _DocumentThumbnailType
+  sealed trait SMALL
+    extends _ApiCacheType
+       with _DocumentThumbnailType
   
   @js.native
   sealed trait SMALL_BOUNDING_BOX extends _Reason
@@ -23192,6 +24182,9 @@ object awsSdkStrings {
   sealed trait SNAPSHOT_BATCHING extends _ConnectorCapability
   
   @js.native
+  sealed trait SNC1_HDD extends _SnowballType
+  
+  @js.native
   sealed trait SND extends _LanguageCode
   
   @js.native
@@ -23254,6 +24247,11 @@ object awsSdkStrings {
   sealed trait SOURCE_IP_ADDRESS extends _AttackPropertyIdentifier
   
   @js.native
+  sealed trait SOURCE_NOT_FOUND
+    extends _DashboardErrorType
+       with _TemplateErrorType
+  
+  @js.native
   sealed trait SOURCE_RESOURCE_LIMIT_EXCEEDED extends _IngestionErrorType
   
   @js.native
@@ -23289,6 +24287,10 @@ object awsSdkStrings {
        with _Mpeg2ParControl
        with _ProresFramerateControl
        with _ProresParControl
+       with _Vp8FramerateControl
+       with _Vp8ParControl
+       with _Vp9FramerateControl
+       with _Vp9ParControl
   
   @js.native
   sealed trait SPECIFIEDSTART
@@ -23487,8 +24489,10 @@ object awsSdkStrings {
   @js.native
   sealed trait STANDARD
     extends _ChannelClass
+       with typingsSlinky.awsSdk.ivsMod._ChannelType
        with _Compute
        with _DvbSubtitlingType
+       with typingsSlinky.awsSdk.managedblockchainMod._Edition
        with _Edition
        with _IFrameOnlyPlaylistType
        with _InputClass
@@ -23507,6 +24511,9 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.s3Mod._StorageClass
        with typingsSlinky.awsSdk.glacierMod._StorageClass
        with _UploadAvailability
+  
+  @js.native
+  sealed trait STANDARD_DEVIATION extends _AggregateType
   
   @js.native
   sealed trait STANDARD_IA
@@ -23540,7 +24547,8 @@ object awsSdkStrings {
        with _TaskRunSortColumnType
   
   @js.native
-  sealed trait STARTER extends _Edition
+  sealed trait STARTER
+    extends typingsSlinky.awsSdk.managedblockchainMod._Edition
   
   @js.native
   sealed trait STARTING
@@ -23594,6 +24602,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait START_TO_CLOSE extends _ActivityTaskTimeoutType
+  
+  @js.native
+  sealed trait STARVING extends _StreamHealth
   
   @js.native
   sealed trait STATE
@@ -23658,7 +24669,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait STOPPED
-    extends _CanaryState
+    extends _BuildBatchPhaseType
+       with _CanaryState
        with _CompilationJobStatus
        with _DesiredStatus
        with _DiscovererState
@@ -23743,6 +24755,9 @@ object awsSdkStrings {
   sealed trait STORAGE_LIMIT extends _UserSortType
   
   @js.native
+  sealed trait STORAGE_OPTIMIZATION extends _AdministrativeActionType
+  
+  @js.native
   sealed trait STORAGE_USED extends _UserSortType
   
   @js.native
@@ -23813,10 +24828,12 @@ object awsSdkStrings {
   sealed trait STRICT
     extends _AudioLanguageSelectionPolicy
        with _ListenerTlsMode
+       with _VirtualGatewayListenerTlsMode
   
   @js.native
   sealed trait STRING
     extends _ColumnDataType
+       with _ColumnStatisticsType
        with _DataType
        with _DecimalReturnType
        with _DynamoKeyType
@@ -23841,6 +24858,12 @@ object awsSdkStrings {
   sealed trait STRING_VALUE extends _DocumentAttributeValueType
   
   @js.native
+  sealed trait STRONGER extends _WatermarkingStrength
+  
+  @js.native
+  sealed trait STRONGEST extends _WatermarkingStrength
+  
+  @js.native
   sealed trait STS_DISABLED_IN_REGION extends _FleetErrorCode
   
   @js.native
@@ -23850,7 +24873,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait SUBMITTED
-    extends _BuildPhaseType
+    extends _BuildBatchPhaseType
+       with _BuildPhaseType
        with _CancelStepsRequestStatus
        with typingsSlinky.awsSdk.mediaconvertMod._JobStatus
        with typingsSlinky.awsSdk.comprehendMod._JobStatus
@@ -23895,6 +24919,7 @@ object awsSdkStrings {
   sealed trait SUCCEEDED
     extends _AccountGateStatus
        with _AggregatedSourceStatusType
+       with _BuildBatchPhaseType
        with _BulkPublishStatus
        with _BusinessReportStatus
        with _ChangeStatus
@@ -23921,6 +24946,7 @@ object awsSdkStrings {
        with _RemediationExecutionStepState
        with _ReportStatusType
        with _ReprocessingStatus
+       with _StackInstanceDetailedStatus
        with _StackSetOperationResultStatus
        with _StackSetOperationStatus
        with typingsSlinky.awsSdk.mediapackageMod._Status
@@ -23945,6 +24971,7 @@ object awsSdkStrings {
   sealed trait SUCCESS
     extends _AssessmentRunNotificationSnsStatusCode
        with _AuditReportStatus
+       with _BulkEmailStatus
        with _ContainerCondition
        with _DkimStatus
        with typingsSlinky.awsSdk.sesv2Mod._DkimStatus
@@ -23979,6 +25006,15 @@ object awsSdkStrings {
   
   @js.native
   sealed trait SUMMARY extends _EvaluationType
+  
+  @js.native
+  sealed trait SUM_BY_ACCOUNT extends _UsageStatisticType
+  
+  @js.native
+  sealed trait SUM_BY_DATA_SOURCE extends _UsageStatisticType
+  
+  @js.native
+  sealed trait SUM_BY_RESOURCE extends _UsageStatisticType
   
   @js.native
   sealed trait SUN
@@ -24129,6 +25165,7 @@ object awsSdkStrings {
   sealed trait SYSTEM_ORGAN_SITE
     extends _EntitySubType
        with _ICD10CMAttributeType
+       with _RelationshipType
   
   @js.native
   sealed trait SYSTEM_TEMPLATE_ID extends _SystemInstanceFilterName
@@ -24164,6 +25201,9 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.lightsailMod._MetricStatistic
        with typingsSlinky.awsSdk.cloudwatchMod._Statistic
        with typingsSlinky.awsSdk.route53Mod._Statistic
+  
+  @js.native
+  sealed trait SamplingIntervalInMilliseconds extends _AgentParameterField
   
   @js.native
   sealed trait Scalar extends _ConfigurationOptionValueType
@@ -24290,7 +25330,7 @@ object awsSdkStrings {
   
   @js.native
   sealed trait Server_
-    extends _ComputePlatform
+    extends typingsSlinky.awsSdk.codedeployMod._ComputePlatform
        with _Fault
   
   @js.native
@@ -24726,7 +25766,7 @@ object awsSdkStrings {
     extends _AssociationStatusName
        with _AutoSnapshotStatus
        with _AutomationExecutionStatus
-       with _BulkEmailStatus
+       with typingsSlinky.awsSdk.sesMod._BulkEmailStatus
        with _ChallengeResponse
        with _CommandInvocationStatus
        with _CommandPluginStatus
@@ -24737,12 +25777,14 @@ object awsSdkStrings {
        with _LifecycleErrorCode
        with _NotificationEvent
        with _RecorderStatus
+       with typingsSlinky.awsSdk.lightsailMod._RenewalStatus
        with _UsageRecordResultStatus
        with _VerificationStatus
   
   @js.native
   sealed trait Successful_
-    extends _LastResourceDataSyncStatus
+    extends _InstanceRefreshStatus
+       with _LastResourceDataSyncStatus
        with _LastUpdateStatus
        with _PhoneNumberOrderStatus
        with _ScalingActivityStatusCode
@@ -24796,6 +25838,9 @@ object awsSdkStrings {
   sealed trait T50 extends _SnowballCapacity
   
   @js.native
+  sealed trait T8 extends _SnowballCapacity
+  
+  @js.native
   sealed trait T80 extends _SnowballCapacity
   
   @js.native
@@ -24830,7 +25875,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait TAG_POLICY
-    extends typingsSlinky.awsSdk.organizationsMod._PolicyType
+    extends _EffectivePolicyType
+       with _PolicyType
   
   @js.native
   sealed trait TAH extends _LanguageCode
@@ -24911,12 +25957,19 @@ object awsSdkStrings {
        with _UdpTimedMetadataId3Frame
   
   @js.native
+  sealed trait TECHNICAL_CUE
+    extends typingsSlinky.awsSdk.rekognitionMod._SegmentType
+  
+  @js.native
   sealed trait TEL extends _LanguageCode
   
   @js.native
   sealed trait TELETEXT
     extends _CaptionDestinationType
        with _CaptionSourceType
+  
+  @js.native
+  sealed trait TEMPLATE_NOT_FOUND extends _BulkEmailStatus
   
   @js.native
   sealed trait TEMPORAL extends _NoiseReducerFilter
@@ -25024,7 +26077,9 @@ object awsSdkStrings {
   sealed trait TERM_MATCH extends js.Object
   
   @js.native
-  sealed trait TEST extends _ComponentType
+  sealed trait TEST
+    extends _ComponentType
+       with _ReportType
   
   @js.native
   sealed trait TESTING extends _ImageStatus
@@ -25052,6 +26107,7 @@ object awsSdkStrings {
   @js.native
   sealed trait TEXT
     extends _DocumentFormat
+       with _Format
        with _LogType
   
   @js.native
@@ -25169,14 +26225,17 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.mqMod._DayOfWeek
   
   @js.native
-  sealed trait TIME extends _TypeHint
+  sealed trait TIME
+    extends _Format
+       with _TypeHint
   
   @js.native
   sealed trait TIMEDOUT extends _PlayerSessionStatus
   
   @js.native
   sealed trait TIMED_OUT
-    extends _CloseStatus
+    extends _AwsJobAbortCriteriaFailureType
+       with _CloseStatus
        with _ExecutionStatus
        with _GameSessionPlacementState
        with _JobExecutionFailureType
@@ -25317,6 +26376,9 @@ object awsSdkStrings {
   sealed trait TLSv1Dot2_2018 extends _MinimumProtocolVersion
   
   @js.native
+  sealed trait TLSv1Dot2_2019 extends _MinimumProtocolVersion
+  
+  @js.native
   sealed trait TLSv1_2016 extends _MinimumProtocolVersion
   
   @js.native
@@ -25384,6 +26446,9 @@ object awsSdkStrings {
   sealed trait TOP_RESOLUTION extends _SlotValueSelectionStrategy
   
   @js.native
+  sealed trait TOP_RESOURCES extends _UsageStatisticType
+  
+  @js.native
   sealed trait TOP_RIGHT extends _TimecodeBurninPosition
   
   @js.native
@@ -25393,6 +26458,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait TOTAL_SIZE extends _SnapshotAttributeToSortBy
+  
+  @js.native
+  sealed trait TO_AGENT extends _VoiceRecordingTrack
   
   @js.native
   sealed trait TR
@@ -25427,22 +26495,18 @@ object awsSdkStrings {
   sealed trait TRAINING extends _ModelStatus
   
   @js.native
-  sealed trait TRAINING_COMPLETE extends _ModelVersionStatus
-  
-  @js.native
   sealed trait TRAINING_COMPLETED extends _ProjectVersionStatus
   
   @js.native
   sealed trait TRAINING_FAILED extends _ProjectVersionStatus
   
   @js.native
-  sealed trait TRAINING_IN_PROGRESS
-    extends _ModelVersionStatus
-       with _ProjectVersionStatus
+  sealed trait TRAINING_IN_PROGRESS extends _ProjectVersionStatus
   
   @js.native
   sealed trait TRANSACTIONAL
-    extends typingsSlinky.awsSdk.pinpointMod._MessageType
+    extends _MailType
+       with typingsSlinky.awsSdk.pinpointMod._MessageType
   
   @js.native
   sealed trait TRANSCODING extends _JobPhase
@@ -25465,6 +26529,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait TRANSFORM_TYPE extends _TransformSortColumnType
+  
+  @js.native
+  sealed trait TRANSIENT_FAILURE extends _BulkEmailStatus
   
   @js.native
   sealed trait TRANSITIONING
@@ -25495,6 +26562,7 @@ object awsSdkStrings {
   @js.native
   sealed trait TRUE
     extends _BooleanEnumType
+       with _EnableHybridValues
        with _IsModifiable
        with _Replacement
   
@@ -25609,7 +26677,8 @@ object awsSdkStrings {
   sealed trait Target extends _SessionFilterKey
   
   @js.native
-  sealed trait TargetBased extends _PolicyType
+  sealed trait TargetBased
+    extends typingsSlinky.awsSdk.gameliftMod._PolicyType
   
   @js.native
   sealed trait TargetDotDeregistrationInProgress extends _TargetHealthReasonEnum
@@ -25688,7 +26757,8 @@ object awsSdkStrings {
   sealed trait Team extends _AccountType
   
   @js.native
-  sealed trait TemplateDoesNotExist extends _BulkEmailStatus
+  sealed trait TemplateDoesNotExist
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait TemporaryFailure
@@ -25762,7 +26832,9 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.ioteventsdataMod._ErrorCode
   
   @js.native
-  sealed trait Throttling_ extends _HandlerErrorCode
+  sealed trait Throttling_
+    extends typingsSlinky.awsSdk.chimeMod._ErrorCode
+       with _HandlerErrorCode
   
   @js.native
   sealed trait ThumbsDown extends _Reaction
@@ -25833,6 +26905,9 @@ object awsSdkStrings {
   sealed trait `Topic not found` extends _TopicStatus
   
   @js.native
+  sealed trait TotalErrorRate extends _DistributionMetricName
+  
+  @js.native
   sealed trait TraceId extends _TimeRangeType
   
   @js.native
@@ -25852,7 +26927,8 @@ object awsSdkStrings {
   sealed trait TransferLearning extends _HyperParameterTuningJobWarmStartType
   
   @js.native
-  sealed trait TransientFailure extends _BulkEmailStatus
+  sealed trait TransientFailure
+    extends typingsSlinky.awsSdk.sesMod._BulkEmailStatus
   
   @js.native
   sealed trait TransitVirtualInterface extends _DirectConnectGatewayAttachmentType
@@ -26049,10 +27125,12 @@ object awsSdkStrings {
        with _CsvHeaderOption
        with _DataSourceErrorInfoType
        with _EmotionName
+       with typingsSlinky.awsSdk.macie2Mod._EncryptionType
        with _HealthStatus
        with typingsSlinky.awsSdk.ecsMod._HealthStatus
        with _LoadBalancerTlsCertificateStatus
        with _StackDriftStatus
+       with _StreamHealth
        with _TestGridSessionArtifactType
        with typingsSlinky.awsSdk.cognitoidentityserviceproviderMod._UserStatusType
        with _VerificationState
@@ -26155,6 +27233,10 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._ReturnValue
   
   @js.native
+  sealed trait UPDATED_OPTIMIZING
+    extends typingsSlinky.awsSdk.fsxMod._Status
+  
+  @js.native
   sealed trait UPDATEPOLICY extends _ResourceAttribute
   
   @js.native
@@ -26162,7 +27244,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait UPDATE_COMPLETE
-    extends typingsSlinky.awsSdk.cloudformationMod._ResourceStatus
+    extends _GroupConfigurationStatus
+       with typingsSlinky.awsSdk.cloudformationMod._ResourceStatus
        with _StackStatus
   
   @js.native
@@ -26180,6 +27263,7 @@ object awsSdkStrings {
   @js.native
   sealed trait UPDATE_FAILED
     extends _ChannelState
+       with _GroupConfigurationStatus
        with _MemberAccountRuleStatus
        with _OrganizationResourceDetailedStatus
        with _OrganizationResourceStatus
@@ -26249,6 +27333,7 @@ object awsSdkStrings {
        with _CloudHsmObjectState
        with _ClusterState
        with _ClusterStatus
+       with _DataRepositoryLifecycle
        with _DataSourceStatus
        with _DeviceState
        with _DomainNameStatus
@@ -26262,6 +27347,7 @@ object awsSdkStrings {
        with _GlobalNetworkState
        with _GlobalTableStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._GlobalTableStatus
+       with _GroupConfigurationStatus
        with _HsmStatus
        with _IndexStatus
        with typingsSlinky.awsSdk.documentClientMod.DocumentClient._IndexStatus
@@ -26541,6 +27627,9 @@ object awsSdkStrings {
   sealed trait Underprovisioned extends _Finding
   
   @js.native
+  sealed trait Unfinished extends _PackageVersionStatus
+  
+  @js.native
   sealed trait Unfulfilled
     extends typingsSlinky.awsSdk.applicationautoscalingMod._ScalingActivityStatusCode
   
@@ -26568,6 +27657,9 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.codedeployMod._TargetStatus
   
   @js.native
+  sealed trait Unlisted extends _PackageVersionStatus
+  
+  @js.native
   sealed trait Unprocessable
     extends typingsSlinky.awsSdk.chimeMod._ErrorCode
   
@@ -26580,6 +27672,14 @@ object awsSdkStrings {
   
   @js.native
   sealed trait UpdateCancelled extends _FailureType
+  
+  @js.native
+  sealed trait UpdateDistribution
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
+  
+  @js.native
+  sealed trait UpdateDistributionBundle
+    extends typingsSlinky.awsSdk.lightsailMod._OperationType
   
   @js.native
   sealed trait UpdateDomainEntry
@@ -26664,6 +27764,16 @@ object awsSdkStrings {
   sealed trait UsersQuota extends _summaryKeyType
   
   @js.native
+  sealed trait UtilizationMetricsCpuMaximum
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
+  sealed trait UtilizationMetricsMemoryMaximum
+    extends _ExportableAutoScalingGroupField
+       with _ExportableInstanceField
+  
+  @js.native
   sealed trait V0_11 extends _OrcFormatVersion
   
   @js.native
@@ -26693,6 +27803,7 @@ object awsSdkStrings {
   sealed trait VALIDATING
     extends _DeploymentState
        with _FleetStatus
+       with _OutboundCrossClusterSearchConnectionStatusCode
        with _PackageStatus
   
   @js.native
@@ -26707,7 +27818,9 @@ object awsSdkStrings {
   sealed trait VALIDATION_EXCEPTION extends _Code
   
   @js.native
-  sealed trait VALIDATION_FAILED extends _PackageStatus
+  sealed trait VALIDATION_FAILED
+    extends _OutboundCrossClusterSearchConnectionStatusCode
+       with _PackageStatus
   
   @js.native
   sealed trait VALIDATION_IN_PROGRESS
@@ -26717,6 +27830,7 @@ object awsSdkStrings {
   @js.native
   sealed trait VALIDATION_TIMED_OUT
     extends typingsSlinky.awsSdk.acmMod._CertificateStatus
+       with typingsSlinky.awsSdk.lightsailMod._CertificateStatus
        with _LoadBalancerTlsCertificateStatus
   
   @js.native
@@ -26732,6 +27846,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait VARIANT extends _FacetAttributeType
+  
+  @js.native
+  sealed trait VARIANT_MANIFESTS_AND_SEGMENTS
+    extends typingsSlinky.awsSdk.medialiveMod._HlsOutputSelection
   
   @js.native
   sealed trait VAT_NUMBER extends _ExtraParamName
@@ -26937,6 +28055,15 @@ object awsSdkStrings {
   sealed trait VOLUME_UNKNOWN extends _MemberDisabledReason
   
   @js.native
+  sealed trait VORBIS extends _AudioCodec
+  
+  @js.native
+  sealed trait VP8 extends _VideoCodec
+  
+  @js.native
+  sealed trait VP9 extends _VideoCodec
+  
+  @js.native
   sealed trait VPC
     extends typingsSlinky.awsSdk.transferMod._EndpointType
        with _FlowLogsResourceType
@@ -27102,6 +28229,9 @@ object awsSdkStrings {
   sealed trait WEBKIT_LOG extends _ArtifactType
   
   @js.native
+  sealed trait WEBM extends _ContainerType
+  
+  @js.native
   sealed trait WEBSOCKET
     extends _ConnectionType
        with _ProtocolType
@@ -27222,6 +28352,9 @@ object awsSdkStrings {
   @js.native
   sealed trait WINDOWS_SERVER_2019
     extends typingsSlinky.awsSdk.appstreamMod._PlatformType
+  
+  @js.native
+  sealed trait WINDOWS_SERVER_2019_CONTAINER extends _EnvironmentType
   
   @js.native
   sealed trait WITHOUT_TRAFFIC_CONTROL extends _DeploymentOption
@@ -27359,6 +28492,9 @@ object awsSdkStrings {
   sealed trait Weekly_ extends _InventoryFrequency
   
   @js.native
+  sealed trait `Windows BYOL` extends _CapacityReservationInstancePlatform
+  
+  @js.native
   sealed trait `Windows LeftparenthesisAmazon VPCRightparenthesis` extends _RIProductDescription
   
   @js.native
@@ -27444,7 +28580,12 @@ object awsSdkStrings {
   sealed trait WrongRegionSimulationApplication extends _SimulationJobErrorCode
   
   @js.native
-  sealed trait X86_64 extends _Architecture
+  sealed trait X86 extends _TargetPlatformArch
+  
+  @js.native
+  sealed trait X86_64
+    extends _Architecture
+       with _TargetPlatformArch
   
   @js.native
   sealed trait XCTEST extends _TestType
@@ -27472,6 +28613,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait XHO extends _LanguageCode
+  
+  @js.native
+  sealed trait XLARGE extends _ApiCacheType
   
   @js.native
   sealed trait XLSX extends _FileFormat
@@ -27636,7 +28780,9 @@ object awsSdkStrings {
   sealed trait accepted__ extends _DirectConnectGatewayAssociationProposalState
   
   @js.native
-  sealed trait accountId_ extends _UsageStatisticsSortKey
+  sealed trait accountId_
+    extends _UsageStatisticsFilterKey
+       with _UsageStatisticsSortKey
   
   @js.native
   sealed trait accountNotification extends _eventTypeCategory
@@ -27716,13 +28862,33 @@ object awsSdkStrings {
   sealed trait alarmExists extends js.Object
   
   @js.native
+  sealed trait allExcept
+    extends _CachePolicyCookieBehavior
+       with _CachePolicyQueryStringBehavior
+  
+  @js.native
+  sealed trait allViewer extends _OriginRequestPolicyHeaderBehavior
+  
+  @js.native
+  sealed trait allViewerAndWhitelistCloudFront extends _OriginRequestPolicyHeaderBehavior
+  
+  @js.native
   sealed trait all__
-    extends _ItemSelection
+    extends _CachePolicyCookieBehavior
+       with _CachePolicyQueryStringBehavior
+       with _FilterNameStringType
+       with _ForwardValues
+       with _ItemSelection
        with _NetworkProtocol
+       with _OriginRequestPolicyCookieBehavior
+       with _OriginRequestPolicyQueryStringBehavior
        with _RepositoryTriggerEventEnum
   
   @js.native
   sealed trait `allow-all` extends _ViewerProtocolPolicy
+  
+  @js.native
+  sealed trait `allow-list` extends _ForwardValues
   
   @js.native
   sealed trait allow__
@@ -27887,6 +29053,7 @@ object awsSdkStrings {
   sealed trait asc_
     extends typingsSlinky.awsSdk.machinelearningMod._SortOrder
        with typingsSlinky.awsSdk.securityhubMod._SortOrder
+       with typingsSlinky.awsSdk.secretsmanagerMod._SortOrderType
   
   @js.native
   sealed trait ascending__
@@ -28064,7 +29231,7 @@ object awsSdkStrings {
   
   @js.native
   sealed trait awsColonkms
-    extends _EncryptionType
+    extends typingsSlinky.awsSdk.macie2Mod._EncryptionType
        with typingsSlinky.awsSdk.glacierMod._EncryptionType
        with _ServerSideEncryption
        with _ServerSideEncryptionTypes
@@ -28340,6 +29507,38 @@ object awsSdkStrings {
   sealed trait c5DotxlargeDotelasticsearch extends _ESPartitionInstanceType
   
   @js.native
+  sealed trait c5aDot12xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDot16xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDot24xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDot2xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDot4xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDot8xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDotlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c5aDotxlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
   sealed trait c5dDot12xlarge
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
@@ -28400,6 +29599,78 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
   @js.native
+  sealed trait c6gDot12xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDot16xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDot2xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDot4xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDot8xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDotlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDotmedium
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDotmetal
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gDotxlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDot12xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDot16xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDot2xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDot4xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDot8xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDotlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDotmedium
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDotmetal
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait c6gdDotxlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
   sealed trait `ca-central-1`
     extends _CloudWatchRegion
        with _RegionName
@@ -28408,6 +29679,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait ca_ extends _AnalysisSchemeLanguage
+  
+  @js.native
+  sealed trait cache extends _BehaviorEnum
   
   @js.native
   sealed trait `cache-cluster`
@@ -28631,6 +29905,7 @@ object awsSdkStrings {
        with _DiskSnapshotState
        with _ExportTaskState
        with _SnapshotState
+       with typingsSlinky.awsSdk.ebsMod._Status
        with typingsSlinky.awsSdk.pollyMod._TaskStatus
        with _VolumeModificationState
   
@@ -28645,6 +29920,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait `concurrency-scaling` extends _UsageLimitFeatureType
+  
+  @js.native
+  sealed trait `configuration-type` extends _GroupFilterName
   
   @js.native
   sealed trait configure extends _DeploymentCommandName
@@ -28820,6 +30098,15 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
   @js.native
+  sealed trait `create-complete` extends _PrefixListState
+  
+  @js.native
+  sealed trait `create-failed` extends _PrefixListState
+  
+  @js.native
+  sealed trait `create-in-progress` extends _PrefixListState
+  
+  @js.native
   sealed trait createReference extends _RepositoryTriggerEventEnum
   
   @js.native
@@ -28853,7 +30140,7 @@ object awsSdkStrings {
   sealed trait cs extends _AnalysisSchemeLanguage
   
   @js.native
-  sealed trait csv_ extends _DataFormatValue
+  sealed trait csv__ extends _DataFormatValue
   
   @js.native
   sealed trait `custom-resource` extends _ServiceNamespace
@@ -28862,7 +30149,10 @@ object awsSdkStrings {
   sealed trait `custom-resourceColonResourceTypeColonProperty` extends _ScalableDimension
   
   @js.native
-  sealed trait custom__ extends _LayerType
+  sealed trait custom__
+    extends _CachePolicyType
+       with _LayerType
+       with _OriginRequestPolicyType
   
   @js.native
   sealed trait `customer-gateway`
@@ -29075,7 +30365,7 @@ object awsSdkStrings {
   sealed trait `default-vpc` extends _AccountAttributeName
   
   @js.native
-  sealed trait default_
+  sealed trait default__
     extends _Affinity
        with _AuthMechanismValue
        with _CapacityReservationTenancy
@@ -29086,6 +30376,15 @@ object awsSdkStrings {
   
   @js.native
   sealed trait delayed_ extends _DsnAction
+  
+  @js.native
+  sealed trait `delete-complete` extends _PrefixListState
+  
+  @js.native
+  sealed trait `delete-failed` extends _PrefixListState
+  
+  @js.native
+  sealed trait `delete-in-progress` extends _PrefixListState
   
   @js.native
   sealed trait deleteReference extends _RepositoryTriggerEventEnum
@@ -29183,6 +30482,7 @@ object awsSdkStrings {
   @js.native
   sealed trait desc_
     extends typingsSlinky.awsSdk.securityhubMod._SortOrder
+       with typingsSlinky.awsSdk.secretsmanagerMod._SortOrderType
   
   @js.native
   sealed trait descending__
@@ -29191,7 +30491,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait description
-    extends _FpgaImageAttributeName
+    extends _FilterNameStringType
+       with _FpgaImageAttributeName
        with _ImageAttributeName
        with _NetworkInterfaceAttribute
        with _TrafficMirrorFilterRuleField
@@ -29245,10 +30546,13 @@ object awsSdkStrings {
     extends _AutomaticFailoverStatus
        with _FastSnapshotRestoreStateCode
        with _InstanceMetadataEndpointState
+       with typingsSlinky.awsSdk.ec2Mod._InstanceMetadataEndpointState
        with _LaunchTemplateInstanceMetadataEndpointState
        with _MonitoringState
+       with _MultiAZStatus
        with _PendingAutomaticFailoverStatus
        with _TransitGatewayPropagationState
+       with _WriteForwardingStatus
   
   @js.native
   sealed trait disabling_
@@ -29256,6 +30560,7 @@ object awsSdkStrings {
        with _FastSnapshotRestoreStateCode
        with _MonitoringState
        with _TransitGatewayPropagationState
+       with _WriteForwardingStatus
   
   @js.native
   sealed trait disassociated_
@@ -29316,6 +30621,9 @@ object awsSdkStrings {
   sealed trait diversified
     extends _AllocationStrategy
        with _SpotAllocationStrategy
+  
+  @js.native
+  sealed trait `dont-cache` extends _BehaviorEnum
   
   @js.native
   sealed trait dotnetcore1Dot0 extends _Runtime
@@ -29432,6 +30740,10 @@ object awsSdkStrings {
   sealed trait el extends _AnalysisSchemeLanguage
   
   @js.native
+  sealed trait `elastic-gpu`
+    extends typingsSlinky.awsSdk.ec2Mod._ResourceType
+  
+  @js.native
   sealed trait `elastic-ip`
     extends typingsSlinky.awsSdk.ec2Mod._ResourceType
   
@@ -29456,13 +30768,6 @@ object awsSdkStrings {
   
   @js.native
   sealed trait `emit-metric` extends _UsageLimitBreachAction
-  
-  @js.native
-  sealed trait en
-    extends _AnalysisSchemeLanguage
-       with typingsSlinky.awsSdk.comprehendMod._LanguageCode
-       with _LocaleType
-       with _SyntaxLanguageCode
   
   @js.native
   sealed trait `en-AB`
@@ -29503,6 +30808,13 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.transcribeserviceMod._LanguageCode
   
   @js.native
+  sealed trait en_
+    extends _AnalysisSchemeLanguage
+       with typingsSlinky.awsSdk.comprehendMod._LanguageCode
+       with _LocaleType
+       with _SyntaxLanguageCode
+  
+  @js.native
   sealed trait enaSupport extends _InstanceAttributeName
   
   @js.native
@@ -29526,16 +30838,20 @@ object awsSdkStrings {
     extends _AutomaticFailoverStatus
        with _FastSnapshotRestoreStateCode
        with _InstanceMetadataEndpointState
+       with typingsSlinky.awsSdk.ec2Mod._InstanceMetadataEndpointState
        with _LaunchTemplateInstanceMetadataEndpointState
        with _MonitoringState
+       with _MultiAZStatus
        with _PendingAutomaticFailoverStatus
        with _TransitGatewayPropagationState
+       with _WriteForwardingStatus
   
   @js.native
   sealed trait enabling__
     extends _AutomaticFailoverStatus
        with _FastSnapshotRestoreStateCode
        with _TransitGatewayPropagationState
+       with _WriteForwardingStatus
   
   @js.native
   sealed trait end_ extends _SavingsPlansFilterName
@@ -29548,6 +30864,15 @@ object awsSdkStrings {
   
   @js.native
   sealed trait endpointInService extends js.Object
+  
+  @js.native
+  sealed trait environmentExists extends js.Object
+  
+  @js.native
+  sealed trait environmentTerminated extends js.Object
+  
+  @js.native
+  sealed trait environmentUpdated extends js.Object
   
   @js.native
   sealed trait eq_
@@ -29564,6 +30889,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.ec2Mod._ImageState
        with _InstanceSnapshotState
        with _SnapshotState
+       with typingsSlinky.awsSdk.ebsMod._Status
        with _ValidationSeverity
        with _VolumeState
   
@@ -29677,6 +31003,14 @@ object awsSdkStrings {
   sealed trait explicitDeny extends _PolicyEvaluationDecisionType
   
   @js.native
+  sealed trait `export-image-task`
+    extends typingsSlinky.awsSdk.ec2Mod._ResourceType
+  
+  @js.native
+  sealed trait `export-instance-task`
+    extends typingsSlinky.awsSdk.ec2Mod._ResourceType
+  
+  @js.native
   sealed trait exportTaskCancelled extends js.Object
   
   @js.native
@@ -29770,6 +31104,10 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.fsxMod._FilterName
   
   @js.native
+  sealed trait `file-system-type`
+    extends typingsSlinky.awsSdk.fsxMod._FilterName
+  
+  @js.native
   sealed trait filling extends js.Object
   
   @js.native
@@ -29853,6 +31191,11 @@ object awsSdkStrings {
        with _SyntaxLanguageCode
   
   @js.native
+  sealed trait freeTrialStartDate
+    extends _UsageStatisticsFilterKey
+       with _UsageStatisticsSortKey
+  
+  @js.native
   sealed trait fsize extends _UlimitName
   
   @js.native
@@ -29923,6 +31266,10 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
   @js.native
+  sealed trait g4dnDotmetal
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
   sealed trait g4dnDotxlarge
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
@@ -29966,7 +31313,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.esMod._VolumeType
   
   @js.native
-  sealed trait granted_ extends _NetworkInterfacePermissionStateCode
+  sealed trait granted__ extends _NetworkInterfacePermissionStateCode
   
   @js.native
   sealed trait `greater-than`
@@ -29988,7 +31335,9 @@ object awsSdkStrings {
   sealed trait group__ extends _PolicySourceType
   
   @js.native
-  sealed trait grpc extends _PortProtocol
+  sealed trait grpc
+    extends _PortProtocol
+       with _VirtualGatewayPortProtocol
   
   @js.native
   sealed trait gt_
@@ -30063,7 +31412,7 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._ResourceType
   
   @js.native
-  sealed trait host_
+  sealed trait host__
     extends _Affinity
        with _HostTenancy
        with _IpcMode
@@ -30079,7 +31428,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
   @js.native
-  sealed trait `http-only` extends _OriginProtocolPolicy
+  sealed trait `http-only`
+    extends _OriginProtocolPolicy
+       with _OriginProtocolPolicyEnum
   
   @js.native
   sealed trait http1Dot1 extends _HttpVersion
@@ -30088,6 +31439,7 @@ object awsSdkStrings {
   sealed trait http2
     extends _HttpVersion
        with _PortProtocol
+       with _VirtualGatewayPortProtocol
   
   @js.native
   sealed trait httpData extends js.Object
@@ -30112,10 +31464,12 @@ object awsSdkStrings {
     extends _HttpScheme
        with _PortProtocol
        with typingsSlinky.awsSdk.s3Mod._Protocol
+       with _VirtualGatewayPortProtocol
   
   @js.native
   sealed trait `https-only`
     extends _OriginProtocolPolicy
+       with _OriginProtocolPolicyEnum
        with _ViewerProtocolPolicy
   
   @js.native
@@ -30286,6 +31640,9 @@ object awsSdkStrings {
   sealed trait imageScanComplete extends js.Object
   
   @js.native
+  sealed trait imageSlashjpeg extends js.Object
+  
+  @js.native
   sealed trait immediate_
     extends _ApplyMethod
        with typingsSlinky.awsSdk.docdbMod._ApplyMethod
@@ -30304,6 +31661,14 @@ object awsSdkStrings {
   
   @js.native
   sealed trait implicitDeny extends _PolicyEvaluationDecisionType
+  
+  @js.native
+  sealed trait `import-image-task`
+    extends typingsSlinky.awsSdk.ec2Mod._ResourceType
+  
+  @js.native
+  sealed trait `import-snapshot-task`
+    extends typingsSlinky.awsSdk.ec2Mod._ResourceType
   
   @js.native
   sealed trait important extends _ServiceUpdateSeverity
@@ -30644,15 +32009,15 @@ object awsSdkStrings {
        with _SyntaxLanguageCode
   
   @js.native
-  sealed trait ja
-    extends _AnalysisSchemeLanguage
-       with typingsSlinky.awsSdk.comprehendMod._LanguageCode
-       with _LocaleType
-  
-  @js.native
   sealed trait `ja-JP`
     extends typingsSlinky.awsSdk.pollyMod._LanguageCode
        with typingsSlinky.awsSdk.transcribeserviceMod._LanguageCode
+  
+  @js.native
+  sealed trait ja_
+    extends _AnalysisSchemeLanguage
+       with typingsSlinky.awsSdk.comprehendMod._LanguageCode
+       with _LocaleType
   
   @js.native
   sealed trait `java-app` extends _LayerType
@@ -30683,7 +32048,7 @@ object awsSdkStrings {
   sealed trait jobComplete extends js.Object
   
   @js.native
-  sealed trait jobStatus
+  sealed trait jobStatus_
     extends _ListJobsFilterKey
        with _ListJobsSortAttributeName
   
@@ -30846,6 +32211,8 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.ec2Mod._apiVersion
        with typingsSlinky.awsSdk.route53domainsMod._apiVersion
        with typingsSlinky.awsSdk.stsMod._apiVersion
+       with typingsSlinky.awsSdk.codeartifactMod._apiVersion
+       with typingsSlinky.awsSdk.honeycodeMod._apiVersion
        with typingsSlinky.awsSdk.kendraMod._apiVersion
        with typingsSlinky.awsSdk.wafregionalMod._apiVersion
        with typingsSlinky.awsSdk.cloudhsmv2Mod._apiVersion
@@ -30864,6 +32231,7 @@ object awsSdkStrings {
        with typingsSlinky.awsSdk.appstreamMod._apiVersion
        with typingsSlinky.awsSdk.codestarMod._apiVersion
        with typingsSlinky.awsSdk.ecrMod._apiVersion
+       with typingsSlinky.awsSdk.ivsMod._apiVersion
        with typingsSlinky.awsSdk.codecommitMod._apiVersion
        with typingsSlinky.awsSdk.smsMod._apiVersion
        with typingsSlinky.awsSdk.cloudwatcheventsMod._apiVersion
@@ -31089,6 +32457,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait loadPermission extends _FpgaImageAttributeName
+  
+  @js.native
+  sealed trait `local-gateway-route-table-vpc-association`
+    extends typingsSlinky.awsSdk.ec2Mod._ResourceType
   
   @js.native
   sealed trait locks extends _UlimitName
@@ -31501,6 +32873,42 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
   @js.native
+  sealed trait m6gdDot12xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDot16xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDot2xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDot4xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDot8xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDotlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDotmedium
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDotmetal
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait m6gdDotxlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
   sealed trait mLModelAvailable extends js.Object
   
   @js.native
@@ -31529,6 +32937,11 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._FleetType
   
   @js.native
+  sealed trait managed_
+    extends _CachePolicyType
+       with _OriginRequestPolicyType
+  
+  @js.native
   sealed trait marketplace_ extends _ProductCodeValues
   
   @js.native
@@ -31536,6 +32949,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait `match-viewer` extends _OriginProtocolPolicy
+  
+  @js.native
+  sealed trait maven extends _PackageFormat
   
   @js.native
   sealed trait maxIO extends _PerformanceMode
@@ -32078,6 +33494,9 @@ object awsSdkStrings {
   sealed trait ml_c5 extends _TargetDevice
   
   @js.native
+  sealed trait ml_g4dn extends _TargetDevice
+  
+  @js.native
   sealed trait ml_inf1 extends _TargetDevice
   
   @js.native
@@ -32091,6 +33510,15 @@ object awsSdkStrings {
   
   @js.native
   sealed trait ml_p3 extends _TargetDevice
+  
+  @js.native
+  sealed trait `modify-complete` extends _PrefixListState
+  
+  @js.native
+  sealed trait `modify-failed` extends _PrefixListState
+  
+  @js.native
+  sealed trait `modify-in-progress` extends _PrefixListState
   
   @js.native
   sealed trait modifying_
@@ -32184,7 +33612,8 @@ object awsSdkStrings {
   
   @js.native
   sealed trait name__
-    extends _FpgaImageAttributeName
+    extends _FilterNameStringType
+       with _FpgaImageAttributeName
        with _ListJobsFilterKey
        with _ListJobsSortAttributeName
   
@@ -32291,14 +33720,21 @@ object awsSdkStrings {
   @js.native
   sealed trait none__
     extends _AlgorithmicStemming
+       with _CachePolicyCookieBehavior
+       with _CachePolicyHeaderBehavior
+       with _CachePolicyQueryStringBehavior
        with _CapacityReservationPreference
        with _CompressionTypeValue
        with _DmsSslModeValue
+       with _ForwardValues
        with _GeoRestrictionType
        with _IpcMode
        with _ItemSelection
        with _NestingLevelValue
        with _NetworkMode
+       with _OriginRequestPolicyCookieBehavior
+       with _OriginRequestPolicyHeaderBehavior
+       with _OriginRequestPolicyQueryStringBehavior
        with _PolicySourceType
        with _SuggesterFuzzyMatching
   
@@ -32351,6 +33787,9 @@ object awsSdkStrings {
   
   @js.native
   sealed trait notebookInstanceStopped extends js.Object
+  
+  @js.native
+  sealed trait npm extends _PackageFormat
   
   @js.native
   sealed trait nproc extends _UlimitName
@@ -32439,6 +33878,7 @@ object awsSdkStrings {
   @js.native
   sealed trait optional__
     extends _HttpTokensState
+       with _InstanceMetadataHttpTokensState
        with _LaunchTemplateHttpTokensState
   
   @js.native
@@ -32615,6 +34055,7 @@ object awsSdkStrings {
        with _NetworkInterfacePermissionStateCode
        with _PlacementGroupState
        with _SnapshotState
+       with typingsSlinky.awsSdk.ebsMod._Status
        with _SubnetState
        with _TransitGatewayAttachmentState
        with _TransitGatewayMulticastDomainState
@@ -32803,6 +34244,9 @@ object awsSdkStrings {
        with _ObjectACL
        with _ObjectCannedACL
        with _S3CannedAccessControlList
+  
+  @js.native
+  sealed trait pypi extends _PackageFormat
   
   @js.native
   sealed trait python2Dot7 extends _Runtime
@@ -33154,6 +34598,78 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.ec2Mod._InstanceType
   
   @js.native
+  sealed trait r6gDot12xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDot16xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDot2xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDot4xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDot8xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDotlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDotmedium
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDotmetal
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gDotxlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDot12xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDot16xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDot2xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDot4xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDot8xlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDotlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDotmedium
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDotmetal
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
+  sealed trait r6gdDotxlarge
+    extends typingsSlinky.awsSdk.ec2Mod._InstanceType
+  
+  @js.native
   sealed trait rails
     extends typingsSlinky.awsSdk.opsworksMod._AppType
   
@@ -33261,7 +34777,7 @@ object awsSdkStrings {
        with _VpcPeeringConnectionStateReasonCode
   
   @js.native
-  sealed trait rejecting_ extends _TransitGatewayAttachmentState
+  sealed trait rejecting__ extends _TransitGatewayAttachmentState
   
   @js.native
   sealed trait relayed extends _DsnAction
@@ -33350,8 +34866,10 @@ object awsSdkStrings {
   
   @js.native
   sealed trait required__
-    extends _EnaSupport
+    extends _EbsNvmeSupport
+       with _EnaSupport
        with _HttpTokensState
+       with _InstanceMetadataHttpTokensState
        with _LaunchTemplateHttpTokensState
   
   @js.native
@@ -33376,7 +34894,7 @@ object awsSdkStrings {
   sealed trait `resource-exhausted` extends _GrpcRetryPolicyEvent
   
   @js.native
-  sealed trait `resource-type` extends js.Object
+  sealed trait `resource-type` extends _GroupFilterName
   
   @js.native
   sealed trait resourceRecordSetsChanged extends js.Object
@@ -33393,6 +34911,15 @@ object awsSdkStrings {
   @js.native
   sealed trait `restore-cluster`
     extends typingsSlinky.awsSdk.redshiftMod._ActionType
+  
+  @js.native
+  sealed trait `restore-complete` extends _PrefixListState
+  
+  @js.native
+  sealed trait `restore-failed` extends _PrefixListState
+  
+  @js.native
+  sealed trait `restore-in-progress` extends _PrefixListState
   
   @js.native
   sealed trait restoringToClassic extends _MoveStatus
@@ -33682,6 +35209,12 @@ object awsSdkStrings {
   sealed trait serviceCode extends _SavingsPlanRateFilterName
   
   @js.native
+  sealed trait serviceLimit extends _UsageStatisticsFilterKey
+  
+  @js.native
+  sealed trait serviceLimitValue extends _UsageStatisticsSortKey
+  
+  @js.native
   sealed trait serviceLongArnFormat extends _SettingName
   
   @js.native
@@ -33958,6 +35491,7 @@ object awsSdkStrings {
   @js.native
   sealed trait supported
     extends _EbsEncryptionSupport
+       with _EbsNvmeSupport
        with _EbsOptimizedSupport
        with _EnaSupport
   
@@ -34124,6 +35658,12 @@ object awsSdkStrings {
   sealed trait tableNotExists extends js.Object
   
   @js.native
+  sealed trait `tag-key` extends _FilterNameStringType
+  
+  @js.native
+  sealed trait `tag-value` extends _FilterNameStringType
+  
+  @js.native
   sealed trait tail_ extends _EnvironmentInfoType
   
   @js.native
@@ -34239,7 +35779,9 @@ object awsSdkStrings {
     extends typingsSlinky.awsSdk.forecastserviceMod._AttributeType
   
   @js.native
-  sealed trait total_ extends _UsageStatisticsSortKey
+  sealed trait total_
+    extends _UsageStatisticsFilterKey
+       with _UsageStatisticsSortKey
   
   @js.native
   sealed trait `tr-TR`
@@ -34381,6 +35923,7 @@ object awsSdkStrings {
        with _LagState
        with _LoadBalancerState
        with _VirtualInterfaceState
+       with _WriteForwardingStatus
   
   @js.native
   sealed trait unlimited_ extends _EndDateType
@@ -34391,6 +35934,7 @@ object awsSdkStrings {
   @js.native
   sealed trait unsupported
     extends _EbsEncryptionSupport
+       with _EbsNvmeSupport
        with _EbsOptimizedSupport
        with _EnaSupport
   
@@ -34696,8 +36240,14 @@ object awsSdkStrings {
   
   @js.native
   sealed trait whitelist
-    extends _GeoRestrictionType
+    extends _CachePolicyCookieBehavior
+       with _CachePolicyHeaderBehavior
+       with _CachePolicyQueryStringBehavior
+       with _GeoRestrictionType
        with _ItemSelection
+       with _OriginRequestPolicyCookieBehavior
+       with _OriginRequestPolicyHeaderBehavior
+       with _OriginRequestPolicyQueryStringBehavior
   
   @js.native
   sealed trait word_ extends _SpeechMarkType
@@ -34744,6 +36294,12 @@ object awsSdkStrings {
        with _ArchitectureType
        with _ArchitectureValues
        with _UpdateTargetsArchitecture
+  
+  @js.native
+  sealed trait x86_win32 extends _TargetDevice
+  
+  @js.native
+  sealed trait x86_win64 extends _TargetDevice
   
   @js.native
   sealed trait xen
@@ -35195,6 +36751,8 @@ object awsSdkStrings {
   @scala.inline
   def `2018-09-17`: `2018-09-17` = "2018-09-17".asInstanceOf[`2018-09-17`]
   @scala.inline
+  def `2018-09-22`: `2018-09-22` = "2018-09-22".asInstanceOf[`2018-09-22`]
+  @scala.inline
   def `2018-09-24`: `2018-09-24` = "2018-09-24".asInstanceOf[`2018-09-24`]
   @scala.inline
   def `2018-09-25`: `2018-09-25` = "2018-09-25".asInstanceOf[`2018-09-25`]
@@ -35277,6 +36835,12 @@ object awsSdkStrings {
   @scala.inline
   def `2020-01-01`: `2020-01-01` = "2020-01-01".asInstanceOf[`2020-01-01`]
   @scala.inline
+  def `2020-03-01`: `2020-03-01` = "2020-03-01".asInstanceOf[`2020-03-01`]
+  @scala.inline
+  def `2020-05-31`: `2020-05-31` = "2020-05-31".asInstanceOf[`2020-05-31`]
+  @scala.inline
+  def `2020-07-14`: `2020-07-14` = "2020-07-14".asInstanceOf[`2020-07-14`]
+  @scala.inline
   def `237`: `237` = "237".asInstanceOf[`237`]
   @scala.inline
   def `28Dot4`: `28Dot4` = "28.4".asInstanceOf[`28Dot4`]
@@ -35339,15 +36903,25 @@ object awsSdkStrings {
   @scala.inline
   def ACCOUNT: ACCOUNT = "ACCOUNT".asInstanceOf[ACCOUNT]
   @scala.inline
+  def ACCOUNTING: ACCOUNTING = "ACCOUNTING".asInstanceOf[ACCOUNTING]
+  @scala.inline
   def ACCOUNT_CAPACITY_LIMIT_EXCEEDED: ACCOUNT_CAPACITY_LIMIT_EXCEEDED = "ACCOUNT_CAPACITY_LIMIT_EXCEEDED".asInstanceOf[ACCOUNT_CAPACITY_LIMIT_EXCEEDED]
+  @scala.inline
+  def ACCOUNT_DAILY_QUOTA_EXCEEDED: ACCOUNT_DAILY_QUOTA_EXCEEDED = "ACCOUNT_DAILY_QUOTA_EXCEEDED".asInstanceOf[ACCOUNT_DAILY_QUOTA_EXCEEDED]
   @scala.inline
   def ACCOUNT_ID: ACCOUNT_ID = "ACCOUNT_ID".asInstanceOf[ACCOUNT_ID]
   @scala.inline
   def ACCOUNT_LIMIT_EXCEEDED: ACCOUNT_LIMIT_EXCEEDED = "ACCOUNT_LIMIT_EXCEEDED".asInstanceOf[ACCOUNT_LIMIT_EXCEEDED]
   @scala.inline
+  def ACCOUNT_SENDING_PAUSED: ACCOUNT_SENDING_PAUSED = "ACCOUNT_SENDING_PAUSED".asInstanceOf[ACCOUNT_SENDING_PAUSED]
+  @scala.inline
   def ACCOUNT_SETTINGS: ACCOUNT_SETTINGS = "ACCOUNT_SETTINGS".asInstanceOf[ACCOUNT_SETTINGS]
   @scala.inline
   def ACCOUNT_SPECIFIC: ACCOUNT_SPECIFIC = "ACCOUNT_SPECIFIC".asInstanceOf[ACCOUNT_SPECIFIC]
+  @scala.inline
+  def ACCOUNT_SUSPENDED: ACCOUNT_SUSPENDED = "ACCOUNT_SUSPENDED".asInstanceOf[ACCOUNT_SUSPENDED]
+  @scala.inline
+  def ACCOUNT_THROTTLED: ACCOUNT_THROTTLED = "ACCOUNT_THROTTLED".asInstanceOf[ACCOUNT_THROTTLED]
   @scala.inline
   def ACKNOWLEDGE_TASK_MESSAGE: ACKNOWLEDGE_TASK_MESSAGE = "ACKNOWLEDGE_TASK_MESSAGE".asInstanceOf[ACKNOWLEDGE_TASK_MESSAGE]
   @scala.inline
@@ -35355,13 +36929,11 @@ object awsSdkStrings {
   @scala.inline
   def ACTION_FAILED: ACTION_FAILED = "ACTION_FAILED".asInstanceOf[ACTION_FAILED]
   @scala.inline
+  def ACTION_LEVEL: ACTION_LEVEL = "ACTION_LEVEL".asInstanceOf[ACTION_LEVEL]
+  @scala.inline
   def ACTION_NEEDED: ACTION_NEEDED = "ACTION_NEEDED".asInstanceOf[ACTION_NEEDED]
   @scala.inline
   def ACTIVATED: ACTIVATED = "ACTIVATED".asInstanceOf[ACTIVATED]
-  @scala.inline
-  def ACTIVATE_IN_PROGRESS: ACTIVATE_IN_PROGRESS = "ACTIVATE_IN_PROGRESS".asInstanceOf[ACTIVATE_IN_PROGRESS]
-  @scala.inline
-  def ACTIVATE_REQUESTED: ACTIVATE_REQUESTED = "ACTIVATE_REQUESTED".asInstanceOf[ACTIVATE_REQUESTED]
   @scala.inline
   def ACTIVATING: ACTIVATING = "ACTIVATING".asInstanceOf[ACTIVATING]
   @scala.inline
@@ -35551,6 +37123,8 @@ object awsSdkStrings {
   @scala.inline
   def AIFF: AIFF = "AIFF".asInstanceOf[AIFF]
   @scala.inline
+  def AISERVICES_OPT_OUT_POLICY: AISERVICES_OPT_OUT_POLICY = "AISERVICES_OPT_OUT_POLICY".asInstanceOf[AISERVICES_OPT_OUT_POLICY]
+  @scala.inline
   def AKA: AKA = "AKA".asInstanceOf[AKA]
   @scala.inline
   def AKAMAI: AKAMAI = "AKAMAI".asInstanceOf[AKAMAI]
@@ -35610,6 +37184,8 @@ object awsSdkStrings {
   def ALL_STEPS_COMPLETED: ALL_STEPS_COMPLETED = "ALL_STEPS_COMPLETED".asInstanceOf[ALL_STEPS_COMPLETED]
   @scala.inline
   def ALL_UPFRONT: ALL_UPFRONT = "ALL_UPFRONT".asInstanceOf[ALL_UPFRONT]
+  @scala.inline
+  def ALREADY_EXISTS: ALREADY_EXISTS = "ALREADY_EXISTS".asInstanceOf[ALREADY_EXISTS]
   @scala.inline
   def ALTER: ALTER = "ALTER".asInstanceOf[ALTER]
   @scala.inline
@@ -35818,6 +37394,10 @@ object awsSdkStrings {
   def ARMHF: ARMHF = "ARMHF".asInstanceOf[ARMHF]
   @scala.inline
   def ARM_CONTAINER: ARM_CONTAINER = "ARM_CONTAINER".asInstanceOf[ARM_CONTAINER]
+  @scala.inline
+  def ARM_EABI: ARM_EABI = "ARM_EABI".asInstanceOf[ARM_EABI]
+  @scala.inline
+  def ARM_EABIHF: ARM_EABIHF = "ARM_EABIHF".asInstanceOf[ARM_EABIHF]
   @scala.inline
   def ARN: ARN = "ARN".asInstanceOf[ARN]
   @scala.inline
@@ -36113,9 +37693,13 @@ object awsSdkStrings {
   @scala.inline
   def AWSColonColonS3ColonColonBucket: AWSColonColonS3ColonColonBucket = "AWS::S3::Bucket".asInstanceOf[AWSColonColonS3ColonColonBucket]
   @scala.inline
+  def AWSColonColonSNSColonColonTopic: AWSColonColonSNSColonColonTopic = "AWS::SNS::Topic".asInstanceOf[AWSColonColonSNSColonColonTopic]
+  @scala.inline
   def AWSColonColonSQSColonColonQueue: AWSColonColonSQSColonColonQueue = "AWS::SQS::Queue".asInstanceOf[AWSColonColonSQSColonColonQueue]
   @scala.inline
   def AWSColonColonSSMColonColonAssociationCompliance: AWSColonColonSSMColonColonAssociationCompliance = "AWS::SSM::AssociationCompliance".asInstanceOf[AWSColonColonSSMColonColonAssociationCompliance]
+  @scala.inline
+  def AWSColonColonSSMColonColonFileData: AWSColonColonSSMColonColonFileData = "AWS::SSM::FileData".asInstanceOf[AWSColonColonSSMColonColonFileData]
   @scala.inline
   def AWSColonColonSSMColonColonManagedInstanceInventory: AWSColonColonSSMColonColonManagedInstanceInventory = "AWS::SSM::ManagedInstanceInventory".asInstanceOf[AWSColonColonSSMColonColonManagedInstanceInventory]
   @scala.inline
@@ -36126,6 +37710,8 @@ object awsSdkStrings {
   def AWSColonColonSageMakerColonColonTrainingJob: AWSColonColonSageMakerColonColonTrainingJob = "AWS::SageMaker::TrainingJob".asInstanceOf[AWSColonColonSageMakerColonColonTrainingJob]
   @scala.inline
   def AWSColonColonSageMakerColonColonTransformJob: AWSColonColonSageMakerColonColonTransformJob = "AWS::SageMaker::TransformJob".asInstanceOf[AWSColonColonSageMakerColonColonTransformJob]
+  @scala.inline
+  def AWSColonColonSecretsManagerColonColonSecret: AWSColonColonSecretsManagerColonColonSecret = "AWS::SecretsManager::Secret".asInstanceOf[AWSColonColonSecretsManagerColonColonSecret]
   @scala.inline
   def AWSColonColonServiceCatalogColonColonCloudFormationProduct: AWSColonColonServiceCatalogColonColonCloudFormationProduct = "AWS::ServiceCatalog::CloudFormationProduct".asInstanceOf[AWSColonColonServiceCatalogColonColonCloudFormationProduct]
   @scala.inline
@@ -36229,6 +37815,14 @@ object awsSdkStrings {
   @scala.inline
   def Abandoned: Abandoned = "Abandoned".asInstanceOf[Abandoned]
   @scala.inline
+  def `Accept-Charset`: `Accept-Charset` = "Accept-Charset".asInstanceOf[`Accept-Charset`]
+  @scala.inline
+  def `Accept-Datetime`: `Accept-Datetime` = "Accept-Datetime".asInstanceOf[`Accept-Datetime`]
+  @scala.inline
+  def `Accept-Encoding`: `Accept-Encoding` = "Accept-Encoding".asInstanceOf[`Accept-Encoding`]
+  @scala.inline
+  def `Accept-Language`: `Accept-Language` = "Accept-Language".asInstanceOf[`Accept-Language`]
+  @scala.inline
   def Accept_ : Accept_ = "Accept".asInstanceOf[Accept_]
   @scala.inline
   def Accepted_ : Accepted_ = "Accepted".asInstanceOf[Accepted_]
@@ -36323,7 +37917,11 @@ object awsSdkStrings {
   @scala.inline
   def Advanced: Advanced = "Advanced".asInstanceOf[Advanced]
   @scala.inline
+  def AgentId: AgentId = "AgentId".asInstanceOf[AgentId]
+  @scala.inline
   def AgentVersion: AgentVersion = "AgentVersion".asInstanceOf[AgentVersion]
+  @scala.inline
+  def AggregatedRelativeTotalTime: AggregatedRelativeTotalTime = "AggregatedRelativeTotalTime".asInstanceOf[AggregatedRelativeTotalTime]
   @scala.inline
   def Alarm_ : Alarm_ = "Alarm".asInstanceOf[Alarm_]
   @scala.inline
@@ -36332,6 +37930,8 @@ object awsSdkStrings {
   def `All Upfront`: `All Upfront` = ("All Upfront").asInstanceOf[`All Upfront`]
   @scala.inline
   def AllAtOnce: AllAtOnce = "AllAtOnce".asInstanceOf[AllAtOnce]
+  @scala.inline
+  def AllData: AllData = "AllData".asInstanceOf[AllData]
   @scala.inline
   def AllDocuments: AllDocuments = "AllDocuments".asInstanceOf[AllDocuments]
   @scala.inline
@@ -36367,6 +37967,8 @@ object awsSdkStrings {
   @scala.inline
   def And_ : And_ = "And".asInstanceOf[And_]
   @scala.inline
+  def AnomalyDetection: AnomalyDetection = "AnomalyDetection".asInstanceOf[AnomalyDetection]
+  @scala.inline
   def Any_ : Any_ = "Any".asInstanceOf[Any_]
   @scala.inline
   def ApiCallRateInsight: ApiCallRateInsight = "ApiCallRateInsight".asInstanceOf[ApiCallRateInsight]
@@ -36398,6 +38000,8 @@ object awsSdkStrings {
   def ApproximateReceiveCount: ApproximateReceiveCount = "ApproximateReceiveCount".asInstanceOf[ApproximateReceiveCount]
   @scala.inline
   def ArchiveRetrieval: ArchiveRetrieval = "ArchiveRetrieval".asInstanceOf[ArchiveRetrieval]
+  @scala.inline
+  def Archived_ : Archived_ = "Archived".asInstanceOf[Archived_]
   @scala.inline
   def AreaCode: AreaCode = "AreaCode".asInstanceOf[AreaCode]
   @scala.inline
@@ -36445,6 +38049,8 @@ object awsSdkStrings {
   @scala.inline
   def Astrid: Astrid = "Astrid".asInstanceOf[Astrid]
   @scala.inline
+  def AttachCertificateToDistribution: AttachCertificateToDistribution = "AttachCertificateToDistribution".asInstanceOf[AttachCertificateToDistribution]
+  @scala.inline
   def AttachDisk: AttachDisk = "AttachDisk".asInstanceOf[AttachDisk]
   @scala.inline
   def AttachInstancesToLoadBalancer: AttachInstancesToLoadBalancer = "AttachInstancesToLoadBalancer".asInstanceOf[AttachInstancesToLoadBalancer]
@@ -36465,11 +38071,17 @@ object awsSdkStrings {
   @scala.inline
   def AuthenticatedRole: AuthenticatedRole = "AuthenticatedRole".asInstanceOf[AuthenticatedRole]
   @scala.inline
+  def Authorization: Authorization = "Authorization".asInstanceOf[Authorization]
+  @scala.inline
   def AutoBundleOnDeploy: AutoBundleOnDeploy = "AutoBundleOnDeploy".asInstanceOf[AutoBundleOnDeploy]
   @scala.inline
   def AutoScalingGroup: AutoScalingGroup = "AutoScalingGroup".asInstanceOf[AutoScalingGroup]
   @scala.inline
+  def AutoScalingGroupArn: AutoScalingGroupArn = "AutoScalingGroupArn".asInstanceOf[AutoScalingGroupArn]
+  @scala.inline
   def AutoScalingGroupInvalidConfiguration: AutoScalingGroupInvalidConfiguration = "AutoScalingGroupInvalidConfiguration".asInstanceOf[AutoScalingGroupInvalidConfiguration]
+  @scala.inline
+  def AutoScalingGroupName: AutoScalingGroupName = "AutoScalingGroupName".asInstanceOf[AutoScalingGroupName]
   @scala.inline
   def AutoScalingGroupNotFound: AutoScalingGroupNotFound = "AutoScalingGroupNotFound".asInstanceOf[AutoScalingGroupNotFound]
   @scala.inline
@@ -36503,6 +38115,8 @@ object awsSdkStrings {
   @scala.inline
   def AwsFlowRubySettings: AwsFlowRubySettings = "AwsFlowRubySettings".asInstanceOf[AwsFlowRubySettings]
   @scala.inline
+  def AwsRequestId: AwsRequestId = "AwsRequestId".asInstanceOf[AwsRequestId]
+  @scala.inline
   def B: B = "B".asInstanceOf[B]
   @scala.inline
   def BA: BA = "BA".asInstanceOf[BA]
@@ -36524,6 +38138,8 @@ object awsSdkStrings {
   def BACKUP_PLAN_CREATED: BACKUP_PLAN_CREATED = "BACKUP_PLAN_CREATED".asInstanceOf[BACKUP_PLAN_CREATED]
   @scala.inline
   def BACKUP_PLAN_MODIFIED: BACKUP_PLAN_MODIFIED = "BACKUP_PLAN_MODIFIED".asInstanceOf[BACKUP_PLAN_MODIFIED]
+  @scala.inline
+  def BACKUP_POLICY: BACKUP_POLICY = "BACKUP_POLICY".asInstanceOf[BACKUP_POLICY]
   @scala.inline
   def BACKWARD: BACKWARD = "BACKWARD".asInstanceOf[BACKWARD]
   @scala.inline
@@ -36721,6 +38337,8 @@ object awsSdkStrings {
   @scala.inline
   def BUILDING: BUILDING = "BUILDING".asInstanceOf[BUILDING]
   @scala.inline
+  def BUILD_BATCH: BUILD_BATCH = "BUILD_BATCH".asInstanceOf[BUILD_BATCH]
+  @scala.inline
   def BUILD_GENERAL1_2XLARGE: BUILD_GENERAL1_2XLARGE = "BUILD_GENERAL1_2XLARGE".asInstanceOf[BUILD_GENERAL1_2XLARGE]
   @scala.inline
   def BUILD_GENERAL1_LARGE: BUILD_GENERAL1_LARGE = "BUILD_GENERAL1_LARGE".asInstanceOf[BUILD_GENERAL1_LARGE]
@@ -36809,6 +38427,8 @@ object awsSdkStrings {
   @scala.inline
   def Bits_ : Bits_ = "Bits".asInstanceOf[Bits_]
   @scala.inline
+  def BlackFrames: BlackFrames = "BlackFrames".asInstanceOf[BlackFrames]
+  @scala.inline
   def Block_ : Block_ = "Block".asInstanceOf[Block_]
   @scala.inline
   def Blue_ : Blue_ = "Blue".asInstanceOf[Blue_]
@@ -36837,13 +38457,21 @@ object awsSdkStrings {
   @scala.inline
   def BundlerVersion: BundlerVersion = "BundlerVersion".asInstanceOf[BundlerVersion]
   @scala.inline
+  def BurstCapacityPercentage: BurstCapacityPercentage = "BurstCapacityPercentage".asInstanceOf[BurstCapacityPercentage]
+  @scala.inline
+  def BurstCapacityTime: BurstCapacityTime = "BurstCapacityTime".asInstanceOf[BurstCapacityTime]
+  @scala.inline
   def BusinessCalling: BusinessCalling = "BusinessCalling".asInstanceOf[BusinessCalling]
   @scala.inline
   def ByLogStream: ByLogStream = "ByLogStream".asInstanceOf[ByLogStream]
   @scala.inline
   def ByteMatch: ByteMatch = "ByteMatch".asInstanceOf[ByteMatch]
   @scala.inline
+  def BytesDownloaded: BytesDownloaded = "BytesDownloaded".asInstanceOf[BytesDownloaded]
+  @scala.inline
   def BytesSlashSecond: BytesSlashSecond = "Bytes/Second".asInstanceOf[BytesSlashSecond]
+  @scala.inline
+  def BytesUploaded: BytesUploaded = "BytesUploaded".asInstanceOf[BytesUploaded]
   @scala.inline
   def Bytes_ : Bytes_ = "Bytes".asInstanceOf[Bytes_]
   @scala.inline
@@ -36953,6 +38581,8 @@ object awsSdkStrings {
   @scala.inline
   def CERTIFICATE: CERTIFICATE = "CERTIFICATE".asInstanceOf[CERTIFICATE]
   @scala.inline
+  def CERTIFICATE_AUTHORITY_ACCESS_DENIED: CERTIFICATE_AUTHORITY_ACCESS_DENIED = "CERTIFICATE_AUTHORITY_ACCESS_DENIED".asInstanceOf[CERTIFICATE_AUTHORITY_ACCESS_DENIED]
+  @scala.inline
   def CERTIFICATE_AUTHORITY_COMPROMISE: CERTIFICATE_AUTHORITY_COMPROMISE = "CERTIFICATE_AUTHORITY_COMPROMISE".asInstanceOf[CERTIFICATE_AUTHORITY_COMPROMISE]
   @scala.inline
   def CERTIFICATE_HOLD: CERTIFICATE_HOLD = "CERTIFICATE_HOLD".asInstanceOf[CERTIFICATE_HOLD]
@@ -36972,6 +38602,8 @@ object awsSdkStrings {
   def CH: CH = "CH".asInstanceOf[CH]
   @scala.inline
   def CHA: CHA = "CHA".asInstanceOf[CHA]
+  @scala.inline
+  def CHANGED: CHANGED = "CHANGED".asInstanceOf[CHANGED]
   @scala.inline
   def CHANGE_DOMAIN_OWNER: CHANGE_DOMAIN_OWNER = "CHANGE_DOMAIN_OWNER".asInstanceOf[CHANGE_DOMAIN_OWNER]
   @scala.inline
@@ -37055,6 +38687,8 @@ object awsSdkStrings {
   @scala.inline
   def CLOUD_FORMATION_TEMPLATE: CLOUD_FORMATION_TEMPLATE = "CLOUD_FORMATION_TEMPLATE".asInstanceOf[CLOUD_FORMATION_TEMPLATE]
   @scala.inline
+  def CLOUD_TRAIL: CLOUD_TRAIL = "CLOUD_TRAIL".asInstanceOf[CLOUD_TRAIL]
+  @scala.inline
   def CLUSTER: CLUSTER = "CLUSTER".asInstanceOf[CLUSTER]
   @scala.inline
   def CLUSTER_NOT_FOUND: CLUSTER_NOT_FOUND = "CLUSTER_NOT_FOUND".asInstanceOf[CLUSTER_NOT_FOUND]
@@ -37084,6 +38718,8 @@ object awsSdkStrings {
   def CODEDEPLOY_RESOURCE_CANNOT_BE_FOUND: CODEDEPLOY_RESOURCE_CANNOT_BE_FOUND = "CODEDEPLOY_RESOURCE_CANNOT_BE_FOUND".asInstanceOf[CODEDEPLOY_RESOURCE_CANNOT_BE_FOUND]
   @scala.inline
   def CODEPIPELINE: CODEPIPELINE = "CODEPIPELINE".asInstanceOf[CODEPIPELINE]
+  @scala.inline
+  def CODE_COVERAGE: CODE_COVERAGE = "CODE_COVERAGE".asInstanceOf[CODE_COVERAGE]
   @scala.inline
   def CODE_DEPLOY: CODE_DEPLOY = "CODE_DEPLOY".asInstanceOf[CODE_DEPLOY]
   @scala.inline
@@ -37128,6 +38764,8 @@ object awsSdkStrings {
   def COLUMN_REPLACEMENT_MISSING: COLUMN_REPLACEMENT_MISSING = "COLUMN_REPLACEMENT_MISSING".asInstanceOf[COLUMN_REPLACEMENT_MISSING]
   @scala.inline
   def COLUMN_TYPE_MISMATCH: COLUMN_TYPE_MISMATCH = "COLUMN_TYPE_MISMATCH".asInstanceOf[COLUMN_TYPE_MISMATCH]
+  @scala.inline
+  def COMBINE_ARTIFACTS: COMBINE_ARTIFACTS = "COMBINE_ARTIFACTS".asInstanceOf[COMBINE_ARTIFACTS]
   @scala.inline
   def COMBINE_DUPLICATE_STREAMS: COMBINE_DUPLICATE_STREAMS = "COMBINE_DUPLICATE_STREAMS".asInstanceOf[COMBINE_DUPLICATE_STREAMS]
   @scala.inline
@@ -37190,6 +38828,10 @@ object awsSdkStrings {
   def CONFIGURATION_INVALID: CONFIGURATION_INVALID = "CONFIGURATION_INVALID".asInstanceOf[CONFIGURATION_INVALID]
   @scala.inline
   def CONFIGURATION_IN_PROGRESS: CONFIGURATION_IN_PROGRESS = "CONFIGURATION_IN_PROGRESS".asInstanceOf[CONFIGURATION_IN_PROGRESS]
+  @scala.inline
+  def CONFIGURATION_SET_NOT_FOUND: CONFIGURATION_SET_NOT_FOUND = "CONFIGURATION_SET_NOT_FOUND".asInstanceOf[CONFIGURATION_SET_NOT_FOUND]
+  @scala.inline
+  def CONFIGURATION_SET_SENDING_PAUSED: CONFIGURATION_SET_SENDING_PAUSED = "CONFIGURATION_SET_SENDING_PAUSED".asInstanceOf[CONFIGURATION_SET_SENDING_PAUSED]
   @scala.inline
   def CONFIGURED_PCR_PERIOD: CONFIGURED_PCR_PERIOD = "CONFIGURED_PCR_PERIOD".asInstanceOf[CONFIGURED_PCR_PERIOD]
   @scala.inline
@@ -37317,6 +38959,8 @@ object awsSdkStrings {
   @scala.inline
   def COPY_JOB_SUCCESSFUL: COPY_JOB_SUCCESSFUL = "COPY_JOB_SUCCESSFUL".asInstanceOf[COPY_JOB_SUCCESSFUL]
   @scala.inline
+  def COPY_SOURCE_NOT_FOUND: COPY_SOURCE_NOT_FOUND = "COPY_SOURCE_NOT_FOUND".asInstanceOf[COPY_SOURCE_NOT_FOUND]
+  @scala.inline
   def COR: COR = "COR".asInstanceOf[COR]
   @scala.inline
   def CORE: CORE = "CORE".asInstanceOf[CORE]
@@ -37427,6 +39071,8 @@ object awsSdkStrings {
   @scala.inline
   def CURATED: CURATED = "CURATED".asInstanceOf[CURATED]
   @scala.inline
+  def CURRENCY: CURRENCY = "CURRENCY".asInstanceOf[CURRENCY]
+  @scala.inline
   def CURRENT: CURRENT = "CURRENT".asInstanceOf[CURRENT]
   @scala.inline
   def CURRENTLY_ACTIVE: CURRENTLY_ACTIVE = "CURRENTLY_ACTIVE".asInstanceOf[CURRENTLY_ACTIVE]
@@ -37519,6 +39165,8 @@ object awsSdkStrings {
   @scala.inline
   def Carmen: Carmen = "Carmen".asInstanceOf[Carmen]
   @scala.inline
+  def CaseSensitive: CaseSensitive = "CaseSensitive".asInstanceOf[CaseSensitive]
+  @scala.inline
   def CassandraReadCapacityUtilization: CassandraReadCapacityUtilization = "CassandraReadCapacityUtilization".asInstanceOf[CassandraReadCapacityUtilization]
   @scala.inline
   def CassandraWriteCapacityUtilization: CassandraWriteCapacityUtilization = "CassandraWriteCapacityUtilization".asInstanceOf[CassandraWriteCapacityUtilization]
@@ -37530,6 +39178,8 @@ object awsSdkStrings {
   def Causes: Causes = "Causes".asInstanceOf[Causes]
   @scala.inline
   def Celine: Celine = "Celine".asInstanceOf[Celine]
+  @scala.inline
+  def Certificate_ : Certificate_ = "Certificate".asInstanceOf[Certificate_]
   @scala.inline
   def ChangeCalendar: ChangeCalendar = "ChangeCalendar".asInstanceOf[ChangeCalendar]
   @scala.inline
@@ -37579,6 +39229,18 @@ object awsSdkStrings {
   @scala.inline
   def CloudFormation_ : CloudFormation_ = "CloudFormation".asInstanceOf[CloudFormation_]
   @scala.inline
+  def `CloudFront-Forwarded-Proto`: `CloudFront-Forwarded-Proto` = "CloudFront-Forwarded-Proto".asInstanceOf[`CloudFront-Forwarded-Proto`]
+  @scala.inline
+  def `CloudFront-Is-Desktop-Viewer`: `CloudFront-Is-Desktop-Viewer` = "CloudFront-Is-Desktop-Viewer".asInstanceOf[`CloudFront-Is-Desktop-Viewer`]
+  @scala.inline
+  def `CloudFront-Is-Mobile-Viewer`: `CloudFront-Is-Mobile-Viewer` = "CloudFront-Is-Mobile-Viewer".asInstanceOf[`CloudFront-Is-Mobile-Viewer`]
+  @scala.inline
+  def `CloudFront-Is-SmartTV-Viewer`: `CloudFront-Is-SmartTV-Viewer` = "CloudFront-Is-SmartTV-Viewer".asInstanceOf[`CloudFront-Is-SmartTV-Viewer`]
+  @scala.inline
+  def `CloudFront-Is-Tablet-Viewer`: `CloudFront-Is-Tablet-Viewer` = "CloudFront-Is-Tablet-Viewer".asInstanceOf[`CloudFront-Is-Tablet-Viewer`]
+  @scala.inline
+  def `CloudFront-Viewer-Country`: `CloudFront-Viewer-Country` = "CloudFront-Viewer-Country".asInstanceOf[`CloudFront-Viewer-Country`]
+  @scala.inline
   def CloudWatchEvent: CloudWatchEvent = "CloudWatchEvent".asInstanceOf[CloudWatchEvent]
   @scala.inline
   def ClusterLogging: ClusterLogging = "ClusterLogging".asInstanceOf[ClusterLogging]
@@ -37588,6 +39250,8 @@ object awsSdkStrings {
   def CodeDeploy: CodeDeploy = "CodeDeploy".asInstanceOf[CodeDeploy]
   @scala.inline
   def CodeHook: CodeHook = "CodeHook".asInstanceOf[CodeHook]
+  @scala.inline
+  def ColorBars: ColorBars = "ColorBars".asInstanceOf[ColorBars]
   @scala.inline
   def Color_ : Color_ = "Color".asInstanceOf[Color_]
   @scala.inline
@@ -37614,6 +39278,8 @@ object awsSdkStrings {
   def ComprehendInferenceUtilization: ComprehendInferenceUtilization = "ComprehendInferenceUtilization".asInstanceOf[ComprehendInferenceUtilization]
   @scala.inline
   def Compute: Compute = "Compute".asInstanceOf[Compute]
+  @scala.inline
+  def ComputePlatform: ComputePlatform = "ComputePlatform".asInstanceOf[ComputePlatform]
   @scala.inline
   def Conchita: Conchita = "Conchita".asInstanceOf[Conchita]
   @scala.inline
@@ -37679,6 +39345,8 @@ object awsSdkStrings {
   @scala.inline
   def Cpu_ : Cpu_ = "Cpu".asInstanceOf[Cpu_]
   @scala.inline
+  def CreateCertificate: CreateCertificate = "CreateCertificate".asInstanceOf[CreateCertificate]
+  @scala.inline
   def CreateContactMethod: CreateContactMethod = "CreateContactMethod".asInstanceOf[CreateContactMethod]
   @scala.inline
   def CreateDate: CreateDate = "CreateDate".asInstanceOf[CreateDate]
@@ -37688,6 +39356,8 @@ object awsSdkStrings {
   def CreateDiskFromSnapshot: CreateDiskFromSnapshot = "CreateDiskFromSnapshot".asInstanceOf[CreateDiskFromSnapshot]
   @scala.inline
   def CreateDiskSnapshot: CreateDiskSnapshot = "CreateDiskSnapshot".asInstanceOf[CreateDiskSnapshot]
+  @scala.inline
+  def CreateDistribution: CreateDistribution = "CreateDistribution".asInstanceOf[CreateDistribution]
   @scala.inline
   def CreateDomain: CreateDomain = "CreateDomain".asInstanceOf[CreateDomain]
   @scala.inline
@@ -37743,9 +39413,35 @@ object awsSdkStrings {
   @scala.inline
   def CrossAccount: CrossAccount = "CrossAccount".asInstanceOf[CrossAccount]
   @scala.inline
+  def Csv_ : Csv_ = "Csv".asInstanceOf[Csv_]
+  @scala.inline
   def CurrentAction: CurrentAction = "CurrentAction".asInstanceOf[CurrentAction]
   @scala.inline
+  def CurrentConfigurationDesiredCapacity: CurrentConfigurationDesiredCapacity = "CurrentConfigurationDesiredCapacity".asInstanceOf[CurrentConfigurationDesiredCapacity]
+  @scala.inline
+  def CurrentConfigurationInstanceType: CurrentConfigurationInstanceType = "CurrentConfigurationInstanceType".asInstanceOf[CurrentConfigurationInstanceType]
+  @scala.inline
+  def CurrentConfigurationMaxSize: CurrentConfigurationMaxSize = "CurrentConfigurationMaxSize".asInstanceOf[CurrentConfigurationMaxSize]
+  @scala.inline
+  def CurrentConfigurationMinSize: CurrentConfigurationMinSize = "CurrentConfigurationMinSize".asInstanceOf[CurrentConfigurationMinSize]
+  @scala.inline
+  def CurrentInstanceType: CurrentInstanceType = "CurrentInstanceType".asInstanceOf[CurrentInstanceType]
+  @scala.inline
+  def CurrentMemory: CurrentMemory = "CurrentMemory".asInstanceOf[CurrentMemory]
+  @scala.inline
+  def CurrentNetwork: CurrentNetwork = "CurrentNetwork".asInstanceOf[CurrentNetwork]
+  @scala.inline
+  def CurrentOnDemandPrice: CurrentOnDemandPrice = "CurrentOnDemandPrice".asInstanceOf[CurrentOnDemandPrice]
+  @scala.inline
   def CurrentPlayerSessions: CurrentPlayerSessions = "CurrentPlayerSessions".asInstanceOf[CurrentPlayerSessions]
+  @scala.inline
+  def CurrentStandardOneYearNoUpfrontReservedPrice: CurrentStandardOneYearNoUpfrontReservedPrice = "CurrentStandardOneYearNoUpfrontReservedPrice".asInstanceOf[CurrentStandardOneYearNoUpfrontReservedPrice]
+  @scala.inline
+  def CurrentStandardThreeYearNoUpfrontReservedPrice: CurrentStandardThreeYearNoUpfrontReservedPrice = "CurrentStandardThreeYearNoUpfrontReservedPrice".asInstanceOf[CurrentStandardThreeYearNoUpfrontReservedPrice]
+  @scala.inline
+  def CurrentStorage: CurrentStorage = "CurrentStorage".asInstanceOf[CurrentStorage]
+  @scala.inline
+  def CurrentVCpus: CurrentVCpus = "CurrentVCpus".asInstanceOf[CurrentVCpus]
   @scala.inline
   def Current_ : Current_ = "Current".asInstanceOf[Current_]
   @scala.inline
@@ -37799,7 +39495,11 @@ object awsSdkStrings {
   @scala.inline
   def DATE: DATE = "DATE".asInstanceOf[DATE]
   @scala.inline
+  def DATERANGE: DATERANGE = "DATERANGE".asInstanceOf[DATERANGE]
+  @scala.inline
   def DATETIME: DATETIME = "DATETIME".asInstanceOf[DATETIME]
+  @scala.inline
+  def DATE_TIME: DATE_TIME = "DATE_TIME".asInstanceOf[DATE_TIME]
   @scala.inline
   def DATE_VALUE: DATE_VALUE = "DATE_VALUE".asInstanceOf[DATE_VALUE]
   @scala.inline
@@ -37889,6 +39589,8 @@ object awsSdkStrings {
   @scala.inline
   def DELETED_IN_TARGET: DELETED_IN_TARGET = "DELETED_IN_TARGET".asInstanceOf[DELETED_IN_TARGET]
   @scala.inline
+  def DELETED_ITEMS: DELETED_ITEMS = "DELETED_ITEMS".asInstanceOf[DELETED_ITEMS]
+  @scala.inline
   def DELETE_COMPLETE: DELETE_COMPLETE = "DELETE_COMPLETE".asInstanceOf[DELETE_COMPLETE]
   @scala.inline
   def DELETE_DOMAIN: DELETE_DOMAIN = "DELETE_DOMAIN".asInstanceOf[DELETE_DOMAIN]
@@ -37928,6 +39630,8 @@ object awsSdkStrings {
   def DELETION_IN_PROGRESS: DELETION_IN_PROGRESS = "DELETION_IN_PROGRESS".asInstanceOf[DELETION_IN_PROGRESS]
   @scala.inline
   def DELIVERY: DELIVERY = "DELIVERY".asInstanceOf[DELIVERY]
+  @scala.inline
+  def DELIVERY_DELAY: DELIVERY_DELAY = "DELIVERY_DELAY".asInstanceOf[DELIVERY_DELAY]
   @scala.inline
   def DELTA_LAUNCH_FAILED: DELTA_LAUNCH_FAILED = "DELTA_LAUNCH_FAILED".asInstanceOf[DELTA_LAUNCH_FAILED]
   @scala.inline
@@ -37991,6 +39695,8 @@ object awsSdkStrings {
   @scala.inline
   def DESCENDING: DESCENDING = "DESCENDING".asInstanceOf[DESCENDING]
   @scala.inline
+  def DESCRIBE: DESCRIBE = "DESCRIBE".asInstanceOf[DESCRIBE]
+  @scala.inline
   def DESK_PHONE: DESK_PHONE = "DESK_PHONE".asInstanceOf[DESK_PHONE]
   @scala.inline
   def DESTINATION_URL: DESTINATION_URL = "DESTINATION_URL".asInstanceOf[DESTINATION_URL]
@@ -38000,6 +39706,8 @@ object awsSdkStrings {
   def DETACHED: DETACHED = "DETACHED".asInstanceOf[DETACHED]
   @scala.inline
   def DETACHING: DETACHING = "DETACHING".asInstanceOf[DETACHING]
+  @scala.inline
+  def DETAILED_STATUS: DETAILED_STATUS = "DETAILED_STATUS".asInstanceOf[DETAILED_STATUS]
   @scala.inline
   def DETECTION_COMPLETE: DETECTION_COMPLETE = "DETECTION_COMPLETE".asInstanceOf[DETECTION_COMPLETE]
   @scala.inline
@@ -38133,6 +39841,8 @@ object awsSdkStrings {
   @scala.inline
   def DNS_FAILURE: DNS_FAILURE = "DNS_FAILURE".asInstanceOf[DNS_FAILURE]
   @scala.inline
+  def DNS_LOGS: DNS_LOGS = "DNS_LOGS".asInstanceOf[DNS_LOGS]
+  @scala.inline
   def DNS_PRIVATE: DNS_PRIVATE = "DNS_PRIVATE".asInstanceOf[DNS_PRIVATE]
   @scala.inline
   def DNS_PUBLIC: DNS_PUBLIC = "DNS_PUBLIC".asInstanceOf[DNS_PUBLIC]
@@ -38245,9 +39955,13 @@ object awsSdkStrings {
   @scala.inline
   def DOUBLE_QUOTE: DOUBLE_QUOTE = "DOUBLE_QUOTE".asInstanceOf[DOUBLE_QUOTE]
   @scala.inline
+  def DOUBLE_QUOTES: DOUBLE_QUOTES = "DOUBLE_QUOTES".asInstanceOf[DOUBLE_QUOTES]
+  @scala.inline
   def DOWN: DOWN = "DOWN".asInstanceOf[DOWN]
   @scala.inline
   def DOWNLOADING: DOWNLOADING = "DOWNLOADING".asInstanceOf[DOWNLOADING]
+  @scala.inline
+  def DOWNLOAD_BATCHSPEC: DOWNLOAD_BATCHSPEC = "DOWNLOAD_BATCHSPEC".asInstanceOf[DOWNLOAD_BATCHSPEC]
   @scala.inline
   def DOWNLOAD_SOURCE: DOWNLOAD_SOURCE = "DOWNLOAD_SOURCE".asInstanceOf[DOWNLOAD_SOURCE]
   @scala.inline
@@ -38258,6 +39972,8 @@ object awsSdkStrings {
   def DPL2: DPL2 = "DPL2".asInstanceOf[DPL2]
   @scala.inline
   def DRAFT: DRAFT = "DRAFT".asInstanceOf[DRAFT]
+  @scala.inline
+  def DRAFTS: DRAFTS = "DRAFTS".asInstanceOf[DRAFTS]
   @scala.inline
   def DRAINING: DRAINING = "DRAINING".asInstanceOf[DRAINING]
   @scala.inline
@@ -38329,6 +40045,8 @@ object awsSdkStrings {
   @scala.inline
   def DefaultInstanceName: DefaultInstanceName = "DefaultInstanceName".asInstanceOf[DefaultInstanceName]
   @scala.inline
+  def Default_ : Default_ = "Default".asInstanceOf[Default_]
+  @scala.inline
   def Degraded_ : Degraded_ = "Degraded".asInstanceOf[Degraded_]
   @scala.inline
   def DelaySeconds: DelaySeconds = "DelaySeconds".asInstanceOf[DelaySeconds]
@@ -38339,11 +40057,15 @@ object awsSdkStrings {
   @scala.inline
   def DeleteAlarm: DeleteAlarm = "DeleteAlarm".asInstanceOf[DeleteAlarm]
   @scala.inline
+  def DeleteCertificate: DeleteCertificate = "DeleteCertificate".asInstanceOf[DeleteCertificate]
+  @scala.inline
   def DeleteContactMethod: DeleteContactMethod = "DeleteContactMethod".asInstanceOf[DeleteContactMethod]
   @scala.inline
   def DeleteDisk: DeleteDisk = "DeleteDisk".asInstanceOf[DeleteDisk]
   @scala.inline
   def DeleteDiskSnapshot: DeleteDiskSnapshot = "DeleteDiskSnapshot".asInstanceOf[DeleteDiskSnapshot]
+  @scala.inline
+  def DeleteDistribution: DeleteDistribution = "DeleteDistribution".asInstanceOf[DeleteDistribution]
   @scala.inline
   def DeleteDomain: DeleteDomain = "DeleteDomain".asInstanceOf[DeleteDomain]
   @scala.inline
@@ -38425,6 +40147,8 @@ object awsSdkStrings {
   @scala.inline
   def Destination: Destination = "Destination".asInstanceOf[Destination]
   @scala.inline
+  def DetachCertificateFromDistribution: DetachCertificateFromDistribution = "DetachCertificateFromDistribution".asInstanceOf[DetachCertificateFromDistribution]
+  @scala.inline
   def DetachDisk: DetachDisk = "DetachDisk".asInstanceOf[DetachDisk]
   @scala.inline
   def DetachInstancesFromLoadBalancer: DetachInstancesFromLoadBalancer = "DetachInstancesFromLoadBalancer".asInstanceOf[DetachInstancesFromLoadBalancer]
@@ -38464,6 +40188,8 @@ object awsSdkStrings {
   def Dispatched: Dispatched = "Dispatched".asInstanceOf[Dispatched]
   @scala.inline
   def Disposed: Disposed = "Disposed".asInstanceOf[Disposed]
+  @scala.inline
+  def Distribution: Distribution = "Distribution".asInstanceOf[Distribution]
   @scala.inline
   def DocumentName: DocumentName = "DocumentName".asInstanceOf[DocumentName]
   @scala.inline
@@ -38627,6 +40353,8 @@ object awsSdkStrings {
   @scala.inline
   def EMIT_PROGRAM: EMIT_PROGRAM = "EMIT_PROGRAM".asInstanceOf[EMIT_PROGRAM]
   @scala.inline
+  def EN: EN = "EN".asInstanceOf[EN]
+  @scala.inline
   def ENABLE: ENABLE = "ENABLE".asInstanceOf[ENABLE]
   @scala.inline
   def ENABLED: ENABLED = "ENABLED".asInstanceOf[ENABLED]
@@ -38676,6 +40404,8 @@ object awsSdkStrings {
   def ENI_ACCESS_DENIED: ENI_ACCESS_DENIED = "ENI_ACCESS_DENIED".asInstanceOf[ENI_ACCESS_DENIED]
   @scala.inline
   def ENM: ENM = "ENM".asInstanceOf[ENM]
+  @scala.inline
+  def ENTERPRISE: ENTERPRISE = "ENTERPRISE".asInstanceOf[ENTERPRISE]
   @scala.inline
   def ENTERPRISE_EDITION: ENTERPRISE_EDITION = "ENTERPRISE_EDITION".asInstanceOf[ENTERPRISE_EDITION]
   @scala.inline
@@ -38833,6 +40563,8 @@ object awsSdkStrings {
   @scala.inline
   def EXTERNAL_DATA: EXTERNAL_DATA = "EXTERNAL_DATA".asInstanceOf[EXTERNAL_DATA]
   @scala.inline
+  def EXTERNAL_EVENTS: EXTERNAL_EVENTS = "EXTERNAL_EVENTS".asInstanceOf[EXTERNAL_EVENTS]
+  @scala.inline
   def EXTERNAL_MODEL_SCORE: EXTERNAL_MODEL_SCORE = "EXTERNAL_MODEL_SCORE".asInstanceOf[EXTERNAL_MODEL_SCORE]
   @scala.inline
   def EXTREME_POSE: EXTREME_POSE = "EXTREME_POSE".asInstanceOf[EXTREME_POSE]
@@ -38889,6 +40621,8 @@ object awsSdkStrings {
   @scala.inline
   def EncryptionStatus: EncryptionStatus = "EncryptionStatus".asInstanceOf[EncryptionStatus]
   @scala.inline
+  def EndCredits: EndCredits = "EndCredits".asInstanceOf[EndCredits]
+  @scala.inline
   def EndOfJob: EndOfJob = "EndOfJob".asInstanceOf[EndOfJob]
   @scala.inline
   def EndpointAccessUpdate: EndpointAccessUpdate = "EndpointAccessUpdate".asInstanceOf[EndpointAccessUpdate]
@@ -38905,13 +40639,13 @@ object awsSdkStrings {
   @scala.inline
   def EnteringStandby: EnteringStandby = "EnteringStandby".asInstanceOf[EnteringStandby]
   @scala.inline
-  def Enterprise: Enterprise = "Enterprise".asInstanceOf[Enterprise]
-  @scala.inline
   def EnterpriseDirectory: EnterpriseDirectory = "EnterpriseDirectory".asInstanceOf[EnterpriseDirectory]
   @scala.inline
   def EnterpriseLWA: EnterpriseLWA = "EnterpriseLWA".asInstanceOf[EnterpriseLWA]
   @scala.inline
   def EnterpriseOIDC: EnterpriseOIDC = "EnterpriseOIDC".asInstanceOf[EnterpriseOIDC]
+  @scala.inline
+  def Enterprise_ : Enterprise_ = "Enterprise".asInstanceOf[Enterprise_]
   @scala.inline
   def EnvironmentSetupError: EnvironmentSetupError = "EnvironmentSetupError".asInstanceOf[EnvironmentSetupError]
   @scala.inline
@@ -38954,6 +40688,8 @@ object awsSdkStrings {
   def ExecutingPreLaunch: ExecutingPreLaunch = "ExecutingPreLaunch".asInstanceOf[ExecutingPreLaunch]
   @scala.inline
   def ExecutionAborted: ExecutionAborted = "ExecutionAborted".asInstanceOf[ExecutionAborted]
+  @scala.inline
+  def ExecutionEnvironment: ExecutionEnvironment = "ExecutionEnvironment".asInstanceOf[ExecutionEnvironment]
   @scala.inline
   def ExecutionFailed: ExecutionFailed = "ExecutionFailed".asInstanceOf[ExecutionFailed]
   @scala.inline
@@ -39087,6 +40823,8 @@ object awsSdkStrings {
   @scala.inline
   def FILE_PATH: FILE_PATH = "FILE_PATH".asInstanceOf[FILE_PATH]
   @scala.inline
+  def FILE_SYSTEM_UPDATE: FILE_SYSTEM_UPDATE = "FILE_SYSTEM_UPDATE".asInstanceOf[FILE_SYSTEM_UPDATE]
+  @scala.inline
   def FILE_UPLOAD: FILE_UPLOAD = "FILE_UPLOAD".asInstanceOf[FILE_UPLOAD]
   @scala.inline
   def FILM_LIGHT: FILM_LIGHT = "FILM_LIGHT".asInstanceOf[FILM_LIGHT]
@@ -39191,6 +40929,8 @@ object awsSdkStrings {
   @scala.inline
   def FLOATING_POINT: FLOATING_POINT = "FLOATING_POINT".asInstanceOf[FLOATING_POINT]
   @scala.inline
+  def FLOW_LOGS: FLOW_LOGS = "FLOW_LOGS".asInstanceOf[FLOW_LOGS]
+  @scala.inline
   def FLOW_TEMPLATE_ID: FLOW_TEMPLATE_ID = "FLOW_TEMPLATE_ID".asInstanceOf[FLOW_TEMPLATE_ID]
   @scala.inline
   def FLUSH_IN_PROGRESS: FLUSH_IN_PROGRESS = "FLUSH_IN_PROGRESS".asInstanceOf[FLUSH_IN_PROGRESS]
@@ -39261,6 +41001,8 @@ object awsSdkStrings {
   @scala.inline
   def FORECASTED: FORECASTED = "FORECASTED".asInstanceOf[FORECASTED]
   @scala.inline
+  def FOREIGN: FOREIGN = "FOREIGN".asInstanceOf[FOREIGN]
+  @scala.inline
   def FORM: FORM = "FORM".asInstanceOf[FORM]
   @scala.inline
   def FORMS: FORMS = "FORMS".asInstanceOf[FORMS]
@@ -39268,6 +41010,8 @@ object awsSdkStrings {
   def FORM_FACTOR: FORM_FACTOR = "FORM_FACTOR".asInstanceOf[FORM_FACTOR]
   @scala.inline
   def FORWARD: FORWARD = "FORWARD".asInstanceOf[FORWARD]
+  @scala.inline
+  def FORWARDED_IP: FORWARDED_IP = "FORWARDED_IP".asInstanceOf[FORWARDED_IP]
   @scala.inline
   def FQDN: FQDN = "FQDN".asInstanceOf[FQDN]
   @scala.inline
@@ -39300,6 +41044,8 @@ object awsSdkStrings {
   def FRIDAY: FRIDAY = "FRIDAY".asInstanceOf[FRIDAY]
   @scala.inline
   def FRM: FRM = "FRM".asInstanceOf[FRM]
+  @scala.inline
+  def FROM_AGENT: FROM_AGENT = "FROM_AGENT".asInstanceOf[FROM_AGENT]
   @scala.inline
   def FRY: FRY = "FRY".asInstanceOf[FRY]
   @scala.inline
@@ -39342,6 +41088,8 @@ object awsSdkStrings {
   def FailWorkflowExecutionFailed: FailWorkflowExecutionFailed = "FailWorkflowExecutionFailed".asInstanceOf[FailWorkflowExecutionFailed]
   @scala.inline
   def Fail_ : Fail_ = "Fail".asInstanceOf[Fail_]
+  @scala.inline
+  def FailedDataOnly: FailedDataOnly = "FailedDataOnly".asInstanceOf[FailedDataOnly]
   @scala.inline
   def FailedDocumentsOnly: FailedDocumentsOnly = "FailedDocumentsOnly".asInstanceOf[FailedDocumentsOnly]
   @scala.inline
@@ -39497,6 +41245,8 @@ object awsSdkStrings {
   @scala.inline
   def GLG: GLG = "GLG".asInstanceOf[GLG]
   @scala.inline
+  def GLUE: GLUE = "GLUE".asInstanceOf[GLUE]
+  @scala.inline
   def GLV: GLV = "GLV".asInstanceOf[GLV]
   @scala.inline
   def GM: GM = "GM".asInstanceOf[GM]
@@ -39522,6 +41272,8 @@ object awsSdkStrings {
   def GQ: GQ = "GQ".asInstanceOf[GQ]
   @scala.inline
   def GR: GR = "GR".asInstanceOf[GR]
+  @scala.inline
+  def GRANTED: GRANTED = "GRANTED".asInstanceOf[GRANTED]
   @scala.inline
   def GRANT_ACCESS: GRANT_ACCESS = "GRANT_ACCESS".asInstanceOf[GRANT_ACCESS]
   @scala.inline
@@ -39613,13 +41365,15 @@ object awsSdkStrings {
   @scala.inline
   def Git: Git = "Git".asInstanceOf[Git]
   @scala.inline
+  def GitHubEnterpriseServer: GitHubEnterpriseServer = "GitHubEnterpriseServer".asInstanceOf[GitHubEnterpriseServer]
+  @scala.inline
   def GitHub_ : GitHub_ = "GitHub".asInstanceOf[GitHub_]
   @scala.inline
   def GlobalEndpointTokenVersion: GlobalEndpointTokenVersion = "GlobalEndpointTokenVersion".asInstanceOf[GlobalEndpointTokenVersion]
   @scala.inline
   def Google: Google = "Google".asInstanceOf[Google]
   @scala.inline
-  def Granted: Granted = "Granted".asInstanceOf[Granted]
+  def Granted_ : Granted_ = "Granted".asInstanceOf[Granted_]
   @scala.inline
   def GreaterThan: GreaterThan = "GreaterThan".asInstanceOf[GreaterThan]
   @scala.inline
@@ -39817,6 +41571,8 @@ object awsSdkStrings {
   @scala.inline
   def HITReviewable: HITReviewable = "HITReviewable".asInstanceOf[HITReviewable]
   @scala.inline
+  def HIVE: HIVE = "HIVE".asInstanceOf[HIVE]
+  @scala.inline
   def HK: HK = "HK".asInstanceOf[HK]
   @scala.inline
   def HLG_2020: HLG_2020 = "HLG_2020".asInstanceOf[HLG_2020]
@@ -39933,9 +41689,15 @@ object awsSdkStrings {
   @scala.inline
   def History: History = "History".asInstanceOf[History]
   @scala.inline
+  def Host_ : Host_ = "Host".asInstanceOf[Host_]
+  @scala.inline
   def Hourly_ : Hourly_ = "Hourly".asInstanceOf[Hourly_]
   @scala.inline
   def Hrs: Hrs = "Hrs".asInstanceOf[Hrs]
+  @scala.inline
+  def Http4xxErrorRate: Http4xxErrorRate = "Http4xxErrorRate".asInstanceOf[Http4xxErrorRate]
+  @scala.inline
+  def Http5xxErrorRate: Http5xxErrorRate = "Http5xxErrorRate".asInstanceOf[Http5xxErrorRate]
   @scala.inline
   def IAM: IAM = "IAM".asInstanceOf[IAM]
   @scala.inline
@@ -40055,11 +41817,11 @@ object awsSdkStrings {
   @scala.inline
   def INACCESSIBLE_ENCRYPTION_CREDENTIALS: INACCESSIBLE_ENCRYPTION_CREDENTIALS = "INACCESSIBLE_ENCRYPTION_CREDENTIALS".asInstanceOf[INACCESSIBLE_ENCRYPTION_CREDENTIALS]
   @scala.inline
-  def INACTIVATE_IN_PROGRESS: INACTIVATE_IN_PROGRESS = "INACTIVATE_IN_PROGRESS".asInstanceOf[INACTIVATE_IN_PROGRESS]
-  @scala.inline
   def INACTIVE: INACTIVE = "INACTIVE".asInstanceOf[INACTIVE]
   @scala.inline
   def INBOUND: INBOUND = "INBOUND".asInstanceOf[INBOUND]
+  @scala.inline
+  def INBOX: INBOX = "INBOX".asInstanceOf[INBOX]
   @scala.inline
   def INCLUDE: INCLUDE = "INCLUDE".asInstanceOf[INCLUDE]
   @scala.inline
@@ -40183,6 +41945,8 @@ object awsSdkStrings {
   @scala.inline
   def INTELLIGENT_TIERING: INTELLIGENT_TIERING = "INTELLIGENT_TIERING".asInstanceOf[INTELLIGENT_TIERING]
   @scala.inline
+  def INTEL_GRAPHICS: INTEL_GRAPHICS = "INTEL_GRAPHICS".asInstanceOf[INTEL_GRAPHICS]
+  @scala.inline
   def INTENT: INTENT = "INTENT".asInstanceOf[INTENT]
   @scala.inline
   def INTERACTION_AND_HOLD_TIME: INTERACTION_AND_HOLD_TIME = "INTERACTION_AND_HOLD_TIME".asInstanceOf[INTERACTION_AND_HOLD_TIME]
@@ -40261,6 +42025,8 @@ object awsSdkStrings {
   @scala.inline
   def INVALID_LAMBDA_FUNCTION: INVALID_LAMBDA_FUNCTION = "INVALID_LAMBDA_FUNCTION".asInstanceOf[INVALID_LAMBDA_FUNCTION]
   @scala.inline
+  def INVALID_PARAMETER: INVALID_PARAMETER = "INVALID_PARAMETER".asInstanceOf[INVALID_PARAMETER]
+  @scala.inline
   def INVALID_PASSWORD_STATE: INVALID_PASSWORD_STATE = "INVALID_PASSWORD_STATE".asInstanceOf[INVALID_PASSWORD_STATE]
   @scala.inline
   def INVALID_PERMISSIONS: INVALID_PERMISSIONS = "INVALID_PERMISSIONS".asInstanceOf[INVALID_PERMISSIONS]
@@ -40268,6 +42034,8 @@ object awsSdkStrings {
   def INVALID_PUBLIC_DOMAIN: INVALID_PUBLIC_DOMAIN = "INVALID_PUBLIC_DOMAIN".asInstanceOf[INVALID_PUBLIC_DOMAIN]
   @scala.inline
   def INVALID_REVISION: INVALID_REVISION = "INVALID_REVISION".asInstanceOf[INVALID_REVISION]
+  @scala.inline
+  def INVALID_SENDING_POOL_NAME: INVALID_SENDING_POOL_NAME = "INVALID_SENDING_POOL_NAME".asInstanceOf[INVALID_SENDING_POOL_NAME]
   @scala.inline
   def INVALID_SIGNATURE: INVALID_SIGNATURE = "INVALID_SIGNATURE".asInstanceOf[INVALID_SIGNATURE]
   @scala.inline
@@ -40439,6 +42207,8 @@ object awsSdkStrings {
   @scala.inline
   def Install_ : Install_ = "Install".asInstanceOf[Install_]
   @scala.inline
+  def InstanceArn: InstanceArn = "InstanceArn".asInstanceOf[InstanceArn]
+  @scala.inline
   def InstanceCreditSpecificationDotNotSupported: InstanceCreditSpecificationDotNotSupported = "InstanceCreditSpecification.NotSupported".asInstanceOf[InstanceCreditSpecificationDotNotSupported]
   @scala.inline
   def InstanceDotDeregistrationInProgress: InstanceDotDeregistrationInProgress = "Instance.DeregistrationInProgress".asInstanceOf[InstanceDotDeregistrationInProgress]
@@ -40466,6 +42236,8 @@ object awsSdkStrings {
   def InstanceIds: InstanceIds = "InstanceIds".asInstanceOf[InstanceIds]
   @scala.inline
   def InstanceLimitExceeded: InstanceLimitExceeded = "InstanceLimitExceeded".asInstanceOf[InstanceLimitExceeded]
+  @scala.inline
+  def InstanceName: InstanceName = "InstanceName".asInstanceOf[InstanceName]
   @scala.inline
   def InstanceReady: InstanceReady = "InstanceReady".asInstanceOf[InstanceReady]
   @scala.inline
@@ -40591,6 +42363,8 @@ object awsSdkStrings {
   @scala.inline
   def Ivy: Ivy = "Ivy".asInstanceOf[Ivy]
   @scala.inline
+  def JA: JA = "JA".asInstanceOf[JA]
+  @scala.inline
   def JAR: JAR = "JAR".asInstanceOf[JAR]
   @scala.inline
   def JAV: JAV = "JAV".asInstanceOf[JAV]
@@ -40645,6 +42419,8 @@ object awsSdkStrings {
   @scala.inline
   def JSON_SCHEMA: JSON_SCHEMA = "JSON_SCHEMA".asInstanceOf[JSON_SCHEMA]
   @scala.inline
+  def JUNK_EMAIL: JUNK_EMAIL = "JUNK_EMAIL".asInstanceOf[JUNK_EMAIL]
+  @scala.inline
   def JWT: JWT = "JWT".asInstanceOf[JWT]
   @scala.inline
   def Jacek: Jacek = "Jacek".asInstanceOf[Jacek]
@@ -40658,6 +42434,8 @@ object awsSdkStrings {
   def Joanna: Joanna = "Joanna".asInstanceOf[Joanna]
   @scala.inline
   def JobFailed: JobFailed = "JobFailed".asInstanceOf[JobFailed]
+  @scala.inline
+  def JobStatus: JobStatus = "JobStatus".asInstanceOf[JobStatus]
   @scala.inline
   def Joey: Joey = "Joey".asInstanceOf[Joey]
   @scala.inline
@@ -40676,6 +42454,12 @@ object awsSdkStrings {
   def KAFKA: KAFKA = "KAFKA".asInstanceOf[KAFKA]
   @scala.inline
   def KAFKA_BOOTSTRAP_SERVERS: KAFKA_BOOTSTRAP_SERVERS = "KAFKA_BOOTSTRAP_SERVERS".asInstanceOf[KAFKA_BOOTSTRAP_SERVERS]
+  @scala.inline
+  def KAFKA_CUSTOM_CERT: KAFKA_CUSTOM_CERT = "KAFKA_CUSTOM_CERT".asInstanceOf[KAFKA_CUSTOM_CERT]
+  @scala.inline
+  def KAFKA_SKIP_CUSTOM_CERT_VALIDATION: KAFKA_SKIP_CUSTOM_CERT_VALIDATION = "KAFKA_SKIP_CUSTOM_CERT_VALIDATION".asInstanceOf[KAFKA_SKIP_CUSTOM_CERT_VALIDATION]
+  @scala.inline
+  def KAFKA_SSL_ENABLED: KAFKA_SSL_ENABLED = "KAFKA_SSL_ENABLED".asInstanceOf[KAFKA_SSL_ENABLED]
   @scala.inline
   def KAL: KAL = "KAL".asInstanceOf[KAL]
   @scala.inline
@@ -40791,6 +42575,8 @@ object awsSdkStrings {
   @scala.inline
   def KernelGateway: KernelGateway = "KernelGateway".asInstanceOf[KernelGateway]
   @scala.inline
+  def Kevin: Kevin = "Kevin".asInstanceOf[Kevin]
+  @scala.inline
   def KeyId: KeyId = "KeyId".asInstanceOf[KeyId]
   @scala.inline
   def KeyPair: KeyPair = "KeyPair".asInstanceOf[KeyPair]
@@ -40815,6 +42601,8 @@ object awsSdkStrings {
   @scala.inline
   def KmsDataKeyReusePeriodSeconds: KmsDataKeyReusePeriodSeconds = "KmsDataKeyReusePeriodSeconds".asInstanceOf[KmsDataKeyReusePeriodSeconds]
   @scala.inline
+  def KmsError: KmsError = "KmsError".asInstanceOf[KmsError]
+  @scala.inline
   def KmsMasterKeyId: KmsMasterKeyId = "KmsMasterKeyId".asInstanceOf[KmsMasterKeyId]
   @scala.inline
   def LA: LA = "LA".asInstanceOf[LA]
@@ -40834,6 +42622,14 @@ object awsSdkStrings {
   def LAO: LAO = "LAO".asInstanceOf[LAO]
   @scala.inline
   def LARGE: LARGE = "LARGE".asInstanceOf[LARGE]
+  @scala.inline
+  def LARGE_12X: LARGE_12X = "LARGE_12X".asInstanceOf[LARGE_12X]
+  @scala.inline
+  def LARGE_2X: LARGE_2X = "LARGE_2X".asInstanceOf[LARGE_2X]
+  @scala.inline
+  def LARGE_4X: LARGE_4X = "LARGE_4X".asInstanceOf[LARGE_4X]
+  @scala.inline
+  def LARGE_8X: LARGE_8X = "LARGE_8X".asInstanceOf[LARGE_8X]
   @scala.inline
   def LAST: LAST = "LAST".asInstanceOf[LAST]
   @scala.inline
@@ -40872,6 +42668,8 @@ object awsSdkStrings {
   def LB: LB = "LB".asInstanceOf[LB]
   @scala.inline
   def LC: LC = "LC".asInstanceOf[LC]
+  @scala.inline
+  def LDAP: LDAP = "LDAP".asInstanceOf[LDAP]
   @scala.inline
   def LE: LE = "LE".asInstanceOf[LE]
   @scala.inline
@@ -40941,6 +42739,10 @@ object awsSdkStrings {
   @scala.inline
   def LI: LI = "LI".asInstanceOf[LI]
   @scala.inline
+  def LIGHTER: LIGHTER = "LIGHTER".asInstanceOf[LIGHTER]
+  @scala.inline
+  def LIGHTEST: LIGHTEST = "LIGHTEST".asInstanceOf[LIGHTEST]
+  @scala.inline
   def LIGHT_UTILIZATION: LIGHT_UTILIZATION = "LIGHT_UTILIZATION".asInstanceOf[LIGHT_UTILIZATION]
   @scala.inline
   def LIM: LIM = "LIM".asInstanceOf[LIM]
@@ -40954,6 +42756,8 @@ object awsSdkStrings {
   def LINEAR: LINEAR = "LINEAR".asInstanceOf[LINEAR]
   @scala.inline
   def LINES: LINES = "LINES".asInstanceOf[LINES]
+  @scala.inline
+  def LINE_COVERAGE_PERCENTAGE: LINE_COVERAGE_PERCENTAGE = "LINE_COVERAGE_PERCENTAGE".asInstanceOf[LINE_COVERAGE_PERCENTAGE]
   @scala.inline
   def LINE_LEVEL: LINE_LEVEL = "LINE_LEVEL".asInstanceOf[LINE_LEVEL]
   @scala.inline
@@ -41002,6 +42806,8 @@ object awsSdkStrings {
   def LOGICAL: LOGICAL = "LOGICAL".asInstanceOf[LOGICAL]
   @scala.inline
   def LONDON: LONDON = "LONDON".asInstanceOf[LONDON]
+  @scala.inline
+  def LONG: LONG = "LONG".asInstanceOf[LONG]
   @scala.inline
   def LONGITUDE: LONGITUDE = "LONGITUDE".asInstanceOf[LONGITUDE]
   @scala.inline
@@ -41059,6 +42865,8 @@ object awsSdkStrings {
   @scala.inline
   def LambdaDeleted: LambdaDeleted = "LambdaDeleted".asInstanceOf[LambdaDeleted]
   @scala.inline
+  def LambdaFunctionArn: LambdaFunctionArn = "LambdaFunctionArn".asInstanceOf[LambdaFunctionArn]
+  @scala.inline
   def LambdaFunctionCompleted: LambdaFunctionCompleted = "LambdaFunctionCompleted".asInstanceOf[LambdaFunctionCompleted]
   @scala.inline
   def LambdaFunctionFailed: LambdaFunctionFailed = "LambdaFunctionFailed".asInstanceOf[LambdaFunctionFailed]
@@ -41077,9 +42885,17 @@ object awsSdkStrings {
   @scala.inline
   def LambdaInvoke: LambdaInvoke = "LambdaInvoke".asInstanceOf[LambdaInvoke]
   @scala.inline
+  def LambdaMemoryLimitInMB: LambdaMemoryLimitInMB = "LambdaMemoryLimitInMB".asInstanceOf[LambdaMemoryLimitInMB]
+  @scala.inline
+  def LambdaPreviousExecutionTimeInMilliseconds: LambdaPreviousExecutionTimeInMilliseconds = "LambdaPreviousExecutionTimeInMilliseconds".asInstanceOf[LambdaPreviousExecutionTimeInMilliseconds]
+  @scala.inline
   def LambdaProvisionedConcurrencyUtilization: LambdaProvisionedConcurrencyUtilization = "LambdaProvisionedConcurrencyUtilization".asInstanceOf[LambdaProvisionedConcurrencyUtilization]
   @scala.inline
+  def LambdaRemainingTimeInMilliseconds: LambdaRemainingTimeInMilliseconds = "LambdaRemainingTimeInMilliseconds".asInstanceOf[LambdaRemainingTimeInMilliseconds]
+  @scala.inline
   def LambdaTarget: LambdaTarget = "LambdaTarget".asInstanceOf[LambdaTarget]
+  @scala.inline
+  def LambdaTimeGapBetweenInvokesInMilliseconds: LambdaTimeGapBetweenInvokesInMilliseconds = "LambdaTimeGapBetweenInvokesInMilliseconds".asInstanceOf[LambdaTimeGapBetweenInvokesInMilliseconds]
   @scala.inline
   def Lambda_ : Lambda_ = "Lambda".asInstanceOf[Lambda_]
   @scala.inline
@@ -41098,6 +42914,8 @@ object awsSdkStrings {
   def LastModifiedTime: LastModifiedTime = "LastModifiedTime".asInstanceOf[LastModifiedTime]
   @scala.inline
   def LastModifiedTimestamp: LastModifiedTimestamp = "LastModifiedTimestamp".asInstanceOf[LastModifiedTimestamp]
+  @scala.inline
+  def LastRefreshTimestamp: LastRefreshTimestamp = "LastRefreshTimestamp".asInstanceOf[LastRefreshTimestamp]
   @scala.inline
   def LastUpdatedAt: LastUpdatedAt = "LastUpdatedAt".asInstanceOf[LastUpdatedAt]
   @scala.inline
@@ -41175,6 +42993,8 @@ object awsSdkStrings {
   @scala.inline
   def LoginWithAmazon: LoginWithAmazon = "LoginWithAmazon".asInstanceOf[LoginWithAmazon]
   @scala.inline
+  def LookbackPeriodInDays: LookbackPeriodInDays = "LookbackPeriodInDays".asInstanceOf[LookbackPeriodInDays]
+  @scala.inline
   def Lotte: Lotte = "Lotte".asInstanceOf[Lotte]
   @scala.inline
   def Low_ : Low_ = "Low".asInstanceOf[Low_]
@@ -41198,6 +43018,8 @@ object awsSdkStrings {
   def MAC_ADDRESS: MAC_ADDRESS = "MAC_ADDRESS".asInstanceOf[MAC_ADDRESS]
   @scala.inline
   def MAH: MAH = "MAH".asInstanceOf[MAH]
+  @scala.inline
+  def MAIL_FROM_DOMAIN_NOT_VERIFIED: MAIL_FROM_DOMAIN_NOT_VERIFIED = "MAIL_FROM_DOMAIN_NOT_VERIFIED".asInstanceOf[MAIL_FROM_DOMAIN_NOT_VERIFIED]
   @scala.inline
   def MAIN: MAIN = "MAIN".asInstanceOf[MAIN]
   @scala.inline
@@ -41227,6 +43049,8 @@ object awsSdkStrings {
   @scala.inline
   def MAL: MAL = "MAL".asInstanceOf[MAL]
   @scala.inline
+  def MALI: MALI = "MALI".asInstanceOf[MALI]
+  @scala.inline
   def MALWARE_DETECTED: MALWARE_DETECTED = "MALWARE_DETECTED".asInstanceOf[MALWARE_DETECTED]
   @scala.inline
   def MALWARE_SCAN_ENCRYPTED_FILE: MALWARE_SCAN_ENCRYPTED_FILE = "MALWARE_SCAN_ENCRYPTED_FILE".asInstanceOf[MALWARE_SCAN_ENCRYPTED_FILE]
@@ -41249,6 +43073,8 @@ object awsSdkStrings {
   @scala.inline
   def MARIADB: MARIADB = "MARIADB".asInstanceOf[MARIADB]
   @scala.inline
+  def MARKETING: MARKETING = "MARKETING".asInstanceOf[MARKETING]
+  @scala.inline
   def MARKETPLACE: MARKETPLACE = "MARKETPLACE".asInstanceOf[MARKETPLACE]
   @scala.inline
   def MARKETPLACE_AMI: MARKETPLACE_AMI = "MARKETPLACE_AMI".asInstanceOf[MARKETPLACE_AMI]
@@ -41260,6 +43086,8 @@ object awsSdkStrings {
   def MASTER_EMAIL: MASTER_EMAIL = "MASTER_EMAIL".asInstanceOf[MASTER_EMAIL]
   @scala.inline
   def MASTER_NAME: MASTER_NAME = "MASTER_NAME".asInstanceOf[MASTER_NAME]
+  @scala.inline
+  def MATCH: MATCH = "MATCH".asInstanceOf[MATCH]
   @scala.inline
   def MAX: MAX = "MAX".asInstanceOf[MAX]
   @scala.inline
@@ -41295,6 +43123,8 @@ object awsSdkStrings {
   @scala.inline
   def MD: MD = "MD".asInstanceOf[MD]
   @scala.inline
+  def MD5: MD5 = "MD5".asInstanceOf[MD5]
+  @scala.inline
   def ME: ME = "ME".asInstanceOf[ME]
   @scala.inline
   def MEAN: MEAN = "MEAN".asInstanceOf[MEAN]
@@ -41328,6 +43158,8 @@ object awsSdkStrings {
   def MESSAGE: MESSAGE = "MESSAGE".asInstanceOf[MESSAGE]
   @scala.inline
   def MESSAGE_LOG: MESSAGE_LOG = "MESSAGE_LOG".asInstanceOf[MESSAGE_LOG]
+  @scala.inline
+  def MESSAGE_REJECTED: MESSAGE_REJECTED = "MESSAGE_REJECTED".asInstanceOf[MESSAGE_REJECTED]
   @scala.inline
   def MESSAGE_TAG: MESSAGE_TAG = "MESSAGE_TAG".asInstanceOf[MESSAGE_TAG]
   @scala.inline
@@ -41382,6 +43214,10 @@ object awsSdkStrings {
   def MINUTE: MINUTE = "MINUTE".asInstanceOf[MINUTE]
   @scala.inline
   def MISCONFIGURED: MISCONFIGURED = "MISCONFIGURED".asInstanceOf[MISCONFIGURED]
+  @scala.inline
+  def MISMATCHED_REVISION: MISMATCHED_REVISION = "MISMATCHED_REVISION".asInstanceOf[MISMATCHED_REVISION]
+  @scala.inline
+  def MISMATCHED_STATUS: MISMATCHED_STATUS = "MISMATCHED_STATUS".asInstanceOf[MISMATCHED_STATUS]
   @scala.inline
   def MISSED: MISSED = "MISSED".asInstanceOf[MISSED]
   @scala.inline
@@ -41609,6 +43445,8 @@ object awsSdkStrings {
   @scala.inline
   def MaxSize: MaxSize = "MaxSize".asInstanceOf[MaxSize]
   @scala.inline
+  def MaxStackDepth: MaxStackDepth = "MaxStackDepth".asInstanceOf[MaxStackDepth]
+  @scala.inline
   def MaxWaitTimeExceeded: MaxWaitTimeExceeded = "MaxWaitTimeExceeded".asInstanceOf[MaxWaitTimeExceeded]
   @scala.inline
   def Maxim: Maxim = "Maxim".asInstanceOf[Maxim]
@@ -41636,6 +43474,8 @@ object awsSdkStrings {
   def Member: Member = "Member".asInstanceOf[Member]
   @scala.inline
   def MemcachedMemory: MemcachedMemory = "MemcachedMemory".asInstanceOf[MemcachedMemory]
+  @scala.inline
+  def MemoryUsageLimitPercent: MemoryUsageLimitPercent = "MemoryUsageLimitPercent".asInstanceOf[MemoryUsageLimitPercent]
   @scala.inline
   def Memory_ : Memory_ = "Memory".asInstanceOf[Memory_]
   @scala.inline
@@ -41670,6 +43510,8 @@ object awsSdkStrings {
   def MinSize: MinSize = "MinSize".asInstanceOf[MinSize]
   @scala.inline
   def Minimize: Minimize = "Minimize".asInstanceOf[Minimize]
+  @scala.inline
+  def MinimumTimeForReportingInMilliseconds: MinimumTimeForReportingInMilliseconds = "MinimumTimeForReportingInMilliseconds".asInstanceOf[MinimumTimeForReportingInMilliseconds]
   @scala.inline
   def Minimum_ : Minimum_ = "Minimum".asInstanceOf[Minimum_]
   @scala.inline
@@ -41773,6 +43615,8 @@ object awsSdkStrings {
   @scala.inline
   def NEW_AND_OLD_IMAGES: NEW_AND_OLD_IMAGES = "NEW_AND_OLD_IMAGES".asInstanceOf[NEW_AND_OLD_IMAGES]
   @scala.inline
+  def NEW_CHANGED: NEW_CHANGED = "NEW_CHANGED".asInstanceOf[NEW_CHANGED]
+  @scala.inline
   def NEW_IMAGE: NEW_IMAGE = "NEW_IMAGE".asInstanceOf[NEW_IMAGE]
   @scala.inline
   def NEW_PASSWORD_REQUIRED: NEW_PASSWORD_REQUIRED = "NEW_PASSWORD_REQUIRED".asInstanceOf[NEW_PASSWORD_REQUIRED]
@@ -41819,6 +43663,8 @@ object awsSdkStrings {
   @scala.inline
   def NON_REPUDIATION: NON_REPUDIATION = "NON_REPUDIATION".asInstanceOf[NON_REPUDIATION]
   @scala.inline
+  def NON_RETRYABLE_FAILURE: NON_RETRYABLE_FAILURE = "NON_RETRYABLE_FAILURE".asInstanceOf[NON_RETRYABLE_FAILURE]
+  @scala.inline
   def NOOP: NOOP = "NOOP".asInstanceOf[NOOP]
   @scala.inline
   def NOR: NOR = "NOR".asInstanceOf[NOR]
@@ -41834,6 +43680,8 @@ object awsSdkStrings {
   def NOTIFIED: NOTIFIED = "NOTIFIED".asInstanceOf[NOTIFIED]
   @scala.inline
   def NOT_ACCELERATED: NOT_ACCELERATED = "NOT_ACCELERATED".asInstanceOf[NOT_ACCELERATED]
+  @scala.inline
+  def NOT_ALLOWED: NOT_ALLOWED = "NOT_ALLOWED".asInstanceOf[NOT_ALLOWED]
   @scala.inline
   def NOT_APPLICABLE: NOT_APPLICABLE = "NOT_APPLICABLE".asInstanceOf[NOT_APPLICABLE]
   @scala.inline
@@ -41917,6 +43765,8 @@ object awsSdkStrings {
   @scala.inline
   def NO_LFE: NO_LFE = "NO_LFE".asInstanceOf[NO_LFE]
   @scala.inline
+  def NO_MATCH: NO_MATCH = "NO_MATCH".asInstanceOf[NO_MATCH]
+  @scala.inline
   def NO_PASSTHROUGH: NO_PASSTHROUGH = "NO_PASSTHROUGH".asInstanceOf[NO_PASSTHROUGH]
   @scala.inline
   def NO_PROTECTION: NO_PROTECTION = "NO_PROTECTION".asInstanceOf[NO_PROTECTION]
@@ -41957,6 +43807,8 @@ object awsSdkStrings {
   @scala.inline
   def NUMBER_WITH_TIMELINE: NUMBER_WITH_TIMELINE = "NUMBER_WITH_TIMELINE".asInstanceOf[NUMBER_WITH_TIMELINE]
   @scala.inline
+  def NVIDIA: NVIDIA = "NVIDIA".asInstanceOf[NVIDIA]
+  @scala.inline
   def NYA: NYA = "NYA".asInstanceOf[NYA]
   @scala.inline
   def NZ: NZ = "NZ".asInstanceOf[NZ]
@@ -41966,6 +43818,8 @@ object awsSdkStrings {
   def Naja: Naja = "Naja".asInstanceOf[Naja]
   @scala.inline
   def Name_ : Name_ = "Name".asInstanceOf[Name_]
+  @scala.inline
+  def Negative_ : Negative_ = "Negative".asInstanceOf[Negative_]
   @scala.inline
   def NetworkFailure: NetworkFailure = "NetworkFailure".asInstanceOf[NetworkFailure]
   @scala.inline
@@ -42195,6 +44049,8 @@ object awsSdkStrings {
   @scala.inline
   def OPT_OUT: OPT_OUT = "OPT_OUT".asInstanceOf[OPT_OUT]
   @scala.inline
+  def OPUS: OPUS = "OPUS".asInstanceOf[OPUS]
+  @scala.inline
   def OR: OR = "OR".asInstanceOf[OR]
   @scala.inline
   def ORACLE_LINUX: ORACLE_LINUX = "ORACLE_LINUX".asInstanceOf[ORACLE_LINUX]
@@ -42327,6 +44183,8 @@ object awsSdkStrings {
   @scala.inline
   def OrganizationUnit: OrganizationUnit = "OrganizationUnit".asInstanceOf[OrganizationUnit]
   @scala.inline
+  def Origin: Origin = "Origin".asInstanceOf[Origin]
+  @scala.inline
   def Original_ : Original_ = "Original".asInstanceOf[Original_]
   @scala.inline
   def OutOfService: OutOfService = "OutOfService".asInstanceOf[OutOfService]
@@ -42409,6 +44267,8 @@ object awsSdkStrings {
   @scala.inline
   def PASSWORD_CHANGE: PASSWORD_CHANGE = "PASSWORD_CHANGE".asInstanceOf[PASSWORD_CHANGE]
   @scala.inline
+  def PASSWORD_MANAGER_ACCESS_DENIED: PASSWORD_MANAGER_ACCESS_DENIED = "PASSWORD_MANAGER_ACCESS_DENIED".asInstanceOf[PASSWORD_MANAGER_ACCESS_DENIED]
+  @scala.inline
   def PASSWORD_NOT_FOUND: PASSWORD_NOT_FOUND = "PASSWORD_NOT_FOUND".asInstanceOf[PASSWORD_NOT_FOUND]
   @scala.inline
   def PASSWORD_VERIFIER: PASSWORD_VERIFIER = "PASSWORD_VERIFIER".asInstanceOf[PASSWORD_VERIFIER]
@@ -42464,6 +44324,8 @@ object awsSdkStrings {
   def PEM: PEM = "PEM".asInstanceOf[PEM]
   @scala.inline
   def PENDING: PENDING = "PENDING".asInstanceOf[PENDING]
+  @scala.inline
+  def PENDING_ACCEPTANCE: PENDING_ACCEPTANCE = "PENDING_ACCEPTANCE".asInstanceOf[PENDING_ACCEPTANCE]
   @scala.inline
   def PENDING_ACTIVATION: PENDING_ACTIVATION = "PENDING_ACTIVATION".asInstanceOf[PENDING_ACTIVATION]
   @scala.inline
@@ -42524,6 +44386,8 @@ object awsSdkStrings {
   def PERCENT_CHANGE_IN_CAPACITY: PERCENT_CHANGE_IN_CAPACITY = "PERCENT_CHANGE_IN_CAPACITY".asInstanceOf[PERCENT_CHANGE_IN_CAPACITY]
   @scala.inline
   def PERFORMANCE: PERFORMANCE = "PERFORMANCE".asInstanceOf[PERFORMANCE]
+  @scala.inline
+  def PERMANENTLY_DELETE: PERMANENTLY_DELETE = "PERMANENTLY_DELETE".asInstanceOf[PERMANENTLY_DELETE]
   @scala.inline
   def PERMANENT_FAILURE: PERMANENT_FAILURE = "PERMANENT_FAILURE".asInstanceOf[PERMANENT_FAILURE]
   @scala.inline
@@ -42753,6 +44617,8 @@ object awsSdkStrings {
   @scala.inline
   def PT1H: PT1H = "PT1H".asInstanceOf[PT1H]
   @scala.inline
+  def PT3H: PT3H = "PT3H".asInstanceOf[PT3H]
+  @scala.inline
   def PT5M: PT5M = "PT5M".asInstanceOf[PT5M]
   @scala.inline
   def PTR: PTR = "PTR".asInstanceOf[PTR]
@@ -42766,6 +44632,8 @@ object awsSdkStrings {
   def PUBLISH: PUBLISH = "PUBLISH".asInstanceOf[PUBLISH]
   @scala.inline
   def PUBLISHED: PUBLISHED = "PUBLISHED".asInstanceOf[PUBLISHED]
+  @scala.inline
+  def PUBLISHED_TIME: PUBLISHED_TIME = "PUBLISHED_TIME".asInstanceOf[PUBLISHED_TIME]
   @scala.inline
   def PUBLISHING: PUBLISHING = "PUBLISHING".asInstanceOf[PUBLISHING]
   @scala.inline
@@ -42879,6 +44747,8 @@ object awsSdkStrings {
   @scala.inline
   def PendingAcceptance: PendingAcceptance = "PendingAcceptance".asInstanceOf[PendingAcceptance]
   @scala.inline
+  def PendingAutoRenewal: PendingAutoRenewal = "PendingAutoRenewal".asInstanceOf[PendingAutoRenewal]
+  @scala.inline
   def PendingColonProceed: PendingColonProceed = "Pending:Proceed".asInstanceOf[PendingColonProceed]
   @scala.inline
   def PendingColonWait: PendingColonWait = "Pending:Wait".asInstanceOf[PendingColonWait]
@@ -42890,6 +44760,8 @@ object awsSdkStrings {
   def PendingNewDeployment: PendingNewDeployment = "PendingNewDeployment".asInstanceOf[PendingNewDeployment]
   @scala.inline
   def PendingSpotBidPlacement: PendingSpotBidPlacement = "PendingSpotBidPlacement".asInstanceOf[PendingSpotBidPlacement]
+  @scala.inline
+  def PendingValidation: PendingValidation = "PendingValidation".asInstanceOf[PendingValidation]
   @scala.inline
   def PendingVerification: PendingVerification = "PendingVerification".asInstanceOf[PendingVerification]
   @scala.inline
@@ -42963,6 +44835,8 @@ object awsSdkStrings {
   @scala.inline
   def PollForSourceChanges: PollForSourceChanges = "PollForSourceChanges".asInstanceOf[PollForSourceChanges]
   @scala.inline
+  def Positive_ : Positive_ = "Positive".asInstanceOf[Positive_]
+  @scala.inline
   def PostLaunchFileFailure: PostLaunchFileFailure = "PostLaunchFileFailure".asInstanceOf[PostLaunchFileFailure]
   @scala.inline
   def PreInService: PreInService = "PreInService".asInstanceOf[PreInService]
@@ -43014,6 +44888,8 @@ object awsSdkStrings {
   def PublicAccessCidrs: PublicAccessCidrs = "PublicAccessCidrs".asInstanceOf[PublicAccessCidrs]
   @scala.inline
   def Public_ : Public_ = "Public".asInstanceOf[Public_]
+  @scala.inline
+  def Published_ : Published_ = "Published".asInstanceOf[Published_]
   @scala.inline
   def PullRequest: PullRequest = "PullRequest".asInstanceOf[PullRequest]
   @scala.inline
@@ -43225,6 +45101,8 @@ object awsSdkStrings {
   @scala.inline
   def REJECTED: REJECTED = "REJECTED".asInstanceOf[REJECTED]
   @scala.inline
+  def REJECTING: REJECTING = "REJECTING".asInstanceOf[REJECTING]
+  @scala.inline
   def REJECT_MESSAGE: REJECT_MESSAGE = "REJECT_MESSAGE".asInstanceOf[REJECT_MESSAGE]
   @scala.inline
   def RELATED_TIME_SERIES: RELATED_TIME_SERIES = "RELATED_TIME_SERIES".asInstanceOf[RELATED_TIME_SERIES]
@@ -43417,6 +45295,12 @@ object awsSdkStrings {
   @scala.inline
   def RETRY: RETRY = "RETRY".asInstanceOf[RETRY]
   @scala.inline
+  def RETRYABLE_FAILURE: RETRYABLE_FAILURE = "RETRYABLE_FAILURE".asInstanceOf[RETRYABLE_FAILURE]
+  @scala.inline
+  def RETRY_ALL_BUILDS: RETRY_ALL_BUILDS = "RETRY_ALL_BUILDS".asInstanceOf[RETRY_ALL_BUILDS]
+  @scala.inline
+  def RETRY_FAILED_BUILDS: RETRY_FAILED_BUILDS = "RETRY_FAILED_BUILDS".asInstanceOf[RETRY_FAILED_BUILDS]
+  @scala.inline
   def REVIEW_IN_PROGRESS: REVIEW_IN_PROGRESS = "REVIEW_IN_PROGRESS".asInstanceOf[REVIEW_IN_PROGRESS]
   @scala.inline
   def REVISION: REVISION = "REVISION".asInstanceOf[REVISION]
@@ -43502,6 +45386,8 @@ object awsSdkStrings {
   def ROTATING: ROTATING = "ROTATING".asInstanceOf[ROTATING]
   @scala.inline
   def ROUTE_OR_MODE: ROUTE_OR_MODE = "ROUTE_OR_MODE".asInstanceOf[ROUTE_OR_MODE]
+  @scala.inline
+  def ROWLINK: ROWLINK = "ROWLINK".asInstanceOf[ROWLINK]
   @scala.inline
   def ROW_SIZE_LIMIT_EXCEEDED: ROW_SIZE_LIMIT_EXCEEDED = "ROW_SIZE_LIMIT_EXCEEDED".asInstanceOf[ROW_SIZE_LIMIT_EXCEEDED]
   @scala.inline
@@ -43599,7 +45485,41 @@ object awsSdkStrings {
   @scala.inline
   def ReceiveMessageWaitTimeSeconds: ReceiveMessageWaitTimeSeconds = "ReceiveMessageWaitTimeSeconds".asInstanceOf[ReceiveMessageWaitTimeSeconds]
   @scala.inline
+  def RecommendationOptionsConfigurationDesiredCapacity: RecommendationOptionsConfigurationDesiredCapacity = "RecommendationOptionsConfigurationDesiredCapacity".asInstanceOf[RecommendationOptionsConfigurationDesiredCapacity]
+  @scala.inline
+  def RecommendationOptionsConfigurationInstanceType: RecommendationOptionsConfigurationInstanceType = "RecommendationOptionsConfigurationInstanceType".asInstanceOf[RecommendationOptionsConfigurationInstanceType]
+  @scala.inline
+  def RecommendationOptionsConfigurationMaxSize: RecommendationOptionsConfigurationMaxSize = "RecommendationOptionsConfigurationMaxSize".asInstanceOf[RecommendationOptionsConfigurationMaxSize]
+  @scala.inline
+  def RecommendationOptionsConfigurationMinSize: RecommendationOptionsConfigurationMinSize = "RecommendationOptionsConfigurationMinSize".asInstanceOf[RecommendationOptionsConfigurationMinSize]
+  @scala.inline
+  def RecommendationOptionsInstanceType: RecommendationOptionsInstanceType = "RecommendationOptionsInstanceType".asInstanceOf[RecommendationOptionsInstanceType]
+  @scala.inline
+  def RecommendationOptionsMemory: RecommendationOptionsMemory = "RecommendationOptionsMemory".asInstanceOf[RecommendationOptionsMemory]
+  @scala.inline
+  def RecommendationOptionsNetwork: RecommendationOptionsNetwork = "RecommendationOptionsNetwork".asInstanceOf[RecommendationOptionsNetwork]
+  @scala.inline
+  def RecommendationOptionsOnDemandPrice: RecommendationOptionsOnDemandPrice = "RecommendationOptionsOnDemandPrice".asInstanceOf[RecommendationOptionsOnDemandPrice]
+  @scala.inline
+  def RecommendationOptionsPerformanceRisk: RecommendationOptionsPerformanceRisk = "RecommendationOptionsPerformanceRisk".asInstanceOf[RecommendationOptionsPerformanceRisk]
+  @scala.inline
+  def RecommendationOptionsProjectedUtilizationMetricsCpuMaximum: RecommendationOptionsProjectedUtilizationMetricsCpuMaximum = "RecommendationOptionsProjectedUtilizationMetricsCpuMaximum".asInstanceOf[RecommendationOptionsProjectedUtilizationMetricsCpuMaximum]
+  @scala.inline
+  def RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum: RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum = "RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum".asInstanceOf[RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum]
+  @scala.inline
+  def RecommendationOptionsStandardOneYearNoUpfrontReservedPrice: RecommendationOptionsStandardOneYearNoUpfrontReservedPrice = "RecommendationOptionsStandardOneYearNoUpfrontReservedPrice".asInstanceOf[RecommendationOptionsStandardOneYearNoUpfrontReservedPrice]
+  @scala.inline
+  def RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice: RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice = "RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice".asInstanceOf[RecommendationOptionsStandardThreeYearNoUpfrontReservedPrice]
+  @scala.inline
+  def RecommendationOptionsStorage: RecommendationOptionsStorage = "RecommendationOptionsStorage".asInstanceOf[RecommendationOptionsStorage]
+  @scala.inline
+  def RecommendationOptionsVcpus: RecommendationOptionsVcpus = "RecommendationOptionsVcpus".asInstanceOf[RecommendationOptionsVcpus]
+  @scala.inline
   def RecommendationSourceType: RecommendationSourceType = "RecommendationSourceType".asInstanceOf[RecommendationSourceType]
+  @scala.inline
+  def RecommendationsSourcesRecommendationSourceArn: RecommendationsSourcesRecommendationSourceArn = "RecommendationsSourcesRecommendationSourceArn".asInstanceOf[RecommendationsSourcesRecommendationSourceArn]
+  @scala.inline
+  def RecommendationsSourcesRecommendationSourceType: RecommendationsSourcesRecommendationSourceType = "RecommendationsSourcesRecommendationSourceType".asInstanceOf[RecommendationsSourcesRecommendationSourceType]
   @scala.inline
   def RecordIO: RecordIO = "RecordIO".asInstanceOf[RecordIO]
   @scala.inline
@@ -43615,9 +45535,13 @@ object awsSdkStrings {
   @scala.inline
   def RedrivePolicy: RedrivePolicy = "RedrivePolicy".asInstanceOf[RedrivePolicy]
   @scala.inline
+  def Referer: Referer = "Referer".asInstanceOf[Referer]
+  @scala.inline
   def RefreshedAt: RefreshedAt = "RefreshedAt".asInstanceOf[RefreshedAt]
   @scala.inline
   def RegexMatch: RegexMatch = "RegexMatch".asInstanceOf[RegexMatch]
+  @scala.inline
+  def RegionDisabled: RegionDisabled = "RegionDisabled".asInstanceOf[RegionDisabled]
   @scala.inline
   def Region_ : Region_ = "Region".asInstanceOf[Region_]
   @scala.inline
@@ -43643,7 +45567,7 @@ object awsSdkStrings {
   @scala.inline
   def Rejected_ : Rejected_ = "Rejected".asInstanceOf[Rejected_]
   @scala.inline
-  def Rejecting: Rejecting = "Rejecting".asInstanceOf[Rejecting]
+  def Rejecting_ : Rejecting_ = "Rejecting".asInstanceOf[Rejecting_]
   @scala.inline
   def RelationalDatabase: RelationalDatabase = "RelationalDatabase".asInstanceOf[RelationalDatabase]
   @scala.inline
@@ -43673,6 +45597,8 @@ object awsSdkStrings {
   @scala.inline
   def Report_CSV_20180820: Report_CSV_20180820 = "Report_CSV_20180820".asInstanceOf[Report_CSV_20180820]
   @scala.inline
+  def ReportingIntervalInMilliseconds: ReportingIntervalInMilliseconds = "ReportingIntervalInMilliseconds".asInstanceOf[ReportingIntervalInMilliseconds]
+  @scala.inline
   def RequestCancelActivityTask: RequestCancelActivityTask = "RequestCancelActivityTask".asInstanceOf[RequestCancelActivityTask]
   @scala.inline
   def RequestCancelActivityTaskFailed: RequestCancelActivityTaskFailed = "RequestCancelActivityTaskFailed".asInstanceOf[RequestCancelActivityTaskFailed]
@@ -43695,6 +45621,8 @@ object awsSdkStrings {
   @scala.inline
   def Requester: Requester = "Requester".asInstanceOf[Requester]
   @scala.inline
+  def Requests_ : Requests_ = "Requests".asInstanceOf[Requests_]
+  @scala.inline
   def Require_ : Require_ = "Require".asInstanceOf[Require_]
   @scala.inline
   def Required_ : Required_ = "Required".asInstanceOf[Required_]
@@ -43702,6 +45630,8 @@ object awsSdkStrings {
   def RequiresIndexDocuments: RequiresIndexDocuments = "RequiresIndexDocuments".asInstanceOf[RequiresIndexDocuments]
   @scala.inline
   def ResetDeployment: ResetDeployment = "ResetDeployment".asInstanceOf[ResetDeployment]
+  @scala.inline
+  def ResetDistributionCache: ResetDistributionCache = "ResetDistributionCache".asInstanceOf[ResetDistributionCache]
   @scala.inline
   def Resigned: Resigned = "Resigned".asInstanceOf[Resigned]
   @scala.inline
@@ -43797,6 +45727,8 @@ object awsSdkStrings {
   @scala.inline
   def RollbackSuccessful: RollbackSuccessful = "RollbackSuccessful".asInstanceOf[RollbackSuccessful]
   @scala.inline
+  def Rolling: Rolling = "Rolling".asInstanceOf[Rolling]
+  @scala.inline
   def RollingBack: RollingBack = "RollingBack".asInstanceOf[RollingBack]
   @scala.inline
   def Root_ : Root_ = "Root".asInstanceOf[Root_]
@@ -43848,6 +45780,8 @@ object awsSdkStrings {
   def S3_ACCESS_POINT: S3_ACCESS_POINT = "S3_ACCESS_POINT".asInstanceOf[S3_ACCESS_POINT]
   @scala.inline
   def S3_FILE_INACCESSIBLE: S3_FILE_INACCESSIBLE = "S3_FILE_INACCESSIBLE".asInstanceOf[S3_FILE_INACCESSIBLE]
+  @scala.inline
+  def S3_LOGS: S3_LOGS = "S3_LOGS".asInstanceOf[S3_LOGS]
   @scala.inline
   def S3_MANIFEST_ERROR: S3_MANIFEST_ERROR = "S3_MANIFEST_ERROR".asInstanceOf[S3_MANIFEST_ERROR]
   @scala.inline
@@ -44063,6 +45997,8 @@ object awsSdkStrings {
   @scala.inline
   def SENSITIVE_DATA_DISCOVERY: SENSITIVE_DATA_DISCOVERY = "SENSITIVE_DATA_DISCOVERY".asInstanceOf[SENSITIVE_DATA_DISCOVERY]
   @scala.inline
+  def SENT_ITEMS: SENT_ITEMS = "SENT_ITEMS".asInstanceOf[SENT_ITEMS]
+  @scala.inline
   def SEQUENTIAL: SEQUENTIAL = "SEQUENTIAL".asInstanceOf[SEQUENTIAL]
   @scala.inline
   def SERIAL: SERIAL = "SERIAL".asInstanceOf[SERIAL]
@@ -44145,6 +46081,12 @@ object awsSdkStrings {
   @scala.inline
   def SH: SH = "SH".asInstanceOf[SH]
   @scala.inline
+  def `SHA-1`: `SHA-1` = "SHA-1".asInstanceOf[`SHA-1`]
+  @scala.inline
+  def `SHA-256`: `SHA-256` = "SHA-256".asInstanceOf[`SHA-256`]
+  @scala.inline
+  def `SHA-512`: `SHA-512` = "SHA-512".asInstanceOf[`SHA-512`]
+  @scala.inline
   def SHA1: SHA1 = "SHA1".asInstanceOf[SHA1]
   @scala.inline
   def SHA256: SHA256 = "SHA256".asInstanceOf[SHA256]
@@ -44178,6 +46120,8 @@ object awsSdkStrings {
   def SHIELD_ADVANCED: SHIELD_ADVANCED = "SHIELD_ADVANCED".asInstanceOf[SHIELD_ADVANCED]
   @scala.inline
   def SHIFT_90_DEGREES: SHIFT_90_DEGREES = "SHIFT_90_DEGREES".asInstanceOf[SHIFT_90_DEGREES]
+  @scala.inline
+  def SHOT: SHOT = "SHOT".asInstanceOf[SHOT]
   @scala.inline
   def SHUTDOWN: SHUTDOWN = "SHUTDOWN".asInstanceOf[SHUTDOWN]
   @scala.inline
@@ -44309,6 +46253,8 @@ object awsSdkStrings {
   @scala.inline
   def SNAPSHOT_BATCHING: SNAPSHOT_BATCHING = "SNAPSHOT_BATCHING".asInstanceOf[SNAPSHOT_BATCHING]
   @scala.inline
+  def SNC1_HDD: SNC1_HDD = "SNC1_HDD".asInstanceOf[SNC1_HDD]
+  @scala.inline
   def SND: SND = "SND".asInstanceOf[SND]
   @scala.inline
   def SNI_ONLY: SNI_ONLY = "SNI_ONLY".asInstanceOf[SNI_ONLY]
@@ -44342,6 +46288,8 @@ object awsSdkStrings {
   def SOURCE_IP: SOURCE_IP = "SOURCE_IP".asInstanceOf[SOURCE_IP]
   @scala.inline
   def SOURCE_IP_ADDRESS: SOURCE_IP_ADDRESS = "SOURCE_IP_ADDRESS".asInstanceOf[SOURCE_IP_ADDRESS]
+  @scala.inline
+  def SOURCE_NOT_FOUND: SOURCE_NOT_FOUND = "SOURCE_NOT_FOUND".asInstanceOf[SOURCE_NOT_FOUND]
   @scala.inline
   def SOURCE_RESOURCE_LIMIT_EXCEEDED: SOURCE_RESOURCE_LIMIT_EXCEEDED = "SOURCE_RESOURCE_LIMIT_EXCEEDED".asInstanceOf[SOURCE_RESOURCE_LIMIT_EXCEEDED]
   @scala.inline
@@ -44461,6 +46409,8 @@ object awsSdkStrings {
   @scala.inline
   def STANDARD: STANDARD = "STANDARD".asInstanceOf[STANDARD]
   @scala.inline
+  def STANDARD_DEVIATION: STANDARD_DEVIATION = "STANDARD_DEVIATION".asInstanceOf[STANDARD_DEVIATION]
+  @scala.inline
   def STANDARD_IA: STANDARD_IA = "STANDARD_IA".asInstanceOf[STANDARD_IA]
   @scala.inline
   def STANDARD_QUALITY: STANDARD_QUALITY = "STANDARD_QUALITY".asInstanceOf[STANDARD_QUALITY]
@@ -44494,6 +46444,8 @@ object awsSdkStrings {
   def START_IN_PROGRESS: START_IN_PROGRESS = "START_IN_PROGRESS".asInstanceOf[START_IN_PROGRESS]
   @scala.inline
   def START_TO_CLOSE: START_TO_CLOSE = "START_TO_CLOSE".asInstanceOf[START_TO_CLOSE]
+  @scala.inline
+  def STARVING: STARVING = "STARVING".asInstanceOf[STARVING]
   @scala.inline
   def STATE: STATE = "STATE".asInstanceOf[STATE]
   @scala.inline
@@ -44549,6 +46501,8 @@ object awsSdkStrings {
   @scala.inline
   def STORAGE_LIMIT: STORAGE_LIMIT = "STORAGE_LIMIT".asInstanceOf[STORAGE_LIMIT]
   @scala.inline
+  def STORAGE_OPTIMIZATION: STORAGE_OPTIMIZATION = "STORAGE_OPTIMIZATION".asInstanceOf[STORAGE_OPTIMIZATION]
+  @scala.inline
   def STORAGE_USED: STORAGE_USED = "STORAGE_USED".asInstanceOf[STORAGE_USED]
   @scala.inline
   def STREAMING: STREAMING = "STREAMING".asInstanceOf[STREAMING]
@@ -44603,6 +46557,10 @@ object awsSdkStrings {
   @scala.inline
   def STRING_VALUE: STRING_VALUE = "STRING_VALUE".asInstanceOf[STRING_VALUE]
   @scala.inline
+  def STRONGER: STRONGER = "STRONGER".asInstanceOf[STRONGER]
+  @scala.inline
+  def STRONGEST: STRONGEST = "STRONGEST".asInstanceOf[STRONGEST]
+  @scala.inline
   def STS_DISABLED_IN_REGION: STS_DISABLED_IN_REGION = "STS_DISABLED_IN_REGION".asInstanceOf[STS_DISABLED_IN_REGION]
   @scala.inline
   def SUBDIRECTORY_PER_STREAM: SUBDIRECTORY_PER_STREAM = "SUBDIRECTORY_PER_STREAM".asInstanceOf[SUBDIRECTORY_PER_STREAM]
@@ -44640,6 +46598,12 @@ object awsSdkStrings {
   def SUM: SUM = "SUM".asInstanceOf[SUM]
   @scala.inline
   def SUMMARY: SUMMARY = "SUMMARY".asInstanceOf[SUMMARY]
+  @scala.inline
+  def SUM_BY_ACCOUNT: SUM_BY_ACCOUNT = "SUM_BY_ACCOUNT".asInstanceOf[SUM_BY_ACCOUNT]
+  @scala.inline
+  def SUM_BY_DATA_SOURCE: SUM_BY_DATA_SOURCE = "SUM_BY_DATA_SOURCE".asInstanceOf[SUM_BY_DATA_SOURCE]
+  @scala.inline
+  def SUM_BY_RESOURCE: SUM_BY_RESOURCE = "SUM_BY_RESOURCE".asInstanceOf[SUM_BY_RESOURCE]
   @scala.inline
   def SUN: SUN = "SUN".asInstanceOf[SUN]
   @scala.inline
@@ -44720,6 +46684,8 @@ object awsSdkStrings {
   def Salli: Salli = "Salli".asInstanceOf[Salli]
   @scala.inline
   def SampleCount: SampleCount = "SampleCount".asInstanceOf[SampleCount]
+  @scala.inline
+  def SamplingIntervalInMilliseconds: SamplingIntervalInMilliseconds = "SamplingIntervalInMilliseconds".asInstanceOf[SamplingIntervalInMilliseconds]
   @scala.inline
   def Scalar: Scalar = "Scalar".asInstanceOf[Scalar]
   @scala.inline
@@ -45011,6 +46977,8 @@ object awsSdkStrings {
   @scala.inline
   def T50: T50 = "T50".asInstanceOf[T50]
   @scala.inline
+  def T8: T8 = "T8".asInstanceOf[T8]
+  @scala.inline
   def T80: T80 = "T80".asInstanceOf[T80]
   @scala.inline
   def T98: T98 = "T98".asInstanceOf[T98]
@@ -45065,9 +47033,13 @@ object awsSdkStrings {
   @scala.inline
   def TDRL: TDRL = "TDRL".asInstanceOf[TDRL]
   @scala.inline
+  def TECHNICAL_CUE: TECHNICAL_CUE = "TECHNICAL_CUE".asInstanceOf[TECHNICAL_CUE]
+  @scala.inline
   def TEL: TEL = "TEL".asInstanceOf[TEL]
   @scala.inline
   def TELETEXT: TELETEXT = "TELETEXT".asInstanceOf[TELETEXT]
+  @scala.inline
+  def TEMPLATE_NOT_FOUND: TEMPLATE_NOT_FOUND = "TEMPLATE_NOT_FOUND".asInstanceOf[TEMPLATE_NOT_FOUND]
   @scala.inline
   def TEMPORAL: TEMPORAL = "TEMPORAL".asInstanceOf[TEMPORAL]
   @scala.inline
@@ -45257,6 +47229,8 @@ object awsSdkStrings {
   @scala.inline
   def TLSv1Dot2_2018: TLSv1Dot2_2018 = "TLSv1.2_2018".asInstanceOf[TLSv1Dot2_2018]
   @scala.inline
+  def TLSv1Dot2_2019: TLSv1Dot2_2019 = "TLSv1.2_2019".asInstanceOf[TLSv1Dot2_2019]
+  @scala.inline
   def TLSv1_2016: TLSv1_2016 = "TLSv1_2016".asInstanceOf[TLSv1_2016]
   @scala.inline
   def TM: TM = "TM".asInstanceOf[TM]
@@ -45289,11 +47263,15 @@ object awsSdkStrings {
   @scala.inline
   def TOP_RESOLUTION: TOP_RESOLUTION = "TOP_RESOLUTION".asInstanceOf[TOP_RESOLUTION]
   @scala.inline
+  def TOP_RESOURCES: TOP_RESOURCES = "TOP_RESOURCES".asInstanceOf[TOP_RESOURCES]
+  @scala.inline
   def TOP_RIGHT: TOP_RIGHT = "TOP_RIGHT".asInstanceOf[TOP_RIGHT]
   @scala.inline
   def TOTAL: TOTAL = "TOTAL".asInstanceOf[TOTAL]
   @scala.inline
   def TOTAL_SIZE: TOTAL_SIZE = "TOTAL_SIZE".asInstanceOf[TOTAL_SIZE]
+  @scala.inline
+  def TO_AGENT: TO_AGENT = "TO_AGENT".asInstanceOf[TO_AGENT]
   @scala.inline
   def TR: TR = "TR".asInstanceOf[TR]
   @scala.inline
@@ -45308,8 +47286,6 @@ object awsSdkStrings {
   def TRAINED_INSUFFICIENT_DATA: TRAINED_INSUFFICIENT_DATA = "TRAINED_INSUFFICIENT_DATA".asInstanceOf[TRAINED_INSUFFICIENT_DATA]
   @scala.inline
   def TRAINING: TRAINING = "TRAINING".asInstanceOf[TRAINING]
-  @scala.inline
-  def TRAINING_COMPLETE: TRAINING_COMPLETE = "TRAINING_COMPLETE".asInstanceOf[TRAINING_COMPLETE]
   @scala.inline
   def TRAINING_COMPLETED: TRAINING_COMPLETED = "TRAINING_COMPLETED".asInstanceOf[TRAINING_COMPLETED]
   @scala.inline
@@ -45332,6 +47308,8 @@ object awsSdkStrings {
   def TRANSFER_OUT_DOMAIN: TRANSFER_OUT_DOMAIN = "TRANSFER_OUT_DOMAIN".asInstanceOf[TRANSFER_OUT_DOMAIN]
   @scala.inline
   def TRANSFORM_TYPE: TRANSFORM_TYPE = "TRANSFORM_TYPE".asInstanceOf[TRANSFORM_TYPE]
+  @scala.inline
+  def TRANSIENT_FAILURE: TRANSIENT_FAILURE = "TRANSIENT_FAILURE".asInstanceOf[TRANSIENT_FAILURE]
   @scala.inline
   def TRANSITIONING: TRANSITIONING = "TRANSITIONING".asInstanceOf[TRANSITIONING]
   @scala.inline
@@ -45523,6 +47501,8 @@ object awsSdkStrings {
   @scala.inline
   def `Topic not found`: `Topic not found` = ("Topic not found").asInstanceOf[`Topic not found`]
   @scala.inline
+  def TotalErrorRate: TotalErrorRate = "TotalErrorRate".asInstanceOf[TotalErrorRate]
+  @scala.inline
   def TraceId: TraceId = "TraceId".asInstanceOf[TraceId]
   @scala.inline
   def TrainingDataSourceId: TrainingDataSourceId = "TrainingDataSourceId".asInstanceOf[TrainingDataSourceId]
@@ -45670,6 +47650,8 @@ object awsSdkStrings {
   def UPDATED_NEW: UPDATED_NEW = "UPDATED_NEW".asInstanceOf[UPDATED_NEW]
   @scala.inline
   def UPDATED_OLD: UPDATED_OLD = "UPDATED_OLD".asInstanceOf[UPDATED_OLD]
+  @scala.inline
+  def UPDATED_OPTIMIZING: UPDATED_OPTIMIZING = "UPDATED_OPTIMIZING".asInstanceOf[UPDATED_OPTIMIZING]
   @scala.inline
   def UPDATEPOLICY: UPDATEPOLICY = "UPDATEPOLICY".asInstanceOf[UPDATEPOLICY]
   @scala.inline
@@ -45829,6 +47811,8 @@ object awsSdkStrings {
   @scala.inline
   def Underprovisioned: Underprovisioned = "Underprovisioned".asInstanceOf[Underprovisioned]
   @scala.inline
+  def Unfinished: Unfinished = "Unfinished".asInstanceOf[Unfinished]
+  @scala.inline
   def Unfulfilled: Unfulfilled = "Unfulfilled".asInstanceOf[Unfulfilled]
   @scala.inline
   def UnhealthyHostCount: UnhealthyHostCount = "UnhealthyHostCount".asInstanceOf[UnhealthyHostCount]
@@ -45839,6 +47823,8 @@ object awsSdkStrings {
   @scala.inline
   def Unknown_ : Unknown_ = "Unknown".asInstanceOf[Unknown_]
   @scala.inline
+  def Unlisted: Unlisted = "Unlisted".asInstanceOf[Unlisted]
+  @scala.inline
   def Unprocessable: Unprocessable = "Unprocessable".asInstanceOf[Unprocessable]
   @scala.inline
   def Unprocessed: Unprocessed = "Unprocessed".asInstanceOf[Unprocessed]
@@ -45846,6 +47832,10 @@ object awsSdkStrings {
   def Unregistered: Unregistered = "Unregistered".asInstanceOf[Unregistered]
   @scala.inline
   def UpdateCancelled: UpdateCancelled = "UpdateCancelled".asInstanceOf[UpdateCancelled]
+  @scala.inline
+  def UpdateDistribution: UpdateDistribution = "UpdateDistribution".asInstanceOf[UpdateDistribution]
+  @scala.inline
+  def UpdateDistributionBundle: UpdateDistributionBundle = "UpdateDistributionBundle".asInstanceOf[UpdateDistributionBundle]
   @scala.inline
   def UpdateDomainEntry: UpdateDomainEntry = "UpdateDomainEntry".asInstanceOf[UpdateDomainEntry]
   @scala.inline
@@ -45889,6 +47879,10 @@ object awsSdkStrings {
   @scala.inline
   def UsersQuota: UsersQuota = "UsersQuota".asInstanceOf[UsersQuota]
   @scala.inline
+  def UtilizationMetricsCpuMaximum: UtilizationMetricsCpuMaximum = "UtilizationMetricsCpuMaximum".asInstanceOf[UtilizationMetricsCpuMaximum]
+  @scala.inline
+  def UtilizationMetricsMemoryMaximum: UtilizationMetricsMemoryMaximum = "UtilizationMetricsMemoryMaximum".asInstanceOf[UtilizationMetricsMemoryMaximum]
+  @scala.inline
   def V0_11: V0_11 = "V0_11".asInstanceOf[V0_11]
   @scala.inline
   def V0_12: V0_12 = "V0_12".asInstanceOf[V0_12]
@@ -45918,6 +47912,8 @@ object awsSdkStrings {
   def VALUE_ONLY: VALUE_ONLY = "VALUE_ONLY".asInstanceOf[VALUE_ONLY]
   @scala.inline
   def VARIANT: VARIANT = "VARIANT".asInstanceOf[VARIANT]
+  @scala.inline
+  def VARIANT_MANIFESTS_AND_SEGMENTS: VARIANT_MANIFESTS_AND_SEGMENTS = "VARIANT_MANIFESTS_AND_SEGMENTS".asInstanceOf[VARIANT_MANIFESTS_AND_SEGMENTS]
   @scala.inline
   def VAT_NUMBER: VAT_NUMBER = "VAT_NUMBER".asInstanceOf[VAT_NUMBER]
   @scala.inline
@@ -46009,6 +48005,12 @@ object awsSdkStrings {
   @scala.inline
   def VOLUME_UNKNOWN: VOLUME_UNKNOWN = "VOLUME_UNKNOWN".asInstanceOf[VOLUME_UNKNOWN]
   @scala.inline
+  def VORBIS: VORBIS = "VORBIS".asInstanceOf[VORBIS]
+  @scala.inline
+  def VP8: VP8 = "VP8".asInstanceOf[VP8]
+  @scala.inline
+  def VP9: VP9 = "VP9".asInstanceOf[VP9]
+  @scala.inline
   def VPC: VPC = "VPC".asInstanceOf[VPC]
   @scala.inline
   def VPC_CONFIGURATION: VPC_CONFIGURATION = "VPC_CONFIGURATION".asInstanceOf[VPC_CONFIGURATION]
@@ -46097,6 +48099,8 @@ object awsSdkStrings {
   @scala.inline
   def WEBKIT_LOG: WEBKIT_LOG = "WEBKIT_LOG".asInstanceOf[WEBKIT_LOG]
   @scala.inline
+  def WEBM: WEBM = "WEBM".asInstanceOf[WEBM]
+  @scala.inline
   def WEBSOCKET: WEBSOCKET = "WEBSOCKET".asInstanceOf[WEBSOCKET]
   @scala.inline
   def WEBVTT: WEBVTT = "WEBVTT".asInstanceOf[WEBVTT]
@@ -46150,6 +48154,8 @@ object awsSdkStrings {
   def WINDOWS_SERVER_2016: WINDOWS_SERVER_2016 = "WINDOWS_SERVER_2016".asInstanceOf[WINDOWS_SERVER_2016]
   @scala.inline
   def WINDOWS_SERVER_2019: WINDOWS_SERVER_2019 = "WINDOWS_SERVER_2019".asInstanceOf[WINDOWS_SERVER_2019]
+  @scala.inline
+  def WINDOWS_SERVER_2019_CONTAINER: WINDOWS_SERVER_2019_CONTAINER = "WINDOWS_SERVER_2019_CONTAINER".asInstanceOf[WINDOWS_SERVER_2019_CONTAINER]
   @scala.inline
   def WITHOUT_TRAFFIC_CONTROL: WITHOUT_TRAFFIC_CONTROL = "WITHOUT_TRAFFIC_CONTROL".asInstanceOf[WITHOUT_TRAFFIC_CONTROL]
   @scala.inline
@@ -46225,6 +48231,8 @@ object awsSdkStrings {
   @scala.inline
   def Weekly_ : Weekly_ = "Weekly".asInstanceOf[Weekly_]
   @scala.inline
+  def `Windows BYOL`: `Windows BYOL` = ("Windows BYOL").asInstanceOf[`Windows BYOL`]
+  @scala.inline
   def `Windows LeftparenthesisAmazon VPCRightparenthesis`: `Windows LeftparenthesisAmazon VPCRightparenthesis` = ("Windows (Amazon VPC)").asInstanceOf[`Windows LeftparenthesisAmazon VPCRightparenthesis`]
   @scala.inline
   def `Windows with SQL Server`: `Windows with SQL Server` = ("Windows with SQL Server").asInstanceOf[`Windows with SQL Server`]
@@ -46273,6 +48281,8 @@ object awsSdkStrings {
   @scala.inline
   def WrongRegionSimulationApplication: WrongRegionSimulationApplication = "WrongRegionSimulationApplication".asInstanceOf[WrongRegionSimulationApplication]
   @scala.inline
+  def X86: X86 = "X86".asInstanceOf[X86]
+  @scala.inline
   def X86_64: X86_64 = "X86_64".asInstanceOf[X86_64]
   @scala.inline
   def XCTEST: XCTEST = "XCTEST".asInstanceOf[XCTEST]
@@ -46292,6 +48302,8 @@ object awsSdkStrings {
   def XGBOOST: XGBOOST = "XGBOOST".asInstanceOf[XGBOOST]
   @scala.inline
   def XHO: XHO = "XHO".asInstanceOf[XHO]
+  @scala.inline
+  def XLARGE: XLARGE = "XLARGE".asInstanceOf[XLARGE]
   @scala.inline
   def XLSX: XLSX = "XLSX".asInstanceOf[XLSX]
   @scala.inline
@@ -46397,9 +48409,17 @@ object awsSdkStrings {
   @scala.inline
   def alarmExists: alarmExists = "alarmExists".asInstanceOf[alarmExists]
   @scala.inline
+  def allExcept: allExcept = "allExcept".asInstanceOf[allExcept]
+  @scala.inline
+  def allViewer: allViewer = "allViewer".asInstanceOf[allViewer]
+  @scala.inline
+  def allViewerAndWhitelistCloudFront: allViewerAndWhitelistCloudFront = "allViewerAndWhitelistCloudFront".asInstanceOf[allViewerAndWhitelistCloudFront]
+  @scala.inline
   def all__ : all__ = "all".asInstanceOf[all__]
   @scala.inline
   def `allow-all`: `allow-all` = "allow-all".asInstanceOf[`allow-all`]
+  @scala.inline
+  def `allow-list`: `allow-list` = "allow-list".asInstanceOf[`allow-list`]
   @scala.inline
   def allow__ : allow__ = "allow".asInstanceOf[allow__]
   @scala.inline
@@ -46671,6 +48691,22 @@ object awsSdkStrings {
   @scala.inline
   def c5DotxlargeDotelasticsearch: c5DotxlargeDotelasticsearch = "c5.xlarge.elasticsearch".asInstanceOf[c5DotxlargeDotelasticsearch]
   @scala.inline
+  def c5aDot12xlarge: c5aDot12xlarge = "c5a.12xlarge".asInstanceOf[c5aDot12xlarge]
+  @scala.inline
+  def c5aDot16xlarge: c5aDot16xlarge = "c5a.16xlarge".asInstanceOf[c5aDot16xlarge]
+  @scala.inline
+  def c5aDot24xlarge: c5aDot24xlarge = "c5a.24xlarge".asInstanceOf[c5aDot24xlarge]
+  @scala.inline
+  def c5aDot2xlarge: c5aDot2xlarge = "c5a.2xlarge".asInstanceOf[c5aDot2xlarge]
+  @scala.inline
+  def c5aDot4xlarge: c5aDot4xlarge = "c5a.4xlarge".asInstanceOf[c5aDot4xlarge]
+  @scala.inline
+  def c5aDot8xlarge: c5aDot8xlarge = "c5a.8xlarge".asInstanceOf[c5aDot8xlarge]
+  @scala.inline
+  def c5aDotlarge: c5aDotlarge = "c5a.large".asInstanceOf[c5aDotlarge]
+  @scala.inline
+  def c5aDotxlarge: c5aDotxlarge = "c5a.xlarge".asInstanceOf[c5aDotxlarge]
+  @scala.inline
   def c5dDot12xlarge: c5dDot12xlarge = "c5d.12xlarge".asInstanceOf[c5dDot12xlarge]
   @scala.inline
   def c5dDot18xlarge: c5dDot18xlarge = "c5d.18xlarge".asInstanceOf[c5dDot18xlarge]
@@ -46701,9 +48737,47 @@ object awsSdkStrings {
   @scala.inline
   def c5nDotxlarge: c5nDotxlarge = "c5n.xlarge".asInstanceOf[c5nDotxlarge]
   @scala.inline
+  def c6gDot12xlarge: c6gDot12xlarge = "c6g.12xlarge".asInstanceOf[c6gDot12xlarge]
+  @scala.inline
+  def c6gDot16xlarge: c6gDot16xlarge = "c6g.16xlarge".asInstanceOf[c6gDot16xlarge]
+  @scala.inline
+  def c6gDot2xlarge: c6gDot2xlarge = "c6g.2xlarge".asInstanceOf[c6gDot2xlarge]
+  @scala.inline
+  def c6gDot4xlarge: c6gDot4xlarge = "c6g.4xlarge".asInstanceOf[c6gDot4xlarge]
+  @scala.inline
+  def c6gDot8xlarge: c6gDot8xlarge = "c6g.8xlarge".asInstanceOf[c6gDot8xlarge]
+  @scala.inline
+  def c6gDotlarge: c6gDotlarge = "c6g.large".asInstanceOf[c6gDotlarge]
+  @scala.inline
+  def c6gDotmedium: c6gDotmedium = "c6g.medium".asInstanceOf[c6gDotmedium]
+  @scala.inline
+  def c6gDotmetal: c6gDotmetal = "c6g.metal".asInstanceOf[c6gDotmetal]
+  @scala.inline
+  def c6gDotxlarge: c6gDotxlarge = "c6g.xlarge".asInstanceOf[c6gDotxlarge]
+  @scala.inline
+  def c6gdDot12xlarge: c6gdDot12xlarge = "c6gd.12xlarge".asInstanceOf[c6gdDot12xlarge]
+  @scala.inline
+  def c6gdDot16xlarge: c6gdDot16xlarge = "c6gd.16xlarge".asInstanceOf[c6gdDot16xlarge]
+  @scala.inline
+  def c6gdDot2xlarge: c6gdDot2xlarge = "c6gd.2xlarge".asInstanceOf[c6gdDot2xlarge]
+  @scala.inline
+  def c6gdDot4xlarge: c6gdDot4xlarge = "c6gd.4xlarge".asInstanceOf[c6gdDot4xlarge]
+  @scala.inline
+  def c6gdDot8xlarge: c6gdDot8xlarge = "c6gd.8xlarge".asInstanceOf[c6gdDot8xlarge]
+  @scala.inline
+  def c6gdDotlarge: c6gdDotlarge = "c6gd.large".asInstanceOf[c6gdDotlarge]
+  @scala.inline
+  def c6gdDotmedium: c6gdDotmedium = "c6gd.medium".asInstanceOf[c6gdDotmedium]
+  @scala.inline
+  def c6gdDotmetal: c6gdDotmetal = "c6gd.metal".asInstanceOf[c6gdDotmetal]
+  @scala.inline
+  def c6gdDotxlarge: c6gdDotxlarge = "c6gd.xlarge".asInstanceOf[c6gdDotxlarge]
+  @scala.inline
   def `ca-central-1`: `ca-central-1` = "ca-central-1".asInstanceOf[`ca-central-1`]
   @scala.inline
   def ca_ : ca_ = "ca".asInstanceOf[ca_]
+  @scala.inline
+  def cache: cache = "cache".asInstanceOf[cache]
   @scala.inline
   def `cache-cluster`: `cache-cluster` = "cache-cluster".asInstanceOf[`cache-cluster`]
   @scala.inline
@@ -46829,6 +48903,8 @@ object awsSdkStrings {
   @scala.inline
   def `concurrency-scaling`: `concurrency-scaling` = "concurrency-scaling".asInstanceOf[`concurrency-scaling`]
   @scala.inline
+  def `configuration-type`: `configuration-type` = "configuration-type".asInstanceOf[`configuration-type`]
+  @scala.inline
   def configure: configure = "configure".asInstanceOf[configure]
   @scala.inline
   def confirming: confirming = "confirming".asInstanceOf[confirming]
@@ -46941,6 +49017,12 @@ object awsSdkStrings {
   @scala.inline
   def cr1Dot8xlarge: cr1Dot8xlarge = "cr1.8xlarge".asInstanceOf[cr1Dot8xlarge]
   @scala.inline
+  def `create-complete`: `create-complete` = "create-complete".asInstanceOf[`create-complete`]
+  @scala.inline
+  def `create-failed`: `create-failed` = "create-failed".asInstanceOf[`create-failed`]
+  @scala.inline
+  def `create-in-progress`: `create-in-progress` = "create-in-progress".asInstanceOf[`create-in-progress`]
+  @scala.inline
   def createReference: createReference = "createReference".asInstanceOf[createReference]
   @scala.inline
   def createVolumePermission: createVolumePermission = "createVolumePermission".asInstanceOf[createVolumePermission]
@@ -46957,7 +49039,7 @@ object awsSdkStrings {
   @scala.inline
   def cs: cs = "cs".asInstanceOf[cs]
   @scala.inline
-  def csv_ : csv_ = "csv".asInstanceOf[csv_]
+  def csv__ : csv__ = "csv".asInstanceOf[csv__]
   @scala.inline
   def `custom-resource`: `custom-resource` = "custom-resource".asInstanceOf[`custom-resource`]
   @scala.inline
@@ -47079,9 +49161,15 @@ object awsSdkStrings {
   @scala.inline
   def `default-vpc`: `default-vpc` = "default-vpc".asInstanceOf[`default-vpc`]
   @scala.inline
-  def default_ : default_ = "default".asInstanceOf[default_]
+  def default__ : default__ = "default".asInstanceOf[default__]
   @scala.inline
   def delayed_ : delayed_ = "delayed".asInstanceOf[delayed_]
+  @scala.inline
+  def `delete-complete`: `delete-complete` = "delete-complete".asInstanceOf[`delete-complete`]
+  @scala.inline
+  def `delete-failed`: `delete-failed` = "delete-failed".asInstanceOf[`delete-failed`]
+  @scala.inline
+  def `delete-in-progress`: `delete-in-progress` = "delete-in-progress".asInstanceOf[`delete-in-progress`]
   @scala.inline
   def deleteReference: deleteReference = "deleteReference".asInstanceOf[deleteReference]
   @scala.inline
@@ -47167,6 +49255,8 @@ object awsSdkStrings {
   @scala.inline
   def diversified: diversified = "diversified".asInstanceOf[diversified]
   @scala.inline
+  def `dont-cache`: `dont-cache` = "dont-cache".asInstanceOf[`dont-cache`]
+  @scala.inline
   def dotnetcore1Dot0: dotnetcore1Dot0 = "dotnetcore1.0".asInstanceOf[dotnetcore1Dot0]
   @scala.inline
   def dotnetcore2Dot0: dotnetcore2Dot0 = "dotnetcore2.0".asInstanceOf[dotnetcore2Dot0]
@@ -47223,6 +49313,8 @@ object awsSdkStrings {
   @scala.inline
   def el: el = "el".asInstanceOf[el]
   @scala.inline
+  def `elastic-gpu`: `elastic-gpu` = "elastic-gpu".asInstanceOf[`elastic-gpu`]
+  @scala.inline
   def `elastic-ip`: `elastic-ip` = "elastic-ip".asInstanceOf[`elastic-ip`]
   @scala.inline
   def elasticmapreduce: elasticmapreduce = "elasticmapreduce".asInstanceOf[elasticmapreduce]
@@ -47236,8 +49328,6 @@ object awsSdkStrings {
   def email__ : email__ = "email".asInstanceOf[email__]
   @scala.inline
   def `emit-metric`: `emit-metric` = "emit-metric".asInstanceOf[`emit-metric`]
-  @scala.inline
-  def en: en = "en".asInstanceOf[en]
   @scala.inline
   def `en-AB`: `en-AB` = "en-AB".asInstanceOf[`en-AB`]
   @scala.inline
@@ -47254,6 +49344,8 @@ object awsSdkStrings {
   def `en-US`: `en-US` = "en-US".asInstanceOf[`en-US`]
   @scala.inline
   def `en-WL`: `en-WL` = "en-WL".asInstanceOf[`en-WL`]
+  @scala.inline
+  def en_ : en_ = "en".asInstanceOf[en_]
   @scala.inline
   def enaSupport: enaSupport = "enaSupport".asInstanceOf[enaSupport]
   @scala.inline
@@ -47274,6 +49366,12 @@ object awsSdkStrings {
   def endpointDeleted: endpointDeleted = "endpointDeleted".asInstanceOf[endpointDeleted]
   @scala.inline
   def endpointInService: endpointInService = "endpointInService".asInstanceOf[endpointInService]
+  @scala.inline
+  def environmentExists: environmentExists = "environmentExists".asInstanceOf[environmentExists]
+  @scala.inline
+  def environmentTerminated: environmentTerminated = "environmentTerminated".asInstanceOf[environmentTerminated]
+  @scala.inline
+  def environmentUpdated: environmentUpdated = "environmentUpdated".asInstanceOf[environmentUpdated]
   @scala.inline
   def eq_ : eq_ = "eq".asInstanceOf[eq_]
   @scala.inline
@@ -47325,6 +49423,10 @@ object awsSdkStrings {
   @scala.inline
   def explicitDeny: explicitDeny = "explicitDeny".asInstanceOf[explicitDeny]
   @scala.inline
+  def `export-image-task`: `export-image-task` = "export-image-task".asInstanceOf[`export-image-task`]
+  @scala.inline
+  def `export-instance-task`: `export-instance-task` = "export-instance-task".asInstanceOf[`export-instance-task`]
+  @scala.inline
   def exportTaskCancelled: exportTaskCancelled = "exportTaskCancelled".asInstanceOf[exportTaskCancelled]
   @scala.inline
   def exportTaskCompleted: exportTaskCompleted = "exportTaskCompleted".asInstanceOf[exportTaskCompleted]
@@ -47362,6 +49464,8 @@ object awsSdkStrings {
   def fi_ : fi_ = "fi".asInstanceOf[fi_]
   @scala.inline
   def `file-system-id`: `file-system-id` = "file-system-id".asInstanceOf[`file-system-id`]
+  @scala.inline
+  def `file-system-type`: `file-system-type` = "file-system-type".asInstanceOf[`file-system-type`]
   @scala.inline
   def filling: filling = "filling".asInstanceOf[filling]
   @scala.inline
@@ -47409,6 +49513,8 @@ object awsSdkStrings {
   @scala.inline
   def fr_ : fr_ = "fr".asInstanceOf[fr_]
   @scala.inline
+  def freeTrialStartDate: freeTrialStartDate = "freeTrialStartDate".asInstanceOf[freeTrialStartDate]
+  @scala.inline
   def fsize: fsize = "fsize".asInstanceOf[fsize]
   @scala.inline
   def fulfilled__ : fulfilled__ = "fulfilled".asInstanceOf[fulfilled__]
@@ -47447,6 +49553,8 @@ object awsSdkStrings {
   @scala.inline
   def g4dnDot8xlarge: g4dnDot8xlarge = "g4dn.8xlarge".asInstanceOf[g4dnDot8xlarge]
   @scala.inline
+  def g4dnDotmetal: g4dnDotmetal = "g4dn.metal".asInstanceOf[g4dnDotmetal]
+  @scala.inline
   def g4dnDotxlarge: g4dnDotxlarge = "g4dn.xlarge".asInstanceOf[g4dnDotxlarge]
   @scala.inline
   def ga_ : ga_ = "ga".asInstanceOf[ga_]
@@ -47471,7 +49579,7 @@ object awsSdkStrings {
   @scala.inline
   def gp2: gp2 = "gp2".asInstanceOf[gp2]
   @scala.inline
-  def granted_ : granted_ = "granted".asInstanceOf[granted_]
+  def granted__ : granted__ = "granted".asInstanceOf[granted__]
   @scala.inline
   def `greater-than`: `greater-than` = "greater-than".asInstanceOf[`greater-than`]
   @scala.inline
@@ -47521,7 +49629,7 @@ object awsSdkStrings {
   @scala.inline
   def `host-reservation`: `host-reservation` = "host-reservation".asInstanceOf[`host-reservation`]
   @scala.inline
-  def host_ : host_ = "host".asInstanceOf[host_]
+  def host__ : host__ = "host".asInstanceOf[host__]
   @scala.inline
   def hostedzone: hostedzone = "hostedzone".asInstanceOf[hostedzone]
   @scala.inline
@@ -47639,6 +49747,8 @@ object awsSdkStrings {
   @scala.inline
   def imageScanComplete: imageScanComplete = "imageScanComplete".asInstanceOf[imageScanComplete]
   @scala.inline
+  def imageSlashjpeg: imageSlashjpeg = "image/jpeg".asInstanceOf[imageSlashjpeg]
+  @scala.inline
   def immediate_ : immediate_ = "immediate".asInstanceOf[immediate_]
   @scala.inline
   def impaired__ : impaired__ = "impaired".asInstanceOf[impaired__]
@@ -47646,6 +49756,10 @@ object awsSdkStrings {
   def `implicit`: `implicit` = "implicit".asInstanceOf[`implicit`]
   @scala.inline
   def implicitDeny: implicitDeny = "implicitDeny".asInstanceOf[implicitDeny]
+  @scala.inline
+  def `import-image-task`: `import-image-task` = "import-image-task".asInstanceOf[`import-image-task`]
+  @scala.inline
+  def `import-snapshot-task`: `import-snapshot-task` = "import-snapshot-task".asInstanceOf[`import-snapshot-task`]
   @scala.inline
   def important: important = "important".asInstanceOf[important]
   @scala.inline
@@ -47833,9 +49947,9 @@ object awsSdkStrings {
   @scala.inline
   def it_ : it_ = "it".asInstanceOf[it_]
   @scala.inline
-  def ja: ja = "ja".asInstanceOf[ja]
-  @scala.inline
   def `ja-JP`: `ja-JP` = "ja-JP".asInstanceOf[`ja-JP`]
+  @scala.inline
+  def ja_ : ja_ = "ja".asInstanceOf[ja_]
   @scala.inline
   def `java-app`: `java-app` = "java-app".asInstanceOf[`java-app`]
   @scala.inline
@@ -47855,7 +49969,7 @@ object awsSdkStrings {
   @scala.inline
   def jobComplete: jobComplete = "jobComplete".asInstanceOf[jobComplete]
   @scala.inline
-  def jobStatus: jobStatus = "jobStatus".asInstanceOf[jobStatus]
+  def jobStatus_ : jobStatus_ = "jobStatus".asInstanceOf[jobStatus_]
   @scala.inline
   def jobType: jobType = "jobType".asInstanceOf[jobType]
   @scala.inline
@@ -47960,6 +50074,8 @@ object awsSdkStrings {
   def loadBalancersDeleted: loadBalancersDeleted = "loadBalancersDeleted".asInstanceOf[loadBalancersDeleted]
   @scala.inline
   def loadPermission: loadPermission = "loadPermission".asInstanceOf[loadPermission]
+  @scala.inline
+  def `local-gateway-route-table-vpc-association`: `local-gateway-route-table-vpc-association` = "local-gateway-route-table-vpc-association".asInstanceOf[`local-gateway-route-table-vpc-association`]
   @scala.inline
   def locks: locks = "locks".asInstanceOf[locks]
   @scala.inline
@@ -48159,6 +50275,24 @@ object awsSdkStrings {
   @scala.inline
   def m6gDotxlarge: m6gDotxlarge = "m6g.xlarge".asInstanceOf[m6gDotxlarge]
   @scala.inline
+  def m6gdDot12xlarge: m6gdDot12xlarge = "m6gd.12xlarge".asInstanceOf[m6gdDot12xlarge]
+  @scala.inline
+  def m6gdDot16xlarge: m6gdDot16xlarge = "m6gd.16xlarge".asInstanceOf[m6gdDot16xlarge]
+  @scala.inline
+  def m6gdDot2xlarge: m6gdDot2xlarge = "m6gd.2xlarge".asInstanceOf[m6gdDot2xlarge]
+  @scala.inline
+  def m6gdDot4xlarge: m6gdDot4xlarge = "m6gd.4xlarge".asInstanceOf[m6gdDot4xlarge]
+  @scala.inline
+  def m6gdDot8xlarge: m6gdDot8xlarge = "m6gd.8xlarge".asInstanceOf[m6gdDot8xlarge]
+  @scala.inline
+  def m6gdDotlarge: m6gdDotlarge = "m6gd.large".asInstanceOf[m6gdDotlarge]
+  @scala.inline
+  def m6gdDotmedium: m6gdDotmedium = "m6gd.medium".asInstanceOf[m6gdDotmedium]
+  @scala.inline
+  def m6gdDotmetal: m6gdDotmetal = "m6gd.metal".asInstanceOf[m6gdDotmetal]
+  @scala.inline
+  def m6gdDotxlarge: m6gdDotxlarge = "m6gd.xlarge".asInstanceOf[m6gdDotxlarge]
+  @scala.inline
   def mLModelAvailable: mLModelAvailable = "mLModelAvailable".asInstanceOf[mLModelAvailable]
   @scala.inline
   def mac_cyrillic: mac_cyrillic = "mac_cyrillic".asInstanceOf[mac_cyrillic]
@@ -48177,11 +50311,15 @@ object awsSdkStrings {
   @scala.inline
   def maintain: maintain = "maintain".asInstanceOf[maintain]
   @scala.inline
+  def managed_ : managed_ = "managed".asInstanceOf[managed_]
+  @scala.inline
   def marketplace_ : marketplace_ = "marketplace".asInstanceOf[marketplace_]
   @scala.inline
   def mask: mask = "mask".asInstanceOf[mask]
   @scala.inline
   def `match-viewer`: `match-viewer` = "match-viewer".asInstanceOf[`match-viewer`]
+  @scala.inline
+  def maven: maven = "maven".asInstanceOf[maven]
   @scala.inline
   def maxIO: maxIO = "maxIO".asInstanceOf[maxIO]
   @scala.inline
@@ -48395,6 +50533,8 @@ object awsSdkStrings {
   @scala.inline
   def ml_c5: ml_c5 = "ml_c5".asInstanceOf[ml_c5]
   @scala.inline
+  def ml_g4dn: ml_g4dn = "ml_g4dn".asInstanceOf[ml_g4dn]
+  @scala.inline
   def ml_inf1: ml_inf1 = "ml_inf1".asInstanceOf[ml_inf1]
   @scala.inline
   def ml_m4: ml_m4 = "ml_m4".asInstanceOf[ml_m4]
@@ -48404,6 +50544,12 @@ object awsSdkStrings {
   def ml_p2: ml_p2 = "ml_p2".asInstanceOf[ml_p2]
   @scala.inline
   def ml_p3: ml_p3 = "ml_p3".asInstanceOf[ml_p3]
+  @scala.inline
+  def `modify-complete`: `modify-complete` = "modify-complete".asInstanceOf[`modify-complete`]
+  @scala.inline
+  def `modify-failed`: `modify-failed` = "modify-failed".asInstanceOf[`modify-failed`]
+  @scala.inline
+  def `modify-in-progress`: `modify-in-progress` = "modify-in-progress".asInstanceOf[`modify-in-progress`]
   @scala.inline
   def modifying_ : modifying_ = "modifying".asInstanceOf[modifying_]
   @scala.inline
@@ -48548,6 +50694,8 @@ object awsSdkStrings {
   def notebookInstanceInService: notebookInstanceInService = "notebookInstanceInService".asInstanceOf[notebookInstanceInService]
   @scala.inline
   def notebookInstanceStopped: notebookInstanceStopped = "notebookInstanceStopped".asInstanceOf[notebookInstanceStopped]
+  @scala.inline
+  def npm: npm = "npm".asInstanceOf[npm]
   @scala.inline
   def nproc: nproc = "nproc".asInstanceOf[nproc]
   @scala.inline
@@ -48755,6 +50903,8 @@ object awsSdkStrings {
   @scala.inline
   def `public-read-write`: `public-read-write` = "public-read-write".asInstanceOf[`public-read-write`]
   @scala.inline
+  def pypi: pypi = "pypi".asInstanceOf[pypi]
+  @scala.inline
   def python2Dot7: python2Dot7 = "python2.7".asInstanceOf[python2Dot7]
   @scala.inline
   def python3Dot6: python3Dot6 = "python3.6".asInstanceOf[python3Dot6]
@@ -48925,6 +51075,42 @@ object awsSdkStrings {
   @scala.inline
   def r5nDotxlarge: r5nDotxlarge = "r5n.xlarge".asInstanceOf[r5nDotxlarge]
   @scala.inline
+  def r6gDot12xlarge: r6gDot12xlarge = "r6g.12xlarge".asInstanceOf[r6gDot12xlarge]
+  @scala.inline
+  def r6gDot16xlarge: r6gDot16xlarge = "r6g.16xlarge".asInstanceOf[r6gDot16xlarge]
+  @scala.inline
+  def r6gDot2xlarge: r6gDot2xlarge = "r6g.2xlarge".asInstanceOf[r6gDot2xlarge]
+  @scala.inline
+  def r6gDot4xlarge: r6gDot4xlarge = "r6g.4xlarge".asInstanceOf[r6gDot4xlarge]
+  @scala.inline
+  def r6gDot8xlarge: r6gDot8xlarge = "r6g.8xlarge".asInstanceOf[r6gDot8xlarge]
+  @scala.inline
+  def r6gDotlarge: r6gDotlarge = "r6g.large".asInstanceOf[r6gDotlarge]
+  @scala.inline
+  def r6gDotmedium: r6gDotmedium = "r6g.medium".asInstanceOf[r6gDotmedium]
+  @scala.inline
+  def r6gDotmetal: r6gDotmetal = "r6g.metal".asInstanceOf[r6gDotmetal]
+  @scala.inline
+  def r6gDotxlarge: r6gDotxlarge = "r6g.xlarge".asInstanceOf[r6gDotxlarge]
+  @scala.inline
+  def r6gdDot12xlarge: r6gdDot12xlarge = "r6gd.12xlarge".asInstanceOf[r6gdDot12xlarge]
+  @scala.inline
+  def r6gdDot16xlarge: r6gdDot16xlarge = "r6gd.16xlarge".asInstanceOf[r6gdDot16xlarge]
+  @scala.inline
+  def r6gdDot2xlarge: r6gdDot2xlarge = "r6gd.2xlarge".asInstanceOf[r6gdDot2xlarge]
+  @scala.inline
+  def r6gdDot4xlarge: r6gdDot4xlarge = "r6gd.4xlarge".asInstanceOf[r6gdDot4xlarge]
+  @scala.inline
+  def r6gdDot8xlarge: r6gdDot8xlarge = "r6gd.8xlarge".asInstanceOf[r6gdDot8xlarge]
+  @scala.inline
+  def r6gdDotlarge: r6gdDotlarge = "r6gd.large".asInstanceOf[r6gdDotlarge]
+  @scala.inline
+  def r6gdDotmedium: r6gdDotmedium = "r6gd.medium".asInstanceOf[r6gdDotmedium]
+  @scala.inline
+  def r6gdDotmetal: r6gdDotmetal = "r6gd.metal".asInstanceOf[r6gdDotmetal]
+  @scala.inline
+  def r6gdDotxlarge: r6gdDotxlarge = "r6gd.xlarge".asInstanceOf[r6gdDotxlarge]
+  @scala.inline
   def rails: rails = "rails".asInstanceOf[rails]
   @scala.inline
   def `rails-app`: `rails-app` = "rails-app".asInstanceOf[`rails-app`]
@@ -48977,7 +51163,7 @@ object awsSdkStrings {
   @scala.inline
   def rejected__ : rejected__ = "rejected".asInstanceOf[rejected__]
   @scala.inline
-  def rejecting_ : rejecting_ = "rejecting".asInstanceOf[rejecting_]
+  def rejecting__ : rejecting__ = "rejecting".asInstanceOf[rejecting__]
   @scala.inline
   def relayed: relayed = "relayed".asInstanceOf[relayed]
   @scala.inline
@@ -49052,6 +51238,12 @@ object awsSdkStrings {
   def restart: restart = "restart".asInstanceOf[restart]
   @scala.inline
   def `restore-cluster`: `restore-cluster` = "restore-cluster".asInstanceOf[`restore-cluster`]
+  @scala.inline
+  def `restore-complete`: `restore-complete` = "restore-complete".asInstanceOf[`restore-complete`]
+  @scala.inline
+  def `restore-failed`: `restore-failed` = "restore-failed".asInstanceOf[`restore-failed`]
+  @scala.inline
+  def `restore-in-progress`: `restore-in-progress` = "restore-in-progress".asInstanceOf[`restore-in-progress`]
   @scala.inline
   def restoringToClassic: restoringToClassic = "restoringToClassic".asInstanceOf[restoringToClassic]
   @scala.inline
@@ -49220,6 +51412,10 @@ object awsSdkStrings {
   def `service-error`: `service-error` = "service-error".asInstanceOf[`service-error`]
   @scala.inline
   def serviceCode: serviceCode = "serviceCode".asInstanceOf[serviceCode]
+  @scala.inline
+  def serviceLimit: serviceLimit = "serviceLimit".asInstanceOf[serviceLimit]
+  @scala.inline
+  def serviceLimitValue: serviceLimitValue = "serviceLimitValue".asInstanceOf[serviceLimitValue]
   @scala.inline
   def serviceLongArnFormat: serviceLongArnFormat = "serviceLongArnFormat".asInstanceOf[serviceLongArnFormat]
   @scala.inline
@@ -49452,6 +51648,10 @@ object awsSdkStrings {
   def tableExists: tableExists = "tableExists".asInstanceOf[tableExists]
   @scala.inline
   def tableNotExists: tableNotExists = "tableNotExists".asInstanceOf[tableNotExists]
+  @scala.inline
+  def `tag-key`: `tag-key` = "tag-key".asInstanceOf[`tag-key`]
+  @scala.inline
+  def `tag-value`: `tag-value` = "tag-value".asInstanceOf[`tag-value`]
   @scala.inline
   def tail_ : tail_ = "tail".asInstanceOf[tail_]
   @scala.inline
@@ -49778,6 +51978,10 @@ object awsSdkStrings {
   def x1eDotxlarge: x1eDotxlarge = "x1e.xlarge".asInstanceOf[x1eDotxlarge]
   @scala.inline
   def x86_64_ : x86_64_ = "x86_64".asInstanceOf[x86_64_]
+  @scala.inline
+  def x86_win32: x86_win32 = "x86_win32".asInstanceOf[x86_win32]
+  @scala.inline
+  def x86_win64: x86_win64 = "x86_win64".asInstanceOf[x86_win64]
   @scala.inline
   def xen: xen = "xen".asInstanceOf[xen]
   @scala.inline

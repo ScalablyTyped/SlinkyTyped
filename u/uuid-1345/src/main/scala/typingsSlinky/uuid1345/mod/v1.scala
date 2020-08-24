@@ -4,7 +4,7 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.uuid1345.anon.Encoding
 import typingsSlinky.uuid1345.anon.EncodingMac
 import typingsSlinky.uuid1345.anon.Mac
-import typingsSlinky.uuid1345.anon.MacBoolean
+import typingsSlinky.uuid1345.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +19,8 @@ object v1 extends js.Object {
   def apply(options: EncodingMac, callback: BinaryCallback): Unit = js.native
   def apply(options: Encoding, callback: ASCIICallback): Unit = js.native
   def apply(options: Mac): String = js.native
-  def apply(options: MacBoolean): UUID = js.native
-  def apply(options: MacBoolean, callback: ObjectCallback): Unit = js.native
   def apply(options: Mac, callback: ASCIICallback): Unit = js.native
+  def apply(options: `0`): UUID = js.native
+  def apply(options: `0`, callback: ObjectCallback): Unit = js.native
 }
 

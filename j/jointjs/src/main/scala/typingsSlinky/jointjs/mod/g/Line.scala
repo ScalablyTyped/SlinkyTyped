@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jointjs", "g.Line")
 @js.native
-class Line () extends PathObjectUnit {
+class Line () extends _PathObjectUnit {
   def this(line: Line) = this()
   def this(p1: String, p2: String) = this()
   def this(p1: String, p2: PlainPoint) = this()
@@ -40,6 +40,7 @@ class Line () extends PathObjectUnit {
   def isDifferentiable(): Boolean = js.native
   def length(): Double = js.native
   def midpoint(): Point = js.native
+  def parallel(): Line = js.native
   def pointAt(t: Double): Point = js.native
   def pointAtLength(length: Double): Point = js.native
   def pointOffset(p: String): Double = js.native
@@ -49,11 +50,13 @@ class Line () extends PathObjectUnit {
   def round(precision: Double): this.type = js.native
   def scale(sx: Double, sy: Double): this.type = js.native
   def scale(sx: Double, sy: Double, origin: PlainPoint): this.type = js.native
+  def serialize(): String = js.native
   def setLength(length: Double): this.type = js.native
   def squaredLength(): Double = js.native
   def tangentAt(t: Double): Line | Null = js.native
   def tangentAtLength(length: Double): Line | Null = js.native
   def translate(): this.type = js.native
+  def translate(tx: js.UndefOr[scala.Nothing], ty: Double): this.type = js.native
   def translate(tx: Double): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: PlainPoint): this.type = js.native

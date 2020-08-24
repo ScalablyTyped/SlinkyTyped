@@ -39,12 +39,37 @@ object ApplicationDateRangeKpiResponse {
     EndTime: js.Date,
     KpiName: string,
     KpiResult: BaseKpiResult,
-    StartTime: js.Date,
-    NextToken: string = null
+    StartTime: js.Date
   ): ApplicationDateRangeKpiResponse = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], EndTime = EndTime.asInstanceOf[js.Any], KpiName = KpiName.asInstanceOf[js.Any], KpiResult = KpiResult.asInstanceOf[js.Any], StartTime = StartTime.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationDateRangeKpiResponse]
   }
+  @scala.inline
+  implicit class ApplicationDateRangeKpiResponseOps[Self <: ApplicationDateRangeKpiResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setApplicationId(value: string): Self = this.set("ApplicationId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEndTime(value: js.Date): Self = this.set("EndTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKpiName(value: string): Self = this.set("KpiName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKpiResult(value: BaseKpiResult): Self = this.set("KpiResult", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStartTime(value: js.Date): Self = this.set("StartTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNextToken(value: string): Self = this.set("NextToken", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNextToken: Self = this.set("NextToken", js.undefined)
+  }
+  
 }
 

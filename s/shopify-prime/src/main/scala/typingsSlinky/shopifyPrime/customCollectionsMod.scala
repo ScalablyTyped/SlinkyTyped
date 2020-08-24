@@ -1,6 +1,6 @@
 package typingsSlinky.shopifyPrime
 
-import typingsSlinky.shopifyPrime.anon.titlestringproductidnumbe
+import typingsSlinky.shopifyPrime.anon.titlestringundefinedprodu
 import typingsSlinky.shopifyPrime.infrastructureMod.BaseService
 import typingsSlinky.shopifyPrime.optionsBaseMod.FieldOptions
 import typingsSlinky.shopifyPrime.optionsProductCollectionMod.CollectionListOptions
@@ -21,7 +21,7 @@ object customCollectionsMod extends js.Object {
       * @see https://help.shopify.com/api/reference/customcollection#count
       */
     def count(): js.Promise[Double] = js.native
-    def count(options: titlestringproductidnumbe): js.Promise[Double] = js.native
+    def count(options: titlestringundefinedprodu): js.Promise[Double] = js.native
     /**
       * Creates an collection.
       * @param collection The collection being created.

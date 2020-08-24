@@ -1,30 +1,28 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.cardCardTitleMod.CardTitleProps
-import typingsSlinky.reactToolbox.cardCardTitleMod.CardTitleTheme
-import typingsSlinky.reactToolbox.cardCardTitleMod.default
+import typingsSlinky.reactToolbox.cardTitleMod.CardTitleProps
+import typingsSlinky.reactToolbox.cardTitleMod.CardTitleTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CardTitle {
-  @JSImport("react-toolbox/lib/card/CardTitle", JSImport.Default)
+  @JSImport("react-toolbox/components/card", "CardTitle")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.cardMod.CardTitle] {
     @scala.inline
     def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def avatar(value: TagMod[Any]): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -76,13 +74,13 @@ object CardTitle {
     @scala.inline
     def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def theme(value: CardTitleTheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CardTitleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

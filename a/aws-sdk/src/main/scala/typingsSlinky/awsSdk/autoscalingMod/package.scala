@@ -40,8 +40,35 @@ package object autoscalingMod {
   type HeartbeatTimeout = scala.Double
   type HonorCooldown = scala.Boolean
   type InstanceIds = js.Array[typingsSlinky.awsSdk.autoscalingMod.XmlStringMaxLen19]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.disabled__
+    - typingsSlinky.awsSdk.awsSdkStrings.enabled__
+    - java.lang.String
+  */
+  type InstanceMetadataEndpointState = typingsSlinky.awsSdk.autoscalingMod._InstanceMetadataEndpointState | java.lang.String
+  type InstanceMetadataHttpPutResponseHopLimit = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.optional__
+    - typingsSlinky.awsSdk.awsSdkStrings.required__
+    - java.lang.String
+  */
+  type InstanceMetadataHttpTokensState = typingsSlinky.awsSdk.autoscalingMod._InstanceMetadataHttpTokensState | java.lang.String
   type InstanceProtected = scala.Boolean
+  type InstanceRefreshIds = js.Array[typingsSlinky.awsSdk.autoscalingMod.XmlStringMaxLen255]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Pending_
+    - typingsSlinky.awsSdk.awsSdkStrings.InProgress_
+    - typingsSlinky.awsSdk.awsSdkStrings.Successful_
+    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
+    - typingsSlinky.awsSdk.awsSdkStrings.Cancelling_
+    - typingsSlinky.awsSdk.awsSdkStrings.Cancelled_
+    - java.lang.String
+  */
+  type InstanceRefreshStatus = typingsSlinky.awsSdk.autoscalingMod._InstanceRefreshStatus | java.lang.String
+  type InstanceRefreshes = js.Array[typingsSlinky.awsSdk.autoscalingMod.InstanceRefresh]
   type Instances = js.Array[typingsSlinky.awsSdk.autoscalingMod.Instance]
+  type InstancesToUpdate = scala.Double
+  type IntPercent = scala.Double
   type LaunchConfigurationNames = js.Array[typingsSlinky.awsSdk.autoscalingMod.ResourceName]
   type LaunchConfigurations = js.Array[typingsSlinky.awsSdk.autoscalingMod.LaunchConfiguration]
   type LaunchTemplateName = java.lang.String
@@ -122,6 +149,8 @@ package object autoscalingMod {
   type Progress = scala.Double
   type PropagateAtLaunch = scala.Boolean
   type ProtectedFromScaleIn = scala.Boolean
+  type RefreshInstanceWarmup = scala.Double
+  type RefreshStrategy = typingsSlinky.awsSdk.awsSdkStrings.Rolling | java.lang.String
   type ResourceName = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PendingSpotBidPlacement

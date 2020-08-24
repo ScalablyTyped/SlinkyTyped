@@ -29,59 +29,30 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withComponent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
+    def setComponent(value: Boolean): Self = this.set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteComponent: Self = this.set("component", js.undefined)
     @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
+    def deleteName: Self = this.set("name", js.undefined)
     @scala.inline
-    def withRelatedView(value: CellView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNameNull: Self = this.set("name", null)
     @scala.inline
-    def withoutRelatedView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedView")(js.undefined)
-        ret
-    }
+    def setRelatedView(value: CellView): Self = this.set("relatedView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTools(value: js.Array[ToolView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRelatedView: Self = this.set("relatedView", js.undefined)
     @scala.inline
-    def withoutTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(js.undefined)
-        ret
-    }
+    def setToolsVarargs(value: ToolView*): Self = this.set("tools", js.Array(value :_*))
+    @scala.inline
+    def setTools(value: js.Array[ToolView]): Self = this.set("tools", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTools: Self = this.set("tools", js.undefined)
   }
   
 }

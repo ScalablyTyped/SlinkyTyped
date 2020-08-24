@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "semantic-ui-rating"
-version := "2.2-dt-20200515Z-a73e0c"
-scalaVersion := "2.13.2"
+version := "2.2-dt-20200515Z-6576dc"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

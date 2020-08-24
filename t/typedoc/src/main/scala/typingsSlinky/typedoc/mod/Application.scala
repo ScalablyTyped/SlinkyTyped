@@ -7,9 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("typedoc", "Application")
 @js.native
 class Application ()
-  extends typingsSlinky.typedoc.applicationMod.Application {
-  def this(options: js.Object) = this()
-}
+  extends typingsSlinky.typedoc.applicationMod.Application
 
 /* static members */
 @JSImport("typedoc", "Application")

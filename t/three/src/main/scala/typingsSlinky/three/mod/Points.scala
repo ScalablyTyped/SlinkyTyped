@@ -10,25 +10,10 @@ import scala.scalajs.js.annotation._
 	 * @param geometry An instance of Geometry or BufferGeometry.
 	 * @param material An instance of Material (optional).
 	 */
-class Points ()
-  extends typingsSlinky.three.pointsMod.Points {
-  def this(geometry: typingsSlinky.three.bufferGeometryMod.BufferGeometry) = this()
-  def this(geometry: typingsSlinky.three.geometryMod.Geometry) = this()
-  def this(
-    geometry: typingsSlinky.three.bufferGeometryMod.BufferGeometry,
-    material: js.Array[typingsSlinky.three.materialMod.Material]
-  ) = this()
-  def this(
-    geometry: typingsSlinky.three.bufferGeometryMod.BufferGeometry,
-    material: typingsSlinky.three.materialMod.Material
-  ) = this()
-  def this(
-    geometry: typingsSlinky.three.geometryMod.Geometry,
-    material: js.Array[typingsSlinky.three.materialMod.Material]
-  ) = this()
-  def this(
-    geometry: typingsSlinky.three.geometryMod.Geometry,
-    material: typingsSlinky.three.materialMod.Material
-  ) = this()
+class Points[TGeometry /* <: typingsSlinky.three.geometryMod.Geometry | typingsSlinky.three.bufferGeometryMod.BufferGeometry */, TMaterial /* <: typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material] */] ()
+  extends typingsSlinky.three.pointsMod.Points[TGeometry, TMaterial] {
+  def this(geometry: TGeometry) = this()
+  def this(geometry: TGeometry, material: TMaterial) = this()
+  def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial) = this()
 }
 

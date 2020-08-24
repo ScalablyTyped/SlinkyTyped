@@ -29,77 +29,34 @@ object EndCellArgs {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnchor(value: AnchorJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
+    def setAnchor(value: AnchorJSON): Self = this.set("anchor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectionPoint(value: ConnectionPointJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAnchor: Self = this.set("anchor", js.undefined)
     @scala.inline
-    def withoutConnectionPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPoint")(js.undefined)
-        ret
-    }
+    def setConnectionPoint(value: ConnectionPointJSON): Self = this.set("connectionPoint", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMagnet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("magnet")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteConnectionPoint: Self = this.set("connectionPoint", js.undefined)
     @scala.inline
-    def withoutMagnet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("magnet")(js.undefined)
-        ret
-    }
+    def setMagnet(value: String): Self = this.set("magnet", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPort(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMagnet: Self = this.set("magnet", js.undefined)
     @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
+    def setPort(value: String): Self = this.set("port", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPriority(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePort: Self = this.set("port", js.undefined)
     @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
+    def setPriority(value: Boolean): Self = this.set("priority", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePriority: Self = this.set("priority", js.undefined)
     @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
+    def setSelector(value: String): Self = this.set("selector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelector: Self = this.set("selector", js.undefined)
   }
   
 }

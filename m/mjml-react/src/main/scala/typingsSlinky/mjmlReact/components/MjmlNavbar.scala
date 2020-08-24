@@ -2,7 +2,7 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.ColorProperty
+import typingsSlinky.csstype.mod.Property.Color
 import typingsSlinky.mjmlReact.mod.MjmlNavbarProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
 import scala.scalajs.js
@@ -29,7 +29,7 @@ object MjmlNavbar {
     @scala.inline
     def icoClose(value: String): this.type = set("icoClose", value.asInstanceOf[js.Any])
     @scala.inline
-    def icoColor(value: ColorProperty): this.type = set("icoColor", value.asInstanceOf[js.Any])
+    def icoColor(value: Color): this.type = set("icoColor", value.asInstanceOf[js.Any])
     @scala.inline
     def icoFontSize(value: String): this.type = set("icoFontSize", value.asInstanceOf[js.Any])
     @scala.inline

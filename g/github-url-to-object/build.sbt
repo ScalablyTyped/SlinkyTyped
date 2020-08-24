@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "github-url-to-object"
-version := "4.0-dt-20180715Z-120a6e"
-scalaVersion := "2.13.2"
+version := "4.0-dt-20180715Z-f4c9eb"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

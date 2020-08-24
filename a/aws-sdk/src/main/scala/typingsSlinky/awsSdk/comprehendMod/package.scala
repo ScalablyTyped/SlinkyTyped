@@ -14,6 +14,8 @@ package object comprehendMod {
   type ComprehendEndpointArn = java.lang.String
   type ComprehendEndpointName = java.lang.String
   type ComprehendModelArn = java.lang.String
+  type CustomerInputString = java.lang.String
+  type CustomerInputStringList = js.Array[typingsSlinky.awsSdk.comprehendMod.CustomerInputString]
   type DocumentClassificationJobPropertiesList = js.Array[typingsSlinky.awsSdk.comprehendMod.DocumentClassificationJobProperties]
   type DocumentClassifierArn = java.lang.String
   type DocumentClassifierEndpointArn = java.lang.String
@@ -38,6 +40,7 @@ package object comprehendMod {
   type EndpointStatus = typingsSlinky.awsSdk.comprehendMod._EndpointStatus | java.lang.String
   type EntitiesDetectionJobPropertiesList = js.Array[typingsSlinky.awsSdk.comprehendMod.EntitiesDetectionJobProperties]
   type EntityRecognizerArn = java.lang.String
+  type EntityRecognizerEndpointArn = java.lang.String
   type EntityRecognizerMetadataEntityTypesList = js.Array[typingsSlinky.awsSdk.comprehendMod.EntityRecognizerMetadataEntityTypesListItem]
   type EntityRecognizerPropertiesList = js.Array[typingsSlinky.awsSdk.comprehendMod.EntityRecognizerProperties]
   /* Rewritten from type alias, can be one of: 
@@ -81,7 +84,7 @@ package object comprehendMod {
   type KmsKeyId = java.lang.String
   type LabelDelimiter = java.lang.String
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.en
+    - typingsSlinky.awsSdk.awsSdkStrings.en_
     - typingsSlinky.awsSdk.awsSdkStrings.es_
     - typingsSlinky.awsSdk.awsSdkStrings.fr_
     - typingsSlinky.awsSdk.awsSdkStrings.de_
@@ -89,7 +92,7 @@ package object comprehendMod {
     - typingsSlinky.awsSdk.awsSdkStrings.pt_
     - typingsSlinky.awsSdk.awsSdkStrings.ar_
     - typingsSlinky.awsSdk.awsSdkStrings.hi
-    - typingsSlinky.awsSdk.awsSdkStrings.ja
+    - typingsSlinky.awsSdk.awsSdkStrings.ja_
     - typingsSlinky.awsSdk.awsSdkStrings.ko
     - typingsSlinky.awsSdk.awsSdkStrings.zh
     - typingsSlinky.awsSdk.awsSdkStrings.`zh-TW`
@@ -155,11 +158,10 @@ package object comprehendMod {
   */
   type SentimentType = typingsSlinky.awsSdk.comprehendMod._SentimentType | java.lang.String
   type String = java.lang.String
-  type StringList = js.Array[typingsSlinky.awsSdk.comprehendMod.String]
   type SubnetId = java.lang.String
   type Subnets = js.Array[typingsSlinky.awsSdk.comprehendMod.SubnetId]
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.en
+    - typingsSlinky.awsSdk.awsSdkStrings.en_
     - typingsSlinky.awsSdk.awsSdkStrings.es_
     - typingsSlinky.awsSdk.awsSdkStrings.fr_
     - typingsSlinky.awsSdk.awsSdkStrings.de_

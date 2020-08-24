@@ -44,6 +44,8 @@ object DefaultTabBar {
     @scala.inline
     def tabStyle(value: ViewStyle): this.type = set("tabStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def tabsVarargs(value: ReactElement*): this.type = set("tabs", js.Array(value :_*))
+    @scala.inline
     def tabs(value: js.Array[ReactElement]): this.type = set("tabs", value.asInstanceOf[js.Any])
     @scala.inline
     def textStyle(value: TextStyle): this.type = set("textStyle", value.asInstanceOf[js.Any])

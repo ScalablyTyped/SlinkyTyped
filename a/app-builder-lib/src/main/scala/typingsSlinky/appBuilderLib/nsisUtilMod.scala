@@ -3,7 +3,6 @@ package typingsSlinky.appBuilderLib
 import typingsSlinky.appBuilderLib.nsisTargetMod.NsisTarget
 import typingsSlinky.builderUtil.archMod.Arch
 import typingsSlinky.builderUtilRuntime.updateInfoMod.PackageFileInfo
-import typingsSlinky.lazyVal.mod.Lazy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,16 @@ object nsisUtilMod extends js.Object {
     def copy(appOutDir: String, target: NsisTarget): js.Promise[_] = js.native
   }
   
-  val NSIS_PATH: Lazy[String] = js.native
+  @js.native
+  class UninstallerReader () extends js.Object
+  
   val nsisTemplatesDir: String = js.native
+  def NSIS_PATH(): js.Promise[String] = js.native
+  /* static members */
+  @js.native
+  object UninstallerReader extends js.Object {
+    def exec(installerPath: String, uninstallerPath: String): Unit = js.native
+  }
+  
 }
 

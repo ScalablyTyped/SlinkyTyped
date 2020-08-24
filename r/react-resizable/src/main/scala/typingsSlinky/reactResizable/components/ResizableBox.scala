@@ -3,7 +3,6 @@ package typingsSlinky.reactResizable.components
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -33,9 +32,9 @@ object ResizableBox {
     @scala.inline
     def handleReactElement(value: ReactElement): this.type = set("handle", value.asInstanceOf[js.Any])
     @scala.inline
-    def handleFunction1(value: /* resizeHandle */ ResizeHandle => TagMod[Any]): this.type = set("handle", js.Any.fromFunction1(value))
+    def handleFunction1(value: /* resizeHandle */ ResizeHandle => ReactElement): this.type = set("handle", js.Any.fromFunction1(value))
     @scala.inline
-    def handle(value: TagMod[Any] | (js.Function1[/* resizeHandle */ ResizeHandle, TagMod[Any]])): this.type = set("handle", value.asInstanceOf[js.Any])
+    def handle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("handle", value.asInstanceOf[js.Any])
     @scala.inline
     def handleSize(value: js.Tuple2[Double, Double]): this.type = set("handleSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,6 +49,8 @@ object ResizableBox {
     def onResizeStart(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResizeStart", js.Any.fromFunction2(value))
     @scala.inline
     def onResizeStop(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResizeStop", js.Any.fromFunction2(value))
+    @scala.inline
+    def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
     @scala.inline
     def resizeHandles(value: js.Array[ResizeHandle]): this.type = set("resizeHandles", value.asInstanceOf[js.Any])
   }

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ThrowStmt")
 @js.native
 class ThrowStmt protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ThrowStmt {
+  extends typingsSlinky.angularCompiler.compilerMod.ThrowStmt {
   def this(error: typingsSlinky.angularCompiler.outputAstMod.Expression) = this()
   def this(
     error: typingsSlinky.angularCompiler.outputAstMod.Expression,

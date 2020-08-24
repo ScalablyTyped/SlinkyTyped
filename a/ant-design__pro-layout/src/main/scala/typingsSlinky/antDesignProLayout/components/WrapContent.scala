@@ -2,8 +2,7 @@ package typingsSlinky.antDesignProLayout.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.anon.Children
-import typingsSlinky.antDesignProLayout.wrapContentMod.default
+import typingsSlinky.antDesignProLayout.anon.ClassName
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,9 +16,11 @@ object WrapContent {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentHeight(value: Double | String): this.type = set("contentHeight", value.asInstanceOf[js.Any])
     @scala.inline
     def isChildrenLayout(value: Boolean): this.type = set("isChildrenLayout", value.asInstanceOf[js.Any])
     @scala.inline
@@ -28,7 +29,7 @@ object WrapContent {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Children): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ClassName): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: WrapContent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

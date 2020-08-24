@@ -6,7 +6,6 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.lg
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.md
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.sm
 import typingsSlinky.antDesignReactNative.wingBlankMod.WingBlankProps
-import typingsSlinky.antDesignReactNative.wingBlankMod.default
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
@@ -14,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WingBlank {
-  @JSImport("@ant-design/react-native/lib/wing-blank", JSImport.Default)
+  @JSImport("@ant-design/react-native", "WingBlank")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.WingBlank] {
     @scala.inline
     def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline

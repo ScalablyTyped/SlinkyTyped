@@ -1,8 +1,10 @@
 package typingsSlinky.reactPlacesAutocomplete.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPlacesAutocomplete.anon.Bounds
+import typingsSlinky.reactPlacesAutocomplete.anon.Readonlyloadingbooleansug
 import typingsSlinky.reactPlacesAutocomplete.mod.PropTypes
 import typingsSlinky.reactPlacesAutocomplete.mod.default
 import scala.scalajs.js
@@ -39,6 +41,10 @@ object ReactPlacesAutocomplete {
   }
   
   def withProps(p: PropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ReactPlacesAutocomplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: Readonlyloadingbooleansug => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropTypes]))
+  }
 }
 

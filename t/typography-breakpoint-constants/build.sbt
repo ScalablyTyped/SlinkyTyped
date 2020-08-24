@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "typography-breakpoint-constants"
-version := "0.16-dt-20190927Z-f9c834"
-scalaVersion := "2.13.2"
+version := "0.16-dt-20190927Z-e2dbf2"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

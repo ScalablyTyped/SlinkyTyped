@@ -1,6 +1,7 @@
 package typingsSlinky.angularCore.r3SymbolsMod
 
 import typingsSlinky.angularCore.angularCoreStrings.any
+import typingsSlinky.angularCore.angularCoreStrings.platform
 import typingsSlinky.angularCore.angularCoreStrings.root
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +17,7 @@ trait ɵɵInjectableDef[T] extends js.Object {
     * - `null`, does not belong to any injector. Must be explicitly listed in the injector
     *   `providers`.
     */
-  var providedIn: InjectorType[_] | root | any | Null = js.native
+  var providedIn: InjectorType[_] | root | platform | any | Null = js.native
   /**
     * The token to which this definition belongs.
     *

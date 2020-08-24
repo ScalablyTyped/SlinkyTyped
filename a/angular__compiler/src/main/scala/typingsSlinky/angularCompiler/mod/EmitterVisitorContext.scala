@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "EmitterVisitorContext")
 @js.native
 class EmitterVisitorContext protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.EmitterVisitorContext {
+  extends typingsSlinky.angularCompiler.compilerMod.EmitterVisitorContext {
   def this(_indent: Double) = this()
 }
 

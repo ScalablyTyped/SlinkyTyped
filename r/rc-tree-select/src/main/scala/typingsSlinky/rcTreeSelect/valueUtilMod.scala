@@ -1,6 +1,6 @@
 package typingsSlinky.rcTreeSelect
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.anon.FilterOption
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.DefaultValueType
@@ -12,7 +12,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-tree-select/lib/utils/valueUtil", JSImport.Namespace)
+@JSImport("rc-tree-select/es/utils/valueUtil", JSImport.Namespace)
 @js.native
 object valueUtilMod extends js.Object {
   def addValue(rawValues: js.Array[RawValueType], value: RawValueType): js.Array[String | Double] = js.native
@@ -22,8 +22,13 @@ object valueUtilMod extends js.Object {
   def getRawValueLabeled(
     values: js.Array[RawValueType],
     prevValue: DefaultValueType,
-    getEntityByValue: js.Function2[/* value */ RawValueType, /* skipType */ js.UndefOr[SkipType], FlattenDataNode],
-    getLabelProp: js.Function1[/* node */ DataNode, TagMod[Any]]
+    getEntityByValue: js.Function3[
+      /* value */ RawValueType, 
+      /* skipType */ js.UndefOr[SkipType], 
+      /* ignoreDisabledCheck */ js.UndefOr[Boolean], 
+      FlattenDataNode
+    ],
+    getLabelProp: js.Function1[/* node */ DataNode, ReactElement]
   ): js.Array[LabelValueType] = js.native
   def isCheckDisabled(node: DataNode): Boolean = js.native
   def isValueDisabled(value: RawValueType, options: js.Array[FlattenDataNode]): Boolean = js.native

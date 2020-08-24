@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "autoprefixer"
-version := "9.7-dt-20200515Z-6dc5de"
-scalaVersion := "2.13.2"
+version := "9.7-dt-20200515Z-33b106"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "browserslist" % "4.8-dt-20200515Z-c756bc",
-  "org.scalablytyped.slinky" %%% "postcss" % "7.0.18-fedef9",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-ba4eed",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "browserslist" % "4.8-dt-20200515Z-4cb87a",
+  "org.scalablytyped.slinky" %%% "postcss" % "7.0.32-0263b3",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-fe56c3",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

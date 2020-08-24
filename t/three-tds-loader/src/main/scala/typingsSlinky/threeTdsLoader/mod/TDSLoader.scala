@@ -2,6 +2,9 @@ package typingsSlinky.threeTdsLoader.mod
 
 import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.ProgressEvent
+import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import typingsSlinky.three.geometryMod.Geometry
+import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.mod.Color
 import typingsSlinky.three.mod.Mesh
 import typingsSlinky.three.mod.Object3D
@@ -35,6 +38,12 @@ trait TDSLoader extends js.Object {
     * @param onError onError callback.
     */
   def load(url: String, onLoad: js.Function1[/* object3D */ Object3D, Unit]): Unit = js.native
+  def load(
+    url: String,
+    onLoad: js.Function1[/* object3D */ Object3D, Unit],
+    onProgress: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* event */ ErrorEvent, Unit]
+  ): Unit = js.native
   def load(
     url: String,
     onLoad: js.Function1[/* object3D */ Object3D, Unit],
@@ -95,7 +104,7 @@ trait TDSLoader extends js.Object {
     * @param data Dataview in use.
     * @param mesh Mesh to be filled with the data read.
     */
-  def readFaceArray(data: js.typedarray.DataView, mesh: Mesh): Unit = js.native
+  def readFaceArray(data: js.typedarray.DataView, mesh: Mesh[Geometry | BufferGeometry, Material | js.Array[Material]]): Unit = js.native
   /**
     * Decode file content to read 3ds data.
     *

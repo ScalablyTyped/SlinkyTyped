@@ -1,7 +1,7 @@
 package typingsSlinky.nukaCarousel.components
 
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
@@ -93,39 +93,39 @@ object NukaCarousel {
     @scala.inline
     def renderAnnounceSlideMessage(value: /* hasCurrentSlideSlideCount */ CarouselSlideRenderControlProps => String): this.type = set("renderAnnounceSlideMessage", js.Any.fromFunction1(value))
     @scala.inline
-    def renderBottomCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderBottomCenterControls", js.Any.fromFunction1(value))
+    def renderBottomCenterControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderBottomCenterControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderBottomCenterControlsNull: this.type = set("renderBottomCenterControls", null)
     @scala.inline
-    def renderBottomLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderBottomLeftControls", js.Any.fromFunction1(value))
+    def renderBottomLeftControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderBottomLeftControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderBottomLeftControlsNull: this.type = set("renderBottomLeftControls", null)
     @scala.inline
-    def renderBottomRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderBottomRightControls", js.Any.fromFunction1(value))
+    def renderBottomRightControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderBottomRightControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderBottomRightControlsNull: this.type = set("renderBottomRightControls", null)
     @scala.inline
-    def renderCenterCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderCenterCenterControls", js.Any.fromFunction1(value))
+    def renderCenterCenterControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderCenterCenterControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderCenterCenterControlsNull: this.type = set("renderCenterCenterControls", null)
     @scala.inline
-    def renderCenterLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderCenterLeftControls", js.Any.fromFunction1(value))
+    def renderCenterLeftControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderCenterLeftControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderCenterLeftControlsNull: this.type = set("renderCenterLeftControls", null)
     @scala.inline
-    def renderCenterRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderCenterRightControls", js.Any.fromFunction1(value))
+    def renderCenterRightControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderCenterRightControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderCenterRightControlsNull: this.type = set("renderCenterRightControls", null)
     @scala.inline
-    def renderTopCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderTopCenterControls", js.Any.fromFunction1(value))
+    def renderTopCenterControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderTopCenterControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderTopCenterControlsNull: this.type = set("renderTopCenterControls", null)
     @scala.inline
-    def renderTopLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderTopLeftControls", js.Any.fromFunction1(value))
+    def renderTopLeftControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderTopLeftControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderTopLeftControlsNull: this.type = set("renderTopLeftControls", null)
     @scala.inline
-    def renderTopRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderTopRightControls", js.Any.fromFunction1(value))
+    def renderTopRightControls(value: /* props */ CarouselSlideRenderControlProps => ReactElement): this.type = set("renderTopRightControls", js.Any.fromFunction1(value))
     @scala.inline
     def renderTopRightControlsNull: this.type = set("renderTopRightControls", null)
     @scala.inline

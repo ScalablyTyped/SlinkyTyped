@@ -81,6 +81,7 @@ object Sound extends js.Object {
       * @param config Optional sound config object to be applied to this marker or entire sound if no marker name is provided. It gets memorized for future plays of current section of the sound.
       */
     def play(): Boolean = js.native
+    def play(markerName: js.UndefOr[scala.Nothing], config: SoundConfig): Boolean = js.native
     def play(markerName: String): Boolean = js.native
     def play(markerName: String, config: SoundConfig): Boolean = js.native
     def play(markerName: SoundConfig): Boolean = js.native
@@ -427,6 +428,7 @@ object Sound extends js.Object {
       * @param config Optional sound config object to be applied to this marker or entire sound if no marker name is provided. It gets memorized for future plays of current section of the sound.
       */
     def play(): Boolean = js.native
+    def play(markerName: js.UndefOr[scala.Nothing], config: SoundConfig): Boolean = js.native
     def play(markerName: String): Boolean = js.native
     def play(markerName: String, config: SoundConfig): Boolean = js.native
     def play(markerName: SoundConfig): Boolean = js.native
@@ -549,6 +551,8 @@ object Sound extends js.Object {
       * @param audioData The audio data, either a base64 encoded string, an audio media-type data uri, or an ArrayBuffer instance.
       */
     def decodeAudio(): Unit = js.native
+    def decodeAudio(audioKey: js.UndefOr[scala.Nothing], audioData: String): Unit = js.native
+    def decodeAudio(audioKey: js.UndefOr[scala.Nothing], audioData: js.typedarray.ArrayBuffer): Unit = js.native
     def decodeAudio(audioKey: String): Unit = js.native
     def decodeAudio(audioKey: String, audioData: String): Unit = js.native
     def decodeAudio(audioKey: String, audioData: js.typedarray.ArrayBuffer): Unit = js.native

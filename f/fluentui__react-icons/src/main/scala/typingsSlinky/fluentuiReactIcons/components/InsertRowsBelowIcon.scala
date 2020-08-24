@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InsertRowsBelowIcon {
-  @JSImport("@fluentui/react-icons/lib/components/InsertRowsBelowIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "InsertRowsBelowIcon")
   @js.native
   object component extends js.Object
   

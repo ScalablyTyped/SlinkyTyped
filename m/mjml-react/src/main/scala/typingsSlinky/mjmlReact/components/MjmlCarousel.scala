@@ -2,9 +2,9 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.BorderProperty
-import typingsSlinky.csstype.mod.BorderRadiusProperty
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.Border
+import typingsSlinky.csstype.mod.Property.BorderRadius
 import typingsSlinky.mjmlReact.mjmlReactStrings.hidden
 import typingsSlinky.mjmlReact.mjmlReactStrings.visible
 import typingsSlinky.mjmlReact.mod.ClassNameProps
@@ -26,7 +26,7 @@ object MjmlCarousel {
     @scala.inline
     def align(value: String): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def borderRadius(value: String | Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
     @scala.inline
@@ -38,9 +38,9 @@ object MjmlCarousel {
     @scala.inline
     def rightIcon(value: String): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def tbBorder(value: BorderProperty[String | Double]): this.type = set("tbBorder", value.asInstanceOf[js.Any])
+    def tbBorder(value: Border[String | Double]): this.type = set("tbBorder", value.asInstanceOf[js.Any])
     @scala.inline
-    def tbBorderRadius(value: BorderRadiusProperty[String | Double]): this.type = set("tbBorderRadius", value.asInstanceOf[js.Any])
+    def tbBorderRadius(value: BorderRadius[String | Double]): this.type = set("tbBorderRadius", value.asInstanceOf[js.Any])
     @scala.inline
     def tbHoverBorderColor(value: String): this.type = set("tbHoverBorderColor", value.asInstanceOf[js.Any])
     @scala.inline

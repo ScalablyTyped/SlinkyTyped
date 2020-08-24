@@ -4,9 +4,9 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.anon.AxisLabel
-import typingsSlinky.victory.anon.XBoolean
 import typingsSlinky.victory.anon.Y
 import typingsSlinky.victory.anon.`1`
+import typingsSlinky.victory.anon.`2`
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
 import typingsSlinky.victory.mod.D3Scale
 import typingsSlinky.victory.mod.DomainPropType
@@ -55,6 +55,10 @@ object VictoryAxis {
     @scala.inline
     def domain(value: DomainPropType): this.type = set("domain", value.asInstanceOf[js.Any])
     @scala.inline
+    def eventsVarargs(
+      value: (EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String])*
+    ): this.type = set("events", js.Array(value :_*))
+    @scala.inline
     def events(
       value: js.Array[
           EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
@@ -91,7 +95,7 @@ object VictoryAxis {
     @scala.inline
     def scale(value: ScalePropType | D3Scale | `1`): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
-    def singleQuadrantDomainPadding(value: Boolean | XBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    def singleQuadrantDomainPadding(value: Boolean | `2`): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
     @scala.inline
@@ -103,6 +107,8 @@ object VictoryAxis {
     @scala.inline
     def tickCount(value: Double): this.type = set("tickCount", value.asInstanceOf[js.Any])
     @scala.inline
+    def tickFormatVarargs(value: js.Any*): this.type = set("tickFormat", js.Array(value :_*))
+    @scala.inline
     def tickFormatFunction3(value: (/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_]) => String | Double): this.type = set("tickFormat", js.Any.fromFunction3(value))
     @scala.inline
     def tickFormat(
@@ -110,6 +116,8 @@ object VictoryAxis {
     ): this.type = set("tickFormat", value.asInstanceOf[js.Any])
     @scala.inline
     def tickLabelComponent(value: ReactElement): this.type = set("tickLabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickValuesVarargs(value: js.Any*): this.type = set("tickValues", js.Array(value :_*))
     @scala.inline
     def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
     @scala.inline

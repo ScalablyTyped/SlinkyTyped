@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -30,9 +30,9 @@ object DefaultTabBar {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderTab(value: /* tab */ TabData => TagMod[Any]): this.type = set("renderTab", js.Any.fromFunction1(value))
+    def renderTab(value: /* tab */ TabData => ReactElement): this.type = set("renderTab", js.Any.fromFunction1(value))
     @scala.inline
-    def renderUnderline(value: /* style */ CSSProperties | js.Any => TagMod[Any]): this.type = set("renderUnderline", js.Any.fromFunction1(value))
+    def renderUnderline(value: /* style */ CSSProperties | js.Any => ReactElement): this.type = set("renderUnderline", js.Any.fromFunction1(value))
     @scala.inline
     def tabBarActiveTextColor(value: String): this.type = set("tabBarActiveTextColor", value.asInstanceOf[js.Any])
     @scala.inline

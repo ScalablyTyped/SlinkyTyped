@@ -33,13 +33,6 @@ trait Client extends EventEmitter {
   def create(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]): Unit = js.native
   def create(
     path: String,
-    dataOrAclsOrmode1: Buffer | js.Array[ACL] | Double,
-    dataOrAclsOrmode2: Buffer | js.Array[ACL] | Double,
-    dataOrAclsOrmode3: Buffer | js.Array[ACL] | Double,
-    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
-  ): Unit = js.native
-  def create(
-    path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
@@ -52,7 +45,49 @@ trait Client extends EventEmitter {
   def create(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
@@ -63,6 +98,27 @@ trait Client extends EventEmitter {
   ): Unit = js.native
   def create(
     path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
     dataOrAclsOrmode1: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
@@ -75,13 +131,76 @@ trait Client extends EventEmitter {
   def create(
     path: String,
     dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
@@ -98,13 +217,76 @@ trait Client extends EventEmitter {
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def create(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def exists(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]): Unit = js.native
@@ -152,13 +334,6 @@ trait Client extends EventEmitter {
   def mkdirp(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]): Unit = js.native
   def mkdirp(
     path: String,
-    dataOrAclsOrmode1: Buffer | js.Array[ACL] | Double,
-    dataOrAclsOrmode2: Buffer | js.Array[ACL] | Double,
-    dataOrAclsOrmode3: Buffer | js.Array[ACL] | Double,
-    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
-  ): Unit = js.native
-  def mkdirp(
-    path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
@@ -171,7 +346,49 @@ trait Client extends EventEmitter {
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
@@ -182,6 +399,27 @@ trait Client extends EventEmitter {
   ): Unit = js.native
   def mkdirp(
     path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: js.Array[ACL],
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
     dataOrAclsOrmode1: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
@@ -194,13 +432,76 @@ trait Client extends EventEmitter {
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Double,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
@@ -217,13 +518,76 @@ trait Client extends EventEmitter {
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: js.Array[ACL],
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Double,
+    dataOrAclsOrmode3: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Buffer,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: js.Array[ACL],
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Double,
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
+  ): Unit = js.native
+  def mkdirp(
+    path: String,
+    dataOrAclsOrmode1: Buffer,
+    dataOrAclsOrmode2: Buffer,
+    dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def on(event: String, cb: js.Function0[Unit]): this.type = js.native

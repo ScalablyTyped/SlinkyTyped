@@ -29,43 +29,24 @@ object Progress {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBatchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(js.undefined)
-        ret
-    }
+    def setBatchSize(value: Double): Self = this.set("batchSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProgress(
+    def deleteBatchSize: Self = this.set("batchSize", js.undefined)
+    @scala.inline
+    def setProgress(
       value: (/* done */ Boolean, /* processed */ Double, /* total */ Double, /* stats */ UpdateStats, /* paper */ Paper) => scala.Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.Any.fromFunction5(value))
-        ret
-    }
+    ): Self = this.set("progress", js.Any.fromFunction5(value))
     @scala.inline
-    def withoutProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
-        ret
-    }
+    def deleteProgress: Self = this.set("progress", js.undefined)
     @scala.inline
-    def withViewport(value: (/* view */ View[js.Any], /* isDetached */ Boolean, /* paper */ Paper) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setViewport(value: (/* view */ View[js.Any], /* isMounted */ Boolean, /* paper */ Paper) => Boolean): Self = this.set("viewport", js.Any.fromFunction3(value))
     @scala.inline
-    def withoutViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.undefined)
-        ret
-    }
+    def deleteViewport: Self = this.set("viewport", js.undefined)
   }
   
 }

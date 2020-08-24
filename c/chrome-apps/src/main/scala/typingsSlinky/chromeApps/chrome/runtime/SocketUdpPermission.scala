@@ -36,41 +36,28 @@ object SocketUdpPermission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBind(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(js.undefined)
-        ret
-    }
+    def setBindVarargs(value: String*): Self = this.set("bind", js.Array(value :_*))
     @scala.inline
-    def withMulticastMembership(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multicastMembership")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBind(value: String | js.Array[String]): Self = this.set("bind", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMulticastMembership: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multicastMembership")(js.undefined)
-        ret
-    }
+    def deleteBind: Self = this.set("bind", js.undefined)
     @scala.inline
-    def withSend(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMulticastMembershipVarargs(value: String*): Self = this.set("multicastMembership", js.Array(value :_*))
     @scala.inline
-    def withoutSend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.undefined)
-        ret
-    }
+    def setMulticastMembership(value: String | js.Array[String]): Self = this.set("multicastMembership", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMulticastMembership: Self = this.set("multicastMembership", js.undefined)
+    @scala.inline
+    def setSendVarargs(value: String*): Self = this.set("send", js.Array(value :_*))
+    @scala.inline
+    def setSend(value: String | js.Array[String]): Self = this.set("send", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSend: Self = this.set("send", js.undefined)
   }
   
 }

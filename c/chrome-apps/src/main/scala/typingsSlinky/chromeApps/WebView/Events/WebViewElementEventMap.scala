@@ -169,107 +169,44 @@ object WebViewElementEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClose(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withConsolemessage(value: ConsoleMessageEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consolemessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClose(value: Event): Self = this.set("close", value.asInstanceOf[js.Any])
     @scala.inline
-    def withContentload(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentload")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConsolemessage(value: ConsoleMessageEvent): Self = this.set("consolemessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDialog(value: DialogEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setContentload(value: Event): Self = this.set("contentload", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExit(value: ExitEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDialog(value: DialogEvent): Self = this.set("dialog", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFindupdate(value: FindUpdateEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findupdate")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExit(value: ExitEvent): Self = this.set("exit", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadabort(value: LoadAbortEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadabort")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFindupdate(value: FindUpdateEvent): Self = this.set("findupdate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadcommit(value: LoadCommitEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadcommit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLoadabort(value: LoadAbortEvent): Self = this.set("loadabort", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadredirect(value: LoadRedirectEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadredirect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLoadcommit(value: LoadCommitEvent): Self = this.set("loadcommit", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadstart(value: LoadStartEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadstart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLoadredirect(value: LoadRedirectEvent): Self = this.set("loadredirect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadstop(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadstop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLoadstart(value: LoadStartEvent): Self = this.set("loadstart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNewwindow(value: NewWindowEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newwindow")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLoadstop(value: Event): Self = this.set("loadstop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPermissionrequest(value: PermissionRequestEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionrequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNewwindow(value: NewWindowEvent): Self = this.set("newwindow", value.asInstanceOf[js.Any])
     @scala.inline
-    def withResponsive(value: ResponsiveEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissionrequest(value: PermissionRequestEvent): Self = this.set("permissionrequest", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSizechanged(value: SizeChangedEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizechanged")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setResponsive(value: ResponsiveEvent): Self = this.set("responsive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUnresponsive(value: UnresponsiveEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unresponsive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSizechanged(value: SizeChangedEvent): Self = this.set("sizechanged", value.asInstanceOf[js.Any])
     @scala.inline
-    def withZoomchange(value: ZoomChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomchange")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUnresponsive(value: UnresponsiveEvent): Self = this.set("unresponsive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZoomchange(value: ZoomChangeEvent): Self = this.set("zoomchange", value.asInstanceOf[js.Any])
   }
   
 }

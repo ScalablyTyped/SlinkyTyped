@@ -1,6 +1,5 @@
 package typingsSlinky.gestalt.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -29,7 +28,7 @@ object Tooltip {
     @scala.inline
     def linkReactElement(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
     @scala.inline
-    def link(value: TagMod[Any]): this.type = set("link", value.asInstanceOf[js.Any])
+    def link(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

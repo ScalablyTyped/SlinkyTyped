@@ -2,8 +2,6 @@ package typingsSlinky.reactLeaflet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.leaflet.mod.Control_.Scale
-import typingsSlinky.reactLeaflet.mod.ScaleControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +13,11 @@ object ScaleControl {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: ScaleControlProps, E <: Scale] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.ScaleControl[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.ScaleControl[P, E]]
   
-  def apply[P <: ScaleControlProps, E <: Scale](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: ScaleControlProps, E <: Scale](companion: ScaleControl.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeaflet.mod.ScaleControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Scale */ E](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeaflet.mod.ScaleControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Scale */ E](companion: ScaleControl.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
 }
 

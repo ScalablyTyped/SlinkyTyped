@@ -18,10 +18,12 @@ trait NewWindowEvent extends Event {
     */
   var disposition: default | `foreground-tab` | `background-tab` | `new-window` | `save-to-disk` | other = js.native
   var frameName: String = js.native
+  // Docs: http://electronjs.org/docs/api/structures/new-window-event
+  var newGuest: js.UndefOr[BrowserWindow] = js.native
   /**
-    * The options which should be used for creating the new .
+    * The options which should be used for creating the new `BrowserWindow`.
     */
-  var options: Options = js.native
+  var options: BrowserWindowConstructorOptions = js.native
   var url: String = js.native
 }
 

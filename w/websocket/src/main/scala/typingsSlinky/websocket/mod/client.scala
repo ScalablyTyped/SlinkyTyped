@@ -1,11 +1,9 @@
 package typingsSlinky.websocket.mod
 
-import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.httpMod.RequestOptions
-import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.urlMod.Url
 import typingsSlinky.websocket.websocketStrings.connect
 import typingsSlinky.websocket.websocketStrings.connectFailed
@@ -18,13 +16,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class client () extends EventEmitter {
   def this(ClientConfig: IClientConfig) = this()
-  var firstDataChunk: Buffer | Null = js.native
-  var origin: String = js.native
-  var protocols: js.Array[String] = js.native
-  var response: IncomingMessage = js.native
-  var secure: Boolean = js.native
-  var socket: Socket = js.native
-  var url: Url = js.native
   /**
     * Will cancel an in-progress connection request before either the `connect` event or the `connectFailed` event has been emitted.
     * If the `connect` or `connectFailed` event has already been emitted, calling `abort()` will do nothing.
@@ -40,22 +31,122 @@ class client () extends EventEmitter {
     cb: js.Function2[/* response */ IncomingMessage, /* client */ this.type, Unit]
   ): this.type = js.native
   def connect(requestUrl: String): Unit = js.native
-  def connect(requestUrl: String, protocols: String): Unit = js.native
-  def connect(requestUrl: String, protocols: String, origin: String): Unit = js.native
-  def connect(requestUrl: String, protocols: String, origin: String, headers: OutgoingHttpHeaders): Unit = js.native
   def connect(
     requestUrl: String,
-    protocols: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: String, requestedProtocols: js.UndefOr[scala.Nothing], origin: String): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: String,
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: String,
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
     origin: String,
     headers: OutgoingHttpHeaders,
     extraRequestOptions: RequestOptions
   ): Unit = js.native
-  def connect(requestUrl: String, protocols: js.Array[String]): Unit = js.native
-  def connect(requestUrl: String, protocols: js.Array[String], origin: String): Unit = js.native
-  def connect(requestUrl: String, protocols: js.Array[String], origin: String, headers: OutgoingHttpHeaders): Unit = js.native
+  def connect(requestUrl: String, requestedProtocols: String): Unit = js.native
   def connect(
     requestUrl: String,
-    protocols: js.Array[String],
+    requestedProtocols: String,
+    origin: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: String,
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: String,
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: String, requestedProtocols: String, origin: String): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: String,
+    origin: String,
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: String, requestedProtocols: String, origin: String, headers: OutgoingHttpHeaders): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: String,
+    origin: String,
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: String, requestedProtocols: js.Array[String]): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.Array[String],
+    origin: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.Array[String],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.Array[String],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: String, requestedProtocols: js.Array[String], origin: String): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.Array[String],
+    origin: String,
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.Array[String],
+    origin: String,
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: String,
+    requestedProtocols: js.Array[String],
     origin: String,
     headers: OutgoingHttpHeaders,
     extraRequestOptions: RequestOptions
@@ -64,32 +155,140 @@ class client () extends EventEmitter {
     * Establish a connection. The remote server will select the best subprotocol that
     * it supports and send that back when establishing the connection.
     *
-    * @param [origin] can be used in user-agent scenarios to identify the page containing
-    *                 any scripting content that caused the connection to be requested.
     * @param requestUrl should be a standard websocket url
+    * @param [requestedProtocols] list of subprotocols supported by the client.
+    *     The remote server will select the best subprotocol that it supports and send that back when establishing the connection.
+    * @param [origin] Used in user-agent scenarios to identify the page containing
+    *     any scripting content that caused the connection to be requested.
+    * @param [headers] additional arbitrary HTTP request headers to send along with the request.
+    *     This may be used to pass things like access tokens, etc. so that the server can verify authentication/authorization
+    *     before deciding to accept and open the full WebSocket connection.
+    * @param [extraRequestOptions] additional configuration options to be passed to `http.request` or `https.request`.
+    *     This can be used to pass a custom `agent` to enable `client` usage from behind an HTTP or HTTPS proxy server
+    *     using {@link https://github.com/koichik/node-tunnel|koichik/node-tunnel} or similar.
+    * @example client.connect('ws://www.mygreatapp.com:1234/websocketapp/')
     */
   def connect(requestUrl: Url): Unit = js.native
-  def connect(requestUrl: Url, protocols: String): Unit = js.native
-  def connect(requestUrl: Url, protocols: String, origin: String): Unit = js.native
-  def connect(requestUrl: Url, protocols: String, origin: String, headers: OutgoingHttpHeaders): Unit = js.native
   def connect(
     requestUrl: Url,
-    protocols: String,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: Url, requestedProtocols: js.UndefOr[scala.Nothing], origin: String): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: String,
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.UndefOr[scala.Nothing],
+    origin: String,
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.UndefOr[scala.Nothing],
     origin: String,
     headers: OutgoingHttpHeaders,
     extraRequestOptions: RequestOptions
   ): Unit = js.native
-  def connect(requestUrl: Url, protocols: js.Array[String]): Unit = js.native
-  def connect(requestUrl: Url, protocols: js.Array[String], origin: String): Unit = js.native
-  def connect(requestUrl: Url, protocols: js.Array[String], origin: String, headers: OutgoingHttpHeaders): Unit = js.native
+  def connect(requestUrl: Url, requestedProtocols: String): Unit = js.native
   def connect(
     requestUrl: Url,
-    protocols: js.Array[String],
+    requestedProtocols: String,
+    origin: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: String,
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: String,
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: Url, requestedProtocols: String, origin: String): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: String,
+    origin: String,
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: Url, requestedProtocols: String, origin: String, headers: OutgoingHttpHeaders): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: String,
     origin: String,
     headers: OutgoingHttpHeaders,
     extraRequestOptions: RequestOptions
   ): Unit = js.native
-  def failHandshake(errorDescription: String): Unit = js.native
+  def connect(requestUrl: Url, requestedProtocols: js.Array[String]): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.Array[String],
+    origin: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.Array[String],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.Array[String],
+    origin: js.UndefOr[scala.Nothing],
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(requestUrl: Url, requestedProtocols: js.Array[String], origin: String): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.Array[String],
+    origin: String,
+    headers: js.UndefOr[scala.Nothing],
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.Array[String],
+    origin: String,
+    headers: OutgoingHttpHeaders
+  ): Unit = js.native
+  def connect(
+    requestUrl: Url,
+    requestedProtocols: js.Array[String],
+    origin: String,
+    headers: OutgoingHttpHeaders,
+    extraRequestOptions: RequestOptions
+  ): Unit = js.native
   // Events
   @JSName("on")
   def on_connect(event: connect, cb: js.Function1[/* connection */ connection, Unit]): this.type = js.native
@@ -100,7 +299,5 @@ class client () extends EventEmitter {
     event: httpResponse,
     cb: js.Function2[/* response */ IncomingMessage, /* client */ this.type, Unit]
   ): this.type = js.native
-  def succeedHandshake(): Unit = js.native
-  def validateHandshake(): Unit = js.native
 }
 

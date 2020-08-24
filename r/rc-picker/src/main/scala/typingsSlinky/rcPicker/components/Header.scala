@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Header {
-  @JSImport("rc-picker/lib/panels/Header", JSImport.Default)
+  @JSImport("rc-picker/es/panels/Header", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -21,7 +20,7 @@ object Header {
     @scala.inline
     def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextIcon(value: TagMod[Any]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def onNext(value: () => Unit): this.type = set("onNext", js.Any.fromFunction0(value))
     @scala.inline
@@ -33,15 +32,15 @@ object Header {
     @scala.inline
     def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def prevIcon(value: TagMod[Any]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def superNextIconReactElement(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def superNextIcon(value: TagMod[Any]): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    def superNextIcon(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def superPrevIconReactElement(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def superPrevIcon(value: TagMod[Any]): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    def superPrevIcon(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: HeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

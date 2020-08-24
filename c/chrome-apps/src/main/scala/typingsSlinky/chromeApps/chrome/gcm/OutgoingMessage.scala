@@ -38,35 +38,20 @@ object OutgoingMessage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: IGCMDataSend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDestinationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setData(value: IGCMDataSend): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMessageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDestinationId(value: String): Self = this.set("destinationId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTimeToLive(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToLive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMessageId(value: String): Self = this.set("messageId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTimeToLive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToLive")(js.undefined)
-        ret
-    }
+    def setTimeToLive(value: integer): Self = this.set("timeToLive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimeToLive: Self = this.set("timeToLive", js.undefined)
   }
   
 }

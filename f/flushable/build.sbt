@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "flushable"
-version := "1.0-dt-20190312Z-d1f82f"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190312Z-3ca64e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

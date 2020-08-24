@@ -1,10 +1,9 @@
 package typingsSlinky.baseui.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.anon.Body
 import typingsSlinky.baseui.anon.ListItemProfile
 import typingsSlinky.baseui.menuMod.OptionProfileProps
 import scala.scalajs.js
@@ -23,7 +22,7 @@ object OptionProfile {
     @scala.inline
     def $isHighlighted(value: Boolean): this.type = set("$isHighlighted", value.asInstanceOf[js.Any])
     @scala.inline
-    def getChildMenu(value: /* item */ js.Any => TagMod[Any]): this.type = set("getChildMenu", js.Any.fromFunction1(value))
+    def getChildMenu(value: /* item */ js.Any => ReactElement): this.type = set("getChildMenu", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: ListItemProfile): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
@@ -37,7 +36,7 @@ object OptionProfile {
   def apply(
     getProfileItemImg: js.Any => String | ReactComponentClass[_],
     getProfileItemImgText: js.Any => String,
-    getProfileItemLabels: js.Any => Body,
+    getProfileItemLabels: js.Any => typingsSlinky.baseui.anon.Body,
     item: js.Any
   ): Builder = {
     val __props = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])

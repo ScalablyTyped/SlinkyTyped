@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 class PrecedenceGroup protected ()
   extends typingsSlinky.jodata.jo.PrecedenceGroup {
   def this(filterClause: typingsSlinky.jodata.jo.FilterClause) = this()
-  /* CompleteClass */
-  override def andFilter(filterClause: typingsSlinky.jodata.jo.FilterClause): typingsSlinky.jodata.jo.FilterClause = js.native
-  /* CompleteClass */
-  override def orFilter(filterClause: typingsSlinky.jodata.jo.FilterClause): typingsSlinky.jodata.jo.FilterClause = js.native
 }
 

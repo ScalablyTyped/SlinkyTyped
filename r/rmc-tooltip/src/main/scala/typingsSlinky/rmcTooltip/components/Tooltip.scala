@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tooltip {
-  @JSImport("rmc-tooltip/lib/Tooltip", JSImport.Default)
+  @JSImport("rmc-tooltip/es/Tooltip", JSImport.Default)
   @js.native
   object component extends js.Object
   

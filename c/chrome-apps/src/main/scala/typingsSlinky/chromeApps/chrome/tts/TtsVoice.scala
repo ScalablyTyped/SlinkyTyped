@@ -42,77 +42,36 @@ object TtsVoice {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEventTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypes")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutEventTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypes")(js.undefined)
-        ret
-    }
+    def setEventTypesVarargs(value: String*): Self = this.set("eventTypes", js.Array(value :_*))
     @scala.inline
-    def withExtensionsId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionsId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEventTypes(value: js.Array[String]): Self = this.set("eventTypes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutExtensionsId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionsId")(js.undefined)
-        ret
-    }
+    def deleteEventTypes: Self = this.set("eventTypes", js.undefined)
     @scala.inline
-    def withGender(value: male | female): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtensionsId(value: String): Self = this.set("extensionsId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
+    def deleteExtensionsId: Self = this.set("extensionsId", js.undefined)
     @scala.inline
-    def withLang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGender(value: male | female): Self = this.set("gender", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
+    def deleteGender: Self = this.set("gender", js.undefined)
     @scala.inline
-    def withRemote(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remote")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLang(value: String): Self = this.set("lang", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRemote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remote")(js.undefined)
-        ret
-    }
+    def deleteLang: Self = this.set("lang", js.undefined)
     @scala.inline
-    def withVoiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRemote(value: Boolean): Self = this.set("remote", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutVoiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceName")(js.undefined)
-        ret
-    }
+    def deleteRemote: Self = this.set("remote", js.undefined)
+    @scala.inline
+    def setVoiceName(value: String): Self = this.set("voiceName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVoiceName: Self = this.set("voiceName", js.undefined)
   }
   
 }

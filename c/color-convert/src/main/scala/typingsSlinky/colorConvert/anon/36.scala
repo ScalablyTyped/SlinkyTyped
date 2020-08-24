@@ -1,7 +1,7 @@
 package typingsSlinky.colorConvert.anon
 
 import typingsSlinky.colorConvert.conversionsMod.HSV_
-import typingsSlinky.colorConvert.conversionsMod.KEYWORD_
+import typingsSlinky.colorConvert.conversionsMod.LCH_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait `36` extends js.Object {
   @JSName("raw")
-  var raw_Original: js.Function1[/* from */ HSV_, KEYWORD_] = js.native
-  def raw(from: HSV_): KEYWORD_ = js.native
+  var raw_Original: js.Function1[/* from */ HSV_, LCH_] = js.native
+  def raw(from: HSV_): LCH_ = js.native
 }
 

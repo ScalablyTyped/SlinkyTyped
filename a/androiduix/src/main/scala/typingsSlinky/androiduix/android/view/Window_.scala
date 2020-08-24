@@ -64,6 +64,12 @@ trait Window_ extends js.Object {
   def setTitle(title: String): Unit = js.native
   def setType(`type`: Double): Unit = js.native
   def setWindowAnimations(enterAnimation: Animation, exitAnimation: Animation): Unit = js.native
+  def setWindowAnimations(
+    enterAnimation: Animation,
+    exitAnimation: Animation,
+    resumeAnimation: js.UndefOr[scala.Nothing],
+    hideAnimation: Animation
+  ): Unit = js.native
   def setWindowAnimations(enterAnimation: Animation, exitAnimation: Animation, resumeAnimation: Animation): Unit = js.native
   def setWindowAnimations(
     enterAnimation: Animation,

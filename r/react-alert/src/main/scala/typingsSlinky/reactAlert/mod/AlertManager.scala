@@ -1,7 +1,7 @@
 package typingsSlinky.reactAlert.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +11,17 @@ trait AlertManager extends js.Object {
   var alerts: js.Array[AlertComponentProps] = js.native
   var root: js.UndefOr[HTMLElement] = js.native
   def error(): AlertComponentProps = js.native
-  def error(message: TagMod[Any]): AlertComponentProps = js.native
-  def error(message: TagMod[Any], options: AlertCustomOptions): AlertComponentProps = js.native
+  def error(message: js.UndefOr[ReactElement], options: AlertCustomOptions): AlertComponentProps = js.native
+  def error(message: ReactElement): AlertComponentProps = js.native
   def info(): AlertComponentProps = js.native
-  def info(message: TagMod[Any]): AlertComponentProps = js.native
-  def info(message: TagMod[Any], options: AlertCustomOptions): AlertComponentProps = js.native
+  def info(message: js.UndefOr[ReactElement], options: AlertCustomOptions): AlertComponentProps = js.native
+  def info(message: ReactElement): AlertComponentProps = js.native
   def remove(alert: AlertComponentProps): Unit = js.native
   def show(): AlertComponentProps = js.native
-  def show(message: TagMod[Any]): AlertComponentProps = js.native
-  def show(message: TagMod[Any], options: AlertCustomOptionsWithType): AlertComponentProps = js.native
+  def show(message: js.UndefOr[ReactElement], options: AlertCustomOptionsWithType): AlertComponentProps = js.native
+  def show(message: ReactElement): AlertComponentProps = js.native
   def success(): AlertComponentProps = js.native
-  def success(message: TagMod[Any]): AlertComponentProps = js.native
-  def success(message: TagMod[Any], options: AlertCustomOptions): AlertComponentProps = js.native
+  def success(message: js.UndefOr[ReactElement], options: AlertCustomOptions): AlertComponentProps = js.native
+  def success(message: ReactElement): AlertComponentProps = js.native
 }
 

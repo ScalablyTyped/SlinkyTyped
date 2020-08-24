@@ -21,7 +21,6 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapListSu
 import typingsSlinky.materialUiCore.listSubheaderListSubheaderMod.ListSubheaderProps
-import typingsSlinky.materialUiCore.listSubheaderMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -32,6 +31,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.both
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
 import typingsSlinky.materialUiCore.materialUiCoreStrings.decimal
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.email
@@ -72,20 +72,21 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListSubheader {
-  @JSImport("@material-ui/core/ListSubheader", JSImport.Default)
+  @JSImport("@material-ui/core", "ListSubheader")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -197,13 +198,13 @@ object ListSubheader {
     @scala.inline
     def classes(value: PartialClassNameMapListSu): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: typingsSlinky.materialUiCore.materialUiCoreStrings.default | primary | inherit): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: default | primary | inherit): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[ListSubheaderProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[ListSubheaderProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[ListSubheaderProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[ListSubheaderProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -214,6 +215,8 @@ object ListSubheader {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

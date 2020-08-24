@@ -6,6 +6,10 @@ import typingsSlinky.googleCloudStorage.fileMod.File
 import typingsSlinky.googleCloudStorage.fileMod.FileOptions
 import typingsSlinky.googleCloudStorage.iamMod.Iam
 import typingsSlinky.googleCloudStorage.notificationMod.Notification
+import typingsSlinky.googleCloudStorage.signerMod.GetSignedUrlCallback
+import typingsSlinky.googleCloudStorage.signerMod.GetSignedUrlResponse
+import typingsSlinky.googleCloudStorage.signerMod.URLSigner
+import typingsSlinky.googleCloudStorage.storageMod.Cors
 import typingsSlinky.googleCloudStorage.storageMod.Storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -146,6 +150,28 @@ class Bucket protected ()
     *   .on('data', function(file) {
     *     this.end();
     *   });
+    *
+    * //-
+    * // If you're filtering files with a delimiter, you should use
+    * // {@link Bucket#getFiles} and set `autoPaginate: false` in order to
+    * // preserve the `apiResponse` argument.
+    * //-
+    * const prefixes = [];
+    *
+    * function callback(err, files, nextQuery, apiResponse) {
+    *   prefixes = prefixes.concat(apiResponse.prefixes);
+    *
+    *   if (nextQuery) {
+    *     bucket.getFiles(nextQuery, callback);
+    *   } else {
+    *     // prefixes = The finished array of prefixes.
+    *   }
+    * }
+    *
+    * bucket.getFiles({
+    *   autoPaginate: false,
+    *   delimiter: '/'
+    * }, callback);
     */
   var getFilesStream: js.Function = js.native
   /**
@@ -197,6 +223,7 @@ class Bucket protected ()
     * @type {string}
     */
   var name: String = js.native
+  var signer: js.UndefOr[URLSigner] = js.native
   /**
     * A reference to the {@link Storage} associated with this {@link Bucket}
     * instance.
@@ -298,6 +325,8 @@ class Bucket protected ()
   def getNotifications(callback: GetNotificationsCallback): Unit = js.native
   def getNotifications(options: GetNotificationsOptions): js.Promise[GetNotificationsResponse] = js.native
   def getNotifications(options: GetNotificationsOptions, callback: GetNotificationsCallback): Unit = js.native
+  def getSignedUrl(cfg: GetBucketSignedUrlConfig): js.Promise[GetSignedUrlResponse] = js.native
+  def getSignedUrl(cfg: GetBucketSignedUrlConfig, callback: GetSignedUrlCallback): Unit = js.native
   def lock(metageneration: String): js.Promise[BucketLockResponse] = js.native
   def lock(metageneration: String, callback: BucketLockCallback): Unit = js.native
   def lock(metageneration: Double): js.Promise[BucketLockResponse] = js.native
@@ -330,6 +359,8 @@ class Bucket protected ()
   def notification(id: String): Notification = js.native
   def removeRetentionPeriod(): js.Promise[SetBucketMetadataResponse] = js.native
   def removeRetentionPeriod(callback: SetBucketMetadataCallback): Unit = js.native
+  def setCorsConfiguration(corsConfiguration: js.Array[Cors]): js.Promise[SetBucketMetadataResponse] = js.native
+  def setCorsConfiguration(corsConfiguration: js.Array[Cors], callback: SetBucketMetadataCallback): Unit = js.native
   def setLabels(labels: Labels): js.Promise[SetLabelsResponse] = js.native
   def setLabels(labels: Labels, callback: SetLabelsCallback): Unit = js.native
   def setLabels(labels: Labels, options: SetLabelsOptions): js.Promise[SetLabelsResponse] = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.apigatewayMod
 
-import typingsSlinky.pulumiAws.integrationResponseMod.IntegrationResponseArgs
-import typingsSlinky.pulumiAws.integrationResponseMod.IntegrationResponseState
+import typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponseArgs
+import typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponseState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@pulumi/aws/apigateway", "IntegrationResponse")
 @js.native
 class IntegrationResponse protected ()
-  extends typingsSlinky.pulumiAws.integrationResponseMod.IntegrationResponse {
+  extends typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponse {
   /**
     * Create a IntegrationResponse resource with the given unique name, arguments, and options.
     *
@@ -35,10 +35,12 @@ object IntegrationResponse extends js.Object {
     * @param name The _unique_ name of the resulting resource.
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param state Any extra arguments used during the lookup.
+    * @param opts Optional settings to control the behavior of the CustomResource.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.integrationResponseMod.IntegrationResponse = js.native
-  def get(name: String, id: Input[ID], state: IntegrationResponseState): typingsSlinky.pulumiAws.integrationResponseMod.IntegrationResponse = js.native
-  def get(name: String, id: Input[ID], state: IntegrationResponseState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.integrationResponseMod.IntegrationResponse = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponse = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponse = js.native
+  def get(name: String, id: Input[ID], state: IntegrationResponseState): typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponse = js.native
+  def get(name: String, id: Input[ID], state: IntegrationResponseState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayIntegrationResponseMod.IntegrationResponse = js.native
   /**
     * Returns true if the given object is an instance of IntegrationResponse.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.

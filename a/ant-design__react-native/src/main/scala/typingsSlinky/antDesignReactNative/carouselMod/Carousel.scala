@@ -1,12 +1,7 @@
 package typingsSlinky.antDesignReactNative.carouselMod
 
-import slinky.core.SyntheticEvent
-import slinky.core.TagMod
-import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
-import typingsSlinky.reactNative.mod.NativeScrollEvent
-import typingsSlinky.reactNative.mod.NodeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,26 +9,23 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Carousel
   extends Component[CarouselProps, CarouselState, js.Any] {
-  var androidScrollEndTimer: js.Any = js.native
+  var autoplay: js.Any = js.native
   var autoplayTimer: js.Any = js.native
-  var scrollEndTimter: js.Any = js.native
-  var scrollviewRef: js.Any = js.native
-  def autoplay(): Unit = js.native
+  var getChildrenCount: js.Any = js.native
+  var renderDots: js.Any = js.native
+  var viewPager: ReactRef[
+    /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ViewPager */ _
+  ] = js.native
   @JSName("componentDidMount")
   def componentDidMount_MCarousel(): Unit = js.native
+  @JSName("componentDidUpdate")
+  def componentDidUpdate_MCarousel(prevProps: CarouselProps): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MCarousel(): Unit = js.native
-  def getChildrenCount(children: TagMod[Any]): Double = js.native
-  def loopJump(): Unit = js.native
-  def onChildLayout(e: LayoutChangeEvent): Unit = js.native
-  def onLayout(e: LayoutChangeEvent): Unit = js.native
-  def onScrollBegin(e: SyntheticEvent[NodeHandle, NativeScrollEvent]): Unit = js.native
-  def onScrollEnd(e: SyntheticEvent[NodeHandle, NativeScrollEvent]): Unit = js.native
-  def onScrollEndDrag(e: SyntheticEvent[NodeHandle, NativeScrollEvent]): Unit = js.native
-  def paging(offsetY: Double): Unit = js.native
-  def renderContent(pages: TagMod[Any]): ReactElement = js.native
-  def renderDots(index: Double): ReactElement | Null = js.native
-  def scrollNextPage(): Unit = js.native
-  def updateIndex(offset: CarouselOffset): Unit = js.native
+  /**
+    * go to index
+    * @param index
+    */
+  def goTo(index: Double): Unit = js.native
 }
 

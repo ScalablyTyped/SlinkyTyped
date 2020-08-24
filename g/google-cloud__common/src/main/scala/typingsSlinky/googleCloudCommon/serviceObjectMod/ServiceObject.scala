@@ -3,7 +3,6 @@ package typingsSlinky.googleCloudCommon.serviceObjectMod
 import typingsSlinky.googleCloudCommon.utilMod.BodyResponseCallback
 import typingsSlinky.googleCloudCommon.utilMod.DecorateRequestOptions
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.PromiseConstructor
 import typingsSlinky.teenyRequest.mod.Request
 import typingsSlinky.teenyRequest.mod.Response
 import scala.scalajs.js
@@ -25,14 +24,14 @@ import scala.scalajs.js.annotation._
 @js.native
 class ServiceObject[T] protected () extends EventEmitter {
   def this(config: ServiceObjectConfig) = this()
-  var Promise: js.UndefOr[PromiseConstructor] = js.native
   var baseUrl: js.UndefOr[String] = js.native
-  var createMethod: js.UndefOr[js.Any] = js.native
+  var createMethod: js.Any = js.native
   var id: js.UndefOr[String] = js.native
   var interceptors: js.Array[Interceptor] = js.native
   var metadata: Metadata = js.native
   var methods: Methods = js.native
   var parent: ServiceObjectParent = js.native
+  var pollIntervalMs: js.UndefOr[Double] = js.native
   /**
     * Make an authenticated API request.
     *
@@ -106,6 +105,10 @@ class ServiceObject[T] protected () extends EventEmitter {
   def getMetadata(callback: MetadataCallback): Unit = js.native
   def getMetadata(options: GetMetadataOptions): js.Promise[MetadataResponse] = js.native
   def getMetadata(options: GetMetadataOptions, callback: MetadataCallback): Unit = js.native
+  /**
+    * Return the user's custom request interceptors.
+    */
+  def getRequestInterceptors(): js.Array[js.Function] = js.native
   /**
     * Make an authenticated API request.
     *

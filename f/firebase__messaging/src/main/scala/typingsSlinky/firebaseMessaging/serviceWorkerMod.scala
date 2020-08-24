@@ -1,8 +1,5 @@
 package typingsSlinky.firebaseMessaging
 
-import org.scalajs.dom.experimental.push.PushEncryptionKeyName
-import org.scalajs.dom.experimental.push.PushSubscriptionJSON
-import org.scalajs.dom.experimental.push.PushSubscriptionOptions
 import typingsSlinky.std.EventInit
 import typingsSlinky.std.PushManager
 import typingsSlinky.std.PushSubscription
@@ -36,21 +33,9 @@ object serviceWorkerMod extends js.Object {
   @js.native
   class FakePushSubscription () extends PushSubscription {
     var auth: String = js.native
-    /* CompleteClass */
-    override val endpoint: String = js.native
-    /* CompleteClass */
-    override val expirationTime: Double | Null = js.native
     @JSName("expirationTime")
     var expirationTime_FakePushSubscription: Double = js.native
-    /* CompleteClass */
-    override val options: PushSubscriptionOptions = js.native
     var p256: String = js.native
-    /* CompleteClass */
-    override def getKey(name: PushEncryptionKeyName): js.typedarray.ArrayBuffer | Null = js.native
-    /* CompleteClass */
-    override def toJSON(): PushSubscriptionJSON = js.native
-    /* CompleteClass */
-    override def unsubscribe(): js.Promise[Boolean] = js.native
   }
   
   @js.native

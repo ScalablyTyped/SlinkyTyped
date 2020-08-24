@@ -1,0 +1,17 @@
+package typingsSlinky.angularCommon
+
+import typingsSlinky.angularCommon.anon.NZDUSD
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/common/locales/mi", JSImport.Namespace)
+@js.native
+object localesMiMod extends js.Object {
+  val default: js.Array[
+    js.UndefOr[
+      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | NZDUSD
+    ]
+  ] = js.native
+}
+

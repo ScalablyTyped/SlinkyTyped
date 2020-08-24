@@ -18,8 +18,6 @@ package object Mocha {
     /* done */ typingsSlinky.mocha.Mocha.Done, 
     scala.Unit
   ]
-  /** @deprecated use `Mocha.Stats` instead. */
-  type IStats = typingsSlinky.mocha.Mocha.Stats
   /**
     * [bdd, tdd] Describe a "suite" with the given `title` and callback `fn` containing
     * nested suites. Indicates this suite should not be executed.

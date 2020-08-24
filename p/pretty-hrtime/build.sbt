@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "pretty-hrtime"
-version := "1.0-dt-20190101Z-7098c6"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190101Z-04431a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

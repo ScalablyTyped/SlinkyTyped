@@ -29,17 +29,17 @@ package object mod {
   type OnSuggestionsClearRequested = js.Function0[scala.Unit]
   type RenderInputComponent[TSuggestion] = js.Function1[
     /* inputProps */ typingsSlinky.reactAutosuggest.mod.InputProps[TSuggestion], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
-  type RenderSectionTitle = js.Function1[/* section */ js.Any, slinky.core.TagMod[scala.Any]]
+  type RenderSectionTitle = js.Function1[/* section */ js.Any, slinky.core.facade.ReactElement]
   type RenderSuggestion[TSuggestion] = js.Function2[
     /* suggestion */ TSuggestion, 
     /* params */ typingsSlinky.reactAutosuggest.mod.RenderSuggestionParams, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type RenderSuggestionsContainer = js.Function1[
     /* params */ typingsSlinky.reactAutosuggest.mod.RenderSuggestionsContainerParams, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type ShouldRenderSuggestions = js.Function1[/* value */ java.lang.String, scala.Boolean]
   type SuggestionsFetchRequested = js.Function1[

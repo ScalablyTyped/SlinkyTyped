@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.Cryptography.Core
 
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,18 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider")
 @js.native
 abstract class KeyDerivationAlgorithmProvider ()
-  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider {
-  /** Gets the name of the open key derivation function (KDF) algorithm. */
-  /* CompleteClass */
-  override var algorithmName: String = js.native
-  /**
-    * Creates a KDF key.
-    * @param keyMaterial Data used to create the key.
-    * @return Represents the KDF key.
-    */
-  /* CompleteClass */
-  override def createKey(keyMaterial: IBuffer): typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.CryptographicKey = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider
 
 /* static members */
 @JSGlobal("Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider")

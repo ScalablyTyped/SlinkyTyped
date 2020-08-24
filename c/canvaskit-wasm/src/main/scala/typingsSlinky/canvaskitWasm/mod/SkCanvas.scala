@@ -38,7 +38,42 @@ trait SkCanvas extends SkObject[SkCanvas] {
   def getTotalMatrix(): SkMatrix = js.native
   def makeSurface(info: SkImageInfo): SkSurface = js.native
   def readPixels(x: Double, y: Double, w: Double, h: Double): js.typedarray.Uint8Array = js.native
+  def readPixels(
+    x: Double,
+    y: Double,
+    w: Double,
+    h: Double,
+    alphaType: js.UndefOr[scala.Nothing],
+    colorType: js.UndefOr[scala.Nothing],
+    dstRowBytes: Double
+  ): js.typedarray.Uint8Array = js.native
+  def readPixels(
+    x: Double,
+    y: Double,
+    w: Double,
+    h: Double,
+    alphaType: js.UndefOr[scala.Nothing],
+    colorType: SkColorType
+  ): js.typedarray.Uint8Array = js.native
+  def readPixels(
+    x: Double,
+    y: Double,
+    w: Double,
+    h: Double,
+    alphaType: js.UndefOr[scala.Nothing],
+    colorType: SkColorType,
+    dstRowBytes: Double
+  ): js.typedarray.Uint8Array = js.native
   def readPixels(x: Double, y: Double, w: Double, h: Double, alphaType: SkAlphaType): js.typedarray.Uint8Array = js.native
+  def readPixels(
+    x: Double,
+    y: Double,
+    w: Double,
+    h: Double,
+    alphaType: SkAlphaType,
+    colorType: js.UndefOr[scala.Nothing],
+    dstRowBytes: Double
+  ): js.typedarray.Uint8Array = js.native
   def readPixels(x: Double, y: Double, w: Double, h: Double, alphaType: SkAlphaType, colorType: SkColorType): js.typedarray.Uint8Array = js.native
   def readPixels(
     x: Double,
@@ -63,6 +98,15 @@ trait SkCanvas extends SkObject[SkCanvas] {
     srcHeight: Double,
     destX: Double,
     destY: Double
+  ): Unit = js.native
+  def writePixels(
+    pixels: js.typedarray.Uint8Array,
+    srcWidth: Double,
+    srcHeight: Double,
+    destX: Double,
+    destY: Double,
+    alphaType: js.UndefOr[scala.Nothing],
+    colorType: SkColorType
   ): Unit = js.native
   def writePixels(
     pixels: js.typedarray.Uint8Array,

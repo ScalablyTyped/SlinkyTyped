@@ -20,6 +20,7 @@ class ObservablePoint protected ()
   extends typingsSlinky.pixiJs.PIXI.ObservablePoint {
   def this(cb: js.Function1[/* repeated */ js.Any, _], scope: js.Any) = this()
   def this(cb: js.Function1[/* repeated */ js.Any, _], scope: js.Any, x: Double) = this()
+  def this(cb: js.Function1[/* repeated */ js.Any, _], scope: js.Any, x: js.UndefOr[scala.Nothing], y: Double) = this()
   def this(cb: js.Function1[/* repeated */ js.Any, _], scope: js.Any, x: Double, y: Double) = this()
 }
 

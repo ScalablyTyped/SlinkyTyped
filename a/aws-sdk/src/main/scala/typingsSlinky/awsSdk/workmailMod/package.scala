@@ -29,6 +29,16 @@ package object workmailMod {
     - java.lang.String
   */
   type EntityState = typingsSlinky.awsSdk.workmailMod._EntityState | java.lang.String
+  type FolderConfigurations = js.Array[typingsSlinky.awsSdk.workmailMod.FolderConfiguration]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INBOX
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED_ITEMS
+    - typingsSlinky.awsSdk.awsSdkStrings.SENT_ITEMS
+    - typingsSlinky.awsSdk.awsSdkStrings.DRAFTS
+    - typingsSlinky.awsSdk.awsSdkStrings.JUNK_EMAIL
+    - java.lang.String
+  */
+  type FolderName = typingsSlinky.awsSdk.workmailMod._FolderName | java.lang.String
   type GroupName = java.lang.String
   type Groups = js.Array[typingsSlinky.awsSdk.workmailMod.Group]
   type IpAddress = java.lang.String
@@ -58,6 +68,7 @@ package object workmailMod {
   type PermissionType = typingsSlinky.awsSdk.workmailMod._PermissionType | java.lang.String
   type PermissionValues = js.Array[typingsSlinky.awsSdk.workmailMod.PermissionType]
   type Permissions = js.Array[typingsSlinky.awsSdk.workmailMod.Permission]
+  type PolicyDescription = java.lang.String
   type ResourceDelegates = js.Array[typingsSlinky.awsSdk.workmailMod.Delegate]
   type ResourceId = java.lang.String
   type ResourceName = java.lang.String
@@ -68,6 +79,15 @@ package object workmailMod {
   */
   type ResourceType = typingsSlinky.awsSdk.workmailMod._ResourceType | java.lang.String
   type Resources = js.Array[typingsSlinky.awsSdk.workmailMod.Resource]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
+    - typingsSlinky.awsSdk.awsSdkStrings.PERMANENTLY_DELETE
+    - java.lang.String
+  */
+  type RetentionAction = typingsSlinky.awsSdk.workmailMod._RetentionAction | java.lang.String
+  type RetentionPeriod = scala.Double
+  type ShortString = java.lang.String
   type String = java.lang.String
   type TagKey = java.lang.String
   type TagKeyList = js.Array[typingsSlinky.awsSdk.workmailMod.TagKey]

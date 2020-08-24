@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServerExpress.mod
 
-import typingsSlinky.graphqlTools.filterRootFieldsMod.RootFilter
+import typingsSlinky.graphqlToolsUtils.interfacesMod.RootFieldFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class FilterRootFields protected ()
   extends typingsSlinky.graphqlTools.mod.FilterRootFields {
-  def this(filter: RootFilter) = this()
+  def this(filter: RootFieldFilter) = this()
 }
 

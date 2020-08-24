@@ -12,18 +12,18 @@ package object esTableMod {
   ]
   type TableCellRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esTableMod.TableCellProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type TableHeaderRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esTableMod.TableHeaderProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type TableHeaderRowRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esTableMod.TableHeaderRowProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type TableRowRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esTableMod.TableRowProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
 }

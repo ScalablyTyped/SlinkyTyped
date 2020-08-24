@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "material-ui__styles"
-version := "4.9.0-4a1866"
-scalaVersion := "2.13.2"
+version := "4.10.0-f6ee5b"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "jss" % "10.1.1-846b8f",
-  "org.scalablytyped.slinky" %%% "material-ui__types" % "5.0.0-f5619a",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
+  "org.scalablytyped.slinky" %%% "jss" % "10.3.0-57b145",
+  "org.scalablytyped.slinky" %%% "material-ui__types" % "5.1.0-00e562",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

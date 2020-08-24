@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Sockets.StreamSocketListenerControl")
 @js.native
 class StreamSocketListenerControl ()
-  extends typingsSlinky.winrt.Windows.Networking.Sockets.StreamSocketListenerControl {
-  /* CompleteClass */
-  override var qualityOfService: typingsSlinky.winrt.Windows.Networking.Sockets.SocketQualityOfService = js.native
-}
+  extends typingsSlinky.winrt.Windows.Networking.Sockets.StreamSocketListenerControl
 

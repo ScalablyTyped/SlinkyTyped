@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Text {
-  @JSImport("wix-style-react/Text", JSImport.Default)
+  @JSImport("wix-style-react", "Text")
   @js.native
   object component extends js.Object
   

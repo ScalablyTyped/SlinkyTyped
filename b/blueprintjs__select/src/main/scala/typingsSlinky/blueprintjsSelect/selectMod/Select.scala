@@ -11,14 +11,13 @@ import scala.scalajs.js.annotation._
 class Select[T] ()
   extends Component[ISelectProps[T], ISelectState, js.Any] {
   var TypedQueryList: js.Any = js.native
-  var getInputRefHandler: js.Any = js.native
   var handleItemSelect: js.Any = js.native
   var handlePopoverClosing: js.Any = js.native
   var handlePopoverInteraction: js.Any = js.native
   var handlePopoverOpened: js.Any = js.native
   var handlePopoverOpening: js.Any = js.native
   var handleTargetKeyDown: js.Any = js.native
-  var input: js.Any = js.native
+  var inputEl: js.Any = js.native
   var maybeRenderClearButton: js.Any = js.native
   var previousFocusedElement: js.Any = js.native
   var queryList: js.Any = js.native

@@ -1,8 +1,10 @@
 package typingsSlinky.reactVirtualized.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualized.esArrowKeyStepperMod.ArrowKeyStepperProps
+import typingsSlinky.reactVirtualized.esArrowKeyStepperMod.ChildProps
 import typingsSlinky.reactVirtualized.esArrowKeyStepperMod.ScrollIndices
 import typingsSlinky.reactVirtualized.reactVirtualizedStrings.cells
 import typingsSlinky.reactVirtualized.reactVirtualizedStrings.edges
@@ -37,8 +39,8 @@ object ArrowKeyStepper {
   
   def withProps(p: ArrowKeyStepperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(columnCount: Double, rowCount: Double): Builder = {
-    val __props = js.Dynamic.literal(columnCount = columnCount.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any])
+  def apply(children: ChildProps => ReactElement, columnCount: Double, rowCount: Double): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), columnCount = columnCount.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ArrowKeyStepperProps]))
   }
 }

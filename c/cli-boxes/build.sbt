@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cli-boxes"
-version := "2.2.0-8b53e9"
-scalaVersion := "2.13.2"
+version := "2.2.0-32da73"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

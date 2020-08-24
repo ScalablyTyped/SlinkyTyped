@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.Sockets
 
-import typingsSlinky.winrtUwp.Windows.Networking.HostName
-import typingsSlinky.winrtUwp.Windows.Networking.Sockets.BandwidthStatistics
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,15 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Sockets.StreamWebSocketInformation")
 @js.native
 abstract class StreamWebSocketInformation ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.StreamWebSocketInformation {
-  /** Gets bandwidth information for network data transfer on a StreamWebSocket object. */
-  /* CompleteClass */
-  override var bandwidthStatistics: BandwidthStatistics = js.native
-  /** Gets the IP address associated with a StreamWebSocket object. */
-  /* CompleteClass */
-  override var localAddress: HostName = js.native
-  /** Gets the WebSocket sub-protocol negotiated with the server during WebSocket handshake on a StreamWebSocket object. */
-  /* CompleteClass */
-  override var protocol: String = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.StreamWebSocketInformation
 

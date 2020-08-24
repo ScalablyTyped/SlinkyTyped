@@ -31,17 +31,14 @@ object DisplayInfoFlags {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSingleUnified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleUnified")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutSingleUnified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleUnified")(js.undefined)
-        ret
-    }
+    def setSingleUnified(value: Boolean): Self = this.set("singleUnified", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSingleUnified: Self = this.set("singleUnified", js.undefined)
   }
   
 }

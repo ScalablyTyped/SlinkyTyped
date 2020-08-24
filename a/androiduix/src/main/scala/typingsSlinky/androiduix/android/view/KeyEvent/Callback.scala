@@ -28,23 +28,16 @@ object Callback {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnKeyDown(value: (Double, typingsSlinky.androiduix.android.view.KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnKeyLongPress(value: (Double, typingsSlinky.androiduix.android.view.KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyLongPress")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnKeyDown(value: (Double, typingsSlinky.androiduix.android.view.KeyEvent) => Boolean): Self = this.set("onKeyDown", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnKeyUp(value: (Double, typingsSlinky.androiduix.android.view.KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnKeyLongPress(value: (Double, typingsSlinky.androiduix.android.view.KeyEvent) => Boolean): Self = this.set("onKeyLongPress", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnKeyUp(value: (Double, typingsSlinky.androiduix.android.view.KeyEvent) => Boolean): Self = this.set("onKeyUp", js.Any.fromFunction2(value))
   }
   
 }

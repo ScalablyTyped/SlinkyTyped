@@ -1,720 +1,829 @@
 package typingsSlinky.octokitRest
 
-import typingsSlinky.octokitRest.mod.Octokit.RequestMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object octokitRestStrings {
   @js.native
-  sealed trait `-1` extends js.Object
+  sealed trait `GET SlashappSlashinstallations` extends js.Object
   
   @js.native
-  sealed trait `040000` extends js.Object
+  sealed trait `GET SlashapplicationsSlashgrants` extends js.Object
   
   @js.native
-  sealed trait `1` extends js.Object
+  sealed trait `GET Slashauthorizations` extends js.Object
   
   @js.native
-  sealed trait `100644` extends js.Object
+  sealed trait `GET Slashgists` extends js.Object
   
   @js.native
-  sealed trait `100755` extends js.Object
+  sealed trait `GET SlashgistsSlashColongist_idSlashcomments` extends js.Object
   
   @js.native
-  sealed trait `120000` extends js.Object
+  sealed trait `GET SlashgistsSlashColongist_idSlashcommits` extends js.Object
   
   @js.native
-  sealed trait `160000` extends js.Object
+  sealed trait `GET SlashgistsSlashColongist_idSlashforks` extends js.Object
   
   @js.native
-  sealed trait `2fa_disabled` extends js.Object
+  sealed trait `GET SlashgistsSlashpublic` extends js.Object
   
   @js.native
-  sealed trait APPROVE extends js.Object
+  sealed trait `GET SlashgistsSlashstarred` extends js.Object
   
   @js.native
-  sealed trait COMMENT extends js.Object
+  sealed trait `GET SlashinstallationSlashrepositories` extends js.Object
   
   @js.native
-  sealed trait DELETE extends RequestMethod
+  sealed trait `GET Slashissues` extends js.Object
   
   @js.native
-  sealed trait GET extends RequestMethod
+  sealed trait `GET Slashmarketplace_listingSlashplans` extends js.Object
   
   @js.native
-  sealed trait HEAD extends RequestMethod
+  sealed trait `GET Slashmarketplace_listingSlashplansSlashColonplan_idSlashaccounts` extends js.Object
   
   @js.native
-  sealed trait LEFT extends js.Object
+  sealed trait `GET Slashmarketplace_listingSlashstubbedSlashplans` extends js.Object
   
   @js.native
-  sealed trait PATCH extends RequestMethod
+  sealed trait `GET Slashmarketplace_listingSlashstubbedSlashplansSlashColonplan_idSlashaccounts` extends js.Object
   
   @js.native
-  sealed trait POST extends RequestMethod
+  sealed trait `GET Slashnotifications` extends js.Object
   
   @js.native
-  sealed trait PUT extends RequestMethod
+  sealed trait `GET Slashorganizations` extends js.Object
   
   @js.native
-  sealed trait Plussign1 extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunners` extends js.Object
   
   @js.native
-  sealed trait `Quotationmarkgh-pagesQuotationmark` extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads` extends js.Object
   
   @js.native
-  sealed trait `Quotationmarkmaster SlashdocsQuotationmark` extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashsecrets` extends js.Object
   
   @js.native
-  sealed trait QuotationmarkmasterQuotationmark extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_nameSlashrepositories` extends js.Object
   
   @js.native
-  sealed trait REQUEST_CHANGES extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashblocks` extends js.Object
   
   @js.native
-  sealed trait RIGHT extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashcredential-authorizations` extends js.Object
   
   @js.native
-  sealed trait action_required extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashhooks` extends js.Object
   
   @js.native
-  sealed trait active extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashinstallations` extends js.Object
   
   @js.native
-  sealed trait admin extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashinvitations` extends js.Object
   
   @js.native
-  sealed trait all extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashinvitationsSlashColoninvitation_idSlashteams` extends js.Object
   
   @js.native
-  sealed trait app extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashissues` extends js.Object
   
   @js.native
-  sealed trait archived extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashmembers` extends js.Object
   
   @js.native
-  sealed trait asc extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashmigrations` extends js.Object
   
   @js.native
-  sealed trait assigned extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashmigrationsSlashColonmigration_idSlashrepositories` extends js.Object
   
   @js.native
-  sealed trait `author-date` extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashoutside_collaborators` extends js.Object
   
   @js.native
-  sealed trait basic extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashprojects` extends js.Object
   
   @js.native
-  sealed trait billing_manager extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashpublic_members` extends js.Object
   
   @js.native
-  sealed trait blob extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashrepos` extends js.Object
   
   @js.native
-  sealed trait cancelled extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteam-syncSlashgroups` extends js.Object
   
   @js.native
-  sealed trait closed extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteams` extends js.Object
   
   @js.native
-  sealed trait collaborators_only extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussions` extends js.Object
   
   @js.native
-  sealed trait comments extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcomments` extends js.Object
   
   @js.native
-  sealed trait commit extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions` extends js.Object
   
   @js.native
-  sealed trait `committer-date` extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashreactions` extends js.Object
   
   @js.native
-  sealed trait completed extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashinvitations` extends js.Object
   
   @js.native
-  sealed trait completeness extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashmembers` extends js.Object
   
   @js.native
-  sealed trait conclusion extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashprojects` extends js.Object
   
   @js.native
-  sealed trait confused extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashrepos` extends js.Object
   
   @js.native
-  sealed trait contributors_only extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteam-syncSlashgroup-mappings` extends js.Object
   
   @js.native
-  sealed trait created extends js.Object
+  sealed trait `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteams` extends js.Object
   
   @js.native
-  sealed trait day extends js.Object
+  sealed trait `GET SlashprojectsSlashColonproject_idSlashcollaborators` extends js.Object
   
   @js.native
-  sealed trait desc extends js.Object
+  sealed trait `GET SlashprojectsSlashColonproject_idSlashcolumns` extends js.Object
   
   @js.native
-  sealed trait direct extends js.Object
+  sealed trait `GET SlashprojectsSlashcolumnsSlashColoncolumn_idSlashcards` extends js.Object
   
   @js.native
-  sealed trait direct_member extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashartifacts` extends js.Object
   
   @js.native
-  sealed trait due_on extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunners` extends js.Object
   
   @js.native
-  sealed trait error extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunnersSlashdownloads` extends js.Object
   
   @js.native
-  sealed trait existing_users extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashruns` extends js.Object
   
   @js.native
-  sealed trait eyes extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashartifacts` extends js.Object
   
   @js.native
-  sealed trait failure extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashjobs` extends js.Object
   
   @js.native
-  sealed trait followers extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashsecrets` extends js.Object
   
   @js.native
-  sealed trait forks extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflows` extends js.Object
   
   @js.native
-  sealed trait full_name extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns` extends js.Object
   
   @js.native
-  sealed trait gfm extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashassignees` extends js.Object
   
   @js.native
-  sealed trait `gh-pages` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashbranches` extends js.Object
   
   @js.native
-  sealed trait git extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations` extends js.Object
   
   @js.native
-  sealed trait heart extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs` extends js.Object
   
   @js.native
-  sealed trait `help-wanted-issues` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts` extends js.Object
   
   @js.native
-  sealed trait hooray extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators` extends js.Object
   
   @js.native
-  sealed trait in_progress extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcomments` extends js.Object
   
   @js.native
-  sealed trait inactive extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions` extends js.Object
   
   @js.native
-  sealed trait indexed extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommits` extends js.Object
   
   @js.native
-  sealed trait interactions extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashbranches-where-head` extends js.Object
   
   @js.native
-  sealed trait internal extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashcomments` extends js.Object
   
   @js.native
-  sealed trait issue extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashpulls` extends js.Object
   
   @js.native
-  sealed trait joined extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-runs` extends js.Object
   
   @js.native
-  sealed trait latest extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-suites` extends js.Object
   
   @js.native
-  sealed trait laugh extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashstatuses` extends js.Object
   
   @js.native
-  sealed trait `long-running` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcontributors` extends js.Object
   
   @js.native
-  sealed trait maintainer extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashdeployments` extends js.Object
   
   @js.native
-  sealed trait markdown extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashdeploymentsSlashColondeployment_idSlashstatuses` extends js.Object
   
   @js.native
-  sealed trait master extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashforks` extends js.Object
   
   @js.native
-  sealed trait member extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashgitSlashmatching-refsSlashColonref` extends js.Object
   
   @js.native
-  sealed trait mentioned extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashhooks` extends js.Object
   
   @js.native
-  sealed trait mercurial extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashinvitations` extends js.Object
   
   @js.native
-  sealed trait merge extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissues` extends js.Object
   
   @js.native
-  sealed trait neutral extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashcomments` extends js.Object
   
   @js.native
-  sealed trait newest extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashevents` extends js.Object
   
   @js.native
-  sealed trait none extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashlabels` extends js.Object
   
   @js.native
-  sealed trait not_archived extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashreactions` extends js.Object
   
   @js.native
-  sealed trait notice extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashtimeline` extends js.Object
   
   @js.native
-  sealed trait oauth extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcomments` extends js.Object
   
   @js.native
-  sealed trait `off-topic` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcommentsSlashColoncomment_idSlashreactions` extends js.Object
   
   @js.native
-  sealed trait oldest extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashevents` extends js.Object
   
   @js.native
-  sealed trait open extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashkeys` extends js.Object
   
   @js.native
-  sealed trait opt_in extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashlabels` extends js.Object
   
   @js.native
-  sealed trait opt_out extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashlanguages` extends js.Object
   
   @js.native
-  sealed trait organization extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashmilestones` extends js.Object
   
   @js.native
-  sealed trait outside extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashmilestonesSlashColonmilestone_numberSlashlabels` extends js.Object
   
   @js.native
-  sealed trait owner extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashnotifications` extends js.Object
   
   @js.native
-  sealed trait pending extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpagesSlashbuilds` extends js.Object
   
   @js.native
-  sealed trait popularity extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashprojects` extends js.Object
   
   @js.native
-  sealed trait `private` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpulls` extends js.Object
   
   @js.native
-  sealed trait production extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcomments` extends js.Object
   
   @js.native
-  sealed trait public extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcommits` extends js.Object
   
   @js.native
-  sealed trait pull extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashfiles` extends js.Object
   
   @js.native
-  sealed trait pull_request extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashrequested_reviewers` extends js.Object
   
   @js.native
-  sealed trait push extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviews` extends js.Object
   
   @js.native
-  sealed trait pushed extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviewsSlashColonreview_idSlashcomments` extends js.Object
   
   @js.native
-  sealed trait qa extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcomments` extends js.Object
   
   @js.native
-  sealed trait queued extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcommentsSlashColoncomment_idSlashreactions` extends js.Object
   
   @js.native
-  sealed trait reactions extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashreleases` extends js.Object
   
   @js.native
-  sealed trait `reactions--1` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashreleasesSlashColonrelease_idSlashassets` extends js.Object
   
   @js.native
-  sealed trait `reactions-Plussign1` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashstargazers` extends js.Object
   
   @js.native
-  sealed trait `reactions-heart` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashsubscribers` extends js.Object
   
   @js.native
-  sealed trait `reactions-smile` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashtags` extends js.Object
   
   @js.native
-  sealed trait `reactions-tada` extends js.Object
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashteams` extends js.Object
   
   @js.native
-  sealed trait `reactions-thinking_face` extends js.Object
+  sealed trait `GET Slashrepositories` extends js.Object
   
   @js.native
-  sealed trait read extends js.Object
+  sealed trait `GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashGroups` extends js.Object
   
   @js.native
-  sealed trait rebase extends js.Object
+  sealed trait `GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashUsers` extends js.Object
   
   @js.native
-  sealed trait repositories extends js.Object
+  sealed trait `GET SlashscimSlashv2SlashorganizationsSlashColonorgSlashUsers` extends js.Object
   
   @js.native
-  sealed trait repository extends js.Object
+  sealed trait `GET SlashsearchSlashcode` extends js.Object
   
   @js.native
-  sealed trait resolved extends js.Object
+  sealed trait `GET SlashsearchSlashcommits` extends js.Object
   
   @js.native
-  sealed trait rocket extends js.Object
+  sealed trait `GET SlashsearchSlashissues` extends js.Object
   
   @js.native
-  sealed trait secret extends js.Object
+  sealed trait `GET SlashsearchSlashlabels` extends js.Object
   
   @js.native
-  sealed trait side extends js.Object
+  sealed trait `GET SlashsearchSlashrepositories` extends js.Object
   
   @js.native
-  sealed trait sources extends js.Object
+  sealed trait `GET SlashsearchSlashtopics` extends js.Object
   
   @js.native
-  sealed trait spam extends js.Object
+  sealed trait `GET SlashsearchSlashusers` extends js.Object
   
   @js.native
-  sealed trait squash extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashdiscussions` extends js.Object
   
   @js.native
-  sealed trait staging extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcomments` extends js.Object
   
   @js.native
-  sealed trait stargazers extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions` extends js.Object
   
   @js.native
-  sealed trait stars extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashreactions` extends js.Object
   
   @js.native
-  sealed trait status extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashinvitations` extends js.Object
   
   @js.native
-  sealed trait subscribed extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashmembers` extends js.Object
   
   @js.native
-  sealed trait subversion extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashprojects` extends js.Object
   
   @js.native
-  sealed trait success extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashrepos` extends js.Object
   
   @js.native
-  sealed trait tfvc extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashteam-syncSlashgroup-mappings` extends js.Object
   
   @js.native
-  sealed trait timed_out extends js.Object
+  sealed trait `GET SlashteamsSlashColonteam_idSlashteams` extends js.Object
   
   @js.native
-  sealed trait token extends js.Object
+  sealed trait `GET SlashuserSlashblocks` extends js.Object
   
   @js.native
-  sealed trait `too heated` extends js.Object
+  sealed trait `GET SlashuserSlashemails` extends js.Object
   
   @js.native
-  sealed trait tree extends js.Object
+  sealed trait `GET SlashuserSlashfollowers` extends js.Object
   
   @js.native
-  sealed trait updated extends js.Object
+  sealed trait `GET SlashuserSlashfollowing` extends js.Object
   
   @js.native
-  sealed trait visibility extends js.Object
+  sealed trait `GET SlashuserSlashgpg_keys` extends js.Object
   
   @js.native
-  sealed trait warning extends js.Object
+  sealed trait `GET SlashuserSlashinstallations` extends js.Object
   
   @js.native
-  sealed trait week extends js.Object
+  sealed trait `GET SlashuserSlashinstallationsSlashColoninstallation_idSlashrepositories` extends js.Object
   
   @js.native
-  sealed trait write extends js.Object
+  sealed trait `GET SlashuserSlashissues` extends js.Object
   
+  @js.native
+  sealed trait `GET SlashuserSlashkeys` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashmarketplace_purchases` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashmarketplace_purchasesSlashstubbed` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashmembershipsSlashorgs` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashmigrations` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashmigrationsSlashColonmigration_idSlashrepositories` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashorgs` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashpublic_emails` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashrepository_invitations` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashstarred` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashsubscriptions` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashuserSlashteams` extends js.Object
+  
+  @js.native
+  sealed trait `GET Slashusers` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashfollowers` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashfollowing` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashgists` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashgpg_keys` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashkeys` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashorgs` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashprojects` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashstarred` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashusersSlashColonusernameSlashsubscriptions` extends js.Object
+  
+  @scala.inline
+  def `GET SlashappSlashinstallations`: `GET SlashappSlashinstallations` = ("GET /app/installations").asInstanceOf[`GET SlashappSlashinstallations`]
+  @scala.inline
+  def `GET SlashapplicationsSlashgrants`: `GET SlashapplicationsSlashgrants` = ("GET /applications/grants").asInstanceOf[`GET SlashapplicationsSlashgrants`]
+  @scala.inline
+  def `GET Slashauthorizations`: `GET Slashauthorizations` = ("GET /authorizations").asInstanceOf[`GET Slashauthorizations`]
+  @scala.inline
+  def `GET Slashgists`: `GET Slashgists` = ("GET /gists").asInstanceOf[`GET Slashgists`]
+  @scala.inline
+  def `GET SlashgistsSlashColongist_idSlashcomments`: `GET SlashgistsSlashColongist_idSlashcomments` = ("GET /gists/:gist_id/comments").asInstanceOf[`GET SlashgistsSlashColongist_idSlashcomments`]
+  @scala.inline
+  def `GET SlashgistsSlashColongist_idSlashcommits`: `GET SlashgistsSlashColongist_idSlashcommits` = ("GET /gists/:gist_id/commits").asInstanceOf[`GET SlashgistsSlashColongist_idSlashcommits`]
+  @scala.inline
+  def `GET SlashgistsSlashColongist_idSlashforks`: `GET SlashgistsSlashColongist_idSlashforks` = ("GET /gists/:gist_id/forks").asInstanceOf[`GET SlashgistsSlashColongist_idSlashforks`]
+  @scala.inline
+  def `GET SlashgistsSlashpublic`: `GET SlashgistsSlashpublic` = ("GET /gists/public").asInstanceOf[`GET SlashgistsSlashpublic`]
+  @scala.inline
+  def `GET SlashgistsSlashstarred`: `GET SlashgistsSlashstarred` = ("GET /gists/starred").asInstanceOf[`GET SlashgistsSlashstarred`]
+  @scala.inline
+  def `GET SlashinstallationSlashrepositories`: `GET SlashinstallationSlashrepositories` = ("GET /installation/repositories").asInstanceOf[`GET SlashinstallationSlashrepositories`]
+  @scala.inline
+  def `GET Slashissues`: `GET Slashissues` = ("GET /issues").asInstanceOf[`GET Slashissues`]
+  @scala.inline
+  def `GET Slashmarketplace_listingSlashplans`: `GET Slashmarketplace_listingSlashplans` = ("GET /marketplace_listing/plans").asInstanceOf[`GET Slashmarketplace_listingSlashplans`]
+  @scala.inline
+  def `GET Slashmarketplace_listingSlashplansSlashColonplan_idSlashaccounts`: `GET Slashmarketplace_listingSlashplansSlashColonplan_idSlashaccounts` = ("GET /marketplace_listing/plans/:plan_id/accounts").asInstanceOf[`GET Slashmarketplace_listingSlashplansSlashColonplan_idSlashaccounts`]
+  @scala.inline
+  def `GET Slashmarketplace_listingSlashstubbedSlashplans`: `GET Slashmarketplace_listingSlashstubbedSlashplans` = ("GET /marketplace_listing/stubbed/plans").asInstanceOf[`GET Slashmarketplace_listingSlashstubbedSlashplans`]
+  @scala.inline
+  def `GET Slashmarketplace_listingSlashstubbedSlashplansSlashColonplan_idSlashaccounts`: `GET Slashmarketplace_listingSlashstubbedSlashplansSlashColonplan_idSlashaccounts` = ("GET /marketplace_listing/stubbed/plans/:plan_id/accounts").asInstanceOf[`GET Slashmarketplace_listingSlashstubbedSlashplansSlashColonplan_idSlashaccounts`]
+  @scala.inline
+  def `GET Slashnotifications`: `GET Slashnotifications` = ("GET /notifications").asInstanceOf[`GET Slashnotifications`]
+  @scala.inline
+  def `GET Slashorganizations`: `GET Slashorganizations` = ("GET /organizations").asInstanceOf[`GET Slashorganizations`]
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunners`: `GET SlashorgsSlashColonorgSlashactionsSlashrunners` = ("GET /orgs/:org/actions/runners").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunners`]
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads`: `GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads` = ("GET /orgs/:org/actions/runners/downloads").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads`]
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashsecrets`: `GET SlashorgsSlashColonorgSlashactionsSlashsecrets` = ("GET /orgs/:org/actions/secrets").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashsecrets`]
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_nameSlashrepositories`: `GET SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_nameSlashrepositories` = ("GET /orgs/:org/actions/secrets/:secret_name/repositories").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_nameSlashrepositories`]
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashblocks`: `GET SlashorgsSlashColonorgSlashblocks` = ("GET /orgs/:org/blocks").asInstanceOf[`GET SlashorgsSlashColonorgSlashblocks`]
   @scala.inline
-  def `-1`: `-1` = "-1".asInstanceOf[`-1`]
+  def `GET SlashorgsSlashColonorgSlashcredential-authorizations`: `GET SlashorgsSlashColonorgSlashcredential-authorizations` = ("GET /orgs/:org/credential-authorizations").asInstanceOf[`GET SlashorgsSlashColonorgSlashcredential-authorizations`]
   @scala.inline
-  def `040000`: `040000` = "040000".asInstanceOf[`040000`]
+  def `GET SlashorgsSlashColonorgSlashhooks`: `GET SlashorgsSlashColonorgSlashhooks` = ("GET /orgs/:org/hooks").asInstanceOf[`GET SlashorgsSlashColonorgSlashhooks`]
   @scala.inline
-  def `1`: `1` = "1".asInstanceOf[`1`]
+  def `GET SlashorgsSlashColonorgSlashinstallations`: `GET SlashorgsSlashColonorgSlashinstallations` = ("GET /orgs/:org/installations").asInstanceOf[`GET SlashorgsSlashColonorgSlashinstallations`]
   @scala.inline
-  def `100644`: `100644` = "100644".asInstanceOf[`100644`]
+  def `GET SlashorgsSlashColonorgSlashinvitations`: `GET SlashorgsSlashColonorgSlashinvitations` = ("GET /orgs/:org/invitations").asInstanceOf[`GET SlashorgsSlashColonorgSlashinvitations`]
   @scala.inline
-  def `100755`: `100755` = "100755".asInstanceOf[`100755`]
+  def `GET SlashorgsSlashColonorgSlashinvitationsSlashColoninvitation_idSlashteams`: `GET SlashorgsSlashColonorgSlashinvitationsSlashColoninvitation_idSlashteams` = ("GET /orgs/:org/invitations/:invitation_id/teams").asInstanceOf[`GET SlashorgsSlashColonorgSlashinvitationsSlashColoninvitation_idSlashteams`]
   @scala.inline
-  def `120000`: `120000` = "120000".asInstanceOf[`120000`]
+  def `GET SlashorgsSlashColonorgSlashissues`: `GET SlashorgsSlashColonorgSlashissues` = ("GET /orgs/:org/issues").asInstanceOf[`GET SlashorgsSlashColonorgSlashissues`]
   @scala.inline
-  def `160000`: `160000` = "160000".asInstanceOf[`160000`]
+  def `GET SlashorgsSlashColonorgSlashmembers`: `GET SlashorgsSlashColonorgSlashmembers` = ("GET /orgs/:org/members").asInstanceOf[`GET SlashorgsSlashColonorgSlashmembers`]
   @scala.inline
-  def `2fa_disabled`: `2fa_disabled` = "2fa_disabled".asInstanceOf[`2fa_disabled`]
+  def `GET SlashorgsSlashColonorgSlashmigrations`: `GET SlashorgsSlashColonorgSlashmigrations` = ("GET /orgs/:org/migrations").asInstanceOf[`GET SlashorgsSlashColonorgSlashmigrations`]
   @scala.inline
-  def APPROVE: APPROVE = "APPROVE".asInstanceOf[APPROVE]
+  def `GET SlashorgsSlashColonorgSlashmigrationsSlashColonmigration_idSlashrepositories`: `GET SlashorgsSlashColonorgSlashmigrationsSlashColonmigration_idSlashrepositories` = ("GET /orgs/:org/migrations/:migration_id/repositories").asInstanceOf[`GET SlashorgsSlashColonorgSlashmigrationsSlashColonmigration_idSlashrepositories`]
   @scala.inline
-  def COMMENT: COMMENT = "COMMENT".asInstanceOf[COMMENT]
+  def `GET SlashorgsSlashColonorgSlashoutside_collaborators`: `GET SlashorgsSlashColonorgSlashoutside_collaborators` = ("GET /orgs/:org/outside_collaborators").asInstanceOf[`GET SlashorgsSlashColonorgSlashoutside_collaborators`]
   @scala.inline
-  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
+  def `GET SlashorgsSlashColonorgSlashprojects`: `GET SlashorgsSlashColonorgSlashprojects` = ("GET /orgs/:org/projects").asInstanceOf[`GET SlashorgsSlashColonorgSlashprojects`]
   @scala.inline
-  def GET: GET = "GET".asInstanceOf[GET]
+  def `GET SlashorgsSlashColonorgSlashpublic_members`: `GET SlashorgsSlashColonorgSlashpublic_members` = ("GET /orgs/:org/public_members").asInstanceOf[`GET SlashorgsSlashColonorgSlashpublic_members`]
   @scala.inline
-  def HEAD: HEAD = "HEAD".asInstanceOf[HEAD]
+  def `GET SlashorgsSlashColonorgSlashrepos`: `GET SlashorgsSlashColonorgSlashrepos` = ("GET /orgs/:org/repos").asInstanceOf[`GET SlashorgsSlashColonorgSlashrepos`]
   @scala.inline
-  def LEFT: LEFT = "LEFT".asInstanceOf[LEFT]
+  def `GET SlashorgsSlashColonorgSlashteam-syncSlashgroups`: `GET SlashorgsSlashColonorgSlashteam-syncSlashgroups` = ("GET /orgs/:org/team-sync/groups").asInstanceOf[`GET SlashorgsSlashColonorgSlashteam-syncSlashgroups`]
   @scala.inline
-  def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
+  def `GET SlashorgsSlashColonorgSlashteams`: `GET SlashorgsSlashColonorgSlashteams` = ("GET /orgs/:org/teams").asInstanceOf[`GET SlashorgsSlashColonorgSlashteams`]
   @scala.inline
-  def POST: POST = "POST".asInstanceOf[POST]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussions`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussions` = ("GET /orgs/:org/teams/:team_slug/discussions").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussions`]
   @scala.inline
-  def PUT: PUT = "PUT".asInstanceOf[PUT]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcomments`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcomments` = ("GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcomments`]
   @scala.inline
-  def Plussign1: Plussign1 = "+1".asInstanceOf[Plussign1]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions` = ("GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/comments/:comment_number/reactions").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions`]
   @scala.inline
-  def `Quotationmarkgh-pagesQuotationmark`: `Quotationmarkgh-pagesQuotationmark` = "\"gh-pages\"".asInstanceOf[`Quotationmarkgh-pagesQuotationmark`]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashreactions`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashreactions` = ("GET /orgs/:org/teams/:team_slug/discussions/:discussion_number/reactions").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashdiscussionsSlashColondiscussion_numberSlashreactions`]
   @scala.inline
-  def `Quotationmarkmaster SlashdocsQuotationmark`: `Quotationmarkmaster SlashdocsQuotationmark` = ("\"master /docs\"").asInstanceOf[`Quotationmarkmaster SlashdocsQuotationmark`]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashinvitations`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashinvitations` = ("GET /orgs/:org/teams/:team_slug/invitations").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashinvitations`]
   @scala.inline
-  def QuotationmarkmasterQuotationmark: QuotationmarkmasterQuotationmark = "\"master\"".asInstanceOf[QuotationmarkmasterQuotationmark]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashmembers`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashmembers` = ("GET /orgs/:org/teams/:team_slug/members").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashmembers`]
   @scala.inline
-  def REQUEST_CHANGES: REQUEST_CHANGES = "REQUEST_CHANGES".asInstanceOf[REQUEST_CHANGES]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashprojects`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashprojects` = ("GET /orgs/:org/teams/:team_slug/projects").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashprojects`]
   @scala.inline
-  def RIGHT: RIGHT = "RIGHT".asInstanceOf[RIGHT]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashrepos`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashrepos` = ("GET /orgs/:org/teams/:team_slug/repos").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashrepos`]
   @scala.inline
-  def action_required: action_required = "action_required".asInstanceOf[action_required]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteam-syncSlashgroup-mappings`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteam-syncSlashgroup-mappings` = ("GET /orgs/:org/teams/:team_slug/team-sync/group-mappings").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteam-syncSlashgroup-mappings`]
   @scala.inline
-  def active: active = "active".asInstanceOf[active]
+  def `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteams`: `GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteams` = ("GET /orgs/:org/teams/:team_slug/teams").asInstanceOf[`GET SlashorgsSlashColonorgSlashteamsSlashColonteam_slugSlashteams`]
   @scala.inline
-  def admin: admin = "admin".asInstanceOf[admin]
+  def `GET SlashprojectsSlashColonproject_idSlashcollaborators`: `GET SlashprojectsSlashColonproject_idSlashcollaborators` = ("GET /projects/:project_id/collaborators").asInstanceOf[`GET SlashprojectsSlashColonproject_idSlashcollaborators`]
   @scala.inline
-  def all: all = "all".asInstanceOf[all]
+  def `GET SlashprojectsSlashColonproject_idSlashcolumns`: `GET SlashprojectsSlashColonproject_idSlashcolumns` = ("GET /projects/:project_id/columns").asInstanceOf[`GET SlashprojectsSlashColonproject_idSlashcolumns`]
   @scala.inline
-  def app: app = "app".asInstanceOf[app]
+  def `GET SlashprojectsSlashcolumnsSlashColoncolumn_idSlashcards`: `GET SlashprojectsSlashcolumnsSlashColoncolumn_idSlashcards` = ("GET /projects/columns/:column_id/cards").asInstanceOf[`GET SlashprojectsSlashcolumnsSlashColoncolumn_idSlashcards`]
   @scala.inline
-  def archived: archived = "archived".asInstanceOf[archived]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashartifacts`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashartifacts` = ("GET /repos/:owner/:repo/actions/artifacts").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashartifacts`]
   @scala.inline
-  def asc: asc = "asc".asInstanceOf[asc]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunners`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunners` = ("GET /repos/:owner/:repo/actions/runners").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunners`]
   @scala.inline
-  def assigned: assigned = "assigned".asInstanceOf[assigned]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunnersSlashdownloads`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunnersSlashdownloads` = ("GET /repos/:owner/:repo/actions/runners/downloads").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunnersSlashdownloads`]
   @scala.inline
-  def `author-date`: `author-date` = "author-date".asInstanceOf[`author-date`]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashruns`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashruns` = ("GET /repos/:owner/:repo/actions/runs").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashruns`]
   @scala.inline
-  def basic: basic = "basic".asInstanceOf[basic]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashartifacts`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashartifacts` = ("GET /repos/:owner/:repo/actions/runs/:run_id/artifacts").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashartifacts`]
   @scala.inline
-  def billing_manager: billing_manager = "billing_manager".asInstanceOf[billing_manager]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashjobs`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashjobs` = ("GET /repos/:owner/:repo/actions/runs/:run_id/jobs").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashrunsSlashColonrun_idSlashjobs`]
   @scala.inline
-  def blob: blob = "blob".asInstanceOf[blob]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashsecrets`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashsecrets` = ("GET /repos/:owner/:repo/actions/secrets").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashsecrets`]
   @scala.inline
-  def cancelled: cancelled = "cancelled".asInstanceOf[cancelled]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflows`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflows` = ("GET /repos/:owner/:repo/actions/workflows").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflows`]
   @scala.inline
-  def closed: closed = "closed".asInstanceOf[closed]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns`: `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns` = ("GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns`]
   @scala.inline
-  def collaborators_only: collaborators_only = "collaborators_only".asInstanceOf[collaborators_only]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashassignees`: `GET SlashreposSlashColonownerSlashColonrepoSlashassignees` = ("GET /repos/:owner/:repo/assignees").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashassignees`]
   @scala.inline
-  def comments: comments = "comments".asInstanceOf[comments]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashbranches`: `GET SlashreposSlashColonownerSlashColonrepoSlashbranches` = ("GET /repos/:owner/:repo/branches").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashbranches`]
   @scala.inline
-  def commit: commit = "commit".asInstanceOf[commit]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations`: `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations` = ("GET /repos/:owner/:repo/check-runs/:check_run_id/annotations").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations`]
   @scala.inline
-  def `committer-date`: `committer-date` = "committer-date".asInstanceOf[`committer-date`]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs`: `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs` = ("GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs`]
   @scala.inline
-  def completed: completed = "completed".asInstanceOf[completed]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`: `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts` = ("GET /repos/:owner/:repo/code-scanning/alerts").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`]
   @scala.inline
-  def completeness: completeness = "completeness".asInstanceOf[completeness]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`: `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators` = ("GET /repos/:owner/:repo/collaborators").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`]
   @scala.inline
-  def conclusion: conclusion = "conclusion".asInstanceOf[conclusion]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashcomments` = ("GET /repos/:owner/:repo/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcomments`]
   @scala.inline
-  def confused: confused = "confused".asInstanceOf[confused]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions` = ("GET /repos/:owner/:repo/comments/:comment_id/reactions").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`]
   @scala.inline
-  def contributors_only: contributors_only = "contributors_only".asInstanceOf[contributors_only]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommits`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommits` = ("GET /repos/:owner/:repo/commits").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommits`]
   @scala.inline
-  def created: created = "created".asInstanceOf[created]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashbranches-where-head`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashbranches-where-head` = ("GET /repos/:owner/:repo/commits/:commit_sha/branches-where-head").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashbranches-where-head`]
   @scala.inline
-  def day: day = "day".asInstanceOf[day]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashcomments` = ("GET /repos/:owner/:repo/commits/:commit_sha/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashcomments`]
   @scala.inline
-  def desc: desc = "desc".asInstanceOf[desc]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashpulls`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashpulls` = ("GET /repos/:owner/:repo/commits/:commit_sha/pulls").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColoncommit_shaSlashpulls`]
   @scala.inline
-  def direct: direct = "direct".asInstanceOf[direct]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-runs`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-runs` = ("GET /repos/:owner/:repo/commits/:ref/check-runs").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-runs`]
   @scala.inline
-  def direct_member: direct_member = "direct_member".asInstanceOf[direct_member]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-suites`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-suites` = ("GET /repos/:owner/:repo/commits/:ref/check-suites").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashcheck-suites`]
   @scala.inline
-  def due_on: due_on = "due_on".asInstanceOf[due_on]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashstatuses`: `GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashstatuses` = ("GET /repos/:owner/:repo/commits/:ref/statuses").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcommitsSlashColonrefSlashstatuses`]
   @scala.inline
-  def error: error = "error".asInstanceOf[error]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcontributors`: `GET SlashreposSlashColonownerSlashColonrepoSlashcontributors` = ("GET /repos/:owner/:repo/contributors").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcontributors`]
   @scala.inline
-  def existing_users: existing_users = "existing_users".asInstanceOf[existing_users]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashdeployments`: `GET SlashreposSlashColonownerSlashColonrepoSlashdeployments` = ("GET /repos/:owner/:repo/deployments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashdeployments`]
   @scala.inline
-  def eyes: eyes = "eyes".asInstanceOf[eyes]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashdeploymentsSlashColondeployment_idSlashstatuses`: `GET SlashreposSlashColonownerSlashColonrepoSlashdeploymentsSlashColondeployment_idSlashstatuses` = ("GET /repos/:owner/:repo/deployments/:deployment_id/statuses").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashdeploymentsSlashColondeployment_idSlashstatuses`]
   @scala.inline
-  def failure: failure = "failure".asInstanceOf[failure]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashforks`: `GET SlashreposSlashColonownerSlashColonrepoSlashforks` = ("GET /repos/:owner/:repo/forks").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashforks`]
   @scala.inline
-  def followers: followers = "followers".asInstanceOf[followers]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashgitSlashmatching-refsSlashColonref`: `GET SlashreposSlashColonownerSlashColonrepoSlashgitSlashmatching-refsSlashColonref` = ("GET /repos/:owner/:repo/git/matching-refs/:ref").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashgitSlashmatching-refsSlashColonref`]
   @scala.inline
-  def forks: forks = "forks".asInstanceOf[forks]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashhooks`: `GET SlashreposSlashColonownerSlashColonrepoSlashhooks` = ("GET /repos/:owner/:repo/hooks").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashhooks`]
   @scala.inline
-  def full_name: full_name = "full_name".asInstanceOf[full_name]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashinvitations`: `GET SlashreposSlashColonownerSlashColonrepoSlashinvitations` = ("GET /repos/:owner/:repo/invitations").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashinvitations`]
   @scala.inline
-  def gfm: gfm = "gfm".asInstanceOf[gfm]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissues`: `GET SlashreposSlashColonownerSlashColonrepoSlashissues` = ("GET /repos/:owner/:repo/issues").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissues`]
   @scala.inline
-  def `gh-pages`: `gh-pages` = "gh-pages".asInstanceOf[`gh-pages`]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashcomments` = ("GET /repos/:owner/:repo/issues/:issue_number/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashcomments`]
   @scala.inline
-  def git: git = "git".asInstanceOf[git]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashevents`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashevents` = ("GET /repos/:owner/:repo/issues/:issue_number/events").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashevents`]
   @scala.inline
-  def heart: heart = "heart".asInstanceOf[heart]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashlabels`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashlabels` = ("GET /repos/:owner/:repo/issues/:issue_number/labels").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashlabels`]
   @scala.inline
-  def `help-wanted-issues`: `help-wanted-issues` = "help-wanted-issues".asInstanceOf[`help-wanted-issues`]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashreactions`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashreactions` = ("GET /repos/:owner/:repo/issues/:issue_number/reactions").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashreactions`]
   @scala.inline
-  def hooray: hooray = "hooray".asInstanceOf[hooray]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashtimeline`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashtimeline` = ("GET /repos/:owner/:repo/issues/:issue_number/timeline").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashColonissue_numberSlashtimeline`]
   @scala.inline
-  def in_progress: in_progress = "in_progress".asInstanceOf[in_progress]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcomments` = ("GET /repos/:owner/:repo/issues/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcomments`]
   @scala.inline
-  def inactive: inactive = "inactive".asInstanceOf[inactive]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcommentsSlashColoncomment_idSlashreactions`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcommentsSlashColoncomment_idSlashreactions` = ("GET /repos/:owner/:repo/issues/comments/:comment_id/reactions").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashcommentsSlashColoncomment_idSlashreactions`]
   @scala.inline
-  def indexed: indexed = "indexed".asInstanceOf[indexed]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashevents`: `GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashevents` = ("GET /repos/:owner/:repo/issues/events").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashissuesSlashevents`]
   @scala.inline
-  def interactions: interactions = "interactions".asInstanceOf[interactions]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashkeys`: `GET SlashreposSlashColonownerSlashColonrepoSlashkeys` = ("GET /repos/:owner/:repo/keys").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashkeys`]
   @scala.inline
-  def internal: internal = "internal".asInstanceOf[internal]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashlabels`: `GET SlashreposSlashColonownerSlashColonrepoSlashlabels` = ("GET /repos/:owner/:repo/labels").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashlabels`]
   @scala.inline
-  def issue: issue = "issue".asInstanceOf[issue]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashlanguages`: `GET SlashreposSlashColonownerSlashColonrepoSlashlanguages` = ("GET /repos/:owner/:repo/languages").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashlanguages`]
   @scala.inline
-  def joined: joined = "joined".asInstanceOf[joined]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashmilestones`: `GET SlashreposSlashColonownerSlashColonrepoSlashmilestones` = ("GET /repos/:owner/:repo/milestones").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashmilestones`]
   @scala.inline
-  def latest: latest = "latest".asInstanceOf[latest]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashmilestonesSlashColonmilestone_numberSlashlabels`: `GET SlashreposSlashColonownerSlashColonrepoSlashmilestonesSlashColonmilestone_numberSlashlabels` = ("GET /repos/:owner/:repo/milestones/:milestone_number/labels").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashmilestonesSlashColonmilestone_numberSlashlabels`]
   @scala.inline
-  def laugh: laugh = "laugh".asInstanceOf[laugh]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashnotifications`: `GET SlashreposSlashColonownerSlashColonrepoSlashnotifications` = ("GET /repos/:owner/:repo/notifications").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashnotifications`]
   @scala.inline
-  def `long-running`: `long-running` = "long-running".asInstanceOf[`long-running`]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpagesSlashbuilds`: `GET SlashreposSlashColonownerSlashColonrepoSlashpagesSlashbuilds` = ("GET /repos/:owner/:repo/pages/builds").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpagesSlashbuilds`]
   @scala.inline
-  def maintainer: maintainer = "maintainer".asInstanceOf[maintainer]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashprojects`: `GET SlashreposSlashColonownerSlashColonrepoSlashprojects` = ("GET /repos/:owner/:repo/projects").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashprojects`]
   @scala.inline
-  def markdown: markdown = "markdown".asInstanceOf[markdown]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpulls`: `GET SlashreposSlashColonownerSlashColonrepoSlashpulls` = ("GET /repos/:owner/:repo/pulls").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpulls`]
   @scala.inline
-  def master: master = "master".asInstanceOf[master]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcomments` = ("GET /repos/:owner/:repo/pulls/:pull_number/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcomments`]
   @scala.inline
-  def member: member = "member".asInstanceOf[member]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcommits`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcommits` = ("GET /repos/:owner/:repo/pulls/:pull_number/commits").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashcommits`]
   @scala.inline
-  def mentioned: mentioned = "mentioned".asInstanceOf[mentioned]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashfiles`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashfiles` = ("GET /repos/:owner/:repo/pulls/:pull_number/files").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashfiles`]
   @scala.inline
-  def mercurial: mercurial = "mercurial".asInstanceOf[mercurial]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashrequested_reviewers`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashrequested_reviewers` = ("GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashrequested_reviewers`]
   @scala.inline
-  def merge: merge = "merge".asInstanceOf[merge]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviews`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviews` = ("GET /repos/:owner/:repo/pulls/:pull_number/reviews").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviews`]
   @scala.inline
-  def neutral: neutral = "neutral".asInstanceOf[neutral]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviewsSlashColonreview_idSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviewsSlashColonreview_idSlashcomments` = ("GET /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashColonpull_numberSlashreviewsSlashColonreview_idSlashcomments`]
   @scala.inline
-  def newest: newest = "newest".asInstanceOf[newest]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcomments`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcomments` = ("GET /repos/:owner/:repo/pulls/comments").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcomments`]
   @scala.inline
-  def none: none = "none".asInstanceOf[none]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcommentsSlashColoncomment_idSlashreactions`: `GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcommentsSlashColoncomment_idSlashreactions` = ("GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashpullsSlashcommentsSlashColoncomment_idSlashreactions`]
   @scala.inline
-  def not_archived: not_archived = "not_archived".asInstanceOf[not_archived]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashreleases`: `GET SlashreposSlashColonownerSlashColonrepoSlashreleases` = ("GET /repos/:owner/:repo/releases").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashreleases`]
   @scala.inline
-  def notice: notice = "notice".asInstanceOf[notice]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashreleasesSlashColonrelease_idSlashassets`: `GET SlashreposSlashColonownerSlashColonrepoSlashreleasesSlashColonrelease_idSlashassets` = ("GET /repos/:owner/:repo/releases/:release_id/assets").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashreleasesSlashColonrelease_idSlashassets`]
   @scala.inline
-  def oauth: oauth = "oauth".asInstanceOf[oauth]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashstargazers`: `GET SlashreposSlashColonownerSlashColonrepoSlashstargazers` = ("GET /repos/:owner/:repo/stargazers").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashstargazers`]
   @scala.inline
-  def `off-topic`: `off-topic` = "off-topic".asInstanceOf[`off-topic`]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashsubscribers`: `GET SlashreposSlashColonownerSlashColonrepoSlashsubscribers` = ("GET /repos/:owner/:repo/subscribers").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashsubscribers`]
   @scala.inline
-  def oldest: oldest = "oldest".asInstanceOf[oldest]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashtags`: `GET SlashreposSlashColonownerSlashColonrepoSlashtags` = ("GET /repos/:owner/:repo/tags").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashtags`]
   @scala.inline
-  def open: open = "open".asInstanceOf[open]
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashteams`: `GET SlashreposSlashColonownerSlashColonrepoSlashteams` = ("GET /repos/:owner/:repo/teams").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashteams`]
   @scala.inline
-  def opt_in: opt_in = "opt_in".asInstanceOf[opt_in]
+  def `GET Slashrepositories`: `GET Slashrepositories` = ("GET /repositories").asInstanceOf[`GET Slashrepositories`]
   @scala.inline
-  def opt_out: opt_out = "opt_out".asInstanceOf[opt_out]
+  def `GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashGroups`: `GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashGroups` = ("GET /scim/v2/enterprises/:enterprise/Groups").asInstanceOf[`GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashGroups`]
   @scala.inline
-  def organization: organization = "organization".asInstanceOf[organization]
+  def `GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashUsers`: `GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashUsers` = ("GET /scim/v2/enterprises/:enterprise/Users").asInstanceOf[`GET SlashscimSlashv2SlashenterprisesSlashColonenterpriseSlashUsers`]
   @scala.inline
-  def outside: outside = "outside".asInstanceOf[outside]
+  def `GET SlashscimSlashv2SlashorganizationsSlashColonorgSlashUsers`: `GET SlashscimSlashv2SlashorganizationsSlashColonorgSlashUsers` = ("GET /scim/v2/organizations/:org/Users").asInstanceOf[`GET SlashscimSlashv2SlashorganizationsSlashColonorgSlashUsers`]
   @scala.inline
-  def owner: owner = "owner".asInstanceOf[owner]
+  def `GET SlashsearchSlashcode`: `GET SlashsearchSlashcode` = ("GET /search/code").asInstanceOf[`GET SlashsearchSlashcode`]
   @scala.inline
-  def pending: pending = "pending".asInstanceOf[pending]
+  def `GET SlashsearchSlashcommits`: `GET SlashsearchSlashcommits` = ("GET /search/commits").asInstanceOf[`GET SlashsearchSlashcommits`]
   @scala.inline
-  def popularity: popularity = "popularity".asInstanceOf[popularity]
+  def `GET SlashsearchSlashissues`: `GET SlashsearchSlashissues` = ("GET /search/issues").asInstanceOf[`GET SlashsearchSlashissues`]
   @scala.inline
-  def `private`: `private` = "private".asInstanceOf[`private`]
+  def `GET SlashsearchSlashlabels`: `GET SlashsearchSlashlabels` = ("GET /search/labels").asInstanceOf[`GET SlashsearchSlashlabels`]
   @scala.inline
-  def production: production = "production".asInstanceOf[production]
+  def `GET SlashsearchSlashrepositories`: `GET SlashsearchSlashrepositories` = ("GET /search/repositories").asInstanceOf[`GET SlashsearchSlashrepositories`]
   @scala.inline
-  def public: public = "public".asInstanceOf[public]
+  def `GET SlashsearchSlashtopics`: `GET SlashsearchSlashtopics` = ("GET /search/topics").asInstanceOf[`GET SlashsearchSlashtopics`]
   @scala.inline
-  def pull: pull = "pull".asInstanceOf[pull]
+  def `GET SlashsearchSlashusers`: `GET SlashsearchSlashusers` = ("GET /search/users").asInstanceOf[`GET SlashsearchSlashusers`]
   @scala.inline
-  def pull_request: pull_request = "pull_request".asInstanceOf[pull_request]
+  def `GET SlashteamsSlashColonteam_idSlashdiscussions`: `GET SlashteamsSlashColonteam_idSlashdiscussions` = ("GET /teams/:team_id/discussions").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashdiscussions`]
   @scala.inline
-  def push: push = "push".asInstanceOf[push]
+  def `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcomments`: `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcomments` = ("GET /teams/:team_id/discussions/:discussion_number/comments").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcomments`]
   @scala.inline
-  def pushed: pushed = "pushed".asInstanceOf[pushed]
+  def `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions`: `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions` = ("GET /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashcommentsSlashColoncomment_numberSlashreactions`]
   @scala.inline
-  def qa: qa = "qa".asInstanceOf[qa]
+  def `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashreactions`: `GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashreactions` = ("GET /teams/:team_id/discussions/:discussion_number/reactions").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashdiscussionsSlashColondiscussion_numberSlashreactions`]
   @scala.inline
-  def queued: queued = "queued".asInstanceOf[queued]
+  def `GET SlashteamsSlashColonteam_idSlashinvitations`: `GET SlashteamsSlashColonteam_idSlashinvitations` = ("GET /teams/:team_id/invitations").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashinvitations`]
   @scala.inline
-  def reactions: reactions = "reactions".asInstanceOf[reactions]
+  def `GET SlashteamsSlashColonteam_idSlashmembers`: `GET SlashteamsSlashColonteam_idSlashmembers` = ("GET /teams/:team_id/members").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashmembers`]
   @scala.inline
-  def `reactions--1`: `reactions--1` = "reactions--1".asInstanceOf[`reactions--1`]
+  def `GET SlashteamsSlashColonteam_idSlashprojects`: `GET SlashteamsSlashColonteam_idSlashprojects` = ("GET /teams/:team_id/projects").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashprojects`]
   @scala.inline
-  def `reactions-Plussign1`: `reactions-Plussign1` = "reactions-+1".asInstanceOf[`reactions-Plussign1`]
+  def `GET SlashteamsSlashColonteam_idSlashrepos`: `GET SlashteamsSlashColonteam_idSlashrepos` = ("GET /teams/:team_id/repos").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashrepos`]
   @scala.inline
-  def `reactions-heart`: `reactions-heart` = "reactions-heart".asInstanceOf[`reactions-heart`]
+  def `GET SlashteamsSlashColonteam_idSlashteam-syncSlashgroup-mappings`: `GET SlashteamsSlashColonteam_idSlashteam-syncSlashgroup-mappings` = ("GET /teams/:team_id/team-sync/group-mappings").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashteam-syncSlashgroup-mappings`]
   @scala.inline
-  def `reactions-smile`: `reactions-smile` = "reactions-smile".asInstanceOf[`reactions-smile`]
+  def `GET SlashteamsSlashColonteam_idSlashteams`: `GET SlashteamsSlashColonteam_idSlashteams` = ("GET /teams/:team_id/teams").asInstanceOf[`GET SlashteamsSlashColonteam_idSlashteams`]
   @scala.inline
-  def `reactions-tada`: `reactions-tada` = "reactions-tada".asInstanceOf[`reactions-tada`]
+  def `GET SlashuserSlashblocks`: `GET SlashuserSlashblocks` = ("GET /user/blocks").asInstanceOf[`GET SlashuserSlashblocks`]
   @scala.inline
-  def `reactions-thinking_face`: `reactions-thinking_face` = "reactions-thinking_face".asInstanceOf[`reactions-thinking_face`]
+  def `GET SlashuserSlashemails`: `GET SlashuserSlashemails` = ("GET /user/emails").asInstanceOf[`GET SlashuserSlashemails`]
   @scala.inline
-  def read: read = "read".asInstanceOf[read]
+  def `GET SlashuserSlashfollowers`: `GET SlashuserSlashfollowers` = ("GET /user/followers").asInstanceOf[`GET SlashuserSlashfollowers`]
   @scala.inline
-  def rebase: rebase = "rebase".asInstanceOf[rebase]
+  def `GET SlashuserSlashfollowing`: `GET SlashuserSlashfollowing` = ("GET /user/following").asInstanceOf[`GET SlashuserSlashfollowing`]
   @scala.inline
-  def repositories: repositories = "repositories".asInstanceOf[repositories]
+  def `GET SlashuserSlashgpg_keys`: `GET SlashuserSlashgpg_keys` = ("GET /user/gpg_keys").asInstanceOf[`GET SlashuserSlashgpg_keys`]
   @scala.inline
-  def repository: repository = "repository".asInstanceOf[repository]
+  def `GET SlashuserSlashinstallations`: `GET SlashuserSlashinstallations` = ("GET /user/installations").asInstanceOf[`GET SlashuserSlashinstallations`]
   @scala.inline
-  def resolved: resolved = "resolved".asInstanceOf[resolved]
+  def `GET SlashuserSlashinstallationsSlashColoninstallation_idSlashrepositories`: `GET SlashuserSlashinstallationsSlashColoninstallation_idSlashrepositories` = ("GET /user/installations/:installation_id/repositories").asInstanceOf[`GET SlashuserSlashinstallationsSlashColoninstallation_idSlashrepositories`]
   @scala.inline
-  def rocket: rocket = "rocket".asInstanceOf[rocket]
+  def `GET SlashuserSlashissues`: `GET SlashuserSlashissues` = ("GET /user/issues").asInstanceOf[`GET SlashuserSlashissues`]
   @scala.inline
-  def secret: secret = "secret".asInstanceOf[secret]
+  def `GET SlashuserSlashkeys`: `GET SlashuserSlashkeys` = ("GET /user/keys").asInstanceOf[`GET SlashuserSlashkeys`]
   @scala.inline
-  def side: side = "side".asInstanceOf[side]
+  def `GET SlashuserSlashmarketplace_purchases`: `GET SlashuserSlashmarketplace_purchases` = ("GET /user/marketplace_purchases").asInstanceOf[`GET SlashuserSlashmarketplace_purchases`]
   @scala.inline
-  def sources: sources = "sources".asInstanceOf[sources]
+  def `GET SlashuserSlashmarketplace_purchasesSlashstubbed`: `GET SlashuserSlashmarketplace_purchasesSlashstubbed` = ("GET /user/marketplace_purchases/stubbed").asInstanceOf[`GET SlashuserSlashmarketplace_purchasesSlashstubbed`]
   @scala.inline
-  def spam: spam = "spam".asInstanceOf[spam]
+  def `GET SlashuserSlashmembershipsSlashorgs`: `GET SlashuserSlashmembershipsSlashorgs` = ("GET /user/memberships/orgs").asInstanceOf[`GET SlashuserSlashmembershipsSlashorgs`]
   @scala.inline
-  def squash: squash = "squash".asInstanceOf[squash]
+  def `GET SlashuserSlashmigrations`: `GET SlashuserSlashmigrations` = ("GET /user/migrations").asInstanceOf[`GET SlashuserSlashmigrations`]
   @scala.inline
-  def staging: staging = "staging".asInstanceOf[staging]
+  def `GET SlashuserSlashmigrationsSlashColonmigration_idSlashrepositories`: `GET SlashuserSlashmigrationsSlashColonmigration_idSlashrepositories` = ("GET /user/migrations/:migration_id/repositories").asInstanceOf[`GET SlashuserSlashmigrationsSlashColonmigration_idSlashrepositories`]
   @scala.inline
-  def stargazers: stargazers = "stargazers".asInstanceOf[stargazers]
+  def `GET SlashuserSlashorgs`: `GET SlashuserSlashorgs` = ("GET /user/orgs").asInstanceOf[`GET SlashuserSlashorgs`]
   @scala.inline
-  def stars: stars = "stars".asInstanceOf[stars]
+  def `GET SlashuserSlashpublic_emails`: `GET SlashuserSlashpublic_emails` = ("GET /user/public_emails").asInstanceOf[`GET SlashuserSlashpublic_emails`]
   @scala.inline
-  def status: status = "status".asInstanceOf[status]
+  def `GET SlashuserSlashrepository_invitations`: `GET SlashuserSlashrepository_invitations` = ("GET /user/repository_invitations").asInstanceOf[`GET SlashuserSlashrepository_invitations`]
   @scala.inline
-  def subscribed: subscribed = "subscribed".asInstanceOf[subscribed]
+  def `GET SlashuserSlashstarred`: `GET SlashuserSlashstarred` = ("GET /user/starred").asInstanceOf[`GET SlashuserSlashstarred`]
   @scala.inline
-  def subversion: subversion = "subversion".asInstanceOf[subversion]
+  def `GET SlashuserSlashsubscriptions`: `GET SlashuserSlashsubscriptions` = ("GET /user/subscriptions").asInstanceOf[`GET SlashuserSlashsubscriptions`]
   @scala.inline
-  def success: success = "success".asInstanceOf[success]
+  def `GET SlashuserSlashteams`: `GET SlashuserSlashteams` = ("GET /user/teams").asInstanceOf[`GET SlashuserSlashteams`]
   @scala.inline
-  def tfvc: tfvc = "tfvc".asInstanceOf[tfvc]
+  def `GET Slashusers`: `GET Slashusers` = ("GET /users").asInstanceOf[`GET Slashusers`]
   @scala.inline
-  def timed_out: timed_out = "timed_out".asInstanceOf[timed_out]
+  def `GET SlashusersSlashColonusernameSlashfollowers`: `GET SlashusersSlashColonusernameSlashfollowers` = ("GET /users/:username/followers").asInstanceOf[`GET SlashusersSlashColonusernameSlashfollowers`]
   @scala.inline
-  def token: token = "token".asInstanceOf[token]
+  def `GET SlashusersSlashColonusernameSlashfollowing`: `GET SlashusersSlashColonusernameSlashfollowing` = ("GET /users/:username/following").asInstanceOf[`GET SlashusersSlashColonusernameSlashfollowing`]
   @scala.inline
-  def `too heated`: `too heated` = ("too heated").asInstanceOf[`too heated`]
+  def `GET SlashusersSlashColonusernameSlashgists`: `GET SlashusersSlashColonusernameSlashgists` = ("GET /users/:username/gists").asInstanceOf[`GET SlashusersSlashColonusernameSlashgists`]
   @scala.inline
-  def tree: tree = "tree".asInstanceOf[tree]
+  def `GET SlashusersSlashColonusernameSlashgpg_keys`: `GET SlashusersSlashColonusernameSlashgpg_keys` = ("GET /users/:username/gpg_keys").asInstanceOf[`GET SlashusersSlashColonusernameSlashgpg_keys`]
   @scala.inline
-  def updated: updated = "updated".asInstanceOf[updated]
+  def `GET SlashusersSlashColonusernameSlashkeys`: `GET SlashusersSlashColonusernameSlashkeys` = ("GET /users/:username/keys").asInstanceOf[`GET SlashusersSlashColonusernameSlashkeys`]
   @scala.inline
-  def visibility: visibility = "visibility".asInstanceOf[visibility]
+  def `GET SlashusersSlashColonusernameSlashorgs`: `GET SlashusersSlashColonusernameSlashorgs` = ("GET /users/:username/orgs").asInstanceOf[`GET SlashusersSlashColonusernameSlashorgs`]
   @scala.inline
-  def warning: warning = "warning".asInstanceOf[warning]
+  def `GET SlashusersSlashColonusernameSlashprojects`: `GET SlashusersSlashColonusernameSlashprojects` = ("GET /users/:username/projects").asInstanceOf[`GET SlashusersSlashColonusernameSlashprojects`]
   @scala.inline
-  def week: week = "week".asInstanceOf[week]
+  def `GET SlashusersSlashColonusernameSlashstarred`: `GET SlashusersSlashColonusernameSlashstarred` = ("GET /users/:username/starred").asInstanceOf[`GET SlashusersSlashColonusernameSlashstarred`]
   @scala.inline
-  def write: write = "write".asInstanceOf[write]
+  def `GET SlashusersSlashColonusernameSlashsubscriptions`: `GET SlashusersSlashColonusernameSlashsubscriptions` = ("GET /users/:username/subscriptions").asInstanceOf[`GET SlashusersSlashColonusernameSlashsubscriptions`]
 }
 

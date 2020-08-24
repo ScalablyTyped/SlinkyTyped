@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.LightSensorReading")
 @js.native
 abstract class LightSensorReading ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.LightSensorReading {
-  /** Gets the illuminance level in lux. */
-  /* CompleteClass */
-  override var illuminanceInLux: Double = js.native
-  /** Gets the time at which the sensor reported the reading. */
-  /* CompleteClass */
-  override var timestamp: js.Date = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.LightSensorReading
 

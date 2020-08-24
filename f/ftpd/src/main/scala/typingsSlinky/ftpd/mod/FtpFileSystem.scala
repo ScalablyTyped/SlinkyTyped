@@ -4,8 +4,8 @@ import typingsSlinky.ftpd.anon.BufferSize
 import typingsSlinky.ftpd.anon.Encoding
 import typingsSlinky.ftpd.anon.EncodingFlag
 import typingsSlinky.ftpd.anon.Flag
-import typingsSlinky.ftpd.anon.FlagString
 import typingsSlinky.ftpd.anon.Mode
+import typingsSlinky.ftpd.anon.`0`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.ReadStream
@@ -57,7 +57,7 @@ trait FtpFileSystem extends js.Object {
   var readFile: js.UndefOr[
     (js.Function3[
       /* filename */ String, 
-      (/* options */ Flag) | (/* options */ FlagString) | (/* encoding */ String), 
+      (/* options */ `0`) | (/* options */ Flag) | (/* encoding */ String), 
       /* callback */ js.Function2[/* err */ ErrnoException, (/* data */ Buffer) | (/* data */ String), Unit], 
       Unit
     ]) | (js.Function2[

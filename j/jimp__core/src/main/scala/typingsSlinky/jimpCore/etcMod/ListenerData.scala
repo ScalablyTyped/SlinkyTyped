@@ -1,6 +1,5 @@
 package typingsSlinky.jimpCore.etcMod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jimpCore.jimpCoreStrings.`before-change`
 import typingsSlinky.jimpCore.jimpCoreStrings.changed
 import typingsSlinky.jimpCore.jimpCoreStrings.clone
@@ -17,18 +16,13 @@ trait ListenerData[T /* <: ListenableName */] extends js.Object
 
 object ListenerData {
   @scala.inline
-  def EventName[T](eventName: T, methodName: clone | ChangeName | constructor): ListenerData[T] = {
+  def EventName[/* <: typingsSlinky.jimpCore.etcMod.ListenableName */ T](eventName: T, methodName: clone | ChangeName | constructor): ListenerData[T] = {
     val __obj = js.Dynamic.literal(eventName = eventName.asInstanceOf[js.Any], methodName = methodName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerData[T]]
   }
   @scala.inline
-  def Dictkey[T](
-    eventName: `before-change` | changed,
-    methodName: T,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null
-  ): ListenerData[T] = {
+  def Dictkey[/* <: typingsSlinky.jimpCore.etcMod.ListenableName */ T](eventName: `before-change` | changed, methodName: T): ListenerData[T] = {
     val __obj = js.Dynamic.literal(eventName = eventName.asInstanceOf[js.Any], methodName = methodName.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[ListenerData[T]]
   }
 }

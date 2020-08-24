@@ -1,6 +1,6 @@
 package typingsSlinky.easyXHeaders.netMod
 
-import typingsSlinky.easyXHeaders.anon.AllowHalfOpenBoolean
+import typingsSlinky.easyXHeaders.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation._
 object createServer extends js.Object {
   def apply(): Server = js.native
   def apply(connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
-  def apply(options: AllowHalfOpenBoolean): Server = js.native
-  def apply(options: AllowHalfOpenBoolean, connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
+  def apply(options: js.UndefOr[scala.Nothing], connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
+  def apply(options: `0`): Server = js.native
+  def apply(options: `0`, connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
 }
 

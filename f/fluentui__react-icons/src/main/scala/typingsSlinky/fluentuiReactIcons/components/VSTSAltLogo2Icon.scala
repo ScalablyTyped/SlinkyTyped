@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VSTSAltLogo2Icon {
-  @JSImport("@fluentui/react-icons/lib/components/VSTSAltLogo2Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "VSTSAltLogo2Icon")
   @js.native
   object component extends js.Object
   

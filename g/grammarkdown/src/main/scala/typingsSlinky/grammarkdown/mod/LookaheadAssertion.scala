@@ -24,6 +24,18 @@ class LookaheadAssertion protected ()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
     lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: typingsSlinky.grammarkdown.nodesMod.SymbolSet
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: typingsSlinky.grammarkdown.nodesMod.SymbolSpan
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
     operatorToken: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadOperatorKind],
     lookahead: typingsSlinky.grammarkdown.nodesMod.SymbolSet
   ) = this()
@@ -32,6 +44,34 @@ class LookaheadAssertion protected ()
     lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
     operatorToken: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadOperatorKind],
     lookahead: typingsSlinky.grammarkdown.nodesMod.SymbolSpan
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: js.UndefOr[scala.Nothing],
+    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: typingsSlinky.grammarkdown.nodesMod.SymbolSet,
+    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: typingsSlinky.grammarkdown.nodesMod.SymbolSpan,
+    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    lookaheadKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadKeyword],
+    operatorToken: typingsSlinky.grammarkdown.nodesMod.Token[LookaheadOperatorKind],
+    lookahead: js.UndefOr[scala.Nothing],
+    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
   ) = this()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],

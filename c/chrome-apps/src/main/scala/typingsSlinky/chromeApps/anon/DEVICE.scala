@@ -29,29 +29,18 @@ object DEVICE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDEVICE(value: device__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DEVICE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withENDPOINT(value: endpoint_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ENDPOINT")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDEVICE(value: device__): Self = this.set("DEVICE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withINTERFACE(value: interface_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INTERFACE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setENDPOINT(value: endpoint_): Self = this.set("ENDPOINT", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOTHER(value: other_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTHER")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINTERFACE(value: interface_): Self = this.set("INTERFACE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOTHER(value: other_): Self = this.set("OTHER", value.asInstanceOf[js.Any])
   }
   
 }

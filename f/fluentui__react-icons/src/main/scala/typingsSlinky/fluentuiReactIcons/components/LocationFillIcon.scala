@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LocationFillIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LocationFillIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LocationFillIcon")
   @js.native
   object component extends js.Object
   

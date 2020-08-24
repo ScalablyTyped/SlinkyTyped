@@ -1,13 +1,11 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.menuIconMenuMod.IconMenuProps
-import typingsSlinky.reactToolbox.menuIconMenuMod.IconMenuTheme
-import typingsSlinky.reactToolbox.menuIconMenuMod.default
+import typingsSlinky.reactToolbox.iconMenuMod.IconMenuProps
+import typingsSlinky.reactToolbox.iconMenuMod.IconMenuTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.auto
 import typingsSlinky.reactToolbox.reactToolboxStrings.bottomLeft
 import typingsSlinky.reactToolbox.reactToolboxStrings.bottomRight
@@ -19,14 +17,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IconMenu {
-  @JSImport("react-toolbox/lib/menu/IconMenu", JSImport.Default)
+  @JSImport("react-toolbox/components/menu", "IconMenu")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.menuMod.IconMenu] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +32,7 @@ object IconMenu {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconRipple(value: Boolean): this.type = set("iconRipple", value.asInstanceOf[js.Any])
     @scala.inline

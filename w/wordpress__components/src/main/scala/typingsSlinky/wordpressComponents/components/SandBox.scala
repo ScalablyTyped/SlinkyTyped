@@ -1,6 +1,5 @@
 package typingsSlinky.wordpressComponents.components
 
-import typingsSlinky.wordpressComponents.mod.SandBox.^
 import typingsSlinky.wordpressComponents.sandboxMod.SandBox.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,8 +10,8 @@ object SandBox {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props_883064592[^] = new SharedBuilder_Props_883064592[^](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: SandBox.type): SharedBuilder_Props_883064592[^] = new SharedBuilder_Props_883064592[^](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Props): SharedBuilder_Props613517575 = new SharedBuilder_Props613517575(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SandBox.type): SharedBuilder_Props613517575 = new SharedBuilder_Props613517575(js.Array(this.component, js.Dictionary.empty))()
 }
 
 object Sandbox {
@@ -20,7 +19,7 @@ object Sandbox {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props_883064592[typingsSlinky.wordpressComponents.sandboxMod.default.^] = new SharedBuilder_Props_883064592[typingsSlinky.wordpressComponents.sandboxMod.default.^](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Sandbox.type): SharedBuilder_Props_883064592[typingsSlinky.wordpressComponents.sandboxMod.default.^] = new SharedBuilder_Props_883064592[typingsSlinky.wordpressComponents.sandboxMod.default.^](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Props): SharedBuilder_Props613517575 = new SharedBuilder_Props613517575(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sandbox.type): SharedBuilder_Props613517575 = new SharedBuilder_Props613517575(js.Array(this.component, js.Dictionary.empty))()
 }
 

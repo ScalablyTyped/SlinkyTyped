@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiLab.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClassName extends js.Object {
   var className: String = js.native
-  var endAdornment: TagMod[Any] = js.native
+  var endAdornment: ReactElement = js.native
   var ref: Ref[_] = js.native
-  var startAdornment: TagMod[Any] = js.native
+  var startAdornment: ReactElement = js.native
 }
 
 object ClassName {
@@ -28,59 +28,28 @@ object ClassName {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withEndAdornment(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAdornment")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEndAdornment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAdornment")(js.undefined)
-        ret
-    }
+    def setEndAdornment(value: ReactElement): Self = this.set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRefRefObject(value: ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEndAdornment: Self = this.set("endAdornment", js.undefined)
     @scala.inline
-    def withRefFunction1(value: /* instance */ _ | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRefRefObject(value: ReactRef[_]): Self = this.set("ref", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRef(value: Ref[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRefFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("ref", js.Any.fromFunction1(value))
     @scala.inline
-    def withRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(null)
-        ret
-    }
+    def setRef(value: Ref[_]): Self = this.set("ref", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStartAdornment(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAdornment")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRefNull: Self = this.set("ref", null)
     @scala.inline
-    def withoutStartAdornment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAdornment")(js.undefined)
-        ret
-    }
+    def setStartAdornment(value: ReactElement): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStartAdornment: Self = this.set("startAdornment", js.undefined)
   }
   
 }

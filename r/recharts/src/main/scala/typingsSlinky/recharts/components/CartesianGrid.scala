@@ -1,13 +1,16 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.anon.Height
+import typingsSlinky.recharts.anon.Offset
 import typingsSlinky.recharts.mod.CartesianGridProps
+import typingsSlinky.recharts.mod.ChartOffset
 import typingsSlinky.recharts.mod.ContentRenderer
 import typingsSlinky.recharts.mod.LineProps
+import typingsSlinky.recharts.mod.XAxisProps
+import typingsSlinky.recharts.mod.YAxisProps
 import typingsSlinky.recharts.rechartsNumbers.`100`
 import typingsSlinky.recharts.rechartsNumbers.`200`
 import typingsSlinky.recharts.rechartsNumbers.`300`
@@ -116,13 +119,17 @@ object CartesianGrid {
     @scala.inline
     def horizontalReactElement(value: ReactElement): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
-    def horizontalFunction1(value: LineProps with CartesianGridProps => TagMod[Any]): this.type = set("horizontal", js.Any.fromFunction1(value))
+    def horizontalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("horizontal", js.Any.fromFunction1(value))
     @scala.inline
     def horizontal(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
     def horizontalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): this.type = set("horizontalCoordinatesGenerator", js.Any.fromFunction1(value))
     @scala.inline
+    def horizontalFillVarargs(value: String*): this.type = set("horizontalFill", js.Array(value :_*))
+    @scala.inline
     def horizontalFill(value: js.Array[String]): this.type = set("horizontalFill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontalPointsVarargs(value: Double*): this.type = set("horizontalPoints", js.Array(value :_*))
     @scala.inline
     def horizontalPoints(value: js.Array[Double]): this.type = set("horizontalPoints", value.asInstanceOf[js.Any])
     @scala.inline
@@ -142,7 +149,7 @@ object CartesianGrid {
     @scala.inline
     def mask(value: String): this.type = set("mask", value.asInstanceOf[js.Any])
     @scala.inline
-    def offset(value: js.Object): this.type = set("offset", value.asInstanceOf[js.Any])
+    def offset(value: ChartOffset): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def opacity(value: Double | String): this.type = set("opacity", value.asInstanceOf[js.Any])
     @scala.inline
@@ -188,13 +195,17 @@ object CartesianGrid {
     @scala.inline
     def verticalReactElement(value: ReactElement): this.type = set("vertical", value.asInstanceOf[js.Any])
     @scala.inline
-    def verticalFunction1(value: LineProps with CartesianGridProps => TagMod[Any]): this.type = set("vertical", js.Any.fromFunction1(value))
+    def verticalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("vertical", js.Any.fromFunction1(value))
     @scala.inline
     def vertical(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
     @scala.inline
-    def verticalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): this.type = set("verticalCoordinatesGenerator", js.Any.fromFunction1(value))
+    def verticalCoordinatesGenerator(value: /* arg */ Offset => js.Array[Double]): this.type = set("verticalCoordinatesGenerator", js.Any.fromFunction1(value))
+    @scala.inline
+    def verticalFillVarargs(value: String*): this.type = set("verticalFill", js.Array(value :_*))
     @scala.inline
     def verticalFill(value: js.Array[String]): this.type = set("verticalFill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalPointsVarargs(value: Double*): this.type = set("verticalPoints", js.Array(value :_*))
     @scala.inline
     def verticalPoints(value: js.Array[Double]): this.type = set("verticalPoints", value.asInstanceOf[js.Any])
     @scala.inline
@@ -208,11 +219,11 @@ object CartesianGrid {
     @scala.inline
     def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
     @scala.inline
-    def xAxis(value: js.Object): this.type = set("xAxis", value.asInstanceOf[js.Any])
+    def xAxis(value: XAxisProps): this.type = set("xAxis", value.asInstanceOf[js.Any])
     @scala.inline
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
     @scala.inline
-    def yAxis(value: js.Object): this.type = set("yAxis", value.asInstanceOf[js.Any])
+    def yAxis(value: YAxisProps): this.type = set("yAxis", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CartesianGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

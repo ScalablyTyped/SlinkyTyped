@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InsertColumnsLeftIcon {
-  @JSImport("@fluentui/react-icons/lib/components/InsertColumnsLeftIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "InsertColumnsLeftIcon")
   @js.native
   object component extends js.Object
   

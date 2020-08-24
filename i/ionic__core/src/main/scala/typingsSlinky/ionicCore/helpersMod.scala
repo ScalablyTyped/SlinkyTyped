@@ -5,7 +5,8 @@ import org.scalajs.dom.raw.UIEvent
 import typingsSlinky.ionicCore.anon.X
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLabelElement
 import typingsSlinky.ionicCore.mod.Side
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
+import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +21,8 @@ object helpersMod extends js.Object {
   def debounceEvent(event: EventEmitter[_], wait: Double): EventEmitter[_] = js.native
   def deferEvent(event: EventEmitter[_]): EventEmitter[_] = js.native
   def findItemLabel(componentEl: HTMLElement): HTMLIonLabelElement | Null = js.native
+  def getElementRoot(el: HTMLElement): HTMLElement | ShadowRoot = js.native
+  def getElementRoot(el: HTMLElement, fallback: HTMLElement): HTMLElement | ShadowRoot = js.native
   def hasShadowDom(el: HTMLElement): Boolean = js.native
   def isEndSide(side: Side): Boolean = js.native
   def now(ev: UIEvent): Double = js.native
@@ -29,8 +32,10 @@ object helpersMod extends js.Object {
     always: Boolean,
     container: HTMLElement,
     name: String,
-    value: js.UndefOr[Null | String],
+    value: js.UndefOr[scala.Nothing],
     disabled: Boolean
   ): Unit = js.native
+  def renderHiddenInput(always: Boolean, container: HTMLElement, name: String, value: String, disabled: Boolean): Unit = js.native
+  def renderHiddenInput(always: Boolean, container: HTMLElement, name: String, value: Null, disabled: Boolean): Unit = js.native
 }
 

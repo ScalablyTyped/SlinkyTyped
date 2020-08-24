@@ -5,6 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/**
+  *
+  * Demos:
+  *
+  * - [Toggle Button](https://material-ui.com/components/toggle-button/)
+  *
+  * API:
+  *
+  * - [ToggleButton API](https://material-ui.com/api/toggle-button/)
+  * - inherits [ButtonBase API](https://material-ui.com/api/button-base/)
+  */
 @JSImport("@material-ui/lab/ToggleButton/ToggleButton", JSImport.Default)
 @js.native
 object default

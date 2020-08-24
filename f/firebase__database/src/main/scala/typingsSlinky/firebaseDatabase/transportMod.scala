@@ -3,6 +3,7 @@ package typingsSlinky.firebaseDatabase
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
+import org.scalablytyped.runtime.Instantiable5
 import typingsSlinky.firebaseDatabase.repoInfoMod.RepoInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,6 +24,12 @@ object transportMod extends js.Object {
       */
     def this(connId: String, repoInfo: RepoInfo) = this()
     def this(connId: String, repoInfo: RepoInfo, transportSessionId: String) = this()
+    def this(
+      connId: String,
+      repoInfo: RepoInfo,
+      transportSessionId: js.UndefOr[scala.Nothing],
+      lastSessionId: String
+    ) = this()
     def this(connId: String, repoInfo: RepoInfo, transportSessionId: String, lastSessionId: String) = this()
     /**
       * Bytes received since connection started.
@@ -58,23 +65,22 @@ object transportMod extends js.Object {
   
   @js.native
   trait TransportConstructor
-    extends Instantiable2[
-          /* connId */ String, 
-          (/* RepoInfo */ js.Any) | (/* repoInfo */ RepoInfo), 
-          js.Any | Transport
-        ]
-       with Instantiable3[
-          /* connId */ String, 
-          (/* RepoInfo */ js.Any) | (/* repoInfo */ RepoInfo), 
-          /* transportSessionId */ String, 
-          js.Any | Transport
-        ]
+    extends Instantiable2[/* connId */ String, /* repoInfo */ RepoInfo, Transport]
+       with Instantiable3[/* connId */ String, /* repoInfo */ RepoInfo, /* applicationId */ String, Transport]
        with Instantiable4[
           /* connId */ String, 
-          (/* RepoInfo */ js.Any) | (/* repoInfo */ RepoInfo), 
+          /* repoInfo */ RepoInfo, 
+          js.UndefOr[/* applicationId */ String], 
           /* transportSessionId */ String, 
+          Transport
+        ]
+       with Instantiable5[
+          /* connId */ String, 
+          /* repoInfo */ RepoInfo, 
+          js.UndefOr[/* applicationId */ String], 
+          js.UndefOr[/* transportSessionId */ String], 
           /* lastSessionId */ String, 
-          js.Any | Transport
+          Transport
         ] {
     var healthyTimeout: js.UndefOr[Double] = js.native
     var responsesRequiredToBeHealthy: js.UndefOr[Double] = js.native

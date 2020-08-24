@@ -33,6 +33,18 @@ trait OverScroller extends js.Object {
     maxX: Double,
     minY: Double,
     maxY: Double,
+    overX: js.UndefOr[scala.Nothing],
+    overY: Double
+  ): Unit = js.native
+  def fling(
+    startX: Double,
+    startY: Double,
+    velocityX: Double,
+    velocityY: Double,
+    minX: Double,
+    maxX: Double,
+    minY: Double,
+    maxY: Double,
     overX: Double
   ): Unit = js.native
   def fling(

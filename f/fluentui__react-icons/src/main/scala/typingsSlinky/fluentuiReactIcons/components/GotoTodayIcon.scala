@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GotoTodayIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GotoTodayIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GotoTodayIcon")
   @js.native
   object component extends js.Object
   

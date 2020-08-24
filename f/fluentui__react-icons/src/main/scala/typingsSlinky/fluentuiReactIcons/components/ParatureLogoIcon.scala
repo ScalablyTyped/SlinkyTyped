@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ParatureLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ParatureLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ParatureLogoIcon")
   @js.native
   object component extends js.Object
   

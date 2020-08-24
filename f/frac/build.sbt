@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "frac"
-version := "1.1.2-097749"
-scalaVersion := "2.13.2"
+version := "1.1.2-258d09"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

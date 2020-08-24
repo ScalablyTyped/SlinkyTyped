@@ -49,6 +49,9 @@ trait Instrument extends js.Object {
     * @param callbackData
     *        Data to send to the onEnd callback functions.
     */
+  def stop(immediately: Boolean): Unit = js.native
+  def stop(immediately: Boolean, onStopped: js.UndefOr[scala.Nothing], callbackData: js.Any): Unit = js.native
+  def stop(immediately: Boolean, onStopped: js.Function): Unit = js.native
   def stop(immediately: Boolean, onStopped: js.Function, callbackData: js.Any): Unit = js.native
 }
 

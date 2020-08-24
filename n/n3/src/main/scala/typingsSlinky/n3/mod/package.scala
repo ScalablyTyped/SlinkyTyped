@@ -11,7 +11,7 @@ package object mod {
   type ParseCallback[Q /* <: typingsSlinky.n3.mod.BaseQuad */] = js.Function3[
     /* error */ js.Error, 
     /* quad */ Q, 
-    /* prefixes */ typingsSlinky.n3.mod.Prefixes[typingsSlinky.rdfJs.mod.NamedNode], 
+    /* prefixes */ typingsSlinky.n3.mod.Prefixes[typingsSlinky.rdfJs.mod.NamedNode[java.lang.String]], 
     scala.Unit
   ]
   type PrefixedToIri = js.Function1[/* suffix */ java.lang.String, typingsSlinky.n3.mod.NamedNode]

@@ -1,0 +1,13 @@
+package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
+
+import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.TensorContainer
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "dispose")
+@js.native
+object dispose extends js.Object {
+  def apply(container: TensorContainer): Unit = js.native
+}
+

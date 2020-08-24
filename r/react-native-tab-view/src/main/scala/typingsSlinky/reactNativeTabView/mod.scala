@@ -6,6 +6,8 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reactNativeTabView.anon.Bounces
 import typingsSlinky.reactNativeTabView.anon.GestureHandlerProps
 import typingsSlinky.reactNativeTabView.anon.GetAccessibilityLabel
+import typingsSlinky.reactNativeTabView.anon.PressColor
+import typingsSlinky.reactNativeTabView.anon.SceneRendererPropsroutean
 import typingsSlinky.reactNativeTabView.scrollPagerMod.default
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
@@ -27,10 +29,18 @@ object mod extends js.Object {
     extends typingsSlinky.reactNativeTabView.tabBarIndicatorMod.TabBarIndicator[T]
   
   @js.native
+  class TabBarItem[T /* <: Route */] ()
+    extends typingsSlinky.reactNativeTabView.tabBarItemMod.TabBarItem[T]
+  
+  @js.native
   class TabView[T /* <: Route */] ()
     extends typingsSlinky.reactNativeTabView.tabViewMod.default[T]
   
-  def SceneMap[T /* <: js.Any */](scenes: StringDictionary[ReactComponentClass[T]]): js.Function1[/* hasRouteJumpToPosition */ T, ReactElement] = js.native
+  @js.native
+  class TouchableItem ()
+    extends typingsSlinky.reactNativeTabView.touchableItemMod.default
+  
+  def SceneMap[T /* <: js.Any */](scenes: StringDictionary[ReactComponentClass[T]]): js.Function1[/* hasRouteJumpToPosition */ SceneRendererPropsroutean, ReactElement] = js.native
   /* static members */
   @js.native
   object ScrollPager extends js.Object {
@@ -47,6 +57,12 @@ object mod extends js.Object {
   @js.native
   object TabView extends js.Object {
     var defaultProps: GestureHandlerProps = js.native
+  }
+  
+  /* static members */
+  @js.native
+  object TouchableItem extends js.Object {
+    var defaultProps: PressColor = js.native
   }
   
 }

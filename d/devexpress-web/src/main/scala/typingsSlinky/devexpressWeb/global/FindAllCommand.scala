@@ -10,11 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FindAllCommand")
 @js.native
 class FindAllCommand ()
-  extends typingsSlinky.devexpressWeb.FindAllCommand {
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.FindAllCommand
 

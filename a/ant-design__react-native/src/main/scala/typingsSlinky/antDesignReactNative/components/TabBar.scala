@@ -3,21 +3,20 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.tabBarMod.TabBarNativeProps
-import typingsSlinky.antDesignReactNative.tabBarMod.default
 import typingsSlinky.antDesignReactNative.tabBarStyleMod.TabBarStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabBar {
-  @JSImport("@ant-design/react-native/lib/tab-bar", JSImport.Default)
+  @JSImport("@ant-design/react-native", "TabBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.TabBar] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline

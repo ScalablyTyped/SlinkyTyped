@@ -1,7 +1,7 @@
 
 # Scala.js typings for electron-winstaller
 
-Typings are for version 4.0.0
+Typings are for version 4.0.1
 
 ## Library description:
 Module to generate Windows installers for Electron apps

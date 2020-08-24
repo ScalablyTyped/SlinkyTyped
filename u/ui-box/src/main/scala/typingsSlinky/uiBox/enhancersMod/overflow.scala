@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ui-box/dist/enhancers", "overflow")
+@JSImport("ui-box/dist/src/enhancers", "overflow")
 @js.native
 object overflow extends js.Object {
   val propAliases: PropAliases = js.native

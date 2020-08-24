@@ -220,6 +220,8 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultVisibleValue(value: String): this.type = set("defaultVisibleValue", value.asInstanceOf[js.Any])
@@ -229,6 +231,8 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   @scala.inline
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+  @scala.inline
+  def enableAutofillOnKeyPressVarargs(value: KeyCodes*): this.type = set("enableAutofillOnKeyPress", js.Array(value :_*))
   @scala.inline
   def enableAutofillOnKeyPress(value: js.Array[KeyCodes]): this.type = set("enableAutofillOnKeyPress", value.asInstanceOf[js.Any])
   @scala.inline
@@ -847,6 +851,8 @@ class SharedBuilder_IAutofillProps_786739988[R <: js.Object] (val args: js.Array
   def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
   @scala.inline
   def updateValueInWillReceiveProps(value: () => String | Null): this.type = set("updateValueInWillReceiveProps", js.Any.fromFunction0(value))
+  @scala.inline
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   @scala.inline
   def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   @scala.inline

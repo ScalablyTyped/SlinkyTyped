@@ -26,7 +26,7 @@ class Memo[T /* <: MemoType */] protected ()
 @JSImport("stellar-sdk", "Memo")
 @js.native
 object Memo extends js.Object {
-  def fromXDRObject(memo: typingsSlinky.stellarBase.mod.xdr.Memo): typingsSlinky.stellarBase.mod.Memo[MemoType] = js.native
+  def fromXDRObject(memo: typingsSlinky.stellarBase.xdrMod.default.Memo): typingsSlinky.stellarBase.mod.Memo[MemoType] = js.native
   def hash(hash: String): typingsSlinky.stellarBase.mod.Memo[Hash] = js.native
   def id(id: String): typingsSlinky.stellarBase.mod.Memo[ID] = js.native
   def none(): typingsSlinky.stellarBase.mod.Memo[None] = js.native

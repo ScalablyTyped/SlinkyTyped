@@ -37,6 +37,8 @@ object Voronoi {
     @scala.inline
     def enablePoints(value: Boolean): this.type = set("enablePoints", value.asInstanceOf[js.Any])
     @scala.inline
+    def layersVarargs(value: (links | cells | points | bounds | VoronoiCustomLayer)*): this.type = set("layers", js.Array(value :_*))
+    @scala.inline
     def layers(value: js.Array[links | cells | points | bounds | VoronoiCustomLayer]): this.type = set("layers", value.asInstanceOf[js.Any])
     @scala.inline
     def linkLineColor(value: String): this.type = set("linkLineColor", value.asInstanceOf[js.Any])

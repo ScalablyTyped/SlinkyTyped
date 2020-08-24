@@ -11,18 +11,37 @@ trait IdentityProviderDetails extends js.Object {
     */
   var InvocationRole: js.UndefOr[Role] = js.native
   /**
-    * Contains the location of the service endpoint used to authenticate users.
+    * Provides the location of the service endpoint used to authenticate users.
     */
   var Url: js.UndefOr[typingsSlinky.awsSdk.transferMod.Url] = js.native
 }
 
 object IdentityProviderDetails {
   @scala.inline
-  def apply(InvocationRole: Role = null, Url: Url = null): IdentityProviderDetails = {
+  def apply(): IdentityProviderDetails = {
     val __obj = js.Dynamic.literal()
-    if (InvocationRole != null) __obj.updateDynamic("InvocationRole")(InvocationRole.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityProviderDetails]
   }
+  @scala.inline
+  implicit class IdentityProviderDetailsOps[Self <: IdentityProviderDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setInvocationRole(value: Role): Self = this.set("InvocationRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInvocationRole: Self = this.set("InvocationRole", js.undefined)
+    @scala.inline
+    def setUrl(value: Url): Self = this.set("Url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUrl: Self = this.set("Url", js.undefined)
+  }
+  
 }
 

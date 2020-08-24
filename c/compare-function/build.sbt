@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "compare-function"
-version := "2.0-dt-20190524Z-9b5cf5"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20190524Z-cc5c59"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

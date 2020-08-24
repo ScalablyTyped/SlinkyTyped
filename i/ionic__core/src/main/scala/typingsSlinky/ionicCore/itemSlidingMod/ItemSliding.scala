@@ -2,8 +2,8 @@ package typingsSlinky.ionicCore.itemSlidingMod
 
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonItemSlidingElement
 import typingsSlinky.ionicCore.mod.Side
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ class ItemSliding () extends ComponentInterface {
     */
   var disabled: Boolean = js.native
   var el: HTMLIonItemSlidingElement = js.native
-  var gesture: js.UndefOr[js.Any] = js.native
+  var gesture: js.Any = js.native
   /**
     * Given an optional side, return the ion-item-options element.
     *
@@ -33,7 +33,7 @@ class ItemSliding () extends ComponentInterface {
     */
   var ionDrag: EventEmitter[_] = js.native
   var item: js.Any = js.native
-  var leftOptions: js.UndefOr[js.Any] = js.native
+  var leftOptions: js.Any = js.native
   var onEnd: js.Any = js.native
   var onMove: js.Any = js.native
   var onStart: js.Any = js.native
@@ -41,18 +41,18 @@ class ItemSliding () extends ComponentInterface {
   var optsDirty: js.Any = js.native
   var optsWidthLeftSide: js.Any = js.native
   var optsWidthRightSide: js.Any = js.native
-  var rightOptions: js.UndefOr[js.Any] = js.native
+  var rightOptions: js.Any = js.native
   var setOpenAmount: js.Any = js.native
   var sides: js.Any = js.native
   var state: SlidingState = js.native
   var tmr: js.Any = js.native
   var updateOptions: js.Any = js.native
   /**
-    * Close the sliding item. Items can also be closed from the [List](../../list/List).
+    * Close the sliding item. Items can also be closed from the [List](../list).
     */
   def close(): js.Promise[Unit] = js.native
   /**
-    * Close all of the sliding items in the list. Items can also be closed from the [List](../../list/List).
+    * Close all of the sliding items in the list. Items can also be closed from the [List](../list).
     */
   def closeOpened(): js.Promise[Boolean] = js.native
   @JSName("connectedCallback")

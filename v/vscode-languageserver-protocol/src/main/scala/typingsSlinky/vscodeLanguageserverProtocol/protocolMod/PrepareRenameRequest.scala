@@ -1,7 +1,8 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
-import typingsSlinky.vscodeJsonrpc.mod.RequestType
 import typingsSlinky.vscodeLanguageserverProtocol.anon.Placeholder
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
+import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashprepareRename
 import typingsSlinky.vscodeLanguageserverTypes.mod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol/lib/protocol", "PrepareRenameRequest")
 @js.native
 object PrepareRenameRequest extends js.Object {
-  val `type`: RequestType[TextDocumentPositionParams, Range | Placeholder | Null, Unit, Unit] = js.native
+  val method: textDocumentSlashprepareRename = js.native
+  val `type`: ProtocolRequestType[PrepareRenameParams, Range | Placeholder | Null, scala.Nothing, Unit, Unit] = js.native
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RemoveOccurrenceIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RemoveOccurrenceIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RemoveOccurrenceIcon")
   @js.native
   object component extends js.Object
   

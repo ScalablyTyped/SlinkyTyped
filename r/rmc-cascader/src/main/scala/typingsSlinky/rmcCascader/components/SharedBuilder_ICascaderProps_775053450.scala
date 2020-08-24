@@ -2,6 +2,7 @@ package typingsSlinky.rmcCascader.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderOneValue
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +16,8 @@ class SharedBuilder_ICascaderProps_775053450[R <: js.Object] (val args: js.Array
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
   def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+  @scala.inline
+  def defaultValueVarargs(value: CascaderOneValue*): this.type = set("defaultValue", js.Array(value :_*))
   @scala.inline
   def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
@@ -35,6 +38,8 @@ class SharedBuilder_ICascaderProps_775053450[R <: js.Object] (val args: js.Array
   def rootNativeProps(value: js.Object): this.type = set("rootNativeProps", value.asInstanceOf[js.Any])
   @scala.inline
   def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueVarargs(value: CascaderOneValue*): this.type = set("value", js.Array(value :_*))
   @scala.inline
   def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
 }

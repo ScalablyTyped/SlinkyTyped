@@ -25,29 +25,22 @@ object Extensions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExtensions(value: js.Array[Asterisk | String | Includedirectories]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
+    def setExtensionsVarargs(value: (Asterisk | String | Includedirectories)*): Self = this.set("extensions", js.Array(value :_*))
     @scala.inline
-    def withTypes(value: js.Array[Asterisk | String | Includedirectories]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtensions(value: js.Array[Asterisk | String | Includedirectories]): Self = this.set("extensions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
+    def deleteExtensions: Self = this.set("extensions", js.undefined)
+    @scala.inline
+    def setTypesVarargs(value: (Asterisk | String | Includedirectories)*): Self = this.set("types", js.Array(value :_*))
+    @scala.inline
+    def setTypes(value: js.Array[Asterisk | String | Includedirectories]): Self = this.set("types", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTypes: Self = this.set("types", js.undefined)
   }
   
 }

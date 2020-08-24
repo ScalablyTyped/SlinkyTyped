@@ -12,14 +12,86 @@ class Module protected ()
   def this(id: Double, outgoing: typingsSlinky.webcola.powergraphMod.LinkSets) = this()
   def this(
     id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: typingsSlinky.webcola.powergraphMod.LinkSets
+  ) = this()
+  def this(
+    id: Double,
     outgoing: typingsSlinky.webcola.powergraphMod.LinkSets,
     incoming: typingsSlinky.webcola.powergraphMod.LinkSets
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.webcola.powergraphMod.ModuleSet
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: typingsSlinky.webcola.powergraphMod.LinkSets,
+    children: typingsSlinky.webcola.powergraphMod.ModuleSet
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: typingsSlinky.webcola.powergraphMod.LinkSets,
+    incoming: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.webcola.powergraphMod.ModuleSet
   ) = this()
   def this(
     id: Double,
     outgoing: typingsSlinky.webcola.powergraphMod.LinkSets,
     incoming: typingsSlinky.webcola.powergraphMod.LinkSets,
     children: typingsSlinky.webcola.powergraphMod.ModuleSet
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: js.UndefOr[scala.Nothing],
+    children: js.UndefOr[scala.Nothing],
+    definition: js.Any
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.webcola.powergraphMod.ModuleSet,
+    definition: js.Any
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: typingsSlinky.webcola.powergraphMod.LinkSets,
+    children: js.UndefOr[scala.Nothing],
+    definition: js.Any
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: js.UndefOr[scala.Nothing],
+    incoming: typingsSlinky.webcola.powergraphMod.LinkSets,
+    children: typingsSlinky.webcola.powergraphMod.ModuleSet,
+    definition: js.Any
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: typingsSlinky.webcola.powergraphMod.LinkSets,
+    incoming: js.UndefOr[scala.Nothing],
+    children: js.UndefOr[scala.Nothing],
+    definition: js.Any
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: typingsSlinky.webcola.powergraphMod.LinkSets,
+    incoming: js.UndefOr[scala.Nothing],
+    children: typingsSlinky.webcola.powergraphMod.ModuleSet,
+    definition: js.Any
+  ) = this()
+  def this(
+    id: Double,
+    outgoing: typingsSlinky.webcola.powergraphMod.LinkSets,
+    incoming: typingsSlinky.webcola.powergraphMod.LinkSets,
+    children: js.UndefOr[scala.Nothing],
+    definition: js.Any
   ) = this()
   def this(
     id: Double,

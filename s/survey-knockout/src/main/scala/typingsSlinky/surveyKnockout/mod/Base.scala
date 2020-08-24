@@ -12,6 +12,7 @@ class Base () extends js.Object {
     */
   val isLoadingFromJson: Boolean = js.native
   var isLoadingFromJsonValue: Boolean = js.native
+  var loadingOwner: Base = js.native
   /**
     * Event that raised on changing property of the ItemValue object.
     * sender - the object that owns the property
@@ -40,6 +41,7 @@ class Base () extends js.Object {
   /* protected */ def createLocalizableString(name: String, owner: ILocalizableOwner): LocalizableString = js.native
   /* protected */ def createLocalizableString(name: String, owner: ILocalizableOwner, useMarkDown: Boolean): LocalizableString = js.native
   /* protected */ def createNewArray(name: String): js.Array[_] = js.native
+  /* protected */ def createNewArray(name: String, onPush: js.UndefOr[scala.Nothing], onRemove: js.Any): js.Array[_] = js.native
   /* protected */ def createNewArray(name: String, onPush: js.Any): js.Array[_] = js.native
   /* protected */ def createNewArray(name: String, onPush: js.Any, onRemove: js.Any): js.Array[_] = js.native
   /* protected */ def createNewArrayCore(name: String): js.Array[_] = js.native
@@ -51,6 +53,7 @@ class Base () extends js.Object {
     */
   def fromJSON(json: js.Any): Unit = js.native
   def geValueFromHash(): js.Any = js.native
+  /* protected */ def getIsLoadingFromJson(): Boolean = js.native
   /* protected */ def getItemValueType(): String = js.native
   def getLocalizableString(name: String): LocalizableString = js.native
   def getLocalizableStringText(name: String): String = js.native
@@ -86,13 +89,20 @@ class Base () extends js.Object {
   /* protected */ def onPropertyValueChanged(name: String, oldValue: js.Any, newValue: js.Any): Unit = js.native
   def onPropertyValueChangedCallback(name: String, oldValue: js.Any, newValue: js.Any, sender: Base, arrayChanges: ArrayChanges): Unit = js.native
   /* protected */ def propertyValueChanged(name: String, oldValue: js.Any, newValue: js.Any): Unit = js.native
+  /* protected */ def propertyValueChanged(
+    name: String,
+    oldValue: js.Any,
+    newValue: js.Any,
+    arrayChanges: js.UndefOr[scala.Nothing],
+    target: Base
+  ): Unit = js.native
   /* protected */ def propertyValueChanged(name: String, oldValue: js.Any, newValue: js.Any, arrayChanges: ArrayChanges): Unit = js.native
   /* protected */ def propertyValueChanged(name: String, oldValue: js.Any, newValue: js.Any, arrayChanges: ArrayChanges, target: Base): Unit = js.native
   /**
     * Register a function that will be called on a property value changed from the names list.
     * @param names the list of properties names
     * @param func the function with no parameters that will be called on property changed.
-    * @param key an optional parameter. If there is already a registered function for this property witht the same key, it will be overwritten.
+    * @param key an optional parameter. If there is already a registered function for this property with the same key, it will be overwritten.
     */
   def registerFunctionOnPropertiesValueChanged(names: js.Array[String], func: js.Any): Unit = js.native
   def registerFunctionOnPropertiesValueChanged(names: js.Array[String], func: js.Any, key: String): Unit = js.native
@@ -100,7 +110,7 @@ class Base () extends js.Object {
     * Register a function that will be called on a property value changed.
     * @param name the property name
     * @param func the function with no parameters that will be called on property changed.
-    * @param key an optional parameter. If there is already a registered function for this property witht the same key, it will be overwritten.
+    * @param key an optional parameter. If there is already a registered function for this property with the same key, it will be overwritten.
     */
   def registerFunctionOnPropertyValueChanged(name: String, func: js.Any): Unit = js.native
   def registerFunctionOnPropertyValueChanged(name: String, func: js.Any, key: String): Unit = js.native

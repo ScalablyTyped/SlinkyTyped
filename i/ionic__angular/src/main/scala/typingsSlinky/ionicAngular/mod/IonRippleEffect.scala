@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonRippleEffect")
 @js.native
 class IonRippleEffect protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonRippleEffect {
+  extends typingsSlinky.ionicAngular.proxiesMod.IonRippleEffect {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
 }
 

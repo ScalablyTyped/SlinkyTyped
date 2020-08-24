@@ -1,13 +1,11 @@
 package typingsSlinky.materialUiCore.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapGridLiActionIcon
 import typingsSlinky.materialUiCore.gridListTileBarGridListTileBarMod.GridListTileBarProps
-import typingsSlinky.materialUiCore.gridListTileBarMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.bottom
 import typingsSlinky.materialUiCore.materialUiCoreStrings.left
 import typingsSlinky.materialUiCore.materialUiCoreStrings.right
@@ -19,18 +17,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GridListTileBar {
-  @JSImport("@material-ui/core/GridListTileBar", JSImport.Default)
+  @JSImport("@material-ui/core", "GridListTileBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def actionIconReactElement(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def actionIcon(value: TagMod[Any]): this.type = set("actionIcon", value.asInstanceOf[js.Any])
+    def actionIcon(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def actionPosition(value: left | right): this.type = set("actionPosition", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,11 +48,11 @@ object GridListTileBar {
     @scala.inline
     def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titlePosition(value: top | bottom): this.type = set("titlePosition", value.asInstanceOf[js.Any])
   }

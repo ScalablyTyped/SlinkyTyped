@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 abstract class Reflection protected () extends js.Object {
   def this(name: String, kind: ReflectionKind) = this()
   def this(name: String, kind: ReflectionKind, parent: Reflection) = this()
-  var _alias: js.UndefOr[js.Any] = js.native
-  var _aliases: js.UndefOr[js.Any] = js.native
+  var _alias: js.Any = js.native
+  var _aliases: js.Any = js.native
   var anchor: js.UndefOr[String] = js.native
   var comment: js.UndefOr[Comment] = js.native
   var cssClasses: js.UndefOr[String] = js.native
@@ -38,12 +38,11 @@ abstract class Reflection protected () extends js.Object {
   def getFullName(separator: String): String = js.native
   def hasComment(): Boolean = js.native
   def hasGetterOrSetter(): Boolean = js.native
-  def isProject(): Boolean = js.native
+  def isProject(): /* is typedoc.typedoc/dist/lib/models/reflections/project.ProjectReflection */ Boolean = js.native
   def kindOf(kind: js.Array[ReflectionKind]): Boolean = js.native
   def kindOf(kind: ReflectionKind): Boolean = js.native
   def setFlag(flag: ReflectionFlag): Unit = js.native
   def setFlag(flag: ReflectionFlag, value: Boolean): Unit = js.native
-  def toObject(): js.Any = js.native
   def toStringHierarchy(): String = js.native
   def toStringHierarchy(indent: String): String = js.native
   def traverse(callback: TraverseCallback): Unit = js.native

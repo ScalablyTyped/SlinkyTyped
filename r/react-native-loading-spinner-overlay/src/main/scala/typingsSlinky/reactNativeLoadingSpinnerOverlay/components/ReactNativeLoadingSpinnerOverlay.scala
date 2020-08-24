@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeLoadingSpinnerOverlay.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
@@ -31,6 +32,8 @@ object ReactNativeLoadingSpinnerOverlay {
     def cancelable(value: Boolean): this.type = set("cancelable", value.asInstanceOf[js.Any])
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customIndicator(value: ReactElement): this.type = set("customIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def overlayColor(value: String): this.type = set("overlayColor", value.asInstanceOf[js.Any])
     @scala.inline

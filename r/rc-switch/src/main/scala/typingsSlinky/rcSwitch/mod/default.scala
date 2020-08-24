@@ -1,12 +1,14 @@
 package typingsSlinky.rcSwitch.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLButtonElement
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("rc-switch", JSImport.Default)
 @js.native
-class default ()
-  extends Component[Props, js.Object, js.Any]
+object default extends TopLevel[ForwardRefExoticComponent[SwitchProps with RefAttributes[HTMLButtonElement]]]
 

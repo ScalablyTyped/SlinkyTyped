@@ -32,6 +32,11 @@ trait LGTV extends EventEmitter {
   /* private */ def register(): Unit = js.native
   def request(uri: String): Unit = js.native
   def request(uri: String, callback: js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]): Unit = js.native
+  def request(
+    uri: String,
+    payload: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]
+  ): Unit = js.native
   def request(uri: String, payload: js.Any): Unit = js.native
   def request(
     uri: String,
@@ -44,6 +49,12 @@ trait LGTV extends EventEmitter {
     uri: String,
     callback: js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]
   ): Unit = js.native
+  /* private */ def send(
+    `type`: String,
+    uri: String,
+    payload: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]
+  ): Unit = js.native
   /* private */ def send(`type`: String, uri: String, payload: js.Any): Unit = js.native
   /* private */ def send(
     `type`: String,
@@ -53,6 +64,11 @@ trait LGTV extends EventEmitter {
   ): Unit = js.native
   def subscribe(uri: String): Unit = js.native
   def subscribe(uri: String, callback: js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]): Unit = js.native
+  def subscribe(
+    uri: String,
+    payload: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]
+  ): Unit = js.native
   def subscribe(uri: String, payload: js.Any): Unit = js.native
   def subscribe(
     uri: String,

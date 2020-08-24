@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "extsprintf"
-version := "1.4-dt-20190212Z-9cc354"
-scalaVersion := "2.13.2"
+version := "1.4-dt-20190212Z-b0dae2"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

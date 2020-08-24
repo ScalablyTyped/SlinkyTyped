@@ -60,13 +60,24 @@ object ClientCertificateRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCertificateAuthorities(value: js.Array[js.typedarray.ArrayBuffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorities")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCertificateTypes(
+    def setCertificateAuthoritiesVarargs(value: js.typedarray.ArrayBuffer*): Self = this.set("certificateAuthorities", js.Array(value :_*))
+    @scala.inline
+    def setCertificateAuthorities(value: js.Array[js.typedarray.ArrayBuffer]): Self = this.set("certificateAuthorities", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCertificateTypesVarargs(
+      value: (ToStringLiteral[
+          ECDSASIGN, 
+          /* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
+          Exclude[/* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
+        ])*
+    ): Self = this.set("certificateTypes", js.Array(value :_*))
+    @scala.inline
+    def setCertificateTypes(
       value: js.Array[
           ToStringLiteral[
             ECDSASIGN, 
@@ -74,11 +85,7 @@ object ClientCertificateRequest {
             Exclude[/* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("certificateTypes", value.asInstanceOf[js.Any])
   }
   
 }

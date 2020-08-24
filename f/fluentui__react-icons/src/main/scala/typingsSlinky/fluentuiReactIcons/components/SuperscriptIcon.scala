@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SuperscriptIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SuperscriptIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SuperscriptIcon")
   @js.native
   object component extends js.Object
   

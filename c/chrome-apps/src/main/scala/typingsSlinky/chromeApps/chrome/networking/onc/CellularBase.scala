@@ -32,65 +32,30 @@ object CellularBase {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActivationState(value: ActivationStateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationState")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutActivationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationState")(js.undefined)
-        ret
-    }
+    def setActivationState(value: ActivationStateType): Self = this.set("ActivationState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNetworkTechnology(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkTechnology")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteActivationState: Self = this.set("ActivationState", js.undefined)
     @scala.inline
-    def withoutNetworkTechnology: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkTechnology")(js.undefined)
-        ret
-    }
+    def setNetworkTechnology(value: String): Self = this.set("NetworkTechnology", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoamingState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoamingState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteNetworkTechnology: Self = this.set("NetworkTechnology", js.undefined)
     @scala.inline
-    def withoutRoamingState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoamingState")(js.undefined)
-        ret
-    }
+    def setRoamingState(value: String): Self = this.set("RoamingState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSIMPresent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMPresent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRoamingState: Self = this.set("RoamingState", js.undefined)
     @scala.inline
-    def withoutSIMPresent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMPresent")(js.undefined)
-        ret
-    }
+    def setSIMPresent(value: Boolean): Self = this.set("SIMPresent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSignalStrength(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalStrength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSIMPresent: Self = this.set("SIMPresent", js.undefined)
     @scala.inline
-    def withoutSignalStrength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalStrength")(js.undefined)
-        ret
-    }
+    def setSignalStrength(value: integer): Self = this.set("SignalStrength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSignalStrength: Self = this.set("SignalStrength", js.undefined)
   }
   
 }

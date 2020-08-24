@@ -1,5 +1,6 @@
 package typingsSlinky.reactToggled.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactToggled.mod.ReactToggledProps
@@ -27,6 +28,10 @@ object ReactToggled {
   }
   
   def withProps(p: ReactToggledProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ReactToggled.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: /* options */ TogglerStateAndHelpers => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactToggledProps]))
+  }
 }
 

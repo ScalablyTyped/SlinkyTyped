@@ -38,47 +38,24 @@ object ActivityLifecycleCallbacks {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnActivityCreated(value: (Activity, Bundle) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivityCreated")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnActivityDestroyed(value: Activity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivityDestroyed")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnActivityCreated(value: (Activity, Bundle) => Unit): Self = this.set("onActivityCreated", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnActivityPaused(value: Activity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivityPaused")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnActivityDestroyed(value: Activity => Unit): Self = this.set("onActivityDestroyed", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnActivityResumed(value: Activity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivityResumed")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnActivityPaused(value: Activity => Unit): Self = this.set("onActivityPaused", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnActivitySaveInstanceState(value: (Activity, Bundle) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivitySaveInstanceState")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnActivityResumed(value: Activity => Unit): Self = this.set("onActivityResumed", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnActivityStarted(value: Activity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivityStarted")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnActivitySaveInstanceState(value: (Activity, Bundle) => Unit): Self = this.set("onActivitySaveInstanceState", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnActivityStopped(value: Activity => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivityStopped")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnActivityStarted(value: Activity => Unit): Self = this.set("onActivityStarted", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnActivityStopped(value: Activity => Unit): Self = this.set("onActivityStopped", js.Any.fromFunction1(value))
   }
   
 }

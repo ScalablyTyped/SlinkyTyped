@@ -93,6 +93,8 @@ object Picker {
     @scala.inline
     def triggerType(value: String): this.type = set("triggerType", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: js.Array[String | Double]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])

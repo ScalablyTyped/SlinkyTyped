@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Core
 
-import typingsSlinky.winrtUwp.Windows.WinRTError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.MediaSourceError")
 @js.native
 abstract class MediaSourceError ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaSourceError {
-  /** Gets the extended error code for the MediaSourceError . */
-  /* CompleteClass */
-  override var extendedError: WinRTError = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaSourceError
 

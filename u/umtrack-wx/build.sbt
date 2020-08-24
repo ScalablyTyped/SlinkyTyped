@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "umtrack-wx"
-version := "2.3-dt-20200515Z-6c6903"
-scalaVersion := "2.13.2"
+version := "2.3-dt-20200515Z-ff35ed"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

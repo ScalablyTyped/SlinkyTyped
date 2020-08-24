@@ -74,6 +74,8 @@ object Legend {
     @scala.inline
     def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
     def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def layout(value: LegendLayoutType): this.type = set("layout", value.asInstanceOf[js.Any])

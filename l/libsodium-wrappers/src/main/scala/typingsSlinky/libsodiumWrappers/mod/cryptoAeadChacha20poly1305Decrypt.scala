@@ -12,15 +12,8 @@ object cryptoAeadChacha20poly1305Decrypt extends js.Object {
     ciphertext: String | js.typedarray.Uint8Array,
     additional_data: String | js.typedarray.Uint8Array | Null,
     public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String | js.typedarray.Uint8Array | Null,
-    ciphertext: String | js.typedarray.Uint8Array,
-    additional_data: String | js.typedarray.Uint8Array | Null,
-    public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
+    outputFormat: js.UndefOr[Uint8ArrayOutputFormat | Null]
   ): js.typedarray.Uint8Array = js.native
   def apply(
     secret_nonce: String,

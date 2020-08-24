@@ -24,17 +24,14 @@ object QuotaBytes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withQuotaBytes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytes")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withUsageBytes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usageBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setQuotaBytes(value: integer): Self = this.set("quotaBytes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUsageBytes(value: integer): Self = this.set("usageBytes", value.asInstanceOf[js.Any])
   }
   
 }

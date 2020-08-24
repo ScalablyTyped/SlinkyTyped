@@ -24,6 +24,7 @@ object Repository extends js.Object {
   def open(path: String): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native
   def openBare(barePath: String): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native
   def openExt(path: String): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native
+  def openExt(path: String, flags: js.UndefOr[scala.Nothing], ceilingDirs: String): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native
   def openExt(path: String, flags: Double): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native
   def openExt(path: String, flags: Double, ceilingDirs: String): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native
   def wrapOdb(odb: typingsSlinky.nodegit.odbMod.Odb): js.Promise[typingsSlinky.nodegit.repositoryMod.Repository] = js.native

@@ -11,5 +11,9 @@ package object mod {
     - typingsSlinky.reactColor.mod.RGBColor
   */
   type Color = typingsSlinky.reactColor.mod._Color | java.lang.String
-  type ColorChangeHandler = js.Function1[/* color */ typingsSlinky.reactColor.mod.ColorResult, scala.Unit]
+  type ColorChangeHandler = js.Function2[
+    /* color */ typingsSlinky.reactColor.mod.ColorResult, 
+    /* event */ typingsSlinky.react.mod.ChangeEvent[org.scalajs.dom.raw.HTMLInputElement], 
+    scala.Unit
+  ]
 }

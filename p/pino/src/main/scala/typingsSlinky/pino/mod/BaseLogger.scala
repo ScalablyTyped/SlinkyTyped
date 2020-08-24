@@ -83,6 +83,11 @@ trait BaseLogger extends EventEmitter {
     */
   val pino: String = js.native
   /**
+    * Noop function.
+    */
+  @JSName("silent")
+  var silent_Original: LogFn = js.native
+  /**
     * Log at `'trace'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
     *
@@ -100,6 +105,10 @@ trait BaseLogger extends EventEmitter {
     * Use only defined `customLevels` and omit Pino's levels.
     */
   var useOnlyCustomLevels: Boolean = js.native
+  /**
+    * Exposes the Pino package version. Also available on the exported pino function.
+    */
+  val version: String = js.native
   /**
     * Log at `'warn'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -135,6 +144,7 @@ trait BaseLogger extends EventEmitter {
     * @param ...args: format string values when `msg` is a format string
     */
   def debug(msg: String, args: js.Any*): Unit = js.native
+  def debug(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
   /**
     * Log at `'debug'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -143,7 +153,6 @@ trait BaseLogger extends EventEmitter {
     * @param msg: the log message to write
     * @param ...args: format string values when `msg` is a format string
     */
-  def debug(obj: js.Object): Unit = js.native
   def debug(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
   /**
     * Log at `'error'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
@@ -154,6 +163,7 @@ trait BaseLogger extends EventEmitter {
     * @param ...args: format string values when `msg` is a format string
     */
   def error(msg: String, args: js.Any*): Unit = js.native
+  def error(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
   /**
     * Log at `'error'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -162,7 +172,6 @@ trait BaseLogger extends EventEmitter {
     * @param msg: the log message to write
     * @param ...args: format string values when `msg` is a format string
     */
-  def error(obj: js.Object): Unit = js.native
   def error(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
   /**
     * Log at `'fatal'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
@@ -173,6 +182,7 @@ trait BaseLogger extends EventEmitter {
     * @param ...args: format string values when `msg` is a format string
     */
   def fatal(msg: String, args: js.Any*): Unit = js.native
+  def fatal(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
   /**
     * Log at `'fatal'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -181,7 +191,6 @@ trait BaseLogger extends EventEmitter {
     * @param msg: the log message to write
     * @param ...args: format string values when `msg` is a format string
     */
-  def fatal(obj: js.Object): Unit = js.native
   def fatal(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
   /**
     * Flushes the content of the buffer in extreme mode. It has no effect if extreme mode is not enabled.
@@ -196,6 +205,7 @@ trait BaseLogger extends EventEmitter {
     * @param ...args: format string values when `msg` is a format string
     */
   def info(msg: String, args: js.Any*): Unit = js.native
+  def info(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
   /**
     * Log at `'info'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -204,7 +214,6 @@ trait BaseLogger extends EventEmitter {
     * @param msg: the log message to write
     * @param ...args: format string values when `msg` is a format string
     */
-  def info(obj: js.Object): Unit = js.native
   def info(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
   def isLevelEnabled(level: String): Boolean = js.native
   /**
@@ -230,14 +239,14 @@ trait BaseLogger extends EventEmitter {
   @JSName("removeListener")
   def removeListener_levelchange(event: `level-change`, listener: LevelChangeEventListener): this.type = js.native
   /**
-    * Log at `'trace'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
-    * If more args follows `msg`, these will be used to format `msg` using `util.format`.
-    *
-    * @param obj: object to be serialized
-    * @param msg: the log message to write
-    * @param ...args: format string values when `msg` is a format string
+    * Noop function.
     */
-  def trace(msg: String, args: js.Any*): Unit = js.native
+  def silent(msg: String, args: js.Any*): Unit = js.native
+  def silent(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
+  /**
+    * Noop function.
+    */
+  def silent(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
   /**
     * Log at `'trace'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -246,7 +255,16 @@ trait BaseLogger extends EventEmitter {
     * @param msg: the log message to write
     * @param ...args: format string values when `msg` is a format string
     */
-  def trace(obj: js.Object): Unit = js.native
+  def trace(msg: String, args: js.Any*): Unit = js.native
+  def trace(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
+  /**
+    * Log at `'trace'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
+    * If more args follows `msg`, these will be used to format `msg` using `util.format`.
+    *
+    * @param obj: object to be serialized
+    * @param msg: the log message to write
+    * @param ...args: format string values when `msg` is a format string
+    */
   def trace(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
   /**
     * Log at `'warn'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
@@ -257,6 +275,7 @@ trait BaseLogger extends EventEmitter {
     * @param ...args: format string values when `msg` is a format string
     */
   def warn(msg: String, args: js.Any*): Unit = js.native
+  def warn(obj: js.Object, msg: js.UndefOr[scala.Nothing], args: js.Any*): Unit = js.native
   /**
     * Log at `'warn'` level the given msg. If the first argument is an object, all its properties will be included in the JSON line.
     * If more args follows `msg`, these will be used to format `msg` using `util.format`.
@@ -265,7 +284,6 @@ trait BaseLogger extends EventEmitter {
     * @param msg: the log message to write
     * @param ...args: format string values when `msg` is a format string
     */
-  def warn(obj: js.Object): Unit = js.native
   def warn(obj: js.Object, msg: String, args: js.Any*): Unit = js.native
 }
 

@@ -26,6 +26,7 @@ import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.mask
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.name
+import typingsSlinky.grommet.grommetStrings.onBlur
 import typingsSlinky.grommet.grommetStrings.plain
 import typingsSlinky.grommet.grommetStrings.reverse
 import typingsSlinky.grommet.grommetStrings.size
@@ -91,7 +92,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MaskedInput {
-  @JSImport("grommet", "MaskedInput")
+  @JSImport("grommet/es6", "MaskedInput")
   @js.native
   object component extends js.Object
   
@@ -234,6 +235,8 @@ object MaskedInput {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -281,6 +284,8 @@ object MaskedInput {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskVarargs(value: Fixed*): this.type = set("mask", js.Array(value :_*))
     @scala.inline
     def mask(value: js.Array[Fixed]): this.type = set("mask", value.asInstanceOf[js.Any])
     @scala.inline
@@ -518,7 +523,7 @@ object MaskedInput {
   def withProps(
     p: MaskedInputProps with (Omit[
       DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
-      icon | id | mask | name | plain | reverse | size | value
+      icon | id | mask | name | onBlur | plain | reverse | size | value
     ])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: MaskedInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()

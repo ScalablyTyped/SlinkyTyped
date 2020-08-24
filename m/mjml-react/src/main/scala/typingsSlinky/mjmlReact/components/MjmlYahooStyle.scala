@@ -11,6 +11,10 @@ object MjmlYahooStyle {
   object component extends js.Object
   
   def withProps(p: Children): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.extensionsMod.MjmlYahooStyle] = new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.extensionsMod.MjmlYahooStyle](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MjmlYahooStyle.type): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.extensionsMod.MjmlYahooStyle] = new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.extensionsMod.MjmlYahooStyle](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: String): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.extensionsMod.MjmlYahooStyle] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.extensionsMod.MjmlYahooStyle](js.Array(this.component, __props.asInstanceOf[Children]))
+  }
 }
 

@@ -94,215 +94,80 @@ object Drawables {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApplyErrorDrawableIfNeeded(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyErrorDrawableIfNeeded")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMCompoundRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCompoundRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setApplyErrorDrawableIfNeeded(value: js.Any => js.Any): Self = this.set("applyErrorDrawableIfNeeded", js.Any.fromFunction1(value))
     @scala.inline
-    def withMDrawableBottom(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCompoundRect(value: Rect): Self = this.set("mCompoundRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableEnd(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableBottom(value: Drawable): Self = this.set("mDrawableBottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableError(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableEnd(value: Drawable): Self = this.set("mDrawableEnd", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableHeightEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableHeightEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableError(value: Drawable): Self = this.set("mDrawableError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableHeightError(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableHeightError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableHeightEnd(value: Double): Self = this.set("mDrawableHeightEnd", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableHeightLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableHeightLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableHeightError(value: Double): Self = this.set("mDrawableHeightError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableHeightRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableHeightRight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableHeightLeft(value: Double): Self = this.set("mDrawableHeightLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableHeightStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableHeightStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableHeightRight(value: Double): Self = this.set("mDrawableHeightRight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableHeightTemp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableHeightTemp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableHeightStart(value: Double): Self = this.set("mDrawableHeightStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableLeft(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableHeightTemp(value: Double): Self = this.set("mDrawableHeightTemp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableLeftInitial(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableLeftInitial")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableLeft(value: Drawable): Self = this.set("mDrawableLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawablePadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawablePadding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableLeftInitial(value: Drawable): Self = this.set("mDrawableLeftInitial", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableRight(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableRight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawablePadding(value: Double): Self = this.set("mDrawablePadding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableRightInitial(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableRightInitial")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableRight(value: Drawable): Self = this.set("mDrawableRight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSaved(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSaved")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableRightInitial(value: Drawable): Self = this.set("mDrawableRightInitial", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSaved(value: Double): Self = this.set("mDrawableSaved", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeBottom(value: Double): Self = this.set("mDrawableSizeBottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeError(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeEnd(value: Double): Self = this.set("mDrawableSizeEnd", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeError(value: Double): Self = this.set("mDrawableSizeError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeRight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeLeft(value: Double): Self = this.set("mDrawableSizeLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeRight(value: Double): Self = this.set("mDrawableSizeRight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeTemp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeTemp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeStart(value: Double): Self = this.set("mDrawableSizeStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableSizeTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableSizeTop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeTemp(value: Double): Self = this.set("mDrawableSizeTemp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableStart(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableSizeTop(value: Double): Self = this.set("mDrawableSizeTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableTemp(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableTemp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableStart(value: Drawable): Self = this.set("mDrawableStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableTop(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableTop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableTemp(value: Drawable): Self = this.set("mDrawableTemp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableWidthBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableWidthBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableTop(value: Drawable): Self = this.set("mDrawableTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableWidthTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableWidthTop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableWidthBottom(value: Double): Self = this.set("mDrawableWidthBottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsRtlCompatibilityMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsRtlCompatibilityMode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableWidthTop(value: Double): Self = this.set("mDrawableWidthTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOverride(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsRtlCompatibilityMode(value: Boolean): Self = this.set("mIsRtlCompatibilityMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withResolveWithLayoutDirection(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveWithLayoutDirection")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMOverride(value: Boolean): Self = this.set("mOverride", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetErrorDrawable(value: (Drawable, typingsSlinky.androiduix.android.widget.TextView) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setErrorDrawable")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setResolveWithLayoutDirection(value: Double => Unit): Self = this.set("resolveWithLayoutDirection", js.Any.fromFunction1(value))
     @scala.inline
-    def withUpdateDrawablesLayoutDirection(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDrawablesLayoutDirection")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetErrorDrawable(value: (Drawable, typingsSlinky.androiduix.android.widget.TextView) => Unit): Self = this.set("setErrorDrawable", js.Any.fromFunction2(value))
+    @scala.inline
+    def setUpdateDrawablesLayoutDirection(value: js.Any => js.Any): Self = this.set("updateDrawablesLayoutDirection", js.Any.fromFunction1(value))
   }
   
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PrintfaxPrinterFileIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PrintfaxPrinterFileIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PrintfaxPrinterFileIcon")
   @js.native
   object component extends js.Object
   

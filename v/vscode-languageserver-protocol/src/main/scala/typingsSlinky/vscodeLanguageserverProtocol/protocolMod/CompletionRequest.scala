@@ -1,6 +1,8 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
-import typingsSlinky.vscodeJsonrpc.mod.RequestType
+import typingsSlinky.vscodeJsonrpc.mod.ProgressType
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
+import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashcompletion
 import typingsSlinky.vscodeLanguageserverTypes.mod.CompletionItem
 import typingsSlinky.vscodeLanguageserverTypes.mod.CompletionList
 import scala.scalajs.js
@@ -10,9 +12,13 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol/lib/protocol", "CompletionRequest")
 @js.native
 object CompletionRequest extends js.Object {
-  val `type`: RequestType[
+  val method: textDocumentSlashcompletion = js.native
+  /** @deprecated Use CompletionRequest.type */
+  val resultType: ProgressType[js.Array[CompletionItem]] = js.native
+  val `type`: ProtocolRequestType[
     CompletionParams, 
     CompletionList | js.Array[CompletionItem] | Null, 
+    js.Array[CompletionItem], 
     Unit, 
     CompletionRegistrationOptions
   ] = js.native

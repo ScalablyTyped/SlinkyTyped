@@ -11,26 +11,7 @@ import scala.scalajs.js.annotation._
 object htmlParser extends js.Object {
   @js.native
   class basicWriter ()
-    extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.basicWriter {
-    /* CompleteClass */
-    override def attribute(attName: String, attValue: String): Unit = js.native
-    /* CompleteClass */
-    override def closeTag(tagName: String): Unit = js.native
-    /* CompleteClass */
-    override def comment(comment: String): Unit = js.native
-    /* CompleteClass */
-    override def getHtml(reset: Boolean): String = js.native
-    /* CompleteClass */
-    override def openTag(tagName: String, attributes: StringDictionary[String]): Unit = js.native
-    /* CompleteClass */
-    override def openTagClose(tagName: String, isSelfClose: Boolean): Unit = js.native
-    /* CompleteClass */
-    override def reset(): Unit = js.native
-    /* CompleteClass */
-    override def text(text: String): Unit = js.native
-    /* CompleteClass */
-    override def write(data: String): Unit = js.native
-  }
+    extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.basicWriter
   
   @js.native
   class cdata protected ()
@@ -86,6 +67,8 @@ object htmlParser extends js.Object {
   object fragment extends js.Object {
     def fromBBCode(source: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment = js.native
     def fromHtml(fragmentHtml: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
+    def fromHtml(fragmentHtml: String, parent: js.UndefOr[scala.Nothing], fixingBlock: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
+    def fromHtml(fragmentHtml: String, parent: js.UndefOr[scala.Nothing], fixingBlock: Boolean): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
     def fromHtml(fragmentHtml: String, parent: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
     def fromHtml(fragmentHtml: String, parent: String, fixingBlock: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
     def fromHtml(fragmentHtml: String, parent: String, fixingBlock: Boolean): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native

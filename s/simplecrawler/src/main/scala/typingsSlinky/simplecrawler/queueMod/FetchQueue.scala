@@ -13,6 +13,11 @@ trait FetchQueue
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for T */ js.Any
     ] {
   def add(queueItem: QueueItem): Unit = js.native
+  def add(
+    queueItem: QueueItem,
+    force: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.UndefOr[js.Error], /* queueItem */ js.UndefOr[QueueItem], Unit]
+  ): Unit = js.native
   def add(queueItem: QueueItem, force: Boolean): Unit = js.native
   def add(
     queueItem: QueueItem,

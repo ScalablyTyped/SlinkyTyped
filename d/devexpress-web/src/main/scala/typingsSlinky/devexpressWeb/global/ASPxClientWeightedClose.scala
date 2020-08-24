@@ -10,21 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientWeightedClose")
 @js.native
 class ASPxClientWeightedClose ()
-  extends typingsSlinky.devexpressWeb.ASPxClientIndicator {
-  /**
-    * Gets the chart that owns the current chart element.
-    */
-  /* CompleteClass */
-  override var chart: typingsSlinky.devexpressWeb.ASPxClientWebChart = js.native
-  /**
-    * Gets the name of the chart element.
-    */
-  /* CompleteClass */
-  override var name: String = js.native
-  /**
-    * Gets the indicator's associated series.
-    */
-  /* CompleteClass */
-  override var series: typingsSlinky.devexpressWeb.ASPxClientSeries = js.native
-}
+  extends typingsSlinky.devexpressWeb.ASPxClientIndicator
 

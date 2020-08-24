@@ -21,11 +21,11 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.anon.Invalid
 import typingsSlinky.grommet.formMod.FormProps
 import typingsSlinky.grommet.grommetStrings.blur
+import typingsSlinky.grommet.grommetStrings.onChange
 import typingsSlinky.grommet.grommetStrings.submit
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.FormHTMLAttributes
@@ -74,12 +74,13 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Form {
-  @JSImport("grommet", "Form")
+  @JSImport("grommet/es6", "Form")
   @js.native
   object component extends js.Object
   
@@ -214,6 +215,8 @@ object Form {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -274,7 +277,7 @@ object Form {
     @scala.inline
     def onCanPlayThrough(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* event */ ChangeEvent[Element] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLFormElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -459,7 +462,9 @@ object Form {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormProps with (DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(
+    p: FormProps[js.Any] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange])
+  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

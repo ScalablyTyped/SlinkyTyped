@@ -4,9 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader
 import typingsSlinky.antDesignReactNative.accordionMod.AccordionNativeProps
-import typingsSlinky.antDesignReactNative.accordionMod.default
 import typingsSlinky.antDesignReactNative.anon.PartialAccordionStyle
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.center
@@ -19,14 +17,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Accordion {
-  @JSImport("@ant-design/react-native/lib/accordion", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Accordion")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: AccordionHeader] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Accordion[T]] {
+    @scala.inline
+    def activeSectionsVarargs(value: Double*): this.type = set("activeSections", js.Array(value :_*))
     @scala.inline
     def activeSections(value: js.Array[Double]): this.type = set("activeSections", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,6 +60,8 @@ object Accordion {
     @scala.inline
     def sectionContainerStyleNull: this.type = set("sectionContainerStyle", null)
     @scala.inline
+    def sectionsVarargs(value: T*): this.type = set("sections", js.Array(value :_*))
+    @scala.inline
     def sections(value: js.Array[T]): this.type = set("sections", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
@@ -75,12 +77,12 @@ object Accordion {
     def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: AccordionHeader](p: AccordionNativeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader */ T](p: AccordionNativeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: AccordionHeader](): Builder[T] = {
+  def apply[/* <: typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader */ T](): Builder[T] = {
     val __props = js.Dynamic.literal()
     new Builder[T](js.Array(this.component, __props.asInstanceOf[AccordionNativeProps[T]]))
   }
-  implicit def make[T <: AccordionHeader](companion: Accordion.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader */ T](companion: Accordion.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

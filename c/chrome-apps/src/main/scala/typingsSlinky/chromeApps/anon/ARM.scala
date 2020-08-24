@@ -31,35 +31,20 @@ object ARM {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withARM(value: arm_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARM")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMIPS(value: mips_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MIPS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setARM(value: arm_): Self = this.set("ARM", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIPS64(value: mips64_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MIPS64")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIPS(value: mips_): Self = this.set("MIPS", value.asInstanceOf[js.Any])
     @scala.inline
-    def withX86_32(value: `x86-32`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("X86_32")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIPS64(value: mips64_): Self = this.set("MIPS64", value.asInstanceOf[js.Any])
     @scala.inline
-    def withX86_64(value: `x86-64`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("X86_64")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setX86_32(value: `x86-32`): Self = this.set("X86_32", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setX86_64(value: `x86-64`): Self = this.set("X86_64", value.asInstanceOf[js.Any])
   }
   
 }

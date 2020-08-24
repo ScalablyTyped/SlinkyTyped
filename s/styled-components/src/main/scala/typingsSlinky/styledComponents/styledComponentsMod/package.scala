@@ -23,7 +23,7 @@ package object styledComponentsMod {
   ]
   type CSSKeyframes = js.Object with org.scalablytyped.runtime.StringDictionary[typingsSlinky.styledComponents.styledComponentsMod.CSSObject]
   type CSSProp[T] = java.lang.String | typingsSlinky.styledComponents.styledComponentsMod.CSSObject | typingsSlinky.styledComponents.styledComponentsMod.FlattenInterpolation[typingsSlinky.styledComponents.styledComponentsMod.ThemeProps[T]]
-  type CSSProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double]
+  type CSSProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double, java.lang.String with js.Object]
   // Any prop that has a default prop becomes optional, but its type is unchanged
   // Undeclared default props are augmented into the resulting allowable attributes
   // If declared props have indexed properties, ignore default props entirely as keyof gets widened
@@ -99,14 +99,16 @@ package object styledComponentsMod {
     P, 
     typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme]
   ]
-  type StylisPlugin = js.Function7[
+  type StylisPlugin = js.Function9[
     /* context */ scala.Double, 
+    /* content */ java.lang.String, 
     /* selector */ js.Array[java.lang.String], 
     /* parent */ js.Array[java.lang.String], 
-    /* content */ java.lang.String, 
     /* line */ scala.Double, 
     /* column */ scala.Double, 
     /* length */ scala.Double, 
+    /* at */ scala.Double, 
+    /* depth */ scala.Double, 
     java.lang.String | scala.Unit
   ]
   type ThemeProviderComponent[T /* <: js.Object */, U /* <: js.Object */] = slinky.core.ReactComponentClass[
@@ -124,6 +126,6 @@ package object styledComponentsMod {
   // See https://github.com/DefinitelyTyped/DefinitelyTyped/pull/31945
   // and https://github.com/DefinitelyTyped/DefinitelyTyped/pull/32843
   type WithChildrenIfReactComponentClass[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = js.Object | typingsSlinky.styledComponents.anon.Children
-  type WithOptionalTheme[P /* <: typingsSlinky.styledComponents.anon.ThemeT[T] */, T] = P with typingsSlinky.styledComponents.anon.ThemeT[T]
+  type WithOptionalTheme[P /* <: typingsSlinky.styledComponents.anon.`0`[T] */, T] = P with typingsSlinky.styledComponents.anon.`0`[T]
   type WithThemeFnInterface[T /* <: js.Object */] = typingsSlinky.styledComponents.styledComponentsMod.BaseWithThemeFnInterface[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[T]]
 }

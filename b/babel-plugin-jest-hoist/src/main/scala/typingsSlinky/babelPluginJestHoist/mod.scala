@@ -1,6 +1,7 @@
 package typingsSlinky.babelPluginJestHoist
 
-import typingsSlinky.babelPluginJestHoist.anon.Visitor
+import typingsSlinky.babelCore.mod.PluginObj
+import typingsSlinky.babelPluginJestHoist.anon.DeclareJestObjGetterIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("babel-plugin-jest-hoist", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  def apply(): Visitor = js.native
+  def default(): PluginObj[DeclareJestObjGetterIdentifier] = js.native
 }
 

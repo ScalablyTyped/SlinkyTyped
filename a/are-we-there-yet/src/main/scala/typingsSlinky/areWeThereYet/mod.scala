@@ -24,6 +24,7 @@ object mod extends js.Object {
     extends TrackerBase
        with TrackerObject {
     def this(name: String) = this()
+    def this(name: js.UndefOr[scala.Nothing], todo: Double) = this()
     def this(name: String, todo: Double) = this()
     def addWork(work: Double): Unit = js.native
     def completeWork(completed: Double): Unit = js.native
@@ -59,14 +60,23 @@ object mod extends js.Object {
     def debug(): String = js.native
     def finish(): Unit = js.native
     def newGroup(): TrackerGroup = js.native
+    def newGroup(name: js.UndefOr[scala.Nothing], weight: Double): TrackerGroup = js.native
     def newGroup(name: String): TrackerGroup = js.native
     def newGroup(name: String, weight: Double): TrackerGroup = js.native
     def newItem(): Tracker = js.native
+    def newItem(name: js.UndefOr[scala.Nothing], todo: js.UndefOr[scala.Nothing], weight: Double): Tracker = js.native
+    def newItem(name: js.UndefOr[scala.Nothing], todo: Double): Tracker = js.native
+    def newItem(name: js.UndefOr[scala.Nothing], todo: Double, weight: Double): Tracker = js.native
     def newItem(name: String): Tracker = js.native
+    def newItem(name: String, todo: js.UndefOr[scala.Nothing], weight: Double): Tracker = js.native
     def newItem(name: String, todo: Double): Tracker = js.native
     def newItem(name: String, todo: Double, weight: Double): Tracker = js.native
     def newStream(): TrackerStream = js.native
+    def newStream(name: js.UndefOr[scala.Nothing], todo: js.UndefOr[scala.Nothing], weight: Double): TrackerStream = js.native
+    def newStream(name: js.UndefOr[scala.Nothing], todo: Double): TrackerStream = js.native
+    def newStream(name: js.UndefOr[scala.Nothing], todo: Double, weight: Double): TrackerStream = js.native
     def newStream(name: String): TrackerStream = js.native
+    def newStream(name: String, todo: js.UndefOr[scala.Nothing], weight: Double): TrackerStream = js.native
     def newStream(name: String, todo: Double): TrackerStream = js.native
     def newStream(name: String, todo: Double, weight: Double): TrackerStream = js.native
   }
@@ -83,7 +93,11 @@ object mod extends js.Object {
     extends Transform
        with TrackerObject {
     def this(name: String) = this()
+    def this(name: js.UndefOr[scala.Nothing], size: Double) = this()
     def this(name: String, size: Double) = this()
+    def this(name: js.UndefOr[scala.Nothing], size: js.UndefOr[scala.Nothing], options: TransformOptions) = this()
+    def this(name: js.UndefOr[scala.Nothing], size: Double, options: TransformOptions) = this()
+    def this(name: String, size: js.UndefOr[scala.Nothing], options: TransformOptions) = this()
     def this(name: String, size: Double, options: TransformOptions) = this()
     @JSName("addListener")
     def addListener_change(event: change, listener: TrackerEventListener): this.type = js.native

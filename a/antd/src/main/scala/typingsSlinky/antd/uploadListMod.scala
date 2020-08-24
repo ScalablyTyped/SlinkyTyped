@@ -3,7 +3,6 @@ package typingsSlinky.antd
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.IsImageUrl
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
@@ -22,8 +21,8 @@ object uploadListMod extends js.Object {
     extends Component[UploadListProps[js.Any], js.Any, js.Any] {
     @JSName("componentDidUpdate")
     def componentDidUpdate_MUploadList(): Unit = js.native
-    def handleActionIconRender(customIcon: TagMod[Any], callback: js.Function0[Unit]): ReactElement = js.native
-    def handleActionIconRender(customIcon: TagMod[Any], callback: js.Function0[Unit], title: String): ReactElement = js.native
+    def handleActionIconRender(customIcon: ReactElement, callback: js.Function0[Unit], prefixCls: String): ReactElement = js.native
+    def handleActionIconRender(customIcon: ReactElement, callback: js.Function0[Unit], prefixCls: String, title: String): ReactElement = js.native
     def handleClose(file: UploadFile[_]): Unit = js.native
     def handleDownload(file: UploadFile[_]): Unit = js.native
     def handleIconRender(file: UploadFile[_]): js.UndefOr[js.Object | Null] = js.native

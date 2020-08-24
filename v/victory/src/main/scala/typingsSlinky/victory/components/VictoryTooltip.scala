@@ -36,6 +36,8 @@ object VictoryTooltip {
     @scala.inline
     def cornerRadius(value: NumberOrCallback): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def datum(value: js.Object): this.type = set("datum", value.asInstanceOf[js.Any])
@@ -87,6 +89,8 @@ object VictoryTooltip {
     def renderInPortal(value: Boolean): this.type = set("renderInPortal", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textVarargs(value: (Double | String)*): this.type = set("text", js.Array(value :_*))
     @scala.inline
     def textFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("text", js.Any.fromFunction1(value))
     @scala.inline

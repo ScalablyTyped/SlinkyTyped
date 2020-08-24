@@ -6,21 +6,20 @@ import typingsSlinky.antdMobile.antdMobileStrings.lg
 import typingsSlinky.antdMobile.antdMobileStrings.md
 import typingsSlinky.antdMobile.antdMobileStrings.sm
 import typingsSlinky.antdMobile.wingBlankMod.WingBlankProps
-import typingsSlinky.antdMobile.wingBlankMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WingBlank {
-  @JSImport("antd-mobile/lib/wing-blank", JSImport.Default)
+  @JSImport("antd-mobile", "WingBlank")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.WingBlank] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

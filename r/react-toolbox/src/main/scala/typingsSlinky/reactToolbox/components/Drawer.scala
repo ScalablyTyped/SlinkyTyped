@@ -3,9 +3,9 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libDrawerDrawerMod.DrawerProps
-import typingsSlinky.reactToolbox.libDrawerDrawerMod.DrawerTheme
-import typingsSlinky.reactToolbox.libDrawerMod.default
+import typingsSlinky.reactToolbox.drawerDrawerMod.DrawerProps
+import typingsSlinky.reactToolbox.drawerDrawerMod.DrawerTheme
+import typingsSlinky.reactToolbox.drawerMod.default
 import typingsSlinky.reactToolbox.reactToolboxStrings.left
 import typingsSlinky.reactToolbox.reactToolboxStrings.right
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Drawer {
-  @JSImport("react-toolbox/lib/drawer", JSImport.Default)
+  @JSImport("react-toolbox/components/drawer", JSImport.Default)
   @js.native
   object component extends js.Object
   

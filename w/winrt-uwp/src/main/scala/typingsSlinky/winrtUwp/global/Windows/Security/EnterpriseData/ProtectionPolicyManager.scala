@@ -16,11 +16,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.EnterpriseData.ProtectionPolicyManager")
 @js.native
 abstract class ProtectionPolicyManager ()
-  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectionPolicyManager {
-  /** Gets or sets the enterprise identity. */
-  /* CompleteClass */
-  override var identity: String = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectionPolicyManager
 
 /* static members */
 @JSGlobal("Windows.Security.EnterpriseData.ProtectionPolicyManager")

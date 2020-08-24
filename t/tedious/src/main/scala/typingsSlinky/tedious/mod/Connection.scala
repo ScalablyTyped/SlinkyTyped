@@ -26,6 +26,11 @@ class Connection protected () extends EventEmitter {
     * @param isolationLevel The isolation level that the transaction is to be run with.
     */
   def beginTransaction(callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def beginTransaction(
+    callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit],
+    name: js.UndefOr[scala.Nothing],
+    isolationLevel: ISOLATION_LEVEL
+  ): Unit = js.native
   def beginTransaction(callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit], name: String): Unit = js.native
   def beginTransaction(
     callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit],
@@ -168,6 +173,20 @@ class Connection protected () extends EventEmitter {
       ], 
       Unit
     ]
+  ): Unit = js.native
+  def transaction(
+    callback: js.Function2[
+      /* error */ js.Error, 
+      /* done */ js.Function3[
+        /* error */ js.UndefOr[js.Error], 
+        /* doneCallback */ js.UndefOr[js.Function2[/* error */ js.UndefOr[js.Error], /* repeated */ js.Any, Unit]], 
+        /* repeated */ js.Any, 
+        Unit
+      ], 
+      Unit
+    ],
+    name: js.UndefOr[scala.Nothing],
+    isolationLevel: ISOLATION_LEVEL
   ): Unit = js.native
   def transaction(
     callback: js.Function2[

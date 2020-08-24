@@ -2,10 +2,7 @@ package typingsSlinky.winrt.global.Windows.Storage
 
 import typingsSlinky.winrt.Windows.Storage.IStorageFile
 import typingsSlinky.winrt.Windows.Storage.Provider.CachedFileOptions
-import typingsSlinky.winrt.Windows.Storage.Provider.CachedFileTarget
-import typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateStatus
 import typingsSlinky.winrt.Windows.Storage.Provider.ReadActivationMode
-import typingsSlinky.winrt.Windows.Storage.Provider.UIStatus
 import typingsSlinky.winrt.Windows.Storage.Provider.WriteActivationMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,47 +17,19 @@ object Provider extends js.Object {
   
   @js.native
   class CachedFileUpdaterUI ()
-    extends typingsSlinky.winrt.Windows.Storage.Provider.CachedFileUpdaterUI {
-    /* CompleteClass */
-    override var onfileupdaterequested: js.Any = js.native
-    /* CompleteClass */
-    override var onuirequested: js.Any = js.native
-    /* CompleteClass */
-    override var title: String = js.native
-    /* CompleteClass */
-    override var uIStatus: UIStatus = js.native
-    /* CompleteClass */
-    override var updateTarget: CachedFileTarget = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Storage.Provider.CachedFileUpdaterUI
   
   @js.native
   class FileUpdateRequest ()
-    extends typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequest {
-    /* CompleteClass */
-    override var contentId: String = js.native
-    /* CompleteClass */
-    override var file: typingsSlinky.winrt.Windows.Storage.StorageFile = js.native
-    /* CompleteClass */
-    override var status: FileUpdateStatus = js.native
-    /* CompleteClass */
-    override def getDeferral(): typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequestDeferral = js.native
-    /* CompleteClass */
-    override def updateLocalFile(value: IStorageFile): Unit = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequest
   
   @js.native
   class FileUpdateRequestDeferral ()
-    extends typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequestDeferral {
-    /* CompleteClass */
-    override def complete(): Unit = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequestDeferral
   
   @js.native
   class FileUpdateRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequestedEventArgs {
-    /* CompleteClass */
-    override var request: typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequest = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Storage.Provider.FileUpdateRequestedEventArgs
   
   @js.native
   object CachedFileOptions extends js.Object {

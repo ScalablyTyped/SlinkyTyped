@@ -24,6 +24,8 @@ object TabBarItemDotnative {
     @scala.inline
     def badge(value: String | Double): this.type = set("badge", value.asInstanceOf[js.Any])
     @scala.inline
+    def iconVarargs(value: ImageURISource*): this.type = set("icon", js.Array(value :_*))
+    @scala.inline
     def icon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconStyle(value: StyleProp[ImageStyle]): this.type = set("iconStyle", value.asInstanceOf[js.Any])
@@ -35,6 +37,8 @@ object TabBarItemDotnative {
     def renderAsOriginal(value: Boolean): this.type = set("renderAsOriginal", value.asInstanceOf[js.Any])
     @scala.inline
     def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIconVarargs(value: ImageURISource*): this.type = set("selectedIcon", js.Array(value :_*))
     @scala.inline
     def selectedIcon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
     @scala.inline

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WavingHandIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WavingHandIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WavingHandIcon")
   @js.native
   object component extends js.Object
   

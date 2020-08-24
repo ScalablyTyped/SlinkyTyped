@@ -3,7 +3,6 @@ package typingsSlinky.antd.components
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -54,6 +53,7 @@ import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcPicker.timePanelMod.SharedTimeProps
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MutableRefObject
 import scala.scalajs.js
@@ -173,9 +173,9 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+  def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def dateRender(value: (Moment, Moment) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+  def dateRender(value: (Moment, Moment) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
   @scala.inline
   def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
   @scala.inline
@@ -191,11 +191,11 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def disabledTime(value: /* date */ Moment | Null => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction1(value))
   @scala.inline
-  def dropdownAlign(
-    value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+  def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
   @scala.inline
   def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
+  @scala.inline
+  def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
   @scala.inline
   def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
   @scala.inline
@@ -209,7 +209,7 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline
-  def monthCellRender(value: (Moment, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+  def monthCellRender(value: (Moment, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
   @scala.inline
   def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   @scala.inline
@@ -241,6 +241,8 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
   @scala.inline
+  def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
+  @scala.inline
   def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
   @scala.inline
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -249,9 +251,11 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   @scala.inline
-  def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+  def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
   @scala.inline
   def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+  @scala.inline
+  def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
   @scala.inline
   def showTime(value: Boolean | SharedTimeProps[Moment]): this.type = set("showTime", value.asInstanceOf[js.Any])
   @scala.inline
@@ -263,12 +267,14 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+  def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   @scala.inline
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   @scala.inline
   def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueNull: this.type = set("value", null)
 }
 

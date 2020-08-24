@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type AlgorithmName = typingsSlinky.typeFest.mod.LiteralUnion[
+  type AlgorithmName = typingsSlinky.typeFest.literalUnionMod.LiteralUnion[
     typingsSlinky.hasha.hashaStrings.md5 | typingsSlinky.hasha.hashaStrings.sha1 | typingsSlinky.hasha.hashaStrings.sha256 | typingsSlinky.hasha.hashaStrings.sha512, 
     java.lang.String
   ]

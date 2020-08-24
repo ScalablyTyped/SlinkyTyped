@@ -3,9 +3,8 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
-import typingsSlinky.ionicCore.radioGroupInterfaceMod.RadioChangeEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,25 +29,15 @@ object radioMod extends js.Object {
       */
     var disabled: Boolean = js.native
     var el: HTMLElement = js.native
-    var emitStyle: js.Any = js.native
     var inputId: js.Any = js.native
     /**
       * Emitted when the radio button loses focus.
       */
     var ionBlur: EventEmitter[Unit] = js.native
     /**
-      * Emitted when checked radio button is selected.
-      * @internal
-      */
-    var ionDeselect: EventEmitter[RadioChangeEventDetail] = js.native
-    /**
       * Emitted when the radio button has focus.
       */
     var ionFocus: EventEmitter[Unit] = js.native
-    /**
-      * Emitted when the radio button is selected.
-      */
-    var ionSelect: EventEmitter[RadioChangeEventDetail] = js.native
     /**
       * Emitted when the styles change.
       * @internal
@@ -59,17 +48,20 @@ object radioMod extends js.Object {
       */
     var name: String = js.native
     var onBlur: js.Any = js.native
-    var onClick: js.Any = js.native
     var onFocus: js.Any = js.native
+    var radioGroup: js.Any = js.native
+    var updateState: js.Any = js.native
     /**
       * the value of the radio.
       */
     var value: js.UndefOr[js.Any | Null] = js.native
-    def checkedChanged(isChecked: Boolean): Unit = js.native
-    def colorChanged(): Unit = js.native
     @JSName("componentWillLoad")
     def componentWillLoad_MRadio(): Unit = js.native
-    def disabledChanged(): Unit = js.native
+    @JSName("connectedCallback")
+    def connectedCallback_MRadio(): Unit = js.native
+    @JSName("disconnectedCallback")
+    def disconnectedCallback_MRadio(): Unit = js.native
+    def emitStyle(): Unit = js.native
     @JSName("render")
     def render_MRadio(): js.Any = js.native
   }

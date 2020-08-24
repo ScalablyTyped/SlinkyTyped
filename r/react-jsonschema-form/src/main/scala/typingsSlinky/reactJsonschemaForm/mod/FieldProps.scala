@@ -2,7 +2,7 @@ package typingsSlinky.reactJsonschemaForm.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.jsonSchema.mod.JSONSchema6
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
@@ -129,7 +129,7 @@ trait FieldProps[T]
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
   var autofocus: Boolean = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var color: js.UndefOr[String] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native

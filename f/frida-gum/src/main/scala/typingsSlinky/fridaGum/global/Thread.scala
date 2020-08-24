@@ -24,6 +24,7 @@ object Thread extends js.Object {
     *                   where the latter is the default if not specified.
     */
   def backtrace(): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
+  def backtrace(context: js.UndefOr[scala.Nothing], backtracer: typingsSlinky.fridaGum.Backtracer): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
   def backtrace(context: CpuContext): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
   def backtrace(context: CpuContext, backtracer: typingsSlinky.fridaGum.Backtracer): js.Array[typingsSlinky.fridaGum.NativePointer] = js.native
   /**

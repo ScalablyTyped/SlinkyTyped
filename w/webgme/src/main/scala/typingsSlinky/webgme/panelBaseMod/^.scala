@@ -1,7 +1,5 @@
 package typingsSlinky.webgme.panelBaseMod
 
-import typingsSlinky.webgme.Global_.GmeLogger
-import typingsSlinky.webgme.GmePanel.Layout
 import typingsSlinky.webgme.GmePanel.Options
 import typingsSlinky.webgme.GmePanel.PanelBase
 import scala.scalajs.js
@@ -12,29 +10,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends PanelBase {
   def this(options: Options) = this()
-  /* CompleteClass */
-  override var OPTIONS: Options = js.native
-  /* CompleteClass */
-  override var control: js.Any = js.native
-  /* CompleteClass */
-  override var logger: GmeLogger = js.native
-  /* CompleteClass */
-  override def afterAppend(): Unit = js.native
-  /* CompleteClass */
-  override def clear(): Unit = js.native
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /* CompleteClass */
-  override def isReadOnly(): Boolean = js.native
-  /* CompleteClass */
-  override def onReadOnlyChanged(isReadOnly: Boolean): Unit = js.native
-  /* CompleteClass */
-  override def onResize(width: Double, height: Double): Unit = js.native
-  /* CompleteClass */
-  override def setContainerUpdateFn(currentLayout: Layout, sizeUpdateFn: js.Function1[/* layout */ Layout, Double]): Unit = js.native
-  /* CompleteClass */
-  override def setReadOnly(isReadOnly: Boolean): Unit = js.native
-  /* CompleteClass */
-  override def setSize(width: Double, height: Double): Unit = js.native
 }
 

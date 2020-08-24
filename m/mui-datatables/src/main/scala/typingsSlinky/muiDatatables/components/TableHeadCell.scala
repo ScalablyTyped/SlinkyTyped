@@ -3,7 +3,7 @@ package typingsSlinky.muiDatatables.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableHeadCell
-import typingsSlinky.muiDatatables.mod.SortDirection
+import typingsSlinky.muiDatatables.mod.MUISortOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,11 @@ object TableHeadCell {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def sortDirection(value: SortDirection): this.type = set("sortDirection", value.asInstanceOf[js.Any])
+    def sortOrder(value: MUISortOptions): this.type = set("sortOrder", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MUIDataTableHeadCell): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

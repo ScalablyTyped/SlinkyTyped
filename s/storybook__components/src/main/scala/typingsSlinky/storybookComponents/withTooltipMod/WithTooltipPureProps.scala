@@ -1,6 +1,6 @@
 package typingsSlinky.storybookComponents.withTooltipMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.popperJs.mod.Placement
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`right-click`
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait WithTooltipPureProps extends js.Object {
-  var children: TagMod[Any] = js.native
+  var children: ReactElement = js.native
   var closeOnClick: js.UndefOr[Boolean] = js.native
   var hasChrome: js.UndefOr[Boolean] = js.native
   var modifiers: js.UndefOr[Modifiers] = js.native
@@ -21,39 +21,77 @@ trait WithTooltipPureProps extends js.Object {
   var onVisibilityChange: js.UndefOr[js.Function1[/* visibility */ Boolean, Unit]] = js.native
   var placement: js.UndefOr[Placement] = js.native
   var svg: js.UndefOr[Boolean] = js.native
-  var tooltip: TagMod[Any] | (js.Function1[/* p */ WithHideFn, TagMod[Any]]) = js.native
+  var tooltip: ReactElement | (js.Function1[/* p */ WithHideFn, ReactElement]) = js.native
   var tooltipShown: js.UndefOr[Boolean] = js.native
   var trigger: js.UndefOr[none | hover | click | `right-click`] = js.native
 }
 
 object WithTooltipPureProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    closeOnClick: js.UndefOr[Boolean] = js.undefined,
-    hasChrome: js.UndefOr[Boolean] = js.undefined,
-    modifiers: Modifiers = null,
-    onDoubleClick: () => Unit = null,
-    onVisibilityChange: /* visibility */ Boolean => Unit = null,
-    placement: Placement = null,
-    svg: js.UndefOr[Boolean] = js.undefined,
-    tooltip: TagMod[Any] | (js.Function1[/* p */ WithHideFn, TagMod[Any]]) = null,
-    tooltipShown: js.UndefOr[Boolean] = js.undefined,
-    trigger: none | hover | click | `right-click` = null
-  ): WithTooltipPureProps = {
+  def apply(): WithTooltipPureProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasChrome)) __obj.updateDynamic("hasChrome")(hasChrome.get.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction0(onDoubleClick))
-    if (onVisibilityChange != null) __obj.updateDynamic("onVisibilityChange")(js.Any.fromFunction1(onVisibilityChange))
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (!js.isUndefined(svg)) __obj.updateDynamic("svg")(svg.get.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (!js.isUndefined(tooltipShown)) __obj.updateDynamic("tooltipShown")(tooltipShown.get.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[WithTooltipPureProps]
   }
+  @scala.inline
+  implicit class WithTooltipPurePropsOps[Self <: WithTooltipPureProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setCloseOnClick(value: Boolean): Self = this.set("closeOnClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseOnClick: Self = this.set("closeOnClick", js.undefined)
+    @scala.inline
+    def setHasChrome(value: Boolean): Self = this.set("hasChrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasChrome: Self = this.set("hasChrome", js.undefined)
+    @scala.inline
+    def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteModifiers: Self = this.set("modifiers", js.undefined)
+    @scala.inline
+    def setOnDoubleClick(value: () => Unit): Self = this.set("onDoubleClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnDoubleClick: Self = this.set("onDoubleClick", js.undefined)
+    @scala.inline
+    def setOnVisibilityChange(value: /* visibility */ Boolean => Unit): Self = this.set("onVisibilityChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnVisibilityChange: Self = this.set("onVisibilityChange", js.undefined)
+    @scala.inline
+    def setPlacement(value: Placement): Self = this.set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlacement: Self = this.set("placement", js.undefined)
+    @scala.inline
+    def setSvg(value: Boolean): Self = this.set("svg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSvg: Self = this.set("svg", js.undefined)
+    @scala.inline
+    def setTooltipReactElement(value: ReactElement): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTooltipFunction1(value: /* p */ WithHideFn => ReactElement): Self = this.set("tooltip", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTooltip(value: ReactElement | (js.Function1[/* p */ WithHideFn, ReactElement])): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltip: Self = this.set("tooltip", js.undefined)
+    @scala.inline
+    def setTooltipShown(value: Boolean): Self = this.set("tooltipShown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipShown: Self = this.set("tooltipShown", js.undefined)
+    @scala.inline
+    def setTrigger(value: none | hover | click | `right-click`): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrigger: Self = this.set("trigger", js.undefined)
+  }
+  
 }
 

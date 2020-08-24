@@ -1,6 +1,5 @@
 package typingsSlinky.wordpressBlockEditor.components
 
-import typingsSlinky.wordpressBlockEditor.mod.URLInput.^
 import typingsSlinky.wordpressBlockEditor.urlInputMod.URLInput.PostType
 import typingsSlinky.wordpressBlockEditor.urlInputMod.URLInput.Props
 import scala.scalajs.js
@@ -12,11 +11,11 @@ object URLInput {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props2040850355[^] = new SharedBuilder_Props2040850355[^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): SharedBuilder_Props2085463973 = new SharedBuilder_Props2085463973(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: (String, js.UndefOr[PostType]) => Unit, value: String): SharedBuilder_Props2040850355[^] = {
+  def apply(onChange: (String, js.UndefOr[PostType]) => Unit, value: String): SharedBuilder_Props2085463973 = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange), value = value.asInstanceOf[js.Any])
-    new SharedBuilder_Props2040850355[^](js.Array(this.component, __props.asInstanceOf[Props]))
+    new SharedBuilder_Props2085463973(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
 
@@ -25,11 +24,11 @@ object UrlInput {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props2040850355[typingsSlinky.wordpressBlockEditor.urlInputMod.default.^] = new SharedBuilder_Props2040850355[typingsSlinky.wordpressBlockEditor.urlInputMod.default.^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): SharedBuilder_Props2085463973 = new SharedBuilder_Props2085463973(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: (String, js.UndefOr[PostType]) => Unit, value: String): SharedBuilder_Props2040850355[typingsSlinky.wordpressBlockEditor.urlInputMod.default.^] = {
+  def apply(onChange: (String, js.UndefOr[PostType]) => Unit, value: String): SharedBuilder_Props2085463973 = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange), value = value.asInstanceOf[js.Any])
-    new SharedBuilder_Props2040850355[typingsSlinky.wordpressBlockEditor.urlInputMod.default.^](js.Array(this.component, __props.asInstanceOf[Props]))
+    new SharedBuilder_Props2085463973(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
 

@@ -43,19 +43,16 @@ object AuthenticationInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
+    def setData(value: String): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMethod(
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setMethod(
       value: ToStringLiteral[
           PBC, 
           /* keyof chrome-apps.anon.PBC */ typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN, 
@@ -64,17 +61,9 @@ object AuthenticationInfo {
             typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("method", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
+    def deleteMethod: Self = this.set("method", js.undefined)
   }
   
 }

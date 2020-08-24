@@ -10,7 +10,6 @@ import typingsSlinky.reactNative.mod.ModalProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeModalFilterPicker.mod.ModalFilterPickerOption
 import typingsSlinky.reactNativeModalFilterPicker.mod.ModalFilterPickerProps
 import typingsSlinky.reactNativeModalFilterPicker.mod.default
 import typingsSlinky.reactNativeModalFilterPicker.reactNativeModalFilterPickerStrings.always
@@ -27,9 +26,9 @@ object ReactNativeModalFilterPicker {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: ModalFilterPickerOption] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactNativeModalFilterPicker.mod.ModalFilterPickerOption */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
     @scala.inline
     def androidUnderlineColor(value: String): this.type = set("androidUnderlineColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -104,9 +103,9 @@ object ReactNativeModalFilterPicker {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: ModalFilterPickerOption](p: ModalFilterPickerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactNativeModalFilterPicker.mod.ModalFilterPickerOption */ T](p: ModalFilterPickerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: ModalFilterPickerOption](onCancel: () => Unit, onSelect: String => Unit, options: js.Array[T]): Builder[T] = {
+  def apply[/* <: typingsSlinky.reactNativeModalFilterPicker.mod.ModalFilterPickerOption */ T](onCancel: () => Unit, onSelect: String => Unit, options: js.Array[T]): Builder[T] = {
     val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSelect = js.Any.fromFunction1(onSelect), options = options.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[ModalFilterPickerProps[T]]))
   }

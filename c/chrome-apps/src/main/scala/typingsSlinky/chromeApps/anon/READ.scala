@@ -24,17 +24,14 @@ object READ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withREAD(value: typingsSlinky.chromeApps.chromeAppsStrings.READ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("READ")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withWRITE(value: WRITE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WRITE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setREAD(value: typingsSlinky.chromeApps.chromeAppsStrings.READ): Self = this.set("READ", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWRITE(value: WRITE): Self = this.set("WRITE", value.asInstanceOf[js.Any])
   }
   
 }

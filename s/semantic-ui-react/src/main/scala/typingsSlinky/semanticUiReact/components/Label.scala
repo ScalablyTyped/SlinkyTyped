@@ -1,20 +1,19 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
 import typingsSlinky.semanticUiReact.labelDetailMod.LabelDetailProps
+import typingsSlinky.semanticUiReact.labelGroupMod.LabelGroupProps
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
-import typingsSlinky.semanticUiReact.labelMod.default
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`top left`
@@ -30,14 +29,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Label {
-  @JSImport("semantic-ui-react/dist/commonjs/elements/Label", JSImport.Default)
+  @JSImport("semantic-ui-react", "Label")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.`*`.tag.type, default] {
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.mod.Label] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,7 +61,7 @@ object Label {
     def detailReactElement(value: ReactElement): this.type = set("detail", value.asInstanceOf[js.Any])
     @scala.inline
     def detailFunction3(
-      value: (/* component */ ReactComponentClass[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("detail", js.Any.fromFunction3(value))
     @scala.inline
     def detail(value: SemanticShorthandItem[LabelDetailProps]): this.type = set("detail", value.asInstanceOf[js.Any])
@@ -76,7 +75,7 @@ object Label {
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -94,7 +93,7 @@ object Label {
     def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def removeIconFunction3(
-      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("removeIcon", js.Any.fromFunction3(value))
     @scala.inline
     def removeIcon(value: SemanticShorthandItem[IconProps]): this.type = set("removeIcon", value.asInstanceOf[js.Any])
@@ -108,5 +107,23 @@ object Label {
   
   def withProps(p: LabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Label.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Detail {
+    @JSImport("semantic-ui-react", "Label.Detail")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: LabelDetailProps): SharedBuilder_LabelDetailProps_543902875 = new SharedBuilder_LabelDetailProps_543902875(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Detail.type): SharedBuilder_LabelDetailProps_543902875 = new SharedBuilder_LabelDetailProps_543902875(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react", "Label.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: LabelGroupProps): SharedBuilder_LabelGroupProps1387370830 = new SharedBuilder_LabelGroupProps1387370830(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_LabelGroupProps1387370830 = new SharedBuilder_LabelGroupProps1387370830(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

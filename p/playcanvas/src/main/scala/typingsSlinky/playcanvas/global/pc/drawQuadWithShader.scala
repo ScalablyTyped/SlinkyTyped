@@ -7,6 +7,63 @@ import scala.scalajs.js.annotation._
 @JSGlobal("pc.drawQuadWithShader")
 @js.native
 object drawQuadWithShader extends js.Object {
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: js.UndefOr[scala.Nothing],
+    scissorRect: js.UndefOr[scala.Nothing],
+    useBlend: Boolean
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: js.UndefOr[scala.Nothing],
+    scissorRect: typingsSlinky.playcanvas.pc.Vec4
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: js.UndefOr[scala.Nothing],
+    scissorRect: typingsSlinky.playcanvas.pc.Vec4,
+    useBlend: Boolean
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: typingsSlinky.playcanvas.pc.Vec4
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: typingsSlinky.playcanvas.pc.Vec4,
+    scissorRect: js.UndefOr[scala.Nothing],
+    useBlend: Boolean
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: typingsSlinky.playcanvas.pc.Vec4,
+    scissorRect: typingsSlinky.playcanvas.pc.Vec4
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: js.UndefOr[scala.Nothing],
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: typingsSlinky.playcanvas.pc.Vec4,
+    scissorRect: typingsSlinky.playcanvas.pc.Vec4,
+    useBlend: Boolean
+  ): Unit = js.native
   /**
     * Draws a screen-space quad using a specific shader. Mostly used by post-effects.
     * @param device - The graphics device used to draw the quad.
@@ -18,25 +75,56 @@ object drawQuadWithShader extends js.Object {
     */
   def apply(
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
-    target: js.UndefOr[typingsSlinky.playcanvas.pc.RenderTarget],
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
     shader: typingsSlinky.playcanvas.pc.Shader
   ): Unit = js.native
   def apply(
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
-    target: js.UndefOr[typingsSlinky.playcanvas.pc.RenderTarget],
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: js.UndefOr[scala.Nothing],
+    scissorRect: js.UndefOr[scala.Nothing],
+    useBlend: Boolean
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: js.UndefOr[scala.Nothing],
+    scissorRect: typingsSlinky.playcanvas.pc.Vec4
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: js.UndefOr[scala.Nothing],
+    scissorRect: typingsSlinky.playcanvas.pc.Vec4,
+    useBlend: Boolean
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
     shader: typingsSlinky.playcanvas.pc.Shader,
     rect: typingsSlinky.playcanvas.pc.Vec4
   ): Unit = js.native
   def apply(
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
-    target: js.UndefOr[typingsSlinky.playcanvas.pc.RenderTarget],
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
+    shader: typingsSlinky.playcanvas.pc.Shader,
+    rect: typingsSlinky.playcanvas.pc.Vec4,
+    scissorRect: js.UndefOr[scala.Nothing],
+    useBlend: Boolean
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
     shader: typingsSlinky.playcanvas.pc.Shader,
     rect: typingsSlinky.playcanvas.pc.Vec4,
     scissorRect: typingsSlinky.playcanvas.pc.Vec4
   ): Unit = js.native
   def apply(
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
-    target: js.UndefOr[typingsSlinky.playcanvas.pc.RenderTarget],
+    target: typingsSlinky.playcanvas.pc.RenderTarget,
     shader: typingsSlinky.playcanvas.pc.Shader,
     rect: typingsSlinky.playcanvas.pc.Vec4,
     scissorRect: typingsSlinky.playcanvas.pc.Vec4,

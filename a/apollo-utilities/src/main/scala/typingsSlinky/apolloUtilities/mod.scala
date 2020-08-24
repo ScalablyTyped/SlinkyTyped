@@ -24,7 +24,6 @@ import typingsSlinky.graphql.astMod.OperationDefinitionNode
 import typingsSlinky.graphql.astMod.SelectionNode
 import typingsSlinky.graphql.astMod.ValueNode
 import typingsSlinky.graphql.executeMod.ExecutionResult
-import typingsSlinky.graphql.executeMod.ExecutionResultDataDefault
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -65,9 +64,10 @@ object mod extends js.Object {
   def getOperationName(doc: DocumentNode): String | Null = js.native
   def getQueryDefinition(doc: DocumentNode): OperationDefinitionNode = js.native
   def getStoreKeyName(fieldName: String): String = js.native
+  def getStoreKeyName(fieldName: String, args: js.UndefOr[scala.Nothing], directives: Directives): String = js.native
   def getStoreKeyName(fieldName: String, args: js.Object): String = js.native
   def getStoreKeyName(fieldName: String, args: js.Object, directives: Directives): String = js.native
-  def graphQLResultHasError(result: ExecutionResult[ExecutionResultDataDefault]): Double = js.native
+  def graphQLResultHasError(result: ExecutionResult[StringDictionary[_], StringDictionary[_]]): Double = js.native
   def hasClientExports(document: DocumentNode): Boolean = js.native
   def hasDirectives(names: js.Array[String], doc: DocumentNode): Boolean = js.native
   def isDevelopment(): Boolean = js.native

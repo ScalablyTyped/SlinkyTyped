@@ -1,7 +1,6 @@
 package typingsSlinky.recharts.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -62,7 +61,7 @@ object Bar {
     @scala.inline
     def backgroundReactElement(value: ReactElement): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundFunction1(value: _ => TagMod[Any]): this.type = set("background", js.Any.fromFunction1(value))
+    def backgroundFunction1(value: _ => ReactElement): this.type = set("background", js.Any.fromFunction1(value))
     @scala.inline
     def background(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
@@ -89,6 +88,8 @@ object Bar {
     def colorRendering(value: String): this.type = set("colorRendering", value.asInstanceOf[js.Any])
     @scala.inline
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: BarData*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[BarData]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -150,7 +151,7 @@ object Bar {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelFunction1(value: _ => TagMod[Any]): this.type = set("label", js.Any.fromFunction1(value))
+    def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     @scala.inline
     def labelFunctionComponent(value: ReactComponentClass[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
@@ -216,11 +217,13 @@ object Bar {
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     @scala.inline
+    def radiusVarargs(value: Double*): this.type = set("radius", js.Array(value :_*))
+    @scala.inline
     def radius(value: Double | js.Array[Double]): this.type = set("radius", value.asInstanceOf[js.Any])
     @scala.inline
     def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline
-    def shapeFunction1(value: RectangleProps => TagMod[Any]): this.type = set("shape", js.Any.fromFunction1(value))
+    def shapeFunction1(value: RectangleProps => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     @scala.inline
     def shape(value: ReactElement | ContentRenderer[RectangleProps]): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline

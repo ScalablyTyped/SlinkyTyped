@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -47,7 +46,7 @@ object Radar {
     @scala.inline
     def activeDotReactElement(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
     @scala.inline
-    def activeDotFunction1(value: _ => TagMod[Any]): this.type = set("activeDot", js.Any.fromFunction1(value))
+    def activeDotFunction1(value: _ => ReactElement): this.type = set("activeDot", js.Any.fromFunction1(value))
     @scala.inline
     def activeDot(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("activeDot", value.asInstanceOf[js.Any])
     @scala.inline
@@ -93,7 +92,7 @@ object Radar {
     @scala.inline
     def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
-    def dotFunction1(value: DotProps => TagMod[Any]): this.type = set("dot", js.Any.fromFunction1(value))
+    def dotFunction1(value: DotProps => ReactElement): this.type = set("dot", js.Any.fromFunction1(value))
     @scala.inline
     def dot(value: js.Object | ReactElement | ContentRenderer[DotProps] | Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
@@ -147,7 +146,7 @@ object Radar {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelFunction1(value: _ => TagMod[Any]): this.type = set("label", js.Any.fromFunction1(value))
+    def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     @scala.inline
     def label(value: js.Object | ReactElement | ContentRenderer[_] | Boolean): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
@@ -201,13 +200,15 @@ object Radar {
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
+    def pointsVarargs(value: RadarPoint*): this.type = set("points", js.Array(value :_*))
+    @scala.inline
     def points(value: js.Array[RadarPoint]): this.type = set("points", value.asInstanceOf[js.Any])
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     @scala.inline
     def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline
-    def shapeFunction1(value: RadarProps => TagMod[Any]): this.type = set("shape", js.Any.fromFunction1(value))
+    def shapeFunction1(value: RadarProps => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     @scala.inline
     def shape(value: ReactElement | ContentRenderer[RadarProps]): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline

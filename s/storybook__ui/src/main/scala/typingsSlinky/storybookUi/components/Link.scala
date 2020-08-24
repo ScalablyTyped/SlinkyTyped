@@ -16,6 +16,7 @@ object Link {
   @scala.inline
   def apply(
     childIds: js.Any,
+    children: js.Any,
     id: js.Any,
     isComponent: js.Any,
     isExpanded: js.Any,
@@ -25,7 +26,7 @@ object Link {
     onKeyUp: js.Any,
     prefix: js.Any
   ): Default[tag.type, js.Object] = {
-    val __props = js.Dynamic.literal(childIds = childIds.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isComponent = isComponent.asInstanceOf[js.Any], isExpanded = isExpanded.asInstanceOf[js.Any], isLeaf = isLeaf.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(childIds = childIds.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isComponent = isComponent.asInstanceOf[js.Any], isExpanded = isExpanded.asInstanceOf[js.Any], isLeaf = isLeaf.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ChildIds]))
   }
 }

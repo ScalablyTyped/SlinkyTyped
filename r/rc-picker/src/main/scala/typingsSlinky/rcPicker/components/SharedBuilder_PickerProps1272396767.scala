@@ -3,7 +3,6 @@ package typingsSlinky.rcPicker.components
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -50,6 +49,7 @@ import typingsSlinky.rcPicker.rcPickerStrings.text
 import typingsSlinky.rcPicker.rcPickerStrings.time
 import typingsSlinky.rcPicker.rcPickerStrings.tree
 import typingsSlinky.rcPicker.rcPickerStrings.vertical
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MutableRefObject
 import scala.scalajs.js
@@ -167,11 +167,11 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+  def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
   @scala.inline
-  def dateRender(value: (DateType, DateType) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+  def dateRender(value: (DateType, DateType) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
   @scala.inline
   def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
   @scala.inline
@@ -185,11 +185,11 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
   @scala.inline
-  def dropdownAlign(
-    value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+  def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
   @scala.inline
   def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
+  @scala.inline
+  def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
   @scala.inline
   def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
   @scala.inline
@@ -201,13 +201,13 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline
-  def monthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+  def monthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
   @scala.inline
   def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   @scala.inline
   def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def nextIcon(value: TagMod[Any]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+  def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
   @scala.inline
@@ -237,6 +237,8 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
   @scala.inline
+  def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
+  @scala.inline
   def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
   @scala.inline
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -247,9 +249,9 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def prevIcon(value: TagMod[Any]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+  def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+  def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
   @scala.inline
   def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
   @scala.inline
@@ -257,20 +259,22 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+  def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def superNextIconReactElement(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def superNextIcon(value: TagMod[Any]): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+  def superNextIcon(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def superPrevIconReactElement(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def superPrevIcon(value: TagMod[Any]): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+  def superPrevIcon(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   @scala.inline
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   @scala.inline
   def value(value: DateType): this.type = set("value", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueNull: this.type = set("value", null)
 }
 

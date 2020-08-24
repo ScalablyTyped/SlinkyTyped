@@ -1,9 +1,9 @@
 package typingsSlinky.primereact.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.primereact.anon.Maximized
 import typingsSlinky.primereact.dialogMod.DialogProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,15 +43,23 @@ object Dialog {
     @scala.inline
     def header(value: js.Any): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconsTemplate(value: () => js.UndefOr[ReactElement]): this.type = set("iconsTemplate", js.Any.fromFunction0(value))
+    def iconsTemplate(value: js.Any): this.type = set("iconsTemplate", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def maskClassName(value: String): this.type = set("maskClassName", value.asInstanceOf[js.Any])
+    @scala.inline
     def maximizable(value: Boolean): this.type = set("maximizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maximized(value: Boolean): this.type = set("maximized", value.asInstanceOf[js.Any])
     @scala.inline
     def modal(value: Boolean): this.type = set("modal", value.asInstanceOf[js.Any])
     @scala.inline
+    def onMaximize(value: /* e */ Maximized => Unit): this.type = set("onMaximize", js.Any.fromFunction1(value))
+    @scala.inline
     def onShow(value: () => Unit): this.type = set("onShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def position(value: String): this.type = set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
     @scala.inline

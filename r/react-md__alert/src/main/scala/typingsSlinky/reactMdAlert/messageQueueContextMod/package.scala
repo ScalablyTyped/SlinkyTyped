@@ -1,0 +1,15 @@
+package typingsSlinky.reactMdAlert
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object messageQueueContextMod {
+  type AddMessage[M /* <: typingsSlinky.reactMdAlert.messageQueueContextMod.Message */] = js.Function1[/* message */ M, scala.Unit]
+  type HideMessage = js.Function0[scala.Unit]
+  type PopMessage = js.Function0[scala.Unit]
+  type ResetQueue[M /* <: typingsSlinky.reactMdAlert.messageQueueContextMod.Message */] = js.Function0[js.Array[M]]
+  type RestartVisibilityTimer = js.Function0[scala.Unit]
+  type StartVisibilityTimer = js.Function0[scala.Unit]
+  type StopVisibilityTimer = js.Function0[scala.Unit]
+}

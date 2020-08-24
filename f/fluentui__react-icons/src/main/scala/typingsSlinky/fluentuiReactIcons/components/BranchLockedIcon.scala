@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BranchLockedIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BranchLockedIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BranchLockedIcon")
   @js.native
   object component extends js.Object
   

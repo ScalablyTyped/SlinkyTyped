@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Chain protected ()
   extends typingsSlinky.angularCompiler.astMod.Chain {
-  def this(span: typingsSlinky.angularCompiler.astMod.ParseSpan, expressions: js.Array[_]) = this()
+  def this(
+    span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
+    expressions: js.Array[_]
+  ) = this()
 }
 

@@ -15,11 +15,15 @@ import typingsSlinky.angularRouter.mod.OutletContext
 import typingsSlinky.angularRouter.mod.Router
 import typingsSlinky.ionicAngular.configMod.Config
 import typingsSlinky.ionicAngular.navControllerMod.NavController
+import typingsSlinky.ionicAngular.stackUtilsMod.RouteView
+import typingsSlinky.ionicCore.animationInterfaceMod.Animation
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRouterOutletElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@ionic/angular/dist/directives/navigation/ion-router-outlet", JSImport.Namespace)
+@JSImport("@ionic/angular/directives/navigation/ion-router-outlet", JSImport.Namespace)
 @js.native
 object ionRouterOutletMod extends js.Object {
   @js.native
@@ -56,13 +60,15 @@ object ionRouterOutletMod extends js.Object {
       parentOutlet: IonRouterOutlet
     ) = this()
     var _activatedRoute: js.Any = js.native
-    var _swipeGesture: js.UndefOr[js.Any] = js.native
+    var _swipeGesture: js.Any = js.native
     var activateEvents: EventEmitter[_] = js.native
     var activated: js.Any = js.native
     val activatedRoute: ActivatedRoute = js.native
     val activatedRouteData: js.Any = js.native
-    var activatedView: js.Any = js.native
+    var activatedView: RouteView | Null = js.native
     var animated: Boolean = js.native
+    @JSName("animation")
+    var animation_Original: AnimationBuilder = js.native
     val component: js.Object = js.native
     var config: js.Any = js.native
     /**
@@ -76,7 +82,7 @@ object ionRouterOutletMod extends js.Object {
     val isActivated: Boolean = js.native
     var location: js.Any = js.native
     var name: js.Any = js.native
-    var nativeEl: js.Any = js.native
+    var nativeEl: HTMLIonRouterOutletElement = js.native
     var navCtrl: js.Any = js.native
     var parentContexts: js.Any = js.native
     val parentOutlet: js.UndefOr[IonRouterOutlet] = js.native
@@ -96,6 +102,8 @@ object ionRouterOutletMod extends js.Object {
     var updateActivatedRouteProxy: js.Any = js.native
     def activateWith(activatedRoute: ActivatedRoute): Unit = js.native
     def activateWith(activatedRoute: ActivatedRoute, resolver: ComponentFactoryResolver): Unit = js.native
+    def animation(baseEl: js.Any): Animation = js.native
+    def animation(baseEl: js.Any, opts: js.Any): Animation = js.native
     /**
       * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
       */
@@ -104,6 +112,7 @@ object ionRouterOutletMod extends js.Object {
       * Returns `true` if there are pages in the stack to go back.
       */
     def canGoBack(): Boolean = js.native
+    def canGoBack(deep: js.UndefOr[scala.Nothing], stackId: String): Boolean = js.native
     def canGoBack(deep: Double): Boolean = js.native
     def canGoBack(deep: Double, stackId: String): Boolean = js.native
     def deactivate(): Unit = js.native
@@ -117,29 +126,27 @@ object ionRouterOutletMod extends js.Object {
     def getActiveStackId(): js.UndefOr[String] = js.native
     def getContext(): OutletContext | Null = js.native
     /**
+      * Returns the RouteView of the active page of each stack.
+      * @internal
+      */
+    def getLastRouteView(): js.UndefOr[RouteView] = js.native
+    def getLastRouteView(stackId: String): js.UndefOr[RouteView] = js.native
+    /**
       * Returns the URL of the active page of each stack.
       */
     def getLastUrl(): js.UndefOr[String] = js.native
     def getLastUrl(stackId: String): js.UndefOr[String] = js.native
     /**
-      * A callback method that performs custom clean-up, invoked immediately
-      * after a directive, pipe, or service instance is destroyed.
+      * Returns the root view in the tab stack.
+      * @internal
       */
-    /* CompleteClass */
-    override def ngOnDestroy(): Unit = js.native
-    /**
-      * A callback method that is invoked immediately after the
-      * default change detector has checked the directive's
-      * data-bound properties for the first time,
-      * and before any of the view or content children have been checked.
-      * It is invoked only once when the directive is instantiated.
-      */
-    /* CompleteClass */
-    override def ngOnInit(): Unit = js.native
+    def getRootView(): js.UndefOr[RouteView] = js.native
+    def getRootView(stackId: String): js.UndefOr[RouteView] = js.native
     /**
       * Resolves to `true` if it the outlet was able to sucessfully pop the last N pages.
       */
     def pop(): js.Promise[Boolean] = js.native
+    def pop(deep: js.UndefOr[scala.Nothing], stackId: String): js.Promise[Boolean] = js.native
     def pop(deep: Double): js.Promise[Boolean] = js.native
     def pop(deep: Double, stackId: String): js.Promise[Boolean] = js.native
   }

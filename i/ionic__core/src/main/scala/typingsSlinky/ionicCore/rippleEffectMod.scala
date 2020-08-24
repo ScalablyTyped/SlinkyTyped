@@ -2,7 +2,8 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.ionicCoreStrings.bounded
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.ionicCoreStrings.unbounded
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,8 +23,7 @@ object rippleEffectMod extends js.Object {
       * NOTE: Surfaces for bounded ripples should have the overflow property set to hidden,
       * while surfaces for unbounded ripples should have it set to visible.
       */
-    var `type`: bounded | typingsSlinky.ionicCore.ionicCoreStrings.unbounded = js.native
-    val unbounded: js.Any = js.native
+    var `type`: bounded | unbounded = js.native
     /**
       * Adds the ripple effect to the parent element.
       *
@@ -33,6 +33,7 @@ object rippleEffectMod extends js.Object {
     def addRipple(x: Double, y: Double): js.Promise[js.Function0[Unit]] = js.native
     @JSName("render")
     def render_MRippleEffect(): js.Any = js.native
+    /* private */ def unbounded: js.Any = js.native
   }
   
 }

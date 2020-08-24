@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TaskManagerMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TaskManagerMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TaskManagerMirroredIcon")
   @js.native
   object component extends js.Object
   

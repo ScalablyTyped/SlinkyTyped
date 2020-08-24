@@ -7,13 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Elastic")
 @js.native
 class Elastic ()
-  extends typingsSlinky.gsap.gsap.Elastic {
-  /* CompleteClass */
-  override def config(amplitude: Double, period: Double): typingsSlinky.gsap.gsap.Elastic = js.native
-  /** Translates the tween's progress ratio into the corresponding ease ratio. */
-  /* CompleteClass */
-  override def getRatio(p: Double): Double = js.native
-}
+  extends typingsSlinky.gsap.gsap.Elastic
 
 /* static members */
 @JSImport("gsap", "Elastic")

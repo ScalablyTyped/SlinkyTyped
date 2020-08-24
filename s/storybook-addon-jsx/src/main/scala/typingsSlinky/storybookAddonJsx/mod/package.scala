@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object mod {
   type AddWithJSXFunc[StoryFnReturnType] = js.Function3[
     /* kind */ java.lang.String, 
-    /* fn */ js.Function0[slinky.core.TagMod[scala.Any]], 
+    /* fn */ js.Function0[slinky.core.facade.ReactElement], 
     /* options */ js.UndefOr[typingsSlinky.storybookAddonJsx.mod.AddonParameters], 
     typingsSlinky.storybookAddons.typesMod.StoryApi[StoryFnReturnType]
   ]

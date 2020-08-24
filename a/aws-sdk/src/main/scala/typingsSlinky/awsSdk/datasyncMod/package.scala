@@ -52,6 +52,7 @@ package object datasyncMod {
   */
   type Gid = typingsSlinky.awsSdk.datasyncMod._Gid | java.lang.String
   type IamRoleArn = java.lang.String
+  type InputTagList = js.Array[typingsSlinky.awsSdk.datasyncMod.TagListEntry]
   type LocationArn = java.lang.String
   type LocationList = js.Array[typingsSlinky.awsSdk.datasyncMod.LocationListEntry]
   type LocationUri = java.lang.String
@@ -81,6 +82,17 @@ package object datasyncMod {
     - java.lang.String
   */
   type NfsVersion = typingsSlinky.awsSdk.datasyncMod._NfsVersion | java.lang.String
+  type ObjectStorageAccessKey = java.lang.String
+  type ObjectStorageBucketName = java.lang.String
+  type ObjectStorageSecretKey = java.lang.String
+  type ObjectStorageServerPort = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPS
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTP
+    - java.lang.String
+  */
+  type ObjectStorageServerProtocol = typingsSlinky.awsSdk.datasyncMod._ObjectStorageServerProtocol | java.lang.String
+  type OutputTagList = js.Array[typingsSlinky.awsSdk.datasyncMod.TagListEntry]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ALWAYS
     - typingsSlinky.awsSdk.awsSdkStrings.NEVER
@@ -142,7 +154,6 @@ package object datasyncMod {
   type SourceNetworkInterfaceArns = js.Array[typingsSlinky.awsSdk.datasyncMod.NetworkInterfaceArn]
   type TagKey = java.lang.String
   type TagKeyList = js.Array[typingsSlinky.awsSdk.datasyncMod.TagKey]
-  type TagList = js.Array[typingsSlinky.awsSdk.datasyncMod.TagListEntry]
   type TagValue = java.lang.String
   type TaggableResourceArn = java.lang.String
   type TaskArn = java.lang.String
@@ -176,6 +187,12 @@ package object datasyncMod {
   */
   type TaskStatus = typingsSlinky.awsSdk.datasyncMod._TaskStatus | java.lang.String
   type Time = js.Date
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CHANGED
+    - typingsSlinky.awsSdk.awsSdkStrings.ALL
+    - java.lang.String
+  */
+  type TransferMode = typingsSlinky.awsSdk.datasyncMod._TransferMode | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.INT_VALUE

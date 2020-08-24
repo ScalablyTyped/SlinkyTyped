@@ -79,7 +79,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DrawerChild {
-  @JSImport("rc-drawer/lib/DrawerChild", JSImport.Default)
+  @JSImport("rc-drawer/es/DrawerChild", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -212,6 +212,8 @@ object DrawerChild {
     @scala.inline
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -257,6 +259,8 @@ object DrawerChild {
     def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
+    @scala.inline
+    def levelVarargs(value: String*): this.type = set("level", js.Array(value :_*))
     @scala.inline
     def level(value: String | js.Array[String]): this.type = set("level", value.asInstanceOf[js.Any])
     @scala.inline

@@ -2,7 +2,7 @@ package typingsSlinky.mongooseSimpleRandom.mod
 
 import org.scalajs.dom.raw.Document
 import typingsSlinky.mongoose.mod.ModelProperties
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,32 @@ object mongooseAugmentingMod extends js.Object {
     extends EventEmitter
        with ModelProperties {
     def findRandom(conditions: js.Object): Unit = js.native
+    def findRandom(
+      conditions: js.Object,
+      projection: js.UndefOr[scala.Nothing],
+      options: js.UndefOr[scala.Nothing],
+      callback: js.Function2[/* err */ js.Any, /* res */ js.UndefOr[js.Array[T]], Unit]
+    ): Unit = js.native
+    def findRandom(conditions: js.Object, projection: js.UndefOr[scala.Nothing], options: js.Object): Unit = js.native
+    def findRandom(
+      conditions: js.Object,
+      projection: js.UndefOr[scala.Nothing],
+      options: js.Object,
+      callback: js.Function2[/* err */ js.Any, /* res */ js.UndefOr[js.Array[T]], Unit]
+    ): Unit = js.native
+    def findRandom(
+      conditions: js.Object,
+      projection: js.UndefOr[scala.Nothing],
+      options: Null,
+      callback: js.Function2[/* err */ js.Any, /* res */ js.UndefOr[js.Array[T]], Unit]
+    ): Unit = js.native
     def findRandom(conditions: js.Object, projection: js.Object): Unit = js.native
+    def findRandom(
+      conditions: js.Object,
+      projection: js.Object,
+      options: js.UndefOr[scala.Nothing],
+      callback: js.Function2[/* err */ js.Any, /* res */ js.UndefOr[js.Array[T]], Unit]
+    ): Unit = js.native
     def findRandom(conditions: js.Object, projection: js.Object, options: js.Object): Unit = js.native
     def findRandom(
       conditions: js.Object,
@@ -28,6 +53,12 @@ object mongooseAugmentingMod extends js.Object {
       conditions: js.Object,
       projection: js.Object,
       options: Null,
+      callback: js.Function2[/* err */ js.Any, /* res */ js.UndefOr[js.Array[T]], Unit]
+    ): Unit = js.native
+    def findRandom(
+      conditions: js.Object,
+      projection: Null,
+      options: js.UndefOr[scala.Nothing],
       callback: js.Function2[/* err */ js.Any, /* res */ js.UndefOr[js.Array[T]], Unit]
     ): Unit = js.native
     def findRandom(conditions: js.Object, projection: Null, options: js.Object): Unit = js.native

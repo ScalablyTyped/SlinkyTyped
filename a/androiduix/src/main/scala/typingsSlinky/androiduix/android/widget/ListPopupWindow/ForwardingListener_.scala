@@ -53,71 +53,32 @@ object ForwardingListener_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetPopup(value: () => typingsSlinky.androiduix.android.widget.ListPopupWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopup")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMActivePointerId(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActivePointerId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetPopup(value: () => typingsSlinky.androiduix.android.widget.ListPopupWindow): Self = this.set("getPopup", js.Any.fromFunction0(value))
     @scala.inline
-    def withMDisallowIntercept(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDisallowIntercept")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActivePointerId(value: js.Any): Self = this.set("mActivePointerId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMForwarding(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mForwarding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDisallowIntercept(value: js.Any): Self = this.set("mDisallowIntercept", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScaledTouchSlop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScaledTouchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMForwarding(value: js.Any): Self = this.set("mForwarding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSrc(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScaledTouchSlop(value: js.Any): Self = this.set("mScaledTouchSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTapTimeout(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTapTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMSrc(value: js.Any): Self = this.set("mSrc", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnForwardingStarted(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onForwardingStarted")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMTapTimeout(value: js.Any): Self = this.set("mTapTimeout", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnForwardingStopped(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onForwardingStopped")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setOnForwardingStarted(value: () => Boolean): Self = this.set("onForwardingStarted", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnTouchForwarded(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchForwarded")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnForwardingStopped(value: () => Boolean): Self = this.set("onForwardingStopped", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnTouchObserved(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchObserved")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnTouchForwarded(value: js.Any => js.Any): Self = this.set("onTouchForwarded", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnTouchObserved(value: js.Any => js.Any): Self = this.set("onTouchObserved", js.Any.fromFunction1(value))
   }
   
 }

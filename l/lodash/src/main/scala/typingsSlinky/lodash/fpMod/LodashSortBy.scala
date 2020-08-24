@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LodashSortBy extends js.Object {
+trait LodashSortBy extends LodashConvertible {
   def apply[T](iteratees: Many[ValueIteratee[T]]): js.Array[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[

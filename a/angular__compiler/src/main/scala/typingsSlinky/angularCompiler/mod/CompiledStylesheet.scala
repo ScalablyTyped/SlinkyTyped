@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "CompiledStylesheet")
 @js.native
 class CompiledStylesheet protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.CompiledStylesheet {
+  extends typingsSlinky.angularCompiler.compilerMod.CompiledStylesheet {
   def this(
     outputCtx: OutputContext,
     stylesVar: String,

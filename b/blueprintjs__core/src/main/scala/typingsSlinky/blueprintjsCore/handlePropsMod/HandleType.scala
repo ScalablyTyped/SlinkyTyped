@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  FULL  :'full',   START  :'start',   END  :'end'}[keyof {  FULL  :'full',   START  :'start',   END  :'end'}] */
+/* Inlined {  FULL :'full',   START :'start',   END :'end'}[keyof {  FULL :'full',   START :'start',   END :'end'}] */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.full
   - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.start

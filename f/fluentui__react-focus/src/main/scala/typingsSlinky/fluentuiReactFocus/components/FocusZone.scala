@@ -239,6 +239,8 @@ object FocusZone {
     @scala.inline
     def defaultTabbableElement(value: String | (js.Function1[/* root */ HTMLElement, HTMLElement])): this.type = set("defaultTabbableElement", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -729,6 +731,8 @@ object FocusZone {
     def shouldFocusOnMount(value: Boolean): this.type = set("shouldFocusOnMount", value.asInstanceOf[js.Any])
     @scala.inline
     def shouldInputLoseFocusOnArrowKey(value: /* inputElement */ HTMLInputElement => Boolean): this.type = set("shouldInputLoseFocusOnArrowKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def shouldRaiseClicks(value: Boolean): this.type = set("shouldRaiseClicks", value.asInstanceOf[js.Any])
     @scala.inline
     def shouldReceiveFocus(value: /* childElement */ js.UndefOr[HTMLElement] => Boolean): this.type = set("shouldReceiveFocus", js.Any.fromFunction1(value))
     @scala.inline

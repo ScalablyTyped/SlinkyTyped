@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cached-path-relative"
-version := "1.0-dt-20200515Z-0d7fe9"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-9c0321"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

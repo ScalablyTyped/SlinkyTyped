@@ -1,6 +1,6 @@
 package typingsSlinky.universalRouter.generateUrlsMod
 
-import typingsSlinky.universalRouter.mod.Context
+import typingsSlinky.universalRouter.mod.RouterContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,10 @@ import scala.scalajs.js.annotation._
 @JSImport("universal-router/src/generateUrls", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(router: typingsSlinky.universalRouter.mod.default[Context, _]): js.Function2[/* routeName */ String, /* params */ js.UndefOr[Params], String] = js.native
-  def apply(router: typingsSlinky.universalRouter.mod.default[Context, _], options: GenerateUrlsOptions): js.Function2[/* routeName */ String, /* params */ js.UndefOr[Params], String] = js.native
-  def apply(
-    router: typingsSlinky.universalRouter.universalRouterSyncMod.default[typingsSlinky.universalRouter.universalRouterSyncMod.Context, _]
-  ): js.Function2[/* routeName */ String, /* params */ js.UndefOr[Params], String] = js.native
-  def apply(
-    router: typingsSlinky.universalRouter.universalRouterSyncMod.default[typingsSlinky.universalRouter.universalRouterSyncMod.Context, _],
-    options: GenerateUrlsOptions
-  ): js.Function2[/* routeName */ String, /* params */ js.UndefOr[Params], String] = js.native
+  /**
+    * Create a function to generate urls by route names.
+    */
+  def apply(router: typingsSlinky.universalRouter.mod.default[_, RouterContext]): GenerateUrl = js.native
+  def apply(router: typingsSlinky.universalRouter.mod.default[_, RouterContext], options: GenerateUrlsOptions): GenerateUrl = js.native
 }
 

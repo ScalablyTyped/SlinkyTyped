@@ -11,7 +11,7 @@ trait CreateLedgerRequest extends js.Object {
     */
   var DeletionProtection: js.UndefOr[typingsSlinky.awsSdk.qldbMod.DeletionProtection] = js.native
   /**
-    * The name of the ledger that you want to create. The name must be unique among all of your ledgers in the current AWS Region.
+    * The name of the ledger that you want to create. The name must be unique among all of your ledgers in the current AWS Region. Naming constraints for ledger names are defined in Quotas in Amazon QLDB in the Amazon QLDB Developer Guide.
     */
   var Name: LedgerName = js.native
   /**
@@ -26,16 +26,34 @@ trait CreateLedgerRequest extends js.Object {
 
 object CreateLedgerRequest {
   @scala.inline
-  def apply(
-    Name: LedgerName,
-    PermissionsMode: PermissionsMode,
-    DeletionProtection: js.UndefOr[DeletionProtection] = js.undefined,
-    Tags: Tags = null
-  ): CreateLedgerRequest = {
+  def apply(Name: LedgerName, PermissionsMode: PermissionsMode): CreateLedgerRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], PermissionsMode = PermissionsMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeletionProtection)) __obj.updateDynamic("DeletionProtection")(DeletionProtection.get.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLedgerRequest]
   }
+  @scala.inline
+  implicit class CreateLedgerRequestOps[Self <: CreateLedgerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: LedgerName): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPermissionsMode(value: PermissionsMode): Self = this.set("PermissionsMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeletionProtection(value: DeletionProtection): Self = this.set("DeletionProtection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeletionProtection: Self = this.set("DeletionProtection", js.undefined)
+    @scala.inline
+    def setTags(value: Tags): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.vscodeLanguageclient.clientMod
 
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageclient/lib/client", "ShutdownRequest")
 @js.native
 object ShutdownRequest extends js.Object {
-  val `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType0[Unit, Unit, Unit] = js.native
+  val `type`: ProtocolRequestType0[Unit, scala.Nothing, Unit, Unit] = js.native
 }
 

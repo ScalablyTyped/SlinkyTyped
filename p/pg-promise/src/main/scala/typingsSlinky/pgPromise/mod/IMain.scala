@@ -18,17 +18,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IMain[Ext, C /* <: IClient */] extends js.Object {
   val ParameterizedQuery: Instantiable1[
-    js.UndefOr[String | typingsSlinky.pgPromise.mod.QueryFile | IParameterizedQuery], 
+    /* options */ js.UndefOr[String | typingsSlinky.pgPromise.mod.QueryFile | IParameterizedQuery], 
     typingsSlinky.pgPromise.mod.ParameterizedQuery
   ] = js.native
   val PreparedStatement: Instantiable1[
-    js.UndefOr[/* options */ IPreparedStatement], 
+    /* options */ js.UndefOr[IPreparedStatement], 
     typingsSlinky.pgPromise.mod.PreparedStatement
   ] = js.native
   val PromiseAdapter: Instantiable1[/* api */ IPromiseConfig, typingsSlinky.pgPromise.mod.PromiseAdapter] = js.native
   val QueryFile: Instantiable2[
     /* file */ String, 
-    js.UndefOr[/* options */ IQueryFileOptions], 
+    /* options */ js.UndefOr[IQueryFileOptions], 
     typingsSlinky.pgPromise.mod.QueryFile
   ] = js.native
   val as: IFormatting = js.native

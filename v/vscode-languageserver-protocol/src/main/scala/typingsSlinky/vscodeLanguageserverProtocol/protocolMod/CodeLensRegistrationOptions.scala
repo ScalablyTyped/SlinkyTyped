@@ -4,15 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CodeLensRegistrationOptions
-  extends TextDocumentRegistrationOptions
-     with CodeLensOptions
+  extends CodeLensOptions
+     with TextDocumentRegistrationOptions
 
 object CodeLensRegistrationOptions {
   @scala.inline
-  def apply(documentSelector: DocumentSelector = null, resolveProvider: js.UndefOr[Boolean] = js.undefined): CodeLensRegistrationOptions = {
-    val __obj = js.Dynamic.literal(documentSelector = documentSelector.asInstanceOf[js.Any])
-    if (!js.isUndefined(resolveProvider)) __obj.updateDynamic("resolveProvider")(resolveProvider.get.asInstanceOf[js.Any])
+  def apply(): CodeLensRegistrationOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CodeLensRegistrationOptions]
   }
 }

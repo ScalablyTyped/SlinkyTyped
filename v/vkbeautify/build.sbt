@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "vkbeautify"
-version := "0.99-dt-20200227Z-e7f4c9"
-scalaVersion := "2.13.2"
+version := "0.99-dt-20200227Z-f1e213"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -25,17 +25,14 @@ object LOCALTOREMOTE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLOCAL_TO_REMOTE(value: local_to_remote_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LOCAL_TO_REMOTE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withREMOTE_TO_LOCAL(value: remote_to_local_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("REMOTE_TO_LOCAL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLOCAL_TO_REMOTE(value: local_to_remote_): Self = this.set("LOCAL_TO_REMOTE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setREMOTE_TO_LOCAL(value: remote_to_local_): Self = this.set("REMOTE_TO_LOCAL", value.asInstanceOf[js.Any])
   }
   
 }

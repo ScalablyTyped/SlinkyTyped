@@ -4,21 +4,20 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.dimmerDimmableMod.DimmerDimmableProps
-import typingsSlinky.semanticUiReact.dimmerDimmableMod.default
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DimmerDimmable {
-  @JSImport("semantic-ui-react/dist/commonjs/modules/Dimmer/DimmerDimmable", JSImport.Default)
+  @JSImport("semantic-ui-react", "DimmerDimmable")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.DimmerDimmable] {
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline

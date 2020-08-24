@@ -1,7 +1,9 @@
 package typingsSlinky.apolloServer.exportsMod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
-import typingsSlinky.graphqlTools.anon.InheritResolversFromInterfaces
+import typingsSlinky.graphqlToolsMerge.mergeSchemasMod.MergeSchemasConfig
+import typingsSlinky.graphqlToolsUtils.interfacesMod.IResolvers
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +11,6 @@ import scala.scalajs.js.annotation._
 @JSImport("apollo-server/dist/exports", "mergeSchemas")
 @js.native
 object mergeSchemas extends js.Object {
-  def apply(
-    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: InheritResolversFromInterfaces
-  ): GraphQLSchema = js.native
+  def apply(config: MergeSchemasConfig[IResolvers[_, _, Record[String, _], _]]): GraphQLSchema = js.native
 }
 

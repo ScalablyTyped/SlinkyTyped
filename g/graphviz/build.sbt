@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "graphviz"
-version := "0.0.8-dt-20200515Z-fd13c0"
-scalaVersion := "2.13.2"
+version := "0.0-dt-20200624Z-249ba0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

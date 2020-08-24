@@ -24,23 +24,16 @@ object Bundle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContainsKey(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsKey")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGet(value: (String, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setContainsKey(value: String => Boolean): Self = this.set("containsKey", js.Any.fromFunction1(value))
     @scala.inline
-    def withPut(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGet(value: (String, js.Any) => js.Any): Self = this.set("get", js.Any.fromFunction2(value))
+    @scala.inline
+    def setPut(value: (String, js.Any) => Unit): Self = this.set("put", js.Any.fromFunction2(value))
   }
   
 }

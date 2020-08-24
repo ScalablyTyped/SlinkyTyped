@@ -2,7 +2,6 @@ package typingsSlinky.wordpressBlockEditor.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressBlockEditor.mod.NavigableToolbar.^
 import typingsSlinky.wordpressBlockEditor.navigableToolbarMod.NavigableToolbar.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +15,7 @@ object NavigableToolbar {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def focusOnMount(value: Boolean): this.type = set("focusOnMount", value.asInstanceOf[js.Any])
   }

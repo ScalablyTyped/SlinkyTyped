@@ -47,6 +47,8 @@ object TumblrShareButton {
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def tagsVarargs(value: String*): this.type = set("tags", js.Array(value :_*))
+    @scala.inline
     def tags(value: js.Array[String]): this.type = set("tags", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])

@@ -5,8 +5,10 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticTEXTALIGNMENTS
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
+import typingsSlinky.semanticUiReact.gridColumnMod.GridColumnProps
 import typingsSlinky.semanticUiReact.gridGridMod.GridProps
 import typingsSlinky.semanticUiReact.gridGridMod.GridReversedProp
+import typingsSlinky.semanticUiReact.gridRowMod.GridRowProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.equal
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.horizontally
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.internally
@@ -17,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Grid {
-  @JSImport("semantic-ui-react/dist/commonjs/collections/Grid", JSImport.Default)
+  @JSImport("semantic-ui-react", "Grid")
   @js.native
   object component extends js.Object
   
@@ -61,5 +63,23 @@ object Grid {
   
   def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Row {
+    @JSImport("semantic-ui-react", "Grid.Row")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: GridRowProps): SharedBuilder_GridRowProps_1468990785 = new SharedBuilder_GridRowProps_1468990785(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Row.type): SharedBuilder_GridRowProps_1468990785 = new SharedBuilder_GridRowProps_1468990785(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Column {
+    @JSImport("semantic-ui-react", "Grid.Column")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: GridColumnProps): SharedBuilder_GridColumnProps_612419309 = new SharedBuilder_GridColumnProps_612419309(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Column.type): SharedBuilder_GridColumnProps_612419309 = new SharedBuilder_GridColumnProps_612419309(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

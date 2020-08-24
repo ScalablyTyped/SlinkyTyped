@@ -35,89 +35,38 @@ object SVGXLinkAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withXlinkColonactuate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:actuate")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutXlinkColonactuate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:actuate")(js.undefined)
-        ret
-    }
+    def setXlinkColonactuate(value: String): Self = this.set("xlink:actuate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXlinkColonarcrole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:arcrole")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXlinkColonactuate: Self = this.set("xlink:actuate", js.undefined)
     @scala.inline
-    def withoutXlinkColonarcrole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:arcrole")(js.undefined)
-        ret
-    }
+    def setXlinkColonarcrole(value: String): Self = this.set("xlink:arcrole", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXlinkColonhref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:href")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXlinkColonarcrole: Self = this.set("xlink:arcrole", js.undefined)
     @scala.inline
-    def withoutXlinkColonhref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:href")(js.undefined)
-        ret
-    }
+    def setXlinkColonhref(value: String): Self = this.set("xlink:href", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXlinkColonrole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:role")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXlinkColonhref: Self = this.set("xlink:href", js.undefined)
     @scala.inline
-    def withoutXlinkColonrole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:role")(js.undefined)
-        ret
-    }
+    def setXlinkColonrole(value: String): Self = this.set("xlink:role", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXlinkColonshow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:show")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXlinkColonrole: Self = this.set("xlink:role", js.undefined)
     @scala.inline
-    def withoutXlinkColonshow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:show")(js.undefined)
-        ret
-    }
+    def setXlinkColonshow(value: String): Self = this.set("xlink:show", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXlinkColontitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:title")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXlinkColonshow: Self = this.set("xlink:show", js.undefined)
     @scala.inline
-    def withoutXlinkColontitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:title")(js.undefined)
-        ret
-    }
+    def setXlinkColontitle(value: String): Self = this.set("xlink:title", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXlinkColontype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXlinkColontitle: Self = this.set("xlink:title", js.undefined)
     @scala.inline
-    def withoutXlinkColontype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlink:type")(js.undefined)
-        ret
-    }
+    def setXlinkColontype(value: String): Self = this.set("xlink:type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteXlinkColontype: Self = this.set("xlink:type", js.undefined)
   }
   
 }

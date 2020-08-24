@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "tiny-invariant"
-version := "1.0.6-5d5e2a"
-scalaVersion := "2.13.2"
+version := "1.1.0-f16a51"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

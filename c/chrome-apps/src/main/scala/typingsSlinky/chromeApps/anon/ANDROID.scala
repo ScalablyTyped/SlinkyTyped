@@ -33,41 +33,22 @@ object ANDROID {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withANDROID(value: android_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ANDROID")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCROS(value: cros_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CROS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setANDROID(value: android_): Self = this.set("ANDROID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLINUX(value: linux_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LINUX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCROS(value: cros_): Self = this.set("CROS", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMAC(value: mac_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAC")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLINUX(value: linux_): Self = this.set("LINUX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOPENBSD(value: openbsd_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPENBSD")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAC(value: mac_): Self = this.set("MAC", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWIN(value: win_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WIN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPENBSD(value: openbsd_): Self = this.set("OPENBSD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWIN(value: win_): Self = this.set("WIN", value.asInstanceOf[js.Any])
   }
   
 }

@@ -17,15 +17,5 @@ class ASPxClientPopupWindowPinnedChangedEventArgs protected ()
     * @param pinned true if the window has been pinned; false if the window has been unpinned.
     */
   def this(window: typingsSlinky.devexpressWeb.ASPxClientPopupWindow, pinned: Boolean) = this()
-  /**
-    * Gets a value indicating whether the processed popup window has been pinned.
-    */
-  /* CompleteClass */
-  override var pinned: Boolean = js.native
-  /**
-    * Gets the popup window object related to the event.
-    */
-  /* CompleteClass */
-  override var window: typingsSlinky.devexpressWeb.ASPxClientPopupWindow = js.native
 }
 

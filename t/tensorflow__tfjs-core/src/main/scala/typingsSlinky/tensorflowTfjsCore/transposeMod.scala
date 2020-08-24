@@ -1,13 +1,22 @@
 package typingsSlinky.tensorflowTfjsCore
 
-import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@tensorflow/tfjs-core/dist/backends/cpu/kernels/Transpose", JSImport.Namespace)
+@JSImport("@tensorflow/tfjs-core/dist/ops/transpose", JSImport.Namespace)
 @js.native
 object transposeMod extends js.Object {
-  val transposeConfig: KernelConfig = js.native
+  @js.native
+  object transpose extends js.Object {
+    def apply[T /* <: Tensor[Rank] */](x: T): T = js.native
+    def apply[T /* <: Tensor[Rank] */](x: T, perm: js.Array[Double]): T = js.native
+    def apply[T /* <: Tensor[Rank] */](x: TensorLike): T = js.native
+    def apply[T /* <: Tensor[Rank] */](x: TensorLike, perm: js.Array[Double]): T = js.native
+  }
+  
 }
 

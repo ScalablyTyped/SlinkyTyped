@@ -823,347 +823,124 @@ object Typeofchrome {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEvent(value: Instantiable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAccessibilityFeatures(value: TypeofaccessibilityFeatur): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEvent(value: Instantiable): Self = this.set("Event", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAlarms(value: Typeofalarms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAccessibilityFeatures(value: TypeofaccessibilityFeatur): Self = this.set("accessibilityFeatures", value.asInstanceOf[js.Any])
     @scala.inline
-    def withApp(value: Typeofapp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAlarms(value: Typeofalarms): Self = this.set("alarms", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAudio(value: Typeofaudio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setApp(value: Typeofapp): Self = this.set("app", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBluetooth(value: Typeofbluetooth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAudio(value: Typeofaudio): Self = this.set("audio", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBluetoothLowEnergy(value: TypeofbluetoothLowEnergy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothLowEnergy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBluetooth(value: Typeofbluetooth): Self = this.set("bluetooth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBluetoothSocket(value: TypeofbluetoothSocket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothSocket")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBluetoothLowEnergy(value: TypeofbluetoothLowEnergy): Self = this.set("bluetoothLowEnergy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBrowser(value: Typeofbrowser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBluetoothSocket(value: TypeofbluetoothSocket): Self = this.set("bluetoothSocket", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCertificateProvider(value: TypeofcertificateProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBrowser(value: Typeofbrowser): Self = this.set("browser", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClipboard(value: Typeofclipboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCertificateProvider(value: TypeofcertificateProvider): Self = this.set("certificateProvider", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCommands(value: Typeofcommands): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClipboard(value: Typeofclipboard): Self = this.set("clipboard", value.asInstanceOf[js.Any])
     @scala.inline
-    def withContextMenus(value: TypeofcontextMenus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenus")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCommands(value: Typeofcommands): Self = this.set("commands", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCsi(value: () => OnloadT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csi")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setContextMenus(value: TypeofcontextMenus): Self = this.set("contextMenus", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDesktopCapture(value: TypeofdesktopCapture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopCapture")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCsi(value: () => OnloadT): Self = this.set("csi", js.Any.fromFunction0(value))
     @scala.inline
-    def withDiagnostics(value: Typeofdiagnostics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnostics")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDesktopCapture(value: TypeofdesktopCapture): Self = this.set("desktopCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDisplaySource(value: TypeofdisplaySource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displaySource")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDiagnostics(value: Typeofdiagnostics): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDns(value: Typeofdns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplaySource(value: TypeofdisplaySource): Self = this.set("displaySource", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDocumentScan(value: TypeofdocumentScan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentScan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDns(value: Typeofdns): Self = this.set("dns", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEnterprise(value: Typeofenterprise): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterprise")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDocumentScan(value: TypeofdocumentScan): Self = this.set("documentScan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEvents(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEnterprise(value: Typeofenterprise): Self = this.set("enterprise", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExperimental(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEvents(value: js.Any): Self = this.set("events", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExtensionTypes(value: TypeofextensionTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExperimental(value: js.Any): Self = this.set("experimental", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFileBrowserHandler(value: TypeoffileBrowserHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileBrowserHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtensionTypes(value: TypeofextensionTypes): Self = this.set("extensionTypes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFileSystem(value: TypeoffileSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFileBrowserHandler(value: TypeoffileBrowserHandler): Self = this.set("fileBrowserHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFileSystemProvider(value: TypeoffileSystemProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFileSystem(value: TypeoffileSystem): Self = this.set("fileSystem", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGcm(value: Typeofgcm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFileSystemProvider(value: TypeoffileSystemProvider): Self = this.set("fileSystemProvider", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHid(value: Typeofhid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGcm(value: Typeofgcm): Self = this.set("gcm", value.asInstanceOf[js.Any])
     @scala.inline
-    def withI18n(value: Typeofi18n): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHid(value: Typeofhid): Self = this.set("hid", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIdentity(value: Typeofidentity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setI18n(value: Typeofi18n): Self = this.set("i18n", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIdle(value: Typeofidle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIdentity(value: Typeofidentity): Self = this.set("identity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInstanceID(value: TypeofinstanceID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIdle(value: Typeofidle): Self = this.set("idle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadTimes(value: () => deprecatedButUsable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadTimes")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInstanceID(value: TypeofinstanceID): Self = this.set("instanceID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withManagement(value: Typeofmanagement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("management")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLoadTimes(value: () => deprecatedButUsable): Self = this.set("loadTimes", js.Any.fromFunction0(value))
     @scala.inline
-    def withMdns(value: Typeofmdns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdns")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setManagement(value: Typeofmanagement): Self = this.set("management", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMediaGalleries(value: TypeofmediaGalleries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaGalleries")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMdns(value: Typeofmdns): Self = this.set("mdns", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNetworking(value: Typeofnetworking): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networking")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMediaGalleries(value: TypeofmediaGalleries): Self = this.set("mediaGalleries", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNotifications(value: Typeofnotifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNetworking(value: Typeofnetworking): Self = this.set("networking", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPermissions(value: Typeofpermissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNotifications(value: Typeofnotifications): Self = this.set("notifications", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPlatformKeys(value: TypeofplatformKeysClientCertificateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissions(value: Typeofpermissions): Self = this.set("permissions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPower(value: Typeofpower): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("power")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPlatformKeys(value: TypeofplatformKeysClientCertificateType): Self = this.set("platformKeys", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPrinterProvider(value: TypeofprinterProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printerProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPower(value: Typeofpower): Self = this.set("power", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRuntime(value: TypeofruntimeConnect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPrinterProvider(value: TypeofprinterProvider): Self = this.set("printerProvider", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSerial(value: deprecated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serial")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRuntime(value: TypeofruntimeConnect): Self = this.set("runtime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSignedInDevices(value: TypeofsignedInDevices): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signedInDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSerial(value: deprecated): Self = this.set("serial", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSockets(value: Typeofsockets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sockets")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSignedInDevices(value: TypeofsignedInDevices): Self = this.set("signedInDevices", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStorage(value: Typeofstorage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSockets(value: Typeofsockets): Self = this.set("sockets", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSyncFileSystem(value: TypeofsyncFileSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncFileSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStorage(value: Typeofstorage): Self = this.set("storage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSystem(value: Typeofsystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSyncFileSystem(value: TypeofsyncFileSystem): Self = this.set("syncFileSystem", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTts(value: Typeoftts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSystem(value: Typeofsystem): Self = this.set("system", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTypes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTts(value: Typeoftts): Self = this.set("tts", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUsb(value: Typeofusb): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usb")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTypes(value: js.Any): Self = this.set("types", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVirtualKeyboard(value: TypeofvirtualKeyboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualKeyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUsb(value: Typeofusb): Self = this.set("usb", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVpnProvider(value: TypeofvpnProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVirtualKeyboard(value: TypeofvirtualKeyboard): Self = this.set("virtualKeyboard", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWallpaper(value: Typeofwallpaper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wallpaper")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVpnProvider(value: TypeofvpnProvider): Self = this.set("vpnProvider", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWebRequest(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWallpaper(value: Typeofwallpaper): Self = this.set("wallpaper", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWebViewRequest(value: TypeofwebViewRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWebRequest(value: js.Any): Self = this.set("webRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebViewRequest(value: TypeofwebViewRequest): Self = this.set("webViewRequest", value.asInstanceOf[js.Any])
   }
   
 }

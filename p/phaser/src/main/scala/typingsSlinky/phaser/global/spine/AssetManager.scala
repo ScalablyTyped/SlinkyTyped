@@ -11,8 +11,6 @@ class AssetManager protected ()
   extends typingsSlinky.phaser.spine.AssetManager {
   def this(textureLoader: js.Function1[/* image */ HTMLImageElement, _]) = this()
   def this(textureLoader: js.Function1[/* image */ HTMLImageElement, _], pathPrefix: String) = this()
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
 
 /* static members */

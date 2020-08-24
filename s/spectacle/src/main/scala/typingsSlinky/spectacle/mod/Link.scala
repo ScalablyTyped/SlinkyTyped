@@ -1,12 +1,14 @@
 package typingsSlinky.spectacle.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.react.mod.AnchorHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("spectacle", "Link")
 @js.native
-class Link ()
-  extends Component[LinkProps, js.Object, js.Any]
+object Link
+  extends TopLevel[ReactComponentClass[TypographyProps with AnchorHTMLAttributes[js.Object]]]
 

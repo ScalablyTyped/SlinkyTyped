@@ -10,13 +10,33 @@ import scala.scalajs.js.annotation._
 @js.native
 object createUrn extends js.Object {
   def apply(name: Input[String], `type`: Input[String]): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
+  def apply(
+    name: Input[String],
+    `type`: Input[String],
+    parent: js.UndefOr[Input[URN]],
+    project: js.UndefOr[scala.Nothing],
+    stack: String
+  ): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
+  def apply(name: Input[String], `type`: Input[String], parent: js.UndefOr[Input[URN]], project: String): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
+  def apply(
+    name: Input[String],
+    `type`: Input[String],
+    parent: js.UndefOr[Input[URN]],
+    project: String,
+    stack: String
+  ): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
   def apply(name: Input[String], `type`: Input[String], parent: Input[URN]): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
-  def apply(name: Input[String], `type`: Input[String], parent: Input[URN], project: String): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
-  def apply(name: Input[String], `type`: Input[String], parent: Input[URN], project: String, stack: String): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
   def apply(
     name: Input[String],
     `type`: Input[String],
     parent: typingsSlinky.pulumiPulumi.resourceMod.Resource
+  ): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
+  def apply(
+    name: Input[String],
+    `type`: Input[String],
+    parent: typingsSlinky.pulumiPulumi.resourceMod.Resource,
+    project: js.UndefOr[scala.Nothing],
+    stack: String
   ): typingsSlinky.pulumiPulumi.outputMod.Output_[String] = js.native
   def apply(
     name: Input[String],

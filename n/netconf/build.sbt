@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "netconf"
-version := "2.0-dt-20200515Z-4cc77b"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200515Z-0c65e8"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

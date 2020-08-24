@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime
 
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

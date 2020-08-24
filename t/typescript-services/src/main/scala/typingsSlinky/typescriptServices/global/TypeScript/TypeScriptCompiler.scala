@@ -11,6 +11,10 @@ class TypeScriptCompiler ()
   extends typingsSlinky.typescriptServices.TypeScript.TypeScriptCompiler {
   def this(logger: ILogger) = this()
   def this(
+    logger: js.UndefOr[scala.Nothing],
+    _settings: typingsSlinky.typescriptServices.TypeScript.ImmutableCompilationSettings
+  ) = this()
+  def this(
     logger: ILogger,
     _settings: typingsSlinky.typescriptServices.TypeScript.ImmutableCompilationSettings
   ) = this()

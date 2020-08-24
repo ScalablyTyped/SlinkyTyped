@@ -1,7 +1,6 @@
 package typingsSlinky.formol.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -19,13 +18,17 @@ object Field {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.formol.mod.Field] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def TypeFieldFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
     @scala.inline
     def TypeFieldComponentClass(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
     @scala.inline
     def TypeField(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def choicesVarargs(value: js.Any*): this.type = set("choices", js.Array(value :_*))
     @scala.inline
     def choices(value: js.Array[_]): this.type = set("choices", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,11 +42,11 @@ object Field {
     @scala.inline
     def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
     def extrasReactElement(value: ReactElement): this.type = set("extras", value.asInstanceOf[js.Any])
     @scala.inline
-    def extras(value: TagMod[Any]): this.type = set("extras", value.asInstanceOf[js.Any])
+    def extras(value: ReactElement): this.type = set("extras", value.asInstanceOf[js.Any])
     @scala.inline
     def formatter(value: js.Any => js.Any): this.type = set("formatter", js.Any.fromFunction1(value))
     @scala.inline
@@ -81,7 +84,7 @@ object Field {
     @scala.inline
     def unitReactElement(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
     @scala.inline
-    def unit(value: TagMod[Any]): this.type = set("unit", value.asInstanceOf[js.Any])
+    def unit(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
     @scala.inline
     def unregister(value: /* name */ String => Unit): this.type = set("unregister", js.Any.fromFunction1(value))
     @scala.inline

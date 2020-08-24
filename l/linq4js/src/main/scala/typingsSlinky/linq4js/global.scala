@@ -14,32 +14,17 @@ object global extends js.Object {
     class EvaluateCommand protected ()
       extends typingsSlinky.linq4js.Linq4JS.EvaluateCommand {
       def this(command: String, identifier: String*) = this()
-      /* CompleteClass */
-      override var Command: String = js.native
-      /* CompleteClass */
-      override var Finder: Array[js.RegExp] = js.native
-      /* CompleteClass */
-      override var SplitRegex: Array[js.RegExp] = js.native
     }
     
     @js.native
     class EvaluateCommandResult protected ()
       extends typingsSlinky.linq4js.Linq4JS.EvaluateCommandResult {
       def this(cmd: String, fn: String) = this()
-      /* CompleteClass */
-      override var Command: String = js.native
-      /* CompleteClass */
-      override var DynamicFunction: String = js.native
     }
     
     @js.native
     class GeneratedEntity ()
-      extends typingsSlinky.linq4js.Linq4JS.GeneratedEntity {
-      /* CompleteClass */
-      override var Id: Double = js.native
-      /* CompleteClass */
-      override var _GeneratedId_ : Double = js.native
-    }
+      extends typingsSlinky.linq4js.Linq4JS.GeneratedEntity
     
     @js.native
     class Helper ()
@@ -49,20 +34,12 @@ object global extends js.Object {
     class OrderEntry protected ()
       extends typingsSlinky.linq4js.Linq4JS.OrderEntry {
       def this(_direction: OrderDirection, _valueSelector: js.Function1[/* item */ js.Any, _]) = this()
-      /* CompleteClass */
-      override var Direction: OrderDirection = js.native
-      /* CompleteClass */
-      override def ValueSelector(item: js.Any): js.Any = js.native
     }
     
     @js.native
     class SelectEntry protected ()
       extends typingsSlinky.linq4js.Linq4JS.SelectEntry {
       def this(n: String, p: String) = this()
-      /* CompleteClass */
-      override var name: String = js.native
-      /* CompleteClass */
-      override var property: String = js.native
     }
     
     /* static members */
@@ -71,9 +48,11 @@ object global extends js.Object {
       var Commands: Array[typingsSlinky.linq4js.Linq4JS.EvaluateCommand] = js.native
       var ConvertStringFunction: js.Any = js.native
       def ConvertFunction[T](testFunction: T): T = js.native
+      def ConvertFunction[T](testFunction: T, noAutoReturn: js.UndefOr[scala.Nothing], noBracketReplace: Boolean): T = js.native
       def ConvertFunction[T](testFunction: T, noAutoReturn: Boolean): T = js.native
       def ConvertFunction[T](testFunction: T, noAutoReturn: Boolean, noBracketReplace: Boolean): T = js.native
       def ConvertFunction[T](testFunction: String): T = js.native
+      def ConvertFunction[T](testFunction: String, noAutoReturn: js.UndefOr[scala.Nothing], noBracketReplace: Boolean): T = js.native
       def ConvertFunction[T](testFunction: String, noAutoReturn: Boolean): T = js.native
       def ConvertFunction[T](testFunction: String, noAutoReturn: Boolean, noBracketReplace: Boolean): T = js.native
       def CreateArrayData(array: Array[_]): Unit = js.native

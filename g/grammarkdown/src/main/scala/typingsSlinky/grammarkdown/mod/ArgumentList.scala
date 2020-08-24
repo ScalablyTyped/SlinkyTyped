@@ -19,6 +19,11 @@ class ArgumentList protected ()
   ) = this()
   def this(
     openParenToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenParenToken | OpenBracketToken],
+    elements: js.UndefOr[scala.Nothing],
+    closeParenToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseParenToken | CloseBracketToken]
+  ) = this()
+  def this(
+    openParenToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenParenToken | OpenBracketToken],
     elements: js.Array[typingsSlinky.grammarkdown.nodesMod.Argument],
     closeParenToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseParenToken | CloseBracketToken]
   ) = this()

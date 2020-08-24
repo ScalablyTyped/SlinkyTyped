@@ -15,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimeBody {
-  @JSImport("rc-picker/lib/panels/TimePanel/TimeBody", JSImport.Default)
+  @JSImport("rc-picker/es/panels/TimePanel/TimeBody", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -45,6 +45,8 @@ object TimeBody {
     def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
     @scala.inline
     def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
     @scala.inline
     def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
     @scala.inline

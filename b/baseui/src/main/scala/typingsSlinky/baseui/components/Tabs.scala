@@ -3,7 +3,7 @@ package typingsSlinky.baseui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.ActiveKey
-import typingsSlinky.baseui.anon.SharedPropsactiveboolean
+import typingsSlinky.baseui.anon.SharedPropsactivebooleanu
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.tabsMod.TabsOverrides
@@ -31,7 +31,7 @@ object Tabs {
     @scala.inline
     def orientation(value: horizontal | vertical): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline
-    def overrides(value: TabsOverrides[SharedPropsactiveboolean]): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: TabsOverrides[SharedPropsactivebooleanu]): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
   }

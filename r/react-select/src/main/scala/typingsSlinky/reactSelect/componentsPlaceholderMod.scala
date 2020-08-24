@@ -1,11 +1,9 @@
 package typingsSlinky.reactSelect
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Component
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
@@ -19,18 +17,11 @@ import scala.scalajs.js.annotation._
 @JSImport("react-select/src/components/Placeholder", JSImport.Namespace)
 @js.native
 object componentsPlaceholderMod extends js.Object {
-  @js.native
-  class Placeholder protected ()
-    extends Component[PlaceholderProps[js.Any], js.Object, js.Any] {
-    def this(props: PlaceholderProps[_]) = this()
-    def this(props: PlaceholderProps[_], context: js.Any) = this()
-  }
-  
-  /* Inlined react-select.react-select/src/types.CommonProps<OptionType> & {  children  :react.react.ReactNode,   innerProps  :{[key: string] : any}} */
+  /* Inlined react-select.react-select/src/types.CommonProps<OptionType> & {  children :react.react.ReactNode,   innerProps :{[key: string] : any}} */
   @js.native
   trait PlaceholderProps[OptionType /* <: OptionTypeBase */] extends js.Object {
     /** The children to be rendered. */
-    var children: TagMod[Any] = js.native
+    var children: ReactElement = js.native
     var className: js.UndefOr[String] = js.native
     var hasValue: Boolean = js.native
     /** props passed to the wrapping element for the group. */
@@ -39,12 +30,9 @@ object componentsPlaceholderMod extends js.Object {
     var options: OptionsType[OptionType] = js.native
     var selectProps: Props[OptionType] = js.native
     def clearValue(): Unit = js.native
-    def cx(): String | Unit = js.native
-    def cx(a: String): String | Unit = js.native
-    def cx(a: String, b: ClassNamesState): String | Unit = js.native
-    def cx(a: String, b: ClassNamesState, c: String): String | Unit = js.native
-    def cx(a: Null, b: ClassNamesState): String | Unit = js.native
-    def cx(a: Null, b: ClassNamesState, c: String): String | Unit = js.native
+    def cx(): String = js.native
+    def cx(state: js.UndefOr[ClassNamesState], className: String): String = js.native
+    def cx(state: ClassNamesState): String = js.native
     /*
       Get the styles of a particular part of the select. Pass in the name of the
       property as the first argument, and the current props as the second argument.
@@ -56,21 +44,8 @@ object componentsPlaceholderMod extends js.Object {
     def setValue(value: ValueType[OptionType], action: ActionTypes): Unit = js.native
   }
   
-  @js.native
-  class default protected ()
-    extends Component[PlaceholderProps[js.Any], js.Object, js.Any] {
-    def this(props: PlaceholderProps[_]) = this()
-    def this(props: PlaceholderProps[_], context: js.Any) = this()
-  }
-  
+  val Placeholder: ReactComponentClass[PlaceholderProps[js.Any]] = js.native
+  val default: ReactComponentClass[PlaceholderProps[js.Any]] = js.native
   def placeholderCSS(): CSSProperties = js.native
-  @js.native
-  object Placeholder
-    extends TopLevel[ReactComponentClass[PlaceholderProps[js.Any]]]
-  
-  @js.native
-  object default
-    extends TopLevel[ReactComponentClass[PlaceholderProps[js.Any]]]
-  
 }
 

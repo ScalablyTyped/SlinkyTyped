@@ -3,23 +3,33 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonSearchbarElement
+import typingsSlinky.ionicCore.ionicCoreStrings.always
 import typingsSlinky.ionicCore.ionicCoreStrings.decimal
+import typingsSlinky.ionicCore.ionicCoreStrings.done
 import typingsSlinky.ionicCore.ionicCoreStrings.email
+import typingsSlinky.ionicCore.ionicCoreStrings.enter
+import typingsSlinky.ionicCore.ionicCoreStrings.focus
+import typingsSlinky.ionicCore.ionicCoreStrings.go
+import typingsSlinky.ionicCore.ionicCoreStrings.never
+import typingsSlinky.ionicCore.ionicCoreStrings.next
 import typingsSlinky.ionicCore.ionicCoreStrings.none
 import typingsSlinky.ionicCore.ionicCoreStrings.number
 import typingsSlinky.ionicCore.ionicCoreStrings.numeric
 import typingsSlinky.ionicCore.ionicCoreStrings.off
 import typingsSlinky.ionicCore.ionicCoreStrings.on
 import typingsSlinky.ionicCore.ionicCoreStrings.password
+import typingsSlinky.ionicCore.ionicCoreStrings.previous
 import typingsSlinky.ionicCore.ionicCoreStrings.search
+import typingsSlinky.ionicCore.ionicCoreStrings.send
 import typingsSlinky.ionicCore.ionicCoreStrings.tel
 import typingsSlinky.ionicCore.ionicCoreStrings.text
 import typingsSlinky.ionicCore.ionicCoreStrings.url
+import typingsSlinky.ionicCore.mod.AutocompleteTypes
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.searchbarInterfaceMod.SearchbarChangeEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,13 +46,14 @@ object searchbarMod extends js.Object {
     /**
       * Set the input's autocomplete property.
       */
-    var autocomplete: on | off = js.native
+    var autocomplete: AutocompleteTypes = js.native
     /**
       * Set the input's autocorrect property.
       */
     var autocorrect: on | off = js.native
     /**
       * Set the cancel button icon. Only applies to `md` mode.
+      * Defaults to `"arrow-back-sharp"`.
       */
     var cancelButtonIcon: String = js.native
     /**
@@ -50,7 +61,7 @@ object searchbarMod extends js.Object {
       */
     var cancelButtonText: String = js.native
     /**
-      * Set the clear icon. Defaults to `"close-circle"` for `ios` and `"close"` for `md`.
+      * Set the clear icon. Defaults to `"close-circle"` for `ios` and `"close-sharp"` for `md`.
       */
     var clearIcon: js.UndefOr[String] = js.native
     /**
@@ -69,6 +80,12 @@ object searchbarMod extends js.Object {
     var disabled: Boolean = js.native
     var el: HTMLIonSearchbarElement = js.native
     var emitStyle: js.Any = js.native
+    /**
+      * A hint to the browser for which enter key to display.
+      * Possible values: `"enter"`, `"done"`, `"go"`, `"next"`,
+      * `"previous"`, `"search"`, and `"send"`.
+      */
+    var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
     var focused: Boolean = js.native
     var getValue: js.Any = js.native
     var hasValue: js.Any = js.native
@@ -77,7 +94,7 @@ object searchbarMod extends js.Object {
       * Possible values: `"none"`, `"text"`, `"tel"`, `"url"`,
       * `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
       */
-    var inputmode: none | text | tel | url | email | numeric | decimal | search = js.native
+    var inputmode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
     /**
       * Emitted when the input loses focus.
       */
@@ -99,7 +116,7 @@ object searchbarMod extends js.Object {
       */
     var ionFocus: EventEmitter[Unit] = js.native
     /**
-      * Emitted when a keyboard input ocurred.
+      * Emitted when a keyboard input occurred.
       */
     var ionInput: EventEmitter[KeyboardEvent] = js.native
     /**
@@ -108,7 +125,7 @@ object searchbarMod extends js.Object {
       */
     var ionStyle: EventEmitter[StyleEventDetail] = js.native
     var isCancelVisible: js.Any = js.native
-    var nativeInput: js.UndefOr[js.Any] = js.native
+    var nativeInput: js.Any = js.native
     var noAnimate: Boolean = js.native
     /**
       * Sets the Searchbar to not focused and checks if it should align left
@@ -157,9 +174,10 @@ object searchbarMod extends js.Object {
       */
     var positionPlaceholder: js.Any = js.native
     /**
-      * The icon to use as the search icon.
+      * The icon to use as the search icon. Defaults to `"search-outline"` in
+      * `ios` mode and `"search-sharp"` in `md` mode.
       */
-    var searchIcon: String = js.native
+    var searchIcon: js.UndefOr[String] = js.native
     var shouldAlignLeft: js.Any = js.native
     /**
       * Determines whether or not the cancel button should be visible onscreen.
@@ -175,7 +193,7 @@ object searchbarMod extends js.Object {
       * Setting to `"always"` shows the cancel button regardless
       * of focus state.
       */
-    var showCancelButton: Boolean | String = js.native
+    var showCancelButton: never | focus | always = js.native
     /**
       * If `true`, enable spellcheck on the input.
       */

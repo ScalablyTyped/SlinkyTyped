@@ -40,6 +40,8 @@ object WaffleCanvas {
     @scala.inline
     def colorBy(value: String | GetColor[WaffleDatum]): this.type = set("colorBy", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colors(value: Colors): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def emptyColor(value: String): this.type = set("emptyColor", value.asInstanceOf[js.Any])

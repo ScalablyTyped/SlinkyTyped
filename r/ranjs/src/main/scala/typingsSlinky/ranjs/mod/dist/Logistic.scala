@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class Logistic ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.Logistic] {
   def this(mu: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], s: Double) = this()
   def this(mu: Double, s: Double) = this()
 }
 

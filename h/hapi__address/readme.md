@@ -1,7 +1,7 @@
 
 # Scala.js typings for hapi__address
 
-Typings are for version 4.0.1
+Typings are for version 4.1.0
 
 ## Library description:
 Email address and domain validation

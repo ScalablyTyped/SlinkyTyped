@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.chipsChipsMod.ChipsProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
@@ -20,6 +21,8 @@ object Chips {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.primereact.chipsMod.Chips] {
+    @scala.inline
+    def allowDuplicate(value: Boolean): this.type = set("allowDuplicate", value.asInstanceOf[js.Any])
     @scala.inline
     def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +42,7 @@ object Chips {
     @scala.inline
     def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: /* event */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
@@ -47,11 +50,15 @@ object Chips {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
+    def separator(value: String): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }

@@ -11,7 +11,7 @@ object PluginArea {
   @js.native
   object component extends js.Object
   
-  def withProps(p: js.Object): Default[tag.type, typingsSlinky.wordpressPlugins.mod.PluginArea] = new Default[tag.type, typingsSlinky.wordpressPlugins.mod.PluginArea](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PluginArea.type): Default[tag.type, typingsSlinky.wordpressPlugins.mod.PluginArea] = new Default[tag.type, typingsSlinky.wordpressPlugins.mod.PluginArea](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PluginArea.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

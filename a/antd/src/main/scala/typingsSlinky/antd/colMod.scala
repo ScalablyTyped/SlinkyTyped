@@ -1,6 +1,9 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.gridColMod.Col
+import org.scalajs.dom.raw.HTMLDivElement
+import typingsSlinky.antd.gridColMod.ColProps
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,8 +11,6 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/col", JSImport.Namespace)
 @js.native
 object colMod extends js.Object {
-  @js.native
-  class default () extends Col
-  
+  val default: ForwardRefExoticComponent[ColProps with RefAttributes[HTMLDivElement]] = js.native
 }
 

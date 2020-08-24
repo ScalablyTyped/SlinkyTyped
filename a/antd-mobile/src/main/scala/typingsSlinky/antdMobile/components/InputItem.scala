@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -74,7 +73,6 @@ import typingsSlinky.antdMobile.antdMobileStrings.url
 import typingsSlinky.antdMobile.antdMobileStrings.vertical
 import typingsSlinky.antdMobile.antdMobileStrings.yes
 import typingsSlinky.antdMobile.inputItemMod.InputItemProps
-import typingsSlinky.antdMobile.inputItemMod.default
 import typingsSlinky.antdMobile.inputItemPropsTypeMod.InputKey
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -85,14 +83,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InputItem {
-  @JSImport("antd-mobile/lib/input-item", JSImport.Default)
+  @JSImport("antd-mobile", "InputItem")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.InputItem] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -282,6 +280,8 @@ object InputItem {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def disabledKeysVarargs(value: InputKey*): this.type = set("disabledKeys", js.Array(value :_*))
+    @scala.inline
     def disabledKeys(value: js.Array[InputKey]): this.type = set("disabledKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def disabledKeysNull: this.type = set("disabledKeys", null)
@@ -298,7 +298,7 @@ object InputItem {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
     @scala.inline
@@ -396,7 +396,7 @@ object InputItem {
     @scala.inline
     def moneyKeyboardHeaderReactElement(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     @scala.inline
-    def moneyKeyboardHeader(value: TagMod[Any]): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
+    def moneyKeyboardHeader(value: ReactElement): this.type = set("moneyKeyboardHeader", value.asInstanceOf[js.Any])
     @scala.inline
     def moneyKeyboardWrapProps(value: js.Object): this.type = set("moneyKeyboardWrapProps", value.asInstanceOf[js.Any])
     @scala.inline

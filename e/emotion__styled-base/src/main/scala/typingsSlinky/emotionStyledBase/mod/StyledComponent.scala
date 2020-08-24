@@ -107,7 +107,7 @@ import org.scalajs.dom.raw.SVGUseElement
 import org.scalajs.dom.raw.SVGViewElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.emotionSerialize.mod.ComponentSelector
-import typingsSlinky.emotionStyledBase.anon.ThemeTheme
+import typingsSlinky.emotionStyledBase.anon.`0`
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.`object`
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.`var`
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.a
@@ -271,6 +271,7 @@ import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.textarea
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.tfoot
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.th
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.thead
+import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.theme
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.time
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.title
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.tr
@@ -283,6 +284,7 @@ import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.video
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.view
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.wbr
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.webview
+import typingsSlinky.emotionStyledBase.helperMod.Omit
 import typingsSlinky.emotionStyledBase.helperMod.PropsOf
 import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.react.mod.AreaHTMLAttributes
@@ -353,7 +355,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StyledComponent[InnerProps, StyleProps, Theme /* <: js.Object */]
   extends ComponentSelector
-     with FunctionComponent[InnerProps with StyleProps with ThemeTheme[Theme]] {
+     with FunctionComponent[InnerProps with (Omit[StyleProps, theme]) with `0`[Theme]] {
   def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], StyleProps, Theme] = js.native
   /**
     * @desc this method is type-unsafe

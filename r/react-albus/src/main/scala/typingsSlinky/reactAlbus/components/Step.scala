@@ -13,7 +13,7 @@ object Step {
   @js.native
   object component extends js.Object
   
-  def apply(p: StepProps): Default[tag.type, typingsSlinky.reactAlbus.mod.Step] = new Default[tag.type, typingsSlinky.reactAlbus.mod.Step](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Step.type): Default[tag.type, typingsSlinky.reactAlbus.mod.Step] = new Default[tag.type, typingsSlinky.reactAlbus.mod.Step](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: StepProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Step.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

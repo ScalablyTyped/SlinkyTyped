@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object esListMod {
   type ListRowRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esListMod.ListRowProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type RenderedRows = typingsSlinky.reactVirtualized.mod.OverscanIndexRange with typingsSlinky.reactVirtualized.mod.IndexRange
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AccessibiltyCheckerIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AccessibiltyCheckerIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AccessibiltyCheckerIcon")
   @js.native
   object component extends js.Object
   

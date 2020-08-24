@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class DoubleGamma ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.DoubleGamma] {
   def this(alpha: Double) = this()
+  def this(alpha: js.UndefOr[scala.Nothing], beta: Double) = this()
   def this(alpha: Double, beta: Double) = this()
 }
 

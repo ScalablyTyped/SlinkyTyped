@@ -1,6 +1,6 @@
 package typingsSlinky.chalkPipe
 
-import typingsSlinky.chalkPipe.anon.ChalksupportsColorColorSu
+import typingsSlinky.chalkPipe.anon.ChalkChalkFunctionsupport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ object mod extends js.Object {
     * 🌈 Create chalk-style schemes with simpler style strings.
     * @param stylePipe Use a dot `.` to separate multiple styles.
     */
-  def apply[T /* <: ChalksupportsColorColorSu */](stylePipe: String): T = js.native
-  def apply[T /* <: ChalksupportsColorColorSu */](stylePipe: String, customChalk: T): T = js.native
+  def apply[T /* <: ChalkChalkFunctionsupport */](stylePipe: String): T = js.native
+  def apply[T /* <: ChalkChalkFunctionsupport */](stylePipe: String, customChalk: T): T = js.native
 }
 

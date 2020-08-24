@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "VirtualHeader")
 @js.native
 class VirtualHeader protected ()
-  extends typingsSlinky.ionicAngular.distMod.VirtualHeader {
+  extends typingsSlinky.ionicAngular.virtualHeaderMod.VirtualHeader {
   def this(templateRef: TemplateRef[VirtualContext]) = this()
 }
 

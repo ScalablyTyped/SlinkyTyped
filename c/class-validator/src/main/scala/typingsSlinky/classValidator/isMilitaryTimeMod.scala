@@ -1,0 +1,19 @@
+package typingsSlinky.classValidator
+
+import typingsSlinky.classValidator.validationOptionsMod.ValidationOptions
+import typingsSlinky.std.PropertyDecorator
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("class-validator/types/decorator/string/IsMilitaryTime", JSImport.Namespace)
+@js.native
+object isMilitaryTimeMod extends js.Object {
+  val IS_MILITARY_TIME: /* "isMilitaryTime" */ String = js.native
+  @JSName("IsMilitaryTime")
+  def IsMilitaryTime_(): PropertyDecorator = js.native
+  @JSName("IsMilitaryTime")
+  def IsMilitaryTime_(validationOptions: ValidationOptions): PropertyDecorator = js.native
+  def isMilitaryTime(value: js.Any): Boolean = js.native
+}
+

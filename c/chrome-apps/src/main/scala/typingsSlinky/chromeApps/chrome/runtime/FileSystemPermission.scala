@@ -30,11 +30,14 @@ object FileSystemPermission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFileSystem(value: js.Array[write_ | retainEntries | directory | requestFileSystem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystem")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setFileSystemVarargs(value: (write_ | retainEntries | directory | requestFileSystem)*): Self = this.set("fileSystem", js.Array(value :_*))
+    @scala.inline
+    def setFileSystem(value: js.Array[write_ | retainEntries | directory | requestFileSystem]): Self = this.set("fileSystem", value.asInstanceOf[js.Any])
   }
   
 }

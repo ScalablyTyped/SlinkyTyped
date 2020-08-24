@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IModuleDocument because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IRemoteEntitySourceDocument because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RemoteEntitySourceDocument")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IRemoteEntitySourceDocument because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined icon */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RemoteEntitySourceDocument")
 @js.native
 abstract class RemoteEntitySourceDocument protected () extends Document {
   def this(
@@ -34,27 +34,32 @@ abstract class RemoteEntitySourceDocument protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
+  /**
+    * In version 8.11.0: added public
+    * In version 8.10.0: introduced
+    */
+  @JSName("icon")
+  val icon_FRemoteEntitySourceDocument: String | Null = js.native
   @JSName("model")
   var model_FRemoteEntitySourceDocument: IModel = js.native
   /**
     * In version 8.10.0: introduced
     */
   def catalogUrl: String = js.native
-  def catalogUrl(newValue: String): js.Any = js.native
+  def catalogUrl_=(newValue: String): Unit = js.native
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MRemoteEntitySourceDocument: FolderBase = js.native
   /**
     * In version 8.10.0: introduced
     */
   def description: String = js.native
-  def description(newValue: String): js.Any = js.native
-  def icon(): js.Any = js.native
-  def icon(newValue: String): js.Any = js.native
+  def description_=(newValue: String): Unit = js.native
   /**
+    * In version 8.11.0: added public
     * In version 8.10.0: introduced
     */
-  @JSName("icon")
-  def icon_Union: String | Null = js.native
+  def icon: String | Null = js.native
+  def icon_=(newValue: String | Null): Unit = js.native
 }
 
 /* static members */

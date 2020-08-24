@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.ValueString
+import typingsSlinky.primereact.anon.OriginalEventEvent
 import typingsSlinky.primereact.dataViewMod.DataViewLayoutOptionsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +29,7 @@ object DataViewLayoutOptions {
   
   def withProps(p: DataViewLayoutOptionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: ValueString => Unit): Builder = {
+  def apply(onChange: OriginalEventEvent => Unit): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[DataViewLayoutOptionsProps]))
   }

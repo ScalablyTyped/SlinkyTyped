@@ -29,29 +29,18 @@ object BOTTOM {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBOTTOM(value: bottom_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BOTTOM")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withLEFT(value: left_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LEFT")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBOTTOM(value: bottom_): Self = this.set("BOTTOM", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRIGHT(value: right_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RIGHT")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLEFT(value: left_): Self = this.set("LEFT", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTOP(value: top_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TOP")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRIGHT(value: right_): Self = this.set("RIGHT", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTOP(value: top_): Self = this.set("TOP", value.asInstanceOf[js.Any])
   }
   
 }

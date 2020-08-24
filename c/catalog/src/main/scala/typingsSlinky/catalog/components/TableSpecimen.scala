@@ -1,7 +1,7 @@
 package typingsSlinky.catalog.components
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.catalog.catalogNumbers.`1`
@@ -26,6 +26,8 @@ object TableSpecimen {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.catalog.mod.TableSpecimen] {
     @scala.inline
+    def columnsVarargs(value: String*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[String]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def rawBody(value: String): this.type = set("rawBody", value.asInstanceOf[js.Any])
@@ -37,7 +39,7 @@ object TableSpecimen {
   
   def withProps(p: SpecimenProps with TableSpecimenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(rows: js.Array[StringDictionary[TagMod[Any]]]): Builder = {
+  def apply(rows: js.Array[StringDictionary[ReactElement]]): Builder = {
     val __props = js.Dynamic.literal(rows = rows.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[SpecimenProps with TableSpecimenProps]))
   }

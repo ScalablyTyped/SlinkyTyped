@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   *
   * Represents a collection of all the rows that are part of the table.
+  
   Note that unlike Ranges or Columns, which will adjust if new rows/columns are added before them,
   a TableRow object represent the physical location of the table row, but not the data.
   That is, if the data is sorted or if new rows are added, a table row will continue
@@ -36,6 +37,7 @@ trait TableRowCollection extends ClientObject {
   val items: js.Array[TableRow] = js.native
   /**
     * Adds one or more rows to the table. The return object will be the top of the newly added row(s).
+    
     Note that unlike Ranges or Columns, which will adjust if new rows/columns are added before them,
     a TableRow object represent the physical location of the table row, but not the data.
     That is, if the data is sorted or if new rows are added, a table row will continue
@@ -47,6 +49,10 @@ trait TableRowCollection extends ClientObject {
     * @param values Optional. A 2-dimensional array of unformatted values of the table row.
     */
   def add(): TableRow = js.native
+  def add(index: js.UndefOr[scala.Nothing], values: String): TableRow = js.native
+  def add(index: js.UndefOr[scala.Nothing], values: js.Array[js.Array[Boolean | String | Double]]): TableRow = js.native
+  def add(index: js.UndefOr[scala.Nothing], values: Boolean): TableRow = js.native
+  def add(index: js.UndefOr[scala.Nothing], values: Double): TableRow = js.native
   def add(index: Double): TableRow = js.native
   def add(index: Double, values: String): TableRow = js.native
   def add(index: Double, values: js.Array[js.Array[Boolean | String | Double]]): TableRow = js.native
@@ -60,6 +66,7 @@ trait TableRowCollection extends ClientObject {
   def getCount(): ClientResult[Double] = js.native
   /**
     * Gets a row based on its position in the collection.
+    
     Note that unlike Ranges or Columns, which will adjust if new rows/columns are added before them,
     a TableRow object represent the physical location of the table row, but not the data.
     That is, if the data is sorted or if new rows are added, a table row will continue

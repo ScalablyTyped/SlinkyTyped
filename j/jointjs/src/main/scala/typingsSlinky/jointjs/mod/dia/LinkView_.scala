@@ -11,7 +11,6 @@ import typingsSlinky.jointjs.mod.dia.LinkView.Options
 import typingsSlinky.jointjs.mod.dia.LinkView.VertexOptions
 import typingsSlinky.jointjs.mod.g.Curve
 import typingsSlinky.jointjs.mod.g.Line
-import typingsSlinky.jointjs.mod.g.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,9 +50,13 @@ class LinkView_ () extends CellViewGeneric[Link] {
   def getClosestPoint(point: Point): typingsSlinky.jointjs.mod.g.Point = js.native
   def getClosestPointLength(point: Point): Double = js.native
   def getClosestPointRatio(point: Point): Double = js.native
-  def getConnection(): Path = js.native
+  def getConnection(): typingsSlinky.jointjs.mod.g.Path = js.native
   def getConnectionLength(): Double = js.native
   def getConnectionSubdivisions(): js.Array[js.Array[Curve]] = js.native
+  def getEndAnchor(endType: LinkEnd): typingsSlinky.jointjs.mod.g.Point = js.native
+  def getEndConnectionPoint(endType: LinkEnd): typingsSlinky.jointjs.mod.g.Point = js.native
+  def getEndMagnet(endType: LinkEnd): SVGElement | Null = js.native
+  def getEndView(endType: LinkEnd): CellView | Null = js.native
   def getLabelCoordinates(labelPosition: LabelPosition): typingsSlinky.jointjs.mod.g.Point = js.native
   def getLabelPosition(x: Double, y: Double): LabelPosition = js.native
   def getLabelPosition(x: Double, y: Double, angle: Double): LabelPosition = js.native
@@ -75,7 +78,10 @@ class LinkView_ () extends CellViewGeneric[Link] {
   /* protected */ def onToolsChange(link: Link, toolsMarkup: String, opt: StringDictionary[js.Any]): Unit = js.native
   /* protected */ def onVerticesChange(link: Link, vertices: js.Array[Point], opt: StringDictionary[js.Any]): Unit = js.native
   /* protected */ def onlabel(evt: Event, x: Double, y: Double): Unit = js.native
+  def requestConnectionUpdate(): Unit = js.native
+  def requestConnectionUpdate(opt: StringDictionary[js.Any]): Unit = js.native
   def sendToken(token: SVGElement): Unit = js.native
+  def sendToken(token: SVGElement, duration: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def sendToken(token: SVGElement, duration: Double): Unit = js.native
   def sendToken(token: SVGElement, duration: Double, callback: js.Function0[Unit]): Unit = js.native
   def sendToken(token: SVGElement, opt: Connection): Unit = js.native

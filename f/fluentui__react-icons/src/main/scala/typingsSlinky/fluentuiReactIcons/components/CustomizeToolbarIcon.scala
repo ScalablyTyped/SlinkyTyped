@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CustomizeToolbarIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CustomizeToolbarIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CustomizeToolbarIcon")
   @js.native
   object component extends js.Object
   

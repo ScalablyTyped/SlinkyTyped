@@ -6,6 +6,7 @@ import typingsSlinky.apolloServerCore.typesMod.Config
 import typingsSlinky.apolloServerCore.typesMod.FileUploadOptions
 import typingsSlinky.apolloServerCore.typesMod.SubscriptionServerOptions
 import typingsSlinky.apolloServerPluginBase.mod.ApolloServerPlugin
+import typingsSlinky.apolloServerTypes.mod.BaseContext
 import typingsSlinky.apolloServerTypes.mod.GraphQLRequest
 import typingsSlinky.apolloServerTypes.mod.GraphQLResponse
 import typingsSlinky.apollographqlGraphqlPlaygroundHtml.renderPlaygroundPageMod.RenderPageOptions
@@ -23,10 +24,10 @@ object apolloServerMod extends js.Object {
   class ApolloServerBase protected () extends js.Object {
     def this(config: Config) = this()
     var config: js.Any = js.native
-    var context: js.UndefOr[js.Any] = js.native
-    var engineApiKeyHash: js.UndefOr[js.Any] = js.native
-    var engineReportingAgent: js.UndefOr[js.Any] = js.native
-    var engineServiceId: js.UndefOr[js.Any] = js.native
+    var context: js.Any = js.native
+    var engineApiKeyHash: js.Any = js.native
+    var engineReportingAgent: js.Any = js.native
+    var engineServiceId: js.Any = js.native
     var ensurePluginInstantiation: js.Any = js.native
     var experimental_approximateDocumentStoreMiB: js.Any = js.native
     var generateSchemaDerivedData: js.Any = js.native
@@ -36,12 +37,12 @@ object apolloServerMod extends js.Object {
     var logger: js.Any = js.native
     var parseOptions: js.Any = js.native
     var playgroundOptions: js.UndefOr[RenderPageOptions] = js.native
-    var plugins: js.Array[ApolloServerPlugin[Record[String, _]]] = js.native
+    var plugins: js.Array[ApolloServerPlugin[BaseContext]] = js.native
     var requestOptions: PartialGraphQLServerOptio = js.native
     var schema: js.UndefOr[GraphQLSchema] = js.native
     var schemaDerivedData: js.Any = js.native
     var schemaIsFederated: js.Any = js.native
-    var subscriptionServer: js.UndefOr[js.Any] = js.native
+    var subscriptionServer: js.Any = js.native
     var subscriptionServerOptions: js.UndefOr[SubscriptionServerOptions] = js.native
     var subscriptionsPath: js.UndefOr[String] = js.native
     var toDispose: js.Any = js.native

@@ -2,8 +2,6 @@ package typingsSlinky.reactLeaflet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.leaflet.mod.ImageOverlay_
-import typingsSlinky.reactLeaflet.mod.ImageOverlayProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +13,11 @@ object ImageOverlay {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: ImageOverlayProps, E <: ImageOverlay_] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.ImageOverlay[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.ImageOverlay[P, E]]
   
-  def apply[P <: ImageOverlayProps, E <: ImageOverlay_](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: ImageOverlayProps, E <: ImageOverlay_](companion: ImageOverlay.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeaflet.mod.ImageOverlayProps */ P, /* <: typingsSlinky.leaflet.mod.ImageOverlay_ */ E](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeaflet.mod.ImageOverlayProps */ P, /* <: typingsSlinky.leaflet.mod.ImageOverlay_ */ E](companion: ImageOverlay.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
 }
 

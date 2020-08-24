@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 class Blob ()
   extends typingsSlinky.std.Blob {
   def this(blobParts: js.Array[BlobPart]) = this()
+  def this(blobParts: js.UndefOr[scala.Nothing], options: BlobPropertyBag) = this()
   def this(blobParts: js.Array[BlobPart], options: BlobPropertyBag) = this()
 }
 
@@ -23,7 +24,7 @@ object Blob
   extends Instantiable0[org.scalajs.dom.raw.Blob]
      with Instantiable1[/* blobParts */ js.Array[BlobPart], org.scalajs.dom.raw.Blob]
      with Instantiable2[
-      /* blobParts */ js.Array[BlobPart], 
+      js.UndefOr[/* blobParts */ js.Array[BlobPart]], 
       /* options */ BlobPropertyBag, 
       org.scalajs.dom.raw.Blob
     ]

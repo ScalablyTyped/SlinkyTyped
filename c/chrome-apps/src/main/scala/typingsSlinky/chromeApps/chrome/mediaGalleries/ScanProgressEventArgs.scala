@@ -35,59 +35,28 @@ object ScanProgressEventArgs {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: ScanProgressType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAudioCount(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: ScanProgressType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAudioCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioCount")(js.undefined)
-        ret
-    }
+    def setAudioCount(value: integer): Self = this.set("audioCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGalleryCount(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("galleryCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAudioCount: Self = this.set("audioCount", js.undefined)
     @scala.inline
-    def withoutGalleryCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("galleryCount")(js.undefined)
-        ret
-    }
+    def setGalleryCount(value: integer): Self = this.set("galleryCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withImageCount(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGalleryCount: Self = this.set("galleryCount", js.undefined)
     @scala.inline
-    def withoutImageCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageCount")(js.undefined)
-        ret
-    }
+    def setImageCount(value: integer): Self = this.set("imageCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVideoCount(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteImageCount: Self = this.set("imageCount", js.undefined)
     @scala.inline
-    def withoutVideoCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCount")(js.undefined)
-        ret
-    }
+    def setVideoCount(value: integer): Self = this.set("videoCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVideoCount: Self = this.set("videoCount", js.undefined)
   }
   
 }

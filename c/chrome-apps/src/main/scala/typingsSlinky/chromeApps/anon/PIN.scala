@@ -24,17 +24,14 @@ object PIN {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPIN(value: typingsSlinky.chromeApps.chromeAppsStrings.PIN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PIN")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPUK(value: PUK): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PUK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPIN(value: typingsSlinky.chromeApps.chromeAppsStrings.PIN): Self = this.set("PIN", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPUK(value: PUK): Self = this.set("PUK", value.asInstanceOf[js.Any])
   }
   
 }

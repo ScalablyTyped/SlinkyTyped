@@ -35,7 +35,7 @@ Instantiable1[
     ]
      with Instantiable3[
       /* player */ typingsSlinky.videoJs.mod.videojs.Player, 
-      /* options */ TrackButtonOptions, 
+      js.UndefOr[/* options */ TrackButtonOptions], 
       /* ready */ ReadyCallback, 
       typingsSlinky.videoJs.mod.videojs.DescriptionsButton
     ]

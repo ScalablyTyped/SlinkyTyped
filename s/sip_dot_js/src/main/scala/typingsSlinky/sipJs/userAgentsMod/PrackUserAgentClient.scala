@@ -13,6 +13,7 @@ class PrackUserAgentClient protected ()
   extends typingsSlinky.sipJs.prackUserAgentClientMod.PrackUserAgentClient {
   def this(dialog: SessionDialog) = this()
   def this(dialog: SessionDialog, delegate: OutgoingRequestDelegate) = this()
+  def this(dialog: SessionDialog, delegate: js.UndefOr[scala.Nothing], options: RequestOptions) = this()
   def this(dialog: SessionDialog, delegate: OutgoingRequestDelegate, options: RequestOptions) = this()
 }
 

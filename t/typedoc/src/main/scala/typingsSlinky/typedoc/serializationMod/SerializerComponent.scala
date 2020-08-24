@@ -6,8 +6,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("typedoc/dist/lib/serialization", "SerializerComponent")
 @js.native
-abstract class SerializerComponent[T] ()
-  extends typingsSlinky.typedoc.serializationComponentsMod.SerializerComponent[T]
+abstract class SerializerComponent[T] protected ()
+  extends typingsSlinky.typedoc.serializationComponentsMod.SerializerComponent[T] {
+  def this(owner: typingsSlinky.typedoc.serializerMod.Serializer) = this()
+}
 
 /* static members */
 @JSImport("typedoc/dist/lib/serialization", "SerializerComponent")

@@ -3,6 +3,7 @@ package typingsSlinky.rheostat.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.rheostat.mod.Algorithm
 import typingsSlinky.rheostat.mod.Orientation
 import typingsSlinky.rheostat.mod.Props
@@ -30,7 +31,7 @@ object Rheostat {
     @scala.inline
     def backgroundComponentClass(value: ReactComponentClass[_]): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
-    def background(value: ReactComponentClass[_]): this.type = set("background", value.asInstanceOf[js.Any])
+    def background(value: ReactType[_]): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -42,7 +43,7 @@ object Rheostat {
     @scala.inline
     def handleComponentClass(value: ReactComponentClass[_]): this.type = set("handle", value.asInstanceOf[js.Any])
     @scala.inline
-    def handle(value: ReactComponentClass[_]): this.type = set("handle", value.asInstanceOf[js.Any])
+    def handle(value: ReactType[_]): this.type = set("handle", value.asInstanceOf[js.Any])
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
     @scala.inline
@@ -68,7 +69,9 @@ object Rheostat {
     @scala.inline
     def pitComponentComponentClass(value: ReactComponentClass[_]): this.type = set("pitComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def pitComponent(value: ReactComponentClass[_]): this.type = set("pitComponent", value.asInstanceOf[js.Any])
+    def pitComponent(value: ReactType[_]): this.type = set("pitComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pitPointsVarargs(value: Double*): this.type = set("pitPoints", js.Array(value :_*))
     @scala.inline
     def pitPoints(value: js.Array[Double]): this.type = set("pitPoints", value.asInstanceOf[js.Any])
     @scala.inline
@@ -76,11 +79,15 @@ object Rheostat {
     @scala.inline
     def progressBarComponentClass(value: ReactComponentClass[_]): this.type = set("progressBar", value.asInstanceOf[js.Any])
     @scala.inline
-    def progressBar(value: ReactComponentClass[_]): this.type = set("progressBar", value.asInstanceOf[js.Any])
+    def progressBar(value: ReactType[_]): this.type = set("progressBar", value.asInstanceOf[js.Any])
     @scala.inline
     def snap(value: Boolean): this.type = set("snap", value.asInstanceOf[js.Any])
     @scala.inline
+    def snapPointsVarargs(value: Double*): this.type = set("snapPoints", js.Array(value :_*))
+    @scala.inline
     def snapPoints(value: js.Array[Double]): this.type = set("snapPoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valuesVarargs(value: Double*): this.type = set("values", js.Array(value :_*))
     @scala.inline
     def values(value: js.Array[Double]): this.type = set("values", value.asInstanceOf[js.Any])
   }

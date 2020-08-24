@@ -250,6 +250,8 @@ class SharedBuilder_MDLOtherProps_1174833659[R <: js.Object] (val args: js.Array
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
   def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -617,6 +619,8 @@ class SharedBuilder_MDLOtherProps_1174833659[R <: js.Object] (val args: js.Array
   def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
   @scala.inline
   def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
   @scala.inline
   def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
   @scala.inline

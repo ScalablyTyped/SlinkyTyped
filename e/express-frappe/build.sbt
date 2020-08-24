@@ -1,25 +1,25 @@
 organization := "org.scalablytyped.slinky"
 name := "express-frappe"
-version := "2.1.3-5a3820"
-scalaVersion := "2.13.2"
+version := "2.1.3-72ff8e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-3172ef",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-49be3e",
-  "org.scalablytyped.slinky" %%% "cors" % "2.8-dt-20200515Z-f53092",
-  "org.scalablytyped.slinky" %%% "engine_dot_io" % "3.1-dt-20200515Z-554504",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200515Z-35525e",
-  "org.scalablytyped.slinky" %%% "express-routers" % "1.0.1-99b0cd",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200515Z-f4fc10",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200515Z-2900a9",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-8e6135",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-0a4f98",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-85de9b",
-  "org.scalablytyped.slinky" %%% "socket_dot_io" % "2.1-dt-20200517Z-0f882b",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-b686e3",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-46705a",
+  "org.scalablytyped.slinky" %%% "cors" % "2.8-dt-20200515Z-31ced8",
+  "org.scalablytyped.slinky" %%% "engine_dot_io" % "3.1-dt-20200530Z-81d35e",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200706Z-e24f67",
+  "org.scalablytyped.slinky" %%% "express-routers" % "1.0.1-d4fdbe",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200722Z-f4d568",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-cba958",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-7e078d",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-d7b143",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-0a0205",
+  "org.scalablytyped.slinky" %%% "socket_dot_io" % "2.1-dt-20200721Z-25d828",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

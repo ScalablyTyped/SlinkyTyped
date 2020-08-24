@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Checkbox {
-  @JSImport("fundamental-react/lib/Forms/Checkbox", JSImport.Default)
+  @JSImport("fundamental-react", "Checkbox")
   @js.native
   object component extends js.Object
   

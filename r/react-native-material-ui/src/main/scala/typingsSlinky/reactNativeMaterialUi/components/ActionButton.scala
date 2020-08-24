@@ -21,6 +21,8 @@ object ActionButton {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.ActionButton] {
     @scala.inline
+    def actionsVarargs(value: (ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String)*): this.type = set("actions", js.Array(value :_*))
+    @scala.inline
     def actions(value: js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])

@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("three", "FaceColors")
 @js.native
 object FaceColors
-  extends TopLevel[typingsSlinky.three.constantsMod.Colors]
+  extends TopLevel[typingsSlinky.three.threeLegacyMod.Colors]
 

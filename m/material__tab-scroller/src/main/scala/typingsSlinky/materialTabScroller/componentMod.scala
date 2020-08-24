@@ -2,7 +2,6 @@ package typingsSlinky.materialTabScroller
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
-import typingsSlinky.materialBase.foundationMod.default
 import typingsSlinky.materialTabScroller.foundationMod.MDCTabScrollerFoundation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object componentMod extends js.Object {
   @js.native
-  class MDCTabScroller () extends MDCComponent[MDCTabScrollerFoundation, default[MDCTabScrollerFoundation]] {
+  class MDCTabScroller () extends MDCComponent[MDCTabScrollerFoundation] {
     /**
       * Returns the width of the scroll content
       */

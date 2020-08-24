@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore.mod
 
+import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/core", "\u0275getDirectives")
 @js.native
 object ɵgetDirectives extends js.Object {
-  def apply(target: js.Object): js.Array[js.Object] = js.native
+  def apply(element: Element): js.Array[js.Object] = js.native
 }
 

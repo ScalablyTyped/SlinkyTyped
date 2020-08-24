@@ -17,7 +17,7 @@ object ThemeProvider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactJss.mod.ThemeProvider] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def themeFunction1(value: DefaultTheme => NonNullable[DefaultTheme]): this.type = set("theme", js.Any.fromFunction1(value))
     @scala.inline

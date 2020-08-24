@@ -2,6 +2,7 @@ package typingsSlinky.reactDraggable.components
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDraggable.anon.PartialDraggableProps
@@ -53,6 +54,8 @@ object ReactDraggable {
     def grid(value: js.Tuple2[Double, Double]): this.type = set("grid", value.asInstanceOf[js.Any])
     @scala.inline
     def handle(value: String): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeRef(value: ReactRef[HTMLElement]): this.type = set("nodeRef", value.asInstanceOf[js.Any])
     @scala.inline
     def offsetParent(value: HTMLElement): this.type = set("offsetParent", value.asInstanceOf[js.Any])
     @scala.inline

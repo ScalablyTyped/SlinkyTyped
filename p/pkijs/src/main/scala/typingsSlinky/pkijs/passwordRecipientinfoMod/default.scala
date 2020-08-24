@@ -1,6 +1,5 @@
 package typingsSlinky.pkijs.passwordRecipientinfoMod
 
-import typingsSlinky.asn1js.mod.OctetString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,20 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends PasswordRecipientinfo {
   def this(params: js.Any) = this()
-  /* CompleteClass */
-  override var encryptedKey: OctetString = js.native
-  /* CompleteClass */
-  override var keyEncryptionAlgorithm: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
-  /* CompleteClass */
-  override var password: js.typedarray.ArrayBuffer = js.native
-  /* CompleteClass */
-  override var version: Double = js.native
-  /* CompleteClass */
-  override def fromSchema(schema: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def toJSON(): js.Any = js.native
-  /* CompleteClass */
-  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

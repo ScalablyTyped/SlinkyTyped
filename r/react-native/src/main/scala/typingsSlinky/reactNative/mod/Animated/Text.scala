@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 object Text
   extends TopLevel[
       ReactComponentClass[
-        AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.Text]]]
+        ComponentProps[Instantiable0[typingsSlinky.reactNative.mod.Text]] | AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.Text]]]
       ]
     ]
 

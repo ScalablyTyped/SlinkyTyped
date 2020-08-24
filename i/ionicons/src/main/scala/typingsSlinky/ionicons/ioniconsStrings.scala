@@ -1,5 +1,6 @@
 package typingsSlinky.ionicons
 
+import typingsSlinky.ionicons.stencilPublicRuntimeMod.ListenTargetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,16 +28,25 @@ object ioniconsStrings {
   sealed trait bevel extends js.Object
   
   @js.native
+  sealed trait body extends ListenTargetOptions
+  
+  @js.native
   sealed trait butt extends js.Object
   
   @js.native
   sealed trait central extends js.Object
   
   @js.native
+  sealed trait document extends ListenTargetOptions
+  
+  @js.native
   sealed trait eager extends js.Object
   
   @js.native
   sealed trait evenodd extends js.Object
+  
+  @js.native
+  sealed trait `false` extends js.Object
   
   @js.native
   sealed trait hanging extends js.Object
@@ -54,25 +64,19 @@ object ioniconsStrings {
   sealed trait initial extends js.Object
   
   @js.native
-  sealed trait ios extends js.Object
-  
-  @js.native
   sealed trait isolated extends js.Object
   
   @js.native
   sealed trait `lazy` extends js.Object
   
   @js.native
-  sealed trait linearRGB extends js.Object
+  sealed trait `linear-rGB` extends js.Object
   
   @js.native
   sealed trait low extends js.Object
   
   @js.native
   sealed trait mathematical extends js.Object
-  
-  @js.native
-  sealed trait md extends js.Object
   
   @js.native
   sealed trait medial extends js.Object
@@ -93,13 +97,16 @@ object ioniconsStrings {
   sealed trait nonzero extends js.Object
   
   @js.native
+  sealed trait parent extends ListenTargetOptions
+  
+  @js.native
   sealed trait replace extends js.Object
   
   @js.native
   sealed trait round extends js.Object
   
   @js.native
-  sealed trait sRGB extends js.Object
+  sealed trait `s-rGB` extends js.Object
   
   @js.native
   sealed trait square extends js.Object
@@ -120,6 +127,12 @@ object ioniconsStrings {
   sealed trait `text-before-edge` extends js.Object
   
   @js.native
+  sealed trait `true` extends js.Object
+  
+  @js.native
+  sealed trait window extends ListenTargetOptions
+  
+  @js.native
   sealed trait yes extends js.Object
   
   @scala.inline
@@ -137,13 +150,19 @@ object ioniconsStrings {
   @scala.inline
   def bevel: bevel = "bevel".asInstanceOf[bevel]
   @scala.inline
+  def body: body = "body".asInstanceOf[body]
+  @scala.inline
   def butt: butt = "butt".asInstanceOf[butt]
   @scala.inline
   def central: central = "central".asInstanceOf[central]
   @scala.inline
+  def document: document = "document".asInstanceOf[document]
+  @scala.inline
   def eager: eager = "eager".asInstanceOf[eager]
   @scala.inline
   def evenodd: evenodd = "evenodd".asInstanceOf[evenodd]
+  @scala.inline
+  def `false`: `false` = "false".asInstanceOf[`false`]
   @scala.inline
   def hanging: hanging = "hanging".asInstanceOf[hanging]
   @scala.inline
@@ -155,19 +174,15 @@ object ioniconsStrings {
   @scala.inline
   def initial: initial = "initial".asInstanceOf[initial]
   @scala.inline
-  def ios: ios = "ios".asInstanceOf[ios]
-  @scala.inline
   def isolated: isolated = "isolated".asInstanceOf[isolated]
   @scala.inline
   def `lazy`: `lazy` = "lazy".asInstanceOf[`lazy`]
   @scala.inline
-  def linearRGB: linearRGB = "linearRGB".asInstanceOf[linearRGB]
+  def `linear-rGB`: `linear-rGB` = "linear-rGB".asInstanceOf[`linear-rGB`]
   @scala.inline
   def low: low = "low".asInstanceOf[low]
   @scala.inline
   def mathematical: mathematical = "mathematical".asInstanceOf[mathematical]
-  @scala.inline
-  def md: md = "md".asInstanceOf[md]
   @scala.inline
   def medial: medial = "medial".asInstanceOf[medial]
   @scala.inline
@@ -181,11 +196,13 @@ object ioniconsStrings {
   @scala.inline
   def nonzero: nonzero = "nonzero".asInstanceOf[nonzero]
   @scala.inline
+  def parent: parent = "parent".asInstanceOf[parent]
+  @scala.inline
   def replace: replace = "replace".asInstanceOf[replace]
   @scala.inline
   def round: round = "round".asInstanceOf[round]
   @scala.inline
-  def sRGB: sRGB = "sRGB".asInstanceOf[sRGB]
+  def `s-rGB`: `s-rGB` = "s-rGB".asInstanceOf[`s-rGB`]
   @scala.inline
   def square: square = "square".asInstanceOf[square]
   @scala.inline
@@ -198,6 +215,10 @@ object ioniconsStrings {
   def `text-after-edge`: `text-after-edge` = "text-after-edge".asInstanceOf[`text-after-edge`]
   @scala.inline
   def `text-before-edge`: `text-before-edge` = "text-before-edge".asInstanceOf[`text-before-edge`]
+  @scala.inline
+  def `true`: `true` = "true".asInstanceOf[`true`]
+  @scala.inline
+  def window: window = "window".asInstanceOf[window]
   @scala.inline
   def yes: yes = "yes".asInstanceOf[yes]
 }

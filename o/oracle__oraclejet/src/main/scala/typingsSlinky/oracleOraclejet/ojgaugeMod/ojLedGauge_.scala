@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.Text
 import typingsSlinky.oracleOraclejet.anon.TextType
-import typingsSlinky.oracleOraclejet.anon.`8`
+import typingsSlinky.oracleOraclejet.anon.`10`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojLedGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`180`
@@ -82,7 +82,7 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   var svgClassName: String = js.native
   var svgStyle: js.Object = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: `8` = js.native
+  var tooltip: `10` = js.native
   var `type`: arrow | diamond | square | rectangle | triangle | star | human | circle = js.native
   var value: Double | Null = js.native
   var visualEffects: none | auto = js.native
@@ -222,7 +222,7 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_thresholds(property: thresholds): js.Array[Threshold] = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `8` = js.native
+  def getProperty_tooltip(property: tooltip): `10` = js.native
   @JSName("getProperty")
   def getProperty_type(property: `type`): arrow | diamond | square | rectangle | triangle | star | human | circle = js.native
   @JSName("getProperty")
@@ -265,7 +265,7 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_thresholds(property: thresholds, value: js.Array[Threshold]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `8`): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `10`): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value): Unit = js.native
   @JSName("setProperty")

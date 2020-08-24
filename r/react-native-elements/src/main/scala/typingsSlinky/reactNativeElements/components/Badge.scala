@@ -1,11 +1,11 @@
 package typingsSlinky.reactNativeElements.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextProperties
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.BadgeProps
@@ -41,13 +41,15 @@ object Badge {
     @scala.inline
     def status(value: primary | success | warning | error): this.type = set("status", value.asInstanceOf[js.Any])
     @scala.inline
+    def textProps(value: TextProperties): this.type = set("textProps", value.asInstanceOf[js.Any])
+    @scala.inline
     def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def textStyleNull: this.type = set("textStyle", null)
     @scala.inline
     def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
-    def value(value: TagMod[Any]): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

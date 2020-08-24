@@ -24,6 +24,8 @@ object TableSearch {
     def onSearch(value: /* args */ js.Any => _): this.type = set("onSearch", js.Any.fromFunction1(value))
     @scala.inline
     def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MUIDataTableSearch): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

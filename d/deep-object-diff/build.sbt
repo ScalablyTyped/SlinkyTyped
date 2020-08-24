@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "deep-object-diff"
-version := "1.1.0-5cd86b"
-scalaVersion := "2.13.2"
+version := "1.1.0-3b73e5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

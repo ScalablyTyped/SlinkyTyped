@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "bit-twiddle"
-version := "1.0-dt-20200515Z-eb23af"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-d2b488"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

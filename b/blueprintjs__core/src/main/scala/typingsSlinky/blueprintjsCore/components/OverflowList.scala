@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsCore.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
@@ -19,7 +19,7 @@ object OverflowList {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.OverflowList[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.OverflowList[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,7 +40,7 @@ object OverflowList {
   @scala.inline
   def apply[T](
     items: js.Array[T],
-    overflowRenderer: js.Array[T] => TagMod[Any],
+    overflowRenderer: js.Array[T] => ReactElement,
     visibleItemRenderer: (T, Double) => ReactChild
   ): Builder[T] = {
     val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], overflowRenderer = js.Any.fromFunction1(overflowRenderer), visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))

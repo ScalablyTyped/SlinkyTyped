@@ -24,17 +24,14 @@ object OnHierarchyChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChildViewAdded(value: (View, View) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildViewAdded")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnChildViewRemoved(value: (View, View) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildViewRemoved")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnChildViewAdded(value: (View, View) => js.Any): Self = this.set("onChildViewAdded", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnChildViewRemoved(value: (View, View) => js.Any): Self = this.set("onChildViewRemoved", js.Any.fromFunction2(value))
   }
   
 }

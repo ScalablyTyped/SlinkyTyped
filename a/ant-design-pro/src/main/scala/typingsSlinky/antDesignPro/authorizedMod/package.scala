@@ -8,7 +8,7 @@ package object authorizedMod {
   type IReactComponent[P] = slinky.core.ReactComponentClass[P]
   type Secured = js.Function2[
     /* authority */ typingsSlinky.antDesignPro.authorizedRouteMod.authority, 
-    /* error */ js.UndefOr[slinky.core.TagMod[scala.Any]], 
+    /* error */ js.UndefOr[slinky.core.facade.ReactElement], 
     js.Function1[
       /* target */ typingsSlinky.antDesignPro.authorizedMod.IReactComponent[js.Any], 
       typingsSlinky.antDesignPro.authorizedMod.IReactComponent[js.Any]

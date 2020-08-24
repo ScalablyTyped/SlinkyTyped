@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("react-native", "Animated.Image")
 @js.native
-object Image extends TopLevel[ReactComponentClass[AnimatedProps[ComponentPropsWithRef[TypeofImage]]]]
+object Image extends TopLevel[
+      ReactComponentClass[ComponentProps[TypeofImage] | AnimatedProps[ComponentPropsWithRef[TypeofImage]]]
+    ]
 

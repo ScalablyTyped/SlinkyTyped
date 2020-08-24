@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.WebUI.SuspendingEventArgs")
 @js.native
 abstract class SuspendingEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.SuspendingEventArgs {
-  /** Gets the app suspension operation. */
-  /* CompleteClass */
-  override var suspendingOperation: typingsSlinky.winrtUwp.Windows.ApplicationModel.SuspendingOperation = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.SuspendingEventArgs
 

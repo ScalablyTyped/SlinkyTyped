@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -75,7 +74,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ActionBar {
-  @JSImport("fundamental-react/lib/ActionBar/ActionBar", JSImport.Default)
+  @JSImport("fundamental-react", "ActionBar")
   @js.native
   object component extends js.Object
   
@@ -94,7 +93,7 @@ object ActionBar {
     @scala.inline
     def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
-    def actions(value: TagMod[Any]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -215,6 +214,8 @@ object ActionBar {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -440,8 +441,6 @@ object ActionBar {
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
-    @scala.inline
     def titleProps(value: js.Any): this.type = set("titleProps", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -454,6 +453,10 @@ object ActionBar {
   }
   
   def withProps(p: PropsWithChildren[ActionBarProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ActionBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(title: String with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[ActionBarProps]]))
+  }
 }
 

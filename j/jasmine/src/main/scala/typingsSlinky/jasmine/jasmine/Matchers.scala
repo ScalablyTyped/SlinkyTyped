@@ -31,6 +31,7 @@ trait Matchers[T]
   def toBe(expected: Expected[T]): Boolean = js.native
   def toBe(expected: Expected[T], expectationFailOutput: js.Any): Boolean = js.native
   def toBeCloseTo(expected: Double): Boolean = js.native
+  def toBeCloseTo(expected: Double, precision: js.UndefOr[scala.Nothing], expectationFailOutput: js.Any): Boolean = js.native
   def toBeCloseTo(expected: Double, precision: js.Any): Boolean = js.native
   def toBeCloseTo(expected: Double, precision: js.Any, expectationFailOutput: js.Any): Boolean = js.native
   def toBeDefined(): Boolean = js.native
@@ -99,6 +100,8 @@ trait Matchers[T]
   def toThrow(): Boolean = js.native
   def toThrow(expected: js.Any): Boolean = js.native
   def toThrowError(): Boolean = js.native
+  def toThrowError(expected: js.UndefOr[scala.Nothing], message: String): Boolean = js.native
+  def toThrowError(expected: js.UndefOr[scala.Nothing], message: js.RegExp): Boolean = js.native
   def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error]): Boolean = js.native
   def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error], message: String): Boolean = js.native
   def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error], message: js.RegExp): Boolean = js.native

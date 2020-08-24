@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object loginWithTwitter extends js.Object {
   def apply(): Unit = js.native
+  def apply(
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* error */ js.UndefOr[js.Error | Error | TypedError], Unit]
+  ): Unit = js.native
   def apply(options: LoginWithExternalServiceOptions): Unit = js.native
   def apply(
     options: LoginWithExternalServiceOptions,

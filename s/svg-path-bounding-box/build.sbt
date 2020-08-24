@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "svg-path-bounding-box"
-version := "1.0-dt-20200515Z-2f1394"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-169551"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

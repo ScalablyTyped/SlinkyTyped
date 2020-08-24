@@ -7,6 +7,21 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Chart extends js.Object {
   /**
+    * Generates a data URL of CSV for local download in the browser. This
+    * is the default action for a click on the 'Download CSV' button.
+    *
+    * See Highcharts.Chart#getCSV to get the CSV data itself.
+    */
+  def downloadCSV(): Unit = js.native
+  /**
+    * Generates a data URL of an XLS document for local download in the
+    * browser. This is the default action for a click on the 'Download XLS'
+    * button.
+    *
+    * See Highcharts.Chart#getTable to get the table data itself.
+    */
+  def downloadXLS(): Unit = js.native
+  /**
     * Export-data module required. Returns the current chart data as a CSV
     * string.
     *
@@ -49,16 +64,6 @@ trait Chart extends js.Object {
     */
   def getTable(): String = js.native
   def getTable(useLocalDecimalPoint: Boolean): String = js.native
-  /**
-    * Experimental function to send a chart's config to the Cloud for
-    * editing.
-    *
-    * Limitations
-    *
-    * - All functions (formatters and callbacks) are removed since they're
-    * not JSON.
-    */
-  def openInCloud(): Unit = js.native
   /**
     * Export-data module required. View the data in a table below the
     * chart.

@@ -25,29 +25,18 @@ object StorageChange {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNewValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutNewValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(js.undefined)
-        ret
-    }
+    def setNewValue(value: js.Any): Self = this.set("newValue", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOldValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteNewValue: Self = this.set("newValue", js.undefined)
     @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
+    def setOldValue(value: js.Any): Self = this.set("oldValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOldValue: Self = this.set("oldValue", js.undefined)
   }
   
 }

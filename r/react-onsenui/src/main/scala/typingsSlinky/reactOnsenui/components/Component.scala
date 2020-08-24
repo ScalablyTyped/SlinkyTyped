@@ -16,7 +16,7 @@ object Component {
   @scala.inline
   class Builder[P, S] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Component[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Component[P, S]]
   
   def apply[P, S](p: HTMLAttributesidclassName with P): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P, S](companion: Component.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()

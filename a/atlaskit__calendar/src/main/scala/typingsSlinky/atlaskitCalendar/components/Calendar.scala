@@ -27,15 +27,23 @@ object Calendar {
     @scala.inline
     def defaultDay(value: Double): this.type = set("defaultDay", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultDisabledVarargs(value: String*): this.type = set("defaultDisabled", js.Array(value :_*))
+    @scala.inline
     def defaultDisabled(value: js.Array[String]): this.type = set("defaultDisabled", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultMonth(value: Double): this.type = set("defaultMonth", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultPreviouslySelectedVarargs(value: String*): this.type = set("defaultPreviouslySelected", js.Array(value :_*))
+    @scala.inline
     def defaultPreviouslySelected(value: js.Array[String]): this.type = set("defaultPreviouslySelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedVarargs(value: String*): this.type = set("defaultSelected", js.Array(value :_*))
     @scala.inline
     def defaultSelected(value: js.Array[String]): this.type = set("defaultSelected", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultYear(value: Double): this.type = set("defaultYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledVarargs(value: String*): this.type = set("disabled", js.Array(value :_*))
     @scala.inline
     def disabled(value: js.Array[String]): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,7 +59,11 @@ object Calendar {
     @scala.inline
     def onSelect(value: /* e */ SelectEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
+    def previouslySelectedVarargs(value: String*): this.type = set("previouslySelected", js.Array(value :_*))
+    @scala.inline
     def previouslySelected(value: js.Array[String]): this.type = set("previouslySelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedVarargs(value: String*): this.type = set("selected", js.Array(value :_*))
     @scala.inline
     def selected(value: js.Array[String]): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline

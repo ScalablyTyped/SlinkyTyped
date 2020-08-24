@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "is-relative-url"
-version := "3.0.0-1fcade"
-scalaVersion := "2.13.2"
+version := "3.0.0-56ef8a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

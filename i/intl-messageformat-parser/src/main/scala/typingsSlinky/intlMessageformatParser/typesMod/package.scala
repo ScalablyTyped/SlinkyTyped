@@ -19,6 +19,7 @@ package object typesMod {
     - typingsSlinky.intlMessageformatParser.typesMod.TimeElement
     - typingsSlinky.intlMessageformatParser.typesMod.SelectElement
     - typingsSlinky.intlMessageformatParser.typesMod.PluralElement
+    - typingsSlinky.intlMessageformatParser.typesMod.TagElement
     - typingsSlinky.intlMessageformatParser.typesMod.PoundElement
   */
   type MessageFormatElement = typingsSlinky.intlMessageformatParser.typesMod._MessageFormatElement | typingsSlinky.intlMessageformatParser.typesMod.LiteralElement | typingsSlinky.intlMessageformatParser.typesMod.ArgumentElement | typingsSlinky.intlMessageformatParser.typesMod.NumberElement | typingsSlinky.intlMessageformatParser.typesMod.DateElement | typingsSlinky.intlMessageformatParser.typesMod.TimeElement

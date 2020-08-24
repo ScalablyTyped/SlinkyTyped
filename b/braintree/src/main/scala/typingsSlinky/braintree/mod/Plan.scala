@@ -11,7 +11,7 @@ class Plan () extends js.Object {
   var billingDayOfMonth: Double = js.native
   var billingFrequency: Double = js.native
   var createdAt: js.Date = js.native
-  var currenyIsoCode: String = js.native
+  var currencyIsoCode: String = js.native
   var description: js.UndefOr[String] = js.native
   var discounts: js.UndefOr[js.Array[Discount]] = js.native
   var id: String = js.native

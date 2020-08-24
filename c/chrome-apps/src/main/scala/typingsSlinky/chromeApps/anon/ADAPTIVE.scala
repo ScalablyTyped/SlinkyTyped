@@ -27,23 +27,16 @@ object ADAPTIVE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withADAPTIVE(value: adaptive_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ADAPTIVE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withASYNCHRONOUS(value: asynchronous_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ASYNCHRONOUS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setADAPTIVE(value: adaptive_): Self = this.set("ADAPTIVE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSYNCHRONOUS(value: synchronous_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SYNCHRONOUS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setASYNCHRONOUS(value: asynchronous_): Self = this.set("ASYNCHRONOUS", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSYNCHRONOUS(value: synchronous_): Self = this.set("SYNCHRONOUS", value.asInstanceOf[js.Any])
   }
   
 }

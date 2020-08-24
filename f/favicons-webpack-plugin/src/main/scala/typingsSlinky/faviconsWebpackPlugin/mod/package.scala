@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type FaviconsWebpackPlugin = typingsSlinky.webpack.mod.Plugin
+  type FaviconsWebpackPlugin = typingsSlinky.std.Plugin
 }

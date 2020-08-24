@@ -1,7 +1,6 @@
 package typingsSlinky.antdMobile.components
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
@@ -12,21 +11,20 @@ import typingsSlinky.antdMobile.antdMobileStrings.primary
 import typingsSlinky.antdMobile.antdMobileStrings.small
 import typingsSlinky.antdMobile.antdMobileStrings.warning
 import typingsSlinky.antdMobile.buttonMod.ButtonProps
-import typingsSlinky.antdMobile.buttonMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Button {
-  @JSImport("antd-mobile/lib/button", JSImport.Default)
+  @JSImport("antd-mobile", "Button")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Button] {
     @scala.inline
     def activeClassName(value: String): this.type = set("activeClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -38,7 +36,7 @@ object Button {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     @scala.inline

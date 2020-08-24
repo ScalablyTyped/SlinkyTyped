@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DrawerWrapper {
-  @JSImport("rc-drawer/lib/DrawerWrapper", JSImport.Default)
+  @JSImport("rc-drawer/es/DrawerWrapper", JSImport.Default)
   @js.native
   object component extends js.Object
   

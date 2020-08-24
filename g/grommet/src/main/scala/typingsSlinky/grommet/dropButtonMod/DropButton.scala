@@ -13,7 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet/components/DropButton", "DropButton")
+@JSImport("grommet/es6/components/DropButton", "DropButton")
 @js.native
 class DropButton protected ()
   extends Component[
@@ -37,7 +37,7 @@ class DropButton protected ()
   ) = this()
 }
 
-@JSImport("grommet/components/DropButton", "DropButton")
+@JSImport("grommet/es6/components/DropButton", "DropButton")
 @js.native
 object DropButton extends TopLevel[
       ReactComponentClass[

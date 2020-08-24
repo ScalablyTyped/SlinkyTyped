@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery-slimscroll"
-version := "v1.3.8-dt-20200515Z-c0b4d4"
-scalaVersion := "2.13.2"
+version := "v1.3.8-dt-20200515Z-29e948"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

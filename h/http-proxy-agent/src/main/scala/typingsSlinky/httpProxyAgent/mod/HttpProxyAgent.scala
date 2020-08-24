@@ -1,14 +1,13 @@
 package typingsSlinky.httpProxyAgent.mod
 
-import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.node.urlMod.Url
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.httpProxyAgent.agentMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@JSImport("http-proxy-agent", "HttpProxyAgent")
 @js.native
-trait HttpProxyAgent extends Agent {
-  var proxy: Url = js.native
-  var secureProxy: Boolean = js.native
-}
+object HttpProxyAgent extends TopLevel[Instantiable1[/* _opts */ String | HttpProxyAgentOptions, default]]
 

@@ -13,6 +13,13 @@ object renderWithData extends js.Object {
     templateOrView: typingsSlinky.meteor.Blaze.Template,
     data: js.Function,
     parentNode: Node,
+    nextNode: js.UndefOr[scala.Nothing],
+    parentView: typingsSlinky.meteor.Blaze.View
+  ): typingsSlinky.meteor.Blaze.View = js.native
+  def apply(
+    templateOrView: typingsSlinky.meteor.Blaze.Template,
+    data: js.Function,
+    parentNode: Node,
     nextNode: Node
   ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
@@ -23,6 +30,13 @@ object renderWithData extends js.Object {
     parentView: typingsSlinky.meteor.Blaze.View
   ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(templateOrView: typingsSlinky.meteor.Blaze.Template, data: js.Object, parentNode: Node): typingsSlinky.meteor.Blaze.View = js.native
+  def apply(
+    templateOrView: typingsSlinky.meteor.Blaze.Template,
+    data: js.Object,
+    parentNode: Node,
+    nextNode: js.UndefOr[scala.Nothing],
+    parentView: typingsSlinky.meteor.Blaze.View
+  ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
     templateOrView: typingsSlinky.meteor.Blaze.Template,
     data: js.Object,
@@ -41,6 +55,13 @@ object renderWithData extends js.Object {
     templateOrView: typingsSlinky.meteor.Blaze.View,
     data: js.Function,
     parentNode: Node,
+    nextNode: js.UndefOr[scala.Nothing],
+    parentView: typingsSlinky.meteor.Blaze.View
+  ): typingsSlinky.meteor.Blaze.View = js.native
+  def apply(
+    templateOrView: typingsSlinky.meteor.Blaze.View,
+    data: js.Function,
+    parentNode: Node,
     nextNode: Node
   ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
@@ -51,6 +72,13 @@ object renderWithData extends js.Object {
     parentView: typingsSlinky.meteor.Blaze.View
   ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(templateOrView: typingsSlinky.meteor.Blaze.View, data: js.Object, parentNode: Node): typingsSlinky.meteor.Blaze.View = js.native
+  def apply(
+    templateOrView: typingsSlinky.meteor.Blaze.View,
+    data: js.Object,
+    parentNode: Node,
+    nextNode: js.UndefOr[scala.Nothing],
+    parentView: typingsSlinky.meteor.Blaze.View
+  ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(templateOrView: typingsSlinky.meteor.Blaze.View, data: js.Object, parentNode: Node, nextNode: Node): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
     templateOrView: typingsSlinky.meteor.Blaze.View,

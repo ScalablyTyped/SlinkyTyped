@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-bytesize-icons
 
-Typings are for version 0.6.4
+Typings are for version 0.12.2
 
 ## Library description:
 Bytesize Icons as React Components.

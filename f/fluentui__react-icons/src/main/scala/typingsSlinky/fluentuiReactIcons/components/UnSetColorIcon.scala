@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UnSetColorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UnSetColorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UnSetColorIcon")
   @js.native
   object component extends js.Object
   

@@ -9,6 +9,7 @@ package object mediapackageMod {
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.SCTE35_ENHANCED
     - typingsSlinky.awsSdk.awsSdkStrings.PASSTHROUGH
+    - typingsSlinky.awsSdk.awsSdkStrings.DATERANGE
     - java.lang.String
   */
   type AdMarkers = typingsSlinky.awsSdk.mediapackageMod._AdMarkers | java.lang.String

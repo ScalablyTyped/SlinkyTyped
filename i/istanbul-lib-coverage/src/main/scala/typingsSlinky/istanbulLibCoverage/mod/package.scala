@@ -5,5 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type CoverageMapData = org.scalablytyped.runtime.StringDictionary[typingsSlinky.istanbulLibCoverage.mod.FileCoverage]
+  type CoverageMapData = org.scalablytyped.runtime.StringDictionary[
+    typingsSlinky.istanbulLibCoverage.mod.FileCoverage | typingsSlinky.istanbulLibCoverage.mod.FileCoverageData
+  ]
 }

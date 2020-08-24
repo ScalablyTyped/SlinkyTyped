@@ -2,13 +2,15 @@ package typingsSlinky.ink.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ink.mod.ColorProps
+import typingsSlinky.chalk.mod.Chalk
+import typingsSlinky.ink.colorMod.Props
+import typingsSlinky.std.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Color {
-  @JSImport("ink", "Color")
+  @JSImport("ink/build/components/Color", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -16,6 +18,14 @@ object Color {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def ansi(value: (Parameters[js.Function1[/* code */ Double, Chalk]]) | String): this.type = set("ansi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ansi256(value: (Parameters[js.Function1[/* index */ Double, Chalk]]) | String): this.type = set("ansi256", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgAnsi(value: (Parameters[js.Function1[/* code */ Double, Chalk]]) | String): this.type = set("bgAnsi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgAnsi256(value: (Parameters[js.Function1[/* index */ Double, Chalk]]) | String): this.type = set("bgAnsi256", value.asInstanceOf[js.Any])
     @scala.inline
     def bgBlack(value: Boolean): this.type = set("bgBlack", value.asInstanceOf[js.Any])
     @scala.inline
@@ -29,19 +39,35 @@ object Color {
     @scala.inline
     def bgCyanBright(value: Boolean): this.type = set("bgCyanBright", value.asInstanceOf[js.Any])
     @scala.inline
+    def bgGray(value: Boolean): this.type = set("bgGray", value.asInstanceOf[js.Any])
+    @scala.inline
     def bgGreen(value: Boolean): this.type = set("bgGreen", value.asInstanceOf[js.Any])
     @scala.inline
     def bgGreenBright(value: Boolean): this.type = set("bgGreenBright", value.asInstanceOf[js.Any])
     @scala.inline
-    def bgHex(value: String): this.type = set("bgHex", value.asInstanceOf[js.Any])
+    def bgGrey(value: Boolean): this.type = set("bgGrey", value.asInstanceOf[js.Any])
     @scala.inline
-    def bgHsl(value: js.Tuple3[Double, Double, Double]): this.type = set("bgHsl", value.asInstanceOf[js.Any])
+    def bgHex(value: (Parameters[js.Function1[/* color */ String, Chalk]]) | String): this.type = set("bgHex", value.asInstanceOf[js.Any])
     @scala.inline
-    def bgHsv(value: js.Tuple3[Double, Double, Double]): this.type = set("bgHsv", value.asInstanceOf[js.Any])
+    def bgHsl(
+      value: (Parameters[
+          js.Function3[/* hue */ Double, /* saturation */ Double, /* lightness */ Double, Chalk]
+        ]) | String
+    ): this.type = set("bgHsl", value.asInstanceOf[js.Any])
     @scala.inline
-    def bgHwb(value: js.Tuple3[Double, Double, Double]): this.type = set("bgHwb", value.asInstanceOf[js.Any])
+    def bgHsv(
+      value: (Parameters[
+          js.Function3[/* hue */ Double, /* saturation */ Double, /* value */ Double, Chalk]
+        ]) | String
+    ): this.type = set("bgHsv", value.asInstanceOf[js.Any])
     @scala.inline
-    def bgKeyword(value: String): this.type = set("bgKeyword", value.asInstanceOf[js.Any])
+    def bgHwb(
+      value: (Parameters[
+          js.Function3[/* hue */ Double, /* whiteness */ Double, /* blackness */ Double, Chalk]
+        ]) | String
+    ): this.type = set("bgHwb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgKeyword(value: (Parameters[js.Function1[/* color */ String, Chalk]]) | String): this.type = set("bgKeyword", value.asInstanceOf[js.Any])
     @scala.inline
     def bgMagenta(value: Boolean): this.type = set("bgMagenta", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,7 +77,9 @@ object Color {
     @scala.inline
     def bgRedBright(value: Boolean): this.type = set("bgRedBright", value.asInstanceOf[js.Any])
     @scala.inline
-    def bgRgb(value: js.Tuple3[Double, Double, Double]): this.type = set("bgRgb", value.asInstanceOf[js.Any])
+    def bgRgb(
+      value: (Parameters[js.Function3[/* red */ Double, /* green */ Double, /* blue */ Double, Chalk]]) | String
+    ): this.type = set("bgRgb", value.asInstanceOf[js.Any])
     @scala.inline
     def bgWhite(value: Boolean): this.type = set("bgWhite", value.asInstanceOf[js.Any])
     @scala.inline
@@ -85,21 +113,33 @@ object Color {
     @scala.inline
     def grey(value: Boolean): this.type = set("grey", value.asInstanceOf[js.Any])
     @scala.inline
-    def hex(value: String): this.type = set("hex", value.asInstanceOf[js.Any])
+    def hex(value: (Parameters[js.Function1[/* color */ String, Chalk]]) | String): this.type = set("hex", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def hsl(value: js.Tuple3[Double, Double, Double]): this.type = set("hsl", value.asInstanceOf[js.Any])
+    def hsl(
+      value: (Parameters[
+          js.Function3[/* hue */ Double, /* saturation */ Double, /* lightness */ Double, Chalk]
+        ]) | String
+    ): this.type = set("hsl", value.asInstanceOf[js.Any])
     @scala.inline
-    def hsv(value: js.Tuple3[Double, Double, Double]): this.type = set("hsv", value.asInstanceOf[js.Any])
+    def hsv(
+      value: (Parameters[
+          js.Function3[/* hue */ Double, /* saturation */ Double, /* value */ Double, Chalk]
+        ]) | String
+    ): this.type = set("hsv", value.asInstanceOf[js.Any])
     @scala.inline
-    def hwb(value: js.Tuple3[Double, Double, Double]): this.type = set("hwb", value.asInstanceOf[js.Any])
+    def hwb(
+      value: (Parameters[
+          js.Function3[/* hue */ Double, /* whiteness */ Double, /* blackness */ Double, Chalk]
+        ]) | String
+    ): this.type = set("hwb", value.asInstanceOf[js.Any])
     @scala.inline
     def inverse(value: Boolean): this.type = set("inverse", value.asInstanceOf[js.Any])
     @scala.inline
     def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
     @scala.inline
-    def keyword(value: String): this.type = set("keyword", value.asInstanceOf[js.Any])
+    def keyword(value: (Parameters[js.Function1[/* color */ String, Chalk]]) | String): this.type = set("keyword", value.asInstanceOf[js.Any])
     @scala.inline
     def magenta(value: Boolean): this.type = set("magenta", value.asInstanceOf[js.Any])
     @scala.inline
@@ -111,7 +151,9 @@ object Color {
     @scala.inline
     def reset(value: Boolean): this.type = set("reset", value.asInstanceOf[js.Any])
     @scala.inline
-    def rgb(value: js.Tuple3[Double, Double, Double]): this.type = set("rgb", value.asInstanceOf[js.Any])
+    def rgb(
+      value: (Parameters[js.Function3[/* red */ Double, /* green */ Double, /* blue */ Double, Chalk]]) | String
+    ): this.type = set("rgb", value.asInstanceOf[js.Any])
     @scala.inline
     def strikethrough(value: Boolean): this.type = set("strikethrough", value.asInstanceOf[js.Any])
     @scala.inline
@@ -128,7 +170,7 @@ object Color {
     def yellowBright(value: Boolean): this.type = set("yellowBright", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ColorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Color.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

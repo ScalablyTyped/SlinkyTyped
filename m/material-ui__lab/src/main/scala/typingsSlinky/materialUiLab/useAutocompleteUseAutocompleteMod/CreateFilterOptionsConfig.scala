@@ -23,83 +23,40 @@ object CreateFilterOptionsConfig {
     __obj.asInstanceOf[CreateFilterOptionsConfig[T]]
   }
   @scala.inline
-  implicit class CreateFilterOptionsConfigOps[Self[t] <: CreateFilterOptionsConfig[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class CreateFilterOptionsConfigOps[Self <: CreateFilterOptionsConfig[_], T] (val x: Self with CreateFilterOptionsConfig[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIgnoreAccents(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreAccents")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutIgnoreAccents: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreAccents")(js.undefined)
-        ret
-    }
+    def setIgnoreAccents(value: Boolean): Self = this.set("ignoreAccents", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIgnoreCase(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIgnoreAccents: Self = this.set("ignoreAccents", js.undefined)
     @scala.inline
-    def withoutIgnoreCase: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(js.undefined)
-        ret
-    }
+    def setIgnoreCase(value: Boolean): Self = this.set("ignoreCase", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLimit(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIgnoreCase: Self = this.set("ignoreCase", js.undefined)
     @scala.inline
-    def withoutLimit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
+    def setLimit(value: Double): Self = this.set("limit", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMatchFrom(value: any | start): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLimit: Self = this.set("limit", js.undefined)
     @scala.inline
-    def withoutMatchFrom: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchFrom")(js.undefined)
-        ret
-    }
+    def setMatchFrom(value: any | start): Self = this.set("matchFrom", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStringify(value: /* option */ T => String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteMatchFrom: Self = this.set("matchFrom", js.undefined)
     @scala.inline
-    def withoutStringify: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
-        ret
-    }
+    def setStringify(value: /* option */ T => String): Self = this.set("stringify", js.Any.fromFunction1(value))
     @scala.inline
-    def withTrim(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStringify: Self = this.set("stringify", js.undefined)
     @scala.inline
-    def withoutTrim: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
-        ret
-    }
+    def setTrim(value: Boolean): Self = this.set("trim", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrim: Self = this.set("trim", js.undefined)
   }
   
 }

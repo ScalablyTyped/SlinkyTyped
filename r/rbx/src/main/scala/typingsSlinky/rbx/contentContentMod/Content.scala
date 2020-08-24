@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rbx.anon.AsElementType
 import typingsSlinky.rbx.anon.NoneTAsComponentextendsElItem
 import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
-import typingsSlinky.rbx.anon.`7`
+import typingsSlinky.rbx.anon.`6`
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.helpersMod.HelpersPropsOverrides
 import typingsSlinky.rbx.rbxStrings.as
@@ -62,7 +62,7 @@ object Content extends js.Object {
   ]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ContentModifierProps with (Pick[
+    props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ContentModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

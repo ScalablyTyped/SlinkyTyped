@@ -13,7 +13,7 @@ package object mod {
     /* nextFormatter */ js.UndefOr[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias react-timeago.react-timeago.Formatter */ js.Object
     ], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type ReactTimeago[T /* <: slinky.core.ReactComponentClass[js.Object] */] = slinky.core.ReactComponentClass[
     typingsSlinky.reactTimeago.mod.ReactTimeagoProps[T] with typingsSlinky.react.mod.ComponentProps[T]

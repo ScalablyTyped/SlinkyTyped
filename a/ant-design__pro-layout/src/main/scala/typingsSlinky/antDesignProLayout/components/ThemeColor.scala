@@ -6,7 +6,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.anon.Color
 import typingsSlinky.antDesignProLayout.anon.DefaultMessage
 import typingsSlinky.antDesignProLayout.themeColorMod.ThemeColorProps
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,11 +19,11 @@ object ThemeColor {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLDivElement] {
+    @scala.inline
+    def colorsVarargs(value: Color*): this.type = set("colors", js.Array(value :_*))
     @scala.inline
     def colors(value: js.Array[Color]): this.type = set("colors", value.asInstanceOf[js.Any])
-    @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ThemeColorProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

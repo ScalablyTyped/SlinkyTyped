@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UnlockSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UnlockSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UnlockSolidIcon")
   @js.native
   object component extends js.Object
   

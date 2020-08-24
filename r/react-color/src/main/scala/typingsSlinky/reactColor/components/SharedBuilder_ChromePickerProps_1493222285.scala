@@ -1,8 +1,10 @@
 package typingsSlinky.reactColor.components
 
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactColor.chromeMod.ChromePickerStyles
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.reactColor.anon.PartialClassesChromePicke
 import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
 import scala.scalajs.js
@@ -14,14 +16,16 @@ class SharedBuilder_ChromePickerProps_1493222285[R <: js.Object] (val args: js.A
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  @scala.inline
   def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
   @scala.inline
   def disableAlpha(value: Boolean): this.type = set("disableAlpha", value.asInstanceOf[js.Any])
   @scala.inline
-  def onChange(value: /* color */ ColorResult => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+  def onChange(value: (/* color */ ColorResult, /* event */ ChangeEvent[HTMLInputElement]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
   @scala.inline
-  def onChangeComplete(value: /* color */ ColorResult => Unit): this.type = set("onChangeComplete", js.Any.fromFunction1(value))
+  def onChangeComplete(value: (/* color */ ColorResult, /* event */ ChangeEvent[HTMLInputElement]) => Unit): this.type = set("onChangeComplete", js.Any.fromFunction2(value))
   @scala.inline
-  def styles(value: ChromePickerStyles): this.type = set("styles", value.asInstanceOf[js.Any])
+  def styles(value: PartialClassesChromePicke): this.type = set("styles", value.asInstanceOf[js.Any])
 }
 

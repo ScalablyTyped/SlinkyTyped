@@ -56,6 +56,7 @@ object athenaMod extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: WorkgroupArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: WorkgroupArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -69,8 +70,10 @@ object athenaMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.databaseMod.Database = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.databaseMod.Database = js.native
     def get(name: String, id: Input[ID], state: DatabaseState): typingsSlinky.pulumiAws.databaseMod.Database = js.native
     def get(name: String, id: Input[ID], state: DatabaseState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.databaseMod.Database = js.native
     /**
@@ -90,8 +93,10 @@ object athenaMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.namedQueryMod.NamedQuery = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.namedQueryMod.NamedQuery = js.native
     def get(name: String, id: Input[ID], state: NamedQueryState): typingsSlinky.pulumiAws.namedQueryMod.NamedQuery = js.native
     def get(name: String, id: Input[ID], state: NamedQueryState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.namedQueryMod.NamedQuery = js.native
     /**
@@ -111,8 +116,10 @@ object athenaMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.workgroupMod.Workgroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.workgroupMod.Workgroup = js.native
     def get(name: String, id: Input[ID], state: WorkgroupState): typingsSlinky.pulumiAws.workgroupMod.Workgroup = js.native
     def get(name: String, id: Input[ID], state: WorkgroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.workgroupMod.Workgroup = js.native
     /**

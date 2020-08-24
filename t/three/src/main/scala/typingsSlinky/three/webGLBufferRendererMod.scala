@@ -1,6 +1,9 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.WebGLRenderingContext
+import typingsSlinky.three.webGLCapabilitiesMod.WebGLCapabilities
+import typingsSlinky.three.webGLExtensionsMod.WebGLExtensions
+import typingsSlinky.three.webGLInfoMod.WebGLInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +13,14 @@ import scala.scalajs.js.annotation._
 object webGLBufferRendererMod extends js.Object {
   @js.native
   class WebGLBufferRenderer protected () extends js.Object {
-    def this(_gl: WebGLRenderingContext, extensions: js.Any, _infoRender: js.Any) = this()
+    def this(
+      gl: WebGLRenderingContext,
+      extensions: WebGLExtensions,
+      info: WebGLInfo,
+      capabilities: WebGLCapabilities
+    ) = this()
     def render(start: js.Any, count: Double): Unit = js.native
-    def renderInstances(geometry: js.Any): Unit = js.native
+    def renderInstances(start: js.Any, count: Double, primcount: Double): Unit = js.native
     def setMode(value: js.Any): Unit = js.native
   }
   

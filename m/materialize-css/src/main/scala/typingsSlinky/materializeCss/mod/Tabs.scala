@@ -1,8 +1,6 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.M.TabsOptions
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialTabsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,39 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "Tabs")
 @js.native
 class Tabs ()
-  extends typingsSlinky.materializeCss.M.Tabs {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /**
-    * The index of tab that is currently shown
-    */
-  /* CompleteClass */
-  override var index: Double = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: TabsOptions = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /**
-    * Show tab content that corresponds to the tab with the id
-    * @param tabId The id of the tab that you want to switch to
-    */
-  /* CompleteClass */
-  override def select(tabId: String): Unit = js.native
-  /**
-    * Recalculate tab indicator position. This is useful when the indicator position is not correct
-    */
-  /* CompleteClass */
-  override def updateTabIndicator(): Unit = js.native
-}
+  extends typingsSlinky.materializeCss.M.Tabs
 
 /* static members */
 @JSImport("materialize-css", "Tabs")
@@ -56,8 +22,13 @@ object Tabs extends js.Object {
   /**
     * Init Tabses
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.Tabs] = js.native
-  def init(els: MElements, options: PartialTabsOptions): js.Array[typingsSlinky.materializeCss.M.Tabs] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.Tabs] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: PartialTabsOptions
+  ): js.Array[typingsSlinky.materializeCss.M.Tabs] = js.native
   /**
     * Init Tabs
     */

@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class HeaderedRectangle () extends Element {
   def this(attributes: GenericAttributes[HeaderedRectangleSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[HeaderedRectangleSelectors], opt: Options) = this()
 }
 

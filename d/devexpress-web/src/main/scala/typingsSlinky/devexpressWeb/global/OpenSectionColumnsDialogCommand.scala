@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenSectionColumnsDialogCommand")
 @js.native
 class OpenSectionColumnsDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenSectionColumnsDialogCommand {
-  /**
-    * Executes the OpenSectionColumnsDialogCommand command.
-    */
-  /* CompleteClass */
-  override def execute(): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.OpenSectionColumnsDialogCommand
 

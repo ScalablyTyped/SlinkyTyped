@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "sequester"
-version := "1.0.0-dt-20200515Z-37c0c7"
-scalaVersion := "2.13.2"
+version := "1.0.0-dt-20200515Z-ba22db"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

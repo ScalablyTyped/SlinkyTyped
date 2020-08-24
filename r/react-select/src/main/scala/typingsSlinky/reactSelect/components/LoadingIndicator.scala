@@ -20,7 +20,7 @@ object LoadingIndicator {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactSelect.indicatorsMod.LoadingIndicator] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   }
@@ -29,7 +29,7 @@ object LoadingIndicator {
   @scala.inline
   def apply(
     clearValue: () => Unit,
-    cx: (js.UndefOr[Null | String], js.UndefOr[ClassNamesState], js.UndefOr[String]) => String | Unit,
+    cx: (js.UndefOr[ClassNamesState], js.UndefOr[String]) => String,
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
@@ -43,7 +43,7 @@ object LoadingIndicator {
     setValue: (ValueType[js.Any], ActionTypes) => Unit,
     size: Double
   ): Builder = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction3(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue), size = size.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue), size = size.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[LoadingIconProps[js.Any]]))
   }
 }

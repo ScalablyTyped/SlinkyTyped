@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.Credentials
 
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,15 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.Credentials.KeyCredentialAttestationResult")
 @js.native
 abstract class KeyCredentialAttestationResult ()
-  extends typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialAttestationResult {
-  /** Gets the attestation information for the KeyCredential. */
-  /* CompleteClass */
-  override var attestationBuffer: IBuffer = js.native
-  /** Gets the chain of certificates used to verify the attestation. */
-  /* CompleteClass */
-  override var certificateChainBuffer: IBuffer = js.native
-  /** Gets the status of the key credential attestation. */
-  /* CompleteClass */
-  override var status: typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialAttestationStatus = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialAttestationResult
 

@@ -2,6 +2,7 @@ package typingsSlinky.reactNativeSvg.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNativeSvg.mod.ClipPathCls
 import typingsSlinky.reactNativeSvg.mod.ClipPathProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +16,7 @@ object ClipPath {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.ClipPath] {
+       with StBuildingComponent[tag.type, ClipPathCls] {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
   }

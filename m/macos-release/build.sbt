@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "macos-release"
-version := "2.3.0-9fbed9"
-scalaVersion := "2.13.2"
+version := "2.4.1-53e649"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

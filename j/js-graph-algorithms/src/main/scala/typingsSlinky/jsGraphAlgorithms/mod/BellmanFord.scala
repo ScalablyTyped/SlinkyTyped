@@ -9,21 +9,5 @@ import scala.scalajs.js.annotation._
 class BellmanFord protected ()
   extends typingsSlinky.jsGraphAlgorithms.JsGraphs.BellmanFord {
   def this(G: typingsSlinky.jsGraphAlgorithms.JsGraphs.WeightedGraph, s: Double) = this()
-  /* CompleteClass */
-  override var cost: js.Any = js.native
-  /* CompleteClass */
-  override var edgeTo: js.Any = js.native
-  /* CompleteClass */
-  override var marked: js.Any = js.native
-  /* CompleteClass */
-  override var s: js.Any = js.native
-  /* CompleteClass */
-  override def distanceTo(v: Double): Double = js.native
-  /* CompleteClass */
-  override def hasPathTo(v: Double): Boolean = js.native
-  /* CompleteClass */
-  override def pathTo(v: Double): js.Array[typingsSlinky.jsGraphAlgorithms.JsGraphs.Edge] = js.native
-  /* CompleteClass */
-  override def relax(e: typingsSlinky.jsGraphAlgorithms.JsGraphs.Edge): Unit = js.native
 }
 

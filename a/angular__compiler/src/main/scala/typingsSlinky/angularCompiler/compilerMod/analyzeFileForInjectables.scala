@@ -1,18 +1,18 @@
 package typingsSlinky.angularCompiler.compilerMod
 
-import typingsSlinky.angularCompiler.metadataResolverMod.CompileMetadataResolver
-import typingsSlinky.angularCompiler.staticSymbolResolverMod.StaticSymbolResolver
+import typingsSlinky.angularCompiler.aotCompilerMod.NgAnalyzeModulesHost
+import typingsSlinky.angularCompiler.aotCompilerMod.NgAnalyzedFileWithInjectables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@angular/compiler/src/aot/compiler", "analyzeFileForInjectables")
+@JSImport("@angular/compiler/compiler", "analyzeFileForInjectables")
 @js.native
 object analyzeFileForInjectables extends js.Object {
   def apply(
     host: NgAnalyzeModulesHost,
-    staticSymbolResolver: StaticSymbolResolver,
-    metadataResolver: CompileMetadataResolver,
+    staticSymbolResolver: typingsSlinky.angularCompiler.staticSymbolResolverMod.StaticSymbolResolver,
+    metadataResolver: typingsSlinky.angularCompiler.metadataResolverMod.CompileMetadataResolver,
     fileName: String
   ): NgAnalyzedFileWithInjectables = js.native
 }

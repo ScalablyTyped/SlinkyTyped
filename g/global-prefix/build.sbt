@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "global-prefix"
-version := "3.0-dt-20181225Z-24cd68"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20181225Z-86df53"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

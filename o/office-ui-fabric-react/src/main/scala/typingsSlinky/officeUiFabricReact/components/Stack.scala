@@ -22,6 +22,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.initial
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.unset
+import typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemProps
 import typingsSlinky.officeUiFabricReact.stackTypesMod.Alignment
 import typingsSlinky.officeUiFabricReact.stackTypesMod.IStackProps
 import typingsSlinky.officeUiFabricReact.stackTypesMod.IStackSlots
@@ -88,7 +89,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Stack {
-  @JSImport("office-ui-fabric-react/lib/components/Stack/Stack", JSImport.Default)
+  @JSImport("office-ui-fabric-react", "Stack")
   @js.native
   object component extends js.Object
   
@@ -222,6 +223,8 @@ object Stack {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -494,5 +497,14 @@ object Stack {
   
   def withProps(p: PropsWithChildren[IStackProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Stack.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("office-ui-fabric-react", "Stack.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: IStackItemProps): SharedBuilder_IStackItemProps1971397930 = new SharedBuilder_IStackItemProps1971397930(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_IStackItemProps1971397930 = new SharedBuilder_IStackItemProps1971397930(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 object forEachChild extends js.Object {
   def apply[T](
-    node: js.UndefOr[
-      typingsSlinky.grammarkdown.nodesMod.Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind]
-    ],
+    node: js.UndefOr[scala.Nothing],
+    cbNode: js.Function1[
+      /* node */ typingsSlinky.grammarkdown.nodesMod.Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind], 
+      js.UndefOr[T]
+    ]
+  ): js.UndefOr[T] = js.native
+  def apply[T](
+    node: typingsSlinky.grammarkdown.nodesMod.Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind],
     cbNode: js.Function1[
       /* node */ typingsSlinky.grammarkdown.nodesMod.Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind], 
       js.UndefOr[T]

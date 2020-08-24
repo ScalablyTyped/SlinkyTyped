@@ -1,7 +1,7 @@
 package typingsSlinky.rxWamp.mod
 
 import typingsSlinky.autobahn.mod.ISubscribeOptions
-import typingsSlinky.rxLite.Rx.IObserver
+import typingsSlinky.rx.Rx.IObserver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,34 @@ class Subscriber () extends js.Object {
   def to(
     topic: String,
     options: ISubscribeOptions,
+    observerOrOnNext: js.UndefOr[scala.Nothing],
+    onError: js.UndefOr[scala.Nothing],
+    onCompleted: js.Function0[Unit]
+  ): Subscriber = js.native
+  def to(
+    topic: String,
+    options: ISubscribeOptions,
+    observerOrOnNext: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* exception */ js.Any, Unit]
+  ): Subscriber = js.native
+  def to(
+    topic: String,
+    options: ISubscribeOptions,
+    observerOrOnNext: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* exception */ js.Any, Unit],
+    onCompleted: js.Function0[Unit]
+  ): Subscriber = js.native
+  def to(
+    topic: String,
+    options: ISubscribeOptions,
     observerOrOnNext: js.Function1[/* value */ IWampEvent, Unit]
+  ): Subscriber = js.native
+  def to(
+    topic: String,
+    options: ISubscribeOptions,
+    observerOrOnNext: js.Function1[/* value */ IWampEvent, Unit],
+    onError: js.UndefOr[scala.Nothing],
+    onCompleted: js.Function0[Unit]
   ): Subscriber = js.native
   def to(
     topic: String,
@@ -30,6 +57,13 @@ class Subscriber () extends js.Object {
     onCompleted: js.Function0[Unit]
   ): Subscriber = js.native
   def to(topic: String, options: ISubscribeOptions, observerOrOnNext: IObserver[IWampEvent]): Subscriber = js.native
+  def to(
+    topic: String,
+    options: ISubscribeOptions,
+    observerOrOnNext: IObserver[IWampEvent],
+    onError: js.UndefOr[scala.Nothing],
+    onCompleted: js.Function0[Unit]
+  ): Subscriber = js.native
   def to(
     topic: String,
     options: ISubscribeOptions,

@@ -1,8 +1,8 @@
 package typingsSlinky.apolloServer.mod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
-import typingsSlinky.graphqlTools.interfacesMod.GraphQLParseOptions
-import typingsSlinky.graphqlTools.interfacesMod.ITypeDefinitions
+import typingsSlinky.graphqlToolsUtils.interfacesMod.GraphQLParseOptions
+import typingsSlinky.graphqlToolsUtils.interfacesMod.ITypeDefinitions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

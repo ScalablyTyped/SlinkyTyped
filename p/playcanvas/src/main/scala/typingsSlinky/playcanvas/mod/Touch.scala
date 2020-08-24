@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.mod
 
-import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,30 +18,5 @@ import scala.scalajs.js.annotation._
 class Touch protected ()
   extends typingsSlinky.playcanvas.pc.Touch {
   def this(touch: typingsSlinky.playcanvas.pc.Touch) = this()
-  /**
-    * The identifier of the touch.
-    */
-  /* CompleteClass */
-  override var id: Double = js.native
-  /**
-    * The target element of the touch event.
-    */
-  /* CompleteClass */
-  override var target: Element = js.native
-  /**
-    * The original browser Touch object.
-    */
-  /* CompleteClass */
-  override var touch: typingsSlinky.playcanvas.pc.Touch = js.native
-  /**
-    * The x co-ordinate relative to the element that the TouchDevice is attached to.
-    */
-  /* CompleteClass */
-  override var x: Double = js.native
-  /**
-    * The y co-ordinate relative to the element that the TouchDevice is attached to.
-    */
-  /* CompleteClass */
-  override var y: Double = js.native
 }
 

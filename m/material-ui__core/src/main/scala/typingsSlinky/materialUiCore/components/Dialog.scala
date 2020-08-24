@@ -25,7 +25,6 @@ import typingsSlinky.materialUiCore.anon.PartialClassNameMapDialog
 import typingsSlinky.materialUiCore.anon.PartialPaperProps
 import typingsSlinky.materialUiCore.backdropBackdropMod.BackdropProps
 import typingsSlinky.materialUiCore.dialogDialogMod.DialogProps
-import typingsSlinky.materialUiCore.dialogMod.default
 import typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
@@ -87,26 +86,27 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactInstance
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dialog {
-  @JSImport("@material-ui/core/Dialog", JSImport.Default)
+  @JSImport("@material-ui/core", "Dialog")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def BackdropComponentComponentClass(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def BackdropComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
+    def BackdropComponent(value: ReactType[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def BackdropProps(value: PartialBackdropProps): this.type = set("BackdropProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -259,6 +259,8 @@ object Dialog {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

@@ -74,155 +74,62 @@ object RecycleBin {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_AbsListView_this(value: typingsSlinky.androiduix.android.widget.AbsListView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_AbsListView_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAddScrapView(value: (View, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addScrapView")(js.Any.fromFunction2(value))
-        ret
-    }
+    def set_AbsListView_this(value: typingsSlinky.androiduix.android.widget.AbsListView): Self = this.set("_AbsListView_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddScrapView(value: (View, Double) => Unit): Self = this.set("addScrapView", js.Any.fromFunction2(value))
     @scala.inline
-    def withClearTransientStateViews(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearTransientStateViews")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
     @scala.inline
-    def withFillActiveViews(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillActiveViews")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setClearTransientStateViews(value: () => Unit): Self = this.set("clearTransientStateViews", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetActiveView(value: Double => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setFillActiveViews(value: (Double, Double) => Unit): Self = this.set("fillActiveViews", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetScrapView(value: Double => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrapView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetActiveView(value: Double => View): Self = this.set("getActiveView", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetTransientStateView(value: Double => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransientStateView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetScrapView(value: Double => View): Self = this.set("getScrapView", js.Any.fromFunction1(value))
     @scala.inline
-    def withMActiveViews(value: js.Array[View]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActiveViews")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetTransientStateView(value: Double => View): Self = this.set("getTransientStateView", js.Any.fromFunction1(value))
     @scala.inline
-    def withMCurrentScrap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrentScrap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActiveViewsVarargs(value: View*): Self = this.set("mActiveViews", js.Array(value :_*))
     @scala.inline
-    def withMFirstActivePosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFirstActivePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActiveViews(value: js.Array[View]): Self = this.set("mActiveViews", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRecyclerListener(value: RecyclerListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRecyclerListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrentScrap(value: js.Any): Self = this.set("mCurrentScrap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScrapViews(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScrapViews")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFirstActivePosition(value: js.Any): Self = this.set("mFirstActivePosition", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSkippedScrap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSkippedScrap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRecyclerListener(value: RecyclerListener): Self = this.set("mRecyclerListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTransientStateViews(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTransientStateViews")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScrapViews(value: js.Any): Self = this.set("mScrapViews", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTransientStateViewsById(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTransientStateViewsById")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMSkippedScrap(value: js.Any): Self = this.set("mSkippedScrap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewTypeCount(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewTypeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTransientStateViews(value: js.Any): Self = this.set("mTransientStateViews", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMarkChildrenDirty(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markChildrenDirty")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMTransientStateViewsById(value: js.Any): Self = this.set("mTransientStateViewsById", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPruneScrapViews(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pruneScrapViews")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMViewTypeCount(value: js.Any): Self = this.set("mViewTypeCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReclaimScrapViews(value: List[View] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reclaimScrapViews")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMarkChildrenDirty(value: () => Unit): Self = this.set("markChildrenDirty", js.Any.fromFunction0(value))
     @scala.inline
-    def withRemoveSkippedScrap(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSkippedScrap")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setPruneScrapViews(value: () => js.Any): Self = this.set("pruneScrapViews", js.Any.fromFunction0(value))
     @scala.inline
-    def withScrapActiveViews(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrapActiveViews")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setReclaimScrapViews(value: List[View] => Unit): Self = this.set("reclaimScrapViews", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetCacheColorHint(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCacheColorHint")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveSkippedScrap(value: () => Unit): Self = this.set("removeSkippedScrap", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetViewTypeCount(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setViewTypeCount")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setScrapActiveViews(value: () => Unit): Self = this.set("scrapActiveViews", js.Any.fromFunction0(value))
     @scala.inline
-    def withShouldRecycleViewType(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldRecycleViewType")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetCacheColorHint(value: Double => Unit): Self = this.set("setCacheColorHint", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetViewTypeCount(value: Double => Unit): Self = this.set("setViewTypeCount", js.Any.fromFunction1(value))
+    @scala.inline
+    def setShouldRecycleViewType(value: Double => Boolean): Self = this.set("shouldRecycleViewType", js.Any.fromFunction1(value))
   }
   
 }

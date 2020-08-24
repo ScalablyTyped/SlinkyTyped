@@ -3,7 +3,6 @@ package typingsSlinky.relayRuntime
 import typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.MutationTypes
 import typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.RangeOperations
 import typingsSlinky.relayRuntime.relayRecordStateMod.RecordState
-import typingsSlinky.relayRuntime.relayStoreTypesMod.OperationAvailability
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ object relayRuntimeStrings {
   sealed trait Condition extends js.Object
   
   @js.native
-  sealed trait ConnectionField extends js.Object
+  sealed trait Connection extends js.Object
   
   @js.native
   sealed trait Defer extends js.Object
@@ -55,6 +54,9 @@ object relayRuntimeStrings {
   sealed trait LinkedHandle extends js.Object
   
   @js.native
+  sealed trait ListValue extends js.Object
+  
+  @js.native
   sealed trait Literal extends js.Object
   
   @js.native
@@ -68,6 +70,9 @@ object relayRuntimeStrings {
   
   @js.native
   sealed trait NONEXISTENT extends RecordState
+  
+  @js.native
+  sealed trait ObjectValue extends js.Object
   
   @js.native
   sealed trait Operation extends js.Object
@@ -100,6 +105,9 @@ object relayRuntimeStrings {
   sealed trait Stream extends js.Object
   
   @js.native
+  sealed trait TypeDiscriminator extends js.Object
+  
+  @js.native
   sealed trait UNKNOWN extends RecordState
   
   @js.native
@@ -115,7 +123,7 @@ object relayRuntimeStrings {
   sealed trait append extends RangeOperations
   
   @js.native
-  sealed trait available extends OperationAvailability
+  sealed trait available extends js.Object
   
   @js.native
   sealed trait clientMutationId extends js.Object
@@ -157,22 +165,16 @@ object relayRuntimeStrings {
   sealed trait executeDotunsubscribe extends js.Object
   
   @js.native
-  sealed trait fetch extends js.Object
-  
-  @js.native
   sealed trait hasNextPage extends js.Object
   
   @js.native
   sealed trait hasPreviousPage extends js.Object
   
   @js.native
-  sealed trait insert extends js.Object
-  
-  @js.native
   sealed trait linked extends js.Object
   
   @js.native
-  sealed trait missing extends OperationAvailability
+  sealed trait missing extends js.Object
   
   @js.native
   sealed trait node extends js.Object
@@ -193,16 +195,13 @@ object relayRuntimeStrings {
   sealed trait scalar extends js.Object
   
   @js.native
-  sealed trait stale extends OperationAvailability
+  sealed trait stale extends js.Object
   
   @js.native
   sealed trait startCursor extends js.Object
   
   @js.native
   sealed trait stream_ extends js.Object
-  
-  @js.native
-  sealed trait update extends js.Object
   
   @scala.inline
   def CRITICAL: CRITICAL = "CRITICAL".asInstanceOf[CRITICAL]
@@ -211,7 +210,7 @@ object relayRuntimeStrings {
   @scala.inline
   def Condition: Condition = "Condition".asInstanceOf[Condition]
   @scala.inline
-  def ConnectionField: ConnectionField = "ConnectionField".asInstanceOf[ConnectionField]
+  def Connection: Connection = "Connection".asInstanceOf[Connection]
   @scala.inline
   def Defer: Defer = "Defer".asInstanceOf[Defer]
   @scala.inline
@@ -235,6 +234,8 @@ object relayRuntimeStrings {
   @scala.inline
   def LinkedHandle: LinkedHandle = "LinkedHandle".asInstanceOf[LinkedHandle]
   @scala.inline
+  def ListValue: ListValue = "ListValue".asInstanceOf[ListValue]
+  @scala.inline
   def Literal: Literal = "Literal".asInstanceOf[Literal]
   @scala.inline
   def LocalArgument: LocalArgument = "LocalArgument".asInstanceOf[LocalArgument]
@@ -244,6 +245,8 @@ object relayRuntimeStrings {
   def NODE_DELETE: NODE_DELETE = "NODE_DELETE".asInstanceOf[NODE_DELETE]
   @scala.inline
   def NONEXISTENT: NONEXISTENT = "NONEXISTENT".asInstanceOf[NONEXISTENT]
+  @scala.inline
+  def ObjectValue: ObjectValue = "ObjectValue".asInstanceOf[ObjectValue]
   @scala.inline
   def Operation: Operation = "Operation".asInstanceOf[Operation]
   @scala.inline
@@ -264,6 +267,8 @@ object relayRuntimeStrings {
   def SplitOperation: SplitOperation = "SplitOperation".asInstanceOf[SplitOperation]
   @scala.inline
   def Stream: Stream = "Stream".asInstanceOf[Stream]
+  @scala.inline
+  def TypeDiscriminator: TypeDiscriminator = "TypeDiscriminator".asInstanceOf[TypeDiscriminator]
   @scala.inline
   def UNKNOWN: UNKNOWN = "UNKNOWN".asInstanceOf[UNKNOWN]
   @scala.inline
@@ -303,13 +308,9 @@ object relayRuntimeStrings {
   @scala.inline
   def executeDotunsubscribe: executeDotunsubscribe = "execute.unsubscribe".asInstanceOf[executeDotunsubscribe]
   @scala.inline
-  def fetch: fetch = "fetch".asInstanceOf[fetch]
-  @scala.inline
   def hasNextPage: hasNextPage = "hasNextPage".asInstanceOf[hasNextPage]
   @scala.inline
   def hasPreviousPage: hasPreviousPage = "hasPreviousPage".asInstanceOf[hasPreviousPage]
-  @scala.inline
-  def insert: insert = "insert".asInstanceOf[insert]
   @scala.inline
   def linked: linked = "linked".asInstanceOf[linked]
   @scala.inline
@@ -332,7 +333,5 @@ object relayRuntimeStrings {
   def startCursor: startCursor = "startCursor".asInstanceOf[startCursor]
   @scala.inline
   def stream_ : stream_ = "stream".asInstanceOf[stream_]
-  @scala.inline
-  def update: update = "update".asInstanceOf[update]
 }
 

@@ -26,17 +26,14 @@ object OnAttachStateChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnViewAttachedToWindow(value: typingsSlinky.androiduix.android.view.View => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewAttachedToWindow")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnViewDetachedFromWindow(value: typingsSlinky.androiduix.android.view.View => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewDetachedFromWindow")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnViewAttachedToWindow(value: typingsSlinky.androiduix.android.view.View => js.Any): Self = this.set("onViewAttachedToWindow", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnViewDetachedFromWindow(value: typingsSlinky.androiduix.android.view.View => js.Any): Self = this.set("onViewDetachedFromWindow", js.Any.fromFunction1(value))
   }
   
 }

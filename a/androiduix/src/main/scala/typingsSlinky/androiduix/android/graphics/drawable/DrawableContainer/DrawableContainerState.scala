@@ -120,287 +120,106 @@ object DrawableContainerState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddChild(value: Drawable => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addChild")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCanConstantState(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canConstantState")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddChild(value: Drawable => Double): Self = this.set("addChild", js.Any.fromFunction1(value))
     @scala.inline
-    def withComputeConstantSize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeConstantSize")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCanConstantState(value: () => Boolean): Self = this.set("canConstantState", js.Any.fromFunction0(value))
     @scala.inline
-    def withCreateAllFutures(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createAllFutures")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setComputeConstantSize(value: () => Unit): Self = this.set("computeConstantSize", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetCapacity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCapacity")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCreateAllFutures(value: () => js.Any): Self = this.set("createAllFutures", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetChild(value: Double => Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChild")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetCapacity(value: () => Double): Self = this.set("getCapacity", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetChildCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetChild(value: Double => Drawable): Self = this.set("getChild", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetChildren(value: () => js.Array[Drawable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildren")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetChildCount(value: () => Double): Self = this.set("getChildCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetConstantHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConstantHeight")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetChildren(value: () => js.Array[Drawable]): Self = this.set("getChildren", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetConstantMinimumHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConstantMinimumHeight")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetConstantHeight(value: () => Double): Self = this.set("getConstantHeight", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetConstantMinimumWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConstantMinimumWidth")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetConstantMinimumHeight(value: () => Double): Self = this.set("getConstantMinimumHeight", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetConstantPadding(value: () => Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConstantPadding")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetConstantMinimumWidth(value: () => Double): Self = this.set("getConstantMinimumWidth", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetConstantWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConstantWidth")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetConstantPadding(value: () => Rect): Self = this.set("getConstantPadding", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetEnterFadeDuration(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEnterFadeDuration")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetConstantWidth(value: () => Double): Self = this.set("getConstantWidth", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetExitFadeDuration(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExitFadeDuration")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetEnterFadeDuration(value: () => Double): Self = this.set("getEnterFadeDuration", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetOpacity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpacity")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetExitFadeDuration(value: () => Double): Self = this.set("getExitFadeDuration", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsConstantSize(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConstantSize")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetOpacity(value: () => Double): Self = this.set("getOpacity", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsStateful(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateful")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsConstantSize(value: () => Boolean): Self = this.set("isConstantSize", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAutoMirrored(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAutoMirrored")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsStateful(value: () => Boolean): Self = this.set("isStateful", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCanConstantState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCanConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAutoMirrored(value: Boolean): Self = this.set("mAutoMirrored", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCheckedConstantState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCanConstantState(value: Boolean): Self = this.set("mCanConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCheckedOpacity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedConstantState(value: Boolean): Self = this.set("mCheckedConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCheckedStateful(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedStateful")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedOpacity(value: Boolean): Self = this.set("mCheckedOpacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMComputedConstantSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mComputedConstantSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedStateful(value: Boolean): Self = this.set("mCheckedStateful", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMConstantHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mConstantHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMComputedConstantSize(value: Boolean): Self = this.set("mComputedConstantSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMConstantMinimumHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mConstantMinimumHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMConstantHeight(value: Double): Self = this.set("mConstantHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMConstantMinimumWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mConstantMinimumWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMConstantMinimumHeight(value: Double): Self = this.set("mConstantMinimumHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMConstantPadding(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mConstantPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMConstantMinimumWidth(value: Double): Self = this.set("mConstantMinimumWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMConstantSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mConstantSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMConstantPadding(value: Rect): Self = this.set("mConstantPadding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMConstantWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mConstantWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMConstantSize(value: Boolean): Self = this.set("mConstantSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDither(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDither")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMConstantWidth(value: Double): Self = this.set("mConstantWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawableFutures(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawableFutures")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDither(value: Boolean): Self = this.set("mDither", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawables(value: js.Array[Drawable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawables")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawableFutures(value: js.Any): Self = this.set("mDrawableFutures", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMEnterFadeDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mEnterFadeDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawablesVarargs(value: Drawable*): Self = this.set("mDrawables", js.Array(value :_*))
     @scala.inline
-    def withMExitFadeDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mExitFadeDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawables(value: js.Array[Drawable]): Self = this.set("mDrawables", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMutated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMutated")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMEnterFadeDuration(value: Double): Self = this.set("mEnterFadeDuration", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNumChildren(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNumChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMExitFadeDuration(value: Double): Self = this.set("mExitFadeDuration", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMutated(value: Boolean): Self = this.set("mMutated", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOwner(value: typingsSlinky.androiduix.android.graphics.drawable.DrawableContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNumChildren(value: Double): Self = this.set("mNumChildren", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPaddingChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPaddingChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOpacity(value: Double): Self = this.set("mOpacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStateful(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStateful")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOwner(value: typingsSlinky.androiduix.android.graphics.drawable.DrawableContainer): Self = this.set("mOwner", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMVariablePadding(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mVariablePadding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPaddingChecked(value: Boolean): Self = this.set("mPaddingChecked", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMutate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutate")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMStateful(value: Boolean): Self = this.set("mStateful", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetConstantSize(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setConstantSize")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMVariablePadding(value: Boolean): Self = this.set("mVariablePadding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetEnterFadeDuration(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnterFadeDuration")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMutate(value: () => Unit): Self = this.set("mutate", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetExitFadeDuration(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExitFadeDuration")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetConstantSize(value: Boolean => Unit): Self = this.set("setConstantSize", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetVariablePadding(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVariablePadding")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetEnterFadeDuration(value: Double => Unit): Self = this.set("setEnterFadeDuration", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetExitFadeDuration(value: Double => Unit): Self = this.set("setExitFadeDuration", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetVariablePadding(value: Boolean => Unit): Self = this.set("setVariablePadding", js.Any.fromFunction1(value))
   }
   
 }

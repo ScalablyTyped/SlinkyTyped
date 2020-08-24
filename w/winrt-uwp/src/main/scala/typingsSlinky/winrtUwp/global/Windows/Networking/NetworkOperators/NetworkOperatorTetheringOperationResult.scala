@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult")
 @js.native
 abstract class NetworkOperatorTetheringOperationResult ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult {
-  /** An optional error message string that provides mobile operator specific context to the error. */
-  /* CompleteClass */
-  override var additionalErrorMessage: String = js.native
-  /** Indicates the result of a tethering operation. Possible values are defined by TetheringOperationStatus . */
-  /* CompleteClass */
-  override var status: typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.TetheringOperationStatus = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult
 

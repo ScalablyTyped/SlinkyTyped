@@ -67,7 +67,6 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.wordpressEditor.mod.PostPublishPanel.^
 import typingsSlinky.wordpressEditor.postPublishPanelMod.PostPublishPanel.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -81,7 +80,7 @@ object PostPublishPanel {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, HTMLDivElement] {
     @scala.inline
     def PostPublishExtensionFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("PostPublishExtension", value.asInstanceOf[js.Any])
     @scala.inline
@@ -270,6 +269,8 @@ object PostPublishPanel {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -642,6 +643,8 @@ object PostPublishPanel {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

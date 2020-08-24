@@ -26,53 +26,26 @@ object StrokeHighlighterArguments {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttrs(value: NativeSVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAttrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(js.undefined)
-        ret
-    }
+    def setAttrs(value: NativeSVGAttributes): Self = this.set("attrs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAttrs: Self = this.set("attrs", js.undefined)
     @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
+    def setPadding(value: Double): Self = this.set("padding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePadding: Self = this.set("padding", js.undefined)
     @scala.inline
-    def withoutRx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(js.undefined)
-        ret
-    }
+    def setRx(value: Double): Self = this.set("rx", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRx: Self = this.set("rx", js.undefined)
     @scala.inline
-    def withoutRy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(js.undefined)
-        ret
-    }
+    def setRy(value: Double): Self = this.set("ry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRy: Self = this.set("ry", js.undefined)
   }
   
 }

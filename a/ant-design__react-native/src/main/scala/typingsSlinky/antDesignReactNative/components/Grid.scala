@@ -5,7 +5,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.carouselMod.CarouselProps
 import typingsSlinky.antDesignReactNative.gridMod.GridProps
-import typingsSlinky.antDesignReactNative.gridMod.default
 import typingsSlinky.antDesignReactNative.gridPropsTypeMod.DataItem
 import typingsSlinky.antDesignReactNative.gridStyleMod.GridStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -16,16 +15,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Grid {
-  @JSImport("@ant-design/react-native/lib/grid", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Grid")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Grid] {
     @scala.inline
     def carouselProps(value: CarouselProps): this.type = set("carouselProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline

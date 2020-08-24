@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
 trait Animation extends js.Object {
   var childAnimations: js.Array[Animation] = js.native
   var elements: js.Array[HTMLElement] = js.native
+  var id: js.UndefOr[String] = js.native
   var parentAnimation: js.UndefOr[Animation] = js.native
   def addAnimation(animationToAdd: js.Array[Animation]): Animation = js.native
   /**
@@ -105,6 +106,7 @@ trait Animation extends js.Object {
     * Destroy the animation and all child animations.
     */
   def destroy(): Unit = js.native
+  def destroy(clearStyleSheets: Boolean): Unit = js.native
   /**
     * Sets whether the animation should play forwards,
     * backwards, or alternating back and forth.
@@ -195,19 +197,18 @@ trait Animation extends js.Object {
     */
   def play(): js.Promise[Unit] = js.native
   def play(opts: AnimationPlayOptions): js.Promise[Unit] = js.native
-  /** @deprecated */
-  def playAsync(): js.Promise[Unit] = js.native
-  /** @deprecated */
-  def playSync(): Unit = js.native
+  def progressEnd(playTo: js.UndefOr[scala.Nothing], step: Double): Unit = js.native
+  def progressEnd(playTo: js.UndefOr[scala.Nothing], step: Double, dur: Double): Unit = js.native
   @JSName("progressEnd")
-  def progressEnd_0(playTo: js.UndefOr[`0`], step: Double): Unit = js.native
+  def progressEnd_0(playTo: `0`, step: Double): Unit = js.native
   @JSName("progressEnd")
-  def progressEnd_0(playTo: js.UndefOr[`0`], step: Double, dur: Double): Unit = js.native
+  def progressEnd_0(playTo: `0`, step: Double, dur: Double): Unit = js.native
   @JSName("progressEnd")
-  def progressEnd_1(playTo: js.UndefOr[`1`], step: Double): Unit = js.native
+  def progressEnd_1(playTo: `1`, step: Double): Unit = js.native
   @JSName("progressEnd")
-  def progressEnd_1(playTo: js.UndefOr[`1`], step: Double, dur: Double): Unit = js.native
+  def progressEnd_1(playTo: `1`, step: Double, dur: Double): Unit = js.native
   def progressStart(forceLinearEasing: Boolean): Unit = js.native
+  def progressStart(forceLinearEasing: Boolean, step: Double): Unit = js.native
   def progressStep(step: Double): Unit = js.native
   /**
     * Stop the animation and reset

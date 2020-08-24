@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UnpinIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UnpinIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UnpinIcon")
   @js.native
   object component extends js.Object
   

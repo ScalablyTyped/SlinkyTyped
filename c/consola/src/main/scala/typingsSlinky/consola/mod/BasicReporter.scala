@@ -12,9 +12,7 @@ class BasicReporter () extends ConsolaReporter {
   /* protected */ def filterAndJoin(arr: js.Array[js.UndefOr[String]]): String = js.native
   /* protected */ def formatArgs(args: js.Array[_]): String = js.native
   /* protected */ def formatDate(date: js.Date): String = js.native
-  /* protected */ def formatLogObj(logObj: ConsolaLogObject): String = js.native
+  /* protected */ def formatLogObj(logObj: ConsolaReporterLogObject): String = js.native
   /* protected */ def formatStack(stack: String): String = js.native
-  /* CompleteClass */
-  override def log(logObj: ConsolaLogObject, args: ConsolaReporterArgs): Unit = js.native
 }
 

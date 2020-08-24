@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SearchCalendarIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SearchCalendarIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SearchCalendarIcon")
   @js.native
   object component extends js.Object
   

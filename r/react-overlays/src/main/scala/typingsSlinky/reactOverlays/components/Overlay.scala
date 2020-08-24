@@ -3,12 +3,12 @@ package typingsSlinky.reactOverlays.components
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.reactOverlays.overlayMod.OverlayProps
+import typingsSlinky.reactOverlays.overlayMod.OverlayRenderProps
 import typingsSlinky.reactOverlays.overlayMod.Placements
 import typingsSlinky.reactOverlays.portalMod.PortalProps
 import typingsSlinky.reactOverlays.reactOverlaysStrings.click
@@ -30,7 +30,7 @@ object Overlay {
     @scala.inline
     def containerReactElement(value: ReactElement): this.type = set("container", value.asInstanceOf[js.Any])
     @scala.inline
-    def container(value: TagMod[Any] | js.Function): this.type = set("container", value.asInstanceOf[js.Any])
+    def container(value: ReactElement | js.Function): this.type = set("container", value.asInstanceOf[js.Any])
     @scala.inline
     def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,14 +70,18 @@ object Overlay {
     @scala.inline
     def target(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
-    def transitionFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transitionFunctionComponent(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): this.type = set("transition", value.asInstanceOf[js.Any])
     @scala.inline
-    def transitionComponentClass(value: ReactComponentClass[TransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transitionComponentClass(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): this.type = set("transition", value.asInstanceOf[js.Any])
     @scala.inline
-    def transition(value: ReactComponentClass[TransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
+    def transition(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): this.type = set("transition", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Overlay.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: OverlayRenderProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayProps]))
+  }
 }
 

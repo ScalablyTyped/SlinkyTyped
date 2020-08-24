@@ -43,7 +43,7 @@ object websecurityscannerMod extends js.Object {
       extends TopLevel[
               Instantiable2[
                 /* options */ GlobalOptions, 
-                js.UndefOr[/* google */ GoogleConfigurable], 
+                /* google */ js.UndefOr[GoogleConfigurable], 
                 Websecurityscanner
               ]
             ]
@@ -53,7 +53,7 @@ object websecurityscannerMod extends js.Object {
       extends TopLevel[
               Instantiable2[
                 /* options */ GlobalOptions, 
-                js.UndefOr[/* google */ GoogleConfigurable], 
+                /* google */ js.UndefOr[GoogleConfigurable], 
                 typingsSlinky.googleapis.websecurityscannerV1betaMod.websecurityscannerV1beta.Websecurityscanner
               ]
             ]

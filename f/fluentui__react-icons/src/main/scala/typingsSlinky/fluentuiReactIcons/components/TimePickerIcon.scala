@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimePickerIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TimePickerIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TimePickerIcon")
   @js.native
   object component extends js.Object
   

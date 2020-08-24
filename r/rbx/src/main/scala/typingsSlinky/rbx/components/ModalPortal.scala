@@ -8,6 +8,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.modalPortalMod.ModalPortalModifierProps
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +28,7 @@ object ModalPortal {
     @scala.inline
     def asComponentClass(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
-    def as(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: ReactType[_]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

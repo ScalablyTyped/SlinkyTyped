@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Rate {
-  @JSImport("rc-rate/lib/Rate", JSImport.Default)
+  @JSImport("rc-rate/es/Rate", JSImport.Default)
   @js.native
   object component extends js.Object
   

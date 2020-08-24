@@ -30,29 +30,18 @@ object FileWatchersInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEntryPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPath")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEntryPath(value: String): Self = this.set("entryPath", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLastTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastTag")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRecursive(value: Boolean): Self = this.set("recursive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLastTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastTag")(js.undefined)
-        ret
-    }
+    def setLastTag(value: String): Self = this.set("lastTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLastTag: Self = this.set("lastTag", js.undefined)
   }
   
 }

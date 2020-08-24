@@ -62,9 +62,11 @@ object messaging extends js.Object {
       *    execute this returned function.
       */
     def onMessage(nextOrObserver: NextFn[_]): Unsubscribe = js.native
+    def onMessage(nextOrObserver: NextFn[_], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
     def onMessage(nextOrObserver: NextFn[_], error: ErrorFn[js.Error]): Unsubscribe = js.native
     def onMessage(nextOrObserver: NextFn[_], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
     def onMessage(nextOrObserver: Observer[_, js.Error]): Unsubscribe = js.native
+    def onMessage(nextOrObserver: Observer[_, js.Error], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
     def onMessage(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error]): Unsubscribe = js.native
     def onMessage(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
     /**
@@ -79,9 +81,11 @@ object messaging extends js.Object {
       *   refresh events execute this returned function.
       */
     def onTokenRefresh(nextOrObserver: NextFn[_]): Unsubscribe = js.native
+    def onTokenRefresh(nextOrObserver: NextFn[_], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: NextFn[_], error: ErrorFn[js.Error]): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: NextFn[_], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: Observer[_, js.Error]): Unsubscribe = js.native
+    def onTokenRefresh(nextOrObserver: Observer[_, js.Error], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error]): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
     /**

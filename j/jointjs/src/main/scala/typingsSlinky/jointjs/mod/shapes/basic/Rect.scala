@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Rect () extends Element {
   def this(attributes: GenericAttributes[RectSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
   def this(attributes: GenericAttributes[RectSelectors], opt: StringDictionary[js.Any]) = this()
 }
 

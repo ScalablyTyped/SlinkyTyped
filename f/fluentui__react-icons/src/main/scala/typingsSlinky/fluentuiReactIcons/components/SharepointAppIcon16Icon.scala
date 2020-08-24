@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SharepointAppIcon16Icon {
-  @JSImport("@fluentui/react-icons/lib/components/SharepointAppIcon16Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SharepointAppIcon16Icon")
   @js.native
   object component extends js.Object
   

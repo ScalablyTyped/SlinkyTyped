@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DockerLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DockerLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DockerLogoIcon")
   @js.native
   object component extends js.Object
   

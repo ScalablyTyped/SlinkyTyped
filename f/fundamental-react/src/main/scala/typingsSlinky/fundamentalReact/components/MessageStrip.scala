@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MessageStrip {
-  @JSImport("fundamental-react/lib/MessageStrip/MessageStrip", JSImport.Default)
+  @JSImport("fundamental-react", "MessageStrip")
   @js.native
   object component extends js.Object
   

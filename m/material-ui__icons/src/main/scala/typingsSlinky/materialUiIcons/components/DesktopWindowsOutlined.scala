@@ -1,17 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
-import typingsSlinky.materialUiIcons.desktopWindowsOutlinedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DesktopWindowsOutlined {
-  @JSImport("@material-ui/icons/DesktopWindowsOutlined", JSImport.Default)
+  @JSImport("@material-ui/icons", "DesktopWindowsOutlined")
   @js.native
   object component extends js.Object
   
-  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DesktopWindowsOutlined.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps144760471[SVGSVGElement] = new SharedBuilder_SvgIconProps144760471[SVGSVGElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DesktopWindowsOutlined.type): SharedBuilder_SvgIconProps144760471[SVGSVGElement] = new SharedBuilder_SvgIconProps144760471[SVGSVGElement](js.Array(this.component, js.Dictionary.empty))()
 }
 

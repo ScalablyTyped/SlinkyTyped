@@ -23,7 +23,13 @@ object image extends js.Object {
     def this(src: typingsSlinky.androiduix.androidui.image.NetImage) = this()
     def this(src: String, paint: Paint) = this()
     def this(src: typingsSlinky.androiduix.androidui.image.NetImage, paint: Paint) = this()
+    def this(src: String, paint: js.UndefOr[scala.Nothing], overrideImageRatio: Double) = this()
     def this(src: String, paint: Paint, overrideImageRatio: Double) = this()
+    def this(
+      src: typingsSlinky.androiduix.androidui.image.NetImage,
+      paint: js.UndefOr[scala.Nothing],
+      overrideImageRatio: Double
+    ) = this()
     def this(src: typingsSlinky.androiduix.androidui.image.NetImage, paint: Paint, overrideImageRatio: Double) = this()
   }
   

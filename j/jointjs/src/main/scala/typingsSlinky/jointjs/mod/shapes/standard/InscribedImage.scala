@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class InscribedImage () extends Element {
   def this(attributes: GenericAttributes[InscribedImageSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[InscribedImageSelectors], opt: Options) = this()
 }
 

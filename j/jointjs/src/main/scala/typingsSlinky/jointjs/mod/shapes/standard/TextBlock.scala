@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextBlock () extends Element {
   def this(attributes: GenericAttributes[TextBlockSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[TextBlockSelectors], opt: Options) = this()
 }
 

@@ -43,7 +43,11 @@ object ResponsiveWaffle {
     @scala.inline
     def colorBy(value: String | GetColor[WaffleDatum]): this.type = set("colorBy", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colors(value: Colors): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defsVarargs(value: Dictkey*): this.type = set("defs", js.Array(value :_*))
     @scala.inline
     def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,6 +56,8 @@ object ResponsiveWaffle {
     def emptyOpacity(value: Double): this.type = set("emptyOpacity", value.asInstanceOf[js.Any])
     @scala.inline
     def enableLabels(value: Boolean): this.type = set("enableLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillVarargs(value: Id[WaffleDatum]*): this.type = set("fill", js.Array(value :_*))
     @scala.inline
     def fill(value: js.Array[Id[WaffleDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline

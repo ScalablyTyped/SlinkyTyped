@@ -26,6 +26,7 @@ object timeScaleMod extends js.Object {
       * @return {Date[]}
       */
     def tickInterval(interval: String): js.Array[js.Date] = js.native
+    def tickInterval(interval: String, step: js.UndefOr[scala.Nothing], useUTC: Boolean): js.Array[js.Date] = js.native
     def tickInterval(interval: String, step: Double): js.Array[js.Date] = js.native
     def tickInterval(interval: String, step: Double, useUTC: Boolean): js.Array[js.Date] = js.native
   }

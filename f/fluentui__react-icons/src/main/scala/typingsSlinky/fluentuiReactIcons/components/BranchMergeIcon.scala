@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BranchMergeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BranchMergeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BranchMergeIcon")
   @js.native
   object component extends js.Object
   

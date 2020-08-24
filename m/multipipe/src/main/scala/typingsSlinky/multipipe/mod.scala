@@ -24,10 +24,17 @@ object mod extends js.Object {
     */
   def apply(): PassThrough = js.native
   def apply(callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): PassThrough = js.native
+  def apply(options: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): PassThrough = js.native
   def apply(options: DuplexOptions): PassThrough = js.native
   def apply(options: DuplexOptions, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): PassThrough = js.native
   def apply(source: Readable, destination: Writable): Duplex = js.native
   def apply(source: Readable, destination: Writable, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
+  def apply(
+    source: Readable,
+    destination: Writable,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
+  ): Duplex = js.native
   def apply(source: Readable, destination: Writable, options: DuplexOptions): Duplex = js.native
   def apply(
     source: Readable,
@@ -256,6 +263,11 @@ object mod extends js.Object {
   ): Duplex = js.native
   def apply(stream: js.Array[Stream]): Duplex = js.native
   def apply(stream: js.Array[Stream], callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
+  def apply(
+    stream: js.Array[Stream],
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
+  ): Duplex = js.native
   def apply(stream: js.Array[Stream], options: DuplexOptions): Duplex = js.native
   def apply(
     stream: js.Array[Stream],
@@ -264,6 +276,11 @@ object mod extends js.Object {
   ): Duplex = js.native
   def apply(stream: Duplex): Duplex = js.native
   def apply(stream: Duplex, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
+  def apply(
+    stream: Duplex,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], _]
+  ): Duplex = js.native
   def apply(stream: Duplex, options: DuplexOptions): Duplex = js.native
   def apply(stream: Duplex, options: DuplexOptions, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
 }

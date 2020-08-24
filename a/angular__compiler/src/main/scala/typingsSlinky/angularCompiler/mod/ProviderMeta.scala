@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ProviderMeta")
 @js.native
 class ProviderMeta protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ProviderMeta {
+  extends typingsSlinky.angularCompiler.compilerMod.ProviderMeta {
   def this(token: js.Any, hasUseClassUseValueUseExistingUseFactoryDepsMulti: Deps) = this()
 }
 

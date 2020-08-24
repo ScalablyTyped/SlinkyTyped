@@ -53,179 +53,72 @@ object Metadata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttachedImages(value: js.Array[Blob]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachedImages")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAttachedImagesVarargs(value: Blob*): Self = this.set("attachedImages", js.Array(value :_*))
     @scala.inline
-    def withRawTags(value: js.Array[RawTag]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTags")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAttachedImages(value: js.Array[Blob]): Self = this.set("attachedImages", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAlbum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMimeType(value: String): Self = this.set("mimeType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAlbum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(js.undefined)
-        ret
-    }
+    def setRawTagsVarargs(value: RawTag*): Self = this.set("rawTags", js.Array(value :_*))
     @scala.inline
-    def withArtist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRawTags(value: js.Array[RawTag]): Self = this.set("rawTags", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutArtist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(js.undefined)
-        ret
-    }
+    def setAlbum(value: String): Self = this.set("album", value.asInstanceOf[js.Any])
     @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAlbum: Self = this.set("album", js.undefined)
     @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
+    def setArtist(value: String): Self = this.set("artist", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCopyright(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteArtist: Self = this.set("artist", js.undefined)
     @scala.inline
-    def withoutCopyright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
-        ret
-    }
+    def setComment(value: String): Self = this.set("comment", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDisc(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disc")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteComment: Self = this.set("comment", js.undefined)
     @scala.inline
-    def withoutDisc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disc")(js.undefined)
-        ret
-    }
+    def setCopyright(value: String): Self = this.set("copyright", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDuration(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCopyright: Self = this.set("copyright", js.undefined)
     @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
+    def setDisc(value: integer): Self = this.set("disc", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGenre(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDisc: Self = this.set("disc", js.undefined)
     @scala.inline
-    def withoutGenre: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(js.undefined)
-        ret
-    }
+    def setDuration(value: integer): Self = this.set("duration", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHeight(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDuration: Self = this.set("duration", js.undefined)
     @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
+    def setGenre(value: String): Self = this.set("genre", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGenre: Self = this.set("genre", js.undefined)
     @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
+    def setHeight(value: integer): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRotation(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHeight: Self = this.set("height", js.undefined)
     @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
+    def setLanguage(value: String): Self = this.set("language", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLanguage: Self = this.set("language", js.undefined)
     @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
+    def setRotation(value: integer): Self = this.set("rotation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTrack(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRotation: Self = this.set("rotation", js.undefined)
     @scala.inline
-    def withoutTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
-        ret
-    }
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWidth(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
+    def setTrack(value: integer): Self = this.set("track", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrack: Self = this.set("track", js.undefined)
+    @scala.inline
+    def setWidth(value: integer): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
   
 }

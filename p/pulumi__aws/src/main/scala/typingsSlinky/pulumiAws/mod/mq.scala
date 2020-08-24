@@ -45,9 +45,10 @@ object mq extends js.Object {
     def this(name: String, args: ConfigurationArgs, opts: CustomResourceOptions) = this()
   }
   
-  def getBroker(): js.Promise[GetBrokerResult] with GetBrokerResult = js.native
-  def getBroker(args: GetBrokerArgs): js.Promise[GetBrokerResult] with GetBrokerResult = js.native
-  def getBroker(args: GetBrokerArgs, opts: InvokeOptions): js.Promise[GetBrokerResult] with GetBrokerResult = js.native
+  def getBroker(): js.Promise[GetBrokerResult] = js.native
+  def getBroker(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetBrokerResult] = js.native
+  def getBroker(args: GetBrokerArgs): js.Promise[GetBrokerResult] = js.native
+  def getBroker(args: GetBrokerArgs, opts: InvokeOptions): js.Promise[GetBrokerResult] = js.native
   /* static members */
   @js.native
   object Broker extends js.Object {
@@ -58,8 +59,10 @@ object mq extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.brokerMod.Broker = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.brokerMod.Broker = js.native
     def get(name: String, id: Input[ID], state: BrokerState): typingsSlinky.pulumiAws.brokerMod.Broker = js.native
     def get(name: String, id: Input[ID], state: BrokerState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.brokerMod.Broker = js.native
     /**
@@ -79,8 +82,10 @@ object mq extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.configurationMod.Configuration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.configurationMod.Configuration = js.native
     def get(name: String, id: Input[ID], state: ConfigurationState): typingsSlinky.pulumiAws.configurationMod.Configuration = js.native
     def get(name: String, id: Input[ID], state: ConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.configurationMod.Configuration = js.native
     /**

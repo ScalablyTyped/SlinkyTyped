@@ -36,6 +36,8 @@ object SplitButton {
     @scala.inline
     def menuStyle(value: js.Object): this.type = set("menuStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def modelVarargs(value: js.Any*): this.type = set("model", js.Array(value :_*))
+    @scala.inline
     def model(value: js.Array[_]): this.type = set("model", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: /* event */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))

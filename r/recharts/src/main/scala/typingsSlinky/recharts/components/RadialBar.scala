@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -46,7 +45,7 @@ object RadialBar {
     @scala.inline
     def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     @scala.inline
-    def activeShapeFunction1(value: _ => TagMod[Any]): this.type = set("activeShape", js.Any.fromFunction1(value))
+    def activeShapeFunction1(value: _ => ReactElement): this.type = set("activeShape", js.Any.fromFunction1(value))
     @scala.inline
     def activeShape(value: js.Object | ContentRenderer[_] | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,7 +65,7 @@ object RadialBar {
     @scala.inline
     def backgroundReactElement(value: ReactElement): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundFunction1(value: _ => TagMod[Any]): this.type = set("background", js.Any.fromFunction1(value))
+    def backgroundFunction1(value: _ => ReactElement): this.type = set("background", js.Any.fromFunction1(value))
     @scala.inline
     def background(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
@@ -93,6 +92,8 @@ object RadialBar {
     def cornerRadius(value: Double | String): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
     @scala.inline
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: RadialBarData*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[RadialBarData]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -152,7 +153,7 @@ object RadialBar {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelFunction1(value: _ => TagMod[Any]): this.type = set("label", js.Any.fromFunction1(value))
+    def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     @scala.inline
     def label(value: Boolean | ReactElement | ContentRenderer[_] | js.Object): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
@@ -214,7 +215,7 @@ object RadialBar {
     @scala.inline
     def shapeReactElement(value: ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline
-    def shapeFunction1(value: _ => TagMod[Any]): this.type = set("shape", js.Any.fromFunction1(value))
+    def shapeFunction1(value: _ => ReactElement): this.type = set("shape", js.Any.fromFunction1(value))
     @scala.inline
     def shape(value: ContentRenderer[_] | ReactElement): this.type = set("shape", value.asInstanceOf[js.Any])
     @scala.inline

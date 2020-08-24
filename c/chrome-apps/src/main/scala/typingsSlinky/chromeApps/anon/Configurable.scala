@@ -39,53 +39,26 @@ object Configurable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConfigurable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurable")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutConfigurable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurable")(js.undefined)
-        ret
-    }
+    def setConfigurable(value: Boolean): Self = this.set("configurable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMultiple_mounts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple_mounts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteConfigurable: Self = this.set("configurable", js.undefined)
     @scala.inline
-    def withoutMultiple_mounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple_mounts")(js.undefined)
-        ret
-    }
+    def setMultiple_mounts(value: Boolean): Self = this.set("multiple_mounts", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSource(value: network): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMultiple_mounts: Self = this.set("multiple_mounts", js.undefined)
     @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
+    def setSource(value: network): Self = this.set("source", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWatchable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSource: Self = this.set("source", js.undefined)
     @scala.inline
-    def withoutWatchable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchable")(js.undefined)
-        ret
-    }
+    def setWatchable(value: Boolean): Self = this.set("watchable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWatchable: Self = this.set("watchable", js.undefined)
   }
   
 }

@@ -2,8 +2,8 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.ColorProperty
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.Color
 import typingsSlinky.mjmlReact.mjmlReactStrings.auto
 import typingsSlinky.mjmlReact.mjmlReactStrings.center
 import typingsSlinky.mjmlReact.mjmlReactStrings.fixed
@@ -34,9 +34,9 @@ object MjmlTable {
     @scala.inline
     def cellspacing(value: String): this.type = set("cellspacing", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def containerBackgroundColor(value: BackgroundColor): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
     @scala.inline

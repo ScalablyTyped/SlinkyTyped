@@ -28,8 +28,91 @@ object filterMod extends js.Object {
   def lessThan(propertyName: String, expression: Double): typingsSlinky.ol.lessThanMod.default = js.native
   def lessThanOrEqualTo(propertyName: String, expression: Double): typingsSlinky.ol.lessThanOrEqualToMod.default = js.native
   def like(propertyName: String, pattern: String): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: js.UndefOr[scala.Nothing],
+    opt_escapeChar: js.UndefOr[scala.Nothing],
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: js.UndefOr[scala.Nothing],
+    opt_escapeChar: String
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: js.UndefOr[scala.Nothing],
+    opt_escapeChar: String,
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: String
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: String,
+    opt_escapeChar: js.UndefOr[scala.Nothing],
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: String,
+    opt_escapeChar: String
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: js.UndefOr[scala.Nothing],
+    opt_singleChar: String,
+    opt_escapeChar: String,
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
   def like(propertyName: String, pattern: String, opt_wildCard: String): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: String,
+    opt_singleChar: js.UndefOr[scala.Nothing],
+    opt_escapeChar: js.UndefOr[scala.Nothing],
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: String,
+    opt_singleChar: js.UndefOr[scala.Nothing],
+    opt_escapeChar: String
+  ): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: String,
+    opt_singleChar: js.UndefOr[scala.Nothing],
+    opt_escapeChar: String,
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
   def like(propertyName: String, pattern: String, opt_wildCard: String, opt_singleChar: String): typingsSlinky.ol.isLikeMod.default = js.native
+  def like(
+    propertyName: String,
+    pattern: String,
+    opt_wildCard: String,
+    opt_singleChar: String,
+    opt_escapeChar: js.UndefOr[scala.Nothing],
+    opt_matchCase: Boolean
+  ): typingsSlinky.ol.isLikeMod.default = js.native
   def like(
     propertyName: String,
     pattern: String,

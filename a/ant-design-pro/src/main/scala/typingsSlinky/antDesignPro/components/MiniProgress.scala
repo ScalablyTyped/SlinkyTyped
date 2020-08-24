@@ -3,21 +3,20 @@ package typingsSlinky.antDesignPro.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.miniProgressMod.IMiniProgressProps
-import typingsSlinky.antDesignPro.miniProgressMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MiniProgress {
-  @JSImport("ant-design-pro/lib/Charts/MiniProgress", JSImport.Default)
+  @JSImport("ant-design-pro/lib/Charts", "MiniProgress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.chartsMod.MiniProgress] {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline

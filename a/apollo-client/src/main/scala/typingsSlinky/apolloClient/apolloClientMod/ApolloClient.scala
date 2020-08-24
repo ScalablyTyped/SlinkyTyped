@@ -1,5 +1,6 @@
 package typingsSlinky.apolloClient.apolloClientMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloCache.dataProxyMod.DataProxy
 import typingsSlinky.apolloCache.mod.ApolloCache
 import typingsSlinky.apolloClient.localStateMod.FragmentMatcher
@@ -18,7 +19,6 @@ import typingsSlinky.apolloLink.typesMod.FetchResult
 import typingsSlinky.apolloLink.typesMod.GraphQLRequest
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.executeMod.ExecutionResult
-import typingsSlinky.graphql.executeMod.ExecutionResultDataDefault
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +40,7 @@ trait ApolloClient[TCacheShape] extends DataProxy {
   val typeDefs: js.UndefOr[String | (js.Array[DocumentNode | String]) | DocumentNode] = js.native
   var version: String = js.native
   def __actionHookForDevTools(cb: js.Function0[_]): Unit = js.native
-  def __requestRaw(payload: GraphQLRequest): Observable[ExecutionResult[ExecutionResultDataDefault]] = js.native
+  def __requestRaw(payload: GraphQLRequest): Observable[ExecutionResult[StringDictionary[_], StringDictionary[_]]] = js.native
   def addResolvers(resolvers: js.Array[Resolvers]): Unit = js.native
   def addResolvers(resolvers: Resolvers): Unit = js.native
   def clearStore(): js.Promise[js.Array[_]] = js.native

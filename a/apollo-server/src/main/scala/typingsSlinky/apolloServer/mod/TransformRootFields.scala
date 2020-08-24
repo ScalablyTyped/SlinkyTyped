@@ -1,6 +1,7 @@
 package typingsSlinky.apolloServer.mod
 
-import typingsSlinky.graphqlTools.transformRootFieldsMod.RootTransformer
+import typingsSlinky.graphqlToolsWrap.typesMod.FieldNodeTransformer
+import typingsSlinky.graphqlToolsWrap.typesMod.RootFieldTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TransformRootFields protected ()
   extends typingsSlinky.apolloServer.exportsMod.TransformRootFields {
-  def this(transform: RootTransformer) = this()
+  def this(rootFieldTransformer: RootFieldTransformer) = this()
+  def this(rootFieldTransformer: RootFieldTransformer, fieldNodeTransformer: FieldNodeTransformer) = this()
 }
 

@@ -9,7 +9,11 @@ import scala.scalajs.js.annotation._
 class GeneralizedLogistic ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.GeneralizedLogistic] {
   def this(mu: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], s: Double) = this()
   def this(mu: Double, s: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], s: js.UndefOr[scala.Nothing], c: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], s: Double, c: Double) = this()
+  def this(mu: Double, s: js.UndefOr[scala.Nothing], c: Double) = this()
   def this(mu: Double, s: Double, c: Double) = this()
 }
 

@@ -3,7 +3,7 @@ package typingsSlinky.ionicCore
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,8 +29,9 @@ object tabMod extends js.Object {
       * the selected tab or by the router to switch between them.
       */
     var tab: String = js.native
+    def changeActive(isActive: Boolean): Unit = js.native
     @JSName("componentWillLoad")
-    def componentWillLoad_MTab(): Unit = js.native
+    def componentWillLoad_MTab(): js.Promise[Unit] = js.native
     @JSName("render")
     def render_MTab(): js.Any = js.native
     /** Set the active component for the tab */

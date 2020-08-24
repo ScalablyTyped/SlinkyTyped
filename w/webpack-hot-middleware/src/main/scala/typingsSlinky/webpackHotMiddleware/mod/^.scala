@@ -1,7 +1,6 @@
 package typingsSlinky.webpackHotMiddleware.mod
 
 import typingsSlinky.connect.mod.NextHandleFunction
-import typingsSlinky.webpack.mod.ICompiler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,12 @@ import scala.scalajs.js.annotation._
 @JSImport("webpack-hot-middleware", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  def apply(compiler: ICompiler): NextHandleFunction with EventStream = js.native
-  def apply(compiler: ICompiler, options: MiddlewareOptions): NextHandleFunction with EventStream = js.native
+  def apply(
+    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.ICompiler */ js.Any
+  ): NextHandleFunction with EventStream = js.native
+  def apply(
+    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.ICompiler */ js.Any,
+    options: MiddlewareOptions
+  ): NextHandleFunction with EventStream = js.native
 }
 

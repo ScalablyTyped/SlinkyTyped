@@ -28,7 +28,7 @@ import typingsSlinky.kefir.mod.Pool_
 import typingsSlinky.kefir.mod.Property
 import typingsSlinky.kefir.mod.Stream_
 import typingsSlinky.kefir.mod.ValueOfAnObservable
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -97,6 +97,7 @@ object ^ extends js.Object {
     ], 
     _
   ] = js.native
+  def combine[T /* <: StringDictionary[typingsSlinky.kefir.mod.Observable[_, _]] */, K /* <: StringDictionary[typingsSlinky.kefir.mod.Observable[_, _]] */](obss: T, passiveObss: K): Stream_[typingsSlinky.kefir.kefirStrings.^  with TopLevel[T] with TopLevel[K], _] = js.native
   def combine[T, S, U](
     obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
     combinator: js.Function1[/* repeated */ T, U]
@@ -337,6 +338,11 @@ object ^ extends js.Object {
   def stream[T, S](subscribe: js.Function1[/* emitter */ Emitter[T, S], js.Function | Unit]): Stream_[T, S] = js.native
   def withInterval[T, S](interval: Double, handler: js.Function1[/* emitter */ Emitter[T, S], Unit]): Stream_[T, S] = js.native
   def zip[T, S, U](obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]): typingsSlinky.kefir.mod.Observable[U, S] = js.native
+  def zip[T, S, U](
+    obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
+    passiveObss: js.UndefOr[scala.Nothing],
+    combinator: js.Function1[/* repeated */ T, U]
+  ): typingsSlinky.kefir.mod.Observable[U, S] = js.native
   def zip[T, S, U](
     obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
     passiveObss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]

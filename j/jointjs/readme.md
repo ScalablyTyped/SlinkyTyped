@@ -1,7 +1,7 @@
 
 # Scala.js typings for jointjs
 
-Typings are for version 3.1.1
+Typings are for version 3.2.0
 
 ## Library description:
 JavaScript diagramming library

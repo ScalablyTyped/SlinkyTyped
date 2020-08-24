@@ -3,7 +3,6 @@ package typingsSlinky.lolex.mod
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.lolex.anon.Now
 import typingsSlinky.std.DateConstructor
-import typingsSlinky.std.global.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +10,14 @@ import scala.scalajs.js.annotation._
 /**
   * Lolex clock for a browser environment.
   */
-/* Inlined lolex.lolex.LolexClock<number> & {  performance  :{now (): number}} */
+/* Inlined lolex.lolex.LolexClock<number> & {  performance :{now (): number}} */
 @js.native
 trait BrowserClock extends Clock {
   /**
     * Implements the Date object but using this clock to provide the correct time.
     */
   @JSName("Date")
-  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, Date]) = js.native
+  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, js.Date]) = js.native
   /**
     * Maximum number of timers that will be run when calling runAll().
     */

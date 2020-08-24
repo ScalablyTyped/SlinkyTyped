@@ -9,6 +9,6 @@ trait WebGL2RenderingContext
   extends WebGL2RenderingContextBase
      with WebGL2RenderingContextOverloads
      with WebGLRenderingContextBase
-     with OffscreenRenderingContext
-     with RenderingContext
+     with _OffscreenRenderingContext
+     with _RenderingContext
 

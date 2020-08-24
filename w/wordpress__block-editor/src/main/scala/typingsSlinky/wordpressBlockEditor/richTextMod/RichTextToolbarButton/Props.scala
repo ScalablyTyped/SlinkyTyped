@@ -1,6 +1,5 @@
 package typingsSlinky.wordpressBlockEditor.richTextMod.RichTextToolbarButton
 
-import slinky.core.TagMod
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.access
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.alt
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.ctrl
@@ -11,53 +10,53 @@ import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.primaryShi
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.secondary
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.shift
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.shiftAlt
-import typingsSlinky.wordpressComponents.anon.PartialProps
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
-import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Props
   extends typingsSlinky.wordpressComponents.toolbarButtonMod.ToolbarButton.Props {
-  var name: js.UndefOr[String] = js.undefined
-  var shortcutCharacter: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
+  var shortcutCharacter: js.UndefOr[String] = js.native
   var shortcutType: js.UndefOr[
     primary | primaryShift | primaryAlt | secondary | access | ctrl | alt | ctrlShift | shift | shiftAlt
-  ] = js.undefined
+  ] = js.native
 }
 
 object Props {
   @scala.inline
-  def apply(
-    icon: Icon,
-    onClick: () => Unit,
-    title: String,
-    children: TagMod[Any] = null,
-    className: String = null,
-    containerClassName: String = null,
-    extraProps: PartialProps = null,
-    isActive: js.UndefOr[Boolean] = js.undefined,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    shortcut: ShortcutType = null,
-    shortcutCharacter: String = null,
-    shortcutType: primary | primaryShift | primaryAlt | secondary | access | ctrl | alt | ctrlShift | shift | shiftAlt = null,
-    subscript: String = null
-  ): Props = {
+  def apply(icon: Icon, onClick: () => Unit, title: String): Props = {
     val __obj = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick), title = title.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
-    if (extraProps != null) __obj.updateDynamic("extraProps")(extraProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.get.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (shortcut != null) __obj.updateDynamic("shortcut")(shortcut.asInstanceOf[js.Any])
-    if (shortcutCharacter != null) __obj.updateDynamic("shortcutCharacter")(shortcutCharacter.asInstanceOf[js.Any])
-    if (shortcutType != null) __obj.updateDynamic("shortcutType")(shortcutType.asInstanceOf[js.Any])
-    if (subscript != null) __obj.updateDynamic("subscript")(subscript.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
+  @scala.inline
+  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setShortcutCharacter(value: String): Self = this.set("shortcutCharacter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShortcutCharacter: Self = this.set("shortcutCharacter", js.undefined)
+    @scala.inline
+    def setShortcutType(
+      value: primary | primaryShift | primaryAlt | secondary | access | ctrl | alt | ctrlShift | shift | shiftAlt
+    ): Self = this.set("shortcutType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShortcutType: Self = this.set("shortcutType", js.undefined)
+  }
+  
 }
 

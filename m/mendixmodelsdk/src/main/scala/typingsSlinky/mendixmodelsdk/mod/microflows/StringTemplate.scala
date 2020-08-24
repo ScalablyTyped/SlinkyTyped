@@ -6,6 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.UserTask
+import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.Workflow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -84,5 +85,14 @@ object StringTemplate extends js.Object {
     *  8.10.0 and higher
     */
   def createInUserTaskUnderSubject(container: UserTask): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  /**
+    * Creates and returns a new StringTemplate instance in the SDK and on the server.
+    * The new StringTemplate will be automatically stored in the 'subject' property
+    * of the parent workflows.Workflow element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.11.0 and higher
+    */
+  def createInWorkflowUnderSubject(container: Workflow): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
 }
 

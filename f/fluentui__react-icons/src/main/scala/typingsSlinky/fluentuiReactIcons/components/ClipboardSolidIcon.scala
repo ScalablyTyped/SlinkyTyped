@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClipboardSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ClipboardSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ClipboardSolidIcon")
   @js.native
   object component extends js.Object
   

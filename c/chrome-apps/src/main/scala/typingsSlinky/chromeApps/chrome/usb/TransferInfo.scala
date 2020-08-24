@@ -126,7 +126,12 @@ object TransferInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDirection(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDirection(
       value: ToStringLiteral[
           IN, 
           /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
@@ -135,19 +140,11 @@ object TransferInfo {
             in_ | out_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIndex(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIndex(value: integer): Self = this.set("index", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRecipient(
+    def setRecipient(
       value: ToStringLiteral[
           DEVICE, 
           /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
@@ -156,19 +153,11 @@ object TransferInfo {
             device__ | interface_ | endpoint_ | other_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("recipient", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequest(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRequest(value: integer): Self = this.set("request", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequestType(
+    def setRequestType(
       value: ToStringLiteral[
           CLASS, 
           /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
@@ -177,53 +166,21 @@ object TransferInfo {
             standard_ | class_ | vendor_ | reserved_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("requestType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withValue(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setValue(value: integer): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
-    def withData(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setData(value: js.typedarray.ArrayBuffer): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
+    def deleteData: Self = this.set("data", js.undefined)
     @scala.inline
-    def withLength(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLength(value: integer): Self = this.set("length", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
+    def deleteLength: Self = this.set("length", js.undefined)
     @scala.inline
-    def withTimeout(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTimeout(value: integer): Self = this.set("timeout", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
   }
   
 }

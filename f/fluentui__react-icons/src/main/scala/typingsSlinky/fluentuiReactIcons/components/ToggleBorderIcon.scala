@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleBorderIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ToggleBorderIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ToggleBorderIcon")
   @js.native
   object component extends js.Object
   

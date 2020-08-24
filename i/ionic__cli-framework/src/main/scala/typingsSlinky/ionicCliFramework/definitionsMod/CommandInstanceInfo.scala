@@ -1,19 +1,20 @@
 package typingsSlinky.ionicCliFramework.definitionsMod
 
-import typingsSlinky.node.NodeJS.ProcessEnv
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CommandInstanceInfo[C /* <: ICommand[C, N, M, I, O] */, N /* <: INamespace[C, N, M, I, O] */, M /* <: CommandMetadata[I, O] */, I /* <: CommandMetadataInput */, O /* <: CommandMetadataOption */] extends js.Object {
-  var env: ProcessEnv
-  var executor: IExecutor[C, N, M, I, O]
-  var location: NamespaceLocateResult[C, N, M, I, O]
+  var env: ProcessEnv = js.native
+  var executor: IExecutor[C, N, M, I, O] = js.native
+  var location: NamespaceLocateResult[C, N, M, I, O] = js.native
 }
 
 object CommandInstanceInfo {
   @scala.inline
-  def apply[C, N, M, I, O](
+  def apply[/* <: typingsSlinky.ionicCliFramework.definitionsMod.ICommand[C, N, M, I, O] */ C, /* <: typingsSlinky.ionicCliFramework.definitionsMod.INamespace[C, N, M, I, O] */ N, /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[I, O] */ M, /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput */ I, /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */ O](
     env: ProcessEnv,
     executor: IExecutor[C, N, M, I, O],
     location: NamespaceLocateResult[C, N, M, I, O]
@@ -21,5 +22,24 @@ object CommandInstanceInfo {
     val __obj = js.Dynamic.literal(env = env.asInstanceOf[js.Any], executor = executor.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandInstanceInfo[C, N, M, I, O]]
   }
+  @scala.inline
+  implicit class CommandInstanceInfoOps[Self <: CommandInstanceInfo[_, _, _, _, _], /* <: typingsSlinky.ionicCliFramework.definitionsMod.ICommand[C, N, M, I, O] */ C, /* <: typingsSlinky.ionicCliFramework.definitionsMod.INamespace[C, N, M, I, O] */ N, /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[I, O] */ M, /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput */ I, /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */ O] (val x: Self with (CommandInstanceInfo[C, N, M, I, O])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEnv(value: ProcessEnv): Self = this.set("env", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExecutor(value: IExecutor[C, N, M, I, O]): Self = this.set("executor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocation(value: NamespaceLocateResult[C, N, M, I, O]): Self = this.set("location", value.asInstanceOf[js.Any])
+  }
+  
 }
 

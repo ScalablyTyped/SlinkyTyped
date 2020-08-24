@@ -6,20 +6,21 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typedGithubApi.userMod.UserOrOrgSummary because Already inherited
-- typingsSlinky.typedGithubApi.userMod.UserOrOrg because var conflicts: avatar_url, events_url, id, login, repos_url, `type`, url. Inlined name, company, blog, location, email, public_repos, public_gists, followers, following, created_at, updated_at */ trait User extends UserSummary {
-  var bio: String
-  var blog: String
-  var company: String
-  var created_at: js.Date
-  var email: String
-  var followers: Double
-  var following: Double
-  var hireable: Boolean
-  var location: String
-  var name: String
-  var public_gists: Double
-  var public_repos: Double
-  var updated_at: js.Date
+- typingsSlinky.typedGithubApi.userMod.UserOrOrg because var conflicts: avatar_url, events_url, id, login, repos_url, `type`, url. Inlined name, company, blog, location, email, public_repos, public_gists, followers, following, created_at, updated_at */ @js.native
+trait User extends UserSummary {
+  var bio: String = js.native
+  var blog: String = js.native
+  var company: String = js.native
+  var created_at: js.Date = js.native
+  var email: String = js.native
+  var followers: Double = js.native
+  var following: Double = js.native
+  var hireable: Boolean = js.native
+  var location: String = js.native
+  var name: String = js.native
+  var public_gists: Double = js.native
+  var public_repos: Double = js.native
+  var updated_at: js.Date = js.native
 }
 
 object User {
@@ -60,5 +61,44 @@ object User {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
   }
+  @scala.inline
+  implicit class UserOps[Self <: User] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBio(value: String): Self = this.set("bio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBlog(value: String): Self = this.set("blog", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCompany(value: String): Self = this.set("company", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreated_at(value: js.Date): Self = this.set("created_at", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEmail(value: String): Self = this.set("email", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFollowers(value: Double): Self = this.set("followers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFollowing(value: Double): Self = this.set("following", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHireable(value: Boolean): Self = this.set("hireable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocation(value: String): Self = this.set("location", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPublic_gists(value: Double): Self = this.set("public_gists", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPublic_repos(value: Double): Self = this.set("public_repos", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUpdated_at(value: js.Date): Self = this.set("updated_at", value.asInstanceOf[js.Any])
+  }
+  
 }
 

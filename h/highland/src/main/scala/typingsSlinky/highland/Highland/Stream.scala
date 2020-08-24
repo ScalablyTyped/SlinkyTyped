@@ -5,10 +5,10 @@ import typingsSlinky.highland.Flattened
 import typingsSlinky.highland.PConstructor
 import typingsSlinky.highland.anon.End
 import typingsSlinky.highland.highlandStrings.done
-import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.NodeJS.ReadWriteStream
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js

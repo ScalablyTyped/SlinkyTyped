@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.avatarItemMod.AvatarItemProps
@@ -27,7 +27,7 @@ object AvatarItem {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def tips(value: TagMod[Any]): this.type = set("tips", value.asInstanceOf[js.Any])
+    def tips(value: ReactElement): this.type = set("tips", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AvatarItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

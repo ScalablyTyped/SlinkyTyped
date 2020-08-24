@@ -2,6 +2,7 @@ package typingsSlinky.three.raycasterMod
 
 import typingsSlinky.three.anon.X
 import typingsSlinky.three.cameraMod.Camera
+import typingsSlinky.three.layersMod.Layers
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.rayMod.Ray
 import typingsSlinky.three.vector3Mod.Vector3
@@ -20,8 +21,34 @@ import scala.scalajs.js.annotation._
 	 */
 class Raycaster () extends js.Object {
   def this(origin: Vector3) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: Vector3) = this()
   def this(origin: Vector3, direction: Vector3) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: js.UndefOr[scala.Nothing], near: Double) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: Vector3, near: Double) = this()
+  def this(origin: Vector3, direction: js.UndefOr[scala.Nothing], near: Double) = this()
   def this(origin: Vector3, direction: Vector3, near: Double) = this()
+  def this(
+    origin: js.UndefOr[scala.Nothing],
+    direction: js.UndefOr[scala.Nothing],
+    near: js.UndefOr[scala.Nothing],
+    far: Double
+  ) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: js.UndefOr[scala.Nothing], near: Double, far: Double) = this()
+  def this(
+    origin: js.UndefOr[scala.Nothing],
+    direction: Vector3,
+    near: js.UndefOr[scala.Nothing],
+    far: Double
+  ) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: Vector3, near: Double, far: Double) = this()
+  def this(
+    origin: Vector3,
+    direction: js.UndefOr[scala.Nothing],
+    near: js.UndefOr[scala.Nothing],
+    far: Double
+  ) = this()
+  def this(origin: Vector3, direction: js.UndefOr[scala.Nothing], near: Double, far: Double) = this()
+  def this(origin: Vector3, direction: Vector3, near: js.UndefOr[scala.Nothing], far: Double) = this()
   def this(origin: Vector3, direction: Vector3, near: Double, far: Double) = this()
   /**
   	 * The camera to use when raycasting against view-dependent objects such as billboarded objects like Sprites. This field
@@ -34,9 +61,9 @@ class Raycaster () extends js.Object {
   	 */
   var far: Double = js.native
   /**
-  	 * The precision factor of the raycaster when intersecting Line objects.
+  	 * Used by Raycaster to selectively ignore 3D objects when performing intersection tests.
   	 */
-  var linePrecision: Double = js.native
+  var layers: Layers = js.native
   /**
   	 * The near factor of the raycaster. This value indicates which objects can be discarded based on the
   	 * distance. This value shouldn't be negative and should be smaller than the far property.
@@ -52,6 +79,7 @@ class Raycaster () extends js.Object {
   	 * @param optionalTarget (optional) target to set the result. Otherwise a new Array is instantiated. If set, you must clear this array prior to each call (i.e., array.length = 0;).
   	 */
   def intersectObject(`object`: Object3D): js.Array[Intersection] = js.native
+  def intersectObject(`object`: Object3D, recursive: js.UndefOr[scala.Nothing], optionalTarget: js.Array[Intersection]): js.Array[Intersection] = js.native
   def intersectObject(`object`: Object3D, recursive: Boolean): js.Array[Intersection] = js.native
   def intersectObject(`object`: Object3D, recursive: Boolean, optionalTarget: js.Array[Intersection]): js.Array[Intersection] = js.native
   /**
@@ -61,6 +89,11 @@ class Raycaster () extends js.Object {
   	 * @param optionalTarget (optional) target to set the result. Otherwise a new Array is instantiated. If set, you must clear this array prior to each call (i.e., array.length = 0;).
   	 */
   def intersectObjects(objects: js.Array[Object3D]): js.Array[Intersection] = js.native
+  def intersectObjects(
+    objects: js.Array[Object3D],
+    recursive: js.UndefOr[scala.Nothing],
+    optionalTarget: js.Array[Intersection]
+  ): js.Array[Intersection] = js.native
   def intersectObjects(objects: js.Array[Object3D], recursive: Boolean): js.Array[Intersection] = js.native
   def intersectObjects(objects: js.Array[Object3D], recursive: Boolean, optionalTarget: js.Array[Intersection]): js.Array[Intersection] = js.native
   /**

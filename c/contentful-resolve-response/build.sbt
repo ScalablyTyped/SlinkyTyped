@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "contentful-resolve-response"
-version := "v0.1.2-dt-20200515Z-0a695e"
-scalaVersion := "2.13.2"
+version := "v0.1.2-dt-20200515Z-7ee27b"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

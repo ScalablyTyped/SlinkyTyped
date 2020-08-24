@@ -3,14 +3,14 @@ package typingsSlinky.officeUiFabricReact.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.officeUiFabricReact.calendarDayMod.ICalendarDay
 import typingsSlinky.officeUiFabricReact.calendarDayMod.ICalendarDayProps
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCallbacks
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarStrings
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
-import typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,6 +42,8 @@ object CalendarDay {
     @scala.inline
     def onHeaderSelect(value: /* focus */ Boolean => Unit): this.type = set("onHeaderSelect", js.Any.fromFunction1(value))
     @scala.inline
+    def restrictedDatesVarargs(value: js.Date*): this.type = set("restrictedDates", js.Array(value :_*))
+    @scala.inline
     def restrictedDates(value: js.Array[js.Date]): this.type = set("restrictedDates", value.asInstanceOf[js.Any])
     @scala.inline
     def showCloseButton(value: Boolean): this.type = set("showCloseButton", value.asInstanceOf[js.Any])
@@ -51,6 +53,8 @@ object CalendarDay {
     def showWeekNumbers(value: Boolean): this.type = set("showWeekNumbers", value.asInstanceOf[js.Any])
     @scala.inline
     def today(value: js.Date): this.type = set("today", value.asInstanceOf[js.Any])
+    @scala.inline
+    def workWeekDaysVarargs(value: DayOfWeek*): this.type = set("workWeekDays", js.Array(value :_*))
     @scala.inline
     def workWeekDays(value: js.Array[DayOfWeek]): this.type = set("workWeekDays", value.asInstanceOf[js.Any])
   }

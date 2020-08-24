@@ -28,6 +28,11 @@ object TypedValue extends js.Object {
   var UNIT_SCALE_MAP: js.Any = js.native
   def applyDimension(unit: String, size: Double, dm: typingsSlinky.androiduix.android.util.DisplayMetrics): Double = js.native
   def complexToDimension(valueWithUnit: String): Double = js.native
+  def complexToDimension(
+    valueWithUnit: String,
+    baseValue: js.UndefOr[scala.Nothing],
+    metrics: typingsSlinky.androiduix.android.util.DisplayMetrics
+  ): Double = js.native
   def complexToDimension(valueWithUnit: String, baseValue: Double): Double = js.native
   def complexToDimension(
     valueWithUnit: String,
@@ -35,6 +40,11 @@ object TypedValue extends js.Object {
     metrics: typingsSlinky.androiduix.android.util.DisplayMetrics
   ): Double = js.native
   def complexToDimensionPixelOffset(valueWithUnit: String): Double = js.native
+  def complexToDimensionPixelOffset(
+    valueWithUnit: String,
+    baseValue: js.UndefOr[scala.Nothing],
+    metrics: typingsSlinky.androiduix.android.util.DisplayMetrics
+  ): Double = js.native
   def complexToDimensionPixelOffset(valueWithUnit: String, baseValue: Double): Double = js.native
   def complexToDimensionPixelOffset(
     valueWithUnit: String,
@@ -42,6 +52,11 @@ object TypedValue extends js.Object {
     metrics: typingsSlinky.androiduix.android.util.DisplayMetrics
   ): Double = js.native
   def complexToDimensionPixelSize(valueWithUnit: String): Double = js.native
+  def complexToDimensionPixelSize(
+    valueWithUnit: String,
+    baseValue: js.UndefOr[scala.Nothing],
+    metrics: typingsSlinky.androiduix.android.util.DisplayMetrics
+  ): Double = js.native
   def complexToDimensionPixelSize(valueWithUnit: String, baseValue: Double): Double = js.native
   def complexToDimensionPixelSize(
     valueWithUnit: String,

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "math-sign"
-version := "1.0-dt-20190403Z-c04294"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190403Z-ff6885"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

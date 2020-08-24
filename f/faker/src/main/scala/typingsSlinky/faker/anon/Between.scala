@@ -13,12 +13,16 @@ trait Between extends js.Object {
   def between(from: js.Date, to: String): js.Date = js.native
   def between(from: js.Date, to: js.Date): js.Date = js.native
   def future(): js.Date = js.native
+  def future(years: js.UndefOr[scala.Nothing], refDate: String): js.Date = js.native
+  def future(years: js.UndefOr[scala.Nothing], refDate: js.Date): js.Date = js.native
   def future(years: Double): js.Date = js.native
   def future(years: Double, refDate: String): js.Date = js.native
   def future(years: Double, refDate: js.Date): js.Date = js.native
   def month(): String = js.native
   def month(options: Abbr): String = js.native
   def past(): js.Date = js.native
+  def past(years: js.UndefOr[scala.Nothing], refDate: String): js.Date = js.native
+  def past(years: js.UndefOr[scala.Nothing], refDate: js.Date): js.Date = js.native
   def past(years: Double): js.Date = js.native
   def past(years: Double, refDate: String): js.Date = js.native
   def past(years: Double, refDate: js.Date): js.Date = js.native

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Fn7 extends js.Object {
-  def apply(): js.SyntaxError = js.native
-  def apply(message: String): js.SyntaxError = js.native
+  def apply(): js.EvalError = js.native
+  def apply(message: String): js.EvalError = js.native
 }
 

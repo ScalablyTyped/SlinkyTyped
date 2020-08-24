@@ -14,6 +14,11 @@ class ByeUserAgentClient protected ()
   def this(dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog, delegate: OutgoingRequestDelegate) = this()
   def this(
     dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog,
+    delegate: js.UndefOr[scala.Nothing],
+    options: RequestOptions
+  ) = this()
+  def this(
+    dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog,
     delegate: OutgoingRequestDelegate,
     options: RequestOptions
   ) = this()

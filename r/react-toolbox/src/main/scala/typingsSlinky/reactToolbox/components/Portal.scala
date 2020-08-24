@@ -3,14 +3,14 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.hocPortalMod.PortalProps
-import typingsSlinky.reactToolbox.hocPortalMod.default
+import typingsSlinky.reactToolbox.portalMod.PortalProps
+import typingsSlinky.reactToolbox.portalMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Portal {
-  @JSImport("react-toolbox/lib/hoc/Portal", JSImport.Default)
+  @JSImport("react-toolbox/components/hoc/Portal", JSImport.Default)
   @js.native
   object component extends js.Object
   

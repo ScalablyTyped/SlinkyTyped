@@ -3,7 +3,6 @@ package typingsSlinky.node
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.Global
 import typingsSlinky.node.NodeJS.Immediate
-import typingsSlinky.node.NodeJS.Process
 import typingsSlinky.node.NodeJS.Timeout
 import typingsSlinky.node.anon.ToPrimitive
 import typingsSlinky.node.anon.ValueOf
@@ -71,7 +70,6 @@ object global extends js.Object {
     def this(str: java.lang.String, encoding: BufferEncoding) = this()
   }
   
-  var console: Console = js.native
   @JSName("__dirname")
   var dirname: java.lang.String = js.native
   // Same as module.exports
@@ -80,7 +78,6 @@ object global extends js.Object {
   var filename: java.lang.String = js.native
   var global: Global = js.native
   var module: NodeModule = js.native
-  var process: Process = js.native
   var require: NodeRequire = js.native
   def clearImmediate(immediateId: Immediate): Unit = js.native
   def clearInterval(intervalId: Timeout): Unit = js.native
@@ -103,6 +100,7 @@ object global extends js.Object {
       * @param encoding encoding used for call to buf.fill while initalizing
       */
     def alloc(size: Double): typingsSlinky.node.Buffer = js.native
+    def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
     def alloc(size: Double, fill: java.lang.String): typingsSlinky.node.Buffer = js.native
     def alloc(size: Double, fill: java.lang.String, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
     def alloc(size: Double, fill: Double): typingsSlinky.node.Buffer = js.native
@@ -156,6 +154,7 @@ object global extends js.Object {
     def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
     def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
@@ -167,6 +166,7 @@ object global extends js.Object {
       * @param arrayBuffer The .buffer property of any TypedArray or a new ArrayBuffer()
       */
     def from(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
@@ -176,6 +176,7 @@ object global extends js.Object {
     def from(data: js.Array[Double]): typingsSlinky.node.Buffer = js.native
     def from(data: js.typedarray.Uint8Array): typingsSlinky.node.Buffer = js.native
     def from(obj: ToPrimitive): typingsSlinky.node.Buffer = js.native
+    def from(obj: ToPrimitive, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
     def from(obj: ToPrimitive, byteOffset: Double): typingsSlinky.node.Buffer = js.native
     def from(obj: ToPrimitive, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
@@ -184,6 +185,7 @@ object global extends js.Object {
       * @param obj An object supporting `Symbol.toPrimitive` or `valueOf()`.
       */
     def from(obj: ValueOf): typingsSlinky.node.Buffer = js.native
+    def from(obj: ValueOf, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
     def from(obj: ValueOf, byteOffset: Double): typingsSlinky.node.Buffer = js.native
     def from(obj: ValueOf, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
@@ -222,10 +224,7 @@ object global extends js.Object {
   object NodeJS extends js.Object
   
   @js.native
-  object Symbol extends SymbolConstructor {
-    /* CompleteClass */
-    override val asyncIterator: js.Symbol = js.native
-  }
+  object Symbol extends SymbolConstructor
   
   @js.native
   object setImmediate extends js.Object {

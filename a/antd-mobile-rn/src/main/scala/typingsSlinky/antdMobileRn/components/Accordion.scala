@@ -20,7 +20,11 @@ object Accordion {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.Accordion] {
     @scala.inline
+    def activeKeyVarargs(value: String*): this.type = set("activeKey", js.Array(value :_*))
+    @scala.inline
     def activeKey(value: String | js.Array[String]): this.type = set("activeKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultActiveKeyVarargs(value: String*): this.type = set("defaultActiveKey", js.Array(value :_*))
     @scala.inline
     def defaultActiveKey(value: String | js.Array[String]): this.type = set("defaultActiveKey", value.asInstanceOf[js.Any])
     @scala.inline

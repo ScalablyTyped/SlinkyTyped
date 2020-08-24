@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ArrowTallDownLeftIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ArrowTallDownLeftIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ArrowTallDownLeftIcon")
   @js.native
   object component extends js.Object
   

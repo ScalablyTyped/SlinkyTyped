@@ -44,17 +44,14 @@ object ReplacementSpan {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDraw(value: (Canvas, String, Double, Double, Double, Double, Double, Double, Paint) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.Any.fromFunction9(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetSize(value: (Paint, String, Double, Double, FontMetricsInt) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSize")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setDraw(value: (Canvas, String, Double, Double, Double, Double, Double, Double, Paint) => Unit): Self = this.set("draw", js.Any.fromFunction9(value))
+    @scala.inline
+    def setGetSize(value: (Paint, String, Double, Double, FontMetricsInt) => Double): Self = this.set("getSize", js.Any.fromFunction5(value))
   }
   
 }

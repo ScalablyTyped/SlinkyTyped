@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "node-cleanup"
-version := "2.1-dt-20200515Z-c430b4"
-scalaVersion := "2.13.2"
+version := "2.1-dt-20200515Z-7cdf45"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

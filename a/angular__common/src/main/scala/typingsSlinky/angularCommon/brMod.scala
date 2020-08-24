@@ -1,6 +1,6 @@
 package typingsSlinky.angularCommon
 
-import typingsSlinky.angularCommon.anon.CAD
+import typingsSlinky.angularCommon.anon.EGP
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object brMod extends js.Object {
   val default: js.Array[
     js.UndefOr[
-      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | CAD
+      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | EGP
     ]
   ] = js.native
 }

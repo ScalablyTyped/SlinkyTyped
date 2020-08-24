@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeSortableGrid.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
@@ -25,6 +26,10 @@ object ReactNativeSortableGrid {
     def activeBlockCenteringDuration(value: Double): this.type = set("activeBlockCenteringDuration", value.asInstanceOf[js.Any])
     @scala.inline
     def blockTransitionDuration(value: Double): this.type = set("blockTransitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def doubleTapTreshold(value: Double): this.type = set("doubleTapTreshold", value.asInstanceOf[js.Any])
     @scala.inline

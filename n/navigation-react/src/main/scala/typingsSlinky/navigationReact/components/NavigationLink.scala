@@ -201,6 +201,8 @@ object NavigationLink {
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
+    def currentDataKeysVarargs(value: String*): this.type = set("currentDataKeys", js.Array(value :_*))
+    @scala.inline
     def currentDataKeys(value: String | js.Array[String]): this.type = set("currentDataKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
@@ -208,6 +210,8 @@ object NavigationLink {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

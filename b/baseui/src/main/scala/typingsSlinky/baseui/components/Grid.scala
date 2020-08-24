@@ -20,15 +20,25 @@ object Grid {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def alignVarargs(value: ALIGNMENT*): this.type = set("align", js.Array(value :_*))
+    @scala.inline
     def align(value: Responsive[ALIGNMENT]): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
     def behavior(value: BEHAVIOR): this.type = set("behavior", value.asInstanceOf[js.Any])
     @scala.inline
+    def gridColumnsVarargs(value: Double*): this.type = set("gridColumns", js.Array(value :_*))
+    @scala.inline
     def gridColumns(value: Responsive[Double]): this.type = set("gridColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridGapsVarargs(value: Double*): this.type = set("gridGaps", js.Array(value :_*))
     @scala.inline
     def gridGaps(value: Responsive[Double]): this.type = set("gridGaps", value.asInstanceOf[js.Any])
     @scala.inline
+    def gridGuttersVarargs(value: Double*): this.type = set("gridGutters", js.Array(value :_*))
+    @scala.inline
     def gridGutters(value: Responsive[Double]): this.type = set("gridGutters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridMarginsVarargs(value: Double*): this.type = set("gridMargins", js.Array(value :_*))
     @scala.inline
     def gridMargins(value: Responsive[Double]): this.type = set("gridMargins", value.asInstanceOf[js.Any])
     @scala.inline

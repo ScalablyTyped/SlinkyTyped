@@ -1,17 +1,16 @@
 package typingsSlinky.recharts.components
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.d3Path.mod.Path_
 import typingsSlinky.d3Shape.mod.CurveGenerator
+import typingsSlinky.recharts.anon.DotPropspayloadany
 import typingsSlinky.recharts.mod.AnimationEasingType
 import typingsSlinky.recharts.mod.AreaProps
 import typingsSlinky.recharts.mod.ContentRenderer
 import typingsSlinky.recharts.mod.DataKey
-import typingsSlinky.recharts.mod.DotProps
 import typingsSlinky.recharts.mod.LayoutType
 import typingsSlinky.recharts.mod.LegendType
 import typingsSlinky.recharts.mod.LineType
@@ -52,7 +51,7 @@ object Area {
     @scala.inline
     def activeDotReactElement(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
     @scala.inline
-    def activeDotFunction1(value: _ => TagMod[Any]): this.type = set("activeDot", js.Any.fromFunction1(value))
+    def activeDotFunction1(value: _ => ReactElement): this.type = set("activeDot", js.Any.fromFunction1(value))
     @scala.inline
     def activeDot(value: Boolean | js.Object | ReactElement | ContentRenderer[_]): this.type = set("activeDot", value.asInstanceOf[js.Any])
     @scala.inline
@@ -67,6 +66,8 @@ object Area {
     def animationEasing(value: AnimationEasingType): this.type = set("animationEasing", value.asInstanceOf[js.Any])
     @scala.inline
     def animationId(value: Double): this.type = set("animationId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def baseLineVarargs(value: js.Any*): this.type = set("baseLine", js.Array(value :_*))
     @scala.inline
     def baseLine(value: Double | js.Array[_]): this.type = set("baseLine", value.asInstanceOf[js.Any])
     @scala.inline
@@ -102,9 +103,9 @@ object Area {
     @scala.inline
     def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
-    def dotFunction1(value: DotProps => TagMod[Any]): this.type = set("dot", js.Any.fromFunction1(value))
+    def dotFunction1(value: DotPropspayloadany => ReactElement): this.type = set("dot", js.Any.fromFunction1(value))
     @scala.inline
-    def dot(value: Boolean | js.Object | ReactElement | ContentRenderer[DotProps]): this.type = set("dot", value.asInstanceOf[js.Any])
+    def dot(value: Boolean | js.Object | ReactElement | ContentRenderer[DotPropspayloadany]): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
     def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
     @scala.inline
@@ -160,7 +161,7 @@ object Area {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelFunction1(value: _ => TagMod[Any]): this.type = set("label", js.Any.fromFunction1(value))
+    def labelFunction1(value: _ => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     @scala.inline
     def label(value: Boolean | js.Object | ContentRenderer[_] | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
@@ -215,6 +216,8 @@ object Area {
     def overflow(value: String): this.type = set("overflow", value.asInstanceOf[js.Any])
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointsVarargs(value: Point*): this.type = set("points", js.Array(value :_*))
     @scala.inline
     def points(value: js.Array[Point]): this.type = set("points", value.asInstanceOf[js.Any])
     @scala.inline

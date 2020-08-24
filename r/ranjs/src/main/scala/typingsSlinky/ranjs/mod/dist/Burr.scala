@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class Burr ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.Burr] {
   def this(c: Double) = this()
+  def this(c: js.UndefOr[scala.Nothing], k: Double) = this()
   def this(c: Double, k: Double) = this()
 }
 

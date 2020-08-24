@@ -38,6 +38,7 @@ trait Float64ArrayConstructor
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
   def from(arrayLike: js.Iterable[Double]): js.typedarray.Float64Array = js.native
+  def from(arrayLike: js.Iterable[Double], mapfn: js.UndefOr[scala.Nothing], thisArg: js.Any): js.typedarray.Float64Array = js.native
   def from(arrayLike: js.Iterable[Double], mapfn: js.Function2[/* v */ Double, /* k */ Double, Double]): js.typedarray.Float64Array = js.native
   def from(
     arrayLike: js.Iterable[Double],

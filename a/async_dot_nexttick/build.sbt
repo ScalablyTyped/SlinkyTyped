@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "async_dot_nexttick"
-version := "0.5-dt-20200515Z-0cdf30"
-scalaVersion := "2.13.2"
+version := "0.5-dt-20200515Z-cfdf8f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

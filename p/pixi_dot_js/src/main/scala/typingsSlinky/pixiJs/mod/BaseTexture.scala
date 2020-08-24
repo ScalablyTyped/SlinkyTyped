@@ -45,6 +45,7 @@ class BaseTexture ()
   def this(resource: HTMLCanvasElement) = this()
   def this(resource: HTMLImageElement) = this()
   def this(resource: HTMLVideoElement) = this()
+  def this(resource: js.UndefOr[scala.Nothing], options: AlphaMode) = this()
   def this(resource: String, options: AlphaMode) = this()
   def this(resource: Resource, options: AlphaMode) = this()
   def this(resource: HTMLCanvasElement, options: AlphaMode) = this()
@@ -81,29 +82,34 @@ object BaseTexture extends js.Object {
     * @param {string|HTMLImageElement|HTMLCanvasElement|SVGElement|HTMLVideoElement} source - The
     *        source to create base texture from.
     * @param {object} [options] See {@link PIXI.BaseTexture}'s constructor for options.
-    * @param {boolean} [strict] Enforce strict-mode, see {@link PIXI.settings.STRICT_TEXTURE_CACHE}.
+    * @param {boolean} [strict] - Enforce strict-mode, see {@link PIXI.settings.STRICT_TEXTURE_CACHE}.
     * @returns {PIXI.BaseTexture} The new base texture.
     */
   def from(source: String): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: String, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: String, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: String, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLCanvasElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLCanvasElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLImageElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLImageElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLImageElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLImageElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLVideoElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLVideoElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: HTMLVideoElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: SVGElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: SVGElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: SVGElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: SVGElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   /**
     * Create a new BaseTexture with a BufferResource from a Float32Array.
     * RGBA values are floats from 0 to 1.
     * @static
-    * @param {Float32Array|Uint8Array} buffer The optional array to use, if no data
+    * @param {Float32Array|Uint8Array} buffer - The optional array to use, if no data
     *        is provided, a new Float32Array is created.
     * @param {number} width - Width of the resource
     * @param {number} height - Height of the resource

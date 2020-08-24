@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("gitlab", "GroupAccessRequests")
 @js.native
-class GroupAccessRequests ()
+class GroupAccessRequests protected ()
   extends typingsSlinky.gitlab.servicesMod.GroupAccessRequests {
   def this(options: BaseServiceOptions) = this()
 }

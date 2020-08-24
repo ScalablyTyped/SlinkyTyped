@@ -4,21 +4,20 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticTRANSITIONS
 import typingsSlinky.semanticUiReact.transitionGroupMod.TransitionGroupProps
-import typingsSlinky.semanticUiReact.transitionGroupMod.default
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionPropDuration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TransitionGroup {
-  @JSImport("semantic-ui-react/dist/commonjs/modules/Transition/TransitionGroup", JSImport.Default)
+  @JSImport("semantic-ui-react", "TransitionGroup")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.TransitionGroup] {
     @scala.inline
     def animation(value: SemanticTRANSITIONS | String): this.type = set("animation", value.asInstanceOf[js.Any])
     @scala.inline

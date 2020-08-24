@@ -21,6 +21,13 @@ class ^ protected () extends AGTransport {
     authEngine: AGAuthEngine,
     codecEngine: CodecEngine,
     options: ClientOptions,
+    wsOptions: js.UndefOr[scala.Nothing],
+    handlers: TransportHandlers
+  ) = this()
+  def this(
+    authEngine: AGAuthEngine,
+    codecEngine: CodecEngine,
+    options: ClientOptions,
     wsOptions: typingsSlinky.ws.mod.ClientOptions,
     handlers: TransportHandlers
   ) = this()

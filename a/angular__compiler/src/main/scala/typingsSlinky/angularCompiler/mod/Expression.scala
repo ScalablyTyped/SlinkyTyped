@@ -7,8 +7,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "Expression")
 @js.native
 abstract class Expression ()
-  extends typingsSlinky.angularCompiler.publicApiMod.Expression {
+  extends typingsSlinky.angularCompiler.compilerMod.Expression {
   def this(`type`: typingsSlinky.angularCompiler.outputAstMod.Type) = this()
+  def this(
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
   def this(`type`: Null, sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan) = this()
   def this(
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,

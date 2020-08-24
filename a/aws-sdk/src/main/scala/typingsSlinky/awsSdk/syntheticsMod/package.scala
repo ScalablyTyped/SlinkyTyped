@@ -43,6 +43,7 @@ package object syntheticsMod {
   type MaxOneYearInSeconds = scala.Double
   type MaxSize100 = scala.Double
   type MaxSize1024 = scala.Double
+  type MaxSize3008 = scala.Double
   type RuntimeVersionList = js.Array[typingsSlinky.awsSdk.syntheticsMod.RuntimeVersion]
   type SecurityGroupId = java.lang.String
   type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.syntheticsMod.SecurityGroupId]

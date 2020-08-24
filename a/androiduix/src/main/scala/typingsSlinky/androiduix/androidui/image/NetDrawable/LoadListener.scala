@@ -26,17 +26,14 @@ object LoadListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnError(value: typingsSlinky.androiduix.androidui.image.NetDrawable => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnLoad(value: typingsSlinky.androiduix.androidui.image.NetDrawable => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnError(value: typingsSlinky.androiduix.androidui.image.NetDrawable => js.Any): Self = this.set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnLoad(value: typingsSlinky.androiduix.androidui.image.NetDrawable => js.Any): Self = this.set("onLoad", js.Any.fromFunction1(value))
   }
   
 }

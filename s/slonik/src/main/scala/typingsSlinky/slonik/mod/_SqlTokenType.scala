@@ -9,8 +9,8 @@ trait _SqlTokenType extends js.Object
 
 object _SqlTokenType {
   @scala.inline
-  def JsonSqlTokenType(`type`: js.Symbol, value: SerializableValueType = null): _SqlTokenType = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+  def JsonSqlTokenType(`type`: js.Symbol): _SqlTokenType = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_SqlTokenType]
   }

@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Notifications.ToastDismissedEventArgs")
 @js.native
 class ToastDismissedEventArgs ()
-  extends typingsSlinky.winrt.Windows.UI.Notifications.ToastDismissedEventArgs {
-  /* CompleteClass */
-  override var reason: typingsSlinky.winrt.Windows.UI.Notifications.ToastDismissalReason = js.native
-}
+  extends typingsSlinky.winrt.Windows.UI.Notifications.ToastDismissedEventArgs
 

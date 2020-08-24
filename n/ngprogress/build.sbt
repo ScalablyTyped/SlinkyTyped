@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "ngprogress"
-version := "1.0.7-dt-20200515Z-784fe0"
-scalaVersion := "2.13.2"
+version := "1.0.7-dt-20200515Z-7d25f9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

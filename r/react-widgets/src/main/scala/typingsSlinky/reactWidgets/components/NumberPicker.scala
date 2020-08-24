@@ -26,6 +26,8 @@ object NumberPicker {
     @scala.inline
     def defaultValue(value: Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
+    def disabledVarargs(value: js.Any*): this.type = set("disabled", js.Array(value :_*))
+    @scala.inline
     def disabled(value: Boolean | js.Array[_]): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def format(value: js.Any): this.type = set("format", value.asInstanceOf[js.Any])
@@ -54,11 +56,15 @@ object NumberPicker {
     @scala.inline
     def parseFunction2(value: (/* str */ String, /* culture */ String) => Double): this.type = set("parse", js.Any.fromFunction2(value))
     @scala.inline
+    def parseVarargs(value: String*): this.type = set("parse", js.Array(value :_*))
+    @scala.inline
     def parse(value: js.Array[String] | (js.Function2[/* str */ String, /* culture */ String, Double])): this.type = set("parse", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def precision(value: Double): this.type = set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnlyVarargs(value: js.Any*): this.type = set("readOnly", js.Array(value :_*))
     @scala.inline
     def readOnly(value: Boolean | js.Array[_]): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline

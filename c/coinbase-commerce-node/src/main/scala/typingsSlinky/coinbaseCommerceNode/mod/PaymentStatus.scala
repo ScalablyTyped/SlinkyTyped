@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.NEW
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.PENDING
-  - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CONFIRMED
+  - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.COMPLETED
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.UNRESOLVED
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.RESOLVED
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED
@@ -22,7 +22,7 @@ object PaymentStatus {
   @scala.inline
   def CANCELED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CANCELED = "CANCELED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CANCELED]
   @scala.inline
-  def CONFIRMED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CONFIRMED = "CONFIRMED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CONFIRMED]
+  def COMPLETED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.COMPLETED = "COMPLETED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.COMPLETED]
   @scala.inline
   def EXPIRED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED = "EXPIRED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED]
   @scala.inline

@@ -5,21 +5,20 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.fixed
 import typingsSlinky.antdMobile.antdMobileStrings.normal
 import typingsSlinky.antdMobile.progressMod.ProgressProps
-import typingsSlinky.antdMobile.progressMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Progress {
-  @JSImport("antd-mobile/lib/progress", JSImport.Default)
+  @JSImport("antd-mobile", "Progress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Progress] {
     @scala.inline
     def appearTransition(value: Boolean): this.type = set("appearTransition", value.asInstanceOf[js.Any])
     @scala.inline

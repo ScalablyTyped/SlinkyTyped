@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object D365TalentLearnIcon {
-  @JSImport("@fluentui/react-icons/lib/components/D365TalentLearnIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "D365TalentLearnIcon")
   @js.native
   object component extends js.Object
   

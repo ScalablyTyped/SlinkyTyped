@@ -33,12 +33,12 @@ trait Clownface[T /* <: AnyContext */, D /* <: DatasetCore[Quad, Quad] */] exten
     callback: AddCallback[D, X]
   ): Clownface[T, D] = js.native
   def addList[X /* <: Term */](predicates: SingleOrArrayOfTerms[Term]): Clownface[T, D] = js.native
-  def addList[X /* <: Term */](predicates: SingleOrArrayOfTerms[Term], objects: SingleOrArrayOfTermsOrLiterals[X]): Clownface[T, D] = js.native
   def addList[X /* <: Term */](
     predicates: SingleOrArrayOfTerms[Term],
-    objects: SingleOrArrayOfTermsOrLiterals[X],
+    objects: js.UndefOr[SingleOrArrayOfTermsOrLiterals[X]],
     callback: AddCallback[D, X]
   ): Clownface[T, D] = js.native
+  def addList[X /* <: Term */](predicates: SingleOrArrayOfTerms[Term], objects: SingleOrArrayOfTermsOrLiterals[X]): Clownface[T, D] = js.native
   def addOut(predicates: SingleOrArrayOfTerms[Term]): Clownface[T, D] = js.native
   def addOut(predicates: SingleOrArrayOfTerms[Term], callback: AddCallback[D, BlankNode]): Clownface[T, D] = js.native
   def addOut[X /* <: Term */](predicates: SingleOrArrayOfTerms[Term], objects: SingleOrArrayOfTermsOrLiterals[X]): Clownface[T, D] = js.native
@@ -57,14 +57,14 @@ trait Clownface[T /* <: AnyContext */, D /* <: DatasetCore[Quad, Quad] */] exten
   def deleteOut(predicates: SingleOrArrayOfTerms[Term]): Clownface[T, D] = js.native
   def filter(cb: js.Function1[/* quad */ Iteratee[T, D], Boolean]): Clownface[T, D] = js.native
   def forEach(cb: js.Function1[/* quad */ Iteratee[T, D], Unit]): Unit = js.native
-  def has(predicates: SingleOrArrayOfTerms[Term]): Clownface[js.Array[NamedNode | BlankNode], D] = js.native
-  def has(predicates: SingleOrArrayOfTerms[Term], objects: SingleOrArrayOfTermsOrLiterals[Term]): Clownface[js.Array[NamedNode | BlankNode], D] = js.native
-  def in(): SafeClownface[NamedNode | BlankNode, D] = js.native
-  def in(predicates: SingleOrArrayOfTerms[Term]): SafeClownface[NamedNode | BlankNode, D] = js.native
+  def has(predicates: SingleOrArrayOfTerms[Term]): Clownface[js.Array[NamedNode[String] | BlankNode], D] = js.native
+  def has(predicates: SingleOrArrayOfTerms[Term], objects: SingleOrArrayOfTermsOrLiterals[Term]): Clownface[js.Array[NamedNode[String] | BlankNode], D] = js.native
+  def in(): SafeClownface[NamedNode[String] | BlankNode, D] = js.native
+  def in(predicates: SingleOrArrayOfTerms[Term]): SafeClownface[NamedNode[String] | BlankNode, D] = js.native
   def list(): js.Iterable[Iteratee[T, D]] = js.native
   def literal(values: js.Array[Boolean | String | Double | Term | Null]): Clownface[js.Array[Literal], D] = js.native
   def literal(values: js.Array[Boolean | String | Double | Term | Null], languageOrDatatype: String): Clownface[js.Array[Literal], D] = js.native
-  def literal(values: js.Array[Boolean | String | Double | Term | Null], languageOrDatatype: NamedNode): Clownface[js.Array[Literal], D] = js.native
+  def literal(values: js.Array[Boolean | String | Double | Term | Null], languageOrDatatype: NamedNode[String]): Clownface[js.Array[Literal], D] = js.native
   def literal(value: SingleOrOneElementArray[Boolean | String | Double | Term | Null]): Clownface[Literal, D] = js.native
   def literal(
     value: SingleOrOneElementArray[Boolean | String | Double | Term | Null],
@@ -72,11 +72,11 @@ trait Clownface[T /* <: AnyContext */, D /* <: DatasetCore[Quad, Quad] */] exten
   ): Clownface[Literal, D] = js.native
   def literal(
     value: SingleOrOneElementArray[Boolean | String | Double | Term | Null],
-    languageOrDatatype: NamedNode
+    languageOrDatatype: NamedNode[String]
   ): Clownface[Literal, D] = js.native
   def map[X](cb: js.Function2[/* quad */ Iteratee[T, D], /* index */ Double, X]): js.Array[X] = js.native
-  def namedNode(values: js.Array[String | NamedNode]): Clownface[js.Array[NamedNode], D] = js.native
-  def namedNode(value: SingleOrOneElementArray[String | NamedNode]): Clownface[NamedNode, D] = js.native
+  def namedNode(values: js.Array[String | NamedNode[String]]): Clownface[js.Array[NamedNode[String]], D] = js.native
+  def namedNode(value: SingleOrOneElementArray[String | NamedNode[String]]): Clownface[NamedNode[String], D] = js.native
   def node(): Clownface[BlankNode, D] = js.native
   def node(value: Null, options: NodeOptions): Clownface[BlankNode, D] = js.native
   def node(values: js.Array[Boolean | Double | Null | String | Term]): Clownface[js.Array[Literal], D] = js.native

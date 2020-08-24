@@ -63,6 +63,8 @@ object FacepileBase {
     @scala.inline
     def overflowButtonType(value: OverflowButtonType): this.type = set("overflowButtonType", value.asInstanceOf[js.Any])
     @scala.inline
+    def overflowPersonasVarargs(value: IFacepilePersona*): this.type = set("overflowPersonas", js.Array(value :_*))
+    @scala.inline
     def overflowPersonas(value: js.Array[IFacepilePersona]): this.type = set("overflowPersonas", value.asInstanceOf[js.Any])
     @scala.inline
     def personaSize(value: PersonaSize): this.type = set("personaSize", value.asInstanceOf[js.Any])

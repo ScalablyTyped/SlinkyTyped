@@ -28,8 +28,43 @@ abstract class Layout protected ()
     paint: typingsSlinky.androiduix.android.text.TextPaint,
     width: Double,
     align: Alignment,
+    textDir: js.UndefOr[scala.Nothing],
+    spacingMult: Double
+  ) = this()
+  def this(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    width: Double,
+    align: Alignment,
     textDir: TextDirectionHeuristic,
     spacingMult: Double
+  ) = this()
+  def this(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    width: Double,
+    align: Alignment,
+    textDir: js.UndefOr[scala.Nothing],
+    spacingMult: js.UndefOr[scala.Nothing],
+    spacingAdd: Double
+  ) = this()
+  def this(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    width: Double,
+    align: Alignment,
+    textDir: js.UndefOr[scala.Nothing],
+    spacingMult: Double,
+    spacingAdd: Double
+  ) = this()
+  def this(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    width: Double,
+    align: Alignment,
+    textDir: TextDirectionHeuristic,
+    spacingMult: js.UndefOr[scala.Nothing],
+    spacingAdd: Double
   ) = this()
   def this(
     text: String,

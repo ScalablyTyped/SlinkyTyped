@@ -1,6 +1,5 @@
 package typingsSlinky.ionicReact.components
 
-import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
@@ -73,7 +72,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -86,7 +84,7 @@ object IonSegmentButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonSegmentButtonElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -194,8 +192,6 @@ object IonSegmentButton {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
-    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
-    @scala.inline
     def `class`(value: String): this.type = set("class", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -211,6 +207,8 @@ object IonSegmentButton {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -385,8 +383,6 @@ object IonSegmentButton {
     def onInvalid(value: SyntheticEvent[EventTarget with HTMLIonSegmentButtonElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
     def onInvalidCapture(value: js.Any): this.type = set("onInvalidCapture", value.asInstanceOf[js.Any])
-    @scala.inline
-    def onIonSelect(value: /* event */ CustomEvent => Unit): this.type = set("onIonSelect", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: SyntheticKeyboardEvent[HTMLIonSegmentButtonElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline

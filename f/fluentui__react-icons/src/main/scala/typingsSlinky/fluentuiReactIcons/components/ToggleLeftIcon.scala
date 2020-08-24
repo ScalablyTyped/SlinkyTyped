@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleLeftIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ToggleLeftIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ToggleLeftIcon")
   @js.native
   object component extends js.Object
   

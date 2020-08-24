@@ -50,6 +50,8 @@ object TableQuadrantStack {
     @scala.inline
     def isVerticalScrollDisabled(value: Boolean): this.type = set("isVerticalScrollDisabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def loadingOptionsVarargs(value: TableLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
+    @scala.inline
     def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def menuRenderer(value: /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit] => ReactElement): this.type = set("menuRenderer", js.Any.fromFunction1(value))

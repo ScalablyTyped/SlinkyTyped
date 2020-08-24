@@ -2,6 +2,7 @@ package typingsSlinky.jointjs.mod.dia
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.jointjs.anon.BreadthFirst
 import typingsSlinky.jointjs.mod.dia.Cell.Attributes
 import typingsSlinky.jointjs.mod.dia.Cell.DisconnectableOptions
@@ -16,19 +17,22 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jointjs", "dia.Cell")
 @js.native
-class Cell_ () extends Model {
+class Cell_ ()
+  extends Model[js.Any, ModelSetOptions] {
   def this(attributes: Attributes) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: Attributes, opt: Options) = this()
   var graph: Graph = js.native
   @JSName("id")
   var id_Cell_ : String | Double = js.native
+  var markup: String | MarkupJSON = js.native
   def addTo(graph: Graph): this.type = js.native
   def addTo(graph: Graph, opt: Options): this.type = js.native
   def angle(): Double = js.native
   def attr(): js.Any = js.native
-  def attr(key: String): js.Any = js.native
-  def attr(key: String, value: js.Any): this.type = js.native
-  def attr(key: String, value: js.Any, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
+  def attr(key: Path): js.Any = js.native
+  def attr(key: Path, value: js.Any): this.type = js.native
+  def attr(key: Path, value: js.Any, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def attr(`object`: Selectors): this.type = js.native
   def attr(`object`: Selectors, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def clone(opt: EmbeddableOptions): Cell | js.Array[Cell] = js.native
@@ -55,29 +59,23 @@ class Cell_ () extends Model {
     * @deprecated
     */
   /* protected */ def processPorts(): Unit = js.native
-  def prop(key: String): js.Any = js.native
-  def prop(key: String, value: js.Any): this.type = js.native
-  def prop(key: String, value: js.Any, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
-  def prop(key: js.Array[String]): js.Any = js.native
-  def prop(key: js.Array[String], value: js.Any): this.type = js.native
-  def prop(key: js.Array[String], value: js.Any, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
+  def prop(key: Path): js.Any = js.native
+  def prop(key: Path, value: js.Any): this.type = js.native
+  def prop(key: Path, value: js.Any, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def prop(`object`: Attributes): this.type = js.native
   def prop(`object`: Attributes, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def remove(): this.type = js.native
   def remove(opt: DisconnectableOptions): this.type = js.native
-  def removeAttr(path: String): this.type = js.native
-  def removeAttr(path: String, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
-  def removeAttr(path: js.Array[String]): this.type = js.native
-  def removeAttr(path: js.Array[String], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
-  def removeProp(path: String): this.type = js.native
-  def removeProp(path: String, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
-  def removeProp(path: js.Array[String]): this.type = js.native
-  def removeProp(path: js.Array[String], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
+  def removeAttr(path: Path): this.type = js.native
+  def removeAttr(path: Path, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
+  def removeProp(path: Path): this.type = js.native
+  def removeProp(path: Path, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def startBatch(name: String): this.type = js.native
   def startBatch(name: String, opt: Options): this.type = js.native
   def stopBatch(name: String): this.type = js.native
   def stopBatch(name: String, opt: Options): this.type = js.native
   def stopTransitions(): this.type = js.native
+  def stopTransitions(path: js.UndefOr[scala.Nothing], delim: String): this.type = js.native
   def stopTransitions(path: String): this.type = js.native
   def stopTransitions(path: String, delim: String): this.type = js.native
   def toBack(): this.type = js.native
@@ -86,7 +84,11 @@ class Cell_ () extends Model {
   def toFront(opt: EmbeddableOptions): this.type = js.native
   def toJSON(): js.Any = js.native
   def transition(path: String): Double = js.native
+  def transition(path: String, value: js.UndefOr[scala.Nothing], opt: js.UndefOr[scala.Nothing], delim: String): Double = js.native
+  def transition(path: String, value: js.UndefOr[scala.Nothing], opt: TransitionOptions): Double = js.native
+  def transition(path: String, value: js.UndefOr[scala.Nothing], opt: TransitionOptions, delim: String): Double = js.native
   def transition(path: String, value: js.Any): Double = js.native
+  def transition(path: String, value: js.Any, opt: js.UndefOr[scala.Nothing], delim: String): Double = js.native
   def transition(path: String, value: js.Any, opt: TransitionOptions): Double = js.native
   def transition(path: String, value: js.Any, opt: TransitionOptions, delim: String): Double = js.native
   def unembed(cell: Cell): this.type = js.native

@@ -27,23 +27,16 @@ object Graph {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGraph(value: typingsSlinky.jointjs.mod.dia.Graph): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graph")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withModel(value: Collection[Cell]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGraph(value: typingsSlinky.jointjs.mod.dia.Graph): Self = this.set("graph", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPaper(value: Paper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setModel(value: Collection[Cell]): Self = this.set("model", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPaper(value: Paper): Self = this.set("paper", value.asInstanceOf[js.Any])
   }
   
 }

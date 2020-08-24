@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "R3BoundTarget")
 @js.native
 class R3BoundTarget[DirectiveT /* <: DirectiveMeta */] protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.R3BoundTarget[DirectiveT] {
+  extends typingsSlinky.angularCompiler.compilerMod.R3BoundTarget[DirectiveT] {
   def this(
     target: Target,
     directives: Map[typingsSlinky.angularCompiler.r3AstMod.Element | Template, js.Array[DirectiveT]],

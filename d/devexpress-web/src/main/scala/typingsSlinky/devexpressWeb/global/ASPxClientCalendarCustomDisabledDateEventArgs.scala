@@ -16,15 +16,5 @@ class ASPxClientCalendarCustomDisabledDateEventArgs protected ()
     * @param date A DateTime object that is the currently processed date.
     */
   def this(date: js.Date) = this()
-  /**
-    * Gets the date processed in the calendar.
-    */
-  /* CompleteClass */
-  override var date: js.Date = js.native
-  /**
-    * Gets or sets a value specifying whether selection of the processed calendar date is disabled.
-    */
-  /* CompleteClass */
-  override var isDisabled: Boolean = js.native
 }
 

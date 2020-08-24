@@ -27,6 +27,8 @@ object PricingCard {
     @scala.inline
     def containerStyleNull: this.type = set("containerStyle", null)
     @scala.inline
+    def infoVarargs(value: String*): this.type = set("info", js.Array(value :_*))
+    @scala.inline
     def info(value: js.Array[String]): this.type = set("info", value.asInstanceOf[js.Any])
     @scala.inline
     def infoStyle(value: StyleProp[TextStyle]): this.type = set("infoStyle", value.asInstanceOf[js.Any])

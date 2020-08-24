@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "convert-hrtime"
-version := "3.0.0-c4d4fb"
-scalaVersion := "2.13.2"
+version := "3.0.0-069335"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

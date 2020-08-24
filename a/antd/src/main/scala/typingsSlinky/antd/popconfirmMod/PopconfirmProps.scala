@@ -1,79 +1,114 @@
 package typingsSlinky.antd.popconfirmMod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import typingsSlinky.antd.buttonButtonMod.NativeButtonProps
 import typingsSlinky.antd.getRenderPropValueMod.RenderFunction
-import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.tooltipMod.AbstractTooltipProps
-import typingsSlinky.antd.tooltipMod.TooltipPlacement
-import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PopconfirmProps extends AbstractTooltipProps {
-  var cancelButtonProps: js.UndefOr[NativeButtonProps] = js.undefined
-  var cancelText: js.UndefOr[TagMod[Any]] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
-  var okButtonProps: js.UndefOr[NativeButtonProps] = js.undefined
-  var okText: js.UndefOr[TagMod[Any]] = js.undefined
-  var okType: js.UndefOr[LegacyButtonType] = js.undefined
-  var onCancel: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.undefined
-  var onConfirm: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.undefined
-  var onVisibleChange: js.UndefOr[
-    js.Function2[/* visible */ Boolean, /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]
-  ] = js.undefined
-  var title: TagMod[Any] | RenderFunction
+  var cancelButtonProps: js.UndefOr[NativeButtonProps] = js.native
+  var cancelText: js.UndefOr[ReactElement] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[ReactElement] = js.native
+  var okButtonProps: js.UndefOr[NativeButtonProps] = js.native
+  var okText: js.UndefOr[ReactElement] = js.native
+  var okType: js.UndefOr[LegacyButtonType] = js.native
+  var onCancel: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.native
+  var onConfirm: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.native
+  @JSName("onVisibleChange")
+  var onVisibleChange_PopconfirmProps: js.UndefOr[
+    js.Function2[
+      /* visible */ Boolean, 
+      /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLDivElement]], 
+      Unit
+    ]
+  ] = js.native
+  var title: ReactElement | RenderFunction = js.native
 }
 
 object PopconfirmProps {
   @scala.inline
-  def apply(
-    arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
-    autoAdjustOverflow: Boolean | AdjustOverflow = null,
-    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
-    cancelButtonProps: NativeButtonProps = null,
-    cancelText: TagMod[Any] = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    icon: TagMod[Any] = null,
-    okButtonProps: NativeButtonProps = null,
-    okText: TagMod[Any] = null,
-    okType: LegacyButtonType = null,
-    onCancel: /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit = null,
-    onConfirm: /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit = null,
-    onVisibleChange: (/* visible */ Boolean, /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]]) => Unit = null,
-    openClassName: String = null,
-    placement: TooltipPlacement = null,
-    style: CSSProperties = null,
-    title: TagMod[Any] | RenderFunction = null
-  ): PopconfirmProps = {
+  def apply(): PopconfirmProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(arrowPointAtCenter)) __obj.updateDynamic("arrowPointAtCenter")(arrowPointAtCenter.get.asInstanceOf[js.Any])
-    if (autoAdjustOverflow != null) __obj.updateDynamic("autoAdjustOverflow")(autoAdjustOverflow.asInstanceOf[js.Any])
-    if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])
-    if (cancelButtonProps != null) __obj.updateDynamic("cancelButtonProps")(cancelButtonProps.asInstanceOf[js.Any])
-    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (okButtonProps != null) __obj.updateDynamic("okButtonProps")(okButtonProps.asInstanceOf[js.Any])
-    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
-    if (okType != null) __obj.updateDynamic("okType")(okType.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
-    if (onConfirm != null) __obj.updateDynamic("onConfirm")(js.Any.fromFunction1(onConfirm))
-    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction2(onVisibleChange))
-    if (openClassName != null) __obj.updateDynamic("openClassName")(openClassName.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopconfirmProps]
   }
+  @scala.inline
+  implicit class PopconfirmPropsOps[Self <: PopconfirmProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCancelButtonProps(value: NativeButtonProps): Self = this.set("cancelButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCancelButtonProps: Self = this.set("cancelButtonProps", js.undefined)
+    @scala.inline
+    def setCancelTextReactElement(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCancelText(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCancelText: Self = this.set("cancelText", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setOkButtonProps(value: NativeButtonProps): Self = this.set("okButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOkButtonProps: Self = this.set("okButtonProps", js.undefined)
+    @scala.inline
+    def setOkTextReactElement(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOkText(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOkText: Self = this.set("okText", js.undefined)
+    @scala.inline
+    def setOkType(value: LegacyButtonType): Self = this.set("okType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOkType: Self = this.set("okType", js.undefined)
+    @scala.inline
+    def setOnCancel(value: /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit): Self = this.set("onCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnCancel: Self = this.set("onCancel", js.undefined)
+    @scala.inline
+    def setOnConfirm(value: /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit): Self = this.set("onConfirm", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnConfirm: Self = this.set("onConfirm", js.undefined)
+    @scala.inline
+    def setOnVisibleChange(
+      value: (/* visible */ Boolean, /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLDivElement]]) => Unit
+    ): Self = this.set("onVisibleChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnVisibleChange: Self = this.set("onVisibleChange", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitleFunction0(value: () => ReactElement): Self = this.set("title", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTitle(value: ReactElement | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

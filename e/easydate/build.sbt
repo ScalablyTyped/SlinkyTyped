@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "easydate"
-version := "2.2-dt-20190313Z-932378"
-scalaVersion := "2.13.2"
+version := "2.2-dt-20190313Z-392fb1"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

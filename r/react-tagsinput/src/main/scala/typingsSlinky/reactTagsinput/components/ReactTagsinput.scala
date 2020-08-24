@@ -1,6 +1,5 @@
 package typingsSlinky.reactTagsinput.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -23,7 +22,9 @@ object ReactTagsinput {
   @scala.inline
   class Builder[Tag] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^[js.Any]] {
+       with StBuildingComponent[tag.type, ^[Tag]] {
+    @scala.inline
+    def addKeysVarargs(value: (Double | String)*): this.type = set("addKeys", js.Array(value :_*))
     @scala.inline
     def addKeys(value: js.Array[Double | String]): this.type = set("addKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -55,13 +56,15 @@ object ReactTagsinput {
     @scala.inline
     def preventSubmit(value: Boolean): this.type = set("preventSubmit", value.asInstanceOf[js.Any])
     @scala.inline
+    def removeKeysVarargs(value: Double*): this.type = set("removeKeys", js.Array(value :_*))
+    @scala.inline
     def removeKeys(value: js.Array[Double]): this.type = set("removeKeys", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderInput(value: /* props */ RenderInputProps[Tag] => TagMod[Any]): this.type = set("renderInput", js.Any.fromFunction1(value))
+    def renderInput(value: /* props */ RenderInputProps[Tag] => ReactElement): this.type = set("renderInput", js.Any.fromFunction1(value))
     @scala.inline
     def renderLayout(value: (/* tagElements */ js.Array[ReactElement], /* inputElement */ ReactElement) => ReactChild): this.type = set("renderLayout", js.Any.fromFunction2(value))
     @scala.inline
-    def renderTag(value: /* props */ RenderTagProps[Tag] => TagMod[Any]): this.type = set("renderTag", js.Any.fromFunction1(value))
+    def renderTag(value: /* props */ RenderTagProps[Tag] => ReactElement): this.type = set("renderTag", js.Any.fromFunction1(value))
     @scala.inline
     def tagDisplayProp(value: /* keyof Tag */ String): this.type = set("tagDisplayProp", value.asInstanceOf[js.Any])
     @scala.inline

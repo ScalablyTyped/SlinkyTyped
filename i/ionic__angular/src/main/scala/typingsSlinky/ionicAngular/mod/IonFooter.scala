@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonFooter")
 @js.native
 class IonFooter protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonFooter {
+  extends typingsSlinky.ionicAngular.proxiesMod.IonFooter {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
 }
 

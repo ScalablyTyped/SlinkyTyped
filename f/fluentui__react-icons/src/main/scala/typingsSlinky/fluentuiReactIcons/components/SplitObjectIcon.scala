@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SplitObjectIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SplitObjectIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SplitObjectIcon")
   @js.native
   object component extends js.Object
   

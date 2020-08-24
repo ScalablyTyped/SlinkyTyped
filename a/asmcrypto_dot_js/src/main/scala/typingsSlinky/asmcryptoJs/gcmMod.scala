@@ -15,6 +15,12 @@ object gcmMod extends js.Object {
     def this(
       key: js.typedarray.Uint8Array,
       nonce: js.typedarray.Uint8Array,
+      adata: js.UndefOr[scala.Nothing],
+      tagSize: Double
+    ) = this()
+    def this(
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
       adata: js.typedarray.Uint8Array,
       tagSize: Double
     ) = this()
@@ -45,6 +51,13 @@ object gcmMod extends js.Object {
       ciphertext: js.typedarray.Uint8Array,
       key: js.typedarray.Uint8Array,
       nonce: js.typedarray.Uint8Array,
+      adata: js.UndefOr[scala.Nothing],
+      tagsize: Double
+    ): js.typedarray.Uint8Array = js.native
+    def decrypt(
+      ciphertext: js.typedarray.Uint8Array,
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
       adata: js.typedarray.Uint8Array
     ): js.typedarray.Uint8Array = js.native
     def decrypt(
@@ -58,6 +71,13 @@ object gcmMod extends js.Object {
       cleartext: js.typedarray.Uint8Array,
       key: js.typedarray.Uint8Array,
       nonce: js.typedarray.Uint8Array
+    ): js.typedarray.Uint8Array = js.native
+    def encrypt(
+      cleartext: js.typedarray.Uint8Array,
+      key: js.typedarray.Uint8Array,
+      nonce: js.typedarray.Uint8Array,
+      adata: js.UndefOr[scala.Nothing],
+      tagsize: Double
     ): js.typedarray.Uint8Array = js.native
     def encrypt(
       cleartext: js.typedarray.Uint8Array,

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Header4Icon {
-  @JSImport("@fluentui/react-icons/lib/components/Header4Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Header4Icon")
   @js.native
   object component extends js.Object
   

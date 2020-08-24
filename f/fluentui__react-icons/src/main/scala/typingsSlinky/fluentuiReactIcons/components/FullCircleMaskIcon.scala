@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FullCircleMaskIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FullCircleMaskIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FullCircleMaskIcon")
   @js.native
   object component extends js.Object
   

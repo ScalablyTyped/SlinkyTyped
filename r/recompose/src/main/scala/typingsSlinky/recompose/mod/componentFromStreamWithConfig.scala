@@ -1,7 +1,7 @@
 package typingsSlinky.recompose.mod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object componentFromStreamWithConfig extends js.Object {
   def apply(config: ObservableConfig): js.Function1[
-    /* propsToReactNode */ mapper[Subscribable[_], Subscribable[TagMod[Any]]], 
+    /* propsToReactNode */ mapper[Subscribable[_], Subscribable[ReactElement]], 
     ReactComponentClass[_]
   ] = js.native
 }

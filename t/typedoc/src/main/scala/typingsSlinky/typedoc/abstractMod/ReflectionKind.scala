@@ -42,9 +42,6 @@ object ReflectionKind extends js.Object {
   sealed trait Event extends ReflectionKind
   
   @js.native
-  sealed trait ExternalModule extends ReflectionKind
-  
-  @js.native
   sealed trait Function extends ReflectionKind
   
   @js.native
@@ -69,6 +66,9 @@ object ReflectionKind extends js.Object {
   sealed trait Module extends ReflectionKind
   
   @js.native
+  sealed trait Namespace extends ReflectionKind
+  
+  @js.native
   sealed trait ObjectLiteral extends ReflectionKind
   
   @js.native
@@ -76,6 +76,9 @@ object ReflectionKind extends js.Object {
   
   @js.native
   sealed trait Property extends ReflectionKind
+  
+  @js.native
+  sealed trait Reference extends ReflectionKind
   
   @js.native
   sealed trait SetSignature extends ReflectionKind
@@ -139,9 +142,6 @@ object ReflectionKind extends js.Object {
   /* 8388608 */ @js.native
   object Event extends TopLevel[Event with Double]
   
-  /* 1 */ @js.native
-  object ExternalModule extends TopLevel[ExternalModule with Double]
-  
   /* 64 */ @js.native
   object Function extends TopLevel[Function with Double]
   
@@ -163,8 +163,11 @@ object ReflectionKind extends js.Object {
   /* 2048 */ @js.native
   object Method extends TopLevel[Method with Double]
   
-  /* 2 */ @js.native
+  /* 1 */ @js.native
   object Module extends TopLevel[Module with Double]
+  
+  /* 2 */ @js.native
+  object Namespace extends TopLevel[Namespace with Double]
   
   /* 2097152 */ @js.native
   object ObjectLiteral extends TopLevel[ObjectLiteral with Double]
@@ -174,6 +177,9 @@ object ReflectionKind extends js.Object {
   
   /* 1024 */ @js.native
   object Property extends TopLevel[Property with Double]
+  
+  /* 16777216 */ @js.native
+  object Reference extends TopLevel[Reference with Double]
   
   /* 1048576 */ @js.native
   object SetSignature extends TopLevel[SetSignature with Double]

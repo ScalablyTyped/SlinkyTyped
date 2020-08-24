@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.global.chrome
 
+import typingsSlinky.chrome.chrome.enterprise.networkingAttributes.NetworkDetails
 import typingsSlinky.chrome.chrome.enterprise.platformKeys.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +25,19 @@ object enterprise extends js.Object {
     def getDeviceAssetId(callback: js.Function1[/* assetId */ String, Unit]): Unit = js.native
     def getDeviceSerialNumber(callback: js.Function1[/* serialNumber */ String, Unit]): Unit = js.native
     def getDirectoryDeviceId(callback: js.Function1[/* deviceId */ String, Unit]): Unit = js.native
+  }
+  
+  ////////////////////
+  // Enterprise Networking Attributes
+  ////////////////////
+  /**
+    * Use the <code>chrome.enterprise.networkingAttributes</code> API to read information about your current network. Note: This API is only available to extensions force-installed by enterprise policy.
+    * Important: This API works only on Chrome OS.
+    * @since Chrome 85.
+    */
+  @js.native
+  object networkingAttributes extends js.Object {
+    def getNetworkDetails(callback: js.Function1[/* networkDetails */ NetworkDetails, Unit]): Unit = js.native
   }
   
   ////////////////////

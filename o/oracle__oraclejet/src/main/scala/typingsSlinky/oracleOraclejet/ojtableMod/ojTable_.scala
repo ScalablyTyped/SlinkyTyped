@@ -13,7 +13,7 @@ import typingsSlinky.oracleOraclejet.anon.IndexSubId
 import typingsSlinky.oracleOraclejet.anon.LabelAccSelectionAffordanceBottom
 import typingsSlinky.oracleOraclejet.anon.MaxCount
 import typingsSlinky.oracleOraclejet.anon.RowHeader
-import typingsSlinky.oracleOraclejet.anon.`19`
+import typingsSlinky.oracleOraclejet.anon.`21`
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojtableMod.ojTable.ColumnSelectionEnd
@@ -123,7 +123,7 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   var selection: js.Array[
     (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
   ] = js.native
-  var selectionMode: `19` = js.native
+  var selectionMode: `21` = js.native
   var selectionRequired: Boolean = js.native
   @JSName("translations")
   var translations_ojTable_ : LabelAccSelectionAffordanceBottom = js.native
@@ -368,7 +368,7 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
     (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
   ] = js.native
   @JSName("getProperty")
-  def getProperty_selectionMode(property: selectionMode): `19` = js.native
+  def getProperty_selectionMode(property: selectionMode): `21` = js.native
   @JSName("getProperty")
   def getProperty_selectionRequired(property: selectionRequired): Boolean = js.native
   @JSName("getProperty")
@@ -428,7 +428,7 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
     ]
   ): Unit = js.native
   @JSName("setProperty")
-  def setProperty_selectionMode(property: selectionMode, value: `19`): Unit = js.native
+  def setProperty_selectionMode(property: selectionMode, value: `21`): Unit = js.native
   @JSName("setProperty")
   def setProperty_selectionRequired(property: selectionRequired, value: Boolean): Unit = js.native
   @JSName("setProperty")

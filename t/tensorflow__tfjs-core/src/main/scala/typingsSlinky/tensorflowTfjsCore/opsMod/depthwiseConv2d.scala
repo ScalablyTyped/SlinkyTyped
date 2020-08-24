@@ -18,31 +18,12 @@ object depthwiseConv2d extends js.Object {
     x: T | TensorLike,
     filter: Tensor4D | TensorLike,
     strides: (js.Tuple2[Double, Double]) | Double,
-    pad: valid_ | same_ | Double
-  ): T = js.native
-  def apply[T /* <: Tensor3D | Tensor4D */](
-    x: T | TensorLike,
-    filter: Tensor4D | TensorLike,
-    strides: (js.Tuple2[Double, Double]) | Double,
     pad: valid_ | same_ | Double,
-    dataFormat: NHWC | NCHW
-  ): T = js.native
-  def apply[T /* <: Tensor3D | Tensor4D */](
-    x: T | TensorLike,
-    filter: Tensor4D | TensorLike,
-    strides: (js.Tuple2[Double, Double]) | Double,
-    pad: valid_ | same_ | Double,
-    dataFormat: NHWC | NCHW,
-    dilations: (js.Tuple2[Double, Double]) | Double
-  ): T = js.native
-  def apply[T /* <: Tensor3D | Tensor4D */](
-    x: T | TensorLike,
-    filter: Tensor4D | TensorLike,
-    strides: (js.Tuple2[Double, Double]) | Double,
-    pad: valid_ | same_ | Double,
-    dataFormat: NHWC | NCHW,
-    dilations: (js.Tuple2[Double, Double]) | Double,
-    dimRoundingMode: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.floor | typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.round | typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.ceil
+    dataFormat: js.UndefOr[NHWC | NCHW],
+    dilations: js.UndefOr[(js.Tuple2[Double, Double]) | Double],
+    dimRoundingMode: js.UndefOr[
+      typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.floor | typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.round | typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.ceil
+    ]
   ): T = js.native
 }
 

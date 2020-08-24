@@ -1,11 +1,10 @@
 package typingsSlinky.reactRange.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRange.anon.Children
 import typingsSlinky.reactRange.anon.Index
-import typingsSlinky.reactRange.rangeMod.default
 import typingsSlinky.reactRange.typesMod.Direction
 import typingsSlinky.reactRange.typesMod.IProps
 import scala.scalajs.js
@@ -13,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Range {
-  @JSImport("react-range/lib/Range", JSImport.Default)
+  @JSImport("react-range", "Range")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactRange.mod.Range] {
     @scala.inline
     def onFinalChange(value: /* values */ js.Array[Double] => Unit): this.type = set("onFinalChange", js.Any.fromFunction1(value))
   }
@@ -34,8 +33,8 @@ object Range {
     max: Double,
     min: Double,
     onChange: js.Array[Double] => Unit,
-    renderThumb: Index => TagMod[Any],
-    renderTrack: Children => TagMod[Any],
+    renderThumb: Index => ReactElement,
+    renderTrack: Children => ReactElement,
     rtl: Boolean,
     step: Double,
     values: js.Array[Double]

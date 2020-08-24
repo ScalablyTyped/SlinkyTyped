@@ -1,13 +1,12 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
-import typingsSlinky.ionicCore.ionicCoreStrings.ios
-import typingsSlinky.ionicCore.ionicCoreStrings.md
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +18,6 @@ object loadingMod extends js.Object {
   class Loading ()
     extends ComponentInterface
        with OverlayInterface {
-    @JSName("animation")
-    var animation_Loading: js.UndefOr[Animation] = js.native
     /**
       * If `true`, the loading indicator will be dismissed when the backdrop is clicked.
       */
@@ -37,12 +34,11 @@ object loadingMod extends js.Object {
     var durationTimeout: js.Any = js.native
     @JSName("el")
     var el_Loading: HTMLIonLoadingElement = js.native
+    var lastFocus: js.UndefOr[HTMLElement] = js.native
     /**
       * Optional text content to display in the loading indicator.
       */
-    var message: js.UndefOr[String] = js.native
-    @JSName("mode")
-    var mode_Loading: ios | md = js.native
+    var message: js.UndefOr[String | IonicSafeString] = js.native
     var onBackdropTap: js.Any = js.native
     /**
       * If `true`, a backdrop will be displayed behind the loading indicator.
@@ -60,14 +56,16 @@ object loadingMod extends js.Object {
     var translucent: Boolean = js.native
     @JSName("componentWillLoad")
     def componentWillLoad_MLoading(): Unit = js.native
+    @JSName("connectedCallback")
+    def connectedCallback_MLoading(): Unit = js.native
     /**
       * Returns a promise that resolves when the loading did dismiss.
       */
-    def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     /**
       * Returns a promise that resolves when the loading will dismiss.
       */
-    def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     @JSName("render")
     def render_MLoading(): js.Any = js.native
   }

@@ -43,65 +43,30 @@ object StateAttr {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttributes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCreateDiffKeyAsNullValueAttrMap(value: StateAttr => Map[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDiffKeyAsNullValueAttrMap")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAttributes(value: js.Any): Self = this.set("attributes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetAttrMap(value: () => Map[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrMap")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCreateDiffKeyAsNullValueAttrMap(value: StateAttr => Map[String, String]): Self = this.set("createDiffKeyAsNullValueAttrMap", js.Any.fromFunction1(value))
     @scala.inline
-    def withHasAttr(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttr")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetAttrMap(value: () => Map[String, String]): Self = this.set("getAttrMap", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsDefaultState(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultState")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHasAttr(value: String => Boolean): Self = this.set("hasAttr", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsStateEquals(value: js.Array[Double] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateEquals")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsDefaultState(value: () => Boolean): Self = this.set("isDefaultState", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsStateMatch(value: js.Array[Double] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStateMatch")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsStateEquals(value: js.Array[Double] => Boolean): Self = this.set("isStateEquals", js.Any.fromFunction1(value))
     @scala.inline
-    def withPutAll(value: StateAttr => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("putAll")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsStateMatch(value: js.Array[Double] => Boolean): Self = this.set("isStateMatch", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetAttr(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttr")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setPutAll(value: StateAttr => Unit): Self = this.set("putAll", js.Any.fromFunction1(value))
     @scala.inline
-    def withStateSpec(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateSpec")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetAttr(value: (String, String) => Unit): Self = this.set("setAttr", js.Any.fromFunction2(value))
+    @scala.inline
+    def setStateSpec(value: js.Any): Self = this.set("stateSpec", value.asInstanceOf[js.Any])
   }
   
 }

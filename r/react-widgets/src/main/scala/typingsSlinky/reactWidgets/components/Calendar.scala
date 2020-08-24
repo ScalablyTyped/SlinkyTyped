@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactWidgets.calendarMod.CalendarMessages
 import typingsSlinky.reactWidgets.calendarMod.CalendarProps
 import typingsSlinky.reactWidgets.calendarMod.CalendarView
@@ -44,7 +45,7 @@ object Calendar {
     @scala.inline
     def dayComponentComponentClass(value: ReactComponentClass[_]): this.type = set("dayComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def dayComponent(value: ReactComponentClass[_]): this.type = set("dayComponent", value.asInstanceOf[js.Any])
+    def dayComponent(value: ReactType[_]): this.type = set("dayComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def dayFormatFunction1(value: /* day */ js.Date => String): this.type = set("dayFormat", js.Any.fromFunction1(value))
     @scala.inline
@@ -57,6 +58,8 @@ object Calendar {
     def defaultValue(value: js.Date): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultView(value: CalendarView): this.type = set("defaultView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledVarargs(value: js.Any*): this.type = set("disabled", js.Array(value :_*))
     @scala.inline
     def disabled(value: Boolean | js.Array[_]): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,11 +101,15 @@ object Calendar {
     @scala.inline
     def onViewChange(value: () => Unit): this.type = set("onViewChange", js.Any.fromFunction0(value))
     @scala.inline
+    def readOnlyVarargs(value: js.Any*): this.type = set("readOnly", js.Array(value :_*))
+    @scala.inline
     def readOnly(value: Boolean | js.Array[_]): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def view(value: CalendarView): this.type = set("view", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewsVarargs(value: CalendarView*): this.type = set("views", js.Array(value :_*))
     @scala.inline
     def views(value: js.Array[CalendarView]): this.type = set("views", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.aframe.mod.THREE
 
+import org.scalajs.dom.raw.AudioNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class AudioAnalyser protected ()
   extends typingsSlinky.three.mod.AudioAnalyser {
-  def this(audio: js.Any, fftSize: Double) = this()
+  def this(audio: typingsSlinky.three.audioMod.Audio[AudioNode], fftSize: Double) = this()
 }
 

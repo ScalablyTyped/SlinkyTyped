@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object typesMod {
   type DebugEvent[T /* <: typingsSlinky.urqlCore.urqlCoreStrings.cacheHit | typingsSlinky.urqlCore.urqlCoreStrings.cacheInvalidation | typingsSlinky.urqlCore.urqlCoreStrings.fetchRequest | typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess | typingsSlinky.urqlCore.urqlCoreStrings.fetchError | typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying | java.lang.String */] = typingsSlinky.urqlCore.typesMod.DebugEventArg[T] with typingsSlinky.urqlCore.anon.Source
-  type DebugEventArg[T /* <: typingsSlinky.urqlCore.urqlCoreStrings.cacheHit | typingsSlinky.urqlCore.urqlCoreStrings.cacheInvalidation | typingsSlinky.urqlCore.urqlCoreStrings.fetchRequest | typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess | typingsSlinky.urqlCore.urqlCoreStrings.fetchError | typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying | java.lang.String */] = typingsSlinky.urqlCore.anon.Message[T] with (typingsSlinky.urqlCore.anon.DataAny | typingsSlinky.urqlCore.anon.Data[T])
+  type DebugEventArg[T /* <: typingsSlinky.urqlCore.urqlCoreStrings.cacheHit | typingsSlinky.urqlCore.urqlCoreStrings.cacheInvalidation | typingsSlinky.urqlCore.urqlCoreStrings.fetchRequest | typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess | typingsSlinky.urqlCore.urqlCoreStrings.fetchError | typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying | java.lang.String */] = typingsSlinky.urqlCore.anon.Message[T] with (typingsSlinky.urqlCore.anon.`0` | typingsSlinky.urqlCore.anon.Data[T])
   type Exchange = js.Function1[
     /* input */ typingsSlinky.urqlCore.typesMod.ExchangeInput, 
     typingsSlinky.urqlCore.typesMod.ExchangeIO

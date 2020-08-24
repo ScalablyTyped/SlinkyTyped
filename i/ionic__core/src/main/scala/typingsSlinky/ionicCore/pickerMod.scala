@@ -1,14 +1,12 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPickerElement
-import typingsSlinky.ionicCore.ionicCoreStrings.ios
-import typingsSlinky.ionicCore.ionicCoreStrings.md
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
 import typingsSlinky.ionicCore.pickerInterfaceMod.PickerButton
 import typingsSlinky.ionicCore.pickerInterfaceMod.PickerColumn
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +18,6 @@ object pickerMod extends js.Object {
   class Picker ()
     extends ComponentInterface
        with OverlayInterface {
-    @JSName("animation")
-    var animation_Picker: js.UndefOr[Animation] = js.native
     /**
       * If `true`, the picker will be dismissed when the backdrop is clicked.
       */
@@ -31,6 +27,7 @@ object pickerMod extends js.Object {
       * Array of buttons to be displayed at the top of the picker.
       */
     var buttons: js.Array[PickerButton] = js.native
+    var callButtonHandler: js.Any = js.native
     /**
       * Array of columns to be displayed in the picker.
       */
@@ -40,6 +37,7 @@ object pickerMod extends js.Object {
       * provided they should be separated by spaces.
       */
     var cssClass: js.UndefOr[String | js.Array[String]] = js.native
+    var dispatchCancelHandler: js.Any = js.native
     /**
       * Number of milliseconds to wait before dismissing the picker.
       */
@@ -48,13 +46,14 @@ object pickerMod extends js.Object {
     @JSName("el")
     var el_Picker: HTMLIonPickerElement = js.native
     var getSelected: js.Any = js.native
-    @JSName("mode")
-    var mode_Picker: ios | md = js.native
+    var lastFocus: js.UndefOr[HTMLElement] = js.native
     var onBackdropTap: js.Any = js.native
     /**
       * If `true`, a backdrop will be displayed behind the picker.
       */
     var showBackdrop: Boolean = js.native
+    @JSName("connectedCallback")
+    def connectedCallback_MPicker(): Unit = js.native
     /**
       * Get the column that matches the specified name.
       *
@@ -64,11 +63,11 @@ object pickerMod extends js.Object {
     /**
       * Returns a promise that resolves when the picker did dismiss.
       */
-    def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     /**
       * Returns a promise that resolves when the picker will dismiss.
       */
-    def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     @JSName("render")
     def render_MPicker(): js.Any = js.native
   }

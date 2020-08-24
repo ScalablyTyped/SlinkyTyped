@@ -1,7 +1,7 @@
 package typingsSlinky.hyphen
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.hyphen.commonMod.PatternsDefinition
+import typingsSlinky.hyphen.mod.PatternsDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

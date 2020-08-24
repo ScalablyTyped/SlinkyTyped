@@ -1,6 +1,6 @@
 package typingsSlinky.rmcPullToRefresh.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rmcPullToRefresh.propsTypeMod.Indicator
 import typingsSlinky.rmcPullToRefresh.propsTypeMod.PropsType
 import typingsSlinky.rmcPullToRefresh.pullToRefreshMod.default
@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PullToRefresh {
-  @JSImport("rmc-pull-to-refresh/lib/PullToRefresh", JSImport.Default)
+  @JSImport("rmc-pull-to-refresh/es/PullToRefresh", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -20,7 +20,7 @@ object PullToRefresh {
   def apply(
     direction: down | up,
     distanceToRefresh: Double,
-    getScrollContainer: () => TagMod[Any],
+    getScrollContainer: () => ReactElement,
     indicator: Indicator,
     onRefresh: () => Unit
   ): SharedBuilder_PropsType_974277609[default] = {

@@ -26,47 +26,24 @@ object StartSessionInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSinkId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sinkId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAudioTrack(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioTrack")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSinkId(value: integer): Self = this.set("sinkId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAudioTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioTrack")(js.undefined)
-        ret
-    }
+    def setAudioTrack(value: js.Object): Self = this.set("audioTrack", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAuthenticationInfo(value: AuthenticationInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAudioTrack: Self = this.set("audioTrack", js.undefined)
     @scala.inline
-    def withoutAuthenticationInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationInfo")(js.undefined)
-        ret
-    }
+    def setAuthenticationInfo(value: AuthenticationInfo): Self = this.set("authenticationInfo", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVideoTrack(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoTrack")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAuthenticationInfo: Self = this.set("authenticationInfo", js.undefined)
     @scala.inline
-    def withoutVideoTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoTrack")(js.undefined)
-        ret
-    }
+    def setVideoTrack(value: js.Object): Self = this.set("videoTrack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVideoTrack: Self = this.set("videoTrack", js.undefined)
   }
   
 }

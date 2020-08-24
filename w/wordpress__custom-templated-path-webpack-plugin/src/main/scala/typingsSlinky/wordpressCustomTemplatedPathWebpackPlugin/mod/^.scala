@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressCustomTemplatedPathWebpackPlugin.mod
 
+import typingsSlinky.std.Plugin
 import typingsSlinky.std.Record
-import typingsSlinky.webpack.mod.Plugin
 import typingsSlinky.wordpressCustomTemplatedPathWebpackPlugin.anon.Basename
 import scala.scalajs.js
 import scala.scalajs.js.`|`

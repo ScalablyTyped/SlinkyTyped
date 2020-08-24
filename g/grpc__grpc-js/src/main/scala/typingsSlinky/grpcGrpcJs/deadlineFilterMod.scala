@@ -24,8 +24,6 @@ object deadlineFilterMod extends js.Object {
   class DeadlineFilterFactory protected () extends FilterFactory[DeadlineFilter] {
     def this(channel: Channel) = this()
     val channel: js.Any = js.native
-    /* CompleteClass */
-    override def createFilter(callStream: Call): DeadlineFilter = js.native
   }
   
 }

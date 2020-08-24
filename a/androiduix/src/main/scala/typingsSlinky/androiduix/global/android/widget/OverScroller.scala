@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 class OverScroller ()
   extends typingsSlinky.androiduix.android.widget.OverScroller {
   def this(interpolator: Interpolator) = this()
+  def this(interpolator: js.UndefOr[scala.Nothing], flywheel: Boolean) = this()
   def this(interpolator: Interpolator, flywheel: Boolean) = this()
 }
 

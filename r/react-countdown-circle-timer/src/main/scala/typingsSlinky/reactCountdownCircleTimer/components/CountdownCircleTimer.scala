@@ -1,6 +1,6 @@
 package typingsSlinky.reactCountdownCircleTimer.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCountdownCircleTimer.mod.ColorType
@@ -29,7 +29,7 @@ object CountdownCircleTimer {
     def onComplete(value: () => js.UndefOr[(js.Tuple2[Boolean, Double]) | Unit]): this.type = set("onComplete", js.Any.fromFunction0(value))
     @scala.inline
     def renderTime(
-      value: (/* remainingTime */ Double, /* elapsedTime */ Double, /* isPlaying */ Boolean) => TagMod[Any]
+      value: (/* remainingTime */ Double, /* elapsedTime */ Double, /* isPlaying */ Boolean) => ReactElement
     ): this.type = set("renderTime", js.Any.fromFunction3(value))
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])

@@ -37,13 +37,15 @@ object ^ extends js.Object {
   def dataset(): DatasetExt = js.native
   def dataset(quads: js.Array[Quad]): DatasetExt = js.native
   @JSName("dataset")
+  def dataset_graph(quads: js.UndefOr[scala.Nothing], graph: PropType[QuadExt, graph]): DatasetExt = js.native
+  @JSName("dataset")
   def dataset_graph(quads: js.Array[Quad], graph: PropType[QuadExt, graph]): DatasetExt = js.native
   def defaultGraph(): DefaultGraphExt = js.native
   def graph(): DatasetExt = js.native
   def graph(quads: js.Any): DatasetExt = js.native
   def literal(value: String): LiteralExt = js.native
   def literal(value: String, languageOrDatatype: String): LiteralExt = js.native
-  def literal(value: String, languageOrDatatype: NamedNode): LiteralExt = js.native
+  def literal(value: String, languageOrDatatype: NamedNode[String]): LiteralExt = js.native
   def namedNode(value: String): NamedNodeExt = js.native
   def prefixMap(prefixes: Prefixes): typingsSlinky.rdfExt.prefixMapMod.^ = js.native
   def quad(subject: QuadSubject, predicate: QuadPredicate, `object`: QuadObject): QuadExt = js.native

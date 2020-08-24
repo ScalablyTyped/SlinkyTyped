@@ -86,245 +86,94 @@ object UrlFilter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHostContains(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostContains")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutHostContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostContains")(js.undefined)
-        ret
-    }
+    def setHostContains(value: String): Self = this.set("hostContains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHostEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHostContains: Self = this.set("hostContains", js.undefined)
     @scala.inline
-    def withoutHostEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostEquals")(js.undefined)
-        ret
-    }
+    def setHostEquals(value: String): Self = this.set("hostEquals", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHostPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHostEquals: Self = this.set("hostEquals", js.undefined)
     @scala.inline
-    def withoutHostPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPrefix")(js.undefined)
-        ret
-    }
+    def setHostPrefix(value: String): Self = this.set("hostPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHostSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHostPrefix: Self = this.set("hostPrefix", js.undefined)
     @scala.inline
-    def withoutHostSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostSuffix")(js.undefined)
-        ret
-    }
+    def setHostSuffix(value: String): Self = this.set("hostSuffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOriginAndPathMatches(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originAndPathMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHostSuffix: Self = this.set("hostSuffix", js.undefined)
     @scala.inline
-    def withoutOriginAndPathMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originAndPathMatches")(js.undefined)
-        ret
-    }
+    def setOriginAndPathMatches(value: String): Self = this.set("originAndPathMatches", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPathContains(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathContains")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOriginAndPathMatches: Self = this.set("originAndPathMatches", js.undefined)
     @scala.inline
-    def withoutPathContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathContains")(js.undefined)
-        ret
-    }
+    def setPathContains(value: String): Self = this.set("pathContains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPathEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePathContains: Self = this.set("pathContains", js.undefined)
     @scala.inline
-    def withoutPathEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathEquals")(js.undefined)
-        ret
-    }
+    def setPathEquals(value: String): Self = this.set("pathEquals", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPathPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePathEquals: Self = this.set("pathEquals", js.undefined)
     @scala.inline
-    def withoutPathPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPrefix")(js.undefined)
-        ret
-    }
+    def setPathPrefix(value: String): Self = this.set("pathPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPathSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePathPrefix: Self = this.set("pathPrefix", js.undefined)
     @scala.inline
-    def withoutPathSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathSuffix")(js.undefined)
-        ret
-    }
+    def setPathSuffix(value: String): Self = this.set("pathSuffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPorts(value: js.Array[integer | js.Array[integer]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePathSuffix: Self = this.set("pathSuffix", js.undefined)
     @scala.inline
-    def withoutPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
-        ret
-    }
+    def setPortsVarargs(value: (integer | js.Array[integer])*): Self = this.set("ports", js.Array(value :_*))
     @scala.inline
-    def withQueryContains(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContains")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPorts(value: js.Array[integer | js.Array[integer]]): Self = this.set("ports", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutQueryContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContains")(js.undefined)
-        ret
-    }
+    def deletePorts: Self = this.set("ports", js.undefined)
     @scala.inline
-    def withQueryEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setQueryContains(value: String): Self = this.set("queryContains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutQueryEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryEquals")(js.undefined)
-        ret
-    }
+    def deleteQueryContains: Self = this.set("queryContains", js.undefined)
     @scala.inline
-    def withQueryPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setQueryEquals(value: String): Self = this.set("queryEquals", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutQueryPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPrefix")(js.undefined)
-        ret
-    }
+    def deleteQueryEquals: Self = this.set("queryEquals", js.undefined)
     @scala.inline
-    def withQuerySuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setQueryPrefix(value: String): Self = this.set("queryPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutQuerySuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querySuffix")(js.undefined)
-        ret
-    }
+    def deleteQueryPrefix: Self = this.set("queryPrefix", js.undefined)
     @scala.inline
-    def withSchemes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setQuerySuffix(value: String): Self = this.set("querySuffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSchemes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(js.undefined)
-        ret
-    }
+    def deleteQuerySuffix: Self = this.set("querySuffix", js.undefined)
     @scala.inline
-    def withUrlContains(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlContains")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSchemesVarargs(value: String*): Self = this.set("schemes", js.Array(value :_*))
     @scala.inline
-    def withoutUrlContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlContains")(js.undefined)
-        ret
-    }
+    def setSchemes(value: js.Array[String]): Self = this.set("schemes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrlEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSchemes: Self = this.set("schemes", js.undefined)
     @scala.inline
-    def withoutUrlEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlEquals")(js.undefined)
-        ret
-    }
+    def setUrlContains(value: String): Self = this.set("urlContains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrlMatches(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUrlContains: Self = this.set("urlContains", js.undefined)
     @scala.inline
-    def withoutUrlMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlMatches")(js.undefined)
-        ret
-    }
+    def setUrlEquals(value: String): Self = this.set("urlEquals", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrlPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUrlEquals: Self = this.set("urlEquals", js.undefined)
     @scala.inline
-    def withoutUrlPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPrefix")(js.undefined)
-        ret
-    }
+    def setUrlMatches(value: String): Self = this.set("urlMatches", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrlSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUrlMatches: Self = this.set("urlMatches", js.undefined)
     @scala.inline
-    def withoutUrlSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlSuffix")(js.undefined)
-        ret
-    }
+    def setUrlPrefix(value: String): Self = this.set("urlPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUrlPrefix: Self = this.set("urlPrefix", js.undefined)
+    @scala.inline
+    def setUrlSuffix(value: String): Self = this.set("urlSuffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUrlSuffix: Self = this.set("urlSuffix", js.undefined)
   }
   
 }

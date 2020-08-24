@@ -18,8 +18,8 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.anon.DarkLight
 import typingsSlinky.grommet.anon.Index
+import typingsSlinky.grommet.anon.Light
 import typingsSlinky.grommet.listMod.BorderType
 import typingsSlinky.grommet.listMod.ListProps
 import typingsSlinky.grommet.listMod.PadType
@@ -83,7 +83,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object List {
-  @JSImport("grommet", "List")
+  @JSImport("grommet/es6", "List")
   @js.native
   object component extends js.Object
   
@@ -204,7 +204,9 @@ object List {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
-    def background(value: String | js.Array[String] | DarkLight): this.type = set("background", value.asInstanceOf[js.Any])
+    def backgroundVarargs(value: String*): this.type = set("background", js.Array(value :_*))
+    @scala.inline
+    def background(value: String | js.Array[String] | Light): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
     def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
     @scala.inline
@@ -218,11 +220,15 @@ object List {
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataVarargs(value: (js.Object | String)*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[js.Object | String]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

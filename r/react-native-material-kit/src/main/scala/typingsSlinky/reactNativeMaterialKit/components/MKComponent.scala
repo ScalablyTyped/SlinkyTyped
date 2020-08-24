@@ -15,7 +15,7 @@ object MKComponent {
   @scala.inline
   class Builder[P, S] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialKit.mod.MKComponent[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialKit.mod.MKComponent[P, S]]
   
   def apply[P, S](p: P): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P, S](companion: MKComponent.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()

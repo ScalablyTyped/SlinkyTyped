@@ -10,11 +10,11 @@ import typingsSlinky.atom.anon.Path
 import typingsSlinky.atom.anon.Persistent
 import typingsSlinky.atom.anon.PreserveFolds
 import typingsSlinky.atom.anon.PreserveLeadingWhitespace
-import typingsSlinky.atom.anon.ReversedBoolean
 import typingsSlinky.atom.anon.Scopes
 import typingsSlinky.atom.anon.Text
-import typingsSlinky.atom.anon.`27`
 import typingsSlinky.atom.anon.`28`
+import typingsSlinky.atom.anon.`29`
+import typingsSlinky.atom.anon.`30`
 import typingsSlinky.atom.atomBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -68,7 +68,7 @@ class TextEditor () extends js.Object {
   ): Unit = js.native
   /** Convert a position in screen-coordinates to buffer-coordinates. */
   def bufferPositionForScreenPosition(bufferPosition: PointCompatible): Point = js.native
-  def bufferPositionForScreenPosition(bufferPosition: PointCompatible, options: `27`): Point = js.native
+  def bufferPositionForScreenPosition(bufferPosition: PointCompatible, options: `28`): Point = js.native
   /**
     *  Get the range in buffer coordinates of all tokens surrounding the cursor
     *  that match the given scope selector.
@@ -87,13 +87,13 @@ class TextEditor () extends js.Object {
   def clipBufferRange(range: RangeCompatible): Range = js.native
   /** Clip the given Point to a valid position on screen. */
   def clipScreenPosition(screenPosition: PointCompatible): Point = js.native
-  def clipScreenPosition(screenPosition: PointCompatible, options: `27`): Point = js.native
+  def clipScreenPosition(screenPosition: PointCompatible, options: `28`): Point = js.native
   /**
     *  Clip the start and end of the given range to valid positions on screen.
     *  See ::clipScreenPosition for more information.
     */
   def clipScreenRange(range: RangeCompatible): Range = js.native
-  def clipScreenRange(range: RangeCompatible, options: `27`): Range = js.native
+  def clipScreenRange(range: RangeCompatible, options: `28`): Range = js.native
   // Clipboard Operations
   /** For each selection, copy the selected text. */
   def copySelectedText(): Unit = js.native
@@ -459,7 +459,7 @@ class TextEditor () extends js.Object {
     *  To group multiple markers together in their own private layer, see ::addMarkerLayer.
     */
   def markBufferPosition(bufferPosition: PointCompatible): DisplayMarker = js.native
-  def markBufferPosition(bufferPosition: PointCompatible, options: `28`): DisplayMarker = js.native
+  def markBufferPosition(bufferPosition: PointCompatible, options: `29`): DisplayMarker = js.native
   // Markers
   /**
     *  Create a marker on the default marker layer with the given range in buffer coordinates.
@@ -694,7 +694,7 @@ class TextEditor () extends js.Object {
   // TextEditor Coordinates
   /** Convert a position in buffer-coordinates to screen-coordinates. */
   def screenPositionForBufferPosition(bufferPosition: PointCompatible): Point = js.native
-  def screenPositionForBufferPosition(bufferPosition: PointCompatible, options: `27`): Point = js.native
+  def screenPositionForBufferPosition(bufferPosition: PointCompatible, options: `28`): Point = js.native
   /** Convert a range in buffer-coordinates to screen-coordinates. */
   def screenRangeForBufferRange(bufferRange: RangeCompatible): Range = js.native
   /** Scrolls the editor to the given buffer position. */
@@ -898,13 +898,13 @@ class TextEditor () extends js.Object {
     *  they are reduced to a single selection with the given range.
     */
   def setSelectedScreenRange(screenRange: RangeCompatible): Unit = js.native
-  def setSelectedScreenRange(screenRange: RangeCompatible, options: ReversedBoolean): Unit = js.native
+  def setSelectedScreenRange(screenRange: RangeCompatible, options: `30`): Unit = js.native
   /**
     *  Set the selected ranges in screen coordinates. If there are multiple selections,
     *  they are replaced by new selections with the given ranges.
     */
   def setSelectedScreenRanges(screenRanges: js.Array[RangeCompatible]): Unit = js.native
-  def setSelectedScreenRanges(screenRanges: js.Array[RangeCompatible], options: ReversedBoolean): Unit = js.native
+  def setSelectedScreenRanges(screenRanges: js.Array[RangeCompatible], options: `30`): Unit = js.native
   /** Enable or disable soft tabs for this editor. */
   def setSoftTabs(softTabs: Boolean): Unit = js.native
   /** Enable or disable soft wrapping for this editor. */

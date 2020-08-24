@@ -1,9 +1,9 @@
 package typingsSlinky.shelljsExecProxy.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.childProcessMod.ChildProcess
-import typingsSlinky.shelljs.anon.ExecOptionsasyncfalse
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
+import typingsSlinky.shelljs.anon.ExecOptionsasyncfalseunde
 import typingsSlinky.shelljs.anon.ExecOptionsasynctrue
 import typingsSlinky.shelljs.mod.ExecCallback
 import typingsSlinky.shelljs.mod.ExecOptions
@@ -23,7 +23,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {[k: string] : shelljs-exec-proxy.shelljs-exec-proxy.Exec} & { readonly head  :shelljs.shelljs.HeadFunction, readonly exit (): never, readonly exit (code : number): never,  readonly env  :node.NodeJS.ProcessEnv,  readonly popd  :shelljs.shelljs.PopDirFunction,  readonly grep  :shelljs.shelljs.GrepFunction,  readonly pushd  :shelljs.shelljs.PushDirFunction,  readonly sort  :shelljs.shelljs.SortFunction,  readonly sed  :shelljs.shelljs.SedFunction,  readonly chmod  :shelljs.shelljs.ChmodFunction, readonly error (): shelljs.shelljs.ShellString, readonly which (command : string): shelljs.shelljs.ShellString,  readonly mv  :shelljs.shelljs.MoveFunction,  readonly touch  :shelljs.shelljs.TouchFunction,  readonly uniq  :shelljs.shelljs.UniqFunction,  readonly ls  :shelljs.shelljs.ListFunction,  readonly ln  :shelljs.shelljs.LinkFunction,  readonly echo  :shelljs.shelljs.EchoFunction,  readonly rm  :shelljs.shelljs.RemoveFunction,  readonly find  :shelljs.shelljs.FindFunction,  readonly cat  :shelljs.shelljs.CatFunction,  readonly dirs  :shelljs.shelljs.DirsFunction,  readonly mkdir  :shelljs.shelljs.MkdirFunction, readonly tempdir (): shelljs.shelljs.ShellString,  readonly tail  :shelljs.shelljs.TailFunction,  readonly exec  :shelljs.shelljs.ExecFunction,  readonly cp  :shelljs.shelljs.CopyFunction,  readonly ShellString  :shelljs.shelljs.ShellStringConstructor, readonly test (option : shelljs.shelljs.TestOptions, path : string): boolean,  readonly config  :shelljs.shelljs.ShellConfig, readonly set (options : string): void, readonly cd (): shelljs.shelljs.ShellString, readonly cd (dir : string): shelljs.shelljs.ShellString, readonly pwd (): shelljs.shelljs.ShellString} */
+/* Inlined {[k: string] : shelljs-exec-proxy.shelljs-exec-proxy.Exec} & { readonly head :shelljs.shelljs.HeadFunction, readonly exit (): never, readonly exit (code : number): never,  readonly env :node.process.<global>.NodeJS.ProcessEnv,  readonly popd :shelljs.shelljs.PopDirFunction,  readonly grep :shelljs.shelljs.GrepFunction,  readonly pushd :shelljs.shelljs.PushDirFunction,  readonly sort :shelljs.shelljs.SortFunction,  readonly sed :shelljs.shelljs.SedFunction,  readonly chmod :shelljs.shelljs.ChmodFunction, readonly error (): shelljs.shelljs.ShellString, readonly which (command : string): shelljs.shelljs.ShellString,  readonly mv :shelljs.shelljs.MoveFunction,  readonly touch :shelljs.shelljs.TouchFunction,  readonly uniq :shelljs.shelljs.UniqFunction,  readonly ls :shelljs.shelljs.ListFunction,  readonly ln :shelljs.shelljs.LinkFunction,  readonly echo :shelljs.shelljs.EchoFunction,  readonly rm :shelljs.shelljs.RemoveFunction,  readonly find :shelljs.shelljs.FindFunction,  readonly cat :shelljs.shelljs.CatFunction,  readonly dirs :shelljs.shelljs.DirsFunction,  readonly mkdir :shelljs.shelljs.MkdirFunction, readonly tempdir (): shelljs.shelljs.ShellString,  readonly tail :shelljs.shelljs.TailFunction,  readonly exec :shelljs.shelljs.ExecFunction,  readonly cp :shelljs.shelljs.CopyFunction,  readonly ShellString :shelljs.shelljs.ShellStringConstructor, readonly test (option : shelljs.shelljs.TestOptions, path : string): boolean,  readonly config :shelljs.shelljs.ShellConfig, readonly set (options : string): void, readonly cd (): shelljs.shelljs.ShellString, readonly cd (dir : string): shelljs.shelljs.ShellString, readonly pwd (): shelljs.shelljs.ShellString} */
 @js.native
 trait ShelljsExecProxy extends /* k */ StringDictionary[Exec] {
   @JSName("ShellString")
@@ -199,7 +199,7 @@ trait ShelljsExecProxy extends /* k */ StringDictionary[Exec] {
     * @return        Returns an object containing the return code and output as string,
     *                or if `{async: true}` was passed, a `ChildProcess`.
     */
-  def exec(command: String, options: ExecOptionsasyncfalse): ShellString = js.native
+  def exec(command: String, options: ExecOptionsasyncfalseunde): ShellString = js.native
   /**
     * Executes the given command asynchronously.
     *

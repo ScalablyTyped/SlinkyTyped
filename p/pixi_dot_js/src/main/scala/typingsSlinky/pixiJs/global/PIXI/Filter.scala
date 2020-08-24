@@ -145,36 +145,18 @@ import scala.scalajs.js.annotation._
 class Filter ()
   extends typingsSlinky.pixiJs.PIXI.Filter {
   def this(vertexSrc: String) = this()
+  def this(vertexSrc: js.UndefOr[scala.Nothing], fragmentSrc: String) = this()
   def this(vertexSrc: String, fragmentSrc: String) = this()
+  def this(vertexSrc: js.UndefOr[scala.Nothing], fragmentSrc: js.UndefOr[scala.Nothing], uniforms: js.Any) = this()
+  def this(vertexSrc: js.UndefOr[scala.Nothing], fragmentSrc: String, uniforms: js.Any) = this()
+  def this(vertexSrc: String, fragmentSrc: js.UndefOr[scala.Nothing], uniforms: js.Any) = this()
   def this(vertexSrc: String, fragmentSrc: String, uniforms: js.Any) = this()
-  /**
-    * Program that the shader uses
-    *
-    * @member {PIXI.Program} PIXI.Shader#program
-    */
-  /* CompleteClass */
-  override var program: typingsSlinky.pixiJs.PIXI.Program = js.native
-  /**
-    * Shader uniform values, shortcut for `uniformGroup.uniforms`
-    * @readonly
-    * @member {object}
-    */
-  /* CompleteClass */
-  override val uniforms: js.Any = js.native
 }
 
 /* static members */
 @JSGlobal("PIXI.Filter")
 @js.native
 object Filter extends js.Object {
-  /**
-    * Used for caching shader IDs
-    *
-    * @static
-    * @type {object}
-    * @protected
-    */
-  var SOURCE_KEY_MAP: js.Any = js.native
   /**
     * The default fragment shader source
     *

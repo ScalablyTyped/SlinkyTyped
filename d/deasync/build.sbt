@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "deasync"
-version := "0.1-dt-20200515Z-796a82"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20200515Z-e1204f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

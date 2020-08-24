@@ -8,14 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("DeviceAcceleration")
 @js.native
 class DeviceAcceleration ()
-  extends typingsSlinky.std.DeviceAcceleration {
-  /* CompleteClass */
-  override val x: Double | Null = js.native
-  /* CompleteClass */
-  override val y: Double | Null = js.native
-  /* CompleteClass */
-  override val z: Double | Null = js.native
-}
+  extends typingsSlinky.std.DeviceAcceleration
 
 @JSGlobal("DeviceAcceleration")
 @js.native

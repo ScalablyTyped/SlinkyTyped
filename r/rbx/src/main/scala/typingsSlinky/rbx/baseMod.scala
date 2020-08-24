@@ -11,6 +11,7 @@ import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.typesMod.Prefer
 import typingsSlinky.react.mod.ComponentPropsWithoutRef
 import typingsSlinky.react.mod.PropsWithoutRef
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object baseMod extends js.Object {
   val Generic: ForwardRefAsExoticComponent[PreferHelpersPropsOverrid, ReactElement] = js.native
-  def forwardRefAs[TOwnProps, TDefaultComponent /* <: ReactComponentClass[_] */](
+  def forwardRefAs[TOwnProps, TDefaultComponent /* <: ReactType[_] */](
     factory: ReactComponentClass[HTMLElement | SVGElement | ReactComponentClass[js.Object]],
     defaultProps: Partial[
       Prefer[

@@ -1,7 +1,7 @@
 package typingsSlinky.apolloServer.mod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
-import typingsSlinky.graphqlTools.interfacesMod.IFieldIteratorFn
+import typingsSlinky.graphqlToolsUtils.interfacesMod.IFieldIteratorFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

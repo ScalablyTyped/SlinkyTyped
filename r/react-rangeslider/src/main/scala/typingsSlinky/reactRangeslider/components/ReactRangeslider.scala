@@ -19,6 +19,8 @@ object ReactRangeslider {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def format(value: /* value */ Double => js.UndefOr[String | Double]): this.type = set("format", js.Any.fromFunction1(value))

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GoMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GoMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GoMirroredIcon")
   @js.native
   object component extends js.Object
   

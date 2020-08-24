@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PhishingIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PhishingIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PhishingIcon")
   @js.native
   object component extends js.Object
   

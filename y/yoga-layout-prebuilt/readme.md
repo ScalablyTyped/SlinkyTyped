@@ -1,7 +1,7 @@
 
 # Scala.js typings for yoga-layout-prebuilt
 
-Typings are for version 1.9.5
+Typings are for version 1.9.6
 
 ## Library description:
 Prebuilt yoga-layout package

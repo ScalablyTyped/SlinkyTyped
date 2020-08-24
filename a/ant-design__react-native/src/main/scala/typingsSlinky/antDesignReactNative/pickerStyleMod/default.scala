@@ -1,6 +1,5 @@
 package typingsSlinky.antDesignReactNative.pickerStyleMod
 
-import typingsSlinky.antDesignReactNative.anon.ActionText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/react-native/lib/picker/style", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(): ActionText = js.native
+  def apply(): PickerStyle = js.native
 }
 

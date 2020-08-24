@@ -15,23 +15,43 @@ trait EncryptResponse extends js.Object {
     */
   var EncryptionAlgorithm: js.UndefOr[EncryptionAlgorithmSpec] = js.native
   /**
-    * The ID of the key used during encryption.
+    * The Amazon Resource Name (key ARN) of the CMK that was used to encrypt the plaintext.
     */
   var KeyId: js.UndefOr[KeyIdType] = js.native
 }
 
 object EncryptResponse {
   @scala.inline
-  def apply(
-    CiphertextBlob: CiphertextType = null,
-    EncryptionAlgorithm: EncryptionAlgorithmSpec = null,
-    KeyId: KeyIdType = null
-  ): EncryptResponse = {
+  def apply(): EncryptResponse = {
     val __obj = js.Dynamic.literal()
-    if (CiphertextBlob != null) __obj.updateDynamic("CiphertextBlob")(CiphertextBlob.asInstanceOf[js.Any])
-    if (EncryptionAlgorithm != null) __obj.updateDynamic("EncryptionAlgorithm")(EncryptionAlgorithm.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptResponse]
   }
+  @scala.inline
+  implicit class EncryptResponseOps[Self <: EncryptResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCiphertextBlob(value: CiphertextType): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCiphertextBlob: Self = this.set("CiphertextBlob", js.undefined)
+    @scala.inline
+    def setEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = this.set("EncryptionAlgorithm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncryptionAlgorithm: Self = this.set("EncryptionAlgorithm", js.undefined)
+    @scala.inline
+    def setKeyId(value: KeyIdType): Self = this.set("KeyId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyId: Self = this.set("KeyId", js.undefined)
+  }
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.rcMenu.components
 
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -18,6 +17,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
 import typingsSlinky.rcMenu.subPopupMenuMod.default
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
@@ -26,7 +26,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SubPopupMenu {
-  @JSImport("rc-menu/lib/SubPopupMenu", JSImport.Default)
+  @JSImport("rc-menu/es/SubPopupMenu", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -43,7 +43,11 @@ object SubPopupMenu {
     @scala.inline
     def defaultActiveFirst(value: Boolean): this.type = set("defaultActiveFirst", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
+    @scala.inline
     def defaultOpenKeys(value: js.Array[String]): this.type = set("defaultOpenKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +57,7 @@ object SubPopupMenu {
     @scala.inline
     def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandIconFunction1(value: /* props */ js.Any => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+    def expandIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def expandIcon(value: RenderIconType): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -67,7 +71,7 @@ object SubPopupMenu {
     @scala.inline
     def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemIconFunction1(value: /* props */ js.Any => TagMod[Any]): this.type = set("itemIcon", js.Any.fromFunction1(value))
+    def itemIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("itemIcon", js.Any.fromFunction1(value))
     @scala.inline
     def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -77,9 +81,7 @@ object SubPopupMenu {
     @scala.inline
     def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline
-    def motion(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): this.type = set("motion", value.asInstanceOf[js.Any])
+    def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
@@ -93,11 +95,13 @@ object SubPopupMenu {
     @scala.inline
     def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
+    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+    @scala.inline
     def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def overflowedIndicator(value: TagMod[Any]): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def overflowedIndicator(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def parentMenuElement(value: Element): this.type = set("parentMenu", value.asInstanceOf[js.Any])
     @scala.inline
@@ -108,6 +112,8 @@ object SubPopupMenu {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

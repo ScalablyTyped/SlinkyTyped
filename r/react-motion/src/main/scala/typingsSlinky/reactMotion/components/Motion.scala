@@ -1,5 +1,6 @@
 package typingsSlinky.reactMotion.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.MotionProps
@@ -18,6 +19,8 @@ object Motion {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMotion.mod.Motion] {
+    @scala.inline
+    def children(value: /* interpolatedStyle */ PlainStyle => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def defaultStyle(value: PlainStyle): this.type = set("defaultStyle", value.asInstanceOf[js.Any])
     @scala.inline

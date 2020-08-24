@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TextAst")
 @js.native
 class TextAst protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TextAst {
+  extends typingsSlinky.angularCompiler.compilerMod.TextAst {
   def this(
     value: String,
     ngContentIndex: Double,

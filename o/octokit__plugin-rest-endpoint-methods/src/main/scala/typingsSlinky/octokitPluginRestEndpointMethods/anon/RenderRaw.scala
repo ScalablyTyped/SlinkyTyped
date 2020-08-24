@@ -1,31 +1,37 @@
 package typingsSlinky.octokitPluginRestEndpointMethods.anon
 
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.AnyResponse
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.MarkdownRenderParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.MarkdownRenderRawParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RenderRaw extends js.Object {
-  /**
-    * You must send Markdown as plain text (using a `Content-Type` header of `text/plain` or `text/x-markdown`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
-    */
-  @JSName("renderRaw")
-  var renderRaw_Original: `185` = js.native
-  @JSName("render")
-  var render_Original: `184` = js.native
-  def render(): js.Promise[AnyResponse] = js.native
-  def render(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with MarkdownRenderParams
-  ): js.Promise[AnyResponse] = js.native
-  /**
-    * You must send Markdown as plain text (using a `Content-Type` header of `text/plain` or `text/x-markdown`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
-    */
-  def renderRaw(): js.Promise[AnyResponse] = js.native
-  def renderRaw(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with MarkdownRenderRawParams
-  ): js.Promise[AnyResponse] = js.native
+  var render: `754` = js.native
+  var renderRaw: `755` = js.native
+}
+
+object RenderRaw {
+  @scala.inline
+  def apply(render: `754`, renderRaw: `755`): RenderRaw = {
+    val __obj = js.Dynamic.literal(render = render.asInstanceOf[js.Any], renderRaw = renderRaw.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RenderRaw]
+  }
+  @scala.inline
+  implicit class RenderRawOps[Self <: RenderRaw] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRender(value: `754`): Self = this.set("render", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRenderRaw(value: `755`): Self = this.set("renderRaw", value.asInstanceOf[js.Any])
+  }
+  
 }
 

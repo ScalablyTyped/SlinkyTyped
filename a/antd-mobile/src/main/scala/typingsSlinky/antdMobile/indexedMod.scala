@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antdMobile.anon.Label
 import typingsSlinky.antdMobile.anon.ListViewPrefixCls
 import typingsSlinky.antdMobile.listViewPropsTypeMod.ListViewPropsType
@@ -21,7 +21,7 @@ object indexedMod extends js.Object {
   
   @js.native
   trait MIndexedListProps extends ListViewPropsType {
-    var delayActivityIndicator: js.UndefOr[TagMod[Any]] = js.native
+    var delayActivityIndicator: js.UndefOr[ReactElement] = js.native
     var delayTime: js.UndefOr[Double] = js.native
     var onQuickSearch: js.UndefOr[js.Function2[/* sectionID */ js.Any, /* topId */ js.UndefOr[js.Any], Unit]] = js.native
     var quickSearchBarStyle: js.UndefOr[CSSProperties] = js.native

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ElementAst")
 @js.native
 class ElementAst protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ElementAst {
+  extends typingsSlinky.angularCompiler.compilerMod.ElementAst {
   def this(
     name: String,
     attrs: js.Array[typingsSlinky.angularCompiler.templateAstMod.AttrAst],

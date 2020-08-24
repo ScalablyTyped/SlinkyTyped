@@ -11,11 +11,13 @@ trait MockAjax extends js.Object {
   def addCustomParamParser(parser: JasmineAjaxParamParser): Unit = js.native
   def install(): Unit = js.native
   def stubRequest(url: String): JasmineAjaxRequestStub = js.native
+  def stubRequest(url: String, data: js.UndefOr[scala.Nothing], method: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: String, data: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: String, data: String, method: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: String, data: js.RegExp): JasmineAjaxRequestStub = js.native
   def stubRequest(url: String, data: js.RegExp, method: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: js.RegExp): JasmineAjaxRequestStub = js.native
+  def stubRequest(url: js.RegExp, data: js.UndefOr[scala.Nothing], method: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: js.RegExp, data: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: js.RegExp, data: String, method: String): JasmineAjaxRequestStub = js.native
   def stubRequest(url: js.RegExp, data: js.RegExp): JasmineAjaxRequestStub = js.native

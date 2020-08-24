@@ -1,7 +1,6 @@
 package typingsSlinky.awsSdkXmlBodyBuilder
 
 import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializerBuildOptions
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -29,17 +28,6 @@ object mod extends js.Object {
     var serializeTimestamp: js.Any = js.native
     var toXml: js.Any = js.native
     val utf8Decoder: js.Any = js.native
-    /**
-      * Converts the provided `input` into the serialized format described in the
-      * provided `shape`.
-      *
-      * @param options Modeled and user-provided operation input to serialize.
-      *
-      * @throws if a node in the input cannot be converted into the type
-      *          specified by the serialization model
-      */
-    /* CompleteClass */
-    override def build(options: BodySerializerBuildOptions): String = js.native
   }
   
 }

@@ -1,9 +1,5 @@
 package typingsSlinky.findMyWay.mod
 
-import typingsSlinky.node.http2Mod.Http2ServerRequest
-import typingsSlinky.node.http2Mod.Http2ServerResponse
-import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -126,8 +122,8 @@ trait Instance[V /* <: HTTPVersion */] extends js.Object {
   def lock(path: String, handler: Handler[V], store: js.Any): Unit = js.native
   def lock(path: String, opts: RouteOptions, handler: Handler[V]): Unit = js.native
   def lock(path: String, opts: RouteOptions, handler: Handler[V], store: js.Any): Unit = js.native
-  def lookup[Context](req: Http2ServerRequest | IncomingMessage, res: Http2ServerResponse | ServerResponse): Unit = js.native
-  def lookup[Context](req: Http2ServerRequest | IncomingMessage, res: Http2ServerResponse | ServerResponse, ctx: Context): Unit = js.native
+  def lookup[Context](req: Req[V], res: Res[V]): Unit = js.native
+  def lookup[Context](req: Req[V], res: Res[V], ctx: Context): Unit = js.native
   def `m-search`(path: String, handler: Handler[V]): Unit = js.native
   def `m-search`(path: String, handler: Handler[V], store: js.Any): Unit = js.native
   def `m-search`(path: String, opts: RouteOptions, handler: Handler[V]): Unit = js.native

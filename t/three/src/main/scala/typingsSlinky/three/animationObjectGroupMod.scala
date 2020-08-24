@@ -1,6 +1,7 @@
 package typingsSlinky.three
 
 import typingsSlinky.three.anon.BindingsPerObject
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,7 @@ object animationObjectGroupMod extends js.Object {
   @js.native
   class AnimationObjectGroup protected () extends js.Object {
     def this(args: js.Any*) = this()
+    val isAnimationObjectGroup: `true` = js.native
     var stats: BindingsPerObject = js.native
     var uuid: String = js.native
     def add(args: js.Any*): Unit = js.native

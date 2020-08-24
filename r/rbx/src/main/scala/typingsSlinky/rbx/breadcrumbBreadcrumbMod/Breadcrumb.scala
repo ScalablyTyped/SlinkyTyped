@@ -3,7 +3,7 @@ package typingsSlinky.rbx.breadcrumbBreadcrumbMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rbx.anon.AsElementType
 import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
-import typingsSlinky.rbx.anon.`7`
+import typingsSlinky.rbx.anon.`6`
 import typingsSlinky.rbx.breadcrumbItemMod.BreadcrumbItemProps
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
@@ -65,7 +65,7 @@ object Breadcrumb extends js.Object {
   ]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with BreadcrumbModifierProps with (Pick[
+    props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with BreadcrumbModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

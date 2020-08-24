@@ -2,7 +2,6 @@ package typingsSlinky.reactChartjs2.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactChartjs2.mod.ChartComponentProps
 import typingsSlinky.reactChartjs2.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,11 +14,11 @@ object ReactChartjs2 {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: ChartComponentProps] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactChartjs2.mod.ChartComponentProps */ P] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]]
+       with StBuildingComponent[tag.type, default[P]]
   
-  def apply[P <: ChartComponentProps](p: P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: ChartComponentProps](companion: ReactChartjs2.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactChartjs2.mod.ChartComponentProps */ P](p: P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactChartjs2.mod.ChartComponentProps */ P](companion: ReactChartjs2.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UpdateRestoreIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UpdateRestoreIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UpdateRestoreIcon")
   @js.native
   object component extends js.Object
   

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VoicemailIRMIcon {
-  @JSImport("@fluentui/react-icons/lib/components/VoicemailIRMIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "VoicemailIRMIcon")
   @js.native
   object component extends js.Object
   

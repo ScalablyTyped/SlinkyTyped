@@ -31,6 +31,13 @@ class VertexBuffer protected ()
     graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice,
     format: typingsSlinky.playcanvas.pc.VertexFormat,
     numVertices: Double,
+    usage: js.UndefOr[scala.Nothing],
+    initialData: js.typedarray.ArrayBuffer
+  ) = this()
+  def this(
+    graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    format: typingsSlinky.playcanvas.pc.VertexFormat,
+    numVertices: Double,
     usage: Double,
     initialData: js.typedarray.ArrayBuffer
   ) = this()

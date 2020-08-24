@@ -230,6 +230,7 @@ package object emrMod {
   type MetricDimensionList = js.Array[typingsSlinky.awsSdk.emrMod.MetricDimension]
   type NewSupportedProductsList = js.Array[typingsSlinky.awsSdk.emrMod.SupportedProductConfig]
   type NonNegativeDouble = scala.Double
+  type OnDemandProvisioningAllocationStrategy = typingsSlinky.awsSdk.awsSdkStrings.`lowest-price` | java.lang.String
   type OptionalArnType = java.lang.String
   type Port = scala.Double
   type PortRanges = js.Array[typingsSlinky.awsSdk.emrMod.PortRange]
@@ -249,6 +250,7 @@ package object emrMod {
   type ScalingRuleList = js.Array[typingsSlinky.awsSdk.emrMod.ScalingRule]
   type SecurityConfigurationList = js.Array[typingsSlinky.awsSdk.emrMod.SecurityConfigurationSummary]
   type SecurityGroupsList = js.Array[typingsSlinky.awsSdk.emrMod.XmlStringMaxLen256]
+  type SpotProvisioningAllocationStrategy = typingsSlinky.awsSdk.awsSdkStrings.`capacity-optimized` | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SWITCH_TO_ON_DEMAND
     - typingsSlinky.awsSdk.awsSdkStrings.TERMINATE_CLUSTER

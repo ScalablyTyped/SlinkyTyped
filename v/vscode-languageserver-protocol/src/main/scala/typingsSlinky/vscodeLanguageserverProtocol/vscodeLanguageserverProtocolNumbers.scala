@@ -3,6 +3,8 @@ package typingsSlinky.vscodeLanguageserverProtocol
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CompletionTriggerKind
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.FileChangeType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.MessageType
+import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.SignatureHelpTriggerKind
+import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentSaveReason
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentSyncKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +19,8 @@ object vscodeLanguageserverProtocolNumbers {
     extends CompletionTriggerKind
        with FileChangeType
        with MessageType
+       with SignatureHelpTriggerKind
+       with TextDocumentSaveReason
        with TextDocumentSyncKind
   
   @js.native
@@ -54,6 +58,8 @@ object vscodeLanguageserverProtocolNumbers {
     extends CompletionTriggerKind
        with FileChangeType
        with MessageType
+       with SignatureHelpTriggerKind
+       with TextDocumentSaveReason
        with TextDocumentSyncKind
   
   @js.native
@@ -82,6 +88,8 @@ object vscodeLanguageserverProtocolNumbers {
     extends CompletionTriggerKind
        with FileChangeType
        with MessageType
+       with SignatureHelpTriggerKind
+       with TextDocumentSaveReason
   
   @js.native
   sealed trait `4` extends MessageType

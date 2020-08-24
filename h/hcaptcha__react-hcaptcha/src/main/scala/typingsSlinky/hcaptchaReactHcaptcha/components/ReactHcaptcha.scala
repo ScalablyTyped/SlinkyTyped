@@ -23,6 +23,8 @@ object ReactHcaptcha {
     extends AnyVal
        with StBuildingComponent[tag.type, ^] {
     @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
     def languageOverride(value: String): this.type = set("languageOverride", value.asInstanceOf[js.Any])
     @scala.inline
     def onError(value: /* event */ String => _): this.type = set("onError", js.Any.fromFunction1(value))

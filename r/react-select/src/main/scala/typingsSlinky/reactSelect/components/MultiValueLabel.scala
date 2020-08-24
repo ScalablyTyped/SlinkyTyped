@@ -1,21 +1,18 @@
 package typingsSlinky.reactSelect.components
 
-import typingsSlinky.reactSelect.anon.ClassName
-import typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueGenericProps
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree. */
 object MultiValueLabel {
-  @JSImport("react-select/src/components/MultiValue", "MultiValueLabel")
+  @JSImport("react-select", "components.MultiValueLabel")
   @js.native
   object component extends js.Object
   
-  def withProps(p: MultiValueGenericProps[js.Any]): SharedBuilder_MultiValueGenericProps_351876057[typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueLabel] = new SharedBuilder_MultiValueGenericProps_351876057[typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueLabel](js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(data: js.Any, innerProps: ClassName, selectProps: js.Any): SharedBuilder_MultiValueGenericProps_351876057[typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueLabel] = {
-    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], selectProps = selectProps.asInstanceOf[js.Any])
-    new SharedBuilder_MultiValueGenericProps_351876057[typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueLabel](js.Array(this.component, __props.asInstanceOf[MultiValueGenericProps[js.Any]]))
-  }
+  def apply(p: js.Any): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MultiValueLabel.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -139,13 +139,14 @@ object EndpointDescriptor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDirection(
+    def setAddress(value: integer): Self = this.set("address", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDirection(
       value: ToStringLiteral[
           IN, 
           /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
@@ -154,25 +155,13 @@ object EndpointDescriptor {
             in_ | out_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExtra_data(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_data")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtra_data(value: js.typedarray.ArrayBuffer): Self = this.set("extra_data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaximumPacketSize(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPacketSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaximumPacketSize(value: integer): Self = this.set("maximumPacketSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(
+    def setType(
       value: ToStringLiteral[
           BULK, 
           /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
@@ -181,25 +170,13 @@ object EndpointDescriptor {
             control_ | interrupt_ | isochronous_ | bulk_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPollingInterval(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPollingInterval(value: integer): Self = this.set("pollingInterval", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPollingInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingInterval")(js.undefined)
-        ret
-    }
+    def deletePollingInterval: Self = this.set("pollingInterval", js.undefined)
     @scala.inline
-    def withSynchronization(
+    def setSynchronization(
       value: ToStringLiteral[
           ADAPTIVE, 
           /* keyof chrome-apps.anon.ADAPTIVE */ ASYNCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.ADAPTIVE | SYNCHRONOUS, 
@@ -208,19 +185,11 @@ object EndpointDescriptor {
             asynchronous_ | adaptive_ | synchronous_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronization")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("synchronization", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSynchronization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronization")(js.undefined)
-        ret
-    }
+    def deleteSynchronization: Self = this.set("synchronization", js.undefined)
     @scala.inline
-    def withUsage(
+    def setUsage(
       value: ToStringLiteral[
           DATA_, 
           /* keyof chrome-apps.anon.DATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
@@ -229,17 +198,9 @@ object EndpointDescriptor {
             notification_ | data_ | periodic_ | feedback_ | explicitFeedback
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("usage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
-        ret
-    }
+    def deleteUsage: Self = this.set("usage", js.undefined)
   }
   
 }

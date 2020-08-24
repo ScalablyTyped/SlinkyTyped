@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TurnRightIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TurnRightIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TurnRightIcon")
   @js.native
   object component extends js.Object
   

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class BitmapText ()
   extends typingsSlinky.easeljs.createjs.BitmapText {
   def this(text: String) = this()
+  def this(text: js.UndefOr[scala.Nothing], spriteSheet: typingsSlinky.easeljs.createjs.SpriteSheet) = this()
   def this(text: String, spriteSheet: typingsSlinky.easeljs.createjs.SpriteSheet) = this()
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.webpackSources.mod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sourceMap.mod.RawSourceMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class CachedSource protected () extends Source {
   def this(source: Source) = this()
-  var _cachedMaps: StringDictionary[RawSourceMap] = js.native
-  var _cachedSize: Double = js.native
-  var _cachedSource: String = js.native
-  var _source: Source = js.native
 }
 

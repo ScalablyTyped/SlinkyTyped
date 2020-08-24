@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Lock12Icon {
-  @JSImport("@fluentui/react-icons/lib/components/Lock12Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Lock12Icon")
   @js.native
   object component extends js.Object
   

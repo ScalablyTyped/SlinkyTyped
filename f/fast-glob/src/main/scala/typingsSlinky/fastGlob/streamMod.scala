@@ -1,13 +1,24 @@
 package typingsSlinky.fastGlob
 
-import typingsSlinky.node.NodeJS.ReadableStream
+import typingsSlinky.fastGlob.tasksMod.Task
+import typingsSlinky.fastGlob.typesMod.ReaderOptions
+import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("fast-glob/out/utils/stream", JSImport.Namespace)
+@JSImport("fast-glob/out/providers/stream", JSImport.Namespace)
 @js.native
 object streamMod extends js.Object {
-  def merge(streams: js.Array[ReadableStream]): ReadableStream = js.native
+  @js.native
+  trait ProviderStream
+    extends typingsSlinky.fastGlob.providerMod.default[Readable] {
+    var _reader: typingsSlinky.fastGlob.readersStreamMod.default = js.native
+    def api(root: String, task: Task, options: ReaderOptions): Readable = js.native
+  }
+  
+  @js.native
+  class default () extends ProviderStream
+  
 }
 

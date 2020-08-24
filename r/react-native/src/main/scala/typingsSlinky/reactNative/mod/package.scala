@@ -40,6 +40,7 @@ package object mod {
     - js.UndefOr[scala.Nothing]
   */
   type ColorSchemeName = js.UndefOr[typingsSlinky.reactNative.mod._ColorSchemeName | scala.Null]
+  type ColorValue = java.lang.String | typingsSlinky.reactNative.mod.OpaqueColorValue
   type ComponentProvider = js.Function0[slinky.core.ReactComponentClass[js.Any]]
   type Constructor[T] = org.scalablytyped.runtime.Instantiable1[/* args (repeated) */ js.Any, T]
   type DatePickerAndroid = typingsSlinky.reactNative.mod.DatePickerAndroidStatic
@@ -97,6 +98,7 @@ package object mod {
   ]
   type ListViewComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.ListViewProps]
   type ListViewProperties = typingsSlinky.reactNative.mod.ListViewProps
+  type LogBox = typingsSlinky.reactNative.mod.LogBoxStatic
   /**
     * @see https://facebook.github.io/react-native/docs/maskedviewios.html
     */
@@ -137,6 +139,8 @@ package object mod {
   type NativeSyntheticEvent[T] = slinky.core.SyntheticEvent[typingsSlinky.reactNative.mod.NodeHandle, T]
   type NavigatorIOSProperties = typingsSlinky.reactNative.mod.NavigatorIOSProps
   type NodeHandle = scala.Double
+  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  type OpaqueColorValue = js.Symbol
   type PanResponder = typingsSlinky.reactNative.mod.PanResponderStatic
   type PermissionsAndroid = typingsSlinky.reactNative.mod.PermissionsAndroidStatic
   /**
@@ -150,6 +154,7 @@ package object mod {
   type PickerProperties = typingsSlinky.reactNative.mod.PickerProps
   type PickerPropertiesAndroid = typingsSlinky.reactNative.mod.PickerPropsAndroid
   type PickerPropertiesIOS = typingsSlinky.reactNative.mod.PickerPropsIOS
+  type ProcessedColorValue = scala.Double | typingsSlinky.reactNative.mod.OpaqueColorValue
   /**
     * React component that wraps the Android-only `ProgressBar`. This component is used to indicate
     * that the app is loading or there is some activity in the app.

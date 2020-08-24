@@ -13,5 +13,5 @@ package object validationErrorMod {
     java.lang.String
   ]
   type SPECIFICITY = scala.Double
-  type Schema = typingsSlinky.jsonSchema.mod.JSONSchema4 | typingsSlinky.jsonSchema.mod.JSONSchema6 | typingsSlinky.jsonSchema.mod.JSONSchema7
+  type Schema = (typingsSlinky.jsonSchema.mod.JSONSchema4 with typingsSlinky.schemaUtils.validateMod.Extend) | (typingsSlinky.jsonSchema.mod.JSONSchema6 with typingsSlinky.schemaUtils.validateMod.Extend) | (typingsSlinky.jsonSchema.mod.JSONSchema7 with typingsSlinky.schemaUtils.validateMod.Extend)
 }

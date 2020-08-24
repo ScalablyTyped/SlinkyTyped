@@ -1,12 +1,10 @@
 package typingsSlinky.rxjs
 
+import typingsSlinky.rxjs.innerSubscribeMod.SimpleOuterSubscriber
 import typingsSlinky.rxjs.operatorMod.Operator
-import typingsSlinky.rxjs.outerSubscriberMod.OuterSubscriber
 import typingsSlinky.rxjs.subscriberMod.Subscriber
-import typingsSlinky.rxjs.subscriptionMod.Subscription
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.OperatorFunction
-import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,12 +22,10 @@ object mergeScanMod extends js.Object {
     var accumulator: js.Any = js.native
     var concurrent: js.Any = js.native
     var seed: js.Any = js.native
-    /* CompleteClass */
-    override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
   }
   
   @js.native
-  class MergeScanSubscriber[T, R] protected () extends OuterSubscriber[T, R] {
+  class MergeScanSubscriber[T, R] protected () extends SimpleOuterSubscriber[T, R] {
     def this(
       destination: Subscriber[R],
       accumulator: js.Function3[/* acc */ R, /* value */ T, /* index */ Double, ObservableInput[R]],
@@ -46,7 +42,6 @@ object mergeScanMod extends js.Object {
     var hasValue: js.Any = js.native
     var index: Double = js.native
     /* protected */ def _next(value: js.Any): Unit = js.native
-    def notifyComplete(innerSub: Subscription): Unit = js.native
   }
   
   def mergeScan[T, R](

@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -211,6 +210,8 @@ object MenuItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -259,7 +260,7 @@ object MenuItem {
     @scala.inline
     def labelElementReactElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelElement(value: TagMod[Any]): this.type = set("labelElement", value.asInstanceOf[js.Any])
+    def labelElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
@@ -467,7 +468,7 @@ object MenuItem {
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
-    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def textClassName(value: String): this.type = set("textClassName", value.asInstanceOf[js.Any])
     @scala.inline

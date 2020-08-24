@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery-gray"
-version := "1.6-dt-20200515Z-4ea73a"
-scalaVersion := "2.13.2"
+version := "1.6-dt-20200515Z-d1d176"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

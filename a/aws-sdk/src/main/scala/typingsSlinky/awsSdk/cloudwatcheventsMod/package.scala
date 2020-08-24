@@ -35,6 +35,9 @@ package object cloudwatcheventsMod {
   */
   type EventSourceState = typingsSlinky.awsSdk.cloudwatcheventsMod._EventSourceState | java.lang.String
   type EventTime = js.Date
+  type HeaderKey = java.lang.String
+  type HeaderParametersMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.cloudwatcheventsMod.HeaderValue]
+  type HeaderValue = java.lang.String
   type InputTransformerPathKey = java.lang.String
   type Integer = scala.Double
   /* Rewritten from type alias, can be one of: 
@@ -52,12 +55,17 @@ package object cloudwatcheventsMod {
   type PartnerEventSourceAccountList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PartnerEventSourceAccount]
   type PartnerEventSourceList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PartnerEventSource]
   type PartnerEventSourceNamePrefix = java.lang.String
+  type PathParameter = java.lang.String
+  type PathParameterList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PathParameter]
   type Principal = java.lang.String
   type PutEventsRequestEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PutEventsRequestEntry]
   type PutEventsResultEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PutEventsResultEntry]
   type PutPartnerEventsRequestEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PutPartnerEventsRequestEntry]
   type PutPartnerEventsResultEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PutPartnerEventsResultEntry]
   type PutTargetsResultEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PutTargetsResultEntry]
+  type QueryStringKey = java.lang.String
+  type QueryStringParametersMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.cloudwatcheventsMod.QueryStringValue]
+  type QueryStringValue = java.lang.String
   type RemoveTargetsResultEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.RemoveTargetsResultEntry]
   type RoleArn = java.lang.String
   type RuleArn = java.lang.String

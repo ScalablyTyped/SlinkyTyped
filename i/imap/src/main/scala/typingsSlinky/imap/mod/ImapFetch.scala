@@ -2,7 +2,7 @@ package typingsSlinky.imap.mod
 
 import typingsSlinky.imap.imapStrings.error
 import typingsSlinky.imap.imapStrings.message
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

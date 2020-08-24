@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "kue-ui-client"
-version := "1.2-dt-20191002Z-5ab28c"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20191002Z-680c06"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

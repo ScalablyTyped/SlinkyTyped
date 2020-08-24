@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ariaQuery.ariaQueryStrings.widget
   - typingsSlinky.ariaQuery.ariaQueryStrings.window
 */
-trait ARIAAbstractRole extends js.Object
+trait ARIAAbstractRole extends _ARIARoleDefintionKey
 
 object ARIAAbstractRole {
   @scala.inline

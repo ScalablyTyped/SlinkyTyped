@@ -8,7 +8,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object pass extends js.Object {
   def apply(): js.Any = js.native
+  def apply(fn: js.UndefOr[scala.Nothing], args: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
+  def apply(fn: js.UndefOr[scala.Nothing], args: typingsSlinky.extjs.Ext.Array): js.Any = js.native
+  def apply(fn: js.UndefOr[scala.Nothing], args: typingsSlinky.extjs.Ext.Array, scope: js.Any): js.Any = js.native
   def apply(fn: js.Any): js.Any = js.native
+  def apply(fn: js.Any, args: js.UndefOr[scala.Nothing], scope: js.Any): js.Any = js.native
   def apply(fn: js.Any, args: typingsSlinky.extjs.Ext.Array): js.Any = js.native
   def apply(fn: js.Any, args: typingsSlinky.extjs.Ext.Array, scope: js.Any): js.Any = js.native
 }

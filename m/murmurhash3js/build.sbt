@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "murmurhash3js"
-version := "v3.0.1-dt-20200515Z-dc5257"
-scalaVersion := "2.13.2"
+version := "v3.0.1-dt-20200515Z-2fc78d"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

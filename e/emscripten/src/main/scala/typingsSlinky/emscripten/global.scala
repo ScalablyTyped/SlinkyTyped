@@ -10,7 +10,7 @@ import typingsSlinky.emscripten.FS.FSStream
 import typingsSlinky.emscripten.FS.Lookup
 import typingsSlinky.emscripten.anon.Encoding
 import typingsSlinky.emscripten.anon.Flags
-import typingsSlinky.emscripten.anon.FlagsString
+import typingsSlinky.emscripten.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,6 +83,7 @@ object global extends js.Object {
   def getValue(ptr: Double, `type`: CType): Double = js.native
   def getValue(ptr: Double, `type`: CType, noSafe: Boolean): Double = js.native
   def intArrayFromString(stringy: String): js.Array[Double] = js.native
+  def intArrayFromString(stringy: String, dontAddNull: js.UndefOr[scala.Nothing], length: Double): js.Array[Double] = js.native
   def intArrayFromString(stringy: String, dontAddNull: Boolean): js.Array[Double] = js.native
   def intArrayFromString(stringy: String, dontAddNull: Boolean, length: Double): js.Array[Double] = js.native
   def intArrayToString(array: js.Array[Double]): String = js.native
@@ -143,6 +144,79 @@ object global extends js.Object {
       url: String,
       canRead: Boolean,
       canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean,
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit]
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit],
+      dontCreateFile: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit],
+      dontCreateFile: Boolean,
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
       onload: js.Function0[Unit]
     ): Unit = js.native
     def createPreloadedFile(
@@ -152,7 +226,50 @@ object global extends js.Object {
       canRead: Boolean,
       canWrite: Boolean,
       onload: js.Function0[Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean,
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
       onerror: js.Function0[Unit]
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: String,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
+      onerror: js.Function0[Unit],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
     ): Unit = js.native
     def createPreloadedFile(
       parent: String,
@@ -182,6 +299,79 @@ object global extends js.Object {
       url: String,
       canRead: Boolean,
       canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean,
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit]
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit],
+      dontCreateFile: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.UndefOr[scala.Nothing],
+      onerror: js.Function0[Unit],
+      dontCreateFile: Boolean,
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
       onload: js.Function0[Unit]
     ): Unit = js.native
     def createPreloadedFile(
@@ -191,7 +381,50 @@ object global extends js.Object {
       canRead: Boolean,
       canWrite: Boolean,
       onload: js.Function0[Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontCreateFile: Boolean,
+      canOwn: Boolean
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
       onerror: js.Function0[Unit]
+    ): Unit = js.native
+    def createPreloadedFile(
+      parent: FSNode,
+      name: String,
+      url: String,
+      canRead: Boolean,
+      canWrite: Boolean,
+      onload: js.Function0[Unit],
+      onerror: js.Function0[Unit],
+      dontCreateFile: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
     ): Unit = js.native
     def createPreloadedFile(
       parent: FSNode,
@@ -260,6 +493,7 @@ object global extends js.Object {
     def makedev(ma: Double, mi: Double): Double = js.native
     def minor(dev: Double): Double = js.native
     def mkdev(path: String): js.Any = js.native
+    def mkdev(path: String, mode: js.UndefOr[scala.Nothing], dev: Double): js.Any = js.native
     def mkdev(path: String, mode: Double): js.Any = js.native
     def mkdev(path: String, mode: Double, dev: Double): js.Any = js.native
     def mkdir(path: String): js.Any = js.native
@@ -275,7 +509,17 @@ object global extends js.Object {
     ): js.Any = js.native
     def mount(`type`: FileSystemType, opts: js.Any, mountpoint: String): js.Any = js.native
     def open(path: String, flags: String): FSStream = js.native
+    def open(
+      path: String,
+      flags: String,
+      mode: js.UndefOr[scala.Nothing],
+      fd_start: js.UndefOr[scala.Nothing],
+      fd_end: Double
+    ): FSStream = js.native
+    def open(path: String, flags: String, mode: js.UndefOr[scala.Nothing], fd_start: Double): FSStream = js.native
+    def open(path: String, flags: String, mode: js.UndefOr[scala.Nothing], fd_start: Double, fd_end: Double): FSStream = js.native
     def open(path: String, flags: String, mode: Double): FSStream = js.native
+    def open(path: String, flags: String, mode: Double, fd_start: js.UndefOr[scala.Nothing], fd_end: Double): FSStream = js.native
     def open(path: String, flags: String, mode: Double, fd_start: Double): FSStream = js.native
     def open(path: String, flags: String, mode: Double, fd_start: Double, fd_end: Double): FSStream = js.native
     def read(stream: FSStream, buffer: js.typedarray.ArrayBufferView, offset: Double, length: Double): Double = js.native
@@ -289,7 +533,7 @@ object global extends js.Object {
     def readFile(path: String): js.typedarray.Uint8Array = js.native
     def readFile(path: String, opts: Encoding): js.typedarray.Uint8Array = js.native
     def readFile(path: String, opts: Flags): String = js.native
-    def readFile(path: String, opts: FlagsString): js.typedarray.Uint8Array = js.native
+    def readFile(path: String, opts: `0`): js.typedarray.Uint8Array = js.native
     def readdir(path: String): js.Any = js.native
     def readlink(path: String): String = js.native
     def registerDevice(dev: Double, ops: js.Any): Unit = js.native
@@ -314,6 +558,14 @@ object global extends js.Object {
       buffer: js.typedarray.ArrayBufferView,
       offset: Double,
       length: Double,
+      position: js.UndefOr[scala.Nothing],
+      canOwn: Boolean
+    ): Double = js.native
+    def write(
+      stream: FSStream,
+      buffer: js.typedarray.ArrayBufferView,
+      offset: Double,
+      length: Double,
       position: Double
     ): Double = js.native
     def write(
@@ -325,9 +577,9 @@ object global extends js.Object {
       canOwn: Boolean
     ): Double = js.native
     def writeFile(path: String, data: String): Unit = js.native
-    def writeFile(path: String, data: String, opts: FlagsString): Unit = js.native
+    def writeFile(path: String, data: String, opts: `0`): Unit = js.native
     def writeFile(path: String, data: js.typedarray.ArrayBufferView): Unit = js.native
-    def writeFile(path: String, data: js.typedarray.ArrayBufferView, opts: FlagsString): Unit = js.native
+    def writeFile(path: String, data: js.typedarray.ArrayBufferView, opts: `0`): Unit = js.native
   }
   
 }

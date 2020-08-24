@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NavigateBackMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/NavigateBackMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "NavigateBackMirroredIcon")
   @js.native
   object component extends js.Object
   

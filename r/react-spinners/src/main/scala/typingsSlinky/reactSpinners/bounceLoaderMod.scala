@@ -1,6 +1,7 @@
 package typingsSlinky.reactSpinners
 
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactSpinners.anon.RequiredLoaderSizeProps
 import typingsSlinky.reactSpinners.interfacesMod.LoaderSizeProps
 import typingsSlinky.reactSpinners.interfacesMod.StyleFunction
 import typingsSlinky.reactSpinners.interfacesMod.StyleFunctionWithIndex
@@ -24,7 +25,7 @@ object bounceLoaderMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: LoaderSizeProps = js.native
+    var defaultProps: RequiredLoaderSizeProps = js.native
   }
   
 }

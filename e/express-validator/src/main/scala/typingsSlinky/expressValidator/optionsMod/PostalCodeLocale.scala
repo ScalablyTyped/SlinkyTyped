@@ -42,6 +42,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.expressValidator.expressValidatorStrings.MX
   - typingsSlinky.expressValidator.expressValidatorStrings.NL
   - typingsSlinky.expressValidator.expressValidatorStrings.NO
+  - typingsSlinky.expressValidator.expressValidatorStrings.NP
   - typingsSlinky.expressValidator.expressValidatorStrings.NZ
   - typingsSlinky.expressValidator.expressValidatorStrings.PL
   - typingsSlinky.expressValidator.expressValidatorStrings.PR
@@ -133,6 +134,8 @@ object PostalCodeLocale {
   def NL: typingsSlinky.expressValidator.expressValidatorStrings.NL = "NL".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.NL]
   @scala.inline
   def NO: typingsSlinky.expressValidator.expressValidatorStrings.NO = "NO".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.NO]
+  @scala.inline
+  def NP: typingsSlinky.expressValidator.expressValidatorStrings.NP = "NP".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.NP]
   @scala.inline
   def NZ: typingsSlinky.expressValidator.expressValidatorStrings.NZ = "NZ".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.NZ]
   @scala.inline

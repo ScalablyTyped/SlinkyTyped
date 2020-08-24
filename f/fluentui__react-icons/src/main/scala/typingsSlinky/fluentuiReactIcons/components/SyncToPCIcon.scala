@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SyncToPCIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SyncToPCIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SyncToPCIcon")
   @js.native
   object component extends js.Object
   

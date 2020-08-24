@@ -1,10 +1,8 @@
 package typingsSlinky.materialUiCore
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.anon.HandleContainerOverflow
 import typingsSlinky.materialUiCore.modalModalMod.ModalProps
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,15 +16,6 @@ object modalMod extends js.Object {
     def this(opts: HandleContainerOverflow) = this()
   }
   
-  @js.native
-  class default protected ()
-    extends Component[ModalProps, js.Object, js.Any] {
-    def this(props: ModalProps) = this()
-    def this(props: ModalProps, context: js.Any) = this()
-  }
-  
-  @js.native
-  object default extends TopLevel[ReactComponentClass[ModalProps]]
-  
+  val default: ReactComponentClass[ModalProps] = js.native
 }
 

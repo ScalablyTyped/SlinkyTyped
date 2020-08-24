@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "shebang-command"
-version := "1.2-dt-20181231Z-a1581b"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20181231Z-944b3c"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -9,6 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object render extends js.Object {
   def apply(templateOrView: typingsSlinky.meteor.Blaze.Template, parentNode: Node): typingsSlinky.meteor.Blaze.View = js.native
+  def apply(
+    templateOrView: typingsSlinky.meteor.Blaze.Template,
+    parentNode: Node,
+    nextNode: js.UndefOr[scala.Nothing],
+    parentView: typingsSlinky.meteor.Blaze.View
+  ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(templateOrView: typingsSlinky.meteor.Blaze.Template, parentNode: Node, nextNode: Node): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
     templateOrView: typingsSlinky.meteor.Blaze.Template,
@@ -17,6 +23,12 @@ object render extends js.Object {
     parentView: typingsSlinky.meteor.Blaze.View
   ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(templateOrView: typingsSlinky.meteor.Blaze.View, parentNode: Node): typingsSlinky.meteor.Blaze.View = js.native
+  def apply(
+    templateOrView: typingsSlinky.meteor.Blaze.View,
+    parentNode: Node,
+    nextNode: js.UndefOr[scala.Nothing],
+    parentView: typingsSlinky.meteor.Blaze.View
+  ): typingsSlinky.meteor.Blaze.View = js.native
   def apply(templateOrView: typingsSlinky.meteor.Blaze.View, parentNode: Node, nextNode: Node): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
     templateOrView: typingsSlinky.meteor.Blaze.View,

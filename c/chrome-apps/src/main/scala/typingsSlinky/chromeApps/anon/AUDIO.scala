@@ -29,29 +29,18 @@ object AUDIO {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAUDIO(value: audio_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AUDIO")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSCREEN(value: screen_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SCREEN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAUDIO(value: audio_): Self = this.set("AUDIO", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTAB(value: tab_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TAB")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSCREEN(value: screen_): Self = this.set("SCREEN", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWINDOW(value: window_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WINDOW")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTAB(value: tab_): Self = this.set("TAB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWINDOW(value: window_): Self = this.set("WINDOW", value.asInstanceOf[js.Any])
   }
   
 }

@@ -1,17 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
-import typingsSlinky.materialUiIcons.favoriteBorderTwoToneMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FavoriteBorderTwoTone {
-  @JSImport("@material-ui/icons/FavoriteBorderTwoTone", JSImport.Default)
+  @JSImport("@material-ui/icons", "FavoriteBorderTwoTone")
   @js.native
   object component extends js.Object
   
-  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: FavoriteBorderTwoTone.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps144760471[SVGSVGElement] = new SharedBuilder_SvgIconProps144760471[SVGSVGElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FavoriteBorderTwoTone.type): SharedBuilder_SvgIconProps144760471[SVGSVGElement] = new SharedBuilder_SvgIconProps144760471[SVGSVGElement](js.Array(this.component, js.Dictionary.empty))()
 }
 

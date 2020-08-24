@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ArrangeSendToBackIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ArrangeSendToBackIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ArrangeSendToBackIcon")
   @js.native
   object component extends js.Object
   

@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
@@ -73,6 +72,8 @@ object DetailsList {
     @scala.inline
     def columnReorderOptions(value: IColumnReorderOptions): this.type = set("columnReorderOptions", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
@@ -106,6 +107,8 @@ object DetailsList {
     def getRowAriaLabel(value: /* item */ js.Any => String): this.type = set("getRowAriaLabel", js.Any.fromFunction1(value))
     @scala.inline
     def groupProps(value: IDetailsGroupRenderProps): this.type = set("groupProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
     @scala.inline
     def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     @scala.inline
@@ -166,11 +169,11 @@ object DetailsList {
     ): this.type = set("onRenderDetailsHeader", js.Any.fromFunction2(value))
     @scala.inline
     def onRenderItemColumn(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any]
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => ReactElement
     ): this.type = set("onRenderItemColumn", js.Any.fromFunction3(value))
     @scala.inline
     def onRenderMissingItem(
-      value: (/* index */ js.UndefOr[Double], /* rowProps */ js.UndefOr[IDetailsRowProps]) => TagMod[Any]
+      value: (/* index */ js.UndefOr[Double], /* rowProps */ js.UndefOr[IDetailsRowProps]) => ReactElement
     ): this.type = set("onRenderMissingItem", js.Any.fromFunction2(value))
     @scala.inline
     def onRenderRow(
@@ -182,6 +185,8 @@ object DetailsList {
     def onRowWillUnmount(value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double]) => Unit): this.type = set("onRowWillUnmount", js.Any.fromFunction2(value))
     @scala.inline
     def onShouldVirtualize(value: /* props */ IListProps[_] => Boolean): this.type = set("onShouldVirtualize", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowElementEventMapVarargs(value: Callback*): this.type = set("rowElementEventMap", js.Array(value :_*))
     @scala.inline
     def rowElementEventMap(value: js.Array[Callback]): this.type = set("rowElementEventMap", value.asInstanceOf[js.Any])
     @scala.inline

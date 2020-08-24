@@ -12,17 +12,18 @@ import scala.scalajs.js.annotation._
 
 @JSImport("fabric", "fabric.StaticCanvas")
 @js.native
-class StaticCanvas protected ()
+/**
+  * Constructor
+  * @param {HTMLElement | String} el <canvas> element to initialize instance on
+  * @param {Object} [options] Options object
+  * @return {Object} thisArg
+  */
+class StaticCanvas ()
   extends typingsSlinky.fabric.fabricImplMod.StaticCanvas {
   def this(element: String) = this()
-  /**
-    * Constructor
-    * @param {HTMLElement | String} el <canvas> element to initialize instance on
-    * @param {Object} [options] Options object
-    * @return {Object} thisArg
-    */
   def this(element: HTMLCanvasElement) = this()
   def this(element: String, options: ICanvasOptions) = this()
+  def this(element: Null, options: ICanvasOptions) = this()
   def this(element: HTMLCanvasElement, options: ICanvasOptions) = this()
 }
 

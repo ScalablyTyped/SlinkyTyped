@@ -4,6 +4,7 @@ import org.scalajs.dom.experimental.Headers
 import slinky.core.ReactComponentClass
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactTwitterAuth.mod.TwitterLoginProps
 import typingsSlinky.reactTwitterAuth.reactTwitterAuthStrings.`same-origin`
 import typingsSlinky.reactTwitterAuth.reactTwitterAuthStrings.include
@@ -25,6 +26,8 @@ object ReactTwitterAuth {
     @scala.inline
     def credentials(value: omit | `same-origin` | include): this.type = set("credentials", value.asInstanceOf[js.Any])
     @scala.inline
+    def customHeadersVarargs(value: js.Array[String]*): this.type = set("customHeaders", js.Array(value :_*))
+    @scala.inline
     def customHeadersHeaders(value: Headers): this.type = set("customHeaders", value.asInstanceOf[js.Any])
     @scala.inline
     def customHeaders(value: HeadersInit): this.type = set("customHeaders", value.asInstanceOf[js.Any])
@@ -45,7 +48,7 @@ object ReactTwitterAuth {
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
-    def tag(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }

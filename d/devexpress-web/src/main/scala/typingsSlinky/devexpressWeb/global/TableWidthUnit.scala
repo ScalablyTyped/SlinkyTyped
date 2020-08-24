@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TableWidthUnit")
 @js.native
 class TableWidthUnit ()
-  extends typingsSlinky.devexpressWeb.TableWidthUnit {
-  /**
-    * Gets or sets the unit type for the table width.
-    */
-  /* CompleteClass */
-  override var `type`: typingsSlinky.devexpressWeb.TableWidthUnitType = js.native
-  /**
-    * Gets or sets the table width value in twips.
-    */
-  /* CompleteClass */
-  override var value: Double = js.native
-}
+  extends typingsSlinky.devexpressWeb.TableWidthUnit
 

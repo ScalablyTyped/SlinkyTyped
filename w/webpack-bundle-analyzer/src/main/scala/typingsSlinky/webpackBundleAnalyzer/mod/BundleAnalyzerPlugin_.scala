@@ -1,6 +1,6 @@
 package typingsSlinky.webpackBundleAnalyzer.mod
 
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import typingsSlinky.webpackBundleAnalyzer.mod.BundleAnalyzerPlugin.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 class BundleAnalyzerPlugin_ () extends Plugin {
   def this(options: Options) = this()
+  @JSName("apply")
+  def apply(
+    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any
+  ): Unit = js.native
 }
 

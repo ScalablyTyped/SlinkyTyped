@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CannedChatIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CannedChatIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CannedChatIcon")
   @js.native
   object component extends js.Object
   

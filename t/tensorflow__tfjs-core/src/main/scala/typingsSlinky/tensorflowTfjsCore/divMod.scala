@@ -1,13 +1,22 @@
 package typingsSlinky.tensorflowTfjsCore
 
-import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@tensorflow/tfjs-core/dist/backends/cpu/kernels/Div", JSImport.Namespace)
+@JSImport("@tensorflow/tfjs-core/dist/ops/div", JSImport.Namespace)
 @js.native
 object divMod extends js.Object {
-  val divConfig: KernelConfig = js.native
+  @js.native
+  object div extends js.Object {
+    def apply[T /* <: Tensor[Rank] */](a: TensorLike, b: TensorLike): T = js.native
+    def apply[T /* <: Tensor[Rank] */](a: TensorLike, b: Tensor[Rank]): T = js.native
+    def apply[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
+    def apply[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
+  }
+  
 }
 

@@ -5,20 +5,19 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Hour
 import typingsSlinky.fundamentalReact.anon.MeridiemAM
 import typingsSlinky.fundamentalReact.timeMod.TimeProps
-import typingsSlinky.fundamentalReact.timeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Time {
-  @JSImport("fundamental-react/lib/Time/Time", JSImport.Default)
+  @JSImport("fundamental-react", "Time")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.Time] {
     @scala.inline
     def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
     @scala.inline

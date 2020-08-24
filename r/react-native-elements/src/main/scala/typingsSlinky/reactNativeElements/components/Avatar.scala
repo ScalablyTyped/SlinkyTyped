@@ -6,10 +6,11 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
+import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.anon.PartialIconProps
+import typingsSlinky.reactNativeElements.anon.PartialIconPropsPartialIm
 import typingsSlinky.reactNativeElements.anon.PartialImageProps
 import typingsSlinky.reactNativeElements.mod.AvatarIcon
 import typingsSlinky.reactNativeElements.mod.AvatarProps
@@ -35,6 +36,8 @@ object Avatar {
     @scala.inline
     def ImageComponent(value: ReactComponentClass[js.Object]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
     @scala.inline
+    def accessory(value: PartialIconPropsPartialIm): this.type = set("accessory", value.asInstanceOf[js.Any])
+    @scala.inline
     def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
     @scala.inline
     def avatarStyle(value: ImageStyle): this.type = set("avatarStyle", value.asInstanceOf[js.Any])
@@ -42,8 +45,6 @@ object Avatar {
     def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def containerStyleNull: this.type = set("containerStyle", null)
-    @scala.inline
-    def editButton(value: PartialIconProps): this.type = set("editButton", value.asInstanceOf[js.Any])
     @scala.inline
     def icon(value: AvatarIcon): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +54,7 @@ object Avatar {
     @scala.inline
     def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def onEditPress(value: () => Unit): this.type = set("onEditPress", js.Any.fromFunction0(value))
+    def onAccessoryPress(value: () => Unit): this.type = set("onAccessoryPress", js.Any.fromFunction0(value))
     @scala.inline
     def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
     @scala.inline
@@ -71,9 +72,11 @@ object Avatar {
     @scala.inline
     def rounded(value: Boolean): this.type = set("rounded", value.asInstanceOf[js.Any])
     @scala.inline
-    def showEditButton(value: Boolean): this.type = set("showEditButton", value.asInstanceOf[js.Any])
+    def showAccessory(value: Boolean): this.type = set("showAccessory", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: small | medium | large | xlarge | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sourceVarargs(value: ImageURISource*): this.type = set("source", js.Array(value :_*))
     @scala.inline
     def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
     @scala.inline

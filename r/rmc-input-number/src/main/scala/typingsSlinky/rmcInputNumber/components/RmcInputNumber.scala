@@ -1,6 +1,5 @@
 package typingsSlinky.rmcInputNumber.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -30,7 +29,7 @@ object RmcInputNumber {
     @scala.inline
     def downHandlerReactElement(value: ReactElement): this.type = set("downHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def downHandler(value: TagMod[Any]): this.type = set("downHandler", value.asInstanceOf[js.Any])
+    def downHandler(value: ReactElement): this.type = set("downHandler", value.asInstanceOf[js.Any])
     @scala.inline
     def focusOnUpDown(value: Boolean): this.type = set("focusOnUpDown", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,7 +61,7 @@ object RmcInputNumber {
     @scala.inline
     def upHandlerReactElement(value: ReactElement): this.type = set("upHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def upHandler(value: TagMod[Any]): this.type = set("upHandler", value.asInstanceOf[js.Any])
+    def upHandler(value: ReactElement): this.type = set("upHandler", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }

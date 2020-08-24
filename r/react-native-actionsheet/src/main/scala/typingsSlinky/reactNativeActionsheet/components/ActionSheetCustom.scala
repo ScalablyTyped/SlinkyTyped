@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeActionsheet.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -33,12 +32,12 @@ object ActionSheetCustom {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ActionSheetCustomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onPress: Double => Unit, options: js.Array[TagMod[Any]]): Builder = {
+  def apply(onPress: Double => Unit, options: js.Array[ReactElement]): Builder = {
     val __props = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), options = options.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetCustomProps]))
   }

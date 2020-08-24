@@ -1,17 +1,16 @@
 package typingsSlinky.materialUi.components
 
 import typingsSlinky.materialUi.MaterialUI.SvgIconProps
-import typingsSlinky.materialUi.navigationArrowDropRightMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NavigationArrowDropRight {
-  @JSImport("material-ui/svg-icons/navigation-arrow-drop-right", JSImport.Default)
+  @JSImport("material-ui/svg-icons", "NavigationArrowDropRight")
   @js.native
   object component extends js.Object
   
-  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[default] = new SharedBuilder_SvgIconProps_1073724525[default](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: NavigationArrowDropRight.type): SharedBuilder_SvgIconProps_1073724525[default] = new SharedBuilder_SvgIconProps_1073724525[default](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.NavigationArrowDropRight] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.NavigationArrowDropRight](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NavigationArrowDropRight.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.NavigationArrowDropRight] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.NavigationArrowDropRight](js.Array(this.component, js.Dictionary.empty))()
 }
 

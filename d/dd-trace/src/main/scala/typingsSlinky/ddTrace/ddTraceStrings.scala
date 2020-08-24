@@ -9,7 +9,10 @@ object ddTraceStrings {
   sealed trait _dd1DotsrDoteausr extends js.Object
   
   @js.native
-  sealed trait `agent-exporter` extends js.Object
+  sealed trait _ddDotmeasured extends js.Object
+  
+  @js.native
+  sealed trait agent extends js.Object
   
   @js.native
   sealed trait amqp10 extends js.Object
@@ -21,7 +24,16 @@ object ddTraceStrings {
   sealed trait async_hooks extends js.Object
   
   @js.native
+  sealed trait async_local_storage extends js.Object
+  
+  @js.native
+  sealed trait `aws-sdk` extends js.Object
+  
+  @js.native
   sealed trait bluebird extends js.Object
+  
+  @js.native
+  sealed trait browser extends js.Object
   
   @js.native
   sealed trait bunyan extends js.Object
@@ -42,6 +54,9 @@ object ddTraceStrings {
   sealed trait couchbase extends js.Object
   
   @js.native
+  sealed trait debug extends js.Object
+  
+  @js.native
   sealed trait dns extends js.Object
   
   @js.native
@@ -57,7 +72,13 @@ object ddTraceStrings {
   sealed trait fastify extends js.Object
   
   @js.native
+  sealed trait fs extends js.Object
+  
+  @js.native
   sealed trait `generic-pool` extends js.Object
+  
+  @js.native
+  sealed trait `google-cloud-pubsub` extends js.Object
   
   @js.native
   sealed trait graphql extends js.Object
@@ -108,9 +129,6 @@ object ddTraceStrings {
   sealed trait log extends js.Object
   
   @js.native
-  sealed trait `log-exporter` extends js.Object
-  
-  @js.native
   sealed trait manualDotdrop extends js.Object
   
   @js.native
@@ -118,6 +136,9 @@ object ddTraceStrings {
   
   @js.native
   sealed trait memcached extends js.Object
+  
+  @js.native
+  sealed trait `microgateway-core` extends js.Object
   
   @js.native
   sealed trait `mongodb-core` extends js.Object
@@ -165,6 +186,9 @@ object ddTraceStrings {
   sealed trait restify extends js.Object
   
   @js.native
+  sealed trait rhea extends js.Object
+  
+  @js.native
   sealed trait router extends js.Object
   
   @js.native
@@ -197,7 +221,9 @@ object ddTraceStrings {
   @scala.inline
   def _dd1DotsrDoteausr: _dd1DotsrDoteausr = "_dd1.sr.eausr".asInstanceOf[_dd1DotsrDoteausr]
   @scala.inline
-  def `agent-exporter`: `agent-exporter` = "agent-exporter".asInstanceOf[`agent-exporter`]
+  def _ddDotmeasured: _ddDotmeasured = "_dd.measured".asInstanceOf[_ddDotmeasured]
+  @scala.inline
+  def agent: agent = "agent".asInstanceOf[agent]
   @scala.inline
   def amqp10: amqp10 = "amqp10".asInstanceOf[amqp10]
   @scala.inline
@@ -205,7 +231,13 @@ object ddTraceStrings {
   @scala.inline
   def async_hooks: async_hooks = "async_hooks".asInstanceOf[async_hooks]
   @scala.inline
+  def async_local_storage: async_local_storage = "async_local_storage".asInstanceOf[async_local_storage]
+  @scala.inline
+  def `aws-sdk`: `aws-sdk` = "aws-sdk".asInstanceOf[`aws-sdk`]
+  @scala.inline
   def bluebird: bluebird = "bluebird".asInstanceOf[bluebird]
+  @scala.inline
+  def browser: browser = "browser".asInstanceOf[browser]
   @scala.inline
   def bunyan: bunyan = "bunyan".asInstanceOf[bunyan]
   @scala.inline
@@ -219,6 +251,8 @@ object ddTraceStrings {
   @scala.inline
   def couchbase: couchbase = "couchbase".asInstanceOf[couchbase]
   @scala.inline
+  def debug: debug = "debug".asInstanceOf[debug]
+  @scala.inline
   def dns: dns = "dns".asInstanceOf[dns]
   @scala.inline
   def elasticsearch: elasticsearch = "elasticsearch".asInstanceOf[elasticsearch]
@@ -229,7 +263,11 @@ object ddTraceStrings {
   @scala.inline
   def fastify: fastify = "fastify".asInstanceOf[fastify]
   @scala.inline
+  def fs: fs = "fs".asInstanceOf[fs]
+  @scala.inline
   def `generic-pool`: `generic-pool` = "generic-pool".asInstanceOf[`generic-pool`]
+  @scala.inline
+  def `google-cloud-pubsub`: `google-cloud-pubsub` = "google-cloud-pubsub".asInstanceOf[`google-cloud-pubsub`]
   @scala.inline
   def graphql: graphql = "graphql".asInstanceOf[graphql]
   @scala.inline
@@ -263,13 +301,13 @@ object ddTraceStrings {
   @scala.inline
   def log: log = "log".asInstanceOf[log]
   @scala.inline
-  def `log-exporter`: `log-exporter` = "log-exporter".asInstanceOf[`log-exporter`]
-  @scala.inline
   def manualDotdrop: manualDotdrop = "manual.drop".asInstanceOf[manualDotdrop]
   @scala.inline
   def manualDotkeep: manualDotkeep = "manual.keep".asInstanceOf[manualDotkeep]
   @scala.inline
   def memcached: memcached = "memcached".asInstanceOf[memcached]
+  @scala.inline
+  def `microgateway-core`: `microgateway-core` = "microgateway-core".asInstanceOf[`microgateway-core`]
   @scala.inline
   def `mongodb-core`: `mongodb-core` = "mongodb-core".asInstanceOf[`mongodb-core`]
   @scala.inline
@@ -300,6 +338,8 @@ object ddTraceStrings {
   def resourceDotname: resourceDotname = "resource.name".asInstanceOf[resourceDotname]
   @scala.inline
   def restify: restify = "restify".asInstanceOf[restify]
+  @scala.inline
+  def rhea: rhea = "rhea".asInstanceOf[rhea]
   @scala.inline
   def router: router = "router".asInstanceOf[router]
   @scala.inline

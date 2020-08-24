@@ -1,6 +1,6 @@
 package typingsSlinky.nivoAnnotations.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAnnotations.mod.NoteCoordinate
@@ -28,7 +28,7 @@ object Annotation {
       @scala.inline
       def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
       @scala.inline
-      def note(value: TagMod[Any]): this.type = set("note", value.asInstanceOf[js.Any])
+      def note(value: ReactElement): this.type = set("note", value.asInstanceOf[js.Any])
       @scala.inline
       def noteTextOffset(value: Double): this.type = set("noteTextOffset", value.asInstanceOf[js.Any])
       @scala.inline
@@ -69,7 +69,7 @@ object Annotation {
       @scala.inline
       def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
       @scala.inline
-      def note(value: TagMod[Any]): this.type = set("note", value.asInstanceOf[js.Any])
+      def note(value: ReactElement): this.type = set("note", value.asInstanceOf[js.Any])
       @scala.inline
       def noteTextOffset(value: Double): this.type = set("noteTextOffset", value.asInstanceOf[js.Any])
       @scala.inline
@@ -111,7 +111,7 @@ object Annotation {
       @scala.inline
       def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
       @scala.inline
-      def note(value: TagMod[Any]): this.type = set("note", value.asInstanceOf[js.Any])
+      def note(value: ReactElement): this.type = set("note", value.asInstanceOf[js.Any])
       @scala.inline
       def noteTextOffset(value: Double): this.type = set("noteTextOffset", value.asInstanceOf[js.Any])
       @scala.inline

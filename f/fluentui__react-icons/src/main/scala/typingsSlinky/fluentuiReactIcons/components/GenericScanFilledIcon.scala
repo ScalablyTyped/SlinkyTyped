@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GenericScanFilledIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GenericScanFilledIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GenericScanFilledIcon")
   @js.native
   object component extends js.Object
   

@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@ionic/angular/dist/directives/proxies", "IonThumbnail")
+@JSImport("@ionic/angular/directives/proxies", "IonThumbnail")
 @js.native
 class IonThumbnail protected ()
   extends typingsSlinky.ionicCore.componentsMod.Components.IonThumbnail {

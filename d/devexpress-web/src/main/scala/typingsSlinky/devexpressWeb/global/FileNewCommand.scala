@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FileNewCommand")
 @js.native
 class FileNewCommand ()
-  extends typingsSlinky.devexpressWeb.FileNewCommand {
-  /**
-    * Executes the FileNewCommand command.
-    */
-  /* CompleteClass */
-  override def execute(): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.FileNewCommand
 

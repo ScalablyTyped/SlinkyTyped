@@ -91,6 +91,7 @@ package object medialiveMod {
     - java.lang.String
   */
   type Ac3MetadataControl = typingsSlinky.awsSdk.medialiveMod._Ac3MetadataControl | java.lang.String
+  type AcceptHeader = typingsSlinky.awsSdk.awsSdkStrings.imageSlashjpeg | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AUTO
     - typingsSlinky.awsSdk.awsSdkStrings.FIXED
@@ -238,6 +239,7 @@ package object medialiveMod {
   */
   type ChannelState = typingsSlinky.awsSdk.medialiveMod._ChannelState | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.medialiveMod.ClientApiVersions
+  type ContentType = typingsSlinky.awsSdk.awsSdkStrings.imageSlashjpeg | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SYNCED
     - typingsSlinky.awsSdk.awsSdkStrings.SYNCING
@@ -400,6 +402,18 @@ package object medialiveMod {
   */
   type Eac3SurroundMode = typingsSlinky.awsSdk.medialiveMod._Eac3SurroundMode | java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EXCLUDE
+    - typingsSlinky.awsSdk.awsSdkStrings.INCLUDE
+    - java.lang.String
+  */
+  type EbuTtDDestinationStyleControl = typingsSlinky.awsSdk.medialiveMod._EbuTtDDestinationStyleControl | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - java.lang.String
+  */
+  type EbuTtDFillLineGapControl = typingsSlinky.awsSdk.medialiveMod._EbuTtDFillLineGapControl | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - typingsSlinky.awsSdk.awsSdkStrings.UPCONVERT
     - java.lang.String
@@ -411,6 +425,12 @@ package object medialiveMod {
     - java.lang.String
   */
   type EmbeddedScte20Detection = typingsSlinky.awsSdk.medialiveMod._EmbeddedScte20Detection | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - java.lang.String
+  */
+  type FeatureActivationsInputPrepareScheduleActions = typingsSlinky.awsSdk.medialiveMod._FeatureActivationsInputPrepareScheduleActions | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.COLUMN
     - typingsSlinky.awsSdk.awsSdkStrings.COLUMN_AND_ROW
@@ -704,7 +724,12 @@ package object medialiveMod {
     - java.lang.String
   */
   type H265RateControlMode = typingsSlinky.awsSdk.medialiveMod._H265RateControlMode | java.lang.String
-  type H265ScanType = typingsSlinky.awsSdk.awsSdkStrings.PROGRESSIVE | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERLACED
+    - typingsSlinky.awsSdk.awsSdkStrings.PROGRESSIVE
+    - java.lang.String
+  */
+  type H265ScanType = typingsSlinky.awsSdk.medialiveMod._H265ScanType | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
@@ -813,6 +838,7 @@ package object medialiveMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.MANIFESTS_AND_SEGMENTS
     - typingsSlinky.awsSdk.awsSdkStrings.SEGMENTS_ONLY
+    - typingsSlinky.awsSdk.awsSdkStrings.VARIANT_MANIFESTS_AND_SEGMENTS
     - java.lang.String
   */
   type HlsOutputSelection = typingsSlinky.awsSdk.medialiveMod._HlsOutputSelection | java.lang.String
@@ -927,6 +953,7 @@ package object medialiveMod {
     - java.lang.String
   */
   type InputDeviceState = typingsSlinky.awsSdk.medialiveMod._InputDeviceState | java.lang.String
+  type InputDeviceThumbnail = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.medialiveMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type InputDeviceType = typingsSlinky.awsSdk.awsSdkStrings.HD | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AUTO
@@ -1614,6 +1641,7 @@ package object medialiveMod {
   type listOfScte35Descriptor = js.Array[typingsSlinky.awsSdk.medialiveMod.Scte35Descriptor]
   type listOfString = js.Array[typingsSlinky.awsSdk.medialiveMod.string]
   type listOfVideoDescription = js.Array[typingsSlinky.awsSdk.medialiveMod.VideoDescription]
+  type long = scala.Double
   type longMin0Max1099511627775 = scala.Double
   type longMin0Max4294967295 = scala.Double
   type longMin0Max8589934591 = scala.Double
@@ -1623,8 +1651,10 @@ package object medialiveMod {
   type stringMin1 = java.lang.String
   type stringMin1Max255 = java.lang.String
   type stringMin1Max256 = java.lang.String
+  type stringMin1Max35 = java.lang.String
   type stringMin32Max32 = java.lang.String
   type stringMin34Max34 = java.lang.String
   type stringMin3Max3 = java.lang.String
   type stringMin6Max6 = java.lang.String
+  type timestamp = js.Date
 }

@@ -1,20 +1,22 @@
 package typingsSlinky.agGrid.componentProviderMod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.agGrid.componentResolverMod.ComponentType
 import typingsSlinky.agGrid.iComponentMod.IComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RegisteredComponent[A /* <: IComponent[_] with B */, B] extends js.Object {
-  var component: RegisteredComponentInput[A, B]
-  var source: RegisteredComponentSource
-  var `type`: ComponentType
+  var component: RegisteredComponentInput[A, B] = js.native
+  var source: RegisteredComponentSource = js.native
+  var `type`: ComponentType = js.native
 }
 
 object RegisteredComponent {
   @scala.inline
-  def apply[A, B](
+  def apply[/* <: typingsSlinky.agGrid.iComponentMod.IComponent[_] with B */ A, B](
     component: RegisteredComponentInput[A, B],
     source: RegisteredComponentSource,
     `type`: ComponentType
@@ -23,5 +25,26 @@ object RegisteredComponent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisteredComponent[A, B]]
   }
+  @scala.inline
+  implicit class RegisteredComponentOps[Self <: RegisteredComponent[_, _], /* <: typingsSlinky.agGrid.iComponentMod.IComponent[_] with B */ A, B] (val x: Self with (RegisteredComponent[A, B])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setComponentFunction1(value: /* params */ js.Any => String | HTMLElement): Self = this.set("component", js.Any.fromFunction1(value))
+    @scala.inline
+    def setComponent(value: RegisteredComponentInput[A, B]): Self = this.set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSource(value: RegisteredComponentSource): Self = this.set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: ComponentType): Self = this.set("type", value.asInstanceOf[js.Any])
+  }
+  
 }
 

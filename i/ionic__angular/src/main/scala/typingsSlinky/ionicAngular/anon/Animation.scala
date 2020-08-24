@@ -1,23 +1,19 @@
 package typingsSlinky.ionicAngular.anon
 
-import typingsSlinky.ionicAngular.ionicAngularStrings.back
-import typingsSlinky.ionicAngular.ionicAngularStrings.forward
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
+import typingsSlinky.ionicCore.navInterfaceMod.NavDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Animation extends js.Object {
-  var animation: js.UndefOr[forward | back] = js.undefined
-  var direction: RouterDirection
-}
-
-object Animation {
-  @scala.inline
-  def apply(direction: RouterDirection, animation: forward | back = null): Animation = {
-    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Animation]
-  }
+  var animation: NavDirection = js.native
+  @JSName("animationBuilder")
+  var animationBuilder_Original: AnimationBuilder = js.native
+  var direction: RouterDirection = js.native
+  def animationBuilder(baseEl: js.Any): typingsSlinky.ionicCore.animationInterfaceMod.Animation = js.native
+  def animationBuilder(baseEl: js.Any, opts: js.Any): typingsSlinky.ionicCore.animationInterfaceMod.Animation = js.native
 }
 

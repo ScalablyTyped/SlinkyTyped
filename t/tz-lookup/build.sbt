@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "tz-lookup"
-version := "6.1-dt-20200108Z-7c4b58"
-scalaVersion := "2.13.2"
+version := "6.1-dt-20200108Z-a4dc38"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RelationshipIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RelationshipIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RelationshipIcon")
   @js.native
   object component extends js.Object
   

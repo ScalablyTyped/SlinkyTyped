@@ -1,6 +1,11 @@
 package typingsSlinky.materialSlider
 
+import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialSlider.adapterMod.MDCSliderAdapter
+import typingsSlinky.materialSlider.anon.ACTIVE
+import typingsSlinky.materialSlider.anon.ARIADISABLED
+import typingsSlinky.materialSlider.anon.PAGEFACTOR
+import typingsSlinky.materialSlider.anon.PartialMDCSliderAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +14,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object foundationMod extends js.Object {
   @js.native
-  trait MDCSliderFoundation
-    extends typingsSlinky.materialBase.foundationMod.default[MDCSliderAdapter] {
+  class MDCSliderFoundation () extends MDCFoundation[MDCSliderAdapter] {
+    def this(adapter: PartialMDCSliderAdapter) = this()
     def getMax(): Double = js.native
     def getMin(): Double = js.native
     def getStep(): Double = js.native
@@ -26,15 +31,26 @@ object foundationMod extends js.Object {
   }
   
   @js.native
-  class default () extends MDCSliderFoundation
+  class default () extends MDCSliderFoundation {
+    def this(adapter: PartialMDCSliderAdapter) = this()
+  }
+  
+  /* static members */
+  @js.native
+  object MDCSliderFoundation extends js.Object {
+    def cssClasses: ACTIVE = js.native
+    def defaultAdapter: MDCSliderAdapter = js.native
+    def numbers: PAGEFACTOR = js.native
+    def strings: ARIADISABLED = js.native
+  }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    val cssClasses: typingsSlinky.materialSlider.constantsMod.cssClasses = js.native
-    val defaultAdapter: MDCSliderAdapter = js.native
-    val numbers: typingsSlinky.materialSlider.constantsMod.numbers = js.native
-    val strings: typingsSlinky.materialSlider.constantsMod.strings = js.native
+    def cssClasses: ACTIVE = js.native
+    def defaultAdapter: MDCSliderAdapter = js.native
+    def numbers: PAGEFACTOR = js.native
+    def strings: ARIADISABLED = js.native
   }
   
 }

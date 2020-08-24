@@ -50,59 +50,30 @@ object ConfigDescriptor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withConfigurationValue(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationValue")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExtra_data(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_data")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConfigurationValue(value: integer): Self = this.set("configurationValue", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaces(value: js.Array[InterfaceDescriptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaces")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtra_data(value: js.typedarray.ArrayBuffer): Self = this.set("extra_data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxPower(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPower")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInterfacesVarargs(value: InterfaceDescriptor*): Self = this.set("interfaces", js.Array(value :_*))
     @scala.inline
-    def withRemoteWakeup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteWakeup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInterfaces(value: js.Array[InterfaceDescriptor]): Self = this.set("interfaces", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelfPowered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfPowered")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaxPower(value: integer): Self = this.set("maxPower", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRemoteWakeup(value: Boolean): Self = this.set("remoteWakeup", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
+    def setSelfPowered(value: Boolean): Self = this.set("selfPowered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
   }
   
 }

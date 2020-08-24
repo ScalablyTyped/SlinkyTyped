@@ -27,23 +27,16 @@ object APPUPDATE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAPP_UPDATE(value: app_update_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("APP_UPDATE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOS_UPDATE(value: os_update_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OS_UPDATE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAPP_UPDATE(value: app_update_): Self = this.set("APP_UPDATE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPERIODIC(value: periodic_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PERIODIC")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOS_UPDATE(value: os_update_): Self = this.set("OS_UPDATE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPERIODIC(value: periodic_): Self = this.set("PERIODIC", value.asInstanceOf[js.Any])
   }
   
 }

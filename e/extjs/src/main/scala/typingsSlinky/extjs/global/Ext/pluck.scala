@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object pluck extends js.Object {
   def apply(): typingsSlinky.extjs.Ext.Array = js.native
+  def apply(array: js.UndefOr[scala.Nothing], propertyName: java.lang.String): typingsSlinky.extjs.Ext.Array = js.native
   def apply(array: js.Any): typingsSlinky.extjs.Ext.Array = js.native
   def apply(array: js.Any, propertyName: java.lang.String): typingsSlinky.extjs.Ext.Array = js.native
 }

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -23,7 +22,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapListItDense
 import typingsSlinky.materialUiCore.anon.PartialTypographyProps
 import typingsSlinky.materialUiCore.listItemTextListItemTextMod.ListItemTextProps
-import typingsSlinky.materialUiCore.listItemTextMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -79,14 +77,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListItemText {
-  @JSImport("@material-ui/core/ListItemText", JSImport.Default)
+  @JSImport("@material-ui/core", "ListItemText")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -209,6 +207,8 @@ object ListItemText {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -414,7 +414,7 @@ object ListItemText {
     @scala.inline
     def primaryReactElement(value: ReactElement): this.type = set("primary", value.asInstanceOf[js.Any])
     @scala.inline
-    def primary(value: TagMod[Any]): this.type = set("primary", value.asInstanceOf[js.Any])
+    def primary(value: ReactElement): this.type = set("primary", value.asInstanceOf[js.Any])
     @scala.inline
     def primaryTypographyProps(value: PartialTypographyProps): this.type = set("primaryTypographyProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -430,7 +430,7 @@ object ListItemText {
     @scala.inline
     def secondaryReactElement(value: ReactElement): this.type = set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
-    def secondary(value: TagMod[Any]): this.type = set("secondary", value.asInstanceOf[js.Any])
+    def secondary(value: ReactElement): this.type = set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
     def secondaryTypographyProps(value: PartialTypographyProps): this.type = set("secondaryTypographyProps", value.asInstanceOf[js.Any])
     @scala.inline

@@ -29,7 +29,9 @@ trait Typeoftabs extends js.Object {
     * @param tabId The ID of the tab that has become active.
     * @deprecated Please use `tabs.onActivated`.
     */
-  val onActiveChanged: js.UndefOr[WebExtEvent[js.Function2[/* tabId */ Double, /* selectInfo */ `0`, Unit]]] = js.native
+  val onActiveChanged: js.UndefOr[
+    WebExtEvent[js.Function2[/* tabId */ Double, /* selectInfo */ WindowIdNumber, Unit]]
+  ] = js.native
   /** Fired when a tab is attached to a window, for example because it was moved between windows. */
   val onAttached: WebExtEvent[js.Function2[/* tabId */ Double, /* attachInfo */ NewPosition, Unit]] = js.native
   /* tabs events */
@@ -63,7 +65,9 @@ trait Typeoftabs extends js.Object {
     * @param tabId The ID of the tab that has become active.
     * @deprecated Please use `tabs.onActivated`.
     */
-  val onSelectionChanged: js.UndefOr[WebExtEvent[js.Function2[/* tabId */ Double, /* selectInfo */ `0`, Unit]]] = js.native
+  val onSelectionChanged: js.UndefOr[
+    WebExtEvent[js.Function2[/* tabId */ Double, /* selectInfo */ WindowIdNumber, Unit]]
+  ] = js.native
   /**
     * Fired when a tab is updated.
     * @param changeInfo Lists the changes to the state of the tab that was updated.
@@ -77,6 +81,7 @@ trait Typeoftabs extends js.Object {
     * @param [tabId] The tab to capture. Defaults to the active tab of the current window.
     */
   def captureTab(): js.Promise[String] = js.native
+  def captureTab(tabId: js.UndefOr[scala.Nothing], options: ImageDetails): js.Promise[String] = js.native
   def captureTab(tabId: Double): js.Promise[String] = js.native
   def captureTab(tabId: Double, options: ImageDetails): js.Promise[String] = js.native
   /**
@@ -85,6 +90,7 @@ trait Typeoftabs extends js.Object {
     * @param [windowId] The target window. Defaults to the current window.
     */
   def captureVisibleTab(): js.Promise[String] = js.native
+  def captureVisibleTab(windowId: js.UndefOr[scala.Nothing], options: ImageDetails): js.Promise[String] = js.native
   def captureVisibleTab(windowId: Double): js.Promise[String] = js.native
   def captureVisibleTab(windowId: Double, options: ImageDetails): js.Promise[String] = js.native
   /**
@@ -114,6 +120,7 @@ trait Typeoftabs extends js.Object {
     * @param tabId The ID of the tab which is to be duplicated.
     */
   def duplicate(tabId: Double): js.Promise[Tab] = js.native
+  def duplicate(tabId: Double, duplicateProperties: ActiveIndex): js.Promise[Tab] = js.native
   /**
     * Injects JavaScript code into a page. For details, see the programmatic injection section of the content scripts
     * doc.
@@ -163,6 +170,18 @@ trait Typeoftabs extends js.Object {
     */
   def getZoomSettings(): js.Promise[ZoomSettings] = js.native
   def getZoomSettings(tabId: Double): js.Promise[ZoomSettings] = js.native
+  /**
+    * Navigate to previous page in tab's history, if available.
+    * @param [tabId] The ID of the tab to navigate backward.
+    */
+  def goBack(): js.Promise[Unit] = js.native
+  def goBack(tabId: Double): js.Promise[Unit] = js.native
+  /**
+    * Navigate to next page in tab's history, if available
+    * @param [tabId] The ID of the tab to navigate forward.
+    */
+  def goForward(): js.Promise[Unit] = js.native
+  def goForward(tabId: Double): js.Promise[Unit] = js.native
   def hide(tabIds: js.Array[Double]): js.Promise[js.Array[Double]] = js.native
   /**
     * Hides one or more tabs. The `"tabHide"` permission is required to hide tabs. Not all tabs are hidable. Returns
@@ -201,6 +220,7 @@ trait Typeoftabs extends js.Object {
     *     the first tab in the array instead.
     */
   def moveInSuccession(tabIds: js.Array[Double]): js.Promise[_] = js.native
+  def moveInSuccession(tabIds: js.Array[Double], tabId: js.UndefOr[scala.Nothing], options: Append): js.Promise[_] = js.native
   def moveInSuccession(tabIds: js.Array[Double], tabId: Double): js.Promise[_] = js.native
   def moveInSuccession(tabIds: js.Array[Double], tabId: Double, options: Append): js.Promise[_] = js.native
   /** Prints page in active tab. */
@@ -214,6 +234,7 @@ trait Typeoftabs extends js.Object {
     * @param [tabId] The ID of the tab to reload; defaults to the selected tab of the current window.
     */
   def reload(): js.Promise[Unit] = js.native
+  def reload(tabId: js.UndefOr[scala.Nothing], reloadProperties: BypassCache): js.Promise[Unit] = js.native
   def reload(tabId: Double): js.Promise[Unit] = js.native
   def reload(tabId: Double, reloadProperties: BypassCache): js.Promise[Unit] = js.native
   def remove(tabIds: js.Array[Double]): js.Promise[Unit] = js.native
@@ -246,7 +267,7 @@ trait Typeoftabs extends js.Object {
     * tab for the current extension.
     */
   def sendMessage(tabId: Double, message: js.Any): js.Promise[_] = js.native
-  def sendMessage(tabId: Double, message: js.Any, options: FrameIdNumber): js.Promise[_] = js.native
+  def sendMessage(tabId: Double, message: js.Any, options: `3`): js.Promise[_] = js.native
   /**
     * Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a
     * response is sent back. The `extension.onRequest` event is fired in each content script running in the specified

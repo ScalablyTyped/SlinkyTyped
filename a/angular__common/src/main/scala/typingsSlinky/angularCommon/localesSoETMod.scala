@@ -1,6 +1,6 @@
 package typingsSlinky.angularCommon
 
-import typingsSlinky.angularCommon.anon.JPYSOS
+import typingsSlinky.angularCommon.anon.BBDETB
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object localesSoETMod extends js.Object {
   val default: js.Array[
     js.UndefOr[
-      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | JPYSOS
+      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | BBDETB
     ]
   ] = js.native
 }

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "pretty-ms"
-version := "5.1.0-bf344a"
-scalaVersion := "2.13.2"
+version := "7.0.0-ee6431"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

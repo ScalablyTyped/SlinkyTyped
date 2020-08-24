@@ -1,338 +1,132 @@
 package typingsSlinky.octokitPluginRestEndpointMethods.anon
 
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.AnyResponse
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsAddCollaboratorParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsCreateCardParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsCreateColumnParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsCreateForAuthenticatedUserParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsCreateForOrgParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsCreateForRepoParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsDeleteCardParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsDeleteColumnParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsDeleteParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsGetCardParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsGetColumnParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsGetParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsListCardsParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsListCollaboratorsParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsListColumnsParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsListForOrgParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsListForRepoParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsListForUserParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsMoveCardParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsMoveColumnParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsRemoveCollaboratorParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsReviewUserPermissionLevelParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsUpdateCardParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsUpdateColumnParams
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ProjectsUpdateParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CreateCard extends js.Object {
-  /**
-    * Adds a collaborator to a an organization project and sets their permission level. You must be an organization owner or a project `admin` to add a collaborator.
-    */
-  @JSName("addCollaborator")
-  var addCollaborator_Original: `259` = js.native
-  /**
-    * **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key.
-    *
-    * Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
-    */
-  @JSName("createCard")
-  var createCard_Original: `260` = js.native
-  @JSName("createColumn")
-  var createColumn_Original: `261` = js.native
-  @JSName("createForAuthenticatedUser")
-  var createForAuthenticatedUser_Original: `262` = js.native
-  /**
-    * Creates an organization project board. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  @JSName("createForOrg")
-  var createForOrg_Original: `263` = js.native
-  /**
-    * Creates a repository project board. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  @JSName("createForRepo")
-  var createForRepo_Original: `264` = js.native
-  @JSName("deleteCard")
-  var deleteCard_Original: `266` = js.native
-  @JSName("deleteColumn")
-  var deleteColumn_Original: `267` = js.native
-  /**
-    * Deletes a project board. Returns a `404 Not Found` status if projects are disabled.
-    */
-  @JSName("delete")
-  var delete_Original: `265` = js.native
-  @JSName("getCard")
-  var getCard_Original: `269` = js.native
-  @JSName("getColumn")
-  var getColumn_Original: `270` = js.native
-  /**
-    * Gets a project by its `id`. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  @JSName("get")
-  var get_Original: `268` = js.native
-  @JSName("listCards")
-  var listCards_Original: `271` = js.native
-  /**
-    * Lists the collaborators for an organization project. For a project, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners. You must be an organization owner or a project `admin` to list collaborators.
-    */
-  @JSName("listCollaborators")
-  var listCollaborators_Original: `272` = js.native
-  @JSName("listColumns")
-  var listColumns_Original: `273` = js.native
-  /**
-    * Lists the projects in an organization. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    *
-    * s
-    */
-  @JSName("listForOrg")
-  var listForOrg_Original: `274` = js.native
-  /**
-    * Lists the projects in a repository. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  @JSName("listForRepo")
-  var listForRepo_Original: `275` = js.native
-  @JSName("listForUser")
-  var listForUser_Original: `276` = js.native
-  @JSName("moveCard")
-  var moveCard_Original: `277` = js.native
-  @JSName("moveColumn")
-  var moveColumn_Original: `278` = js.native
-  /**
-    * Removes a collaborator from an organization project. You must be an organization owner or a project `admin` to remove a collaborator.
-    */
-  @JSName("removeCollaborator")
-  var removeCollaborator_Original: `279` = js.native
-  /**
-    * Returns the collaborator's permission level for an organization project. Possible values for the `permission` key: `admin`, `write`, `read`, `none`. You must be an organization owner or a project `admin` to review a user's permission level.
-    */
-  @JSName("reviewUserPermissionLevel")
-  var reviewUserPermissionLevel_Original: `280` = js.native
-  @JSName("updateCard")
-  var updateCard_Original: `282` = js.native
-  @JSName("updateColumn")
-  var updateColumn_Original: `283` = js.native
-  /**
-    * Updates a project board's information. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  @JSName("update")
-  var update_Original: `281` = js.native
-  /**
-    * Adds a collaborator to a an organization project and sets their permission level. You must be an organization owner or a project `admin` to add a collaborator.
-    */
-  def addCollaborator(): js.Promise[AnyResponse] = js.native
-  def addCollaborator(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsAddCollaboratorParams
-  ): js.Promise[AnyResponse] = js.native
-  /**
-    * **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key.
-    *
-    * Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
-    */
-  def createCard(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateCardResponse> */ _
-  ] = js.native
-  def createCard(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsCreateCardParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateCardResponse> */ _
-  ] = js.native
-  def createColumn(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateColumnResponse> */ _
-  ] = js.native
-  def createColumn(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsCreateColumnParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateColumnResponse> */ _
-  ] = js.native
-  def createForAuthenticatedUser(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateForAuthenticatedUserResponse> */ _
-  ] = js.native
-  def createForAuthenticatedUser(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsCreateForAuthenticatedUserParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateForAuthenticatedUserResponse> */ _
-  ] = js.native
-  /**
-    * Creates an organization project board. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  def createForOrg(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateForOrgResponse> */ _
-  ] = js.native
-  def createForOrg(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsCreateForOrgParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateForOrgResponse> */ _
-  ] = js.native
-  /**
-    * Creates a repository project board. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  def createForRepo(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateForRepoResponse> */ _
-  ] = js.native
-  def createForRepo(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsCreateForRepoParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsCreateForRepoResponse> */ _
-  ] = js.native
-  /**
-    * Deletes a project board. Returns a `404 Not Found` status if projects are disabled.
-    */
-  def delete(): js.Promise[AnyResponse] = js.native
-  def delete(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsDeleteParams
-  ): js.Promise[AnyResponse] = js.native
-  def deleteCard(): js.Promise[AnyResponse] = js.native
-  def deleteCard(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsDeleteCardParams
-  ): js.Promise[AnyResponse] = js.native
-  def deleteColumn(): js.Promise[AnyResponse] = js.native
-  def deleteColumn(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsDeleteColumnParams
-  ): js.Promise[AnyResponse] = js.native
-  /**
-    * Gets a project by its `id`. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  def get(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsGetResponse> */ _
-  ] = js.native
-  def get(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsGetParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsGetResponse> */ _
-  ] = js.native
-  def getCard(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsGetCardResponse> */ _
-  ] = js.native
-  def getCard(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsGetCardParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsGetCardResponse> */ _
-  ] = js.native
-  def getColumn(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsGetColumnResponse> */ _
-  ] = js.native
-  def getColumn(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsGetColumnParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsGetColumnResponse> */ _
-  ] = js.native
-  def listCards(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListCardsResponse> */ _
-  ] = js.native
-  def listCards(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsListCardsParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListCardsResponse> */ _
-  ] = js.native
-  /**
-    * Lists the collaborators for an organization project. For a project, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners. You must be an organization owner or a project `admin` to list collaborators.
-    */
-  def listCollaborators(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListCollaboratorsResponse> */ _
-  ] = js.native
-  def listCollaborators(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsListCollaboratorsParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListCollaboratorsResponse> */ _
-  ] = js.native
-  def listColumns(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListColumnsResponse> */ _
-  ] = js.native
-  def listColumns(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsListColumnsParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListColumnsResponse> */ _
-  ] = js.native
-  /**
-    * Lists the projects in an organization. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    *
-    * s
-    */
-  def listForOrg(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListForOrgResponse> */ _
-  ] = js.native
-  def listForOrg(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsListForOrgParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListForOrgResponse> */ _
-  ] = js.native
-  /**
-    * Lists the projects in a repository. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  def listForRepo(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListForRepoResponse> */ _
-  ] = js.native
-  def listForRepo(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsListForRepoParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListForRepoResponse> */ _
-  ] = js.native
-  def listForUser(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListForUserResponse> */ _
-  ] = js.native
-  def listForUser(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsListForUserParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsListForUserResponse> */ _
-  ] = js.native
-  def moveCard(): js.Promise[AnyResponse] = js.native
-  def moveCard(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsMoveCardParams
-  ): js.Promise[AnyResponse] = js.native
-  def moveColumn(): js.Promise[AnyResponse] = js.native
-  def moveColumn(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsMoveColumnParams
-  ): js.Promise[AnyResponse] = js.native
-  /**
-    * Removes a collaborator from an organization project. You must be an organization owner or a project `admin` to remove a collaborator.
-    */
-  def removeCollaborator(): js.Promise[AnyResponse] = js.native
-  def removeCollaborator(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsRemoveCollaboratorParams
-  ): js.Promise[AnyResponse] = js.native
-  /**
-    * Returns the collaborator's permission level for an organization project. Possible values for the `permission` key: `admin`, `write`, `read`, `none`. You must be an organization owner or a project `admin` to review a user's permission level.
-    */
-  def reviewUserPermissionLevel(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsReviewUserPermissionLevelResponse> */ _
-  ] = js.native
-  def reviewUserPermissionLevel(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsReviewUserPermissionLevelParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsReviewUserPermissionLevelResponse> */ _
-  ] = js.native
-  /**
-    * Updates a project board's information. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
-    */
-  def update(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsUpdateResponse> */ _
-  ] = js.native
-  def update(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsUpdateParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsUpdateResponse> */ _
-  ] = js.native
-  def updateCard(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsUpdateCardResponse> */ _
-  ] = js.native
-  def updateCard(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsUpdateCardParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsUpdateCardResponse> */ _
-  ] = js.native
-  def updateColumn(): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsUpdateColumnResponse> */ _
-  ] = js.native
-  def updateColumn(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ProjectsUpdateColumnParams
-  ): js.Promise[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ProjectsUpdateColumnResponse> */ _
-  ] = js.native
+  var addCollaborator: `814` = js.native
+  var createCard: `815` = js.native
+  var createColumn: `816` = js.native
+  var createForAuthenticatedUser: `817` = js.native
+  var createForOrg: `818` = js.native
+  var createForRepo: `819` = js.native
+  var delete: `820` = js.native
+  var deleteCard: `821` = js.native
+  var deleteColumn: `822` = js.native
+  var get: `823` = js.native
+  var getCard: `824` = js.native
+  var getColumn: `825` = js.native
+  var getPermissionForUser: `826` = js.native
+  var listCards: `827` = js.native
+  var listCollaborators: `828` = js.native
+  var listColumns: `829` = js.native
+  var listForOrg: `830` = js.native
+  var listForRepo: `831` = js.native
+  var listForUser: `832` = js.native
+  var moveCard: `833` = js.native
+  var moveColumn: `834` = js.native
+  var removeCollaborator: `835` = js.native
+  var update: `836` = js.native
+  var updateCard: `837` = js.native
+  var updateColumn: `838` = js.native
+}
+
+object CreateCard {
+  @scala.inline
+  def apply(
+    addCollaborator: `814`,
+    createCard: `815`,
+    createColumn: `816`,
+    createForAuthenticatedUser: `817`,
+    createForOrg: `818`,
+    createForRepo: `819`,
+    delete: `820`,
+    deleteCard: `821`,
+    deleteColumn: `822`,
+    get: `823`,
+    getCard: `824`,
+    getColumn: `825`,
+    getPermissionForUser: `826`,
+    listCards: `827`,
+    listCollaborators: `828`,
+    listColumns: `829`,
+    listForOrg: `830`,
+    listForRepo: `831`,
+    listForUser: `832`,
+    moveCard: `833`,
+    moveColumn: `834`,
+    removeCollaborator: `835`,
+    update: `836`,
+    updateCard: `837`,
+    updateColumn: `838`
+  ): CreateCard = {
+    val __obj = js.Dynamic.literal(addCollaborator = addCollaborator.asInstanceOf[js.Any], createCard = createCard.asInstanceOf[js.Any], createColumn = createColumn.asInstanceOf[js.Any], createForAuthenticatedUser = createForAuthenticatedUser.asInstanceOf[js.Any], createForOrg = createForOrg.asInstanceOf[js.Any], createForRepo = createForRepo.asInstanceOf[js.Any], delete = delete.asInstanceOf[js.Any], deleteCard = deleteCard.asInstanceOf[js.Any], deleteColumn = deleteColumn.asInstanceOf[js.Any], get = get.asInstanceOf[js.Any], getCard = getCard.asInstanceOf[js.Any], getColumn = getColumn.asInstanceOf[js.Any], getPermissionForUser = getPermissionForUser.asInstanceOf[js.Any], listCards = listCards.asInstanceOf[js.Any], listCollaborators = listCollaborators.asInstanceOf[js.Any], listColumns = listColumns.asInstanceOf[js.Any], listForOrg = listForOrg.asInstanceOf[js.Any], listForRepo = listForRepo.asInstanceOf[js.Any], listForUser = listForUser.asInstanceOf[js.Any], moveCard = moveCard.asInstanceOf[js.Any], moveColumn = moveColumn.asInstanceOf[js.Any], removeCollaborator = removeCollaborator.asInstanceOf[js.Any], update = update.asInstanceOf[js.Any], updateCard = updateCard.asInstanceOf[js.Any], updateColumn = updateColumn.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CreateCard]
+  }
+  @scala.inline
+  implicit class CreateCardOps[Self <: CreateCard] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddCollaborator(value: `814`): Self = this.set("addCollaborator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreateCard(value: `815`): Self = this.set("createCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreateColumn(value: `816`): Self = this.set("createColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreateForAuthenticatedUser(value: `817`): Self = this.set("createForAuthenticatedUser", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreateForOrg(value: `818`): Self = this.set("createForOrg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreateForRepo(value: `819`): Self = this.set("createForRepo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDelete(value: `820`): Self = this.set("delete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeleteCard(value: `821`): Self = this.set("deleteCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeleteColumn(value: `822`): Self = this.set("deleteColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGet(value: `823`): Self = this.set("get", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGetCard(value: `824`): Self = this.set("getCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGetColumn(value: `825`): Self = this.set("getColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGetPermissionForUser(value: `826`): Self = this.set("getPermissionForUser", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListCards(value: `827`): Self = this.set("listCards", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListCollaborators(value: `828`): Self = this.set("listCollaborators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListColumns(value: `829`): Self = this.set("listColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListForOrg(value: `830`): Self = this.set("listForOrg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListForRepo(value: `831`): Self = this.set("listForRepo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListForUser(value: `832`): Self = this.set("listForUser", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMoveCard(value: `833`): Self = this.set("moveCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMoveColumn(value: `834`): Self = this.set("moveColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRemoveCollaborator(value: `835`): Self = this.set("removeCollaborator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUpdate(value: `836`): Self = this.set("update", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUpdateCard(value: `837`): Self = this.set("updateCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUpdateColumn(value: `838`): Self = this.set("updateColumn", value.asInstanceOf[js.Any])
+  }
+  
 }
 

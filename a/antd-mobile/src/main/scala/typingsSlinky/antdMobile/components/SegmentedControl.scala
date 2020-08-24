@@ -3,21 +3,20 @@ package typingsSlinky.antdMobile.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.segmentedControlMod.SegmentedControlProps
-import typingsSlinky.antdMobile.segmentedControlMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SegmentedControl {
-  @JSImport("antd-mobile/lib/segmented-control", JSImport.Default)
+  @JSImport("antd-mobile", "SegmentedControl")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.SegmentedControl] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,6 +33,8 @@ object SegmentedControl {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valuesVarargs(value: String*): this.type = set("values", js.Array(value :_*))
     @scala.inline
     def values(value: js.Array[String]): this.type = set("values", value.asInstanceOf[js.Any])
   }

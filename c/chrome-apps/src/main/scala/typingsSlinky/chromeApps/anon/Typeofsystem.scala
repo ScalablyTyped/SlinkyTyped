@@ -84,41 +84,22 @@ object Typeofsystem {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCpu(value: Typeofcpu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDisplay(value: Typeofdisplay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCpu(value: Typeofcpu): Self = this.set("cpu", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMemory(value: Typeofmemory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplay(value: Typeofdisplay): Self = this.set("display", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNetwork(value: Typeofnetwork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMemory(value: Typeofmemory): Self = this.set("memory", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPowerSource(value: TypeofpowerSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("powerSource")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNetwork(value: Typeofnetwork): Self = this.set("network", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStorage(value: TypeofstorageEjectDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPowerSource(value: TypeofpowerSource): Self = this.set("powerSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStorage(value: TypeofstorageEjectDevice): Self = this.set("storage", value.asInstanceOf[js.Any])
   }
   
 }

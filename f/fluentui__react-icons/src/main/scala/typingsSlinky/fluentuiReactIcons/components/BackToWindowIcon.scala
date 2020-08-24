@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BackToWindowIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BackToWindowIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BackToWindowIcon")
   @js.native
   object component extends js.Object
   

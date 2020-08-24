@@ -1,7 +1,7 @@
 
 # Scala.js typings for dataloader
 
-Typings are for version 1.4.0
+Typings are for version 2.0.0
 
 ## Library description:
 A data loading utility to reduce requests to a backend via batching and caching.

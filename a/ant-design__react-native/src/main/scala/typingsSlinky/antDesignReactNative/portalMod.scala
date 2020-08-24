@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignReactNative.anon.TypeofPortalHost
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +39,7 @@ object portalMod extends js.Object {
   @js.native
   object default extends js.Object {
     var Host: TypeofPortalHost = js.native
-    def add(e: TagMod[Any]): Double = js.native
+    def add(e: ReactElement): Double = js.native
     def remove(key: Double): Unit = js.native
   }
   

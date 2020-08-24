@@ -19,18 +19,18 @@ trait TypeofAMap extends js.Object {
     typingsSlinky.amapJsApi.AMap.BezierCurve[js.Object]
   ] = js.native
   var Bounds: Instantiable1[
-    js.UndefOr[/* coords */ js.Tuple4[Double, Double, Double, Double]], 
+    /* coords */ js.UndefOr[js.Tuple4[Double, Double, Double, Double]], 
     typingsSlinky.amapJsApi.AMap.Bounds
   ] = js.native
   val Browser: TypeofBrowser = js.native
   val Buildings: Instantiable1[
-    js.UndefOr[/* opts */ typingsSlinky.amapJsApi.AMap.Buildings.Options], 
+    /* opts */ js.UndefOr[typingsSlinky.amapJsApi.AMap.Buildings.Options], 
     typingsSlinky.amapJsApi.AMap.Buildings
   ] = js.native
   var CanvasLayer: Instantiable0[typingsSlinky.amapJsApi.AMap.CanvasLayer] = js.native
   val Circle: Instantiable1[
-    js.UndefOr[
-      /* options */ typingsSlinky.amapJsApi.AMap.Circle.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
+    /* options */ js.UndefOr[
+      typingsSlinky.amapJsApi.AMap.Circle.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
     ], 
     typingsSlinky.amapJsApi.AMap.Circle[js.Object]
   ] = js.native
@@ -40,24 +40,24 @@ trait TypeofAMap extends js.Object {
     */
   var CircleMarker: Instantiable0[typingsSlinky.amapJsApi.AMap.CircleMarker[js.Object]] = js.native
   val ContextMenu: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.ContextMenu.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.ContextMenu.Options], 
     typingsSlinky.amapJsApi.AMap.ContextMenu[js.Object]
   ] = js.native
   val DomUtil: TypeofDomUtil = js.native
   val Ellipse: Instantiable1[
-    js.UndefOr[
-      /* options */ typingsSlinky.amapJsApi.AMap.Ellipse.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
+    /* options */ js.UndefOr[
+      typingsSlinky.amapJsApi.AMap.Ellipse.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
     ], 
     typingsSlinky.amapJsApi.AMap.Ellipse[js.Object]
   ] = js.native
   var EventEmitter: Instantiable0[typingsSlinky.amapJsApi.AMap.EventEmitter] = js.native
   val GeoJSON: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.GeoJSON.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.GeoJSON.Options], 
     typingsSlinky.amapJsApi.AMap.GeoJSON[js.Object]
   ] = js.native
   val GeometryUtil: TypeofGeometryUtil = js.native
   val Icon: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.Icon.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.Icon.Options], 
     typingsSlinky.amapJsApi.AMap.Icon
   ] = js.native
   /**
@@ -65,15 +65,15 @@ trait TypeofAMap extends js.Object {
     */
   var ImageLayer: Instantiable0[typingsSlinky.amapJsApi.AMap.ImageLayer] = js.native
   val InfoWindow: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.InfoWindow.Options[js.Any]], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.InfoWindow.Options[js.Any]], 
     typingsSlinky.amapJsApi.AMap.InfoWindow[js.Object]
   ] = js.native
   val LabelMarker: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.LabelMarker.Options[js.Any]], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.LabelMarker.Options[js.Any]], 
     typingsSlinky.amapJsApi.AMap.LabelMarker[js.Object]
   ] = js.native
   val LabelsLayer: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.LabelsLayer.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.LabelsLayer.Options], 
     typingsSlinky.amapJsApi.AMap.LabelsLayer
   ] = js.native
   val Layer: Instantiable0[typingsSlinky.amapJsApi.AMap.Layer] = js.native
@@ -84,17 +84,17 @@ trait TypeofAMap extends js.Object {
   var LngLat: Instantiable3[
     /* lng */ Double, 
     /* lat */ Double, 
-    js.UndefOr[/* noAutofix */ Boolean], 
+    /* noAutofix */ js.UndefOr[Boolean], 
     typingsSlinky.amapJsApi.AMap.LngLat
   ] = js.native
   val Map: Instantiable2[
     /* container */ String | HTMLElement, 
-    js.UndefOr[/* opts */ typingsSlinky.amapJsApi.AMap.Map.Options], 
+    /* opts */ js.UndefOr[typingsSlinky.amapJsApi.AMap.Map.Options], 
     typingsSlinky.amapJsApi.AMap.Map
   ] = js.native
   val Marker: Instantiable1[
-    js.UndefOr[
-      /* options */ typingsSlinky.amapJsApi.AMap.Marker.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
+    /* options */ js.UndefOr[
+      typingsSlinky.amapJsApi.AMap.Marker.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
     ], 
     typingsSlinky.amapJsApi.AMap.Marker[js.Object]
   ] = js.native
@@ -108,63 +108,63 @@ trait TypeofAMap extends js.Object {
     typingsSlinky.amapJsApi.AMap.MassMarks[typingsSlinky.amapJsApi.AMap.MassMarks.Data]
   ] = js.native
   val MediaLayer: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.MediaLayer.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.MediaLayer.Options], 
     typingsSlinky.amapJsApi.AMap.MediaLayer[HTMLElement]
   ] = js.native
   val Overlay: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.Overlay.Options[js.Any]], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.Overlay.Options[js.Any]], 
     typingsSlinky.amapJsApi.AMap.Overlay[js.Object]
   ] = js.native
   var OverlayGroup: Instantiable1[
-    js.UndefOr[
+    /* overlays */ js.UndefOr[
       (/* import warning: RewrittenClass.unapply cls was tparam O */ js.Any) | (js.Array[/* import warning: RewrittenClass.unapply cls was tparam O */ js.Any])
     ], 
     typingsSlinky.amapJsApi.AMap.OverlayGroup[typingsSlinky.amapJsApi.AMap.Overlay[js.Any], js.Object]
   ] = js.native
   val PathOverlay: Instantiable1[
-    js.UndefOr[
-      /* options */ typingsSlinky.amapJsApi.AMap.PathOverlay.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
+    /* options */ js.UndefOr[
+      typingsSlinky.amapJsApi.AMap.PathOverlay.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
     ], 
     typingsSlinky.amapJsApi.AMap.PathOverlay[js.Object]
   ] = js.native
   var Pixel: Instantiable3[
     /* x */ Double, 
     /* y */ Double, 
-    js.UndefOr[/* round */ Boolean], 
+    /* round */ js.UndefOr[Boolean], 
     typingsSlinky.amapJsApi.AMap.Pixel
   ] = js.native
   val Polygon: Instantiable1[
-    js.UndefOr[
-      /* options */ typingsSlinky.amapJsApi.AMap.Polygon.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
+    /* options */ js.UndefOr[
+      typingsSlinky.amapJsApi.AMap.Polygon.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
     ], 
     typingsSlinky.amapJsApi.AMap.Polygon[js.Object]
   ] = js.native
   val Polyline: Instantiable1[
-    js.UndefOr[
+    /* options */ js.UndefOr[
       (Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]) | (typingsSlinky.amapJsApi.AMap.Polyline.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any])
     ], 
     typingsSlinky.amapJsApi.AMap.Polyline[js.Object]
   ] = js.native
   val Rectangle: Instantiable1[
-    js.UndefOr[
-      /* options */ typingsSlinky.amapJsApi.AMap.Rectangle.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
+    /* options */ js.UndefOr[
+      typingsSlinky.amapJsApi.AMap.Rectangle.Options[/* import warning: RewrittenClass.unapply cls was tparam ExtraData */ js.Any]
     ], 
     typingsSlinky.amapJsApi.AMap.Rectangle[js.Object]
   ] = js.native
   val ShapeOverlay: Instantiable0[typingsSlinky.amapJsApi.AMap.ShapeOverlay[js.Object]] = js.native
   var Size: Instantiable2[/* width */ Double, /* height */ Double, typingsSlinky.amapJsApi.AMap.Size] = js.native
   val Text: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.Text.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.Text.Options], 
     typingsSlinky.amapJsApi.AMap.Text[js.Object]
   ] = js.native
   val TileLayer: TypeofTileLayer with (Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.TileLayer.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.TileLayer.Options], 
     typingsSlinky.amapJsApi.AMap.TileLayer
   ]) = js.native
   val Util: TypeofUtil = js.native
   var VideoLayer: Instantiable0[typingsSlinky.amapJsApi.AMap.VideoLayer] = js.native
   val View2D: Instantiable1[
-    js.UndefOr[/* options */ typingsSlinky.amapJsApi.AMap.View2D.Options], 
+    /* options */ js.UndefOr[typingsSlinky.amapJsApi.AMap.View2D.Options], 
     typingsSlinky.amapJsApi.AMap.View2D
   ] = js.native
   val convertFrom: TypeofconvertFrom = js.native

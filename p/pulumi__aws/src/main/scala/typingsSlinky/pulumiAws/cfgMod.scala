@@ -52,6 +52,7 @@ object cfgMod extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: ConfigurationAggregatorArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: ConfigurationAggregatorArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -149,8 +150,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.aggregateAuthorizationMod.AggregateAuthorization = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.aggregateAuthorizationMod.AggregateAuthorization = js.native
     def get(name: String, id: Input[ID], state: AggregateAuthorizationState): typingsSlinky.pulumiAws.aggregateAuthorizationMod.AggregateAuthorization = js.native
     def get(name: String, id: Input[ID], state: AggregateAuthorizationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.aggregateAuthorizationMod.AggregateAuthorization = js.native
     /**
@@ -170,8 +173,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.configurationAggregatorMod.ConfigurationAggregator = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.configurationAggregatorMod.ConfigurationAggregator = js.native
     def get(name: String, id: Input[ID], state: ConfigurationAggregatorState): typingsSlinky.pulumiAws.configurationAggregatorMod.ConfigurationAggregator = js.native
     def get(name: String, id: Input[ID], state: ConfigurationAggregatorState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.configurationAggregatorMod.ConfigurationAggregator = js.native
     /**
@@ -191,8 +196,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.deliveryChannelMod.DeliveryChannel = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.deliveryChannelMod.DeliveryChannel = js.native
     def get(name: String, id: Input[ID], state: DeliveryChannelState): typingsSlinky.pulumiAws.deliveryChannelMod.DeliveryChannel = js.native
     def get(name: String, id: Input[ID], state: DeliveryChannelState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.deliveryChannelMod.DeliveryChannel = js.native
     /**
@@ -212,8 +219,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.organizationCustomRuleMod.OrganizationCustomRule = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.organizationCustomRuleMod.OrganizationCustomRule = js.native
     def get(name: String, id: Input[ID], state: OrganizationCustomRuleState): typingsSlinky.pulumiAws.organizationCustomRuleMod.OrganizationCustomRule = js.native
     def get(name: String, id: Input[ID], state: OrganizationCustomRuleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.organizationCustomRuleMod.OrganizationCustomRule = js.native
     /**
@@ -233,8 +242,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.organizationManagedRuleMod.OrganizationManagedRule = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.organizationManagedRuleMod.OrganizationManagedRule = js.native
     def get(name: String, id: Input[ID], state: OrganizationManagedRuleState): typingsSlinky.pulumiAws.organizationManagedRuleMod.OrganizationManagedRule = js.native
     def get(name: String, id: Input[ID], state: OrganizationManagedRuleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.organizationManagedRuleMod.OrganizationManagedRule = js.native
     /**
@@ -254,8 +265,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.recorderMod.Recorder = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.recorderMod.Recorder = js.native
     def get(name: String, id: Input[ID], state: RecorderState): typingsSlinky.pulumiAws.recorderMod.Recorder = js.native
     def get(name: String, id: Input[ID], state: RecorderState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.recorderMod.Recorder = js.native
     /**
@@ -275,8 +288,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.recorderStatusMod.RecorderStatus = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.recorderStatusMod.RecorderStatus = js.native
     def get(name: String, id: Input[ID], state: RecorderStatusState): typingsSlinky.pulumiAws.recorderStatusMod.RecorderStatus = js.native
     def get(name: String, id: Input[ID], state: RecorderStatusState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.recorderStatusMod.RecorderStatus = js.native
     /**
@@ -296,8 +311,10 @@ object cfgMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.ruleMod.Rule = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.ruleMod.Rule = js.native
     def get(name: String, id: Input[ID], state: RuleState): typingsSlinky.pulumiAws.ruleMod.Rule = js.native
     def get(name: String, id: Input[ID], state: RuleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.ruleMod.Rule = js.native
     /**

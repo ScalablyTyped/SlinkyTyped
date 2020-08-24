@@ -26,17 +26,14 @@ object RefreshLoadListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnLoadMore(value: typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadMore")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnRefresh(value: typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnLoadMore(value: typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout => Unit): Self = this.set("onLoadMore", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnRefresh(value: typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout => Unit): Self = this.set("onRefresh", js.Any.fromFunction1(value))
   }
   
 }

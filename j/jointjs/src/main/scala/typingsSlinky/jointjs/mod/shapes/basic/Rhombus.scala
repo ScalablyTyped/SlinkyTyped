@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Rhombus () extends Element {
   def this(attributes: GenericAttributes[PathSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
   def this(attributes: GenericAttributes[PathSelectors], opt: StringDictionary[js.Any]) = this()
 }
 

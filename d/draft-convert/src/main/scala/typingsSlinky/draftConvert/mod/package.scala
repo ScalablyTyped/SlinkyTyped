@@ -12,6 +12,6 @@ package object mod {
     - typingsSlinky.draftConvert.anon.Empty
     - typingsSlinky.draftConvert.anon.Element
   */
-  type Tag = typingsSlinky.draftConvert.mod._Tag | slinky.core.TagMod[scala.Any]
+  type Tag = typingsSlinky.draftConvert.mod._Tag | slinky.core.facade.ReactElement
   type htmlConverter = js.Function1[/* html */ java.lang.String, typingsSlinky.draftJs.mod.ContentState]
 }

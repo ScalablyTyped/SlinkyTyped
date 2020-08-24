@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CloudIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CloudIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CloudIcon")
   @js.native
   object component extends js.Object
   

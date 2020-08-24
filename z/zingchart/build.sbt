@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "zingchart"
-version := "2.8-dt-20200117Z-84e422"
-scalaVersion := "2.13.2"
+version := "2.8-dt-20200117Z-226d4a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

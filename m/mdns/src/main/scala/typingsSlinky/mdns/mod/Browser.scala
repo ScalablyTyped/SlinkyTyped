@@ -3,7 +3,7 @@ package typingsSlinky.mdns.mod
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mdns.mdnsStrings.serviceDown
 import typingsSlinky.mdns.mdnsStrings.serviceUp
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

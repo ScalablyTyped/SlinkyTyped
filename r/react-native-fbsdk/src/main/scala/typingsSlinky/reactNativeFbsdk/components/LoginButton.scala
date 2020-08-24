@@ -34,6 +34,8 @@ object LoginButton {
     @scala.inline
     def onLogoutFinished(value: () => Unit): this.type = set("onLogoutFinished", js.Any.fromFunction0(value))
     @scala.inline
+    def permissionsVarargs(value: Permissions*): this.type = set("permissions", js.Array(value :_*))
+    @scala.inline
     def permissions(value: js.Array[Permissions]): this.type = set("permissions", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: ViewStyle): this.type = set("style", value.asInstanceOf[js.Any])

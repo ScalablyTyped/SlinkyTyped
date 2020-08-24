@@ -4,20 +4,19 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Styles.MuiTheme
 import typingsSlinky.materialUi.MaterialUI.Styles.MuiThemeProviderProps
-import typingsSlinky.materialUi.muiThemeProviderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MuiThemeProvider {
-  @JSImport("material-ui/styles/MuiThemeProvider", JSImport.Default)
+  @JSImport("material-ui/styles", "MuiThemeProvider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.stylesMod.MuiThemeProvider] {
     @scala.inline
     def muiTheme(value: MuiTheme): this.type = set("muiTheme", value.asInstanceOf[js.Any])
   }

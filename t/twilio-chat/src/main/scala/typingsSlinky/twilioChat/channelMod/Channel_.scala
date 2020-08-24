@@ -5,6 +5,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.twilioChat.channelMod.Channel.LastMessage
 import typingsSlinky.twilioChat.channelMod.Channel.NotificationLevel
 import typingsSlinky.twilioChat.channelMod.Channel.SendMediaOptions
+import typingsSlinky.twilioChat.channelMod.Channel.State
 import typingsSlinky.twilioChat.channelMod.Channel.Status
 import typingsSlinky.twilioChat.channelMod.Channel.Type
 import typingsSlinky.twilioChat.channelsMod.Channels.DataSource
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation._
 
 /**
   * @classdesc A Channel represents a remote channel of communication between multiple Programmable Chat Clients
-  * @property {Object} attributes - The Channel's custom attributes
+  * @property {any} attributes - The Channel's custom attributes
   * @property {String} createdBy - The identity of the User that created this Channel
   * @property {Date} dateCreated - The Date this Channel was created
   * @property {Date} dateUpdated - The Date this Channel was last updated
@@ -28,6 +29,7 @@ import scala.scalajs.js.annotation._
   * @property {Channel#LastMessage} lastMessage - Last Message sent to this Channel
   * @property {Channel#NotificationLevel} notificationLevel - User Notification level for this Channel
   * @property {String} sid - The Channel's unique system identifier
+  * @property {Channel#State} state - The Channel's state
   * @property {Channel#Status} status - The Channel's status
   * @property {Channel#Type} type - The Channel's type
   * @property {String} uniqueName - The Channel's unique name (tag)
@@ -54,14 +56,14 @@ class Channel_ protected () extends EventEmitter {
   /**
     * The update reason for <code>updated</code> event emitted on Channel
     * @typedef {('attributes' | 'createdBy' | 'dateCreated' | 'dateUpdated' |
-    'friendlyName' | 'lastConsumedMessageIndex' | 'status' | 'uniqueName' | 'lastMessage' |
+    'friendlyName' | 'lastConsumedMessageIndex' | 'state' | 'status' | 'uniqueName' | 'lastMessage' |
     'notificationLevel' )} Channel#UpdateReason
     */
   /**
     * The status of the Channel, relative to the Client: whether the Channel
-    * is <code>known</code> to local Client, Client is <code>invited</code> to or
+    * is <code>notParticipating</code> to local Client, Client is <code>invited</code> to or
     * is <code>joined</code> to this Channel
-    * @typedef {('unknown' | 'known' | 'invited' | 'joined')} Channel#Status
+    * @typedef {('unknown' | 'notParticipating' | 'invited' | 'joined')} Channel#Status
     */
   /**
     * The type of Channel (<code>public</code> or <code>private</code>).
@@ -73,11 +75,18 @@ class Channel_ protected () extends EventEmitter {
     * where <code>default</code> defers to global Service push configuration.
     * @typedef {('default' | 'muted')} Channel#NotificationLevel
     */
+  /**
+    * The Channel's state. Set to undefined if the channel is not a conversation.
+    * @typedef {Object | undefined} Channel#State
+    * @property {('active' | 'inactive' | 'closed')} current - the current state
+    * @property {Date} dateUpdated - date at which the latest channel state update happened
+    */
   def this(services: ChannelServices, descriptor: ChannelDescriptor, sid: String) = this()
   /**
     * @private
     */
   var _onMessageAdded: js.Any = js.native
+  var channelState: js.Any = js.native
   var entity: js.Any = js.native
   var entityName: js.Any = js.native
   var entityPromise: js.Any = js.native
@@ -86,7 +95,6 @@ class Channel_ protected () extends EventEmitter {
   var messagesEntity: js.Any = js.native
   var services: js.Any = js.native
   val sid: String = js.native
-  var state: js.Any = js.native
   var statusSource: js.Any = js.native
   /**
     * Set channel status
@@ -103,7 +111,7 @@ class Channel_ protected () extends EventEmitter {
     * The Channel's last message's information.
     * @typedef {Object} Channel#LastMessage
     * @property {Number} index - Message's index
-    * @property {Date} timestamp - Message's creation timestamp
+    * @property {Date} dateCreated - Message's creation date
     */
   /**
     * Load and Subscribe to this Channel and do not subscribe to its Members and Messages.
@@ -205,7 +213,11 @@ class Channel_ protected () extends EventEmitter {
     * @returns {Promise<Paginator<Message>>} page of messages
     */
   def getMessages(): js.Promise[Paginator[Message]] = js.native
+  def getMessages(pageSize: js.UndefOr[scala.Nothing], anchor: js.UndefOr[scala.Nothing], direction: String): js.Promise[Paginator[Message]] = js.native
+  def getMessages(pageSize: js.UndefOr[scala.Nothing], anchor: Double): js.Promise[Paginator[Message]] = js.native
+  def getMessages(pageSize: js.UndefOr[scala.Nothing], anchor: Double, direction: String): js.Promise[Paginator[Message]] = js.native
   def getMessages(pageSize: Double): js.Promise[Paginator[Message]] = js.native
+  def getMessages(pageSize: Double, anchor: js.UndefOr[scala.Nothing], direction: String): js.Promise[Paginator[Message]] = js.native
   def getMessages(pageSize: Double, anchor: Double): js.Promise[Paginator[Message]] = js.native
   def getMessages(pageSize: Double, anchor: Double, direction: String): js.Promise[Paginator[Message]] = js.native
   /**
@@ -268,15 +280,15 @@ class Channel_ protected () extends EventEmitter {
     * Send a Message in the Channel.
     * @param {String | FormData | Channel#SendMediaOptions} message - The message body for text message,
     * FormData or MediaOptions for media content. Sending FormData supported only with browser engine
-    * @param {Object} messageAttributes - attributes for the message
+    * @param {any} messageAttributes - attributes for the message
     * @returns {Promise<number|Error|SessionError>} new Message's index in the Channel's messages list
     */
   def sendMessage(message: String): js.Promise[Double] = js.native
-  def sendMessage(message: String, messageAttributes: js.Object): js.Promise[Double] = js.native
+  def sendMessage(message: String, messageAttributes: js.Any): js.Promise[Double] = js.native
   def sendMessage(message: FormData): js.Promise[Double] = js.native
-  def sendMessage(message: FormData, messageAttributes: js.Object): js.Promise[Double] = js.native
+  def sendMessage(message: FormData, messageAttributes: js.Any): js.Promise[Double] = js.native
   def sendMessage(message: SendMediaOptions): js.Promise[Double] = js.native
-  def sendMessage(message: SendMediaOptions, messageAttributes: js.Object): js.Promise[Double] = js.native
+  def sendMessage(message: SendMediaOptions, messageAttributes: js.Any): js.Promise[Double] = js.native
   /**
     * Set last consumed Channel's Message index to last known Message's index in this Channel.
     * @returns {Promise<number|SessionError>} resulting unread messages count in the channel
@@ -293,6 +305,7 @@ class Channel_ protected () extends EventEmitter {
     * @returns {Promise<void|Error|SessionError>}
     */
   def setUserNotificationLevel(notificationLevel: NotificationLevel): js.Promise[Unit] = js.native
+  def state: State = js.native
   def status: Status = js.native
   def `type`: Type = js.native
   /**
@@ -304,10 +317,10 @@ class Channel_ protected () extends EventEmitter {
   def uniqueName: String = js.native
   /**
     * Update the Channel's attributes.
-    * @param {Object} attributes - The new attributes object
+    * @param {any} attributes new attributes for Channel.
     * @returns {Promise<Channel|Error|SessionError>}
     */
-  def updateAttributes(attributes: js.Object): js.Promise[this.type] = js.native
+  def updateAttributes(attributes: js.Any): js.Promise[this.type] = js.native
   /**
     * Update the Channel's friendlyName.
     * @param {String} name - The new Channel friendlyName

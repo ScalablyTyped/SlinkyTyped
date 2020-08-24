@@ -2,8 +2,6 @@ package typingsSlinky.reactLeaflet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.leaflet.mod.Marker_
-import typingsSlinky.reactLeaflet.mod.MarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +13,11 @@ object Marker {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: MarkerProps, E <: Marker_[js.Any]] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.Marker[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.Marker[P, E]]
   
-  def apply[P <: MarkerProps, E <: Marker_[js.Any]](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: MarkerProps, E <: Marker_[js.Any]](companion: Marker.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeaflet.mod.MarkerProps */ P, /* <: typingsSlinky.leaflet.mod.Marker_[js.Any] */ E](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeaflet.mod.MarkerProps */ P, /* <: typingsSlinky.leaflet.mod.Marker_[js.Any] */ E](companion: Marker.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
 }
 

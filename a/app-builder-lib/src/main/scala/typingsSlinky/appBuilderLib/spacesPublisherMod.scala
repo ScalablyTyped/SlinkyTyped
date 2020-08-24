@@ -13,6 +13,8 @@ object spacesPublisherMod extends js.Object {
   @js.native
   trait SpacesPublisher extends BaseS3Publisher {
     val info: js.Any = js.native
+    @JSName("providerName")
+    val providerName_FSpacesPublisher: /* "Spaces" */ String = js.native
   }
   
   @js.native

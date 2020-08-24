@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antvG2.mod.AxisGrid
 import typingsSlinky.antvG2.mod.AxisLabel
+import typingsSlinky.antvG2.mod.AxisTitle
 import typingsSlinky.antvG2.mod.Styles.tickLine
 import typingsSlinky.bizcharts.mod.AxisProps
 import typingsSlinky.bizcharts.mod.PositionType
@@ -47,9 +48,7 @@ object Axis {
     @scala.inline
     def tickLineNull: this.type = set("tickLine", null)
     @scala.inline
-    def title(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify G2.AxisTile */ js.Any) | Boolean
-    ): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: AxisTitle | Boolean): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titleNull: this.type = set("title", null)
     @scala.inline

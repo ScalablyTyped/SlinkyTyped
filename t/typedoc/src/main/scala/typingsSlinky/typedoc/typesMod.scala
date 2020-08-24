@@ -48,6 +48,10 @@ object typesMod extends js.Object {
     extends typingsSlinky.typedoc.predicateMod.PredicateConverter
   
   @js.native
+  class QueryConverter ()
+    extends typingsSlinky.typedoc.queryMod.QueryConverter
+  
+  @js.native
   class ReferenceConverter ()
     extends typingsSlinky.typedoc.typesReferenceMod.ReferenceConverter
   

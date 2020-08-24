@@ -17,7 +17,7 @@ object ToastProvider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToastNotifications.mod.ToastProvider] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def autoDismiss(value: Boolean | Double): this.type = set("autoDismiss", value.asInstanceOf[js.Any])
     @scala.inline

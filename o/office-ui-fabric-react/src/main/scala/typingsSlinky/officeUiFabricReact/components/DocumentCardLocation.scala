@@ -9,7 +9,6 @@ import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentC
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationProps
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationStyles
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -26,7 +25,10 @@ object DocumentCardLocation {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.documentCardLocationBaseMod.DocumentCardLocationBase
+        ] {
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline

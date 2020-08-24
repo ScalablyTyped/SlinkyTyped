@@ -29,29 +29,18 @@ object CLASS {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCLASS(value: class_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CLASS")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRESERVED(value: reserved_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RESERVED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCLASS(value: class_): Self = this.set("CLASS", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSTANDARD(value: standard_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("STANDARD")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRESERVED(value: reserved_): Self = this.set("RESERVED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVENDOR(value: vendor_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VENDOR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSTANDARD(value: standard_): Self = this.set("STANDARD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVENDOR(value: vendor_): Self = this.set("VENDOR", value.asInstanceOf[js.Any])
   }
   
 }

@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait piePointObject extends basePointObject {
   /** @name piePointObject.percent */
-  var percent: String | Double | js.Date
+  var percent: js.UndefOr[String | Double | js.Date] = js.native
   /** @name piePointObject.hide() */
-  def hide(): Unit
+  def hide(): Unit = js.native
   /** @name piePointObject.isVisible() */
-  def isVisible(): Boolean
+  def isVisible(): Boolean = js.native
   /** @name piePointObject.show() */
-  def show(): Unit
+  def show(): Unit = js.native
 }
 
 object piePointObject {
@@ -20,8 +21,6 @@ object piePointObject {
   def apply(
     clearHover: () => Unit,
     clearSelection: () => Unit,
-    data: js.Any,
-    fullState: Double,
     getColor: () => String,
     getLabel: () => baseLabelObject with js.Array[baseLabelObject],
     hide: () => Unit,
@@ -30,17 +29,37 @@ object piePointObject {
     isHovered: () => Boolean,
     isSelected: () => Boolean,
     isVisible: () => Boolean,
-    originalArgument: String | Double | js.Date,
-    originalValue: String | Double | js.Date,
-    percent: String | Double | js.Date,
     select: () => Unit,
-    series: js.Any,
     show: () => Unit,
-    showTooltip: () => Unit,
-    tag: js.Any
+    showTooltip: () => Unit
   ): piePointObject = {
-    val __obj = js.Dynamic.literal(clearHover = js.Any.fromFunction0(clearHover), clearSelection = js.Any.fromFunction0(clearSelection), data = data.asInstanceOf[js.Any], fullState = fullState.asInstanceOf[js.Any], getColor = js.Any.fromFunction0(getColor), getLabel = js.Any.fromFunction0(getLabel), hide = js.Any.fromFunction0(hide), hideTooltip = js.Any.fromFunction0(hideTooltip), hover = js.Any.fromFunction0(hover), isHovered = js.Any.fromFunction0(isHovered), isSelected = js.Any.fromFunction0(isSelected), isVisible = js.Any.fromFunction0(isVisible), originalArgument = originalArgument.asInstanceOf[js.Any], originalValue = originalValue.asInstanceOf[js.Any], percent = percent.asInstanceOf[js.Any], select = js.Any.fromFunction0(select), series = series.asInstanceOf[js.Any], show = js.Any.fromFunction0(show), showTooltip = js.Any.fromFunction0(showTooltip), tag = tag.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(clearHover = js.Any.fromFunction0(clearHover), clearSelection = js.Any.fromFunction0(clearSelection), getColor = js.Any.fromFunction0(getColor), getLabel = js.Any.fromFunction0(getLabel), hide = js.Any.fromFunction0(hide), hideTooltip = js.Any.fromFunction0(hideTooltip), hover = js.Any.fromFunction0(hover), isHovered = js.Any.fromFunction0(isHovered), isSelected = js.Any.fromFunction0(isSelected), isVisible = js.Any.fromFunction0(isVisible), select = js.Any.fromFunction0(select), show = js.Any.fromFunction0(show), showTooltip = js.Any.fromFunction0(showTooltip))
     __obj.asInstanceOf[piePointObject]
   }
+  @scala.inline
+  implicit class piePointObjectOps[Self <: piePointObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHide(value: () => Unit): Self = this.set("hide", js.Any.fromFunction0(value))
+    @scala.inline
+    def setIsVisible(value: () => Boolean): Self = this.set("isVisible", js.Any.fromFunction0(value))
+    @scala.inline
+    def setShow(value: () => Unit): Self = this.set("show", js.Any.fromFunction0(value))
+    @scala.inline
+    def setPercentDate(value: js.Date): Self = this.set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPercent(value: String | Double | js.Date): Self = this.set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePercent: Self = this.set("percent", js.undefined)
+  }
+  
 }
 

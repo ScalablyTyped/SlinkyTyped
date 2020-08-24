@@ -13,20 +13,11 @@ object Util extends js.Object {
   class EventSource protected ()
     extends typingsSlinky.dropboxjs.Dropbox.Util.EventSource {
     def this(options: Cancelable) = this()
-    /* CompleteClass */
-    override def addListener(listener: js.Function1[/* event */ js.Any, Unit]): typingsSlinky.dropboxjs.Dropbox.Util.EventSource = js.native
-    /* CompleteClass */
-    override def dispatch(event: js.Object): Boolean = js.native
-    /* CompleteClass */
-    override def removeListener(listener: js.Function1[/* event */ js.Any, Unit]): typingsSlinky.dropboxjs.Dropbox.Util.EventSource = js.native
   }
   
   @js.native
   class Oauth ()
-    extends typingsSlinky.dropboxjs.Dropbox.Util.Oauth {
-    /* CompleteClass */
-    override def checkAuthStateParam(stateParam: String): Boolean = js.native
-  }
+    extends typingsSlinky.dropboxjs.Dropbox.Util.Oauth
   
   @js.native
   class Xhr protected ()

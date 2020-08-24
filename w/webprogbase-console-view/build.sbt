@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "webprogbase-console-view"
-version := "1.2-dt-20181002Z-4adff0"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20181002Z-6ae6d4"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

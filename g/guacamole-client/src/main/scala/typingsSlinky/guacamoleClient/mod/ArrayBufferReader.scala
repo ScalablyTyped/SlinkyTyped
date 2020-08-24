@@ -1,0 +1,16 @@
+package typingsSlinky.guacamoleClient.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("guacamole-client", "ArrayBufferReader")
+@js.native
+class ArrayBufferReader protected ()
+  extends typingsSlinky.guacamoleClient.arrayBufferReaderMod.ArrayBufferReader {
+  /**
+    * @param stream The stream that data will be read from.
+    */
+  def this(stream: typingsSlinky.guacamoleClient.inputStreamMod.InputStream) = this()
+}
+

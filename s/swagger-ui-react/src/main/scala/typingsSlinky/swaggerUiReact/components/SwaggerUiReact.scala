@@ -31,6 +31,8 @@ object SwaggerUiReact {
     @scala.inline
     def onComplete(value: /* system */ System => Unit): this.type = set("onComplete", js.Any.fromFunction1(value))
     @scala.inline
+    def pluginsVarargs(value: Plugin*): this.type = set("plugins", js.Array(value :_*))
+    @scala.inline
     def plugins(value: js.Array[Plugin]): this.type = set("plugins", value.asInstanceOf[js.Any])
     @scala.inline
     def requestInterceptor(value: /* req */ Request => Request | js.Promise[Request]): this.type = set("requestInterceptor", js.Any.fromFunction1(value))
@@ -38,6 +40,10 @@ object SwaggerUiReact {
     def responseInterceptor(value: /* res */ Response => Response | js.Promise[Response]): this.type = set("responseInterceptor", js.Any.fromFunction1(value))
     @scala.inline
     def spec(value: js.Object): this.type = set("spec", value.asInstanceOf[js.Any])
+    @scala.inline
+    def supportedSubmitMethodsVarargs(value: String*): this.type = set("supportedSubmitMethods", js.Array(value :_*))
+    @scala.inline
+    def supportedSubmitMethods(value: js.Array[String]): this.type = set("supportedSubmitMethods", value.asInstanceOf[js.Any])
     @scala.inline
     def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
   }

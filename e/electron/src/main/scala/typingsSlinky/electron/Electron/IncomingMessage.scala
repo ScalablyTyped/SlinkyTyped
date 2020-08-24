@@ -5,13 +5,15 @@ import typingsSlinky.electron.electronStrings.data
 import typingsSlinky.electron.electronStrings.end
 import typingsSlinky.electron.electronStrings.error
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IncomingMessage extends EventEmitter {
-  var headers: js.Any = js.native
+  var headers: Record[String, js.Array[String]] = js.native
   var httpVersion: String = js.native
   var httpVersionMajor: Double = js.native
   var httpVersionMinor: Double = js.native
@@ -32,7 +34,7 @@ trait IncomingMessage extends EventEmitter {
   @JSName("on")
   def on_aborted(event: aborted, listener: js.Function): this.type = js.native
   /**
-    * The data event is the usual method of transferring response data into
+    * The `data` event is the usual method of transferring response data into
     * applicative code.
     */
   @JSName("on")
@@ -43,10 +45,13 @@ trait IncomingMessage extends EventEmitter {
   @JSName("on")
   def on_end(event: end, listener: js.Function): this.type = js.native
   /**
-    * error Error - Typically holds an error string identifying failure root cause.
+    * Returns:
+    *
+    * `error` Error - Typically holds an error string identifying failure root cause.
+    *
     * Emitted when an error was encountered while streaming response data events. For
     * instance, if the server closes the underlying while the response is still
-    * streaming, an error event will be emitted on the response object and a close
+    * streaming, an `error` event will be emitted on the response object and a `close`
     * event will subsequently follow on the request object.
     */
   @JSName("on")

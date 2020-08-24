@@ -10,21 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientAxisTitle")
 @js.native
 class ASPxClientAxisTitle ()
-  extends typingsSlinky.devexpressWeb.ASPxClientAxisTitle {
-  /**
-    * Gets the axis to which the axis title belongs.
-    */
-  /* CompleteClass */
-  override var axis: typingsSlinky.devexpressWeb.ASPxClientAxisBase = js.native
-  /**
-    * Gets the chart that owns the current chart element.
-    */
-  /* CompleteClass */
-  override var chart: typingsSlinky.devexpressWeb.ASPxClientWebChart = js.native
-  /**
-    * Gets the text of the axis title.
-    */
-  /* CompleteClass */
-  override var text: String = js.native
-}
+  extends typingsSlinky.devexpressWeb.ASPxClientAxisTitle
 

@@ -21,9 +21,13 @@ object MaterialUiDatatables {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def columnsVarargs(value: Column*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[Column]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -72,6 +76,8 @@ object MaterialUiDatatables {
     def rowSize(value: Double): this.type = set("rowSize", value.asInstanceOf[js.Any])
     @scala.inline
     def rowSizeLabel(value: String): this.type = set("rowSizeLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSizeListVarargs(value: Double*): this.type = set("rowSizeList", js.Array(value :_*))
     @scala.inline
     def rowSizeList(value: js.Array[Double]): this.type = set("rowSizeList", value.asInstanceOf[js.Any])
     @scala.inline

@@ -52,232 +52,97 @@ trait CellularProperties[M /* <: ManagedObject */] extends CellularBase {
 
 object CellularProperties {
   @scala.inline
-  def apply[M](): CellularProperties[M] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M](): CellularProperties[M] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CellularProperties[M]]
   }
   @scala.inline
-  implicit class CellularPropertiesOps[Self[m] <: CellularProperties[m], M] (val x: Self[M]) extends AnyVal {
+  implicit class CellularPropertiesOps[Self <: CellularProperties[_], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M] (val x: Self with CellularProperties[M]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[M] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[M] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActivationType(value: String): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutActivationType: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationType")(js.undefined)
-        ret
-    }
+    def setActivationType(value: String): Self = this.set("ActivationType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAllowRoaming(value: Boolean): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowRoaming")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteActivationType: Self = this.set("ActivationType", js.undefined)
     @scala.inline
-    def withoutAllowRoaming: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowRoaming")(js.undefined)
-        ret
-    }
+    def setAllowRoaming(value: Boolean): Self = this.set("AllowRoaming", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAutoConnect(value: Boolean | ManagedBoolean): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAllowRoaming: Self = this.set("AllowRoaming", js.undefined)
     @scala.inline
-    def withoutAutoConnect: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(js.undefined)
-        ret
-    }
+    def setAutoConnect(value: Boolean | ManagedBoolean): Self = this.set("AutoConnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCarrier(value: String | ManagedDOMString): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Carrier")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoConnect: Self = this.set("AutoConnect", js.undefined)
     @scala.inline
-    def withoutCarrier: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Carrier")(js.undefined)
-        ret
-    }
+    def setCarrier(value: String | ManagedDOMString): Self = this.set("Carrier", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFamily(value: CDMA | GSM): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCarrier: Self = this.set("Carrier", js.undefined)
     @scala.inline
-    def withoutFamily: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(js.undefined)
-        ret
-    }
+    def setFamily(value: CDMA | GSM): Self = this.set("Family", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFirmwareRevision(value: String): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirmwareRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFamily: Self = this.set("Family", js.undefined)
     @scala.inline
-    def withoutFirmwareRevision: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirmwareRevision")(js.undefined)
-        ret
-    }
+    def setFirmwareRevision(value: String): Self = this.set("FirmwareRevision", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFoundNetworks(value: js.Array[FoundNetworkProperties]): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FoundNetworks")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFirmwareRevision: Self = this.set("FirmwareRevision", js.undefined)
     @scala.inline
-    def withoutFoundNetworks: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FoundNetworks")(js.undefined)
-        ret
-    }
+    def setFoundNetworksVarargs(value: FoundNetworkProperties*): Self = this.set("FoundNetworks", js.Array(value :_*))
     @scala.inline
-    def withHardwareRevision(value: String): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HardwareRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFoundNetworks(value: js.Array[FoundNetworkProperties]): Self = this.set("FoundNetworks", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHardwareRevision: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HardwareRevision")(js.undefined)
-        ret
-    }
+    def deleteFoundNetworks: Self = this.set("FoundNetworks", js.undefined)
     @scala.inline
-    def withHomeProvider(value: CellularProviderProperties): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHardwareRevision(value: String): Self = this.set("HardwareRevision", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHomeProvider: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeProvider")(js.undefined)
-        ret
-    }
+    def deleteHardwareRevision: Self = this.set("HardwareRevision", js.undefined)
     @scala.inline
-    def withMAnufacturer(value: String): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAnufacturer")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHomeProvider(value: CellularProviderProperties): Self = this.set("HomeProvider", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMAnufacturer: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAnufacturer")(js.undefined)
-        ret
-    }
+    def deleteHomeProvider: Self = this.set("HomeProvider", js.undefined)
     @scala.inline
-    def withModelID(value: String): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAnufacturer(value: String): Self = this.set("MAnufacturer", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutModelID: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelID")(js.undefined)
-        ret
-    }
+    def deleteMAnufacturer: Self = this.set("MAnufacturer", js.undefined)
     @scala.inline
-    def withPRLVersion(value: integer): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PRLVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setModelID(value: String): Self = this.set("ModelID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPRLVersion: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PRLVersion")(js.undefined)
-        ret
-    }
+    def deleteModelID: Self = this.set("ModelID", js.undefined)
     @scala.inline
-    def withPaymentPortal(value: PaymentPortal | PaymentPortalPost): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentPortal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPRLVersion(value: integer): Self = this.set("PRLVersion", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPaymentPortal: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentPortal")(js.undefined)
-        ret
-    }
+    def deletePRLVersion: Self = this.set("PRLVersion", js.undefined)
     @scala.inline
-    def withSIMLockStatus(value: SIMLockStatus): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMLockStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPaymentPortal(value: PaymentPortal | PaymentPortalPost): Self = this.set("PaymentPortal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSIMLockStatus: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMLockStatus")(js.undefined)
-        ret
-    }
+    def deletePaymentPortal: Self = this.set("PaymentPortal", js.undefined)
     @scala.inline
-    def withScanning(value: Boolean): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scanning")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSIMLockStatus(value: SIMLockStatus): Self = this.set("SIMLockStatus", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutScanning: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scanning")(js.undefined)
-        ret
-    }
+    def deleteSIMLockStatus: Self = this.set("SIMLockStatus", js.undefined)
     @scala.inline
-    def withServingOperator(value: CellularProviderProperties): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServingOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScanning(value: Boolean): Self = this.set("Scanning", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutServingOperator: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServingOperator")(js.undefined)
-        ret
-    }
+    def deleteScanning: Self = this.set("Scanning", js.undefined)
     @scala.inline
-    def withSupportNetworkScan(value: Boolean): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportNetworkScan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServingOperator(value: CellularProviderProperties): Self = this.set("ServingOperator", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSupportNetworkScan: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportNetworkScan")(js.undefined)
-        ret
-    }
+    def deleteServingOperator: Self = this.set("ServingOperator", js.undefined)
     @scala.inline
-    def withSupportedCarriers(value: js.Array[String]): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedCarriers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSupportNetworkScan(value: Boolean): Self = this.set("SupportNetworkScan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSupportedCarriers: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedCarriers")(js.undefined)
-        ret
-    }
+    def deleteSupportNetworkScan: Self = this.set("SupportNetworkScan", js.undefined)
+    @scala.inline
+    def setSupportedCarriersVarargs(value: String*): Self = this.set("SupportedCarriers", js.Array(value :_*))
+    @scala.inline
+    def setSupportedCarriers(value: js.Array[String]): Self = this.set("SupportedCarriers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSupportedCarriers: Self = this.set("SupportedCarriers", js.undefined)
   }
   
 }

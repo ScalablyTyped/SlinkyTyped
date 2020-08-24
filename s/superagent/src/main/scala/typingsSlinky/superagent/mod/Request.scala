@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.std.Promise
 import typingsSlinky.superagent.anon.ContentType
 import typingsSlinky.superagent.anon.Deadline
 import typingsSlinky.superagent.anon.Passphrase
@@ -19,7 +18,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Request extends Promise[Response] {
+trait Request
+  extends js.Promise[Response] {
   def abort(): Unit = js.native
   def accept(`type`: String): this.type = js.native
   def attach(field: String, file: MultipartValueSingle): this.type = js.native
@@ -68,6 +68,7 @@ trait Request extends Promise[Response] {
   def redirects(n: Double): this.type = js.native
   def responseType(`type`: String): this.type = js.native
   def retry(): this.type = js.native
+  def retry(count: js.UndefOr[scala.Nothing], callback: CallbackHandler): this.type = js.native
   def retry(count: Double): this.type = js.native
   def retry(count: Double, callback: CallbackHandler): this.type = js.native
   def send(): this.type = js.native
@@ -86,9 +87,9 @@ trait Request extends Promise[Response] {
   def unset(field: String): this.type = js.native
   def use(fn: Plugin): this.type = js.native
   def withCredentials(): this.type = js.native
-  def write(data: String): this.type = js.native
-  def write(data: String, encoding: String): this.type = js.native
-  def write(data: Buffer): this.type = js.native
-  def write(data: Buffer, encoding: String): this.type = js.native
+  def write(data: String): Boolean = js.native
+  def write(data: String, encoding: String): Boolean = js.native
+  def write(data: Buffer): Boolean = js.native
+  def write(data: Buffer, encoding: String): Boolean = js.native
 }
 

@@ -54,235 +54,88 @@ object LayoutOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClusterPadding(value: Padding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterPadding")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutClusterPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterPadding")(js.undefined)
-        ret
-    }
+    def setClusterPadding(value: Padding): Self = this.set("clusterPadding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDagre(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dagre")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClusterPadding: Self = this.set("clusterPadding", js.undefined)
     @scala.inline
-    def withoutDagre: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dagre")(js.undefined)
-        ret
-    }
+    def setDagre(value: js.Any): Self = this.set("dagre", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDebugTiming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugTiming")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDagre: Self = this.set("dagre", js.undefined)
     @scala.inline
-    def withoutDebugTiming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugTiming")(js.undefined)
-        ret
-    }
+    def setDebugTiming(value: Boolean): Self = this.set("debugTiming", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEdgeSep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSep")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDebugTiming: Self = this.set("debugTiming", js.undefined)
     @scala.inline
-    def withoutEdgeSep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSep")(js.undefined)
-        ret
-    }
+    def setEdgeSep(value: Double): Self = this.set("edgeSep", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExportElement(value: /* element */ Element => Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportElement")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteEdgeSep: Self = this.set("edgeSep", js.undefined)
     @scala.inline
-    def withoutExportElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportElement")(js.undefined)
-        ret
-    }
+    def setExportElement(value: /* element */ Element => Node): Self = this.set("exportElement", js.Any.fromFunction1(value))
     @scala.inline
-    def withExportLink(value: /* link */ Link => Edge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportLink")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteExportElement: Self = this.set("exportElement", js.undefined)
     @scala.inline
-    def withoutExportLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportLink")(js.undefined)
-        ret
-    }
+    def setExportLink(value: /* link */ Link => Edge): Self = this.set("exportLink", js.Any.fromFunction1(value))
     @scala.inline
-    def withGraphlib(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphlib")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExportLink: Self = this.set("exportLink", js.undefined)
     @scala.inline
-    def withoutGraphlib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphlib")(js.undefined)
-        ret
-    }
+    def setGraphlib(value: js.Any): Self = this.set("graphlib", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMarginX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGraphlib: Self = this.set("graphlib", js.undefined)
     @scala.inline
-    def withoutMarginX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginX")(js.undefined)
-        ret
-    }
+    def setMarginX(value: Double): Self = this.set("marginX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMarginY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMarginX: Self = this.set("marginX", js.undefined)
     @scala.inline
-    def withoutMarginY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginY")(js.undefined)
-        ret
-    }
+    def setMarginY(value: Double): Self = this.set("marginY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNodeSep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSep")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMarginY: Self = this.set("marginY", js.undefined)
     @scala.inline
-    def withoutNodeSep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSep")(js.undefined)
-        ret
-    }
+    def setNodeSep(value: Double): Self = this.set("nodeSep", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRankDir(value: TB | BT | LR | RL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankDir")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteNodeSep: Self = this.set("nodeSep", js.undefined)
     @scala.inline
-    def withoutRankDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankDir")(js.undefined)
-        ret
-    }
+    def setRankDir(value: TB | BT | LR | RL): Self = this.set("rankDir", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRankSep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankSep")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRankDir: Self = this.set("rankDir", js.undefined)
     @scala.inline
-    def withoutRankSep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankSep")(js.undefined)
-        ret
-    }
+    def setRankSep(value: Double): Self = this.set("rankSep", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRanker(value: `network-simplex` | `tight-tree` | `longest-path`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ranker")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRankSep: Self = this.set("rankSep", js.undefined)
     @scala.inline
-    def withoutRanker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ranker")(js.undefined)
-        ret
-    }
+    def setRanker(value: `network-simplex` | `tight-tree` | `longest-path`): Self = this.set("ranker", value.asInstanceOf[js.Any])
     @scala.inline
-    def withResizeClusters(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeClusters")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRanker: Self = this.set("ranker", js.undefined)
     @scala.inline
-    def withoutResizeClusters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeClusters")(js.undefined)
-        ret
-    }
+    def setResizeClusters(value: Boolean): Self = this.set("resizeClusters", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetLabelsFunction3(value: (/* link */ Link, /* position */ Point, /* points */ js.Array[Point]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLabels")(js.Any.fromFunction3(value))
-        ret
-    }
+    def deleteResizeClusters: Self = this.set("resizeClusters", js.undefined)
     @scala.inline
-    def withSetLabels(
+    def setSetLabelsFunction3(value: (/* link */ Link, /* position */ Point, /* points */ js.Array[Point]) => Unit): Self = this.set("setLabels", js.Any.fromFunction3(value))
+    @scala.inline
+    def setSetLabels(
       value: Boolean | (js.Function3[/* link */ Link, /* position */ Point, /* points */ js.Array[Point], Unit])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("setLabels", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSetLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLabels")(js.undefined)
-        ret
-    }
+    def deleteSetLabels: Self = this.set("setLabels", js.undefined)
     @scala.inline
-    def withSetLinkVertices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLinkVertices")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetLinkVertices(value: Boolean): Self = this.set("setLinkVertices", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSetLinkVertices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLinkVertices")(js.undefined)
-        ret
-    }
+    def deleteSetLinkVertices: Self = this.set("setLinkVertices", js.undefined)
     @scala.inline
-    def withSetPosition(value: (/* element */ Element, /* position */ BBox) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPosition")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetPosition(value: (/* element */ Element, /* position */ BBox) => Unit): Self = this.set("setPosition", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutSetPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPosition")(js.undefined)
-        ret
-    }
+    def deleteSetPosition: Self = this.set("setPosition", js.undefined)
     @scala.inline
-    def withSetVerticesFunction2(value: (/* link */ Link, /* vertices */ js.Array[Point]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVertices")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetVerticesFunction2(value: (/* link */ Link, /* vertices */ js.Array[Point]) => Unit): Self = this.set("setVertices", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetVertices(value: Boolean | (js.Function2[/* link */ Link, /* vertices */ js.Array[Point], Unit])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVertices")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetVertices(value: Boolean | (js.Function2[/* link */ Link, /* vertices */ js.Array[Point], Unit])): Self = this.set("setVertices", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSetVertices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVertices")(js.undefined)
-        ret
-    }
+    def deleteSetVertices: Self = this.set("setVertices", js.undefined)
   }
   
 }

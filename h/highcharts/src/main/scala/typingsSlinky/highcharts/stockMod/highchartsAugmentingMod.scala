@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.stockMod
 
-import typingsSlinky.highcharts.mod.PlotSeriesDataGroupingOptions
+import typingsSlinky.highcharts.mod.DataGroupingOptionsObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +24,7 @@ object highchartsAugmentingMod extends js.Object {
       *        Chart#redraw.
       */
     def setCompare(): Unit = js.native
+    def setCompare(compare: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
     def setCompare(compare: String): Unit = js.native
     def setCompare(compare: String, redraw: Boolean): Unit = js.native
     /**
@@ -39,10 +40,11 @@ object highchartsAugmentingMod extends js.Object {
       *        Chart#redraw.
       */
     def setDataGrouping(): Unit = js.native
+    def setDataGrouping(dataGrouping: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
     def setDataGrouping(dataGrouping: Boolean): Unit = js.native
     def setDataGrouping(dataGrouping: Boolean, redraw: Boolean): Unit = js.native
-    def setDataGrouping(dataGrouping: PlotSeriesDataGroupingOptions): Unit = js.native
-    def setDataGrouping(dataGrouping: PlotSeriesDataGroupingOptions, redraw: Boolean): Unit = js.native
+    def setDataGrouping(dataGrouping: DataGroupingOptionsObject): Unit = js.native
+    def setDataGrouping(dataGrouping: DataGroupingOptionsObject, redraw: Boolean): Unit = js.native
   }
   
   @js.native

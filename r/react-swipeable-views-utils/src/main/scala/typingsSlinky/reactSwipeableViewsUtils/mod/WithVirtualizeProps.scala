@@ -1,21 +1,22 @@
 package typingsSlinky.reactSwipeableViewsUtils.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactSwipeableViews.mod.OnChangeIndexCallback
 import typingsSlinky.reactSwipeableViews.mod.OnTransitionEndCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WithVirtualizeProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var index: Double
-  var onChangeIndex: OnChangeIndexCallback
-  var onTransitionEnd: js.UndefOr[OnTransitionEndCallback] = js.undefined
-  var overscanSlideAfter: js.UndefOr[Double] = js.undefined
-  var overscanSlideBefore: js.UndefOr[Double] = js.undefined
-  var slideCount: js.UndefOr[Double] = js.undefined
-  var slideRenderer: SlideRendererCallback
+  var children: js.UndefOr[ReactElement] = js.native
+  var index: Double = js.native
+  var onChangeIndex: OnChangeIndexCallback = js.native
+  var onTransitionEnd: js.UndefOr[OnTransitionEndCallback] = js.native
+  var overscanSlideAfter: js.UndefOr[Double] = js.native
+  var overscanSlideBefore: js.UndefOr[Double] = js.native
+  var slideCount: js.UndefOr[Double] = js.native
+  var slideRenderer: SlideRendererCallback = js.native
 }
 
 object WithVirtualizeProps {
@@ -23,20 +24,51 @@ object WithVirtualizeProps {
   def apply(
     index: Double,
     onChangeIndex: (/* index */ Double, /* indexLatest */ Double) => Unit,
-    slideRenderer: /* render */ SlideRenderProps => TagMod[Any],
-    children: TagMod[Any] = null,
-    onTransitionEnd: () => Unit = null,
-    overscanSlideAfter: js.UndefOr[Double] = js.undefined,
-    overscanSlideBefore: js.UndefOr[Double] = js.undefined,
-    slideCount: js.UndefOr[Double] = js.undefined
+    slideRenderer: /* render */ SlideRenderProps => ReactElement
   ): WithVirtualizeProps = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], onChangeIndex = js.Any.fromFunction2(onChangeIndex), slideRenderer = js.Any.fromFunction1(slideRenderer))
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction0(onTransitionEnd))
-    if (!js.isUndefined(overscanSlideAfter)) __obj.updateDynamic("overscanSlideAfter")(overscanSlideAfter.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(overscanSlideBefore)) __obj.updateDynamic("overscanSlideBefore")(overscanSlideBefore.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(slideCount)) __obj.updateDynamic("slideCount")(slideCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WithVirtualizeProps]
   }
+  @scala.inline
+  implicit class WithVirtualizePropsOps[Self <: WithVirtualizeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnChangeIndex(value: (/* index */ Double, /* indexLatest */ Double) => Unit): Self = this.set("onChangeIndex", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSlideRenderer(value: /* render */ SlideRenderProps => ReactElement): Self = this.set("slideRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setOnTransitionEnd(value: () => Unit): Self = this.set("onTransitionEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnTransitionEnd: Self = this.set("onTransitionEnd", js.undefined)
+    @scala.inline
+    def setOverscanSlideAfter(value: Double): Self = this.set("overscanSlideAfter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverscanSlideAfter: Self = this.set("overscanSlideAfter", js.undefined)
+    @scala.inline
+    def setOverscanSlideBefore(value: Double): Self = this.set("overscanSlideBefore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverscanSlideBefore: Self = this.set("overscanSlideBefore", js.undefined)
+    @scala.inline
+    def setSlideCount(value: Double): Self = this.set("slideCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSlideCount: Self = this.set("slideCount", js.undefined)
+  }
+  
 }
 

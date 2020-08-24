@@ -5,32 +5,30 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props
-import typingsSlinky.reactNativeTabView.tabBarIndicatorMod.default
 import typingsSlinky.reactNativeTabView.typesMod.Layout
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
-import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabBarIndicator {
-  @JSImport("react-native-tab-view/lib/typescript/src/TabBarIndicator", JSImport.Default)
+  @JSImport("react-native-tab-view", "TabBarIndicator")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: Route] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeTabView.mod.TabBarIndicator[T]] {
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def styleNull: this.type = set("style", null)
   }
   
-  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: Route](
+  def apply[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](
     getTabWidth: /* index */ Double => Double,
     jumpTo: String => Unit,
     layout: Layout,

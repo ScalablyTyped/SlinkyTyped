@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BufferTimeAfterIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BufferTimeAfterIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BufferTimeAfterIcon")
   @js.native
   object component extends js.Object
   

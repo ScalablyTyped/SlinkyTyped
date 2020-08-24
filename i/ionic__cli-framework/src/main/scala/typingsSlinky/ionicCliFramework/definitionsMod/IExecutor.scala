@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.definitionsMod
 
-import typingsSlinky.node.NodeJS.ProcessEnv
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

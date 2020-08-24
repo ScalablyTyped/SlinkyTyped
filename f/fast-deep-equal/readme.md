@@ -1,7 +1,7 @@
 
 # Scala.js typings for fast-deep-equal
 
-Typings are for version 2.0.1
+Typings are for version 3.1.3
 
 ## Library description:
 Fast deep equal

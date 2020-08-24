@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "hey-listen"
-version := "1.0.8-cd4a44"
-scalaVersion := "2.13.2"
+version := "1.0.8-a2dc61"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

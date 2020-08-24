@@ -46,7 +46,7 @@ package object mod {
   // createEagerFactory: https://github.com/acdlite/recompose/blob/master/docs/API.md#createEagerFactory
   type componentFactory = js.Function2[
     /* props */ js.UndefOr[js.Object], 
-    /* children */ js.UndefOr[slinky.core.TagMod[scala.Any]], 
+    /* children */ js.UndefOr[slinky.core.facade.ReactElement], 
     slinky.core.facade.ReactElement
   ]
   type mapper[TInner, TOutter] = js.Function1[/* input */ TInner, TOutter]

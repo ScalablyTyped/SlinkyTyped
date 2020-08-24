@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Core
 
-import typingsSlinky.winrtUwp.Windows.Media.Core.IMediaStreamDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,24 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.MediaStreamSourceSampleRequest")
 @js.native
 abstract class MediaStreamSourceSampleRequest ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSampleRequest {
-  /** Sets the MediaStreamSample requested by the MediaStreamSource . Applications deliver a MediaStreamSample to the MediaStreamSource by assigning a value to this property. */
-  /* CompleteClass */
-  override var sample: typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSample = js.native
-  /** Gets the IMediaStreamDescriptor interface of the stream for which a MediaStreamSample is being requested. */
-  /* CompleteClass */
-  override var streamDescriptor: IMediaStreamDescriptor = js.native
-  /**
-    * Defers assigning a MediaStreamSample to MediaStreamSourceSampleRequest object.
-    * @return The deferral.
-    */
-  /* CompleteClass */
-  override def getDeferral(): typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSampleRequestDeferral = js.native
-  /**
-    * Provides a status update to the MediaStreamSource while the application is temporarily unable to deliver a requested MediaStreamSample .
-    * @param progress A value between 0 to 100 that indicates the progress towards being able to deliver the requested MediaStreamSample .
-    */
-  /* CompleteClass */
-  override def reportSampleProgress(progress: Double): Unit = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSampleRequest
 

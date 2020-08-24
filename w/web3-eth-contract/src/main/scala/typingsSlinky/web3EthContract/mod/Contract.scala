@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 class Contract protected () extends js.Object {
   def this(jsonInterface: js.Array[AbiItem]) = this()
   def this(jsonInterface: js.Array[AbiItem], address: String) = this()
+  def this(jsonInterface: js.Array[AbiItem], address: js.UndefOr[scala.Nothing], options: ContractOptions) = this()
   def this(jsonInterface: js.Array[AbiItem], address: String, options: ContractOptions) = this()
   var _address: String = js.native
   var _jsonInterface: js.Array[AbiItem] = js.native
@@ -23,6 +24,7 @@ class Contract protected () extends js.Object {
   var defaultCommon: Common = js.native
   var defaultHardfork: hardfork = js.native
   var events: js.Any = js.native
+  var handleRevert: Boolean = js.native
   var methods: js.Any = js.native
   var options: Options = js.native
   var transactionBlockTimeout: Double = js.native

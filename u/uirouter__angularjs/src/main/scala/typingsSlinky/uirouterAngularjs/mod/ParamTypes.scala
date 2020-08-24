@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@uirouter/angularjs", "ParamTypes")
 @js.native
-/** @internalapi */
 class ParamTypes ()
   extends typingsSlinky.uirouterCore.mod.ParamTypes
 

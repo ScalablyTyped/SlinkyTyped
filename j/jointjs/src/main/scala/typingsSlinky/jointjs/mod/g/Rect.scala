@@ -9,8 +9,24 @@ import scala.scalajs.js.annotation._
 class Rect () extends PlainRect {
   def this(r: PlainRect) = this()
   def this(x: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
   def this(x: Double, y: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], width: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, width: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], width: Double) = this()
   def this(x: Double, y: Double, width: Double) = this()
+  def this(
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    width: js.UndefOr[scala.Nothing],
+    height: Double
+  ) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], width: Double, height: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, width: js.UndefOr[scala.Nothing], height: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, width: Double, height: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], width: js.UndefOr[scala.Nothing], height: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], width: Double, height: Double) = this()
+  def this(x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(x: Double, y: Double, width: Double, height: Double) = this()
   def bbox(): Rect = js.native
   def bbox(angle: Double): Rect = js.native
@@ -25,6 +41,7 @@ class Rect () extends PlainRect {
   def corner(): Point = js.native
   def equals(r: PlainRect): Boolean = js.native
   def inflate(): this.type = js.native
+  def inflate(dx: js.UndefOr[scala.Nothing], dy: Double): this.type = js.native
   def inflate(dx: Double): this.type = js.native
   def inflate(dx: Double, dy: Double): this.type = js.native
   def intersect(r: Rect): Rect | Null = js.native
@@ -42,6 +59,7 @@ class Rect () extends PlainRect {
   def moveAndExpand(r: PlainRect): this.type = js.native
   def normalize(): this.type = js.native
   def offset(): this.type = js.native
+  def offset(dx: js.UndefOr[scala.Nothing], dy: Double): this.type = js.native
   def offset(dx: Double): this.type = js.native
   def offset(dx: Double, dy: Double): this.type = js.native
   def offset(p: PlainPoint): this.type = js.native
@@ -65,6 +83,7 @@ class Rect () extends PlainRect {
   def topMiddle(): Point = js.native
   def topRight(): Point = js.native
   def translate(): this.type = js.native
+  def translate(tx: js.UndefOr[scala.Nothing], ty: Double): this.type = js.native
   def translate(tx: Double): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: PlainPoint): this.type = js.native

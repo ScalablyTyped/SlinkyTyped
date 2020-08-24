@@ -17,6 +17,7 @@ trait Schedule extends js.Object {
     * @param dateTo: The latest a valid instance can occur
     */
   def next(numberOfInst: Double): js.Array[js.Date] | js.Date = js.native
+  def next(numberOfInst: Double, dateFrom: js.UndefOr[scala.Nothing], dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   def next(numberOfInst: Double, dateFrom: js.Date): js.Array[js.Date] | js.Date = js.native
   def next(numberOfInst: Double, dateFrom: js.Date, dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   /**
@@ -30,6 +31,7 @@ trait Schedule extends js.Object {
     * @param dateTo: The latest a valid range can occur
     */
   def nextRange(numberOfInst: Double): js.Array[js.Date] | js.Date = js.native
+  def nextRange(numberOfInst: Double, dateFrom: js.UndefOr[scala.Nothing], dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   def nextRange(numberOfInst: Double, dateFrom: js.Date): js.Array[js.Date] | js.Date = js.native
   def nextRange(numberOfInst: Double, dateFrom: js.Date, dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   /**
@@ -43,6 +45,7 @@ trait Schedule extends js.Object {
     * @param dateTo: The latest a valid instance can occur
     */
   def prev(numberOfInst: Double): js.Array[js.Date] | js.Date = js.native
+  def prev(numberOfInst: Double, dateFrom: js.UndefOr[scala.Nothing], dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   def prev(numberOfInst: Double, dateFrom: js.Date): js.Array[js.Date] | js.Date = js.native
   def prev(numberOfInst: Double, dateFrom: js.Date, dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   /**
@@ -56,6 +59,7 @@ trait Schedule extends js.Object {
     * @param dateTo: The latest a valid range can occur
     */
   def prevRange(numberOfInst: Double): js.Array[js.Date] | js.Date = js.native
+  def prevRange(numberOfInst: Double, dateFrom: js.UndefOr[scala.Nothing], dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
   def prevRange(numberOfInst: Double, dateFrom: js.Date): js.Array[js.Date] | js.Date = js.native
   def prevRange(numberOfInst: Double, dateFrom: js.Date, dateTo: js.Date): js.Array[js.Date] | js.Date = js.native
 }

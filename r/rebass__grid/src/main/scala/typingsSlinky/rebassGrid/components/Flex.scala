@@ -19,19 +19,10 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.AlignItemsProperty
-import typingsSlinky.csstype.mod.AlignSelfProperty
-import typingsSlinky.csstype.mod.FlexDirectionProperty
-import typingsSlinky.csstype.mod.FlexProperty
-import typingsSlinky.csstype.mod.FlexWrapProperty
-import typingsSlinky.csstype.mod.GlobalsNumber
-import typingsSlinky.csstype.mod.JustifyContentProperty
-import typingsSlinky.csstype.mod.WidthProperty
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.rebassGrid.mod.FlexProps
 import typingsSlinky.rebassGrid.rebassGridStrings.`additions text`
 import typingsSlinky.rebassGrid.rebassGridStrings.`inline`
@@ -83,7 +74,6 @@ import typingsSlinky.rebassGrid.rebassGridStrings.vertical
 import typingsSlinky.rebassGrid.rebassGridStrings.yes
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.ResponsiveValue
-import typingsSlinky.styledSystem.mod.TLengthStyledSystem
 import typingsSlinky.styledSystem.mod.ThemeValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -97,7 +87,7 @@ object Flex {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -109,11 +99,25 @@ object Flex {
     @scala.inline
     def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def alignItems(value: ResponsiveValue[AlignItemsProperty, RequiredTheme]): this.type = set("alignItems", value.asInstanceOf[js.Any])
+    def alignItemsVarargs(value: (js.Any | Null)*): this.type = set("alignItems", js.Array(value :_*))
+    @scala.inline
+    def alignItems(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("alignItems", value.asInstanceOf[js.Any])
     @scala.inline
     def alignItemsNull: this.type = set("alignItems", null)
     @scala.inline
-    def alignSelf(value: ResponsiveValue[AlignSelfProperty, RequiredTheme]): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    def alignSelfVarargs(value: (js.Any | Null)*): this.type = set("alignSelf", js.Array(value :_*))
+    @scala.inline
+    def alignSelf(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
     def alignSelfNull: this.type = set("alignSelf", null)
     @scala.inline
@@ -239,9 +243,13 @@ object Flex {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
+    def backgroundColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("backgroundColor", js.Array(value :_*))
+    @scala.inline
     def backgroundColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def backgroundColorNull: this.type = set("backgroundColor", null)
+    @scala.inline
+    def bgVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("bg", js.Array(value :_*))
     @scala.inline
     def bg(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("bg", value.asInstanceOf[js.Any])
     @scala.inline
@@ -266,6 +274,8 @@ object Flex {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("color", js.Array(value :_*))
     @scala.inline
     def color(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
@@ -297,6 +307,8 @@ object Flex {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -311,17 +323,40 @@ object Flex {
     @scala.inline
     def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
     @scala.inline
-    def flex(value: ResponsiveValue[FlexProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("flex", value.asInstanceOf[js.Any])
+    def flexVarargs(value: (js.Any | Null)*): this.type = set("flex", js.Array(value :_*))
+    @scala.inline
+    def flex(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("flex", value.asInstanceOf[js.Any])
     @scala.inline
     def flexNull: this.type = set("flex", null)
     @scala.inline
-    def flexDirection(value: ResponsiveValue[FlexDirectionProperty, RequiredTheme]): this.type = set("flexDirection", value.asInstanceOf[js.Any])
+    def flexDirectionVarargs(value: (js.Any | Null)*): this.type = set("flexDirection", js.Array(value :_*))
+    @scala.inline
+    def flexDirection(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("flexDirection", value.asInstanceOf[js.Any])
     @scala.inline
     def flexDirectionNull: this.type = set("flexDirection", null)
     @scala.inline
-    def flexWrap(value: ResponsiveValue[FlexWrapProperty, RequiredTheme]): this.type = set("flexWrap", value.asInstanceOf[js.Any])
+    def flexWrapVarargs(value: (js.Any | Null)*): this.type = set("flexWrap", js.Array(value :_*))
+    @scala.inline
+    def flexWrap(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("flexWrap", value.asInstanceOf[js.Any])
     @scala.inline
     def flexWrapNull: this.type = set("flexWrap", null)
+    @scala.inline
+    def fontSizeVarargs(value: ((ThemeValue[fontSizes, RequiredTheme, js.Any]) | Null)*): this.type = set("fontSize", js.Array(value :_*))
     @scala.inline
     def fontSize(value: ResponsiveValue[ThemeValue[fontSizes, RequiredTheme, _], RequiredTheme]): this.type = set("fontSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -377,7 +412,14 @@ object Flex {
     @scala.inline
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     @scala.inline
-    def justifyContent(value: ResponsiveValue[JustifyContentProperty, RequiredTheme]): this.type = set("justifyContent", value.asInstanceOf[js.Any])
+    def justifyContentVarargs(value: (js.Any | Null)*): this.type = set("justifyContent", js.Array(value :_*))
+    @scala.inline
+    def justifyContent(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyContentProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("justifyContent", value.asInstanceOf[js.Any])
     @scala.inline
     def justifyContentNull: this.type = set("justifyContent", null)
     @scala.inline
@@ -397,15 +439,21 @@ object Flex {
     @scala.inline
     def low(value: Double): this.type = set("low", value.asInstanceOf[js.Any])
     @scala.inline
+    def mVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("m", js.Array(value :_*))
+    @scala.inline
     def m(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("m", value.asInstanceOf[js.Any])
     @scala.inline
     def mNull: this.type = set("m", null)
     @scala.inline
     def manifest(value: String): this.type = set("manifest", value.asInstanceOf[js.Any])
     @scala.inline
+    def marginVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("margin", js.Array(value :_*))
+    @scala.inline
     def margin(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
     def marginNull: this.type = set("margin", null)
+    @scala.inline
+    def marginBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginBottom", js.Array(value :_*))
     @scala.inline
     def marginBottom(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginBottom", value.asInstanceOf[js.Any])
     @scala.inline
@@ -413,13 +461,19 @@ object Flex {
     @scala.inline
     def marginHeight(value: Double): this.type = set("marginHeight", value.asInstanceOf[js.Any])
     @scala.inline
+    def marginLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginLeft", js.Array(value :_*))
+    @scala.inline
     def marginLeft(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def marginLeftNull: this.type = set("marginLeft", null)
     @scala.inline
+    def marginRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginRight", js.Array(value :_*))
+    @scala.inline
     def marginRight(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginRight", value.asInstanceOf[js.Any])
     @scala.inline
     def marginRightNull: this.type = set("marginRight", null)
+    @scala.inline
+    def marginTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginTop", js.Array(value :_*))
     @scala.inline
     def marginTop(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginTop", value.asInstanceOf[js.Any])
     @scala.inline
@@ -427,9 +481,13 @@ object Flex {
     @scala.inline
     def marginWidth(value: Double): this.type = set("marginWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def marginXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginX", js.Array(value :_*))
+    @scala.inline
     def marginX(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginX", value.asInstanceOf[js.Any])
     @scala.inline
     def marginXNull: this.type = set("marginX", null)
+    @scala.inline
+    def marginYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginY", js.Array(value :_*))
     @scala.inline
     def marginY(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -438,6 +496,8 @@ object Flex {
     def max(value: Double | String): this.type = set("max", value.asInstanceOf[js.Any])
     @scala.inline
     def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mb", js.Array(value :_*))
     @scala.inline
     def mb(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mb", value.asInstanceOf[js.Any])
     @scala.inline
@@ -453,13 +513,19 @@ object Flex {
     @scala.inline
     def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
     @scala.inline
+    def mlVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("ml", js.Array(value :_*))
+    @scala.inline
     def ml(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("ml", value.asInstanceOf[js.Any])
     @scala.inline
     def mlNull: this.type = set("ml", null)
     @scala.inline
+    def mrVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mr", js.Array(value :_*))
+    @scala.inline
     def mr(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mr", value.asInstanceOf[js.Any])
     @scala.inline
     def mrNull: this.type = set("mr", null)
+    @scala.inline
+    def mtVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mt", js.Array(value :_*))
     @scala.inline
     def mt(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mt", value.asInstanceOf[js.Any])
     @scala.inline
@@ -469,9 +535,13 @@ object Flex {
     @scala.inline
     def muted(value: Boolean): this.type = set("muted", value.asInstanceOf[js.Any])
     @scala.inline
+    def mxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mx", js.Array(value :_*))
+    @scala.inline
     def mx(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mx", value.asInstanceOf[js.Any])
     @scala.inline
     def mxNull: this.type = set("mx", null)
+    @scala.inline
+    def myVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("my", js.Array(value :_*))
     @scala.inline
     def my(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("my", value.asInstanceOf[js.Any])
     @scala.inline
@@ -641,7 +711,14 @@ object Flex {
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
-    def opacity(value: ResponsiveValue[GlobalsNumber, RequiredTheme]): this.type = set("opacity", value.asInstanceOf[js.Any])
+    def opacityVarargs(value: (js.Any | Null)*): this.type = set("opacity", js.Array(value :_*))
+    @scala.inline
+    def opacity(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("opacity", value.asInstanceOf[js.Any])
     @scala.inline
     def opacityNull: this.type = set("opacity", null)
     @scala.inline
@@ -649,37 +726,60 @@ object Flex {
     @scala.inline
     def optimum(value: Double): this.type = set("optimum", value.asInstanceOf[js.Any])
     @scala.inline
-    def order(value: ResponsiveValue[GlobalsNumber, RequiredTheme]): this.type = set("order", value.asInstanceOf[js.Any])
+    def orderVarargs(value: (js.Any | Null)*): this.type = set("order", js.Array(value :_*))
+    @scala.inline
+    def order(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("order", value.asInstanceOf[js.Any])
     @scala.inline
     def orderNull: this.type = set("order", null)
+    @scala.inline
+    def pVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("p", js.Array(value :_*))
     @scala.inline
     def p(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("p", value.asInstanceOf[js.Any])
     @scala.inline
     def pNull: this.type = set("p", null)
     @scala.inline
+    def paddingVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("padding", js.Array(value :_*))
+    @scala.inline
     def padding(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingNull: this.type = set("padding", null)
+    @scala.inline
+    def paddingBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingBottom", js.Array(value :_*))
     @scala.inline
     def paddingBottom(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingBottomNull: this.type = set("paddingBottom", null)
     @scala.inline
+    def paddingLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingLeft", js.Array(value :_*))
+    @scala.inline
     def paddingLeft(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingLeftNull: this.type = set("paddingLeft", null)
+    @scala.inline
+    def paddingRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingRight", js.Array(value :_*))
     @scala.inline
     def paddingRight(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingRight", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingRightNull: this.type = set("paddingRight", null)
     @scala.inline
+    def paddingTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingTop", js.Array(value :_*))
+    @scala.inline
     def paddingTop(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingTop", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingTopNull: this.type = set("paddingTop", null)
     @scala.inline
+    def paddingXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingX", js.Array(value :_*))
+    @scala.inline
     def paddingX(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingX", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingXNull: this.type = set("paddingX", null)
+    @scala.inline
+    def paddingYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingY", js.Array(value :_*))
     @scala.inline
     def paddingY(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -687,9 +787,13 @@ object Flex {
     @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
     @scala.inline
+    def pbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pb", js.Array(value :_*))
+    @scala.inline
     def pb(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pb", value.asInstanceOf[js.Any])
     @scala.inline
     def pbNull: this.type = set("pb", null)
+    @scala.inline
+    def plVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pl", js.Array(value :_*))
     @scala.inline
     def pl(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pl", value.asInstanceOf[js.Any])
     @scala.inline
@@ -701,6 +805,8 @@ object Flex {
     @scala.inline
     def poster(value: String): this.type = set("poster", value.asInstanceOf[js.Any])
     @scala.inline
+    def prVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pr", js.Array(value :_*))
+    @scala.inline
     def pr(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pr", value.asInstanceOf[js.Any])
     @scala.inline
     def prNull: this.type = set("pr", null)
@@ -711,13 +817,19 @@ object Flex {
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline
+    def ptVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pt", js.Array(value :_*))
+    @scala.inline
     def pt(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pt", value.asInstanceOf[js.Any])
     @scala.inline
     def ptNull: this.type = set("pt", null)
     @scala.inline
+    def pxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("px", js.Array(value :_*))
+    @scala.inline
     def px(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("px", value.asInstanceOf[js.Any])
     @scala.inline
     def pxNull: this.type = set("px", null)
+    @scala.inline
+    def pyVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("py", js.Array(value :_*))
     @scala.inline
     def py(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("py", value.asInstanceOf[js.Any])
     @scala.inline
@@ -805,11 +917,20 @@ object Flex {
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     @scala.inline
-    def width(value: ResponsiveValue[WidthProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("width", value.asInstanceOf[js.Any])
+    def widthVarargs(value: (js.Any | Null)*): this.type = set("width", js.Array(value :_*))
+    @scala.inline
+    def width(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
     def widthNull: this.type = set("width", null)
     @scala.inline

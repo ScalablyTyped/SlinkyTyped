@@ -2,96 +2,88 @@ package typingsSlinky.fsMerger.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.fsMerger.anon.At
 import typingsSlinky.fsMerger.anon.Encoding
-import typingsSlinky.fsMerger.anon.Fn0
-import typingsSlinky.fsMerger.anon.FnCall
-import typingsSlinky.fsMerger.anon.FnCallPathOptions
-import typingsSlinky.fsMerger.anon.Typeofreaddir
 import typingsSlinky.fsMerger.anon.WithFileTypes
-import typingsSlinky.fsMerger.fsMergerStrings.buffer
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
-import typingsSlinky.node.anon.BaseEncodingOptionsflagst
-import typingsSlinky.node.anon.BaseEncodingOptionswithFi
-import typingsSlinky.node.anon.BaseEncodingOptionswithFiEncoding
-import typingsSlinky.node.anon.EncodingBufferEncoding
-import typingsSlinky.node.anon.EncodingNull
-import typingsSlinky.node.fsMod.Dirent
-import typingsSlinky.node.fsMod.PathLike
-import typingsSlinky.walkSync.mod.WalkSyncEntry
-import typingsSlinky.walkSync.mod.WalkSyncOptions
+import typingsSlinky.walkSync.mod.Entry
+import typingsSlinky.walkSync.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FSMerger extends js.Object {
+  var LIST: js.Array[FSMergerObject] = js.native
   var MAP: StringDictionary[FSMergerObject] | Null = js.native
   var PREFIXINDEXMAP: NumberDictionary[FSMergerObject] = js.native
   var _atList: js.Array[FSMerger] = js.native
   var _dirList: js.Array[Node] = js.native
-  @JSName("entries")
-  var entries_Original: Fn0 = js.native
   var fs: FS = js.native
-  @JSName("readFileSync")
-  var readFileSync_Original: FnCall = js.native
-  var readdir: Typeofreaddir = js.native
-  @JSName("readdirSync")
-  var readdirSync_Original: FnCallPathOptions = js.native
   def _generateMap(): Unit = js.native
   def at(index: Double): FSMerger = js.native
-  def entries(): js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entry */ _
-  ] = js.native
-  def entries(
-    dirPath: String,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Options */ js.Any
-  ): js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entry */ _
-  ] = js.native
-  def entries(path: String): js.Array[WalkSyncEntry] = js.native
-  def entries(path: String, options: WalkSyncOptions): js.Array[WalkSyncEntry] = js.native
+  def entries(): js.Array[Entry] = js.native
+  def entries(dirPath: js.UndefOr[scala.Nothing], options: Options): js.Array[Entry] = js.native
+  def entries(dirPath: String): js.Array[Entry] = js.native
+  def entries(dirPath: String, options: Options): js.Array[Entry] = js.native
   def readFileMeta(filePath: String): js.UndefOr[FileMeta] = js.native
-  def readFileMeta(filePath: String, options: FileMetaOption): FileMeta = js.native
-  @JSName("readFileMeta")
-  def readFileMeta_Union(filePath: String, options: FileMetaOption): js.UndefOr[FileMeta] = js.native
+  def readFileMeta(filePath: String, options: FileMetaOption): js.UndefOr[FileMeta] = js.native
   def readFileSync(filePath: String): js.UndefOr[FileContent] = js.native
   def readFileSync(filePath: String, options: String): js.UndefOr[FileContent] = js.native
   def readFileSync(filePath: String, options: Encoding): js.UndefOr[FileContent] = js.native
-  def readFileSync(path: Double): String | Buffer = js.native
-  def readFileSync(path: Double, options: BufferEncoding): String = js.native
-  def readFileSync(path: Double, options: BaseEncodingOptionsflagst): String | Buffer = js.native
-  def readFileSync(path: Double, options: EncodingBufferEncoding): String = js.native
-  def readFileSync(path: Double, options: EncodingNull): Buffer = js.native
-  def readFileSync(path: PathLike): String | Buffer = js.native
-  def readFileSync(path: PathLike, options: BufferEncoding): String = js.native
-  def readFileSync(path: PathLike, options: BaseEncodingOptionsflagst): String | Buffer = js.native
-  def readFileSync(path: PathLike, options: EncodingBufferEncoding): String = js.native
-  def readFileSync(path: PathLike, options: EncodingNull): Buffer = js.native
-  @JSName("readFileSync")
-  def readFileSync_Buffer(path: Double): Buffer = js.native
-  @JSName("readFileSync")
-  def readFileSync_Buffer(path: PathLike): Buffer = js.native
-  @JSName("readFileSync")
-  def readFileSync_Union(path: Double, options: BufferEncoding): String | Buffer = js.native
-  @JSName("readFileSync")
-  def readFileSync_Union(path: PathLike, options: BufferEncoding): String | Buffer = js.native
   def readdir(
     dirPath: String,
-    options: js.UndefOr[Null | String | WithFileTypes],
-    callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[
+      /* err */ ErrnoException | Null, 
+      /* files */ js.UndefOr[js.Array[Buffer | String]], 
+      Unit
+    ]
+  ): Unit = js.native
+  def readdir(
+    dirPath: String,
+    options: String,
+    callback: js.Function2[
+      /* err */ ErrnoException | Null, 
+      /* files */ js.UndefOr[js.Array[Buffer | String]], 
+      Unit
+    ]
+  ): Unit = js.native
+  def readdir(
+    dirPath: String,
+    options: Null,
+    callback: js.Function2[
+      /* err */ ErrnoException | Null, 
+      /* files */ js.UndefOr[js.Array[Buffer | String]], 
+      Unit
+    ]
+  ): Unit = js.native
+  def readdir(
+    dirPath: String,
+    options: WithFileTypes,
+    callback: js.Function2[
+      /* err */ ErrnoException | Null, 
+      /* files */ js.UndefOr[js.Array[Buffer | String]], 
+      Unit
+    ]
   ): Unit = js.native
   def readdirSync(dirPath: String): js.Array[Buffer | String] = js.native
   def readdirSync(dirPath: String, options: String): js.Array[Buffer | String] = js.native
   def readdirSync(dirPath: String, options: WithFileTypes): js.Array[Buffer | String] = js.native
-  def readdirSync(path: PathLike): js.Array[Buffer | String] = js.native
-  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[Buffer | String] = js.native
-  def readdirSync(path: PathLike, options: BaseEncodingOptionswithFi): js.Array[Buffer | String] = js.native
-  def readdirSync(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Array[Dirent] = js.native
-  def readdirSync(path: PathLike, options: typingsSlinky.node.anon.Encoding): js.Array[Buffer] = js.native
-  def readdirSync(path: PathLike, options: typingsSlinky.node.anon.WithFileTypes): js.Array[String] = js.native
-  @JSName("readdirSync")
-  def readdirSync_buffer(path: PathLike, options: buffer): js.Array[Buffer] = js.native
+  /**
+    * Given an absolute path, returns a relative path suitable for using with the
+    * other methods in this FSMerger. Does not emit paths starting with `../`;
+    * paths outside this merged FS are instead returned as `null`.
+    *
+    * Note: If this FSMerger has a path that is inside another path, the first
+    * one that contains the path will be used.
+    *
+    * Note 2: This method does not check whether the absolute path exists.
+    *
+    * @param absolutePath An absolute path to make relative.
+    * @returns null if the path is not within any filesystem tree.
+    */
+  def relativePathTo(absolutePath: String): At | Null = js.native
 }
 

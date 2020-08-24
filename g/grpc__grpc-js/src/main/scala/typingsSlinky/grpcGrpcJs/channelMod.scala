@@ -21,6 +21,21 @@ object channelMod extends js.Object {
       * grpc.Client.prototype.close
       */
     def close(): Unit = js.native
+    def createCall(
+      method: String,
+      deadline: Deadline,
+      host: js.UndefOr[scala.Nothing],
+       // eslint-disable-line @typescript-eslint/no-explicit-any
+    parentCall: js.Any
+    ): Call = js.native
+    def createCall(
+      method: String,
+      deadline: Deadline,
+      host: js.UndefOr[scala.Nothing],
+       // eslint-disable-line @typescript-eslint/no-explicit-any
+    parentCall: js.Any,
+      propagateFlags: Double
+    ): Call = js.native
     /**
       * Create a call object. Call is an opaque type that is used by the Client
       * class. This function is called by the gRPC library when starting a
@@ -36,14 +51,29 @@ object channelMod extends js.Object {
     def createCall(
       method: String,
       deadline: Deadline,
-      host: js.UndefOr[Null | String],
+      host: String,
        // eslint-disable-line @typescript-eslint/no-explicit-any
     parentCall: js.Any
     ): Call = js.native
     def createCall(
       method: String,
       deadline: Deadline,
-      host: js.UndefOr[Null | String],
+      host: String,
+       // eslint-disable-line @typescript-eslint/no-explicit-any
+    parentCall: js.Any,
+      propagateFlags: Double
+    ): Call = js.native
+    def createCall(
+      method: String,
+      deadline: Deadline,
+      host: Null,
+       // eslint-disable-line @typescript-eslint/no-explicit-any
+    parentCall: js.Any
+    ): Call = js.native
+    def createCall(
+      method: String,
+      deadline: Deadline,
+      host: Null,
        // eslint-disable-line @typescript-eslint/no-explicit-any
     parentCall: js.Any,
       propagateFlags: Double

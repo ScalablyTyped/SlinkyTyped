@@ -12,11 +12,12 @@ import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.menuItemMod.MenuItem
 import typingsSlinky.rcMenu.menuItemMod.MenuItemProps
 import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-menu/lib/SubPopupMenu", "SubPopupMenu")
+@JSImport("rc-menu/es/SubPopupMenu", "SubPopupMenu")
 @js.native
 class SubPopupMenu protected ()
   extends Component[SubPopupMenuProps, js.Object, js.Any] {
@@ -42,15 +43,14 @@ class SubPopupMenu protected ()
     */
   def onKeyDown(e: SyntheticKeyboardEvent[HTMLElement], callback: js.Function1[/* item */ MenuItem, Unit]): Double = js.native
   def renderCommonMenuItem(child: ReactElement, i: Double, extraProps: MenuItemProps): ReactElement = js.native
-  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: String): ReactElement = js.native
-  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: Double): ReactElement = js.native
+  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: Key): ReactElement = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MSubPopupMenu(nextProps: SubPopupMenuProps): Boolean = js.native
   def step(direction: Double): MenuItem = js.native
 }
 
 /* static members */
-@JSImport("rc-menu/lib/SubPopupMenu", "SubPopupMenu")
+@JSImport("rc-menu/es/SubPopupMenu", "SubPopupMenu")
 @js.native
 object SubPopupMenu extends js.Object {
   var defaultProps: Focusable = js.native

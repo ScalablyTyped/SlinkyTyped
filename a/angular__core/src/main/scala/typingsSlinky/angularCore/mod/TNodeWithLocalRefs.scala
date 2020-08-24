@@ -18,100 +18,57 @@ object TNodeWithLocalRefs {
   @scala.inline
   def TContainerNode(
     child: Null,
+    classBindings: TStylingRange,
     directiveEnd: Double,
     directiveStart: Double,
+    directiveStylingLast: Double,
     flags: TNodeFlags,
     index: Double,
     injectorIndex: Double,
     projection: Null,
-    propertyMetadataEndIndex: Double,
-    propertyMetadataStartIndex: Double,
     providerIndexes: TNodeProviderIndexes,
-    `type`: TNodeType,
-    attrs: TAttributes = null,
-    classes: StylingMapArray | TStylingContext = null,
-    initialInputs: js.UndefOr[Null | InitialInputData] = js.undefined,
-    inputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    localNames: js.Array[String | Double] = null,
-    next: TNode = null,
-    outputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    parent: ɵangularPackagesCoreCoreBf | TElementContainerNode = null,
-    projectionNext: TNode = null,
-    styles: StylingMapArray | TStylingContext = null,
-    tViews: TView | js.Array[TView] = null,
-    tagName: String = null
+    styleBindings: TStylingRange,
+    `type`: TNodeType
   ): TNodeWithLocalRefs = {
-    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], attrs = attrs.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], localNames = localNames.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], projectionNext = projectionNext.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(initialInputs)) __obj.updateDynamic("initialInputs")(initialInputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNodeWithLocalRefs]
   }
   @scala.inline
   def ɵangularPackagesCoreCoreBf(
+    classBindings: TStylingRange,
     directiveEnd: Double,
     directiveStart: Double,
+    directiveStylingLast: Double,
     flags: TNodeFlags,
     index: Double,
     injectorIndex: Double,
-    propertyMetadataEndIndex: Double,
-    propertyMetadataStartIndex: Double,
     providerIndexes: TNodeProviderIndexes,
+    styleBindings: TStylingRange,
     tViews: Null,
-    `type`: TNodeType,
-    attrs: TAttributes = null,
-    child: typingsSlinky.angularCore.mod.ɵangularPackagesCoreCoreBf | TTextNode | TElementContainerNode | TContainerNode | TProjectionNode = null,
-    classes: StylingMapArray | TStylingContext = null,
-    initialInputs: js.UndefOr[Null | InitialInputData] = js.undefined,
-    inputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    localNames: js.Array[String | Double] = null,
-    next: TNode = null,
-    outputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    parent: typingsSlinky.angularCore.mod.ɵangularPackagesCoreCoreBf | TElementContainerNode = null,
-    projection: js.Array[TNode | js.Array[RNode]] = null,
-    projectionNext: TNode = null,
-    styles: StylingMapArray | TStylingContext = null,
-    tagName: String = null
+    `type`: TNodeType
   ): TNodeWithLocalRefs = {
-    val __obj = js.Dynamic.literal(directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], attrs = attrs.asInstanceOf[js.Any], child = child.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], localNames = localNames.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], projectionNext = projectionNext.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(initialInputs)) __obj.updateDynamic("initialInputs")(initialInputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNodeWithLocalRefs]
   }
   @scala.inline
   def TElementContainerNode(
+    classBindings: TStylingRange,
     directiveEnd: Double,
     directiveStart: Double,
+    directiveStylingLast: Double,
     flags: TNodeFlags,
     index: Double,
     injectorIndex: Double,
     projection: Null,
-    propertyMetadataEndIndex: Double,
-    propertyMetadataStartIndex: Double,
     providerIndexes: TNodeProviderIndexes,
+    styleBindings: TStylingRange,
     tViews: Null,
-    `type`: TNodeType,
-    attrs: TAttributes = null,
-    child: ɵangularPackagesCoreCoreBf | TTextNode | TContainerNode | typingsSlinky.angularCore.mod.TElementContainerNode | TProjectionNode = null,
-    classes: StylingMapArray | TStylingContext = null,
-    initialInputs: js.UndefOr[Null | InitialInputData] = js.undefined,
-    inputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    localNames: js.Array[String | Double] = null,
-    next: TNode = null,
-    outputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    parent: ɵangularPackagesCoreCoreBf | typingsSlinky.angularCore.mod.TElementContainerNode = null,
-    projectionNext: TNode = null,
-    styles: StylingMapArray | TStylingContext = null,
-    tagName: String = null
+    `type`: TNodeType
   ): TNodeWithLocalRefs = {
-    val __obj = js.Dynamic.literal(directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], attrs = attrs.asInstanceOf[js.Any], child = child.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], localNames = localNames.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], projectionNext = projectionNext.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(initialInputs)) __obj.updateDynamic("initialInputs")(initialInputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNodeWithLocalRefs]
   }
 }

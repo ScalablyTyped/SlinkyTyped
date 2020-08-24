@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "strict-uri-encode"
-version := "2.0-dt-20180320Z-296514"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20180320Z-e63f4f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

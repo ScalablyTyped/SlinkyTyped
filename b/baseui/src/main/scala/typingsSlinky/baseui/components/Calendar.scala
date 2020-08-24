@@ -27,11 +27,15 @@ object Calendar {
     @scala.inline
     def autoFocusCalendar(value: Boolean): this.type = set("autoFocusCalendar", value.asInstanceOf[js.Any])
     @scala.inline
+    def excludeDatesVarargs(value: js.Date*): this.type = set("excludeDates", js.Array(value :_*))
+    @scala.inline
     def excludeDates(value: js.Array[js.Date]): this.type = set("excludeDates", value.asInstanceOf[js.Any])
     @scala.inline
     def filterDate(value: /* day */ js.Date => Boolean): this.type = set("filterDate", js.Any.fromFunction1(value))
     @scala.inline
     def highlightedDate(value: js.Date): this.type = set("highlightedDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def includeDatesVarargs(value: js.Date*): this.type = set("includeDates", js.Array(value :_*))
     @scala.inline
     def includeDates(value: js.Array[js.Date]): this.type = set("includeDates", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,6 +67,8 @@ object Calendar {
     @scala.inline
     def quickSelect(value: Boolean): this.type = set("quickSelect", value.asInstanceOf[js.Any])
     @scala.inline
+    def quickSelectOptionsVarargs(value: BeginDate*): this.type = set("quickSelectOptions", js.Array(value :_*))
+    @scala.inline
     def quickSelectOptions(value: js.Array[BeginDate]): this.type = set("quickSelectOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def range(value: Boolean): this.type = set("range", value.asInstanceOf[js.Any])
@@ -72,6 +78,8 @@ object Calendar {
     def timeSelectStart(value: Boolean): this.type = set("timeSelectStart", value.asInstanceOf[js.Any])
     @scala.inline
     def trapTabbing(value: Boolean): this.type = set("trapTabbing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Date*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

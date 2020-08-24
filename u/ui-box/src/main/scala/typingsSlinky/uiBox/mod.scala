@@ -1,7 +1,8 @@
 package typingsSlinky.uiBox
 
+import slinky.core.facade.ReactElement
 import typingsSlinky.uiBox.anon.Cache
-import typingsSlinky.uiBox.boxTypesMod.BoxComponent
+import typingsSlinky.uiBox.boxTypesMod.BoxProps
 import typingsSlinky.uiBox.cacheMod.CacheEntry
 import typingsSlinky.uiBox.safeHrefMod.SafeHrefConfigObj
 import typingsSlinky.uiBox.splitBoxPropsMod.SplitBoxProps
@@ -19,7 +20,6 @@ import scala.scalajs.js.annotation._
 @JSImport("ui-box", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  val default: BoxComponent = js.native
   val hydrate: js.Function1[/* newEntries */ js.Array[CacheEntry], Unit] = js.native
   val propAliases: PropAliases = js.native
   val propEnhancers: PropEnhancers = js.native
@@ -27,6 +27,7 @@ object mod extends js.Object {
   val propTypes: PropTypesMapping = js.native
   def clearStyles(): Unit = js.native
   def configureSafeHref(configObject: SafeHrefConfigObj): Unit = js.native
+  def default[E /* <: ReactElement */](props: BoxProps[E]): ReactElement = js.native
   def extractStyles(): Cache = js.native
   def setClassNamePrefix(prefix: String): Unit = js.native
   def splitBoxProps[P /* <: EnhancerProps */](props: P): SplitBoxProps[P] = js.native

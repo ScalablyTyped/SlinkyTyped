@@ -18,5 +18,8 @@ package object mod {
     /* arg */ js.UndefOr[java.lang.String | scala.Double | scala.Boolean], 
     java.lang.String
   ]
-  type TokenIndexer = typingsSlinky.morgan.mod.TokenIndexer
+  type TokenIndexer = typingsSlinky.morgan.mod.TokenIndexer[
+    typingsSlinky.node.httpMod.IncomingMessage, 
+    typingsSlinky.node.httpMod.ServerResponse
+  ]
 }

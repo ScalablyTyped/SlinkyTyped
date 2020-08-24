@@ -29,6 +29,8 @@ object ReactPanelgroup {
     @scala.inline
     def panelColor(value: String): this.type = set("panelColor", value.asInstanceOf[js.Any])
     @scala.inline
+    def panelWidthsVarargs(value: (PanelWidth | Null)*): this.type = set("panelWidths", js.Array(value :_*))
+    @scala.inline
     def panelWidths(value: js.Array[PanelWidth | Null]): this.type = set("panelWidths", value.asInstanceOf[js.Any])
     @scala.inline
     def spacing(value: Double): this.type = set("spacing", value.asInstanceOf[js.Any])

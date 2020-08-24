@@ -1,14 +1,13 @@
 package typingsSlinky.rmcCalendar.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.rmcCalendar.calendarMod.default
+import typingsSlinky.rmcCalendar.calendarPropsMod.PropsType
 import typingsSlinky.rmcCalendar.calendarPropsMod.SelectDateType
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.ExtraData
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
-import typingsSlinky.rmcCalendar.headerMod.PropsType
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.horizontal
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.normal
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.one
@@ -20,18 +19,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Calendar {
-  @JSImport("rmc-calendar/lib/Calendar", JSImport.Default)
+  @JSImport("rmc-calendar", "Calendar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.rmcCalendar.mod.Calendar] {
     @scala.inline
     def defaultDate(value: js.Date): this.type = set("defaultDate", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultTimeValue(value: js.Date): this.type = set("defaultTimeValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: js.Date*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: SelectDateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,10 +66,10 @@ object Calendar {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderHeader(value: /* prop */ PropsType => TagMod[Any]): this.type = set("renderHeader", js.Any.fromFunction1(value))
+    def renderHeader(value: PropsType => ReactElement): this.type = set("renderHeader", js.Any.fromFunction1(value))
     @scala.inline
     def renderShortcut(
-      value: /* select */ js.Function2[/* startDate */ js.UndefOr[js.Date], /* endDate */ js.UndefOr[js.Date], Unit] => TagMod[Any]
+      value: /* select */ js.Function2[/* startDate */ js.UndefOr[js.Date], /* endDate */ js.UndefOr[js.Date], Unit] => ReactElement
     ): this.type = set("renderShortcut", js.Any.fromFunction1(value))
     @scala.inline
     def rowSize(value: normal | xl): this.type = set("rowSize", value.asInstanceOf[js.Any])
@@ -88,7 +89,7 @@ object Calendar {
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: typingsSlinky.rmcCalendar.calendarPropsMod.PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

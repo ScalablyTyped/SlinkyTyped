@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RewindTwoXIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RewindTwoXIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RewindTwoXIcon")
   @js.native
   object component extends js.Object
   

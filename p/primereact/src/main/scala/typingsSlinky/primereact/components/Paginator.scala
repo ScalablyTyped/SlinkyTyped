@@ -37,6 +37,8 @@ object Paginator {
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     @scala.inline
+    def rowsPerPageOptionsVarargs(value: js.Any*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    @scala.inline
     def rowsPerPageOptions(value: js.Array[_]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])

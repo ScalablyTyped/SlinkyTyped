@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object KeywordTrigger {
-  @JSImport("rc-mentions/lib/KeywordTrigger", JSImport.Default)
+  @JSImport("rc-mentions/es/KeywordTrigger", JSImport.Default)
   @js.native
   object component extends js.Object
   

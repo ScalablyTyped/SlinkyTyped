@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.Id
@@ -26,7 +26,7 @@ object TimezonePicker {
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def mapLabels(value: /* args */ Option => TagMod[Any]): this.type = set("mapLabels", js.Any.fromFunction1(value))
+    def mapLabels(value: /* args */ Option => ReactElement): this.type = set("mapLabels", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(value: /* value */ Id => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline

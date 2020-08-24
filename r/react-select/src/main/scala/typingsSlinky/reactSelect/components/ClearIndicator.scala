@@ -15,11 +15,11 @@ object ClearIndicator {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IndicatorProps[js.Any]): SharedBuilder_IndicatorProps_1414441721[typingsSlinky.reactSelect.indicatorsMod.ClearIndicator] = new SharedBuilder_IndicatorProps_1414441721[typingsSlinky.reactSelect.indicatorsMod.ClearIndicator](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: IndicatorProps[js.Any]): SharedBuilder_IndicatorProps_1609693056 = new SharedBuilder_IndicatorProps_1609693056(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
     clearValue: () => Unit,
-    cx: (js.UndefOr[Null | String], js.UndefOr[ClassNamesState], js.UndefOr[String]) => String | Unit,
+    cx: (js.UndefOr[ClassNamesState], js.UndefOr[String]) => String,
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
@@ -31,9 +31,9 @@ object ClearIndicator {
     selectOption: js.Any => Unit,
     selectProps: Props[js.Any],
     setValue: (ValueType[js.Any], ActionTypes) => Unit
-  ): SharedBuilder_IndicatorProps_1414441721[typingsSlinky.reactSelect.indicatorsMod.ClearIndicator] = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction3(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
-    new SharedBuilder_IndicatorProps_1414441721[typingsSlinky.reactSelect.indicatorsMod.ClearIndicator](js.Array(this.component, __props.asInstanceOf[IndicatorProps[js.Any]]))
+  ): SharedBuilder_IndicatorProps_1609693056 = {
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    new SharedBuilder_IndicatorProps_1609693056(js.Array(this.component, __props.asInstanceOf[IndicatorProps[js.Any]]))
   }
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.vueServerRenderer.pluginMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

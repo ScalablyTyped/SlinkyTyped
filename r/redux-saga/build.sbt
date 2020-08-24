@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "redux-saga"
-version := "1.1.3-3eea55"
-scalaVersion := "2.13.2"
+version := "1.1.3-bc60a8"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

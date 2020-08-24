@@ -10,28 +10,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.rollup.anon.`0`
+  - typingsSlinky.rollup.anon.`1`
   - typingsSlinky.rollup.anon.Input
   - typingsSlinky.rollup.anon.Duration
-  - typingsSlinky.rollup.anon.`1`
+  - typingsSlinky.rollup.anon.`2`
   - typingsSlinky.rollup.anon.Error
 */
 trait RollupWatcherEvent extends js.Object
 
 object RollupWatcherEvent {
   @scala.inline
-  def `1`(code: END): RollupWatcherEvent = {
+  def `1`(code: START): RollupWatcherEvent = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RollupWatcherEvent]
+  }
+  @scala.inline
+  def `2`(code: END): RollupWatcherEvent = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollupWatcherEvent]
   }
   @scala.inline
   def Input(code: BUNDLE_START, input: InputOption, output: js.Array[String]): RollupWatcherEvent = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RollupWatcherEvent]
-  }
-  @scala.inline
-  def `0`(code: START): RollupWatcherEvent = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollupWatcherEvent]
   }
   @scala.inline

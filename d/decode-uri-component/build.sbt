@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "decode-uri-component"
-version := "0.2-dt-20181208Z-dfa5e7"
-scalaVersion := "2.13.2"
+version := "0.2-dt-20181208Z-6377a5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

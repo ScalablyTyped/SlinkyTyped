@@ -4,6 +4,8 @@ import typingsSlinky.grpcGrpcJs.callStreamMod.Http2CallStream
 import typingsSlinky.grpcGrpcJs.channelCredentialsMod.ChannelCredentials
 import typingsSlinky.grpcGrpcJs.channelMod.ConnectivityState
 import typingsSlinky.grpcGrpcJs.channelOptionsMod.ChannelOptions
+import typingsSlinky.grpcGrpcJs.filterMod.Filter
+import typingsSlinky.grpcGrpcJs.filterMod.FilterFactory
 import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
 import typingsSlinky.grpcGrpcJs.uriParserMod.GrpcUri
 import scala.scalajs.js
@@ -58,6 +60,7 @@ class Subchannel protected () extends js.Object {
     * status.
     */
   var disconnectListeners: js.Any = js.native
+  var handleBackoffTimer: js.Any = js.native
   /**
     * Timer reference for timeout that indicates when to send the next ping
     */
@@ -149,6 +152,7 @@ class Subchannel protected () extends js.Object {
     * @param callStream
     */
   def startCallStream(metadata: Metadata, callStream: Http2CallStream): Unit = js.native
+  def startCallStream(metadata: Metadata, callStream: Http2CallStream, extraFilterFactory: FilterFactory[Filter]): Unit = js.native
   /**
     * If the subchannel is currently IDLE, start connecting and switch to the
     * CONNECTING state. If the subchannel is current in TRANSIENT_FAILURE,

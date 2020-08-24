@@ -11,8 +11,5 @@ import scala.scalajs.js.annotation._
   * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.media.StopRequest
   */
 class StopRequest ()
-  extends typingsSlinky.chrome.chrome.cast.media.StopRequest {
-  /* CompleteClass */
-  override var customData: js.Object = js.native
-}
+  extends typingsSlinky.chrome.chrome.cast.media.StopRequest
 

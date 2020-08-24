@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -30,7 +30,6 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.both
 import typingsSlinky.materialUiLab.materialUiLabStrings.copy
 import typingsSlinky.materialUiLab.materialUiLabStrings.date
 import typingsSlinky.materialUiLab.materialUiLabStrings.decimal
-import typingsSlinky.materialUiLab.materialUiLabStrings.default
 import typingsSlinky.materialUiLab.materialUiLabStrings.descending
 import typingsSlinky.materialUiLab.materialUiLabStrings.dialog
 import typingsSlinky.materialUiLab.materialUiLabStrings.email
@@ -70,6 +69,7 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.search
 import typingsSlinky.materialUiLab.materialUiLabStrings.secondary
 import typingsSlinky.materialUiLab.materialUiLabStrings.small
 import typingsSlinky.materialUiLab.materialUiLabStrings.spelling
+import typingsSlinky.materialUiLab.materialUiLabStrings.standard
 import typingsSlinky.materialUiLab.materialUiLabStrings.step
 import typingsSlinky.materialUiLab.materialUiLabStrings.tel
 import typingsSlinky.materialUiLab.materialUiLabStrings.text
@@ -79,6 +79,7 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.url
 import typingsSlinky.materialUiLab.materialUiLabStrings.vertical
 import typingsSlinky.materialUiLab.materialUiLabStrings.yes
 import typingsSlinky.materialUiLab.paginationPaginationMod.PaginationProps
+import typingsSlinky.materialUiLab.paginationPaginationMod.PaginationRenderItemParams
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -90,7 +91,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pagination {
-  @JSImport("@material-ui/lab/Pagination/Pagination", JSImport.Default)
+  @JSImport("@material-ui/lab", "Pagination")
   @js.native
   object component extends js.Object
   
@@ -211,7 +212,7 @@ object Pagination {
     @scala.inline
     def classes(value: PartialClassNameMapPagina): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: default | primary | secondary): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: primary | secondary | standard): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def componentName(value: String): this.type = set("componentName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -228,6 +229,8 @@ object Pagination {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultPage(value: Double): this.type = set("defaultPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -443,7 +446,7 @@ object Pagination {
     @scala.inline
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderItem(value: /* params */ js.Object => TagMod[Any]): this.type = set("renderItem", js.Any.fromFunction1(value))
+    def renderItem(value: /* params */ PaginationRenderItemParams => ReactElement): this.type = set("renderItem", js.Any.fromFunction1(value))
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
     @scala.inline

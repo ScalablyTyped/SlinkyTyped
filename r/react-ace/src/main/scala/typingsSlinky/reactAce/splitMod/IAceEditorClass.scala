@@ -1,7 +1,7 @@
 package typingsSlinky.reactAce.splitMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.brace.mod.Editor
+import typingsSlinky.aceBuilds.mod.Ace.Editor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs")
 @js.native
 abstract class PosPrinterStatusUpdatedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs {
-  /** Gets the new status of the point-of-service printer after the status of the printer changes. */
-  /* CompleteClass */
-  override var status: typingsSlinky.winrtUwp.Windows.Devices.PointOfService.PosPrinterStatus = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs
 

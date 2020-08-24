@@ -23,9 +23,10 @@ trait Redis
       /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
       Unit
     ], 
-    typingsSlinky.std.global.Promise[js.Object]
+    js.Promise[js.Object]
   ]) = js.native
-  var status: String = js.native
+  val options: RedisOptions = js.native
+  val status: String = js.native
   def connect(): js.Promise[Unit] = js.native
   def connect(callback: js.Function0[Unit]): js.Promise[Unit] = js.native
   def disconnect(): Unit = js.native

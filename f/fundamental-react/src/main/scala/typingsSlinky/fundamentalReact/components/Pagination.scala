@@ -4,20 +4,19 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Next
 import typingsSlinky.fundamentalReact.paginationMod.PaginationProps
-import typingsSlinky.fundamentalReact.paginationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pagination {
-  @JSImport("fundamental-react/lib/Pagination/Pagination", JSImport.Default)
+  @JSImport("fundamental-react", "Pagination")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.Pagination] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

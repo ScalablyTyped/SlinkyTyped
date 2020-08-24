@@ -28,77 +28,34 @@ object PartialClassNameMapSpeedDIcon {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
+    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIconOpen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
-    def withoutIconOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconOpen")(js.undefined)
-        ret
-    }
+    def setIconOpen(value: String): Self = this.set("iconOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIconWithOpenIconOpen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWithOpenIconOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIconOpen: Self = this.set("iconOpen", js.undefined)
     @scala.inline
-    def withoutIconWithOpenIconOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWithOpenIconOpen")(js.undefined)
-        ret
-    }
+    def setIconWithOpenIconOpen(value: String): Self = this.set("iconWithOpenIconOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpenIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIconWithOpenIconOpen: Self = this.set("iconWithOpenIconOpen", js.undefined)
     @scala.inline
-    def withoutOpenIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIcon")(js.undefined)
-        ret
-    }
+    def setOpenIcon(value: String): Self = this.set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpenIconOpen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIconOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOpenIcon: Self = this.set("openIcon", js.undefined)
     @scala.inline
-    def withoutOpenIconOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openIconOpen")(js.undefined)
-        ret
-    }
+    def setOpenIconOpen(value: String): Self = this.set("openIconOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOpenIconOpen: Self = this.set("openIconOpen", js.undefined)
     @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
+    def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRoot: Self = this.set("root", js.undefined)
   }
   
 }

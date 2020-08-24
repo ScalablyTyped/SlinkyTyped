@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "just-map-values"
-version := "1.1-dt-20200305Z-6bb49c"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20200305Z-a6a84e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

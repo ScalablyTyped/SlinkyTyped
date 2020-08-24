@@ -8,10 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AuthenticatorResponse")
 @js.native
 class AuthenticatorResponse ()
-  extends typingsSlinky.std.AuthenticatorResponse {
-  /* CompleteClass */
-  override val clientDataJSON: js.typedarray.ArrayBuffer = js.native
-}
+  extends typingsSlinky.std.AuthenticatorResponse
 
 @JSGlobal("AuthenticatorResponse")
 @js.native

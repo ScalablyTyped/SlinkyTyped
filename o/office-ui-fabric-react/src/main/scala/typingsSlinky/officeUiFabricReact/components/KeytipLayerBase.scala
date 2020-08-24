@@ -34,9 +34,15 @@ object KeytipLayerBase {
     @scala.inline
     def componentRef(value: IRefObject[IKeytipLayer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     @scala.inline
+    def keytipExitSequencesVarargs(value: IKeytipTransitionKey*): this.type = set("keytipExitSequences", js.Array(value :_*))
+    @scala.inline
     def keytipExitSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipExitSequences", value.asInstanceOf[js.Any])
     @scala.inline
+    def keytipReturnSequencesVarargs(value: IKeytipTransitionKey*): this.type = set("keytipReturnSequences", js.Array(value :_*))
+    @scala.inline
     def keytipReturnSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipReturnSequences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keytipStartSequencesVarargs(value: IKeytipTransitionKey*): this.type = set("keytipStartSequences", js.Array(value :_*))
     @scala.inline
     def keytipStartSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipStartSequences", value.asInstanceOf[js.Any])
     @scala.inline

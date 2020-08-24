@@ -208,6 +208,8 @@ object HTMLSelect {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -411,6 +413,8 @@ object HTMLSelect {
     def onWaiting(value: SyntheticEvent[Event, HTMLSelectElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLSelectElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def optionsVarargs(value: (String | Double | IOptionProps)*): this.type = set("options", js.Array(value :_*))
     @scala.inline
     def options(value: js.Array[String | Double | IOptionProps]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline

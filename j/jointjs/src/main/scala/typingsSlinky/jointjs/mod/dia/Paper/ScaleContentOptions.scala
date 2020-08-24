@@ -1,6 +1,7 @@
 package typingsSlinky.jointjs.mod.dia.Paper
 
 import typingsSlinky.jointjs.mod.dia.BBox
+import typingsSlinky.jointjs.mod.dia.Padding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +16,7 @@ trait ScaleContentOptions extends js.Object {
   var minScale: js.UndefOr[Double] = js.native
   var minScaleX: js.UndefOr[Double] = js.native
   var minScaleY: js.UndefOr[Double] = js.native
-  var padding: js.UndefOr[Double] = js.native
+  var padding: js.UndefOr[Padding] = js.native
   var preserveAspectRatio: js.UndefOr[Boolean] = js.native
   var scaleGrid: js.UndefOr[Double] = js.native
   var useModelGeometry: js.UndefOr[Boolean] = js.native
@@ -34,149 +35,58 @@ object ScaleContentOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentArea(value: BBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentArea")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutContentArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentArea")(js.undefined)
-        ret
-    }
+    def setContentArea(value: BBox): Self = this.set("contentArea", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFittingBBox(value: BBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fittingBBox")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteContentArea: Self = this.set("contentArea", js.undefined)
     @scala.inline
-    def withoutFittingBBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fittingBBox")(js.undefined)
-        ret
-    }
+    def setFittingBBox(value: BBox): Self = this.set("fittingBBox", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFittingBBox: Self = this.set("fittingBBox", js.undefined)
     @scala.inline
-    def withoutMaxScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(js.undefined)
-        ret
-    }
+    def setMaxScale(value: Double): Self = this.set("maxScale", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxScaleX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxScale: Self = this.set("maxScale", js.undefined)
     @scala.inline
-    def withoutMaxScaleX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScaleX")(js.undefined)
-        ret
-    }
+    def setMaxScaleX(value: Double): Self = this.set("maxScaleX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxScaleY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxScaleX: Self = this.set("maxScaleX", js.undefined)
     @scala.inline
-    def withoutMaxScaleY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScaleY")(js.undefined)
-        ret
-    }
+    def setMaxScaleY(value: Double): Self = this.set("maxScaleY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMinScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxScaleY: Self = this.set("maxScaleY", js.undefined)
     @scala.inline
-    def withoutMinScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(js.undefined)
-        ret
-    }
+    def setMinScale(value: Double): Self = this.set("minScale", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMinScaleX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinScale: Self = this.set("minScale", js.undefined)
     @scala.inline
-    def withoutMinScaleX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScaleX")(js.undefined)
-        ret
-    }
+    def setMinScaleX(value: Double): Self = this.set("minScaleX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMinScaleY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinScaleX: Self = this.set("minScaleX", js.undefined)
     @scala.inline
-    def withoutMinScaleY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScaleY")(js.undefined)
-        ret
-    }
+    def setMinScaleY(value: Double): Self = this.set("minScaleY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinScaleY: Self = this.set("minScaleY", js.undefined)
     @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
+    def setPadding(value: Padding): Self = this.set("padding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPreserveAspectRatio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePadding: Self = this.set("padding", js.undefined)
     @scala.inline
-    def withoutPreserveAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAspectRatio")(js.undefined)
-        ret
-    }
+    def setPreserveAspectRatio(value: Boolean): Self = this.set("preserveAspectRatio", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScaleGrid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePreserveAspectRatio: Self = this.set("preserveAspectRatio", js.undefined)
     @scala.inline
-    def withoutScaleGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleGrid")(js.undefined)
-        ret
-    }
+    def setScaleGrid(value: Double): Self = this.set("scaleGrid", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUseModelGeometry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useModelGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteScaleGrid: Self = this.set("scaleGrid", js.undefined)
     @scala.inline
-    def withoutUseModelGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useModelGeometry")(js.undefined)
-        ret
-    }
+    def setUseModelGeometry(value: Boolean): Self = this.set("useModelGeometry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseModelGeometry: Self = this.set("useModelGeometry", js.undefined)
   }
   
 }

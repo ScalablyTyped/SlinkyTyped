@@ -1,7 +1,7 @@
 package typingsSlinky.falcorRouter.mod
 
 import typingsSlinky.falcorJsonGraph.mod.JSONGraph
-import typingsSlinky.rxLiteAggregates.Rx.Observable
+import typingsSlinky.rx.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

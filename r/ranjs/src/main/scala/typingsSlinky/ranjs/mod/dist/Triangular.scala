@@ -9,7 +9,11 @@ import scala.scalajs.js.annotation._
 class Triangular ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.Triangular] {
   def this(a: Double) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: Double) = this()
   def this(a: Double, b: Double) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: js.UndefOr[scala.Nothing], c: Double) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: Double, c: Double) = this()
+  def this(a: Double, b: js.UndefOr[scala.Nothing], c: Double) = this()
   def this(a: Double, b: Double, c: Double) = this()
 }
 

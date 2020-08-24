@@ -1,8 +1,9 @@
 package typingsSlinky.nodePgMigrate
 
-import typingsSlinky.nodePgMigrate.mod.Action
-import typingsSlinky.nodePgMigrate.mod.Extension
-import typingsSlinky.nodePgMigrate.mod.Like
+import typingsSlinky.nodePgMigrate.distTypesMod.MigrationDirection
+import typingsSlinky.nodePgMigrate.extensionsTypesMod.Extension
+import typingsSlinky.nodePgMigrate.tablesTypesMod.Action
+import typingsSlinky.nodePgMigrate.tablesTypesMod.Like
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,6 +83,9 @@ object nodePgMigrateStrings {
   
   @js.native
   sealed trait `NO FORCE` extends js.Object
+  
+  @js.native
+  sealed trait Nullable extends js.Object
   
   @js.native
   sealed trait OUT extends js.Object
@@ -174,7 +178,7 @@ object nodePgMigrateStrings {
   sealed trait dict_xsyn extends Extension
   
   @js.native
-  sealed trait down extends js.Object
+  sealed trait down extends MigrationDirection
   
   @js.native
   sealed trait earthdistance extends Extension
@@ -208,6 +212,9 @@ object nodePgMigrateStrings {
   
   @js.native
   sealed trait isn extends Extension
+  
+  @js.native
+  sealed trait js_ extends js.Object
   
   @js.native
   sealed trait lo extends Extension
@@ -267,6 +274,9 @@ object nodePgMigrateStrings {
   sealed trait spi extends Extension
   
   @js.native
+  sealed trait sql extends js.Object
+  
+  @js.native
   sealed trait sslinfo extends Extension
   
   @js.native
@@ -279,6 +289,9 @@ object nodePgMigrateStrings {
   sealed trait test_decoding extends Extension
   
   @js.native
+  sealed trait ts extends js.Object
+  
+  @js.native
   sealed trait tsm_system_rows extends Extension
   
   @js.native
@@ -288,7 +301,7 @@ object nodePgMigrateStrings {
   sealed trait unaccent extends Extension
   
   @js.native
-  sealed trait up extends js.Object
+  sealed trait up extends MigrationDirection
   
   @js.native
   sealed trait `uuid-ossp` extends Extension
@@ -346,6 +359,8 @@ object nodePgMigrateStrings {
   def `NO ACTION`: `NO ACTION` = ("NO ACTION").asInstanceOf[`NO ACTION`]
   @scala.inline
   def `NO FORCE`: `NO FORCE` = ("NO FORCE").asInstanceOf[`NO FORCE`]
+  @scala.inline
+  def Nullable: Nullable = "Nullable".asInstanceOf[Nullable]
   @scala.inline
   def OUT: OUT = "OUT".asInstanceOf[OUT]
   @scala.inline
@@ -431,6 +446,8 @@ object nodePgMigrateStrings {
   @scala.inline
   def isn: isn = "isn".asInstanceOf[isn]
   @scala.inline
+  def js_ : js_ = "js".asInstanceOf[js_]
+  @scala.inline
   def lo: lo = "lo".asInstanceOf[lo]
   @scala.inline
   def ltree: ltree = "ltree".asInstanceOf[ltree]
@@ -469,6 +486,8 @@ object nodePgMigrateStrings {
   @scala.inline
   def spi: spi = "spi".asInstanceOf[spi]
   @scala.inline
+  def sql: sql = "sql".asInstanceOf[sql]
+  @scala.inline
   def sslinfo: sslinfo = "sslinfo".asInstanceOf[sslinfo]
   @scala.inline
   def tablefunc: tablefunc = "tablefunc".asInstanceOf[tablefunc]
@@ -476,6 +495,8 @@ object nodePgMigrateStrings {
   def tcn: tcn = "tcn".asInstanceOf[tcn]
   @scala.inline
   def test_decoding: test_decoding = "test_decoding".asInstanceOf[test_decoding]
+  @scala.inline
+  def ts: ts = "ts".asInstanceOf[ts]
   @scala.inline
   def tsm_system_rows: tsm_system_rows = "tsm_system_rows".asInstanceOf[tsm_system_rows]
   @scala.inline

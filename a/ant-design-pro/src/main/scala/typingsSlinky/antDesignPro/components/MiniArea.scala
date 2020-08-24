@@ -5,20 +5,19 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.Y
 import typingsSlinky.antDesignPro.miniAreaMod.IAxis
 import typingsSlinky.antDesignPro.miniAreaMod.IMiniAreaProps
-import typingsSlinky.antDesignPro.miniAreaMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MiniArea {
-  @JSImport("ant-design-pro/lib/Charts/MiniArea", JSImport.Default)
+  @JSImport("ant-design-pro/lib/Charts", "MiniArea")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.chartsMod.MiniArea] {
     @scala.inline
     def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline

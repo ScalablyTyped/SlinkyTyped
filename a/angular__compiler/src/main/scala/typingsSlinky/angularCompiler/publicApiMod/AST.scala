@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 class AST protected ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.AST {
-  def this(span: typingsSlinky.angularCompiler.astMod.ParseSpan) = this()
+  def this(
+    span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    /**
+    * Absolute location of the expression AST in a source code file.
+    */
+  sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan
+  ) = this()
 }
 

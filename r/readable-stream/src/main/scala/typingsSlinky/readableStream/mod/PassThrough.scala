@@ -12,8 +12,23 @@ class PassThrough () extends Transform {
   def this(options: TransformOptions) = this()
   def _transform[T](
     chunk: T,
-    encoding: js.UndefOr[BufferEncoding | Null],
-    callback: js.Function2[/* error */ js.Any, /* data */ T, Unit]
+    encoding: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[T], Unit]
+  ): Unit = js.native
+  def _transform[T](
+    chunk: T,
+    encoding: String,
+    callback: js.Function2[/* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[T], Unit]
+  ): Unit = js.native
+  def _transform[T](
+    chunk: T,
+    encoding: Null,
+    callback: js.Function2[/* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[T], Unit]
+  ): Unit = js.native
+  def _transform[T](
+    chunk: T,
+    encoding: BufferEncoding,
+    callback: js.Function2[/* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[T], Unit]
   ): Unit = js.native
 }
 

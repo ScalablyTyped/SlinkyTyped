@@ -24,6 +24,8 @@ object View {
     @scala.inline
     def end(value: X): this.type = set("end", value.asInstanceOf[js.Any])
     @scala.inline
+    def filterVarargs(value: js.Any*): this.type = set("filter", js.Array(value :_*))
+    @scala.inline
     def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])

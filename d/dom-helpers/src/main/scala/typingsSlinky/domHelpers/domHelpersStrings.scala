@@ -724,9 +724,6 @@ object domHelpersStrings {
   sealed trait `-webkit-clip-path` extends HyphenProperty
   
   @js.native
-  sealed trait `-webkit-color-adjust` extends HyphenProperty
-  
-  @js.native
   sealed trait `-webkit-column-count` extends HyphenProperty
   
   @js.native
@@ -868,6 +865,9 @@ object domHelpersStrings {
   sealed trait `-webkit-perspective-origin` extends HyphenProperty
   
   @js.native
+  sealed trait `-webkit-print-color-adjust` extends HyphenProperty
+  
+  @js.native
   sealed trait `-webkit-scroll-snap-points-x` extends HyphenProperty
   
   @js.native
@@ -926,6 +926,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait `-webkit-text-stroke-width` extends HyphenProperty
+  
+  @js.native
+  sealed trait `-webkit-text-underline-position` extends HyphenProperty
   
   @js.native
   sealed trait `-webkit-touch-callout` extends HyphenProperty
@@ -1468,9 +1471,6 @@ object domHelpersStrings {
   sealed trait WebkitClipPath extends CamelProperty
   
   @js.native
-  sealed trait WebkitColorAdjust extends CamelProperty
-  
-  @js.native
   sealed trait WebkitColumnCount extends CamelProperty
   
   @js.native
@@ -1612,6 +1612,9 @@ object domHelpersStrings {
   sealed trait WebkitPerspectiveOrigin extends CamelProperty
   
   @js.native
+  sealed trait WebkitPrintColorAdjust extends CamelProperty
+  
+  @js.native
   sealed trait WebkitScrollSnapPointsX extends CamelProperty
   
   @js.native
@@ -1670,6 +1673,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait WebkitTextStrokeWidth extends CamelProperty
+  
+  @js.native
+  sealed trait WebkitTextUnderlinePosition extends CamelProperty
   
   @js.native
   sealed trait WebkitTouchCallout extends CamelProperty
@@ -1834,6 +1840,12 @@ object domHelpersStrings {
   sealed trait appearance
     extends CamelProperty
        with HyphenProperty
+  
+  @js.native
+  sealed trait `aspect-ratio` extends HyphenProperty
+  
+  @js.native
+  sealed trait aspectRatio extends CamelProperty
   
   @js.native
   sealed trait auxclick extends js.Object
@@ -4108,9 +4120,6 @@ object domHelpersStrings {
   sealed trait `offset-path` extends HyphenProperty
   
   @js.native
-  sealed trait `offset-position` extends HyphenProperty
-  
-  @js.native
   sealed trait `offset-rotate` extends HyphenProperty
   
   @js.native
@@ -4142,9 +4151,6 @@ object domHelpersStrings {
   
   @js.native
   sealed trait offsetPath extends CamelProperty
-  
-  @js.native
-  sealed trait offsetPosition extends CamelProperty
   
   @js.native
   sealed trait offsetRotate extends CamelProperty
@@ -4268,6 +4274,12 @@ object domHelpersStrings {
   sealed trait `overscroll-behavior` extends HyphenProperty
   
   @js.native
+  sealed trait `overscroll-behavior-block` extends HyphenProperty
+  
+  @js.native
+  sealed trait `overscroll-behavior-inline` extends HyphenProperty
+  
+  @js.native
   sealed trait `overscroll-behavior-x` extends HyphenProperty
   
   @js.native
@@ -4275,6 +4287,12 @@ object domHelpersStrings {
   
   @js.native
   sealed trait overscrollBehavior extends CamelProperty
+  
+  @js.native
+  sealed trait overscrollBehaviorBlock extends CamelProperty
+  
+  @js.native
+  sealed trait overscrollBehaviorInline extends CamelProperty
   
   @js.native
   sealed trait overscrollBehaviorX extends CamelProperty
@@ -4671,6 +4689,21 @@ object domHelpersStrings {
   sealed trait `scroll-snap-destination` extends HyphenProperty
   
   @js.native
+  sealed trait `scroll-snap-margin` extends HyphenProperty
+  
+  @js.native
+  sealed trait `scroll-snap-margin-bottom` extends HyphenProperty
+  
+  @js.native
+  sealed trait `scroll-snap-margin-left` extends HyphenProperty
+  
+  @js.native
+  sealed trait `scroll-snap-margin-right` extends HyphenProperty
+  
+  @js.native
+  sealed trait `scroll-snap-margin-top` extends HyphenProperty
+  
+  @js.native
   sealed trait `scroll-snap-points-x` extends HyphenProperty
   
   @js.native
@@ -4769,6 +4802,21 @@ object domHelpersStrings {
   sealed trait scrollSnapDestination extends CamelProperty
   
   @js.native
+  sealed trait scrollSnapMargin extends CamelProperty
+  
+  @js.native
+  sealed trait scrollSnapMarginBottom extends CamelProperty
+  
+  @js.native
+  sealed trait scrollSnapMarginLeft extends CamelProperty
+  
+  @js.native
+  sealed trait scrollSnapMarginRight extends CamelProperty
+  
+  @js.native
+  sealed trait scrollSnapMarginTop extends CamelProperty
+  
+  @js.native
   sealed trait scrollSnapPointsX extends CamelProperty
   
   @js.native
@@ -4790,10 +4838,16 @@ object domHelpersStrings {
   sealed trait `scrollbar-color` extends HyphenProperty
   
   @js.native
+  sealed trait `scrollbar-track-color` extends HyphenProperty
+  
+  @js.native
   sealed trait `scrollbar-width` extends HyphenProperty
   
   @js.native
   sealed trait scrollbarColor extends CamelProperty
+  
+  @js.native
+  sealed trait scrollbarTrackColor extends CamelProperty
   
   @js.native
   sealed trait scrollbarWidth extends CamelProperty
@@ -4988,6 +5042,12 @@ object domHelpersStrings {
   sealed trait `text-decoration-style` extends HyphenProperty
   
   @js.native
+  sealed trait `text-decoration-thickness` extends HyphenProperty
+  
+  @js.native
+  sealed trait `text-decoration-width` extends HyphenProperty
+  
+  @js.native
   sealed trait `text-emphasis` extends HyphenProperty
   
   @js.native
@@ -5022,6 +5082,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait `text-transform` extends HyphenProperty
+  
+  @js.native
+  sealed trait `text-underline-offset` extends HyphenProperty
   
   @js.native
   sealed trait `text-underline-position` extends HyphenProperty
@@ -5074,6 +5137,12 @@ object domHelpersStrings {
   sealed trait textDecorationStyle
     extends CamelProperty
        with Styles
+  
+  @js.native
+  sealed trait textDecorationThickness extends CamelProperty
+  
+  @js.native
+  sealed trait textDecorationWidth extends CamelProperty
   
   @js.native
   sealed trait textEmphasis
@@ -5132,6 +5201,9 @@ object domHelpersStrings {
   sealed trait textTransform
     extends CamelProperty
        with Styles
+  
+  @js.native
+  sealed trait textUnderlineOffset extends CamelProperty
   
   @js.native
   sealed trait textUnderlinePosition
@@ -6078,8 +6150,6 @@ object domHelpersStrings {
   @scala.inline
   def `-webkit-clip-path`: `-webkit-clip-path` = "-webkit-clip-path".asInstanceOf[`-webkit-clip-path`]
   @scala.inline
-  def `-webkit-color-adjust`: `-webkit-color-adjust` = "-webkit-color-adjust".asInstanceOf[`-webkit-color-adjust`]
-  @scala.inline
   def `-webkit-column-count`: `-webkit-column-count` = "-webkit-column-count".asInstanceOf[`-webkit-column-count`]
   @scala.inline
   def `-webkit-column-fill`: `-webkit-column-fill` = "-webkit-column-fill".asInstanceOf[`-webkit-column-fill`]
@@ -6174,6 +6244,8 @@ object domHelpersStrings {
   @scala.inline
   def `-webkit-perspective-origin`: `-webkit-perspective-origin` = "-webkit-perspective-origin".asInstanceOf[`-webkit-perspective-origin`]
   @scala.inline
+  def `-webkit-print-color-adjust`: `-webkit-print-color-adjust` = "-webkit-print-color-adjust".asInstanceOf[`-webkit-print-color-adjust`]
+  @scala.inline
   def `-webkit-scroll-snap-points-x`: `-webkit-scroll-snap-points-x` = "-webkit-scroll-snap-points-x".asInstanceOf[`-webkit-scroll-snap-points-x`]
   @scala.inline
   def `-webkit-scroll-snap-points-y`: `-webkit-scroll-snap-points-y` = "-webkit-scroll-snap-points-y".asInstanceOf[`-webkit-scroll-snap-points-y`]
@@ -6213,6 +6285,8 @@ object domHelpersStrings {
   def `-webkit-text-stroke-color`: `-webkit-text-stroke-color` = "-webkit-text-stroke-color".asInstanceOf[`-webkit-text-stroke-color`]
   @scala.inline
   def `-webkit-text-stroke-width`: `-webkit-text-stroke-width` = "-webkit-text-stroke-width".asInstanceOf[`-webkit-text-stroke-width`]
+  @scala.inline
+  def `-webkit-text-underline-position`: `-webkit-text-underline-position` = "-webkit-text-underline-position".asInstanceOf[`-webkit-text-underline-position`]
   @scala.inline
   def `-webkit-touch-callout`: `-webkit-touch-callout` = "-webkit-touch-callout".asInstanceOf[`-webkit-touch-callout`]
   @scala.inline
@@ -6574,8 +6648,6 @@ object domHelpersStrings {
   @scala.inline
   def WebkitClipPath: WebkitClipPath = "WebkitClipPath".asInstanceOf[WebkitClipPath]
   @scala.inline
-  def WebkitColorAdjust: WebkitColorAdjust = "WebkitColorAdjust".asInstanceOf[WebkitColorAdjust]
-  @scala.inline
   def WebkitColumnCount: WebkitColumnCount = "WebkitColumnCount".asInstanceOf[WebkitColumnCount]
   @scala.inline
   def WebkitColumnFill: WebkitColumnFill = "WebkitColumnFill".asInstanceOf[WebkitColumnFill]
@@ -6670,6 +6742,8 @@ object domHelpersStrings {
   @scala.inline
   def WebkitPerspectiveOrigin: WebkitPerspectiveOrigin = "WebkitPerspectiveOrigin".asInstanceOf[WebkitPerspectiveOrigin]
   @scala.inline
+  def WebkitPrintColorAdjust: WebkitPrintColorAdjust = "WebkitPrintColorAdjust".asInstanceOf[WebkitPrintColorAdjust]
+  @scala.inline
   def WebkitScrollSnapPointsX: WebkitScrollSnapPointsX = "WebkitScrollSnapPointsX".asInstanceOf[WebkitScrollSnapPointsX]
   @scala.inline
   def WebkitScrollSnapPointsY: WebkitScrollSnapPointsY = "WebkitScrollSnapPointsY".asInstanceOf[WebkitScrollSnapPointsY]
@@ -6709,6 +6783,8 @@ object domHelpersStrings {
   def WebkitTextStrokeColor: WebkitTextStrokeColor = "WebkitTextStrokeColor".asInstanceOf[WebkitTextStrokeColor]
   @scala.inline
   def WebkitTextStrokeWidth: WebkitTextStrokeWidth = "WebkitTextStrokeWidth".asInstanceOf[WebkitTextStrokeWidth]
+  @scala.inline
+  def WebkitTextUnderlinePosition: WebkitTextUnderlinePosition = "WebkitTextUnderlinePosition".asInstanceOf[WebkitTextUnderlinePosition]
   @scala.inline
   def WebkitTouchCallout: WebkitTouchCallout = "WebkitTouchCallout".asInstanceOf[WebkitTouchCallout]
   @scala.inline
@@ -6797,6 +6873,10 @@ object domHelpersStrings {
   def animationstart: animationstart = "animationstart".asInstanceOf[animationstart]
   @scala.inline
   def appearance: appearance = "appearance".asInstanceOf[appearance]
+  @scala.inline
+  def `aspect-ratio`: `aspect-ratio` = "aspect-ratio".asInstanceOf[`aspect-ratio`]
+  @scala.inline
+  def aspectRatio: aspectRatio = "aspectRatio".asInstanceOf[aspectRatio]
   @scala.inline
   def auxclick: auxclick = "auxclick".asInstanceOf[auxclick]
   @scala.inline
@@ -8034,8 +8114,6 @@ object domHelpersStrings {
   @scala.inline
   def `offset-path`: `offset-path` = "offset-path".asInstanceOf[`offset-path`]
   @scala.inline
-  def `offset-position`: `offset-position` = "offset-position".asInstanceOf[`offset-position`]
-  @scala.inline
   def `offset-rotate`: `offset-rotate` = "offset-rotate".asInstanceOf[`offset-rotate`]
   @scala.inline
   def `offset-rotation`: `offset-rotation` = "offset-rotation".asInstanceOf[`offset-rotation`]
@@ -8057,8 +8135,6 @@ object domHelpersStrings {
   def offsetInlineStart: offsetInlineStart = "offsetInlineStart".asInstanceOf[offsetInlineStart]
   @scala.inline
   def offsetPath: offsetPath = "offsetPath".asInstanceOf[offsetPath]
-  @scala.inline
-  def offsetPosition: offsetPosition = "offsetPosition".asInstanceOf[offsetPosition]
   @scala.inline
   def offsetRotate: offsetRotate = "offsetRotate".asInstanceOf[offsetRotate]
   @scala.inline
@@ -8120,11 +8196,19 @@ object domHelpersStrings {
   @scala.inline
   def `overscroll-behavior`: `overscroll-behavior` = "overscroll-behavior".asInstanceOf[`overscroll-behavior`]
   @scala.inline
+  def `overscroll-behavior-block`: `overscroll-behavior-block` = "overscroll-behavior-block".asInstanceOf[`overscroll-behavior-block`]
+  @scala.inline
+  def `overscroll-behavior-inline`: `overscroll-behavior-inline` = "overscroll-behavior-inline".asInstanceOf[`overscroll-behavior-inline`]
+  @scala.inline
   def `overscroll-behavior-x`: `overscroll-behavior-x` = "overscroll-behavior-x".asInstanceOf[`overscroll-behavior-x`]
   @scala.inline
   def `overscroll-behavior-y`: `overscroll-behavior-y` = "overscroll-behavior-y".asInstanceOf[`overscroll-behavior-y`]
   @scala.inline
   def overscrollBehavior: overscrollBehavior = "overscrollBehavior".asInstanceOf[overscrollBehavior]
+  @scala.inline
+  def overscrollBehaviorBlock: overscrollBehaviorBlock = "overscrollBehaviorBlock".asInstanceOf[overscrollBehaviorBlock]
+  @scala.inline
+  def overscrollBehaviorInline: overscrollBehaviorInline = "overscrollBehaviorInline".asInstanceOf[overscrollBehaviorInline]
   @scala.inline
   def overscrollBehaviorX: overscrollBehaviorX = "overscrollBehaviorX".asInstanceOf[overscrollBehaviorX]
   @scala.inline
@@ -8344,6 +8428,16 @@ object domHelpersStrings {
   @scala.inline
   def `scroll-snap-destination`: `scroll-snap-destination` = "scroll-snap-destination".asInstanceOf[`scroll-snap-destination`]
   @scala.inline
+  def `scroll-snap-margin`: `scroll-snap-margin` = "scroll-snap-margin".asInstanceOf[`scroll-snap-margin`]
+  @scala.inline
+  def `scroll-snap-margin-bottom`: `scroll-snap-margin-bottom` = "scroll-snap-margin-bottom".asInstanceOf[`scroll-snap-margin-bottom`]
+  @scala.inline
+  def `scroll-snap-margin-left`: `scroll-snap-margin-left` = "scroll-snap-margin-left".asInstanceOf[`scroll-snap-margin-left`]
+  @scala.inline
+  def `scroll-snap-margin-right`: `scroll-snap-margin-right` = "scroll-snap-margin-right".asInstanceOf[`scroll-snap-margin-right`]
+  @scala.inline
+  def `scroll-snap-margin-top`: `scroll-snap-margin-top` = "scroll-snap-margin-top".asInstanceOf[`scroll-snap-margin-top`]
+  @scala.inline
   def `scroll-snap-points-x`: `scroll-snap-points-x` = "scroll-snap-points-x".asInstanceOf[`scroll-snap-points-x`]
   @scala.inline
   def `scroll-snap-points-y`: `scroll-snap-points-y` = "scroll-snap-points-y".asInstanceOf[`scroll-snap-points-y`]
@@ -8408,6 +8502,16 @@ object domHelpersStrings {
   @scala.inline
   def scrollSnapDestination: scrollSnapDestination = "scrollSnapDestination".asInstanceOf[scrollSnapDestination]
   @scala.inline
+  def scrollSnapMargin: scrollSnapMargin = "scrollSnapMargin".asInstanceOf[scrollSnapMargin]
+  @scala.inline
+  def scrollSnapMarginBottom: scrollSnapMarginBottom = "scrollSnapMarginBottom".asInstanceOf[scrollSnapMarginBottom]
+  @scala.inline
+  def scrollSnapMarginLeft: scrollSnapMarginLeft = "scrollSnapMarginLeft".asInstanceOf[scrollSnapMarginLeft]
+  @scala.inline
+  def scrollSnapMarginRight: scrollSnapMarginRight = "scrollSnapMarginRight".asInstanceOf[scrollSnapMarginRight]
+  @scala.inline
+  def scrollSnapMarginTop: scrollSnapMarginTop = "scrollSnapMarginTop".asInstanceOf[scrollSnapMarginTop]
+  @scala.inline
   def scrollSnapPointsX: scrollSnapPointsX = "scrollSnapPointsX".asInstanceOf[scrollSnapPointsX]
   @scala.inline
   def scrollSnapPointsY: scrollSnapPointsY = "scrollSnapPointsY".asInstanceOf[scrollSnapPointsY]
@@ -8422,9 +8526,13 @@ object domHelpersStrings {
   @scala.inline
   def `scrollbar-color`: `scrollbar-color` = "scrollbar-color".asInstanceOf[`scrollbar-color`]
   @scala.inline
+  def `scrollbar-track-color`: `scrollbar-track-color` = "scrollbar-track-color".asInstanceOf[`scrollbar-track-color`]
+  @scala.inline
   def `scrollbar-width`: `scrollbar-width` = "scrollbar-width".asInstanceOf[`scrollbar-width`]
   @scala.inline
   def scrollbarColor: scrollbarColor = "scrollbarColor".asInstanceOf[scrollbarColor]
+  @scala.inline
+  def scrollbarTrackColor: scrollbarTrackColor = "scrollbarTrackColor".asInstanceOf[scrollbarTrackColor]
   @scala.inline
   def scrollbarWidth: scrollbarWidth = "scrollbarWidth".asInstanceOf[scrollbarWidth]
   @scala.inline
@@ -8536,6 +8644,10 @@ object domHelpersStrings {
   @scala.inline
   def `text-decoration-style`: `text-decoration-style` = "text-decoration-style".asInstanceOf[`text-decoration-style`]
   @scala.inline
+  def `text-decoration-thickness`: `text-decoration-thickness` = "text-decoration-thickness".asInstanceOf[`text-decoration-thickness`]
+  @scala.inline
+  def `text-decoration-width`: `text-decoration-width` = "text-decoration-width".asInstanceOf[`text-decoration-width`]
+  @scala.inline
   def `text-emphasis`: `text-emphasis` = "text-emphasis".asInstanceOf[`text-emphasis`]
   @scala.inline
   def `text-emphasis-color`: `text-emphasis-color` = "text-emphasis-color".asInstanceOf[`text-emphasis-color`]
@@ -8559,6 +8671,8 @@ object domHelpersStrings {
   def `text-size-adjust`: `text-size-adjust` = "text-size-adjust".asInstanceOf[`text-size-adjust`]
   @scala.inline
   def `text-transform`: `text-transform` = "text-transform".asInstanceOf[`text-transform`]
+  @scala.inline
+  def `text-underline-offset`: `text-underline-offset` = "text-underline-offset".asInstanceOf[`text-underline-offset`]
   @scala.inline
   def `text-underline-position`: `text-underline-position` = "text-underline-position".asInstanceOf[`text-underline-position`]
   @scala.inline
@@ -8584,6 +8698,10 @@ object domHelpersStrings {
   @scala.inline
   def textDecorationStyle: textDecorationStyle = "textDecorationStyle".asInstanceOf[textDecorationStyle]
   @scala.inline
+  def textDecorationThickness: textDecorationThickness = "textDecorationThickness".asInstanceOf[textDecorationThickness]
+  @scala.inline
+  def textDecorationWidth: textDecorationWidth = "textDecorationWidth".asInstanceOf[textDecorationWidth]
+  @scala.inline
   def textEmphasis: textEmphasis = "textEmphasis".asInstanceOf[textEmphasis]
   @scala.inline
   def textEmphasisColor: textEmphasisColor = "textEmphasisColor".asInstanceOf[textEmphasisColor]
@@ -8607,6 +8725,8 @@ object domHelpersStrings {
   def textSizeAdjust: textSizeAdjust = "textSizeAdjust".asInstanceOf[textSizeAdjust]
   @scala.inline
   def textTransform: textTransform = "textTransform".asInstanceOf[textTransform]
+  @scala.inline
+  def textUnderlineOffset: textUnderlineOffset = "textUnderlineOffset".asInstanceOf[textUnderlineOffset]
   @scala.inline
   def textUnderlinePosition: textUnderlinePosition = "textUnderlinePosition".asInstanceOf[textUnderlinePosition]
   @scala.inline

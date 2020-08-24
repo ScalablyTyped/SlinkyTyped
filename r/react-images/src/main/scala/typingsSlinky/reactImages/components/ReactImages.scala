@@ -29,6 +29,8 @@ object ReactImages {
     @scala.inline
     def currentImage(value: Double): this.type = set("currentImage", value.asInstanceOf[js.Any])
     @scala.inline
+    def customControlsVarargs(value: ReactHTMLElement[js.Any]*): this.type = set("customControls", js.Array(value :_*))
+    @scala.inline
     def customControls(value: js.Array[ReactHTMLElement[_]]): this.type = set("customControls", value.asInstanceOf[js.Any])
     @scala.inline
     def enableKeyboardInput(value: Boolean): this.type = set("enableKeyboardInput", value.asInstanceOf[js.Any])

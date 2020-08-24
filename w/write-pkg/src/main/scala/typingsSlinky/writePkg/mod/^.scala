@@ -1,6 +1,6 @@
 package typingsSlinky.writePkg.mod
 
-import typingsSlinky.typeFest.mod.JsonObject
+import typingsSlinky.typeFest.basicMod.JsonObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

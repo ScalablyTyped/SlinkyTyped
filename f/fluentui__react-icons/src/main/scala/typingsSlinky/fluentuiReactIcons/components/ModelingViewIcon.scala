@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ModelingViewIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ModelingViewIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ModelingViewIcon")
   @js.native
   object component extends js.Object
   

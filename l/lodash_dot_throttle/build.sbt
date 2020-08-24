@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "lodash_dot_throttle"
-version := "4.1-dt-20200515Z-7b686d"
-scalaVersion := "2.13.2"
+version := "4.1-dt-20200515Z-14dfbb"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

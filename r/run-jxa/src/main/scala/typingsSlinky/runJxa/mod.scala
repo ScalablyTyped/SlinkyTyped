@@ -1,6 +1,6 @@
 package typingsSlinky.runJxa
 
-import typingsSlinky.typeFest.mod.JsonValue
+import typingsSlinky.typeFest.basicMod.JsonValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

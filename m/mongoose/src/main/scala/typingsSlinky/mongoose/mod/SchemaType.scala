@@ -46,9 +46,11 @@ trait SchemaType extends js.Object {
   /** Declares an unique index. */
   def unique(bool: Boolean): this.type = js.native
   def validate(obj: js.Any): this.type = js.native
+  def validate(obj: js.Any, errorMsg: js.UndefOr[scala.Nothing], `type`: String): this.type = js.native
   def validate(obj: js.Any, errorMsg: String): this.type = js.native
   def validate(obj: js.Any, errorMsg: String, `type`: String): this.type = js.native
   def validate(obj: js.Function): this.type = js.native
+  def validate(obj: js.Function, errorMsg: js.UndefOr[scala.Nothing], `type`: String): this.type = js.native
   def validate(obj: js.Function, errorMsg: String): this.type = js.native
   def validate(obj: js.Function, errorMsg: String, `type`: String): this.type = js.native
   /**
@@ -60,6 +62,7 @@ trait SchemaType extends js.Object {
     * @param type optional validator type
     */
   def validate(obj: js.RegExp): this.type = js.native
+  def validate(obj: js.RegExp, errorMsg: js.UndefOr[scala.Nothing], `type`: String): this.type = js.native
   def validate(obj: js.RegExp, errorMsg: String): this.type = js.native
   def validate(obj: js.RegExp, errorMsg: String, `type`: String): this.type = js.native
 }

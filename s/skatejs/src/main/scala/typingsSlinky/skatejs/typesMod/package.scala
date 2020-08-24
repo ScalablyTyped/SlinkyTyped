@@ -9,7 +9,7 @@ package object typesMod {
   {[ P in keyof T ]: skatejs.skatejs/types.PropOptions<T[P]>}
     */ typingsSlinky.skatejs.skatejsStrings.ComponentProps with org.scalablytyped.runtime.TopLevel[T]
   type Constructor[T] = org.scalablytyped.runtime.Instantiable1[/* args (repeated) */ js.Any, T]
-  type HTMLElementClass = typingsSlinky.skatejs.anon.Instantiable with org.scalablytyped.runtime.Instantiable0[typingsSlinky.std.global.HTMLElement]
+  type HTMLElementClass = typingsSlinky.skatejs.anon.Instantiable with org.scalablytyped.runtime.Instantiable0[org.scalajs.dom.raw.HTMLElement]
   type Maybe[T] = js.UndefOr[T | scala.Null]
   type Mixed = js.Object
   type PropOptionsAttribute = typingsSlinky.skatejs.typesMod.PropOptionsAttributeIdentifier | typingsSlinky.skatejs.typesMod.PropOptionsAttributeIdentifierMap

@@ -3,8 +3,8 @@ package typingsSlinky.antd.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLLIElement
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -19,7 +19,6 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.li.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.anon.DomEvent
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -42,6 +41,7 @@ import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
 import typingsSlinky.antd.antdStrings.location
+import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
 import typingsSlinky.antd.antdStrings.move
@@ -55,6 +55,7 @@ import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.polite
 import typingsSlinky.antd.antdStrings.popup
 import typingsSlinky.antd.antdStrings.removals
+import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
@@ -67,11 +68,18 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.menuItemMod.MenuItemProps
 import typingsSlinky.antd.menuItemMod.default
-import typingsSlinky.antd.menuMod.ClickParam
+import typingsSlinky.rcMenu.anon.Hover
+import typingsSlinky.rcMenu.interfaceMod.MenuInfo
+import typingsSlinky.rcMenu.interfaceMod.MenuMode
+import typingsSlinky.rcMenu.interfaceMod.RenderIconType
+import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.ReactInstance
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -89,6 +97,8 @@ object MenuItem {
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -186,6 +196,8 @@ object MenuItem {
     @scala.inline
     def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
     @scala.inline
+    def attribute(value: Record[String, String]): this.type = set("attribute", value.asInstanceOf[js.Any])
+    @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
     @scala.inline
     def autoCorrect(value: String): this.type = set("autoCorrect", value.asInstanceOf[js.Any])
@@ -200,27 +212,37 @@ object MenuItem {
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
+    def danger(value: Boolean): this.type = set("danger", value.asInstanceOf[js.Any])
+    @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
+    def eventKey(value: Key): this.type = set("eventKey", value.asInstanceOf[js.Any])
+    @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inlineIndent(value: Double): this.type = set("inlineIndent", value.asInstanceOf[js.Any])
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     @scala.inline
@@ -228,7 +250,15 @@ object MenuItem {
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
     @scala.inline
+    def isSelected(value: Boolean): this.type = set("isSelected", value.asInstanceOf[js.Any])
+    @scala.inline
     def itemID(value: String): this.type = set("itemID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("itemIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def itemProp(value: String): this.type = set("itemProp", value.asInstanceOf[js.Any])
     @scala.inline
@@ -241,6 +271,12 @@ object MenuItem {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
     def level(value: Double): this.type = set("level", value.asInstanceOf[js.Any])
+    @scala.inline
+    def manualRef(value: /* node */ ReactInstance => Unit): this.type = set("manualRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLLIElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
@@ -262,7 +298,7 @@ object MenuItem {
     @scala.inline
     def onChange(value: SyntheticEvent[EventTarget with HTMLLIElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClick(value: /* param */ ClickParam => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* info */ MenuInfo => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLLIElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -275,6 +311,10 @@ object MenuItem {
     def onCopy(value: SyntheticClipboardEvent[HTMLLIElement] => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
     @scala.inline
     def onCut(value: SyntheticClipboardEvent[HTMLLIElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDeselect(value: /* info */ SelectInfo => Unit): this.type = set("onDeselect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDestroy(value: /* key */ Key => Unit): this.type = set("onDestroy", js.Any.fromFunction1(value))
     @scala.inline
     def onDoubleClick(value: SyntheticMouseEvent[HTMLLIElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -310,6 +350,8 @@ object MenuItem {
     @scala.inline
     def onInvalid(value: SyntheticEvent[EventTarget with HTMLLIElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
+    def onItemHover(value: /* info */ Hover => Unit): this.type = set("onItemHover", js.Any.fromFunction1(value))
+    @scala.inline
     def onKeyDown(value: SyntheticKeyboardEvent[HTMLLIElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyPress(value: SyntheticKeyboardEvent[HTMLLIElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
@@ -326,9 +368,9 @@ object MenuItem {
     @scala.inline
     def onMouseDown(value: SyntheticMouseEvent[HTMLLIElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseEnter(value: /* e */ DomEvent => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    def onMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseLeave(value: /* e */ DomEvent => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    def onMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseMove(value: SyntheticMouseEvent[HTMLLIElement] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
     @scala.inline
@@ -374,7 +416,7 @@ object MenuItem {
     @scala.inline
     def onSeeking(value: SyntheticEvent[Event, HTMLLIElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: SyntheticEvent[Event, HTMLLIElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def onStalled(value: SyntheticEvent[Event, HTMLLIElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
@@ -400,6 +442,12 @@ object MenuItem {
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLLIElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
+    def parentMenuElement(value: org.scalajs.dom.raw.Element): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def parentMenuComponent(value: ReactComponentClass[js.Any]): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def parentMenu(value: ReactInstance): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
@@ -418,6 +466,10 @@ object MenuItem {
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
+    @scala.inline
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
     @scala.inline
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])
@@ -432,7 +484,7 @@ object MenuItem {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     @scala.inline

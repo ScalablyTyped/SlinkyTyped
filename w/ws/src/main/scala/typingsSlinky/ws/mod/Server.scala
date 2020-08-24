@@ -19,6 +19,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Server () extends EventEmitter {
   def this(options: ServerOptions) = this()
+  def this(options: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]) = this()
   def this(options: ServerOptions, callback: js.Function0[Unit]) = this()
   var clients: Set[WebSocket] = js.native
   var options: ServerOptions = js.native
@@ -126,6 +127,6 @@ class Server () extends EventEmitter {
   ): this.type = js.native
   @JSName("removeListener")
   def removeListener_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
-  def shouldHandle(request: IncomingMessage): Boolean = js.native
+  def shouldHandle(request: IncomingMessage): Boolean | js.Promise[Boolean] = js.native
 }
 

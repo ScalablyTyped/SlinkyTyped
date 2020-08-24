@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InsertSignatureLineIcon {
-  @JSImport("@fluentui/react-icons/lib/components/InsertSignatureLineIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "InsertSignatureLineIcon")
   @js.native
   object component extends js.Object
   

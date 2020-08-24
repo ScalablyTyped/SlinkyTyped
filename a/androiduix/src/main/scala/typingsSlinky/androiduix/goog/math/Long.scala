@@ -86,197 +86,74 @@ object Long {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdd(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAnd(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAdd(value: Long => Long): Self = this.set("add", js.Any.fromFunction1(value))
     @scala.inline
-    def withCompare(value: Long => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAnd(value: Long => Long): Self = this.set("and", js.Any.fromFunction1(value))
     @scala.inline
-    def withDiv(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setCompare(value: Long => Double): Self = this.set("compare", js.Any.fromFunction1(value))
     @scala.inline
-    def withEquals(value: Long => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDiv(value: Long => Long): Self = this.set("div", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetHighBits(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHighBits")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setEquals(value: Long => Boolean): Self = this.set("equals", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetLowBits(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLowBits")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetHighBits(value: () => Double): Self = this.set("getHighBits", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetLowBitsUnsigned(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLowBitsUnsigned")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetLowBits(value: () => Double): Self = this.set("getLowBits", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetNumBitsAbs(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumBitsAbs")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetLowBitsUnsigned(value: () => Double): Self = this.set("getLowBitsUnsigned", js.Any.fromFunction0(value))
     @scala.inline
-    def withGreaterThan(value: Long => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greaterThan")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetNumBitsAbs(value: () => Double): Self = this.set("getNumBitsAbs", js.Any.fromFunction0(value))
     @scala.inline
-    def withGreaterThanOrEqual(value: Long => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greaterThanOrEqual")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGreaterThan(value: Long => Boolean): Self = this.set("greaterThan", js.Any.fromFunction1(value))
     @scala.inline
-    def withHigh_(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high_")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGreaterThanOrEqual(value: Long => Boolean): Self = this.set("greaterThanOrEqual", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsNegative(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNegative")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHigh_(value: js.Any): Self = this.set("high_", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsOdd(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOdd")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsNegative(value: () => Boolean): Self = this.set("isNegative", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsZero(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isZero")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsOdd(value: () => Boolean): Self = this.set("isOdd", js.Any.fromFunction0(value))
     @scala.inline
-    def withLessThan(value: Long => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lessThan")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsZero(value: () => Boolean): Self = this.set("isZero", js.Any.fromFunction0(value))
     @scala.inline
-    def withLessThanOrEqual(value: Long => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lessThanOrEqual")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLessThan(value: Long => Boolean): Self = this.set("lessThan", js.Any.fromFunction1(value))
     @scala.inline
-    def withLow_(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low_")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLessThanOrEqual(value: Long => Boolean): Self = this.set("lessThanOrEqual", js.Any.fromFunction1(value))
     @scala.inline
-    def withModulo(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modulo")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLow_(value: js.Any): Self = this.set("low_", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMultiply(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiply")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setModulo(value: Long => Long): Self = this.set("modulo", js.Any.fromFunction1(value))
     @scala.inline
-    def withNegate(value: () => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negate")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMultiply(value: Long => Long): Self = this.set("multiply", js.Any.fromFunction1(value))
     @scala.inline
-    def withNot(value: () => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setNegate(value: () => Long): Self = this.set("negate", js.Any.fromFunction0(value))
     @scala.inline
-    def withNotEquals(value: Long => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notEquals")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setNot(value: () => Long): Self = this.set("not", js.Any.fromFunction0(value))
     @scala.inline
-    def withOr(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setNotEquals(value: Long => Boolean): Self = this.set("notEquals", js.Any.fromFunction1(value))
     @scala.inline
-    def withShiftLeft(value: Double => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftLeft")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOr(value: Long => Long): Self = this.set("or", js.Any.fromFunction1(value))
     @scala.inline
-    def withShiftRight(value: Double => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftRight")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setShiftLeft(value: Double => Long): Self = this.set("shiftLeft", js.Any.fromFunction1(value))
     @scala.inline
-    def withShiftRightUnsigned(value: Double => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftRightUnsigned")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setShiftRight(value: Double => Long): Self = this.set("shiftRight", js.Any.fromFunction1(value))
     @scala.inline
-    def withSubtract(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtract")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setShiftRightUnsigned(value: Double => Long): Self = this.set("shiftRightUnsigned", js.Any.fromFunction1(value))
     @scala.inline
-    def withToInt(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toInt")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSubtract(value: Long => Long): Self = this.set("subtract", js.Any.fromFunction1(value))
     @scala.inline
-    def withToNumber(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toNumber")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setToInt(value: () => Double): Self = this.set("toInt", js.Any.fromFunction0(value))
     @scala.inline
-    def withToString(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toString")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setToNumber(value: () => Double): Self = this.set("toNumber", js.Any.fromFunction0(value))
     @scala.inline
-    def withXor(value: Long => Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xor")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setToString(value: Double => String): Self = this.set("toString", js.Any.fromFunction1(value))
+    @scala.inline
+    def setXor(value: Long => Long): Self = this.set("xor", js.Any.fromFunction1(value))
   }
   
 }

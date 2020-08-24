@@ -3,21 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.listListItemTextMod.ListItemTextProps
-import typingsSlinky.reactToolbox.listListItemTextMod.ListItemTextTheme
+import typingsSlinky.reactToolbox.listItemTextMod.ListItemTextProps
+import typingsSlinky.reactToolbox.listItemTextMod.ListItemTextTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListItemText {
-  @JSImport("react-toolbox/lib/list", "ListItemText")
+  @JSImport("react-toolbox/components/list", "ListItemText")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.libListMod.ListItemText] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.listMod.ListItemText] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

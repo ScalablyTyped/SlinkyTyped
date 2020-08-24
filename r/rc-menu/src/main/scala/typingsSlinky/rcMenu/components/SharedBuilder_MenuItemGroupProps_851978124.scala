@@ -1,6 +1,5 @@
 package typingsSlinky.rcMenu.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -34,6 +33,6 @@ class SharedBuilder_MenuItemGroupProps_851978124[R <: js.Object] (val args: js.A
   @scala.inline
   def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
-  def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
 }
 

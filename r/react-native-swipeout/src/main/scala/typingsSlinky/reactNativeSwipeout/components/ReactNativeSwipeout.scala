@@ -29,6 +29,8 @@ object ReactNativeSwipeout {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def leftVarargs(value: SwipeoutButtonProperties*): this.type = set("left", js.Array(value :_*))
+    @scala.inline
     def left(value: js.Array[SwipeoutButtonProperties]): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline
     def onClose(value: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit): this.type = set("onClose", js.Any.fromFunction3(value))
@@ -38,6 +40,8 @@ object ReactNativeSwipeout {
     def openLeft(value: Boolean): this.type = set("openLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def openRight(value: Boolean): this.type = set("openRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightVarargs(value: SwipeoutButtonProperties*): this.type = set("right", js.Array(value :_*))
     @scala.inline
     def right(value: js.Array[SwipeoutButtonProperties]): this.type = set("right", value.asInstanceOf[js.Any])
     @scala.inline

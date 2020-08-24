@@ -1,0 +1,33 @@
+package typingsSlinky.stellarSdk.mod.xdr
+
+import typingsSlinky.node.Buffer
+import typingsSlinky.stellarSdk.stellarSdkStrings.base64
+import typingsSlinky.stellarSdk.stellarSdkStrings.hex
+import typingsSlinky.stellarSdk.stellarSdkStrings.raw
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("stellar-sdk", "xdr.AuthenticatedMessage")
+@js.native
+class AuthenticatedMessage ()
+  extends typingsSlinky.stellarBase.mod.xdr.AuthenticatedMessage
+
+/* static members */
+@JSImport("stellar-sdk", "xdr.AuthenticatedMessage")
+@js.native
+object AuthenticatedMessage extends js.Object {
+  def `0`(value: typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessageV0): typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage = js.native
+  def fromXDR(input: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage = js.native
+  @JSName("fromXDR")
+  def fromXDR_base64(input: String, format: base64): typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage = js.native
+  @JSName("fromXDR")
+  def fromXDR_hex(input: String, format: hex): typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage = js.native
+  @JSName("fromXDR")
+  def fromXDR_raw(input: Buffer, format: raw): typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage = js.native
+  def isValid(value: typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage): Boolean = js.native
+  def read(io: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage = js.native
+  def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage): Buffer = js.native
+  def write(value: typingsSlinky.stellarBase.xdrMod.xdr.AuthenticatedMessage, io: Buffer): Unit = js.native
+}
+

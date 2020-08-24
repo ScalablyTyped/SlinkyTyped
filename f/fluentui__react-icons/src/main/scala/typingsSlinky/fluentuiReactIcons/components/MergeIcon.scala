@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MergeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MergeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MergeIcon")
   @js.native
   object component extends js.Object
   

@@ -1,7 +1,7 @@
 package typingsSlinky.svgSprite.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InstagramStyle {
-  @JSImport("react-content-loader/dist/stylized/InstagramStyle", JSImport.Default)
+  @JSImport("react-content-loader/dist/web/presets/InstagramStyle", JSImport.Default)
   @js.native
   object component extends js.Object
   

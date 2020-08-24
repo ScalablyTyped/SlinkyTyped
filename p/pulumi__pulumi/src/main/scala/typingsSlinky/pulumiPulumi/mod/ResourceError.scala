@@ -10,6 +10,7 @@ class ResourceError protected ()
   extends typingsSlinky.pulumiPulumi.errorsMod.ResourceError {
   def this(message: String) = this()
   def this(message: String, resource: typingsSlinky.pulumiPulumi.resourceMod.Resource) = this()
+  def this(message: String, resource: js.UndefOr[scala.Nothing], hideStack: Boolean) = this()
   def this(message: String, resource: typingsSlinky.pulumiPulumi.resourceMod.Resource, hideStack: Boolean) = this()
 }
 

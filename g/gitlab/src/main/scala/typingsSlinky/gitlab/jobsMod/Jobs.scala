@@ -1,7 +1,7 @@
 package typingsSlinky.gitlab.jobsMod
 
-import typingsSlinky.gitlab.anon.scopeJobScopeSudo
-import typingsSlinky.gitlab.anon.streambooleanBaseRequestO
+import typingsSlinky.gitlab.anon.scopeJobScopeundefinedSud
+import typingsSlinky.gitlab.anon.streambooleanundefinedBas
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
@@ -21,33 +21,33 @@ class Jobs () extends BaseService {
   def cancel(projectId: String, jobId: Double, options: Sudo): js.Promise[js.Object] = js.native
   def cancel(projectId: Double, jobId: Double): js.Promise[js.Object] = js.native
   def cancel(projectId: Double, jobId: Double, options: Sudo): js.Promise[js.Object] = js.native
-  def downloadLatestArtifactFile(projectId: String, ref: String, name: String, hasStreamOptions: streambooleanBaseRequestO): js.Any = js.native
-  def downloadLatestArtifactFile(projectId: Double, ref: String, name: String, hasStreamOptions: streambooleanBaseRequestO): js.Any = js.native
+  def downloadLatestArtifactFile(projectId: String, ref: String, name: String, hasStreamOptions: streambooleanundefinedBas): js.Any = js.native
+  def downloadLatestArtifactFile(projectId: Double, ref: String, name: String, hasStreamOptions: streambooleanundefinedBas): js.Any = js.native
   def downloadSingleArtifactFile(
     projectId: String,
     jobId: Double,
     artifactPath: String,
-    hasStreamOptions: streambooleanBaseRequestO
+    hasStreamOptions: streambooleanundefinedBas
   ): js.Any = js.native
   def downloadSingleArtifactFile(
     projectId: Double,
     jobId: Double,
     artifactPath: String,
-    hasStreamOptions: streambooleanBaseRequestO
+    hasStreamOptions: streambooleanundefinedBas
   ): js.Any = js.native
   def downloadSingleArtifactFileFromRef(
     projectId: String,
     ref: String,
     artifactPath: String,
     name: String,
-    hasStreamOptions: streambooleanBaseRequestO
+    hasStreamOptions: streambooleanundefinedBas
   ): js.Any = js.native
   def downloadSingleArtifactFileFromRef(
     projectId: Double,
     ref: String,
     artifactPath: String,
     name: String,
-    hasStreamOptions: streambooleanBaseRequestO
+    hasStreamOptions: streambooleanundefinedBas
   ): js.Any = js.native
   def downloadTraceFile(projectId: String, jobId: Double): js.Promise[GetResponse] = js.native
   def downloadTraceFile(projectId: String, jobId: Double, options: Sudo): js.Promise[GetResponse] = js.native
@@ -77,7 +77,9 @@ class Jobs () extends BaseService {
   def show(projectId: String, jobId: Double, options: Sudo): js.Promise[GetResponse] = js.native
   def show(projectId: Double, jobId: Double): js.Promise[GetResponse] = js.native
   def show(projectId: Double, jobId: Double, options: Sudo): js.Promise[GetResponse] = js.native
-  def showPipelineJobs(projectId: String, pipelineId: Double, options: scopeJobScopeSudo): js.Promise[GetResponse] = js.native
-  def showPipelineJobs(projectId: Double, pipelineId: Double, options: scopeJobScopeSudo): js.Promise[GetResponse] = js.native
+  def showPipelineJobs(projectId: String, pipelineId: Double): js.Promise[GetResponse] = js.native
+  def showPipelineJobs(projectId: String, pipelineId: Double, options: scopeJobScopeundefinedSud): js.Promise[GetResponse] = js.native
+  def showPipelineJobs(projectId: Double, pipelineId: Double): js.Promise[GetResponse] = js.native
+  def showPipelineJobs(projectId: Double, pipelineId: Double, options: scopeJobScopeundefinedSud): js.Promise[GetResponse] = js.native
 }
 

@@ -9,7 +9,7 @@ import typingsSlinky.ionicCliFramework.definitionsMod.INamespace
 import typingsSlinky.ionicCliFramework.definitionsMod.NamespaceLocateResult
 import typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.`operation-rpc`
 import typingsSlinky.ionicCliFramework.ipcMod.RPCProcess
-import typingsSlinky.node.NodeJS.ProcessEnv
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
 import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

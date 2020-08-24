@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.components
 
-import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.inputMaskMod.InputMaskProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
@@ -36,9 +36,9 @@ object InputMask {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onComplete(value: /* e */ Event => Unit): this.type = set("onComplete", js.Any.fromFunction1(value))
+    def onComplete(value: /* e */ Value => Unit): this.type = set("onComplete", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

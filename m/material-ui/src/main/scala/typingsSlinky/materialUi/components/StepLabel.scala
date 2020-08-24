@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -28,7 +27,7 @@ object StepLabel {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any] | String | Double): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement | String | Double): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconContainerStyle(value: CSSProperties): this.type = set("iconContainerStyle", value.asInstanceOf[js.Any])
     @scala.inline

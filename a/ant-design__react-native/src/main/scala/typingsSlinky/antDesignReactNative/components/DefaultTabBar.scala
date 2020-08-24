@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
@@ -36,9 +36,9 @@ object DefaultTabBar {
     @scala.inline
     def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderTab(value: /* tab */ TabData => TagMod[Any]): this.type = set("renderTab", js.Any.fromFunction1(value))
+    def renderTab(value: /* tab */ TabData => ReactElement): this.type = set("renderTab", js.Any.fromFunction1(value))
     @scala.inline
-    def renderUnderline(value: /* style */ js.Any => TagMod[Any]): this.type = set("renderUnderline", js.Any.fromFunction1(value))
+    def renderUnderline(value: /* style */ js.Any => ReactElement): this.type = set("renderUnderline", js.Any.fromFunction1(value))
     @scala.inline
     def scrollValue(value: js.Any): this.type = set("scrollValue", value.asInstanceOf[js.Any])
     @scala.inline

@@ -5,6 +5,7 @@ import typingsSlinky.nodegit.convenientPatchMod.ConvenientPatch
 import typingsSlinky.nodegit.diffDeltaMod.DiffDelta
 import typingsSlinky.nodegit.diffMod.Diff.FORMAT
 import typingsSlinky.nodegit.diffPerfDataMod.DiffPerfdata
+import typingsSlinky.nodegit.diffStatsMod.DiffStats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +17,10 @@ class Diff_ () extends js.Object {
   def findSimilar(options: DiffFindOptions): js.Promise[Double] = js.native
   def getDelta(idx: Double): DiffDelta = js.native
   def getPerfdata(): js.Promise[DiffPerfdata] = js.native
+  /**
+    * @returns - Structure containg the diff statistics.
+    */
+  def getStats(): js.Promise[DiffStats] = js.native
   def merge(from: Diff): js.Promise[Double] = js.native
   def numDeltas(): Double = js.native
   /**

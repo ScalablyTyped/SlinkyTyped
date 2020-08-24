@@ -103,71 +103,32 @@ object WebRequestEventInterface {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnAuthRequired(value: WebAuthenticationChallengeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuthRequired")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnBeforeRedirect(value: WebRedirectionResponseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnAuthRequired(value: WebAuthenticationChallengeEvent): Self = this.set("onAuthRequired", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnBeforeRequest(value: WebRequestBodyEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnBeforeRedirect(value: WebRedirectionResponseEvent): Self = this.set("onBeforeRedirect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnBeforeSendHeaders(value: WebRequestHeadersEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeSendHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnBeforeRequest(value: WebRequestBodyEvent): Self = this.set("onBeforeRequest", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnCompleted(value: WebResponseCacheEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompleted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnBeforeSendHeaders(value: WebRequestHeadersEvent): Self = this.set("onBeforeSendHeaders", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnErrorOccured(value: WebResponseErrorEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorOccured")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnCompleted(value: WebResponseCacheEvent): Self = this.set("onCompleted", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnHeadersReceived(value: WebResponseHeadersEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHeadersReceived")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnErrorOccured(value: WebResponseErrorEvent): Self = this.set("onErrorOccured", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnMessage(value: OnMessageEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnHeadersReceived(value: WebResponseHeadersEvent): Self = this.set("onHeadersReceived", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnRequest(value: OnRequestEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnMessage(value: OnMessageEvent): Self = this.set("onMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnResponseStarted(value: WebResponseCacheEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponseStarted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnRequest(value: OnRequestEvent): Self = this.set("onRequest", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnSendHeaders(value: WebRequestHeadersEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSendHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnResponseStarted(value: WebResponseCacheEvent): Self = this.set("onResponseStarted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnSendHeaders(value: WebRequestHeadersEvent): Self = this.set("onSendHeaders", value.asInstanceOf[js.Any])
   }
   
 }

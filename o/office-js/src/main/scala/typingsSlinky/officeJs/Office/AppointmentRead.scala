@@ -328,6 +328,12 @@ trait AppointmentRead extends Item {
     handler: js.Any,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  def addHandlerAsync(
+    eventType: String,
+    handler: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def addHandlerAsync(eventType: String, handler: js.Any, options: AsyncContextOptions): Unit = js.native
   def addHandlerAsync(
     eventType: String,
@@ -338,7 +344,7 @@ trait AppointmentRead extends Item {
   /**
     * Adds an event handler for a supported event. **Note**: Events are available only with task pane.
     * 
-    * To see which event types are supported, see `Office.EventType` for details.
+    * Refer to the Item object model {@link https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/office.context.mailbox.item#events | events section} for supported events.
     * 
     * [Api set: Mailbox 1.7]
     *
@@ -362,6 +368,12 @@ trait AppointmentRead extends Item {
     handler: js.Any,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  def addHandlerAsync(
+    eventType: EventType,
+    handler: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def addHandlerAsync(eventType: EventType, handler: js.Any, options: AsyncContextOptions): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
@@ -370,16 +382,15 @@ trait AppointmentRead extends Item {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
   /**
-    * Displays a reply form that includes the sender and all recipients of the selected message or the organizer and all attendees of the 
+    * Displays a reply form that includes either the sender and all recipients of the selected message or the organizer and all attendees of the
     * selected appointment.
     *
-    * In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2- or 1-column view.
+    * In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2-column or 1-column view.
     *
     * If any of the string parameters exceed their limits, `displayReplyAllForm` throws an exception.
     *
-    * When attachments are specified in the `formData.attachments` parameter, Outlook on the web and desktop clients attempt to download
-    * all attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form UI. 
-    * If this isn't possible, then no error message is thrown.
+    * When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all attachments and attach them to the
+    * reply form. If any attachments fail to be added, an error is shown in the form UI. If this isn't possible, then no error message is thrown.
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
@@ -397,13 +408,12 @@ trait AppointmentRead extends Item {
   /**
     * Displays a reply form that includes only the sender of the selected message or the organizer of the selected appointment.
     *
-    * In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2- or 1-column view.
+    * In Outlook on the web, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2-column or 1-column view.
     *
     * If any of the string parameters exceed their limits, `displayReplyForm` throws an exception.
     *
-    * When attachments are specified in the `formData.attachments` parameter, Outlook on the web and desktop clients attempt to download
-    * all attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form UI. 
-    * If this isn't possible, then no error message is thrown.
+    * When attachments are specified in the `formData.attachments` parameter, Outlook attempts to download all attachments and attach them to the
+    * reply form. If any attachments fail to be added, an error is shown in the form UI. If this isn't possible, then no error message is thrown.
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
@@ -452,6 +462,11 @@ trait AppointmentRead extends Item {
   def getAttachmentContentAsync(attachmentId: String): Unit = js.native
   def getAttachmentContentAsync(
     attachmentId: String,
+    callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
+  ): Unit = js.native
+  def getAttachmentContentAsync(
+    attachmentId: String,
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
   ): Unit = js.native
   def getAttachmentContentAsync(attachmentId: String, options: AsyncContextOptions): Unit = js.native
@@ -723,6 +738,11 @@ trait AppointmentRead extends Item {
   def loadCustomPropertiesAsync(callback: js.Function1[/* asyncResult */ AsyncResult[CustomProperties], Unit], userContext: js.Any): Unit = js.native
   def removeHandlerAsync(eventType: String): Unit = js.native
   def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  def removeHandlerAsync(
+    eventType: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def removeHandlerAsync(eventType: String, options: AsyncContextOptions): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
@@ -732,7 +752,7 @@ trait AppointmentRead extends Item {
   /**
     * Removes the event handlers for a supported event type. **Note**: Events are available only with task pane.
     * 
-    * To see which event types are supported, see `Office.EventType` for details.
+    * Refer to the Item object model {@link https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/office.context.mailbox.item#events | events section} for supported events.
     * 
     * [Api set: Mailbox 1.7]
     *
@@ -750,6 +770,11 @@ trait AppointmentRead extends Item {
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
   def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  def removeHandlerAsync(
+    eventType: EventType,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def removeHandlerAsync(eventType: EventType, options: AsyncContextOptions): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,

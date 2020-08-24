@@ -3,10 +3,10 @@ package typingsSlinky.reactAce.components
 import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.brace.mod.Annotation
+import typingsSlinky.reactAce.mod.split
 import typingsSlinky.reactAce.splitMod.ISplitEditorProps
-import typingsSlinky.reactAce.splitMod.default
 import typingsSlinky.reactAce.typesMod.IAceOptions
+import typingsSlinky.reactAce.typesMod.IAnnotation
 import typingsSlinky.reactAce.typesMod.ICommand
 import typingsSlinky.reactAce.typesMod.IEditorProps
 import typingsSlinky.reactAce.typesMod.IMarker
@@ -15,18 +15,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Split {
-  @JSImport("react-ace/lib/split", JSImport.Default)
+  @JSImport("react-ace", "split")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, split] {
     @scala.inline
-    def annotations(value: js.Array[js.Array[Annotation]]): this.type = set("annotations", value.asInstanceOf[js.Any])
+    def annotationsVarargs(value: js.Array[IAnnotation]*): this.type = set("annotations", js.Array(value :_*))
+    @scala.inline
+    def annotations(value: js.Array[js.Array[IAnnotation]]): this.type = set("annotations", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def commandsVarargs(value: ICommand*): this.type = set("commands", js.Array(value :_*))
     @scala.inline
     def commands(value: js.Array[ICommand]): this.type = set("commands", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,11 +38,17 @@ object Split {
     @scala.inline
     def debounceChangePeriod(value: Double): this.type = set("debounceChangePeriod", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def editorProps(value: IEditorProps): this.type = set("editorProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
+    @scala.inline
     def enableBasicAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableBasicAutocompletion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
     @scala.inline
     def enableLiveAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableLiveAutocompletion", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,6 +61,8 @@ object Split {
     def highlightActiveLine(value: Boolean): this.type = set("highlightActiveLine", value.asInstanceOf[js.Any])
     @scala.inline
     def keyboardHandler(value: String): this.type = set("keyboardHandler", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markersVarargs(value: js.Array[IMarker]*): this.type = set("markers", js.Array(value :_*))
     @scala.inline
     def markers(value: js.Array[js.Array[IMarker]]): this.type = set("markers", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,6 +102,8 @@ object Split {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
+    def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
+    @scala.inline
     def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
     @scala.inline
     def setOptions(value: IAceOptions): this.type = set("setOptions", value.asInstanceOf[js.Any])
@@ -101,6 +115,8 @@ object Split {
     def tabSize(value: Double): this.type = set("tabSize", value.asInstanceOf[js.Any])
     @scala.inline
     def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

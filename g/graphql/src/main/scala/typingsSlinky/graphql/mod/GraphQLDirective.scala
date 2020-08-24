@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.mod
 
-import typingsSlinky.graphql.directivesMod.GraphQLDirectiveConfig
+import typingsSlinky.graphql.anon.ReadonlyGraphQLDirectiveC
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLDirective protected ()
   extends typingsSlinky.graphql.typeMod.GraphQLDirective {
-  def this(config: GraphQLDirectiveConfig) = this()
+  def this(config: ReadonlyGraphQLDirectiveC) = this()
 }
 

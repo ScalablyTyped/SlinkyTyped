@@ -1,14 +1,12 @@
 package typingsSlinky.rxjs
 
+import typingsSlinky.rxjs.innerSubscribeMod.SimpleOuterSubscriber
 import typingsSlinky.rxjs.operatorMod.Operator
-import typingsSlinky.rxjs.outerSubscriberMod.OuterSubscriber
 import typingsSlinky.rxjs.subscriberMod.Subscriber
-import typingsSlinky.rxjs.subscriptionMod.Subscription
 import typingsSlinky.rxjs.typesMod.MonoTypeOperatorFunction
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.OperatorFunction
 import typingsSlinky.rxjs.typesMod.SchedulerLike
-import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +16,7 @@ import scala.scalajs.js.annotation._
 object expandMod extends js.Object {
   @js.native
   class ExpandOperator[T, R] protected () extends Operator[T, R] {
+    def this(project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]], concurrent: Double) = this()
     def this(
       project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]],
       concurrent: Double,
@@ -26,12 +25,15 @@ object expandMod extends js.Object {
     var concurrent: js.Any = js.native
     var project: js.Any = js.native
     var scheduler: js.Any = js.native
-    /* CompleteClass */
-    override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
   }
   
   @js.native
-  class ExpandSubscriber[T, R] protected () extends OuterSubscriber[T, R] {
+  class ExpandSubscriber[T, R] protected () extends SimpleOuterSubscriber[T, R] {
+    def this(
+      destination: Subscriber[R],
+      project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]],
+      concurrent: Double
+    ) = this()
     def this(
       destination: Subscriber[R],
       project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]],
@@ -47,10 +49,14 @@ object expandMod extends js.Object {
     var scheduler: js.Any = js.native
     var subscribeToProjection: js.Any = js.native
     /* protected */ def _next(value: js.Any): Unit = js.native
-    def notifyComplete(innerSub: Subscription): Unit = js.native
   }
   
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]]): MonoTypeOperatorFunction[T] = js.native
+  def expand[T](
+    project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]],
+    concurrent: js.UndefOr[scala.Nothing],
+    scheduler: SchedulerLike
+  ): MonoTypeOperatorFunction[T] = js.native
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]], concurrent: Double): MonoTypeOperatorFunction[T] = js.native
   def expand[T](
     project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]],
@@ -59,6 +65,12 @@ object expandMod extends js.Object {
   ): MonoTypeOperatorFunction[T] = js.native
   @JSName("expand")
   def expand_TR_OperatorFunction[T, R](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]]): OperatorFunction[T, R] = js.native
+  @JSName("expand")
+  def expand_TR_OperatorFunction[T, R](
+    project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]],
+    concurrent: js.UndefOr[scala.Nothing],
+    scheduler: SchedulerLike
+  ): OperatorFunction[T, R] = js.native
   @JSName("expand")
   def expand_TR_OperatorFunction[T, R](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]], concurrent: Double): OperatorFunction[T, R] = js.native
   @JSName("expand")

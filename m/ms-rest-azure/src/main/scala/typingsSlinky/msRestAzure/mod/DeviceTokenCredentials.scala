@@ -1,7 +1,6 @@
 package typingsSlinky.msRestAzure.mod
 
 import typingsSlinky.msRest.mod.ServiceClientCredentials
-import typingsSlinky.msRest.mod.WebResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,13 +17,5 @@ class DeviceTokenCredentials () extends ServiceClientCredentials {
     *                       {object} [tokenResponse] The tokenResponse (tokenType and accessToken are the two important properties). 
     */
   def getToken(callback: js.Function2[/* err */ js.Error, /* result */ TokenResponse, Unit]): Unit = js.native
-  /**
-    * Signs a request with the Authentication header.
-    *
-    * @param {WebResource} The WebResource to be signed.
-    * @param {function(error)}  callback  The callback function.
-    */
-  /* CompleteClass */
-  override def signRequest(webResource: WebResource, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
 

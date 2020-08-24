@@ -10,9 +10,5 @@ import scala.scalajs.js.annotation._
 class BadgeNotification protected ()
   extends typingsSlinky.winrt.Windows.UI.Notifications.BadgeNotification {
   def this(content: XmlDocument) = this()
-  /* CompleteClass */
-  override var content: XmlDocument = js.native
-  /* CompleteClass */
-  override var expirationTime: js.Date = js.native
 }
 

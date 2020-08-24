@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Exclude<saxes.saxes.SaxesAttributeNS, 'uri'> */
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.saxes.saxesStrings.value
   - typingsSlinky.saxes.saxesStrings.local
   - typingsSlinky.saxes.saxesStrings.prefix
-  - typingsSlinky.saxes.saxesStrings.value
   - typingsSlinky.saxes.saxesStrings.name
 */
 trait SaxesAttributeNSIncomplete

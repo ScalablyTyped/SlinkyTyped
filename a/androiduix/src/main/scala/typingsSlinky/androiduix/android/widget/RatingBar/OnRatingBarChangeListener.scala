@@ -22,11 +22,12 @@ object OnRatingBarChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnRatingChanged(value: (typingsSlinky.androiduix.android.widget.RatingBar, Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRatingChanged")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnRatingChanged(value: (typingsSlinky.androiduix.android.widget.RatingBar, Double, Boolean) => Unit): Self = this.set("onRatingChanged", js.Any.fromFunction3(value))
   }
   
 }

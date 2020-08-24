@@ -49,83 +49,36 @@ object Callback {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClampViewPositionHorizontal(value: (View, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clampViewPositionHorizontal")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClampViewPositionVertical(value: (View, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clampViewPositionVertical")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setClampViewPositionHorizontal(value: (View, Double, Double) => Double): Self = this.set("clampViewPositionHorizontal", js.Any.fromFunction3(value))
     @scala.inline
-    def withGetOrderedChildIndex(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrderedChildIndex")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setClampViewPositionVertical(value: (View, Double, Double) => Double): Self = this.set("clampViewPositionVertical", js.Any.fromFunction3(value))
     @scala.inline
-    def withGetViewHorizontalDragRange(value: View => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewHorizontalDragRange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetOrderedChildIndex(value: Double => Double): Self = this.set("getOrderedChildIndex", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetViewVerticalDragRange(value: View => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewVerticalDragRange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetViewHorizontalDragRange(value: View => Double): Self = this.set("getViewHorizontalDragRange", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnEdgeDragStarted(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdgeDragStarted")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetViewVerticalDragRange(value: View => Double): Self = this.set("getViewVerticalDragRange", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnEdgeLock(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdgeLock")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnEdgeDragStarted(value: (Double, Double) => Unit): Self = this.set("onEdgeDragStarted", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnEdgeTouched(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEdgeTouched")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnEdgeLock(value: Double => Boolean): Self = this.set("onEdgeLock", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnViewCaptured(value: (View, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewCaptured")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnEdgeTouched(value: (Double, Double) => Unit): Self = this.set("onEdgeTouched", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnViewDragStateChanged(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewDragStateChanged")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnViewCaptured(value: (View, Double) => Unit): Self = this.set("onViewCaptured", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnViewPositionChanged(value: (View, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewPositionChanged")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setOnViewDragStateChanged(value: Double => Unit): Self = this.set("onViewDragStateChanged", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnViewReleased(value: (View, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewReleased")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setOnViewPositionChanged(value: (View, Double, Double, Double, Double) => Unit): Self = this.set("onViewPositionChanged", js.Any.fromFunction5(value))
     @scala.inline
-    def withTryCaptureView(value: (View, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tryCaptureView")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnViewReleased(value: (View, Double, Double) => Unit): Self = this.set("onViewReleased", js.Any.fromFunction3(value))
+    @scala.inline
+    def setTryCaptureView(value: (View, Double) => Boolean): Self = this.set("tryCaptureView", js.Any.fromFunction2(value))
   }
   
 }

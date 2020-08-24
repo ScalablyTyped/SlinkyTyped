@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "map-obj"
-version := "4.1.0-9eb8a5"
-scalaVersion := "2.13.2"
+version := "4.1.0-158c73"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

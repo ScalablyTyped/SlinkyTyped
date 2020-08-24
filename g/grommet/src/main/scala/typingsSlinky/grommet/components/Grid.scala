@@ -55,7 +55,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -106,14 +105,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Grid {
-  @JSImport("grommet", "Grid")
+  @JSImport("grommet/es6", "Grid")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.div.tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, HTMLDivElement] {
     @scala.inline
     def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -126,6 +125,8 @@ object Grid {
     def alignContent(value: AlignContentType): this.type = set("alignContent", value.asInstanceOf[js.Any])
     @scala.inline
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def areasVarargs(value: (js.Array[String] | End)*): this.type = set("areas", js.Array(value :_*))
     @scala.inline
     def areas(value: js.Array[js.Array[String] | End]): this.type = set("areas", value.asInstanceOf[js.Any])
     @scala.inline
@@ -241,6 +242,10 @@ object Grid {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(
+      value: (xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String])*
+    ): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(
       value: (js.Array[
           xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
@@ -256,6 +261,8 @@ object Grid {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -472,6 +479,10 @@ object Grid {
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsVarargs(
+      value: (xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String])*
+    ): this.type = set("rows", js.Array(value :_*))
     @scala.inline
     def rows(
       value: (js.Array[

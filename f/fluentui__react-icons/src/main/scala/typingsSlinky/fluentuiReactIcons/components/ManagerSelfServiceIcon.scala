@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ManagerSelfServiceIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ManagerSelfServiceIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ManagerSelfServiceIcon")
   @js.native
   object component extends js.Object
   

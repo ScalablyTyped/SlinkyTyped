@@ -21,11 +21,73 @@ class Color ()
   extends typingsSlinky.playcanvas.pc.Color {
   def this(r: js.Array[Double]) = this()
   def this(r: Double) = this()
+  def this(r: js.UndefOr[scala.Nothing], g: Double) = this()
   def this(r: js.Array[Double], g: Double) = this()
   def this(r: Double, g: Double) = this()
+  def this(r: js.UndefOr[scala.Nothing], g: js.UndefOr[scala.Nothing], b: Double) = this()
+  def this(r: js.UndefOr[scala.Nothing], g: Double, b: Double) = this()
+  def this(r: js.Array[Double], g: js.UndefOr[scala.Nothing], b: Double) = this()
   def this(r: js.Array[Double], g: Double, b: Double) = this()
+  def this(r: Double, g: js.UndefOr[scala.Nothing], b: Double) = this()
   def this(r: Double, g: Double, b: Double) = this()
+  def this(
+    r: js.UndefOr[scala.Nothing],
+    g: js.UndefOr[scala.Nothing],
+    b: js.UndefOr[scala.Nothing],
+    a: Double
+  ) = this()
+  def this(r: js.UndefOr[scala.Nothing], g: js.UndefOr[scala.Nothing], b: Double, a: Double) = this()
+  def this(r: js.UndefOr[scala.Nothing], g: Double, b: js.UndefOr[scala.Nothing], a: Double) = this()
+  def this(r: js.UndefOr[scala.Nothing], g: Double, b: Double, a: Double) = this()
+  def this(r: js.Array[Double], g: js.UndefOr[scala.Nothing], b: js.UndefOr[scala.Nothing], a: Double) = this()
+  def this(r: js.Array[Double], g: js.UndefOr[scala.Nothing], b: Double, a: Double) = this()
+  def this(r: js.Array[Double], g: Double, b: js.UndefOr[scala.Nothing], a: Double) = this()
   def this(r: js.Array[Double], g: Double, b: Double, a: Double) = this()
+  def this(r: Double, g: js.UndefOr[scala.Nothing], b: js.UndefOr[scala.Nothing], a: Double) = this()
+  def this(r: Double, g: js.UndefOr[scala.Nothing], b: Double, a: Double) = this()
+  def this(r: Double, g: Double, b: js.UndefOr[scala.Nothing], a: Double) = this()
   def this(r: Double, g: Double, b: Double, a: Double) = this()
+}
+
+/* static members */
+@JSImport("playcanvas", "Color")
+@js.native
+object Color extends js.Object {
+  /**
+    * A constant color set to black [0, 0, 0, 1].
+    */
+  val BLACK: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to blue [0, 0, 1, 1].
+    */
+  val BLUE: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to cyan [0, 1, 1, 1].
+    */
+  val CYAN: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to gray [0.5, 0.5, 0.5, 1].
+    */
+  val GRAY: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to green [0, 1, 0, 1].
+    */
+  val GREEN: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to magenta [1, 0, 1, 1].
+    */
+  val MAGENTA: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to red [1, 0, 0, 1].
+    */
+  val RED: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to white [1, 1, 1, 1].
+    */
+  val WHITE: typingsSlinky.playcanvas.pc.Color = js.native
+  /**
+    * A constant color set to yellow [1, 1, 0, 1].
+    */
+  val YELLOW: typingsSlinky.playcanvas.pc.Color = js.native
 }
 

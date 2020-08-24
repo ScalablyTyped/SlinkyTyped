@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def addQueryArgs(): String = js.native
+  def addQueryArgs(url: js.UndefOr[scala.Nothing], args: js.Object): String = js.native
   def addQueryArgs(url: String): String = js.native
   def addQueryArgs(url: String, args: js.Object): String = js.native
   def cleanForSlug(string: String): String = js.native
@@ -16,6 +17,7 @@ object mod extends js.Object {
   def getAuthority(url: String): String | Unit = js.native
   def getFragment(url: String): String | Unit = js.native
   def getPath(url: String): String | Unit = js.native
+  def getPathAndQueryString(url: String): String = js.native
   def getProtocol(url: String): String | Unit = js.native
   def getQueryArg(url: String, arg: String): js.UndefOr[
     String | js.Array[String] | (StringDictionary[String | js.Array[String] | js.Any])

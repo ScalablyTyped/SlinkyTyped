@@ -1,6 +1,6 @@
 package typingsSlinky.watchify.mod
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.watchify.watchifyStrings.bytes
 import typingsSlinky.watchify.watchifyStrings.log
 import typingsSlinky.watchify.watchifyStrings.time

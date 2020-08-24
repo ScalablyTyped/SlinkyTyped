@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.input.tag
@@ -60,7 +59,7 @@ object TagInput {
     @scala.inline
     def onAdd(value: (/* values */ js.Array[String], /* method */ TagInputAddMethod) => Boolean | Unit): this.type = set("onAdd", js.Any.fromFunction2(value))
     @scala.inline
-    def onChange(value: /* values */ js.Array[TagMod[Any]] => Boolean | Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* values */ js.Array[ReactElement] => Boolean | Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onInputChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -78,14 +77,14 @@ object TagInput {
     @scala.inline
     def separator(value: String | js.RegExp | `false`): this.type = set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def tagPropsFunction2(value: (/* value */ TagMod[Any], /* index */ Double) => ITagProps): this.type = set("tagProps", js.Any.fromFunction2(value))
+    def tagPropsFunction2(value: (/* value */ ReactElement, /* index */ Double) => ITagProps): this.type = set("tagProps", js.Any.fromFunction2(value))
     @scala.inline
-    def tagProps(value: ITagProps | (js.Function2[/* value */ TagMod[Any], /* index */ Double, ITagProps])): this.type = set("tagProps", value.asInstanceOf[js.Any])
+    def tagProps(value: ITagProps | (js.Function2[/* value */ ReactElement, /* index */ Double, ITagProps])): this.type = set("tagProps", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ITagInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(values: js.Array[TagMod[Any]]): Builder = {
+  def apply(values: js.Array[ReactElement]): Builder = {
     val __props = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ITagInputProps]))
   }

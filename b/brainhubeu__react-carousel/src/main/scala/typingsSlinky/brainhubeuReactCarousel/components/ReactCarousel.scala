@@ -51,11 +51,15 @@ object ReactCarousel {
     @scala.inline
     def keepDirectionWhenDragging(value: Boolean): this.type = set("keepDirectionWhenDragging", value.asInstanceOf[js.Any])
     @scala.inline
+    def minDraggableOffset(value: Double): this.type = set("minDraggableOffset", value.asInstanceOf[js.Any])
+    @scala.inline
     def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: /* value */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesVarargs(value: ReactElement*): this.type = set("slides", js.Array(value :_*))
     @scala.inline
     def slides(value: js.Array[ReactElement]): this.type = set("slides", value.asInstanceOf[js.Any])
     @scala.inline

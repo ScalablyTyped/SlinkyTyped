@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 class Link ()
   extends typingsSlinky.jointjs.mod.dia.Link {
   def this(attributes: GenericAttributes[LinkSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[LinkSelectors], opt: Options) = this()
 }
 

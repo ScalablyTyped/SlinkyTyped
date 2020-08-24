@@ -3,7 +3,6 @@ package typingsSlinky.baseui.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -49,9 +48,9 @@ object Popover {
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction0(value: () => TagMod[Any]): this.type = set("content", js.Any.fromFunction0(value))
+    def contentFunction0(value: () => ReactElement): this.type = set("content", js.Any.fromFunction0(value))
     @scala.inline
-    def content(value: TagMod[Any] | js.Function0[TagMod[Any]]): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | js.Function0[ReactElement]): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
     @scala.inline

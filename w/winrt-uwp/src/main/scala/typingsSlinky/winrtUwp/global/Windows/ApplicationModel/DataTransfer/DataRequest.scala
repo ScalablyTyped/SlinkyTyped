@@ -8,24 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataRequest")
 @js.native
 abstract class DataRequest ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataRequest {
-  /** Sets or gets a DataPackage object that contains the content a user wants to share. */
-  /* CompleteClass */
-  override var data: typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataPackage = js.native
-  /** Gets the deadline for finishing a delayed rendering operation. If execution goes beyond that deadline, the results of delayed rendering are ignored. */
-  /* CompleteClass */
-  override var deadline: js.Date = js.native
-  /**
-    * Cancels the sharing operation and supplies an error string to display to the user.
-    * @param value The text to display to the user.
-    */
-  /* CompleteClass */
-  override def failWithDisplayText(value: String): Unit = js.native
-  /**
-    * Supports asynchronous sharing operations by creating and returning a DataRequestDeferral object.
-    * @return An object that allows you to share or send content asynchronously.
-    */
-  /* CompleteClass */
-  override def getDeferral(): typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataRequestDeferral = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataRequest
 

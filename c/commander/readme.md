@@ -1,7 +1,7 @@
 
 # Scala.js typings for commander
 
-Typings are for version 3.0.2
+Typings are for version 6.0.0
 
 ## Library description:
 the complete solution for node.js command-line programs

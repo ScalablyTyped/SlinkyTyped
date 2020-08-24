@@ -29,23 +29,16 @@ object OnDoubleTapListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnDoubleTap(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleTap")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnDoubleTapEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleTapEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDoubleTap(value: MotionEvent => Boolean): Self = this.set("onDoubleTap", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnSingleTapConfirmed(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSingleTapConfirmed")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDoubleTapEvent(value: MotionEvent => Boolean): Self = this.set("onDoubleTapEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnSingleTapConfirmed(value: MotionEvent => Boolean): Self = this.set("onSingleTapConfirmed", js.Any.fromFunction1(value))
   }
   
 }

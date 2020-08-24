@@ -31,17 +31,14 @@ object DetectedLanguage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLanguage(value: kLanguageInfoTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPercentage(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLanguage(value: kLanguageInfoTable): Self = this.set("language", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPercentage(value: integer): Self = this.set("percentage", value.asInstanceOf[js.Any])
   }
   
 }

@@ -16,7 +16,7 @@ object ThemeProvider {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ThemeProvider[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ThemeProvider[T]] {
     @scala.inline
     def theme(value: Theme[T]): this.type = set("theme", value.asInstanceOf[js.Any])
   }

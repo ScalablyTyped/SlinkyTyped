@@ -1,27 +1,18 @@
 package typingsSlinky.pollyjsAdapter.mod
 
-import typingsSlinky.pollyjsAdapter.anon.Body
-import typingsSlinky.pollyjsCore.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@pollyjs/adapter", JSImport.Default)
 @js.native
-class default () extends Adapter {
-  /* CompleteClass */
-  override def connect(): Unit = js.native
-  /* CompleteClass */
-  override def disconnect(): Unit = js.native
-  /* CompleteClass */
-  override def passthroughRequest(pollyRequest: Request): js.Promise[Body] = js.native
-}
+class default () extends Adapter
 
 /* static members */
 @JSImport("@pollyjs/adapter", JSImport.Default)
 @js.native
 object default extends js.Object {
-  val name: String = js.native
+  val id: String = js.native
   val `type`: String = js.native
 }
 

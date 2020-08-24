@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 package object esGridMod {
   type GridCellRangeRenderer = js.Function1[
     /* params */ typingsSlinky.reactVirtualized.esGridMod.GridCellRangeProps, 
-    js.Array[slinky.core.TagMod[scala.Any]]
+    js.Array[slinky.core.facade.ReactElement]
   ]
   type GridCellRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esGridMod.GridCellProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type OverscanIndices = typingsSlinky.reactVirtualized.mod.OverscanIndexRange
   type OverscanIndicesGetter = js.Function1[

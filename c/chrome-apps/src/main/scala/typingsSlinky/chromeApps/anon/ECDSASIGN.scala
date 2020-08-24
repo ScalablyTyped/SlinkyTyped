@@ -25,17 +25,14 @@ object ECDSASIGN {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withECDSA_SIGN(value: ecdsaSign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ECDSA_SIGN")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRSA_SIGN(value: rsaSign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RSA_SIGN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setECDSA_SIGN(value: ecdsaSign): Self = this.set("ECDSA_SIGN", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRSA_SIGN(value: rsaSign): Self = this.set("RSA_SIGN", value.asInstanceOf[js.Any])
   }
   
 }

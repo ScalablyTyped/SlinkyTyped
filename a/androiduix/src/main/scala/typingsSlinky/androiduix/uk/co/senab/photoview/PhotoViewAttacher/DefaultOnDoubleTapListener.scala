@@ -31,17 +31,14 @@ object DefaultOnDoubleTapListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPhotoViewAttacher(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoViewAttacher")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSetPhotoViewAttacher(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPhotoViewAttacher")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setPhotoViewAttacher(value: js.Any): Self = this.set("photoViewAttacher", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSetPhotoViewAttacher(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher => Unit): Self = this.set("setPhotoViewAttacher", js.Any.fromFunction1(value))
   }
   
 }

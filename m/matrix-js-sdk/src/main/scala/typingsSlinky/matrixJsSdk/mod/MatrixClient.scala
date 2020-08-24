@@ -126,6 +126,7 @@ class MatrixClient () extends EventEmitter {
   def getPresenceList(): js.Promise[js.Array[js.Object]] = js.native
   def getPresenceList(callback: MatrixCallback): js.Promise[js.Array[js.Object]] = js.native
   def getProfileInfo(userId: String): js.Promise[Avatarurl] = js.native
+  def getProfileInfo(userId: String, info: js.UndefOr[scala.Nothing], callback: MatrixCallback): js.Promise[Avatarurl] = js.native
   def getProfileInfo(userId: String, info: String): js.Promise[Avatarurl] = js.native
   def getProfileInfo(userId: String, info: String, callback: MatrixCallback): js.Promise[Avatarurl] = js.native
   def getPublicisedGroups(userIds: js.Array[String]): js.Promise[js.Object] = js.native
@@ -147,6 +148,12 @@ class MatrixClient () extends EventEmitter {
   def getScheduler(): Null | MatrixScheduler = js.native
   def getSsoLoginUrl(redirectUrl: String, loginType: String): String = js.native
   def getStateEvent(roomId: String, eventType: EventType): js.Promise[js.Object] = js.native
+  def getStateEvent(
+    roomId: String,
+    eventType: EventType,
+    stateKey: js.UndefOr[scala.Nothing],
+    callback: MatrixCallback
+  ): js.Promise[js.Object] = js.native
   def getStateEvent(roomId: String, eventType: EventType, stateKey: String): js.Promise[js.Object] = js.native
   def getStateEvent(roomId: String, eventType: EventType, stateKey: String, callback: MatrixCallback): js.Promise[js.Object] = js.native
   def getStoredDevice(userId: String, deviceId: String): js.Promise[CryptoDeviceInfo] = js.native
@@ -186,9 +193,11 @@ class MatrixClient () extends EventEmitter {
   def isUsernameAvailable(username: String): js.Promise[Boolean] = js.native
   def joinGroup(groupId: String): js.Promise[Unit] = js.native
   def joinRoom(roomIdOrAlias: String): js.Promise[Room] = js.native
+  def joinRoom(roomIdOrAlias: String, opts: js.UndefOr[scala.Nothing], callback: MatrixCallback): js.Promise[Room] = js.native
   def joinRoom(roomIdOrAlias: String, opts: InviteSignUrl): js.Promise[Room] = js.native
   def joinRoom(roomIdOrAlias: String, opts: InviteSignUrl, callback: MatrixCallback): js.Promise[Room] = js.native
   def kick(roomId: String, userId: String): js.Promise[Unit] = js.native
+  def kick(roomId: String, userId: String, reason: js.UndefOr[scala.Nothing], callback: MatrixCallback): js.Promise[Unit] = js.native
   def kick(roomId: String, userId: String, reason: String): js.Promise[Unit] = js.native
   def kick(roomId: String, userId: String, reason: String, callback: MatrixCallback): js.Promise[Unit] = js.native
   def leave(roomId: String): js.Promise[Unit] = js.native
@@ -218,7 +227,22 @@ class MatrixClient () extends EventEmitter {
     atEventId: String,
     callback: MatrixCallback
   ): js.Promise[js.Object] = js.native
+  def mxcUrlToHttp(mxcUrl: String): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double, height: Double): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double, height: Double, resizeMethod: String): Null | String = js.native
   def mxcUrlToHttp(mxcUrl: String, width: Double, height: Double, resizeMethod: String, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double, height: Double, resizeMethod: Null, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double, height: Null, resizeMethod: String): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double, height: Null, resizeMethod: String, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Double, height: Null, resizeMethod: Null, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Double): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Double, resizeMethod: String): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Double, resizeMethod: String, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Double, resizeMethod: Null, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Null, resizeMethod: String): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Null, resizeMethod: String, allowDirectLinks: Boolean): Null | String = js.native
+  def mxcUrlToHttp(mxcUrl: String, width: Null, height: Null, resizeMethod: Null, allowDirectLinks: Boolean): Null | String = js.native
   def paginateEventTimeline(eventTimeline: EventTimeline): js.Promise[Boolean] = js.native
   def paginateEventTimeline(eventTimeline: EventTimeline, opts: js.Object): js.Promise[Boolean] = js.native
   def peekInRoom(roomId: String): js.Promise[js.Object] = js.native
@@ -238,9 +262,11 @@ class MatrixClient () extends EventEmitter {
     callback: js.UndefOr[MatrixCallback]
   ): js.Promise[LoginPayload] = js.native
   def registerGuest(): js.Promise[Unit] = js.native
+  def registerGuest(opts: js.UndefOr[scala.Nothing], callback: MatrixCallback): js.Promise[Unit] = js.native
   def registerGuest(opts: js.Object): js.Promise[Unit] = js.native
   def registerGuest(opts: js.Object, callback: MatrixCallback): js.Promise[Unit] = js.native
   def registerRequest(data: js.Object): js.Promise[js.Object] = js.native
+  def registerRequest(data: js.Object, kind: js.UndefOr[scala.Nothing], callback: MatrixCallback): js.Promise[js.Object] = js.native
   def registerRequest(data: js.Object, kind: String): js.Promise[js.Object] = js.native
   def registerRequest(data: js.Object, kind: String, callback: MatrixCallback): js.Promise[js.Object] = js.native
   def removeRoomFromGroup(groupId: String, roomId: String): js.Promise[Unit] = js.native
@@ -327,6 +353,13 @@ class MatrixClient () extends EventEmitter {
   def sendReceipt(event: MatrixEvent, receiptType: String): js.Promise[Unit] = js.native
   def sendReceipt(event: MatrixEvent, receiptType: String, callback: MatrixCallback): js.Promise[Unit] = js.native
   def sendStateEvent(roomId: String, eventType: EventType, content: js.Object): js.Promise[Unit] = js.native
+  def sendStateEvent(
+    roomId: String,
+    eventType: EventType,
+    content: js.Object,
+    stateKey: js.UndefOr[scala.Nothing],
+    callback: MatrixCallback
+  ): js.Promise[Unit] = js.native
   def sendStateEvent(roomId: String, eventType: EventType, content: js.Object, stateKey: String): js.Promise[Unit] = js.native
   def sendStateEvent(
     roomId: String,
@@ -413,6 +446,7 @@ class MatrixClient () extends EventEmitter {
   def uploadContent(file: js.Any, opts: Callback): js.Promise[String] = js.native
   def uploadKeys(): js.Object = js.native
   def uploadKeysRequest(content: js.Object): js.Promise[js.Object] = js.native
+  def uploadKeysRequest(content: js.Object, opts: js.UndefOr[scala.Nothing], callback: MatrixCallback): js.Promise[js.Object] = js.native
   def uploadKeysRequest(content: js.Object, opts: js.Object): js.Promise[js.Object] = js.native
   def uploadKeysRequest(content: js.Object, opts: js.Object, callback: MatrixCallback): js.Promise[js.Object] = js.native
 }

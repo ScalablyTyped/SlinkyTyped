@@ -34,29 +34,18 @@ object CHROMEUPDATE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCHROME_UPDATE(value: chrome_update_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CHROME_UPDATE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withINSTALL(value: install_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INSTALL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCHROME_UPDATE(value: chrome_update_): Self = this.set("CHROME_UPDATE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSHARED_MODULE_UPDATE(value: shared_module_update_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SHARED_MODULE_UPDATE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINSTALL(value: install_): Self = this.set("INSTALL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUPDATE(value: update_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UPDATE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSHARED_MODULE_UPDATE(value: shared_module_update_): Self = this.set("SHARED_MODULE_UPDATE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUPDATE(value: update_): Self = this.set("UPDATE", value.asInstanceOf[js.Any])
   }
   
 }

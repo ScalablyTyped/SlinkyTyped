@@ -20,7 +20,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Identifier {
-  @JSImport("fundamental-react/lib/Identifier/Identifier", JSImport.Default)
+  @JSImport("fundamental-react", "Identifier")
   @js.native
   object component extends js.Object
   

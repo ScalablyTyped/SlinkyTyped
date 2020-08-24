@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ArrangeBringToFrontIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ArrangeBringToFrontIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ArrangeBringToFrontIcon")
   @js.native
   object component extends js.Object
   

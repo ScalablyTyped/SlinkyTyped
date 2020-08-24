@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ExternalGitIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ExternalGitIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ExternalGitIcon")
   @js.native
   object component extends js.Object
   

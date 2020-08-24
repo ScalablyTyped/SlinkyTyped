@@ -1,7 +1,9 @@
 package typingsSlinky.reactSizeme.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactSizeme.mod.SizeMeProps
 import typingsSlinky.reactSizeme.mod.SizeMeRenderProps
 import typingsSlinky.reactSizeme.reactSizemeStrings.debounce
 import typingsSlinky.reactSizeme.reactSizemeStrings.throttle
@@ -33,6 +35,10 @@ object SizeMe {
   }
   
   def withProps(p: SizeMeRenderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: SizeMe.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: SizeMeProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[SizeMeRenderProps]))
+  }
 }
 

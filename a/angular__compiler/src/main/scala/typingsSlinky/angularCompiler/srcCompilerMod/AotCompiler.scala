@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler/src/compiler", "AotCompiler")
 @js.native
 class AotCompiler protected ()
-  extends typingsSlinky.angularCompiler.compilerMod.AotCompiler {
+  extends typingsSlinky.angularCompiler.aotCompilerMod.AotCompiler {
   def this(
     _config: typingsSlinky.angularCompiler.configMod.CompilerConfig,
     _options: AotCompilerOptions,

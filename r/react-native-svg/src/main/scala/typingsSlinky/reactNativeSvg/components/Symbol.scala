@@ -16,7 +16,7 @@ object Symbol {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Symbol] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline

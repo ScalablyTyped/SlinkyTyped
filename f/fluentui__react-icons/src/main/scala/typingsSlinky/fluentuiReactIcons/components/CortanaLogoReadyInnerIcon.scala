@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CortanaLogoReadyInnerIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CortanaLogoReadyInnerIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CortanaLogoReadyInnerIcon")
   @js.native
   object component extends js.Object
   

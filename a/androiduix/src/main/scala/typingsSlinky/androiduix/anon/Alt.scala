@@ -23,17 +23,14 @@ object Alt {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNoMeta(value: `186`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noMeta")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withShift(value: `186`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNoMeta(value: `186`): Self = this.set("noMeta", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShift(value: `186`): Self = this.set("shift", value.asInstanceOf[js.Any])
   }
   
 }

@@ -4,8 +4,8 @@ import typingsSlinky.azureArmResource.anon.CustomHeaders
 import typingsSlinky.azureArmResource.anon.CustomHeadersExpand
 import typingsSlinky.azureArmResource.anon.CustomHeadersTop
 import typingsSlinky.azureArmResource.anon.ExpandFilter
-import typingsSlinky.azureArmResource.anon.ExpandString
 import typingsSlinky.azureArmResource.anon.Top
+import typingsSlinky.azureArmResource.anon.`0`
 import typingsSlinky.azureArmResource.resourceModelsMod.Deployment
 import typingsSlinky.azureArmResource.resourceModelsMod.DeploymentExportResult
 import typingsSlinky.azureArmResource.resourceModelsMod.DeploymentExtended
@@ -2949,8 +2949,8 @@ object resourceOperationsMod extends js.Object {
       */
     def get(resourceProviderNamespace: String): js.Promise[Provider] = js.native
     def get(resourceProviderNamespace: String, callback: ServiceCallback[Provider]): Unit = js.native
-    def get(resourceProviderNamespace: String, options: ExpandString): js.Promise[Provider] = js.native
-    def get(resourceProviderNamespace: String, options: ExpandString, callback: ServiceCallback[Provider]): Unit = js.native
+    def get(resourceProviderNamespace: String, options: `0`): js.Promise[Provider] = js.native
+    def get(resourceProviderNamespace: String, options: `0`, callback: ServiceCallback[Provider]): Unit = js.native
     /**
       * Gets the specified resource provider.
       *
@@ -2972,7 +2972,7 @@ object resourceOperationsMod extends js.Object {
       * @reject {Error|ServiceError} - The error object.
       */
     def getWithHttpOperationResponse(resourceProviderNamespace: String): js.Promise[HttpOperationResponse[Provider]] = js.native
-    def getWithHttpOperationResponse(resourceProviderNamespace: String, options: ExpandString): js.Promise[HttpOperationResponse[Provider]] = js.native
+    def getWithHttpOperationResponse(resourceProviderNamespace: String, options: `0`): js.Promise[HttpOperationResponse[Provider]] = js.native
     /**
       * Gets all resource providers for a subscription.
       *

@@ -1,8 +1,8 @@
 package typingsSlinky.typedoc
 
-import typingsSlinky.typedoc.componentMod.AbstractComponent
-import typingsSlinky.typedoc.optionsOptionsMod.DiscoverEvent
-import typingsSlinky.typedoc.optionsOptionsMod.Options
+import typingsSlinky.typedoc.loggersMod.Logger
+import typingsSlinky.typedoc.optionsMod.Options
+import typingsSlinky.typedoc.optionsOptionsMod.OptionsReader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +11,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object argumentsMod extends js.Object {
   @js.native
-  class ArgumentsReader () extends AbstractComponent[Options] {
-    var parseArguments: js.Any = js.native
-    var parseResponseFile: js.Any = js.native
-    def onDiscover(event: DiscoverEvent): Unit = js.native
+  class ArgumentsReader protected () extends OptionsReader {
+    def this(priority: Double) = this()
+    def this(priority: Double, args: js.Array[String]) = this()
+    var args: js.Any = js.native
+    def read(container: Options, logger: Logger): Unit = js.native
   }
   
 }

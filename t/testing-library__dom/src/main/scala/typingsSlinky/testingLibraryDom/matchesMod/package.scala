@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object matchesMod {
+  type ByRoleMatcher = typingsSlinky.ariaQuery.mod.ARIARole | (java.lang.String with js.Object) | js.RegExp | typingsSlinky.testingLibraryDom.matchesMod.MatcherFunction
   type Match = js.Function4[
     /* textToMatch */ java.lang.String, 
     /* node */ org.scalajs.dom.raw.HTMLElement | scala.Null, 

@@ -30,29 +30,18 @@ object ImageApi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreateImage(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createImage")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetPixels(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPixels")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setCreateImage(value: Double => Unit): Self = this.set("createImage", js.Any.fromFunction1(value))
     @scala.inline
-    def withLoadImage(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadImage")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetPixels(value: (Double, Double, Double, Double, Double, Double) => Unit): Self = this.set("getPixels", js.Any.fromFunction6(value))
     @scala.inline
-    def withRecycleImage(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycleImage")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLoadImage(value: (Double, String) => Unit): Self = this.set("loadImage", js.Any.fromFunction2(value))
+    @scala.inline
+    def setRecycleImage(value: Double => Unit): Self = this.set("recycleImage", js.Any.fromFunction1(value))
   }
   
 }

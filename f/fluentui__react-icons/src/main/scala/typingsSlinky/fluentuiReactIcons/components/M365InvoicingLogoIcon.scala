@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object M365InvoicingLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/M365InvoicingLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "M365InvoicingLogoIcon")
   @js.native
   object component extends js.Object
   

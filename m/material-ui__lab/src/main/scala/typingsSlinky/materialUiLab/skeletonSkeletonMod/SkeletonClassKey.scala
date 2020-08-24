@@ -11,12 +11,19 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.materialUiLab.materialUiLabStrings.circle
   - typingsSlinky.materialUiLab.materialUiLabStrings.pulse
   - typingsSlinky.materialUiLab.materialUiLabStrings.wave
+  - typingsSlinky.materialUiLab.materialUiLabStrings.withChildren
+  - typingsSlinky.materialUiLab.materialUiLabStrings.fitContent
+  - typingsSlinky.materialUiLab.materialUiLabStrings.heightAuto
 */
 trait SkeletonClassKey extends js.Object
 
 object SkeletonClassKey {
   @scala.inline
   def circle: typingsSlinky.materialUiLab.materialUiLabStrings.circle = "circle".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.circle]
+  @scala.inline
+  def fitContent: typingsSlinky.materialUiLab.materialUiLabStrings.fitContent = "fitContent".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.fitContent]
+  @scala.inline
+  def heightAuto: typingsSlinky.materialUiLab.materialUiLabStrings.heightAuto = "heightAuto".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.heightAuto]
   @scala.inline
   def pulse: typingsSlinky.materialUiLab.materialUiLabStrings.pulse = "pulse".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.pulse]
   @scala.inline
@@ -27,5 +34,7 @@ object SkeletonClassKey {
   def text: typingsSlinky.materialUiLab.materialUiLabStrings.text = "text".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.text]
   @scala.inline
   def wave: typingsSlinky.materialUiLab.materialUiLabStrings.wave = "wave".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.wave]
+  @scala.inline
+  def withChildren: typingsSlinky.materialUiLab.materialUiLabStrings.withChildren = "withChildren".asInstanceOf[typingsSlinky.materialUiLab.materialUiLabStrings.withChildren]
 }
 

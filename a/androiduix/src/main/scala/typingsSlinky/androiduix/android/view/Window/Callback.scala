@@ -41,53 +41,26 @@ object Callback {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDispatchGenericMotionEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchGenericMotionEvent")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDispatchKeyEvent(value: KeyEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchKeyEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDispatchGenericMotionEvent(value: MotionEvent => Boolean): Self = this.set("dispatchGenericMotionEvent", js.Any.fromFunction1(value))
     @scala.inline
-    def withDispatchTouchEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchTouchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDispatchKeyEvent(value: KeyEvent => Boolean): Self = this.set("dispatchKeyEvent", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnAttachedToWindow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAttachedToWindow")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDispatchTouchEvent(value: MotionEvent => Boolean): Self = this.set("dispatchTouchEvent", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnContentChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentChanged")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setOnAttachedToWindow(value: () => Unit): Self = this.set("onAttachedToWindow", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnDetachedFromWindow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDetachedFromWindow")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setOnContentChanged(value: () => Unit): Self = this.set("onContentChanged", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnWindowAttributesChanged(value: LayoutParams => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWindowAttributesChanged")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDetachedFromWindow(value: () => Unit): Self = this.set("onDetachedFromWindow", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnWindowFocusChanged(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWindowFocusChanged")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnWindowAttributesChanged(value: LayoutParams => Unit): Self = this.set("onWindowAttributesChanged", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnWindowFocusChanged(value: Boolean => Unit): Self = this.set("onWindowFocusChanged", js.Any.fromFunction1(value))
   }
   
 }

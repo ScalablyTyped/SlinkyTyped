@@ -20,6 +20,8 @@ object ReactShowMore {
     @scala.inline
     def anchorClass(value: String): this.type = set("anchorClass", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: String): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def less(value: String): this.type = set("less", value.asInstanceOf[js.Any])
     @scala.inline
     def lines(value: Double): this.type = set("lines", value.asInstanceOf[js.Any])

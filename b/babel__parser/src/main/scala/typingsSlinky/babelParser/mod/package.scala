@@ -11,6 +11,7 @@ package object mod {
     - typingsSlinky.babelParser.babelParserStrings.classPrivateMethods
     - typingsSlinky.babelParser.babelParserStrings.classPrivateProperties
     - typingsSlinky.babelParser.babelParserStrings.classProperties
+    - typingsSlinky.babelParser.babelParserStrings.decimal
     - typingsSlinky.babelParser.babelParserStrings.decorators
     - typingsSlinky.babelParser.babelParserStrings.`decorators-legacy`
     - typingsSlinky.babelParser.babelParserStrings.doExpressions
@@ -25,6 +26,7 @@ package object mod {
     - typingsSlinky.babelParser.babelParserStrings.importMeta
     - typingsSlinky.babelParser.babelParserStrings.jsx
     - typingsSlinky.babelParser.babelParserStrings.logicalAssignment
+    - typingsSlinky.babelParser.babelParserStrings.moduleAttributes
     - typingsSlinky.babelParser.babelParserStrings.nullishCoalescingOperator
     - typingsSlinky.babelParser.babelParserStrings.numericSeparator
     - typingsSlinky.babelParser.babelParserStrings.objectRestSpread
@@ -33,6 +35,7 @@ package object mod {
     - typingsSlinky.babelParser.babelParserStrings.partialApplication
     - typingsSlinky.babelParser.babelParserStrings.pipelineOperator
     - typingsSlinky.babelParser.babelParserStrings.placeholders
+    - typingsSlinky.babelParser.babelParserStrings.privateIn
     - typingsSlinky.babelParser.babelParserStrings.throwExpressions
     - typingsSlinky.babelParser.babelParserStrings.topLevelAwait
     - typingsSlinky.babelParser.babelParserStrings.typescript

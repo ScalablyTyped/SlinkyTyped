@@ -1,12 +1,12 @@
 package typingsSlinky.openui5.global.sap.m
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.Touch
 import org.scalajs.dom.raw.TouchList
 import typingsSlinky.jquery.JQueryStatic
 import typingsSlinky.openui5.anon.Instantiable
 import typingsSlinky.openui5.sap.ui.core.Element
 import typingsSlinky.std.TouchInit
-import typingsSlinky.std.global.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

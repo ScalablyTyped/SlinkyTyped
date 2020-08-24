@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
 @js.native
 class TestRequest protected () extends js.Object {
   def this(request: HttpRequest[_], observer: Observer[HttpEvent[_]]) = this()
+  var observer: js.Any = js.native
+  var request: HttpRequest[_] = js.native
   /**
     * Whether the request was cancelled after it was sent.
     */
-  val cancelled: Boolean = js.native
-  var observer: js.Any = js.native
-  var request: HttpRequest[_] = js.native
+  def cancelled: Boolean = js.native
   /**
     * Resolve the request by returning an `ErrorEvent` (e.g. simulating a network failure).
     */
@@ -30,6 +30,14 @@ class TestRequest protected () extends js.Object {
     * request.
     */
   def event(event: HttpEvent[_]): Unit = js.native
+  /**
+    * Resolve the request by returning a body plus additional HTTP information (such as response
+    * headers) if provided.
+    * If the request specifies an expected body type, the body is converted into the requested type.
+    * Otherwise, the body is converted to `JSON` by default.
+    *
+    * Both successful and unsuccessful responses can be delivered via `flush()`.
+    */
   def flush(): Unit = js.native
   def flush(body: String): Unit = js.native
   def flush(body: String, opts: StatusText): Unit = js.native
@@ -40,14 +48,6 @@ class TestRequest protected () extends js.Object {
   def flush(body: Double): Unit = js.native
   def flush(body: Double, opts: StatusText): Unit = js.native
   def flush(body: Null, opts: StatusText): Unit = js.native
-  /**
-    * Resolve the request by returning a body plus additional HTTP information (such as response
-    * headers) if provided.
-    * If the request specifies an expected body type, the body is converted into the requested type.
-    * Otherwise, the body is converted to `JSON` by default.
-    *
-    * Both successful and unsuccessful responses can be delivered via `flush()`.
-    */
   def flush(body: js.typedarray.ArrayBuffer): Unit = js.native
   def flush(body: js.typedarray.ArrayBuffer, opts: StatusText): Unit = js.native
   def flush(body: Blob): Unit = js.native

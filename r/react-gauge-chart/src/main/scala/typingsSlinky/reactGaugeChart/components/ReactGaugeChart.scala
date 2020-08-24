@@ -26,9 +26,13 @@ object ReactGaugeChart {
     @scala.inline
     def arcWidth(value: Double): this.type = set("arcWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def arcsLengthVarargs(value: Double*): this.type = set("arcsLength", js.Array(value :_*))
+    @scala.inline
     def arcsLength(value: js.Array[Double]): this.type = set("arcsLength", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
     @scala.inline
     def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline

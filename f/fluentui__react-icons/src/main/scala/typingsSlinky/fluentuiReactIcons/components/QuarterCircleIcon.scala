@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object QuarterCircleIcon {
-  @JSImport("@fluentui/react-icons/lib/components/QuarterCircleIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "QuarterCircleIcon")
   @js.native
   object component extends js.Object
   

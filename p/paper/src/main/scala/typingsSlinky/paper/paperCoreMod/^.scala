@@ -35,18 +35,18 @@ object ^ extends js.Object {
   var CurveLocation: Instantiable3[
     /* curve */ typingsSlinky.paper.paper.Curve, 
     /* time */ Double, 
-    js.UndefOr[/* point */ Point], 
+    /* point */ js.UndefOr[Point], 
     typingsSlinky.paper.paper.CurveLocation
   ] = js.native
   var Event: Instantiable0[typingsSlinky.paper.paper.Event] = js.native
   var Gradient: Instantiable0[typingsSlinky.paper.paper.Gradient] = js.native
   var GradientStop: Instantiable2[
-    js.UndefOr[/* color */ Color], 
-    js.UndefOr[/* offset */ Double], 
+    /* color */ js.UndefOr[Color], 
+    /* offset */ js.UndefOr[Double], 
     typingsSlinky.paper.paper.GradientStop
   ] = js.native
   var Group: Instantiable1[
-    js.UndefOr[/* children */ js.Array[typingsSlinky.paper.paper.Item]], 
+    /* children */ js.UndefOr[js.Array[typingsSlinky.paper.paper.Item]], 
     typingsSlinky.paper.paper.Group
   ] = js.native
   var HitResult: Instantiable0[typingsSlinky.paper.paper.HitResult] = js.native
@@ -54,14 +54,14 @@ object ^ extends js.Object {
   var Key: TypeofKey = js.native
   var KeyEvent: Instantiable0[typingsSlinky.paper.paper.KeyEvent] = js.native
   var Layer: Instantiable1[
-    js.UndefOr[/* children */ js.Array[typingsSlinky.paper.paper.Item]], 
+    /* children */ js.UndefOr[js.Array[typingsSlinky.paper.paper.Item]], 
     typingsSlinky.paper.paper.Layer
   ] = js.native
   var Matrix: Instantiable0[typingsSlinky.paper.paper.Matrix] = js.native
   var MouseEvent: Instantiable0[typingsSlinky.paper.paper.MouseEvent] = js.native
   var PaperScope: TypeofPaperScope = js.native
   var Path: TypeofPath with (Instantiable1[
-    js.UndefOr[/* segments */ js.Array[typingsSlinky.paper.paper.Segment]], 
+    /* segments */ js.UndefOr[js.Array[typingsSlinky.paper.paper.Segment]], 
     typingsSlinky.paper.paper.Path
   ]) = js.native
   var PathItem: TypeofPathItem = js.native
@@ -69,15 +69,15 @@ object ^ extends js.Object {
   var PointText: Instantiable1[/* point */ Point, typingsSlinky.paper.paper.PointText] = js.native
   var Project: Instantiable1[/* element */ HTMLCanvasElement | String | Size, typingsSlinky.paper.paper.Project] = js.native
   var Raster: Instantiable2[
-    js.UndefOr[HTMLImageElement | HTMLCanvasElement | String], 
-    js.UndefOr[/* position */ Point], 
+    /* source */ js.UndefOr[HTMLImageElement | HTMLCanvasElement | String], 
+    /* position */ js.UndefOr[Point], 
     typingsSlinky.paper.paper.Raster
   ] = js.native
   var Rectangle: Instantiable2[/* point */ Point, /* size */ Size, typingsSlinky.paper.paper.Rectangle] = js.native
   var Segment: Instantiable3[
-    js.UndefOr[/* point */ Point], 
-    js.UndefOr[/* handleIn */ Point], 
-    js.UndefOr[/* handleOut */ Point], 
+    /* point */ js.UndefOr[Point], 
+    /* handleIn */ js.UndefOr[Point], 
+    /* handleOut */ js.UndefOr[Point], 
     typingsSlinky.paper.paper.Segment
   ] = js.native
   var Shape: TypeofShape with Instantiable0[typingsSlinky.paper.paper.Shape] = js.native
@@ -85,12 +85,12 @@ object ^ extends js.Object {
   var Style: Instantiable1[/* style */ js.Object, typingsSlinky.paper.paper.Style] = js.native
   var SymbolDefinition: Instantiable2[
     /* item */ typingsSlinky.paper.paper.Item, 
-    js.UndefOr[/* dontCenter */ Boolean], 
+    /* dontCenter */ js.UndefOr[Boolean], 
     typingsSlinky.paper.paper.SymbolDefinition
   ] = js.native
   var SymbolItem: Instantiable2[
     /* definition */ typingsSlinky.paper.paper.SymbolDefinition | typingsSlinky.paper.paper.Item, 
-    js.UndefOr[/* point */ Point], 
+    /* point */ js.UndefOr[Point], 
     typingsSlinky.paper.paper.SymbolItem
   ] = js.native
   var TextItem: Instantiable0[typingsSlinky.paper.paper.TextItem] = js.native
@@ -101,8 +101,8 @@ object ^ extends js.Object {
     /* from */ js.Object, 
     /* to */ js.Object, 
     /* duration */ Double, 
-    js.UndefOr[String | js.Function], 
-    js.UndefOr[/* start */ Boolean], 
+    /* easing */ js.UndefOr[String | js.Function], 
+    /* start */ js.UndefOr[Boolean], 
     typingsSlinky.paper.paper.Tween
   ] = js.native
   var View: Instantiable0[typingsSlinky.paper.paper.View] = js.native

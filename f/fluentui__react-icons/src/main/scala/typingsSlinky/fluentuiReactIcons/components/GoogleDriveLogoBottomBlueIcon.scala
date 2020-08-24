@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GoogleDriveLogoBottomBlueIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GoogleDriveLogoBottomBlueIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GoogleDriveLogoBottomBlueIcon")
   @js.native
   object component extends js.Object
   

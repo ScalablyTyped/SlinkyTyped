@@ -23,53 +23,30 @@ object ProxySettings {
     __obj.asInstanceOf[ProxySettings[M, S, SL]]
   }
   @scala.inline
-  implicit class ProxySettingsOps[Self[m, s, sl] <: ProxySettings[m, s, sl], M, S, SL] (val x: Self[M, S, SL]) extends AnyVal {
+  implicit class ProxySettingsOps[Self <: ProxySettings[_, _, _], M, S, SL] (val x: Self with (ProxySettings[M, S, SL])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, S, SL] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, S, SL]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, S, SL]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, S, SL]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: ProxySettingsType | ManagedType[ProxySettingsType]): Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withExcludeDomains(value: SL): Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: ProxySettingsType | ManagedType[ProxySettingsType]): Self = this.set("Type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutExcludeDomains: Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeDomains")(js.undefined)
-        ret
-    }
+    def setExcludeDomains(value: SL): Self = this.set("ExcludeDomains", value.asInstanceOf[js.Any])
     @scala.inline
-    def withManual(value: ManualProxySettings[M, ProxyLocation | ManagedProxyLocation]): Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Manual")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExcludeDomains: Self = this.set("ExcludeDomains", js.undefined)
     @scala.inline
-    def withoutManual: Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Manual")(js.undefined)
-        ret
-    }
+    def setManual(value: ManualProxySettings[M, ProxyLocation | ManagedProxyLocation]): Self = this.set("Manual", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPAC(value: S): Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAC")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteManual: Self = this.set("Manual", js.undefined)
     @scala.inline
-    def withoutPAC: Self[M, S, SL] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAC")(js.undefined)
-        ret
-    }
+    def setPAC(value: S): Self = this.set("PAC", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePAC: Self = this.set("PAC", js.undefined)
   }
   
 }

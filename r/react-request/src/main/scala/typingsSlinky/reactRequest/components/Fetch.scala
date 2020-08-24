@@ -10,10 +10,12 @@ import org.scalajs.dom.experimental.RequestMode
 import org.scalajs.dom.experimental.RequestRedirect
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FormData
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRequest.mod.FetchProps
 import typingsSlinky.reactRequest.mod.FetchResponse
+import typingsSlinky.reactRequest.mod.RenderProps
 import typingsSlinky.reactRequest.mod.ResponseType
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.HeadersInit
@@ -29,7 +31,7 @@ object Fetch {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRequest.mod.Fetch[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactRequest.mod.Fetch[T]] {
     @scala.inline
     def afterFetch(value: /* args */ FetchResponse[T] => Unit): this.type = set("afterFetch", js.Any.fromFunction1(value))
     @scala.inline
@@ -49,7 +51,11 @@ object Fetch {
     @scala.inline
     def cache(value: RequestCache): this.type = set("cache", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: /* renderProps */ RenderProps[T] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
     def credentials(value: RequestCredentials): this.type = set("credentials", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headersVarargs(value: js.Array[String]*): this.type = set("headers", js.Array(value :_*))
     @scala.inline
     def headersHeaders(value: Headers): this.type = set("headers", value.asInstanceOf[js.Any])
     @scala.inline

@@ -12,7 +12,6 @@ import typingsSlinky.reactNativeSvgCharts.anon.Bottom
 import typingsSlinky.reactNativeSvgCharts.anon.PartialPathProps
 import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.GridProps
-import typingsSlinky.reactNativeSvgCharts.mod.PieChartData
 import typingsSlinky.reactNativeSvgCharts.mod.PieChartProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
 import scala.scalajs.js
@@ -25,9 +24,9 @@ object PieChart {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: PieChartData] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactNativeSvgCharts.mod.PieChartData */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.PieChart[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.PieChart[T]] {
     @scala.inline
     def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
@@ -84,9 +83,9 @@ object PieChart {
     def yScale(value: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any]): this.type = set("yScale", js.Any.fromFunction0(value))
   }
   
-  def withProps[T <: PieChartData](p: PieChartProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactNativeSvgCharts.mod.PieChartData */ T](p: PieChartProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: PieChartData](data: js.Array[T]): Builder[T] = {
+  def apply[/* <: typingsSlinky.reactNativeSvgCharts.mod.PieChartData */ T](data: js.Array[T]): Builder[T] = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[PieChartProps[T]]))
   }

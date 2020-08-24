@@ -6,54 +6,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IContentLoaderProps extends SVGAttributes[SVGElement] {
-  var animate: js.UndefOr[Boolean] = js.undefined
-  var ariaLabel: js.UndefOr[String] = js.undefined
-  var baseUrl: js.UndefOr[String] = js.undefined
-  var gradientRatio: js.UndefOr[Double] = js.undefined
-  var interval: js.UndefOr[Double] = js.undefined
-  var primaryColor: js.UndefOr[String] = js.undefined
-  var primaryOpacity: js.UndefOr[Double] = js.undefined
-  var rtl: js.UndefOr[Boolean] = js.undefined
-  var secondaryColor: js.UndefOr[String] = js.undefined
-  var secondaryOpacity: js.UndefOr[Double] = js.undefined
+  var animate: js.UndefOr[Boolean] = js.native
+  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundOpacity: js.UndefOr[Double] = js.native
+  var baseUrl: js.UndefOr[String] = js.native
+  var foregroundColor: js.UndefOr[String] = js.native
+  var foregroundOpacity: js.UndefOr[Double] = js.native
+  var gradientRatio: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.native
+  var rtl: js.UndefOr[Boolean] = js.native
   @JSName("speed")
-  var speed_IContentLoaderProps: js.UndefOr[Double] = js.undefined
-  var uniquekey: js.UndefOr[String] = js.undefined
+  var speed_IContentLoaderProps: js.UndefOr[Double] = js.native
+  var title: js.UndefOr[String] = js.native
+  var uniqueKey: js.UndefOr[String] = js.native
 }
 
 object IContentLoaderProps {
   @scala.inline
-  def apply(
-    SVGAttributes: SVGAttributes[SVGElement] = null,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    ariaLabel: String = null,
-    baseUrl: String = null,
-    gradientRatio: js.UndefOr[Double] = js.undefined,
-    interval: js.UndefOr[Double] = js.undefined,
-    primaryColor: String = null,
-    primaryOpacity: js.UndefOr[Double] = js.undefined,
-    rtl: js.UndefOr[Boolean] = js.undefined,
-    secondaryColor: String = null,
-    secondaryOpacity: js.UndefOr[Double] = js.undefined,
-    speed: js.UndefOr[Double] = js.undefined,
-    uniquekey: String = null
-  ): IContentLoaderProps = {
+  def apply(): IContentLoaderProps = {
     val __obj = js.Dynamic.literal()
-    if (SVGAttributes != null) js.Dynamic.global.Object.assign(__obj, SVGAttributes)
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(gradientRatio)) __obj.updateDynamic("gradientRatio")(gradientRatio.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
-    if (primaryColor != null) __obj.updateDynamic("primaryColor")(primaryColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(primaryOpacity)) __obj.updateDynamic("primaryOpacity")(primaryOpacity.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
-    if (secondaryColor != null) __obj.updateDynamic("secondaryColor")(secondaryColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(secondaryOpacity)) __obj.updateDynamic("secondaryOpacity")(secondaryOpacity.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
-    if (uniquekey != null) __obj.updateDynamic("uniquekey")(uniquekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IContentLoaderProps]
   }
+  @scala.inline
+  implicit class IContentLoaderPropsOps[Self <: IContentLoaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimate(value: Boolean): Self = this.set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimate: Self = this.set("animate", js.undefined)
+    @scala.inline
+    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    @scala.inline
+    def setBackgroundOpacity(value: Double): Self = this.set("backgroundOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundOpacity: Self = this.set("backgroundOpacity", js.undefined)
+    @scala.inline
+    def setBaseUrl(value: String): Self = this.set("baseUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBaseUrl: Self = this.set("baseUrl", js.undefined)
+    @scala.inline
+    def setForegroundColor(value: String): Self = this.set("foregroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteForegroundColor: Self = this.set("foregroundColor", js.undefined)
+    @scala.inline
+    def setForegroundOpacity(value: Double): Self = this.set("foregroundOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteForegroundOpacity: Self = this.set("foregroundOpacity", js.undefined)
+    @scala.inline
+    def setGradientRatio(value: Double): Self = this.set("gradientRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGradientRatio: Self = this.set("gradientRatio", js.undefined)
+    @scala.inline
+    def setInterval(value: Double): Self = this.set("interval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInterval: Self = this.set("interval", js.undefined)
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
+    @scala.inline
+    def setSpeed(value: Double): Self = this.set("speed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpeed: Self = this.set("speed", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setUniqueKey(value: String): Self = this.set("uniqueKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUniqueKey: Self = this.set("uniqueKey", js.undefined)
+  }
+  
 }
 

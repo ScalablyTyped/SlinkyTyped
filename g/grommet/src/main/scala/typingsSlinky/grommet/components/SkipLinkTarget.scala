@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SkipLinkTarget {
-  @JSImport("grommet", "SkipLinkTarget")
+  @JSImport("grommet/es6", "SkipLinkTarget")
   @js.native
   object component extends js.Object
   
@@ -21,7 +20,7 @@ object SkipLinkTarget {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SkipLinkTargetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

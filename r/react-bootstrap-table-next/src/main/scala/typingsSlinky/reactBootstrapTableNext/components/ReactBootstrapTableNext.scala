@@ -5,10 +5,10 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactBootstrapTableNext.anon.DataSize
-import typingsSlinky.reactBootstrapTableNext.anon.OptionsPaginationOptions
 import typingsSlinky.reactBootstrapTableNext.anon.Order
 import typingsSlinky.reactBootstrapTableNext.anon.Partialpaginationbooleanf
 import typingsSlinky.reactBootstrapTableNext.anon.SortCaret
+import typingsSlinky.reactBootstrapTableNext.anon.`0`
 import typingsSlinky.reactBootstrapTableNext.mod.BootstrapTableProps
 import typingsSlinky.reactBootstrapTableNext.mod.ColumnDescription
 import typingsSlinky.reactBootstrapTableNext.mod.ExpandRowProps
@@ -30,9 +30,9 @@ object ReactBootstrapTableNext {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: js.Object] (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
     @scala.inline
     def bodyClasses(value: String): this.type = set("bodyClasses", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,6 +51,8 @@ object ReactBootstrapTableNext {
     def condensed(value: Boolean): this.type = set("condensed", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultSortDirection(value: SortOrder): this.type = set("defaultSortDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSortedVarargs(value: Order*): this.type = set("defaultSorted", js.Array(value :_*))
     @scala.inline
     def defaultSorted(value: js.Array[Order]): this.type = set("defaultSorted", value.asInstanceOf[js.Any])
     @scala.inline
@@ -86,7 +88,7 @@ object ReactBootstrapTableNext {
     @scala.inline
     def overlay(value: js.Any): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
-    def pagination(value: OptionsPaginationOptions): this.type = set("pagination", value.asInstanceOf[js.Any])
+    def pagination(value: `0`): this.type = set("pagination", value.asInstanceOf[js.Any])
     @scala.inline
     def parentClassNameFunction3(value: (/* isExpand */ Boolean, T, /* rowIndex */ Double) => String): this.type = set("parentClassName", js.Any.fromFunction3(value))
     @scala.inline
@@ -117,9 +119,9 @@ object ReactBootstrapTableNext {
     def wrapperClasses(value: String): this.type = set("wrapperClasses", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: js.Object](p: BootstrapTableProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: js.Object */ T](p: BootstrapTableProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: js.Object](columns: js.Array[ColumnDescription[_, _]], data: js.Array[_], keyField: String): Builder[T] = {
+  def apply[/* <: js.Object */ T](columns: js.Array[ColumnDescription[_, _]], data: js.Array[_], keyField: String): Builder[T] = {
     val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keyField = keyField.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[BootstrapTableProps[T]]))
   }

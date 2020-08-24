@@ -4,13 +4,13 @@ import typingsSlinky.three.constantsMod.Blending
 import typingsSlinky.three.constantsMod.BlendingDstFactor
 import typingsSlinky.three.constantsMod.BlendingEquation
 import typingsSlinky.three.constantsMod.BlendingSrcFactor
-import typingsSlinky.three.constantsMod.Colors
 import typingsSlinky.three.constantsMod.DepthModes
 import typingsSlinky.three.constantsMod.Side
 import typingsSlinky.three.constantsMod.StencilFunc
 import typingsSlinky.three.constantsMod.StencilOp
 import typingsSlinky.three.eventDispatcherMod.EventDispatcher
 import typingsSlinky.three.shaderLibMod.Shader
+import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.threeStrings.highp
 import typingsSlinky.three.threeStrings.lowp
 import typingsSlinky.three.threeStrings.mediump
@@ -71,6 +71,11 @@ class Material () extends EventDispatcher {
   	 */
   var colorWrite: Boolean = js.native
   /**
+  	 * Custom defines to be injected into the shader. These are passed in form of an object literal, with key/value pairs. { MY_CUSTOM_DEFINE: '' , PI2: Math.PI * 2 }.
+  	 * The pairs are defined in both vertex and fragment shaders. Default is undefined.
+  	 */
+  var defines: js.Any = js.native
+  /**
   	 * Which depth function to use. Default is {@link LessEqualDepth}. See the depth mode constants for all possible values.
   	 */
   var depthFunc: DepthModes = js.native
@@ -103,7 +108,7 @@ class Material () extends EventDispatcher {
   	 * Used to check whether this or derived classes are materials. Default is true.
   	 * You should not change this, as it used internally for optimisation.
   	 */
-  var isMaterial: Boolean = js.native
+  val isMaterial: `true` = js.native
   /**
   	 * Material name. Default is an empty string.
   	 */
@@ -117,10 +122,6 @@ class Material () extends EventDispatcher {
   	 * Opacity. Default is 1.
   	 */
   var opacity: Double = js.native
-  /**
-  	 * Enables/disables overdraw. If greater than zero, polygons are drawn slightly bigger in order to fix antialiasing gaps when using the CanvasRenderer. Default is 0.
-  	 */
-  var overdraw: Double = js.native
   /**
   	 * Whether to use polygon offset. Default is false. This corresponds to the POLYGON_OFFSET_FILL WebGL feature.
   	 */
@@ -141,6 +142,11 @@ class Material () extends EventDispatcher {
   	 * Whether to premultiply the alpha (transparency) value. See WebGL / Materials / Transparency for an example of the difference. Default is false.
   	 */
   var premultipliedAlpha: Boolean = js.native
+  /**
+  	 * Defines which of the face sides will cast shadows. Default is *null*.
+  	 * If *null*, the value is opposite that of side, above.
+  	 */
+  var shadowSide: Side = js.native
   /**
   	 * Defines which of the face sides will be rendered - front, back or both.
   	 * Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSide.
@@ -198,13 +204,13 @@ class Material () extends EventDispatcher {
   	 */
   var uuid: String = js.native
   /**
-  	 * Defines whether vertex coloring is used. Default is THREE.NoColors. Other options are THREE.VertexColors and THREE.FaceColors.
+  	 * This starts at 0 and counts how many times .needsUpdate is set to true.
   	 */
-  var vertexColors: Colors = js.native
+  var version: Double = js.native
   /**
-  	 * Defines whether precomputed vertex tangents are used. Default is false.
+  	 * Defines whether vertex coloring is used. Default is false.
   	 */
-  var vertexTangents: Boolean = js.native
+  var vertexColors: Boolean = js.native
   /**
   	 * Defines whether this material is visible. Default is true.
   	 */
@@ -214,6 +220,10 @@ class Material () extends EventDispatcher {
   	 * @param material
   	 */
   def copy(material: Material): this.type = js.native
+  /**
+  	 * In case onBeforeCompile is used, this callback can be used to identify values of settings used in onBeforeCompile, so three.js can reuse a cached shader or recompile the shader as needed.
+  	 */
+  def customProgramCacheKey(): String = js.native
   /**
   	 * This disposes the material. Textures of a material don't get disposed. These needs to be disposed by {@link Texture}.
   	 */

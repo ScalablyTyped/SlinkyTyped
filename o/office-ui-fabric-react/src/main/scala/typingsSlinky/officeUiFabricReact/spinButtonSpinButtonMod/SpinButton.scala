@@ -71,20 +71,16 @@ class SpinButton protected ()
     * @param shouldSpin - should we fire off another updateValue when we are done here? This should be true
     * when spinning in response to a mouseDown
     * @param stepFunction - function to use to step by
+    * @param event - The event that triggered the updateValue
     */
   var _updateValue: js.Any = js.native
   /**
-    * This is used when validating text entry
-    * in the input (not when changed via the buttons)
+    * This is used when validating text entry in the input on blur or when enter key is pressed
+    * (not when changed via the buttons).
     * @param event - the event that fired
     */
   var _validate: js.Any = js.native
   var _valueToValidate: js.Any = js.native
-  /**
-    * Gets the value of the spin button.
-    */
-  @JSName("value")
-  val value_SpinButton: js.UndefOr[String] = js.native
   /**
     * Invoked when a component is receiving new props. This method is not called for the initial render.
     */
@@ -92,11 +88,6 @@ class SpinButton protected ()
   def UNSAFE_componentWillReceiveProps_MSpinButton(newProps: ISpinButtonProps): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MSpinButton(): Unit = js.native
-  /**
-    * Sets focus to the control.
-    */
-  /* CompleteClass */
-  override def focus(): Unit = js.native
 }
 
 /* static members */

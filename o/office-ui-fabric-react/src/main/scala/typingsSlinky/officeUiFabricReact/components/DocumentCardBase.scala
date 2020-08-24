@@ -219,6 +219,8 @@ object DocumentCardBase {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -270,6 +272,8 @@ object DocumentCardBase {
     def onClick(value: /* ev */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onClickHref(value: String): this.type = set("onClickHref", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClickTarget(value: String): this.type = set("onClickTarget", value.asInstanceOf[js.Any])
     @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline

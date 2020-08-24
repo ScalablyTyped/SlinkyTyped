@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -51,9 +50,9 @@ object StatefulTooltip {
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction1(value: /* args */ Close => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    def contentFunction1(value: /* args */ Close => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     @scala.inline
-    def content(value: TagMod[Any] | (js.Function1[/* args */ Close, TagMod[Any]])): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | (js.Function1[/* args */ Close, ReactElement])): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
     @scala.inline

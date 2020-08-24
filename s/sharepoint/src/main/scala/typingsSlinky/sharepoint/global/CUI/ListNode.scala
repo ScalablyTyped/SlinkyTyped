@@ -13,11 +13,5 @@ class ListNode[T] protected ()
     prev: typingsSlinky.sharepoint.CUI.ListNode[T],
     next: typingsSlinky.sharepoint.CUI.ListNode[T]
   ) = this()
-  /* CompleteClass */
-  override var data: T = js.native
-  /* CompleteClass */
-  override var next: typingsSlinky.sharepoint.CUI.ListNode[T] = js.native
-  /* CompleteClass */
-  override var previous: typingsSlinky.sharepoint.CUI.ListNode[T] = js.native
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.officeUiFabricReact.calendarDayMod
 
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCallbacks
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarStrings
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
-import typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js

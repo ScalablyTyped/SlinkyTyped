@@ -1,12 +1,13 @@
 package typingsSlinky.grpc.mod
 
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("grpc", "ServerUnaryCall")
 @js.native
-class ServerUnaryCall[RequestType] protected () extends js.Object {
+class ServerUnaryCall[RequestType] protected () extends EventEmitter {
   /**
     * Indicates if the call has been cancelled
     */

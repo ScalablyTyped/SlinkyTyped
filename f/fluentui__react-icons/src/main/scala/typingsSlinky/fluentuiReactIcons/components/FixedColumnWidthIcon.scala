@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FixedColumnWidthIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FixedColumnWidthIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FixedColumnWidthIcon")
   @js.native
   object component extends js.Object
   

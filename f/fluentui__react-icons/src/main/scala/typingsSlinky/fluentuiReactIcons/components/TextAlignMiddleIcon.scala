@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextAlignMiddleIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TextAlignMiddleIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TextAlignMiddleIcon")
   @js.native
   object component extends js.Object
   

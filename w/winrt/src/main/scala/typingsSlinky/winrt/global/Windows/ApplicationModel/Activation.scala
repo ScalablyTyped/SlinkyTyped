@@ -1,17 +1,5 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel
 
-import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ActivationKind
-import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ApplicationExecutionState
-import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
-import typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation
-import typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfiguration
-import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrt.Windows.Foundation.Rect
-import typingsSlinky.winrt.Windows.Foundation.Uri
-import typingsSlinky.winrt.Windows.Storage.IStorageItem
-import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileOpenPickerUI
-import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSavePickerUI
-import typingsSlinky.winrt.Windows.Storage.Provider.CachedFileUpdaterUI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,178 +9,55 @@ import scala.scalajs.js.annotation._
 object Activation extends js.Object {
   @js.native
   class CachedFileUpdaterActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs {
-    /* CompleteClass */
-    override var cachedFileUpdaterUI: CachedFileUpdaterUI = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs
   
   @js.native
   class CameraSettingsActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs {
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-    /* CompleteClass */
-    override var videoDeviceController: js.Any = js.native
-    /* CompleteClass */
-    override var videoDeviceExtension: js.Any = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs
   
   @js.native
   class ContactPickerActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs {
-    /* CompleteClass */
-    override var contactPickerUI: ContactPickerUI = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs
   
   @js.native
   class DeviceActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.DeviceActivatedEventArgs {
-    /* CompleteClass */
-    override var deviceInformationId: String = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-    /* CompleteClass */
-    override var verb: String = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.DeviceActivatedEventArgs
   
   @js.native
   class FileActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileActivatedEventArgs {
-    /* CompleteClass */
-    override var files: IVectorView[IStorageItem] = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-    /* CompleteClass */
-    override var verb: String = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileActivatedEventArgs
   
   @js.native
   class FileOpenPickerActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs {
-    /* CompleteClass */
-    override var fileOpenPickerUI: FileOpenPickerUI = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs
   
   @js.native
   class FileSavePickerActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs {
-    /* CompleteClass */
-    override var fileSavePickerUI: FileSavePickerUI = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs
   
   @js.native
   class LaunchActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.LaunchActivatedEventArgs {
-    /* CompleteClass */
-    override var arguments: String = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-    /* CompleteClass */
-    override var tileId: String = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.LaunchActivatedEventArgs
   
   @js.native
   class PrintTaskSettingsActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs {
-    /* CompleteClass */
-    override var configuration: PrintTaskConfiguration = js.native
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs
   
   @js.native
   class ProtocolActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs {
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-    /* CompleteClass */
-    override var uri: Uri = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs
   
   @js.native
   class SearchActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.SearchActivatedEventArgs {
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var language: String = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var queryText: String = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.SearchActivatedEventArgs
   
   @js.native
   class ShareTargetActivatedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs {
-    /* CompleteClass */
-    override var kind: ActivationKind = js.native
-    /* CompleteClass */
-    override var previousExecutionState: ApplicationExecutionState = js.native
-    /* CompleteClass */
-    override var shareOperation: ShareOperation = js.native
-    /* CompleteClass */
-    override var splashScreen: typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs
   
   @js.native
   class SplashScreen ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen {
-    /* CompleteClass */
-    override var imageLocation: Rect = js.native
-    /* CompleteClass */
-    override var ondismissed: js.Any = js.native
-  }
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen
   
   @js.native
   object ActivationKind extends js.Object {

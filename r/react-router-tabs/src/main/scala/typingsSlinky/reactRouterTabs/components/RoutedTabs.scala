@@ -15,7 +15,7 @@ object RoutedTabs {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRouterTabs.mod.RoutedTabs] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def activeTabClassName(value: String): this.type = set("activeTabClassName", value.asInstanceOf[js.Any])
     @scala.inline

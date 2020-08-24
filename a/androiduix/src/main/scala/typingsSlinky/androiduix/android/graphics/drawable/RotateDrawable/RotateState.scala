@@ -47,71 +47,32 @@ object RotateState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCanConstantState(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canConstantState")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMCanConstantState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCanConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCanConstantState(value: () => Boolean): Self = this.set("canConstantState", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCheckedConstantState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCanConstantState(value: js.Any): Self = this.set("mCanConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCurrentDegrees(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrentDegrees")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedConstantState(value: js.Any): Self = this.set("mCheckedConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawable(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrentDegrees(value: Double): Self = this.set("mCurrentDegrees", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFromDegrees(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFromDegrees")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawable(value: Drawable): Self = this.set("mDrawable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPivotX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPivotX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFromDegrees(value: Double): Self = this.set("mFromDegrees", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPivotXRel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPivotXRel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPivotX(value: Double): Self = this.set("mPivotX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPivotY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPivotY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPivotXRel(value: Boolean): Self = this.set("mPivotXRel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPivotYRel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPivotYRel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPivotY(value: Double): Self = this.set("mPivotY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMToDegrees(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mToDegrees")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPivotYRel(value: Boolean): Self = this.set("mPivotYRel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMToDegrees(value: Double): Self = this.set("mToDegrees", value.asInstanceOf[js.Any])
   }
   
 }

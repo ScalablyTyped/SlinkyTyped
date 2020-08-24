@@ -7,21 +7,20 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Switches.RadioButtonGroupProps
 import typingsSlinky.materialUi.materialUiStrings.left
 import typingsSlinky.materialUi.materialUiStrings.right
-import typingsSlinky.materialUi.radioButtonGroupMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RadioButtonGroup {
-  @JSImport("material-ui/RadioButton/RadioButtonGroup", JSImport.Default)
+  @JSImport("material-ui", "RadioButtonGroup")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.RadioButtonGroup] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

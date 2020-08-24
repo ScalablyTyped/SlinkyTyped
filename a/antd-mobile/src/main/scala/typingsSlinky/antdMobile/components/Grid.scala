@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.gridMod.GridProps
-import typingsSlinky.antdMobile.gridMod.default
 import typingsSlinky.antdMobile.gridPropsTypeMod.DataItem
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -12,14 +11,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Grid {
-  @JSImport("antd-mobile/lib/grid", JSImport.Default)
+  @JSImport("antd-mobile", "Grid")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Grid] {
     @scala.inline
     def activeClassName(value: String): this.type = set("activeClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -30,6 +29,8 @@ object Grid {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def columnNum(value: Double): this.type = set("columnNum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.UndefOr[DataItem]*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline

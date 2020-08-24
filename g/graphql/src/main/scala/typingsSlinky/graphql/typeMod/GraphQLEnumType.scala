@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.typeMod
 
-import typingsSlinky.graphql.definitionMod.GraphQLEnumTypeConfig
+import typingsSlinky.graphql.anon.ReadonlyGraphQLEnumTypeCo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLEnumType protected ()
   extends typingsSlinky.graphql.definitionMod.GraphQLEnumType {
-  def this(config: GraphQLEnumTypeConfig) = this()
+  def this(config: ReadonlyGraphQLEnumTypeCo) = this()
 }
 

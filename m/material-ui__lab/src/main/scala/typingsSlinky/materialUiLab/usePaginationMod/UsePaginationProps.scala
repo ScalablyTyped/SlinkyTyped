@@ -82,149 +82,58 @@ object UsePaginationProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBoundaryCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryCount")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBoundaryCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryCount")(js.undefined)
-        ret
-    }
+    def setBoundaryCount(value: Double): Self = this.set("boundaryCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withComponentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBoundaryCount: Self = this.set("boundaryCount", js.undefined)
     @scala.inline
-    def withoutComponentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentName")(js.undefined)
-        ret
-    }
+    def setComponentName(value: String): Self = this.set("componentName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteComponentName: Self = this.set("componentName", js.undefined)
     @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
+    def setCount(value: Double): Self = this.set("count", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDefaultPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCount: Self = this.set("count", js.undefined)
     @scala.inline
-    def withoutDefaultPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPage")(js.undefined)
-        ret
-    }
+    def setDefaultPage(value: Double): Self = this.set("defaultPage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefaultPage: Self = this.set("defaultPage", js.undefined)
     @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHideNextButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNextButton")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def withoutHideNextButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNextButton")(js.undefined)
-        ret
-    }
+    def setHideNextButton(value: Boolean): Self = this.set("hideNextButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHidePrevButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePrevButton")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHideNextButton: Self = this.set("hideNextButton", js.undefined)
     @scala.inline
-    def withoutHidePrevButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePrevButton")(js.undefined)
-        ret
-    }
+    def setHidePrevButton(value: Boolean): Self = this.set("hidePrevButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnChange(value: (/* event */ ChangeEvent[_], /* page */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
+    def deleteHidePrevButton: Self = this.set("hidePrevButton", js.undefined)
     @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
+    def setOnChange(value: (/* event */ ChangeEvent[_], /* page */ Double) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
     @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
     @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
+    def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])
     @scala.inline
-    def withShowFirstButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstButton")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePage: Self = this.set("page", js.undefined)
     @scala.inline
-    def withoutShowFirstButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstButton")(js.undefined)
-        ret
-    }
+    def setShowFirstButton(value: Boolean): Self = this.set("showFirstButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def withShowLastButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLastButton")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteShowFirstButton: Self = this.set("showFirstButton", js.undefined)
     @scala.inline
-    def withoutShowLastButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLastButton")(js.undefined)
-        ret
-    }
+    def setShowLastButton(value: Boolean): Self = this.set("showLastButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSiblingCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblingCount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteShowLastButton: Self = this.set("showLastButton", js.undefined)
     @scala.inline
-    def withoutSiblingCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblingCount")(js.undefined)
-        ret
-    }
+    def setSiblingCount(value: Double): Self = this.set("siblingCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSiblingCount: Self = this.set("siblingCount", js.undefined)
   }
   
 }

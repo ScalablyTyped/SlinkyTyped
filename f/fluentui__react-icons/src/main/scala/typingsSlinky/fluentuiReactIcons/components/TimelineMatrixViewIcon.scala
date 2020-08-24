@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimelineMatrixViewIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TimelineMatrixViewIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TimelineMatrixViewIcon")
   @js.native
   object component extends js.Object
   

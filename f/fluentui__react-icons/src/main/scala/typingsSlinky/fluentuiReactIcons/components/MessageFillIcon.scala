@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MessageFillIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MessageFillIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MessageFillIcon")
   @js.native
   object component extends js.Object
   

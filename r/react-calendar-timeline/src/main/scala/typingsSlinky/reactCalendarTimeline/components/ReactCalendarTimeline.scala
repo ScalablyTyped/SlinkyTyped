@@ -3,7 +3,6 @@ package typingsSlinky.reactCalendarTimeline.components
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
@@ -17,8 +16,6 @@ import typingsSlinky.reactCalendarTimeline.mod.ReactCalendarGroupRendererProps
 import typingsSlinky.reactCalendarTimeline.mod.ReactCalendarItemRendererProps
 import typingsSlinky.reactCalendarTimeline.mod.ReactCalendarTimelineProps
 import typingsSlinky.reactCalendarTimeline.mod.TimelineContext
-import typingsSlinky.reactCalendarTimeline.mod.TimelineGroupBase
-import typingsSlinky.reactCalendarTimeline.mod.TimelineItemBase
 import typingsSlinky.reactCalendarTimeline.mod.TimelineKeys
 import typingsSlinky.reactCalendarTimeline.mod.TimelineTimeSteps
 import typingsSlinky.reactCalendarTimeline.mod.default
@@ -39,9 +36,9 @@ object ReactCalendarTimeline {
   object component extends js.Object
   
   @scala.inline
-  class Builder[CustomItem <: TimelineItemBase[js.Any], CustomGroup <: TimelineGroupBase] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactCalendarTimeline.mod.TimelineItemBase[js.Any] */ CustomItem, /* <: typingsSlinky.reactCalendarTimeline.mod.TimelineGroupBase */ CustomGroup] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any, js.Any]] {
+       with StBuildingComponent[tag.type, default[CustomItem, CustomGroup]] {
     @scala.inline
     def canChangeGroup(value: Boolean): this.type = set("canChangeGroup", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,7 +58,7 @@ object ReactCalendarTimeline {
     @scala.inline
     def dragSnap(value: Double): this.type = set("dragSnap", value.asInstanceOf[js.Any])
     @scala.inline
-    def groupRenderer(value: /* props */ ReactCalendarGroupRendererProps[CustomGroup] => TagMod[Any]): this.type = set("groupRenderer", js.Any.fromFunction1(value))
+    def groupRenderer(value: /* props */ ReactCalendarGroupRendererProps[CustomGroup] => ReactElement): this.type = set("groupRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def headerRefRefObject(value: ReactRef[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
     @scala.inline
@@ -75,7 +72,7 @@ object ReactCalendarTimeline {
     @scala.inline
     def itemHeightRatio(value: Double): this.type = set("itemHeightRatio", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemRenderer(value: /* props */ ReactCalendarItemRendererProps[CustomItem] => TagMod[Any]): this.type = set("itemRenderer", js.Any.fromFunction1(value))
+    def itemRenderer(value: /* props */ ReactCalendarItemRendererProps[CustomItem] => ReactElement): this.type = set("itemRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def itemTouchSendsClick(value: Boolean): this.type = set("itemTouchSendsClick", value.asInstanceOf[js.Any])
     @scala.inline
@@ -127,7 +124,7 @@ object ReactCalendarTimeline {
     @scala.inline
     def rightSidebarContentReactElement(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def rightSidebarContent(value: TagMod[Any]): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
+    def rightSidebarContent(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
     @scala.inline
     def rightSidebarWidth(value: Double): this.type = set("rightSidebarWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -139,11 +136,13 @@ object ReactCalendarTimeline {
     @scala.inline
     def scrollRefNull: this.type = set("scrollRef", null)
     @scala.inline
+    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    @scala.inline
     def selected(value: js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline
     def sidebarContentReactElement(value: ReactElement): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def sidebarContent(value: TagMod[Any]): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
+    def sidebarContent(value: ReactElement): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
     @scala.inline
     def sidebarWidth(value: Double): this.type = set("sidebarWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -166,9 +165,9 @@ object ReactCalendarTimeline {
     def visibleTimeStart(value: js.Date | Moment | Double): this.type = set("visibleTimeStart", value.asInstanceOf[js.Any])
   }
   
-  def withProps[CustomItem <: TimelineItemBase[js.Any], CustomGroup <: TimelineGroupBase](p: ReactCalendarTimelineProps[CustomItem, CustomGroup]): Builder[CustomItem, CustomGroup] = new Builder[CustomItem, CustomGroup](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactCalendarTimeline.mod.TimelineItemBase[js.Any] */ CustomItem, /* <: typingsSlinky.reactCalendarTimeline.mod.TimelineGroupBase */ CustomGroup](p: ReactCalendarTimelineProps[CustomItem, CustomGroup]): Builder[CustomItem, CustomGroup] = new Builder[CustomItem, CustomGroup](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[CustomItem <: TimelineItemBase[js.Any], CustomGroup <: TimelineGroupBase](groups: js.Array[CustomGroup], items: js.Array[CustomItem]): Builder[CustomItem, CustomGroup] = {
+  def apply[/* <: typingsSlinky.reactCalendarTimeline.mod.TimelineItemBase[js.Any] */ CustomItem, /* <: typingsSlinky.reactCalendarTimeline.mod.TimelineGroupBase */ CustomGroup](groups: js.Array[CustomGroup], items: js.Array[CustomItem]): Builder[CustomItem, CustomGroup] = {
     val __props = js.Dynamic.literal(groups = groups.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
     new Builder[CustomItem, CustomGroup](js.Array(this.component, __props.asInstanceOf[ReactCalendarTimelineProps[CustomItem, CustomGroup]]))
   }

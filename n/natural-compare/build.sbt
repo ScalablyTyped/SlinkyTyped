@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "natural-compare"
-version := "1.4-dt-20190215Z-a8c4f1"
-scalaVersion := "2.13.2"
+version := "1.4-dt-20190215Z-199f47"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

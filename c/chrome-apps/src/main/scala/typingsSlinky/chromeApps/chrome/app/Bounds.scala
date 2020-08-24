@@ -29,6 +29,7 @@ trait Bounds extends js.Object {
     * A value of undefined will leave a constraint unchanged.
     */
   def setMaximumSize(): Unit = js.native
+  def setMaximumSize(maxWidth: js.UndefOr[scala.Nothing], maxHeight: integer): Unit = js.native
   def setMaximumSize(maxWidth: Null, maxHeight: integer): Unit = js.native
   def setMaximumSize(maxWidth: integer): Unit = js.native
   def setMaximumSize(maxWidth: integer, maxHeight: integer): Unit = js.native
@@ -37,6 +38,7 @@ trait Bounds extends js.Object {
     * A value of undefined will leave a constraint unchanged.
     **/
   def setMinimumSize(): Unit = js.native
+  def setMinimumSize(minWidth: js.UndefOr[scala.Nothing], minHeight: integer): Unit = js.native
   def setMinimumSize(minWidth: Null, minHeight: integer): Unit = js.native
   def setMinimumSize(minWidth: integer): Unit = js.native
   def setMinimumSize(minWidth: integer, minHeight: integer): Unit = js.native

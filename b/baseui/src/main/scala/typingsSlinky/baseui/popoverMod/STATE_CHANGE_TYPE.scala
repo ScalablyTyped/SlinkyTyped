@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait STATE_CHANGE_TYPE extends js.Object {
-  var close: typingsSlinky.baseui.baseuiStrings.close
-  var open: typingsSlinky.baseui.baseuiStrings.open
+  var close: typingsSlinky.baseui.baseuiStrings.close = js.native
+  var open: typingsSlinky.baseui.baseuiStrings.open = js.native
 }
 
 @JSImport("baseui/popover", "STATE_CHANGE_TYPE")

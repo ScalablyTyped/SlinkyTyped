@@ -11,7 +11,6 @@ import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyleProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyles
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -28,7 +27,7 @@ object Coachmark {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.coachmarkBaseMod.CoachmarkBase] {
     @scala.inline
     def ariaAlertText(value: String): this.type = set("ariaAlertText", value.asInstanceOf[js.Any])
     @scala.inline

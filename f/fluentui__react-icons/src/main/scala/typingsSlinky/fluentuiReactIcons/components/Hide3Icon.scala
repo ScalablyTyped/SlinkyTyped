@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Hide3Icon {
-  @JSImport("@fluentui/react-icons/lib/components/Hide3Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Hide3Icon")
   @js.native
   object component extends js.Object
   

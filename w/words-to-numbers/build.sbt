@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "words-to-numbers"
-version := "1.2-dt-20200515Z-6b93c1"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20200515Z-97a3ac"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

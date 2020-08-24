@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
 class OrientedBox ()
   extends typingsSlinky.playcanvas.pc.OrientedBox {
   def this(worldTransform: typingsSlinky.playcanvas.pc.Mat4) = this()
+  def this(worldTransform: js.UndefOr[scala.Nothing], halfExtents: typingsSlinky.playcanvas.pc.Vec3) = this()
   def this(worldTransform: typingsSlinky.playcanvas.pc.Mat4, halfExtents: typingsSlinky.playcanvas.pc.Vec3) = this()
 }
 

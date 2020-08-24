@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "AotSummaryResolver")
 @js.native
 class AotSummaryResolver protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.AotSummaryResolver {
+  extends typingsSlinky.angularCompiler.compilerMod.AotSummaryResolver {
   def this(
     host: AotSummaryResolverHost,
     staticSymbolCache: typingsSlinky.angularCompiler.staticSymbolMod.StaticSymbolCache

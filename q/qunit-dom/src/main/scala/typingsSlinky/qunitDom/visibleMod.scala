@@ -1,5 +1,6 @@
 package typingsSlinky.qunitDom
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,6 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("qunit-dom/dist/helpers/visible", JSImport.Namespace)
 @js.native
 object visibleMod extends js.Object {
-  def default(el: js.Any): Boolean = js.native
+  def default(): Boolean = js.native
+  def default(el: HTMLElement): Boolean = js.native
 }
 

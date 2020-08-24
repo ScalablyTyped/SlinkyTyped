@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
-import typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.IPlayReadyDomain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,11 +14,5 @@ class PlayReadyDomainIterable protected ()
     * @param domainAccountId The domain account identifier.
     */
   def this(domainAccountId: String) = this()
-  /**
-    * Returns an iterator that iterates over the items in the PlayReady domain collection.
-    * @return The PlayReady domain iterator.
-    */
-  /* CompleteClass */
-  override def first(): IIterator[IPlayReadyDomain] = js.native
 }
 

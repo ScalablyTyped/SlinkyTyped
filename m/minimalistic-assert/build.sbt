@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "minimalistic-assert"
-version := "1.0-dt-20191002Z-047c7c"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20191002Z-6b17a8"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

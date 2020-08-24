@@ -1,5 +1,6 @@
 package typingsSlinky.catalog.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.catalog.catalogNumbers.`1`
@@ -24,6 +25,10 @@ object ReactSpecimen {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.catalog.mod.ReactSpecimen] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: ReactElement | String): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def dark(value: Boolean): this.type = set("dark", value.asInstanceOf[js.Any])
     @scala.inline
     def frame(value: Boolean): this.type = set("frame", value.asInstanceOf[js.Any])
@@ -37,6 +42,8 @@ object ReactSpecimen {
     def rawBody(value: String): this.type = set("rawBody", value.asInstanceOf[js.Any])
     @scala.inline
     def rawOptions(value: String): this.type = set("rawOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responsiveVarargs(value: String*): this.type = set("responsive", js.Array(value :_*))
     @scala.inline
     def responsive(value: Boolean | String | js.Array[String]): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

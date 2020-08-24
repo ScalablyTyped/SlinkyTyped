@@ -66,7 +66,12 @@ object NotificationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChangeType(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChangeType(
       value: ToStringLiteral[
           DELETED, 
           /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
@@ -75,53 +80,23 @@ object NotificationOptions {
             CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("changeType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFileSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFileSystemId(value: String): Self = this.set("fileSystemId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withObservedPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observedPath")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setObservedPath(value: String): Self = this.set("observedPath", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRecursive(value: Boolean): Self = this.set("recursive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withChanges(value: js.Array[NotificationChange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChangesVarargs(value: NotificationChange*): Self = this.set("changes", js.Array(value :_*))
     @scala.inline
-    def withoutChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(js.undefined)
-        ret
-    }
+    def setChanges(value: js.Array[NotificationChange]): Self = this.set("changes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteChanges: Self = this.set("changes", js.undefined)
     @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
+    def setTag(value: String): Self = this.set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTag: Self = this.set("tag", js.undefined)
   }
   
 }

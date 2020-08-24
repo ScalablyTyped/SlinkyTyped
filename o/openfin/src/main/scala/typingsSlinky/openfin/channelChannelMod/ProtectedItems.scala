@@ -4,7 +4,7 @@ import typingsSlinky.openfin.anon.FnCall
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.openfinBooleans.`true`
 import typingsSlinky.openfin.openfinStrings.`request-external-authorization`
-import typingsSlinky.openfin.shapesMod.ProviderIdentity
+import typingsSlinky.openfin.shapesIdentityMod.ProviderIdentity
 import typingsSlinky.openfin.transportMod.AuthorizationPayload
 import typingsSlinky.openfin.transportMod.Message
 import typingsSlinky.openfin.transportMod.Payload

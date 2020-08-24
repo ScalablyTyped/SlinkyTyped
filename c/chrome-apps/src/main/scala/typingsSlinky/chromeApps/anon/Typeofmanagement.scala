@@ -37,6 +37,7 @@ trait Typeofmanagement extends js.Object {
     * @param [callback]
     */
   def uninstallSelf(): Unit = js.native
+  def uninstallSelf(options: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def uninstallSelf(options: UninstallOptions): Unit = js.native
   def uninstallSelf(options: UninstallOptions, callback: js.Function0[Unit]): Unit = js.native
 }

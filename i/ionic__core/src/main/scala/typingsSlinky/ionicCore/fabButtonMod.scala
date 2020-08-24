@@ -1,16 +1,14 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.elementInterfaceMod.AnchorInterface
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
-import typingsSlinky.ionicCore.ionicCoreStrings.button
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
 import typingsSlinky.ionicCore.ionicCoreStrings.small
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +26,17 @@ object fabButtonMod extends js.Object {
       */
     var activated: Boolean = js.native
     /**
+      * The icon name to use for the close icon. This will appear when the fab button
+      * is pressed. Only applies if it is the main button inside of a fab containing a
+      * fab list.
+      */
+    var closeIcon: String = js.native
+    /**
       * The color to use from your application's color palette.
       * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
       * For more information on colors, see [theming](/docs/theming/basics).
       */
     var color: js.UndefOr[Color] = js.native
-    /* CompleteClass */
-    override var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     /**
       * Emitted when the button loses focus.
@@ -47,6 +49,11 @@ object fabButtonMod extends js.Object {
     var onBlur: js.Any = js.native
     var onFocus: js.Any = js.native
     /**
+      * When using a router, it specifies the transition animation when navigating to
+      * another page using `href`.
+      */
+    var routerAnimation: js.UndefOr[AnimationBuilder] = js.native
+    /**
       * When using a router, it specifies the transition direction when navigating to
       * another page using `href`.
       */
@@ -56,7 +63,7 @@ object fabButtonMod extends js.Object {
       */
     var show: Boolean = js.native
     /**
-      * The size of the button. Set this to `small` in order to have a mini fab.
+      * The size of the button. Set this to `small` in order to have a mini fab button.
       */
     var size: js.UndefOr[small] = js.native
     /**
@@ -65,8 +72,6 @@ object fabButtonMod extends js.Object {
       * [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
       */
     var translucent: Boolean = js.native
-    /* CompleteClass */
-    override var `type`: submit | reset | button = js.native
     @JSName("render")
     def render_MFabButton(): js.Any = js.native
   }

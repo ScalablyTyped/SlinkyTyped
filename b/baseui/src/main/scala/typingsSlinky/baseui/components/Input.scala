@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
@@ -59,9 +58,9 @@ object Input {
     @scala.inline
     def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def endEnhancerFunction1(value: /* args */ SharedProps => TagMod[Any]): this.type = set("endEnhancer", js.Any.fromFunction1(value))
+    def endEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("endEnhancer", js.Any.fromFunction1(value))
     @scala.inline
-    def endEnhancer(value: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
@@ -111,9 +110,9 @@ object Input {
     @scala.inline
     def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def startEnhancerFunction1(value: /* args */ SharedProps => TagMod[Any]): this.type = set("startEnhancer", js.Any.fromFunction1(value))
+    def startEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("startEnhancer", js.Any.fromFunction1(value))
     @scala.inline
-    def startEnhancer(value: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

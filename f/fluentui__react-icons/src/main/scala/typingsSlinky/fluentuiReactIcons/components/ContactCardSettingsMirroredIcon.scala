@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ContactCardSettingsMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ContactCardSettingsMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ContactCardSettingsMirroredIcon")
   @js.native
   object component extends js.Object
   

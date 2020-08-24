@@ -31,101 +31,42 @@ object BackgroundOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
+    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
+    def setImage(value: String): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteImage: Self = this.set("image", js.undefined)
     @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
+    def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPosition(value: Point | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
     @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
+    def setPosition(value: Point | String): Self = this.set("position", value.asInstanceOf[js.Any])
     @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePosition: Self = this.set("position", js.undefined)
     @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
+    def setQuality(value: Double): Self = this.set("quality", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRepeat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteQuality: Self = this.set("quality", js.undefined)
     @scala.inline
-    def withoutRepeat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(js.undefined)
-        ret
-    }
+    def setRepeat(value: String): Self = this.set("repeat", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSize(value: Size | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRepeat: Self = this.set("repeat", js.undefined)
     @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
+    def setSize(value: Size | String): Self = this.set("size", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWaterMarkAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waterMarkAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSize: Self = this.set("size", js.undefined)
     @scala.inline
-    def withoutWaterMarkAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waterMarkAngle")(js.undefined)
-        ret
-    }
+    def setWaterMarkAngle(value: Double): Self = this.set("waterMarkAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWaterMarkAngle: Self = this.set("waterMarkAngle", js.undefined)
   }
   
 }

@@ -35,6 +35,8 @@ object vueTypesVueAugmentingMod extends js.Object {
     @JSName("$d")
     def $d(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
+    def $d(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
     def $d(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
     def $d(
@@ -47,6 +49,8 @@ object vueTypesVueAugmentingMod extends js.Object {
     @JSName("$d")
     def $d(value: js.Date, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
+    def $d(value: js.Date, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
     def $d(value: js.Date, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
     def $d(
@@ -58,6 +62,8 @@ object vueTypesVueAugmentingMod extends js.Object {
     def $n(value: Double): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
     @JSName("$n")
     def $n(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
+    @JSName("$n")
+    def $n(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
     @JSName("$n")
     def $n(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
     @JSName("$n")
@@ -80,6 +86,12 @@ object vueTypesVueAugmentingMod extends js.Object {
     def $t(key: typingsSlinky.vueI18n.mod.VueI18n.Path, values: typingsSlinky.vueI18n.mod.VueI18n.Values): typingsSlinky.vueI18n.mod.VueI18n.TranslateResult = js.native
     @JSName("$tc")
     def $tc(key: typingsSlinky.vueI18n.mod.VueI18n.Path): String = js.native
+    @JSName("$tc")
+    def $tc(
+      key: typingsSlinky.vueI18n.mod.VueI18n.Path,
+      choice: js.UndefOr[scala.Nothing],
+      values: typingsSlinky.vueI18n.mod.VueI18n.Values
+    ): String = js.native
     @JSName("$tc")
     def $tc(key: typingsSlinky.vueI18n.mod.VueI18n.Path, choice: typingsSlinky.vueI18n.mod.VueI18n.Choice): String = js.native
     @JSName("$tc")

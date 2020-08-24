@@ -27,6 +27,11 @@ object PinkySwear extends js.Object {
     @JSName("then")
     def then_G_GenericPromise[G](): GenericPromise[G] = js.native
     @JSName("then")
+    def then_G_GenericPromise[G](
+      onFulfilled: js.UndefOr[scala.Nothing],
+      onRejected: js.Function1[(/* value */ T) | (/* error */ js.TypeError), Unit]
+    ): GenericPromise[G] = js.native
+    @JSName("then")
     def then_G_GenericPromise[G](onFulfilled: js.Function1[/* value */ T, G | GenericPromise[G]]): GenericPromise[G] = js.native
     @JSName("then")
     def then_G_GenericPromise[G](
@@ -58,6 +63,7 @@ object PinkySwear extends js.Object {
       * @returns PinkySwear.Promise
       */
     def `then`(): Promise = js.native
+    def `then`(onFulfilled: js.UndefOr[scala.Nothing], onRejected: js.Function1[/* repeated */ js.Any, Unit]): Promise = js.native
     def `then`(onFulfilled: js.Function1[/* repeated */ js.Any, this.type | Unit | _]): Promise = js.native
     def `then`(
       onFulfilled: js.Function1[/* repeated */ js.Any, this.type | Unit | _],

@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs")
 @js.native
 abstract class RemoteSystemRemovedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs {
-  /** The RemoteSystem object representing the device that was removed from the set of discoverable devices, causing the containing RemoteSystemRemoved event to be raised. */
-  /* CompleteClass */
-  override var remoteSystemId: String = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs
 

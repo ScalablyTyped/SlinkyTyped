@@ -30,23 +30,16 @@ object HighlighterArgumentsMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddClass(value: AddClassHighlighterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClass")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOpacity(value: OpacityHighlighterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddClass(value: AddClassHighlighterArguments): Self = this.set("addClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStroke(value: StrokeHighlighterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpacity(value: OpacityHighlighterArguments): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStroke(value: StrokeHighlighterArguments): Self = this.set("stroke", value.asInstanceOf[js.Any])
   }
   
 }

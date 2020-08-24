@@ -33,6 +33,8 @@ object TwitterShareButton {
     @scala.inline
     def disabledStyle(value: StyleHTMLAttributes[HTMLDivElement]): this.type = set("disabledStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def hashtagsVarargs(value: String*): this.type = set("hashtags", js.Array(value :_*))
+    @scala.inline
     def hashtags(value: js.Array[String]): this.type = set("hashtags", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: /* link */ String => Unit): this.type = set("onClick", js.Any.fromFunction1(value))

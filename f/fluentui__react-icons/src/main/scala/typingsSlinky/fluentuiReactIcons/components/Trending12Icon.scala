@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Trending12Icon {
-  @JSImport("@fluentui/react-icons/lib/components/Trending12Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Trending12Icon")
   @js.native
   object component extends js.Object
   

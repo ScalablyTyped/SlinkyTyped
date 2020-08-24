@@ -34,7 +34,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ImgHTMLAttributes
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.reactStrings._empty
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
@@ -96,14 +95,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Image {
-  @JSImport("grommet", "Image")
+  @JSImport("grommet/es6", "Image")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLImageElement] {
     @scala.inline
     def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -234,6 +233,8 @@ object Image {
     def decoding(value: async | auto | sync): this.type = set("decoding", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

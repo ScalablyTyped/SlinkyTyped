@@ -17,6 +17,7 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonInfiniteScrollContentElement
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicReact.anon.IonInfiniteScrollContentP
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
@@ -67,7 +68,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +80,7 @@ object IonInfiniteScrollContent {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonInfiniteScrollContentElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -204,6 +204,8 @@ object IonInfiniteScrollContent {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -236,7 +238,7 @@ object IonInfiniteScrollContent {
     @scala.inline
     def loadingSpinnerNull: this.type = set("loadingSpinner", null)
     @scala.inline
-    def loadingText(value: String): this.type = set("loadingText", value.asInstanceOf[js.Any])
+    def loadingText(value: String | IonicSafeString): this.type = set("loadingText", value.asInstanceOf[js.Any])
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLIonInfiniteScrollContentElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline

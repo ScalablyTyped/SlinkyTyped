@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -94,7 +93,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SpeedDialAction {
-  @JSImport("@material-ui/lab/SpeedDialAction/SpeedDialAction", JSImport.Default)
+  @JSImport("@material-ui/lab", "SpeedDialAction")
   @js.native
   object component extends js.Object
   
@@ -239,6 +238,8 @@ object SpeedDialAction {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
@@ -261,7 +262,7 @@ object SpeedDialAction {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -495,7 +496,7 @@ object SpeedDialAction {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def tooltipOpen(value: Boolean): this.type = set("tooltipOpen", value.asInstanceOf[js.Any])
     @scala.inline
@@ -505,7 +506,7 @@ object SpeedDialAction {
     @scala.inline
     def tooltipTitleReactElement(value: ReactElement): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltipTitle(value: TagMod[Any]): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
+    def tooltipTitle(value: ReactElement): this.type = set("tooltipTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     @scala.inline

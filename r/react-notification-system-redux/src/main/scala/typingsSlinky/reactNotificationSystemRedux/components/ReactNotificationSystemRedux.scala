@@ -24,6 +24,8 @@ object ReactNotificationSystemRedux {
     @scala.inline
     def noAnimation(value: Boolean): this.type = set("noAnimation", value.asInstanceOf[js.Any])
     @scala.inline
+    def notificationsVarargs(value: Notification*): this.type = set("notifications", js.Array(value :_*))
+    @scala.inline
     def notifications(value: js.Array[Notification]): this.type = set("notifications", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: Style | Boolean): this.type = set("style", value.asInstanceOf[js.Any])

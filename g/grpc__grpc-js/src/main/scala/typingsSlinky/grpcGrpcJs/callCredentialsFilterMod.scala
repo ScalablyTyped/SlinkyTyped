@@ -23,8 +23,6 @@ object callCredentialsFilterMod extends js.Object {
   class CallCredentialsFilterFactory protected () extends FilterFactory[CallCredentialsFilter] {
     def this(channel: Channel) = this()
     val channel: js.Any = js.native
-    /* CompleteClass */
-    override def createFilter(callStream: Call): CallCredentialsFilter = js.native
   }
   
 }

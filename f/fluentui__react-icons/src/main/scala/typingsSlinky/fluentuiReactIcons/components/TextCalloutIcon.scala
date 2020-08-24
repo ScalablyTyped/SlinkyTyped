@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextCalloutIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TextCalloutIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TextCalloutIcon")
   @js.native
   object component extends js.Object
   

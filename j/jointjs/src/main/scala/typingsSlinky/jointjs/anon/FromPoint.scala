@@ -22,17 +22,14 @@ object FromPoint {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFromPoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPoint")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutFromPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPoint")(js.undefined)
-        ret
-    }
+    def setFromPoint(value: Boolean): Self = this.set("fromPoint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFromPoint: Self = this.set("fromPoint", js.undefined)
   }
   
 }

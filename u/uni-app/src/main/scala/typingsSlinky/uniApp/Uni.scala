@@ -14,6 +14,8 @@ trait Uni extends js.Object {
   @JSName("$emit")
   def $emit(): Unit = js.native
   @JSName("$emit")
+  def $emit(eventName: js.UndefOr[scala.Nothing], param: js.Any): Unit = js.native
+  @JSName("$emit")
   def $emit(eventName: String): Unit = js.native
   @JSName("$emit")
   def $emit(eventName: String, param: js.Any): Unit = js.native
@@ -24,6 +26,8 @@ trait Uni extends js.Object {
     */
   @JSName("$off")
   def $off(): Unit = js.native
+  @JSName("$off")
+  def $off(eventName: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   @JSName("$off")
   def $off(eventName: String): Unit = js.native
   @JSName("$off")
@@ -40,6 +44,8 @@ trait Uni extends js.Object {
   @JSName("$on")
   def $on(): Unit = js.native
   @JSName("$on")
+  def $on(eventName: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
+  @JSName("$on")
   def $on(eventName: String): Unit = js.native
   @JSName("$on")
   def $on(eventName: String, callback: js.Function0[Unit]): Unit = js.native
@@ -50,6 +56,8 @@ trait Uni extends js.Object {
     */
   @JSName("$once")
   def $once(): Unit = js.native
+  @JSName("$once")
+  def $once(eventName: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   @JSName("$once")
   def $once(eventName: String): Unit = js.native
   @JSName("$once")
@@ -225,6 +233,7 @@ trait Uni extends js.Object {
     * 参考: [http://uniapp.dcloud.io/api/ui/canvas?id=createcanvascontext](http://uniapp.dcloud.io/api/ui/canvas?id=createcanvascontext)
     */
   def createCanvasContext(): CanvasContext = js.native
+  def createCanvasContext(canvasId: js.UndefOr[scala.Nothing], componentInstance: js.Any): CanvasContext = js.native
   def createCanvasContext(canvasId: String): CanvasContext = js.native
   def createCanvasContext(canvasId: String, componentInstance: js.Any): CanvasContext = js.native
   /**
@@ -246,6 +255,7 @@ trait Uni extends js.Object {
     * 参考: [http://uniapp.dcloud.io/api/location/map?id=createmapcontext](http://uniapp.dcloud.io/api/location/map?id=createmapcontext)
     */
   def createMapContext(): MapContext = js.native
+  def createMapContext(mapId: js.UndefOr[scala.Nothing], currentComponent: js.Any): MapContext = js.native
   def createMapContext(mapId: String): MapContext = js.native
   def createMapContext(mapId: String, currentComponent: js.Any): MapContext = js.native
   /**
@@ -260,6 +270,7 @@ trait Uni extends js.Object {
     * 参考: [http://uniapp.dcloud.io/api/media/video-context?id=createvideocontext](http://uniapp.dcloud.io/api/media/video-context?id=createvideocontext)
     */
   def createVideoContext(): VideoContext = js.native
+  def createVideoContext(videoId: js.UndefOr[scala.Nothing], currentComponent: js.Any): VideoContext = js.native
   def createVideoContext(videoId: String): VideoContext = js.native
   def createVideoContext(videoId: String, currentComponent: js.Any): VideoContext = js.native
   /**
@@ -919,6 +930,7 @@ trait Uni extends js.Object {
     * 参考: [http://uniapp.dcloud.io/api/storage/storage?id=setstoragesync](http://uniapp.dcloud.io/api/storage/storage?id=setstoragesync)
     */
   def setStorageSync(): Unit = js.native
+  def setStorageSync(key: js.UndefOr[scala.Nothing], value: js.Any): Unit = js.native
   def setStorageSync(key: String): Unit = js.native
   def setStorageSync(key: String, value: js.Any): Unit = js.native
   /**

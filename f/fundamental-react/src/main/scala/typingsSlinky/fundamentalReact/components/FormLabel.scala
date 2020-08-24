@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormLabel {
-  @JSImport("fundamental-react/lib/Forms/FormLabel", JSImport.Default)
+  @JSImport("fundamental-react", "FormLabel")
   @js.native
   object component extends js.Object
   

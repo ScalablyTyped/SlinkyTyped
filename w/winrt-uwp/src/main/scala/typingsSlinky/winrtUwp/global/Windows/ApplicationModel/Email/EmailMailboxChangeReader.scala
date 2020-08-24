@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Email
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,21 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Email.EmailMailboxChangeReader")
 @js.native
 abstract class EmailMailboxChangeReader ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChangeReader {
-  /** Accepts all changes. */
-  /* CompleteClass */
-  override def acceptChanges(): Unit = js.native
-  /**
-    * Accepts all changes through the current change.
-    * @param lastChangeToAcknowledge The current change.
-    */
-  /* CompleteClass */
-  override def acceptChangesThrough(lastChangeToAcknowledge: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChange): Unit = js.native
-  /**
-    * Reads a collection of changes.
-    * @return A batch of changes.
-    */
-  /* CompleteClass */
-  override def readBatchAsync(): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChangeReader
 

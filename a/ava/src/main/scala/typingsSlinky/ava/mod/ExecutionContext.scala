@@ -10,8 +10,12 @@ trait ExecutionContext[Context] extends Assertions {
   var context: Context = js.native
   @JSName("log")
   var log_Original: LogFn = js.native
+  /** Whether the test has passed. Only accurate in afterEach hooks. */
+  val passed: Boolean = js.native
   @JSName("plan")
   var plan_Original: PlanFn = js.native
+  @JSName("teardown")
+  var teardown_Original: TeardownFn = js.native
   @JSName("timeout")
   var timeout_Original: TimeoutFn = js.native
   /** Title of the test or hook. */
@@ -25,25 +29,27 @@ trait ExecutionContext[Context] extends Assertions {
   	 * number of planned assertions. See [assertion planning](https://github.com/avajs/ava#assertion-planning).
   	 */
   def plan(count: Double): Unit = js.native
+  def teardown(fn: js.Function0[Unit]): Unit = js.native
   def timeout(ms: Double): Unit = js.native
+  def timeout(ms: Double, message: String): Unit = js.native
   /**
-  	* Requires opt-in. Attempt to run some assertions. The result must be explicitly committed or discarded or else
-  	* the test will fail. A macro may be provided.
-  	*/
+  	 * Attempt to run some assertions. The result must be explicitly committed or discarded or else
+  	 * the test will fail. A macro may be provided.
+  	 */
   def `try`[Args /* <: js.Array[_] */](
     fn: Array[EitherMacro[Args, Context]],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args is not an array type */ args: Args
   ): js.Promise[js.Array[TryResult]] = js.native
   /**
-  	* Requires opt-in. Attempt to run some assertions. The result must be explicitly committed or discarded or else
-  	* the test will fail. A macro may be provided.
-  	*/
+  	 * Attempt to run some assertions. The result must be explicitly committed or discarded or else
+  	 * the test will fail. A macro may be provided.
+  	 */
   def `try`[Args /* <: js.Array[_] */](
     fn: EitherMacro[Args, Context],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args is not an array type */ args: Args
   ): js.Promise[TryResult] = js.native
   /**
-  	* Requires opt-in. Attempt to run some assertions. The result must be explicitly committed or discarded or else
+  	 * Attempt to run some assertions. The result must be explicitly committed or discarded or else
   	 * the test will fail. A macro may be provided. The title may help distinguish attempts from
   	 * one another.
   	 */
@@ -53,7 +59,7 @@ trait ExecutionContext[Context] extends Assertions {
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args is not an array type */ args: Args
   ): js.Promise[js.Array[TryResult]] = js.native
   /**
-  	 * Requires opt-in. Attempt to run some assertions. The result must be explicitly committed or discarded or else
+  	 * Attempt to run some assertions. The result must be explicitly committed or discarded or else
   	 * the test will fail. A macro may be provided. The title may help distinguish attempts from
   	 * one another.
   	 */

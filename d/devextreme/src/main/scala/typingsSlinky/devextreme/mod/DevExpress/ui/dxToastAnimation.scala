@@ -1,18 +1,16 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.mod.DevExpress.animationConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxToastAnimation extends dxOverlayAnimation
 
 object dxToastAnimation {
   @scala.inline
-  def apply(hide: animationConfig = null, show: animationConfig = null): dxToastAnimation = {
+  def apply(): dxToastAnimation = {
     val __obj = js.Dynamic.literal()
-    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxToastAnimation]
   }
 }

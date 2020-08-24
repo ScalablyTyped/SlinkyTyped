@@ -6,73 +6,74 @@ import scala.scalajs.js.annotation._
 
 /* Inlined estree.estree.Node['type'] */
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.eslint.eslintStrings.ClassExpression
   - typingsSlinky.eslint.eslintStrings.BreakStatement
+  - typingsSlinky.eslint.eslintStrings.ReturnStatement
+  - typingsSlinky.eslint.eslintStrings.YieldExpression
+  - typingsSlinky.eslint.eslintStrings.ForInStatement
+  - typingsSlinky.eslint.eslintStrings.ImportDefaultSpecifier
+  - typingsSlinky.eslint.eslintStrings.SpreadElement
+  - typingsSlinky.eslint.eslintStrings.TryStatement
+  - typingsSlinky.eslint.eslintStrings.BlockStatement
+  - typingsSlinky.eslint.eslintStrings.RestElement
+  - typingsSlinky.eslint.eslintStrings.LabeledStatement
+  - typingsSlinky.eslint.eslintStrings.ExportAllDeclaration
+  - typingsSlinky.eslint.eslintStrings.WhileStatement
+  - typingsSlinky.eslint.eslintStrings.ContinueStatement
+  - typingsSlinky.eslint.eslintStrings.SwitchStatement
+  - typingsSlinky.eslint.eslintStrings.ExportNamedDeclaration
+  - typingsSlinky.eslint.eslintStrings.CallExpression
+  - typingsSlinky.eslint.eslintStrings.SwitchCase
+  - typingsSlinky.eslint.eslintStrings.ArrayExpression
+  - typingsSlinky.eslint.eslintStrings.NewExpression
+  - typingsSlinky.eslint.eslintStrings.MemberExpression
+  - typingsSlinky.eslint.eslintStrings.ExpressionStatement
+  - typingsSlinky.eslint.eslintStrings.AssignmentPattern
+  - typingsSlinky.eslint.eslintStrings.VariableDeclaration
+  - typingsSlinky.eslint.eslintStrings.LogicalExpression
+  - typingsSlinky.eslint.eslintStrings.TaggedTemplateExpression
+  - typingsSlinky.eslint.eslintStrings.TemplateLiteral
+  - typingsSlinky.eslint.eslintStrings.ExportDefaultDeclaration
+  - typingsSlinky.eslint.eslintStrings.MetaProperty
+  - typingsSlinky.eslint.eslintStrings.IfStatement
+  - typingsSlinky.eslint.eslintStrings.BinaryExpression
+  - typingsSlinky.eslint.eslintStrings.WithStatement
+  - typingsSlinky.eslint.eslintStrings.Identifier
+  - typingsSlinky.eslint.eslintStrings.UpdateExpression
+  - typingsSlinky.eslint.eslintStrings.EmptyStatement
+  - typingsSlinky.eslint.eslintStrings.ClassDeclaration
+  - typingsSlinky.eslint.eslintStrings.AwaitExpression
+  - typingsSlinky.eslint.eslintStrings.ImportSpecifier
+  - typingsSlinky.eslint.eslintStrings.ArrayPattern
+  - typingsSlinky.eslint.eslintStrings.ExportSpecifier
+  - typingsSlinky.eslint.eslintStrings.ObjectExpression
+  - typingsSlinky.eslint.eslintStrings.VariableDeclarator
+  - typingsSlinky.eslint.eslintStrings.AssignmentExpression
+  - typingsSlinky.eslint.eslintStrings.FunctionDeclaration
+  - typingsSlinky.eslint.eslintStrings.DebuggerStatement
+  - typingsSlinky.eslint.eslintStrings.ThrowStatement
   - typingsSlinky.eslint.eslintStrings.Property
   - typingsSlinky.eslint.eslintStrings.ArrowFunctionExpression
-  - typingsSlinky.eslint.eslintStrings.CatchClause
-  - typingsSlinky.eslint.eslintStrings.ImportDeclaration
-  - typingsSlinky.eslint.eslintStrings.ReturnStatement
-  - typingsSlinky.eslint.eslintStrings.WithStatement
-  - typingsSlinky.eslint.eslintStrings.AwaitExpression
-  - typingsSlinky.eslint.eslintStrings.ClassExpression
-  - typingsSlinky.eslint.eslintStrings.ClassBody
-  - typingsSlinky.eslint.eslintStrings.ExportSpecifier
-  - typingsSlinky.eslint.eslintStrings.ExportAllDeclaration
-  - typingsSlinky.eslint.eslintStrings.ImportSpecifier
-  - typingsSlinky.eslint.eslintStrings.ArrayExpression
-  - typingsSlinky.eslint.eslintStrings.VariableDeclarator
-  - typingsSlinky.eslint.eslintStrings.ObjectExpression
-  - typingsSlinky.eslint.eslintStrings.WhileStatement
-  - typingsSlinky.eslint.eslintStrings.DebuggerStatement
-  - typingsSlinky.eslint.eslintStrings.ForOfStatement
-  - typingsSlinky.eslint.eslintStrings.UnaryExpression
-  - typingsSlinky.eslint.eslintStrings.AssignmentExpression
-  - typingsSlinky.eslint.eslintStrings.VariableDeclaration
-  - typingsSlinky.eslint.eslintStrings.ExportDefaultDeclaration
-  - typingsSlinky.eslint.eslintStrings.ConditionalExpression
-  - typingsSlinky.eslint.eslintStrings.BinaryExpression
-  - typingsSlinky.eslint.eslintStrings.AssignmentPattern
-  - typingsSlinky.eslint.eslintStrings.ImportExpression
-  - typingsSlinky.eslint.eslintStrings.ThrowStatement
-  - typingsSlinky.eslint.eslintStrings.TemplateElement
-  - typingsSlinky.eslint.eslintStrings.ImportDefaultSpecifier
-  - typingsSlinky.eslint.eslintStrings.ClassDeclaration
-  - typingsSlinky.eslint.eslintStrings.Literal
-  - typingsSlinky.eslint.eslintStrings.DoWhileStatement
-  - typingsSlinky.eslint.eslintStrings.UpdateExpression
   - typingsSlinky.eslint.eslintStrings.MethodDefinition
-  - typingsSlinky.eslint.eslintStrings.ObjectPattern
-  - typingsSlinky.eslint.eslintStrings.ExportNamedDeclaration
-  - typingsSlinky.eslint.eslintStrings.IfStatement
-  - typingsSlinky.eslint.eslintStrings.BlockStatement
-  - typingsSlinky.eslint.eslintStrings.ArrayPattern
-  - typingsSlinky.eslint.eslintStrings.MemberExpression
-  - typingsSlinky.eslint.eslintStrings.CallExpression
-  - typingsSlinky.eslint.eslintStrings.Super
-  - typingsSlinky.eslint.eslintStrings.ThisExpression
-  - typingsSlinky.eslint.eslintStrings.LabeledStatement
-  - typingsSlinky.eslint.eslintStrings.NewExpression
-  - typingsSlinky.eslint.eslintStrings.RestElement
-  - typingsSlinky.eslint.eslintStrings.TemplateLiteral
-  - typingsSlinky.eslint.eslintStrings.FunctionExpression
-  - typingsSlinky.eslint.eslintStrings.ContinueStatement
-  - typingsSlinky.eslint.eslintStrings.YieldExpression
-  - typingsSlinky.eslint.eslintStrings.TryStatement
-  - typingsSlinky.eslint.eslintStrings.SpreadElement
-  - typingsSlinky.eslint.eslintStrings.SwitchCase
-  - typingsSlinky.eslint.eslintStrings.TaggedTemplateExpression
-  - typingsSlinky.eslint.eslintStrings.ForInStatement
-  - typingsSlinky.eslint.eslintStrings.ImportNamespaceSpecifier
+  - typingsSlinky.eslint.eslintStrings.Literal
   - typingsSlinky.eslint.eslintStrings.Program
-  - typingsSlinky.eslint.eslintStrings.EmptyStatement
-  - typingsSlinky.eslint.eslintStrings.FunctionDeclaration
-  - typingsSlinky.eslint.eslintStrings.MetaProperty
-  - typingsSlinky.eslint.eslintStrings.ExpressionStatement
-  - typingsSlinky.eslint.eslintStrings.SwitchStatement
-  - typingsSlinky.eslint.eslintStrings.Identifier
-  - typingsSlinky.eslint.eslintStrings.ForStatement
-  - typingsSlinky.eslint.eslintStrings.LogicalExpression
+  - typingsSlinky.eslint.eslintStrings.Super
+  - typingsSlinky.eslint.eslintStrings.ForOfStatement
+  - typingsSlinky.eslint.eslintStrings.ConditionalExpression
   - typingsSlinky.eslint.eslintStrings.SequenceExpression
+  - typingsSlinky.eslint.eslintStrings.CatchClause
+  - typingsSlinky.eslint.eslintStrings.UnaryExpression
+  - typingsSlinky.eslint.eslintStrings.ForStatement
+  - typingsSlinky.eslint.eslintStrings.FunctionExpression
+  - typingsSlinky.eslint.eslintStrings.TemplateElement
+  - typingsSlinky.eslint.eslintStrings.DoWhileStatement
+  - typingsSlinky.eslint.eslintStrings.ChainExpression
+  - typingsSlinky.eslint.eslintStrings.ImportNamespaceSpecifier
+  - typingsSlinky.eslint.eslintStrings.ObjectPattern
+  - typingsSlinky.eslint.eslintStrings.ClassBody
+  - typingsSlinky.eslint.eslintStrings.ImportExpression
+  - typingsSlinky.eslint.eslintStrings.ThisExpression
+  - typingsSlinky.eslint.eslintStrings.ImportDeclaration
 */
 trait NodeTypes extends js.Object
 
@@ -99,6 +100,8 @@ object NodeTypes {
   def CallExpression: typingsSlinky.eslint.eslintStrings.CallExpression = "CallExpression".asInstanceOf[typingsSlinky.eslint.eslintStrings.CallExpression]
   @scala.inline
   def CatchClause: typingsSlinky.eslint.eslintStrings.CatchClause = "CatchClause".asInstanceOf[typingsSlinky.eslint.eslintStrings.CatchClause]
+  @scala.inline
+  def ChainExpression: typingsSlinky.eslint.eslintStrings.ChainExpression = "ChainExpression".asInstanceOf[typingsSlinky.eslint.eslintStrings.ChainExpression]
   @scala.inline
   def ClassBody: typingsSlinky.eslint.eslintStrings.ClassBody = "ClassBody".asInstanceOf[typingsSlinky.eslint.eslintStrings.ClassBody]
   @scala.inline

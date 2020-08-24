@@ -1,12 +1,12 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
+import typingsSlinky.antd.timelineItemMod.TimeLineItemProps
 import typingsSlinky.antd.timelineTimelineMod.TimelineProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Timeline {
-  @JSImport("antd/lib/timeline", JSImport.Default)
+  @JSImport("antd", "Timeline")
   @js.native
   object component extends js.Object
   
@@ -29,11 +29,11 @@ object Timeline {
     @scala.inline
     def pendingReactElement(value: ReactElement): this.type = set("pending", value.asInstanceOf[js.Any])
     @scala.inline
-    def pending(value: TagMod[Any]): this.type = set("pending", value.asInstanceOf[js.Any])
+    def pending(value: ReactElement): this.type = set("pending", value.asInstanceOf[js.Any])
     @scala.inline
     def pendingDotReactElement(value: ReactElement): this.type = set("pendingDot", value.asInstanceOf[js.Any])
     @scala.inline
-    def pendingDot(value: TagMod[Any]): this.type = set("pendingDot", value.asInstanceOf[js.Any])
+    def pendingDot(value: ReactElement): this.type = set("pendingDot", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -44,5 +44,14 @@ object Timeline {
   
   def withProps(p: TimelineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Timeline.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("antd", "Timeline.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: TimeLineItemProps): SharedBuilder_TimeLineItemProps_1225119422 = new SharedBuilder_TimeLineItemProps_1225119422(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_TimeLineItemProps_1225119422 = new SharedBuilder_TimeLineItemProps_1225119422(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

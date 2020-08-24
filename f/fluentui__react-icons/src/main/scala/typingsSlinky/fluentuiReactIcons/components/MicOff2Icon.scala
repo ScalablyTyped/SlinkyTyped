@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MicOff2Icon {
-  @JSImport("@fluentui/react-icons/lib/components/MicOff2Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MicOff2Icon")
   @js.native
   object component extends js.Object
   

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DependencyRemoveIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DependencyRemoveIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DependencyRemoveIcon")
   @js.native
   object component extends js.Object
   

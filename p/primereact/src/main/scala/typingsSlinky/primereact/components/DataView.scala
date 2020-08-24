@@ -47,6 +47,10 @@ object DataView {
     @scala.inline
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
     @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingIcon(value: String): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def onPage(value: /* e */ Rows => Unit): this.type = set("onPage", js.Any.fromFunction1(value))
     @scala.inline
     def pageLinkSize(value: Double): this.type = set("pageLinkSize", value.asInstanceOf[js.Any])
@@ -63,6 +67,8 @@ object DataView {
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     @scala.inline
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    @scala.inline
     def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def sortField(value: String): this.type = set("sortField", value.asInstanceOf[js.Any])
@@ -72,6 +78,8 @@ object DataView {
     def style(value: String): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }

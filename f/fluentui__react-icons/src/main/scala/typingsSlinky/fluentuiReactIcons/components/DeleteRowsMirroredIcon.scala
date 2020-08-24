@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeleteRowsMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DeleteRowsMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DeleteRowsMirroredIcon")
   @js.native
   object component extends js.Object
   

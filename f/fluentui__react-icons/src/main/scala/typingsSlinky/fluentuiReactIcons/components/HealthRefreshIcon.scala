@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HealthRefreshIcon {
-  @JSImport("@fluentui/react-icons/lib/components/HealthRefreshIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "HealthRefreshIcon")
   @js.native
   object component extends js.Object
   

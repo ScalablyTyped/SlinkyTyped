@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -28,7 +27,7 @@ object Indexed {
     @scala.inline
     def delayActivityIndicatorReactElement(value: ReactElement): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def delayActivityIndicator(value: TagMod[Any]): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
+    def delayActivityIndicator(value: ReactElement): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def delayTime(value: Double): this.type = set("delayTime", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,7 +57,7 @@ object Indexed {
     @scala.inline
     def pullToRefreshReactElement(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
     @scala.inline
-    def pullToRefresh(value: TagMod[Any]): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    def pullToRefresh(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
     @scala.inline
     def quickSearchBarStyle(value: CSSProperties): this.type = set("quickSearchBarStyle", value.asInstanceOf[js.Any])
     @scala.inline

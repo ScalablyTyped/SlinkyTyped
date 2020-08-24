@@ -30,6 +30,7 @@ trait Row extends js.Object {
   @JSName("Word.Row_typekey")
   var WordDotRow_typekey: Row = js.native
   def ConvertToText(): typingsSlinky.activexWord.Word.Range = js.native
+  def ConvertToText(Separator: js.UndefOr[scala.Nothing], NestedTables: js.Any): typingsSlinky.activexWord.Word.Range = js.native
   def ConvertToText(Separator: js.Any): typingsSlinky.activexWord.Word.Range = js.native
   def ConvertToText(Separator: js.Any, NestedTables: js.Any): typingsSlinky.activexWord.Word.Range = js.native
   def ConvertToTextOld(): typingsSlinky.activexWord.Word.Range = js.native

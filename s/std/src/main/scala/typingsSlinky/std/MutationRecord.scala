@@ -5,43 +5,44 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback. */
+@js.native
 trait MutationRecord extends js.Object {
   /**
     * Return the nodes added and removed respectively.
     */
-  val addedNodes: org.scalajs.dom.raw.NodeList
+  val addedNodes: org.scalajs.dom.raw.NodeList = js.native
   /**
     * Returns the local name of the changed attribute, and null otherwise.
     */
-  val attributeName: java.lang.String | Null
+  val attributeName: java.lang.String | Null = js.native
   /**
     * Returns the namespace of the changed attribute, and null otherwise.
     */
-  val attributeNamespace: java.lang.String | Null
+  val attributeNamespace: java.lang.String | Null = js.native
   /**
     * Return the previous and next sibling respectively of the added or removed nodes, and null otherwise.
     */
-  val nextSibling: org.scalajs.dom.raw.Node | Null
+  val nextSibling: org.scalajs.dom.raw.Node | Null = js.native
   /**
     * The return value depends on type. For "attributes", it is the value of the changed attribute before the change. For "characterData", it is the data of the changed node before the change. For "childList", it is null.
     */
-  val oldValue: java.lang.String | Null
+  val oldValue: java.lang.String | Null = js.native
   /**
     * Return the previous and next sibling respectively of the added or removed nodes, and null otherwise.
     */
-  val previousSibling: org.scalajs.dom.raw.Node | Null
+  val previousSibling: org.scalajs.dom.raw.Node | Null = js.native
   /**
     * Return the nodes added and removed respectively.
     */
-  val removedNodes: org.scalajs.dom.raw.NodeList
+  val removedNodes: org.scalajs.dom.raw.NodeList = js.native
   /**
     * Returns the node the mutation affected, depending on the type. For "attributes", it is the element whose attribute changed. For "characterData", it is the CharacterData node. For "childList", it is the node whose children changed.
     */
-  val target: org.scalajs.dom.raw.Node
+  val target: org.scalajs.dom.raw.Node = js.native
   /**
     * Returns "attributes" if it was an attribute mutation. "characterData" if it was a mutation to a CharacterData node. And "childList" if it was a mutation to the tree of nodes.
     */
-  val `type`: MutationRecordType
+  val `type`: MutationRecordType = js.native
 }
 
 object MutationRecord {
@@ -50,16 +51,52 @@ object MutationRecord {
     addedNodes: org.scalajs.dom.raw.NodeList,
     removedNodes: org.scalajs.dom.raw.NodeList,
     target: org.scalajs.dom.raw.Node,
-    `type`: MutationRecordType,
-    attributeName: java.lang.String = null,
-    attributeNamespace: java.lang.String = null,
-    nextSibling: org.scalajs.dom.raw.Node = null,
-    oldValue: java.lang.String = null,
-    previousSibling: org.scalajs.dom.raw.Node = null
+    `type`: MutationRecordType
   ): MutationRecord = {
-    val __obj = js.Dynamic.literal(addedNodes = addedNodes.asInstanceOf[js.Any], removedNodes = removedNodes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], attributeName = attributeName.asInstanceOf[js.Any], attributeNamespace = attributeNamespace.asInstanceOf[js.Any], nextSibling = nextSibling.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any], previousSibling = previousSibling.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(addedNodes = addedNodes.asInstanceOf[js.Any], removedNodes = removedNodes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MutationRecord]
   }
+  @scala.inline
+  implicit class MutationRecordOps[Self <: org.scalajs.dom.raw.MutationRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddedNodes(value: org.scalajs.dom.raw.NodeList): Self = this.set("addedNodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRemovedNodes(value: org.scalajs.dom.raw.NodeList): Self = this.set("removedNodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTarget(value: org.scalajs.dom.raw.Node): Self = this.set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: MutationRecordType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAttributeName(value: java.lang.String): Self = this.set("attributeName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAttributeNameNull: Self = this.set("attributeName", null)
+    @scala.inline
+    def setAttributeNamespace(value: java.lang.String): Self = this.set("attributeNamespace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAttributeNamespaceNull: Self = this.set("attributeNamespace", null)
+    @scala.inline
+    def setNextSibling(value: org.scalajs.dom.raw.Node): Self = this.set("nextSibling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNextSiblingNull: Self = this.set("nextSibling", null)
+    @scala.inline
+    def setOldValue(value: java.lang.String): Self = this.set("oldValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOldValueNull: Self = this.set("oldValue", null)
+    @scala.inline
+    def setPreviousSibling(value: org.scalajs.dom.raw.Node): Self = this.set("previousSibling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreviousSiblingNull: Self = this.set("previousSibling", null)
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.gitlab.projectsMod
 
-import typingsSlinky.gitlab.anon.forkedFromIdnumberBaseReq
-import typingsSlinky.gitlab.anon.metadataUploadMetadataSud
-import typingsSlinky.gitlab.anon.userIdnumberBaseRequestOp
+import typingsSlinky.gitlab.anon.forkedFromIdnumberundefin
+import typingsSlinky.gitlab.anon.metadataUploadMetadataund
+import typingsSlinky.gitlab.anon.userIdnumberundefinedBase
 import typingsSlinky.gitlab.eventsMod.EventOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
@@ -16,13 +16,13 @@ import scala.scalajs.js.annotation._
 @JSImport("gitlab/dist/types/core/services/Projects", "Projects")
 @js.native
 class Projects () extends BaseService {
-  def all(): js.Promise[GetResponse] = js.native
-  def all(options: PaginatedRequestOptions): js.Promise[GetResponse] = js.native
+  def all(): js.Promise[js.Array[ProjectSchema]] = js.native
+  def all(options: PaginatedRequestOptions): js.Promise[js.Array[ProjectSchema]] = js.native
   def archive(projectId: String): js.Promise[js.Object] = js.native
   def archive(projectId: String, options: Sudo): js.Promise[js.Object] = js.native
   def archive(projectId: Double): js.Promise[js.Object] = js.native
   def archive(projectId: Double, options: Sudo): js.Promise[js.Object] = js.native
-  def create(hasUserIdOptions: userIdnumberBaseRequestOp): js.Promise[js.Object] = js.native
+  def create(hasUserIdOptions: userIdnumberundefinedBase): js.Promise[js.Object] = js.native
   def edit(projectId: String): js.Promise[js.Object] = js.native
   def edit(projectId: String, options: BaseRequestOptions): js.Promise[js.Object] = js.native
   def edit(projectId: Double): js.Promise[js.Object] = js.native
@@ -32,9 +32,9 @@ class Projects () extends BaseService {
   def events(projectId: Double): js.Promise[GetResponse] = js.native
   def events(projectId: Double, options: BaseRequestOptions with EventOptions): js.Promise[GetResponse] = js.native
   def fork(projectId: String): js.Promise[js.Object] = js.native
-  def fork(projectId: String, hasForkedFromIdOptions: forkedFromIdnumberBaseReq): js.Promise[js.Object] = js.native
+  def fork(projectId: String, hasForkedFromIdOptions: forkedFromIdnumberundefin): js.Promise[js.Object] = js.native
   def fork(projectId: Double): js.Promise[js.Object] = js.native
-  def fork(projectId: Double, hasForkedFromIdOptions: forkedFromIdnumberBaseReq): js.Promise[js.Object] = js.native
+  def fork(projectId: Double, hasForkedFromIdOptions: forkedFromIdnumberundefin): js.Promise[js.Object] = js.native
   def forks(projectId: String): js.Promise[GetResponse] = js.native
   def forks(projectId: String, options: BaseRequestOptions): js.Promise[GetResponse] = js.native
   def forks(projectId: Double): js.Promise[GetResponse] = js.native
@@ -64,10 +64,10 @@ class Projects () extends BaseService {
   def share(projectId: Double, groupId: String, groupAccess: Double, options: BaseRequestOptions): js.Promise[js.Object] = js.native
   def share(projectId: Double, groupId: Double, groupAccess: Double): js.Promise[js.Object] = js.native
   def share(projectId: Double, groupId: Double, groupAccess: Double, options: BaseRequestOptions): js.Promise[js.Object] = js.native
-  def show(projectId: String): js.Promise[GetResponse] = js.native
-  def show(projectId: String, options: BaseRequestOptions): js.Promise[GetResponse] = js.native
-  def show(projectId: Double): js.Promise[GetResponse] = js.native
-  def show(projectId: Double, options: BaseRequestOptions): js.Promise[GetResponse] = js.native
+  def show(projectId: String): js.Promise[ProjectSchema] = js.native
+  def show(projectId: String, options: BaseRequestOptions): js.Promise[ProjectSchema] = js.native
+  def show(projectId: Double): js.Promise[ProjectSchema] = js.native
+  def show(projectId: Double, options: BaseRequestOptions): js.Promise[ProjectSchema] = js.native
   def star(projectId: String): js.Promise[js.Object] = js.native
   def star(projectId: String, options: Sudo): js.Promise[js.Object] = js.native
   def star(projectId: Double): js.Promise[js.Object] = js.native
@@ -97,6 +97,6 @@ class Projects () extends BaseService {
   def unstar(projectId: Double): js.Promise[js.Object] = js.native
   def unstar(projectId: Double, options: Sudo): js.Promise[js.Object] = js.native
   def upload(projectId: js.Any, content: js.Any): js.Promise[js.Object] = js.native
-  def upload(projectId: js.Any, content: js.Any, hasMetadataSudo: metadataUploadMetadataSud): js.Promise[js.Object] = js.native
+  def upload(projectId: js.Any, content: js.Any, hasMetadataSudo: metadataUploadMetadataund): js.Promise[js.Object] = js.native
 }
 

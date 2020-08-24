@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Capture
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,33 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Capture.MediaCaptureVideoProfile")
 @js.native
 abstract class MediaCaptureVideoProfile ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureVideoProfile {
-  /** Gets the unique identifier of the video profile. */
-  /* CompleteClass */
-  override var id: String = js.native
-  /** Gets a list of MediaCaptureVideoProfileMediaDescription objects that represent supported video device settings for photo capture. */
-  /* CompleteClass */
-  override var supportedPhotoMediaDescription: IVectorView[
-    typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
-  ] = js.native
-  /** Gets a list of MediaCaptureVideoProfileMediaDescription objects that represent supported video device settings for video preview. */
-  /* CompleteClass */
-  override var supportedPreviewMediaDescription: IVectorView[
-    typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
-  ] = js.native
-  /** Gets a list of MediaCaptureVideoProfileMediaDescription objects that represent supported video device settings for video recording. */
-  /* CompleteClass */
-  override var supportedRecordMediaDescription: IVectorView[
-    typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription
-  ] = js.native
-  /** Gets the device ID of the video device associated with the video profile. */
-  /* CompleteClass */
-  override var videoDeviceId: String = js.native
-  /**
-    * Gets the list of MediaCaptureVideoProfile objects that can be used concurrently with this video profile.
-    * @return The list of MediaCaptureVideoProfile objects that can be used concurrently with this video profile.
-    */
-  /* CompleteClass */
-  override def getConcurrency(): IVectorView[typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureVideoProfile] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureVideoProfile
 

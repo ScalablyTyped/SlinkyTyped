@@ -39,10 +39,11 @@ trait CustomProperties extends js.Object {
     *
     * `customProps.get("name")`
     *
-    * `var dictionary = customProps.getAll();
-    * dictionary["name"]`
+    * `var dictionary = customProps.getAll(); dictionary["name"]`
     *
-    * The dictionary object can be iterated through to discover all `names` and `values`.
+    * You can iterate through the dictionary object to discover all `names` and `values`.
+    *
+    * [Api set: Mailbox Preview]
     *
     * @returns An object with all custom properties in a collection of name/value pairs.
     *
@@ -52,6 +53,7 @@ trait CustomProperties extends js.Object {
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     *
+    * @beta
     */
   def getAll(): js.Any = js.native
   /**
@@ -91,6 +93,7 @@ trait CustomProperties extends js.Object {
     * @param asyncContext - Optional. Any state data that is passed to the callback method.
     */
   def saveAsync(): Unit = js.native
+  def saveAsync(callback: js.UndefOr[scala.Nothing], asyncContext: js.Any): Unit = js.native
   def saveAsync(callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def saveAsync(callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit], asyncContext: js.Any): Unit = js.native
   /**

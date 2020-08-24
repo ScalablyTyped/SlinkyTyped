@@ -3,7 +3,7 @@ package typingsSlinky.mqttPacket.mod
 import typingsSlinky.mqttPacket.mqttPacketStrings.error
 import typingsSlinky.mqttPacket.mqttPacketStrings.packet
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

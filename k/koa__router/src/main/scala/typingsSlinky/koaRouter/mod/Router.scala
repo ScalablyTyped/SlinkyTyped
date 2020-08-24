@@ -484,10 +484,13 @@ trait Router[StateT, CustomT] extends js.Object {
     *
     */
   def url(name: String): String = js.native
+  def url(name: String, params: js.UndefOr[scala.Nothing], options: UrlOptionsQuery): String = js.native
   def url(name: String, params: js.Any): String = js.native
   def url(name: String, params: js.Any, options: UrlOptionsQuery): String = js.native
   @JSName("url")
   def url_Error(name: String): js.Error = js.native
+  @JSName("url")
+  def url_Error(name: String, params: js.UndefOr[scala.Nothing], options: UrlOptionsQuery): js.Error = js.native
   @JSName("url")
   def url_Error(name: String, params: js.Any): js.Error = js.native
   @JSName("url")

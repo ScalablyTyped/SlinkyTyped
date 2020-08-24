@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "asap"
-version := "2.0-dt-20200515Z-0913c3"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200515Z-77b145"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

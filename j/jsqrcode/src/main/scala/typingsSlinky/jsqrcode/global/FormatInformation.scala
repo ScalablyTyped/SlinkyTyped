@@ -7,20 +7,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FormatInformation")
 @js.native
 class FormatInformation ()
-  extends typingsSlinky.jsqrcode.FormatInformation {
-  /* CompleteClass */
-  override val DataMask: Double = js.native
-  /* CompleteClass */
-  override val ErrorCorrectionLevel: typingsSlinky.jsqrcode.ErrorCorrectionLevel = js.native
-  /* CompleteClass */
-  override var dataMask: Double = js.native
-  /* CompleteClass */
-  override var errorCorrectionLevel: typingsSlinky.jsqrcode.ErrorCorrectionLevel = js.native
-  /* CompleteClass */
-  override def Equals(other: typingsSlinky.jsqrcode.FormatInformation): Boolean = js.native
-  /* CompleteClass */
-  override def GetHashCode(): Double = js.native
-}
+  extends typingsSlinky.jsqrcode.FormatInformation
 
 /* static members */
 @JSGlobal("FormatInformation")

@@ -40,53 +40,26 @@ object ListenerInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMOnAttachStateChangeListeners(value: CopyOnWriteArrayList[OnAttachStateChangeListener]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnAttachStateChangeListeners")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMOnClickListener(value: OnClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnClickListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnAttachStateChangeListeners(value: CopyOnWriteArrayList[OnAttachStateChangeListener]): Self = this.set("mOnAttachStateChangeListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnFocusChangeListener(value: OnFocusChangeListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnFocusChangeListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnClickListener(value: OnClickListener): Self = this.set("mOnClickListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnGenericMotionListener(value: OnGenericMotionListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnGenericMotionListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnFocusChangeListener(value: OnFocusChangeListener): Self = this.set("mOnFocusChangeListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnKeyListener(value: OnKeyListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnKeyListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnGenericMotionListener(value: OnGenericMotionListener): Self = this.set("mOnGenericMotionListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnLayoutChangeListeners(value: ArrayList[OnLayoutChangeListener]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnLayoutChangeListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnKeyListener(value: OnKeyListener): Self = this.set("mOnKeyListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnLongClickListener(value: OnLongClickListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnLongClickListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnLayoutChangeListeners(value: ArrayList[OnLayoutChangeListener]): Self = this.set("mOnLayoutChangeListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnTouchListener(value: OnTouchListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnTouchListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnLongClickListener(value: OnLongClickListener): Self = this.set("mOnLongClickListener", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMOnTouchListener(value: OnTouchListener): Self = this.set("mOnTouchListener", value.asInstanceOf[js.Any])
   }
   
 }

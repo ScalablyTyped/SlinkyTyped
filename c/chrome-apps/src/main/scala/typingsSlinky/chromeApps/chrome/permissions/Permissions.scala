@@ -37,29 +37,22 @@ object Permissions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrigins(value: js.Array[String | UrlMatches]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutOrigins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
-        ret
-    }
+    def setOriginsVarargs(value: (String | UrlMatches)*): Self = this.set("origins", js.Array(value :_*))
     @scala.inline
-    def withPermissions(value: js.Array[OptionalPermission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOrigins(value: js.Array[String | UrlMatches]): Self = this.set("origins", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
+    def deleteOrigins: Self = this.set("origins", js.undefined)
+    @scala.inline
+    def setPermissionsVarargs(value: OptionalPermission*): Self = this.set("permissions", js.Array(value :_*))
+    @scala.inline
+    def setPermissions(value: js.Array[OptionalPermission]): Self = this.set("permissions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePermissions: Self = this.set("permissions", js.undefined)
   }
   
 }

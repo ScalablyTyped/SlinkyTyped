@@ -11,7 +11,11 @@ trait CSSStyleSheet extends StyleSheet {
   val ownerRule: org.scalajs.dom.raw.CSSRule | Null = js.native
   val rules: org.scalajs.dom.raw.CSSRuleList = js.native
   def addRule(): Double = js.native
+  def addRule(selector: js.UndefOr[scala.Nothing], style: js.UndefOr[scala.Nothing], index: Double): Double = js.native
+  def addRule(selector: js.UndefOr[scala.Nothing], style: java.lang.String): Double = js.native
+  def addRule(selector: js.UndefOr[scala.Nothing], style: java.lang.String, index: Double): Double = js.native
   def addRule(selector: java.lang.String): Double = js.native
+  def addRule(selector: java.lang.String, style: js.UndefOr[scala.Nothing], index: Double): Double = js.native
   def addRule(selector: java.lang.String, style: java.lang.String): Double = js.native
   def addRule(selector: java.lang.String, style: java.lang.String, index: Double): Double = js.native
   def deleteRule(index: Double): Unit = js.native

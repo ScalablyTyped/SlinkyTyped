@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LifesaverLockIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LifesaverLockIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LifesaverLockIcon")
   @js.native
   object component extends js.Object
   

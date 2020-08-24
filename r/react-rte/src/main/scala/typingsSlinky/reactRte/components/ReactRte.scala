@@ -28,6 +28,8 @@ object ReactRte {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def customControlsVarargs(value: CustomControl*): this.type = set("customControls", js.Array(value :_*))
+    @scala.inline
     def customControls(value: js.Array[CustomControl]): this.type = set("customControls", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])

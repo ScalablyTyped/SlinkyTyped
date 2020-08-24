@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.accordionMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.expand
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Key
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Accordion ()
   extends Component[AccordionProps, AccordionState, js.Any] {
-  def getItems(): TagMod[Any] = js.native
+  def getItems(): ReactElement = js.native
   @JSName("internalSetState")
   def internalSetState_expand(`type`: expand, changes: AccordionState): Unit = js.native
   def onPanelChange(

@@ -6,15 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait TimeoutProps
-  extends BaseTransitionProps
-     with TransitionProps {
+@js.native
+trait TimeoutProps[RefElement /* <: js.UndefOr[HTMLElement] */]
+  extends BaseTransitionProps[RefElement]
+     with TransitionProps[RefElement] {
   /**
     * Add a custom transition end trigger. Called with the transitioning DOM
     * node and a done callback. Allows for more fine grained transition end
     * logic. Note: Timeouts are still used as a fallback if provided.
     */
-  var addEndListener: js.UndefOr[EndHandler] = js.undefined
+  var addEndListener: js.UndefOr[EndHandler[RefElement]] = js.native
   /**
     * The duration of the transition, in milliseconds. Required unless addEndListener is provided.
     *
@@ -34,38 +35,33 @@ trait TimeoutProps
     * - enter defaults to `0`
     * - exit defaults to `0`
     */
-  var timeout: Double | Appear
+  var timeout: Double | Appear = js.native
 }
 
 object TimeoutProps {
   @scala.inline
-  def apply(
-    timeout: Double | Appear,
-    addEndListener: (/* node */ HTMLElement, /* done */ js.Function0[Unit]) => Unit = null,
-    children: TransitionChildren = null,
-    in: js.UndefOr[Boolean] = js.undefined,
-    mountOnEnter: js.UndefOr[Boolean] = js.undefined,
-    onEnter: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit = null,
-    onEntered: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit = null,
-    onEntering: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit = null,
-    onExit: /* node */ HTMLElement => Unit = null,
-    onExited: /* node */ HTMLElement => Unit = null,
-    onExiting: /* node */ HTMLElement => Unit = null,
-    unmountOnExit: js.UndefOr[Boolean] = js.undefined
-  ): TimeoutProps = {
+  def apply[/* <: js.UndefOr[typingsSlinky.std.HTMLElement] */ RefElement](timeout: Double | Appear): TimeoutProps[RefElement] = {
     val __obj = js.Dynamic.literal(timeout = timeout.asInstanceOf[js.Any])
-    if (addEndListener != null) __obj.updateDynamic("addEndListener")(js.Any.fromFunction2(addEndListener))
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(in)) __obj.updateDynamic("in")(in.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(mountOnEnter)) __obj.updateDynamic("mountOnEnter")(mountOnEnter.get.asInstanceOf[js.Any])
-    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction2(onEnter))
-    if (onEntered != null) __obj.updateDynamic("onEntered")(js.Any.fromFunction2(onEntered))
-    if (onEntering != null) __obj.updateDynamic("onEntering")(js.Any.fromFunction2(onEntering))
-    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction1(onExit))
-    if (onExited != null) __obj.updateDynamic("onExited")(js.Any.fromFunction1(onExited))
-    if (onExiting != null) __obj.updateDynamic("onExiting")(js.Any.fromFunction1(onExiting))
-    if (!js.isUndefined(unmountOnExit)) __obj.updateDynamic("unmountOnExit")(unmountOnExit.get.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TimeoutProps]
+    __obj.asInstanceOf[TimeoutProps[RefElement]]
   }
+  @scala.inline
+  implicit class TimeoutPropsOps[Self <: TimeoutProps[_], /* <: js.UndefOr[typingsSlinky.std.HTMLElement] */ RefElement] (val x: Self with TimeoutProps[RefElement]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTimeout(value: Double | Appear): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAddEndListener(value: EndHandler[RefElement]): Self = this.set("addEndListener", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAddEndListener: Self = this.set("addEndListener", js.undefined)
+  }
+  
 }
 

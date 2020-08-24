@@ -32,6 +32,10 @@ package object pc {
     */
   type AudioListenerComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
   /**
+    * Parser for basis files.
+    */
+  type BasisParser = typingsSlinky.playcanvas.pc.TextureParser
+  /**
     * Create a new ButtonComponentSystem.
     * @param app - The application.
     */
@@ -47,8 +51,33 @@ package object pc {
     */
   type ComponentSystem = typingsSlinky.playcanvas.pc.EventHandler
   /**
-    * Loads files that contain in them multiple resources. For example GLB files which can contain
-    textures, models and animations.
+    * Loads files that contain multiple resources. For example glTF files can contain
+    * textures, models and animations.
+    * The asset options object can be used to pass load time callbacks for handling the various resources
+    * at different stages of loading. The table below lists the resource types and the corresponding
+    * supported process functions.
+    * ```
+    * |---------------------------------------------------------------------|
+    * |  resource   |  preprocess |   process   |processAsync | postprocess |
+    * |-------------+-------------+-------------+-------------+-------------|
+    * | global      |      x      |             |             |      x      |
+    * | node        |      x      |      x      |             |      x      |
+    * | animation   |      x      |             |             |      x      |
+    * | material    |      x      |      x      |             |      x      |
+    * | image       |      x      |             |      x      |      x      |
+    * | texture     |      x      |             |      x      |      x      |
+    * | buffer      |      x      |             |      x      |      x      |
+    * | bufferView  |      x      |             |      x      |      x      |
+    * |---------------------------------------------------------------------|
+    * ```
+    * For example, to receive a texture preprocess callback:
+    * ```javascript
+    * var containerAsset = new pc.Asset(filename, 'container', { url: url, filename: filename }, null, {
+    *     texture: {
+    *         preprocess: function (gltfTexture) { console.log("texture preprocess"); }
+    *     },
+    * });
+    * ```
     * @param device - The graphics device that will be rendering.
     * @param defaultMaterial - The shared default material that is used in any place that a material is not specified.
     */
@@ -60,6 +89,10 @@ package object pc {
     * @param loader - The resource loader.
     */
   type CubemapHandler = typingsSlinky.playcanvas.pc.ResourceHandler
+  /**
+    * Texture parser for dds files.
+    */
+  type DdsParser = typingsSlinky.playcanvas.pc.TextureParser
   /**
     * Manages creation of {@link pc.ElementComponent}s.
     * @param app - The application.
@@ -77,6 +110,14 @@ package object pc {
     */
   type FontHandler = typingsSlinky.playcanvas.pc.ResourceHandler
   /**
+    * Parser for browser-supported image formats.
+    */
+  type ImgParser = typingsSlinky.playcanvas.pc.TextureParser
+  /**
+    * Texture parser for ktx files.
+    */
+  type KtxParser = typingsSlinky.playcanvas.pc.TextureParser
+  /**
     * Create a new LayoutChildComponentSystem.
     * @param app - The application.
     */
@@ -86,6 +127,10 @@ package object pc {
     * @param app - The application.
     */
   type LayoutGroupComponentSystem = typingsSlinky.playcanvas.pc.ComponentSystem
+  /**
+    * Legacy texture parser for dds files.
+    */
+  type LegacyDdsParser = typingsSlinky.playcanvas.pc.TextureParser
   /**
     * Create a new LightComponentSystem.
     * @param app - The application.

@@ -1,60 +1,42 @@
 package typingsSlinky.rdfjsFetchLite.mod
 
-import org.scalajs.dom.experimental.AbortSignal
-import org.scalajs.dom.experimental.ReferrerPolicy
-import org.scalajs.dom.experimental.RequestCache
-import org.scalajs.dom.experimental.RequestCredentials
-import org.scalajs.dom.experimental.RequestMode
-import org.scalajs.dom.experimental.RequestRedirect
 import typingsSlinky.rdfjsFetchLite.anon.FnCall
 import typingsSlinky.rdfjsFetchLite.anon.PickparsersSinkMapEventEm
-import typingsSlinky.std.BodyInit
-import typingsSlinky.std.HeadersInit
 import typingsSlinky.std.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FormatsInit extends RequestInit {
-  var fetch: js.UndefOr[FnCall] = js.undefined
-  var formats: PickparsersSinkMapEventEm
+  var fetch: js.UndefOr[FnCall] = js.native
+  var formats: PickparsersSinkMapEventEm = js.native
 }
 
 object FormatsInit {
   @scala.inline
-  def apply(
-    formats: PickparsersSinkMapEventEm,
-    body: js.UndefOr[Null | BodyInit] = js.undefined,
-    cache: RequestCache = null,
-    credentials: RequestCredentials = null,
-    fetch: FnCall = null,
-    headers: HeadersInit = null,
-    integrity: String = null,
-    keepalive: js.UndefOr[Boolean] = js.undefined,
-    method: String = null,
-    mode: RequestMode = null,
-    redirect: RequestRedirect = null,
-    referrer: String = null,
-    referrerPolicy: ReferrerPolicy = null,
-    signal: js.UndefOr[Null | AbortSignal] = js.undefined,
-    window: js.Any = null
-  ): FormatsInit = {
+  def apply(formats: PickparsersSinkMapEventEm): FormatsInit = {
     val __obj = js.Dynamic.literal(formats = formats.asInstanceOf[js.Any])
-    if (!js.isUndefined(body)) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (fetch != null) __obj.updateDynamic("fetch")(fetch.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepalive)) __obj.updateDynamic("keepalive")(keepalive.get.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
-    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
-    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
-    if (!js.isUndefined(signal)) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatsInit]
   }
+  @scala.inline
+  implicit class FormatsInitOps[Self <: FormatsInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFormats(value: PickparsersSinkMapEventEm): Self = this.set("formats", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFetch(value: FnCall): Self = this.set("fetch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFetch: Self = this.set("fetch", js.undefined)
+  }
+  
 }
 

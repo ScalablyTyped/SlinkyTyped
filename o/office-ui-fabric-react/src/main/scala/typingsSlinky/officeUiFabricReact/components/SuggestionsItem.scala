@@ -27,7 +27,7 @@ object SuggestionsItem {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsItem[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsItem[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

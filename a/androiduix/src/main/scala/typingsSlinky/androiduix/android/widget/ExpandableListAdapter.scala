@@ -67,113 +67,46 @@ object ExpandableListAdapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAreAllItemsEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areAllItemsEnabled")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetChild(value: (Double, Double) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChild")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setAreAllItemsEnabled(value: () => Boolean): Self = this.set("areAllItemsEnabled", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetChildId(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildId")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetChild(value: (Double, Double) => js.Any): Self = this.set("getChild", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetChildView(value: (Double, Double, Boolean, View, ViewGroup) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildView")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setGetChildId(value: (Double, Double) => Double): Self = this.set("getChildId", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetChildrenCount(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildrenCount")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetChildView(value: (Double, Double, Boolean, View, ViewGroup) => View): Self = this.set("getChildView", js.Any.fromFunction5(value))
     @scala.inline
-    def withGetCombinedChildId(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCombinedChildId")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetChildrenCount(value: Double => Double): Self = this.set("getChildrenCount", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetCombinedGroupId(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCombinedGroupId")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetCombinedChildId(value: (Double, Double) => Double): Self = this.set("getCombinedChildId", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetGroup(value: Double => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroup")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetCombinedGroupId(value: Double => Double): Self = this.set("getCombinedGroupId", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetGroupCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroupCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetGroup(value: Double => js.Any): Self = this.set("getGroup", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetGroupId(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroupId")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetGroupCount(value: () => Double): Self = this.set("getGroupCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetGroupView(value: (Double, Boolean, View, ViewGroup) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroupView")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setGetGroupId(value: Double => Double): Self = this.set("getGroupId", js.Any.fromFunction1(value))
     @scala.inline
-    def withHasStableIds(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasStableIds")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetGroupView(value: (Double, Boolean, View, ViewGroup) => View): Self = this.set("getGroupView", js.Any.fromFunction4(value))
     @scala.inline
-    def withIsChildSelectable(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChildSelectable")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setHasStableIds(value: () => Boolean): Self = this.set("hasStableIds", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsEmpty(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsChildSelectable(value: (Double, Double) => Boolean): Self = this.set("isChildSelectable", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnGroupCollapsed(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupCollapsed")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsEmpty(value: () => Boolean): Self = this.set("isEmpty", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnGroupExpanded(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupExpanded")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnGroupCollapsed(value: Double => Unit): Self = this.set("onGroupCollapsed", js.Any.fromFunction1(value))
     @scala.inline
-    def withRegisterDataSetObserver(value: DataSetObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerDataSetObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnGroupExpanded(value: Double => Unit): Self = this.set("onGroupExpanded", js.Any.fromFunction1(value))
     @scala.inline
-    def withUnregisterDataSetObserver(value: DataSetObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unregisterDataSetObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRegisterDataSetObserver(value: DataSetObserver => Unit): Self = this.set("registerDataSetObserver", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUnregisterDataSetObserver(value: DataSetObserver => Unit): Self = this.set("unregisterDataSetObserver", js.Any.fromFunction1(value))
   }
   
 }

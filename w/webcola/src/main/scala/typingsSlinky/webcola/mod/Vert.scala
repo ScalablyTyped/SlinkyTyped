@@ -10,6 +10,7 @@ class Vert protected ()
   extends typingsSlinky.webcola.gridrouterMod.Vert {
   def this(id: Double, x: Double, y: Double) = this()
   def this(id: Double, x: Double, y: Double, node: typingsSlinky.webcola.gridrouterMod.NodeWrapper) = this()
+  def this(id: Double, x: Double, y: Double, node: js.UndefOr[scala.Nothing], line: js.Any) = this()
   def this(
     id: Double,
     x: Double,

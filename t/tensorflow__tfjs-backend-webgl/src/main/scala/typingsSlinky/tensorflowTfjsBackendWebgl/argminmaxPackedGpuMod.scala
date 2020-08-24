@@ -1,0 +1,24 @@
+package typingsSlinky.tensorflowTfjsBackendWebgl
+
+import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
+import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.max
+import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.min
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs-backend-webgl/dist/argminmax_packed_gpu", JSImport.Namespace)
+@js.native
+object argminmaxPackedGpuMod extends js.Object {
+  @js.native
+  class ArgMinMaxPackedProgram protected () extends GPGPUProgram {
+    def this(shape: js.Array[Double], windowSize: Double, op: max, firstPass: Boolean) = this()
+    def this(shape: js.Array[Double], windowSize: Double, op: min, firstPass: Boolean) = this()
+    @JSName("packedInputs")
+    var packedInputs_ArgMinMaxPackedProgram: Boolean = js.native
+    @JSName("packedOutput")
+    var packedOutput_ArgMinMaxPackedProgram: Boolean = js.native
+  }
+  
+}
+

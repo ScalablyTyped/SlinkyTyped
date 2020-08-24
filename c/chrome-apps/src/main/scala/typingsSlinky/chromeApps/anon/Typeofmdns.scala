@@ -61,23 +61,16 @@ object Typeofmdns {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMAX_SERVICE_INSTANCES_PER_EVENT(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAX_SERVICE_INSTANCES_PER_EVENT")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withForceDiscovery(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDiscovery")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMAX_SERVICE_INSTANCES_PER_EVENT(value: integer): Self = this.set("MAX_SERVICE_INSTANCES_PER_EVENT", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnServiceList(value: FilteredEvent[js.Function1[/* services */ js.Array[Service], Unit], ServiceTypes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onServiceList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setForceDiscovery(value: js.Function0[Unit] => Unit): Self = this.set("forceDiscovery", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnServiceList(value: FilteredEvent[js.Function1[/* services */ js.Array[Service], Unit], ServiceTypes]): Self = this.set("onServiceList", value.asInstanceOf[js.Any])
   }
   
 }

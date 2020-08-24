@@ -33,29 +33,18 @@ object Node {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDependencies(value: SparseMap[String, Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDependents(value: ArrayMap[Node, typingsSlinky.androiduix.android.widget.RelativeLayout.DependencyGraph]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependents")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDependencies(value: SparseMap[String, Node]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRelease(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDependents(value: ArrayMap[Node, typingsSlinky.androiduix.android.widget.RelativeLayout.DependencyGraph]): Self = this.set("dependents", value.asInstanceOf[js.Any])
     @scala.inline
-    def withView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRelease(value: () => Unit): Self = this.set("release", js.Any.fromFunction0(value))
+    @scala.inline
+    def setView(value: View): Self = this.set("view", value.asInstanceOf[js.Any])
   }
   
 }

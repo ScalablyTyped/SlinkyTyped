@@ -1,0 +1,13 @@
+package typingsSlinky.ionicReact.mod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.ionicReact.anon.IonReorderPickHTMLAttribu
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@ionic/react", "IonReorder")
+@js.native
+object IonReorder extends TopLevel[ForwardRefExoticComponent[IonReorderPickHTMLAttribu]]
+

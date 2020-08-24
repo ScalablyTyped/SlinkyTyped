@@ -5,7 +5,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.imagePickerMod.ImagePickerPropTypes
-import typingsSlinky.antdMobile.imagePickerMod.default
 import typingsSlinky.antdMobile.imagePickerPropsTypeMod.ImageFile
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -13,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImagePicker {
-  @JSImport("antd-mobile/lib/image-picker", JSImport.Default)
+  @JSImport("antd-mobile", "ImagePicker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.ImagePicker] {
     @scala.inline
     def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
     @scala.inline
@@ -29,6 +28,8 @@ object ImagePicker {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def disableDelete(value: Boolean): this.type = set("disableDelete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filesVarargs(value: ImageFile*): this.type = set("files", js.Array(value :_*))
     @scala.inline
     def files(value: js.Array[ImageFile]): this.type = set("files", value.asInstanceOf[js.Any])
     @scala.inline

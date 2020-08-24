@@ -1,5 +1,6 @@
 package typingsSlinky.reactApollo.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.apolloCache.dataProxyMod.DataProxy
@@ -10,6 +11,8 @@ import typingsSlinky.apolloClient.watchQueryOptionsMod.ErrorPolicy
 import typingsSlinky.apolloClient.watchQueryOptionsMod.WatchQueryFetchPolicy
 import typingsSlinky.apolloLink.typesMod.FetchResult
 import typingsSlinky.apolloReactCommon.typesMod.Context
+import typingsSlinky.apolloReactCommon.typesMod.MutationFunction
+import typingsSlinky.apolloReactCommon.typesMod.MutationResult
 import typingsSlinky.apolloReactCommon.typesMod.RefetchQueriesFunction
 import typingsSlinky.apolloReactComponents.typesMod.MutationComponentOptions
 import typingsSlinky.graphql.astMod.DocumentNode
@@ -50,6 +53,8 @@ object Mutation {
     @scala.inline
     def optimisticResponse(value: TData | (js.Function1[TVariables, TData])): this.type = set("optimisticResponse", value.asInstanceOf[js.Any])
     @scala.inline
+    def refetchQueriesVarargs(value: (String | PureQueryOptions)*): this.type = set("refetchQueries", js.Array(value :_*))
+    @scala.inline
     def refetchQueriesFunction1(value: /* repeated */ js.Any => js.Array[String | PureQueryOptions]): this.type = set("refetchQueries", js.Any.fromFunction1(value))
     @scala.inline
     def refetchQueries(value: (js.Array[String | PureQueryOptions]) | RefetchQueriesFunction): this.type = set("refetchQueries", value.asInstanceOf[js.Any])
@@ -63,8 +68,11 @@ object Mutation {
   
   def withProps[TData, TVariables](p: MutationComponentOptions[TData, TVariables]): Builder[TData, TVariables] = new Builder[TData, TVariables](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[TData, TVariables](mutation: DocumentNode): Builder[TData, TVariables] = {
-    val __props = js.Dynamic.literal(mutation = mutation.asInstanceOf[js.Any])
+  def apply[TData, TVariables](
+    children: (MutationFunction[TData, TVariables], MutationResult[TData]) => ReactElement | Null,
+    mutation: DocumentNode
+  ): Builder[TData, TVariables] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), mutation = mutation.asInstanceOf[js.Any])
     new Builder[TData, TVariables](js.Array(this.component, __props.asInstanceOf[MutationComponentOptions[TData, TVariables]]))
   }
 }

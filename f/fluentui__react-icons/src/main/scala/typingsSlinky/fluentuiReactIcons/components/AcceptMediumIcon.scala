@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AcceptMediumIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AcceptMediumIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AcceptMediumIcon")
   @js.native
   object component extends js.Object
   

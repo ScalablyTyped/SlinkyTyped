@@ -1,40 +1,42 @@
 package typingsSlinky.uiBox.anon
 
-import typingsSlinky.react.mod.Ref
-import typingsSlinky.uiBox.boxTypesMod.Is
-import typingsSlinky.uiBox.boxTypesMod.RefType
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait AllowUnsafeHref[T /* <: Is[_] */] extends js.Object {
-  /**
-    * Allows the high level value of safeHref to be overwritten on an individual component basis
-    */
-  var allowUnsafeHref: js.UndefOr[Boolean] = js.undefined
-  /**
-    * Callback that gets passed a ref to inner DOM node (or component if the
-    * `is` prop is set to a React component type).
-    */
-  var innerRef: js.UndefOr[Ref[RefType[T]]] = js.undefined
-  /**
-    * Replaces the underlying element
-    */
-  var is: js.UndefOr[T] = js.undefined
+@js.native
+trait AllowUnsafeHref[E /* <: ReactElement */] extends js.Object {
+  var allowUnsafeHref: js.UndefOr[Boolean] = js.native
+  var is: js.UndefOr[E] = js.native
 }
 
 object AllowUnsafeHref {
   @scala.inline
-  def apply[T](
-    allowUnsafeHref: js.UndefOr[Boolean] = js.undefined,
-    innerRef: js.UndefOr[Null | Ref[RefType[T]]] = js.undefined,
-    is: T = null
-  ): AllowUnsafeHref[T] = {
+  def apply[/* <: typingsSlinky.react.mod.ElementType[_] */ E](): AllowUnsafeHref[E] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowUnsafeHref)) __obj.updateDynamic("allowUnsafeHref")(allowUnsafeHref.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(innerRef)) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AllowUnsafeHref[T]]
+    __obj.asInstanceOf[AllowUnsafeHref[E]]
   }
+  @scala.inline
+  implicit class AllowUnsafeHrefOps[Self <: AllowUnsafeHref[_], /* <: typingsSlinky.react.mod.ElementType[_] */ E] (val x: Self with AllowUnsafeHref[E]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAllowUnsafeHref(value: Boolean): Self = this.set("allowUnsafeHref", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowUnsafeHref: Self = this.set("allowUnsafeHref", js.undefined)
+    @scala.inline
+    def setIs(value: E): Self = this.set("is", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIs: Self = this.set("is", js.undefined)
+  }
+  
 }
 

@@ -1,12 +1,12 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
-import typingsSlinky.ionicCore.ionicCoreStrings.button
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
+import typingsSlinky.ionicCore.ionicCoreStrings.bounded
+import typingsSlinky.ionicCore.ionicCoreStrings.unbounded
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +18,6 @@ object backButtonMod extends js.Object {
   class BackButton ()
     extends ComponentInterface
        with ButtonInterface {
-    val backButtonIcon: js.Any = js.native
-    val backButtonText: js.Any = js.native
     /**
       * The color to use from your application's color palette.
       * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
@@ -30,25 +28,29 @@ object backButtonMod extends js.Object {
       * The url to navigate back to by default when there is no history.
       */
     var defaultHref: js.UndefOr[String] = js.native
-    /* CompleteClass */
-    override var disabled: Boolean = js.native
     var el: HTMLElement = js.native
-    val hasIconOnly: js.Any = js.native
     /**
       * The icon name to use for the back button.
       */
     var icon: js.UndefOr[String | Null] = js.native
-    var mode: js.Any = js.native
     var onClick: js.Any = js.native
-    val rippleType: js.Any = js.native
+    /**
+      * When using a router, it specifies the transition animation when navigating to
+      * another page.
+      */
+    var routerAnimation: js.UndefOr[AnimationBuilder] = js.native
     /**
       * The text to display in the back button.
       */
     var text: js.UndefOr[String | Null] = js.native
-    /* CompleteClass */
-    override var `type`: submit | reset | button = js.native
+    def backButtonIcon: js.Any = js.native
+    def backButtonText: js.Any = js.native
+    @JSName("componentWillLoad")
+    def componentWillLoad_MBackButton(): Unit = js.native
+    def hasIconOnly: Boolean = js.native
     @JSName("render")
     def render_MBackButton(): js.Any = js.native
+    def rippleType: bounded | unbounded = js.native
   }
   
 }

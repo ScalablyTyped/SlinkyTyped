@@ -61,6 +61,8 @@ object DateRangePicker {
     @scala.inline
     def selectedShortcutIndex(value: Double): this.type = set("selectedShortcutIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def shortcutsVarargs(value: IDateRangeShortcut*): this.type = set("shortcuts", js.Array(value :_*))
+    @scala.inline
     def shortcuts(value: Boolean | js.Array[IDateRangeShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
     @scala.inline
     def singleMonthOnly(value: Boolean): this.type = set("singleMonthOnly", value.asInstanceOf[js.Any])

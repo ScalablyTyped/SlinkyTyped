@@ -17,6 +17,7 @@ class Path ()
   extends typingsSlinky.fabric.fabricImplMod.Path {
   def this(path: String) = this()
   def this(path: js.Array[typingsSlinky.fabric.fabricImplMod.Point]) = this()
+  def this(path: js.UndefOr[scala.Nothing], options: IPathOptions) = this()
   def this(path: String, options: IPathOptions) = this()
   def this(path: js.Array[typingsSlinky.fabric.fabricImplMod.Point], options: IPathOptions) = this()
 }

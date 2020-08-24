@@ -16,7 +16,27 @@ class TimeUuid ()
 @js.native
 object TimeUuid extends js.Object {
   def fromDate(date: js.Date): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(
+    date: js.Date,
+    ticks: js.UndefOr[scala.Nothing],
+    nodeId: js.UndefOr[scala.Nothing],
+    clockId: String
+  ): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(
+    date: js.Date,
+    ticks: js.UndefOr[scala.Nothing],
+    nodeId: js.UndefOr[scala.Nothing],
+    clockId: Buffer
+  ): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: js.UndefOr[scala.Nothing], nodeId: String): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: js.UndefOr[scala.Nothing], nodeId: String, clockId: String): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: js.UndefOr[scala.Nothing], nodeId: String, clockId: Buffer): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: js.UndefOr[scala.Nothing], nodeId: Buffer): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: js.UndefOr[scala.Nothing], nodeId: Buffer, clockId: String): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: js.UndefOr[scala.Nothing], nodeId: Buffer, clockId: Buffer): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
   def fromDate(date: js.Date, ticks: Double): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: Double, nodeId: js.UndefOr[scala.Nothing], clockId: String): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
+  def fromDate(date: js.Date, ticks: Double, nodeId: js.UndefOr[scala.Nothing], clockId: Buffer): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
   def fromDate(date: js.Date, ticks: Double, nodeId: String): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
   def fromDate(date: js.Date, ticks: Double, nodeId: String, clockId: String): typingsSlinky.cassandraDriver.typesMod.types.TimeUuid = js.native
   def fromDate(

@@ -36,23 +36,6 @@ object global extends js.Object {
       categories: js.UndefOr[typingsSlinky.cordovaPluginContacts.ContactField],
       urls: js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]]
     ) = this()
-    /**
-      * Removes the contact from the device contacts database, otherwise executes an error callback with a ContactError object.
-      * @param onSuccess Success callback function invoked on success operation.
-      * @param onError Error callback function, invoked when an error occurs.
-      */
-    /* CompleteClass */
-    override def remove(onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
-    /**
-      * Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same id already exists.
-      * @param onSuccess Success callback function invoked on success operation with che Contact object.
-      * @param onError Error callback function, invoked when an error occurs.
-      */
-    /* CompleteClass */
-    override def save(
-      onSuccess: js.Function1[/* contact */ this.type, Unit],
-      onError: js.Function1[/* error */ js.Error, Unit]
-    ): Unit = js.native
   }
   
   @js.native
@@ -75,12 +58,6 @@ object global extends js.Object {
   class ContactError protected ()
     extends typingsSlinky.cordovaPluginContacts.ContactError {
     def this(code: Double) = this()
-    /** Error code */
-    /* CompleteClass */
-    override var code: Double = js.native
-    /** Error message */
-    /* CompleteClass */
-    override var message: String = js.native
   }
   
   @js.native
@@ -88,17 +65,12 @@ object global extends js.Object {
   class ContactField ()
     extends typingsSlinky.cordovaPluginContacts.ContactField {
     def this(`type`: String) = this()
+    def this(`type`: js.UndefOr[scala.Nothing], value: String) = this()
     def this(`type`: String, value: String) = this()
+    def this(`type`: js.UndefOr[scala.Nothing], value: js.UndefOr[scala.Nothing], pref: Boolean) = this()
+    def this(`type`: js.UndefOr[scala.Nothing], value: String, pref: Boolean) = this()
+    def this(`type`: String, value: js.UndefOr[scala.Nothing], pref: Boolean) = this()
     def this(`type`: String, value: String, pref: Boolean) = this()
-    /** Set to true if this ContactField contains the user's preferred value. */
-    /* CompleteClass */
-    override var pref: Boolean = js.native
-    /** A string that indicates what type of field this is, home for example. */
-    /* CompleteClass */
-    override var `type`: String = js.native
-    /** The value of the field, such as a phone number or email address. */
-    /* CompleteClass */
-    override var value: String = js.native
   }
   
   @js.native
@@ -106,7 +78,15 @@ object global extends js.Object {
   class ContactFindOptions ()
     extends typingsSlinky.cordovaPluginContacts.ContactFindOptions {
     def this(filter: String) = this()
+    def this(filter: js.UndefOr[scala.Nothing], multiple: Boolean) = this()
     def this(filter: String, multiple: Boolean) = this()
+    def this(
+      filter: js.UndefOr[scala.Nothing],
+      multiple: js.UndefOr[scala.Nothing],
+      desiredFields: js.Array[ContactFieldType]
+    ) = this()
+    def this(filter: js.UndefOr[scala.Nothing], multiple: Boolean, desiredFields: js.Array[ContactFieldType]) = this()
+    def this(filter: String, multiple: js.UndefOr[scala.Nothing], desiredFields: js.Array[ContactFieldType]) = this()
     def this(filter: String, multiple: Boolean, desiredFields: js.Array[ContactFieldType]) = this()
   }
   
@@ -129,9 +109,121 @@ object global extends js.Object {
   class ContactOrganization ()
     extends typingsSlinky.cordovaPluginContacts.ContactOrganization {
     def this(pref: Boolean) = this()
+    def this(pref: js.UndefOr[scala.Nothing], `type`: String) = this()
     def this(pref: Boolean, `type`: String) = this()
+    def this(pref: js.UndefOr[scala.Nothing], `type`: js.UndefOr[scala.Nothing], name: String) = this()
+    def this(pref: js.UndefOr[scala.Nothing], `type`: String, name: String) = this()
+    def this(pref: Boolean, `type`: js.UndefOr[scala.Nothing], name: String) = this()
     def this(pref: Boolean, `type`: String, name: String) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: js.UndefOr[scala.Nothing],
+      name: js.UndefOr[scala.Nothing],
+      department: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: js.UndefOr[scala.Nothing],
+      name: String,
+      department: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: String,
+      name: js.UndefOr[scala.Nothing],
+      department: String
+    ) = this()
+    def this(pref: js.UndefOr[scala.Nothing], `type`: String, name: String, department: String) = this()
+    def this(
+      pref: Boolean,
+      `type`: js.UndefOr[scala.Nothing],
+      name: js.UndefOr[scala.Nothing],
+      department: String
+    ) = this()
+    def this(pref: Boolean, `type`: js.UndefOr[scala.Nothing], name: String, department: String) = this()
+    def this(pref: Boolean, `type`: String, name: js.UndefOr[scala.Nothing], department: String) = this()
     def this(pref: Boolean, `type`: String, name: String, department: String) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: js.UndefOr[scala.Nothing],
+      name: js.UndefOr[scala.Nothing],
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: js.UndefOr[scala.Nothing],
+      name: js.UndefOr[scala.Nothing],
+      department: String,
+      title: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: js.UndefOr[scala.Nothing],
+      name: String,
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: js.UndefOr[scala.Nothing],
+      name: String,
+      department: String,
+      title: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: String,
+      name: js.UndefOr[scala.Nothing],
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: String,
+      name: js.UndefOr[scala.Nothing],
+      department: String,
+      title: String
+    ) = this()
+    def this(
+      pref: js.UndefOr[scala.Nothing],
+      `type`: String,
+      name: String,
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(pref: js.UndefOr[scala.Nothing], `type`: String, name: String, department: String, title: String) = this()
+    def this(
+      pref: Boolean,
+      `type`: js.UndefOr[scala.Nothing],
+      name: js.UndefOr[scala.Nothing],
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(
+      pref: Boolean,
+      `type`: js.UndefOr[scala.Nothing],
+      name: js.UndefOr[scala.Nothing],
+      department: String,
+      title: String
+    ) = this()
+    def this(
+      pref: Boolean,
+      `type`: js.UndefOr[scala.Nothing],
+      name: String,
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(pref: Boolean, `type`: js.UndefOr[scala.Nothing], name: String, department: String, title: String) = this()
+    def this(
+      pref: Boolean,
+      `type`: String,
+      name: js.UndefOr[scala.Nothing],
+      department: js.UndefOr[scala.Nothing],
+      title: String
+    ) = this()
+    def this(pref: Boolean, `type`: String, name: js.UndefOr[scala.Nothing], department: String, title: String) = this()
+    def this(pref: Boolean, `type`: String, name: String, department: js.UndefOr[scala.Nothing], title: String) = this()
     def this(pref: Boolean, `type`: String, name: String, department: String, title: String) = this()
   }
   
@@ -139,22 +231,20 @@ object global extends js.Object {
   object Contact
     extends /** Constructor of Contact object */
   Instantiable14[
-          js.UndefOr[/* id */ String], 
-          js.UndefOr[/* displayName */ String], 
-          js.UndefOr[/* name */ typingsSlinky.cordovaPluginContacts.ContactName], 
-          js.UndefOr[/* nickname */ String], 
-          js.UndefOr[/* phoneNumbers */ js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
-          js.UndefOr[/* emails */ js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
-          js.UndefOr[/* addresses */ js.Array[typingsSlinky.cordovaPluginContacts.ContactAddress]], 
-          js.UndefOr[/* ims */ js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
-          js.UndefOr[
-            /* organizations */ js.Array[typingsSlinky.cordovaPluginContacts.ContactOrganization]
-          ], 
-          js.UndefOr[/* birthday */ js.Date], 
-          js.UndefOr[/* note */ String], 
-          js.UndefOr[/* photos */ js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
-          js.UndefOr[/* categories */ typingsSlinky.cordovaPluginContacts.ContactField], 
-          js.UndefOr[/* urls */ js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
+          /* id */ js.UndefOr[String], 
+          /* displayName */ js.UndefOr[String], 
+          /* name */ js.UndefOr[typingsSlinky.cordovaPluginContacts.ContactName], 
+          /* nickname */ js.UndefOr[String], 
+          /* phoneNumbers */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
+          /* emails */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
+          /* addresses */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactAddress]], 
+          /* ims */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
+          /* organizations */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactOrganization]], 
+          /* birthday */ js.UndefOr[js.Date], 
+          /* note */ js.UndefOr[String], 
+          /* photos */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
+          /* categories */ js.UndefOr[typingsSlinky.cordovaPluginContacts.ContactField], 
+          /* urls */ js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]], 
           typingsSlinky.cordovaPluginContacts.Contact
         ]
   
@@ -162,14 +252,14 @@ object global extends js.Object {
   object ContactAddress
     extends /** Constructor of ContactAddress object */
   Instantiable8[
-          js.UndefOr[/* pref */ Boolean], 
-          js.UndefOr[/* type */ String], 
-          js.UndefOr[/* formatted */ String], 
-          js.UndefOr[/* streetAddress */ String], 
-          js.UndefOr[/* locality */ String], 
-          js.UndefOr[/* region */ String], 
-          js.UndefOr[/* postalCode */ String], 
-          js.UndefOr[/* country */ String], 
+          /* pref */ js.UndefOr[Boolean], 
+          /* type */ js.UndefOr[String], 
+          /* formatted */ js.UndefOr[String], 
+          /* streetAddress */ js.UndefOr[String], 
+          /* locality */ js.UndefOr[String], 
+          /* region */ js.UndefOr[String], 
+          /* postalCode */ js.UndefOr[String], 
+          /* country */ js.UndefOr[String], 
           typingsSlinky.cordovaPluginContacts.ContactAddress
         ]
   
@@ -191,13 +281,13 @@ object global extends js.Object {
   Instantiable0[typingsSlinky.cordovaPluginContacts.ContactField]
        with Instantiable1[/* type */ String, typingsSlinky.cordovaPluginContacts.ContactField]
        with Instantiable2[
-          /* type */ String, 
+          js.UndefOr[/* type */ String], 
           /* value */ String, 
           typingsSlinky.cordovaPluginContacts.ContactField
         ]
        with Instantiable3[
-          /* type */ String, 
-          /* value */ String, 
+          js.UndefOr[/* type */ String], 
+          js.UndefOr[/* value */ String], 
           /* pref */ Boolean, 
           typingsSlinky.cordovaPluginContacts.ContactField
         ]
@@ -208,13 +298,13 @@ object global extends js.Object {
   Instantiable0[typingsSlinky.cordovaPluginContacts.ContactFindOptions]
        with Instantiable1[/* filter */ String, typingsSlinky.cordovaPluginContacts.ContactFindOptions]
        with Instantiable2[
-          /* filter */ String, 
+          js.UndefOr[/* filter */ String], 
           /* multiple */ Boolean, 
           typingsSlinky.cordovaPluginContacts.ContactFindOptions
         ]
        with Instantiable3[
-          /* filter */ String, 
-          /* multiple */ Boolean, 
+          js.UndefOr[/* filter */ String], 
+          js.UndefOr[/* multiple */ Boolean], 
           /* desiredFields */ js.Array[ContactFieldType], 
           typingsSlinky.cordovaPluginContacts.ContactFindOptions
         ]
@@ -223,12 +313,12 @@ object global extends js.Object {
   object ContactName
     extends /** Constructor for ContactName object */
   Instantiable6[
-          js.UndefOr[/* formatted */ String], 
-          js.UndefOr[/* familyName */ String], 
-          js.UndefOr[/* givenName */ String], 
-          js.UndefOr[/* middleName */ String], 
-          js.UndefOr[/* honorificPrefix */ String], 
-          js.UndefOr[/* honorificSuffix */ String], 
+          /* formatted */ js.UndefOr[String], 
+          /* familyName */ js.UndefOr[String], 
+          /* givenName */ js.UndefOr[String], 
+          /* middleName */ js.UndefOr[String], 
+          /* honorificPrefix */ js.UndefOr[String], 
+          /* honorificSuffix */ js.UndefOr[String], 
           typingsSlinky.cordovaPluginContacts.ContactName
         ]
   
@@ -238,28 +328,28 @@ object global extends js.Object {
   Instantiable0[typingsSlinky.cordovaPluginContacts.ContactOrganization]
        with Instantiable1[/* pref */ Boolean, typingsSlinky.cordovaPluginContacts.ContactOrganization]
        with Instantiable2[
-          /* pref */ Boolean, 
+          js.UndefOr[/* pref */ Boolean], 
           /* type */ String, 
           typingsSlinky.cordovaPluginContacts.ContactOrganization
         ]
        with Instantiable3[
-          /* pref */ Boolean, 
-          /* type */ String, 
+          js.UndefOr[/* pref */ Boolean], 
+          js.UndefOr[/* type */ String], 
           /* name */ String, 
           typingsSlinky.cordovaPluginContacts.ContactOrganization
         ]
        with Instantiable4[
-          /* pref */ Boolean, 
-          /* type */ String, 
-          /* name */ String, 
+          js.UndefOr[/* pref */ Boolean], 
+          js.UndefOr[/* type */ String], 
+          js.UndefOr[/* name */ String], 
           /* department */ String, 
           typingsSlinky.cordovaPluginContacts.ContactOrganization
         ]
        with Instantiable5[
-          /* pref */ Boolean, 
-          /* type */ String, 
-          /* name */ String, 
-          /* department */ String, 
+          js.UndefOr[/* pref */ Boolean], 
+          js.UndefOr[/* type */ String], 
+          js.UndefOr[/* name */ String], 
+          js.UndefOr[/* department */ String], 
           /* title */ String, 
           typingsSlinky.cordovaPluginContacts.ContactOrganization
         ]

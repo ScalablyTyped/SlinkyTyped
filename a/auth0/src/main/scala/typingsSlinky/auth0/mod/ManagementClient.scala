@@ -108,6 +108,16 @@ class ManagementClient[A, U] protected () extends js.Object {
   // Client Grants
   def getClientGrants(): js.Promise[js.Array[ClientGrant]] = js.native
   def getClientGrants(cb: js.Function2[/* err */ js.Error, /* data */ js.Array[ClientGrant], Unit]): Unit = js.native
+  def getClientGrants(params: GetClientGrantsOptions): js.Promise[js.Array[ClientGrant]] = js.native
+  def getClientGrants(params: GetClientGrantsOptionsPaged): js.Promise[ClientGrantPage] = js.native
+  def getClientGrants(
+    params: GetClientGrantsOptionsPaged,
+    cb: js.Function2[/* err */ js.Error, /* data */ ClientGrantPage, Unit]
+  ): Unit = js.native
+  def getClientGrants(
+    params: GetClientGrantsOptions,
+    cb: js.Function2[/* err */ js.Error, /* data */ js.Array[ClientGrant], Unit]
+  ): Unit = js.native
   def getClientInfo(): ClientInfo = js.native
   // Clients
   def getClients(): js.Promise[js.Array[Client]] = js.native
@@ -232,6 +242,10 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getUser_Promise(params: ObjectWithId): js.Promise[User[A, U]] = js.native
   def getUsers(): Unit = js.native
   def getUsers(cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
+  def getUsers(
+    params: js.UndefOr[scala.Nothing],
+    cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]
+  ): Unit = js.native
   def getUsers(params: GetUsersData): Unit = js.native
   // Users
   def getUsers(params: GetUsersDataPaged): js.Promise[UserPage[A, U]] = js.native

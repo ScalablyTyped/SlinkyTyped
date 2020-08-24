@@ -32,8 +32,7 @@ package object mod {
   */
   type BaseValueType = typingsSlinky.recharts.mod._BaseValueType | scala.Double
   type ComposedChartProps = typingsSlinky.recharts.mod.CategoricalChartWrapper[typingsSlinky.recharts.mod.LayoutType] with typingsSlinky.recharts.mod.EventAttributes
-  type ContentRenderer[P] = js.Function1[/* props */ P, slinky.core.TagMod[scala.Any]]
-  type CoordinatesGenerator = js.Function1[/* arg */ typingsSlinky.recharts.anon.Height, js.Array[scala.Double]]
+  type ContentRenderer[P] = js.Function1[/* props */ P, slinky.core.facade.ReactElement]
   type DataKey = java.lang.String | scala.Double | (js.Function1[
     /* dataObject */ js.Any, 
     java.lang.String | scala.Double | (js.Tuple2[scala.Double, scala.Double]) | scala.Null
@@ -43,8 +42,9 @@ package object mod {
     /* dataKey */ typingsSlinky.recharts.mod.DataKey, 
     typingsSlinky.recharts.anon.ErrorVal
   ]
+  type HorizontalCoordinatesGenerator = js.Function1[/* arg */ typingsSlinky.recharts.anon.Height, js.Array[scala.Double]]
   type ItemSorter[T] = js.Function2[/* a */ T, /* b */ T, scala.Double]
-  type LabelFormatter = js.Function1[/* label */ java.lang.String | scala.Double, slinky.core.TagMod[scala.Any]]
+  type LabelFormatter = js.Function1[/* label */ java.lang.String | scala.Double, slinky.core.facade.ReactElement]
   type LabelListProps = typingsSlinky.recharts.anon.Angle with (typingsSlinky.recharts.anon.DataKey | typingsSlinky.recharts.anon.ValueAccessor)
   type LegendValueFormatter = js.Function3[
     /* value */ js.UndefOr[
@@ -89,6 +89,7 @@ package object mod {
     /* name */ java.lang.String, 
     /* entry */ typingsSlinky.recharts.mod.TooltipPayload, 
     /* index */ scala.Double, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
+  type VerticalCoordinatesGenerator = js.Function1[/* arg */ typingsSlinky.recharts.anon.Offset, js.Array[scala.Double]]
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
 import org.scalablytyped.runtime.StringDictionary
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.anon.Valid
@@ -18,6 +19,12 @@ object Form {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.cathoQuantum.formMod.Form] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def noValidate(value: Boolean): this.type = set("noValidate", value.asInstanceOf[js.Any])
     @scala.inline

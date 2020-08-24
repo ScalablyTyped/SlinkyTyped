@@ -2,8 +2,8 @@ package typingsSlinky.jupyterlabCoreutils.activitymonitorMod
 
 import typingsSlinky.jupyterlabCoreutils.activitymonitorMod.ActivityMonitor.IArguments
 import typingsSlinky.jupyterlabCoreutils.activitymonitorMod.ActivityMonitor.IOptions
-import typingsSlinky.phosphorDisposable.mod.IDisposable
-import typingsSlinky.phosphorSignaling.mod.ISignal
+import typingsSlinky.luminoDisposable.mod.IDisposable
+import typingsSlinky.luminoSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,31 +28,19 @@ class ActivityMonitor_[Sender, Args] protected () extends IDisposable {
   /**
     * A signal emitted when activity has ceased.
     */
-  val activityStopped: ISignal[this.type, IArguments[Sender, Args]] = js.native
+  def activityStopped: ISignal[this.type, IArguments[Sender, Args]] = js.native
   /**
-    * Test whether the object has been disposed.
+    * Test whether the monitor has been disposed.
     *
     * #### Notes
-    * This property is always safe to access.
+    * This is a read-only property.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
+  @JSName("isDisposed")
+  def isDisposed_MActivityMonitor_ : Boolean = js.native
   /**
     * The timeout associated with the monitor, in milliseconds.
     */
-  var timeout: Double = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  def timeout: Double = js.native
+  def timeout_=(value: Double): Unit = js.native
 }
 

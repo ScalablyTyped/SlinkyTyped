@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FixedAssetManagementIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FixedAssetManagementIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FixedAssetManagementIcon")
   @js.native
   object component extends js.Object
   

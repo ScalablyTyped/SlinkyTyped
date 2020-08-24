@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "karma-mocha-reporter"
-version := "2.2-dt-20200220Z-7a7ffa"
-scalaVersion := "2.13.2"
+version := "2.2-dt-20200220Z-bae0b2"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

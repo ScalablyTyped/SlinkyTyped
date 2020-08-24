@@ -25,17 +25,14 @@ object PermissionRequestHandler {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDeny(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deny")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAllow(value: () => Unit): Self = this.set("allow", js.Any.fromFunction0(value))
+    @scala.inline
+    def setDeny(value: () => Unit): Self = this.set("deny", js.Any.fromFunction0(value))
   }
   
 }

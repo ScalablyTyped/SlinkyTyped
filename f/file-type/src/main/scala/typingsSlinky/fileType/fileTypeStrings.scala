@@ -1,44 +1,53 @@
 package typingsSlinky.fileType
 
-import typingsSlinky.fileType.mod.FileType
-import typingsSlinky.fileType.mod.MimeType
+import typingsSlinky.fileType.coreMod.FileExtension
+import typingsSlinky.fileType.coreMod.MimeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object fileTypeStrings {
   @js.native
-  sealed trait `3g2` extends FileType
+  sealed trait `3g2` extends FileExtension
   
   @js.native
-  sealed trait `3gp` extends FileType
+  sealed trait `3gp` extends FileExtension
   
   @js.native
-  sealed trait `7z` extends FileType
+  sealed trait `7z` extends FileExtension
   
   @js.native
-  sealed trait Z extends FileType
+  sealed trait Z extends FileExtension
   
   @js.native
-  sealed trait ac3 extends FileType
+  sealed trait aac extends FileExtension
   
   @js.native
-  sealed trait aif extends FileType
+  sealed trait ac3 extends FileExtension
   
   @js.native
-  sealed trait alias extends FileType
+  sealed trait ai extends FileExtension
   
   @js.native
-  sealed trait amr extends FileType
+  sealed trait aif extends FileExtension
   
   @js.native
-  sealed trait ape extends FileType
+  sealed trait alias extends FileExtension
   
   @js.native
-  sealed trait apng extends FileType
+  sealed trait amr extends FileExtension
+  
+  @js.native
+  sealed trait ape extends FileExtension
+  
+  @js.native
+  sealed trait apng extends FileExtension
   
   @js.native
   sealed trait applicationSlashdicom extends MimeType
+  
+  @js.native
+  sealed trait applicationSlasheps extends MimeType
   
   @js.native
   sealed trait applicationSlashepubPlussignzip extends MimeType
@@ -54,6 +63,9 @@ object fileTypeStrings {
   
   @js.native
   sealed trait applicationSlashpdf extends MimeType
+  
+  @js.native
+  sealed trait `applicationSlashpgp-encrypted` extends MimeType
   
   @js.native
   sealed trait applicationSlashpostscript extends MimeType
@@ -89,6 +101,9 @@ object fileTypeStrings {
   sealed trait `applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument` extends MimeType
   
   @js.native
+  sealed trait applicationSlashvndDotsketchupDotskp extends MimeType
+  
+  @js.native
   sealed trait applicationSlashvndDottcpdumpDotpcap extends MimeType
   
   @js.native
@@ -102,6 +117,9 @@ object fileTypeStrings {
   
   @js.native
   sealed trait `applicationSlashx-apple-diskimage` extends MimeType
+  
+  @js.native
+  sealed trait `applicationSlashx-asar` extends MimeType
   
   @js.native
   sealed trait `applicationSlashx-blender` extends MimeType
@@ -120,6 +138,12 @@ object fileTypeStrings {
   
   @js.native
   sealed trait `applicationSlashx-google-chrome-extension` extends MimeType
+  
+  @js.native
+  sealed trait `applicationSlashx-indesign` extends MimeType
+  
+  @js.native
+  sealed trait `applicationSlashx-lzh-compressed` extends MimeType
   
   @js.native
   sealed trait `applicationSlashx-lzip` extends MimeType
@@ -176,16 +200,22 @@ object fileTypeStrings {
   sealed trait applicationSlashzip extends MimeType
   
   @js.native
-  sealed trait ar extends FileType
+  sealed trait ar extends FileExtension
   
   @js.native
-  sealed trait arrow extends FileType
+  sealed trait arrow extends FileExtension
   
   @js.native
-  sealed trait arw extends FileType
+  sealed trait arw extends FileExtension
   
   @js.native
-  sealed trait asf extends FileType
+  sealed trait asar extends FileExtension
+  
+  @js.native
+  sealed trait asf extends FileExtension
+  
+  @js.native
+  sealed trait audioSlashaac extends MimeType
   
   @js.native
   sealed trait audioSlashaiff extends MimeType
@@ -230,6 +260,9 @@ object fileTypeStrings {
   sealed trait `audioSlashx-flac` extends MimeType
   
   @js.native
+  sealed trait `audioSlashx-it` extends MimeType
+  
+  @js.native
   sealed trait `audioSlashx-m4a` extends MimeType
   
   @js.native
@@ -239,94 +272,109 @@ object fileTypeStrings {
   sealed trait `audioSlashx-musepack` extends MimeType
   
   @js.native
+  sealed trait `audioSlashx-s3m` extends MimeType
+  
+  @js.native
   sealed trait `audioSlashx-voc` extends MimeType
   
   @js.native
-  sealed trait avi extends FileType
+  sealed trait `audioSlashx-xm` extends MimeType
   
   @js.native
-  sealed trait blend extends FileType
+  sealed trait avi extends FileExtension
   
   @js.native
-  sealed trait bmp extends FileType
+  sealed trait avif extends FileExtension
   
   @js.native
-  sealed trait bpg extends FileType
+  sealed trait blend extends FileExtension
   
   @js.native
-  sealed trait bz2 extends FileType
+  sealed trait bmp extends FileExtension
   
   @js.native
-  sealed trait cab extends FileType
+  sealed trait bpg extends FileExtension
+  
+  @js.native
+  sealed trait bz2 extends FileExtension
+  
+  @js.native
+  sealed trait cab extends FileExtension
   
   @js.native
   sealed trait close extends js.Object
   
   @js.native
-  sealed trait cr2 extends FileType
+  sealed trait cr2 extends FileExtension
   
   @js.native
-  sealed trait crx extends FileType
+  sealed trait cr3 extends FileExtension
   
   @js.native
-  sealed trait cur extends FileType
+  sealed trait crx extends FileExtension
+  
+  @js.native
+  sealed trait cur extends FileExtension
   
   @js.native
   sealed trait data extends js.Object
   
   @js.native
-  sealed trait dcm extends FileType
+  sealed trait dcm extends FileExtension
   
   @js.native
-  sealed trait deb extends FileType
+  sealed trait deb extends FileExtension
   
   @js.native
-  sealed trait dmg extends FileType
+  sealed trait dmg extends FileExtension
   
   @js.native
-  sealed trait dng extends FileType
+  sealed trait dng extends FileExtension
   
   @js.native
-  sealed trait docx extends FileType
+  sealed trait docx extends FileExtension
   
   @js.native
-  sealed trait dsf extends FileType
+  sealed trait dsf extends FileExtension
   
   @js.native
   sealed trait end extends js.Object
   
   @js.native
-  sealed trait eot extends FileType
+  sealed trait eot extends FileExtension
   
   @js.native
-  sealed trait epub extends FileType
+  sealed trait eps extends FileExtension
+  
+  @js.native
+  sealed trait epub extends FileExtension
   
   @js.native
   sealed trait error extends js.Object
   
   @js.native
-  sealed trait exe extends FileType
+  sealed trait exe extends FileExtension
   
   @js.native
-  sealed trait f4a extends FileType
+  sealed trait f4a extends FileExtension
   
   @js.native
-  sealed trait f4b extends FileType
+  sealed trait f4b extends FileExtension
   
   @js.native
-  sealed trait f4p extends FileType
+  sealed trait f4p extends FileExtension
   
   @js.native
-  sealed trait f4v extends FileType
+  sealed trait f4v extends FileExtension
   
   @js.native
-  sealed trait flac extends FileType
+  sealed trait flac extends FileExtension
   
   @js.native
-  sealed trait flif extends FileType
+  sealed trait flif extends FileExtension
   
   @js.native
-  sealed trait flv extends FileType
+  sealed trait flv extends FileExtension
   
   @js.native
   sealed trait fontSlashotf extends MimeType
@@ -341,25 +389,31 @@ object fileTypeStrings {
   sealed trait fontSlashwoff2 extends MimeType
   
   @js.native
-  sealed trait gif extends FileType
+  sealed trait gif extends FileExtension
   
   @js.native
-  sealed trait glb extends FileType
+  sealed trait glb extends FileExtension
   
   @js.native
-  sealed trait gz extends FileType
+  sealed trait gz extends FileExtension
   
   @js.native
-  sealed trait heic extends FileType
+  sealed trait heic extends FileExtension
   
   @js.native
-  sealed trait ico extends FileType
+  sealed trait icns extends FileExtension
   
   @js.native
-  sealed trait ics extends FileType
+  sealed trait ico extends FileExtension
+  
+  @js.native
+  sealed trait ics extends FileExtension
   
   @js.native
   sealed trait imageSlashapng extends MimeType
+  
+  @js.native
+  sealed trait imageSlashavif extends MimeType
   
   @js.native
   sealed trait imageSlashbmp extends MimeType
@@ -384,6 +438,9 @@ object fileTypeStrings {
   
   @js.native
   sealed trait `imageSlashheif-sequence` extends MimeType
+  
+  @js.native
+  sealed trait imageSlashicns extends MimeType
   
   @js.native
   sealed trait imageSlashjp2 extends MimeType
@@ -425,6 +482,9 @@ object fileTypeStrings {
   sealed trait `imageSlashx-canon-cr2` extends MimeType
   
   @js.native
+  sealed trait `imageSlashx-canon-cr3` extends MimeType
+  
+  @js.native
   sealed trait `imageSlashx-fujifilm-raf` extends MimeType
   
   @js.native
@@ -443,154 +503,169 @@ object fileTypeStrings {
   sealed trait `imageSlashx-sony-arw` extends MimeType
   
   @js.native
-  sealed trait jp2 extends FileType
+  sealed trait indd extends FileExtension
   
   @js.native
-  sealed trait jpg extends FileType
+  sealed trait it extends FileExtension
   
   @js.native
-  sealed trait jpm extends FileType
+  sealed trait jp2 extends FileExtension
   
   @js.native
-  sealed trait jpx extends FileType
+  sealed trait jpg extends FileExtension
   
   @js.native
-  sealed trait jxr extends FileType
+  sealed trait jpm extends FileExtension
   
   @js.native
-  sealed trait ktx extends FileType
+  sealed trait jpx extends FileExtension
   
   @js.native
-  sealed trait lnk extends FileType
+  sealed trait jxr extends FileExtension
   
   @js.native
-  sealed trait lz extends FileType
+  sealed trait ktx extends FileExtension
   
   @js.native
-  sealed trait m4a extends FileType
+  sealed trait lnk extends FileExtension
   
   @js.native
-  sealed trait m4b extends FileType
+  sealed trait lz extends FileExtension
   
   @js.native
-  sealed trait m4p extends FileType
+  sealed trait lzh extends FileExtension
   
   @js.native
-  sealed trait m4v extends FileType
+  sealed trait m4a extends FileExtension
   
   @js.native
-  sealed trait mid extends FileType
+  sealed trait m4b extends FileExtension
   
   @js.native
-  sealed trait mie extends FileType
+  sealed trait m4p extends FileExtension
   
   @js.native
-  sealed trait mj2 extends FileType
+  sealed trait m4v extends FileExtension
   
   @js.native
-  sealed trait mkv extends FileType
+  sealed trait mid extends FileExtension
   
   @js.native
-  sealed trait mobi extends FileType
+  sealed trait mie extends FileExtension
+  
+  @js.native
+  sealed trait mj2 extends FileExtension
+  
+  @js.native
+  sealed trait mkv extends FileExtension
+  
+  @js.native
+  sealed trait mobi extends FileExtension
   
   @js.native
   sealed trait `modelSlashgltf-binary` extends MimeType
   
   @js.native
-  sealed trait mov extends FileType
+  sealed trait mov extends FileExtension
   
   @js.native
-  sealed trait mp2 extends FileType
+  sealed trait mp1 extends FileExtension
   
   @js.native
-  sealed trait mp3 extends FileType
+  sealed trait mp2 extends FileExtension
   
   @js.native
-  sealed trait mp4 extends FileType
+  sealed trait mp3 extends FileExtension
   
   @js.native
-  sealed trait mpc extends FileType
+  sealed trait mp4 extends FileExtension
   
   @js.native
-  sealed trait mpg extends FileType
+  sealed trait mpc extends FileExtension
   
   @js.native
-  sealed trait msi extends FileType
+  sealed trait mpg extends FileExtension
   
   @js.native
-  sealed trait mts extends FileType
+  sealed trait msi extends FileExtension
   
   @js.native
-  sealed trait mxf extends FileType
+  sealed trait mts extends FileExtension
   
   @js.native
-  sealed trait nef extends FileType
+  sealed trait mxf extends FileExtension
   
   @js.native
-  sealed trait nes extends FileType
+  sealed trait nef extends FileExtension
   
   @js.native
-  sealed trait odp extends FileType
+  sealed trait nes extends FileExtension
   
   @js.native
-  sealed trait ods extends FileType
+  sealed trait odp extends FileExtension
   
   @js.native
-  sealed trait odt extends FileType
+  sealed trait ods extends FileExtension
   
   @js.native
-  sealed trait oga extends FileType
+  sealed trait odt extends FileExtension
   
   @js.native
-  sealed trait ogg extends FileType
+  sealed trait oga extends FileExtension
   
   @js.native
-  sealed trait ogm extends FileType
+  sealed trait ogg extends FileExtension
   
   @js.native
-  sealed trait ogv extends FileType
+  sealed trait ogm extends FileExtension
   
   @js.native
-  sealed trait ogx extends FileType
+  sealed trait ogv extends FileExtension
   
   @js.native
-  sealed trait opus extends FileType
+  sealed trait ogx extends FileExtension
   
   @js.native
-  sealed trait orf extends FileType
+  sealed trait opus extends FileExtension
   
   @js.native
-  sealed trait otf extends FileType
+  sealed trait orf extends FileExtension
+  
+  @js.native
+  sealed trait otf extends FileExtension
   
   @js.native
   sealed trait pause extends js.Object
   
   @js.native
-  sealed trait pcap extends FileType
+  sealed trait pcap extends FileExtension
   
   @js.native
-  sealed trait pdf extends FileType
+  sealed trait pdf extends FileExtension
   
   @js.native
-  sealed trait png extends FileType
+  sealed trait pgp extends FileExtension
   
   @js.native
-  sealed trait pptx extends FileType
+  sealed trait png extends FileExtension
   
   @js.native
-  sealed trait ps extends FileType
+  sealed trait pptx extends FileExtension
   
   @js.native
-  sealed trait psd extends FileType
+  sealed trait ps extends FileExtension
   
   @js.native
-  sealed trait qcp extends FileType
+  sealed trait psd extends FileExtension
   
   @js.native
-  sealed trait raf extends FileType
+  sealed trait qcp extends FileExtension
   
   @js.native
-  sealed trait rar extends FileType
+  sealed trait raf extends FileExtension
+  
+  @js.native
+  sealed trait rar extends FileExtension
   
   @js.native
   sealed trait readable extends js.Object
@@ -599,43 +674,55 @@ object fileTypeStrings {
   sealed trait resume extends js.Object
   
   @js.native
-  sealed trait rpm extends FileType
+  sealed trait rpm extends FileExtension
   
   @js.native
-  sealed trait rtf extends FileType
+  sealed trait rtf extends FileExtension
   
   @js.native
-  sealed trait rw2 extends FileType
+  sealed trait rw2 extends FileExtension
   
   @js.native
-  sealed trait shp extends FileType
+  sealed trait s3m extends FileExtension
   
   @js.native
-  sealed trait spx extends FileType
+  sealed trait shp extends FileExtension
   
   @js.native
-  sealed trait sqlite extends FileType
+  sealed trait skp extends FileExtension
   
   @js.native
-  sealed trait swf extends FileType
+  sealed trait spx extends FileExtension
   
   @js.native
-  sealed trait tar extends FileType
+  sealed trait sqlite extends FileExtension
+  
+  @js.native
+  sealed trait swf extends FileExtension
+  
+  @js.native
+  sealed trait tar extends FileExtension
   
   @js.native
   sealed trait textSlashcalendar extends MimeType
   
   @js.native
-  sealed trait tif extends FileType
+  sealed trait tif extends FileExtension
   
   @js.native
-  sealed trait ttf extends FileType
+  sealed trait ttf extends FileExtension
   
   @js.native
   sealed trait videoSlash3gpp extends MimeType
   
   @js.native
   sealed trait videoSlash3gpp2 extends MimeType
+  
+  @js.native
+  sealed trait videoSlashMP1S extends MimeType
+  
+  @js.native
+  sealed trait videoSlashMP2P extends MimeType
   
   @js.native
   sealed trait videoSlashmp2t extends MimeType
@@ -671,49 +758,52 @@ object fileTypeStrings {
   sealed trait `videoSlashx-ms-asf` extends MimeType
   
   @js.native
-  sealed trait voc extends FileType
+  sealed trait voc extends FileExtension
   
   @js.native
-  sealed trait wasm extends FileType
+  sealed trait wasm extends FileExtension
   
   @js.native
-  sealed trait wav extends FileType
+  sealed trait wav extends FileExtension
   
   @js.native
-  sealed trait webm extends FileType
+  sealed trait webm extends FileExtension
   
   @js.native
-  sealed trait webp extends FileType
+  sealed trait webp extends FileExtension
   
   @js.native
-  sealed trait wma extends FileType
+  sealed trait wma extends FileExtension
   
   @js.native
-  sealed trait wmv extends FileType
+  sealed trait wmv extends FileExtension
   
   @js.native
-  sealed trait woff extends FileType
+  sealed trait woff extends FileExtension
   
   @js.native
-  sealed trait woff2 extends FileType
+  sealed trait woff2 extends FileExtension
   
   @js.native
-  sealed trait wv extends FileType
+  sealed trait wv extends FileExtension
   
   @js.native
-  sealed trait xlsx extends FileType
+  sealed trait xlsx extends FileExtension
   
   @js.native
-  sealed trait xml extends FileType
+  sealed trait xm extends FileExtension
   
   @js.native
-  sealed trait xpi extends FileType
+  sealed trait xml extends FileExtension
   
   @js.native
-  sealed trait xz extends FileType
+  sealed trait xpi extends FileExtension
   
   @js.native
-  sealed trait zip extends FileType
+  sealed trait xz extends FileExtension
+  
+  @js.native
+  sealed trait zip extends FileExtension
   
   @scala.inline
   def `3g2`: `3g2` = "3g2".asInstanceOf[`3g2`]
@@ -724,7 +814,11 @@ object fileTypeStrings {
   @scala.inline
   def Z: Z = "Z".asInstanceOf[Z]
   @scala.inline
+  def aac: aac = "aac".asInstanceOf[aac]
+  @scala.inline
   def ac3: ac3 = "ac3".asInstanceOf[ac3]
+  @scala.inline
+  def ai: ai = "ai".asInstanceOf[ai]
   @scala.inline
   def aif: aif = "aif".asInstanceOf[aif]
   @scala.inline
@@ -738,6 +832,8 @@ object fileTypeStrings {
   @scala.inline
   def applicationSlashdicom: applicationSlashdicom = "application/dicom".asInstanceOf[applicationSlashdicom]
   @scala.inline
+  def applicationSlasheps: applicationSlasheps = "application/eps".asInstanceOf[applicationSlasheps]
+  @scala.inline
   def applicationSlashepubPlussignzip: applicationSlashepubPlussignzip = "application/epub+zip".asInstanceOf[applicationSlashepubPlussignzip]
   @scala.inline
   def applicationSlashgzip: applicationSlashgzip = "application/gzip".asInstanceOf[applicationSlashgzip]
@@ -747,6 +843,8 @@ object fileTypeStrings {
   def applicationSlashogg: applicationSlashogg = "application/ogg".asInstanceOf[applicationSlashogg]
   @scala.inline
   def applicationSlashpdf: applicationSlashpdf = "application/pdf".asInstanceOf[applicationSlashpdf]
+  @scala.inline
+  def `applicationSlashpgp-encrypted`: `applicationSlashpgp-encrypted` = "application/pgp-encrypted".asInstanceOf[`applicationSlashpgp-encrypted`]
   @scala.inline
   def applicationSlashpostscript: applicationSlashpostscript = "application/postscript".asInstanceOf[applicationSlashpostscript]
   @scala.inline
@@ -770,6 +868,8 @@ object fileTypeStrings {
   @scala.inline
   def `applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument`: `applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument` = "application/vnd.openxmlformats-officedocument.wordprocessingml.document".asInstanceOf[`applicationSlashvndDotopenxmlformats-officedocumentDotwordprocessingmlDotdocument`]
   @scala.inline
+  def applicationSlashvndDotsketchupDotskp: applicationSlashvndDotsketchupDotskp = "application/vnd.sketchup.skp".asInstanceOf[applicationSlashvndDotsketchupDotskp]
+  @scala.inline
   def applicationSlashvndDottcpdumpDotpcap: applicationSlashvndDottcpdumpDotpcap = "application/vnd.tcpdump.pcap".asInstanceOf[applicationSlashvndDottcpdumpDotpcap]
   @scala.inline
   def applicationSlashwasm: applicationSlashwasm = "application/wasm".asInstanceOf[applicationSlashwasm]
@@ -779,6 +879,8 @@ object fileTypeStrings {
   def `applicationSlashx-apache-arrow`: `applicationSlashx-apache-arrow` = "application/x-apache-arrow".asInstanceOf[`applicationSlashx-apache-arrow`]
   @scala.inline
   def `applicationSlashx-apple-diskimage`: `applicationSlashx-apple-diskimage` = "application/x-apple-diskimage".asInstanceOf[`applicationSlashx-apple-diskimage`]
+  @scala.inline
+  def `applicationSlashx-asar`: `applicationSlashx-asar` = "application/x-asar".asInstanceOf[`applicationSlashx-asar`]
   @scala.inline
   def `applicationSlashx-blender`: `applicationSlashx-blender` = "application/x-blender".asInstanceOf[`applicationSlashx-blender`]
   @scala.inline
@@ -791,6 +893,10 @@ object fileTypeStrings {
   def `applicationSlashx-esri-shape`: `applicationSlashx-esri-shape` = "application/x-esri-shape".asInstanceOf[`applicationSlashx-esri-shape`]
   @scala.inline
   def `applicationSlashx-google-chrome-extension`: `applicationSlashx-google-chrome-extension` = "application/x-google-chrome-extension".asInstanceOf[`applicationSlashx-google-chrome-extension`]
+  @scala.inline
+  def `applicationSlashx-indesign`: `applicationSlashx-indesign` = "application/x-indesign".asInstanceOf[`applicationSlashx-indesign`]
+  @scala.inline
+  def `applicationSlashx-lzh-compressed`: `applicationSlashx-lzh-compressed` = "application/x-lzh-compressed".asInstanceOf[`applicationSlashx-lzh-compressed`]
   @scala.inline
   def `applicationSlashx-lzip`: `applicationSlashx-lzip` = "application/x-lzip".asInstanceOf[`applicationSlashx-lzip`]
   @scala.inline
@@ -834,7 +940,11 @@ object fileTypeStrings {
   @scala.inline
   def arw: arw = "arw".asInstanceOf[arw]
   @scala.inline
+  def asar: asar = "asar".asInstanceOf[asar]
+  @scala.inline
   def asf: asf = "asf".asInstanceOf[asf]
+  @scala.inline
+  def audioSlashaac: audioSlashaac = "audio/aac".asInstanceOf[audioSlashaac]
   @scala.inline
   def audioSlashaiff: audioSlashaiff = "audio/aiff".asInstanceOf[audioSlashaiff]
   @scala.inline
@@ -864,15 +974,23 @@ object fileTypeStrings {
   @scala.inline
   def `audioSlashx-flac`: `audioSlashx-flac` = "audio/x-flac".asInstanceOf[`audioSlashx-flac`]
   @scala.inline
+  def `audioSlashx-it`: `audioSlashx-it` = "audio/x-it".asInstanceOf[`audioSlashx-it`]
+  @scala.inline
   def `audioSlashx-m4a`: `audioSlashx-m4a` = "audio/x-m4a".asInstanceOf[`audioSlashx-m4a`]
   @scala.inline
   def `audioSlashx-ms-wma`: `audioSlashx-ms-wma` = "audio/x-ms-wma".asInstanceOf[`audioSlashx-ms-wma`]
   @scala.inline
   def `audioSlashx-musepack`: `audioSlashx-musepack` = "audio/x-musepack".asInstanceOf[`audioSlashx-musepack`]
   @scala.inline
+  def `audioSlashx-s3m`: `audioSlashx-s3m` = "audio/x-s3m".asInstanceOf[`audioSlashx-s3m`]
+  @scala.inline
   def `audioSlashx-voc`: `audioSlashx-voc` = "audio/x-voc".asInstanceOf[`audioSlashx-voc`]
   @scala.inline
+  def `audioSlashx-xm`: `audioSlashx-xm` = "audio/x-xm".asInstanceOf[`audioSlashx-xm`]
+  @scala.inline
   def avi: avi = "avi".asInstanceOf[avi]
+  @scala.inline
+  def avif: avif = "avif".asInstanceOf[avif]
   @scala.inline
   def blend: blend = "blend".asInstanceOf[blend]
   @scala.inline
@@ -887,6 +1005,8 @@ object fileTypeStrings {
   def close: close = "close".asInstanceOf[close]
   @scala.inline
   def cr2: cr2 = "cr2".asInstanceOf[cr2]
+  @scala.inline
+  def cr3: cr3 = "cr3".asInstanceOf[cr3]
   @scala.inline
   def crx: crx = "crx".asInstanceOf[crx]
   @scala.inline
@@ -909,6 +1029,8 @@ object fileTypeStrings {
   def end: end = "end".asInstanceOf[end]
   @scala.inline
   def eot: eot = "eot".asInstanceOf[eot]
+  @scala.inline
+  def eps: eps = "eps".asInstanceOf[eps]
   @scala.inline
   def epub: epub = "epub".asInstanceOf[epub]
   @scala.inline
@@ -946,11 +1068,15 @@ object fileTypeStrings {
   @scala.inline
   def heic: heic = "heic".asInstanceOf[heic]
   @scala.inline
+  def icns: icns = "icns".asInstanceOf[icns]
+  @scala.inline
   def ico: ico = "ico".asInstanceOf[ico]
   @scala.inline
   def ics: ics = "ics".asInstanceOf[ics]
   @scala.inline
   def imageSlashapng: imageSlashapng = "image/apng".asInstanceOf[imageSlashapng]
+  @scala.inline
+  def imageSlashavif: imageSlashavif = "image/avif".asInstanceOf[imageSlashavif]
   @scala.inline
   def imageSlashbmp: imageSlashbmp = "image/bmp".asInstanceOf[imageSlashbmp]
   @scala.inline
@@ -967,6 +1093,8 @@ object fileTypeStrings {
   def imageSlashheif: imageSlashheif = "image/heif".asInstanceOf[imageSlashheif]
   @scala.inline
   def `imageSlashheif-sequence`: `imageSlashheif-sequence` = "image/heif-sequence".asInstanceOf[`imageSlashheif-sequence`]
+  @scala.inline
+  def imageSlashicns: imageSlashicns = "image/icns".asInstanceOf[imageSlashicns]
   @scala.inline
   def imageSlashjp2: imageSlashjp2 = "image/jp2".asInstanceOf[imageSlashjp2]
   @scala.inline
@@ -994,6 +1122,8 @@ object fileTypeStrings {
   @scala.inline
   def `imageSlashx-canon-cr2`: `imageSlashx-canon-cr2` = "image/x-canon-cr2".asInstanceOf[`imageSlashx-canon-cr2`]
   @scala.inline
+  def `imageSlashx-canon-cr3`: `imageSlashx-canon-cr3` = "image/x-canon-cr3".asInstanceOf[`imageSlashx-canon-cr3`]
+  @scala.inline
   def `imageSlashx-fujifilm-raf`: `imageSlashx-fujifilm-raf` = "image/x-fujifilm-raf".asInstanceOf[`imageSlashx-fujifilm-raf`]
   @scala.inline
   def `imageSlashx-icon`: `imageSlashx-icon` = "image/x-icon".asInstanceOf[`imageSlashx-icon`]
@@ -1005,6 +1135,10 @@ object fileTypeStrings {
   def `imageSlashx-panasonic-rw2`: `imageSlashx-panasonic-rw2` = "image/x-panasonic-rw2".asInstanceOf[`imageSlashx-panasonic-rw2`]
   @scala.inline
   def `imageSlashx-sony-arw`: `imageSlashx-sony-arw` = "image/x-sony-arw".asInstanceOf[`imageSlashx-sony-arw`]
+  @scala.inline
+  def indd: indd = "indd".asInstanceOf[indd]
+  @scala.inline
+  def it: it = "it".asInstanceOf[it]
   @scala.inline
   def jp2: jp2 = "jp2".asInstanceOf[jp2]
   @scala.inline
@@ -1021,6 +1155,8 @@ object fileTypeStrings {
   def lnk: lnk = "lnk".asInstanceOf[lnk]
   @scala.inline
   def lz: lz = "lz".asInstanceOf[lz]
+  @scala.inline
+  def lzh: lzh = "lzh".asInstanceOf[lzh]
   @scala.inline
   def m4a: m4a = "m4a".asInstanceOf[m4a]
   @scala.inline
@@ -1043,6 +1179,8 @@ object fileTypeStrings {
   def `modelSlashgltf-binary`: `modelSlashgltf-binary` = "model/gltf-binary".asInstanceOf[`modelSlashgltf-binary`]
   @scala.inline
   def mov: mov = "mov".asInstanceOf[mov]
+  @scala.inline
+  def mp1: mp1 = "mp1".asInstanceOf[mp1]
   @scala.inline
   def mp2: mp2 = "mp2".asInstanceOf[mp2]
   @scala.inline
@@ -1092,6 +1230,8 @@ object fileTypeStrings {
   @scala.inline
   def pdf: pdf = "pdf".asInstanceOf[pdf]
   @scala.inline
+  def pgp: pgp = "pgp".asInstanceOf[pgp]
+  @scala.inline
   def png: png = "png".asInstanceOf[png]
   @scala.inline
   def pptx: pptx = "pptx".asInstanceOf[pptx]
@@ -1116,7 +1256,11 @@ object fileTypeStrings {
   @scala.inline
   def rw2: rw2 = "rw2".asInstanceOf[rw2]
   @scala.inline
+  def s3m: s3m = "s3m".asInstanceOf[s3m]
+  @scala.inline
   def shp: shp = "shp".asInstanceOf[shp]
+  @scala.inline
+  def skp: skp = "skp".asInstanceOf[skp]
   @scala.inline
   def spx: spx = "spx".asInstanceOf[spx]
   @scala.inline
@@ -1135,6 +1279,10 @@ object fileTypeStrings {
   def videoSlash3gpp: videoSlash3gpp = "video/3gpp".asInstanceOf[videoSlash3gpp]
   @scala.inline
   def videoSlash3gpp2: videoSlash3gpp2 = "video/3gpp2".asInstanceOf[videoSlash3gpp2]
+  @scala.inline
+  def videoSlashMP1S: videoSlashMP1S = "video/MP1S".asInstanceOf[videoSlashMP1S]
+  @scala.inline
+  def videoSlashMP2P: videoSlashMP2P = "video/MP2P".asInstanceOf[videoSlashMP2P]
   @scala.inline
   def videoSlashmp2t: videoSlashmp2t = "video/mp2t".asInstanceOf[videoSlashmp2t]
   @scala.inline
@@ -1179,6 +1327,8 @@ object fileTypeStrings {
   def wv: wv = "wv".asInstanceOf[wv]
   @scala.inline
   def xlsx: xlsx = "xlsx".asInstanceOf[xlsx]
+  @scala.inline
+  def xm: xm = "xm".asInstanceOf[xm]
   @scala.inline
   def xml: xml = "xml".asInstanceOf[xml]
   @scala.inline

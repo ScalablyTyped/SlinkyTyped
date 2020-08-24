@@ -8,14 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("DeviceRotationRate")
 @js.native
 class DeviceRotationRate ()
-  extends typingsSlinky.std.DeviceRotationRate {
-  /* CompleteClass */
-  override val alpha: Double | Null = js.native
-  /* CompleteClass */
-  override val beta: Double | Null = js.native
-  /* CompleteClass */
-  override val gamma: Double | Null = js.native
-}
+  extends typingsSlinky.std.DeviceRotationRate
 
 @JSGlobal("DeviceRotationRate")
 @js.native

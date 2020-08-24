@@ -4,7 +4,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.fontSizePickerMod.FontSizePicker.FontSize
 import typingsSlinky.wordpressComponents.fontSizePickerMod.FontSizePicker.Props
-import typingsSlinky.wordpressComponents.mod.FontSizePicker.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,11 +16,13 @@ object FontSizePicker {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def disableCustomFontSizes(value: Boolean): this.type = set("disableCustomFontSizes", value.asInstanceOf[js.Any])
     @scala.inline
     def fallbackFontSize(value: Double): this.type = set("fallbackFontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSizesVarargs(value: FontSize*): this.type = set("fontSizes", js.Array(value :_*))
     @scala.inline
     def fontSizes(value: js.Array[FontSize]): this.type = set("fontSizes", value.asInstanceOf[js.Any])
     @scala.inline

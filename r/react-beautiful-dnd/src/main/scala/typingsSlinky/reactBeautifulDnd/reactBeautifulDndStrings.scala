@@ -3,10 +3,8 @@ package typingsSlinky.reactBeautifulDnd
 import typingsSlinky.reactBeautifulDnd.mod.Direction
 import typingsSlinky.reactBeautifulDnd.mod.DropReason
 import typingsSlinky.reactBeautifulDnd.mod.DroppableMode
-import typingsSlinky.reactBeautifulDnd.mod.HorizontalUserDirection
 import typingsSlinky.reactBeautifulDnd.mod.InOutAnimationMode
 import typingsSlinky.reactBeautifulDnd.mod.MovementMode
-import typingsSlinky.reactBeautifulDnd.mod.VerticalUserDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,9 +53,6 @@ object reactBeautifulDndStrings {
   sealed trait close extends InOutAnimationMode
   
   @js.native
-  sealed trait down extends VerticalUserDirection
-  
-  @js.native
   sealed trait fixed extends js.Object
   
   @js.native
@@ -67,7 +62,7 @@ object reactBeautifulDndStrings {
   sealed trait horizontal extends Direction
   
   @js.native
-  sealed trait left extends HorizontalUserDirection
+  sealed trait left extends js.Object
   
   @js.native
   sealed trait none extends InOutAnimationMode
@@ -76,16 +71,13 @@ object reactBeautifulDndStrings {
   sealed trait open extends InOutAnimationMode
   
   @js.native
-  sealed trait right extends HorizontalUserDirection
+  sealed trait right extends js.Object
   
   @js.native
   sealed trait standard extends DroppableMode
   
   @js.native
   sealed trait top extends js.Object
-  
-  @js.native
-  sealed trait up extends VerticalUserDirection
   
   @js.native
   sealed trait vertical extends Direction
@@ -131,8 +123,6 @@ object reactBeautifulDndStrings {
   @scala.inline
   def close: close = "close".asInstanceOf[close]
   @scala.inline
-  def down: down = "down".asInstanceOf[down]
-  @scala.inline
   def fixed: fixed = "fixed".asInstanceOf[fixed]
   @scala.inline
   def height: height = "height".asInstanceOf[height]
@@ -150,8 +140,6 @@ object reactBeautifulDndStrings {
   def standard: standard = "standard".asInstanceOf[standard]
   @scala.inline
   def top: top = "top".asInstanceOf[top]
-  @scala.inline
-  def up: up = "up".asInstanceOf[up]
   @scala.inline
   def vertical: vertical = "vertical".asInstanceOf[vertical]
   @scala.inline

@@ -1,7 +1,7 @@
 package typingsSlinky.nodegit.treeMod
 
 import typingsSlinky.nodegit.anon.EventEmitterstartvoid
-import typingsSlinky.nodegit.diffFileMod.DiffFile
+import typingsSlinky.nodegit.diffMod.Diff
 import typingsSlinky.nodegit.objectMod.Object
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.repositoryMod.Repository
@@ -25,14 +25,15 @@ class Tree_ () extends js.Object {
   /**
     * Diff two trees
     */
-  def diff(tree: Tree): js.Promise[js.Array[DiffFile]] = js.native
-  def diff(tree: Tree, callback: js.Function): js.Promise[js.Array[DiffFile]] = js.native
+  def diff(tree: Tree): js.Promise[Diff] = js.native
+  def diff(tree: Tree, callback: js.Function): js.Promise[Diff] = js.native
   /**
     * Diff two trees with options
     */
-  def diffWithOptions(tree: Tree): js.Promise[js.Array[DiffFile]] = js.native
-  def diffWithOptions(tree: Tree, options: Object): js.Promise[js.Array[DiffFile]] = js.native
-  def diffWithOptions(tree: Tree, options: Object, callback: js.Function): js.Promise[js.Array[DiffFile]] = js.native
+  def diffWithOptions(tree: Tree): js.Promise[Diff] = js.native
+  def diffWithOptions(tree: Tree, options: js.UndefOr[scala.Nothing], callback: js.Function): js.Promise[Diff] = js.native
+  def diffWithOptions(tree: Tree, options: Object): js.Promise[Diff] = js.native
+  def diffWithOptions(tree: Tree, options: Object, callback: js.Function): js.Promise[Diff] = js.native
   def dup(): js.Promise[Tree] = js.native
   /**
     * Return an array of the entries in this tree (excluding its children).

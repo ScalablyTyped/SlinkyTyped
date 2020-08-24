@@ -18,11 +18,12 @@ object Collator
       typingsSlinky.miniprogramWxs.Intl.Collator
     ]
      with Instantiable2[
-      (/* locales */ Array[String]) | (/* locales */ String), 
+      js.UndefOr[(/* locales */ Array[String]) | (/* locales */ String)], 
       /* options */ CollatorOptions, 
       typingsSlinky.miniprogramWxs.Intl.Collator
     ] {
   def apply(): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
+  def apply(locales: js.UndefOr[scala.Nothing], options: CollatorOptions): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: String): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: String, options: CollatorOptions): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: Array[String]): typingsSlinky.miniprogramWxs.Intl.Collator = js.native

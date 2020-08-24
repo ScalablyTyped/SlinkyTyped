@@ -97,6 +97,7 @@ object iotMod extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: ThingArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: ThingArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -126,6 +127,7 @@ object iotMod extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: ThingTypeArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: ThingTypeArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -143,9 +145,10 @@ object iotMod extends js.Object {
     def this(name: String, args: TopicRuleArgs, opts: CustomResourceOptions) = this()
   }
   
-  def getEndpoint(): js.Promise[GetEndpointResult] with GetEndpointResult = js.native
-  def getEndpoint(args: GetEndpointArgs): js.Promise[GetEndpointResult] with GetEndpointResult = js.native
-  def getEndpoint(args: GetEndpointArgs, opts: InvokeOptions): js.Promise[GetEndpointResult] with GetEndpointResult = js.native
+  def getEndpoint(): js.Promise[GetEndpointResult] = js.native
+  def getEndpoint(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetEndpointResult] = js.native
+  def getEndpoint(args: GetEndpointArgs): js.Promise[GetEndpointResult] = js.native
+  def getEndpoint(args: GetEndpointArgs, opts: InvokeOptions): js.Promise[GetEndpointResult] = js.native
   /* static members */
   @js.native
   object Certificate extends js.Object {
@@ -156,8 +159,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.iotCertificateMod.Certificate = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.iotCertificateMod.Certificate = js.native
     def get(name: String, id: Input[ID], state: CertificateState): typingsSlinky.pulumiAws.iotCertificateMod.Certificate = js.native
     def get(name: String, id: Input[ID], state: CertificateState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.iotCertificateMod.Certificate = js.native
     /**
@@ -177,8 +182,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.iotPolicyMod.Policy = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.iotPolicyMod.Policy = js.native
     def get(name: String, id: Input[ID], state: PolicyState): typingsSlinky.pulumiAws.iotPolicyMod.Policy = js.native
     def get(name: String, id: Input[ID], state: PolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.iotPolicyMod.Policy = js.native
     /**
@@ -198,8 +205,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.iotPolicyAttachmentMod.PolicyAttachment = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.iotPolicyAttachmentMod.PolicyAttachment = js.native
     def get(name: String, id: Input[ID], state: PolicyAttachmentState): typingsSlinky.pulumiAws.iotPolicyAttachmentMod.PolicyAttachment = js.native
     def get(name: String, id: Input[ID], state: PolicyAttachmentState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.iotPolicyAttachmentMod.PolicyAttachment = js.native
     /**
@@ -219,8 +228,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.roleAliasMod.RoleAlias = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.roleAliasMod.RoleAlias = js.native
     def get(name: String, id: Input[ID], state: RoleAliasState): typingsSlinky.pulumiAws.roleAliasMod.RoleAlias = js.native
     def get(name: String, id: Input[ID], state: RoleAliasState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.roleAliasMod.RoleAlias = js.native
     /**
@@ -240,8 +251,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.thingMod.Thing = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.thingMod.Thing = js.native
     def get(name: String, id: Input[ID], state: ThingState): typingsSlinky.pulumiAws.thingMod.Thing = js.native
     def get(name: String, id: Input[ID], state: ThingState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.thingMod.Thing = js.native
     /**
@@ -261,8 +274,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.thingPrincipalAttachmentMod.ThingPrincipalAttachment = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.thingPrincipalAttachmentMod.ThingPrincipalAttachment = js.native
     def get(name: String, id: Input[ID], state: ThingPrincipalAttachmentState): typingsSlinky.pulumiAws.thingPrincipalAttachmentMod.ThingPrincipalAttachment = js.native
     def get(name: String, id: Input[ID], state: ThingPrincipalAttachmentState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.thingPrincipalAttachmentMod.ThingPrincipalAttachment = js.native
     /**
@@ -282,8 +297,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.thingTypeMod.ThingType = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.thingTypeMod.ThingType = js.native
     def get(name: String, id: Input[ID], state: ThingTypeState): typingsSlinky.pulumiAws.thingTypeMod.ThingType = js.native
     def get(name: String, id: Input[ID], state: ThingTypeState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.thingTypeMod.ThingType = js.native
     /**
@@ -303,8 +320,10 @@ object iotMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.topicRuleMod.TopicRule = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.topicRuleMod.TopicRule = js.native
     def get(name: String, id: Input[ID], state: TopicRuleState): typingsSlinky.pulumiAws.topicRuleMod.TopicRule = js.native
     def get(name: String, id: Input[ID], state: TopicRuleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.topicRuleMod.TopicRule = js.native
     /**

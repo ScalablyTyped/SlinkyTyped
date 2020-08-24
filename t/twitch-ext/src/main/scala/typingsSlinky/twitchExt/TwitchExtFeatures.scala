@@ -1,6 +1,8 @@
 package typingsSlinky.twitchExt
 
+import typingsSlinky.twitchExt.twitchExtStrings.isBitsEnabled
 import typingsSlinky.twitchExt.twitchExtStrings.isChatEnabled
+import typingsSlinky.twitchExt.twitchExtStrings.isSubscriptionStatusAvailable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +10,7 @@ import scala.scalajs.js.annotation._
 /**
   * @see TwitchExt.features
   */
+@js.native
 trait TwitchExtFeatures extends TwitchExtFeatureFlags {
   /**
     * This function enables you to receive real-time updates to changes of the features object.
@@ -16,18 +19,47 @@ trait TwitchExtFeatures extends TwitchExtFeatureFlags {
     *
     * @param callback The callback is called with an array of feature flags which were updated.
     */
-  @JSName("onChanged")
-  def onChanged_isChatEnabled(callback: js.Function1[/* changed */ js.Array[isChatEnabled], Unit]): Unit
+  def onChanged(
+    callback: js.Function1[
+      /* changed */ js.Array[isBitsEnabled | isChatEnabled | isSubscriptionStatusAvailable], 
+      Unit
+    ]
+  ): Unit = js.native
 }
 
 object TwitchExtFeatures {
   @scala.inline
   def apply(
+    isBitsEnabled: Boolean,
     isChatEnabled: Boolean,
-    onChanged: js.Function1[/* changed */ js.Array[isChatEnabled], Unit] => Unit
+    isSubscriptionStatusAvailable: Boolean,
+    onChanged: js.Function1[
+      /* changed */ js.Array[isBitsEnabled | isChatEnabled | isSubscriptionStatusAvailable], 
+      Unit
+    ] => Unit
   ): TwitchExtFeatures = {
-    val __obj = js.Dynamic.literal(isChatEnabled = isChatEnabled.asInstanceOf[js.Any], onChanged = js.Any.fromFunction1(onChanged))
+    val __obj = js.Dynamic.literal(isBitsEnabled = isBitsEnabled.asInstanceOf[js.Any], isChatEnabled = isChatEnabled.asInstanceOf[js.Any], isSubscriptionStatusAvailable = isSubscriptionStatusAvailable.asInstanceOf[js.Any], onChanged = js.Any.fromFunction1(onChanged))
     __obj.asInstanceOf[TwitchExtFeatures]
   }
+  @scala.inline
+  implicit class TwitchExtFeaturesOps[Self <: TwitchExtFeatures] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnChanged(
+      value: js.Function1[
+          /* changed */ js.Array[isBitsEnabled | isChatEnabled | isSubscriptionStatusAvailable], 
+          Unit
+        ] => Unit
+    ): Self = this.set("onChanged", js.Any.fromFunction1(value))
+  }
+  
 }
 

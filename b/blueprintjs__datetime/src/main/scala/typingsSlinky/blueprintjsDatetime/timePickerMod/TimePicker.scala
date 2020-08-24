@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 class TimePicker ()
   extends Component[ITimePickerProps, ITimePickerState, js.Any] {
   def this(props: ITimePickerProps) = this()
+  def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   def this(props: ITimePickerProps, context: js.Any) = this()
   var decrementTime: js.Any = js.native
   /**
@@ -18,9 +19,10 @@ class TimePicker ()
   var getFullStateFromValue: js.Any = js.native
   var getInputBlurHandler: js.Any = js.native
   var getInputChangeHandler: js.Any = js.native
+  var getInputFocusHandler: js.Any = js.native
   var getInputKeyDownHandler: js.Any = js.native
+  var getInputKeyUpHandler: js.Any = js.native
   var handleAmPmChange: js.Any = js.native
-  var handleFocus: js.Any = js.native
   var incrementTime: js.Any = js.native
   var maybeRenderAmPm: js.Any = js.native
   var maybeRenderArrowButton: js.Any = js.native

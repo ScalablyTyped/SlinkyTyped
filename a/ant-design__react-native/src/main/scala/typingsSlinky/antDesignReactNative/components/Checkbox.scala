@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.checkboxCheckboxMod.CheckboxProps
-import typingsSlinky.antDesignReactNative.checkboxMod.default
 import typingsSlinky.antDesignReactNative.checkboxPropsTypeMod.OnChangeParams
 import typingsSlinky.antDesignReactNative.checkboxStyleMod.CheckboxStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -14,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Checkbox {
-  @JSImport("@ant-design/react-native/lib/checkbox", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Checkbox")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Checkbox] {
     @scala.inline
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     @scala.inline

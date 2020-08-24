@@ -34,23 +34,16 @@ object MetricAffectingSpan_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetUnderlying(value: () => CharacterStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUnderlying")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withUpdateDrawState(value: TextPaint => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDrawState")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetUnderlying(value: () => CharacterStyle): Self = this.set("getUnderlying", js.Any.fromFunction0(value))
     @scala.inline
-    def withUpdateMeasureState(value: TextPaint => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMeasureState")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setUpdateDrawState(value: TextPaint => Unit): Self = this.set("updateDrawState", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUpdateMeasureState(value: TextPaint => Unit): Self = this.set("updateMeasureState", js.Any.fromFunction1(value))
   }
   
 }

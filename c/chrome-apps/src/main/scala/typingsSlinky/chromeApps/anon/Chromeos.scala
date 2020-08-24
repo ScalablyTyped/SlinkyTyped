@@ -26,65 +26,30 @@ object Chromeos {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChromeos(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chromeos")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutChromeos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chromeos")(js.undefined)
-        ret
-    }
+    def setChromeos(value: String): Self = this.set("chromeos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDefault(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteChromeos: Self = this.set("chromeos", js.undefined)
     @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
+    def setDefault(value: String): Self = this.set("default", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLinux(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linux")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefault: Self = this.set("default", js.undefined)
     @scala.inline
-    def withoutLinux: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linux")(js.undefined)
-        ret
-    }
+    def setLinux(value: String): Self = this.set("linux", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMac(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mac")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLinux: Self = this.set("linux", js.undefined)
     @scala.inline
-    def withoutMac: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mac")(js.undefined)
-        ret
-    }
+    def setMac(value: String): Self = this.set("mac", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWindows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMac: Self = this.set("mac", js.undefined)
     @scala.inline
-    def withoutWindows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(js.undefined)
-        ret
-    }
+    def setWindows(value: String): Self = this.set("windows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWindows: Self = this.set("windows", js.undefined)
   }
   
 }

@@ -16,6 +16,7 @@ object timing extends js.Object {
   def back(): TimingFunction = js.native
   def back(s: Double): TimingFunction = js.native
   def clamp(f: TimingFunction): TimingFunction = js.native
+  def clamp(f: TimingFunction, min: js.UndefOr[scala.Nothing], max: Double): TimingFunction = js.native
   def clamp(f: TimingFunction, min: Double): TimingFunction = js.native
   def clamp(f: TimingFunction, min: Double, max: Double): TimingFunction = js.native
   def elastic(): TimingFunction = js.native

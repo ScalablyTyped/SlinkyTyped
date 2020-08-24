@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TransitionService protected ()
   extends typingsSlinky.uirouterCore.mod.TransitionService {
-  /** @hidden */
+  /** @internal */
   def this(_router: typingsSlinky.uirouterCore.routerMod.UIRouter) = this()
 }
 

@@ -1,7 +1,7 @@
 
 # Scala.js typings for daterangepicker
 
-Typings are for version 3.0
+Typings are for version 3.1
 
 ## Library description:
 Date range picker component for Bootstrap

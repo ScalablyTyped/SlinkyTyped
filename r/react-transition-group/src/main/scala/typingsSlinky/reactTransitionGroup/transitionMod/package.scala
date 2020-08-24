@@ -5,17 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object transitionMod {
-  type EndHandler = js.Function2[
-    /* node */ org.scalajs.dom.raw.HTMLElement, 
-    /* done */ js.Function0[scala.Unit], 
-    scala.Unit
+  type EndHandler[RefElement /* <: js.UndefOr[org.scalajs.dom.raw.HTMLElement] */] = typingsSlinky.reactTransitionGroup.transitionMod.RefHandler[
+    RefElement, 
+    js.Function2[
+      /* node */ org.scalajs.dom.raw.HTMLElement, 
+      /* done */ js.Function0[scala.Unit], 
+      scala.Unit
+    ], 
+    js.Function1[/* done */ js.Function0[scala.Unit], scala.Unit]
   ]
-  type EnterHandler = js.Function2[
-    /* node */ org.scalajs.dom.raw.HTMLElement, 
-    /* isAppearing */ scala.Boolean, 
-    scala.Unit
+  type EnterHandler[RefElement /* <: js.UndefOr[org.scalajs.dom.raw.HTMLElement] */] = typingsSlinky.reactTransitionGroup.transitionMod.RefHandler[
+    RefElement, 
+    js.Function2[
+      /* node */ org.scalajs.dom.raw.HTMLElement, 
+      /* isAppearing */ scala.Boolean, 
+      scala.Unit
+    ], 
+    js.Function1[/* isAppearing */ scala.Boolean, scala.Unit]
   ]
-  type ExitHandler = js.Function1[/* node */ org.scalajs.dom.raw.HTMLElement, scala.Unit]
+  type ExitHandler[E /* <: js.UndefOr[org.scalajs.dom.raw.HTMLElement] */] = typingsSlinky.reactTransitionGroup.transitionMod.RefHandler[
+    E, 
+    js.Function1[/* node */ org.scalajs.dom.raw.HTMLElement, scala.Unit], 
+    js.Function0[scala.Unit]
+  ]
+  type RefHandler[RefElement /* <: js.UndefOr[org.scalajs.dom.raw.HTMLElement] */, ImplicitRefHandler /* <: js.Function2[/* node */ org.scalajs.dom.raw.HTMLElement, /* repeated */ js.Any, scala.Unit] */, ExplicitRefHandler /* <: js.Function1[/* repeated */ js.Any, scala.Unit] */] = /* import warning: importer.ImportType#apply Failed type conversion: react-transition-group.anon.Explicit<ImplicitRefHandler, ExplicitRefHandler>[RefElement extends undefined ? 'implicit' : 'explicit'] */ js.Any
   /**
     * The Transition component lets you describe a transition from one component
     * state to another _over time_ with a simple declarative API. Most commonly
@@ -57,10 +70,10 @@ package object transitionMod {
     * ```
     *
     */
-  type Transition = slinky.core.ReactComponentClass[typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps]
-  type TransitionChildren = slinky.core.TagMod[scala.Any] | (js.Function1[
+  type Transition[RefElement /* <: js.UndefOr[org.scalajs.dom.raw.HTMLElement] */] = slinky.core.ReactComponentClass[typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps[RefElement]]
+  type TransitionChildren = slinky.core.facade.ReactElement | (js.Function1[
     /* status */ typingsSlinky.reactTransitionGroup.transitionMod.TransitionStatus, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ])
   type TransitionStatus = /* "entering" */ java.lang.String
 }

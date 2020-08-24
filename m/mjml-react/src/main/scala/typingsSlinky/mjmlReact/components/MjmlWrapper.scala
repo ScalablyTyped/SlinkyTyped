@@ -2,11 +2,11 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.BackgroundRepeatProperty
-import typingsSlinky.csstype.mod.BackgroundSizeProperty
-import typingsSlinky.csstype.mod.TextAlignProperty
-import typingsSlinky.csstype.mod.VerticalAlignProperty
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.BackgroundRepeat
+import typingsSlinky.csstype.mod.Property.BackgroundSize
+import typingsSlinky.csstype.mod.Property.TextAlign
+import typingsSlinky.csstype.mod.Property.VerticalAlign
 import typingsSlinky.mjmlReact.mod.BorderProps
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlWrapperProps
@@ -26,11 +26,11 @@ object MjmlWrapper {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlWrapper] {
     @scala.inline
-    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundRepeat(value: BackgroundRepeatProperty): this.type = set("backgroundRepeat", value.asInstanceOf[js.Any])
+    def backgroundRepeat(value: BackgroundRepeat): this.type = set("backgroundRepeat", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundSize(value: BackgroundSizeProperty[String | Double]): this.type = set("backgroundSize", value.asInstanceOf[js.Any])
+    def backgroundSize(value: BackgroundSize[String | Double]): this.type = set("backgroundSize", value.asInstanceOf[js.Any])
     @scala.inline
     def backgroundUrl(value: String): this.type = set("backgroundUrl", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,9 +60,9 @@ object MjmlWrapper {
     @scala.inline
     def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def textAlign(value: TextAlignProperty): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    def textAlign(value: TextAlign): this.type = set("textAlign", value.asInstanceOf[js.Any])
     @scala.inline
-    def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    def verticalAlign(value: VerticalAlign[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
   
   def withProps(

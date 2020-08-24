@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobile
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -27,7 +26,7 @@ object listViewPropsTypeMod extends js.Object {
     var onScroll: js.UndefOr[js.Function1[/* e */ js.UndefOr[js.Any], Unit]] = js.native
     var pageSize: js.UndefOr[Double] = js.native
     var prefixCls: js.UndefOr[String] = js.native
-    var pullToRefresh: js.UndefOr[TagMod[Any]] = js.native
+    var pullToRefresh: js.UndefOr[ReactElement] = js.native
     var renderBodyComponent: js.UndefOr[js.Function0[ReactElement]] = js.native
     var renderFooter: js.UndefOr[js.Function0[ReactElement]] = js.native
     var renderHeader: js.UndefOr[js.Function0[ReactElement]] = js.native

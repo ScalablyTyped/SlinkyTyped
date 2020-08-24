@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object KeyPhraseExtractionIcon {
-  @JSImport("@fluentui/react-icons/lib/components/KeyPhraseExtractionIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "KeyPhraseExtractionIcon")
   @js.native
   object component extends js.Object
   

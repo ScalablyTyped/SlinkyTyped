@@ -47,65 +47,30 @@ object MountOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFileSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpenedFilesLimit(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedFilesLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFileSystemId(value: String): Self = this.set("fileSystemId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOpenedFilesLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedFilesLimit")(js.undefined)
-        ret
-    }
+    def setOpenedFilesLimit(value: integer): Self = this.set("openedFilesLimit", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPersistent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOpenedFilesLimit: Self = this.set("openedFilesLimit", js.undefined)
     @scala.inline
-    def withoutPersistent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(js.undefined)
-        ret
-    }
+    def setPersistent(value: Boolean): Self = this.set("persistent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSupportsNotifyTag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNotifyTag")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePersistent: Self = this.set("persistent", js.undefined)
     @scala.inline
-    def withoutSupportsNotifyTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNotifyTag")(js.undefined)
-        ret
-    }
+    def setSupportsNotifyTag(value: Boolean): Self = this.set("supportsNotifyTag", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWritable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSupportsNotifyTag: Self = this.set("supportsNotifyTag", js.undefined)
     @scala.inline
-    def withoutWritable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(js.undefined)
-        ret
-    }
+    def setWritable(value: Boolean): Self = this.set("writable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWritable: Self = this.set("writable", js.undefined)
   }
   
 }

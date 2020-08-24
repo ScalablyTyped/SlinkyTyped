@@ -28,41 +28,22 @@ object Matrix {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withA(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withB(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setA(value: Double): Self = this.set("a", value.asInstanceOf[js.Any])
     @scala.inline
-    def withC(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("c")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setB(value: Double): Self = this.set("b", value.asInstanceOf[js.Any])
     @scala.inline
-    def withD(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setC(value: Double): Self = this.set("c", value.asInstanceOf[js.Any])
     @scala.inline
-    def withE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setD(value: Double): Self = this.set("d", value.asInstanceOf[js.Any])
     @scala.inline
-    def withF(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setE(value: Double): Self = this.set("e", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setF(value: Double): Self = this.set("f", value.asInstanceOf[js.Any])
   }
   
 }

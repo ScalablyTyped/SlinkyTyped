@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("GoToLastDataRecordCommand")
 @js.native
 class GoToLastDataRecordCommand ()
-  extends typingsSlinky.devexpressWeb.GoToLastDataRecordCommand {
-  /**
-    * Executes the GoToLastDataRecordCommand command.
-    */
-  /* CompleteClass */
-  override def execute(): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.GoToLastDataRecordCommand
 

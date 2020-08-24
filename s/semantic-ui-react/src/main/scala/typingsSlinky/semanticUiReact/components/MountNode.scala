@@ -4,21 +4,20 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.semanticUiReact.mountNodeMod.default
 import typingsSlinky.semanticUiReact.mountNodeMountNodeMod.MountNodeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MountNode {
-  @JSImport("semantic-ui-react/dist/commonjs/addons/MountNode", JSImport.Default)
+  @JSImport("semantic-ui-react", "MountNode")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.MountNode] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

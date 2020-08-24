@@ -1,9 +1,9 @@
 package typingsSlinky.typedoc
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.typedoc.componentsMod.ConverterNodeComponent
 import typingsSlinky.typedoc.contextMod.Context
 import typingsSlinky.typedoc.modelsMod.Reflection
+import typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode
 import typingsSlinky.typescript.mod.Block
 import typingsSlinky.typescript.mod.ModuleBlock
 import typingsSlinky.typescript.mod.SourceFile
@@ -22,27 +22,6 @@ object blockMod extends js.Object {
     def convert(context: Context, node: Block): Reflection = js.native
     def convert(context: Context, node: ModuleBlock): Reflection = js.native
     def convert(context: Context, node: SourceFile): Reflection = js.native
-  }
-  
-  @js.native
-  sealed trait SourceFileMode extends js.Object
-  
-  @js.native
-  object SourceFileMode extends js.Object {
-    @js.native
-    sealed trait File extends SourceFileMode
-    
-    @js.native
-    sealed trait Modules extends SourceFileMode
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[SourceFileMode with Double] = js.native
-    /* 0 */ @js.native
-    object File extends TopLevel[File with Double]
-    
-    /* 1 */ @js.native
-    object Modules extends TopLevel[Modules with Double]
-    
   }
   
 }

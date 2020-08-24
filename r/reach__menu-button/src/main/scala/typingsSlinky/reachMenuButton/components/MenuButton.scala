@@ -68,7 +68,8 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.react.mod.KeyboardEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,7 +82,7 @@ object MenuButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLButtonElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -259,6 +260,8 @@ object MenuButton {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -389,8 +392,6 @@ object MenuButton {
     @scala.inline
     def onChange(value: SyntheticEvent[EventTarget with HTMLButtonElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClick(value: /* e */ SyntheticMouseEvent[HTMLButtonElement | HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
-    @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLButtonElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
     def onCompositionStart(value: SyntheticCompositionEvent[HTMLButtonElement] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
@@ -436,8 +437,6 @@ object MenuButton {
     def onInput(value: SyntheticEvent[EventTarget with HTMLButtonElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
     def onInvalid(value: SyntheticEvent[EventTarget with HTMLButtonElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
-    @scala.inline
-    def onKeyDown(value: /* e */ SyntheticKeyboardEvent[HTMLButtonElement | HTMLElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyPress(value: SyntheticKeyboardEvent[HTMLButtonElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     @scala.inline
@@ -627,6 +626,8 @@ object MenuButton {
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -639,6 +640,13 @@ object MenuButton {
   }
   
   def withProps(p: MenuButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MenuButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(
+    onClick: (js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLButtonElement]],
+    onKeyDown: (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLElement], Unit]]) with js.UndefOr[KeyboardEventHandler[HTMLButtonElement]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onClick = onClick.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MenuButtonProps]))
+  }
 }
 

@@ -81,7 +81,23 @@ object tableQuadrantMod extends js.Object {
       * A callback that renders either all of or just frozen sections of the table body.
       */
     def bodyRenderer(): ReactElement = js.native
+    def bodyRenderer(
+      quadrantType: js.UndefOr[scala.Nothing],
+      showFrozenRowsOnly: js.UndefOr[scala.Nothing],
+      showFrozenColumnsOnly: Boolean
+    ): ReactElement = js.native
+    def bodyRenderer(quadrantType: js.UndefOr[scala.Nothing], showFrozenRowsOnly: Boolean): ReactElement = js.native
+    def bodyRenderer(
+      quadrantType: js.UndefOr[scala.Nothing],
+      showFrozenRowsOnly: Boolean,
+      showFrozenColumnsOnly: Boolean
+    ): ReactElement = js.native
     def bodyRenderer(quadrantType: QuadrantType): ReactElement = js.native
+    def bodyRenderer(
+      quadrantType: QuadrantType,
+      showFrozenRowsOnly: js.UndefOr[scala.Nothing],
+      showFrozenColumnsOnly: Boolean
+    ): ReactElement = js.native
     def bodyRenderer(quadrantType: QuadrantType, showFrozenRowsOnly: Boolean): ReactElement = js.native
     def bodyRenderer(quadrantType: QuadrantType, showFrozenRowsOnly: Boolean, showFrozenColumnsOnly: Boolean): ReactElement = js.native
   }
@@ -141,7 +157,7 @@ object tableQuadrantMod extends js.Object {
   /* static members */
   @js.native
   object TableQuadrant extends js.Object {
-    var defaultProps: PartialITableQuadrantProp with js.Object = js.native
+    var defaultProps: PartialITableQuadrantProp = js.native
   }
   
 }

@@ -20,7 +20,7 @@ object JssProvider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactJss.mod.JssProvider] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def classNamePrefix(value: String): this.type = set("classNamePrefix", value.asInstanceOf[js.Any])
     @scala.inline

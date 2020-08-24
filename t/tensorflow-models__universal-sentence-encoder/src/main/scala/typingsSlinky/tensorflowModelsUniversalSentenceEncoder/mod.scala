@@ -1,6 +1,7 @@
 package typingsSlinky.tensorflowModelsUniversalSentenceEncoder
 
 import typingsSlinky.tensorflowModelsUniversalSentenceEncoder.tokenizerMod.Vocabulary
+import typingsSlinky.tensorflowModelsUniversalSentenceEncoder.useQnaMod.UniversalSentenceEncoderQnA
 import typingsSlinky.tensorflowTfjsConverter.mod.GraphModel
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
 import scala.scalajs.js
@@ -14,6 +15,7 @@ object mod extends js.Object {
   class Tokenizer protected ()
     extends typingsSlinky.tensorflowModelsUniversalSentenceEncoder.tokenizerMod.Tokenizer {
     def this(vocabulary: Vocabulary) = this()
+    def this(vocabulary: Vocabulary, reservedSymbolsCount: Double) = this()
   }
   
   @js.native
@@ -21,13 +23,20 @@ object mod extends js.Object {
     var model: js.Any = js.native
     var tokenizer: js.Any = js.native
     def embed(inputs: String): js.Promise[Tensor2D] = js.native
+    /**
+      *
+      * Returns a 2D Tensor of shape [input.length, 512] that contains the
+      * Universal Sentence Encoder embeddings for each input.
+      *
+      * @param inputs A string or an array of strings to embed.
+      */
     def embed(inputs: js.Array[String]): js.Promise[Tensor2D] = js.native
     def load(): js.Promise[Unit] = js.native
     def loadModel(): js.Promise[GraphModel] = js.native
   }
   
+  val version: /* "1.3.0" */ String = js.native
   def load(): js.Promise[UniversalSentenceEncoder] = js.native
-  def loadTokenizer(): js.Promise[typingsSlinky.tensorflowModelsUniversalSentenceEncoder.tokenizerMod.Tokenizer] = js.native
-  def loadTokenizer(pathToVocabulary: String): js.Promise[typingsSlinky.tensorflowModelsUniversalSentenceEncoder.tokenizerMod.Tokenizer] = js.native
+  def loadQnA(): js.Promise[UniversalSentenceEncoderQnA] = js.native
 }
 

@@ -26,6 +26,8 @@ object Toast {
     @scala.inline
     def icon(value: `arrow-circle-forward`): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
+    def textVarargs(value: String*): this.type = set("text", js.Array(value :_*))
+    @scala.inline
     def text(value: String | js.Array[String]): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def thumbnail(value: ReactElement): this.type = set("thumbnail", value.asInstanceOf[js.Any])

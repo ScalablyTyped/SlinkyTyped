@@ -15,21 +15,5 @@ class ConeTwistConstraint protected ()
     bodyB: typingsSlinky.cannon.CANNON.Body,
     options: IConeTwistConstraintOptions
   ) = this()
-  /* CompleteClass */
-  override var bodyA: typingsSlinky.cannon.CANNON.Body = js.native
-  /* CompleteClass */
-  override var bodyB: typingsSlinky.cannon.CANNON.Body = js.native
-  /* CompleteClass */
-  override var collideConnected: Boolean = js.native
-  /* CompleteClass */
-  override var equations: js.Array[_] = js.native
-  /* CompleteClass */
-  override var id: Double = js.native
-  /* CompleteClass */
-  override def disable(): Unit = js.native
-  /* CompleteClass */
-  override def enable(): Unit = js.native
-  /* CompleteClass */
-  override def update(): Unit = js.native
 }
 

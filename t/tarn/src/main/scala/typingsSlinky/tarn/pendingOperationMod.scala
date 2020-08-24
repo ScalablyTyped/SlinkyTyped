@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("tarn/lib/PendingOperation", JSImport.Namespace)
+@JSImport("tarn/dist/PendingOperation", JSImport.Namespace)
 @js.native
 object pendingOperationMod extends js.Object {
   @js.native
   class PendingOperation[T] protected () extends js.Object {
     def this(timeoutMillis: Double) = this()
     var deferred: Deferred[T] = js.native
+    var isRejected: Boolean = js.native
     var possibleTimeoutCause: js.Error | Null = js.native
     var promise: js.Promise[T] = js.native
     var timeoutMillis: Double = js.native

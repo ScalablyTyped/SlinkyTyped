@@ -28,15 +28,15 @@ trait Dom extends js.Object {
   /**
     * The global DOM Element type.
     */
-  var Element: InstantiableElement with Instantiable0[typingsSlinky.std.global.Element] = js.native
+  var Element: InstantiableElement with Instantiable0[org.scalajs.dom.raw.Element] = js.native
   /**
     * The global DOM NodeList type.
     */
-  var NodeList: InstantiableNodeList with Instantiable0[typingsSlinky.std.global.NodeList] = js.native
+  var NodeList: InstantiableNodeList with Instantiable0[org.scalajs.dom.raw.NodeList] = js.native
   /**
     * The global DOM SVGElement type.
     */
-  var SVGElement: InstantiableSVGElement with Instantiable0[typingsSlinky.std.global.SVGElement] = js.native
+  var SVGElement: InstantiableSVGElement with Instantiable0[org.scalajs.dom.raw.SVGElement] = js.native
   /**
     * The document's active/focused element.
     */
@@ -150,7 +150,16 @@ trait Dom extends js.Object {
     * @return The Style node that was created.
     */
   def injectStyles(styles: String): Node = js.native
+  def injectStyles(
+    styles: String,
+    destination: js.UndefOr[scala.Nothing],
+    prepend: js.UndefOr[scala.Nothing],
+    id: String
+  ): Node = js.native
+  def injectStyles(styles: String, destination: js.UndefOr[scala.Nothing], prepend: Boolean): Node = js.native
+  def injectStyles(styles: String, destination: js.UndefOr[scala.Nothing], prepend: Boolean, id: String): Node = js.native
   def injectStyles(styles: String, destination: Element): Node = js.native
+  def injectStyles(styles: String, destination: Element, prepend: js.UndefOr[scala.Nothing], id: String): Node = js.native
   def injectStyles(styles: String, destination: Element, prepend: Boolean): Node = js.native
   def injectStyles(styles: String, destination: Element, prepend: Boolean, id: String): Node = js.native
   /**

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "import-fresh"
-version := "3.2.1-afc46a"
-scalaVersion := "2.13.2"
+version := "3.2.1-b4e0bd"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

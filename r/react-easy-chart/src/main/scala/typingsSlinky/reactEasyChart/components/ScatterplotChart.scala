@@ -31,6 +31,8 @@ object ScatterplotChart {
     @scala.inline
     def clickHandler(value: (/* data */ ScatterplotData, /* mouseEvent */ MouseEvent) => _): this.type = set("clickHandler", js.Any.fromFunction2(value))
     @scala.inline
+    def configVarargs(value: Stroke*): this.type = set("config", js.Array(value :_*))
+    @scala.inline
     def config(value: js.Array[Stroke]): this.type = set("config", value.asInstanceOf[js.Any])
     @scala.inline
     def dotRadius(value: Double): this.type = set("dotRadius", value.asInstanceOf[js.Any])
@@ -51,11 +53,15 @@ object ScatterplotChart {
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
+    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
+    @scala.inline
     def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
     @scala.inline
     def xType(value: time | text | linear): this.type = set("xType", value.asInstanceOf[js.Any])
     @scala.inline
     def yAxisOrientRight(value: Boolean): this.type = set("yAxisOrientRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("yDomainRange", js.Array(value :_*))
     @scala.inline
     def yDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
     @scala.inline

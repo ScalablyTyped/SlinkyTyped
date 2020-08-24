@@ -1,6 +1,6 @@
 package typingsSlinky.spectacle.components
 
-import typingsSlinky.spectacle.mod.ListProps
+import typingsSlinky.spectacle.mod.TypographyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ object ListItem {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ListProps): SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.ListItem] = new SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.ListItem](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ListItem.type): SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.ListItem] = new SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.ListItem](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: TypographyProps): SharedBuilder_TypographyProps_1522227064 = new SharedBuilder_TypographyProps_1522227064(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListItem.type): SharedBuilder_TypographyProps_1522227064 = new SharedBuilder_TypographyProps_1522227064(js.Array(this.component, js.Dictionary.empty))()
 }
 

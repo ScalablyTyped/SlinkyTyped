@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "carbon__themes"
-version := "0.0-dt-20190206Z-d7051b"
-scalaVersion := "2.13.2"
+version := "0.0-dt-20190206Z-eb8123"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

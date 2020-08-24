@@ -1,10 +1,11 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdBooleans.`false`
+import typingsSlinky.antd.listItemMod.ListItemMetaProps
+import typingsSlinky.antd.listItemMod.ListItemProps
 import typingsSlinky.antd.listMod.ListGridType
 import typingsSlinky.antd.listMod.ListItemLayout
 import typingsSlinky.antd.listMod.ListLocale
@@ -18,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object List {
-  @JSImport("antd/lib/list", JSImport.Default)
+  @JSImport("antd", "List")
   @js.native
   object component extends js.Object
   
@@ -31,21 +32,23 @@ object List {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataSourceVarargs(value: T*): this.type = set("dataSource", js.Array(value :_*))
+    @scala.inline
     def dataSource(value: js.Array[T]): this.type = set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def grid(value: ListGridType): this.type = set("grid", value.asInstanceOf[js.Any])
     @scala.inline
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def header(value: TagMod[Any]): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +56,7 @@ object List {
     @scala.inline
     def loadMoreReactElement(value: ReactElement): this.type = set("loadMore", value.asInstanceOf[js.Any])
     @scala.inline
-    def loadMore(value: TagMod[Any]): this.type = set("loadMore", value.asInstanceOf[js.Any])
+    def loadMore(value: ReactElement): this.type = set("loadMore", value.asInstanceOf[js.Any])
     @scala.inline
     def loading(value: Boolean | SpinProps): this.type = set("loading", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,7 +66,7 @@ object List {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderItem(value: (T, /* index */ Double) => TagMod[Any]): this.type = set("renderItem", js.Any.fromFunction2(value))
+    def renderItem(value: (T, /* index */ Double) => ReactElement): this.type = set("renderItem", js.Any.fromFunction2(value))
     @scala.inline
     def rowKeyFunction1(value: T => String): this.type = set("rowKey", js.Any.fromFunction1(value))
     @scala.inline
@@ -83,5 +86,23 @@ object List {
     new Builder[T](js.Array(this.component, __props.asInstanceOf[ListProps[T]]))
   }
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("antd", "List.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ListItemProps): SharedBuilder_ListItemProps_1246570549 = new SharedBuilder_ListItemProps_1246570549(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_ListItemProps_1246570549 = new SharedBuilder_ListItemProps_1246570549(js.Array(this.component, js.Dictionary.empty))()
+    object Meta {
+      @JSImport("antd", "List.Item.Meta")
+      @js.native
+      object component extends js.Object
+      
+      def withProps(p: ListItemMetaProps): SharedBuilder_ListItemMetaProps1028006195 = new SharedBuilder_ListItemMetaProps1028006195(js.Array(this.component, p.asInstanceOf[js.Any]))
+      implicit def make(companion: Meta.type): SharedBuilder_ListItemMetaProps1028006195 = new SharedBuilder_ListItemMetaProps1028006195(js.Array(this.component, js.Dictionary.empty))()
+    }
+    
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "symlink-or-copy"
-version := "1.2-dt-20200518Z-ff96c2"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20200518Z-72ddcd"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

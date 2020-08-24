@@ -43,6 +43,8 @@ object TreeTable {
     @scala.inline
     def expandedKeys(value: js.Any): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
+    def filterLocale(value: String): this.type = set("filterLocale", value.asInstanceOf[js.Any])
+    @scala.inline
     def filterMode(value: String): this.type = set("filterMode", value.asInstanceOf[js.Any])
     @scala.inline
     def filters(value: js.Object): this.type = set("filters", value.asInstanceOf[js.Any])
@@ -74,6 +76,8 @@ object TreeTable {
     def loadingIcon(value: String): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def metaKeySelection(value: Boolean): this.type = set("metaKeySelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiSortMetaVarargs(value: js.Any*): this.type = set("multiSortMeta", js.Array(value :_*))
     @scala.inline
     def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
     @scala.inline
@@ -129,6 +133,8 @@ object TreeTable {
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     @scala.inline
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
+    @scala.inline
     def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
@@ -154,6 +160,8 @@ object TreeTable {
     def tableStyle(value: js.Object): this.type = set("tableStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: TreeNode*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[TreeNode]): this.type = set("value", value.asInstanceOf[js.Any])
   }

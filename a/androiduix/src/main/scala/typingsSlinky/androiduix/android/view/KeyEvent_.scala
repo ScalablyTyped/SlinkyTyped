@@ -21,6 +21,7 @@ trait KeyEvent_ extends js.Object {
   var mMetaKey: js.Any = js.native
   var mShiftKey: js.Any = js.native
   def dispatch(receiver: Callback): Boolean = js.native
+  def dispatch(receiver: Callback, state: js.UndefOr[scala.Nothing], target: js.Any): Boolean = js.native
   def dispatch(receiver: Callback, state: DispatcherState): Boolean = js.native
   def dispatch(receiver: Callback, state: DispatcherState, target: js.Any): Boolean = js.native
   def getAction(): Double = js.native

@@ -4,14 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Exclude<rc-picker.rc-picker/lib/interface.PanelMode, 'datetime' | 'decade'> */
+/* Inlined std.Exclude<rc-picker.rc-picker/es/interface.PanelMode, 'datetime' | 'decade'> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.rcPicker.rcPickerStrings.month
   - typingsSlinky.rcPicker.rcPickerStrings.date
-  - typingsSlinky.rcPicker.rcPickerStrings.quarter
-  - typingsSlinky.rcPicker.rcPickerStrings.year
-  - typingsSlinky.rcPicker.rcPickerStrings.week
   - typingsSlinky.rcPicker.rcPickerStrings.time
+  - typingsSlinky.rcPicker.rcPickerStrings.quarter
+  - typingsSlinky.rcPicker.rcPickerStrings.week
+  - typingsSlinky.rcPicker.rcPickerStrings.year
+  - typingsSlinky.rcPicker.rcPickerStrings.month
 */
 trait PickerMode extends js.Object
 

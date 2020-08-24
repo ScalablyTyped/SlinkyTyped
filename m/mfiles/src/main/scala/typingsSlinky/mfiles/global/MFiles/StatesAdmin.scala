@@ -1,7 +1,6 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IStateAdmin
 import typingsSlinky.mfiles.IStatesAdmin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.StatesAdmin")
 @js.native
-class StatesAdmin () extends IStatesAdmin {
-  /* CompleteClass */
-  override val Count: Double = js.native
-  /* CompleteClass */
-  override def Add(Index: Double, StateAdmin: IStateAdmin): Unit = js.native
-  /* CompleteClass */
-  override def Item(Index: Double): IStateAdmin = js.native
-  /* CompleteClass */
-  override def Remove(Index: Double): Unit = js.native
-}
+class StatesAdmin () extends IStatesAdmin
 
 @JSGlobal("MFiles.StatesAdmin")
 @js.native

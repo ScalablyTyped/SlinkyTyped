@@ -1,12 +1,13 @@
 package typingsSlinky.spectacle.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.spectacle.anon.ChildrenReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("spectacle", "Notes")
 @js.native
-class Notes ()
-  extends Component[BaseProps, js.Object, js.Any]
+object Notes extends TopLevel[ReactComponentClass[ChildrenReactNode]]
 

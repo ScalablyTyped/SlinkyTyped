@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -77,7 +76,6 @@ import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.wordpressComponentsBooleans.`false`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.container
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.firstElement
-import typingsSlinky.wordpressEditor.mod.URLPopover.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,7 +88,7 @@ object URLPopover {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, HTMLDivElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -104,7 +102,7 @@ object URLPopover {
     @scala.inline
     def additionalControlsReactElement(value: ReactElement): this.type = set("additionalControls", value.asInstanceOf[js.Any])
     @scala.inline
-    def additionalControls(value: TagMod[Any]): this.type = set("additionalControls", value.asInstanceOf[js.Any])
+    def additionalControls(value: ReactElement): this.type = set("additionalControls", value.asInstanceOf[js.Any])
     @scala.inline
     def allowFullScreen(value: Boolean): this.type = set("allowFullScreen", value.asInstanceOf[js.Any])
     @scala.inline
@@ -277,6 +275,8 @@ object URLPopover {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -665,6 +665,8 @@ object URLPopover {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

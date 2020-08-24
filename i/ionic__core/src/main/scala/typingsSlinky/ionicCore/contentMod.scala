@@ -6,8 +6,8 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonContentElement
 import typingsSlinky.ionicCore.contentInterfaceMod.ScrollBaseDetail
 import typingsSlinky.ionicCore.contentInterfaceMod.ScrollDetail
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,6 @@ object contentMod extends js.Object {
     var ionScrollStart: EventEmitter[ScrollBaseDetail] = js.native
     var isScrolling: js.Any = js.native
     var lastScroll: js.Any = js.native
-    var mode: js.Any = js.native
     var onScroll: js.Any = js.native
     var onScrollEnd: js.Any = js.native
     var onScrollStart: js.Any = js.native
@@ -77,8 +76,6 @@ object contentMod extends js.Object {
     var scrollY: Boolean = js.native
     var shouldForceOverscroll: js.Any = js.native
     var watchDog: js.Any = js.native
-    @JSName("componentDidLoad")
-    def componentDidLoad_MContent(): Unit = js.native
     @JSName("disconnectedCallback")
     def disconnectedCallback_MContent(): Unit = js.native
     /**
@@ -90,6 +87,7 @@ object contentMod extends js.Object {
       * and `scrollToPoint()` to scroll the content into a certain point.
       */
     def getScrollElement(): js.Promise[HTMLElement] = js.native
+    def onAppLoad(): Unit = js.native
     def onClick(ev: Event): Unit = js.native
     @JSName("render")
     def render_MContent(): js.Any = js.native
@@ -116,10 +114,16 @@ object contentMod extends js.Object {
       * @param duration The amount of time to take scrolling to that point. Defaults to `0`.
       */
     def scrollToPoint(): js.Promise[Unit] = js.native
+    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], duration: Double): js.Promise[Unit] = js.native
+    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: Double): js.Promise[Unit] = js.native
+    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: Double, duration: Double): js.Promise[Unit] = js.native
+    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: Null, duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double): js.Promise[Unit] = js.native
+    def scrollToPoint(x: Double, y: js.UndefOr[scala.Nothing], duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double, y: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double, y: Double, duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double, y: Null, duration: Double): js.Promise[Unit] = js.native
+    def scrollToPoint(x: Null, y: js.UndefOr[scala.Nothing], duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Null, y: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Null, y: Double, duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Null, y: Null, duration: Double): js.Promise[Unit] = js.native

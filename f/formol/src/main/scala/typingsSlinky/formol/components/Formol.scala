@@ -2,12 +2,10 @@ package typingsSlinky.formol.components
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Event
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.formol.formolStrings.FormolProps
-import typingsSlinky.formol.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +18,7 @@ object Formol {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def allowUnmodifiedSubmit(value: js.Any): this.type = set("allowUnmodifiedSubmit", value.asInstanceOf[js.Any])
     @scala.inline
@@ -32,7 +30,7 @@ object Formol {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def i18n(value: js.Any): this.type = set("i18n", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,6 +43,8 @@ object Formol {
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
     def submitText(value: js.Any): this.type = set("submitText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typesVarargs(value: String*): this.type = set("types", js.Array(value :_*))
     @scala.inline
     def types(value: js.Array[String]): this.type = set("types", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,11 +1,5 @@
 package typingsSlinky.divaJs.documentLayoutMod
 
-import typingsSlinky.divaJs.anon.X
-import typingsSlinky.divaJs.interfacesMod.Dimensions
-import typingsSlinky.divaJs.interfacesMod.Offset
-import typingsSlinky.divaJs.interfacesMod.PageGroup
-import typingsSlinky.divaJs.interfacesMod.PageInfo
-import typingsSlinky.divaJs.interfacesMod.Region
 import typingsSlinky.divaJs.interfacesMod.RendererConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,19 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends DocumentLayout {
   def this(config: RendererConfig, zoomLevel: Double) = this()
-  /* CompleteClass */
-  override var dimensions: Dimensions = js.native
-  /* CompleteClass */
-  override var pageGroups: js.Array[PageGroup] = js.native
-  /* CompleteClass */
-  override def getPageDimensions(pageIndex: Double): Dimensions = js.native
-  /* CompleteClass */
-  override def getPageInfo(pageIndex: Double): PageInfo | Null = js.native
-  /* CompleteClass */
-  override def getPageOffset(pageIndex: Double, options: js.Object): Offset = js.native
-  /* CompleteClass */
-  override def getPageRegion(pageIndex: Double, options: js.Object): Offset = js.native
-  /* CompleteClass */
-  override def getPageToViewportCenterOffset(pageIndex: Double, viewport: Region): X = js.native
 }
 

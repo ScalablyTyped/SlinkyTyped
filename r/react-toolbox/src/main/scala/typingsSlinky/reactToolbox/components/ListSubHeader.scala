@@ -3,21 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.listListSubHeaderMod.ListSubHeaderProps
-import typingsSlinky.reactToolbox.listListSubHeaderMod.ListSubHeaderTheme
+import typingsSlinky.reactToolbox.listSubHeaderMod.ListSubHeaderProps
+import typingsSlinky.reactToolbox.listSubHeaderMod.ListSubHeaderTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListSubHeader {
-  @JSImport("react-toolbox", "ListSubHeader")
+  @JSImport("react-toolbox/components/list", "ListSubHeader")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.ListSubHeader] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.listMod.ListSubHeader] {
     @scala.inline
     def caption(value: String): this.type = set("caption", value.asInstanceOf[js.Any])
     @scala.inline

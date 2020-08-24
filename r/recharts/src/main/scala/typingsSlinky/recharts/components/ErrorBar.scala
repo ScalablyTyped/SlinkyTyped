@@ -19,6 +19,8 @@ object ErrorBar {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.ErrorBar] {
     @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def dataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => ErrorVal): this.type = set("dataPointFormatter", js.Any.fromFunction2(value))

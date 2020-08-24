@@ -26,6 +26,11 @@ class ChaptersButtonCls protected ()
   def this(player: typingsSlinky.videoJs.mod.videojs.Player, options: TrackButtonOptions) = this()
   def this(
     player: typingsSlinky.videoJs.mod.videojs.Player,
+    options: js.UndefOr[scala.Nothing],
+    ready: ReadyCallback
+  ) = this()
+  def this(
+    player: typingsSlinky.videoJs.mod.videojs.Player,
     options: TrackButtonOptions,
     ready: ReadyCallback
   ) = this()

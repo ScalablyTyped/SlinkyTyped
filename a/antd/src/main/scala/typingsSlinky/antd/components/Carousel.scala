@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -11,21 +10,20 @@ import typingsSlinky.antd.anon.ClassName
 import typingsSlinky.antd.carouselMod.CarouselEffect
 import typingsSlinky.antd.carouselMod.CarouselProps
 import typingsSlinky.antd.carouselMod.DotPosition
-import typingsSlinky.antd.carouselMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Carousel {
-  @JSImport("antd/lib/carousel", JSImport.Default)
+  @JSImport("antd", "Carousel")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Carousel] {
     @scala.inline
     def accessibility(value: Boolean): this.type = set("accessibility", value.asInstanceOf[js.Any])
     @scala.inline
@@ -33,7 +31,7 @@ object Carousel {
     @scala.inline
     def afterChange(value: /* currentSlide */ Double => Unit): this.type = set("afterChange", js.Any.fromFunction1(value))
     @scala.inline
-    def appendDots(value: /* dots */ TagMod[Any] => ReactElement): this.type = set("appendDots", js.Any.fromFunction1(value))
+    def appendDots(value: /* dots */ ReactElement => ReactElement): this.type = set("appendDots", js.Any.fromFunction1(value))
     @scala.inline
     def arrows(value: Boolean): this.type = set("arrows", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,6 +96,8 @@ object Carousel {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def prevArrow(value: ReactElement): this.type = set("prevArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responsiveVarargs(value: ResponsiveObject*): this.type = set("responsive", js.Array(value :_*))
     @scala.inline
     def responsive(value: js.Array[ResponsiveObject]): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

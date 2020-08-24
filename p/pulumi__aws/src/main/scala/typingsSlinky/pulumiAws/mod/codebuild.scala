@@ -68,8 +68,10 @@ object codebuild extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.projectMod.Project = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.projectMod.Project = js.native
     def get(name: String, id: Input[ID], state: ProjectState): typingsSlinky.pulumiAws.projectMod.Project = js.native
     def get(name: String, id: Input[ID], state: ProjectState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.projectMod.Project = js.native
     /**
@@ -89,8 +91,10 @@ object codebuild extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
     def get(name: String, id: Input[ID], state: SourceCredentialState): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
     def get(name: String, id: Input[ID], state: SourceCredentialState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
     /**
@@ -110,8 +114,10 @@ object codebuild extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
     def get(name: String, id: Input[ID], state: WebhookState): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
     def get(name: String, id: Input[ID], state: WebhookState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
     /**

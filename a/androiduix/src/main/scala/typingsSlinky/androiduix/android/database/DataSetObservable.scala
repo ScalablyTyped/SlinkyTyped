@@ -31,17 +31,14 @@ object DataSetObservable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNotifyChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyChanged")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withNotifyInvalidated(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyInvalidated")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setNotifyChanged(value: () => Unit): Self = this.set("notifyChanged", js.Any.fromFunction0(value))
+    @scala.inline
+    def setNotifyInvalidated(value: () => Unit): Self = this.set("notifyInvalidated", js.Any.fromFunction0(value))
   }
   
 }

@@ -50,6 +50,8 @@ object ReactGridLayout {
     @scala.inline
     def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
     @scala.inline
+    def layoutVarargs(value: Layout*): this.type = set("layout", js.Array(value :_*))
+    @scala.inline
     def layout(value: js.Array[Layout]): this.type = set("layout", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: js.Tuple2[Double, Double]): this.type = set("margin", value.asInstanceOf[js.Any])

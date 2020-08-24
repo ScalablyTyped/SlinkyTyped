@@ -39,6 +39,8 @@ object Tree {
     @scala.inline
     def filterBy(value: js.Any): this.type = set("filterBy", value.asInstanceOf[js.Any])
     @scala.inline
+    def filterLocale(value: String): this.type = set("filterLocale", value.asInstanceOf[js.Any])
+    @scala.inline
     def filterMode(value: String): this.type = set("filterMode", value.asInstanceOf[js.Any])
     @scala.inline
     def filterPlaceholder(value: String): this.type = set("filterPlaceholder", value.asInstanceOf[js.Any])
@@ -80,6 +82,8 @@ object Tree {
     def selectionMode(value: String): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: TreeNode*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[TreeNode]): this.type = set("value", value.asInstanceOf[js.Any])
   }

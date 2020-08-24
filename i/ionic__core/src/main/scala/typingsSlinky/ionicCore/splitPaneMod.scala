@@ -2,8 +2,8 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.anon.Visible
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,6 @@ object splitPaneMod extends js.Object {
   class SplitPane () extends ComponentInterface {
     /**
       * The content `id` of the split-pane's main content.
-      * This property can be used instead of the `[main]` attribute to select the `main`
-      * content of the split-pane.
       */
     var contentId: js.UndefOr[String] = js.native
     /**
@@ -38,8 +36,6 @@ object splitPaneMod extends js.Object {
       * Can also be a boolean expression.
       */
     var when: String | Boolean = js.native
-    @JSName("componentWillLoad")
-    def componentWillLoad_MSplitPane(): Unit = js.native
     @JSName("connectedCallback")
     def connectedCallback_MSplitPane(): Unit = js.native
     @JSName("disconnectedCallback")

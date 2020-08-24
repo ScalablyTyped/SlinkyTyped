@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail")
 @js.native
 abstract class ToastNotificationHistoryChangedTriggerDetail ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail {
-  /** Gets a value representing the kind of change that caused the toast history changed trigger. */
-  /* CompleteClass */
-  override var changeType: typingsSlinky.winrtUwp.Windows.UI.Notifications.ToastHistoryChangedType = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail
 

@@ -29,7 +29,7 @@ object libUrlMod extends js.Object {
   @js.native
   class UrlConfig protected ()
     extends typingsSlinky.uirouterCore.urlConfigMod.UrlConfig {
-    /** @hidden */ def this(/** @hidden */ router: UIRouter) = this()
+    /** @internal */ def this(/** @internal */ router: UIRouter) = this()
   }
   
   @js.native
@@ -57,14 +57,14 @@ object libUrlMod extends js.Object {
   @js.native
   class UrlMatcherFactory protected ()
     extends typingsSlinky.uirouterCore.urlMatcherFactoryMod.UrlMatcherFactory {
-    def this(/** @hidden */ router: UIRouter) = this()
+    def this(/** @internal */ router: UIRouter) = this()
   }
   
   @js.native
   class UrlRouter protected ()
     extends typingsSlinky.uirouterCore.urlRouterMod.UrlRouter {
-    /** @hidden */
-    def this(/** @hidden */ router: UIRouter) = this()
+    /** @internal */
+    def this(/** @internal */ router: UIRouter) = this()
   }
   
   @js.native
@@ -76,21 +76,21 @@ object libUrlMod extends js.Object {
   @js.native
   class UrlRules protected ()
     extends typingsSlinky.uirouterCore.urlRulesMod.UrlRules {
-    /** @hidden */
-    def this(/** @hidden */ router: UIRouter) = this()
+    /** @internal */
+    def this(/** @internal */ router: UIRouter) = this()
   }
   
   @js.native
   class UrlService protected ()
     extends typingsSlinky.uirouterCore.urlServiceMod.UrlService {
-    /** @hidden */
-    def this(/** @hidden */ router: UIRouter) = this()
+    /** @internal */
+    def this(/** @internal */ router: UIRouter) = this()
   }
   
   /* static members */
   @js.native
   object UrlMatcher extends js.Object {
-    /** @hidden */
+    /** @internal */
     var nameValidator: js.RegExp = js.native
     /**
       * Compare two UrlMatchers
@@ -105,11 +105,11 @@ object libUrlMod extends js.Object {
       a: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher,
       b: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
     ): Double = js.native
-    /** @hidden */
+    /** @internal */
     def encodeDashes(str: String): String = js.native
-    /** @hidden Given a matcher, return an array with the matcher's path segments and path params, in order */
+    /** @internal Given a matcher, return an array with the matcher's path segments and path params, in order */
     def pathSegmentsAndParams(matcher: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher): js.Any = js.native
-    /** @hidden Given a matcher, return an array with the matcher's query params */
+    /** @internal Given a matcher, return an array with the matcher's query params */
     def queryParams(matcher: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher): js.Array[Param] = js.native
   }
   

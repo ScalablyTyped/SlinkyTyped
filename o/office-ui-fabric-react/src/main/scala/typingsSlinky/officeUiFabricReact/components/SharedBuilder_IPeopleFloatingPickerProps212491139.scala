@@ -68,9 +68,13 @@ class SharedBuilder_IPeopleFloatingPickerProps212491139[R <: js.Object] (val arg
   @scala.inline
   def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
   @scala.inline
+  def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
+  @scala.inline
   def selectedItems(value: js.Array[IPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
   @scala.inline
   def showForceResolve(value: () => Boolean): this.type = set("showForceResolve", js.Any.fromFunction0(value))
+  @scala.inline
+  def suggestionItemsVarargs(value: IPersonaProps*): this.type = set("suggestionItems", js.Array(value :_*))
   @scala.inline
   def suggestionItems(value: js.Array[IPersonaProps]): this.type = set("suggestionItems", value.asInstanceOf[js.Any])
 }

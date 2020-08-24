@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object QueryListIcon {
-  @JSImport("@fluentui/react-icons/lib/components/QueryListIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "QueryListIcon")
   @js.native
   object component extends js.Object
   

@@ -7,9 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.CanvasPattern")
 @js.native
 class CanvasPattern protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.CanvasPattern {
-  /* CompleteClass */
-  @JSName("MSHTML.CanvasPattern_typekey")
-  override var MSHTMLDotCanvasPattern_typekey: typingsSlinky.activexMshtml.MSHTML.CanvasPattern = js.native
-}
+  extends typingsSlinky.activexMshtml.MSHTML.CanvasPattern
 

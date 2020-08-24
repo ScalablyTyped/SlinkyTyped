@@ -22,6 +22,8 @@ class GitHubPublisher protected () extends HttpPublisher {
   val info: js.Any = js.native
   val options: js.Any = js.native
   var overwriteArtifact: js.Any = js.native
+  @JSName("providerName")
+  val providerName_FGitHubPublisher: /* "GitHub" */ String = js.native
   var releaseLogFields: js.Any = js.native
   val releaseType: js.Any = js.native
   val tag: js.Any = js.native

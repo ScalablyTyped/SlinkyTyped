@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libSwitchMod.default
-import typingsSlinky.reactToolbox.libSwitchSwitchMod.SwitchProps
-import typingsSlinky.reactToolbox.libSwitchSwitchMod.SwitchTheme
+import typingsSlinky.reactToolbox.switchMod.default
+import typingsSlinky.reactToolbox.switchSwitchMod.SwitchProps
+import typingsSlinky.reactToolbox.switchSwitchMod.SwitchTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Switch {
-  @JSImport("react-toolbox/lib/switch", JSImport.Default)
+  @JSImport("react-toolbox/components/switch", JSImport.Default)
   @js.native
   object component extends js.Object
   

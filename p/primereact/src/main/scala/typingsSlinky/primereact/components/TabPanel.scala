@@ -23,7 +23,7 @@ object TabPanel {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def header(value: String): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: js.Any): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
     @scala.inline

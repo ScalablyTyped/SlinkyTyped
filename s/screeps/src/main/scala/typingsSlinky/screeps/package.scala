@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object screeps {
+  type ACCESS_KEY = typingsSlinky.screeps.screepsStrings.accessKey
   type ATTACK = typingsSlinky.screeps.screepsStrings.attack
   type BOTTOM = typingsSlinky.screeps.screepsNumbers.`5`
   type BOTTOM_LEFT = typingsSlinky.screeps.screepsNumbers.`6`
@@ -30,6 +31,7 @@ package object screeps {
   type COLOR_WHITE = typingsSlinky.screeps.screepsNumbers.`10`
   type COLOR_YELLOW = typingsSlinky.screeps.screepsNumbers.`6`
   type CPUShardLimits = org.scalablytyped.runtime.StringDictionary[scala.Double]
+  type CPU_UNLOCK = typingsSlinky.screeps.screepsStrings.cpuUnlock
   // Color Constants
   type ColorConstant = typingsSlinky.screeps.COLOR_RED | typingsSlinky.screeps.COLOR_PURPLE | typingsSlinky.screeps.COLOR_BLUE | typingsSlinky.screeps.COLOR_CYAN | typingsSlinky.screeps.COLOR_GREEN | typingsSlinky.screeps.COLOR_YELLOW | typingsSlinky.screeps.COLOR_ORANGE | typingsSlinky.screeps.COLOR_BROWN | typingsSlinky.screeps.COLOR_GREY | typingsSlinky.screeps.COLOR_WHITE
   /** The commodities, produced by the Factory */
@@ -143,11 +145,11 @@ package object screeps {
   type LookAtResultWithPos[K /* <: typingsSlinky.screeps.LookConstant */] = typingsSlinky.screeps.LookAtResult[K] with typingsSlinky.screeps.anon.X
   // Look Constants
   type LookConstant = typingsSlinky.screeps.LOOK_CREEPS | typingsSlinky.screeps.LOOK_ENERGY | typingsSlinky.screeps.LOOK_RESOURCES | typingsSlinky.screeps.LOOK_SOURCES | typingsSlinky.screeps.LOOK_MINERALS | typingsSlinky.screeps.LOOK_DEPOSITS | typingsSlinky.screeps.LOOK_STRUCTURES | typingsSlinky.screeps.LOOK_FLAGS | typingsSlinky.screeps.LOOK_CONSTRUCTION_SITES | typingsSlinky.screeps.LOOK_NUKES | typingsSlinky.screeps.LOOK_TERRAIN | typingsSlinky.screeps.LOOK_TOMBSTONES | typingsSlinky.screeps.LOOK_POWER_CREEPS | typingsSlinky.screeps.LOOK_RUINS
-  type LookForAtAreaResultArray[T, K /* <: typingsSlinky.screeps.screepsStrings.exit | typingsSlinky.screeps.screepsStrings.structure | typingsSlinky.screeps.screepsStrings.source | typingsSlinky.screeps.screepsStrings.nuke | typingsSlinky.screeps.screepsStrings.deposit | typingsSlinky.screeps.screepsStrings.powerCreep | typingsSlinky.screeps.screepsStrings.terrain | typingsSlinky.screeps.screepsStrings.tombstone | typingsSlinky.screeps.screepsStrings.resource | typingsSlinky.screeps.screepsStrings.flag | typingsSlinky.screeps.screepsStrings.mineral | typingsSlinky.screeps.screepsStrings.ruin | typingsSlinky.screeps.screepsStrings.constructionSite | typingsSlinky.screeps.screepsStrings.creep | typingsSlinky.screeps.screepsStrings.energy */] = js.Array[typingsSlinky.screeps.LookForAtAreaResultWithPos[T, K]]
-  type LookForAtAreaResultMatrix[T, K /* <: typingsSlinky.screeps.screepsStrings.exit | typingsSlinky.screeps.screepsStrings.structure | typingsSlinky.screeps.screepsStrings.source | typingsSlinky.screeps.screepsStrings.nuke | typingsSlinky.screeps.screepsStrings.deposit | typingsSlinky.screeps.screepsStrings.powerCreep | typingsSlinky.screeps.screepsStrings.terrain | typingsSlinky.screeps.screepsStrings.tombstone | typingsSlinky.screeps.screepsStrings.resource | typingsSlinky.screeps.screepsStrings.flag | typingsSlinky.screeps.screepsStrings.mineral | typingsSlinky.screeps.screepsStrings.ruin | typingsSlinky.screeps.screepsStrings.constructionSite | typingsSlinky.screeps.screepsStrings.creep | typingsSlinky.screeps.screepsStrings.energy */] = org.scalablytyped.runtime.NumberDictionary[
+  type LookForAtAreaResultArray[T, K /* <: typingsSlinky.screeps.screepsStrings.tombstone | typingsSlinky.screeps.screepsStrings.exit | typingsSlinky.screeps.screepsStrings.resource | typingsSlinky.screeps.screepsStrings.creep | typingsSlinky.screeps.screepsStrings.structure | typingsSlinky.screeps.screepsStrings.source | typingsSlinky.screeps.screepsStrings.deposit | typingsSlinky.screeps.screepsStrings.constructionSite | typingsSlinky.screeps.screepsStrings.mineral | typingsSlinky.screeps.screepsStrings.nuke | typingsSlinky.screeps.screepsStrings.flag | typingsSlinky.screeps.screepsStrings.energy | typingsSlinky.screeps.screepsStrings.ruin | typingsSlinky.screeps.screepsStrings.terrain | typingsSlinky.screeps.screepsStrings.powerCreep */] = js.Array[typingsSlinky.screeps.LookForAtAreaResultWithPos[T, K]]
+  type LookForAtAreaResultMatrix[T, K /* <: typingsSlinky.screeps.screepsStrings.tombstone | typingsSlinky.screeps.screepsStrings.exit | typingsSlinky.screeps.screepsStrings.resource | typingsSlinky.screeps.screepsStrings.creep | typingsSlinky.screeps.screepsStrings.structure | typingsSlinky.screeps.screepsStrings.source | typingsSlinky.screeps.screepsStrings.deposit | typingsSlinky.screeps.screepsStrings.constructionSite | typingsSlinky.screeps.screepsStrings.mineral | typingsSlinky.screeps.screepsStrings.nuke | typingsSlinky.screeps.screepsStrings.flag | typingsSlinky.screeps.screepsStrings.energy | typingsSlinky.screeps.screepsStrings.ruin | typingsSlinky.screeps.screepsStrings.terrain | typingsSlinky.screeps.screepsStrings.powerCreep */] = org.scalablytyped.runtime.NumberDictionary[
     org.scalablytyped.runtime.NumberDictionary[js.Array[typingsSlinky.screeps.LookForAtAreaResult[T, K]]]
   ]
-  type LookForAtAreaResultWithPos[T, K /* <: typingsSlinky.screeps.screepsStrings.exit | typingsSlinky.screeps.screepsStrings.structure | typingsSlinky.screeps.screepsStrings.source | typingsSlinky.screeps.screepsStrings.nuke | typingsSlinky.screeps.screepsStrings.deposit | typingsSlinky.screeps.screepsStrings.powerCreep | typingsSlinky.screeps.screepsStrings.terrain | typingsSlinky.screeps.screepsStrings.tombstone | typingsSlinky.screeps.screepsStrings.resource | typingsSlinky.screeps.screepsStrings.flag | typingsSlinky.screeps.screepsStrings.mineral | typingsSlinky.screeps.screepsStrings.ruin | typingsSlinky.screeps.screepsStrings.constructionSite | typingsSlinky.screeps.screepsStrings.creep | typingsSlinky.screeps.screepsStrings.energy */] = (typingsSlinky.screeps.LookForAtAreaResult[T, K]) with typingsSlinky.screeps.anon.X
+  type LookForAtAreaResultWithPos[T, K /* <: typingsSlinky.screeps.screepsStrings.tombstone | typingsSlinky.screeps.screepsStrings.exit | typingsSlinky.screeps.screepsStrings.resource | typingsSlinky.screeps.screepsStrings.creep | typingsSlinky.screeps.screepsStrings.structure | typingsSlinky.screeps.screepsStrings.source | typingsSlinky.screeps.screepsStrings.deposit | typingsSlinky.screeps.screepsStrings.constructionSite | typingsSlinky.screeps.screepsStrings.mineral | typingsSlinky.screeps.screepsStrings.nuke | typingsSlinky.screeps.screepsStrings.flag | typingsSlinky.screeps.screepsStrings.energy | typingsSlinky.screeps.screepsStrings.ruin | typingsSlinky.screeps.screepsStrings.terrain | typingsSlinky.screeps.screepsStrings.powerCreep */] = (typingsSlinky.screeps.LookForAtAreaResult[T, K]) with typingsSlinky.screeps.anon.X
   type MOVE = typingsSlinky.screeps.screepsStrings.move
   type MarketResourceConstant = typingsSlinky.screeps.ResourceConstant | typingsSlinky.screeps.SUBSCRIPTION_TOKEN
   /** The compounds which can't boost */
@@ -161,6 +163,7 @@ package object screeps {
   type OK = typingsSlinky.screeps.screepsNumbers.`0`
   type ORDER_BUY = typingsSlinky.screeps.screepsStrings.buy
   type ORDER_SELL = typingsSlinky.screeps.screepsStrings.sell
+  type PIXEL = typingsSlinky.screeps.screepsStrings.pixel
   type PWR_DISRUPT_SOURCE = typingsSlinky.screeps.screepsNumbers.`11`
   type PWR_DISRUPT_SPAWN = typingsSlinky.screeps.screepsNumbers.`9`
   type PWR_DISRUPT_TERMINAL = typingsSlinky.screeps.screepsNumbers.`15`

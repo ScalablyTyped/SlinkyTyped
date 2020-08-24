@@ -16,7 +16,7 @@ object hocUtilsMod extends js.Object {
     extends Component[TProps, TState, js.Any] {
     def this(props: TProps) = this()
     var withRef: Boolean = js.native
-    var wrappedInstance: js.UndefOr[js.Any] = js.native
+    var wrappedInstance: js.Any = js.native
     def getWrappedInstance(): js.UndefOr[ReactComponentClass[TChildProps]] = js.native
     def setWrappedInstance(ref: ReactComponentClass[TChildProps]): Unit = js.native
   }

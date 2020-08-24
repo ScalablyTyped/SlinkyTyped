@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class DiscreteUniform ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.DiscreteUniform] {
   def this(xmin: Double) = this()
+  def this(xmin: js.UndefOr[scala.Nothing], xmax: Double) = this()
   def this(xmin: Double, xmax: Double) = this()
 }
 

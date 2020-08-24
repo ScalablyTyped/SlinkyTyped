@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 class ClassificationInfo protected ()
   extends typingsSlinky.typescriptServices.TypeScript.Services.ClassificationInfo {
   def this(length: Double, classification: typingsSlinky.typescriptServices.TypeScript.Services.TokenClass) = this()
-  /* CompleteClass */
-  override var classification: typingsSlinky.typescriptServices.TypeScript.Services.TokenClass = js.native
-  /* CompleteClass */
-  override var length: Double = js.native
 }
 

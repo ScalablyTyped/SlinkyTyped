@@ -25,6 +25,7 @@ class Effect protected () extends js.Object {
     * This method can be overridden but the super should always be calle first
     */
   def process(ctx: CanvasRenderingContext2D): Boolean = js.native
+  def process(ctx: CanvasRenderingContext2D, fxCtx: js.UndefOr[scala.Nothing], obj: js.Any): Boolean = js.native
   def process(ctx: CanvasRenderingContext2D, fxCtx: CanvasRenderingContext2D): Boolean = js.native
   def process(ctx: CanvasRenderingContext2D, fxCtx: CanvasRenderingContext2D, obj: js.Any): Boolean = js.native
   /**

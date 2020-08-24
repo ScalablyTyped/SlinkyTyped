@@ -29,29 +29,18 @@ object FAILED {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFAILED(value: failed_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILED")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withREJECTED(value: rejected_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("REJECTED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFAILED(value: failed_): Self = this.set("FAILED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSUCCEEDED(value: succeeded_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCEEDED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setREJECTED(value: rejected_): Self = this.set("REJECTED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUNHANDLED(value: unhandled_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UNHANDLED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSUCCEEDED(value: succeeded_): Self = this.set("SUCCEEDED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUNHANDLED(value: unhandled_): Self = this.set("UNHANDLED", value.asInstanceOf[js.Any])
   }
   
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DelveAnalyticsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DelveAnalyticsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DelveAnalyticsIcon")
   @js.native
   object component extends js.Object
   

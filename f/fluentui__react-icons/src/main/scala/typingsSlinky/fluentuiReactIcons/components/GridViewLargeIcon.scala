@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GridViewLargeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GridViewLargeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GridViewLargeIcon")
   @js.native
   object component extends js.Object
   

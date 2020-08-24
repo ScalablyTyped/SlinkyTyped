@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** More flags associated with an LView (saved in LView[FLAGS_MORE]) */
+/** More flags associated with an LView (saved in LView[PREORDER_HOOK_FLAGS]) */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.angularCore.angularCoreNumbers.`65535`
   - typingsSlinky.angularCore.angularCoreNumbers.`65536`
@@ -18,8 +18,10 @@ import scala.scalajs.js.annotation._
 trait PreOrderHookFlags extends js.Object
 
 object PreOrderHookFlags {
-  /** The index of the next pre-order hook to be called in the hooks array, on the first 16
-    bits */
+  /**
+    The index of the next pre-order hook to be called in the hooks array, on the first 16
+    bits
+    */
   @scala.inline
   def IndexOfTheNextPreOrderHookMaskMask: `65535` = 65535.asInstanceOf[`65535`]
   /**

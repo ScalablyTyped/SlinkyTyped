@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "InvokeMethodExpr")
 @js.native
 class InvokeMethodExpr protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.InvokeMethodExpr {
+  extends typingsSlinky.angularCompiler.compilerMod.InvokeMethodExpr {
   def this(
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
     method: String,
@@ -29,6 +29,13 @@ class InvokeMethodExpr protected ()
     method: typingsSlinky.angularCompiler.outputAstMod.BuiltinMethod,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    method: String,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
@@ -42,6 +49,13 @@ class InvokeMethodExpr protected ()
     method: String,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    method: typingsSlinky.angularCompiler.outputAstMod.BuiltinMethod,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(

@@ -97,6 +97,7 @@ object ClassBuffer extends js.Object {
     * 
     */
   def alloc(size: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  def alloc(size: Double, fill: js.UndefOr[scala.Nothing], codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
   def alloc(size: Double, fill: String): typingsSlinky.fibjs.ClassBuffer = js.native
   def alloc(size: Double, fill: String, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
   def alloc(size: Double, fill: Double): typingsSlinky.fibjs.ClassBuffer = js.native
@@ -206,6 +207,7 @@ object ClassBuffer extends js.Object {
     * 
     */
   def from(buffer: typingsSlinky.fibjs.ClassBuffer): typingsSlinky.fibjs.ClassBuffer = js.native
+  def from(buffer: typingsSlinky.fibjs.ClassBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(buffer: typingsSlinky.fibjs.ClassBuffer, byteOffset: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(buffer: typingsSlinky.fibjs.ClassBuffer, byteOffset: Double, length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   /**
@@ -230,6 +232,7 @@ object ClassBuffer extends js.Object {
     * 
     */
   def from(str: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  def from(str: String, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(str: String, byteOffset: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(str: String, byteOffset: Double, length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(str: String, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native

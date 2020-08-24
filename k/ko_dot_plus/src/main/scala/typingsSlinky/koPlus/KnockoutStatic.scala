@@ -1,6 +1,5 @@
 package typingsSlinky.koPlus
 
-import typingsSlinky.knockout.KnockoutObservable
 import typingsSlinky.koPlus.KoPlus.Command
 import typingsSlinky.koPlus.KoPlus.CommandOptions
 import typingsSlinky.koPlus.KoPlus.Editable
@@ -42,17 +41,9 @@ trait KnockoutStatic extends js.Object {
   // create a command - two overloads
   def command(param: js.Function): Command = js.native
   def command(param: CommandOptions): Command = js.native
-  def editable[T](): KnockoutObservable[T | Null] = js.native
-  def editable[T](value: T): KnockoutObservable[T] = js.native
+  def editable[T](): Editable[T] = js.native
+  def editable[T](value: T): Editable[T] = js.native
   def editableArray[T](): EditableArray[T] = js.native
   def editableArray[T](value: js.Array[T]): EditableArray[T] = js.native
-  @JSName("editableArray")
-  def editableArray_T_KnockoutObservableArray[T](): typingsSlinky.knockout.KnockoutObservableArray[T] = js.native
-  @JSName("editableArray")
-  def editableArray_T_KnockoutObservableArray[T](value: js.Array[T]): typingsSlinky.knockout.KnockoutObservableArray[T] = js.native
-  @JSName("editable")
-  def editable_T_Editable[T](): Editable[T] = js.native
-  @JSName("editable")
-  def editable_T_Editable[T](value: T): Editable[T] = js.native
 }
 

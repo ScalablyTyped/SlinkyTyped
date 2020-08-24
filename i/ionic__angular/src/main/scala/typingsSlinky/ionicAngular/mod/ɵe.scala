@@ -1,14 +1,14 @@
 package typingsSlinky.ionicAngular.mod
 
-import org.scalajs.dom.raw.Document
-import typingsSlinky.angularCore.mod.NgZone
+import typingsSlinky.ionicAngular.overlayMod.ControllerShape
+import typingsSlinky.ionicAngular.overlayMod.OverlayBaseController
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@ionic/angular", "\u0275e")
 @js.native
-object ɵe extends js.Object {
-  def apply(config: typingsSlinky.ionicAngular.configMod.Config, doc: Document, zone: NgZone): js.Function0[_] = js.native
+class ɵe[Opts, Overlay] protected () extends OverlayBaseController[Opts, Overlay] {
+  def this(ctrl: ControllerShape[Opts, Overlay]) = this()
 }
 

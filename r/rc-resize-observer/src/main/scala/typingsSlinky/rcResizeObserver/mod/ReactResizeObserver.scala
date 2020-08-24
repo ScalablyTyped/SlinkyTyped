@@ -1,7 +1,7 @@
 package typingsSlinky.rcResizeObserver.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.rcResizeObserver.anon.Height
+import typingsSlinky.rcResizeObserver.anon.Width
 import typingsSlinky.react.mod.Component
 import typingsSlinky.resizeObserverPolyfill.mod.ResizeObserver
 import typingsSlinky.resizeObserverPolyfill.mod.global.ResizeObserverCallback
@@ -17,7 +17,7 @@ trait ReactResizeObserver
   var onResize: ResizeObserverCallback = js.native
   var resizeObserver: ResizeObserver | Null = js.native
   @JSName("state")
-  var state_ReactResizeObserver: Height = js.native
+  var state_ReactResizeObserver: Width = js.native
   @JSName("componentDidMount")
   def componentDidMount_MReactResizeObserver(): Unit = js.native
   @JSName("componentDidUpdate")

@@ -51,23 +51,16 @@ object Typeofidle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnStateChanged(value: Event[js.Function1[/* newState */ IdleState, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChanged")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withQueryState(value: (integer, js.Function1[/* newState */ IdleState, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryState")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnStateChanged(value: Event[js.Function1[/* newState */ IdleState, Unit]]): Self = this.set("onStateChanged", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetDetectionInterval(value: integer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDetectionInterval")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setQueryState(value: (integer, js.Function1[/* newState */ IdleState, Unit]) => Unit): Self = this.set("queryState", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSetDetectionInterval(value: integer => Unit): Self = this.set("setDetectionInterval", js.Any.fromFunction1(value))
   }
   
 }

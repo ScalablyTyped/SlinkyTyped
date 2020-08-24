@@ -7,7 +7,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressBlockEditor.panelColorSettingsMod.PanelColorSettings.ColorSetting
 import typingsSlinky.wordpressBlockEditor.panelColorSettingsMod.PanelColorSettings.Props
 import typingsSlinky.wordpressComponents.iconMod.Icon.IconType
-import typingsSlinky.wordpressEditor.mod.PanelColorSettings.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,7 @@ object PanelColorSettings {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: js.Any): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

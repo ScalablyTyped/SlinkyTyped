@@ -11,6 +11,8 @@ import typingsSlinky.monacoEditor.mod.languages.DocumentColorProvider
 import typingsSlinky.monacoEditor.mod.languages.DocumentFormattingEditProvider
 import typingsSlinky.monacoEditor.mod.languages.DocumentHighlightProvider
 import typingsSlinky.monacoEditor.mod.languages.DocumentRangeFormattingEditProvider
+import typingsSlinky.monacoEditor.mod.languages.DocumentRangeSemanticTokensProvider
+import typingsSlinky.monacoEditor.mod.languages.DocumentSemanticTokensProvider
 import typingsSlinky.monacoEditor.mod.languages.DocumentSymbolProvider
 import typingsSlinky.monacoEditor.mod.languages.EncodedTokensProvider
 import typingsSlinky.monacoEditor.mod.languages.FoldingRangeProvider
@@ -51,6 +53,8 @@ trait Typeoflanguages extends js.Object {
   def registerDocumentFormattingEditProvider(languageId: String, provider: DocumentFormattingEditProvider): IDisposable = js.native
   def registerDocumentHighlightProvider(languageId: String, provider: DocumentHighlightProvider): IDisposable = js.native
   def registerDocumentRangeFormattingEditProvider(languageId: String, provider: DocumentRangeFormattingEditProvider): IDisposable = js.native
+  def registerDocumentRangeSemanticTokensProvider(languageId: String, provider: DocumentRangeSemanticTokensProvider): IDisposable = js.native
+  def registerDocumentSemanticTokensProvider(languageId: String, provider: DocumentSemanticTokensProvider): IDisposable = js.native
   def registerDocumentSymbolProvider(languageId: String, provider: DocumentSymbolProvider): IDisposable = js.native
   def registerFoldingRangeProvider(languageId: String, provider: FoldingRangeProvider): IDisposable = js.native
   def registerHoverProvider(languageId: String, provider: HoverProvider): IDisposable = js.native

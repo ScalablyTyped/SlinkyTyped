@@ -64,175 +64,72 @@ object PartialNotificationOption {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAppIconMaskUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appIconMaskUrl")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAppIconMaskUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appIconMaskUrl")(js.undefined)
-        ret
-    }
+    def setAppIconMaskUrl(value: String): Self = this.set("appIconMaskUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withButtons(value: js.Array[ButtonOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAppIconMaskUrl: Self = this.set("appIconMaskUrl", js.undefined)
     @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
+    def setButtonsVarargs(value: ButtonOptions*): Self = this.set("buttons", js.Array(value :_*))
     @scala.inline
-    def withContextMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setButtons(value: js.Array[ButtonOptions]): Self = this.set("buttons", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutContextMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMessage")(js.undefined)
-        ret
-    }
+    def deleteButtons: Self = this.set("buttons", js.undefined)
     @scala.inline
-    def withEventTime(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setContextMessage(value: String): Self = this.set("contextMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEventTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTime")(js.undefined)
-        ret
-    }
+    def deleteContextMessage: Self = this.set("contextMessage", js.undefined)
     @scala.inline
-    def withIconUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEventTime(value: double): Self = this.set("eventTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
-        ret
-    }
+    def deleteEventTime: Self = this.set("eventTime", js.undefined)
     @scala.inline
-    def withImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIconUrl(value: String): Self = this.set("iconUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(js.undefined)
-        ret
-    }
+    def deleteIconUrl: Self = this.set("iconUrl", js.undefined)
     @scala.inline
-    def withIsClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClickable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setImageUrl(value: String): Self = this.set("imageUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIsClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClickable")(js.undefined)
-        ret
-    }
+    def deleteImageUrl: Self = this.set("imageUrl", js.undefined)
     @scala.inline
-    def withItems(value: js.Array[ItemOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsClickable(value: Boolean): Self = this.set("isClickable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
+    def deleteIsClickable: Self = this.set("isClickable", js.undefined)
     @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setItemsVarargs(value: ItemOptions*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
+    def setItems(value: js.Array[ItemOptions]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPriority(value: `-2` | `-1` | `0` | `1` | `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteItems: Self = this.set("items", js.undefined)
     @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProgress(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline
-    def withoutProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
-        ret
-    }
+    def setPriority(value: `-2` | `-1` | `0` | `1` | `2`): Self = this.set("priority", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequireInteraction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireInteraction")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePriority: Self = this.set("priority", js.undefined)
     @scala.inline
-    def withoutRequireInteraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireInteraction")(js.undefined)
-        ret
-    }
+    def setProgress(value: integer): Self = this.set("progress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteProgress: Self = this.set("progress", js.undefined)
     @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
+    def setRequireInteraction(value: Boolean): Self = this.set("requireInteraction", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRequireInteraction: Self = this.set("requireInteraction", js.undefined)
     @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(
+    def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setType(
       value: ToStringLiteral[
           BASIC, 
           /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
@@ -241,17 +138,9 @@ object PartialNotificationOption {
             basic_ | image_ | list_ | progress_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
+    def deleteType: Self = this.set("type", js.undefined)
   }
   
 }

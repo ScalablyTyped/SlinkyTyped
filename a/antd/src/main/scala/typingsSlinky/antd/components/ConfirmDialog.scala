@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -37,7 +36,7 @@ object ConfirmDialog {
     @scala.inline
     def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def cancelText(value: TagMod[Any]): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    def cancelText(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
     def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +44,9 @@ object ConfirmDialog {
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
     def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +58,7 @@ object ConfirmDialog {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
     @scala.inline
@@ -75,7 +76,7 @@ object ConfirmDialog {
     @scala.inline
     def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def okText(value: TagMod[Any]): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okText(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     @scala.inline
     def okType(value: LegacyButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
     @scala.inline
@@ -85,11 +86,13 @@ object ConfirmDialog {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline

@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Geolocation.StatusChangedEventArgs")
 @js.native
 abstract class StatusChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.StatusChangedEventArgs {
-  /** The updated status of the Geolocator object. */
-  /* CompleteClass */
-  override var status: typingsSlinky.winrtUwp.Windows.Devices.Geolocation.PositionStatus = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.StatusChangedEventArgs
 

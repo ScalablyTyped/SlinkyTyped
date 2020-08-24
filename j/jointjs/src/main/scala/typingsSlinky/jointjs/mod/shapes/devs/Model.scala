@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Model () extends Element {
   def this(attributes: ModelAttributes) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
   def this(attributes: ModelAttributes, opt: StringDictionary[js.Any]) = this()
   def addInPort(port: String): this.type = js.native
   def addInPort(port: String, opt: js.Any): this.type = js.native

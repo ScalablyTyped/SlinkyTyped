@@ -1,6 +1,5 @@
 package typingsSlinky.braftEditor.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -52,11 +51,13 @@ object BraftEditor {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def componentBelowControlBarReactElement(value: ReactElement): this.type = set("componentBelowControlBar", value.asInstanceOf[js.Any])
     @scala.inline
-    def componentBelowControlBar(value: TagMod[Any]): this.type = set("componentBelowControlBar", value.asInstanceOf[js.Any])
+    def componentBelowControlBar(value: ReactElement): this.type = set("componentBelowControlBar", value.asInstanceOf[js.Any])
     @scala.inline
     def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,6 +66,8 @@ object BraftEditor {
     def controlBarClassName(value: String): this.type = set("controlBarClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def controlBarStyle(value: CSSProperties): this.type = set("controlBarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controlsVarargs(value: ControlType*): this.type = set("controls", js.Array(value :_*))
     @scala.inline
     def controls(value: js.Array[ControlType]): this.type = set("controls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -80,15 +83,25 @@ object BraftEditor {
     @scala.inline
     def editorId(value: String): this.type = set("editorId", value.asInstanceOf[js.Any])
     @scala.inline
+    def emojisVarargs(value: String*): this.type = set("emojis", js.Array(value :_*))
+    @scala.inline
     def emojis(value: js.Array[String]): this.type = set("emojis", value.asInstanceOf[js.Any])
     @scala.inline
+    def excludeControlsVarargs(value: BuiltInControlType*): this.type = set("excludeControls", js.Array(value :_*))
+    @scala.inline
     def excludeControls(value: js.Array[BuiltInControlType]): this.type = set("excludeControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extendControlsVarargs(value: ExtendControlType*): this.type = set("extendControls", js.Array(value :_*))
     @scala.inline
     def extendControls(value: js.Array[ExtendControlType]): this.type = set("extendControls", value.asInstanceOf[js.Any])
     @scala.inline
     def fixPlaceholder(value: Boolean): this.type = set("fixPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
+    def fontFamiliesVarargs(value: Family*): this.type = set("fontFamilies", js.Array(value :_*))
+    @scala.inline
     def fontFamilies(value: js.Array[Family]): this.type = set("fontFamilies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSizesVarargs(value: Double*): this.type = set("fontSizes", js.Array(value :_*))
     @scala.inline
     def fontSizes(value: js.Array[Double]): this.type = set("fontSizes", value.asInstanceOf[js.Any])
     @scala.inline
@@ -104,11 +117,15 @@ object BraftEditor {
     @scala.inline
     def handleReturn(value: js.Function): this.type = set("handleReturn", value.asInstanceOf[js.Any])
     @scala.inline
+    def headingsVarargs(value: String*): this.type = set("headings", js.Array(value :_*))
+    @scala.inline
     def headings(value: js.Array[String]): this.type = set("headings", value.asInstanceOf[js.Any])
     @scala.inline
     def hooks(value: HooksType): this.type = set("hooks", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageControlsVarargs(value: ImageControlType*): this.type = set("imageControls", js.Array(value :_*))
     @scala.inline
     def imageControls(value: js.Array[ImageControlType]): this.type = set("imageControls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -122,7 +139,11 @@ object BraftEditor {
       value: zh | `zh-hant` | en | tr | ru | jpn | kr | pl | fr | `vi-vn` | (js.Function2[/* languages */ js.Any, /* context */ js.Any, _])
     ): this.type = set("language", value.asInstanceOf[js.Any])
     @scala.inline
+    def letterSpacingsVarargs(value: Double*): this.type = set("letterSpacings", js.Array(value :_*))
+    @scala.inline
     def letterSpacings(value: js.Array[Double]): this.type = set("letterSpacings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineHeightsVarargs(value: Double*): this.type = set("lineHeights", js.Array(value :_*))
     @scala.inline
     def lineHeights(value: js.Array[Double]): this.type = set("lineHeights", value.asInstanceOf[js.Any])
     @scala.inline
@@ -149,6 +170,8 @@ object BraftEditor {
     def stripPastedStyles(value: Boolean): this.type = set("stripPastedStyles", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlignsVarargs(value: (left | center | right | justify)*): this.type = set("textAligns", js.Array(value :_*))
     @scala.inline
     def textAligns(value: js.Array[left | center | right | justify]): this.type = set("textAligns", value.asInstanceOf[js.Any])
     @scala.inline

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ContrastIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ContrastIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ContrastIcon")
   @js.native
   object component extends js.Object
   

@@ -26,7 +26,11 @@ object PanGestureHandler {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler] {
     @scala.inline
+    def activeOffsetXVarargs(value: Double*): this.type = set("activeOffsetX", js.Array(value :_*))
+    @scala.inline
     def activeOffsetX(value: Double | js.Array[Double]): this.type = set("activeOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeOffsetYVarargs(value: Double*): this.type = set("activeOffsetY", js.Array(value :_*))
     @scala.inline
     def activeOffsetY(value: Double | js.Array[Double]): this.type = set("activeOffsetY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +38,11 @@ object PanGestureHandler {
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def failOffsetXVarargs(value: Double*): this.type = set("failOffsetX", js.Array(value :_*))
+    @scala.inline
     def failOffsetX(value: Double | js.Array[Double]): this.type = set("failOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def failOffsetYVarargs(value: Double*): this.type = set("failOffsetY", js.Array(value :_*))
     @scala.inline
     def failOffsetY(value: Double | js.Array[Double]): this.type = set("failOffsetY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -72,6 +80,8 @@ object PanGestureHandler {
     @scala.inline
     def shouldCancelWhenOutside(value: Boolean): this.type = set("shouldCancelWhenOutside", value.asInstanceOf[js.Any])
     @scala.inline
+    def simultaneousHandlersVarargs(value: Ref[js.Any]*): this.type = set("simultaneousHandlers", js.Array(value :_*))
+    @scala.inline
     def simultaneousHandlersRefObject(value: ReactRef[_]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def simultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): this.type = set("simultaneousHandlers", js.Any.fromFunction1(value))
@@ -79,6 +89,8 @@ object PanGestureHandler {
     def simultaneousHandlers(value: Ref[_] | js.Array[Ref[_]]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def simultaneousHandlersNull: this.type = set("simultaneousHandlers", null)
+    @scala.inline
+    def waitForVarargs(value: Ref[js.Any]*): this.type = set("waitFor", js.Array(value :_*))
     @scala.inline
     def waitForRefObject(value: ReactRef[_]): this.type = set("waitFor", value.asInstanceOf[js.Any])
     @scala.inline

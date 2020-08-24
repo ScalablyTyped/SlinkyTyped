@@ -33,29 +33,20 @@ object CertificateInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCertificate(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(js.undefined)
-        ret
-    }
+    def setCertificate(value: js.typedarray.ArrayBuffer): Self = this.set("certificate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSupportedHashes(value: js.Array[Hash]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedHashes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCertificate: Self = this.set("certificate", js.undefined)
     @scala.inline
-    def withoutSupportedHashes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedHashes")(js.undefined)
-        ret
-    }
+    def setSupportedHashesVarargs(value: Hash*): Self = this.set("supportedHashes", js.Array(value :_*))
+    @scala.inline
+    def setSupportedHashes(value: js.Array[Hash]): Self = this.set("supportedHashes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSupportedHashes: Self = this.set("supportedHashes", js.undefined)
   }
   
 }

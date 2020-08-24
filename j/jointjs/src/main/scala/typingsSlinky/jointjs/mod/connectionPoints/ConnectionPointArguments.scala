@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 /* Inlined jointjs.jointjs.connectionPoints.GenericConnectionPointArguments<jointjs.jointjs.connectionPoints.ConnectionPointType> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.jointjs.jointjsStrings.stroke
   - typingsSlinky.jointjs.jointjsStrings.sticky
-  - typingsSlinky.jointjs.jointjsStrings.precision
-  - typingsSlinky.jointjs.jointjsStrings.insideout
-  - typingsSlinky.jointjs.jointjsStrings.extrapolate
   - typingsSlinky.jointjs.jointjsStrings.offset
+  - typingsSlinky.jointjs.jointjsStrings.extrapolate
+  - typingsSlinky.jointjs.jointjsStrings.insideout
+  - typingsSlinky.jointjs.jointjsStrings.stroke
+  - typingsSlinky.jointjs.jointjsStrings.precision
   - typingsSlinky.jointjs.jointjsStrings.selector
 */
 trait ConnectionPointArguments extends js.Object

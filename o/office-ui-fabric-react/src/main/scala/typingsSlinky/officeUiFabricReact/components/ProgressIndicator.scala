@@ -1,13 +1,11 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorProps
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyleProps
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyles
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -23,7 +21,10 @@ object ProgressIndicator {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.progressIndicatorBaseMod.ProgressIndicatorBase
+        ] {
     @scala.inline
     def ariaValueText(value: String): this.type = set("ariaValueText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -33,11 +34,11 @@ object ProgressIndicator {
     @scala.inline
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def description(value: TagMod[Any]): this.type = set("description", value.asInstanceOf[js.Any])
+    def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def onRenderProgress(
       value: (/* props */ js.UndefOr[IProgressIndicatorProps], /* defaultRender */ js.UndefOr[

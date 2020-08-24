@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.settingsMod.settings
 
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
@@ -28,7 +29,13 @@ class WorkflowsProjectSettingsPart protected () extends ProjectSettingsPart {
   @JSName("model")
   var model_FWorkflowsProjectSettingsPart: IModel = js.native
   def enabled: Boolean = js.native
-  def enabled(newValue: Boolean): js.Any = js.native
+  def enabled_=(newValue: Boolean): Unit = js.native
+  /**
+    * In version 8.11.0: introduced
+    */
+  def userEntity: IEntity | Null = js.native
+  def userEntityQualifiedName: String | Null = js.native
+  def userEntity_=(newValue: IEntity | Null): Unit = js.native
 }
 
 /* static members */

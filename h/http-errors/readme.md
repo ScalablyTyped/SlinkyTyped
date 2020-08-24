@@ -1,7 +1,7 @@
 
 # Scala.js typings for http-errors
 
-Typings are for version 1.6
+Typings are for version 1.8
 
 ## Library description:
 Create HTTP error objects

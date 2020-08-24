@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "multimap"
-version := "1.1-dt-20191216Z-fd1280"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20191216Z-df848b"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

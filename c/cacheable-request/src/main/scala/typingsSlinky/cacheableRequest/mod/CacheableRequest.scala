@@ -14,8 +14,10 @@ trait CacheableRequest
   extends Instantiable1[
       /* requestFn */ RequestFn, 
       js.Function2[
-        (RequestOptions with typingsSlinky.httpCacheSemantics.mod.Options) | String | URL_, 
-        js.UndefOr[js.Function1[ServerResponse | typingsSlinky.responselike.mod.^ , Unit]], 
+        /* opts */ String | URL_ | (RequestOptions with typingsSlinky.httpCacheSemantics.mod.Options), 
+        /* cb */ js.UndefOr[
+          js.Function1[/* response */ ServerResponse | typingsSlinky.responselike.mod.^ , Unit]
+        ], 
         Emitter
       ]
     ]

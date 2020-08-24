@@ -32,107 +32,46 @@ object MarkupNodeJSON {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTagName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAttributes(value: NativeSVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTagName(value: String): Self = this.set("tagName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
+    def setAttributes(value: NativeSVGAttributes): Self = this.set("attributes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withChildren(value: MarkupJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAttributes: Self = this.set("attributes", js.undefined)
     @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
+    def setChildrenVarargs(value: MarkupNodeJSON*): Self = this.set("children", js.Array(value :_*))
     @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChildren(value: MarkupJSON): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
+    def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
-    def withGroupSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutGroupSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupSelector")(js.undefined)
-        ret
-    }
+    def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def withNamespaceUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGroupSelector(value: String): Self = this.set("groupSelector", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutNamespaceUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceUri")(js.undefined)
-        ret
-    }
+    def deleteGroupSelector: Self = this.set("groupSelector", js.undefined)
     @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNamespaceUri(value: String): Self = this.set("namespaceUri", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
+    def deleteNamespaceUri: Self = this.set("namespaceUri", js.undefined)
     @scala.inline
-    def withStyle(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSelector(value: String): Self = this.set("selector", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
+    def deleteSelector: Self = this.set("selector", js.undefined)
     @scala.inline
-    def withTextContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textContent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStyle(value: StringDictionary[js.Any]): Self = this.set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTextContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textContent")(js.undefined)
-        ret
-    }
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTextContent(value: String): Self = this.set("textContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextContent: Self = this.set("textContent", js.undefined)
   }
   
 }

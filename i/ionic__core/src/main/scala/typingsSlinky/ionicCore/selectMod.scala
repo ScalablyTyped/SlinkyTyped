@@ -6,8 +6,8 @@ import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectChangeEventDetail
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectCompareFn
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,12 +17,11 @@ import scala.scalajs.js.annotation._
 object selectMod extends js.Object {
   @js.native
   class Select () extends ComponentInterface {
-    var buttonEl: js.UndefOr[js.Any] = js.native
+    var buttonEl: js.Any = js.native
     /**
       * The text to display on the cancel button.
       */
     var cancelText: String = js.native
-    val childOpts: js.Any = js.native
     /**
       * Close the select interface.
       */
@@ -52,10 +51,12 @@ object selectMod extends js.Object {
     var interface: SelectInterface = js.native
     /**
       * Any additional options that the `alert`, `action-sheet` or `popover` interface
-      * can take. See the [AlertController API docs](../../alert/AlertController/#create), the
-      * [ActionSheetController API docs](../../action-sheet/ActionSheetController/#create) and the
-      * [PopoverController API docs](../../popover/PopoverController/#create) for the
+      * can take. See the [ion-alert docs](../alert), the
+      * [ion-action-sheet docs](../action-sheet) and the
+      * [ion-popover docs](../popover) for the
       * create options for each interface.
+      *
+      * Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
       */
     var interfaceOptions: js.Any = js.native
     /**
@@ -69,7 +70,7 @@ object selectMod extends js.Object {
     /**
       * Emitted when the value has changed.
       */
-    var ionChange: EventEmitter[SelectChangeEventDetail] = js.native
+    var ionChange: EventEmitter[SelectChangeEventDetail[_]] = js.native
     /**
       * Emitted when the select has focus.
       */
@@ -84,7 +85,7 @@ object selectMod extends js.Object {
       * If `true`, the select can accept multiple values.
       */
     var multiple: Boolean = js.native
-    var mutationO: js.UndefOr[js.Any] = js.native
+    var mutationO: js.Any = js.native
     /**
       * The name of the control, which is submitted with the form data.
       */
@@ -99,7 +100,7 @@ object selectMod extends js.Object {
     var openActionSheet: js.Any = js.native
     var openAlert: js.Any = js.native
     var openPopover: js.Any = js.native
-    var overlay: js.UndefOr[js.Any] = js.native
+    var overlay: js.Any = js.native
     /**
       * The text to display when the select is empty.
       */
@@ -109,12 +110,12 @@ object selectMod extends js.Object {
       */
     var selectedText: js.UndefOr[String | Null] = js.native
     var setFocus: js.Any = js.native
-    var updateOptions: js.Any = js.native
     var updateOverlayOptions: js.Any = js.native
     /**
       * the value of the select.
       */
     var value: js.UndefOr[js.Any | Null] = js.native
+    /* private */ def childOpts: js.Any = js.native
     @JSName("componentDidLoad")
     def componentDidLoad_MSelect(): Unit = js.native
     @JSName("connectedCallback")

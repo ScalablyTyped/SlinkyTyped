@@ -408,6 +408,9 @@ package object configserviceMod {
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSQSColonColonQueue
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonKMSColonColonKey
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonQLDBColonColonLedger
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSecretsManagerColonColonSecret
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSNSColonColonTopic
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSSMColonColonFileData
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.configserviceMod._ResourceType | java.lang.String

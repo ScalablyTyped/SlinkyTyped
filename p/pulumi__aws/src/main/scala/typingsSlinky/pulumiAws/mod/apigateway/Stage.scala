@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.mod.apigateway
 
-import typingsSlinky.pulumiAws.stageMod.StageArgs
-import typingsSlinky.pulumiAws.stageMod.StageState
+import typingsSlinky.pulumiAws.apigatewayStageMod.StageArgs
+import typingsSlinky.pulumiAws.apigatewayStageMod.StageState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -35,10 +35,12 @@ object Stage extends js.Object {
     * @param name The _unique_ name of the resulting resource.
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param state Any extra arguments used during the lookup.
+    * @param opts Optional settings to control the behavior of the CustomResource.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.stageMod.Stage = js.native
-  def get(name: String, id: Input[ID], state: StageState): typingsSlinky.pulumiAws.stageMod.Stage = js.native
-  def get(name: String, id: Input[ID], state: StageState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.stageMod.Stage = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayStageMod.Stage = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayStageMod.Stage = js.native
+  def get(name: String, id: Input[ID], state: StageState): typingsSlinky.pulumiAws.apigatewayStageMod.Stage = js.native
+  def get(name: String, id: Input[ID], state: StageState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayStageMod.Stage = js.native
   /**
     * Returns true if the given object is an instance of Stage.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.

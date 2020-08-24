@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "nanoassert"
-version := "2.0-dt-20191009Z-8edddb"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20191009Z-b20c19"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

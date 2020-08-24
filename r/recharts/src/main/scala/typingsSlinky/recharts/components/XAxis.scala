@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -105,7 +104,7 @@ object XAxis {
     @scala.inline
     def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     @scala.inline
-    def tickFunction1(value: _ => TagMod[Any]): this.type = set("tick", js.Any.fromFunction1(value))
+    def tickFunction1(value: _ => ReactElement): this.type = set("tick", js.Any.fromFunction1(value))
     @scala.inline
     def tick(value: Boolean | ContentRenderer[_] | js.Object | ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
     @scala.inline
@@ -118,6 +117,8 @@ object XAxis {
     def tickMargin(value: Double): this.type = set("tickMargin", value.asInstanceOf[js.Any])
     @scala.inline
     def tickSize(value: Double): this.type = set("tickSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ticksVarargs(value: js.Any*): this.type = set("ticks", js.Array(value :_*))
     @scala.inline
     def ticks(value: js.Array[_]): this.type = set("ticks", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,9 +1,9 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolTypeDefinitionMod
 
+import typingsSlinky.vscodeJsonrpc.mod.ProgressType
 import typingsSlinky.vscodeJsonrpc.mod.RequestHandler
-import typingsSlinky.vscodeJsonrpc.mod.RequestType
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentPositionParams
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
+import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashtypeDefinition
 import typingsSlinky.vscodeLanguageserverTypes.mod.Definition
 import typingsSlinky.vscodeLanguageserverTypes.mod.DefinitionLink
 import typingsSlinky.vscodeLanguageserverTypes.mod.Location
@@ -15,12 +15,16 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol/lib/protocol.typeDefinition", "TypeDefinitionRequest")
 @js.native
 object TypeDefinitionRequest extends js.Object {
-  val `type`: RequestType[
-    TextDocumentPositionParams, 
+  val method: textDocumentSlashtypeDefinition = js.native
+  /** @deprecated Use TypeDefinitionRequest.type */
+  val resultType: ProgressType[js.Array[Location | LocationLink]] = js.native
+  val `type`: ProtocolRequestType[
+    TypeDefinitionParams, 
     Location | (js.Array[Location | LocationLink]) | Null, 
+    js.Array[Location | LocationLink], 
     Unit, 
-    TextDocumentRegistrationOptions
+    TypeDefinitionRegistrationOptions
   ] = js.native
-  type HandlerSignature = RequestHandler[TextDocumentPositionParams, Definition | js.Array[DefinitionLink] | Null, Unit]
+  type HandlerSignature = RequestHandler[TypeDefinitionParams, Definition | js.Array[DefinitionLink] | Null, Unit]
 }
 

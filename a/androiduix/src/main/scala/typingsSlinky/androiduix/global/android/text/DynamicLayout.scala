@@ -44,6 +44,19 @@ class DynamicLayout protected ()
     spacingmult: Double,
     spacingadd: Double,
     includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: Double
+  ) = this()
+  def this(
+    base: String,
+    display: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    width: Double,
+    align: Alignment,
+    textDir: TextDirectionHeuristic,
+    spacingmult: Double,
+    spacingadd: Double,
+    includepad: Boolean,
     ellipsize: TruncateAt,
     ellipsizedWidth: Double
   ) = this()

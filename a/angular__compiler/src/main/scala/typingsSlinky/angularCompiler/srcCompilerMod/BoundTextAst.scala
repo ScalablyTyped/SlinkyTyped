@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 class BoundTextAst protected ()
   extends typingsSlinky.angularCompiler.templateAstMod.BoundTextAst {
   def this(
-    value: typingsSlinky.angularCompiler.astMod.AST,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     ngContentIndex: Double,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

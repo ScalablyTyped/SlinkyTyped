@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SystemProps
   extends BackgroundProps
      with BackgroundColorProps[StyledSystemLength]
@@ -85,10 +86,19 @@ trait SystemProps
      with FontSizeProps[StyledSystemLength]
      with LineHeightProps[StyledSystemLength]
      with FontWeightProps
+     with FontStyleProps
      with TextAlignProps
      with LetterSpacingProps[StyledSystemLength]
      with ColorProps
      with TextTransformProps
      with ColProps
      with RowProps
+
+object SystemProps {
+  @scala.inline
+  def apply(): SystemProps = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[SystemProps]
+  }
+}
 

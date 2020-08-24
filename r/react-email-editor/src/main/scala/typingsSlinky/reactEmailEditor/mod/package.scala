@@ -16,4 +16,5 @@ package object mod {
   type SaveDesignCallback = js.Function1[/* data */ typingsSlinky.reactEmailEditor.mod.Design, scala.Unit]
   type StringList = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type ToolsConfig = org.scalablytyped.runtime.StringDictionary[typingsSlinky.reactEmailEditor.mod.ToolConfig]
+  type Translations = typingsSlinky.std.Record[java.lang.String, typingsSlinky.std.Record[java.lang.String, java.lang.String]]
 }

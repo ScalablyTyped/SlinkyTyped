@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object regexpToFunction extends js.Object {
   def apply[P /* <: js.Object */](re: js.RegExp, keys: js.Array[Key]): MatchFunction[P] = js.native
+  def apply[P /* <: js.Object */](re: js.RegExp, keys: js.Array[Key], options: RegexpToFunctionOptions): MatchFunction[P] = js.native
 }
 

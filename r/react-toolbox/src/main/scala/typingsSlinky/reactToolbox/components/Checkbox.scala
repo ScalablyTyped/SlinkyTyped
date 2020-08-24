@@ -1,19 +1,18 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libCheckboxCheckboxMod.CheckboxProps
-import typingsSlinky.reactToolbox.libCheckboxCheckboxMod.CheckboxTheme
-import typingsSlinky.reactToolbox.libCheckboxMod.default
+import typingsSlinky.reactToolbox.checkboxCheckboxMod.CheckboxProps
+import typingsSlinky.reactToolbox.checkboxCheckboxMod.CheckboxTheme
+import typingsSlinky.reactToolbox.checkboxMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Checkbox {
-  @JSImport("react-toolbox/lib/checkbox", JSImport.Default)
+  @JSImport("react-toolbox/components/checkbox", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -30,7 +29,7 @@ object Checkbox {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline

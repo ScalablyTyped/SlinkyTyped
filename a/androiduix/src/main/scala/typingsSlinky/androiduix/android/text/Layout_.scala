@@ -24,7 +24,26 @@ trait Layout_ extends js.Object {
   var mWorkPaint: TextPaint = js.native
   /* private */ def addSelection(line: js.Any, start: js.Any, end: js.Any, top: js.Any, bottom: js.Any, dest: js.Any): js.Any = js.native
   def draw(canvas: Canvas): Unit = js.native
+  def draw(
+    canvas: Canvas,
+    highlight: js.UndefOr[scala.Nothing],
+    highlightPaint: js.UndefOr[scala.Nothing],
+    cursorOffsetVertical: Double
+  ): Unit = js.native
+  def draw(canvas: Canvas, highlight: js.UndefOr[scala.Nothing], highlightPaint: Paint): Unit = js.native
+  def draw(
+    canvas: Canvas,
+    highlight: js.UndefOr[scala.Nothing],
+    highlightPaint: Paint,
+    cursorOffsetVertical: Double
+  ): Unit = js.native
   def draw(canvas: Canvas, highlight: Path): Unit = js.native
+  def draw(
+    canvas: Canvas,
+    highlight: Path,
+    highlightPaint: js.UndefOr[scala.Nothing],
+    cursorOffsetVertical: Double
+  ): Unit = js.native
   def draw(canvas: Canvas, highlight: Path, highlightPaint: Paint): Unit = js.native
   def draw(canvas: Canvas, highlight: Path, highlightPaint: Paint, cursorOffsetVertical: Double): Unit = js.native
   def drawBackground(
@@ -69,8 +88,6 @@ trait Layout_ extends js.Object {
   def getLineStart(line: Double): Double = js.native
   /* private */ def getLineStartPos(line: js.Any, left: js.Any, right: js.Any): js.Any = js.native
   def getLineTop(line: Double): Double = js.native
-  /* private */ def getLineVisibleEnd(line: js.Any): js.Any = js.native
-  /* private */ def getLineVisibleEnd(line: js.Any, start: js.Any): js.Any = js.native
   /* private */ def getLineVisibleEnd(line: js.Any, start: js.Any, end: js.Any): js.Any = js.native
   def getLineWidth(line: Double): Double = js.native
   /* private */ def getOffsetAtStartOf(offset: js.Any): js.Any = js.native

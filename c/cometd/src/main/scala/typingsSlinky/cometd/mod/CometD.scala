@@ -205,6 +205,13 @@ class CometD () extends js.Object {
     * @param callback a function to be invoked when the publish is acknowledged by the server
     */
   def publishBinary(channel: String, data: js.typedarray.ArrayBuffer, last: Boolean): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.ArrayBuffer,
+    last: Boolean,
+    meta: js.UndefOr[scala.Nothing],
+    callback: Listener
+  ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.ArrayBuffer, last: Boolean, meta: js.Object): Unit = js.native
   def publishBinary(
     channel: String,
@@ -214,9 +221,23 @@ class CometD () extends js.Object {
     callback: Listener
   ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.DataView, last: Boolean): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.DataView,
+    last: Boolean,
+    meta: js.UndefOr[scala.Nothing],
+    callback: Listener
+  ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.DataView, last: Boolean, meta: js.Object): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.DataView, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.Uint16Array, last: Boolean): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.Uint16Array,
+    last: Boolean,
+    meta: js.UndefOr[scala.Nothing],
+    callback: Listener
+  ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.Uint16Array, last: Boolean, meta: js.Object): Unit = js.native
   def publishBinary(
     channel: String,
@@ -226,6 +247,13 @@ class CometD () extends js.Object {
     callback: Listener
   ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.Uint32Array, last: Boolean): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.Uint32Array,
+    last: Boolean,
+    meta: js.UndefOr[scala.Nothing],
+    callback: Listener
+  ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.Uint32Array, last: Boolean, meta: js.Object): Unit = js.native
   def publishBinary(
     channel: String,
@@ -235,6 +263,13 @@ class CometD () extends js.Object {
     callback: Listener
   ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.Uint8Array, last: Boolean): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.Uint8Array,
+    last: Boolean,
+    meta: js.UndefOr[scala.Nothing],
+    callback: Listener
+  ): Unit = js.native
   def publishBinary(channel: String, data: js.typedarray.Uint8Array, last: Boolean, meta: js.Object): Unit = js.native
   def publishBinary(
     channel: String,

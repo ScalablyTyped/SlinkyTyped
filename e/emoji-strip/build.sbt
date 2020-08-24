@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "emoji-strip"
-version := "1.0-dt-20191022Z-453abb"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20191022Z-4d6c8a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,29 +1,17 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.devextremeStrings.dash
-import typingsSlinky.devextreme.devextremeStrings.dot
-import typingsSlinky.devextreme.devextremeStrings.longDash
-import typingsSlinky.devextreme.devextremeStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** @name dxChartSeriesTypes.StepAreaSeries.selectionStyle.border */
+@js.native
 trait dxChartSeriesTypesStepAreaSeriesSelectionStyleBorder extends dxChartSeriesTypesCommonSeriesSelectionStyleBorder
 
 object dxChartSeriesTypesStepAreaSeriesSelectionStyleBorder {
   @scala.inline
-  def apply(
-    color: String = null,
-    dashStyle: dash | dot | longDash | solid = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: js.UndefOr[Double] = js.undefined
-  ): dxChartSeriesTypesStepAreaSeriesSelectionStyleBorder = {
+  def apply(): dxChartSeriesTypesStepAreaSeriesSelectionStyleBorder = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesStepAreaSeriesSelectionStyleBorder]
   }
 }

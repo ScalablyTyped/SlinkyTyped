@@ -1,7 +1,6 @@
 package typingsSlinky.marko
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,10 +8,10 @@ import scala.scalajs.js.annotation._
 @JSImport("marko/src/runtime/Async", JSImport.Namespace)
 @js.native
 object asyncMod extends js.Object {
-  @js.native
-  trait Async
-    extends EventEmitter
-       with Promise[js.Any] {
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+  - js.Thenable because Inheritance from two classes. Inlined 
+  - js.Promise because Inheritance from two classes. Inlined  */ @js.native
+  trait Async extends EventEmitter {
     def beginAsync(): this.type = js.native
     def beginAsync(options: js.Any): this.type = js.native
     def c(componentDef: js.Any, key: js.Any, customEvents: js.Any): Unit = js.native

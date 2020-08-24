@@ -1,6 +1,5 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -27,7 +26,7 @@ object CardHeader {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
@@ -37,7 +36,7 @@ object CardHeader {
     @scala.inline
     def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumb(value: TagMod[Any]): this.type = set("thumb", value.asInstanceOf[js.Any])
+    def thumb(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
     @scala.inline
     def thumbStyle(value: StyleProp[ImageStyle]): this.type = set("thumbStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +44,7 @@ object CardHeader {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CardHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

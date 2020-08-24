@@ -194,10 +194,8 @@ import typingsSlinky.jestTypes.globalMod.ItConcurrent
 import typingsSlinky.jestTypes.globalMod.Jasmine
 import typingsSlinky.jestTypes.globalMod.TestFn
 import typingsSlinky.jestTypes.globalMod.TestName
-import typingsSlinky.node.Console
 import typingsSlinky.node.NodeJS.Global
 import typingsSlinky.node.NodeJS.Immediate
-import typingsSlinky.node.NodeJS.Process
 import typingsSlinky.node.NodeJS.Timeout
 import typingsSlinky.node.anon.FnCallSRadix
 import typingsSlinky.node.anon.FnCallUriComponent
@@ -257,50 +255,38 @@ import typingsSlinky.std.VoidFunction
 import typingsSlinky.std.WeakMapConstructor
 import typingsSlinky.std.WeakSetConstructor
 import typingsSlinky.std.WebKitPoint
-import typingsSlinky.std.global.Array
 import typingsSlinky.std.global.Boolean
-import typingsSlinky.std.global.Date
-import typingsSlinky.std.global.Error
-import typingsSlinky.std.global.EvalError
-import typingsSlinky.std.global.Function
 import typingsSlinky.std.global.Number
-import typingsSlinky.std.global.Object
-import typingsSlinky.std.global.RangeError
-import typingsSlinky.std.global.ReferenceError
-import typingsSlinky.std.global.RegExp
-import typingsSlinky.std.global.SyntaxError
-import typingsSlinky.std.global.TypeError
-import typingsSlinky.std.global.URIError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Window & @jest/types.@jest/types.Global.Global & {  Error  :{  stackTraceLimit  :number}} */
+/* Inlined std.Window & @jest/types.@jest/types.Global.Global & {  Error :{  stackTraceLimit :number}} */
 @js.native
 trait Win
   extends /* extras */ StringDictionary[js.Any]
      with /* index */ NumberDictionary[Window] {
-  var ArrayBuffer: ArrayBufferConstructor with (Instantiable1[/* byteLength */ Double, typingsSlinky.std.global.ArrayBuffer]) = js.native
+  var ArrayBuffer: ArrayBufferConstructor with (Instantiable1[/* byteLength */ Double, js.typedarray.ArrayBuffer]) = js.native
   @JSName("Array")
-  var Array_Original: ArrayConstructor with (Instantiable1[/* arrayLength */ Double, Array[js.Object]]) = js.native
+  var Array_Original: ArrayConstructor with (Instantiable1[/* arrayLength */ Double, js.Array[js.Object]]) = js.native
   @JSName("Boolean")
   var Boolean_Original: BooleanConstructor with Instantiable0[Boolean] = js.native
   var Buffer: TypeofBuffer = js.native
-  var DataView: DataViewConstructor with (Instantiable1[/* buffer */ ArrayBufferLike, typingsSlinky.std.global.DataView]) = js.native
+  var DataView: DataViewConstructor with (Instantiable1[/* buffer */ ArrayBufferLike, js.typedarray.DataView]) = js.native
   @JSName("Date")
-  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, Date]) = js.native
+  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, js.Date]) = js.native
   @JSName("Error")
-  var Error_Original: ErrorConstructor with Instantiable0[Error] with StackTraceLimit = js.native
+  var Error_Original: ErrorConstructor with Instantiable0[js.Error] with StackTraceLimit = js.native
   @JSName("EvalError")
-  var EvalError_Original: EvalErrorConstructor with Instantiable0[EvalError] = js.native
-  var Float32Array: Float32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Float32Array]) = js.native
-  var Float64Array: Float64ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Float64Array]) = js.native
+  var EvalError_Original: EvalErrorConstructor with Instantiable0[js.EvalError] = js.native
+  var Float32Array: Float32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Float32Array]) = js.native
+  var Float64Array: Float64ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Float64Array]) = js.native
   @JSName("Function")
-  var Function_Original: FunctionConstructor with (Instantiable1[/* args (repeated) */ String, Function]) = js.native
+  var Function_Original: FunctionConstructor with (Instantiable1[/* args (repeated) */ String, js.Function]) = js.native
   var Infinity: Double = js.native
-  var Int16Array: Int16ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int16Array]) = js.native
-  var Int32Array: Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int32Array]) = js.native
-  var Int8Array: Int8ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int8Array]) = js.native
+  var Int16Array: Int16ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Int16Array]) = js.native
+  var Int32Array: Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Int32Array]) = js.native
+  var Int8Array: Int8ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Int8Array]) = js.native
   var Intl: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Intl */ js.Any = js.native
   var JSON: typingsSlinky.std.JSON = js.native
   var Map: MapConstructor = js.native
@@ -309,7 +295,7 @@ trait Win
   @JSName("Number")
   var Number_Original: NumberConstructor with Instantiable0[Number] = js.native
   @JSName("Object")
-  var Object_Original: ObjectConstructor with Instantiable0[Object] = js.native
+  var Object_Original: ObjectConstructor with Instantiable0[js.Object] = js.native
   var Promise: PromiseConstructor with (Instantiable1[
     /* executor */ js.Function2[
       /* resolve */ js.Function1[
@@ -321,28 +307,28 @@ trait Win
       /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
       Unit
     ], 
-    typingsSlinky.std.global.Promise[js.Object]
+    js.Promise[js.Object]
   ]) = js.native
   @JSName("RangeError")
-  var RangeError_Original: RangeErrorConstructor with Instantiable0[RangeError] = js.native
+  var RangeError_Original: RangeErrorConstructor with Instantiable0[js.RangeError] = js.native
   @JSName("ReferenceError")
-  var ReferenceError_Original: ReferenceErrorConstructor with Instantiable0[ReferenceError] = js.native
+  var ReferenceError_Original: ReferenceErrorConstructor with Instantiable0[js.ReferenceError] = js.native
   @JSName("RegExp")
-  var RegExp_Original: RegExpConstructor with (Instantiable1[/* pattern */ js.RegExp, RegExp]) = js.native
+  var RegExp_Original: RegExpConstructor with (Instantiable1[/* pattern */ js.RegExp, js.RegExp]) = js.native
   var Set: SetConstructor = js.native
   @JSName("String")
   var String_Original: StringConstructor with Instantiable0[typingsSlinky.std.global.String] = js.native
   var Symbol: js.Function = js.native
   @JSName("SyntaxError")
-  var SyntaxError_Original: SyntaxErrorConstructor with Instantiable0[SyntaxError] = js.native
+  var SyntaxError_Original: SyntaxErrorConstructor with Instantiable0[js.SyntaxError] = js.native
   @JSName("TypeError")
-  var TypeError_Original: TypeErrorConstructor with Instantiable0[TypeError] = js.native
+  var TypeError_Original: TypeErrorConstructor with Instantiable0[js.TypeError] = js.native
   @JSName("URIError")
-  var URIError_Original: URIErrorConstructor with Instantiable0[URIError] = js.native
-  var Uint16Array: Uint16ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Uint16Array]) = js.native
-  var Uint32Array: Uint32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Uint32Array]) = js.native
-  var Uint8Array: Uint8ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Uint8Array]) = js.native
-  var Uint8ClampedArray: Uint8ClampedArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Uint8ClampedArray]) = js.native
+  var URIError_Original: URIErrorConstructor with Instantiable0[js.URIError] = js.native
+  var Uint16Array: Uint16ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Uint16Array]) = js.native
+  var Uint32Array: Uint32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Uint32Array]) = js.native
+  var Uint8Array: Uint8ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Uint8Array]) = js.native
+  var Uint8ClampedArray: Uint8ClampedArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Uint8ClampedArray]) = js.native
   var WeakMap: WeakMapConstructor = js.native
   var WeakSet: WeakSetConstructor = js.native
   var __coverage__ : CoverageMapData = js.native
@@ -350,7 +336,6 @@ trait Win
   val caches: CacheStorage = js.native
   val clientInformation: Navigator = js.native
   val closed: scala.Boolean = js.native
-  var console: Console = js.native
   val crypto: Crypto = js.native
   var customElements: CustomElementRegistry = js.native
   @JSName("decodeURIComponent")
@@ -730,7 +715,6 @@ trait Win
   var parseInt_Original: FnCallSRadix = js.native
   val performance: Performance = js.native
   val personalbar: BarProp = js.native
-  var process: Process = js.native
   @JSName("queueMicrotask")
   var queueMicrotask_Original: js.Function1[/* callback */ js.Function0[Unit], Unit] = js.native
   val screen: Screen = js.native
@@ -817,6 +801,19 @@ trait Win
   def URIError_Error(): js.Error = js.native
   @JSName("URIError")
   def URIError_Error(message: String): js.Error = js.native
+  /**
+    * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+    * 
+    * The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+    * 
+    * When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+    * 
+    * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+    * 
+    * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+    * 
+    * The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+    */
   def addEventListener(`type`: String): Unit = js.native
   def addEventListener(`type`: String, listener: Null, options: scala.Boolean): Unit = js.native
   def addEventListener(`type`: String, listener: Null, options: AddEventListenerOptions): Unit = js.native
@@ -2850,8 +2847,39 @@ trait Win
   def moveTo(x: Double, y: Double): Unit = js.native
   def msWriteProfilerMark(profilerMarkName: String): Unit = js.native
   def open(): Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: js.UndefOr[scala.Nothing],
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: js.UndefOr[scala.Nothing], features: String): Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: js.UndefOr[scala.Nothing],
+    features: String,
+    replace: scala.Boolean
+  ): Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: String): Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: String,
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: String, features: String): Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: String, features: String, replace: scala.Boolean): Window | Null = js.native
   def open(url: String): Window | Null = js.native
+  def open(
+    url: String,
+    target: js.UndefOr[scala.Nothing],
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): Window | Null = js.native
+  def open(url: String, target: js.UndefOr[scala.Nothing], features: String): Window | Null = js.native
+  def open(url: String, target: js.UndefOr[scala.Nothing], features: String, replace: scala.Boolean): Window | Null = js.native
   def open(url: String, target: String): Window | Null = js.native
+  def open(url: String, target: String, features: js.UndefOr[scala.Nothing], replace: scala.Boolean): Window | Null = js.native
   def open(url: String, target: String, features: String): Window | Null = js.native
   def open(url: String, target: String, features: String, replace: scala.Boolean): Window | Null = js.native
   def parseFloat(string: String): Double = js.native
@@ -2862,11 +2890,15 @@ trait Win
   def postMessage(message: js.Any, targetOrigin: String, transfer: js.Array[Transferable]): Unit = js.native
   def print(): Unit = js.native
   def prompt(): String | Null = js.native
+  def prompt(message: js.UndefOr[scala.Nothing], _default: String): String | Null = js.native
   def prompt(message: String): String | Null = js.native
   def prompt(message: String, _default: String): String | Null = js.native
   def queueMicrotask(callback: js.Function0[Unit] | VoidFunction): Unit = js.native
   /** @deprecated */
   def releaseEvents(): Unit = js.native
+  /**
+    * Removes the event listener in target's event listener list with the same type, callback, and options.
+    */
   def removeEventListener(`type`: String): Unit = js.native
   def removeEventListener(`type`: String, callback: Null, options: scala.Boolean): Unit = js.native
   def removeEventListener(`type`: String, callback: Null, options: EventListenerOptions): Unit = js.native
@@ -4849,10 +4881,10 @@ trait Win
   def scrollTo(x: Double, y: Double): Unit = js.native
   def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = js.native
   def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
-  def setInterval(handler: TimerHandler): Double = js.native
+  def setInterval(handler: TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): Double = js.native
   def setInterval(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native
   def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
-  def setTimeout(handler: TimerHandler): Double = js.native
+  def setTimeout(handler: TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): Double = js.native
   def setTimeout(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native
   def spyOn(): Unit = js.native
   def spyOnProperty(): Unit = js.native

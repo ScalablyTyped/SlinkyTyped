@@ -36,29 +36,18 @@ object IgnoreRulesParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHasTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTag")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutHasTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTag")(js.undefined)
-        ret
-    }
+    def setHasTag(value: String): Self = this.set("hasTag", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLowerPriorityThan(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerPriorityThan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHasTag: Self = this.set("hasTag", js.undefined)
     @scala.inline
-    def withoutLowerPriorityThan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerPriorityThan")(js.undefined)
-        ret
-    }
+    def setLowerPriorityThan(value: integer): Self = this.set("lowerPriorityThan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLowerPriorityThan: Self = this.set("lowerPriorityThan", js.undefined)
   }
   
 }

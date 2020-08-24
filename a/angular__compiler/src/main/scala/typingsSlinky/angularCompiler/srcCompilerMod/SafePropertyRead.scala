@@ -10,6 +10,8 @@ class SafePropertyRead protected ()
   extends typingsSlinky.angularCompiler.astMod.SafePropertyRead {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
+    nameSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     receiver: typingsSlinky.angularCompiler.astMod.AST,
     name: String
   ) = this()

@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation._
 class TransactionProcessorError protected ()
   extends typingsSlinky.sawtoothSdk.exceptionsMod.TransactionProcessorError {
   protected def this(message: String) = this()
+  protected def this(message: js.UndefOr[scala.Nothing], extendedData: Buffer) = this()
+  protected def this(message: js.UndefOr[scala.Nothing], extendedData: js.typedarray.Uint8Array) = this()
   protected def this(message: String, extendedData: Buffer) = this()
   protected def this(message: String, extendedData: js.typedarray.Uint8Array) = this()
 }

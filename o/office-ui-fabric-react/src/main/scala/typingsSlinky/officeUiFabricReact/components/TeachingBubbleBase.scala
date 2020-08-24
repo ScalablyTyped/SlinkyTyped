@@ -10,7 +10,7 @@ object TeachingBubbleBase {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ITeachingBubbleProps): SharedBuilder_ITeachingBubbleProps1626126877[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase] = new SharedBuilder_ITeachingBubbleProps1626126877[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: TeachingBubbleBase.type): SharedBuilder_ITeachingBubbleProps1626126877[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase] = new SharedBuilder_ITeachingBubbleProps1626126877[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ITeachingBubbleProps): SharedBuilder_ITeachingBubbleProps_1595191623[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase] = new SharedBuilder_ITeachingBubbleProps_1595191623[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TeachingBubbleBase.type): SharedBuilder_ITeachingBubbleProps_1595191623[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase] = new SharedBuilder_ITeachingBubbleProps_1595191623[typingsSlinky.officeUiFabricReact.mod.TeachingBubbleBase](js.Array(this.component, js.Dictionary.empty))()
 }
 

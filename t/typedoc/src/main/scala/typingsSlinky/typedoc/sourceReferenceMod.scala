@@ -1,9 +1,9 @@
 package typingsSlinky.typedoc
 
-import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.typedoc.fileMod.SourceReference
+import typingsSlinky.typedoc.anon.PartialSourceReference
+import typingsSlinky.typedoc.schemaMod.SourceReference
 import typingsSlinky.typedoc.serializationComponentsMod.SerializerComponent
-import typingsSlinky.typedoc.sourceReferenceWrapperMod.SourceReferenceWrapper
+import typingsSlinky.typedoc.serializersModelsMod.SourceReferenceWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,7 @@ import scala.scalajs.js.annotation._
 object sourceReferenceMod extends js.Object {
   @js.native
   class SourceReferenceContainerSerializer () extends SerializerComponent[SourceReferenceWrapper] {
-    @JSName("serializeGroupSymbol")
-    var serializeGroupSymbol_SourceReferenceContainerSerializer: Instantiable1[/* sourceReference */ SourceReference, SourceReferenceWrapper] = js.native
+    def toObject(hasSourceReference: SourceReferenceWrapper, obj: PartialSourceReference): SourceReference = js.native
   }
   
   /* static members */

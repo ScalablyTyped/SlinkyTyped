@@ -12,10 +12,3 @@ class ReactNativeFile protected ()
   def this(options: ReactNativeFileOptions) = this()
 }
 
-/* static members */
-@JSImport("apollo-upload-client", "ReactNativeFile")
-@js.native
-object ReactNativeFile extends js.Object {
-  def list(files: js.Array[ReactNativeFileOptions]): js.Array[typingsSlinky.extractFiles.mod.ReactNativeFile] = js.native
-}
-

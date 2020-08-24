@@ -90,6 +90,7 @@ import typingsSlinky.react.reactStrings.time
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.reactSimpleMaps.mod.GeographiesChildrenArgument
 import typingsSlinky.reactSimpleMaps.mod.GeographiesProps
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -248,6 +249,8 @@ object Geographies {
     @scala.inline
     def capHeight(value: Double | String): this.type = set("capHeight", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: /* data */ GeographiesChildrenArgument => Unit): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def clip(value: Double | String): this.type = set("clip", value.asInstanceOf[js.Any])
@@ -359,6 +362,8 @@ object Geographies {
     def g1(value: Double | String): this.type = set("g1", value.asInstanceOf[js.Any])
     @scala.inline
     def g2(value: Double | String): this.type = set("g2", value.asInstanceOf[js.Any])
+    @scala.inline
+    def geographyVarargs(value: String*): this.type = set("geography", js.Array(value :_*))
     @scala.inline
     def geography(value: String | (Record[String, _]) | js.Array[String]): this.type = set("geography", value.asInstanceOf[js.Any])
     @scala.inline

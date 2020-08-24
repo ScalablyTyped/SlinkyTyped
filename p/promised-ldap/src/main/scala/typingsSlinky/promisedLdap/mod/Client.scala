@@ -13,6 +13,12 @@ import scala.scalajs.js.annotation._
 trait Client extends EventEmitter {
   def _search(base: String, options: typingsSlinky.ldapjs.mod.SearchOptions): js.Promise[EventEmitter] = js.native
   def _search(base: String, options: typingsSlinky.ldapjs.mod.SearchOptions, _bypass: Boolean): js.Promise[EventEmitter] = js.native
+  def _search(
+    base: String,
+    options: typingsSlinky.ldapjs.mod.SearchOptions,
+    controls: js.UndefOr[scala.Nothing],
+    _bypass: Boolean
+  ): js.Promise[EventEmitter] = js.native
   def _search(base: String, options: typingsSlinky.ldapjs.mod.SearchOptions, controls: js.Array[Control]): js.Promise[EventEmitter] = js.native
   def _search(
     base: String,

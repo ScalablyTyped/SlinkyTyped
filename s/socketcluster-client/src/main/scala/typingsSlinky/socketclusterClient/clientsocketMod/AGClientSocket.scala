@@ -8,6 +8,8 @@ import typingsSlinky.socketclusterClient.anon.AckTimeout
 import typingsSlinky.socketclusterClient.anon.Error
 import typingsSlinky.socketclusterClient.anon.OldAuthToken
 import typingsSlinky.socketclusterClient.authMod.AGAuthEngine
+import typingsSlinky.socketclusterClient.authMod.AuthToken
+import typingsSlinky.socketclusterClient.authMod.SignedAuthToken
 import typingsSlinky.socketclusterClient.socketclusterClientStrings.authStateChange
 import typingsSlinky.socketclusterClient.socketclusterClientStrings.authenticate
 import typingsSlinky.socketclusterClient.socketclusterClientStrings.authenticated
@@ -52,7 +54,7 @@ trait AGClientSocket
   var ackTimeout: Double = js.native
   var auth: AGAuthEngine = js.native
   var authState: AuthStates = js.native
-  var authToken: js.Object | Null = js.native
+  var authToken: AuthToken | Null = js.native
   var authTokenName: String = js.native
   var batchOnHandshake: Boolean = js.native
   var batchOnHandshakeDuration: Double = js.native
@@ -75,7 +77,7 @@ trait AGClientSocket
   var poolIndex: js.UndefOr[Double] = js.native
   var preparingPendingSubscriptions: Boolean = js.native
   var protocolVersion: ProtocolVersions = js.native
-  var signedAuthToken: String | Null = js.native
+  var signedAuthToken: SignedAuthToken | Null = js.native
   var state: States = js.native
   var transport: js.UndefOr[typingsSlinky.socketclusterClient.transportMod.^] = js.native
   var version: String | Null = js.native
@@ -98,6 +100,7 @@ trait AGClientSocket
   def decode(message: js.Any): js.Any = js.native
   def decodeBase64(encodedString: String): String = js.native
   def disconnect(): Unit = js.native
+  def disconnect(code: js.UndefOr[scala.Nothing], reason: String): Unit = js.native
   def disconnect(code: Double): Unit = js.native
   def disconnect(code: Double, reason: String): Unit = js.native
   @JSName("emit")
@@ -144,7 +147,7 @@ trait AGClientSocket
   def getAllProceduresConsumerStatsList(): js.Array[ConsumerStats] = js.native
   def getAllReceiversBackpressure(): Double = js.native
   def getAllReceiversConsumerStatsList(): js.Array[ConsumerStats] = js.native
-  def getAuthToken(): js.Object | Null = js.native
+  def getAuthToken(): AuthToken | Null = js.native
   /* AGChannel.Client end */
   def getBackpressure(): Double = js.native
   def getBytesReceived(): Double = js.native
@@ -156,7 +159,7 @@ trait AGClientSocket
   def getReceiverConsumerBackpressure(consumerId: Double): Double = js.native
   def getReceiverConsumerStats(consumerId: Double): ConsumerStats = js.native
   def getReceiverConsumerStatsList(receiverName: String): js.Array[ConsumerStats] = js.native
-  def getSignedAuthToken(): String | Null = js.native
+  def getSignedAuthToken(): SignedAuthToken | Null = js.native
   def getState(): States = js.native
   def hasAnyChannelListenerConsumer(consumerId: js.Any): Boolean = js.native
   def hasAnyChannelOutputConsumer(consumerId: js.Any): Boolean = js.native
@@ -213,6 +216,7 @@ trait AGClientSocket
   // ---- Receiver logic ----
   def receiver(receiverName: String): typingsSlinky.streamDemux.demuxedConsumableStreamMod.^[_] = js.native
   def reconnect(): Unit = js.native
+  def reconnect(code: js.UndefOr[scala.Nothing], reason: String): Unit = js.native
   def reconnect(code: Double): Unit = js.native
   def reconnect(code: Double, reason: String): Unit = js.native
   def send(data: js.Any): Unit = js.native

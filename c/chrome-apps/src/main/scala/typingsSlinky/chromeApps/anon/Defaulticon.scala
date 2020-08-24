@@ -34,41 +34,26 @@ object Defaulticon {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDefault_icon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDefault_title(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefault_icon(value: String): Self = this.set("default_icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFile_filters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_filters")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefault_title(value: String): Self = this.set("default_title", value.asInstanceOf[js.Any])
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFile_filtersVarargs(value: String*): Self = this.set("file_filters", js.Array(value :_*))
     @scala.inline
-    def withFile_access(value: js.Array[read_ | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_access")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFile_filters(value: js.Array[String]): Self = this.set("file_filters", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFile_access: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_access")(js.undefined)
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFile_accessVarargs(value: (read_ | String)*): Self = this.set("file_access", js.Array(value :_*))
+    @scala.inline
+    def setFile_access(value: js.Array[read_ | String]): Self = this.set("file_access", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFile_access: Self = this.set("file_access", js.undefined)
   }
   
 }

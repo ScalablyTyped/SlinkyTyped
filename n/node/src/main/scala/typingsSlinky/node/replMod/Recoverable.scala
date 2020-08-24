@@ -15,9 +15,5 @@ import scala.scalajs.js.annotation._
 class Recoverable protected () extends Error {
   def this(err: js.Error) = this()
   var err: js.Error = js.native
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
 }
 

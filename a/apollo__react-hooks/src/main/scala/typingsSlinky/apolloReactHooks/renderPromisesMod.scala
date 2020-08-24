@@ -1,6 +1,6 @@
 package typingsSlinky.apolloReactHooks
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.apolloClient.mod.ObservableQuery
 import typingsSlinky.apolloReactHooks.queryDataMod.QueryData
 import typingsSlinky.apolloReactHooks.typesMod.QueryOptions
@@ -16,7 +16,7 @@ object renderPromisesMod extends js.Object {
     var lookupQueryInfo: js.Any = js.native
     var queryInfoTrie: js.Any = js.native
     var queryPromises: js.Any = js.native
-    def addQueryPromise[TData, TVariables](queryInstance: QueryData[TData, TVariables], finish: js.Function0[TagMod[Any]]): TagMod[Any] = js.native
+    def addQueryPromise[TData, TVariables](queryInstance: QueryData[TData, TVariables], finish: js.Function0[ReactElement]): ReactElement = js.native
     def consumeAndAwaitPromises(): js.Promise[js.Array[_]] = js.native
     def getSSRObservable[TData, TVariables](props: QueryOptions[TData, TVariables]): (ObservableQuery[_, _]) | Null = js.native
     def hasPromises(): Boolean = js.native

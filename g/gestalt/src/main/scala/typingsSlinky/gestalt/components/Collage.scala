@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.anon.Height
@@ -28,7 +28,7 @@ object Collage {
   
   def withProps(p: CollageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(columns: Double, height: Double, renderImage: Height => TagMod[Any], width: Double): Builder = {
+  def apply(columns: Double, height: Double, renderImage: Height => ReactElement, width: Double): Builder = {
     val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], renderImage = js.Any.fromFunction1(renderImage), width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[CollageProps]))
   }

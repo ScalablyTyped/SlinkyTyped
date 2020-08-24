@@ -5,20 +5,19 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Hour
 import typingsSlinky.fundamentalReact.anon.MeridiemPM
 import typingsSlinky.fundamentalReact.timePickerMod.TimePickerProps
-import typingsSlinky.fundamentalReact.timePickerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimePicker {
-  @JSImport("fundamental-react/lib/TimePicker/TimePicker", JSImport.Default)
+  @JSImport("fundamental-react", "TimePicker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.TimePicker] {
     @scala.inline
     def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
     @scala.inline

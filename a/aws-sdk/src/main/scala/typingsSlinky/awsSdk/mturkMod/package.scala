@@ -105,7 +105,7 @@ package object mturkMod {
   type QualificationRequestList = js.Array[typingsSlinky.awsSdk.mturkMod.QualificationRequest]
   type QualificationRequirementList = js.Array[typingsSlinky.awsSdk.mturkMod.QualificationRequirement]
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Granted
+    - typingsSlinky.awsSdk.awsSdkStrings.Granted_
     - typingsSlinky.awsSdk.awsSdkStrings.Revoked_
     - java.lang.String
   */

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ProductionFloorManagementIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ProductionFloorManagementIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ProductionFloorManagementIcon")
   @js.native
   object component extends js.Object
   

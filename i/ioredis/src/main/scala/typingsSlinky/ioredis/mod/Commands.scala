@@ -19,6 +19,7 @@ import typingsSlinky.ioredis.ioredisStrings.match_
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.std.Map
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -152,6 +153,9 @@ trait Commands extends js.Object {
   def append(key: KeyType, value: ValueType, callback: Callback[Double]): Unit = js.native
   def auth(password: String): js.Promise[String] = js.native
   def auth(password: String, callback: Callback[String]): Unit = js.native
+  // tslint:disable-next-line unified-signatures
+  def auth(username: String, password: String): js.Promise[String] = js.native
+  def auth(username: String, password: String, callback: Callback[String]): Unit = js.native
   def bgrewriteaof(): js.Promise[String] = js.native
   def bgrewriteaof(callback: Callback[String]): Unit = js.native
   def bgsave(): js.Promise[String] = js.native
@@ -575,6 +579,8 @@ trait Commands extends js.Object {
   def hmset(key: KeyType, data: js.Array[ValueType], cb: Callback[Ok]): Unit = js.native
   def hmset(key: KeyType, data: StringDictionary[ValueType]): js.Promise[Ok] = js.native
   def hmset(key: KeyType, data: StringDictionary[ValueType], cb: Callback[Ok]): Unit = js.native
+  def hmset(key: KeyType, data: Map[String, ValueType]): js.Promise[Ok] = js.native
+  def hmset(key: KeyType, data: Map[String, ValueType], cb: Callback[Ok]): Unit = js.native
   def hscan(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
   def hscan(key: KeyType, arg1: js.Array[ValueType], cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def hscan(
@@ -831,6 +837,8 @@ trait Commands extends js.Object {
   def mset(data: js.Array[ValueType], cb: Callback[Ok]): Unit = js.native
   def mset(data: StringDictionary[ValueType]): js.Promise[Ok] = js.native
   def mset(data: StringDictionary[ValueType], cb: Callback[Ok]): Unit = js.native
+  def mset(data: Map[String, ValueType]): js.Promise[Ok] = js.native
+  def mset(data: Map[String, ValueType], cb: Callback[Ok]): Unit = js.native
   def msetnx(
     arg1: ValueType,
     arg2: ValueType,
@@ -847,7 +855,10 @@ trait Commands extends js.Object {
   def msetnx(data: js.Array[ValueType], cb: Callback[BooleanResponse]): Unit = js.native
   def msetnx(data: StringDictionary[ValueType]): js.Promise[BooleanResponse] = js.native
   def msetnx(data: StringDictionary[ValueType], cb: Callback[BooleanResponse]): Unit = js.native
+  def msetnx(data: Map[String, ValueType]): js.Promise[BooleanResponse] = js.native
+  def msetnx(data: Map[String, ValueType], cb: Callback[BooleanResponse]): Unit = js.native
   def multi(): Pipeline = js.native
+  def multi(commands: js.UndefOr[scala.Nothing], options: MultiOptions): Pipeline = js.native
   def multi(commands: js.Array[js.Array[String]]): Pipeline = js.native
   def multi(commands: js.Array[js.Array[String]], options: MultiOptions): Pipeline = js.native
   def multi(options: typingsSlinky.ioredis.anon.Pipeline): js.Promise[Ok] = js.native
@@ -1460,61 +1471,191 @@ trait Commands extends js.Object {
   def sdiffstore(key: KeyType, args: KeyType*): js.Promise[Double] = js.native
   def select(index: Double): js.Promise[Ok] = js.native
   def select(index: Double, callback: Callback[Ok]): Unit = js.native
-  def set(key: KeyType, value: ValueType): js.Promise[Ok] = js.native
+  def set(key: KeyType, value: ValueType): js.Promise[Ok | Null] = js.native
   def set(key: KeyType, value: ValueType, callback: Callback[Ok]): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String, time: String): js.Promise[Ok] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: js.UndefOr[scala.Nothing],
+    setMode: String
+  ): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: js.UndefOr[scala.Nothing],
+    setMode: Double
+  ): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.UndefOr[scala.Nothing], time: String): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: String,
+    setMode: String
+  ): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: String,
+    setMode: Double
+  ): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.UndefOr[scala.Nothing], time: Double): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: Double,
+    setMode: String
+  ): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: Double,
+    setMode: Double
+  ): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: String,
+    time: js.UndefOr[scala.Nothing],
+    setMode: String
+  ): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: String,
+    time: js.UndefOr[scala.Nothing],
+    setMode: Double
+  ): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String, time: String): js.Promise[Ok | Null] = js.native
   def set(key: KeyType, value: ValueType, expiryMode: String, time: String, callback: Callback[Ok]): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String, time: String, setMode: String): js.Promise[Ok] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String, time: String, setMode: String): js.Promise[Ok | Null] = js.native
   def set(
     key: KeyType,
     value: ValueType,
     expiryMode: String,
     time: String,
     setMode: String,
-    callback: Callback[Ok]
+    callback: Callback[Ok | Null]
   ): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String, time: String, setMode: Double): js.Promise[Ok] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String, time: String, setMode: Double): js.Promise[Ok | Null] = js.native
   def set(
     key: KeyType,
     value: ValueType,
     expiryMode: String,
     time: String,
     setMode: Double,
-    callback: Callback[Ok]
+    callback: Callback[Ok | Null]
   ): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String, time: Double): js.Promise[Ok] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String, time: Double): js.Promise[Ok | Null] = js.native
   def set(key: KeyType, value: ValueType, expiryMode: String, time: Double, callback: Callback[Ok]): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String, time: Double, setMode: String): js.Promise[Ok] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String, time: Double, setMode: String): js.Promise[Ok | Null] = js.native
   def set(
     key: KeyType,
     value: ValueType,
     expiryMode: String,
     time: Double,
     setMode: String,
-    callback: Callback[Ok]
+    callback: Callback[Ok | Null]
   ): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: String, time: Double, setMode: Double): js.Promise[Ok] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: String, time: Double, setMode: Double): js.Promise[Ok | Null] = js.native
   def set(
     key: KeyType,
     value: ValueType,
     expiryMode: String,
     time: Double,
     setMode: Double,
-    callback: Callback[Ok]
+    callback: Callback[Ok | Null]
   ): Unit = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_]): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String, setMode: String): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String, setMode: Double): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: String): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: Double): js.Promise[Ok] = js.native
-  def set(key: KeyType, value: ValueType, setMode: String, callback: Callback[Ok]): Unit = js.native
-  def set(key: KeyType, value: ValueType, setMode: js.Array[_], callback: Callback[Ok]): Unit = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_]): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.Array[_],
+    time: js.UndefOr[scala.Nothing],
+    setMode: String
+  ): js.Promise[Ok | Null] = js.native
+  def set(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.Array[_],
+    time: js.UndefOr[scala.Nothing],
+    setMode: Double
+  ): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String, setMode: String): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String, setMode: Double): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: String): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: Double): js.Promise[Ok | Null] = js.native
+  def set(key: KeyType, value: ValueType, setMode: String, callback: Callback[Ok | Null]): Unit = js.native
+  def set(key: KeyType, value: ValueType, setMode: js.Array[_], callback: Callback[Ok | Null]): Unit = js.native
   def setBuffer(key: KeyType, value: ValueType): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, callback: Callback[Buffer]): Unit = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: js.UndefOr[scala.Nothing],
+    setMode: String
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: js.UndefOr[scala.Nothing],
+    setMode: Double
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(key: KeyType, value: ValueType, expiryMode: js.UndefOr[scala.Nothing], time: String): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: String,
+    setMode: String
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: String,
+    setMode: Double
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(key: KeyType, value: ValueType, expiryMode: js.UndefOr[scala.Nothing], time: Double): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: Double,
+    setMode: String
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.UndefOr[scala.Nothing],
+    time: Double,
+    setMode: Double
+  ): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: String): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: String,
+    time: js.UndefOr[scala.Nothing],
+    setMode: String
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: String,
+    time: js.UndefOr[scala.Nothing],
+    setMode: Double
+  ): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: String, time: String): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: String, time: String, setMode: String): js.Promise[Buffer] = js.native
   def setBuffer(
@@ -1555,6 +1696,20 @@ trait Commands extends js.Object {
     callback: Callback[Buffer]
   ): Unit = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: js.Array[_]): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.Array[_],
+    time: js.UndefOr[scala.Nothing],
+    setMode: String
+  ): js.Promise[Buffer] = js.native
+  def setBuffer(
+    key: KeyType,
+    value: ValueType,
+    expiryMode: js.Array[_],
+    time: js.UndefOr[scala.Nothing],
+    setMode: Double
+  ): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String, setMode: String): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: String, setMode: Double): js.Promise[Buffer] = js.native
@@ -1645,42 +1800,290 @@ trait Commands extends js.Object {
     arg6: KeyType | Double,
     cb: Callback[js.Array[String] | Double]
   ): Unit = js.native
-  def sort(
-    arg1: KeyType | Double,
-    arg2: KeyType | Double,
-    arg3: KeyType | Double,
-    arg4: KeyType | Double,
-    arg5: KeyType | Double,
-    cb: Callback[js.Array[String] | Double]
-  ): Unit = js.native
   def sort(arg1: KeyType | Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: js.Array[KeyType | Double]): js.Promise[js.Array[String] | Double] = js.native
   def sort(arg1: js.Array[KeyType | Double], cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: Double, arg3: Double, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: Double, arg3: Double, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: Double, arg2: Double, arg3: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: Double, arg3: KeyType, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: Double, arg3: KeyType, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: Double, arg2: Double, arg3: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: Double, arg2: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, arg3: Double, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, arg3: Double, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, arg3: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, arg3: KeyType, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, arg3: KeyType, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, arg3: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: Double, arg2: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, arg3: Double, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, arg3: Double, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, arg3: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, arg3: KeyType, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, arg3: KeyType, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, arg3: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: KeyType, arg2: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: KeyType, arg3: Double, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: KeyType, arg3: Double, arg4: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: KeyType, arg2: KeyType, arg3: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: Double, cb: Callback[js.Array[String] | Double]): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
+  def sort(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[js.Array[String] | Double]
+  ): Unit = js.native
   def sort(
     arg1: KeyType,
     arg2: KeyType,
@@ -2346,15 +2749,6 @@ trait Commands extends js.Object {
     arg6: KeyType | Double,
     cb: Callback[Double | String]
   ): Unit = js.native
-  def zadd(
-    key: KeyType,
-    arg1: KeyType | Double,
-    arg2: KeyType | Double,
-    arg3: KeyType | Double,
-    arg4: KeyType | Double,
-    arg5: KeyType | Double,
-    cb: Callback[Double | String]
-  ): Unit = js.native
   def zadd(key: KeyType, arg1: KeyType | Double, cb: Callback[Double | String]): Unit = js.native
   def zadd(key: KeyType, arg1: js.Array[KeyType | Double]): js.Promise[Double | String] = js.native
   def zadd(key: KeyType, arg1: js.Array[KeyType | Double], cb: Callback[Double | String]): Unit = js.native
@@ -2364,6 +2758,42 @@ trait Commands extends js.Object {
     arg2: Double,
     arg3: Double,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2381,6 +2811,42 @@ trait Commands extends js.Object {
     arg2: Double,
     arg3: KeyType,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2399,6 +2865,42 @@ trait Commands extends js.Object {
     arg2: KeyType,
     arg3: Double,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2416,6 +2918,42 @@ trait Commands extends js.Object {
     arg2: KeyType,
     arg3: KeyType,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2434,6 +2972,42 @@ trait Commands extends js.Object {
     arg2: Double,
     arg3: Double,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2451,6 +3025,42 @@ trait Commands extends js.Object {
     arg2: Double,
     arg3: KeyType,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2469,6 +3079,42 @@ trait Commands extends js.Object {
     arg2: KeyType,
     arg3: Double,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2486,6 +3132,42 @@ trait Commands extends js.Object {
     arg2: KeyType,
     arg3: KeyType,
     arg4: Double,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double | String]
+  ): Unit = js.native
+  def zadd(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
     cb: Callback[Double | String]
   ): Unit = js.native
   def zadd(
@@ -2523,43 +3205,322 @@ trait Commands extends js.Object {
     arg6: KeyType | Double,
     cb: Callback[Double]
   ): Unit = js.native
-  def zinterstore(
-    key: KeyType,
-    arg1: KeyType | Double,
-    arg2: KeyType | Double,
-    arg3: KeyType | Double,
-    arg4: KeyType | Double,
-    arg5: KeyType | Double,
-    cb: Callback[Double]
-  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType | Double, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: js.Array[KeyType | Double]): js.Promise[Double] = js.native
   def zinterstore(key: KeyType, arg1: js.Array[KeyType | Double], cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: Double, arg2: KeyType, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zinterstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
@@ -3070,43 +4031,322 @@ trait Commands extends js.Object {
     arg6: KeyType | Double,
     cb: Callback[Double]
   ): Unit = js.native
-  def zunionstore(
-    key: KeyType,
-    arg1: KeyType | Double,
-    arg2: KeyType | Double,
-    arg3: KeyType | Double,
-    arg4: KeyType | Double,
-    arg5: KeyType | Double,
-    cb: Callback[Double]
-  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType | Double, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: js.Array[KeyType | Double]): js.Promise[Double] = js.native
   def zunionstore(key: KeyType, arg1: js.Array[KeyType | Double], cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: Double,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: Double, arg2: KeyType, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: Double,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: Double, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: Double,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: Double, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: Double,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: Double, cb: Callback[Double]): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: Double,
+    cb: Callback[Double]
+  ): Unit = js.native
+  def zunionstore(
+    key: KeyType,
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    cb: Callback[Double]
+  ): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native

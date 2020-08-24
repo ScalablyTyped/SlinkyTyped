@@ -70,6 +70,12 @@ trait Settings extends js.Object {
     handler: js.Any,
     callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  def addHandlerAsync(
+    eventType: EventType,
+    handler: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def addHandlerAsync(eventType: EventType, handler: js.Any, options: AsyncContextOptions): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
@@ -170,6 +176,11 @@ trait Settings extends js.Object {
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
   def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* result */ AsyncResult[Unit], Unit]): Unit = js.native
+  def removeHandlerAsync(
+    eventType: EventType,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
   def removeHandlerAsync(eventType: EventType, options: RemoveHandlerOptions): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
@@ -220,6 +231,7 @@ trait Settings extends js.Object {
     */
   def saveAsync(): Unit = js.native
   def saveAsync(callback: js.Function1[/* result */ AsyncResult[Unit], Unit]): Unit = js.native
+  def saveAsync(options: js.UndefOr[scala.Nothing], callback: js.Function1[/* result */ AsyncResult[Unit], Unit]): Unit = js.native
   def saveAsync(options: SaveSettingsOptions): Unit = js.native
   def saveAsync(options: SaveSettingsOptions, callback: js.Function1[/* result */ AsyncResult[Unit], Unit]): Unit = js.native
   /**
@@ -236,7 +248,7 @@ trait Settings extends js.Object {
     * 
     * The set method creates a new setting of the specified name if it does not already exist, or sets an existing setting of the specified name 
     * in the in-memory copy of the settings property bag. After you call the Settings.saveAsync method, the value is stored in the document as 
-    * the serialized JSON representation of its data type. A maximum of 2MB is available for the settings of each add-in.
+    * the serialized JSON representation of its data type.
     * 
     * @param settingName The case-sensitive name of the setting to set or create.
     * @param value Specifies the value to be stored.

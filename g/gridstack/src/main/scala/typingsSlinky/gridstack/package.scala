@@ -10,5 +10,20 @@ package object gridstack {
     * Item attributes
     * Events
     */
-  type GridStackElement = java.lang.String | org.scalajs.dom.raw.HTMLElement | typingsSlinky.gridstack.JQuery
+  type GridStackElement = java.lang.String | org.scalajs.dom.raw.HTMLElement
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.gridstack.gridstackStrings.added
+    - typingsSlinky.gridstack.gridstackStrings.change
+    - typingsSlinky.gridstack.gridstackStrings.disable
+    - typingsSlinky.gridstack.gridstackStrings.dragstart
+    - typingsSlinky.gridstack.gridstackStrings.dragstop
+    - typingsSlinky.gridstack.gridstackStrings.dropped
+    - typingsSlinky.gridstack.gridstackStrings.enable
+    - typingsSlinky.gridstack.gridstackStrings.removed
+    - typingsSlinky.gridstack.gridstackStrings.resize
+    - typingsSlinky.gridstack.gridstackStrings.resizestart
+    - typingsSlinky.gridstack.gridstackStrings.gsresizestop
+    - java.lang.String
+  */
+  type GridStackEvent = typingsSlinky.gridstack._GridStackEvent | java.lang.String
 }

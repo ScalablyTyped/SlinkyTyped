@@ -1,13 +1,13 @@
 package typingsSlinky.reactBigCalendar.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ToolbarProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var date: js.Date = js.native
   var label: String = js.native
   var localizer: typingsSlinky.reactBigCalendar.anon.Messages = js.native

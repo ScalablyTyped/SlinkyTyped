@@ -29,6 +29,8 @@ object SparklinesBars {
     @scala.inline
     def onMouseMove(value: (/* p */ Point, /* event */ SyntheticMouseEvent[ReactSVGElement]) => Unit): this.type = set("onMouseMove", js.Any.fromFunction2(value))
     @scala.inline
+    def pointsVarargs(value: Point*): this.type = set("points", js.Array(value :_*))
+    @scala.inline
     def points(value: js.Array[Point]): this.type = set("points", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

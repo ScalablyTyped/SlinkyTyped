@@ -1,91 +1,35 @@
 package typingsSlinky.node.cryptoMod
 
-import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.anon.Chunk
-import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.node.streamMod.TransformOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CipherCCMOptions extends TransformOptions {
-  var authTagLength: Double
+  var authTagLength: Double = js.native
 }
 
 object CipherCCMOptions {
   @scala.inline
-  def apply(
-    authTagLength: Double,
-    allowHalfOpen: js.UndefOr[Boolean] = js.undefined,
-    autoDestroy: js.UndefOr[Boolean] = js.undefined,
-    decodeStrings: js.UndefOr[Boolean] = js.undefined,
-    defaultencoding: BufferEncoding = null,
-    destroy: js.ThisFunction2[
-      /* this */ Transform, 
-      /* error */ js.Error | Null, 
-      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
-      Unit
-    ] = null,
-    emitClose: js.UndefOr[Boolean] = js.undefined,
-    encoding: BufferEncoding = null,
-    `final`: js.ThisFunction1[
-      /* this */ Transform, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    flush: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit] = null,
-    highWaterMark: js.UndefOr[Double] = js.undefined,
-    objectMode: js.UndefOr[Boolean] = js.undefined,
-    read: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit] = null,
-    readableHighWaterMark: js.UndefOr[Double] = js.undefined,
-    readableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    transform: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ BufferEncoding, 
-      /* callback */ TransformCallback, 
-      Unit
-    ] = null,
-    writableCorked: js.UndefOr[Double] = js.undefined,
-    writableHighWaterMark: js.UndefOr[Double] = js.undefined,
-    writableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    write: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ BufferEncoding, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    writev: js.ThisFunction2[
-      /* this */ Transform, 
-      /* chunks */ js.Array[Chunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null
-  ): CipherCCMOptions = {
+  def apply(authTagLength: Double): CipherCCMOptions = {
     val __obj = js.Dynamic.literal(authTagLength = authTagLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowHalfOpen)) __obj.updateDynamic("allowHalfOpen")(allowHalfOpen.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(decodeStrings)) __obj.updateDynamic("decodeStrings")(decodeStrings.get.asInstanceOf[js.Any])
-    if (defaultencoding != null) __obj.updateDynamic("defaultencoding")(defaultencoding.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
-    if (!js.isUndefined(emitClose)) __obj.updateDynamic("emitClose")(emitClose.get.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (`final` != null) __obj.updateDynamic("final")(`final`.asInstanceOf[js.Any])
-    if (flush != null) __obj.updateDynamic("flush")(flush.asInstanceOf[js.Any])
-    if (!js.isUndefined(highWaterMark)) __obj.updateDynamic("highWaterMark")(highWaterMark.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.get.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
-    if (!js.isUndefined(readableHighWaterMark)) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.get.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableCorked)) __obj.updateDynamic("writableCorked")(writableCorked.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableHighWaterMark)) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.get.asInstanceOf[js.Any])
-    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
-    if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])
     __obj.asInstanceOf[CipherCCMOptions]
   }
+  @scala.inline
+  implicit class CipherCCMOptionsOps[Self <: CipherCCMOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAuthTagLength(value: Double): Self = this.set("authTagLength", value.asInstanceOf[js.Any])
+  }
+  
 }
 

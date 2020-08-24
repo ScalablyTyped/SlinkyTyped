@@ -29,6 +29,7 @@ trait TypeofBuffer_
     * @param encoding encoding used for call to buf.fill while initalizing
     */
   def alloc(size: Double): Buffer = js.native
+  def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: BufferEncoding): Buffer = js.native
   def alloc(size: Double, fill: String): Buffer = js.native
   def alloc(size: Double, fill: String, encoding: BufferEncoding): Buffer = js.native
   def alloc(size: Double, fill: Double): Buffer = js.native
@@ -82,6 +83,7 @@ trait TypeofBuffer_
   def concat(list: js.Array[js.typedarray.Uint8Array]): Buffer = js.native
   def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer): Buffer = js.native
+  def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
   /**
@@ -93,6 +95,7 @@ trait TypeofBuffer_
     * @param arrayBuffer The .buffer property of any TypedArray or a new ArrayBuffer()
     */
   def from(arrayBuffer: js.typedarray.ArrayBuffer): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
   def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): Buffer = js.native
   def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
   /**
@@ -102,6 +105,7 @@ trait TypeofBuffer_
   def from(data: js.Array[Double]): Buffer = js.native
   def from(data: js.typedarray.Uint8Array): Buffer = js.native
   def from(obj: ToPrimitive): Buffer = js.native
+  def from(obj: ToPrimitive, byteOffset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
   def from(obj: ToPrimitive, byteOffset: Double): Buffer = js.native
   def from(obj: ToPrimitive, byteOffset: Double, length: Double): Buffer = js.native
   /**
@@ -110,6 +114,7 @@ trait TypeofBuffer_
     * @param obj An object supporting `Symbol.toPrimitive` or `valueOf()`.
     */
   def from(obj: ValueOf): Buffer = js.native
+  def from(obj: ValueOf, byteOffset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
   def from(obj: ValueOf, byteOffset: Double): Buffer = js.native
   def from(obj: ValueOf, byteOffset: Double, length: Double): Buffer = js.native
   /**

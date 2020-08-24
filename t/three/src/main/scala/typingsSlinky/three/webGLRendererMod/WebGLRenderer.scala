@@ -1,29 +1,32 @@
 package typingsSlinky.three.webGLRendererMod
 
+import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.constantsMod.CullFace
 import typingsSlinky.three.constantsMod.ShadowMapType
+import typingsSlinky.three.constantsMod.TextureEncoding
 import typingsSlinky.three.constantsMod.ToneMapping
-import typingsSlinky.three.fogMod.Fog
 import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.sceneMod.Scene
+import typingsSlinky.three.textureMod.Texture
 import typingsSlinky.three.vector2Mod.Vector2
 import typingsSlinky.three.vector4Mod.Vector4
 import typingsSlinky.three.webGLCapabilitiesMod.WebGLCapabilities
 import typingsSlinky.three.webGLExtensionsMod.WebGLExtensions
 import typingsSlinky.three.webGLInfoMod.WebGLInfo
+import typingsSlinky.three.webGLProgramMod.WebGLProgram
 import typingsSlinky.three.webGLPropertiesMod.WebGLProperties
 import typingsSlinky.three.webGLRenderListsMod.RenderTarget
 import typingsSlinky.three.webGLRenderListsMod.WebGLRenderLists
 import typingsSlinky.three.webGLRenderTargetMod.WebGLRenderTarget
 import typingsSlinky.three.webGLShadowMapMod.WebGLShadowMap
 import typingsSlinky.three.webGLStateMod.WebGLState
-import typingsSlinky.three.webVRManagerMod.WebVRManager
+import typingsSlinky.three.webXRManagerMod.WebXRManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,14 +69,6 @@ class WebGLRenderer () extends Renderer {
   	 * @deprecated
   	 */
   var gammaFactor: Double = js.native
-  /**
-  	 * Default is false.
-  	 */
-  var gammaInput: Boolean = js.native
-  /**
-  	 * Default is false.
-  	 */
-  var gammaOutput: Boolean = js.native
   var info: WebGLInfo = js.native
   var localClippingEnabled: Boolean = js.native
   /**
@@ -84,6 +79,10 @@ class WebGLRenderer () extends Renderer {
   	 * Default is 8.
   	 */
   var maxMorphTargets: Double = js.native
+  /**
+  	 * Default is LinearEncoding.
+  	 */
+  var outputEncoding: TextureEncoding = js.native
   var physicallyCorrectLights: Boolean = js.native
   var pixelRatio: Double = js.native
   var properties: WebGLProperties = js.native
@@ -112,8 +111,11 @@ class WebGLRenderer () extends Renderer {
   var state: WebGLState = js.native
   var toneMapping: ToneMapping = js.native
   var toneMappingExposure: Double = js.native
-  var toneMappingWhitePoint: Double = js.native
-  var vr: WebVRManager = js.native
+  /**
+  	 * @deprecated Use {@link WebGLRenderer#xr .xr} instead.
+  	 */
+  var vr: Boolean = js.native
+  var xr: WebXRManager = js.native
   /**
   	 * @deprecated Use {@link WebGLRenderer#setAnimationLoop .setAnimationLoop()} instead.
   	 */
@@ -123,7 +125,11 @@ class WebGLRenderer () extends Renderer {
   	 * Arguments default to true
   	 */
   def clear(): Unit = js.native
+  def clear(color: js.UndefOr[scala.Nothing], depth: js.UndefOr[scala.Nothing], stencil: Boolean): Unit = js.native
+  def clear(color: js.UndefOr[scala.Nothing], depth: Boolean): Unit = js.native
+  def clear(color: js.UndefOr[scala.Nothing], depth: Boolean, stencil: Boolean): Unit = js.native
   def clear(color: Boolean): Unit = js.native
+  def clear(color: Boolean, depth: js.UndefOr[scala.Nothing], stencil: Boolean): Unit = js.native
   def clear(color: Boolean, depth: Boolean): Unit = js.native
   def clear(color: Boolean, depth: Boolean, stencil: Boolean): Unit = js.native
   def clearColor(): Unit = js.native
@@ -133,7 +139,27 @@ class WebGLRenderer () extends Renderer {
   /**
   	 * Compiles all materials in the scene with the camera. This is useful to precompile shaders before the first rendering.
   	 */
-  def compile(scene: Scene, camera: Camera): Unit = js.native
+  def compile(scene: Object3D, camera: Camera): Unit = js.native
+  /**
+  	 * Copies a region of the currently bound framebuffer into the selected mipmap level of the selected texture.
+  	 * This region is defined by the size of the destination texture's mip level, offset by the input position.
+  	 *
+  	 * @param position Specifies the pixel offset from which to copy out of the framebuffer.
+  	 * @param texture Specifies the destination texture.
+  	 * @param level Specifies the destination mipmap level of the texture.
+  	 */
+  def copyFramebufferToTexture(position: Vector2, texture: Texture): Unit = js.native
+  def copyFramebufferToTexture(position: Vector2, texture: Texture, level: Double): Unit = js.native
+  /**
+  	 * Copies srcTexture to the specified level of dstTexture, offset by the input position.
+  	 *
+  	 * @param position Specifies the pixel offset into the dstTexture where the copy will occur.
+  	 * @param srcTexture Specifies the source texture.
+  	 * @param dstTexture Specifies the destination texture.
+  	 * @param level Specifies the destination mipmap level of the texture.
+  	 */
+  def copyTextureToTexture(position: Vector2, srcTexture: Texture, dstTexture: Texture): Unit = js.native
+  def copyTextureToTexture(position: Vector2, srcTexture: Texture, dstTexture: Texture, level: Double): Unit = js.native
   def dispose(): Unit = js.native
   /**
   	 * @deprecated Use {@link WebGLRenderer#setScissorTest .setScissorTest()} instead.
@@ -193,6 +219,12 @@ class WebGLRenderer () extends Renderer {
   	 * Copies the viewport into target.
   	 */
   def getViewport(target: Vector4): Vector4 = js.native
+  /**
+  	 * Initializes the given texture. Can be used to preload a texture rather than waiting until first render (which can cause noticeable lags due to decode and GPU upload overhead).
+  	 *
+  	 * @param texture The texture to Initialize.
+  	 */
+  def initTexture(texture: Texture): Unit = js.native
   def readRenderTargetPixels(renderTarget: RenderTarget, x: Double, y: Double, width: Double, height: Double, buffer: js.Any): Unit = js.native
   def readRenderTargetPixels(
     renderTarget: RenderTarget,
@@ -205,7 +237,7 @@ class WebGLRenderer () extends Renderer {
   ): Unit = js.native
   def renderBufferDirect(
     camera: Camera,
-    fog: Fog,
+    scene: Scene,
     geometry: BufferGeometry,
     material: Material,
     `object`: Object3D,
@@ -213,28 +245,22 @@ class WebGLRenderer () extends Renderer {
   ): Unit = js.native
   def renderBufferDirect(
     camera: Camera,
-    fog: Fog,
+    scene: Scene,
     geometry: Geometry,
     material: Material,
     `object`: Object3D,
     geometryGroup: js.Any
   ): Unit = js.native
-  /**
-  	 * Tells the shadow map plugin to update using the passed scene and camera parameters.
-  	 *
-  	 * @param scene an instance of Scene
-  	 * @param camera — an instance of Camera
-  	 */
-  def renderBufferImmediate(`object`: Object3D, program: js.Object, material: Material): Unit = js.native
+  def renderBufferImmediate(`object`: Object3D, program: WebGLProgram): Unit = js.native
   /**
   	 * @deprecated Use {@link WebGLState#reset .state.reset()} instead.
   	 */
   def resetGLState(): Unit = js.native
-  def setAnimationLoop(): Unit = js.native
   /**
-  	 * A build in function that can be used instead of requestAnimationFrame. For WebVR projects this function must be used.
+  	 * A build in function that can be used instead of requestAnimationFrame. For WebXR projects this function must be used.
   	 * @param callback The function will be called every available frame. If `null` is passed it will stop any already ongoing animation.
   	 */
+  def setAnimationLoop(): Unit = js.native
   def setAnimationLoop(callback: js.Function): Unit = js.native
   def setClearAlpha(alpha: Double): Unit = js.native
   def setClearColor(color: String): Unit = js.native
@@ -247,37 +273,66 @@ class WebGLRenderer () extends Renderer {
   def setClearColor(color: Color): Unit = js.native
   def setClearColor(color: Color, alpha: Double): Unit = js.native
   def setDrawingBufferSize(width: Double, height: Double, pixelRatio: Double): Unit = js.native
+  /**
+  	 * Sets the given WebGLFramebuffer. This method can only be used if no render target is set via
+  	 * {@link WebGLRenderer#setRenderTarget .setRenderTarget}.
+  	 *
+  	 * @param value The WebGLFramebuffer.
+  	 */
+  def setFramebuffer(value: WebGLFramebuffer): Unit = js.native
+  /**
+  	 * Sets the custom opaque sort function for the WebGLRenderLists. Pass null to use the default painterSortStable function.
+  	 */
+  def setOpaqueSort(method: js.Function): Unit = js.native
   def setPixelRatio(value: Double): Unit = js.native
-  def setRenderTarget(): Unit = js.native
-  def setRenderTarget(renderTarget: Null, activeCubeFace: Double): Unit = js.native
-  def setRenderTarget(renderTarget: Null, activeCubeFace: Double, activeMipmapLevel: Double): Unit = js.native
   /**
   	 * Sets the active render target.
   	 *
   	 * @param renderTarget The {@link WebGLRenderTarget renderTarget} that needs to be activated. When `null` is given, the canvas is set as the active render target instead.
-  	 * @param activeCubeFace Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of {@link WebGLRenderTargetCube}.
+  	 * @param activeCubeFace Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of {@link WebGLCubeRenderTarget}.
   	 * @param activeMipmapLevel Specifies the active mipmap level.
   	 */
+  def setRenderTarget(): Unit = js.native
+  def setRenderTarget(renderTarget: Null, activeCubeFace: js.UndefOr[scala.Nothing], activeMipmapLevel: Double): Unit = js.native
+  def setRenderTarget(renderTarget: Null, activeCubeFace: Double): Unit = js.native
+  def setRenderTarget(renderTarget: Null, activeCubeFace: Double, activeMipmapLevel: Double): Unit = js.native
   def setRenderTarget(renderTarget: RenderTarget): Unit = js.native
+  def setRenderTarget(renderTarget: RenderTarget, activeCubeFace: js.UndefOr[scala.Nothing], activeMipmapLevel: Double): Unit = js.native
   def setRenderTarget(renderTarget: RenderTarget, activeCubeFace: Double): Unit = js.native
   def setRenderTarget(renderTarget: RenderTarget, activeCubeFace: Double, activeMipmapLevel: Double): Unit = js.native
   def setScissor(x: Double): Unit = js.native
+  def setScissor(x: Double, y: js.UndefOr[scala.Nothing], width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
+  def setScissor(x: Double, y: js.UndefOr[scala.Nothing], width: Double): Unit = js.native
+  def setScissor(x: Double, y: js.UndefOr[scala.Nothing], width: Double, height: Double): Unit = js.native
   def setScissor(x: Double, y: Double): Unit = js.native
+  def setScissor(x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
   def setScissor(x: Double, y: Double, width: Double): Unit = js.native
   def setScissor(x: Double, y: Double, width: Double, height: Double): Unit = js.native
   /**
   	 * Sets the scissor area from (x, y) to (x + width, y + height).
   	 */
   def setScissor(x: Vector4): Unit = js.native
+  def setScissor(x: Vector4, y: js.UndefOr[scala.Nothing], width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
+  def setScissor(x: Vector4, y: js.UndefOr[scala.Nothing], width: Double): Unit = js.native
+  def setScissor(x: Vector4, y: js.UndefOr[scala.Nothing], width: Double, height: Double): Unit = js.native
   def setScissor(x: Vector4, y: Double): Unit = js.native
+  def setScissor(x: Vector4, y: Double, width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
   def setScissor(x: Vector4, y: Double, width: Double): Unit = js.native
   def setScissor(x: Vector4, y: Double, width: Double, height: Double): Unit = js.native
   /**
   	 * Enable the scissor test. When this is enabled, only the pixels within the defined scissor area will be affected by further renderer actions.
   	 */
   def setScissorTest(enable: Boolean): Unit = js.native
+  /**
+  	 * Sets the custom transparent sort function for the WebGLRenderLists. Pass null to use the default reversePainterSortStable function.
+  	 */
+  def setTransparentSort(method: js.Function): Unit = js.native
   def setViewport(x: Double): Unit = js.native
+  def setViewport(x: Double, y: js.UndefOr[scala.Nothing], width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
+  def setViewport(x: Double, y: js.UndefOr[scala.Nothing], width: Double): Unit = js.native
+  def setViewport(x: Double, y: js.UndefOr[scala.Nothing], width: Double, height: Double): Unit = js.native
   def setViewport(x: Double, y: Double): Unit = js.native
+  def setViewport(x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
   def setViewport(x: Double, y: Double, width: Double): Unit = js.native
   def setViewport(x: Double, y: Double, width: Double, height: Double): Unit = js.native
   /**
@@ -285,7 +340,11 @@ class WebGLRenderer () extends Renderer {
   	 * (x, y) is the lower-left corner of the region.
   	 */
   def setViewport(x: Vector4): Unit = js.native
+  def setViewport(x: Vector4, y: js.UndefOr[scala.Nothing], width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
+  def setViewport(x: Vector4, y: js.UndefOr[scala.Nothing], width: Double): Unit = js.native
+  def setViewport(x: Vector4, y: js.UndefOr[scala.Nothing], width: Double, height: Double): Unit = js.native
   def setViewport(x: Vector4, y: Double): Unit = js.native
+  def setViewport(x: Vector4, y: Double, width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
   def setViewport(x: Vector4, y: Double, width: Double): Unit = js.native
   def setViewport(x: Vector4, y: Double, width: Double, height: Double): Unit = js.native
   /**

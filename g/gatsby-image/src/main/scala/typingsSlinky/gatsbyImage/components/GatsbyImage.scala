@@ -42,7 +42,11 @@ object GatsbyImage {
     @scala.inline
     def fadeIn(value: Boolean): this.type = set("fadeIn", value.asInstanceOf[js.Any])
     @scala.inline
+    def fixedVarargs(value: FixedObject*): this.type = set("fixed", js.Array(value :_*))
+    @scala.inline
     def fixed(value: FixedObject | js.Array[FixedObject]): this.type = set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fluidVarargs(value: FluidObject*): this.type = set("fluid", js.Array(value :_*))
     @scala.inline
     def fluid(value: FluidObject | js.Array[FluidObject]): this.type = set("fluid", value.asInstanceOf[js.Any])
     @scala.inline

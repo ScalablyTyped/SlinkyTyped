@@ -45,53 +45,26 @@ object DeviceStates {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withState(value: DeviceState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withType(value: NetworkType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setState(value: DeviceState): Self = this.set("State", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSIMLockStatus(value: SIMLockStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMLockStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: NetworkType): Self = this.set("Type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSIMLockStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMLockStatus")(js.undefined)
-        ret
-    }
+    def setSIMLockStatus(value: SIMLockStatus): Self = this.set("SIMLockStatus", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSIMPresent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMPresent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSIMLockStatus: Self = this.set("SIMLockStatus", js.undefined)
     @scala.inline
-    def withoutSIMPresent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SIMPresent")(js.undefined)
-        ret
-    }
+    def setSIMPresent(value: Boolean): Self = this.set("SIMPresent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScanning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scanning")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSIMPresent: Self = this.set("SIMPresent", js.undefined)
     @scala.inline
-    def withoutScanning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scanning")(js.undefined)
-        ret
-    }
+    def setScanning(value: Boolean): Self = this.set("Scanning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScanning: Self = this.set("Scanning", js.undefined)
   }
   
 }

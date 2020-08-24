@@ -1,7 +1,7 @@
 
 # Scala.js typings for bech32
 
-Typings are for version 1.1
+Typings are for version 1.1.4
 
 ## Library description:
 Bech32 encoding / decoding
@@ -24,7 +24,7 @@ Bech32 encoding / decoding
 
 
 ## Note
-This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
+This library has been generated from typescript code from first party type definitions.
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

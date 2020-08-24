@@ -25,53 +25,28 @@ object Lowenergy {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLow_energy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low_energy")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutLow_energy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low_energy")(js.undefined)
-        ret
-    }
+    def setLow_energy(value: Boolean): Self = this.set("low_energy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPeripheral(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peripheral")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLow_energy: Self = this.set("low_energy", js.undefined)
     @scala.inline
-    def withoutPeripheral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peripheral")(js.undefined)
-        ret
-    }
+    def setPeripheral(value: Boolean): Self = this.set("peripheral", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSocket(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePeripheral: Self = this.set("peripheral", js.undefined)
     @scala.inline
-    def withoutSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(js.undefined)
-        ret
-    }
+    def setSocket(value: Boolean): Self = this.set("socket", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUuids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuids")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSocket: Self = this.set("socket", js.undefined)
     @scala.inline
-    def withoutUuids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuids")(js.undefined)
-        ret
-    }
+    def setUuidsVarargs(value: String*): Self = this.set("uuids", js.Array(value :_*))
+    @scala.inline
+    def setUuids(value: js.Array[String]): Self = this.set("uuids", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUuids: Self = this.set("uuids", js.undefined)
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.reactResizeDetector.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactResizeDetector.anon.Leading
@@ -40,7 +40,7 @@ object ReactResizeDetector {
     @scala.inline
     def refreshRate(value: Double): this.type = set("refreshRate", value.asInstanceOf[js.Any])
     @scala.inline
-    def render(value: /* props */ ReactResizeDetectorDimensions => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: /* props */ ReactResizeDetectorDimensions => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
     @scala.inline
     def skipOnMount(value: Boolean): this.type = set("skipOnMount", value.asInstanceOf[js.Any])
     @scala.inline

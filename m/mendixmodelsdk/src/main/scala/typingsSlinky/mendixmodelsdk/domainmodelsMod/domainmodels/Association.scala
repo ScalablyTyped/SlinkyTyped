@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAssociationBase because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAssociation because var conflicts: containerAsDomainModel, id, isLoaded, model, name, owner, parent, qualifiedName, remoteSourceDocument, remoteSourceDocumentQualifiedName, source, structureTypeName, `type`, unit. Inlined child */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.Association")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAssociation because var conflicts: capabilities, containerAsDomainModel, id, isLoaded, model, name, owner, parent, qualifiedName, remoteSourceDocument, remoteSourceDocumentQualifiedName, source, structureTypeName, `type`, unit. Inlined child */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.Association")
 @js.native
 class Association protected () extends AssociationBase {
   def this(
@@ -39,13 +39,13 @@ class Association protected () extends AssociationBase {
   @JSName("model")
   var model_FAssociation: IModel = js.native
   def child: Entity = js.native
-  def child(newValue: Entity): js.Any = js.native
   def childConnection: IPoint = js.native
-  def childConnection(newValue: IPoint): js.Any = js.native
+  def childConnection_=(newValue: IPoint): Unit = js.native
+  def child_=(newValue: Entity): Unit = js.native
   @JSName("containerAsDomainModel")
   def containerAsDomainModel_MAssociation: DomainModel = js.native
   def parentConnection: IPoint = js.native
-  def parentConnection(newValue: IPoint): js.Any = js.native
+  def parentConnection_=(newValue: IPoint): Unit = js.native
 }
 
 /* static members */

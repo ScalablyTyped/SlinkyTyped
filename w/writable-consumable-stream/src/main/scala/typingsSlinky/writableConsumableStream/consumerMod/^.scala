@@ -1,6 +1,5 @@
 package typingsSlinky.writableConsumableStream.consumerMod
 
-import typingsSlinky.std.IteratorResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +13,5 @@ class ^[T] protected () extends Consumer[T] {
     startNode: Node[T],
     timeout: Double
   ) = this()
-  /* CompleteClass */
-  override def next(): js.Promise[IteratorResult[T, _]] = js.native
-  /* CompleteClass */
-  override def `return`(): Unit = js.native
 }
 

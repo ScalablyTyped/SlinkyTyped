@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libDropdownDropdownMod.DropdownProps
-import typingsSlinky.reactToolbox.libDropdownDropdownMod.DropdownTheme
-import typingsSlinky.reactToolbox.libDropdownMod.default
+import typingsSlinky.reactToolbox.dropdownDropdownMod.DropdownProps
+import typingsSlinky.reactToolbox.dropdownDropdownMod.DropdownTheme
+import typingsSlinky.reactToolbox.dropdownMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dropdown {
-  @JSImport("react-toolbox/lib/dropdown", JSImport.Default)
+  @JSImport("react-toolbox/components/dropdown", JSImport.Default)
   @js.native
   object component extends js.Object
   

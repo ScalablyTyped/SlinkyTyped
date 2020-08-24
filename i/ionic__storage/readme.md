@@ -1,7 +1,7 @@
 
 # Scala.js typings for ionic__storage
 
-Typings are for version 2.2.0
+Typings are for version 2.3.0
 
 ## Library description:
 Ionic Storage utility

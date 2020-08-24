@@ -3,9 +3,12 @@ package typingsSlinky.reactNavigationDrawer
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Context
 import typingsSlinky.reactNavigation.mod.CreateNavigatorConfig
+import typingsSlinky.reactNavigation.mod.NavigationNavigator
 import typingsSlinky.reactNavigation.mod.NavigationParams
+import typingsSlinky.reactNavigation.mod.NavigationProp
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigation.mod.NavigationRouteConfigMap
+import typingsSlinky.reactNavigation.mod.NavigationState
 import typingsSlinky.reactNavigation.mod.SupportedThemes
 import typingsSlinky.reactNavigationDrawer.anon.ActiveBackgroundColor
 import typingsSlinky.reactNavigationDrawer.anon.GetActionCreators
@@ -55,7 +58,7 @@ object mod extends js.Object {
       NavigationDrawerProp[NavigationRoute[NavigationParams], _], 
       _
     ]
-  ): js.Any = js.native
+  ): NavigationNavigator[_, NavigationProp[NavigationState]] = js.native
   def createDrawerNavigator(
     routeConfigs: NavigationRouteConfigMap[
       NavigationDrawerOptions, 
@@ -68,7 +71,7 @@ object mod extends js.Object {
       NavigationDrawerOptions, 
       NavigationDrawerProp[NavigationRoute[NavigationParams], _]
     ]
-  ): js.Any = js.native
+  ): NavigationNavigator[_, NavigationProp[NavigationState]] = js.native
   @js.native
   object DrawerActions extends js.Object {
     val CLOSE_DRAWER: /* "Navigation/CLOSE_DRAWER" */ String = js.native

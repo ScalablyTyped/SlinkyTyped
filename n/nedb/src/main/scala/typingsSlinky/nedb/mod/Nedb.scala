@@ -22,7 +22,7 @@ trait Nedb[G] extends EventEmitter {
     * Count all documents matching the query
     * @param query MongoDB-style query
     */
-  def count(query: js.Any, callback: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
+  def count(query: js.Any, callback: js.Function2[/* err */ js.Error | Null, /* n */ Double, Unit]): Unit = js.native
   /**
     * Ensure an index is kept for this field. Same parameters as lib/indexes
     * For now this function is synchronous, we need to test how much time it takes
@@ -30,14 +30,17 @@ trait Nedb[G] extends EventEmitter {
     * @param cb Optional callback, signature: err
     */
   def ensureIndex(options: EnsureIndexOptions): Unit = js.native
-  def ensureIndex(options: EnsureIndexOptions, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def ensureIndex(options: EnsureIndexOptions, cb: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   def find[T /* <: G */](query: js.Any): Cursor[T] = js.native
   /**
     * Find all documents matching the query
     * If no callback is passed, we return the cursor so that user can limit, skip and finally exec
     * * @param {any} query MongoDB-style query
     */
-  def find[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]): Unit = js.native
+  def find[T /* <: G */](
+    query: js.Any,
+    callback: js.Function2[/* err */ js.Error | Null, /* documents */ js.Array[T], Unit]
+  ): Unit = js.native
   def find[T /* <: G */](query: js.Any, projection: T): Cursor[T] = js.native
   /**
     * Find all documents matching the query
@@ -48,19 +51,23 @@ trait Nedb[G] extends EventEmitter {
   def find[T /* <: G */](
     query: js.Any,
     projection: T,
-    callback: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* documents */ js.Array[T], Unit]
   ): Unit = js.native
   /**
     * Find one document matching the query
     * @param query MongoDB-style query
     */
-  def findOne[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
+  def findOne[T /* <: G */](query: js.Any, callback: js.Function2[/* err */ js.Error | Null, /* document */ T, Unit]): Unit = js.native
   /**
     * Find one document matching the query
     * @param query MongoDB-style query
     * @param projection MongoDB-style projection
     */
-  def findOne[T /* <: G */](query: js.Any, projection: T, callback: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
+  def findOne[T /* <: G */](
+    query: js.Any,
+    projection: T,
+    callback: js.Function2[/* err */ js.Error | Null, /* document */ T, Unit]
+  ): Unit = js.native
   /**
     * Get an array of all the data in the database
     */
@@ -80,9 +87,12 @@ trait Nedb[G] extends EventEmitter {
     * @param cb Optional callback, signature: err, insertedDoc
     */
   def insert[T /* <: G */](newDoc: T): Unit = js.native
-  def insert[T /* <: G */](newDoc: T, cb: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
+  def insert[T /* <: G */](newDoc: T, cb: js.Function2[/* err */ js.Error | Null, /* document */ T, Unit]): Unit = js.native
   def insert[T /* <: G */](newDocs: js.Array[T]): Unit = js.native
-  def insert[T /* <: G */](newDocs: js.Array[T], cb: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]): Unit = js.native
+  def insert[T /* <: G */](
+    newDocs: js.Array[T],
+    cb: js.Function2[/* err */ js.Error | Null, /* documents */ js.Array[T], Unit]
+  ): Unit = js.native
   @JSName("listenerCount")
   def listenerCount_compactiondone(`type`: compactionDotdone): Double = js.native
   @JSName("listeners")
@@ -91,7 +101,7 @@ trait Nedb[G] extends EventEmitter {
     * Load the database from the datafile, and trigger the execution of buffered commands if any
     */
   def loadDatabase(): Unit = js.native
-  def loadDatabase(cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def loadDatabase(cb: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("off")
   def off_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -105,7 +115,7 @@ trait Nedb[G] extends EventEmitter {
   @JSName("rawListeners")
   def rawListeners_compactiondone(event: compactionDotdone): js.Array[js.Function0[Unit]] = js.native
   def remove(query: js.Any): Unit = js.native
-  def remove(query: js.Any, cb: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
+  def remove(query: js.Any, cb: js.Function2[/* err */ js.Error | Null, /* n */ Double, Unit]): Unit = js.native
   /**
     * Remove all docs matching the query
     * For now very naive implementation (similar to update)
@@ -116,7 +126,11 @@ trait Nedb[G] extends EventEmitter {
     * @api private Use Datastore.remove which has the same signature
     */
   def remove(query: js.Any, options: RemoveOptions): Unit = js.native
-  def remove(query: js.Any, options: RemoveOptions, cb: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
+  def remove(
+    query: js.Any,
+    options: RemoveOptions,
+    cb: js.Function2[/* err */ js.Error | Null, /* n */ Double, Unit]
+  ): Unit = js.native
   /**
     * Remove one or several document(s) from all indexes
     */
@@ -127,7 +141,7 @@ trait Nedb[G] extends EventEmitter {
     * @param cb Optional callback, signature: err
     */
   def removeIndex(fieldName: String): Unit = js.native
-  def removeIndex(fieldName: String, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def removeIndex(fieldName: String, cb: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("removeListener")
   def removeListener_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
   /**
@@ -147,19 +161,37 @@ trait Nedb[G] extends EventEmitter {
     * @api private Use Datastore.update which has the same signature
     */
   def update(query: js.Any, updateQuery: js.Any): Unit = js.native
+  def update(
+    query: js.Any,
+    updateQuery: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    cb: js.Function3[/* err */ js.Error | Null, /* numberOfUpdated */ Double, /* upsert */ Boolean, Unit]
+  ): Unit = js.native
   def update(query: js.Any, updateQuery: js.Any, options: UpdateOptions): Unit = js.native
   def update(
     query: js.Any,
     updateQuery: js.Any,
     options: UpdateOptions,
-    cb: js.Function3[/* err */ js.Error, /* numberOfUpdated */ Double, /* upsert */ Boolean, Unit]
+    cb: js.Function3[/* err */ js.Error | Null, /* numberOfUpdated */ Double, /* upsert */ Boolean, Unit]
+  ): Unit = js.native
+  def update[T /* <: G */](
+    query: js.Any,
+    updateQuery: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    cb: js.Function4[
+      /* err */ js.Error | Null, 
+      /* numberOfUpdated */ Double, 
+      /* affectedDocuments */ js.Any, 
+      /* upsert */ Boolean, 
+      Unit
+    ]
   ): Unit = js.native
   def update[T /* <: G */](
     query: js.Any,
     updateQuery: js.Any,
     options: UpdateOptions,
     cb: js.Function4[
-      /* err */ js.Error, 
+      /* err */ js.Error | Null, 
       /* numberOfUpdated */ Double, 
       /* affectedDocuments */ js.Any, 
       /* upsert */ Boolean, 

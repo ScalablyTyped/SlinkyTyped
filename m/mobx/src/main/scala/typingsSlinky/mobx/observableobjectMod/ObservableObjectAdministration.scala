@@ -3,7 +3,6 @@ package typingsSlinky.mobx.observableobjectMod
 import typingsSlinky.mobx.atomMod.IAtom
 import typingsSlinky.mobx.computedvalueMod.IComputedValueOptions
 import typingsSlinky.mobx.interceptUtilsMod.IInterceptable
-import typingsSlinky.mobx.interceptUtilsMod.IInterceptor
 import typingsSlinky.mobx.internalMod.ComputedValue
 import typingsSlinky.mobx.internalMod.ObservableValue
 import typingsSlinky.mobx.listenUtilsMod.IListenable
@@ -42,13 +41,12 @@ class ObservableObjectAdministration protected ()
   ): Unit = js.native
   def addObservableProp(propName: PropertyKey, newValue: js.Any): Unit = js.native
   def addObservableProp(propName: PropertyKey, newValue: js.Any, enhancer: IEnhancer[_]): Unit = js.native
-  def defaultEnhancer(newValue: js.Any, oldValue: js.UndefOr[js.Any], name: String): js.Any = js.native
+  def defaultEnhancer(newValue: js.Any, oldValue: js.UndefOr[scala.Nothing], name: String): js.Any = js.native
+  def defaultEnhancer(newValue: js.Any, oldValue: js.Any, name: String): js.Any = js.native
   def getKeys(): js.Array[PropertyKey] = js.native
   def has(key: PropertyKey): js.Any = js.native
   def illegalAccess(owner: js.Any, propName: js.Any): Unit = js.native
   def intercept(handler: js.Any): Lambda = js.native
-  /* CompleteClass */
-  override def intercept(handler: IInterceptor[IObjectWillChange]): Lambda = js.native
   def notifyPropertyAddition(key: PropertyKey, newValue: js.Any): Unit = js.native
   /**
     * Observes this object. Triggers for the events 'add', 'update' and 'delete'.

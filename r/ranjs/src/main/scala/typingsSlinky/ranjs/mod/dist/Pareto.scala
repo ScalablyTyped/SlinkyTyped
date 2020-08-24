@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class Pareto ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.Pareto] {
   def this(xmin: Double) = this()
+  def this(xmin: js.UndefOr[scala.Nothing], alpha: Double) = this()
   def this(xmin: Double, alpha: Double) = this()
 }
 

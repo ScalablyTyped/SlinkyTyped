@@ -1,23 +1,24 @@
 package typingsSlinky.routeNode
 
-import typingsSlinky.routeNode.mod.BuildOptions
-import typingsSlinky.routeNode.mod.MatchResponse
-import typingsSlinky.routeNode.mod.RouteNodeState
-import typingsSlinky.routeNode.mod.RouteNodeStateMeta
-import typingsSlinky.routeNode.mod.default
+import typingsSlinky.routeNode.routeNodeMod.BuildOptions
+import typingsSlinky.routeNode.routeNodeMod.MatchResponse
+import typingsSlinky.routeNode.routeNodeMod.RouteNode
+import typingsSlinky.routeNode.routeNodeMod.RouteNodeState
+import typingsSlinky.routeNode.routeNodeMod.RouteNodeStateMeta
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("route-node/typings/helpers", JSImport.Namespace)
+@JSImport("route-node/dist/helpers", JSImport.Namespace)
 @js.native
 object helpersMod extends js.Object {
-  def buildPathFromSegments(): String = js.native
-  def buildPathFromSegments(segments: js.Array[default]): String = js.native
-  def buildPathFromSegments(segments: js.Array[default], params: js.Object): String = js.native
-  def buildPathFromSegments(segments: js.Array[default], params: js.Object, options: BuildOptions): String = js.native
-  def buildStateFromMatch(`match`: MatchResponse): RouteNodeState = js.native
-  def getMetaFromSegments(segments: js.Array[default]): RouteNodeStateMeta = js.native
-  def getPathFromSegments(segments: js.Array[default]): String = js.native
+  def buildPathFromSegments(segments: js.Array[RouteNode]): String = js.native
+  def buildPathFromSegments(segments: js.Array[RouteNode], params: js.UndefOr[scala.Nothing], options: BuildOptions): String = js.native
+  def buildPathFromSegments(segments: js.Array[RouteNode], params: Record[String, _]): String = js.native
+  def buildPathFromSegments(segments: js.Array[RouteNode], params: Record[String, _], options: BuildOptions): String = js.native
+  def buildStateFromMatch(`match`: MatchResponse): RouteNodeState | Null = js.native
+  def getMetaFromSegments(segments: js.Array[RouteNode]): RouteNodeStateMeta = js.native
+  def getPathFromSegments(segments: js.Array[RouteNode]): String | Null = js.native
 }
 

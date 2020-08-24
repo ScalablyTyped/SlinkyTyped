@@ -22,6 +22,8 @@ object Icon {
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
+    def styleVarargs(value: ViewStyle*): this.type = set("style", js.Array(value :_*))
+    @scala.inline
     def style(value: ViewStyle | js.Array[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def styleNull: this.type = set("style", null)

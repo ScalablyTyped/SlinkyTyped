@@ -16,7 +16,7 @@ object Fields {
   @scala.inline
   class Builder[P] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reduxForm.mod.Fields[js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reduxForm.mod.Fields[P]]
   
   def apply[P](p: BaseFieldsProps[P] with P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P](companion: Fields.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()

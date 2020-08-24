@@ -1,10 +1,8 @@
 package typingsSlinky.wordpressComponents.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressComponents.mod.Tooltip.^
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
 import typingsSlinky.wordpressComponents.tooltipMod.Tooltip.Props
@@ -20,7 +18,7 @@ object Tooltip {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
     @scala.inline
@@ -28,10 +26,14 @@ object Tooltip {
     @scala.inline
     def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

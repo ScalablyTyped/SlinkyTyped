@@ -1,6 +1,5 @@
 package typingsSlinky.rcTimePicker.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -30,7 +29,7 @@ object RcTimePicker {
     @scala.inline
     def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def clearText(value: String): this.type = set("clearText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,7 +57,7 @@ object RcTimePicker {
     @scala.inline
     def inputIconReactElement(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputIcon(value: TagMod[Any]): this.type = set("inputIcon", value.asInstanceOf[js.Any])
+    def inputIcon(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
     @scala.inline

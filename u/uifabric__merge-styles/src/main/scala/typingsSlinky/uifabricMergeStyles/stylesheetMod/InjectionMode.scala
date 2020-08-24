@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  none  :0,   insertNode  :1,   appendChild  :2}[keyof {  none  :0,   insertNode  :1,   appendChild  :2}] */
+/* Inlined {  none :0,   insertNode :1,   appendChild :2}[keyof {  none :0,   insertNode :1,   appendChild :2}] */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.uifabricMergeStyles.uifabricMergeStylesNumbers.`0`
   - typingsSlinky.uifabricMergeStyles.uifabricMergeStylesNumbers.`1`

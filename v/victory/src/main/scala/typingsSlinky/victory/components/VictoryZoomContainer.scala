@@ -49,7 +49,7 @@ object VictoryZoomContainer {
     @scala.inline
     def minimumZoom(value: CursorData): this.type = set("minimumZoom", value.asInstanceOf[js.Any])
     @scala.inline
-    def onZoomDomainChange(value: (/* domain */ DomainPropType, /* props */ VictoryZoomContainerProps) => Unit): this.type = set("onZoomDomainChange", js.Any.fromFunction2(value))
+    def onZoomDomainChange(value: (/* domain */ DomainPropType, VictoryZoomContainerProps) => Unit): this.type = set("onZoomDomainChange", js.Any.fromFunction2(value))
     @scala.inline
     def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,70 +1,120 @@
 package typingsSlinky.antd.treeTreeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AntTreeNodeProps
   extends /* customProp */ StringDictionary[js.Any] {
-  var checkable: js.UndefOr[Boolean] = js.undefined
-  var checked: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var disableCheckbox: js.UndefOr[Boolean] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var eventKey: js.UndefOr[String] = js.undefined
-  var expanded: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[(js.Function1[/* treeNode */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]] = js.undefined
-  var isLeaf: js.UndefOr[Boolean] = js.undefined
-  var key: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-  ] = js.undefined
-  var loading: js.UndefOr[Boolean] = js.undefined
-  var selectable: js.UndefOr[Boolean] = js.undefined
-  var selected: js.UndefOr[Boolean] = js.undefined
-  var title: js.UndefOr[String | TagMod[Any]] = js.undefined
+  var checkable: js.UndefOr[Boolean] = js.native
+  var checked: js.UndefOr[Boolean] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
+  var className: js.UndefOr[String] = js.native
+  var disableCheckbox: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var eventKey: js.UndefOr[String] = js.native
+  var expanded: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[
+    (js.Function1[/* treeNode */ AntdTreeNodeAttribute, ReactElement]) | ReactElement
+  ] = js.native
+  var isLeaf: js.UndefOr[Boolean] = js.native
+  var key: js.UndefOr[Key] = js.native
+  var loading: js.UndefOr[Boolean] = js.native
+  var selectable: js.UndefOr[Boolean] = js.native
+  var selected: js.UndefOr[Boolean] = js.native
+  var title: js.UndefOr[String | ReactElement] = js.native
 }
 
 object AntTreeNodeProps {
   @scala.inline
-  def apply(
-    StringDictionary: /* name */ StringDictionary[js.Any] = null,
-    checkable: js.UndefOr[Boolean] = js.undefined,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    disableCheckbox: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    eventKey: String = null,
-    expanded: js.UndefOr[Boolean] = js.undefined,
-    icon: (js.Function1[/* treeNode */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any] = null,
-    isLeaf: js.UndefOr[Boolean] = js.undefined,
-    key: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    title: String | TagMod[Any] = null
-  ): AntTreeNodeProps = {
+  def apply(): AntTreeNodeProps = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(checkable)) __obj.updateDynamic("checkable")(checkable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableCheckbox)) __obj.updateDynamic("disableCheckbox")(disableCheckbox.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(expanded)) __obj.updateDynamic("expanded")(expanded.get.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLeaf)) __obj.updateDynamic("isLeaf")(isLeaf.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[AntTreeNodeProps]
   }
+  @scala.inline
+  implicit class AntTreeNodePropsOps[Self <: AntTreeNodeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCheckable(value: Boolean): Self = this.set("checkable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckable: Self = this.set("checkable", js.undefined)
+    @scala.inline
+    def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChecked: Self = this.set("checked", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDisableCheckbox(value: Boolean): Self = this.set("disableCheckbox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableCheckbox: Self = this.set("disableCheckbox", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setEventKey(value: String): Self = this.set("eventKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEventKey: Self = this.set("eventKey", js.undefined)
+    @scala.inline
+    def setExpanded(value: Boolean): Self = this.set("expanded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpanded: Self = this.set("expanded", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIconFunction1(value: /* treeNode */ AntdTreeNodeAttribute => ReactElement): Self = this.set("icon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setIcon(value: (js.Function1[/* treeNode */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setIsLeaf(value: Boolean): Self = this.set("isLeaf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsLeaf: Self = this.set("isLeaf", js.undefined)
+    @scala.inline
+    def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    @scala.inline
+    def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSelected(value: Boolean): Self = this.set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelected: Self = this.set("selected", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: String | ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

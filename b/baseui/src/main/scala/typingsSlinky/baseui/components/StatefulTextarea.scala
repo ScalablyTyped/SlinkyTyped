@@ -2,6 +2,7 @@ package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -80,8 +81,6 @@ object StatefulTextarea {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLTextAreaElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: FormEventHandler[HTMLTextAreaElement] with FormEventHandler[HTMLInputElement]): this.type = set("onChange", value.asInstanceOf[js.Any])
-    @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLTextAreaElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: SyntheticKeyboardEvent[HTMLTextAreaElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
@@ -112,6 +111,13 @@ object StatefulTextarea {
   }
   
   def withProps(p: StatefulTextareaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: StatefulTextarea.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(
+    children: js.UndefOr[ReactElement] with js.UndefOr[scala.Nothing],
+    onChange: js.UndefOr[FormEventHandler[HTMLTextAreaElement]] with js.UndefOr[FormEventHandler[HTMLInputElement]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], onChange = onChange.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulTextareaProps]))
+  }
 }
 

@@ -56,9 +56,7 @@ trait PhotoViewAttacher_
   /* private */ def resetMatrix(): js.Any = js.native
   /* private */ def setImageViewMatrix(matrix: js.Any): js.Any = js.native
   def setScale(scale: Double, focalX: Double, focalY: Double): Unit = js.native
-  /* private */ def setScale_2(scale: js.Any): js.Any = js.native
   /* private */ def setScale_2(scale: js.Any, animate: js.Any): js.Any = js.native
-  /* private */ def setScale_4(scale: js.Any, focalX: js.Any, focalY: js.Any): js.Any = js.native
   /* private */ def setScale_4(scale: js.Any, focalX: js.Any, focalY: js.Any, animate: js.Any): js.Any = js.native
   def update(): Unit = js.native
   /* private */ def updateBaseMatrix(d: js.Any): js.Any = js.native

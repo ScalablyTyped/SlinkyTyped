@@ -43,8 +43,22 @@ package object glueMod {
   type CodeGenIdentifier = java.lang.String
   type CodeGenNodeArgs = js.Array[typingsSlinky.awsSdk.glueMod.CodeGenNodeArg]
   type CodeGenNodeType = java.lang.String
+  type ColumnErrors = js.Array[typingsSlinky.awsSdk.glueMod.ColumnError]
   type ColumnList = js.Array[typingsSlinky.awsSdk.glueMod.Column]
   type ColumnNameString = java.lang.String
+  type ColumnStatisticsErrors = js.Array[typingsSlinky.awsSdk.glueMod.ColumnStatisticsError]
+  type ColumnStatisticsList = js.Array[typingsSlinky.awsSdk.glueMod.ColumnStatistics]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.BOOLEAN
+    - typingsSlinky.awsSdk.awsSdkStrings.DATE
+    - typingsSlinky.awsSdk.awsSdkStrings.DECIMAL
+    - typingsSlinky.awsSdk.awsSdkStrings.DOUBLE
+    - typingsSlinky.awsSdk.awsSdkStrings.LONG
+    - typingsSlinky.awsSdk.awsSdkStrings.STRING
+    - typingsSlinky.awsSdk.awsSdkStrings.BINARY
+    - java.lang.String
+  */
+  type ColumnStatisticsType = typingsSlinky.awsSdk.glueMod._ColumnStatisticsType | java.lang.String
   type ColumnTypeString = java.lang.String
   type ColumnValueStringList = js.Array[typingsSlinky.awsSdk.glueMod.ColumnValuesString]
   type ColumnValuesString = java.lang.String
@@ -81,6 +95,9 @@ package object glueMod {
     - typingsSlinky.awsSdk.awsSdkStrings.CUSTOM_JDBC_CERT_STRING
     - typingsSlinky.awsSdk.awsSdkStrings.CONNECTION_URL
     - typingsSlinky.awsSdk.awsSdkStrings.KAFKA_BOOTSTRAP_SERVERS
+    - typingsSlinky.awsSdk.awsSdkStrings.KAFKA_SSL_ENABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.KAFKA_CUSTOM_CERT
+    - typingsSlinky.awsSdk.awsSdkStrings.KAFKA_SKIP_CUSTOM_CERT_VALIDATION
     - java.lang.String
   */
   type ConnectionPropertyKey = typingsSlinky.awsSdk.glueMod._ConnectionPropertyKey | java.lang.String
@@ -144,8 +161,15 @@ package object glueMod {
   type DevEndpointList = js.Array[typingsSlinky.awsSdk.glueMod.DevEndpoint]
   type DevEndpointNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
   type DevEndpointNames = js.Array[typingsSlinky.awsSdk.glueMod.GenericString]
+  type Double = scala.Double
   type DynamoDBTargetList = js.Array[typingsSlinky.awsSdk.glueMod.DynamoDBTarget]
   type EdgeList = js.Array[typingsSlinky.awsSdk.glueMod.Edge]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TRUE
+    - typingsSlinky.awsSdk.awsSdkStrings.FALSE
+    - java.lang.String
+  */
+  type EnableHybridValues = typingsSlinky.awsSdk.glueMod._EnableHybridValues | java.lang.String
   type ErrorByName = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ErrorDetail]
   type ErrorString = java.lang.String
   type ExecutionTime = scala.Double
@@ -162,6 +186,8 @@ package object glueMod {
   type GenericBoundedDouble = scala.Double
   type GenericMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
   type GenericString = java.lang.String
+  type GetColumnNamesList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type GetResourcePoliciesResponseList = js.Array[typingsSlinky.awsSdk.glueMod.GluePolicy]
   type GetTableVersionsList = js.Array[typingsSlinky.awsSdk.glueMod.TableVersion]
   type GlueResourceArn = java.lang.String
   type GlueTables = js.Array[typingsSlinky.awsSdk.glueMod.GlueTable]
@@ -223,6 +249,7 @@ package object glueMod {
   */
   type Logical = typingsSlinky.awsSdk.glueMod._Logical | java.lang.String
   type LogicalOperator = typingsSlinky.awsSdk.awsSdkStrings.EQUALS | java.lang.String
+  type Long = scala.Double
   type MapValue = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
   type MappingList = js.Array[typingsSlinky.awsSdk.glueMod.MappingEntry]
   type MatchCriteria = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
@@ -232,6 +259,7 @@ package object glueMod {
   type MillisecondsCount = scala.Double
   type NameString = java.lang.String
   type NameStringList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type NodeIdList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
   type NodeList = js.Array[typingsSlinky.awsSdk.glueMod.Node]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CRAWLER
@@ -242,6 +270,7 @@ package object glueMod {
   type NodeType = typingsSlinky.awsSdk.glueMod._NodeType | java.lang.String
   type NonNegativeDouble = scala.Double
   type NonNegativeInteger = scala.Double
+  type NonNegativeLong = scala.Double
   type NotifyDelayAfter = scala.Double
   type NullableBoolean = scala.Boolean
   type NullableDouble = scala.Double
@@ -287,6 +316,12 @@ package object glueMod {
   type PythonVersionString = java.lang.String
   type RecordsCount = scala.Double
   type ReplaceBoolean = scala.Boolean
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FOREIGN
+    - typingsSlinky.awsSdk.awsSdkStrings.ALL
+    - java.lang.String
+  */
+  type ResourceShareType = typingsSlinky.awsSdk.glueMod._ResourceShareType | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.JAR
     - typingsSlinky.awsSdk.awsSdkStrings.FILE
@@ -420,6 +455,7 @@ package object glueMod {
     - java.lang.String
   */
   type TriggerType = typingsSlinky.awsSdk.glueMod._TriggerType | java.lang.String
+  type TypeString = java.lang.String
   type URI = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.LOG
@@ -427,6 +463,7 @@ package object glueMod {
     - java.lang.String
   */
   type UpdateBehavior = typingsSlinky.awsSdk.glueMod._UpdateBehavior | java.lang.String
+  type UpdateColumnStatisticsList = js.Array[typingsSlinky.awsSdk.glueMod.ColumnStatistics]
   type UriString = java.lang.String
   type UserDefinedFunctionList = js.Array[typingsSlinky.awsSdk.glueMod.UserDefinedFunction]
   type ValueString = java.lang.String
@@ -453,6 +490,7 @@ package object glueMod {
   type WorkflowRunStatus = typingsSlinky.awsSdk.glueMod._WorkflowRunStatus | java.lang.String
   type WorkflowRuns = js.Array[typingsSlinky.awsSdk.glueMod.WorkflowRun]
   type Workflows = js.Array[typingsSlinky.awsSdk.glueMod.Workflow]
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.glueMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-03-31`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

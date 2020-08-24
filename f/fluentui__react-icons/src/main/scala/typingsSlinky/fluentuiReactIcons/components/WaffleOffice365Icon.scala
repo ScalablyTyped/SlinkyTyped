@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WaffleOffice365Icon {
-  @JSImport("@fluentui/react-icons/lib/components/WaffleOffice365Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WaffleOffice365Icon")
   @js.native
   object component extends js.Object
   

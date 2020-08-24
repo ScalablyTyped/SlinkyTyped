@@ -24,9 +24,15 @@ object Catalog {
     @scala.inline
     def logoSrc(value: String): this.type = set("logoSrc", value.asInstanceOf[js.Any])
     @scala.inline
+    def responsiveSizesVarargs(value: ConfigResponsiveSize*): this.type = set("responsiveSizes", js.Array(value :_*))
+    @scala.inline
     def responsiveSizes(value: js.Array[ConfigResponsiveSize]): this.type = set("responsiveSizes", value.asInstanceOf[js.Any])
     @scala.inline
+    def scriptsVarargs(value: String*): this.type = set("scripts", js.Array(value :_*))
+    @scala.inline
     def scripts(value: js.Array[String]): this.type = set("scripts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesVarargs(value: String*): this.type = set("styles", js.Array(value :_*))
     @scala.inline
     def styles(value: js.Array[String]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

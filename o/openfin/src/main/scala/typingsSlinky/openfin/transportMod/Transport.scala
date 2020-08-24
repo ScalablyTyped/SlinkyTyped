@@ -2,12 +2,12 @@ package typingsSlinky.openfin.transportMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.openfin.anon.Reject
-import typingsSlinky.openfin.entityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.environmentMod.Environment
 import typingsSlinky.openfin.eventAggregatorMod.EventAggregator
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.openfinBooleans.`true`
 import typingsSlinky.openfin.openfinStrings.`request-external-authorization`
+import typingsSlinky.openfin.utilEntityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.wireMod.ConnectConfig
 import typingsSlinky.openfin.wireMod.ExistingConnectConfig
 import typingsSlinky.openfin.wireMod.InternalConnectConfig

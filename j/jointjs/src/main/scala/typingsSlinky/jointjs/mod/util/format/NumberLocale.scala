@@ -30,29 +30,20 @@ object NumberLocale {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCurrency(value: js.Tuple2[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDecimal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCurrency(value: js.Tuple2[String, String]): Self = this.set("currency", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGrouping(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDecimal(value: String): Self = this.set("decimal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withThousands(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thousands")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGroupingVarargs(value: Double*): Self = this.set("grouping", js.Array(value :_*))
+    @scala.inline
+    def setGrouping(value: js.Array[Double]): Self = this.set("grouping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThousands(value: String): Self = this.set("thousands", value.asInstanceOf[js.Any])
   }
   
 }

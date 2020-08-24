@@ -8,12 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SVGAnimatedNumber")
 @js.native
 class SVGAnimatedNumber ()
-  extends typingsSlinky.std.SVGAnimatedNumber {
-  /* CompleteClass */
-  override val animVal: Double = js.native
-  /* CompleteClass */
-  override var baseVal: Double = js.native
-}
+  extends typingsSlinky.std.SVGAnimatedNumber
 
 @JSGlobal("SVGAnimatedNumber")
 @js.native

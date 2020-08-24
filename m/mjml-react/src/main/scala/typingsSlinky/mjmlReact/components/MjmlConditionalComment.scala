@@ -14,8 +14,8 @@ object MjmlConditionalComment {
   
   def withProps(p: Condition): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] = new Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(condition: String): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] = {
-    val __props = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any])
+  def apply(children: String, condition: String): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any])
     new Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment](js.Array(this.component, __props.asInstanceOf[Condition]))
   }
 }

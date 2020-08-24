@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ReturnKeyIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ReturnKeyIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ReturnKeyIcon")
   @js.native
   object component extends js.Object
   

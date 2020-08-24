@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "remove-markdown"
-version := "0.1-dt-20200515Z-630a6e"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20200515Z-811401"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

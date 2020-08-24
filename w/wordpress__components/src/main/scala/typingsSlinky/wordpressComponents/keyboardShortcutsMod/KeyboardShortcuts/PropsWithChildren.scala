@@ -1,33 +1,40 @@
 package typingsSlinky.wordpressComponents.keyboardShortcutsMod.KeyboardShortcuts
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressComponents.wordpressComponentsStrings.keydown
-import typingsSlinky.wordpressComponents.wordpressComponentsStrings.keypress
-import typingsSlinky.wordpressComponents.wordpressComponentsStrings.keyup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PropsWithChildren
   extends BaseProps
      with Props {
-  var children: TagMod[Any]
+  var children: ReactElement = js.native
 }
 
 object PropsWithChildren {
   @scala.inline
-  def apply(
-    shortcuts: Record[String, js.Function0[Unit]],
-    bindGlobal: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    eventName: keydown | keypress | keyup = null
-  ): PropsWithChildren = {
+  def apply(shortcuts: Record[String, js.Function0[Unit]]): PropsWithChildren = {
     val __obj = js.Dynamic.literal(shortcuts = shortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(bindGlobal)) __obj.updateDynamic("bindGlobal")(bindGlobal.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (eventName != null) __obj.updateDynamic("eventName")(eventName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropsWithChildren]
   }
+  @scala.inline
+  implicit class PropsWithChildrenOps[Self <: PropsWithChildren] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+  }
+  
 }
 

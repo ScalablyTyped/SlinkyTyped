@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.default
   - typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Library
   - typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Documents
+  - typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Shared
 */
 trait Location extends js.Object
 
@@ -16,6 +17,8 @@ object Location {
   def Documents: typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Documents = "Documents".asInstanceOf[typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Documents]
   @scala.inline
   def Library: typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Library = "Library".asInstanceOf[typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Library]
+  @scala.inline
+  def Shared: typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Shared = "Shared".asInstanceOf[typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.Shared]
   @scala.inline
   def default: typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.default = "default".asInstanceOf[typingsSlinky.reactNativeSqliteStorage.reactNativeSqliteStorageStrings.default]
 }

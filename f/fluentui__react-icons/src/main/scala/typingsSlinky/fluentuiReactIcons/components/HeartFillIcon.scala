@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HeartFillIcon {
-  @JSImport("@fluentui/react-icons/lib/components/HeartFillIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "HeartFillIcon")
   @js.native
   object component extends js.Object
   

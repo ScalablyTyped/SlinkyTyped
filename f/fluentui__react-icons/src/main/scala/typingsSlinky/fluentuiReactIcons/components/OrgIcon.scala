@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OrgIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OrgIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OrgIcon")
   @js.native
   object component extends js.Object
   

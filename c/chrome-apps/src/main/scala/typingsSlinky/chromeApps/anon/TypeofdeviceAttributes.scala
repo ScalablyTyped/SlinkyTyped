@@ -62,29 +62,18 @@ object TypeofdeviceAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetDeviceAnnotatedLocation(value: js.Function1[/* annotatedLocation */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeviceAnnotatedLocation")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetDeviceAssetId(value: js.Function1[/* assetId */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeviceAssetId")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetDeviceAnnotatedLocation(value: js.Function1[/* annotatedLocation */ String, Unit] => Unit): Self = this.set("getDeviceAnnotatedLocation", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetDeviceSerialNumber(value: js.Function1[/* serialNumber */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeviceSerialNumber")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetDeviceAssetId(value: js.Function1[/* assetId */ String, Unit] => Unit): Self = this.set("getDeviceAssetId", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetDirectoryDeviceId(value: js.Function1[/* deviceId */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDirectoryDeviceId")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetDeviceSerialNumber(value: js.Function1[/* serialNumber */ String, Unit] => Unit): Self = this.set("getDeviceSerialNumber", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetDirectoryDeviceId(value: js.Function1[/* deviceId */ String, Unit] => Unit): Self = this.set("getDirectoryDeviceId", js.Any.fromFunction1(value))
   }
   
 }

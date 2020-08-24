@@ -9,26 +9,28 @@ import typingsSlinky.ionicAngular.ionRouterOutletMod.IonRouterOutlet
 import typingsSlinky.ionicAngular.ionicAngularStrings.back
 import typingsSlinky.ionicAngular.ionicAngularStrings.forward
 import typingsSlinky.ionicAngular.platformMod.Platform
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@ionic/angular/dist/providers/nav-controller", "NavController")
+@JSImport("@ionic/angular/providers/nav-controller", "NavController")
 @js.native
 class NavController protected () extends js.Object {
   def this(platform: Platform, location: Location, serializer: UrlSerializer) = this()
   def this(platform: Platform, location: Location, serializer: UrlSerializer, router: Router) = this()
-  var animated: js.UndefOr[js.Any] = js.native
+  var animated: js.Any = js.native
+  var animationBuilder: js.Any = js.native
   var direction: js.Any = js.native
-  var guessAnimation: js.UndefOr[js.Any] = js.native
+  var guessAnimation: js.Any = js.native
   var guessDirection: js.Any = js.native
   var lastNavId: js.Any = js.native
   var location: js.Any = js.native
   var navigate: js.Any = js.native
-  var router: js.UndefOr[js.Any] = js.native
+  var router: js.Any = js.native
   var serializer: js.Any = js.native
-  var topOutlet: js.UndefOr[js.Any] = js.native
+  var topOutlet: js.Any = js.native
   /**
     * Same as [Location](https://angular.io/api/common/Location)'s back() method.
     * It will use the standard `window.history.back()` under the hood, but featuring a `back` animation
@@ -122,11 +124,55 @@ class NavController protected () extends js.Object {
     * It's recommended to use `navigateForward()`, `navigateBack()` and `navigateRoot()` instead of `setDirection()`.
     */
   def setDirection(direction: RouterDirection): Unit = js.native
+  def setDirection(
+    direction: RouterDirection,
+    animated: js.UndefOr[scala.Nothing],
+    animationDirection: js.UndefOr[scala.Nothing],
+    animationBuilder: AnimationBuilder
+  ): Unit = js.native
   def setDirection(direction: RouterDirection, animated: Boolean): Unit = js.native
+  def setDirection(
+    direction: RouterDirection,
+    animated: Boolean,
+    animationDirection: js.UndefOr[scala.Nothing],
+    animationBuilder: AnimationBuilder
+  ): Unit = js.native
+  @JSName("setDirection")
+  def setDirection_back(direction: RouterDirection, animated: js.UndefOr[scala.Nothing], animationDirection: back): Unit = js.native
+  @JSName("setDirection")
+  def setDirection_back(
+    direction: RouterDirection,
+    animated: js.UndefOr[scala.Nothing],
+    animationDirection: back,
+    animationBuilder: AnimationBuilder
+  ): Unit = js.native
   @JSName("setDirection")
   def setDirection_back(direction: RouterDirection, animated: Boolean, animationDirection: back): Unit = js.native
   @JSName("setDirection")
+  def setDirection_back(
+    direction: RouterDirection,
+    animated: Boolean,
+    animationDirection: back,
+    animationBuilder: AnimationBuilder
+  ): Unit = js.native
+  @JSName("setDirection")
+  def setDirection_forward(direction: RouterDirection, animated: js.UndefOr[scala.Nothing], animationDirection: forward): Unit = js.native
+  @JSName("setDirection")
+  def setDirection_forward(
+    direction: RouterDirection,
+    animated: js.UndefOr[scala.Nothing],
+    animationDirection: forward,
+    animationBuilder: AnimationBuilder
+  ): Unit = js.native
+  @JSName("setDirection")
   def setDirection_forward(direction: RouterDirection, animated: Boolean, animationDirection: forward): Unit = js.native
+  @JSName("setDirection")
+  def setDirection_forward(
+    direction: RouterDirection,
+    animated: Boolean,
+    animationDirection: forward,
+    animationBuilder: AnimationBuilder
+  ): Unit = js.native
   /**
     * @internal
     */

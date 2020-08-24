@@ -1,32 +1,32 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.BlankTarget
 import typingsSlinky.antDesignPro.globalFooterMod.GlobalFooterProps
-import typingsSlinky.antDesignPro.globalFooterMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GlobalFooter {
-  @JSImport("ant-design-pro/lib/GlobalFooter", JSImport.Default)
+  @JSImport("ant-design-pro", "GlobalFooter")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.GlobalFooter] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def copyrightReactElement(value: ReactElement): this.type = set("copyright", value.asInstanceOf[js.Any])
     @scala.inline
-    def copyright(value: TagMod[Any]): this.type = set("copyright", value.asInstanceOf[js.Any])
+    def copyright(value: ReactElement): this.type = set("copyright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linksVarargs(value: BlankTarget*): this.type = set("links", js.Array(value :_*))
     @scala.inline
     def links(value: js.Array[BlankTarget]): this.type = set("links", value.asInstanceOf[js.Any])
     @scala.inline

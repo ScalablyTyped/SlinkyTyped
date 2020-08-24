@@ -6,6 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.kafkaMod.kafka.ConsumedKafkaService
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,16 +28,17 @@ class MetadataReference protected () extends Element {
   ) = this()
   @JSName("model")
   var model_FMetadataReference: IModel = js.native
+  def containerAsConsumedKafkaService: ConsumedKafkaService = js.native
   def containerAsConsumedODataService: ConsumedODataService = js.native
   def containerAsMetadataReference: MetadataReference = js.native
   def metadata: String = js.native
-  def metadata(newValue: String): js.Any = js.native
   /**
     * In version 8.8.0: introduced
     */
   def metadataReferences: IList[MetadataReference] = js.native
+  def metadata_=(newValue: String): Unit = js.native
   def uri: String = js.native
-  def uri(newValue: String): js.Any = js.native
+  def uri_=(newValue: String): Unit = js.native
 }
 
 /* static members */
@@ -60,6 +62,15 @@ object MetadataReference extends js.Object {
     *  8.6.0 to 8.7.0
     */
   def createIn(container: ConsumedODataService): MetadataReference = js.native
+  /**
+    * Creates and returns a new MetadataReference instance in the SDK and on the server.
+    * The new MetadataReference will be automatically stored in the 'metadataReferences' property
+    * of the parent kafka.ConsumedKafkaService element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.11.0 and higher
+    */
+  def createInConsumedKafkaServiceUnderMetadataReferences(container: ConsumedKafkaService): MetadataReference = js.native
   /**
     * Creates and returns a new MetadataReference instance in the SDK and on the server.
     * The new MetadataReference will be automatically stored in the 'metadataReferences' property

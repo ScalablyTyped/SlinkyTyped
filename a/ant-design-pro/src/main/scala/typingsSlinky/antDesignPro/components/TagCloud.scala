@@ -4,21 +4,20 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.Name
 import typingsSlinky.antDesignPro.tagCloudMod.ITagCloudProps
-import typingsSlinky.antDesignPro.tagCloudMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TagCloud {
-  @JSImport("ant-design-pro/lib/Charts/TagCloud", JSImport.Default)
+  @JSImport("ant-design-pro/lib/Charts", "TagCloud")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.chartsMod.TagCloud] {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }

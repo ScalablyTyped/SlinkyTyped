@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServer.exportsMod
 
-import typingsSlinky.graphqlTools.wrapQueryMod.QueryWrapper
+import typingsSlinky.graphqlToolsWrap.wrapQueryMod.QueryWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

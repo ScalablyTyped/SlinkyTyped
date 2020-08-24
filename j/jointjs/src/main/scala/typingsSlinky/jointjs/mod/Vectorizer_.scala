@@ -27,9 +27,15 @@ class Vectorizer_ protected () extends js.Object {
   def this(el: SVGElement) = this()
   def this(el: String, attrs: StringDictionary[js.Any]) = this()
   def this(el: SVGElement, attrs: StringDictionary[js.Any]) = this()
+  def this(el: String, attrs: js.UndefOr[scala.Nothing], children: js.Array[SVGElement | Vectorizer]) = this()
+  def this(el: String, attrs: js.UndefOr[scala.Nothing], children: Vectorizer) = this()
+  def this(el: String, attrs: js.UndefOr[scala.Nothing], children: SVGElement) = this()
   def this(el: String, attrs: StringDictionary[js.Any], children: js.Array[SVGElement | Vectorizer]) = this()
   def this(el: String, attrs: StringDictionary[js.Any], children: Vectorizer) = this()
   def this(el: String, attrs: StringDictionary[js.Any], children: SVGElement) = this()
+  def this(el: SVGElement, attrs: js.UndefOr[scala.Nothing], children: js.Array[SVGElement | Vectorizer]) = this()
+  def this(el: SVGElement, attrs: js.UndefOr[scala.Nothing], children: Vectorizer) = this()
+  def this(el: SVGElement, attrs: js.UndefOr[scala.Nothing], children: SVGElement) = this()
   def this(el: SVGElement, attrs: StringDictionary[js.Any], children: js.Array[SVGElement | Vectorizer]) = this()
   def this(el: SVGElement, attrs: StringDictionary[js.Any], children: Vectorizer) = this()
   def this(el: SVGElement, attrs: StringDictionary[js.Any], children: SVGElement) = this()
@@ -48,6 +54,8 @@ class Vectorizer_ protected () extends js.Object {
   def attr(name: String): String | Null = js.native
   def attr(name: String, value: js.Any): this.type = js.native
   def bbox(): Rect = js.native
+  def bbox(withoutTransformations: js.UndefOr[scala.Nothing], target: Vectorizer): Rect = js.native
+  def bbox(withoutTransformations: js.UndefOr[scala.Nothing], target: SVGElement): Rect = js.native
   def bbox(withoutTransformations: Boolean): Rect = js.native
   def bbox(withoutTransformations: Boolean, target: Vectorizer): Rect = js.native
   def bbox(withoutTransformations: Boolean, target: SVGElement): Rect = js.native
@@ -82,7 +90,11 @@ class Vectorizer_ protected () extends js.Object {
   def removeClass(className: String): this.type = js.native
   def rotate(): Rotation = js.native
   def rotate(angle: Double): this.type = js.native
+  def rotate(angle: Double, cx: js.UndefOr[scala.Nothing], cy: js.UndefOr[scala.Nothing], opt: RotateOptions): this.type = js.native
+  def rotate(angle: Double, cx: js.UndefOr[scala.Nothing], cy: Double): this.type = js.native
+  def rotate(angle: Double, cx: js.UndefOr[scala.Nothing], cy: Double, opt: RotateOptions): this.type = js.native
   def rotate(angle: Double, cx: Double): this.type = js.native
+  def rotate(angle: Double, cx: Double, cy: js.UndefOr[scala.Nothing], opt: RotateOptions): this.type = js.native
   def rotate(angle: Double, cx: Double, cy: Double): this.type = js.native
   def rotate(angle: Double, cx: Double, cy: Double, opt: RotateOptions): this.type = js.native
   def sample(): js.Array[Sample] = js.native
@@ -107,6 +119,7 @@ class Vectorizer_ protected () extends js.Object {
   def transform(matrix: SVGMatrix, opt: TransformOptions): this.type = js.native
   def translate(): Translation = js.native
   def translate(tx: Double): this.type = js.native
+  def translate(tx: Double, ty: js.UndefOr[scala.Nothing], opt: TransformOptions): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: Double, ty: Double, opt: TransformOptions): this.type = js.native
   def translateAndAutoOrient(position: PlainPoint, reference: PlainPoint): this.type = js.native

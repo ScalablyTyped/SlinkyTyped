@@ -1,8 +1,10 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
+import typingsSlinky.ionicCore.navInterfaceMod.NavComponentWithProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +16,7 @@ object viewControllerMod extends js.Object {
   class ViewController protected () extends js.Object {
     def this(component: js.Any) = this()
     def this(component: js.Any, params: ComponentProps[Null]) = this()
+    var animationBuilder: js.UndefOr[AnimationBuilder] = js.native
     var component: js.Any = js.native
     var delegate: js.UndefOr[FrameworkDelegate] = js.native
     var element: js.UndefOr[HTMLElement] = js.native
@@ -32,8 +35,10 @@ object viewControllerMod extends js.Object {
   val VIEW_STATE_NEW: /* 1 */ Double = js.native
   def convertToView(page: js.Any): ViewController | Null = js.native
   def convertToView(page: js.Any, params: ComponentProps[Null]): ViewController | Null = js.native
-  def convertToViews(pages: js.Array[_]): js.Array[ViewController] = js.native
-  def matches(view: js.UndefOr[ViewController], id: String): /* is @ionic/core.@ionic/core/dist/types/components/nav/view-controller.ViewController */ Boolean = js.native
-  def matches(view: js.UndefOr[ViewController], id: String, params: ComponentProps[Null]): /* is @ionic/core.@ionic/core/dist/types/components/nav/view-controller.ViewController */ Boolean = js.native
+  def convertToViews(pages: js.Array[NavComponentWithProps[_]]): js.Array[ViewController] = js.native
+  def matches(view: js.UndefOr[scala.Nothing], id: String): /* is @ionic/core.@ionic/core/dist/types/components/nav/view-controller.ViewController */ Boolean = js.native
+  def matches(view: js.UndefOr[scala.Nothing], id: String, params: ComponentProps[Null]): /* is @ionic/core.@ionic/core/dist/types/components/nav/view-controller.ViewController */ Boolean = js.native
+  def matches(view: ViewController, id: String): /* is @ionic/core.@ionic/core/dist/types/components/nav/view-controller.ViewController */ Boolean = js.native
+  def matches(view: ViewController, id: String, params: ComponentProps[Null]): /* is @ionic/core.@ionic/core/dist/types/components/nav/view-controller.ViewController */ Boolean = js.native
 }
 

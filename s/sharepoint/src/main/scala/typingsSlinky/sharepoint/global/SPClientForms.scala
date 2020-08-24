@@ -1,7 +1,5 @@
 package typingsSlinky.sharepoint.global
 
-import typingsSlinky.sharepoint.SPClientForms.ClientValidation.IValidator
-import typingsSlinky.sharepoint.SPClientForms.FormManagerEvents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +11,6 @@ object SPClientForms extends js.Object {
   class ClientForm protected ()
     extends typingsSlinky.sharepoint.SPClientForms.ClientForm {
     def this(qualifier: String) = this()
-    /* CompleteClass */
-    override def NotifyControlEvent(eventName: FormManagerEvents, fldName: String, eventArg: js.Any): Unit = js.native
-    /* CompleteClass */
-    override def RenderClientForm(): Unit = js.native
-    /* CompleteClass */
-    override def SubmitClientForm(): Boolean = js.native
   }
   
   @js.native
@@ -37,31 +29,19 @@ object SPClientForms extends js.Object {
   object ClientValidation extends js.Object {
     @js.native
     class MaxLengthUrlValidator ()
-      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.MaxLengthUrlValidator {
-      /* CompleteClass */
-      override def Validate(value: js.Any): typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidationResult = js.native
-    }
+      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.MaxLengthUrlValidator
     
     @js.native
     class RequiredFileValidator ()
-      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredFileValidator {
-      /* CompleteClass */
-      override def Validate(value: js.Any): typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidationResult = js.native
-    }
+      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredFileValidator
     
     @js.native
     class RequiredRichTextValidator ()
-      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredRichTextValidator {
-      /* CompleteClass */
-      override def Validate(value: js.Any): typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidationResult = js.native
-    }
+      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredRichTextValidator
     
     @js.native
     class RequiredValidator ()
-      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredValidator {
-      /* CompleteClass */
-      override def Validate(value: js.Any): typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidationResult = js.native
-    }
+      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.RequiredValidator
     
     @js.native
     class ValidationResult protected ()
@@ -71,10 +51,7 @@ object SPClientForms extends js.Object {
     
     @js.native
     class ValidatorSet ()
-      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidatorSet {
-      /* CompleteClass */
-      override def RegisterValidator(validator: IValidator): Unit = js.native
-    }
+      extends typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidatorSet
     
   }
   

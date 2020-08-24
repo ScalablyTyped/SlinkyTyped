@@ -3,21 +3,20 @@ package typingsSlinky.materialUi.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Card.CardTextProps
-import typingsSlinky.materialUi.cardTextMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CardText {
-  @JSImport("material-ui/Card/CardText", JSImport.Default)
+  @JSImport("material-ui", "CardText")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.CardText] {
     @scala.inline
     def actAsExpander(value: Boolean): this.type = set("actAsExpander", value.asInstanceOf[js.Any])
     @scala.inline

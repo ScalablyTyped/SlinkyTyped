@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ParsedProperty")
 @js.native
 class ParsedProperty protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ParsedProperty {
+  extends typingsSlinky.angularCompiler.compilerMod.ParsedProperty {
   def this(
     name: String,
     expression: typingsSlinky.angularCompiler.astMod.ASTWithSource,

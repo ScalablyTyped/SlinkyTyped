@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenPagePaperSizeDialogCommand")
 @js.native
 class OpenPagePaperSizeDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenPagePaperSizeDialogCommand {
-  /**
-    * Executes the OpenPagePaperSizeDialogCommand command.
-    */
-  /* CompleteClass */
-  override def execute(): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.OpenPagePaperSizeDialogCommand
 

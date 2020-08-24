@@ -1,5 +1,6 @@
 package typingsSlinky.angularPlatformBrowser.mod
 
+import typingsSlinky.angularCommon.mod.ɵDomAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

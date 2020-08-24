@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -11,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Empty {
-  @JSImport("antd/lib/empty", JSImport.Default)
+  @JSImport("antd", "Empty")
   @js.native
   object component extends js.Object
   
@@ -24,11 +23,11 @@ object Empty {
     @scala.inline
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def description(value: TagMod[Any]): this.type = set("description", value.asInstanceOf[js.Any])
+    def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def image(value: TagMod[Any]): this.type = set("image", value.asInstanceOf[js.Any])
+    def image(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def imageStyle(value: CSSProperties): this.type = set("imageStyle", value.asInstanceOf[js.Any])
     @scala.inline

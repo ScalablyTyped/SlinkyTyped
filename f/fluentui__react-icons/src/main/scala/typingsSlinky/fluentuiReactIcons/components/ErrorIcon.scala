@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ErrorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ErrorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ErrorIcon")
   @js.native
   object component extends js.Object
   

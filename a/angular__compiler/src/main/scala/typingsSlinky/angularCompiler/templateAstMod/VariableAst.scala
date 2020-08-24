@@ -10,18 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class VariableAst protected () extends TemplateAst {
   def this(name: String, value: String, sourceSpan: ParseSourceSpan) = this()
-  var name: String = js.native
-  /**
-    * The source span from which this node was parsed.
-    */
-  /* CompleteClass */
-  override var sourceSpan: ParseSourceSpan = js.native
-  var value: String = js.native
-  /**
-    * Visit this node and possibly transform it.
-    */
-  /* CompleteClass */
-  override def visit(visitor: TemplateAstVisitor, context: js.Any): js.Any = js.native
+  def this(name: String, value: String, sourceSpan: ParseSourceSpan, valueSpan: ParseSourceSpan) = this()
+  val name: String = js.native
+  val value: String = js.native
+  val valueSpan: js.UndefOr[ParseSourceSpan] = js.native
 }
 
 /* static members */

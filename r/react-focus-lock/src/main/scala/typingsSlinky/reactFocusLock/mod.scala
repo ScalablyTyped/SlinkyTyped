@@ -1,7 +1,7 @@
 package typingsSlinky.reactFocusLock
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactFocusLock.interfacesMod.AutoFocusProps
 import typingsSlinky.reactFocusLock.interfacesMod.FreeFocusProps
@@ -34,6 +34,6 @@ object mod extends js.Object {
   /**
     * Traps Focus inside a Lock
     */
-  val default: ReactComponentClass[ReactFocusLockProps[TagMod[Any], Record[String, js.Any]]] = js.native
+  val default: ReactComponentClass[ReactFocusLockProps[ReactElement, Record[String, js.Any]]] = js.native
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SprintIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SprintIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SprintIcon")
   @js.native
   object component extends js.Object
   

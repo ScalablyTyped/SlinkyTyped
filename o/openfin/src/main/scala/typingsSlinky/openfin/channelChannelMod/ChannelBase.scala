@@ -2,7 +2,7 @@ package typingsSlinky.openfin.channelChannelMod
 
 import typingsSlinky.openfin.anon.FnCall
 import typingsSlinky.openfin.identityMod.Identity
-import typingsSlinky.openfin.shapesMod.ProviderIdentity
+import typingsSlinky.openfin.shapesIdentityMod.ProviderIdentity
 import typingsSlinky.std.WeakMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,15 @@ class ChannelBase protected () extends js.Object {
   def afterAction(func: Action): Unit = js.native
   def beforeAction(func: Action): Unit = js.native
   def defaultAction(): js.Any = js.native
+  def defaultAction(
+    action: js.UndefOr[scala.Nothing],
+    payload: js.UndefOr[scala.Nothing],
+    senderIdentity: ProviderIdentity
+  ): js.Any = js.native
+  def defaultAction(action: js.UndefOr[scala.Nothing], payload: js.Any): js.Any = js.native
+  def defaultAction(action: js.UndefOr[scala.Nothing], payload: js.Any, senderIdentity: ProviderIdentity): js.Any = js.native
   def defaultAction(action: String): js.Any = js.native
+  def defaultAction(action: String, payload: js.UndefOr[scala.Nothing], senderIdentity: ProviderIdentity): js.Any = js.native
   def defaultAction(action: String, payload: js.Any): js.Any = js.native
   def defaultAction(action: String, payload: js.Any, senderIdentity: ProviderIdentity): js.Any = js.native
   def onError(func: js.Function3[/* action */ String, /* error */ js.Any, /* id */ Identity, _]): Unit = js.native

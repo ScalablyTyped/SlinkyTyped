@@ -1,7 +1,9 @@
 package typingsSlinky.reactDocumentTitle.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactChild
 import typingsSlinky.reactDocumentTitle.mod.DocumentTitleProps
 import typingsSlinky.reactDocumentTitle.mod.default
 import scala.scalajs.js
@@ -13,11 +15,23 @@ object ReactDocumentTitle {
   @js.native
   object component extends js.Object
   
-  def withProps(p: DocumentTitleProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(title: String): Default[tag.type, default] = {
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: ReactChild): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenNull: this.type = set("children", null)
+  }
+  
+  def withProps(p: DocumentTitleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(title: String): Builder = {
     val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[DocumentTitleProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DocumentTitleProps]))
   }
 }
 

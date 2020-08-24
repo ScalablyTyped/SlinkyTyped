@@ -31,6 +31,8 @@ object SizePerPageDropDown {
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     @scala.inline
+    def optionsVarargs(value: (Double | Text)*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[Double | Text]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def variation(value: DropDirection): this.type = set("variation", value.asInstanceOf[js.Any])

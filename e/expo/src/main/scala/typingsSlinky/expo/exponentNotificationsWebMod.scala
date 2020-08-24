@@ -1,9 +1,9 @@
 package typingsSlinky.expo
 
-import typingsSlinky.expo.anon.DataType
 import typingsSlinky.expo.anon.IntervalMs
+import typingsSlinky.expo.anon.Type
 import typingsSlinky.expo.notificationsTypesMod.LocalNotification
-import typingsSlinky.react.mod.ReactText
+import typingsSlinky.expo.notificationsTypesMod.LocalNotificationId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,11 +18,13 @@ object exponentNotificationsWebMod extends js.Object {
     def dismissAllNotifications(): js.Promise[Unit] = js.native
     def dismissNotification(): js.Promise[Unit] = js.native
     def dismissNotification(notificationId: String): js.Promise[Unit] = js.native
-    def getDevicePushTokenAsync(): js.Promise[DataType] = js.native
+    def getBadgeNumberAsync(): js.Promise[Double] = js.native
+    def getDevicePushTokenAsync(): js.Promise[Type] = js.native
     def getExponentPushTokenAsync(): js.Promise[String] = js.native
-    def presentLocalNotification(notification: LocalNotification): js.Promise[ReactText] = js.native
+    def presentLocalNotification(notification: LocalNotification): js.Promise[LocalNotificationId] = js.native
     def scheduleLocalNotification(notification: js.Any): js.Promise[String] = js.native
     def scheduleLocalNotification(notification: js.Any, options: IntervalMs): js.Promise[String] = js.native
+    def setBadgeNumberAsync(badgeNumber: Double): js.Promise[Unit] = js.native
   }
   
 }

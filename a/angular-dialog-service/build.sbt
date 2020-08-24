@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "angular-dialog-service"
-version := "5.2.8-dt-20200515Z-46e98e"
-scalaVersion := "2.13.2"
+version := "5.2.8-dt-20200515Z-6c31f4"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -69,7 +69,6 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.tree
 import typingsSlinky.materialUiLab.materialUiLabStrings.url
 import typingsSlinky.materialUiLab.materialUiLabStrings.vertical
 import typingsSlinky.materialUiLab.materialUiLabStrings.yes
-import typingsSlinky.materialUiLab.ratingMod.default
 import typingsSlinky.materialUiLab.ratingRatingMod.IconContainerProps
 import typingsSlinky.materialUiLab.ratingRatingMod.RatingProps
 import typingsSlinky.react.anon.Html
@@ -83,14 +82,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Rating {
-  @JSImport("@material-ui/lab/Rating", JSImport.Default)
+  @JSImport("@material-ui/lab", "Rating")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def IconContainerComponentFunctionComponent(value: ReactComponentClass[IconContainerProps]): this.type = set("IconContainerComponent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -228,11 +227,19 @@ object Rating {
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
+    def emptyIconReactElement(value: ReactElement): this.type = set("emptyIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def emptyIcon(value: ReactElement): this.type = set("emptyIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyLabelTextReactElement(value: ReactElement): this.type = set("emptyLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyLabelText(value: ReactElement): this.type = set("emptyLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def getLabelText(value: /* value */ Double => String): this.type = set("getLabelText", js.Any.fromFunction1(value))
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline

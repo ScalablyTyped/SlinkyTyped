@@ -20,6 +20,8 @@ object Spacing {
     @scala.inline
     def bottom(value: Boolean): this.type = set("bottom", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     @scala.inline
     def left(value: Boolean): this.type = set("left", value.asInstanceOf[js.Any])

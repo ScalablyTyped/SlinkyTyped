@@ -5,18 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.muiDatatables.muiDatatablesStrings.stacked
-  - typingsSlinky.muiDatatables.muiDatatablesStrings.scrollMaxHeight
-  - typingsSlinky.muiDatatables.muiDatatablesStrings.scrollFullHeight
+  - typingsSlinky.muiDatatables.muiDatatablesStrings.vertical
+  - typingsSlinky.muiDatatables.muiDatatablesStrings.standard
+  - typingsSlinky.muiDatatables.muiDatatablesStrings.simple
 */
 trait Responsive extends js.Object
 
 object Responsive {
   @scala.inline
-  def scrollFullHeight: typingsSlinky.muiDatatables.muiDatatablesStrings.scrollFullHeight = "scrollFullHeight".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.scrollFullHeight]
+  def simple: typingsSlinky.muiDatatables.muiDatatablesStrings.simple = "simple".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.simple]
   @scala.inline
-  def scrollMaxHeight: typingsSlinky.muiDatatables.muiDatatablesStrings.scrollMaxHeight = "scrollMaxHeight".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.scrollMaxHeight]
+  def standard: typingsSlinky.muiDatatables.muiDatatablesStrings.standard = "standard".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.standard]
   @scala.inline
-  def stacked: typingsSlinky.muiDatatables.muiDatatablesStrings.stacked = "stacked".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.stacked]
+  def vertical: typingsSlinky.muiDatatables.muiDatatablesStrings.vertical = "vertical".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.vertical]
 }
 

@@ -26,6 +26,7 @@ object mediastoreMod extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: ContainerArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: ContainerArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -53,8 +54,10 @@ object mediastoreMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.mediastoreContainerMod.Container = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.mediastoreContainerMod.Container = js.native
     def get(name: String, id: Input[ID], state: ContainerState): typingsSlinky.pulumiAws.mediastoreContainerMod.Container = js.native
     def get(name: String, id: Input[ID], state: ContainerState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.mediastoreContainerMod.Container = js.native
     /**
@@ -74,8 +77,10 @@ object mediastoreMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.containerPolicyMod.ContainerPolicy = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.containerPolicyMod.ContainerPolicy = js.native
     def get(name: String, id: Input[ID], state: ContainerPolicyState): typingsSlinky.pulumiAws.containerPolicyMod.ContainerPolicy = js.native
     def get(name: String, id: Input[ID], state: ContainerPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.containerPolicyMod.ContainerPolicy = js.native
     /**

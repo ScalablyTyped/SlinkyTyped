@@ -1,8 +1,7 @@
 package typingsSlinky.reactNativeSnapCarousel.mod
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
-import typingsSlinky.react.mod.Props
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.Animated.AnimatedValue
 import typingsSlinky.reactNative.mod.Animated.DecayAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
@@ -10,7 +9,6 @@ import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NodeHandle
-import typingsSlinky.reactNative.mod.ScrollViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSnapCarousel.anon.Index
@@ -28,7 +26,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CarouselProps[T] extends Props[ScrollViewProps] {
+trait CarouselProps[T] extends js.Object {
   // Style and animation
   /**
     * Custom animation options.
@@ -254,7 +252,7 @@ trait CarouselProps[T] extends Props[ScrollViewProps] {
     * Function that takes an item from the `data` array and returns a React
     * Element. See `react-native`'s `FlatList`
     */
-  def renderItem(item: Index[T]): TagMod[Any] = js.native
-  def renderItem(item: Index[T], parallaxProps: AdditionalParallaxProps): TagMod[Any] = js.native
+  def renderItem(item: Index[T]): ReactElement = js.native
+  def renderItem(item: Index[T], parallaxProps: AdditionalParallaxProps): ReactElement = js.native
 }
 

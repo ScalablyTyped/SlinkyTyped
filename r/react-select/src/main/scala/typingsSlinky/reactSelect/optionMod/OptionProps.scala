@@ -1,6 +1,6 @@
 package typingsSlinky.reactSelect.optionMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactSelect.reactSelectStrings.option
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
@@ -13,11 +13,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-select.react-select/src/types.PropsWithStyles & react-select.react-select/src/types.CommonProps<OptionType> & react-select.react-select/src/components/Option.State & {  children  :react.react.ReactNode,   innerRef  :react-select.react-select/src/types.InnerRef,   innerProps  :react-select.react-select/src/components/Option.InnerProps,   label  :string,   type  :'option',   data  :any} */
+/* Inlined react-select.react-select/src/types.PropsWithStyles & react-select.react-select/src/types.CommonProps<OptionType> & react-select.react-select/src/components/Option.State & {  children :react.react.ReactNode,   innerRef :react-select.react-select/src/types.InnerRef,   innerProps :react-select.react-select/src/components/Option.InnerProps,   label :string,   type :'option',   data :any} */
 @js.native
 trait OptionProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   /** The children to be rendered. */
-  var children: TagMod[Any] = js.native
+  var children: ReactElement = js.native
   var className: js.UndefOr[String] = js.native
   /* The data of the selected option. */
   var data: js.Any = js.native
@@ -41,12 +41,9 @@ trait OptionProps[OptionType /* <: OptionTypeBase */] extends js.Object {
     In the case of option this is always `option`. */
   var `type`: option = js.native
   def clearValue(): Unit = js.native
-  def cx(): String | Unit = js.native
-  def cx(a: String): String | Unit = js.native
-  def cx(a: String, b: ClassNamesState): String | Unit = js.native
-  def cx(a: String, b: ClassNamesState, c: String): String | Unit = js.native
-  def cx(a: Null, b: ClassNamesState): String | Unit = js.native
-  def cx(a: Null, b: ClassNamesState, c: String): String | Unit = js.native
+  def cx(): String = js.native
+  def cx(state: js.UndefOr[ClassNamesState], className: String): String = js.native
+  def cx(state: ClassNamesState): String = js.native
   /*
     Get the styles of a particular part of the select. Pass in the name of the
     property as the first argument, and the current props as the second argument.

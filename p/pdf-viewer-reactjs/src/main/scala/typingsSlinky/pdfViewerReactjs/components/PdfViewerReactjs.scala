@@ -1,6 +1,5 @@
 package typingsSlinky.pdfViewerReactjs.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -23,7 +22,7 @@ object PdfViewerReactjs {
     extends AnyVal
        with StBuildingComponent[tag.type, ^] {
     @scala.inline
-    def alert(value: /* err */ Err => TagMod[Any]): this.type = set("alert", js.Any.fromFunction1(value))
+    def alert(value: /* err */ Err => ReactElement): this.type = set("alert", js.Any.fromFunction1(value))
     @scala.inline
     def canvasCss(value: String): this.type = set("canvasCss", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +38,7 @@ object PdfViewerReactjs {
     @scala.inline
     def loaderReactElement(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
     @scala.inline
-    def loader(value: TagMod[Any]): this.type = set("loader", value.asInstanceOf[js.Any])
+    def loader(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
     @scala.inline
     def maxScale(value: Double): this.type = set("maxScale", value.asInstanceOf[js.Any])
     @scala.inline

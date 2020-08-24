@@ -32,6 +32,8 @@ object ReactSmoothScrollbar {
     @scala.inline
     def delegateTo(value: EventTarget): this.type = set("delegateTo", value.asInstanceOf[js.Any])
     @scala.inline
+    def delegateToNull: this.type = set("delegateTo", null)
+    @scala.inline
     def onScroll(value: (/* status */ ScrollStatus, /* scrollbarInstance */ default) => Unit): this.type = set("onScroll", js.Any.fromFunction2(value))
     @scala.inline
     def plugins(value: js.Any): this.type = set("plugins", value.asInstanceOf[js.Any])
@@ -43,6 +45,8 @@ object ReactSmoothScrollbar {
     def thumbMinSize(value: Double): this.type = set("thumbMinSize", value.asInstanceOf[js.Any])
     @scala.inline
     def wheelEventTarget(value: EventTarget): this.type = set("wheelEventTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wheelEventTargetNull: this.type = set("wheelEventTarget", null)
   }
   
   def withProps(p: ScrollbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

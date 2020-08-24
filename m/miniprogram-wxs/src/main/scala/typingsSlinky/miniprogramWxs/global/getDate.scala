@@ -20,9 +20,210 @@ object getDate extends js.Object {
     */
   def apply(value: Double): typingsSlinky.miniprogramWxs.Date = js.native
   def apply(year: Double, month: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(year: Double, month: Double, date: js.UndefOr[scala.Nothing], hours: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(year: Double, month: Double, date: js.UndefOr[scala.Nothing], hours: Double, minutes: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: Double,
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: Double,
+    minutes: Double,
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: js.UndefOr[scala.Nothing],
+    hours: Double,
+    minutes: Double,
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
   def apply(year: Double, month: Double, date: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(year: Double, month: Double, date: Double, hours: js.UndefOr[scala.Nothing], minutes: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
   def apply(year: Double, month: Double, date: Double, hours: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
   def apply(year: Double, month: Double, date: Double, hours: Double, minutes: Double): typingsSlinky.miniprogramWxs.Date = js.native
+  def apply(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): typingsSlinky.miniprogramWxs.Date = js.native
   def apply(year: Double, month: Double, date: Double, hours: Double, minutes: Double, seconds: Double): typingsSlinky.miniprogramWxs.Date = js.native
   def apply(
     year: Double,

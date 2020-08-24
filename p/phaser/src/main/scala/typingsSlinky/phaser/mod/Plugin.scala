@@ -13,14 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("matter", "Plugin")
 @js.native
 class Plugin ()
-  extends typingsSlinky.phaser.MatterJS.Plugin {
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override var version: String = js.native
-  /* CompleteClass */
-  override def install(): Unit = js.native
-}
+  extends typingsSlinky.phaser.MatterJS.Plugin
 
 /* static members */
 @JSImport("matter", "Plugin")

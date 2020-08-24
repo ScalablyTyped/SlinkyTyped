@@ -2,14 +2,14 @@ package typingsSlinky.antDesignProLayout.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.anon.MergerSettingsTypeSetting
+import typingsSlinky.antDesignProLayout.anon.MergerSettingsTypeProSett
 import typingsSlinky.antDesignProLayout.libSettingDrawerMod.SettingDrawerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SettingDrawer {
-  @JSImport("@ant-design/pro-layout/lib/SettingDrawer", JSImport.Default)
+  @JSImport("@ant-design/pro-layout", "SettingDrawer")
   @js.native
   object component extends js.Object
   
@@ -32,11 +32,13 @@ object SettingDrawer {
     @scala.inline
     def onCollapseChange(value: /* collapse */ Boolean => Unit): this.type = set("onCollapseChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onSettingChange(value: /* settings */ MergerSettingsTypeSetting => Unit): this.type = set("onSettingChange", js.Any.fromFunction1(value))
+    def onSettingChange(value: /* settings */ MergerSettingsTypeProSett => Unit): this.type = set("onSettingChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def publicPath(value: String): this.type = set("publicPath", value.asInstanceOf[js.Any])
     @scala.inline
-    def settings(value: MergerSettingsTypeSetting): this.type = set("settings", value.asInstanceOf[js.Any])
+    def settings(value: MergerSettingsTypeProSett): this.type = set("settings", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SettingDrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

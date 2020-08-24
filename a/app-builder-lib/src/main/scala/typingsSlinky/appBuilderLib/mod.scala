@@ -19,6 +19,11 @@ object mod extends js.Object {
     def this(info: typingsSlinky.appBuilderLib.packagerMod.Packager, buildVersion: String) = this()
     def this(
       info: typingsSlinky.appBuilderLib.packagerMod.Packager,
+      buildVersion: js.UndefOr[scala.Nothing],
+      platformSpecificOptions: PlatformSpecificBuildOptions
+    ) = this()
+    def this(
+      info: typingsSlinky.appBuilderLib.packagerMod.Packager,
       buildVersion: String,
       platformSpecificOptions: PlatformSpecificBuildOptions
     ) = this()
@@ -48,7 +53,11 @@ object mod extends js.Object {
   @js.native
   class Platform protected ()
     extends typingsSlinky.appBuilderLib.coreMod.Platform {
-    def this(name: String, buildConfigurationKey: String, nodeName: typingsSlinky.node.NodeJS.Platform) = this()
+    def this(
+      name: String,
+      buildConfigurationKey: String,
+      nodeName: typingsSlinky.node.processMod.global.NodeJS.Platform
+    ) = this()
   }
   
   @js.native

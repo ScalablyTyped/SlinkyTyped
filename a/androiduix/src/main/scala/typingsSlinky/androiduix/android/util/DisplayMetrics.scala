@@ -36,47 +36,24 @@ object DisplayMetrics {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDensity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("density")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDensityDpi(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("densityDpi")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDensity(value: Double): Self = this.set("density", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHeightPixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDensityDpi(value: Double): Self = this.set("densityDpi", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScaledDensity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaledDensity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHeightPixels(value: Double): Self = this.set("heightPixels", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWidthPixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScaledDensity(value: Double): Self = this.set("scaledDensity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXdpi(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xdpi")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWidthPixels(value: Double): Self = this.set("widthPixels", value.asInstanceOf[js.Any])
     @scala.inline
-    def withYdpi(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ydpi")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setXdpi(value: Double): Self = this.set("xdpi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setYdpi(value: Double): Self = this.set("ydpi", value.asInstanceOf[js.Any])
   }
   
 }

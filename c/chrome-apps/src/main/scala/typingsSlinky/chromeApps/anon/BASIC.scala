@@ -29,29 +29,18 @@ object BASIC {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBASIC(value: basic_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BASIC")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withIMAGE(value: image_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IMAGE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBASIC(value: basic_): Self = this.set("BASIC", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLIST(value: list_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LIST")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIMAGE(value: image_): Self = this.set("IMAGE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPROGRESS(value: progress_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PROGRESS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLIST(value: list_): Self = this.set("LIST", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPROGRESS(value: progress_): Self = this.set("PROGRESS", value.asInstanceOf[js.Any])
   }
   
 }

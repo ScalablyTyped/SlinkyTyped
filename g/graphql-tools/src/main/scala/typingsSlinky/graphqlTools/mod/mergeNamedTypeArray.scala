@@ -1,0 +1,14 @@
+package typingsSlinky.graphqlTools.mod
+
+import typingsSlinky.graphql.astMod.NamedTypeNode
+import typingsSlinky.graphqlToolsMerge.mergeTypedefsMod.Config
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("graphql-tools", "mergeNamedTypeArray")
+@js.native
+object mergeNamedTypeArray extends js.Object {
+  def apply(first: js.Array[NamedTypeNode], second: js.Array[NamedTypeNode], config: Config): js.Array[NamedTypeNode] = js.native
+}
+

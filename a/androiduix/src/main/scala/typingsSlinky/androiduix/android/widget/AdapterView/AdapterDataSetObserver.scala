@@ -29,17 +29,14 @@ object AdapterDataSetObserver {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdapterView_this(value: typingsSlinky.androiduix.android.widget.AdapterView[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdapterView_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClearSavedState(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearSavedState")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAdapterView_this(value: typingsSlinky.androiduix.android.widget.AdapterView[_]): Self = this.set("AdapterView_this", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClearSavedState(value: () => Unit): Self = this.set("clearSavedState", js.Any.fromFunction0(value))
   }
   
 }

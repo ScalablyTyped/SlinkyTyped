@@ -246,6 +246,7 @@ object mod extends js.Object {
       * If the specifier already specifies a precision, this method is equivalent to locale.format.
       */
     def tickFormat(): js.Function1[/* d */ Double | ValueOf, String] = js.native
+    def tickFormat(count: js.UndefOr[scala.Nothing], specifier: String): js.Function1[/* d */ Double | ValueOf, String] = js.native
     def tickFormat(count: Double): js.Function1[/* d */ Double | ValueOf, String] = js.native
     def tickFormat(count: Double, specifier: String): js.Function1[/* d */ Double | ValueOf, String] = js.native
     /**
@@ -405,6 +406,7 @@ object mod extends js.Object {
       * If the specifier already specifies a precision, this method is equivalent to locale.format.
       */
     def tickFormat(): js.Function1[/* d */ Double | ValueOf, String] = js.native
+    def tickFormat(count: js.UndefOr[scala.Nothing], specifier: String): js.Function1[/* d */ Double | ValueOf, String] = js.native
     def tickFormat(count: Double): js.Function1[/* d */ Double | ValueOf, String] = js.native
     def tickFormat(count: Double, specifier: String): js.Function1[/* d */ Double | ValueOf, String] = js.native
     /**
@@ -836,6 +838,7 @@ object mod extends js.Object {
       * If the specifier already specifies a precision, this method is equivalent to locale.format.
       */
     def tickFormat(): js.Function1[/* d */ Double | ValueOf, String] = js.native
+    def tickFormat(count: js.UndefOr[scala.Nothing], specifier: String): js.Function1[/* d */ Double | ValueOf, String] = js.native
     def tickFormat(count: Double): js.Function1[/* d */ Double | ValueOf, String] = js.native
     def tickFormat(count: Double, specifier: String): js.Function1[/* d */ Double | ValueOf, String] = js.native
     /**

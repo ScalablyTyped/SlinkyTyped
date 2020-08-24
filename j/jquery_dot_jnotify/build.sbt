@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_jnotify"
-version := "1.0-dt-20200515Z-0b1a3b"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-c268b9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

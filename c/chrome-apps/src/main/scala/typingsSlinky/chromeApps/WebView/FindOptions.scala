@@ -31,29 +31,18 @@ object FindOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBackward(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backward")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBackward: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backward")(js.undefined)
-        ret
-    }
+    def setBackward(value: Boolean): Self = this.set("backward", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMatchCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchCase")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBackward: Self = this.set("backward", js.undefined)
     @scala.inline
-    def withoutMatchCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchCase")(js.undefined)
-        ret
-    }
+    def setMatchCase(value: Boolean): Self = this.set("matchCase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMatchCase: Self = this.set("matchCase", js.undefined)
   }
   
 }

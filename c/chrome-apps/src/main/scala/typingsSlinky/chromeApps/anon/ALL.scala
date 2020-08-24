@@ -58,77 +58,34 @@ object ALL {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withALL(value: all__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ALL")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAUDIO(value: audio_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AUDIO")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setALL(value: all__): Self = this.set("ALL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBROWSER_ACTION(value: browser_action_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BROWSER_ACTION")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAUDIO(value: audio_): Self = this.set("AUDIO", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEDITABLE(value: editable_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EDITABLE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBROWSER_ACTION(value: browser_action_): Self = this.set("BROWSER_ACTION", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFRAME(value: frame_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FRAME")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEDITABLE(value: editable_): Self = this.set("EDITABLE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIMAGE(value: image_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IMAGE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFRAME(value: frame_): Self = this.set("FRAME", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLAUNCHER(value: launcher_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LAUNCHER")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIMAGE(value: image_): Self = this.set("IMAGE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLINK(value: link_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LINK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLAUNCHER(value: launcher_): Self = this.set("LAUNCHER", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPAGE(value: page_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAGE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLINK(value: link_): Self = this.set("LINK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPAGE_ACTION(value: page_action_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PAGE_ACTION")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPAGE(value: page_): Self = this.set("PAGE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSELECTION(value: selection_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SELECTION")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPAGE_ACTION(value: page_action_): Self = this.set("PAGE_ACTION", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVIDEO(value: video_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VIDEO")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSELECTION(value: selection_): Self = this.set("SELECTION", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVIDEO(value: video_): Self = this.set("VIDEO", value.asInstanceOf[js.Any])
   }
   
 }

@@ -2,7 +2,7 @@ package typingsSlinky.fsPromise.mod
 
 import typingsSlinky.fsExtra.anon.EncodingFlag
 import typingsSlinky.fsExtra.anon.Flag
-import typingsSlinky.mz.anon.FlagString
+import typingsSlinky.mz.anon.`4`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
@@ -69,15 +69,16 @@ object readFile extends js.Object {
   def apply(path: Double, callback: js.Function2[(/* err */ ErrnoException) | Null, /* data */ Buffer, Unit]): Unit = js.native
   def apply(
     path: Double,
-    options: js.UndefOr[typingsSlinky.mz.anon.Flag | FlagString | Null | String],
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def apply(path: Double, options: String): js.Promise[String] = js.native
   def apply(
     path: Double,
     options: String,
-    callback: js.Function2[(/* err */ ErrnoException) | Null, /* data */ String, Unit]
+    callback: js.Function2[(/* err */ ErrnoException) | Null, Buffer | (/* data */ String), Unit]
   ): Unit = js.native
+  def apply(path: Double, options: Null, callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]): Unit = js.native
   def apply(path: Double, options: typingsSlinky.mz.anon.EncodingFlag): js.Promise[String] = js.native
   def apply(
     path: Double,
@@ -85,19 +86,34 @@ object readFile extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   def apply(path: Double, options: typingsSlinky.mz.anon.Flag): js.Promise[Buffer] = js.native
-  def apply(path: Double, options: FlagString): js.Promise[String | Buffer] = js.native
+  def apply(
+    path: Double,
+    options: typingsSlinky.mz.anon.Flag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
+  ): Unit = js.native
+  def apply(path: Double, options: `4`): js.Promise[String | Buffer] = js.native
+  def apply(
+    path: Double,
+    options: `4`,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+  ): Unit = js.native
   def apply(path: PathLike): js.Promise[Buffer] = js.native
   def apply(path: PathLike, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
   def apply(
     path: PathLike,
-    options: js.UndefOr[typingsSlinky.mz.anon.Flag | FlagString | Null | String],
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: String): js.Promise[String] = js.native
   def apply(
     path: PathLike,
     options: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
+  ): Unit = js.native
+  def apply(
+    path: PathLike,
+    options: Null,
+    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: typingsSlinky.mz.anon.EncodingFlag): js.Promise[String] = js.native
   def apply(
@@ -106,6 +122,16 @@ object readFile extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: typingsSlinky.mz.anon.Flag): js.Promise[Buffer] = js.native
-  def apply(path: PathLike, options: FlagString): js.Promise[String | Buffer] = js.native
+  def apply(
+    path: PathLike,
+    options: typingsSlinky.mz.anon.Flag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
+  ): Unit = js.native
+  def apply(path: PathLike, options: `4`): js.Promise[String | Buffer] = js.native
+  def apply(
+    path: PathLike,
+    options: `4`,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+  ): Unit = js.native
 }
 

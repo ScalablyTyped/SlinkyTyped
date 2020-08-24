@@ -47,35 +47,20 @@ object WebAuthenticationChallengeDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChallenger(value: WebAuthChallenger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("challenger")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withIsProxy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChallenger(value: WebAuthChallenger): Self = this.set("challenger", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsProxy(value: Boolean): Self = this.set("isProxy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRealm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realm")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScheme(value: String): Self = this.set("scheme", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRealm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realm")(js.undefined)
-        ret
-    }
+    def setRealm(value: String): Self = this.set("realm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRealm: Self = this.set("realm", js.undefined)
   }
   
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.storybookComponents.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -22,13 +21,15 @@ object TooltipMessage {
     @scala.inline
     def descReactElement(value: ReactElement): this.type = set("desc", value.asInstanceOf[js.Any])
     @scala.inline
-    def desc(value: TagMod[Any]): this.type = set("desc", value.asInstanceOf[js.Any])
+    def desc(value: ReactElement): this.type = set("desc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linksVarargs(value: Href*): this.type = set("links", js.Array(value :_*))
     @scala.inline
     def links(value: js.Array[Href]): this.type = set("links", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipMessageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -18,11 +18,12 @@ object DateTimeFormat
       typingsSlinky.minappEnv.Intl.DateTimeFormat
     ]
      with Instantiable2[
-      (/* locales */ Array[String]) | (/* locales */ String), 
+      js.UndefOr[(/* locales */ Array[String]) | (/* locales */ String)], 
       /* options */ DateTimeFormatOptions, 
       typingsSlinky.minappEnv.Intl.DateTimeFormat
     ] {
   def apply(): typingsSlinky.minappEnv.Intl.DateTimeFormat = js.native
+  def apply(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): typingsSlinky.minappEnv.Intl.DateTimeFormat = js.native
   def apply(locales: String): typingsSlinky.minappEnv.Intl.DateTimeFormat = js.native
   def apply(locales: String, options: DateTimeFormatOptions): typingsSlinky.minappEnv.Intl.DateTimeFormat = js.native
   def apply(locales: Array[String]): typingsSlinky.minappEnv.Intl.DateTimeFormat = js.native

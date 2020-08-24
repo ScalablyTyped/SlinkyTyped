@@ -18,9 +18,9 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.grommet.anon.Bottom
 import typingsSlinky.grommet.anon.EnterSelect
 import typingsSlinky.grommet.anon.LabelValue
-import typingsSlinky.grommet.anon.Left
 import typingsSlinky.grommet.anon.Suggestion
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
@@ -91,7 +91,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextInput {
-  @JSImport("grommet", "TextInput")
+  @JSImport("grommet/es6", "TextInput")
   @js.native
   object component extends js.Object
   
@@ -234,6 +234,8 @@ object TextInput {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -242,7 +244,7 @@ object TextInput {
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def dropAlign(value: Left): this.type = set("dropAlign", value.asInstanceOf[js.Any])
+    def dropAlign(value: Bottom): this.type = set("dropAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def dropHeight(value: xsmall | small | medium | large | xlarge | String): this.type = set("dropHeight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -507,6 +509,8 @@ object TextInput {
     def step(value: Double | String): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestionsVarargs(value: (LabelValue | String)*): this.type = set("suggestions", js.Array(value :_*))
     @scala.inline
     def suggestions(value: js.Array[LabelValue | String]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     @scala.inline

@@ -4,12 +4,12 @@ import org.scalajs.dom.raw.CustomEvent
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
 import typingsSlinky.ionicCore.mod.Mode
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicReact.anon.LoadingOptionsReactContro
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,19 +22,19 @@ object IonLoading {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonLoadingElement] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
     def backdropDismiss(value: Boolean): this.type = set("backdropDismiss", value.asInstanceOf[js.Any])
     @scala.inline
+    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
+    @scala.inline
     def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
     @scala.inline
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     @scala.inline
-    def enterAnimation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): this.type = set("enterAnimation", js.Any.fromFunction3(value))
+    def enterAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("enterAnimation", js.Any.fromFunction2(value))
     @scala.inline
     def forwardedRef(value: ReactRef[HTMLIonLoadingElement]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     @scala.inline
@@ -42,11 +42,9 @@ object IonLoading {
     @scala.inline
     def keyboardClose(value: Boolean): this.type = set("keyboardClose", value.asInstanceOf[js.Any])
     @scala.inline
-    def leaveAnimation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): this.type = set("leaveAnimation", js.Any.fromFunction3(value))
+    def leaveAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("leaveAnimation", js.Any.fromFunction2(value))
     @scala.inline
-    def message(value: String): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: String | IonicSafeString): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: Mode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline

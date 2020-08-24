@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_watermark"
-version := "3.1-dt-20200515Z-a45791"
-scalaVersion := "2.13.2"
+version := "3.1-dt-20200515Z-d867b5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

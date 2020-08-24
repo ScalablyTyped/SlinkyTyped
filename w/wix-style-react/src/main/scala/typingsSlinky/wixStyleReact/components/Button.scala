@@ -9,20 +9,19 @@ import typingsSlinky.wixStyleReact.buttonMod.ButtonPriority
 import typingsSlinky.wixStyleReact.buttonMod.ButtonProps
 import typingsSlinky.wixStyleReact.buttonMod.ButtonSize
 import typingsSlinky.wixStyleReact.buttonMod.ButtonSkin
-import typingsSlinky.wixStyleReact.buttonMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Button {
-  @JSImport("wix-style-react/Button", JSImport.Default)
+  @JSImport("wix-style-react", "Button")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.wixStyleReact.mod.Button] {
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline

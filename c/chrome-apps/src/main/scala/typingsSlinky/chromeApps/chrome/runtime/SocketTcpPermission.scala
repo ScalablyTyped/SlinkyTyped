@@ -27,17 +27,16 @@ object SocketTcpPermission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConnect(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.undefined)
-        ret
-    }
+    def setConnectVarargs(value: String*): Self = this.set("connect", js.Array(value :_*))
+    @scala.inline
+    def setConnect(value: String | js.Array[String]): Self = this.set("connect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConnect: Self = this.set("connect", js.undefined)
   }
   
 }

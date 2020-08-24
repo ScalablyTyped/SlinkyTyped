@@ -1,9 +1,11 @@
 package typingsSlinky.victory.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.mod.AnimationData
 import typingsSlinky.victory.mod.AnimationEasing
+import typingsSlinky.victory.mod.AnimationStyle
 import typingsSlinky.victory.mod.VictoryAnimationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +20,10 @@ object VictoryAnimation {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAnimation] {
+    @scala.inline
+    def children(value: /* style */ AnimationStyle => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def dataVarargs(value: AnimationStyle*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: AnimationData): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline

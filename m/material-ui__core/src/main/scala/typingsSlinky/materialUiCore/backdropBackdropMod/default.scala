@@ -2,18 +2,9 @@ package typingsSlinky.materialUiCore.backdropBackdropMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
-
-@JSImport("@material-ui/core/Backdrop/Backdrop", JSImport.Default)
-@js.native
-class default protected ()
-  extends Component[BackdropProps, js.Object, js.Any] {
-  def this(props: BackdropProps) = this()
-  def this(props: BackdropProps, context: js.Any) = this()
-}
 
 @JSImport("@material-ui/core/Backdrop/Backdrop", JSImport.Default)
 @js.native

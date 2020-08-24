@@ -1,13 +1,11 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.cardCardMediaMod.CardMediaProps
-import typingsSlinky.reactToolbox.cardCardMediaMod.CardMediaTheme
-import typingsSlinky.reactToolbox.cardCardMediaMod.default
+import typingsSlinky.reactToolbox.cardMediaMod.CardMediaProps
+import typingsSlinky.reactToolbox.cardMediaMod.CardMediaTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.square
 import typingsSlinky.reactToolbox.reactToolboxStrings.wide
 import scala.scalajs.js
@@ -15,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CardMedia {
-  @JSImport("react-toolbox/lib/card/CardMedia", JSImport.Default)
+  @JSImport("react-toolbox/components/card", "CardMedia")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.cardMod.CardMedia] {
     @scala.inline
     def aspectRatio(value: wide | square): this.type = set("aspectRatio", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +32,7 @@ object CardMedia {
     @scala.inline
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def image(value: TagMod[Any]): this.type = set("image", value.asInstanceOf[js.Any])
+    def image(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: js.Function): this.type = set("onClick", value.asInstanceOf[js.Any])
     @scala.inline

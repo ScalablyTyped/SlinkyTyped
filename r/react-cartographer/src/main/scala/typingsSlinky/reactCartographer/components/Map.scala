@@ -3,7 +3,6 @@ package typingsSlinky.reactCartographer.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCartographer.mapMod.MapProps
-import typingsSlinky.reactCartographer.mapMod.default
 import typingsSlinky.reactCartographer.reactCartographerStrings.bing
 import typingsSlinky.reactCartographer.reactCartographerStrings.google
 import typingsSlinky.reactCartographer.reactCartographerStrings.yahoo
@@ -12,14 +11,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Map {
-  @JSImport("react-cartographer/lib/components/Map", JSImport.Default)
+  @JSImport("react-cartographer", "Map")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactCartographer.mod.Map] {
     @scala.inline
     def addressLine1(value: String): this.type = set("addressLine1", value.asInstanceOf[js.Any])
     @scala.inline

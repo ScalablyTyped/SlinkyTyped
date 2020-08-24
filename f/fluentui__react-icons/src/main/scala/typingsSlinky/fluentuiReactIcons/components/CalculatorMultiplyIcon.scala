@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CalculatorMultiplyIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CalculatorMultiplyIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CalculatorMultiplyIcon")
   @js.native
   object component extends js.Object
   

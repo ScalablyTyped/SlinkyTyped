@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -39,6 +40,8 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  @scala.inline
   def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -57,6 +60,8 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   @scala.inline
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
   @scala.inline
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+  @scala.inline
   def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -65,6 +70,8 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   @scala.inline
   def accessible(value: Boolean): this.type = set("accessible", value.asInstanceOf[js.Any])
   @scala.inline
+  def actionsVarargs(value: ToolbarAndroidAction*): this.type = set("actions", js.Array(value :_*))
+  @scala.inline
   def actions(value: js.Array[ToolbarAndroidAction]): this.type = set("actions", value.asInstanceOf[js.Any])
   @scala.inline
   def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
@@ -72,6 +79,8 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   def contentInsetEnd(value: Double): this.type = set("contentInsetEnd", value.asInstanceOf[js.Any])
   @scala.inline
   def contentInsetStart(value: Double): this.type = set("contentInsetStart", value.asInstanceOf[js.Any])
+  @scala.inline
+  def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
   @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline
@@ -155,13 +164,13 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   @scala.inline
   def subtitle(value: String): this.type = set("subtitle", value.asInstanceOf[js.Any])
   @scala.inline
-  def subtitleColor(value: String): this.type = set("subtitleColor", value.asInstanceOf[js.Any])
+  def subtitleColor(value: ColorValue): this.type = set("subtitleColor", value.asInstanceOf[js.Any])
   @scala.inline
   def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
   @scala.inline
   def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
-  def titleColor(value: String): this.type = set("titleColor", value.asInstanceOf[js.Any])
+  def titleColor(value: ColorValue): this.type = set("titleColor", value.asInstanceOf[js.Any])
   @scala.inline
   def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
   @scala.inline

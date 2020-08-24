@@ -3,22 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.tableTableRowMod.TableRowProps
-import typingsSlinky.reactToolbox.tableTableRowMod.TableRowTheme
-import typingsSlinky.reactToolbox.tableTableRowMod.default
+import typingsSlinky.reactToolbox.tableRowMod.TableRowProps
+import typingsSlinky.reactToolbox.tableRowMod.TableRowTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TableRow {
-  @JSImport("react-toolbox/lib/table/TableRow", JSImport.Default)
+  @JSImport("react-toolbox/components/table", "TableRow")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.tableMod.TableRow] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

@@ -2,11 +2,13 @@ package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.antdStrings.PATCH
 import typingsSlinky.antd.antdStrings.POST
 import typingsSlinky.antd.antdStrings.PUT
+import typingsSlinky.antd.antdStrings.patch_
 import typingsSlinky.antd.antdStrings.post_
 import typingsSlinky.antd.antdStrings.put_
 import typingsSlinky.antd.draggerMod.DraggerProps
@@ -17,6 +19,7 @@ import typingsSlinky.antd.uploadInterfaceMod.RcFile
 import typingsSlinky.antd.uploadInterfaceMod.ShowUploadListInterface
 import typingsSlinky.antd.uploadInterfaceMod.UploadChangeParam
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
+import typingsSlinky.antd.uploadInterfaceMod.UploadListProgressProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadListType
 import typingsSlinky.antd.uploadInterfaceMod.UploadLocale
 import typingsSlinky.antd.uploadInterfaceMod.UploadType
@@ -51,11 +54,15 @@ object Dragger {
     @scala.inline
     def data(value: js.Object | (js.Function1[/* file */ UploadFile[_], js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultFileListVarargs(value: UploadFile[js.Any]*): this.type = set("defaultFileList", js.Array(value :_*))
+    @scala.inline
     def defaultFileList(value: js.Array[UploadFile[_]]): this.type = set("defaultFileList", value.asInstanceOf[js.Any])
     @scala.inline
     def directory(value: Boolean): this.type = set("directory", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fileListVarargs(value: UploadFile[js.Any]*): this.type = set("fileList", js.Array(value :_*))
     @scala.inline
     def fileList(value: js.Array[UploadFile[_]]): this.type = set("fileList", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,7 +70,7 @@ object Dragger {
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): this.type = set("iconRender", js.Any.fromFunction2(value))
+    def iconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => ReactElement): this.type = set("iconRender", js.Any.fromFunction2(value))
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -73,7 +80,7 @@ object Dragger {
     @scala.inline
     def locale(value: UploadLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def method(value: POST | PUT | post_ | put_): this.type = set("method", value.asInstanceOf[js.Any])
+    def method(value: POST | PUT | PATCH | post_ | put_ | patch_): this.type = set("method", value.asInstanceOf[js.Any])
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
@@ -92,6 +99,8 @@ object Dragger {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def previewFile(value: /* file */ File | Blob => js.Thenable[String]): this.type = set("previewFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def progress(value: UploadListProgressProps): this.type = set("progress", value.asInstanceOf[js.Any])
     @scala.inline
     def showUploadList(value: Boolean | ShowUploadListInterface): this.type = set("showUploadList", value.asInstanceOf[js.Any])
     @scala.inline

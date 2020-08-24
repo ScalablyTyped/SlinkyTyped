@@ -1,9 +1,7 @@
 package typingsSlinky.reflux.components
 
-import org.scalablytyped.runtime.Instantiable0
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reflux.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +13,11 @@ object Component {
   object component extends js.Object
   
   @scala.inline
-  class Builder[TOfStore <: Instantiable0[Store], P, S] (val args: js.Array[js.Any])
+  class Builder[/* <: org.scalablytyped.runtime.Instantiable0[typingsSlinky.reflux.mod.Store] */ TOfStore, P, S] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reflux.mod.Component[js.Any, js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reflux.mod.Component[TOfStore, P, S]]
   
-  def apply[TOfStore <: Instantiable0[Store], P, S](p: P): Builder[TOfStore, P, S] = new Builder[TOfStore, P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[TOfStore <: Instantiable0[Store], P, S](companion: Component.type): Builder[TOfStore, P, S] = new Builder[TOfStore, P, S](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: org.scalablytyped.runtime.Instantiable0[typingsSlinky.reflux.mod.Store] */ TOfStore, P, S](p: P): Builder[TOfStore, P, S] = new Builder[TOfStore, P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: org.scalablytyped.runtime.Instantiable0[typingsSlinky.reflux.mod.Store] */ TOfStore, P, S](companion: Component.type): Builder[TOfStore, P, S] = new Builder[TOfStore, P, S](js.Array(this.component, js.Dictionary.empty))()
 }
 

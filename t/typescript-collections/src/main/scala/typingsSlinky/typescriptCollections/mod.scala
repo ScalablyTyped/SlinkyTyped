@@ -254,7 +254,7 @@ object mod extends js.Object {
     *
     * <pre>
     * function petToString(pet) {
-    *  return pet.name;
+    *     return pet.name;
     * }
     * </pre>
     * <p>If the values are custom objects a function to check equality between values
@@ -262,7 +262,7 @@ object mod extends js.Object {
     *
     * <pre>
     * function petsAreEqualByAge(pet1,pet2) {
-    *  return pet1.age===pet2.age;
+    *     return pet1.age === pet2.age;
     * }
     * </pre>
     * @constructor
@@ -278,7 +278,23 @@ object mod extends js.Object {
   class MultiDictionary[K, V] ()
     extends typingsSlinky.typescriptCollections.multiDictionaryMod.default[K, V] {
     def this(toStrFunction: js.Function1[/* key */ K, String]) = this()
+    def this(toStrFunction: js.UndefOr[scala.Nothing], valuesEqualsFunction: IEqualsFunction[V]) = this()
     def this(toStrFunction: js.Function1[/* key */ K, String], valuesEqualsFunction: IEqualsFunction[V]) = this()
+    def this(
+      toStrFunction: js.UndefOr[scala.Nothing],
+      valuesEqualsFunction: js.UndefOr[scala.Nothing],
+      allowDuplicateValues: Boolean
+    ) = this()
+    def this(
+      toStrFunction: js.UndefOr[scala.Nothing],
+      valuesEqualsFunction: IEqualsFunction[V],
+      allowDuplicateValues: Boolean
+    ) = this()
+    def this(
+      toStrFunction: js.Function1[/* key */ K, String],
+      valuesEqualsFunction: js.UndefOr[scala.Nothing],
+      allowDuplicateValues: Boolean
+    ) = this()
     def this(
       toStrFunction: js.Function1[/* key */ K, String],
       valuesEqualsFunction: IEqualsFunction[V],
@@ -290,6 +306,7 @@ object mod extends js.Object {
   class MultiRootTree ()
     extends typingsSlinky.typescriptCollections.multiRootTreeMod.default {
     def this(rootIds: js.Array[String]) = this()
+    def this(rootIds: js.UndefOr[scala.Nothing], nodes: StringDictionary[js.Array[String]]) = this()
     def this(rootIds: js.Array[String], nodes: StringDictionary[js.Array[String]]) = this()
   }
   

@@ -1,7 +1,6 @@
 package typingsSlinky.reactNativeSnapCarousel.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -47,7 +46,7 @@ object Pagination {
     @scala.inline
     def dotElementReactElement(value: ReactElement): this.type = set("dotElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def dotElement(value: TagMod[Any]): this.type = set("dotElement", value.asInstanceOf[js.Any])
+    def dotElement(value: ReactElement): this.type = set("dotElement", value.asInstanceOf[js.Any])
     @scala.inline
     def dotStyle(value: StyleProp[ViewStyle]): this.type = set("dotStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +56,7 @@ object Pagination {
     @scala.inline
     def inactiveDotElementReactElement(value: ReactElement): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def inactiveDotElement(value: TagMod[Any]): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
+    def inactiveDotElement(value: ReactElement): this.type = set("inactiveDotElement", value.asInstanceOf[js.Any])
     @scala.inline
     def inactiveDotOpacity(value: Double): this.type = set("inactiveDotOpacity", value.asInstanceOf[js.Any])
     @scala.inline
@@ -67,7 +66,7 @@ object Pagination {
     @scala.inline
     def inactiveDotStyleNull: this.type = set("inactiveDotStyle", null)
     @scala.inline
-    def renderDots(value: (/* activeIndex */ Double, /* total */ Double, /* context */ js.Any) => TagMod[Any]): this.type = set("renderDots", js.Any.fromFunction3(value))
+    def renderDots(value: (/* activeIndex */ Double, /* total */ Double, /* context */ js.Any) => ReactElement): this.type = set("renderDots", js.Any.fromFunction3(value))
     @scala.inline
     def tappableDots(value: Boolean): this.type = set("tappableDots", value.asInstanceOf[js.Any])
     @scala.inline

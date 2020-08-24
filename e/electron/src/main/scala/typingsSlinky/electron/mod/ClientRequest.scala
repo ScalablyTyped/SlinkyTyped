@@ -1,13 +1,6 @@
 package typingsSlinky.electron.mod
 
-import typingsSlinky.electron.electronStrings.host
-import typingsSlinky.electron.electronStrings.hostname
-import typingsSlinky.electron.electronStrings.method
-import typingsSlinky.electron.electronStrings.partition
-import typingsSlinky.electron.electronStrings.path
-import typingsSlinky.electron.electronStrings.port
-import typingsSlinky.electron.electronStrings.redirect
-import typingsSlinky.electron.electronStrings.url
+import typingsSlinky.electron.Electron.ClientRequestConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class ClientRequest protected ()
   extends typingsSlinky.electron.Electron.ClientRequest {
-  def this(options: method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect) = this()
+  def this(options: String) = this()
+  /**
+    * ClientRequest
+    */
+  def this(options: ClientRequestConstructorOptions) = this()
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.mod
 
-import typingsSlinky.graphql.schemaPrinterMod.Options
+import typingsSlinky.graphql.printSchemaMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

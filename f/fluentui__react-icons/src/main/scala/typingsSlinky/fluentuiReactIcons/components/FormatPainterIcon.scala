@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormatPainterIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FormatPainterIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FormatPainterIcon")
   @js.native
   object component extends js.Object
   

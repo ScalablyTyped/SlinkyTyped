@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Fn0 extends js.Object {
-  def apply(): String = js.native
-  def apply(value: js.Any): String = js.native
+  def apply(): js.URIError = js.native
+  def apply(message: String): js.URIError = js.native
 }
 

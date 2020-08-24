@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.InflationOperationRecord
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.ManageDataOperationRecord
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.BumpSequenceOperationRecord
+  - typingsSlinky.stellarSdk.serverApiMod.ServerApi.PathPaymentStrictSendOperationRecord
 */
 trait OperationRecord extends js.Object
 

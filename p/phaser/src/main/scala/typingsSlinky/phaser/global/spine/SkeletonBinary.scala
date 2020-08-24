@@ -10,37 +10,6 @@ import scala.scalajs.js.annotation._
 class SkeletonBinary protected ()
   extends typingsSlinky.phaser.spine.SkeletonBinary {
   def this(attachmentLoader: AttachmentLoader) = this()
-  /* CompleteClass */
-  override var attachmentLoader: AttachmentLoader = js.native
-  /* CompleteClass */
-  override var linkedMeshes: js.Any = js.native
-  /* CompleteClass */
-  override var readAnimation: js.Any = js.native
-  /* CompleteClass */
-  override var readAttachment: js.Any = js.native
-  /* CompleteClass */
-  override var readCurve: js.Any = js.native
-  /* CompleteClass */
-  override var readFloatArray: js.Any = js.native
-  /* CompleteClass */
-  override var readShortArray: js.Any = js.native
-  /* CompleteClass */
-  override var readSkin: js.Any = js.native
-  /* CompleteClass */
-  override var readVertices: js.Any = js.native
-  /* CompleteClass */
-  override var scale: Double = js.native
-  /* CompleteClass */
-  override def readSkeletonData(binary: js.typedarray.Uint8Array): typingsSlinky.phaser.spine.SkeletonData = js.native
-  /* CompleteClass */
-  override def setCurve(
-    timeline: typingsSlinky.phaser.spine.CurveTimeline,
-    frameIndex: Double,
-    cx1: Double,
-    cy1: Double,
-    cx2: Double,
-    cy2: Double
-  ): Unit = js.native
 }
 
 /* static members */

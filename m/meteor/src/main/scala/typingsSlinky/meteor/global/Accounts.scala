@@ -10,11 +10,11 @@ import typingsSlinky.meteor.URLS
 import typingsSlinky.meteor.anon.Algorithm
 import typingsSlinky.meteor.anon.AmbiguousErrorMessages
 import typingsSlinky.meteor.anon.Connection
-import typingsSlinky.meteor.anon.EmailString
 import typingsSlinky.meteor.anon.ForceApprovalPrompt
 import typingsSlinky.meteor.anon.Logout
 import typingsSlinky.meteor.anon.Profile
 import typingsSlinky.meteor.anon.Stop
+import typingsSlinky.meteor.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,11 +78,8 @@ object Accounts extends js.Object {
   ): String = js.native
   def findUserByEmail(email: String): js.UndefOr[User | Null] = js.native
   def findUserByUsername(username: String): js.UndefOr[User | Null] = js.native
-  def forgotPassword(options: EmailString): Unit = js.native
-  def forgotPassword(
-    options: EmailString,
-    callback: js.Function1[/* error */ js.UndefOr[js.Error | Error | TypedError], Unit]
-  ): Unit = js.native
+  def forgotPassword(options: `0`): Unit = js.native
+  def forgotPassword(options: `0`, callback: js.Function1[/* error */ js.UndefOr[js.Error | Error | TypedError], Unit]): Unit = js.native
   @JSName("_hashPassword")
   def hashPassword(password: String): Algorithm = js.native
   def loggingIn(): Boolean = js.native

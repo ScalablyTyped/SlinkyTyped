@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BorderDotIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BorderDotIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BorderDotIcon")
   @js.native
   object component extends js.Object
   

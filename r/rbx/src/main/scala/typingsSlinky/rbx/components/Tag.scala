@@ -1,10 +1,9 @@
 package typingsSlinky.rbx.components
 
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
-import typingsSlinky.rbx.anon.`7`
+import typingsSlinky.rbx.anon.`6`
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.helpersMod.HelpersPropsOverrides
 import typingsSlinky.rbx.rbxStrings.as
@@ -54,24 +53,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.rbx.anon.`7`[TAsComponent] with typingsSlinky.rbx.helpersMod.HelpersPropsOverrides with typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa with typingsSlinky.rbx.tagTagMod.TagModifierProps with (typingsSlinky.std.Pick[
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.rbx.anon.`6`[TAsComponent] with typingsSlinky.rbx.helpersMod.HelpersPropsOverrides with typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa with typingsSlinky.rbx.tagTagMod.TagModifierProps with (typingsSlinky.std.Pick[
 typingsSlinky.react.mod.ComponentProps[TAsComponent], 
 typingsSlinky.std.Exclude[
   / * keyof react.react.ComponentProps<TAsComponent> * / java.lang.String, 
   typingsSlinky.rbx.rbxStrings.hidden | typingsSlinky.rbx.rbxStrings.color | typingsSlinky.rbx.rbxStrings.overlay | typingsSlinky.rbx.rbxStrings.size | typingsSlinky.rbx.rbxStrings.italic | typingsSlinky.rbx.rbxStrings.relative | typingsSlinky.rbx.rbxStrings.tooltip | typingsSlinky.rbx.rbxStrings.as | typingsSlinky.rbx.rbxStrings.className | typingsSlinky.rbx.rbxStrings.badge | typingsSlinky.rbx.rbxStrings.badgeColor | typingsSlinky.rbx.rbxStrings.badgeOutlined | typingsSlinky.rbx.rbxStrings.badgeRounded | typingsSlinky.rbx.rbxStrings.badgeSize | typingsSlinky.rbx.rbxStrings.clearfix | typingsSlinky.rbx.rbxStrings.pull | typingsSlinky.rbx.rbxStrings.marginless | typingsSlinky.rbx.rbxStrings.paddingless | typingsSlinky.rbx.rbxStrings.radiusless | typingsSlinky.rbx.rbxStrings.shadowless | typingsSlinky.rbx.rbxStrings.unselectable | typingsSlinky.rbx.rbxStrings.clipped | typingsSlinky.rbx.rbxStrings.responsive | typingsSlinky.rbx.rbxStrings.textAlign | typingsSlinky.rbx.rbxStrings.textSize | typingsSlinky.rbx.rbxStrings.tooltipActive | typingsSlinky.rbx.rbxStrings.tooltipColor | typingsSlinky.rbx.rbxStrings.tooltipMultiline | typingsSlinky.rbx.rbxStrings.tooltipPosition | typingsSlinky.rbx.rbxStrings.tooltipResponsive | typingsSlinky.rbx.rbxStrings.backgroundColor | typingsSlinky.rbx.rbxStrings.textColor | typingsSlinky.rbx.rbxStrings.textTransform | typingsSlinky.rbx.rbxStrings.textWeight | typingsSlinky.rbx.rbxStrings.invisible | typingsSlinky.rbx.rbxStrings.srOnly | typingsSlinky.rbx.rbxStrings.rounded | typingsSlinky.rbx.rbxStrings.delete
-]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
+]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object Tag {
   @JSImport("rbx", "Tag")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[TAsComponent <: ReactElement] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object]
   
-  def apply[TAsComponent <: ReactElement](
-    p: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TagModifierProps with (Pick[
+  def apply[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent](
+    p: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TagModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -79,6 +78,6 @@ object Tag {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[TAsComponent <: ReactElement](companion: Tag.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent](companion: Tag.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
 }
 

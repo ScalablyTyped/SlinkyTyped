@@ -1,6 +1,6 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.numberMod.NumberProps
@@ -23,7 +23,7 @@ object Number {
     @scala.inline
     def decimalSeparator(value: String): this.type = set("decimalSeparator", value.asInstanceOf[js.Any])
     @scala.inline
-    def formatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): this.type = set("formatter", js.Any.fromFunction2(value))
+    def formatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => ReactElement): this.type = set("formatter", js.Any.fromFunction2(value))
     @scala.inline
     def formatter(value: Formatter): this.type = set("formatter", value.asInstanceOf[js.Any])
     @scala.inline

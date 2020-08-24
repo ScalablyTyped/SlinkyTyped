@@ -34,35 +34,20 @@ object RunQueue {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExecuteActions(value: Handler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeActions")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMActions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExecuteActions(value: Handler => Unit): Self = this.set("executeActions", js.Any.fromFunction1(value))
     @scala.inline
-    def withPost(value: Runnable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMActions(value: js.Any): Self = this.set("mActions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPostDelayed(value: (Runnable, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postDelayed")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setPost(value: Runnable => Unit): Self = this.set("post", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemoveCallbacks(value: Runnable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCallbacks")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setPostDelayed(value: (Runnable, Double) => Unit): Self = this.set("postDelayed", js.Any.fromFunction2(value))
+    @scala.inline
+    def setRemoveCallbacks(value: Runnable => Unit): Self = this.set("removeCallbacks", js.Any.fromFunction1(value))
   }
   
 }

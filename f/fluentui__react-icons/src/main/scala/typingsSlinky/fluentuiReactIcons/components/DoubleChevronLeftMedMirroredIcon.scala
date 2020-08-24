@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DoubleChevronLeftMedMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DoubleChevronLeftMedMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DoubleChevronLeftMedMirroredIcon")
   @js.native
   object component extends js.Object
   

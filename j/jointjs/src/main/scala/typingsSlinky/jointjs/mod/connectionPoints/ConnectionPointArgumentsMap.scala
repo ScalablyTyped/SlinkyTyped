@@ -32,29 +32,18 @@ object ConnectionPointArgumentsMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnchor(value: DefaultConnectionPointArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBbox(value: StrokeConnectionPointArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAnchor(value: DefaultConnectionPointArguments): Self = this.set("anchor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBoundary(value: BoundaryConnectionPointArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBbox(value: StrokeConnectionPointArguments): Self = this.set("bbox", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRectangle(value: StrokeConnectionPointArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBoundary(value: BoundaryConnectionPointArguments): Self = this.set("boundary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRectangle(value: StrokeConnectionPointArguments): Self = this.set("rectangle", value.asInstanceOf[js.Any])
   }
   
 }

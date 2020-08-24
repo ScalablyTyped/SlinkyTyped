@@ -1,14 +1,19 @@
 package typingsSlinky.apolloServer.mod
 
-import org.scalablytyped.runtime.StringDictionary
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
+import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("apollo-server", "defaultMergedResolver")
 @js.native
-object defaultMergedResolver
-  extends TopLevel[GraphQLFieldResolver[js.Any, js.Any, StringDictionary[js.Any]]]
+object defaultMergedResolver extends js.Object {
+  def apply(
+    parent: Record[String, _],
+    args: Record[String, _],
+    context: Record[String, _],
+    info: GraphQLResolveInfo
+  ): js.Any = js.native
+}
 

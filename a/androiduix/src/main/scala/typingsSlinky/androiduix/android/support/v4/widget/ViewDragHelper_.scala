@@ -42,7 +42,6 @@ trait ViewDragHelper_ extends js.Object {
   def checkTouchSlop(directions: Double): Boolean = js.native
   def checkTouchSlop(directions: Double, pointerId: Double): Boolean = js.native
   /* private */ def clampMag(value: js.Any, absMin: js.Any, absMax: js.Any): js.Any = js.native
-  /* private */ def clearMotionHistory(): js.Any = js.native
   /* private */ def clearMotionHistory(pointerId: js.Any): js.Any = js.native
   /* private */ def computeAxisDuration(delta: js.Any, velocity: js.Any, motionRange: js.Any): js.Any = js.native
   /* private */ def computeSettleDuration(child: js.Any, dx: js.Any, dy: js.Any, xvel: js.Any, yvel: js.Any): js.Any = js.native

@@ -1,6 +1,8 @@
 package typingsSlinky.reactNativeNavigation
 
+import typingsSlinky.reactNativeNavigation.componentEventsMod.ComponentType
 import typingsSlinky.reactNativeNavigation.optionsMod.FontWeight
+import typingsSlinky.reactNativeNavigation.optionsMod.Interpolation
 import typingsSlinky.reactNativeNavigation.optionsMod.LayoutOrientation
 import typingsSlinky.reactNativeNavigation.optionsMod.SystemItemIcon
 import scala.scalajs.js
@@ -9,7 +11,22 @@ import scala.scalajs.js.annotation._
 
 object reactNativeNavigationStrings {
   @js.native
-  sealed trait accelerate extends js.Object
+  sealed trait Component extends ComponentType
+  
+  @js.native
+  sealed trait TopBarBackground extends ComponentType
+  
+  @js.native
+  sealed trait TopBarButton extends ComponentType
+  
+  @js.native
+  sealed trait TopBarTitle extends ComponentType
+  
+  @js.native
+  sealed trait accelerate extends Interpolation
+  
+  @js.native
+  sealed trait accelerateDecelerate extends Interpolation
   
   @js.native
   sealed trait action extends SystemItemIcon
@@ -45,9 +62,6 @@ object reactNativeNavigationStrings {
   sealed trait bookmarks extends SystemItemIcon
   
   @js.native
-  sealed trait bottom extends js.Object
-  
-  @js.native
   sealed trait camera extends SystemItemIcon
   
   @js.native
@@ -63,7 +77,10 @@ object reactNativeNavigationStrings {
   sealed trait dark extends js.Object
   
   @js.native
-  sealed trait decelerate extends js.Object
+  sealed trait decelerate extends Interpolation
+  
+  @js.native
+  sealed trait decelerateAccelerate extends Interpolation
   
   @js.native
   sealed trait default extends js.Object
@@ -114,13 +131,25 @@ object reactNativeNavigationStrings {
   sealed trait light extends FontWeight
   
   @js.native
+  sealed trait linear extends Interpolation
+  
+  @js.native
+  sealed trait locale extends js.Object
+  
+  @js.native
   sealed trait ltr extends js.Object
   
   @js.native
   sealed trait medium extends FontWeight
   
   @js.native
+  sealed trait mini extends js.Object
+  
+  @js.native
   sealed trait never extends js.Object
+  
+  @js.native
+  sealed trait none extends js.Object
   
   @js.native
   sealed trait onSwitchToTab extends js.Object
@@ -174,10 +203,13 @@ object reactNativeNavigationStrings {
   sealed trait semibold extends FontWeight
   
   @js.native
-  sealed trait sharedElement extends js.Object
+  sealed trait showWhenActive extends js.Object
   
   @js.native
-  sealed trait showWhenActive extends js.Object
+  sealed trait showWhenActiveForce extends js.Object
+  
+  @js.native
+  sealed trait sidebar extends js.Object
   
   @js.native
   sealed trait stop extends SystemItemIcon
@@ -187,9 +219,6 @@ object reactNativeNavigationStrings {
   
   @js.native
   sealed trait together extends js.Object
-  
-  @js.native
-  sealed trait top extends js.Object
   
   @js.native
   sealed trait trailing extends js.Object
@@ -210,7 +239,17 @@ object reactNativeNavigationStrings {
   sealed trait withText extends js.Object
   
   @scala.inline
+  def Component: Component = "Component".asInstanceOf[Component]
+  @scala.inline
+  def TopBarBackground: TopBarBackground = "TopBarBackground".asInstanceOf[TopBarBackground]
+  @scala.inline
+  def TopBarButton: TopBarButton = "TopBarButton".asInstanceOf[TopBarButton]
+  @scala.inline
+  def TopBarTitle: TopBarTitle = "TopBarTitle".asInstanceOf[TopBarTitle]
+  @scala.inline
   def accelerate: accelerate = "accelerate".asInstanceOf[accelerate]
+  @scala.inline
+  def accelerateDecelerate: accelerateDecelerate = "accelerateDecelerate".asInstanceOf[accelerateDecelerate]
   @scala.inline
   def action: action = "action".asInstanceOf[action]
   @scala.inline
@@ -234,8 +273,6 @@ object reactNativeNavigationStrings {
   @scala.inline
   def bookmarks: bookmarks = "bookmarks".asInstanceOf[bookmarks]
   @scala.inline
-  def bottom: bottom = "bottom".asInstanceOf[bottom]
-  @scala.inline
   def camera: camera = "camera".asInstanceOf[camera]
   @scala.inline
   def cancel: cancel = "cancel".asInstanceOf[cancel]
@@ -247,6 +284,8 @@ object reactNativeNavigationStrings {
   def dark: dark = "dark".asInstanceOf[dark]
   @scala.inline
   def decelerate: decelerate = "decelerate".asInstanceOf[decelerate]
+  @scala.inline
+  def decelerateAccelerate: decelerateAccelerate = "decelerateAccelerate".asInstanceOf[decelerateAccelerate]
   @scala.inline
   def default: default = "default".asInstanceOf[default]
   @scala.inline
@@ -280,11 +319,19 @@ object reactNativeNavigationStrings {
   @scala.inline
   def light: light = "light".asInstanceOf[light]
   @scala.inline
+  def linear: linear = "linear".asInstanceOf[linear]
+  @scala.inline
+  def locale: locale = "locale".asInstanceOf[locale]
+  @scala.inline
   def ltr: ltr = "ltr".asInstanceOf[ltr]
   @scala.inline
   def medium: medium = "medium".asInstanceOf[medium]
   @scala.inline
+  def mini: mini = "mini".asInstanceOf[mini]
+  @scala.inline
   def never: never = "never".asInstanceOf[never]
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
   @scala.inline
   def onSwitchToTab: onSwitchToTab = "onSwitchToTab".asInstanceOf[onSwitchToTab]
   @scala.inline
@@ -320,17 +367,17 @@ object reactNativeNavigationStrings {
   @scala.inline
   def semibold: semibold = "semibold".asInstanceOf[semibold]
   @scala.inline
-  def sharedElement: sharedElement = "sharedElement".asInstanceOf[sharedElement]
-  @scala.inline
   def showWhenActive: showWhenActive = "showWhenActive".asInstanceOf[showWhenActive]
+  @scala.inline
+  def showWhenActiveForce: showWhenActiveForce = "showWhenActiveForce".asInstanceOf[showWhenActiveForce]
+  @scala.inline
+  def sidebar: sidebar = "sidebar".asInstanceOf[sidebar]
   @scala.inline
   def stop: stop = "stop".asInstanceOf[stop]
   @scala.inline
   def thin: thin = "thin".asInstanceOf[thin]
   @scala.inline
   def together: together = "together".asInstanceOf[together]
-  @scala.inline
-  def top: top = "top".asInstanceOf[top]
   @scala.inline
   def trailing: trailing = "trailing".asInstanceOf[trailing]
   @scala.inline

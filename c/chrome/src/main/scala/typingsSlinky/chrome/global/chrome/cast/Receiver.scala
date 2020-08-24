@@ -25,20 +25,14 @@ class Receiver protected ()
   def this(
     label: String,
     friendlyName: String,
+    capabilities: js.UndefOr[scala.Nothing],
+    volume: typingsSlinky.chrome.chrome.cast.Volume
+  ) = this()
+  def this(
+    label: String,
+    friendlyName: String,
     capabilities: js.Array[typingsSlinky.chrome.chrome.cast.Capability],
     volume: typingsSlinky.chrome.chrome.cast.Volume
   ) = this()
-  /* CompleteClass */
-  override var capabilities: js.Array[typingsSlinky.chrome.chrome.cast.Capability] = js.native
-  /* CompleteClass */
-  override var displayStatus: typingsSlinky.chrome.chrome.cast.ReceiverDisplayStatus = js.native
-  /* CompleteClass */
-  override var friendlyName: String = js.native
-  /* CompleteClass */
-  override var label: String = js.native
-  /* CompleteClass */
-  override var receiverType: typingsSlinky.chrome.chrome.cast.ReceiverType = js.native
-  /* CompleteClass */
-  override var volume: typingsSlinky.chrome.chrome.cast.Volume = js.native
 }
 

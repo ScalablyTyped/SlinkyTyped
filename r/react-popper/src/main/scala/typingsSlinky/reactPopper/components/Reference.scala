@@ -1,9 +1,11 @@
 package typingsSlinky.reactPopper.components
 
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactPopper.mod.ReferenceChildrenProps
 import typingsSlinky.reactPopper.mod.ReferenceProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,6 +31,10 @@ object Reference {
   }
   
   def withProps(p: ReferenceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Reference.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: ReferenceChildrenProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReferenceProps]))
+  }
 }
 

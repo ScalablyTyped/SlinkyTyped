@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.interfaceMod.RouteEntry
+import typingsSlinky.ionicCore.interfaceMod.RouteChain
 import typingsSlinky.ionicCore.interfaceMod.RouteRedirect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object debugMod extends js.Object {
   def printRedirects(redirects: js.Array[RouteRedirect]): Unit = js.native
-  def printRoutes(routes: js.Array[js.Array[RouteEntry]]): Unit = js.native
+  def printRoutes(routes: js.Array[RouteChain]): Unit = js.native
 }
 

@@ -51,7 +51,11 @@ object mod extends js.Object {
     extends typingsSlinky.googleAuthLibrary.mod.OAuth2Client {
     def this(clientId: String) = this()
     def this(options: OAuth2ClientOptions) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String) = this()
     def this(clientId: String, clientSecret: String) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: js.UndefOr[scala.Nothing], redirectUri: String) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String, redirectUri: String) = this()
+    def this(clientId: String, clientSecret: js.UndefOr[scala.Nothing], redirectUri: String) = this()
     def this(clientId: String, clientSecret: String, redirectUri: String) = this()
   }
   
@@ -85,6 +89,10 @@ object mod extends js.Object {
       * Google Sign on certificates in PEM format.
       */
     val GOOGLE_OAUTH2_FEDERATED_SIGNON_PEM_CERTS_URL_ : js.Any = js.native
+    /**
+      * Google Sign on certificates in JWK format.
+      */
+    val GOOGLE_OAUTH2_IAP_PUBLIC_KEY_URL_ : js.Any = js.native
     /**
       * The base endpoint to revoke tokens.
       */

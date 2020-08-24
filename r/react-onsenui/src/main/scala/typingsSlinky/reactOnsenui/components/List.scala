@@ -18,9 +18,11 @@ object List {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.List[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.List[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataSourceVarargs(value: T*): this.type = set("dataSource", js.Array(value :_*))
     @scala.inline
     def dataSource(value: js.Array[T]): this.type = set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline

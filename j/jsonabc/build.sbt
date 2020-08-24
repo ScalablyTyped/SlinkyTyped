@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jsonabc"
-version := "2.3-dt-20190429Z-768d82"
-scalaVersion := "2.13.2"
+version := "2.3-dt-20190429Z-28d6e0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

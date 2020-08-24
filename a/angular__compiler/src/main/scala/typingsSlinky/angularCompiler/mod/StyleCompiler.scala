@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "StyleCompiler")
 @js.native
 class StyleCompiler protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.StyleCompiler {
+  extends typingsSlinky.angularCompiler.compilerMod.StyleCompiler {
   def this(_urlResolver: typingsSlinky.angularCompiler.urlResolverMod.UrlResolver) = this()
 }
 

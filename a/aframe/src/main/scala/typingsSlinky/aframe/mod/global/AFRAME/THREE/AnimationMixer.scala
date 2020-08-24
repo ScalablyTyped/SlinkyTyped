@@ -1,5 +1,6 @@
 package typingsSlinky.aframe.mod.global.AFRAME.THREE
 
+import typingsSlinky.three.object3DMod.Object3D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class AnimationMixer protected ()
   extends typingsSlinky.three.mod.AnimationMixer {
-  def this(root: js.Any) = this()
+  def this(root: Object3D) = this()
 }
 

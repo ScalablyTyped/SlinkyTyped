@@ -1,6 +1,5 @@
 package typingsSlinky.atlaskitSingleSelect.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -36,7 +35,7 @@ object SingleSelect {
     @scala.inline
     def invalidMessageReactElement(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def invalidMessage(value: TagMod[Any]): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
+    def invalidMessage(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def isDefaultOpen(value: Boolean): this.type = set("isDefaultOpen", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,6 +46,8 @@ object SingleSelect {
     def isInvalid(value: Boolean): this.type = set("isInvalid", value.asInstanceOf[js.Any])
     @scala.inline
     def isRequired(value: Boolean): this.type = set("isRequired", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsVarargs(value: GroupType*): this.type = set("items", js.Array(value :_*))
     @scala.inline
     def items(value: js.Array[GroupType]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline

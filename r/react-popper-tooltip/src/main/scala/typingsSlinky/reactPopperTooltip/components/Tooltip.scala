@@ -2,10 +2,9 @@ package typingsSlinky.reactPopperTooltip.components
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MutationObserverInit
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.popperJs.mod.Popper.Placement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactPopper.mod.PopperArrowProps
 import typingsSlinky.reactPopperTooltip.tooltipMod.default
@@ -46,10 +45,10 @@ object Tooltip {
     closeOnOutOfBoundaries: Boolean,
     hideTooltip: () => Unit,
     mutationObserverOptions: MutationObserverInit,
-    placement: Placement,
+    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any,
     scheduleUpdate: () => Unit,
     style: CSSProperties,
-    tooltip: TooltipArg => TagMod[Any],
+    tooltip: TooltipArg => ReactElement,
     trigger: Trigger
   ): Builder = {
     val __props = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], scheduleUpdate = js.Any.fromFunction0(scheduleUpdate), style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any])

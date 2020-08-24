@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "detect-emoji-support"
-version := "0.1-dt-20200515Z-21fe45"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20200515Z-cf51a5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

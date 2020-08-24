@@ -1,0 +1,9 @@
+package typingsSlinky.ionicReact.ionRouteMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait IonRouteState extends js.Object
+

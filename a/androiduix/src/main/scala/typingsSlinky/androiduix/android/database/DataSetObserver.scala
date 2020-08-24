@@ -23,17 +23,14 @@ object DataSetObserver {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnInvalidated(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalidated")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setOnChanged(value: () => Unit): Self = this.set("onChanged", js.Any.fromFunction0(value))
+    @scala.inline
+    def setOnInvalidated(value: () => Unit): Self = this.set("onInvalidated", js.Any.fromFunction0(value))
   }
   
 }

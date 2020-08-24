@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
+import typingsSlinky.antd.dropdownButtonMod.DropdownButtonProps
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
@@ -17,7 +18,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dropdown {
-  @JSImport("antd/lib/dropdown", JSImport.Default)
+  @JSImport("antd", "Dropdown")
   @js.native
   object component extends js.Object
   
@@ -27,6 +28,8 @@ object Dropdown {
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrow(value: Boolean): this.type = set("arrow", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,6 +57,8 @@ object Dropdown {
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline
+    def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
+    @scala.inline
     def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
@@ -65,5 +70,18 @@ object Dropdown {
     val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[DropDownProps]))
   }
+  object Button {
+    @JSImport("antd", "Dropdown.Button")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownButtonProps): SharedBuilder_DropdownButtonProps_944754699 = new SharedBuilder_DropdownButtonProps_944754699(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(overlay: ReactElement | OverlayFunc): SharedBuilder_DropdownButtonProps_944754699 = {
+        val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
+        new SharedBuilder_DropdownButtonProps_944754699(js.Array(this.component, __props.asInstanceOf[DropdownButtonProps]))
+    }
+  }
+  
 }
 

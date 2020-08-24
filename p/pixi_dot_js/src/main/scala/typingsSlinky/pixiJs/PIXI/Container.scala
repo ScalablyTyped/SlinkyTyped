@@ -91,12 +91,10 @@ trait Container extends DisplayObject {
     *
     * Multiple items can be added like so: `myContainer.addChild(thingOne, thingTwo, thingThree)`
     *
-    * @param {...PIXI.DisplayObject} child - The DisplayObject(s) to add to the container
+    * @param {...PIXI.DisplayObject} children - The DisplayObject(s) to add to the container
     * @return {PIXI.DisplayObject} The first child that was added.
     */
-  def addChild[TChildren /* <: js.Array[DisplayObject] */](
-    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param child because its type TChildren is not an array type */ child: TChildren
-  ): /* import warning: importer.ImportType#apply Failed type conversion: TChildren[0] */ js.Any = js.native
+  def addChild(children: DisplayObject*): DisplayObject = js.native
   /**
     * Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown
     *
@@ -105,6 +103,19 @@ trait Container extends DisplayObject {
     * @return {PIXI.DisplayObject} The child that was added.
     */
   def addChildAt[T /* <: DisplayObject */](child: T, index: Double): T = js.native
+  /**
+    * Recalculates the bounds of the container.
+    *
+    */
+  def calculateBounds(): Unit = js.native
+  /**
+    * Container default updateTransform, does update children of container.
+    * Will crash if there's no parent element.
+    *
+    * @memberof PIXI.Container#
+    * @function containerUpdateTransform
+    */
+  def containerUpdateTransform(): Unit = js.native
   def destroy(options: typingsSlinky.pixiJs.anon.BaseTexture): Unit = js.native
   /**
     * Returns the child at the specified index
@@ -116,12 +127,16 @@ trait Container extends DisplayObject {
   /**
     * Returns the display object in the container.
     *
+    * Recursive searches are done in a preorder traversal.
+    *
     * @method getChildByName
     * @memberof PIXI.Container#
     * @param {string} name - Instance name.
+    * @param {boolean}[deep=false] - Whether to search recursively
     * @return {PIXI.DisplayObject} The child with the specified name.
     */
   def getChildByName(name: String): DisplayObject = js.native
+  def getChildByName(name: String, deep: Boolean): DisplayObject = js.native
   /**
     * Returns the index position of a child DisplayObject instance
     *
@@ -129,15 +144,21 @@ trait Container extends DisplayObject {
     * @return {number} The index position of the child display object to identify
     */
   def getChildIndex(child: DisplayObject): Double = js.native
+  def getLocalBounds(rect: js.UndefOr[scala.Nothing], skipChildrenUpdate: Boolean): Rectangle = js.native
+  def getLocalBounds(rect: Rectangle, skipChildrenUpdate: Boolean): Rectangle = js.native
   //tslint:disable-next-line:ban-types forbidden-types
   @JSName("off")
   def off_added(event: added): this.type = js.native
+  @JSName("off")
+  def off_added(event: added, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_added(event: added, fn: js.Function): this.type = js.native
   @JSName("off")
   def off_added(event: added, fn: js.Function, context: js.Any): this.type = js.native
   @JSName("off")
   def off_removed(event: removed): this.type = js.native
+  @JSName("off")
+  def off_removed(event: removed, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_removed(event: removed, fn: js.Function): this.type = js.native
   @JSName("off")
@@ -167,12 +188,10 @@ trait Container extends DisplayObject {
   /**
     * Removes one or more children from the container.
     *
-    * @param {...PIXI.DisplayObject} child - The DisplayObject(s) to remove
+    * @param {...PIXI.DisplayObject} children - The DisplayObject(s) to remove
     * @return {PIXI.DisplayObject} The first child that was removed.
     */
-  def removeChild[TChildren /* <: js.Array[DisplayObject] */](
-    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param child because its type TChildren is not an array type */ child: TChildren
-  ): /* import warning: importer.ImportType#apply Failed type conversion: TChildren[0] */ js.Any = js.native
+  def removeChild(children: DisplayObject*): DisplayObject = js.native
   /**
     * Removes a child from the specified index position.
     *
@@ -188,8 +207,15 @@ trait Container extends DisplayObject {
     * @returns {PIXI.DisplayObject[]} List of removed children
     */
   def removeChildren(): js.Array[DisplayObject] = js.native
+  def removeChildren(beginIndex: js.UndefOr[scala.Nothing], endIndex: Double): js.Array[DisplayObject] = js.native
   def removeChildren(beginIndex: Double): js.Array[DisplayObject] = js.native
   def removeChildren(beginIndex: Double, endIndex: Double): js.Array[DisplayObject] = js.native
+  /**
+    * Renders the object using the WebGL renderer
+    *
+    * @param {PIXI.Renderer} renderer - The renderer
+    */
+  def render(renderer: Renderer): Unit = js.native
   /**
     * Render the object using the WebGL renderer and advanced features.
     *

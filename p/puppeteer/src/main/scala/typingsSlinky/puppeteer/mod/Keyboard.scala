@@ -1,8 +1,8 @@
 package typingsSlinky.puppeteer.mod
 
 import typingsSlinky.puppeteer.anon.Delay
-import typingsSlinky.puppeteer.anon.DelayNumber
 import typingsSlinky.puppeteer.anon.Text
+import typingsSlinky.puppeteer.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait Keyboard extends js.Object {
     * @param options Specifies the typing options.
     */
   def `type`(text: String): js.Promise[Unit] = js.native
-  def `type`(text: String, options: DelayNumber): js.Promise[Unit] = js.native
+  def `type`(text: String, options: `0`): js.Promise[Unit] = js.native
   /**
     * Dispatches a keyup event.
     * @param key Name of key to release, such as ArrowLeft.

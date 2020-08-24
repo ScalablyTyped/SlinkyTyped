@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.ItemListRenderer
@@ -58,7 +57,7 @@ object listItemsPropsMod extends js.Object {
       *
       * This prop is ignored if a custom `itemListRenderer` is supplied.
       */
-    var initialContent: js.UndefOr[TagMod[Any] | Null] = js.native
+    var initialContent: js.UndefOr[ReactElement | Null] = js.native
     /**
       * Determine if the given item is disabled. Provide a callback function, or
       * simply provide the name of a boolean property on the item that exposes
@@ -129,7 +128,7 @@ object listItemsPropsMod extends js.Object {
       *
       * This prop is ignored if a custom `itemListRenderer` is supplied.
       */
-    var noResults: js.UndefOr[TagMod[Any]] = js.native
+    var noResults: js.UndefOr[ReactElement] = js.native
     /**
       * Invoked when user interaction should change the active item: arrow keys
       * move it up/down in the list, selecting an item makes it active, and
@@ -192,10 +191,11 @@ object listItemsPropsMod extends js.Object {
   }
   
   def executeItemsEqual[T](): Boolean = js.native
+  def executeItemsEqual[T](itemsEqualProp: js.UndefOr[ItemsEqualProp[T]], itemA: T): Boolean = js.native
+  def executeItemsEqual[T](itemsEqualProp: js.UndefOr[ItemsEqualProp[T]], itemA: T, itemB: T): Boolean = js.native
+  def executeItemsEqual[T](itemsEqualProp: js.UndefOr[ItemsEqualProp[T]], itemA: js.UndefOr[scala.Nothing], itemB: T): Boolean = js.native
+  def executeItemsEqual[T](itemsEqualProp: js.UndefOr[ItemsEqualProp[T]], itemA: Null, itemB: T): Boolean = js.native
   def executeItemsEqual[T](itemsEqualProp: ItemsEqualProp[T]): Boolean = js.native
-  def executeItemsEqual[T](itemsEqualProp: ItemsEqualProp[T], itemA: T): Boolean = js.native
-  def executeItemsEqual[T](itemsEqualProp: ItemsEqualProp[T], itemA: T, itemB: T): Boolean = js.native
-  def executeItemsEqual[T](itemsEqualProp: ItemsEqualProp[T], itemA: Null, itemB: T): Boolean = js.native
   type ItemsEqualComparator[T] = js.Function2[/* itemA */ T, /* itemB */ T, Boolean]
   type ItemsEqualProp[T] = ItemsEqualComparator[T] | (/* keyof T */ String)
 }

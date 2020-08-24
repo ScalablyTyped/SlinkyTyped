@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServerExpress.mod
 
-import typingsSlinky.graphqlTools.renameTypesMod.RenameOptions
+import typingsSlinky.graphqlToolsUtils.interfacesMod.RenameTypesOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 class RenameTypes protected ()
   extends typingsSlinky.graphqlTools.mod.RenameTypes {
   def this(renamer: js.Function1[/* name */ String, js.UndefOr[String]]) = this()
-  def this(renamer: js.Function1[/* name */ String, js.UndefOr[String]], options: RenameOptions) = this()
+  def this(renamer: js.Function1[/* name */ String, js.UndefOr[String]], options: RenameTypesOptions) = this()
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.reactVirtualized.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -39,7 +39,7 @@ object Grid {
     @scala.inline
     def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def cellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[TagMod[Any]]): this.type = set("cellRangeRenderer", js.Any.fromFunction1(value))
+    def cellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[ReactElement]): this.type = set("cellRangeRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,7 +61,7 @@ object Grid {
     @scala.inline
     def isScrolling(value: Boolean): this.type = set("isScrolling", value.asInstanceOf[js.Any])
     @scala.inline
-    def noContentRenderer(value: () => TagMod[Any]): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
+    def noContentRenderer(value: () => ReactElement): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
     @scala.inline
     def onScroll(value: /* params */ ScrollParams => _): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
@@ -99,7 +99,7 @@ object Grid {
   def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
-    cellRenderer: /* props */ GridCellProps => TagMod[Any],
+    cellRenderer: /* props */ GridCellProps => ReactElement,
     columnCount: Double,
     columnWidth: Double | (js.Function1[/* params */ Index, Double]),
     height: Double,

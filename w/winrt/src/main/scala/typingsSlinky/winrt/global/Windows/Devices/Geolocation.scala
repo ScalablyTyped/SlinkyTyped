@@ -1,6 +1,5 @@
 package typingsSlinky.winrt.global.Windows.Devices
 
-import typingsSlinky.winrt.Windows.Devices.Geolocation.PositionStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,39 +9,11 @@ import scala.scalajs.js.annotation._
 object Geolocation extends js.Object {
   @js.native
   class CivicAddress ()
-    extends typingsSlinky.winrt.Windows.Devices.Geolocation.CivicAddress {
-    /* CompleteClass */
-    override var city: String = js.native
-    /* CompleteClass */
-    override var country: String = js.native
-    /* CompleteClass */
-    override var postalCode: String = js.native
-    /* CompleteClass */
-    override var state: String = js.native
-    /* CompleteClass */
-    override var timestamp: js.Date = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Devices.Geolocation.CivicAddress
   
   @js.native
   class Geocoordinate ()
-    extends typingsSlinky.winrt.Windows.Devices.Geolocation.Geocoordinate {
-    /* CompleteClass */
-    override var accuracy: Double = js.native
-    /* CompleteClass */
-    override var altitude: Double = js.native
-    /* CompleteClass */
-    override var altitudeAccuracy: Double = js.native
-    /* CompleteClass */
-    override var heading: Double = js.native
-    /* CompleteClass */
-    override var latitude: Double = js.native
-    /* CompleteClass */
-    override var longitude: Double = js.native
-    /* CompleteClass */
-    override var speed: Double = js.native
-    /* CompleteClass */
-    override var timestamp: js.Date = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Devices.Geolocation.Geocoordinate
   
   @js.native
   class Geolocator ()
@@ -50,26 +21,15 @@ object Geolocation extends js.Object {
   
   @js.native
   class Geoposition ()
-    extends typingsSlinky.winrt.Windows.Devices.Geolocation.Geoposition {
-    /* CompleteClass */
-    override var civicAddress: typingsSlinky.winrt.Windows.Devices.Geolocation.CivicAddress = js.native
-    /* CompleteClass */
-    override var coordinate: typingsSlinky.winrt.Windows.Devices.Geolocation.Geocoordinate = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Devices.Geolocation.Geoposition
   
   @js.native
   class PositionChangedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Devices.Geolocation.PositionChangedEventArgs {
-    /* CompleteClass */
-    override var position: typingsSlinky.winrt.Windows.Devices.Geolocation.Geoposition = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Devices.Geolocation.PositionChangedEventArgs
   
   @js.native
   class StatusChangedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Devices.Geolocation.StatusChangedEventArgs {
-    /* CompleteClass */
-    override var status: PositionStatus = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Devices.Geolocation.StatusChangedEventArgs
   
   @js.native
   object PositionAccuracy extends js.Object {

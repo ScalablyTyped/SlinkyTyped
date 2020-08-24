@@ -4,10 +4,10 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticICONS
+import typingsSlinky.semanticUiReact.iconGroupMod.IconGroupProps
 import typingsSlinky.semanticUiReact.iconIconMod.IconCorner
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
 import typingsSlinky.semanticUiReact.iconIconMod.IconSizeProp
-import typingsSlinky.semanticUiReact.iconMod.default
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.clockwise
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.counterclockwise
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.horizontally
@@ -17,14 +17,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Icon {
-  @JSImport("semantic-ui-react/dist/commonjs/elements/Icon", JSImport.Default)
+  @JSImport("semantic-ui-react", "Icon")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Icon] {
     @scala.inline
     def `aria-hidden`(value: String): this.type = set("aria-hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,5 +63,14 @@ object Icon {
   
   def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Icon.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Group {
+    @JSImport("semantic-ui-react", "Icon.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: IconGroupProps): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

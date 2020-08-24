@@ -1,5 +1,6 @@
 package typingsSlinky.grpcGrpcJs.resolverMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.grpcGrpcJs.callStreamMod.StatusObject
 import typingsSlinky.grpcGrpcJs.serviceConfigMod.ServiceConfig
 import typingsSlinky.grpcGrpcJs.subchannelMod.SubchannelAddress
@@ -14,9 +15,24 @@ trait ResolverListener extends js.Object {
     * @param error Describes how resolution failed
     */
   def onError(error: StatusObject): Unit = js.native
-  def onSuccessfulResolution(addressList: js.Array[SubchannelAddress]): Unit = js.native
-  def onSuccessfulResolution(addressList: js.Array[SubchannelAddress], serviceConfig: Null, serviceConfigError: StatusObject): Unit = js.native
-  def onSuccessfulResolution(addressList: js.Array[SubchannelAddress], serviceConfig: ServiceConfig): Unit = js.native
+  def onSuccessfulResolution(
+    addressList: js.Array[SubchannelAddress],
+    serviceConfig: Null,
+    serviceConfigError: Null,
+    attributes: StringDictionary[js.Any]
+  ): Unit = js.native
+  def onSuccessfulResolution(
+    addressList: js.Array[SubchannelAddress],
+    serviceConfig: Null,
+    serviceConfigError: StatusObject,
+    attributes: StringDictionary[js.Any]
+  ): Unit = js.native
+  def onSuccessfulResolution(
+    addressList: js.Array[SubchannelAddress],
+    serviceConfig: ServiceConfig,
+    serviceConfigError: Null,
+    attributes: StringDictionary[js.Any]
+  ): Unit = js.native
   /**
     * Called whenever the resolver has new name resolution results to report
     * @param addressList The new list of backend addresses
@@ -29,7 +45,8 @@ trait ResolverListener extends js.Object {
   def onSuccessfulResolution(
     addressList: js.Array[SubchannelAddress],
     serviceConfig: ServiceConfig,
-    serviceConfigError: StatusObject
+    serviceConfigError: StatusObject,
+    attributes: StringDictionary[js.Any]
   ): Unit = js.native
 }
 

@@ -74,6 +74,8 @@ object DateInput {
     @scala.inline
     def rightElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
     @scala.inline
+    def shortcutsVarargs(value: IDatePickerShortcut*): this.type = set("shortcuts", js.Array(value :_*))
+    @scala.inline
     def shortcuts(value: Boolean | js.Array[IDatePickerShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
     @scala.inline
     def showActionsBar(value: Boolean): this.type = set("showActionsBar", value.asInstanceOf[js.Any])

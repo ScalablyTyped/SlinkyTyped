@@ -23,8 +23,7 @@ import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
-import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
-import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
+import typingsSlinky.blueprintjsCore.refsMod.IRef
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -257,7 +256,7 @@ object InputGroup {
     @scala.inline
     def inputRefFunction1(value: /* ref */ HTMLInputElement | Null => js.Any): this.type = set("inputRef", js.Any.fromFunction1(value))
     @scala.inline
-    def inputRef(value: IRefCallback[HTMLInputElement] | IRefObject[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRef(value: IRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
     @scala.inline
     def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
     @scala.inline

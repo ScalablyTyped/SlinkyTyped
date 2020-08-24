@@ -34,13 +34,14 @@ object OnLayoutChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnLayoutChange(
-      value: (typingsSlinky.androiduix.android.view.View, Double, Double, Double, Double, Double, Double, Double, Double) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLayoutChange")(js.Any.fromFunction9(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnLayoutChange(
+      value: (typingsSlinky.androiduix.android.view.View, Double, Double, Double, Double, Double, Double, Double, Double) => Unit
+    ): Self = this.set("onLayoutChange", js.Any.fromFunction9(value))
   }
   
 }

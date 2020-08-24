@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Capture
 
-import typingsSlinky.winrtUwp.Windows.Media.Devices.MediaCaptureFocusState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Capture.MediaCaptureFocusChangedEventArgs")
 @js.native
 abstract class MediaCaptureFocusChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureFocusChangedEventArgs {
-  /** Gets the current focus state of the capture device. */
-  /* CompleteClass */
-  override var focusState: MediaCaptureFocusState = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Capture.MediaCaptureFocusChangedEventArgs
 

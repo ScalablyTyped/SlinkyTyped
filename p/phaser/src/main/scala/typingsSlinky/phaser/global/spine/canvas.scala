@@ -13,55 +13,18 @@ object canvas extends js.Object {
   class AssetManager ()
     extends typingsSlinky.phaser.spine.AssetManager {
     def this(pathPrefix: String) = this()
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
   }
   
   @js.native
   class CanvasTexture protected ()
     extends typingsSlinky.phaser.spine.canvas.CanvasTexture {
     def this(image: HTMLImageElement) = this()
-    /* CompleteClass */
-    override var _image: HTMLImageElement = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
-    /* CompleteClass */
-    override def getImage(): HTMLImageElement = js.native
-    /* CompleteClass */
-    override def setFilters(
-      minFilter: typingsSlinky.phaser.spine.TextureFilter,
-      magFilter: typingsSlinky.phaser.spine.TextureFilter
-    ): Unit = js.native
-    /* CompleteClass */
-    override def setWraps(uWrap: typingsSlinky.phaser.spine.TextureWrap, vWrap: typingsSlinky.phaser.spine.TextureWrap): Unit = js.native
   }
   
   @js.native
   class SkeletonRenderer protected ()
     extends typingsSlinky.phaser.spine.canvas.SkeletonRenderer {
     def this(context: CanvasRenderingContext2D) = this()
-    /* CompleteClass */
-    override var computeMeshVertices: js.Any = js.native
-    /* CompleteClass */
-    override var computeRegionVertices: js.Any = js.native
-    /* CompleteClass */
-    override var ctx: js.Any = js.native
-    /* CompleteClass */
-    override var debugRendering: Boolean = js.native
-    /* CompleteClass */
-    override var drawImages: js.Any = js.native
-    /* CompleteClass */
-    override var drawTriangle: js.Any = js.native
-    /* CompleteClass */
-    override var drawTriangles: js.Any = js.native
-    /* CompleteClass */
-    override var tempColor: js.Any = js.native
-    /* CompleteClass */
-    override var triangleRendering: Boolean = js.native
-    /* CompleteClass */
-    override var vertices: js.Any = js.native
-    /* CompleteClass */
-    override def draw(skeleton: typingsSlinky.phaser.spine.Skeleton): Unit = js.native
   }
   
   /* static members */

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "gray-percentage"
-version := "2.0-dt-20190927Z-140d6a"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20190927Z-e9ee2e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

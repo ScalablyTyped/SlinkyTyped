@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.typeMod
 
-import typingsSlinky.graphql.definitionMod.GraphQLInputObjectTypeConfig
+import typingsSlinky.graphql.anon.ReadonlyGraphQLInputObjec
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLInputObjectType protected ()
   extends typingsSlinky.graphql.definitionMod.GraphQLInputObjectType {
-  def this(config: GraphQLInputObjectTypeConfig) = this()
+  def this(config: ReadonlyGraphQLInputObjec) = this()
 }
 

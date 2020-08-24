@@ -112,275 +112,100 @@ object ScaleGestureDetector_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddTouchHistory(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTouchHistory")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClearTouchHistory(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearTouchHistory")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddTouchHistory(value: js.Any => js.Any): Self = this.set("addTouchHistory", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetCurrentSpan(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentSpan")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setClearTouchHistory(value: () => js.Any): Self = this.set("clearTouchHistory", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetCurrentSpanX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentSpanX")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetCurrentSpan(value: () => Double): Self = this.set("getCurrentSpan", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetCurrentSpanY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentSpanY")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetCurrentSpanX(value: () => Double): Self = this.set("getCurrentSpanX", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetEventTime(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEventTime")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetCurrentSpanY(value: () => Double): Self = this.set("getCurrentSpanY", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetFocusX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFocusX")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetEventTime(value: () => Double): Self = this.set("getEventTime", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetFocusY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFocusY")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetFocusX(value: () => Double): Self = this.set("getFocusX", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetPreviousSpan(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreviousSpan")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetFocusY(value: () => Double): Self = this.set("getFocusY", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetPreviousSpanX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreviousSpanX")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetPreviousSpan(value: () => Double): Self = this.set("getPreviousSpan", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetPreviousSpanY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreviousSpanY")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetPreviousSpanX(value: () => Double): Self = this.set("getPreviousSpanX", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaleFactor(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaleFactor")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetPreviousSpanY(value: () => Double): Self = this.set("getPreviousSpanY", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetTimeDelta(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimeDelta")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaleFactor(value: () => Double): Self = this.set("getScaleFactor", js.Any.fromFunction0(value))
     @scala.inline
-    def withInDoubleTapMode(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inDoubleTapMode")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetTimeDelta(value: () => Double): Self = this.set("getTimeDelta", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsInProgress(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInProgress")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInDoubleTapMode(value: () => js.Any): Self = this.set("inDoubleTapMode", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsQuickScaleEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isQuickScaleEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsInProgress(value: () => Boolean): Self = this.set("isInProgress", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCurrSpan(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsQuickScaleEnabled(value: () => Boolean): Self = this.set("isQuickScaleEnabled", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCurrSpanX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrSpanX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrSpan(value: js.Any): Self = this.set("mCurrSpan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCurrSpanY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrSpanY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrSpanX(value: js.Any): Self = this.set("mCurrSpanX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCurrTime(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCurrTime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrSpanY(value: js.Any): Self = this.set("mCurrSpanY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDoubleTapEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCurrTime(value: js.Any): Self = this.set("mCurrTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDoubleTapMode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapMode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapEvent(value: js.Any): Self = this.set("mDoubleTapEvent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMEventBeforeOrAboveStartingGestureEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mEventBeforeOrAboveStartingGestureEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapMode(value: js.Any): Self = this.set("mDoubleTapMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFocusX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFocusX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMEventBeforeOrAboveStartingGestureEvent(value: js.Any): Self = this.set("mEventBeforeOrAboveStartingGestureEvent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFocusY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFocusY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFocusX(value: js.Any): Self = this.set("mFocusX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMGestureDetector(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mGestureDetector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFocusY(value: js.Any): Self = this.set("mFocusY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHandler(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMGestureDetector(value: js.Any): Self = this.set("mGestureDetector", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInProgress(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHandler(value: js.Any): Self = this.set("mHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInitialSpan(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInitialSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInProgress(value: js.Any): Self = this.set("mInProgress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMListener(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInitialSpan(value: js.Any): Self = this.set("mInitialSpan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMinSpan(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMinSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMListener(value: js.Any): Self = this.set("mListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrevSpan(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrevSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMinSpan(value: js.Any): Self = this.set("mMinSpan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrevSpanX(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrevSpanX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPrevSpan(value: js.Any): Self = this.set("mPrevSpan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrevSpanY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrevSpanY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPrevSpanX(value: js.Any): Self = this.set("mPrevSpanX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrevTime(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrevTime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPrevSpanY(value: js.Any): Self = this.set("mPrevSpanY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMQuickScaleEnabled(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mQuickScaleEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPrevTime(value: js.Any): Self = this.set("mPrevTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSpanSlop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSpanSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMQuickScaleEnabled(value: js.Any): Self = this.set("mQuickScaleEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchHistoryDirection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchHistoryDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMSpanSlop(value: js.Any): Self = this.set("mSpanSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchHistoryLastAccepted(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchHistoryLastAccepted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchHistoryDirection(value: js.Any): Self = this.set("mTouchHistoryDirection", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchHistoryLastAcceptedTime(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchHistoryLastAcceptedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchHistoryLastAccepted(value: js.Any): Self = this.set("mTouchHistoryLastAccepted", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchLower(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchLower")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchHistoryLastAcceptedTime(value: js.Any): Self = this.set("mTouchHistoryLastAcceptedTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchMinMajor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchMinMajor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchLower(value: js.Any): Self = this.set("mTouchLower", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchUpper(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchUpper")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchMinMajor(value: js.Any): Self = this.set("mTouchMinMajor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnTouchEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMTouchUpper(value: js.Any): Self = this.set("mTouchUpper", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetQuickScaleEnabled(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setQuickScaleEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnTouchEvent(value: MotionEvent => Boolean): Self = this.set("onTouchEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetQuickScaleEnabled(value: Boolean => Unit): Self = this.set("setQuickScaleEnabled", js.Any.fromFunction1(value))
   }
   
 }

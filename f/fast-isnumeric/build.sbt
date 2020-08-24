@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "fast-isnumeric"
-version := "1.1-dt-20200407Z-9d00c6"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20200407Z-547991"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

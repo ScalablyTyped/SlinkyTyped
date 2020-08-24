@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiCore.portalMod.default
 import typingsSlinky.materialUiCore.portalPortalMod.PortalProps
 import typingsSlinky.react.mod.ReactInstance
 import scala.scalajs.js
@@ -12,14 +11,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Portal {
-  @JSImport("@material-ui/core/Portal", JSImport.Default)
+  @JSImport("@material-ui/core", "Portal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUiCore.mod.Portal] {
     @scala.inline
     def containerElement(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,8 @@
 package typingsSlinky.vscodeLanguageserver.mod
 
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
 import typingsSlinky.vscodeLanguageserverProtocol.protocolConfigurationMod.ConfigurationParams
+import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.PartialResultParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver", "ConfigurationRequest")
 @js.native
 object ConfigurationRequest extends js.Object {
-  val `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[ConfigurationParams, js.Array[js.Any], Unit, Unit] = js.native
+  val `type`: ProtocolRequestType[
+    ConfigurationParams with PartialResultParams, 
+    js.Array[js.Any], 
+    scala.Nothing, 
+    Unit, 
+    Unit
+  ] = js.native
 }
 

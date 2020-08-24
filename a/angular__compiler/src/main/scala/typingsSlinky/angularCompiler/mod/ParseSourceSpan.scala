@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ParseSourceSpan")
 @js.native
 class ParseSourceSpan protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ParseSourceSpan {
+  extends typingsSlinky.angularCompiler.compilerMod.ParseSourceSpan {
   def this(
     start: typingsSlinky.angularCompiler.srcParseUtilMod.ParseLocation,
     end: typingsSlinky.angularCompiler.srcParseUtilMod.ParseLocation

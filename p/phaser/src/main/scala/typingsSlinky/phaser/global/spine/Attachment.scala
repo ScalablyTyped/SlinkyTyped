@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 abstract class Attachment protected ()
   extends typingsSlinky.phaser.spine.Attachment {
   def this(name: String) = this()
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override def copy(): typingsSlinky.phaser.spine.Attachment = js.native
 }
 

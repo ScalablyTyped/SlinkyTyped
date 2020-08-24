@@ -1,0 +1,13 @@
+package typingsSlinky.httpsProxyAgent.parseProxyResponseMod
+
+import typingsSlinky.node.streamMod.Readable
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("https-proxy-agent/dist/parse-proxy-response", JSImport.Default)
+@js.native
+object default extends js.Object {
+  def apply(socket: Readable): js.Promise[ProxyResponse] = js.native
+}
+

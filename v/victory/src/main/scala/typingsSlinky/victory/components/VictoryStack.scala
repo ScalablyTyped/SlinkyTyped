@@ -3,9 +3,9 @@ package typingsSlinky.victory.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.victory.anon.XBoolean
 import typingsSlinky.victory.anon.Y
 import typingsSlinky.victory.anon.`1`
+import typingsSlinky.victory.anon.`2`
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
 import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.CategoryPropType
@@ -39,7 +39,11 @@ object VictoryStack {
     @scala.inline
     def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
+    def categoriesVarargs(value: String*): this.type = set("categories", js.Array(value :_*))
+    @scala.inline
     def categories(value: CategoryPropType): this.type = set("categories", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorScaleVarargs(value: String*): this.type = set("colorScale", js.Array(value :_*))
     @scala.inline
     def colorScale(value: ColorScalePropType): this.type = set("colorScale", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,6 +57,8 @@ object VictoryStack {
     @scala.inline
     def eventKey(value: StringOrNumberOrCallback): this.type = set("eventKey", value.asInstanceOf[js.Any])
     @scala.inline
+    def eventsVarargs(value: (EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback])*): this.type = set("events", js.Array(value :_*))
+    @scala.inline
     def events(value: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]]): this.type = set("events", value.asInstanceOf[js.Any])
     @scala.inline
     def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
@@ -62,6 +68,8 @@ object VictoryStack {
     def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
     def labelComponent(value: ReactElement): this.type = set("labelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelsVarargs(value: String*): this.type = set("labels", js.Array(value :_*))
     @scala.inline
     def labelsFunction1(value: /* data */ js.Any => String): this.type = set("labels", js.Any.fromFunction1(value))
     @scala.inline
@@ -77,7 +85,7 @@ object VictoryStack {
     @scala.inline
     def scale(value: ScalePropType | D3Scale | `1`): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
-    def singleQuadrantDomainPadding(value: Boolean | XBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    def singleQuadrantDomainPadding(value: Boolean | `2`): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
     @scala.inline

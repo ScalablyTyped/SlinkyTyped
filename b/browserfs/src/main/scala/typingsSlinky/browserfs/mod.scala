@@ -32,8 +32,8 @@ import typingsSlinky.browserfs.fileSystemMod.BFSOneArgCallback
 import typingsSlinky.browserfs.fileSystemMod.FileSystem
 import typingsSlinky.browserfs.fileSystemMod.FileSystemConstructor
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.Process
 import typingsSlinky.node.pathMod.PlatformPath
+import typingsSlinky.node.processMod.global.NodeJS.Process
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,8 +45,39 @@ object mod extends js.Object {
   class EmscriptenFS ()
     extends typingsSlinky.browserfs.nodeMod.EmscriptenFS {
     def this(_FS: js.Any) = this()
+    def this(_FS: js.UndefOr[scala.Nothing], _PATH: js.Any) = this()
     def this(_FS: js.Any, _PATH: js.Any) = this()
+    def this(_FS: js.UndefOr[scala.Nothing], _PATH: js.UndefOr[scala.Nothing], _ERRNO_CODES: js.Any) = this()
+    def this(_FS: js.UndefOr[scala.Nothing], _PATH: js.Any, _ERRNO_CODES: js.Any) = this()
+    def this(_FS: js.Any, _PATH: js.UndefOr[scala.Nothing], _ERRNO_CODES: js.Any) = this()
     def this(_FS: js.Any, _PATH: js.Any, _ERRNO_CODES: js.Any) = this()
+    def this(
+      _FS: js.UndefOr[scala.Nothing],
+      _PATH: js.UndefOr[scala.Nothing],
+      _ERRNO_CODES: js.UndefOr[scala.Nothing],
+      nodefs: default
+    ) = this()
+    def this(
+      _FS: js.UndefOr[scala.Nothing],
+      _PATH: js.UndefOr[scala.Nothing],
+      _ERRNO_CODES: js.Any,
+      nodefs: default
+    ) = this()
+    def this(
+      _FS: js.UndefOr[scala.Nothing],
+      _PATH: js.Any,
+      _ERRNO_CODES: js.UndefOr[scala.Nothing],
+      nodefs: default
+    ) = this()
+    def this(_FS: js.UndefOr[scala.Nothing], _PATH: js.Any, _ERRNO_CODES: js.Any, nodefs: default) = this()
+    def this(
+      _FS: js.Any,
+      _PATH: js.UndefOr[scala.Nothing],
+      _ERRNO_CODES: js.UndefOr[scala.Nothing],
+      nodefs: default
+    ) = this()
+    def this(_FS: js.Any, _PATH: js.UndefOr[scala.Nothing], _ERRNO_CODES: js.Any, nodefs: default) = this()
+    def this(_FS: js.Any, _PATH: js.Any, _ERRNO_CODES: js.UndefOr[scala.Nothing], nodefs: default) = this()
     def this(_FS: js.Any, _PATH: js.Any, _ERRNO_CODES: js.Any, nodefs: default) = this()
   }
   
@@ -84,6 +115,7 @@ object mod extends js.Object {
         */
       def this(`type`: ErrorCode) = this()
       def this(`type`: ErrorCode, message: String) = this()
+      def this(`type`: ErrorCode, message: js.UndefOr[scala.Nothing], path: String) = this()
       def this(`type`: ErrorCode, message: String, path: String) = this()
     }
     

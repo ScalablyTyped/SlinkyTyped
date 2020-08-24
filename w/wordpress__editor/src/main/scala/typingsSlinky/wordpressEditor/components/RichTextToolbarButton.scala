@@ -16,7 +16,6 @@ import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.shiftAlt
 import typingsSlinky.wordpressComponents.anon.PartialProps
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
-import typingsSlinky.wordpressEditor.mod.RichTextToolbarButton.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,7 @@ object RichTextToolbarButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

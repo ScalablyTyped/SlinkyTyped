@@ -13,11 +13,11 @@ object NavigationProvider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Value): Default[tag.type, typingsSlinky.reactNavigation.mod.NavigationProvider] = new Default[tag.type, typingsSlinky.reactNavigation.mod.NavigationProvider](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Value): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(value: NavigationProp[_]): Default[tag.type, typingsSlinky.reactNavigation.mod.NavigationProvider] = {
+  def apply(value: NavigationProp[_]): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.reactNavigation.mod.NavigationProvider](js.Array(this.component, __props.asInstanceOf[Value]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Value]))
   }
 }
 

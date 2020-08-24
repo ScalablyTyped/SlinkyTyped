@@ -1,9 +1,10 @@
 package typingsSlinky.wordpressComponents.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.Control
-import typingsSlinky.wordpressComponents.mod.DropdownMenu.^
+import typingsSlinky.wordpressComponents.dropdownMod.Dropdown.RenderProps
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +19,7 @@ object DropdownMenu {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       @scala.inline
@@ -31,8 +32,8 @@ object DropdownMenu {
     
     def withProps(p: typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.PropsWithChildren): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply(label: String): Builder = {
-        val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+    def apply(children: RenderProps => ReactElement, label: String): Builder = {
+        val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), label = label.asInstanceOf[js.Any])
         new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.PropsWithChildren]))
     }
   }
@@ -45,7 +46,7 @@ object DropdownMenu {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       @scala.inline

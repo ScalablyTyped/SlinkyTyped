@@ -12,14 +12,39 @@ object loadingManagerMod extends js.Object {
   class LoadingManager () extends js.Object {
     def this(onLoad: js.Function0[Unit]) = this()
     def this(
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function3[/* url */ String, /* loaded */ Double, /* total */ Double, Unit]
+    ) = this()
+    def this(
       onLoad: js.Function0[Unit],
       onProgress: js.Function3[/* url */ String, /* loaded */ Double, /* total */ Double, Unit]
+    ) = this()
+    def this(
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* url */ String, Unit]
+    ) = this()
+    def this(
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function3[/* url */ String, /* loaded */ Double, /* total */ Double, Unit],
+      onError: js.Function1[/* url */ String, Unit]
+    ) = this()
+    def this(
+      onLoad: js.Function0[Unit],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* url */ String, Unit]
     ) = this()
     def this(
       onLoad: js.Function0[Unit],
       onProgress: js.Function3[/* url */ String, /* loaded */ Double, /* total */ Double, Unit],
       onError: js.Function1[/* url */ String, Unit]
     ) = this()
+    /**
+    	 * Will be called when loading of an item starts.
+    	 * @param url The url of the item that started loading.
+    	 * @param loaded The number of items already loaded so far.
+    	 * @param total The total amount of items to be loaded.
+    	 */
     var onStart: js.UndefOr[js.Function3[/* url */ String, /* loaded */ Double, /* total */ Double, Unit]] = js.native
     // handlers
     def addHandler(regex: js.RegExp, loader: Loader): this.type = js.native
@@ -28,20 +53,24 @@ object loadingManagerMod extends js.Object {
     def itemError(url: String): Unit = js.native
     def itemStart(url: String): Unit = js.native
     /**
-    	 * Will be called when each element in the scene completes loading.
+    	 * Will be called when item loading fails.
     	 * The default is a function with empty body.
+    	 * @param url The url of the item that errored.
     	 */
     def onError(url: String): Unit = js.native
     /**
-    	 * Will be called when load starts.
+    	 * Will be called when all items finish loading.
     	 * The default is a function with empty body.
     	 */
     def onLoad(): Unit = js.native
     /**
-    	 * Will be called while load progresses.
+    	 * Will be called for each loaded item.
     	 * The default is a function with empty body.
+    	 * @param url The url of the item just loaded.
+    	 * @param loaded The number of items already loaded so far.
+    	 * @param total The total amount of items to be loaded.
     	 */
-    def onProgress(item: js.Any, loaded: Double, total: Double): Unit = js.native
+    def onProgress(url: String, loaded: Double, total: Double): Unit = js.native
     def removeHandler(regex: js.RegExp): this.type = js.native
     /**
     	 * Given a URL, uses the URL modifier callback (if any) and returns a resolved URL.

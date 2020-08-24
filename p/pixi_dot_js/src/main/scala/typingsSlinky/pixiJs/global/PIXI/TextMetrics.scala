@@ -32,69 +32,6 @@ class TextMetrics protected ()
     maxLineWidth: Double,
     fontProperties: js.Any
   ) = this()
-  /**
-    * The font properties object from TextMetrics.measureFont
-    *
-    * @member {PIXI.IFontMetrics} PIXI.TextMetrics#fontProperties
-    */
-  /* CompleteClass */
-  override var fontProperties: IFontMetrics = js.native
-  /**
-    * The measured height of the text
-    *
-    * @member {number} PIXI.TextMetrics#height
-    */
-  /* CompleteClass */
-  override var height: Double = js.native
-  /**
-    * The measured line height for this style
-    *
-    * @member {number} PIXI.TextMetrics#lineHeight
-    */
-  /* CompleteClass */
-  override var lineHeight: Double = js.native
-  /**
-    * An array of the line widths for each line matched to `lines`
-    *
-    * @member {number[]} PIXI.TextMetrics#lineWidths
-    */
-  /* CompleteClass */
-  override var lineWidths: js.Array[Double] = js.native
-  /**
-    * An array of lines of the text broken by new lines and wrapping is specified in style
-    *
-    * @member {string[]} PIXI.TextMetrics#lines
-    */
-  /* CompleteClass */
-  override var lines: js.Array[String] = js.native
-  /**
-    * The maximum line width for all measured lines
-    *
-    * @member {number} PIXI.TextMetrics#maxLineWidth
-    */
-  /* CompleteClass */
-  override var maxLineWidth: Double = js.native
-  /**
-    * The style that was measured
-    *
-    * @member {PIXI.TextStyle} PIXI.TextMetrics#style
-    */
-  /* CompleteClass */
-  override var style: typingsSlinky.pixiJs.PIXI.TextStyle = js.native
-  /**
-    * The text that was measured
-    *
-    * @member {string} PIXI.TextMetrics#text
-    */
-  /* CompleteClass */
-  override var text: String = js.native
-  /**
-    * The measured width of the text
-    *
-    * @member {number} PIXI.TextMetrics#width
-    */
-  /* CompleteClass */
-  override var width: Double = js.native
 }
 
 /* static members */
@@ -140,11 +77,11 @@ object TextMetrics extends js.Object {
     * For example certain characters in CJK langs or numbers.
     * It must return a boolean.
     *
-    * @param  {string}  char      The character
-    * @param  {string}  nextChar  The next character
-    * @param  {string}  token     The token/word the characters are from
-    * @param  {number}  index     The index in the token of the char
-    * @param  {boolean}  breakWords  The style attr break words
+    * @param  {string}  char        - The character
+    * @param  {string}  nextChar    - The next character
+    * @param  {string}  token       - The token/word the characters are from
+    * @param  {number}  index       - The index in the token of the char
+    * @param  {boolean}  breakWords - The style attr break words
     * @return {boolean} whether to break word or not
     */
   def canBreakChars(char: String, nextChar: String, token: String, index: Double, breakWords: Boolean): Boolean = js.native
@@ -155,8 +92,8 @@ object TextMetrics extends js.Object {
     * Examples are if the token is CJK or numbers.
     * It must return a boolean.
     *
-    * @param  {string}  token       The token
-    * @param  {boolean}  breakWords  The style attr break words
+    * @param  {string}  token       - The token
+    * @param  {boolean}  breakWords - The style attr break words
     * @return {boolean} whether to break word or not
     */
   def canBreakWords(token: String, breakWords: Boolean): Boolean = js.native
@@ -186,6 +123,12 @@ object TextMetrics extends js.Object {
     * @return {PIXI.TextMetrics} measured width and height of the text.
     */
   def measureText(text: String, style: typingsSlinky.pixiJs.PIXI.TextStyle): typingsSlinky.pixiJs.PIXI.TextMetrics = js.native
+  def measureText(
+    text: String,
+    style: typingsSlinky.pixiJs.PIXI.TextStyle,
+    wordWrap: js.UndefOr[scala.Nothing],
+    canvas: HTMLCanvasElement
+  ): typingsSlinky.pixiJs.PIXI.TextMetrics = js.native
   def measureText(text: String, style: typingsSlinky.pixiJs.PIXI.TextStyle, wordWrap: Boolean): typingsSlinky.pixiJs.PIXI.TextMetrics = js.native
   def measureText(
     text: String,
@@ -204,7 +147,7 @@ object TextMetrics extends js.Object {
     * // Correctly splits emojis, eg "🤪🤪" will result in two element array, each with one emoji.
     * TextMetrics.wordWrapSplit = (token) => [...token];
     *
-    * @param  {string}  token The token to split
+    * @param  {string}  token - The token to split
     * @return {string[]} The characters of the token
     */
   def wordWrapSplit(token: String): js.Array[String] = js.native

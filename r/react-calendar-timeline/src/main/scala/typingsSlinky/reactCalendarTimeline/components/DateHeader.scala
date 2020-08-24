@@ -1,12 +1,13 @@
 package typingsSlinky.reactCalendarTimeline.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCalendarTimeline.mod.DateHeaderProps
 import typingsSlinky.reactCalendarTimeline.mod.IntervalRenderer
+import typingsSlinky.reactCalendarTimeline.mod.SidebarHeaderChildrenFnProps
 import typingsSlinky.reactCalendarTimeline.mod.Unit
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.primaryHeader
 import scala.scalajs.js
@@ -21,7 +22,9 @@ object DateHeader {
   @scala.inline
   class Builder[Data] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.DateHeader[Data]] {
+    @scala.inline
+    def children(value: /* props */ SidebarHeaderChildrenFnProps[Data] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -29,7 +32,7 @@ object DateHeader {
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def intervalRenderer(value: /* props */ js.UndefOr[IntervalRenderer[Data]] => TagMod[Any]): this.type = set("intervalRenderer", js.Any.fromFunction1(value))
+    def intervalRenderer(value: /* props */ js.UndefOr[IntervalRenderer[Data]] => ReactElement): this.type = set("intervalRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def labelFormatFunction3(
       value: (/* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], /* unit */ Unit, /* labelWidth */ Double) => String

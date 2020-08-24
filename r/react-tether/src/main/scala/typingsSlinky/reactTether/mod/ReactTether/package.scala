@@ -14,6 +14,6 @@ package object ReactTether {
   type ContraintsTo = typingsSlinky.reactTether.mod.ReactTether._ContraintsTo | java.lang.String | org.scalajs.dom.raw.HTMLElement
   type RenderProp = js.Function1[
     /* ref */ slinky.core.facade.ReactRef[org.scalajs.dom.raw.Element], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
 }

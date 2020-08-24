@@ -17,6 +17,11 @@ class SyncHost ()
 @js.native
 object SyncHost extends js.Object {
   def forFile(content: String): typingsSlinky.grammarkdown.hostMod.SyncSingleFileHost = js.native
+  def forFile(
+    content: String,
+    file: js.UndefOr[scala.Nothing],
+    hostFallback: typingsSlinky.grammarkdown.hostMod.SyncHost
+  ): typingsSlinky.grammarkdown.hostMod.SyncSingleFileHost = js.native
   def forFile(content: String, file: String): typingsSlinky.grammarkdown.hostMod.SyncSingleFileHost = js.native
   def forFile(content: String, file: String, hostFallback: typingsSlinky.grammarkdown.hostMod.SyncHost): typingsSlinky.grammarkdown.hostMod.SyncSingleFileHost = js.native
 }

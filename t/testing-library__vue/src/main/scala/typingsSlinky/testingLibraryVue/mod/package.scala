@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type ConfigurationCallback[V /* <: typingsSlinky.vue.vueMod.Vue */] = js.Function3[
-    /* vue */ V, 
+    /* localVue */ typingsSlinky.vue.vueMod.VueConstructor[typingsSlinky.vue.vueMod.Vue], 
     /* store */ typingsSlinky.vuex.mod.Store[js.Any], 
     /* router */ typingsSlinky.vueRouter.mod.default, 
     (typingsSlinky.std.Partial[

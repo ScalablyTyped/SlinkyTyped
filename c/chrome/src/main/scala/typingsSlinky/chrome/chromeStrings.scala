@@ -3,6 +3,7 @@ package typingsSlinky.chrome
 import typingsSlinky.chrome.chrome.contentSettings.ScopeEnum
 import typingsSlinky.chrome.chrome.cookies.SameSiteStatus
 import typingsSlinky.chrome.chrome.idle.IdleState
+import typingsSlinky.chrome.chrome.input.ime.AssistiveWindowButton
 import typingsSlinky.chrome.chrome.loginState.ProfileType
 import typingsSlinky.chrome.chrome.loginState.SessionState
 import typingsSlinky.chrome.chrome.omnibox.OnInputEnteredDisposition
@@ -36,6 +37,9 @@ object chromeStrings {
   
   @js.native
   sealed trait active extends IdleState
+  
+  @js.native
+  sealed trait addToDictionary extends AssistiveWindowButton
   
   @js.native
   sealed trait allow extends js.Object
@@ -215,6 +219,9 @@ object chromeStrings {
   sealed trait two extends js.Object
   
   @js.native
+  sealed trait undo extends AssistiveWindowButton
+  
+  @js.native
   sealed trait unspecified extends SameSiteStatus
   
   @js.native
@@ -242,6 +249,8 @@ object chromeStrings {
   def USER_PROFILE: USER_PROFILE = "USER_PROFILE".asInstanceOf[USER_PROFILE]
   @scala.inline
   def active: active = "active".asInstanceOf[active]
+  @scala.inline
+  def addToDictionary: addToDictionary = "addToDictionary".asInstanceOf[addToDictionary]
   @scala.inline
   def allow: allow = "allow".asInstanceOf[allow]
   @scala.inline
@@ -360,6 +369,8 @@ object chromeStrings {
   def top: top = "top".asInstanceOf[top]
   @scala.inline
   def two: two = "two".asInstanceOf[two]
+  @scala.inline
+  def undo: undo = "undo".asInstanceOf[undo]
   @scala.inline
   def unspecified: unspecified = "unspecified".asInstanceOf[unspecified]
   @scala.inline

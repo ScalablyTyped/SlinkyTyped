@@ -38,197 +38,74 @@ object PartialClassNameMapAlertC {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
+    def setAction(value: String): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFilledError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
-    def withoutFilledError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledError")(js.undefined)
-        ret
-    }
+    def setFilledError(value: String): Self = this.set("filledError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFilledInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFilledError: Self = this.set("filledError", js.undefined)
     @scala.inline
-    def withoutFilledInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledInfo")(js.undefined)
-        ret
-    }
+    def setFilledInfo(value: String): Self = this.set("filledInfo", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFilledSuccess(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFilledInfo: Self = this.set("filledInfo", js.undefined)
     @scala.inline
-    def withoutFilledSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledSuccess")(js.undefined)
-        ret
-    }
+    def setFilledSuccess(value: String): Self = this.set("filledSuccess", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFilledWarning(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFilledSuccess: Self = this.set("filledSuccess", js.undefined)
     @scala.inline
-    def withoutFilledWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filledWarning")(js.undefined)
-        ret
-    }
+    def setFilledWarning(value: String): Self = this.set("filledWarning", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFilledWarning: Self = this.set("filledWarning", js.undefined)
     @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
+    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOutlinedError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline
-    def withoutOutlinedError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedError")(js.undefined)
-        ret
-    }
+    def setOutlinedError(value: String): Self = this.set("outlinedError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOutlinedInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOutlinedError: Self = this.set("outlinedError", js.undefined)
     @scala.inline
-    def withoutOutlinedInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedInfo")(js.undefined)
-        ret
-    }
+    def setOutlinedInfo(value: String): Self = this.set("outlinedInfo", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOutlinedSuccess(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOutlinedInfo: Self = this.set("outlinedInfo", js.undefined)
     @scala.inline
-    def withoutOutlinedSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedSuccess")(js.undefined)
-        ret
-    }
+    def setOutlinedSuccess(value: String): Self = this.set("outlinedSuccess", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOutlinedWarning(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOutlinedSuccess: Self = this.set("outlinedSuccess", js.undefined)
     @scala.inline
-    def withoutOutlinedWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedWarning")(js.undefined)
-        ret
-    }
+    def setOutlinedWarning(value: String): Self = this.set("outlinedWarning", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOutlinedWarning: Self = this.set("outlinedWarning", js.undefined)
     @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
+    def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStandardError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRoot: Self = this.set("root", js.undefined)
     @scala.inline
-    def withoutStandardError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardError")(js.undefined)
-        ret
-    }
+    def setStandardError(value: String): Self = this.set("standardError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStandardInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStandardError: Self = this.set("standardError", js.undefined)
     @scala.inline
-    def withoutStandardInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardInfo")(js.undefined)
-        ret
-    }
+    def setStandardInfo(value: String): Self = this.set("standardInfo", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStandardSuccess(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStandardInfo: Self = this.set("standardInfo", js.undefined)
     @scala.inline
-    def withoutStandardSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardSuccess")(js.undefined)
-        ret
-    }
+    def setStandardSuccess(value: String): Self = this.set("standardSuccess", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStandardWarning(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStandardSuccess: Self = this.set("standardSuccess", js.undefined)
     @scala.inline
-    def withoutStandardWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardWarning")(js.undefined)
-        ret
-    }
+    def setStandardWarning(value: String): Self = this.set("standardWarning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStandardWarning: Self = this.set("standardWarning", js.undefined)
   }
   
 }

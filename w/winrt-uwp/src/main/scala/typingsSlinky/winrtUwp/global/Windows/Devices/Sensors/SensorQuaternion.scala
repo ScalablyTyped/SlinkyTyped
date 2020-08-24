@@ -8,18 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.SensorQuaternion")
 @js.native
 abstract class SensorQuaternion ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.SensorQuaternion {
-  /** Gets the w-value of the Quaternion. */
-  /* CompleteClass */
-  override var w: Double = js.native
-  /** Gets the x-value of the Quaternion. */
-  /* CompleteClass */
-  override var x: Double = js.native
-  /** Gets the y-value of the Quaternion. */
-  /* CompleteClass */
-  override var y: Double = js.native
-  /** Gets the z-value of the Quaternion. */
-  /* CompleteClass */
-  override var z: Double = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.SensorQuaternion
 

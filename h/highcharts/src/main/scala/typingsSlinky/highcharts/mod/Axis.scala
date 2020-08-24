@@ -34,10 +34,19 @@ class Axis protected () extends js.Object {
     * @param chart
     *        The Chart instance to apply the axis on.
     *
-    * @param options
+    * @param userOptions
     *        Axis options.
     */
-  def this(chart: Chart_, options: AxisOptions) = this()
+  def this(chart: Chart_, userOptions: AxisOptions) = this()
+  /**
+    * If categories are present for the axis, names are used instead of numbers
+    * for that axis.
+    *
+    * Since Highcharts 3.0, categories can also be extracted by giving each
+    * point a name and setting axis type to `category`. However, if you have
+    * multiple series, best practice remains defining the `categories` array.
+    */
+  val categories: js.Array[String] = js.native
   /**
     * The Chart that the axis belongs to.
     */
@@ -104,7 +113,7 @@ class Axis protected () extends js.Object {
     * https://api.highcharts.com/highcharts/xAxis.tickPositions) option
     * instead.
     */
-  var tickPositions: js.UndefOr[js.Array[Double]] = js.native
+  var tickPositions: js.UndefOr[AxisTickPositionsArray] = js.native
   /**
     * List of major ticks mapped by postition on axis.
     */
@@ -146,6 +155,9 @@ class Axis protected () extends js.Object {
     * the label. In apps, use the labels.formatter instead, except when a
     * modification is needed.
     *
+    * @param this
+    *        Formatter context of axis label.
+    *
     * @return The formatted label content.
     */
   def defaultLabelFormatter(): String = js.native
@@ -163,6 +175,7 @@ class Axis protected () extends js.Object {
     * @fires Highcharts.Axis#drawCrosshair
     */
   def drawCrosshair(): Unit = js.native
+  def drawCrosshair(e: js.UndefOr[scala.Nothing], point: Point): Unit = js.native
   def drawCrosshair(e: PointerEventObject): Unit = js.native
   def drawCrosshair(e: PointerEventObject, point: Point): Unit = js.native
   /**
@@ -258,6 +271,12 @@ class Axis protected () extends js.Object {
   /**
     * Overrideable function to initialize the axis.
     *
+    * @param chart
+    *        The Chart instance to apply the axis on.
+    *
+    * @param userOptions
+    *        Axis options.
+    *
     * @fires Highcharts.Axis#afterInit
     * @fires Highcharts.Axis#init
     */
@@ -334,6 +353,7 @@ class Axis protected () extends js.Object {
     *        Chart#redraw.
     */
   def setCompare(): Unit = js.native
+  def setCompare(compare: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
   def setCompare(compare: String): Unit = js.native
   def setCompare(compare: String, redraw: Boolean): Unit = js.native
   /**
@@ -349,10 +369,11 @@ class Axis protected () extends js.Object {
     *        Chart#redraw.
     */
   def setDataGrouping(): Unit = js.native
+  def setDataGrouping(dataGrouping: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
   def setDataGrouping(dataGrouping: Boolean): Unit = js.native
   def setDataGrouping(dataGrouping: Boolean, redraw: Boolean): Unit = js.native
-  def setDataGrouping(dataGrouping: PlotSeriesDataGroupingOptions): Unit = js.native
-  def setDataGrouping(dataGrouping: PlotSeriesDataGroupingOptions, redraw: Boolean): Unit = js.native
+  def setDataGrouping(dataGrouping: DataGroupingOptionsObject): Unit = js.native
+  def setDataGrouping(dataGrouping: DataGroupingOptionsObject, redraw: Boolean): Unit = js.native
   /**
     * Set the minimum and maximum of the axes after render time. If the
     * `startOnTick` and `endOnTick` options are true, the minimum and maximum
@@ -380,9 +401,236 @@ class Axis protected () extends js.Object {
     * @fires Highcharts.Axis#setExtremes
     */
   def setExtremes(): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: Boolean
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: Double): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: Double, redraw: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: Boolean,
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: Double, redraw: Boolean, animation: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: Boolean,
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: Boolean,
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: js.UndefOr[scala.Nothing],
+    newMax: Double,
+    redraw: Boolean,
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
   def setExtremes(newMin: Double): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: Double, newMax: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: Double, newMax: js.UndefOr[scala.Nothing], redraw: Boolean, animation: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: js.UndefOr[scala.Nothing],
+    redraw: Boolean,
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(newMin: Double, newMax: Double, redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: Boolean,
+    eventArguments: js.Any
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject
+  ): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: Double,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: AnimationOptionsObject,
+    eventArguments: js.Any
+  ): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean): Unit = js.native
+  def setExtremes(
+    newMin: Double,
+    newMax: Double,
+    redraw: Boolean,
+    animation: js.UndefOr[scala.Nothing],
+    eventArguments: js.Any
+  ): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: Boolean): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: Boolean, eventArguments: js.Any): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
@@ -393,18 +641,6 @@ class Axis protected () extends js.Object {
     animation: AnimationOptionsObject,
     eventArguments: js.Any
   ): Unit = js.native
-  /**
-    * Set predefined left+width and top+height (inverted) for yAxes. This
-    * method modifies options param.
-    *
-    * @param axisPosition
-    *        ['left', 'width', 'height', 'top'] or ['top', 'height',
-    *        'width', 'left'] for an inverted chart.
-    *
-    * @param options
-    *        Highcharts.Axis#options.
-    */
-  def setParallelPosition(axisPosition: js.Array[String], options: AxisOptions): Unit = js.native
   /**
     * Now we have computed the normalized tickInterval, get the tick positions
     *
@@ -442,14 +678,14 @@ class Axis protected () extends js.Object {
     * @param pixel
     *        The pixel value coordinate.
     *
-    * @param paneCoordiantes
+    * @param paneCoordinates
     *        Whether the input pixel is relative to the chart or just the
     *        axis/pane itself.
     *
     * @return The axis value.
     */
   def toValue(pixel: Double): Double = js.native
-  def toValue(pixel: Double, paneCoordiantes: Boolean): Double = js.native
+  def toValue(pixel: Double, paneCoordinates: Boolean): Double = js.native
   /**
     * Update an axis object with a new set of options. The options are merged
     * with the existing options, so only new or altered options need to be

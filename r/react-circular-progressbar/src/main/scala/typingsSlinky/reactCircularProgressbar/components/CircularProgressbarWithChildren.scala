@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CircularProgressbarWithChildren {
-  @JSImport("react-circular-progressbar/dist/CircularProgressbarWithChildren", JSImport.Default)
+  @JSImport("react-circular-progressbar", "CircularProgressbarWithChildren")
   @js.native
   object component extends js.Object
   

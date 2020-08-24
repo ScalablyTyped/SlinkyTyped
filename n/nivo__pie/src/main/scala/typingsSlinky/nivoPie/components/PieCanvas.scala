@@ -1,9 +1,9 @@
 package typingsSlinky.nivoPie.components
 
-import org.scalajs.dom.raw.SVGPathElement
+import org.scalajs.dom.raw.HTMLCanvasElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
-import slinky.web.svg.path.tag
+import slinky.web.html.canvas.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
@@ -38,6 +38,8 @@ object PieCanvas {
     @scala.inline
     def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: PieDatum => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[PieDatum]): this.type = set("colors", value.asInstanceOf[js.Any])
@@ -56,6 +58,8 @@ object PieCanvas {
     @scala.inline
     def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
     @scala.inline
+    def legendsVarargs(value: LegendProps*): this.type = set("legends", js.Array(value :_*))
+    @scala.inline
     def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
@@ -64,7 +68,11 @@ object PieCanvas {
     @scala.inline
     def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    def onClick(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[HTMLCanvasElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseEnter(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[HTMLCanvasElement]) => Unit): this.type = set("onMouseEnter", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseLeave(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[HTMLCanvasElement]) => Unit): this.type = set("onMouseLeave", js.Any.fromFunction2(value))
     @scala.inline
     def padAngle(value: Double): this.type = set("padAngle", value.asInstanceOf[js.Any])
     @scala.inline

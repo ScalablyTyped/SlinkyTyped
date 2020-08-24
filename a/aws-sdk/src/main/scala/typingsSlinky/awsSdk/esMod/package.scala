@@ -12,7 +12,10 @@ package object esMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.esMod.ClientApiVersions
   type CloudWatchLogsLogGroupArn = java.lang.String
   type CompatibleElasticsearchVersionsList = js.Array[typingsSlinky.awsSdk.esMod.CompatibleVersionsMap]
+  type ConnectionAlias = java.lang.String
   type CreatedAt = js.Date
+  type CrossClusterSearchConnectionId = java.lang.String
+  type CrossClusterSearchConnectionStatusMessage = java.lang.String
   type DeploymentCloseDateTimeStamp = js.Date
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING_UPDATE
@@ -123,8 +126,20 @@ package object esMod {
   type EndpointsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.esMod.ServiceUrl]
   type ErrorMessage = java.lang.String
   type ErrorType = java.lang.String
+  type FilterList = js.Array[typingsSlinky.awsSdk.esMod.Filter]
   type GUID = java.lang.String
   type IdentityPoolId = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_ACCEPTANCE
+    - typingsSlinky.awsSdk.awsSdkStrings.APPROVED
+    - typingsSlinky.awsSdk.awsSdkStrings.REJECTING
+    - typingsSlinky.awsSdk.awsSdkStrings.REJECTED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
+    - java.lang.String
+  */
+  type InboundCrossClusterSearchConnectionStatusCode = typingsSlinky.awsSdk.esMod._InboundCrossClusterSearchConnectionStatusCode | java.lang.String
+  type InboundCrossClusterSearchConnections = js.Array[typingsSlinky.awsSdk.esMod.InboundCrossClusterSearchConnection]
   type InstanceCount = scala.Double
   type InstanceRole = java.lang.String
   type Integer = scala.Double
@@ -149,6 +164,7 @@ package object esMod {
   type MaximumInstanceCount = scala.Double
   type MinimumInstanceCount = scala.Double
   type NextToken = java.lang.String
+  type NonEmptyString = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RequiresIndexDocuments
     - typingsSlinky.awsSdk.awsSdkStrings.Processing_
@@ -156,6 +172,20 @@ package object esMod {
     - java.lang.String
   */
   type OptionState = typingsSlinky.awsSdk.esMod._OptionState | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_ACCEPTANCE
+    - typingsSlinky.awsSdk.awsSdkStrings.VALIDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.VALIDATION_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.PROVISIONING
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.REJECTED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
+    - java.lang.String
+  */
+  type OutboundCrossClusterSearchConnectionStatusCode = typingsSlinky.awsSdk.esMod._OutboundCrossClusterSearchConnectionStatusCode | java.lang.String
+  type OutboundCrossClusterSearchConnections = js.Array[typingsSlinky.awsSdk.esMod.OutboundCrossClusterSearchConnection]
+  type OwnerId = java.lang.String
   type PackageDescription = java.lang.String
   type PackageDetailsList = js.Array[typingsSlinky.awsSdk.esMod.PackageDetails]
   type PackageID = java.lang.String
@@ -177,6 +207,7 @@ package object esMod {
   type PolicyDocument = java.lang.String
   type RecurringChargeList = js.Array[typingsSlinky.awsSdk.esMod.RecurringCharge]
   type ReferencePath = java.lang.String
+  type Region = java.lang.String
   type ReservationToken = java.lang.String
   type ReservedElasticsearchInstanceList = js.Array[typingsSlinky.awsSdk.esMod.ReservedElasticsearchInstance]
   type ReservedElasticsearchInstanceOfferingList = js.Array[typingsSlinky.awsSdk.esMod.ReservedElasticsearchInstanceOffering]
@@ -229,6 +260,7 @@ package object esMod {
   type UpgradeStepsList = js.Array[typingsSlinky.awsSdk.esMod.UpgradeStepItem]
   type UserPoolId = java.lang.String
   type Username = java.lang.String
+  type ValueStringList = js.Array[typingsSlinky.awsSdk.esMod.NonEmptyString]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.standard__
     - typingsSlinky.awsSdk.awsSdkStrings.gp2

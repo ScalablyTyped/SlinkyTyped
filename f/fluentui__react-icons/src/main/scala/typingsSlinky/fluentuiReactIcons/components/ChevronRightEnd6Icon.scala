@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChevronRightEnd6Icon {
-  @JSImport("@fluentui/react-icons/lib/components/ChevronRightEnd6Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChevronRightEnd6Icon")
   @js.native
   object component extends js.Object
   

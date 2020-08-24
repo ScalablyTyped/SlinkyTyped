@@ -2,8 +2,6 @@ package typingsSlinky.reactToolbox.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactToolbox.layoutSidebarMod.SidebarProps
-import typingsSlinky.reactToolbox.layoutSidebarMod.SidebarTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.left
 import typingsSlinky.reactToolbox.reactToolboxStrings.lg
 import typingsSlinky.reactToolbox.reactToolboxStrings.lgTablet
@@ -14,19 +12,21 @@ import typingsSlinky.reactToolbox.reactToolboxStrings.smTablet
 import typingsSlinky.reactToolbox.reactToolboxStrings.xl
 import typingsSlinky.reactToolbox.reactToolboxStrings.xxl
 import typingsSlinky.reactToolbox.reactToolboxStrings.xxxl
+import typingsSlinky.reactToolbox.sidebarMod.SidebarProps
+import typingsSlinky.reactToolbox.sidebarMod.SidebarTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Sidebar {
-  @JSImport("react-toolbox", "Sidebar")
+  @JSImport("react-toolbox/components/layout", "Sidebar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.Sidebar] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.layoutMod.Sidebar] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline

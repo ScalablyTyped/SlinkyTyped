@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "karma-junit-reporter"
-version := "2.0-dt-20200214Z-f2d2f1"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200214Z-261cc2"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ViewListIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ViewListIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ViewListIcon")
   @js.native
   object component extends js.Object
   

@@ -13,7 +13,30 @@ import scala.scalajs.js.annotation._
 @js.native
 object passthroughMod extends js.Object {
   def fromMemory(modelArtifacts: js.Object): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: js.Object,
+    weightSpecs: js.UndefOr[scala.Nothing],
+    weightData: js.UndefOr[scala.Nothing],
+    trainingConfig: TrainingConfig
+  ): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: js.Object,
+    weightSpecs: js.UndefOr[scala.Nothing],
+    weightData: js.typedarray.ArrayBuffer
+  ): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: js.Object,
+    weightSpecs: js.UndefOr[scala.Nothing],
+    weightData: js.typedarray.ArrayBuffer,
+    trainingConfig: TrainingConfig
+  ): IOHandler = js.native
   def fromMemory(modelArtifacts: js.Object, weightSpecs: js.Array[WeightsManifestEntry]): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: js.Object,
+    weightSpecs: js.Array[WeightsManifestEntry],
+    weightData: js.UndefOr[scala.Nothing],
+    trainingConfig: TrainingConfig
+  ): IOHandler = js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
@@ -26,7 +49,30 @@ object passthroughMod extends js.Object {
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   def fromMemory(modelArtifacts: ModelArtifacts): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: ModelArtifacts,
+    weightSpecs: js.UndefOr[scala.Nothing],
+    weightData: js.UndefOr[scala.Nothing],
+    trainingConfig: TrainingConfig
+  ): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: ModelArtifacts,
+    weightSpecs: js.UndefOr[scala.Nothing],
+    weightData: js.typedarray.ArrayBuffer
+  ): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: ModelArtifacts,
+    weightSpecs: js.UndefOr[scala.Nothing],
+    weightData: js.typedarray.ArrayBuffer,
+    trainingConfig: TrainingConfig
+  ): IOHandler = js.native
   def fromMemory(modelArtifacts: ModelArtifacts, weightSpecs: js.Array[WeightsManifestEntry]): IOHandler = js.native
+  def fromMemory(
+    modelArtifacts: ModelArtifacts,
+    weightSpecs: js.Array[WeightsManifestEntry],
+    weightData: js.UndefOr[scala.Nothing],
+    trainingConfig: TrainingConfig
+  ): IOHandler = js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],

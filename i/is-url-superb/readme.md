@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-url-superb
 
-Typings are for version 3.0.0
+Typings are for version 4.0.0
 
 ## Library description:
 Check if a string is a URL

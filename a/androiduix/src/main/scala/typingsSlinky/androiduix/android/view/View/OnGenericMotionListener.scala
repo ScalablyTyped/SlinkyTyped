@@ -23,11 +23,12 @@ object OnGenericMotionListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnGenericMotion(value: (typingsSlinky.androiduix.android.view.View, MotionEvent) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGenericMotion")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnGenericMotion(value: (typingsSlinky.androiduix.android.view.View, MotionEvent) => js.Any): Self = this.set("onGenericMotion", js.Any.fromFunction2(value))
   }
   
 }

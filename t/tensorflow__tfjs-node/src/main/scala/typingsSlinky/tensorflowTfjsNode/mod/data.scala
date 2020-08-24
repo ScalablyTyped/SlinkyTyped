@@ -106,7 +106,7 @@ object data extends js.Object {
   }
   
   @JSName("version_data")
-  val versionData: /* "1.7.4" */ String = js.native
+  val versionData: /* "2.0.1" */ String = js.native
   def array[T /* <: TensorContainer */](items: js.Array[T]): typingsSlinky.tensorflowTfjsData.datasetMod.Dataset[T] = js.native
   def csv(source: RequestInfo): typingsSlinky.tensorflowTfjsData.csvDatasetMod.CSVDataset = js.native
   def csv(source: RequestInfo, csvConfig: CSVConfig): typingsSlinky.tensorflowTfjsData.csvDatasetMod.CSVDataset = js.native
@@ -115,6 +115,7 @@ object data extends js.Object {
   def microphone(): js.Promise[MicrophoneIterator] = js.native
   def microphone(microphoneConfig: MicrophoneConfig): js.Promise[MicrophoneIterator] = js.native
   def webcam(): js.Promise[WebcamIterator] = js.native
+  def webcam(webcamVideoElement: js.UndefOr[scala.Nothing], webcamConfig: WebcamConfig): js.Promise[WebcamIterator] = js.native
   def webcam(webcamVideoElement: HTMLVideoElement): js.Promise[WebcamIterator] = js.native
   def webcam(webcamVideoElement: HTMLVideoElement, webcamConfig: WebcamConfig): js.Promise[WebcamIterator] = js.native
   def zip[O /* <: TensorContainer */](datasets: DatasetContainer): typingsSlinky.tensorflowTfjsData.datasetMod.Dataset[O] = js.native

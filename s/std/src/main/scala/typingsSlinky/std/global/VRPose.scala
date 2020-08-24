@@ -8,22 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("VRPose")
 @js.native
 class VRPose ()
-  extends typingsSlinky.std.VRPose {
-  /* CompleteClass */
-  override val angularAcceleration: js.typedarray.Float32Array | Null = js.native
-  /* CompleteClass */
-  override val angularVelocity: js.typedarray.Float32Array | Null = js.native
-  /* CompleteClass */
-  override val linearAcceleration: js.typedarray.Float32Array | Null = js.native
-  /* CompleteClass */
-  override val linearVelocity: js.typedarray.Float32Array | Null = js.native
-  /* CompleteClass */
-  override val orientation: js.typedarray.Float32Array | Null = js.native
-  /* CompleteClass */
-  override val position: js.typedarray.Float32Array | Null = js.native
-  /* CompleteClass */
-  override val timestamp: Double = js.native
-}
+  extends typingsSlinky.std.VRPose
 
 @JSGlobal("VRPose")
 @js.native

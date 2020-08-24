@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jwk-to-pem"
-version := "2.0-dt-20190924Z-5da809"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20190924Z-a72a56"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,6 +1,7 @@
 package typingsSlinky.eslint.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.eslint.anon.Cwd
 import typingsSlinky.eslint.mod.Linter.Config
 import typingsSlinky.eslint.mod.Linter.FixOptions
 import typingsSlinky.eslint.mod.Linter.FixReport
@@ -16,6 +17,7 @@ import scala.scalajs.js.annotation._
 @JSImport("eslint", "Linter")
 @js.native
 class Linter_ () extends js.Object {
+  def this(options: Cwd) = this()
   var version: String = js.native
   def defineParser(name: String, parser: ParserModule): Unit = js.native
   def defineRule(name: String, rule: RuleModule): Unit = js.native

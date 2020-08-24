@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends WebSocket {
   def this(url: String) = this()
   def this(url: String, _reserved: js.Any) = this()
+  def this(url: String, _reserved: js.UndefOr[scala.Nothing], options: Options) = this()
   def this(url: String, _reserved: js.Any, options: Options) = this()
 }
 
@@ -26,6 +27,11 @@ object ^
         /* _reserved */ js.Any, 
         /* options */ Options, 
         org.scalajs.dom.raw.WebSocket
+      ]) with (Instantiable3[
+        /* url */ String, 
+        /* _reserved */ js.UndefOr[scala.Nothing], 
+        /* options */ Options, 
+        org.scalajs.dom.raw.WebSocket
       ])
     ] {
   var CLOSED: typingsSlinky.sockjsClient.mod.CLOSED = js.native
@@ -33,6 +39,7 @@ object ^
   var CONNECTING: typingsSlinky.sockjsClient.mod.CONNECTING = js.native
   var OPEN: typingsSlinky.sockjsClient.mod.OPEN = js.native
   def apply(url: String): org.scalajs.dom.raw.WebSocket = js.native
+  def apply(url: String, _reserved: js.UndefOr[scala.Nothing], options: Options): org.scalajs.dom.raw.WebSocket = js.native
   def apply(url: String, _reserved: js.Any): org.scalajs.dom.raw.WebSocket = js.native
   def apply(url: String, _reserved: js.Any, options: Options): org.scalajs.dom.raw.WebSocket = js.native
 }

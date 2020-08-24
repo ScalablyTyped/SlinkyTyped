@@ -1,0 +1,12 @@
+package typingsSlinky.arcgisJsApi.esri
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.arcgisJsApi.esri.TextAreaInput
+  - typingsSlinky.arcgisJsApi.esri.TextBoxInput
+*/
+trait inputsInput extends js.Object
+

@@ -11,6 +11,10 @@ class JSDocCommentStmt ()
   extends typingsSlinky.angularCompiler.outputAstMod.JSDocCommentStmt {
   def this(tags: js.Array[JSDocTag]) = this()
   def this(
+    tags: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
     tags: js.Array[JSDocTag],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

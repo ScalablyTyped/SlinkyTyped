@@ -1,5 +1,6 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

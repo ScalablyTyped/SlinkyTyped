@@ -5,20 +5,19 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTransitionGroup.reactTransitionGroupStrings.`in-out`
 import typingsSlinky.reactTransitionGroup.reactTransitionGroupStrings.`out-in`
 import typingsSlinky.reactTransitionGroup.switchTransitionMod.SwitchTransitionProps
-import typingsSlinky.reactTransitionGroup.switchTransitionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SwitchTransition {
-  @JSImport("react-transition-group/SwitchTransition", JSImport.Default)
+  @JSImport("react-transition-group", "SwitchTransition")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactTransitionGroup.mod.SwitchTransition] {
     @scala.inline
     def mode(value: `out-in` | `in-out`): this.type = set("mode", value.asInstanceOf[js.Any])
   }

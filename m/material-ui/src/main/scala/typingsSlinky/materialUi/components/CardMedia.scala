@@ -1,25 +1,23 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Card.CardMediaProps
-import typingsSlinky.materialUi.cardMediaMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CardMedia {
-  @JSImport("material-ui/Card/CardMedia", JSImport.Default)
+  @JSImport("material-ui", "CardMedia")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.CardMedia] {
     @scala.inline
     def actAsExpander(value: Boolean): this.type = set("actAsExpander", value.asInstanceOf[js.Any])
     @scala.inline
@@ -29,7 +27,7 @@ object CardMedia {
     @scala.inline
     def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
-    def overlay(value: TagMod[Any]): this.type = set("overlay", value.asInstanceOf[js.Any])
+    def overlay(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def overlayContainerStyle(value: CSSProperties): this.type = set("overlayContainerStyle", value.asInstanceOf[js.Any])
     @scala.inline

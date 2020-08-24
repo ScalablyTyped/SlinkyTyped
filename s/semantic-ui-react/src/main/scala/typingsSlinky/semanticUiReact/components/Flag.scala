@@ -4,20 +4,19 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.flagFlagMod.FlagNameValues
 import typingsSlinky.semanticUiReact.flagFlagMod.FlagProps
-import typingsSlinky.semanticUiReact.flagMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Flag {
-  @JSImport("semantic-ui-react/dist/commonjs/elements/Flag", JSImport.Default)
+  @JSImport("semantic-ui-react", "Flag")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Flag] {
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline

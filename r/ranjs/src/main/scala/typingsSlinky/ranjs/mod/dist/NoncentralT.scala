@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class NoncentralT ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.NoncentralT] {
   def this(nu: Double) = this()
+  def this(nu: js.UndefOr[scala.Nothing], mu: Double) = this()
   def this(nu: Double, mu: Double) = this()
 }
 

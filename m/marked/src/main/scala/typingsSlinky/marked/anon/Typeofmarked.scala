@@ -3,6 +3,7 @@ package typingsSlinky.marked.anon
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.marked.mod.MarkedOptions
+import typingsSlinky.marked.mod.Token
 import typingsSlinky.marked.mod.TokensList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,9 +14,10 @@ trait Typeofmarked extends js.Object {
   var InlineLexer: TypeofInlineLexer = js.native
   var Lexer: TypeofLexer = js.native
   var Parser: TypeofParser = js.native
-  var Renderer: Instantiable1[js.UndefOr[/* options */ MarkedOptions], typingsSlinky.marked.mod.Renderer] = js.native
+  var Renderer: Instantiable1[/* options */ js.UndefOr[MarkedOptions], typingsSlinky.marked.mod.Renderer] = js.native
   var Slugger: Instantiable0[typingsSlinky.marked.mod.Slugger] = js.native
   var TextRenderer: Instantiable0[typingsSlinky.marked.mod.TextRenderer] = js.native
+  var Tokenizer: Instantiable1[/* options */ js.UndefOr[MarkedOptions], typingsSlinky.marked.mod.Tokenizer] = js.native
   val Tokens: js.Any = js.native
   val defaults: MarkedOptions = js.native
   /**
@@ -93,6 +95,11 @@ trait Typeofmarked extends js.Object {
     src: String,
     callback: js.Function2[/* error */ js.UndefOr[js.Any], /* parseResult */ String, Unit]
   ): String = js.native
+  def parse(
+    src: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.UndefOr[js.Any], /* parseResult */ String, Unit]
+  ): String = js.native
   def parse(src: String, options: MarkedOptions): String = js.native
   def parse(
     src: String,
@@ -111,5 +118,11 @@ trait Typeofmarked extends js.Object {
     * @param options Hash of options
     */
   def setOptions(options: MarkedOptions): /* import warning: importer.ImportType#apply Failed type conversion: typeof marked */ js.Any = js.native
+  /**
+    * Use Extension
+    * @param Renderer
+    */
+  def use(options: MarkedOptions): Unit = js.native
+  def walkTokens(tokens: TokensList, callback: js.Function1[/* token */ Token, Unit]): /* import warning: importer.ImportType#apply Failed type conversion: typeof marked */ js.Any = js.native
 }
 

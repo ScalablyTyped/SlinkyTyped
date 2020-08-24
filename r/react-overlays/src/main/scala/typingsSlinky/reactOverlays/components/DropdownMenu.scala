@@ -1,8 +1,10 @@
 package typingsSlinky.reactOverlays.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactOverlays.dropdownMenuMod.DropdownMenuProps
+import typingsSlinky.reactOverlays.dropdownMenuMod.DropdownMenuRenderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,6 +33,10 @@ object DropdownMenu {
   }
   
   def withProps(p: DropdownMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DropdownMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: DropdownMenuRenderProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DropdownMenuProps]))
+  }
 }
 

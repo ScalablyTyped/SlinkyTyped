@@ -2,9 +2,9 @@ package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.anon.ImageDataPath
 import typingsSlinky.firefoxWebextBrowser.anon.Panel
-import typingsSlinky.firefoxWebextBrowser.anon.TabIdWindowId
+import typingsSlinky.firefoxWebextBrowser.anon.TabId
 import typingsSlinky.firefoxWebextBrowser.anon.WindowId
-import typingsSlinky.firefoxWebextBrowser.anon.WindowIdNumber
+import typingsSlinky.firefoxWebextBrowser.anon.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +22,11 @@ object sidebarAction extends js.Object {
   /** Closes the extension sidebar in the active window if the sidebar belongs to the extension. */
   def close(): js.Promise[Unit] = js.native
   /** Gets the url to the html document set as the panel for this sidebar action. */
-  def getPanel(details: TabIdWindowId): js.Promise[String] = js.native
+  def getPanel(details: WindowId): js.Promise[String] = js.native
   /** Gets the title of the sidebar action. */
-  def getTitle(details: TabIdWindowId): js.Promise[String] = js.native
+  def getTitle(details: WindowId): js.Promise[String] = js.native
   /** Checks whether the sidebar action is open. */
-  def isOpen(details: WindowIdNumber): js.Promise[Boolean] = js.native
+  def isOpen(details: `2`): js.Promise[Boolean] = js.native
   /** Opens the extension sidebar in the active window. */
   def open(): js.Promise[Unit] = js.native
   /**
@@ -41,6 +41,8 @@ object sidebarAction extends js.Object {
   def setPanel(details: Panel): js.Promise[Unit] = js.native
   /* sidebarAction functions */
   /** Sets the title of the sidebar action. This shows up in the tooltip. */
-  def setTitle(details: WindowId): js.Promise[Unit] = js.native
+  def setTitle(details: TabId): js.Promise[Unit] = js.native
+  /** Toggles the extension sidebar in the active window. */
+  def toggle(): js.Promise[Unit] = js.native
 }
 

@@ -17,6 +17,11 @@ class SymbolSet protected ()
   ) = this()
   def this(
     openBraceToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBraceToken],
+    elements: js.UndefOr[scala.Nothing],
+    closeBraceToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBraceToken]
+  ) = this()
+  def this(
+    openBraceToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBraceToken],
     elements: js.Array[typingsSlinky.grammarkdown.nodesMod.SymbolSpan],
     closeBraceToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBraceToken]
   ) = this()

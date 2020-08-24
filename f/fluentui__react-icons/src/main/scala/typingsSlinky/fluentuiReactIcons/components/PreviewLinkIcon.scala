@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PreviewLinkIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PreviewLinkIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PreviewLinkIcon")
   @js.native
   object component extends js.Object
   

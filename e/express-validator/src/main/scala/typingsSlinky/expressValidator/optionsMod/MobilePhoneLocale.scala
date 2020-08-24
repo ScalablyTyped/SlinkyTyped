@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.expressValidator.expressValidatorStrings.any
+  - typingsSlinky.expressValidator.expressValidatorStrings.`am-AM`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-AE`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-BH`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-DZ`
@@ -13,14 +14,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-JO`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-IQ`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-KW`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`ar-LY`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-SA`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-SY`
   - typingsSlinky.expressValidator.expressValidatorStrings.`ar-TN`
   - typingsSlinky.expressValidator.expressValidatorStrings.`be-BY`
   - typingsSlinky.expressValidator.expressValidatorStrings.`bg-BG`
   - typingsSlinky.expressValidator.expressValidatorStrings.`bn-BD`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`bs-BA`
   - typingsSlinky.expressValidator.expressValidatorStrings.`cs-CZ`
   - typingsSlinky.expressValidator.expressValidatorStrings.`de-AT`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`de-CH`
   - typingsSlinky.expressValidator.expressValidatorStrings.`de-DE`
   - typingsSlinky.expressValidator.expressValidatorStrings.`da-DK`
   - typingsSlinky.expressValidator.expressValidatorStrings.`el-GR`
@@ -40,12 +44,16 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-PK`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-RW`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-SG`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`en-SL`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-TZ`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-UG`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-US`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-ZA`
   - typingsSlinky.expressValidator.expressValidatorStrings.`en-ZM`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`en-ZW`
   - typingsSlinky.expressValidator.expressValidatorStrings.`es-CL`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`es-CO`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`es-CR`
   - typingsSlinky.expressValidator.expressValidatorStrings.`es-EC`
   - typingsSlinky.expressValidator.expressValidatorStrings.`es-ES`
   - typingsSlinky.expressValidator.expressValidatorStrings.`es-MX`
@@ -57,6 +65,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.expressValidator.expressValidatorStrings.`fi-FI`
   - typingsSlinky.expressValidator.expressValidatorStrings.`fj-FJ`
   - typingsSlinky.expressValidator.expressValidatorStrings.`fo-FO`
+  - typingsSlinky.expressValidator.expressValidatorStrings.`fr-BE`
   - typingsSlinky.expressValidator.expressValidatorStrings.`fr-FR`
   - typingsSlinky.expressValidator.expressValidatorStrings.`fr-GF`
   - typingsSlinky.expressValidator.expressValidatorStrings.`fr-GP`
@@ -96,6 +105,8 @@ trait MobilePhoneLocale extends js.Object
 
 object MobilePhoneLocale {
   @scala.inline
+  def `am-AM`: typingsSlinky.expressValidator.expressValidatorStrings.`am-AM` = "am-AM".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`am-AM`]
+  @scala.inline
   def any: typingsSlinky.expressValidator.expressValidatorStrings.any = "any".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.any]
   @scala.inline
   def `ar-AE`: typingsSlinky.expressValidator.expressValidatorStrings.`ar-AE` = "ar-AE".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`ar-AE`]
@@ -112,6 +123,8 @@ object MobilePhoneLocale {
   @scala.inline
   def `ar-KW`: typingsSlinky.expressValidator.expressValidatorStrings.`ar-KW` = "ar-KW".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`ar-KW`]
   @scala.inline
+  def `ar-LY`: typingsSlinky.expressValidator.expressValidatorStrings.`ar-LY` = "ar-LY".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`ar-LY`]
+  @scala.inline
   def `ar-SA`: typingsSlinky.expressValidator.expressValidatorStrings.`ar-SA` = "ar-SA".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`ar-SA`]
   @scala.inline
   def `ar-SY`: typingsSlinky.expressValidator.expressValidatorStrings.`ar-SY` = "ar-SY".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`ar-SY`]
@@ -124,11 +137,15 @@ object MobilePhoneLocale {
   @scala.inline
   def `bn-BD`: typingsSlinky.expressValidator.expressValidatorStrings.`bn-BD` = "bn-BD".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`bn-BD`]
   @scala.inline
+  def `bs-BA`: typingsSlinky.expressValidator.expressValidatorStrings.`bs-BA` = "bs-BA".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`bs-BA`]
+  @scala.inline
   def `cs-CZ`: typingsSlinky.expressValidator.expressValidatorStrings.`cs-CZ` = "cs-CZ".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`cs-CZ`]
   @scala.inline
   def `da-DK`: typingsSlinky.expressValidator.expressValidatorStrings.`da-DK` = "da-DK".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`da-DK`]
   @scala.inline
   def `de-AT`: typingsSlinky.expressValidator.expressValidatorStrings.`de-AT` = "de-AT".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`de-AT`]
+  @scala.inline
+  def `de-CH`: typingsSlinky.expressValidator.expressValidatorStrings.`de-CH` = "de-CH".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`de-CH`]
   @scala.inline
   def `de-DE`: typingsSlinky.expressValidator.expressValidatorStrings.`de-DE` = "de-DE".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`de-DE`]
   @scala.inline
@@ -166,6 +183,8 @@ object MobilePhoneLocale {
   @scala.inline
   def `en-SG`: typingsSlinky.expressValidator.expressValidatorStrings.`en-SG` = "en-SG".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`en-SG`]
   @scala.inline
+  def `en-SL`: typingsSlinky.expressValidator.expressValidatorStrings.`en-SL` = "en-SL".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`en-SL`]
+  @scala.inline
   def `en-TZ`: typingsSlinky.expressValidator.expressValidatorStrings.`en-TZ` = "en-TZ".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`en-TZ`]
   @scala.inline
   def `en-UG`: typingsSlinky.expressValidator.expressValidatorStrings.`en-UG` = "en-UG".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`en-UG`]
@@ -176,7 +195,13 @@ object MobilePhoneLocale {
   @scala.inline
   def `en-ZM`: typingsSlinky.expressValidator.expressValidatorStrings.`en-ZM` = "en-ZM".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`en-ZM`]
   @scala.inline
+  def `en-ZW`: typingsSlinky.expressValidator.expressValidatorStrings.`en-ZW` = "en-ZW".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`en-ZW`]
+  @scala.inline
   def `es-CL`: typingsSlinky.expressValidator.expressValidatorStrings.`es-CL` = "es-CL".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`es-CL`]
+  @scala.inline
+  def `es-CO`: typingsSlinky.expressValidator.expressValidatorStrings.`es-CO` = "es-CO".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`es-CO`]
+  @scala.inline
+  def `es-CR`: typingsSlinky.expressValidator.expressValidatorStrings.`es-CR` = "es-CR".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`es-CR`]
   @scala.inline
   def `es-EC`: typingsSlinky.expressValidator.expressValidatorStrings.`es-EC` = "es-EC".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`es-EC`]
   @scala.inline
@@ -199,6 +224,8 @@ object MobilePhoneLocale {
   def `fj-FJ`: typingsSlinky.expressValidator.expressValidatorStrings.`fj-FJ` = "fj-FJ".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`fj-FJ`]
   @scala.inline
   def `fo-FO`: typingsSlinky.expressValidator.expressValidatorStrings.`fo-FO` = "fo-FO".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`fo-FO`]
+  @scala.inline
+  def `fr-BE`: typingsSlinky.expressValidator.expressValidatorStrings.`fr-BE` = "fr-BE".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`fr-BE`]
   @scala.inline
   def `fr-FR`: typingsSlinky.expressValidator.expressValidatorStrings.`fr-FR` = "fr-FR".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.`fr-FR`]
   @scala.inline

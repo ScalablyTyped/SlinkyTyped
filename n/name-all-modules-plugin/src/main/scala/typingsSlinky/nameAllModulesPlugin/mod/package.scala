@@ -8,5 +8,5 @@ package object mod {
   /**
     * Names all remaining modules that do not get named via NamedModulesPlugin
     */
-  type NameAllModulesPlugin = typingsSlinky.webpack.mod.Plugin
+  type NameAllModulesPlugin = typingsSlinky.std.Plugin
 }

@@ -29,29 +29,18 @@ object FULLSCREEN {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFULLSCREEN(value: fullscreen_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FULLSCREEN")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMAXIMIZED(value: maximized_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAXIMIZED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFULLSCREEN(value: fullscreen_): Self = this.set("FULLSCREEN", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMINIMIZED(value: minimized_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MINIMIZED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAXIMIZED(value: maximized_): Self = this.set("MAXIMIZED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNORMAL(value: normal_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NORMAL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMINIMIZED(value: minimized_): Self = this.set("MINIMIZED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNORMAL(value: normal_): Self = this.set("NORMAL", value.asInstanceOf[js.Any])
   }
   
 }

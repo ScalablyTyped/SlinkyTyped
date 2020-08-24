@@ -44,6 +44,8 @@ object ReactAliceCarousel {
     @scala.inline
     def infinite(value: Boolean): this.type = set("infinite", value.asInstanceOf[js.Any])
     @scala.inline
+    def itemsVarargs(value: js.Object*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
     def items(value: js.Array[js.Object]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def keysControlDisabled(value: Boolean): this.type = set("keysControlDisabled", value.asInstanceOf[js.Any])
@@ -59,6 +61,8 @@ object ReactAliceCarousel {
     def onSlideChanged(value: /* e */ EventObject => Unit): this.type = set("onSlideChanged", js.Any.fromFunction1(value))
     @scala.inline
     def playButtonEnabled(value: Boolean): this.type = set("playButtonEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preservePosition(value: Boolean): this.type = set("preservePosition", value.asInstanceOf[js.Any])
     @scala.inline
     def preventEventOnTouchMove(value: Boolean): this.type = set("preventEventOnTouchMove", value.asInstanceOf[js.Any])
     @scala.inline
@@ -79,6 +83,8 @@ object ReactAliceCarousel {
     def swipeDisabled(value: Boolean): this.type = set("swipeDisabled", value.asInstanceOf[js.Any])
     @scala.inline
     def touchTrackingEnabled(value: Boolean): this.type = set("touchTrackingEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionTimingFunction(value: String): this.type = set("transitionTimingFunction", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

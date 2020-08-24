@@ -82,7 +82,7 @@ package object ioBroker {
     /* sessionId */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
-  type GetHistoryResult = js.Array[typingsSlinky.iobroker.anon.Stateidstring]
+  type GetHistoryResult = js.Array[typingsSlinky.iobroker.anon.Stateidstringundefined]
   type GetObjectCallback = js.Function2[
     /* err */ java.lang.String | scala.Null, 
     /* obj */ js.UndefOr[typingsSlinky.iobroker.mod.global.ioBroker.Object | scala.Null], 

@@ -1,8 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.anon.Style
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,11 +16,6 @@ object skeletonTextMod extends js.Object {
       */
     var animated: Boolean = js.native
     var el: HTMLElement = js.native
-    /**
-      * @deprecated Use CSS instead. The width of the skeleton text. If supplied, it will override the CSS style.
-      */
-    var width: js.UndefOr[String] = js.native
-    def calculateWidth(): js.UndefOr[Style] = js.native
     @JSName("render")
     def render_MSkeletonText(): js.Any = js.native
   }

@@ -44,13 +44,19 @@ class Socket () extends EventEmitter {
   def bind(callback: js.Function0[Unit]): Unit = js.native
   def bind(options: BindOptions): Unit = js.native
   def bind(options: BindOptions, callback: js.Function0[Unit]): Unit = js.native
+  def bind(port: js.UndefOr[scala.Nothing], address: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
+  def bind(port: js.UndefOr[scala.Nothing], address: String): Unit = js.native
+  def bind(port: js.UndefOr[scala.Nothing], address: String, callback: js.Function0[Unit]): Unit = js.native
+  def bind(port: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def bind(port: Double): Unit = js.native
+  def bind(port: Double, address: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def bind(port: Double, address: String): Unit = js.native
   def bind(port: Double, address: String, callback: js.Function0[Unit]): Unit = js.native
   def bind(port: Double, callback: js.Function0[Unit]): Unit = js.native
   def close(): Unit = js.native
   def close(callback: js.Function0[Unit]): Unit = js.native
   def connect(port: Double): Unit = js.native
+  def connect(port: Double, address: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def connect(port: Double, address: String): Unit = js.native
   def connect(port: Double, address: String, callback: js.Function0[Unit]): Unit = js.native
   def connect(port: Double, callback: js.Function0[Unit]): Unit = js.native
@@ -132,7 +138,39 @@ class Socket () extends EventEmitter {
     length: Double,
     callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
+  def send(
+    msg: String,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(msg: String, offset: Double, length: Double, port: js.UndefOr[scala.Nothing], address: String): Unit = js.native
+  def send(
+    msg: String,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    address: String,
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(
+    msg: String,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: String, offset: Double, length: Double, port: Double): Unit = js.native
+  def send(
+    msg: String,
+    offset: Double,
+    length: Double,
+    port: Double,
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: String, offset: Double, length: Double, port: Double, address: String): Unit = js.native
   def send(
     msg: String,
@@ -149,7 +187,31 @@ class Socket () extends EventEmitter {
     port: Double,
     callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
+  def send(
+    msg: String,
+    port: js.UndefOr[scala.Nothing],
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(msg: String, port: js.UndefOr[scala.Nothing], address: String): Unit = js.native
+  def send(
+    msg: String,
+    port: js.UndefOr[scala.Nothing],
+    address: String,
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(
+    msg: String,
+    port: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: String, port: Double): Unit = js.native
+  def send(
+    msg: String,
+    port: Double,
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: String, port: Double, address: String): Unit = js.native
   def send(
     msg: String,
@@ -164,7 +226,31 @@ class Socket () extends EventEmitter {
   ): Unit = js.native
   def send(msg: js.Array[_]): Unit = js.native
   def send(msg: js.Array[_], callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]): Unit = js.native
+  def send(
+    msg: js.Array[_],
+    port: js.UndefOr[scala.Nothing],
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(msg: js.Array[_], port: js.UndefOr[scala.Nothing], address: String): Unit = js.native
+  def send(
+    msg: js.Array[_],
+    port: js.UndefOr[scala.Nothing],
+    address: String,
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(
+    msg: js.Array[_],
+    port: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: js.Array[_], port: Double): Unit = js.native
+  def send(
+    msg: js.Array[_],
+    port: Double,
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: js.Array[_], port: Double, address: String): Unit = js.native
   def send(
     msg: js.Array[_],
@@ -189,7 +275,45 @@ class Socket () extends EventEmitter {
     length: Double,
     callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    address: String
+  ): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    address: String,
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    offset: Double,
+    length: Double,
+    port: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Double): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    offset: Double,
+    length: Double,
+    port: Double,
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Double, address: String): Unit = js.native
   def send(
     msg: js.typedarray.Uint8Array,
@@ -206,7 +330,31 @@ class Socket () extends EventEmitter {
     port: Double,
     callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    port: js.UndefOr[scala.Nothing],
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(msg: js.typedarray.Uint8Array, port: js.UndefOr[scala.Nothing], address: String): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    port: js.UndefOr[scala.Nothing],
+    address: String,
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    port: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: js.typedarray.Uint8Array, port: Double): Unit = js.native
+  def send(
+    msg: js.typedarray.Uint8Array,
+    port: Double,
+    address: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+  ): Unit = js.native
   def send(msg: js.typedarray.Uint8Array, port: Double, address: String): Unit = js.native
   def send(
     msg: js.typedarray.Uint8Array,

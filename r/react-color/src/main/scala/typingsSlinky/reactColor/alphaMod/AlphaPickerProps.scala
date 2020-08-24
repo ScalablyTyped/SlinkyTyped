@@ -1,39 +1,49 @@
 package typingsSlinky.reactColor.alphaMod
 
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactColor.mod.Color
+import typingsSlinky.reactColor.anon.PartialClassesAlphaPicker
 import typingsSlinky.reactColor.mod.ColorPickerProps
-import typingsSlinky.reactColor.mod.ColorResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AlphaPickerProps extends ColorPickerProps[AlphaPicker] {
-  var height: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
+  @JSName("styles")
+  var styles_AlphaPickerProps: js.UndefOr[PartialClassesAlphaPicker] = js.native
+  var width: js.UndefOr[String] = js.native
 }
 
 object AlphaPickerProps {
   @scala.inline
-  def apply(
-    color: Color = null,
-    height: String = null,
-    key: Key = null,
-    onChange: /* color */ ColorResult => Unit = null,
-    onChangeComplete: /* color */ ColorResult => Unit = null,
-    ref: js.UndefOr[Null | LegacyRef[AlphaPicker]] = js.undefined,
-    width: String = null
-  ): AlphaPickerProps = {
+  def apply(): AlphaPickerProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChangeComplete != null) __obj.updateDynamic("onChangeComplete")(js.Any.fromFunction1(onChangeComplete))
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlphaPickerProps]
   }
+  @scala.inline
+  implicit class AlphaPickerPropsOps[Self <: AlphaPickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHeight(value: String): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setStyles(value: PartialClassesAlphaPicker): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyles: Self = this.set("styles", js.undefined)
+    @scala.inline
+    def setWidth(value: String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AutoDeploySettingsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AutoDeploySettingsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AutoDeploySettingsIcon")
   @js.native
   object component extends js.Object
   

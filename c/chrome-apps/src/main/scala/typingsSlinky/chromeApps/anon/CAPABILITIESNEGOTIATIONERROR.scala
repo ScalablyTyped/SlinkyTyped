@@ -37,35 +37,20 @@ object CAPABILITIESNEGOTIATIONERROR {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCAPABILITIES_NEGOTIATION_ERROR(value: capabilities_negotiation_error_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CAPABILITIES_NEGOTIATION_ERROR")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCONNECTION_ERROR(value: connection_error_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECTION_ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCAPABILITIES_NEGOTIATION_ERROR(value: capabilities_negotiation_error_): Self = this.set("CAPABILITIES_NEGOTIATION_ERROR", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMEDIA_PIPELINE_ERROR(value: media_pipeline_error_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_PIPELINE_ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCONNECTION_ERROR(value: connection_error_): Self = this.set("CONNECTION_ERROR", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTIMEOUT_ERROR(value: timeout_error_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TIMEOUT_ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMEDIA_PIPELINE_ERROR(value: media_pipeline_error_): Self = this.set("MEDIA_PIPELINE_ERROR", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUNKNOWN_ERROR(value: unknown_error_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UNKNOWN_ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTIMEOUT_ERROR(value: timeout_error_): Self = this.set("TIMEOUT_ERROR", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUNKNOWN_ERROR(value: unknown_error_): Self = this.set("UNKNOWN_ERROR", value.asInstanceOf[js.Any])
   }
   
 }

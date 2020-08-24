@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.std.MimeType
@@ -17,11 +16,33 @@ object fileLoaderMod extends js.Object {
   class FileLoader () extends Loader {
     def this(manager: LoadingManager) = this()
     var mimeType: js.UndefOr[MimeType] = js.native
-    var requestHeader: js.UndefOr[StringDictionary[String]] = js.native
     var responseType: js.UndefOr[String] = js.native
     var withCredentials: js.UndefOr[String] = js.native
     def load(url: String): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ ErrorEvent, Unit]
+    ): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function1[/* request */ ProgressEvent, Unit]
+    ): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function1[/* request */ ProgressEvent, Unit],
+      onError: js.Function1[/* event */ ErrorEvent, Unit]
+    ): js.Any = js.native
     def load(url: String, onLoad: js.Function1[/* response */ String | js.typedarray.ArrayBuffer, Unit]): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.Function1[/* response */ String | js.typedarray.ArrayBuffer, Unit],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ ErrorEvent, Unit]
+    ): js.Any = js.native
     def load(
       url: String,
       onLoad: js.Function1[/* response */ String | js.typedarray.ArrayBuffer, Unit],
@@ -34,9 +55,8 @@ object fileLoaderMod extends js.Object {
       onError: js.Function1[/* event */ ErrorEvent, Unit]
     ): js.Any = js.native
     def setMimeType(mimeType: MimeType): FileLoader = js.native
-    def setRequestHeader(value: StringDictionary[String]): FileLoader = js.native
     def setResponseType(responseType: String): FileLoader = js.native
-    def setWithCredentials(value: String): FileLoader = js.native
+    def setWithCredentials(value: Boolean): FileLoader = js.native
   }
   
 }

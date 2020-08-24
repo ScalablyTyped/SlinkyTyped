@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimeUnitColumn {
-  @JSImport("rc-picker/lib/panels/TimePanel/TimeUnitColumn", JSImport.Default)
+  @JSImport("rc-picker/es/panels/TimePanel/TimeUnitColumn", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -24,6 +24,8 @@ object TimeUnitColumn {
     def onSelect(value: /* value */ Double => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unitsVarargs(value: typingsSlinky.rcPicker.timeUnitColumnMod.Unit*): this.type = set("units", js.Array(value :_*))
     @scala.inline
     def units(value: js.Array[typingsSlinky.rcPicker.timeUnitColumnMod.Unit]): this.type = set("units", value.asInstanceOf[js.Any])
     @scala.inline

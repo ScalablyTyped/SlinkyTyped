@@ -1,24 +1,23 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.gaugeMod.IGaugeProps
-import typingsSlinky.antDesignPro.gaugeMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Gauge {
-  @JSImport("ant-design-pro/lib/Charts/Gauge", JSImport.Default)
+  @JSImport("ant-design-pro/lib/Charts", "Gauge")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.chartsMod.Gauge] {
     @scala.inline
     def bgColor(value: Double): this.type = set("bgColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -26,7 +25,7 @@ object Gauge {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IGaugeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

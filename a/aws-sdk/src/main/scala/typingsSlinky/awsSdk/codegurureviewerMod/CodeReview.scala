@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CodeReview extends js.Object {
   /**
-    *  The Amazon Resource Name (ARN) of the code review to describe. 
+    * The Amazon Resource Name (ARN) of the  CodeReview  object. 
     */
   var CodeReviewArn: js.UndefOr[Arn] = js.native
   /**
@@ -27,11 +27,11 @@ trait CodeReview extends js.Object {
     */
   var Name: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.Name] = js.native
   /**
-    *  The owner of the repository. 
+    * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that owns the repository. For a GitHub or Bitbucket repository, this is the username for the account that owns the repository.
     */
   var Owner: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.Owner] = js.native
   /**
-    *  The provider type of the repository association. 
+    *  The type of repository that contains the reviewed code (for example, GitHub or Bitbucket). 
     */
   var ProviderType: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.ProviderType] = js.native
   /**
@@ -47,7 +47,7 @@ trait CodeReview extends js.Object {
     */
   var SourceCodeType: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.SourceCodeType] = js.native
   /**
-    *  The state of the code review. 
+    * The valid code review states are:    Completed: The code review is complete.     Pending: The code review started and has not completed or failed.     Failed: The code review failed.     Deleting: The code review is being deleted.   
     */
   var State: js.UndefOr[JobState] = js.native
   /**
@@ -62,36 +62,74 @@ trait CodeReview extends js.Object {
 
 object CodeReview {
   @scala.inline
-  def apply(
-    CodeReviewArn: Arn = null,
-    CreatedTimeStamp: js.Date = null,
-    LastUpdatedTimeStamp: js.Date = null,
-    Metrics: Metrics = null,
-    Name: Name = null,
-    Owner: Owner = null,
-    ProviderType: ProviderType = null,
-    PullRequestId: PullRequestId = null,
-    RepositoryName: Name = null,
-    SourceCodeType: SourceCodeType = null,
-    State: JobState = null,
-    StateReason: StateReason = null,
-    Type: Type = null
-  ): CodeReview = {
+  def apply(): CodeReview = {
     val __obj = js.Dynamic.literal()
-    if (CodeReviewArn != null) __obj.updateDynamic("CodeReviewArn")(CodeReviewArn.asInstanceOf[js.Any])
-    if (CreatedTimeStamp != null) __obj.updateDynamic("CreatedTimeStamp")(CreatedTimeStamp.asInstanceOf[js.Any])
-    if (LastUpdatedTimeStamp != null) __obj.updateDynamic("LastUpdatedTimeStamp")(LastUpdatedTimeStamp.asInstanceOf[js.Any])
-    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
-    if (ProviderType != null) __obj.updateDynamic("ProviderType")(ProviderType.asInstanceOf[js.Any])
-    if (PullRequestId != null) __obj.updateDynamic("PullRequestId")(PullRequestId.asInstanceOf[js.Any])
-    if (RepositoryName != null) __obj.updateDynamic("RepositoryName")(RepositoryName.asInstanceOf[js.Any])
-    if (SourceCodeType != null) __obj.updateDynamic("SourceCodeType")(SourceCodeType.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (StateReason != null) __obj.updateDynamic("StateReason")(StateReason.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeReview]
   }
+  @scala.inline
+  implicit class CodeReviewOps[Self <: CodeReview] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCodeReviewArn(value: Arn): Self = this.set("CodeReviewArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCodeReviewArn: Self = this.set("CodeReviewArn", js.undefined)
+    @scala.inline
+    def setCreatedTimeStamp(value: js.Date): Self = this.set("CreatedTimeStamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCreatedTimeStamp: Self = this.set("CreatedTimeStamp", js.undefined)
+    @scala.inline
+    def setLastUpdatedTimeStamp(value: js.Date): Self = this.set("LastUpdatedTimeStamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLastUpdatedTimeStamp: Self = this.set("LastUpdatedTimeStamp", js.undefined)
+    @scala.inline
+    def setMetrics(value: Metrics): Self = this.set("Metrics", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMetrics: Self = this.set("Metrics", js.undefined)
+    @scala.inline
+    def setName(value: Name): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("Name", js.undefined)
+    @scala.inline
+    def setOwner(value: Owner): Self = this.set("Owner", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOwner: Self = this.set("Owner", js.undefined)
+    @scala.inline
+    def setProviderType(value: ProviderType): Self = this.set("ProviderType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProviderType: Self = this.set("ProviderType", js.undefined)
+    @scala.inline
+    def setPullRequestId(value: PullRequestId): Self = this.set("PullRequestId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePullRequestId: Self = this.set("PullRequestId", js.undefined)
+    @scala.inline
+    def setRepositoryName(value: Name): Self = this.set("RepositoryName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRepositoryName: Self = this.set("RepositoryName", js.undefined)
+    @scala.inline
+    def setSourceCodeType(value: SourceCodeType): Self = this.set("SourceCodeType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSourceCodeType: Self = this.set("SourceCodeType", js.undefined)
+    @scala.inline
+    def setState(value: JobState): Self = this.set("State", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteState: Self = this.set("State", js.undefined)
+    @scala.inline
+    def setStateReason(value: StateReason): Self = this.set("StateReason", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStateReason: Self = this.set("StateReason", js.undefined)
+    @scala.inline
+    def setType(value: Type): Self = this.set("Type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("Type", js.undefined)
+  }
+  
 }
 

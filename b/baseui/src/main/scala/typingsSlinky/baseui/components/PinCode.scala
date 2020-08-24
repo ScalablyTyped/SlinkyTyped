@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
@@ -58,9 +57,9 @@ object PinCode {
     @scala.inline
     def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def endEnhancerFunction1(value: /* args */ SharedProps => TagMod[Any]): this.type = set("endEnhancer", js.Any.fromFunction1(value))
+    def endEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("endEnhancer", js.Any.fromFunction1(value))
     @scala.inline
-    def endEnhancer(value: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
@@ -78,6 +77,8 @@ object PinCode {
     @scala.inline
     def manageFocus(value: Boolean): this.type = set("manageFocus", value.asInstanceOf[js.Any])
     @scala.inline
+    def mask(value: Boolean | String): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
     @scala.inline
     def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
@@ -94,8 +95,6 @@ object PinCode {
     @scala.inline
     def onKeyUp(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
-    def overrides(value: InputOverrides with PinCodeOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
-    @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -110,17 +109,21 @@ object PinCode {
     @scala.inline
     def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def startEnhancerFunction1(value: /* args */ SharedProps => TagMod[Any]): this.type = set("startEnhancer", js.Any.fromFunction1(value))
+    def startEnhancerFunction1(value: /* args */ SharedProps => ReactElement): this.type = set("startEnhancer", js.Any.fromFunction1(value))
     @scala.inline
-    def startEnhancer(value: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PinCodeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: Values => Unit, values: js.Array[String]): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), values = values.asInstanceOf[js.Any])
+  def apply(
+    onChange: Values => Unit,
+    overrides: js.UndefOr[InputOverrides] with js.UndefOr[PinCodeOverrides],
+    values: js.Array[String]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), overrides = overrides.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[PinCodeProps]))
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TeamworkIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TeamworkIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TeamworkIcon")
   @js.native
   object component extends js.Object
   

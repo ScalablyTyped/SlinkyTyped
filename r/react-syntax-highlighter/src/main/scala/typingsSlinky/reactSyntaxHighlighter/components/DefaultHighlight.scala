@@ -1,13 +1,13 @@
 package typingsSlinky.reactSyntaxHighlighter.components
 
-import typingsSlinky.reactSyntaxHighlighter.defaultHighlightMod.default
+import typingsSlinky.reactSyntaxHighlighter.esmDefaultHighlightMod.default
 import typingsSlinky.reactSyntaxHighlighter.mod.SyntaxHighlighterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DefaultHighlight {
-  @JSImport("react-syntax-highlighter/dist/cjs/default-highlight", JSImport.Default)
+  @JSImport("react-syntax-highlighter/dist/esm/default-highlight", JSImport.Default)
   @js.native
   object component extends js.Object
   

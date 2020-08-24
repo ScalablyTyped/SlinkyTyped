@@ -1,5 +1,8 @@
 package typingsSlinky.octokitEndpoint
 
+import typingsSlinky.octokitTypes.endpointDefaultsMod.EndpointDefaults
+import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
+import typingsSlinky.octokitTypes.routeMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,27 +10,17 @@ import scala.scalajs.js.annotation._
 @JSImport("@octokit/endpoint/dist-types/merge", JSImport.Namespace)
 @js.native
 object mergeMod extends js.Object {
-  def merge(): js.Any = js.native
-  def merge(
-    defaults: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointDefaults */ js.Any
-  ): js.Any = js.native
-  def merge(
-    defaults: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointDefaults */ js.Any,
-    route: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Route */ /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any
-  ): js.Any = js.native
-  def merge(
-    defaults: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointDefaults */ js.Any,
-    route: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Route */ /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any
-  ): js.Any = js.native
-  def merge(
-    defaults: Null,
-    route: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Route */ /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any
-  ): js.Any = js.native
-  def merge(
-    defaults: Null,
-    route: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Route */ /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any
-  ): js.Any = js.native
+  def merge(): EndpointDefaults = js.native
+  def merge(defaults: Null, route: js.UndefOr[scala.Nothing], options: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: Null, route: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: Null, route: RequestParameters, options: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: Null, route: Route): EndpointDefaults = js.native
+  def merge(defaults: Null, route: Route, options: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: EndpointDefaults): EndpointDefaults = js.native
+  def merge(defaults: EndpointDefaults, route: js.UndefOr[scala.Nothing], options: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: EndpointDefaults, route: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: EndpointDefaults, route: RequestParameters, options: RequestParameters): EndpointDefaults = js.native
+  def merge(defaults: EndpointDefaults, route: Route): EndpointDefaults = js.native
+  def merge(defaults: EndpointDefaults, route: Route, options: RequestParameters): EndpointDefaults = js.native
 }
 

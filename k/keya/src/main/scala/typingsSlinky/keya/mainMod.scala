@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("keya/out/browser/main", JSImport.Namespace)
 @js.native
 object mainMod extends js.Object {
-  def store(name: String): js.Promise[default | typingsSlinky.keya.localhostMod.default] = js.native
+  def store[T](name: String): js.Promise[default[T] | typingsSlinky.keya.localhostMod.default[T]] = js.native
   def stores(): js.Promise[js.Array[String]] = js.native
 }
 

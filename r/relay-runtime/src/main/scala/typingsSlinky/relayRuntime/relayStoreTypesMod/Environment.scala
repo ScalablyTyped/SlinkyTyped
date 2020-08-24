@@ -1,7 +1,7 @@
 package typingsSlinky.relayRuntime.relayStoreTypesMod
 
 import typingsSlinky.relayRuntime.anon.CacheConfig
-import typingsSlinky.relayRuntime.anon.Operation
+import typingsSlinky.relayRuntime.anon.OptimisticResponse
 import typingsSlinky.relayRuntime.anon.Source
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.Network
@@ -15,6 +15,10 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Environment extends js.Object {
+  /**
+    * Extra information attached to the environment instance
+    */
+  var options: js.Any = js.native
   /**
     * Apply an optimistic mutation response and/or updater. The mutation can be
     * reverted by calling `dispose()` on the returned value.
@@ -67,7 +71,7 @@ trait Environment extends js.Object {
     * the result is subscribed to:
     * environment.executeMutation({...}).subscribe({...}).
     */
-  def executeMutation(hasOperationOptimisticUpdaterOptimisticResponseUpdaterUploadables: Operation): RelayObservable[GraphQLResponse] = js.native
+  def executeMutation(hasOperationOptimisticUpdaterOptimisticResponseUpdaterUploadables: OptimisticResponse): RelayObservable[GraphQLResponse] = js.native
   /**
     * Returns an Observable of GraphQLResponse resulting from executing the
     * provided Query or Subscription operation responses, the result of which is

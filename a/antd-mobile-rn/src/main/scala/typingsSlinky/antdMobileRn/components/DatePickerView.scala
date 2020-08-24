@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobileRn.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -10,27 +9,26 @@ import typingsSlinky.antdMobileRn.antdMobileRnStrings.datetime
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.month
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.time
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.year
-import typingsSlinky.antdMobileRn.datePickerViewMod.default
 import typingsSlinky.antdMobileRn.datePickerViewPropsTypeMod.DatePickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DatePickerView {
-  @JSImport("antd-mobile-rn/lib/date-picker-view/date-picker-view", JSImport.Default)
+  @JSImport("antd-mobile-rn", "DatePickerView")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.DatePickerView] {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
     @scala.inline
-    def dismissText(value: TagMod[Any]): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    def dismissText(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
     @scala.inline
     def extra(value: String): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,7 +48,7 @@ object DatePickerView {
     @scala.inline
     def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def okText(value: TagMod[Any]): this.type = set("okText", value.asInstanceOf[js.Any])
+    def okText(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: /* value */ js.Date => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -64,7 +62,7 @@ object DatePickerView {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerTypes(value: String): this.type = set("triggerTypes", value.asInstanceOf[js.Any])
     @scala.inline

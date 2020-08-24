@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UneditableSolidMirrored12Icon {
-  @JSImport("@fluentui/react-icons/lib/components/UneditableSolidMirrored12Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UneditableSolidMirrored12Icon")
   @js.native
   object component extends js.Object
   

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BoldIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BoldIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BoldIcon")
   @js.native
   object component extends js.Object
   

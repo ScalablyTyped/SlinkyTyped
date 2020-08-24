@@ -10,18 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChangeTableBordersAndShadingCommand")
 @js.native
 class ChangeTableBordersAndShadingCommand ()
-  extends typingsSlinky.devexpressWeb.ChangeTableBordersAndShadingCommand {
-  /**
-    * Executes the ChangeTableBordersAndShadingCommand command with the specified parameters. true if the command has been successfully executed; false if the command execution has failed.
-    * @param settings A TableBorderSettings object with settings specifying table borders.
-    * @param applyToWholeTable true to apply the border settings to the whole table, false to apply the border settings to the selected cells.
-    */
-  /* CompleteClass */
-  override def execute(settings: typingsSlinky.devexpressWeb.TableBordersSettings, applyToWholeTable: Boolean): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.CommandState[typingsSlinky.devexpressWeb.TableBordersSettings] = js.native
-}
+  extends typingsSlinky.devexpressWeb.ChangeTableBordersAndShadingCommand
 

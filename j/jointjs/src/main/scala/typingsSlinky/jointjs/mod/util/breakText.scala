@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object breakText extends js.Object {
   def apply(text: String, size: Height): String = js.native
+  def apply(text: String, size: Height, attrs: js.UndefOr[scala.Nothing], opt: Ellipsis): String = js.native
   def apply(text: String, size: Height, attrs: NativeSVGAttributes): String = js.native
   def apply(text: String, size: Height, attrs: NativeSVGAttributes, opt: Ellipsis): String = js.native
 }

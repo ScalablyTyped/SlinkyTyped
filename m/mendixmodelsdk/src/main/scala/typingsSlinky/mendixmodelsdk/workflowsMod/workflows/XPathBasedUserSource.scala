@@ -1,0 +1,59 @@
+package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
+
+import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * In version 8.11.0: introduced
+  */
+@JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.XPathBasedUserSource")
+@js.native
+class XPathBasedUserSource protected () extends UserSource {
+  def this(
+    model: AbstractModel,
+    structureTypeName: String,
+    id: String,
+    isPartial: Boolean,
+    unit: ModelUnit,
+    container: AbstractElement
+  ) = this()
+  @JSName("model")
+  var model_FXPathBasedUserSource: IModel = js.native
+  /**
+    * The value of this property is conceptually of type xPathConstraints.XPathConstraint.
+    */
+  def xPathConstraint: String = js.native
+  def xPathConstraint_=(newValue: String): Unit = js.native
+}
+
+/* static members */
+@JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.XPathBasedUserSource")
+@js.native
+object XPathBasedUserSource extends js.Object {
+  var structureTypeName: String = js.native
+  var versionInfo: StructureVersionInfo = js.native
+  /**
+    * Creates and returns a new XPathBasedUserSource instance in the SDK and on the server.
+    * Expects one argument: the IModel object the instance will "live on".
+    * After creation, assign or add this instance to a property that accepts this kind of objects.
+    */
+  def create(model: IModel): XPathBasedUserSource = js.native
+  /**
+    * Creates and returns a new XPathBasedUserSource instance in the SDK and on the server.
+    * The new XPathBasedUserSource will be automatically stored in the 'userSource' property
+    * of the parent UserTask element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.11.0 and higher
+    */
+  def createIn(container: UserTask): XPathBasedUserSource = js.native
+}
+

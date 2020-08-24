@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StrikethroughIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StrikethroughIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StrikethroughIcon")
   @js.native
   object component extends js.Object
   

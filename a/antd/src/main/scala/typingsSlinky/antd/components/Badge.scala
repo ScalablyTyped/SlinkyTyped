@@ -1,12 +1,12 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.badgeMod.BadgeProps
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
+import typingsSlinky.antd.ribbonMod.RibbonProps
 import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Badge {
-  @JSImport("antd/lib/badge", JSImport.Default)
+  @JSImport("antd", "Badge")
   @js.native
   object component extends js.Object
   
@@ -29,7 +29,7 @@ object Badge {
     @scala.inline
     def countReactElement(value: ReactElement): this.type = set("count", value.asInstanceOf[js.Any])
     @scala.inline
-    def count(value: TagMod[Any]): this.type = set("count", value.asInstanceOf[js.Any])
+    def count(value: ReactElement): this.type = set("count", value.asInstanceOf[js.Any])
     @scala.inline
     def dot(value: Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,12 +49,21 @@ object Badge {
     @scala.inline
     def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Badge.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Ribbon {
+    @JSImport("antd", "Badge.Ribbon")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: RibbonProps): SharedBuilder_RibbonProps1687579282 = new SharedBuilder_RibbonProps1687579282(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Ribbon.type): SharedBuilder_RibbonProps1687579282 = new SharedBuilder_RibbonProps1687579282(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

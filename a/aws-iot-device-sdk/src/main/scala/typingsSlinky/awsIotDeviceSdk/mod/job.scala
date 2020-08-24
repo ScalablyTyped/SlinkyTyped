@@ -33,6 +33,7 @@ trait job extends js.Object {
     * @param callback - function(err) optional callback for when the operation completes, err is null if no error occurred
     */
   def failed(): Unit = js.native
+  def failed(statusDetails: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def failed(statusDetails: statusDetails): Unit = js.native
   def failed(statusDetails: statusDetails, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   /**
@@ -42,6 +43,7 @@ trait job extends js.Object {
     * @param callback - function(err) optional callback for when the operation completes, err is null if no error occurred
     */
   def inProgress(): Unit = js.native
+  def inProgress(statusDetails: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def inProgress(statusDetails: statusDetails): Unit = js.native
   def inProgress(statusDetails: statusDetails, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   /**
@@ -51,6 +53,7 @@ trait job extends js.Object {
     * @param callback - function(err) optional callback for when the operation completes, err is null if no error occurred
     */
   def succeeded(): Unit = js.native
+  def succeeded(statusDetails: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def succeeded(statusDetails: statusDetails): Unit = js.native
   def succeeded(statusDetails: statusDetails, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }

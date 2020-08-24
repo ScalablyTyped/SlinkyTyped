@@ -4,20 +4,21 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.NextMonth
 import typingsSlinky.fundamentalReact.calendarMod.CalendarProps
-import typingsSlinky.fundamentalReact.calendarMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Calendar {
-  @JSImport("fundamental-react/lib/Calendar/Calendar", JSImport.Default)
+  @JSImport("fundamental-react", "Calendar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.Calendar] {
+    @scala.inline
+    def blockedDatesVarargs(value: js.Date*): this.type = set("blockedDates", js.Array(value :_*))
     @scala.inline
     def blockedDates(value: js.Array[js.Date]): this.type = set("blockedDates", value.asInstanceOf[js.Any])
     @scala.inline
@@ -31,9 +32,13 @@ object Calendar {
     @scala.inline
     def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
     @scala.inline
+    def disableWeekdayVarargs(value: String*): this.type = set("disableWeekday", js.Array(value :_*))
+    @scala.inline
     def disableWeekday(value: js.Array[String]): this.type = set("disableWeekday", value.asInstanceOf[js.Any])
     @scala.inline
     def disableWeekends(value: Boolean): this.type = set("disableWeekends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
     @scala.inline
     def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
     @scala.inline

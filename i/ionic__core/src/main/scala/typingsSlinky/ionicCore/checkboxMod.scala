@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.checkboxInterfaceMod.CheckboxChangeEventDetail
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 object checkboxMod extends js.Object {
   @js.native
   class Checkbox () extends ComponentInterface {
-    var buttonEl: js.UndefOr[js.Any] = js.native
+    var buttonEl: js.Any = js.native
     /**
       * If `true`, the checkbox is selected.
       */

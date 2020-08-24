@@ -1,16 +1,22 @@
 package typingsSlinky.pulumiAws.topicRuleMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleCloudwatchAlarm
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleCloudwatchMetric
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleDynamodb
+import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleDynamodbv2
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleElasticsearch
+import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleErrorAction
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleFirehose
+import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleIotAnalytic
+import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleIotEvent
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleKinesis
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleLambda
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleRepublish
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleS3
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleSns
 import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleSqs
+import typingsSlinky.pulumiAws.outputMod.iot.TopicRuleStepFunction
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -43,12 +49,19 @@ class TopicRule protected () extends CustomResource {
     */
   val description: Output_[js.UndefOr[String]] = js.native
   val dynamodb: Output_[js.UndefOr[TopicRuleDynamodb]] = js.native
+  val dynamodbv2s: Output_[js.UndefOr[js.Array[TopicRuleDynamodbv2]]] = js.native
   val elasticsearch: Output_[js.UndefOr[TopicRuleElasticsearch]] = js.native
   /**
     * Specifies whether the rule is enabled.
     */
   val enabled: Output_[Boolean] = js.native
+  /**
+    * Configuration block with error action to be associated with the rule. See the documentation for `cloudwatchAlarm`, `cloudwatchMetric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iotAnalytics`, `iotEvents`, `kinesis`, `lambda`, `republish`, `s3`, `stepFunctions`, `sns`, `sqs` configuration blocks for further configuration details.
+    */
+  val errorAction: Output_[js.UndefOr[TopicRuleErrorAction]] = js.native
   val firehose: Output_[js.UndefOr[TopicRuleFirehose]] = js.native
+  val iotAnalytics: Output_[js.UndefOr[js.Array[TopicRuleIotAnalytic]]] = js.native
+  val iotEvents: Output_[js.UndefOr[js.Array[TopicRuleIotEvent]]] = js.native
   val kinesis: Output_[js.UndefOr[TopicRuleKinesis]] = js.native
   val lambda: Output_[js.UndefOr[TopicRuleLambda]] = js.native
   /**
@@ -67,6 +80,11 @@ class TopicRule protected () extends CustomResource {
     */
   val sqlVersion: Output_[String] = js.native
   val sqs: Output_[js.UndefOr[TopicRuleSqs]] = js.native
+  val stepFunctions: Output_[js.UndefOr[js.Array[TopicRuleStepFunction]]] = js.native
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
 }
 
 /* static members */
@@ -80,8 +98,10 @@ object TopicRule extends js.Object {
     * @param name The _unique_ name of the resulting resource.
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param state Any extra arguments used during the lookup.
+    * @param opts Optional settings to control the behavior of the CustomResource.
     */
   def get(name: String, id: Input[ID]): TopicRule = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): TopicRule = js.native
   def get(name: String, id: Input[ID], state: TopicRuleState): TopicRule = js.native
   def get(name: String, id: Input[ID], state: TopicRuleState, opts: CustomResourceOptions): TopicRule = js.native
   /**

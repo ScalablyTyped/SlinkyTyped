@@ -33,29 +33,20 @@ object Filter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIsActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutIsActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(js.undefined)
-        ret
-    }
+    def setIsActive(value: Boolean): Self = this.set("isActive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStreamTypes(value: js.Array[StreamType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIsActive: Self = this.set("isActive", js.undefined)
     @scala.inline
-    def withoutStreamTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamTypes")(js.undefined)
-        ret
-    }
+    def setStreamTypesVarargs(value: StreamType*): Self = this.set("streamTypes", js.Array(value :_*))
+    @scala.inline
+    def setStreamTypes(value: js.Array[StreamType]): Self = this.set("streamTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStreamTypes: Self = this.set("streamTypes", js.undefined)
   }
   
 }

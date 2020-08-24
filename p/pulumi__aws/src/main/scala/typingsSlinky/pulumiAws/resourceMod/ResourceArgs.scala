@@ -1,6 +1,6 @@
 package typingsSlinky.pulumiAws.resourceMod
 
-import typingsSlinky.pulumiAws.restApiMod.RestApi
+import typingsSlinky.pulumiAws.apigatewayMod.RestApi
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,5 +28,24 @@ object ResourceArgs {
     val __obj = js.Dynamic.literal(parentId = parentId.asInstanceOf[js.Any], pathPart = pathPart.asInstanceOf[js.Any], restApi = restApi.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceArgs]
   }
+  @scala.inline
+  implicit class ResourceArgsOps[Self <: ResourceArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setParentId(value: Input[String]): Self = this.set("parentId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPathPart(value: Input[String]): Self = this.set("pathPart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRestApi(value: Input[String | RestApi]): Self = this.set("restApi", value.asInstanceOf[js.Any])
+  }
+  
 }
 

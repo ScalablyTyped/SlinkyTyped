@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BranchCompareIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BranchCompareIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BranchCompareIcon")
   @js.native
   object component extends js.Object
   

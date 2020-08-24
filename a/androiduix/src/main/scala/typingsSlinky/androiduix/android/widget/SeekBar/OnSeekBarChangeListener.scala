@@ -28,23 +28,16 @@ object OnSeekBarChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnProgressChanged(value: (typingsSlinky.androiduix.android.widget.SeekBar, Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgressChanged")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnStartTrackingTouch(value: typingsSlinky.androiduix.android.widget.SeekBar => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartTrackingTouch")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnProgressChanged(value: (typingsSlinky.androiduix.android.widget.SeekBar, Double, Boolean) => Unit): Self = this.set("onProgressChanged", js.Any.fromFunction3(value))
     @scala.inline
-    def withOnStopTrackingTouch(value: typingsSlinky.androiduix.android.widget.SeekBar => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStopTrackingTouch")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnStartTrackingTouch(value: typingsSlinky.androiduix.android.widget.SeekBar => Unit): Self = this.set("onStartTrackingTouch", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnStopTrackingTouch(value: typingsSlinky.androiduix.android.widget.SeekBar => Unit): Self = this.set("onStopTrackingTouch", js.Any.fromFunction1(value))
   }
   
 }

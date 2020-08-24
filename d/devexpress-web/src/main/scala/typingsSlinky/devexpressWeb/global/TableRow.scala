@@ -10,26 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TableRow")
 @js.native
 class TableRow ()
-  extends typingsSlinky.devexpressWeb.TableRow {
-  /**
-    * Provides information about the table row's cells.
-    */
-  /* CompleteClass */
-  override val cells: js.Array[typingsSlinky.devexpressWeb.TableCell] = js.native
-  /**
-    * Gets the text buffer interval occupied by the current table row element.
-    */
-  /* CompleteClass */
-  override val interval: typingsSlinky.devexpressWeb.Interval = js.native
-  /**
-    * Gets the table row's character length.
-    */
-  /* CompleteClass */
-  override val length: Double = js.native
-  /**
-    * Gets the table row's start position in the document.
-    */
-  /* CompleteClass */
-  override val start: Double = js.native
-}
+  extends typingsSlinky.devexpressWeb.TableRow
 

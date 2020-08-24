@@ -1,6 +1,7 @@
 package typingsSlinky.wouter.mod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.wouter.matcherMod.DefaultParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

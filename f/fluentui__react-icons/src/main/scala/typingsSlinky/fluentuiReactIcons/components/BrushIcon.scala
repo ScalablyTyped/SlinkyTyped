@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BrushIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BrushIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BrushIcon")
   @js.native
   object component extends js.Object
   

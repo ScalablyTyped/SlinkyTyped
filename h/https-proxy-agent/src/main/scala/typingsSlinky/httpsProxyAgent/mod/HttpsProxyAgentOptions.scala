@@ -1,31 +1,20 @@
 package typingsSlinky.httpsProxyAgent.mod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.agentBase.mod.AgentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in keyof std.Omit<node.url.Url & node.net.NetConnectOpts & node.tls.ConnectionOptions, 'headers' | 'secureProxy' | 'host' | 'path' | 'port'> ]:? std.Omit<node.url.Url & node.net.NetConnectOpts & node.tls.ConnectionOptions, 'headers' | 'secureProxy' | 'host' | 'path' | 'port'>[P]} */ @js.native
 trait HttpsProxyAgentOptions
-  extends /* key */ StringDictionary[js.Any] {
-  var headers: js.UndefOr[StringDictionary[String]] = js.undefined
-  var host: String
-  var port: Double
-  var secureProxy: js.UndefOr[Boolean] = js.undefined
-}
+  extends AgentOptions
+     with BaseHttpsProxyAgentOptions
 
 object HttpsProxyAgentOptions {
   @scala.inline
-  def apply(
-    host: String,
-    port: Double,
-    StringDictionary: /* name */ StringDictionary[js.Any] = null,
-    headers: StringDictionary[String] = null,
-    secureProxy: js.UndefOr[Boolean] = js.undefined
-  ): HttpsProxyAgentOptions = {
-    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(secureProxy)) __obj.updateDynamic("secureProxy")(secureProxy.get.asInstanceOf[js.Any])
+  def apply(): HttpsProxyAgentOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[HttpsProxyAgentOptions]
   }
 }

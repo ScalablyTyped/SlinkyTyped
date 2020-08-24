@@ -56,6 +56,7 @@ object Validations extends js.Object {
     * @returns Boolean true if the value passes validation.
     */
   def email(): Boolean = js.native
+  def email(config: js.UndefOr[scala.Nothing], email: String): Boolean = js.native
   def email(config: js.Any): Boolean = js.native
   def email(config: js.Any, email: String): Boolean = js.native
   /** [Method] Validates that the given value is present in the configured list
@@ -64,6 +65,7 @@ object Validations extends js.Object {
     * @returns Boolean true if the value is not present in the list.
     */
   def exclusion(): Boolean = js.native
+  def exclusion(config: js.UndefOr[scala.Nothing], value: String): Boolean = js.native
   def exclusion(config: js.Any): Boolean = js.native
   def exclusion(config: js.Any, value: String): Boolean = js.native
   /** [Method] Returns true if the given value passes validation against the configured matcher regex
@@ -72,6 +74,7 @@ object Validations extends js.Object {
     * @returns Boolean true if the value passes the format validation.
     */
   def format(): Boolean = js.native
+  def format(config: js.UndefOr[scala.Nothing], value: String): Boolean = js.native
   def format(config: js.Any): Boolean = js.native
   def format(config: js.Any, value: String): Boolean = js.native
   /** [Method] Returns the initial configuration passed to constructor
@@ -92,6 +95,7 @@ object Validations extends js.Object {
     * @returns Boolean true if the value is present in the list.
     */
   def inclusion(): Boolean = js.native
+  def inclusion(config: js.UndefOr[scala.Nothing], value: String): Boolean = js.native
   def inclusion(config: js.Any): Boolean = js.native
   def inclusion(config: js.Any, value: String): Boolean = js.native
   /** [Method] Initialize configuration for this class
@@ -106,6 +110,7 @@ object Validations extends js.Object {
     * @returns Boolean true if the value passes validation.
     */
   def length(): Boolean = js.native
+  def length(config: js.UndefOr[scala.Nothing], value: String): Boolean = js.native
   def length(config: js.Any): Boolean = js.native
   def length(config: js.Any, value: String): Boolean = js.native
   /** [Method] Validates that the given value is present
@@ -114,6 +119,7 @@ object Validations extends js.Object {
     * @returns Boolean true if validation passed.
     */
   def presence(): Boolean = js.native
+  def presence(config: js.UndefOr[scala.Nothing], value: js.Any): Boolean = js.native
   def presence(config: js.Any): Boolean = js.native
   def presence(config: js.Any, value: js.Any): Boolean = js.native
   /** [Method] Get the reference to the class from which this object was instantiated

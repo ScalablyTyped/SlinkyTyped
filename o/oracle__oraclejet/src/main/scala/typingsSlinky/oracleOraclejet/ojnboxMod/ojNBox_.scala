@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.CellDefaults
 import typingsSlinky.oracleOraclejet.anon.HighlightedCount
-import typingsSlinky.oracleOraclejet.anon.`13`
+import typingsSlinky.oracleOraclejet.anon.`15`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojnboxMod.ojNBox.Cell
@@ -146,7 +146,7 @@ trait ojNBox_[K, D] extends dvtBaseComponent[ojNBoxSettableProperties[K, D]] {
   var selection: js.Array[K] = js.native
   var selectionMode: none | single | multiple = js.native
   var styleDefaults: CellDefaults = js.native
-  var tooltip: `13`[K] = js.native
+  var tooltip: `15`[K] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
   var translations_ojNBox_ : HighlightedCount = js.native
@@ -424,7 +424,7 @@ trait ojNBox_[K, D] extends dvtBaseComponent[ojNBoxSettableProperties[K, D]] {
   @JSName("getProperty")
   def getProperty_styleDefaults(property: styleDefaults): CellDefaults = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `13`[K] = js.native
+  def getProperty_tooltip(property: tooltip): `15`[K] = js.native
   @JSName("getProperty")
   def getProperty_touchResponse(property: touchResponse): touchStart | auto = js.native
   def getRow(rowValue: String): js.Object | Null = js.native
@@ -503,7 +503,7 @@ trait ojNBox_[K, D] extends dvtBaseComponent[ojNBoxSettableProperties[K, D]] {
   @JSName("setProperty")
   def setProperty_styleDefaults(property: styleDefaults, value: CellDefaults): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `13`[K]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `15`[K]): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: HighlightedCount): Unit = js.native
 }

@@ -23,28 +23,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojLegendItemEventMap
   extends ElementEventMap
      with GlobalEventHandlersEventMap
      with DocumentAndElementEventHandlersEventMap {
-  var borderColorChanged: CustomEvent
-  var categoriesChanged: CustomEvent
-  var categoryVisibilityChanged: CustomEvent
-  var colorChanged: CustomEvent
-  var drillingChanged: CustomEvent
-  var lineStyleChanged: CustomEvent
-  var lineWidthChanged: CustomEvent
-  var markerColorChanged: CustomEvent
-  var markerShapeChanged: CustomEvent
-  var markerSvgClassNameChanged: CustomEvent
-  var markerSvgStyleChanged: CustomEvent
-  var patternChanged: CustomEvent
-  var shortDescChanged: CustomEvent
-  var sourceChanged: CustomEvent
-  var svgClassNameChanged: CustomEvent
-  var svgStyleChanged: CustomEvent
-  var symbolTypeChanged: CustomEvent
-  var textChanged: CustomEvent
+  var borderColorChanged: CustomEvent = js.native
+  var categoriesChanged: CustomEvent = js.native
+  var categoryVisibilityChanged: CustomEvent = js.native
+  var colorChanged: CustomEvent = js.native
+  var drillingChanged: CustomEvent = js.native
+  var lineStyleChanged: CustomEvent = js.native
+  var lineWidthChanged: CustomEvent = js.native
+  var markerColorChanged: CustomEvent = js.native
+  var markerShapeChanged: CustomEvent = js.native
+  var markerSvgClassNameChanged: CustomEvent = js.native
+  var markerSvgStyleChanged: CustomEvent = js.native
+  var patternChanged: CustomEvent = js.native
+  var shortDescChanged: CustomEvent = js.native
+  var sourceChanged: CustomEvent = js.native
+  var svgClassNameChanged: CustomEvent = js.native
+  var svgStyleChanged: CustomEvent = js.native
+  var symbolTypeChanged: CustomEvent = js.native
+  var textChanged: CustomEvent = js.native
 }
 
 object ojLegendItemEventMap {
@@ -164,5 +165,54 @@ object ojLegendItemEventMap {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], borderColorChanged = borderColorChanged.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], categoriesChanged = categoriesChanged.asInstanceOf[js.Any], categoryVisibilityChanged = categoryVisibilityChanged.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], colorChanged = colorChanged.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], copy = copy.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], cut = cut.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drillingChanged = drillingChanged.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], fullscreenchange = fullscreenchange.asInstanceOf[js.Any], fullscreenerror = fullscreenerror.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], lineStyleChanged = lineStyleChanged.asInstanceOf[js.Any], lineWidthChanged = lineWidthChanged.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], markerColorChanged = markerColorChanged.asInstanceOf[js.Any], markerShapeChanged = markerShapeChanged.asInstanceOf[js.Any], markerSvgClassNameChanged = markerSvgClassNameChanged.asInstanceOf[js.Any], markerSvgStyleChanged = markerSvgStyleChanged.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], paste = paste.asInstanceOf[js.Any], patternChanged = patternChanged.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], shortDescChanged = shortDescChanged.asInstanceOf[js.Any], sourceChanged = sourceChanged.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], svgClassNameChanged = svgClassNameChanged.asInstanceOf[js.Any], svgStyleChanged = svgStyleChanged.asInstanceOf[js.Any], symbolTypeChanged = symbolTypeChanged.asInstanceOf[js.Any], textChanged = textChanged.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojLegendItemEventMap]
   }
+  @scala.inline
+  implicit class ojLegendItemEventMapOps[Self <: ojLegendItemEventMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBorderColorChanged(value: CustomEvent): Self = this.set("borderColorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCategoriesChanged(value: CustomEvent): Self = this.set("categoriesChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCategoryVisibilityChanged(value: CustomEvent): Self = this.set("categoryVisibilityChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setColorChanged(value: CustomEvent): Self = this.set("colorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDrillingChanged(value: CustomEvent): Self = this.set("drillingChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLineStyleChanged(value: CustomEvent): Self = this.set("lineStyleChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLineWidthChanged(value: CustomEvent): Self = this.set("lineWidthChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMarkerColorChanged(value: CustomEvent): Self = this.set("markerColorChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMarkerShapeChanged(value: CustomEvent): Self = this.set("markerShapeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMarkerSvgClassNameChanged(value: CustomEvent): Self = this.set("markerSvgClassNameChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMarkerSvgStyleChanged(value: CustomEvent): Self = this.set("markerSvgStyleChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPatternChanged(value: CustomEvent): Self = this.set("patternChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShortDescChanged(value: CustomEvent): Self = this.set("shortDescChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSourceChanged(value: CustomEvent): Self = this.set("sourceChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSvgClassNameChanged(value: CustomEvent): Self = this.set("svgClassNameChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSvgStyleChanged(value: CustomEvent): Self = this.set("svgStyleChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSymbolTypeChanged(value: CustomEvent): Self = this.set("symbolTypeChanged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTextChanged(value: CustomEvent): Self = this.set("textChanged", value.asInstanceOf[js.Any])
+  }
+  
 }
 

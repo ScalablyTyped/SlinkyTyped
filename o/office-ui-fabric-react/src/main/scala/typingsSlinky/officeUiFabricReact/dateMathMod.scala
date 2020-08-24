@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
-import typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.std.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +18,13 @@ object dateMathMod extends js.Object {
   def compareDatePart(date1: js.Date, date2: js.Date): Number = js.native
   def compareDates(date1: js.Date, date2: js.Date): Boolean = js.native
   def getDateRangeArray(date: js.Date, dateRangeType: DateRangeType, firstDayOfWeek: DayOfWeek): js.Array[js.Date] = js.native
+  def getDateRangeArray(
+    date: js.Date,
+    dateRangeType: DateRangeType,
+    firstDayOfWeek: DayOfWeek,
+    workWeekDays: js.UndefOr[scala.Nothing],
+    daysToSelectInDayView: Double
+  ): js.Array[js.Date] = js.native
   def getDateRangeArray(
     date: js.Date,
     dateRangeType: DateRangeType,

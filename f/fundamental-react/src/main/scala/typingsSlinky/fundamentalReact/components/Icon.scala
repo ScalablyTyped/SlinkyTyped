@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Icon {
-  @JSImport("fundamental-react/lib/Icon/Icon", JSImport.Default)
+  @JSImport("fundamental-react", "Icon")
   @js.native
   object component extends js.Object
   

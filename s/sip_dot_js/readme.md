@@ -1,7 +1,7 @@
 
 # Scala.js typings for sip_dot_js
 
-Typings are for version 0.15.11
+Typings are for version 0.17.1
 
 ## Library description:
 A simple, intuitive, and powerful JavaScript signaling library

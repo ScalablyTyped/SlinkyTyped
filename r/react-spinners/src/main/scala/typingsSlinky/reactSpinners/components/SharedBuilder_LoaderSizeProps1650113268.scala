@@ -2,6 +2,7 @@ package typingsSlinky.reactSpinners.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactSpinners.interfacesMod.LengthType
 import typingsSlinky.reactSpinners.interfacesMod.PrecompiledCss
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,8 +19,6 @@ class SharedBuilder_LoaderSizeProps1650113268[R <: js.Object] (val args: js.Arra
   @scala.inline
   def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
   @scala.inline
-  def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
-  @scala.inline
-  def sizeUnit(value: String): this.type = set("sizeUnit", value.asInstanceOf[js.Any])
+  def size(value: LengthType): this.type = set("size", value.asInstanceOf[js.Any])
 }
 

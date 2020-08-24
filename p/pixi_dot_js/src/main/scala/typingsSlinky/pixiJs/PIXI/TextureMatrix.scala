@@ -25,6 +25,12 @@ import scala.scalajs.js.annotation._
 trait TextureMatrix extends js.Object {
   /**
     * Tracks Texture frame changes
+    * @member {number} PIXI.TextureMatrix#_textureID
+    * @protected
+    */
+  var _textureID: Double = js.native
+  /**
+    * Tracks Texture frame changes
     * @member {number} PIXI.TextureMatrix#_updateID
     * @protected
     */
@@ -81,7 +87,7 @@ trait TextureMatrix extends js.Object {
   val uClampOffset: js.typedarray.Float32Array = js.native
   /**
     * Multiplies uvs array to transform
-    * @param {Float32Array} uvs mesh uvs
+    * @param {Float32Array} uvs - mesh uvs
     * @param {Float32Array} [out=uvs] output
     * @returns {Float32Array} output
     */
@@ -89,7 +95,7 @@ trait TextureMatrix extends js.Object {
   def multiplyUvs(uvs: js.typedarray.Float32Array, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
   /**
     * updates matrices if texture was changed
-    * @param {boolean} [forceUpdate=false] if true, matrices will be updated any case
+    * @param {boolean} [forceUpdate=false] - if true, matrices will be updated any case
     * @returns {boolean} whether or not it was updated
     */
   def update(): Boolean = js.native

@@ -22,6 +22,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -209,6 +210,8 @@ class SharedBuilder_UncontrolledDropdownProps1809112045[R <: js.Object, T] (val 
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
+  @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
@@ -448,7 +451,7 @@ class SharedBuilder_UncontrolledDropdownProps1809112045[R <: js.Object, T] (val 
   @scala.inline
   def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
   @scala.inline
-  def tag(value: String | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+  def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
   @scala.inline
   def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline

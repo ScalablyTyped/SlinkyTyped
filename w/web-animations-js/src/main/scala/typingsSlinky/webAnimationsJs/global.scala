@@ -16,6 +16,7 @@ object global extends js.Object {
   class Animation ()
     extends typingsSlinky.webAnimationsJs.Animation {
     def this(effect: AnimationEffect) = this()
+    def this(effect: js.UndefOr[scala.Nothing], timeline: AnimationTimeline) = this()
     def this(effect: Null, timeline: AnimationTimeline) = this()
     def this(effect: AnimationEffect, timeline: AnimationTimeline) = this()
   }
@@ -25,26 +26,6 @@ object global extends js.Object {
     extends typingsSlinky.webAnimationsJs.AnimationPlaybackEvent {
     def this(`type`: String) = this()
     def this(`type`: String, eventInitDict: AnimationPlaybackEventInit) = this()
-    /* CompleteClass */
-    override var bubbles: Boolean = js.native
-    /* CompleteClass */
-    override var cancelable: Boolean = js.native
-    /* CompleteClass */
-    override var currentTarget: typingsSlinky.webAnimationsJs.Animation = js.native
-    /* CompleteClass */
-    override val currentTime: Double | Null = js.native
-    /* CompleteClass */
-    override var defaultPrevented: Boolean = js.native
-    /* CompleteClass */
-    override var eventPhase: Double = js.native
-    /* CompleteClass */
-    override var target: typingsSlinky.webAnimationsJs.Animation = js.native
-    /* CompleteClass */
-    override var timeStamp: Double = js.native
-    /* CompleteClass */
-    override val timelineTime: Double | Null = js.native
-    /* CompleteClass */
-    override var `type`: String = js.native
   }
   
   @js.native
@@ -62,7 +43,7 @@ object global extends js.Object {
     extends Instantiable0[typingsSlinky.webAnimationsJs.Animation]
        with Instantiable1[/* effect */ AnimationEffect, typingsSlinky.webAnimationsJs.Animation]
        with Instantiable2[
-          (/* effect */ AnimationEffect) | (/* effect */ Null), 
+          js.UndefOr[(/* effect */ AnimationEffect) | (/* effect */ Null)], 
           /* timeline */ AnimationTimeline, 
           typingsSlinky.webAnimationsJs.Animation
         ]

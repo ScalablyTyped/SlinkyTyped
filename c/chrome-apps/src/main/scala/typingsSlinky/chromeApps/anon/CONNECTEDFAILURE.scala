@@ -25,17 +25,14 @@ object CONNECTEDFAILURE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCONNECTED(value: connected__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECTED")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFAILURE(value: failure_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILURE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCONNECTED(value: connected__): Self = this.set("CONNECTED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFAILURE(value: failure_): Self = this.set("FAILURE", value.asInstanceOf[js.Any])
   }
   
 }

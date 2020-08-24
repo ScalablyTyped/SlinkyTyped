@@ -17,9 +17,11 @@ object Stop {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Stop] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def offset(value: NumberProp): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stopColorVarargs(value: Double*): this.type = set("stopColor", js.Array(value :_*))
     @scala.inline
     def stopColor(value: Color): this.type = set("stopColor", value.asInstanceOf[js.Any])
     @scala.inline

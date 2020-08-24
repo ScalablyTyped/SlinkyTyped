@@ -1,5 +1,6 @@
 package typingsSlinky.cathoQuantum.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
@@ -22,6 +23,14 @@ object Tooltip {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiline(value: Boolean): this.type = set("multiline", value.asInstanceOf[js.Any])
     @scala.inline
     def placement(value: top | right | bottom | left): this.type = set("placement", value.asInstanceOf[js.Any])
     @scala.inline

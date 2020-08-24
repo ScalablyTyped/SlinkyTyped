@@ -3,6 +3,7 @@ package typingsSlinky.jointjs
 import typingsSlinky.jointjs.mod.Vectorizer.TextVerticalAnchor
 import typingsSlinky.jointjs.mod.anchors.AnchorArguments
 import typingsSlinky.jointjs.mod.anchors.AnchorType
+import typingsSlinky.jointjs.mod.connectionPoints.ConnectionPointAlignment
 import typingsSlinky.jointjs.mod.connectionPoints.ConnectionPointArguments
 import typingsSlinky.jointjs.mod.connectionPoints.ConnectionPointType
 import typingsSlinky.jointjs.mod.connectors.ConnectorArguments
@@ -97,6 +98,7 @@ object jointjsStrings {
   @js.native
   sealed trait bottom
     extends AnchorType
+       with ConnectionPointAlignment
        with Direction
        with OrthogonalDirection
        with RectangleSide
@@ -222,6 +224,7 @@ object jointjsStrings {
   @js.native
   sealed trait left
     extends AnchorType
+       with ConnectionPointAlignment
        with Direction
        with OrthogonalDirection
        with RectangleSide
@@ -326,6 +329,7 @@ object jointjsStrings {
   @js.native
   sealed trait right
     extends AnchorType
+       with ConnectionPointAlignment
        with Direction
        with OrthogonalDirection
        with RectangleSide
@@ -386,6 +390,7 @@ object jointjsStrings {
   @js.native
   sealed trait top
     extends AnchorType
+       with ConnectionPointAlignment
        with Direction
        with OrthogonalDirection
        with RectangleSide

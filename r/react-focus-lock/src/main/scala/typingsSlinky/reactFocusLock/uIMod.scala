@@ -1,6 +1,8 @@
 package typingsSlinky.reactFocusLock
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactFocusLock.anon.ReactFocusLockPropsReactN
 import typingsSlinky.reactFocusLock.interfacesMod.AutoFocusProps
@@ -33,5 +35,6 @@ object uIMod extends js.Object {
     * Traps Focus inside a Lock
     */
   val default: ReactComponentClass[ReactFocusLockPropsReactN] = js.native
+  def useFocusInside(node: ReactRef[HTMLElement]): Unit = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.navBarPropsTypeMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antdMobile.antdMobileStrings.dark
 import typingsSlinky.antdMobile.antdMobileStrings.light
@@ -12,39 +12,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavBarProps
   extends AllHTMLAttributes[HTMLDivElement]
      with ClassAttributes[HTMLDivElement] {
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
-  var leftContent: js.UndefOr[TagMod[Any]] = js.undefined
-  var mode: js.UndefOr[dark | light] = js.undefined
-  var onLeftClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var rightContent: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.native
+  var leftContent: js.UndefOr[ReactElement] = js.native
+  var mode: js.UndefOr[dark | light] = js.native
+  var onLeftClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var rightContent: js.UndefOr[ReactElement] = js.native
 }
 
 object NavBarProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[HTMLDivElement] = null,
-    ClassAttributes: ClassAttributes[HTMLDivElement] = null,
-    icon: TagMod[Any] = null,
-    leftContent: TagMod[Any] = null,
-    mode: dark | light = null,
-    onLeftClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    prefixCls: String = null,
-    rightContent: TagMod[Any] = null
-  ): NavBarProps = {
+  def apply(): NavBarProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (leftContent != null) __obj.updateDynamic("leftContent")(leftContent.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onLeftClick != null) __obj.updateDynamic("onLeftClick")(js.Any.fromFunction1(onLeftClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (rightContent != null) __obj.updateDynamic("rightContent")(rightContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavBarProps]
   }
+  @scala.inline
+  implicit class NavBarPropsOps[Self <: NavBarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setLeftContentReactElement(value: ReactElement): Self = this.set("leftContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLeftContent(value: ReactElement): Self = this.set("leftContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLeftContent: Self = this.set("leftContent", js.undefined)
+    @scala.inline
+    def setMode(value: dark | light): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setOnLeftClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onLeftClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLeftClick: Self = this.set("onLeftClick", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRightContentReactElement(value: ReactElement): Self = this.set("rightContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRightContent(value: ReactElement): Self = this.set("rightContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRightContent: Self = this.set("rightContent", js.undefined)
+  }
+  
 }
 

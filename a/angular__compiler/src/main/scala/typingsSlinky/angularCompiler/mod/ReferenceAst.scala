@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ReferenceAst")
 @js.native
 class ReferenceAst protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ReferenceAst {
+  extends typingsSlinky.angularCompiler.compilerMod.ReferenceAst {
   def this(
     name: String,
     value: CompileTokenMetadata,

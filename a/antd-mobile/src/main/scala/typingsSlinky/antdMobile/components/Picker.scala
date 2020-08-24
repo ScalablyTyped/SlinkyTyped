@@ -1,11 +1,9 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.abstractPickerMod.AbstractPickerProps
-import typingsSlinky.antdMobile.pickerMod.default
 import typingsSlinky.antdMobile.pickerPropsTypeMod.PickerData
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcCascader.cascaderTypesMod.CascaderValue
@@ -14,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Picker {
-  @JSImport("antd-mobile/lib/picker", JSImport.Default)
+  @JSImport("antd-mobile", "Picker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Picker] {
     @scala.inline
     def WrapComponent(value: js.Any): this.type = set("WrapComponent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,7 +45,7 @@ object Picker {
     @scala.inline
     def extra(value: String): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def format(value: /* values */ js.Array[TagMod[Any]] => String | js.Array[TagMod[Any]]): this.type = set("format", js.Any.fromFunction1(value))
+    def format(value: /* values */ js.Array[ReactElement] => String | js.Array[ReactElement]): this.type = set("format", js.Any.fromFunction1(value))
     @scala.inline
     def indicatorStyle(value: js.Any): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -94,6 +92,8 @@ object Picker {
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerType(value: String): this.type = set("triggerType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[String | Double]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

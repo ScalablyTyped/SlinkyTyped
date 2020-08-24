@@ -17,7 +17,9 @@ object FieldSet {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.formol.mod.FieldSet] {
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def choicesVarargs(value: js.Any*): this.type = set("choices", js.Array(value :_*))
     @scala.inline
     def choices(value: js.Array[_]): this.type = set("choices", value.asInstanceOf[js.Any])
     @scala.inline

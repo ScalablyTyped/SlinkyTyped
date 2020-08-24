@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.HTMLLIElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.li.tag
@@ -25,13 +24,13 @@ object MenuAdapter {
     @scala.inline
     def artworkReactElement(value: ReactElement): this.type = set("artwork", value.asInstanceOf[js.Any])
     @scala.inline
-    def artwork(value: TagMod[Any]): this.type = set("artwork", value.asInstanceOf[js.Any])
+    def artwork(value: ReactElement): this.type = set("artwork", value.asInstanceOf[js.Any])
     @scala.inline
     def artworkSize(value: ArtworkSizesT | Double): this.type = set("artworkSize", value.asInstanceOf[js.Any])
     @scala.inline
     def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def endEnhancer(value: TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancer(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def overrides(value: OverridesT): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

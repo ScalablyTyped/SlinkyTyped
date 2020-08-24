@@ -1,13 +1,8 @@
 package typingsSlinky.minappEnv.global
 
-import typingsSlinky.minappEnv.DB.DatabaseCommand
-import typingsSlinky.minappEnv.DB.IQueryCondition
 import typingsSlinky.minappEnv.DB.IServerDateOptions
-import typingsSlinky.minappEnv.DB.LOGIC_COMMANDS_LITERAL
-import typingsSlinky.minappEnv.DB.QUERY_COMMANDS_LITERAL
 import typingsSlinky.minappEnv.DB.UPDATE_COMMANDS_LITERAL
 import typingsSlinky.minappEnv.IAPIParam
-import typingsSlinky.minappEnv.ICloudConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,19 +13,7 @@ import scala.scalajs.js.annotation._
 object DB extends js.Object {
   @js.native
   class APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM /* <: IAPIParam[_] */, CONTEXT] ()
-    extends typingsSlinky.minappEnv.DB.APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM, CONTEXT] {
-    /**
-      * In case of callback-style invocation, this function will be called
-      */
-    /* CompleteClass */
-    override def getCallbackReturn(param: PARAM, context: CONTEXT): CALLBACK_RETURN = js.native
-    /* CompleteClass */
-    override def getContext(param: PARAM): CONTEXT = js.native
-    /* CompleteClass */
-    override def getFinalParam[T /* <: PARAM */](param: PARAM, context: CONTEXT): T = js.native
-    /* CompleteClass */
-    override def run[T /* <: PARAM */](param: T): typingsSlinky.minappEnv.Promise[PROMISE_RETURN] = js.native
-  }
+    extends typingsSlinky.minappEnv.DB.APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM, CONTEXT]
   
   @js.native
   class Batch ()
@@ -44,71 +27,15 @@ object DB extends js.Object {
   
   @js.native
   class Database protected ()
-    extends typingsSlinky.minappEnv.DB.Database {
-    /* CompleteClass */
-    override val Geo: typingsSlinky.minappEnv.DB.Geo = js.native
-    /* CompleteClass */
-    override val command: DatabaseCommand = js.native
-    /* CompleteClass */
-    override val config: ICloudConfig = js.native
-    /* CompleteClass */
-    override def collection(collectionName: java.lang.String): typingsSlinky.minappEnv.DB.CollectionReference = js.native
-    /* CompleteClass */
-    override def serverDate(): typingsSlinky.minappEnv.DB.ServerDate = js.native
-  }
+    extends typingsSlinky.minappEnv.DB.Database
   
   @js.native
   class DatabaseLogicCommand ()
-    extends typingsSlinky.minappEnv.DB.DatabaseLogicCommand {
-    /* CompleteClass */
-    override var fieldName: java.lang.String | typingsSlinky.minappEnv.InternalSymbol = js.native
-    /* CompleteClass */
-    override var operands: typingsSlinky.minappEnv.Array[_] = js.native
-    /* CompleteClass */
-    override var operator: LOGIC_COMMANDS_LITERAL | java.lang.String = js.native
-    /* CompleteClass */
-    override def _setFieldName(fieldName: java.lang.String): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def and(expressions: (typingsSlinky.minappEnv.DB.DatabaseLogicCommand | IQueryCondition)*): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def or(expressions: (typingsSlinky.minappEnv.DB.DatabaseLogicCommand | IQueryCondition)*): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-  }
+    extends typingsSlinky.minappEnv.DB.DatabaseLogicCommand
   
   @js.native
   class DatabaseQueryCommand ()
-    extends typingsSlinky.minappEnv.DB.DatabaseQueryCommand {
-    /* CompleteClass */
-    override var fieldName: java.lang.String | typingsSlinky.minappEnv.InternalSymbol = js.native
-    /* CompleteClass */
-    override var operands: typingsSlinky.minappEnv.Array[_] = js.native
-    /* CompleteClass */
-    override var operator: LOGIC_COMMANDS_LITERAL | java.lang.String = js.native
-    /* CompleteClass */
-    @JSName("operator")
-    override var operator_DatabaseQueryCommand: QUERY_COMMANDS_LITERAL | java.lang.String = js.native
-    /* CompleteClass */
-    override def _setFieldName(fieldName: java.lang.String): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def and(expressions: (typingsSlinky.minappEnv.DB.DatabaseLogicCommand | IQueryCondition)*): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def eq(`val`: js.Any): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def gt(`val`: js.Any): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def gte(`val`: js.Any): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def in(`val`: typingsSlinky.minappEnv.Array[_]): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def lt(`val`: js.Any): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def lte(`val`: js.Any): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def neq(`val`: js.Any): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def nin(`val`: typingsSlinky.minappEnv.Array[_]): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-    /* CompleteClass */
-    override def or(expressions: (typingsSlinky.minappEnv.DB.DatabaseLogicCommand | IQueryCondition)*): typingsSlinky.minappEnv.DB.DatabaseLogicCommand = js.native
-  }
+    extends typingsSlinky.minappEnv.DB.DatabaseQueryCommand
   
   @js.native
   class DatabaseUpdateCommand protected ()
@@ -124,14 +51,6 @@ object DB extends js.Object {
       operands: typingsSlinky.minappEnv.Array[_],
       fieldName: typingsSlinky.minappEnv.InternalSymbol
     ) = this()
-    /* CompleteClass */
-    override var fieldName: java.lang.String | typingsSlinky.minappEnv.InternalSymbol = js.native
-    /* CompleteClass */
-    override var operands: typingsSlinky.minappEnv.Array[_] = js.native
-    /* CompleteClass */
-    override var operator: UPDATE_COMMANDS_LITERAL = js.native
-    /* CompleteClass */
-    override def _setFieldName(fieldName: java.lang.String): typingsSlinky.minappEnv.DB.DatabaseUpdateCommand = js.native
   }
   
   @js.native
@@ -145,12 +64,6 @@ object DB extends js.Object {
   abstract class GeoPoint protected ()
     extends typingsSlinky.minappEnv.DB.GeoPoint {
     def this(longitude: Double, latitude: Double) = this()
-    /* CompleteClass */
-    override var latitude: Double = js.native
-    /* CompleteClass */
-    override var longitude: Double = js.native
-    /* CompleteClass */
-    override def toJSON(): js.Object = js.native
   }
   
   @js.native
@@ -161,8 +74,6 @@ object DB extends js.Object {
   abstract class ServerDate ()
     extends typingsSlinky.minappEnv.DB.ServerDate {
     def this(options: IServerDateOptions) = this()
-    /* CompleteClass */
-    override val options: IServerDateOptions = js.native
   }
   
   @js.native

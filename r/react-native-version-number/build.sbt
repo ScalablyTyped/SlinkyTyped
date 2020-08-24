@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "react-native-version-number"
-version := "0.3-dt-20180409Z-e595f2"
-scalaVersion := "2.13.2"
+version := "0.3-dt-20180409Z-9f32f1"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -116,17 +116,17 @@ package object workdocsMod {
   type IdType = java.lang.String
   type LimitType = scala.Double
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.en
+    - typingsSlinky.awsSdk.awsSdkStrings.en_
     - typingsSlinky.awsSdk.awsSdkStrings.fr_
     - typingsSlinky.awsSdk.awsSdkStrings.ko
     - typingsSlinky.awsSdk.awsSdkStrings.de_
     - typingsSlinky.awsSdk.awsSdkStrings.es_
-    - typingsSlinky.awsSdk.awsSdkStrings.ja
+    - typingsSlinky.awsSdk.awsSdkStrings.ja_
     - typingsSlinky.awsSdk.awsSdkStrings.ru_
     - typingsSlinky.awsSdk.awsSdkStrings.zh_CN
     - typingsSlinky.awsSdk.awsSdkStrings.zh_TW
     - typingsSlinky.awsSdk.awsSdkStrings.pt_BR
-    - typingsSlinky.awsSdk.awsSdkStrings.default_
+    - typingsSlinky.awsSdk.awsSdkStrings.default__
     - java.lang.String
   */
   type LocaleType = typingsSlinky.awsSdk.workdocsMod._LocaleType | java.lang.String

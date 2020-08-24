@@ -1,14 +1,15 @@
 package typingsSlinky.materialUiLab.anon
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteFreeSoloValueMapping
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AnchorEl[T] extends js.Object {
+trait AnchorEl[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */] extends js.Object {
   var anchorEl: Null | HTMLElement = js.native
-   // or T | T[]
   var dirty: Boolean = js.native
   var focused: Boolean = js.native
   var focusedTag: Double = js.native
@@ -16,9 +17,7 @@ trait AnchorEl[T] extends js.Object {
   var id: String = js.native
   var inputValue: String = js.native
   var popupOpen: Boolean = js.native
-  // TODO: infer the right type when the issue is resolved
-  // https://github.com/microsoft/TypeScript/issues/13995
-  var value: js.Any = js.native
+  var value: Value[T, Multiple, DisableClearable, FreeSolo] = js.native
   def getClearProps(): js.Object = js.native
   def getInputLabelProps(): js.Object = js.native
   def getInputProps(): js.Object = js.native
@@ -32,7 +31,7 @@ trait AnchorEl[T] extends js.Object {
 
 object AnchorEl {
   @scala.inline
-  def apply[T](
+  def apply[T, /* <: js.UndefOr[scala.Boolean] */ Multiple, /* <: js.UndefOr[scala.Boolean] */ DisableClearable, /* <: js.UndefOr[scala.Boolean] */ FreeSolo](
     dirty: Boolean,
     focused: Boolean,
     focusedTag: Double,
@@ -48,132 +47,66 @@ object AnchorEl {
     id: String,
     inputValue: String,
     popupOpen: Boolean,
-    setAnchorEl: () => Unit,
-    value: js.Any
-  ): AnchorEl[T] = {
-    val __obj = js.Dynamic.literal(dirty = dirty.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], focusedTag = focusedTag.asInstanceOf[js.Any], getClearProps = js.Any.fromFunction0(getClearProps), getInputLabelProps = js.Any.fromFunction0(getInputLabelProps), getInputProps = js.Any.fromFunction0(getInputProps), getListboxProps = js.Any.fromFunction0(getListboxProps), getOptionProps = js.Any.fromFunction1(getOptionProps), getPopupIndicatorProps = js.Any.fromFunction0(getPopupIndicatorProps), getRootProps = js.Any.fromFunction0(getRootProps), getTagProps = js.Any.fromFunction1(getTagProps), groupedOptions = groupedOptions.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], inputValue = inputValue.asInstanceOf[js.Any], popupOpen = popupOpen.asInstanceOf[js.Any], setAnchorEl = js.Any.fromFunction0(setAnchorEl), value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnchorEl[T]]
+    setAnchorEl: () => Unit
+  ): AnchorEl[T, Multiple, DisableClearable, FreeSolo] = {
+    val __obj = js.Dynamic.literal(dirty = dirty.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], focusedTag = focusedTag.asInstanceOf[js.Any], getClearProps = js.Any.fromFunction0(getClearProps), getInputLabelProps = js.Any.fromFunction0(getInputLabelProps), getInputProps = js.Any.fromFunction0(getInputProps), getListboxProps = js.Any.fromFunction0(getListboxProps), getOptionProps = js.Any.fromFunction1(getOptionProps), getPopupIndicatorProps = js.Any.fromFunction0(getPopupIndicatorProps), getRootProps = js.Any.fromFunction0(getRootProps), getTagProps = js.Any.fromFunction1(getTagProps), groupedOptions = groupedOptions.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], inputValue = inputValue.asInstanceOf[js.Any], popupOpen = popupOpen.asInstanceOf[js.Any], setAnchorEl = js.Any.fromFunction0(setAnchorEl))
+    __obj.asInstanceOf[AnchorEl[T, Multiple, DisableClearable, FreeSolo]]
   }
   @scala.inline
-  implicit class AnchorElOps[Self[t] <: AnchorEl[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class AnchorElOps[Self <: AnchorEl[_, _, _, _], T, /* <: js.UndefOr[scala.Boolean] */ Multiple, /* <: js.UndefOr[scala.Boolean] */ DisableClearable, /* <: js.UndefOr[scala.Boolean] */ FreeSolo] (val x: Self with (AnchorEl[T, Multiple, DisableClearable, FreeSolo])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDirty(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirty")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFocused(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDirty(value: Boolean): Self = this.set("dirty", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFocusedTag(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedTag")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFocused(value: Boolean): Self = this.set("focused", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetClearProps(value: () => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClearProps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setFocusedTag(value: Double): Self = this.set("focusedTag", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetInputLabelProps(value: () => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputLabelProps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetClearProps(value: () => js.Object): Self = this.set("getClearProps", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetInputProps(value: () => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputProps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetInputLabelProps(value: () => js.Object): Self = this.set("getInputLabelProps", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetListboxProps(value: () => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getListboxProps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetInputProps(value: () => js.Object): Self = this.set("getInputProps", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetOptionProps(value: Option[T] => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionProps")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetListboxProps(value: () => js.Object): Self = this.set("getListboxProps", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetPopupIndicatorProps(value: () => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupIndicatorProps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetOptionProps(value: Option[T] => js.Object): Self = this.set("getOptionProps", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetRootProps(value: () => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootProps")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetPopupIndicatorProps(value: () => js.Object): Self = this.set("getPopupIndicatorProps", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetTagProps(value: Index => js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTagProps")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetRootProps(value: () => js.Object): Self = this.set("getRootProps", js.Any.fromFunction0(value))
     @scala.inline
-    def withGroupedOptions(value: js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetTagProps(value: Index => js.Object): Self = this.set("getTagProps", js.Any.fromFunction1(value))
     @scala.inline
-    def withId(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGroupedOptionsVarargs(value: T*): Self = this.set("groupedOptions", js.Array(value :_*))
     @scala.inline
-    def withInputValue(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGroupedOptions(value: js.Array[T]): Self = this.set("groupedOptions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopupOpen(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetAnchorEl(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnchorEl")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInputValue(value: String): Self = this.set("inputValue", value.asInstanceOf[js.Any])
     @scala.inline
-    def withValue(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPopupOpen(value: Boolean): Self = this.set("popupOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAnchorEl(value: HTMLElement): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorEl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetAnchorEl(value: () => Unit): Self = this.set("setAnchorEl", js.Any.fromFunction0(value))
     @scala.inline
-    def withAnchorElNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorEl")(null)
-        ret
-    }
+    def setAnchorEl(value: HTMLElement): Self = this.set("anchorEl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAnchorElNull: Self = this.set("anchorEl", null)
+    @scala.inline
+    def setValueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
+    def setValue(value: Value[T, Multiple, DisableClearable, FreeSolo]): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
   
 }

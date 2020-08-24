@@ -53,13 +53,14 @@ object OpenedFileInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMode(
+    def setFilePath(value: String): Self = this.set("filePath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMode(
       value: ToStringLiteral[
           READ, 
           /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
@@ -68,17 +69,9 @@ object OpenedFileInfo {
             typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("mode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpenRequestId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpenRequestId(value: integer): Self = this.set("openRequestId", value.asInstanceOf[js.Any])
   }
   
 }

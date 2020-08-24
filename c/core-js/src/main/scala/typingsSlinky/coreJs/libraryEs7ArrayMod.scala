@@ -23,6 +23,7 @@ object libraryEs7ArrayMod extends js.Object {
     thisArg: js.Any
   ): Boolean = js.native
   def fill[T](array: ArrayLike[T], value: T): Array[T] = js.native
+  def fill[T](array: ArrayLike[T], value: T, start: js.UndefOr[scala.Nothing], end: Double): Array[T] = js.native
   def fill[T](array: ArrayLike[T], value: T, start: Double): Array[T] = js.native
   def fill[T](array: ArrayLike[T], value: T, start: Double, end: Double): Array[T] = js.native
   def filter[T](
@@ -151,6 +152,7 @@ object libraryEs7ArrayMod extends js.Object {
   def reverse[T](array: ArrayLike[T]): Array[T] = js.native
   def shift[T](array: ArrayLike[T]): T = js.native
   def slice[T](array: ArrayLike[T]): Array[T] = js.native
+  def slice[T](array: ArrayLike[T], start: js.UndefOr[scala.Nothing], end: Double): Array[T] = js.native
   def slice[T](array: ArrayLike[T], start: Double): Array[T] = js.native
   def slice[T](array: ArrayLike[T], start: Double, end: Double): Array[T] = js.native
   def some[T](
@@ -164,7 +166,7 @@ object libraryEs7ArrayMod extends js.Object {
   ): Boolean = js.native
   def sort[T](array: ArrayLike[T]): Array[T] = js.native
   def sort[T](array: ArrayLike[T], compareFn: js.Function2[/* a */ T, /* b */ T, Double]): Array[T] = js.native
-  def splice[T](array: ArrayLike[T], start: Double): Array[T] = js.native
+  def splice[T](array: ArrayLike[T], start: Double, deleteCount: js.UndefOr[scala.Nothing], items: T*): Array[T] = js.native
   def splice[T](array: ArrayLike[T], start: Double, deleteCount: Double, items: T*): Array[T] = js.native
   def turn[T](
     array: ArrayLike[T],

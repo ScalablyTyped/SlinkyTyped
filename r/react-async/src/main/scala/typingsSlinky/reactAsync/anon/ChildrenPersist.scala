@@ -1,22 +1,59 @@
 package typingsSlinky.reactAsync.anon
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.reactAsync.mod.AbstractState
+import typingsSlinky.reactAsync.mod.AsyncFulfilled
+import typingsSlinky.reactAsync.mod.AsyncInitial
+import typingsSlinky.reactAsync.mod.AsyncPending
+import typingsSlinky.reactAsync.mod.AsyncRejected
 import typingsSlinky.reactAsync.mod.RejectedChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait ChildrenPersist[T] extends js.Object {
-  var children: js.UndefOr[RejectedChildren[T]] = js.undefined
-  var persist: js.UndefOr[Boolean] = js.undefined
+@js.native
+trait ChildrenPersist[T /* <: js.Object */] extends js.Object {
+  var children: js.UndefOr[RejectedChildren[T]] = js.native
+  var persist: js.UndefOr[Boolean] = js.native
+  var state: (AsyncInitial[T, AbstractState[T]]) | (AsyncPending[T, AbstractState[T]]) | (AsyncFulfilled[T, AbstractState[T]]) | (AsyncRejected[T, AbstractState[T]]) = js.native
 }
 
 object ChildrenPersist {
   @scala.inline
-  def apply[T](children: RejectedChildren[T] = null, persist: js.UndefOr[Boolean] = js.undefined): ChildrenPersist[T] = {
-    val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(persist)) __obj.updateDynamic("persist")(persist.get.asInstanceOf[js.Any])
+  def apply[/* <: js.Object */ T](
+    state: (AsyncInitial[T, AbstractState[T]]) | (AsyncPending[T, AbstractState[T]]) | (AsyncFulfilled[T, AbstractState[T]]) | (AsyncRejected[T, AbstractState[T]])
+  ): ChildrenPersist[T] = {
+    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildrenPersist[T]]
   }
+  @scala.inline
+  implicit class ChildrenPersistOps[Self <: ChildrenPersist[_], /* <: js.Object */ T] (val x: Self with ChildrenPersist[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setState(
+      value: (AsyncInitial[T, AbstractState[T]]) | (AsyncPending[T, AbstractState[T]]) | (AsyncFulfilled[T, AbstractState[T]]) | (AsyncRejected[T, AbstractState[T]])
+    ): Self = this.set("state", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenFunction2(value: (/* error */ js.Error, /* state */ AsyncRejected[T, AbstractState[T]]) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))
+    @scala.inline
+    def setChildren(value: RejectedChildren[T]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setPersist(value: Boolean): Self = this.set("persist", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePersist: Self = this.set("persist", js.undefined)
+  }
+  
 }
 

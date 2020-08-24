@@ -24,17 +24,14 @@ object toGraphLibOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGraphlib(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphlib")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutGraphlib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphlib")(js.undefined)
-        ret
-    }
+    def setGraphlib(value: js.Any): Self = this.set("graphlib", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGraphlib: Self = this.set("graphlib", js.undefined)
   }
   
 }

@@ -15,10 +15,12 @@ trait RElement extends RNode {
   var className: String = js.native
   var setProperty: js.UndefOr[js.Function2[/* name */ String, /* value */ js.Any, Unit]] = js.native
   var style: RCssStyleDeclaration = js.native
+  var textContent: String | Null = js.native
   def addEventListener(`type`: String, listener: EventListener): Unit = js.native
   def addEventListener(`type`: String, listener: EventListener, useCapture: Boolean): Unit = js.native
   def removeAttribute(name: String): Unit = js.native
   def removeEventListener(`type`: String): Unit = js.native
+  def removeEventListener(`type`: String, listener: js.UndefOr[scala.Nothing], options: Boolean): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListener): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListener, options: Boolean): Unit = js.native
   def setAttribute(name: String, value: String): Unit = js.native

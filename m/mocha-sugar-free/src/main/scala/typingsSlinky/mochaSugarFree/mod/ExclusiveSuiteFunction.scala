@@ -1,7 +1,7 @@
 package typingsSlinky.mochaSugarFree.mod
 
 import typingsSlinky.mocha.mod.Suite_
-import typingsSlinky.mochaSugarFree.anon.OptionsfnSuiteFunc
+import typingsSlinky.mochaSugarFree.anon.OptionsfnSuiteFuncundefin
 import typingsSlinky.mochaSugarFree.anon.OptionstitlestringfnSuite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,8 @@ trait ExclusiveSuiteFunction extends js.Object {
   def apply(options: OptionstitlestringfnSuite, fn: SuiteFunc): Suite_ = js.native
   def apply(title: String): Suite_ = js.native
   def apply(title: String, fn: SuiteFunc): Suite_ = js.native
-  def apply(title: String, options: OptionsfnSuiteFunc): Suite_ = js.native
-  def apply(title: String, options: OptionsfnSuiteFunc, fn: SuiteFunc): Suite_ = js.native
+  def apply(title: String, options: js.UndefOr[scala.Nothing], fn: SuiteFunc): Suite_ = js.native
+  def apply(title: String, options: OptionsfnSuiteFuncundefin): Suite_ = js.native
+  def apply(title: String, options: OptionsfnSuiteFuncundefin, fn: SuiteFunc): Suite_ = js.native
 }
 

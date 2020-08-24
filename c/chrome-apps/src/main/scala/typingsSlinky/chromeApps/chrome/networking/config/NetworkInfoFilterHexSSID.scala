@@ -25,17 +25,14 @@ object NetworkInfoFilterHexSSID {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHexSSID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexSSID")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutHexSSID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexSSID")(js.undefined)
-        ret
-    }
+    def setHexSSID(value: String): Self = this.set("HexSSID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHexSSID: Self = this.set("HexSSID", js.undefined)
   }
   
 }

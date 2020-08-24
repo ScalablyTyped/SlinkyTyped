@@ -3,7 +3,6 @@ package typingsSlinky.chaiAsPromised
 import typingsSlinky.chai.Chai.LanguageChains
 import typingsSlinky.chai.Chai.NumericComparison
 import typingsSlinky.chai.Chai.TypeComparison
-import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,11 +53,13 @@ object Chai extends js.Object {
     def rejected(`type`: String, message: String): PromisedAssertion = js.native
     def rejectedWith(): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error, expected: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
@@ -193,11 +194,13 @@ object Chai extends js.Object {
     def NaN(`type`: String, message: String): PromisedAssertion = js.native
     def Throw(): PromisedAssertion = js.native
     def Throw(constructor: js.Function): PromisedAssertion = js.native
+    def Throw(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def Throw(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def Throw(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
     def Throw(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
     def Throw(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def Throw(constructor: js.Error): PromisedAssertion = js.native
+    def Throw(constructor: js.Error, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def Throw(constructor: js.Error, expected: String): PromisedAssertion = js.native
     def Throw(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
     def Throw(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
@@ -307,17 +310,20 @@ object Chai extends js.Object {
     def ownPropertyDescriptor(name: String, descriptor: js.PropertyDescriptor, message: String): PromisedAssertion = js.native
     def ownPropertyDescriptor(name: String, message: String): PromisedAssertion = js.native
     def property(name: String): PromisedAssertion = js.native
+    def property(name: String, value: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def property(name: String, value: js.Any): PromisedAssertion = js.native
     def property(name: String, value: js.Any, message: String): PromisedAssertion = js.native
     def rejected(`type`: String): PromisedAssertion = js.native
     def rejected(`type`: String, message: String): PromisedAssertion = js.native
     def rejectedWith(): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error, expected: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
@@ -340,11 +346,13 @@ object Chai extends js.Object {
     def string(string: String, message: String): PromisedAssertion = js.native
     def `throw`(): PromisedAssertion = js.native
     def `throw`(constructor: js.Function): PromisedAssertion = js.native
+    def `throw`(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
     def `throw`(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Error): PromisedAssertion = js.native
+    def `throw`(constructor: js.Error, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Error, expected: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
@@ -355,11 +363,13 @@ object Chai extends js.Object {
     def `throw`(expected: js.RegExp, message: String): PromisedAssertion = js.native
     def throws(): PromisedAssertion = js.native
     def throws(constructor: js.Function): PromisedAssertion = js.native
+    def throws(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def throws(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def throws(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
     def throws(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
     def throws(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def throws(constructor: js.Error): PromisedAssertion = js.native
+    def throws(constructor: js.Error, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def throws(constructor: js.Error, expected: String): PromisedAssertion = js.native
     def throws(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
     def throws(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
@@ -386,12 +396,38 @@ object Chai extends js.Object {
     def approximately(act: Double, exp: Double, delta: Double, msg: String): js.Thenable[Unit] = js.native
     def changes(modifier: js.Function, obj: js.Object, property: String): js.Thenable[Unit] = js.native
     def changes(modifier: js.Function, obj: js.Object, property: String, msg: String): js.Thenable[Unit] = js.native
+    def changesButNotBy(modifier: js.Function, obj: js.Object, property: String, change: Double): js.Thenable[Unit] = js.native
+    def changesButNotBy(modifier: js.Function, obj: js.Object, property: String, change: Double, msg: String): js.Thenable[Unit] = js.native
+    def changesBy(modifier: js.Function, obj: js.Object, property: String, change: Double): js.Thenable[Unit] = js.native
+    def changesBy(modifier: js.Function, obj: js.Object, property: String, change: Double, msg: String): js.Thenable[Unit] = js.native
     def closeTo(act: Double, exp: Double, delta: Double): js.Thenable[Unit] = js.native
     def closeTo(act: Double, exp: Double, delta: Double, msg: String): js.Thenable[Unit] = js.native
+    def containsAllDeepKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def containsAllDeepKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def containsAllDeepKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def containsAllDeepKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def containsAllKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def containsAllKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def containsAllKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def containsAllKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
     def decreases(modifier: js.Function, obj: js.Object, property: String): js.Thenable[Unit] = js.native
     def decreases(modifier: js.Function, obj: js.Object, property: String, msg: String): js.Thenable[Unit] = js.native
+    def decreasesButNotBy(modifier: js.Function, obj: js.Object, property: String, change: Double): js.Thenable[Unit] = js.native
+    def decreasesButNotBy(modifier: js.Function, obj: js.Object, property: String, change: Double, msg: String): js.Thenable[Unit] = js.native
+    def decreasesBy(modifier: js.Function, obj: js.Object, property: String, change: Double): js.Thenable[Unit] = js.native
+    def decreasesBy(modifier: js.Function, obj: js.Object, property: String, change: Double, msg: String): js.Thenable[Unit] = js.native
     def deepEqual(act: js.Any, exp: js.Any): js.Thenable[Unit] = js.native
     def deepEqual(act: js.Any, exp: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def deepInclude(exp: String, inc: js.Any): js.Thenable[Unit] = js.native
+    def deepInclude(exp: String, inc: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def deepInclude(exp: js.Array[_], inc: js.Any): js.Thenable[Unit] = js.native
+    def deepInclude(exp: js.Array[_], inc: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def deepNestedInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def deepNestedInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def deepNestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any): js.Thenable[Unit] = js.native
+    def deepNestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def deepOwnInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def deepOwnInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
     def deepProperty(obj: js.Object, prop: String): js.Thenable[Unit] = js.native
     def deepProperty(obj: js.Object, prop: String, msg: String): js.Thenable[Unit] = js.native
     def deepPropertyNotVal(obj: js.Object, prop: String, `val`: js.Any): js.Thenable[Unit] = js.native
@@ -402,6 +438,22 @@ object Chai extends js.Object {
     def doesNotChange(modifier: js.Function, obj: js.Object, property: String, msg: String): js.Thenable[Unit] = js.native
     def doesNotDecrease(modifier: js.Function, obj: js.Object, property: String): js.Thenable[Unit] = js.native
     def doesNotDecrease(modifier: js.Function, obj: js.Object, property: String, msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAllDeepKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def doesNotHaveAllDeepKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAllDeepKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def doesNotHaveAllDeepKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAllKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def doesNotHaveAllKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAllKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def doesNotHaveAllKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyDeepKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyDeepKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyDeepKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyDeepKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def doesNotHaveAnyKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
     def doesNotIncrease(modifier: js.Function, obj: js.Object, property: String): js.Thenable[Unit] = js.native
     def doesNotIncrease(modifier: js.Function, obj: js.Object, property: String, msg: String): js.Thenable[Unit] = js.native
     def doesNotThrow(fn: js.Function): js.Thenable[Unit] = js.native
@@ -415,12 +467,59 @@ object Chai extends js.Object {
     def exists(`val`: js.Any): js.Thenable[Unit] = js.native
     def exists(`val`: js.Any, msg: String): js.Thenable[Unit] = js.native
     def fail(): js.Thenable[Unit] = js.native
+    def fail(
+      actual: js.UndefOr[scala.Nothing],
+      expected: js.UndefOr[scala.Nothing],
+      msg: js.UndefOr[scala.Nothing],
+      operator: String
+    ): js.Thenable[Unit] = js.native
+    def fail(actual: js.UndefOr[scala.Nothing], expected: js.UndefOr[scala.Nothing], msg: String): js.Thenable[Unit] = js.native
+    def fail(
+      actual: js.UndefOr[scala.Nothing],
+      expected: js.UndefOr[scala.Nothing],
+      msg: String,
+      operator: String
+    ): js.Thenable[Unit] = js.native
+    def fail(actual: js.UndefOr[scala.Nothing], expected: js.Any): js.Thenable[Unit] = js.native
+    def fail(
+      actual: js.UndefOr[scala.Nothing],
+      expected: js.Any,
+      msg: js.UndefOr[scala.Nothing],
+      operator: String
+    ): js.Thenable[Unit] = js.native
+    def fail(actual: js.UndefOr[scala.Nothing], expected: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def fail(actual: js.UndefOr[scala.Nothing], expected: js.Any, msg: String, operator: String): js.Thenable[Unit] = js.native
     def fail(actual: js.Any): js.Thenable[Unit] = js.native
+    def fail(
+      actual: js.Any,
+      expected: js.UndefOr[scala.Nothing],
+      msg: js.UndefOr[scala.Nothing],
+      operator: String
+    ): js.Thenable[Unit] = js.native
+    def fail(actual: js.Any, expected: js.UndefOr[scala.Nothing], msg: String): js.Thenable[Unit] = js.native
+    def fail(actual: js.Any, expected: js.UndefOr[scala.Nothing], msg: String, operator: String): js.Thenable[Unit] = js.native
     def fail(actual: js.Any, expected: js.Any): js.Thenable[Unit] = js.native
+    def fail(actual: js.Any, expected: js.Any, msg: js.UndefOr[scala.Nothing], operator: String): js.Thenable[Unit] = js.native
     def fail(actual: js.Any, expected: js.Any, msg: String): js.Thenable[Unit] = js.native
     def fail(actual: js.Any, expected: js.Any, msg: String, operator: String): js.Thenable[Unit] = js.native
     def frozen(obj: js.Object): js.Thenable[Unit] = js.native
     def frozen(obj: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def hasAllDeepKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def hasAllDeepKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def hasAllDeepKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def hasAllDeepKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def hasAllKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def hasAllKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def hasAllKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def hasAllKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def hasAnyDeepKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def hasAnyDeepKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def hasAnyDeepKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def hasAnyDeepKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def hasAnyKeys(obj: js.Any, keys: js.Array[_]): js.Thenable[Unit] = js.native
+    def hasAnyKeys(obj: js.Any, keys: js.Array[_], msg: String): js.Thenable[Unit] = js.native
+    def hasAnyKeys(obj: js.Any, keys: js.Object): js.Thenable[Unit] = js.native
+    def hasAnyKeys(obj: js.Any, keys: js.Object, msg: String): js.Thenable[Unit] = js.native
     def ifError(`val`: js.Any): js.Thenable[Unit] = js.native
     def ifError(`val`: js.Any, msg: String): js.Thenable[Unit] = js.native
     def include(exp: String, inc: js.Any): js.Thenable[Unit] = js.native
@@ -437,6 +536,10 @@ object Chai extends js.Object {
     def includeOrderedMembers(set1: js.Array[_], set2: js.Array[_], msg: String): js.Thenable[Unit] = js.native
     def increases(modifier: js.Function, obj: js.Object, property: String): js.Thenable[Unit] = js.native
     def increases(modifier: js.Function, obj: js.Object, property: String, msg: String): js.Thenable[Unit] = js.native
+    def increasesButNotBy(modifier: js.Function, obj: js.Object, property: String, change: Double): js.Thenable[Unit] = js.native
+    def increasesButNotBy(modifier: js.Function, obj: js.Object, property: String, change: Double, msg: String): js.Thenable[Unit] = js.native
+    def increasesBy(modifier: js.Function, obj: js.Object, property: String, change: Double): js.Thenable[Unit] = js.native
+    def increasesBy(modifier: js.Function, obj: js.Object, property: String, change: Double, msg: String): js.Thenable[Unit] = js.native
     def instanceOf(`val`: js.Any, `type`: js.Function): js.Thenable[Unit] = js.native
     def instanceOf(`val`: js.Any, `type`: js.Function, msg: String): js.Thenable[Unit] = js.native
     def isAbove(`val`: Double, above: Double): js.Thenable[Unit] = js.native
@@ -459,6 +562,8 @@ object Chai extends js.Object {
     def isExtensible(obj: js.Object, msg: String): js.Thenable[Unit] = js.native
     def isFalse(`val`: js.Any): js.Thenable[Unit] = js.native
     def isFalse(`val`: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def isFinite(`val`: Double): js.Thenable[Unit] = js.native
+    def isFinite(`val`: Double, msg: String): js.Thenable[Unit] = js.native
     def isFrozen(obj: js.Object): js.Thenable[Unit] = js.native
     def isFrozen(obj: js.Object, msg: String): js.Thenable[Unit] = js.native
     def isFunction(`val`: js.Any): js.Thenable[Unit] = js.native
@@ -515,8 +620,24 @@ object Chai extends js.Object {
     def lengthOf(exp: js.Any, len: Double, msg: String): js.Thenable[Unit] = js.native
     def `match`(exp: js.Any, re: js.RegExp): js.Thenable[Unit] = js.native
     def `match`(exp: js.Any, re: js.RegExp, msg: String): js.Thenable[Unit] = js.native
+    def nestedInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def nestedInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def nestedProperty(obj: js.Object, prop: String): js.Thenable[Unit] = js.native
+    def nestedProperty(obj: js.Object, prop: String, msg: String): js.Thenable[Unit] = js.native
+    def nestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any): js.Thenable[Unit] = js.native
+    def nestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any, msg: String): js.Thenable[Unit] = js.native
     def notDeepEqual(act: js.Any, exp: js.Any): js.Thenable[Unit] = js.native
     def notDeepEqual(act: js.Any, exp: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def notDeepInclude(exp: String, inc: js.Any): js.Thenable[Unit] = js.native
+    def notDeepInclude(exp: String, inc: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def notDeepInclude(exp: js.Array[_], inc: js.Any): js.Thenable[Unit] = js.native
+    def notDeepInclude(exp: js.Array[_], inc: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def notDeepNestedInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def notDeepNestedInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def notDeepNestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any): js.Thenable[Unit] = js.native
+    def notDeepNestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def notDeepOwnInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def notDeepOwnInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
     def notDeepProperty(obj: js.Object, prop: String): js.Thenable[Unit] = js.native
     def notDeepProperty(obj: js.Object, prop: String, msg: String): js.Thenable[Unit] = js.native
     def notEqual(act: js.Any, exp: js.Any): js.Thenable[Unit] = js.native
@@ -537,8 +658,16 @@ object Chai extends js.Object {
     def notInstanceOf(`val`: js.Any, `type`: js.Function, msg: String): js.Thenable[Unit] = js.native
     def notMatch(exp: js.Any, re: js.RegExp): js.Thenable[Unit] = js.native
     def notMatch(exp: js.Any, re: js.RegExp, msg: String): js.Thenable[Unit] = js.native
+    def notNestedInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def notNestedInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
+    def notNestedProperty(obj: js.Object, prop: String): js.Thenable[Unit] = js.native
+    def notNestedProperty(obj: js.Object, prop: String, msg: String): js.Thenable[Unit] = js.native
+    def notNestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any): js.Thenable[Unit] = js.native
+    def notNestedPropertyVal(obj: js.Object, prop: String, `val`: js.Any, msg: String): js.Thenable[Unit] = js.native
     def notOk(`val`: js.Any): js.Thenable[Unit] = js.native
     def notOk(`val`: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def notOwnInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def notOwnInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
     def notProperty(obj: js.Object, prop: String): js.Thenable[Unit] = js.native
     def notProperty(obj: js.Object, prop: String, msg: String): js.Thenable[Unit] = js.native
     def notSameDeepOrderedMembers(set1: js.Array[_], set2: js.Array[_]): js.Thenable[Unit] = js.native
@@ -557,6 +686,8 @@ object Chai extends js.Object {
     def oneOf(`val`: js.Any, list: js.Array[_], msg: String): js.Thenable[Unit] = js.native
     def operator(`val`: js.Any, operator: String, val2: js.Any): js.Thenable[Unit] = js.native
     def operator(`val`: js.Any, operator: String, val2: js.Any, msg: String): js.Thenable[Unit] = js.native
+    def ownInclude(exp: js.Object, inc: js.Object): js.Thenable[Unit] = js.native
+    def ownInclude(exp: js.Object, inc: js.Object, msg: String): js.Thenable[Unit] = js.native
     def property(obj: js.Object, prop: String): js.Thenable[Unit] = js.native
     def property(obj: js.Object, prop: String, msg: String): js.Thenable[Unit] = js.native
     def propertyNotVal(obj: js.Object, prop: String, `val`: js.Any): js.Thenable[Unit] = js.native
@@ -594,8 +725,8 @@ object Chai extends js.Object {
   
   @js.native
   trait PromisedAssertion
-    extends Eventually
-       with PromiseLike[js.Any]
+    extends js.Thenable[js.Any]
+       with Eventually
   
   @js.native
   trait PromisedDeep extends js.Object {
@@ -627,6 +758,7 @@ object Chai extends js.Object {
     def members(set: js.Array[_]): PromisedAssertion = js.native
     def members(set: js.Array[_], message: String): PromisedAssertion = js.native
     def property(name: String): PromisedAssertion = js.native
+    def property(name: String, value: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def property(name: String, value: js.Any): PromisedAssertion = js.native
     def property(name: String, value: js.Any, message: String): PromisedAssertion = js.native
   }
@@ -765,6 +897,7 @@ object Chai extends js.Object {
     def members(set: js.Array[_]): PromisedAssertion = js.native
     def members(set: js.Array[_], message: String): PromisedAssertion = js.native
     def property(name: String): PromisedAssertion = js.native
+    def property(name: String, value: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def property(name: String, value: js.Any): PromisedAssertion = js.native
     def property(name: String, value: js.Any, message: String): PromisedAssertion = js.native
   }
@@ -835,11 +968,13 @@ object Chai extends js.Object {
   trait PromisedThrow extends js.Object {
     def apply(): PromisedAssertion = js.native
     def apply(constructor: js.Function): PromisedAssertion = js.native
+    def apply(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def apply(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def apply(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
     def apply(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
     def apply(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def apply(constructor: js.Error): PromisedAssertion = js.native
+    def apply(constructor: js.Error, expected: js.UndefOr[scala.Nothing], message: String): PromisedAssertion = js.native
     def apply(constructor: js.Error, expected: String): PromisedAssertion = js.native
     def apply(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
     def apply(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native

@@ -48,6 +48,8 @@ object PickList {
     @scala.inline
     def showTargetControls(value: Boolean): this.type = set("showTargetControls", value.asInstanceOf[js.Any])
     @scala.inline
+    def sourceVarargs(value: js.Any*): this.type = set("source", js.Array(value :_*))
+    @scala.inline
     def source(value: js.Array[_]): this.type = set("source", value.asInstanceOf[js.Any])
     @scala.inline
     def sourceHeader(value: js.Any): this.type = set("sourceHeader", value.asInstanceOf[js.Any])
@@ -57,6 +59,8 @@ object PickList {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def tabIndex(value: String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetVarargs(value: js.Any*): this.type = set("target", js.Array(value :_*))
     @scala.inline
     def target(value: js.Array[_]): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline

@@ -34,12 +34,35 @@ object DescribeCodeRepositoryOutput {
     CodeRepositoryArn: CodeRepositoryArn,
     CodeRepositoryName: EntityName,
     CreationTime: js.Date,
-    LastModifiedTime: js.Date,
-    GitConfig: GitConfig = null
+    LastModifiedTime: js.Date
   ): DescribeCodeRepositoryOutput = {
     val __obj = js.Dynamic.literal(CodeRepositoryArn = CodeRepositoryArn.asInstanceOf[js.Any], CodeRepositoryName = CodeRepositoryName.asInstanceOf[js.Any], CreationTime = CreationTime.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any])
-    if (GitConfig != null) __obj.updateDynamic("GitConfig")(GitConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCodeRepositoryOutput]
   }
+  @scala.inline
+  implicit class DescribeCodeRepositoryOutputOps[Self <: DescribeCodeRepositoryOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCodeRepositoryArn(value: CodeRepositoryArn): Self = this.set("CodeRepositoryArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCodeRepositoryName(value: EntityName): Self = this.set("CodeRepositoryName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreationTime(value: js.Date): Self = this.set("CreationTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLastModifiedTime(value: js.Date): Self = this.set("LastModifiedTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGitConfig(value: GitConfig): Self = this.set("GitConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGitConfig: Self = this.set("GitConfig", js.undefined)
+  }
+  
 }
 

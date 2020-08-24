@@ -11,7 +11,7 @@ trait GenerateDataKeyResponse extends js.Object {
     */
   var CiphertextBlob: js.UndefOr[CiphertextType] = js.native
   /**
-    * The identifier of the CMK that encrypted the data key.
+    * The Amazon Resource Name (key ARN) of the CMK that encrypted the data key.
     */
   var KeyId: js.UndefOr[KeyIdType] = js.native
   /**
@@ -22,12 +22,38 @@ trait GenerateDataKeyResponse extends js.Object {
 
 object GenerateDataKeyResponse {
   @scala.inline
-  def apply(CiphertextBlob: CiphertextType = null, KeyId: KeyIdType = null, Plaintext: PlaintextType = null): GenerateDataKeyResponse = {
+  def apply(): GenerateDataKeyResponse = {
     val __obj = js.Dynamic.literal()
-    if (CiphertextBlob != null) __obj.updateDynamic("CiphertextBlob")(CiphertextBlob.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (Plaintext != null) __obj.updateDynamic("Plaintext")(Plaintext.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateDataKeyResponse]
   }
+  @scala.inline
+  implicit class GenerateDataKeyResponseOps[Self <: GenerateDataKeyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCiphertextBlob(value: CiphertextType): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCiphertextBlob: Self = this.set("CiphertextBlob", js.undefined)
+    @scala.inline
+    def setKeyId(value: KeyIdType): Self = this.set("KeyId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyId: Self = this.set("KeyId", js.undefined)
+    @scala.inline
+    def setPlaintextUint8Array(value: js.typedarray.Uint8Array): Self = this.set("Plaintext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPlaintext(value: PlaintextType): Self = this.set("Plaintext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaintext: Self = this.set("Plaintext", js.undefined)
+  }
+  
 }
 

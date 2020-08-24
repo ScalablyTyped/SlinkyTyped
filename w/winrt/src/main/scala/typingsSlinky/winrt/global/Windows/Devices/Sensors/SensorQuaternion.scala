@@ -7,14 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.SensorQuaternion")
 @js.native
 class SensorQuaternion ()
-  extends typingsSlinky.winrt.Windows.Devices.Sensors.SensorQuaternion {
-  /* CompleteClass */
-  override var w: Double = js.native
-  /* CompleteClass */
-  override var x: Double = js.native
-  /* CompleteClass */
-  override var y: Double = js.native
-  /* CompleteClass */
-  override var z: Double = js.native
-}
+  extends typingsSlinky.winrt.Windows.Devices.Sensors.SensorQuaternion
 

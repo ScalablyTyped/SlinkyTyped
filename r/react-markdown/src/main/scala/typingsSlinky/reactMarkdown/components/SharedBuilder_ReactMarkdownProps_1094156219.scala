@@ -1,6 +1,6 @@
 package typingsSlinky.reactMarkdown.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMarkdown.anon.PartialRemarkParseOptions
@@ -21,11 +21,17 @@ class SharedBuilder_ReactMarkdownProps_1094156219[R <: js.Object] (val args: js.
     value: (/* node */ MarkdownAbstractSyntaxTree, /* index */ Double, /* parent */ NodeType) => Boolean
   ): this.type = set("allowNode", js.Any.fromFunction3(value))
   @scala.inline
+  def allowedTypesVarargs(value: NodeType*): this.type = set("allowedTypes", js.Array(value :_*))
+  @scala.inline
   def allowedTypes(value: js.Array[NodeType]): this.type = set("allowedTypes", value.asInstanceOf[js.Any])
+  @scala.inline
+  def astPluginsVarargs(value: MdastPlugin*): this.type = set("astPlugins", js.Array(value :_*))
   @scala.inline
   def astPlugins(value: js.Array[MdastPlugin]): this.type = set("astPlugins", value.asInstanceOf[js.Any])
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  @scala.inline
+  def disallowedTypesVarargs(value: NodeType*): this.type = set("disallowedTypes", js.Array(value :_*))
   @scala.inline
   def disallowedTypes(value: js.Array[NodeType]): this.type = set("disallowedTypes", value.asInstanceOf[js.Any])
   @scala.inline
@@ -38,6 +44,8 @@ class SharedBuilder_ReactMarkdownProps_1094156219[R <: js.Object] (val args: js.
   def linkTarget(value: String | LinkTargetResolver): this.type = set("linkTarget", value.asInstanceOf[js.Any])
   @scala.inline
   def parserOptions(value: PartialRemarkParseOptions): this.type = set("parserOptions", value.asInstanceOf[js.Any])
+  @scala.inline
+  def pluginsVarargs(value: js.Any*): this.type = set("plugins", js.Array(value :_*))
   @scala.inline
   def pluginsFunction0(value: () => Unit): this.type = set("plugins", js.Any.fromFunction0(value))
   @scala.inline
@@ -52,13 +60,13 @@ class SharedBuilder_ReactMarkdownProps_1094156219[R <: js.Object] (val args: js.
   def sourcePos(value: Boolean): this.type = set("sourcePos", value.asInstanceOf[js.Any])
   @scala.inline
   def transformImageUri(
-    value: (/* uri */ String, /* children */ js.UndefOr[TagMod[Any]], /* title */ js.UndefOr[String], /* alt */ js.UndefOr[String]) => String
+    value: (/* uri */ String, /* children */ js.UndefOr[ReactElement], /* title */ js.UndefOr[String], /* alt */ js.UndefOr[String]) => String
   ): this.type = set("transformImageUri", js.Any.fromFunction4(value))
   @scala.inline
   def transformImageUriNull: this.type = set("transformImageUri", null)
   @scala.inline
   def transformLinkUri(
-    value: (/* uri */ String, /* children */ js.UndefOr[TagMod[Any]], /* title */ js.UndefOr[String]) => String
+    value: (/* uri */ String, /* children */ js.UndefOr[ReactElement], /* title */ js.UndefOr[String]) => String
   ): this.type = set("transformLinkUri", js.Any.fromFunction3(value))
   @scala.inline
   def transformLinkUriNull: this.type = set("transformLinkUri", null)

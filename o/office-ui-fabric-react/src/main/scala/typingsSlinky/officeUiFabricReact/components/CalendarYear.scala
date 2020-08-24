@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
@@ -33,9 +33,9 @@ object CalendarYear {
     @scala.inline
     def onHeaderSelect(value: /* focus */ Boolean => Unit): this.type = set("onHeaderSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onRenderTitle(value: /* props */ ICalendarYearHeaderProps => TagMod[Any]): this.type = set("onRenderTitle", js.Any.fromFunction1(value))
+    def onRenderTitle(value: /* props */ ICalendarYearHeaderProps => ReactElement): this.type = set("onRenderTitle", js.Any.fromFunction1(value))
     @scala.inline
-    def onRenderYear(value: /* year */ Double => TagMod[Any]): this.type = set("onRenderYear", js.Any.fromFunction1(value))
+    def onRenderYear(value: /* year */ Double => ReactElement): this.type = set("onRenderYear", js.Any.fromFunction1(value))
     @scala.inline
     def onSelectYear(value: /* year */ Double => Unit): this.type = set("onSelectYear", js.Any.fromFunction1(value))
     @scala.inline

@@ -1,11 +1,12 @@
 package typingsSlinky.angularCore.mod
 
-import typingsSlinky.angularCore.angularCoreNumbers.`1023`
 import typingsSlinky.angularCore.angularCoreNumbers.`1024`
-import typingsSlinky.angularCore.angularCoreNumbers.`10`
+import typingsSlinky.angularCore.angularCoreNumbers.`11`
 import typingsSlinky.angularCore.angularCoreNumbers.`128`
 import typingsSlinky.angularCore.angularCoreNumbers.`16`
 import typingsSlinky.angularCore.angularCoreNumbers.`1`
+import typingsSlinky.angularCore.angularCoreNumbers.`2047`
+import typingsSlinky.angularCore.angularCoreNumbers.`2048`
 import typingsSlinky.angularCore.angularCoreNumbers.`256`
 import typingsSlinky.angularCore.angularCoreNumbers.`32`
 import typingsSlinky.angularCore.angularCoreNumbers.`3`
@@ -30,8 +31,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.angularCore.angularCoreNumbers.`256`
   - typingsSlinky.angularCore.angularCoreNumbers.`512`
   - typingsSlinky.angularCore.angularCoreNumbers.`1024`
-  - typingsSlinky.angularCore.angularCoreNumbers.`10`
-  - typingsSlinky.angularCore.angularCoreNumbers.`1023`
+  - typingsSlinky.angularCore.angularCoreNumbers.`2048`
+  - typingsSlinky.angularCore.angularCoreNumbers.`11`
+  - typingsSlinky.angularCore.angularCoreNumbers.`2047`
 */
 trait LViewFlags extends js.Object
 
@@ -68,14 +70,14 @@ object LViewFlags {
   @scala.inline
   def FirstLViewPass: `8` = 8.asInstanceOf[`8`]
   /**
-    * Index of the current init phase on last 22 bits
+    * Index of the current init phase on last 21 bits
     */
   @scala.inline
-  def IndexWithinInitPhaseIncrementer: `1024` = 1024.asInstanceOf[`1024`]
+  def IndexWithinInitPhaseIncrementer: `2048` = 2048.asInstanceOf[`2048`]
   @scala.inline
-  def IndexWithinInitPhaseReset: `1023` = 1023.asInstanceOf[`1023`]
+  def IndexWithinInitPhaseReset: `2047` = 2047.asInstanceOf[`2047`]
   @scala.inline
-  def IndexWithinInitPhaseShift: `10` = 10.asInstanceOf[`10`]
+  def IndexWithinInitPhaseShift: `11` = 11.asInstanceOf[`11`]
   /** The state of the init phase on the first 2 bits */
   @scala.inline
   def InitPhaseStateIncrementer: `1` = 1.asInstanceOf[`1`]
@@ -101,5 +103,11 @@ object LViewFlags {
     */
   @scala.inline
   def ManualOnPush: `32` = 32.asInstanceOf[`32`]
+  /**
+    * Whether this moved LView was needs to be refreshed at the insertion location because the
+    * declaration was dirty.
+    */
+  @scala.inline
+  def RefreshTransplantedView: `1024` = 1024.asInstanceOf[`1024`]
 }
 

@@ -1,7 +1,10 @@
 package typingsSlinky.materialLineRipple
 
-import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.TransitionEvent
+import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialLineRipple.adapterMod.MDCLineRippleAdapter
+import typingsSlinky.materialLineRipple.anon.LINERIPPLEACTIVE
+import typingsSlinky.materialLineRipple.anon.PartialMDCLineRippleAdapt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,34 +13,37 @@ import scala.scalajs.js.annotation._
 @js.native
 object foundationMod extends js.Object {
   @js.native
-  trait MDCLineRippleFoundation
-    extends typingsSlinky.materialBase.foundationMod.default[MDCLineRippleAdapter] {
-    /**
-      * Activates the line ripple
-      */
+  class MDCLineRippleFoundation () extends MDCFoundation[MDCLineRippleAdapter] {
+    def this(adapter: PartialMDCLineRippleAdapt) = this()
     def activate(): Unit = js.native
-    /**
-      * Deactivates the line ripple
-      */
     def deactivate(): Unit = js.native
-    /**
-      * Handles a transition end event
-      */
-    def handleTransitionEnd(evt: Event): Unit = js.native
-    /**
-      * Sets the center of the ripple animation to the given X coordinate.
-      */
+    def handleTransitionEnd(evt: TransitionEvent): Unit = js.native
     def setRippleCenter(xCoordinate: Double): Unit = js.native
   }
   
   @js.native
-  class default () extends MDCLineRippleFoundation
+  class default () extends MDCLineRippleFoundation {
+    def this(adapter: PartialMDCLineRippleAdapt) = this()
+  }
+  
+  /* static members */
+  @js.native
+  object MDCLineRippleFoundation extends js.Object {
+    def cssClasses: LINERIPPLEACTIVE = js.native
+    /**
+      * See {@link MDCLineRippleAdapter} for typing information on parameters and return types.
+      */
+    def defaultAdapter: MDCLineRippleAdapter = js.native
+  }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    val cssClasses: typingsSlinky.materialLineRipple.constantsMod.cssClasses = js.native
-    val defaultAdapter: MDCLineRippleAdapter = js.native
+    def cssClasses: LINERIPPLEACTIVE = js.native
+    /**
+      * See {@link MDCLineRippleAdapter} for typing information on parameters and return types.
+      */
+    def defaultAdapter: MDCLineRippleAdapter = js.native
   }
   
 }

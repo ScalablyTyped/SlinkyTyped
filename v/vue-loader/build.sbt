@@ -1,24 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "vue-loader"
-version := "15.9.2-a3ec9d"
-scalaVersion := "2.13.2"
+version := "15.9.3-52b1ce"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "anymatch" % "1.3-dt-20200515Z-2c3c09",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "postcss" % "7.0.18-fedef9",
-  "org.scalablytyped.slinky" %%% "source-list-map" % "v0.1.6-dt-20200515Z-c6cc21",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-ba4eed",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "tapable" % "v1.0.0-dt-20200515Z-780548",
-  "org.scalablytyped.slinky" %%% "uglify-js" % "3.9-dt-20200519Z-6f8d3e",
-  "org.scalablytyped.slinky" %%% "vue" % "2.6.11-3c5d56",
-  "org.scalablytyped.slinky" %%% "vue-template-compiler" % "2.6.11-898e07",
-  "org.scalablytyped.slinky" %%% "vue__component-compiler-utils" % "3.1.2-7a0b9e",
-  "org.scalablytyped.slinky" %%% "webpack" % "4.41-dt-20200515Z-8e5d2e",
-  "org.scalablytyped.slinky" %%% "webpack-sources" % "0.1-dt-20200515Z-96d9b2")
+  "org.scalablytyped.slinky" %%% "postcss" % "7.0.32-0263b3",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-fe56c3",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
+  "org.scalablytyped.slinky" %%% "vue" % "2.6.11-68de27",
+  "org.scalablytyped.slinky" %%% "vue-template-compiler" % "2.6.11-25e76e",
+  "org.scalablytyped.slinky" %%% "vue__component-compiler-utils" % "3.2.0-80d5bc")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

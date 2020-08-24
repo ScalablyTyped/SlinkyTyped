@@ -14,7 +14,6 @@ class ShaderMaterial () extends Material {
   def this(parameters: ShaderMaterialParameters) = this()
   var clipping: Boolean = js.native
   var defaultAttributeValues: js.Any = js.native
-  var defines: js.Any = js.native
   /**
   	 * @deprecated Use {@link ShaderMaterial#extensions.derivatives extensions.derivatives} instead.
   	 */
@@ -28,6 +27,7 @@ class ShaderMaterial () extends Material {
   var morphTargets: Boolean = js.native
   var skinning: Boolean = js.native
   var uniforms: StringDictionary[IUniform] = js.native
+  var uniformsNeedUpdate: Boolean = js.native
   var vertexShader: String = js.native
   var wireframe: Boolean = js.native
   var wireframeLinewidth: Double = js.native

@@ -1,5 +1,7 @@
 package typingsSlinky.expoFont
 
+import typingsSlinky.expoFont.anon.PickFontResourcedisplay
+import typingsSlinky.expoFont.fontTypesMod.FontResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,10 @@ object expoFontLoaderWebMod extends js.Object {
   @js.native
   object default extends js.Object {
     val name: String = js.native
-    def loadAsync(fontFamilyName: String, resource: String): js.Promise[Unit] = js.native
+    def loadAsync(fontFamilyName: String, resource: FontResource): js.Promise[Unit] = js.native
+    def unloadAllAsync(): js.Promise[Unit] = js.native
+    def unloadAsync(fontFamilyName: String): js.Promise[Unit] = js.native
+    def unloadAsync(fontFamilyName: String, options: PickFontResourcedisplay): js.Promise[Unit] = js.native
   }
   
 }

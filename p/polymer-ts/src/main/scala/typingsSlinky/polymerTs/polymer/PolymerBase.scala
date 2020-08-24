@@ -42,6 +42,7 @@ trait PolymerBase extends HTMLElement {
   def domHost(): Unit = js.native
   def elementMatches(selector: String, node: Element): js.Any = js.native
   def fire(`type`: String): js.Any = js.native
+  def fire(`type`: String, detail: js.UndefOr[scala.Nothing], options: FireOptions): js.Any = js.native
   def fire(`type`: String, detail: js.Object): js.Any = js.native
   def fire(`type`: String, detail: js.Object, options: FireOptions): js.Any = js.native
   def flushDebouncer(jobName: String): Unit = js.native
@@ -52,7 +53,16 @@ trait PolymerBase extends HTMLElement {
   def getNativePrototype(tag: String): js.Any = js.native
   def getPropertyInfo(property: String): js.Any = js.native
   def importHref(href: String): js.Any = js.native
+  def importHref(
+    href: String,
+    onload: js.UndefOr[scala.Nothing],
+    onerror: js.UndefOr[scala.Nothing],
+    optAsync: Boolean
+  ): js.Any = js.native
+  def importHref(href: String, onload: js.UndefOr[scala.Nothing], onerror: js.Function): js.Any = js.native
+  def importHref(href: String, onload: js.UndefOr[scala.Nothing], onerror: js.Function, optAsync: Boolean): js.Any = js.native
   def importHref(href: String, onload: js.Function): js.Any = js.native
+  def importHref(href: String, onload: js.Function, onerror: js.UndefOr[scala.Nothing], optAsync: Boolean): js.Any = js.native
   def importHref(href: String, onload: js.Function, onerror: js.Function): js.Any = js.native
   def importHref(href: String, onload: js.Function, onerror: js.Function, optAsync: Boolean): js.Any = js.native
   def instanceTemplate(template: js.Any): js.Any = js.native
@@ -77,6 +87,7 @@ trait PolymerBase extends HTMLElement {
   def setScrollDirection(direction: String, node: org.scalajs.dom.raw.HTMLElement): Unit = js.native
   def shift(path: String, value: js.Any): js.Any = js.native
   def splice(path: String, start: Double, deleteCount: Double, items: js.Any*): js.Any = js.native
+  def toggleAttribute(name: String, force: js.UndefOr[scala.Nothing], node: org.scalajs.dom.raw.HTMLElement): Boolean = js.native
   def toggleAttribute(name: String, force: Boolean, node: org.scalajs.dom.raw.HTMLElement): Boolean = js.native
   def toggleClass(name: String, bool: Boolean): Unit = js.native
   def toggleClass(name: String, bool: Boolean, node: org.scalajs.dom.raw.HTMLElement): Unit = js.native

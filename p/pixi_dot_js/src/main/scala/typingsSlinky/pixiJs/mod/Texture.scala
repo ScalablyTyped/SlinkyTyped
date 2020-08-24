@@ -3,6 +3,7 @@ package typingsSlinky.pixiJs.mod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import typingsSlinky.pixiJs.PIXI.IPointData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,14 +46,86 @@ class Texture protected ()
   def this(baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture, frame: typingsSlinky.pixiJs.PIXI.Rectangle) = this()
   def this(
     baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
     frame: typingsSlinky.pixiJs.PIXI.Rectangle,
     orig: typingsSlinky.pixiJs.PIXI.Rectangle
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle
   ) = this()
   def this(
     baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
     frame: typingsSlinky.pixiJs.PIXI.Rectangle,
     orig: typingsSlinky.pixiJs.PIXI.Rectangle,
     trim: typingsSlinky.pixiJs.PIXI.Rectangle
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: Double
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: Double
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: Double
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double
   ) = this()
   def this(
     baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
@@ -63,11 +136,131 @@ class Texture protected ()
   ) = this()
   def this(
     baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: js.UndefOr[scala.Nothing],
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: js.UndefOr[scala.Nothing],
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: js.UndefOr[scala.Nothing],
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: js.UndefOr[scala.Nothing],
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: js.UndefOr[scala.Nothing],
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: js.UndefOr[scala.Nothing],
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: js.UndefOr[scala.Nothing],
+    rotate: Double,
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
+    frame: typingsSlinky.pixiJs.PIXI.Rectangle,
+    orig: typingsSlinky.pixiJs.PIXI.Rectangle,
+    trim: typingsSlinky.pixiJs.PIXI.Rectangle,
+    rotate: js.UndefOr[scala.Nothing],
+    anchor: IPointData
+  ) = this()
+  def this(
+    baseTexture: typingsSlinky.pixiJs.PIXI.BaseTexture,
     frame: typingsSlinky.pixiJs.PIXI.Rectangle,
     orig: typingsSlinky.pixiJs.PIXI.Rectangle,
     trim: typingsSlinky.pixiJs.PIXI.Rectangle,
     rotate: Double,
-    anchor: typingsSlinky.pixiJs.PIXI.Point
+    anchor: IPointData
   ) = this()
 }
 
@@ -109,29 +302,34 @@ object Texture extends js.Object {
     * @param {string|HTMLImageElement|HTMLCanvasElement|HTMLVideoElement|PIXI.BaseTexture} source
     *        Source to create texture from
     * @param {object} [options] See {@link PIXI.BaseTexture}'s constructor for options.
-    * @param {boolean} [strict] Enforce strict-mode, see {@link PIXI.settings.STRICT_TEXTURE_CACHE}.
+    * @param {boolean} [strict] - Enforce strict-mode, see {@link PIXI.settings.STRICT_TEXTURE_CACHE}.
     * @return {PIXI.Texture} The newly created texture
     */
   def from(source: String): typingsSlinky.pixiJs.PIXI.Texture = js.native
+  def from(source: String, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: String, options: js.Any): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: String, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: typingsSlinky.pixiJs.PIXI.BaseTexture): typingsSlinky.pixiJs.PIXI.Texture = js.native
+  def from(source: typingsSlinky.pixiJs.PIXI.BaseTexture, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: typingsSlinky.pixiJs.PIXI.BaseTexture, options: js.Any): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: typingsSlinky.pixiJs.PIXI.BaseTexture, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.Texture = js.native
+  def from(source: HTMLCanvasElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLCanvasElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLImageElement): typingsSlinky.pixiJs.PIXI.Texture = js.native
+  def from(source: HTMLImageElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLImageElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLImageElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLVideoElement): typingsSlinky.pixiJs.PIXI.Texture = js.native
+  def from(source: HTMLVideoElement, options: js.UndefOr[scala.Nothing], strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def from(source: HTMLVideoElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.Texture = js.native
   /**
     * Create a new Texture with a BufferResource from a Float32Array.
     * RGBA values are floats from 0 to 1.
     * @static
-    * @param {Float32Array|Uint8Array} buffer The optional array to use, if no data
+    * @param {Float32Array|Uint8Array} buffer - The optional array to use, if no data
     *        is provided, a new Float32Array is created.
     * @param {number} width - Width of the resource
     * @param {number} height - Height of the resource
@@ -156,6 +354,16 @@ object Texture extends js.Object {
     */
   def fromLoader(source: HTMLImageElement, imageUrl: String): typingsSlinky.pixiJs.PIXI.Texture = js.native
   def fromLoader(source: HTMLImageElement, imageUrl: String, name: String): typingsSlinky.pixiJs.PIXI.Texture = js.native
+  /**
+    * Useful for loading textures via URLs. Use instead of `Texture.from` because
+    * it does a better job of handling failed URLs more effectively. This also ignores
+    * `PIXI.settings.STRICT_TEXTURE_CACHE`. Works for Videos, SVGs, Images.
+    * @param {string} url The remote URL to load.
+    * @param {object} [options] Optional options to include
+    * @return {Promise<PIXI.Texture>} A Promise that resolves to a Texture.
+    */
+  def fromURL(url: String): js.Promise[typingsSlinky.pixiJs.PIXI.Texture] = js.native
+  def fromURL(url: String, options: js.Any): js.Promise[typingsSlinky.pixiJs.PIXI.Texture] = js.native
   /**
     * Remove a Texture from the global TextureCache.
     *

@@ -25,6 +25,7 @@ object ioUtilsMod extends js.Object {
   def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[Data] = js.native
   def encodeWeights(tensors: NamedTensorMap): js.Promise[Data] = js.native
   def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[Data] = js.native
+  def getFloat16Decoder(): js.Function1[/* buffer */ js.typedarray.Uint16Array, js.typedarray.Float32Array] = js.native
   def getModelArtifactsInfoForJSON(modelArtifacts: ModelArtifacts): ModelArtifactsInfo = js.native
   def stringByteLength(str: String): Double = js.native
 }

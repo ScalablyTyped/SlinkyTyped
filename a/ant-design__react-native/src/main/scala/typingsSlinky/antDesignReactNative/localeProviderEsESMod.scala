@@ -1,12 +1,13 @@
 package typingsSlinky.antDesignReactNative
 
 import typingsSlinky.antDesignReactNative.anon.BackspaceLabel
-import typingsSlinky.antDesignReactNative.anon.Calendar
+import typingsSlinky.antDesignReactNative.anon.ButtonText
 import typingsSlinky.antDesignReactNative.anon.CancelText
+import typingsSlinky.antDesignReactNative.anon.Day
+import typingsSlinky.antDesignReactNative.anon.DismissText
 import typingsSlinky.antDesignReactNative.anon.Done
 import typingsSlinky.antDesignReactNative.anon.Extra
 import typingsSlinky.antDesignReactNative.anon.NextText
-import typingsSlinky.antDesignReactNative.anon.OkText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +17,11 @@ import scala.scalajs.js.annotation._
 object localeProviderEsESMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var DatePicker: OkText = js.native
-    var DatePickerView: Calendar = js.native
+    var DatePicker: DismissText = js.native
+    var DatePickerView: Day = js.native
     var InputItem: BackspaceLabel = js.native
     var ListView: Done = js.native
+    var Modal: ButtonText = js.native
     var Pagination: NextText = js.native
     var Picker: Extra = js.native
     var SearchBar: CancelText = js.native

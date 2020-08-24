@@ -54,41 +54,22 @@ object Typeofruntime {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActionType(value: NEWNOTE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withLaunchSource(value: ABOUTPAGE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchSource")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setActionType(value: NEWNOTE): Self = this.set("ActionType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPlayStoreStatus(value: AVAILABLE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayStoreStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLaunchSource(value: ABOUTPAGE): Self = this.set("LaunchSource", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnEmbedRequested(value: Event[js.Function1[/* request */ EmbedRequest, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmbedRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPlayStoreStatus(value: AVAILABLE): Self = this.set("PlayStoreStatus", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnLaunched(value: Event[js.Function1[/* launchData */ LaunchData, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLaunched")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnEmbedRequested(value: Event[js.Function1[/* request */ EmbedRequest, Unit]]): Self = this.set("onEmbedRequested", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnRestarted(value: Event[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRestarted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnLaunched(value: Event[js.Function1[/* launchData */ LaunchData, Unit]]): Self = this.set("onLaunched", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnRestarted(value: Event[js.Function0[Unit]]): Self = this.set("onRestarted", value.asInstanceOf[js.Any])
   }
   
 }

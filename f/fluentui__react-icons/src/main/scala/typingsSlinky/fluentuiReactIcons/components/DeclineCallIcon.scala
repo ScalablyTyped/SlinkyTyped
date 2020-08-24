@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeclineCallIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DeclineCallIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DeclineCallIcon")
   @js.native
   object component extends js.Object
   

@@ -1,16 +1,6 @@
 package typingsSlinky.antd.components
 
-import org.scalajs.dom.raw.HTMLAnchorElement
-import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.TagMod
-import slinky.core.facade.ReactElement
-import slinky.web.SyntheticMouseEvent
-import slinky.web.html.span.tag
-import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.breadcrumbItemMod.BreadcrumbItemProps
-import typingsSlinky.antd.breadcrumbItemMod.default
-import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
-import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,31 +10,7 @@ object BreadcrumbItem {
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, default] {
-    @scala.inline
-    def dropdownProps(value: DropDownProps): this.type = set("dropdownProps", value.asInstanceOf[js.Any])
-    @scala.inline
-    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
-    @scala.inline
-    def onClick(value: SyntheticMouseEvent[HTMLAnchorElement | HTMLSpanElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
-    @scala.inline
-    def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
-    @scala.inline
-    def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
-    @scala.inline
-    def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
-    @scala.inline
-    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
-    @scala.inline
-    def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
-    @scala.inline
-    def separator(value: TagMod[Any]): this.type = set("separator", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: BreadcrumbItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: BreadcrumbItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: BreadcrumbItemProps): SharedBuilder_BreadcrumbItemProps_2017195058 = new SharedBuilder_BreadcrumbItemProps_2017195058(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BreadcrumbItem.type): SharedBuilder_BreadcrumbItemProps_2017195058 = new SharedBuilder_BreadcrumbItemProps_2017195058(js.Array(this.component, js.Dictionary.empty))()
 }
 

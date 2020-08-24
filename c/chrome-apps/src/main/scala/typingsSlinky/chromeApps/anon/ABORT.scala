@@ -71,107 +71,44 @@ object ABORT {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withABORT(value: typingsSlinky.chromeApps.chromeAppsStrings.ABORT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ABORT")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withACCESS_DENIED(value: ACCESS_DENIED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ACCESS_DENIED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setABORT(value: typingsSlinky.chromeApps.chromeAppsStrings.ABORT): Self = this.set("ABORT", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEXISTS(value: EXISTS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EXISTS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setACCESS_DENIED(value: ACCESS_DENIED): Self = this.set("ACCESS_DENIED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFAILED(value: typingsSlinky.chromeApps.chromeAppsStrings.FAILED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEXISTS(value: EXISTS): Self = this.set("EXISTS", value.asInstanceOf[js.Any])
     @scala.inline
-    def withINVALID_OPERATION(value: INVALID_OPERATION): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INVALID_OPERATION")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFAILED(value: typingsSlinky.chromeApps.chromeAppsStrings.FAILED): Self = this.set("FAILED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withINVALID_URL(value: INVALID_URL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INVALID_URL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINVALID_OPERATION(value: INVALID_OPERATION): Self = this.set("INVALID_OPERATION", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIN_USE(value: IN_USE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IN_USE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINVALID_URL(value: INVALID_URL): Self = this.set("INVALID_URL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIO(value: IO): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IO")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIN_USE(value: IN_USE): Self = this.set("IN_USE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNOT_A_DIRECTORY(value: NOT_A_DIRECTORY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOT_A_DIRECTORY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIO(value: IO): Self = this.set("IO", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNOT_A_FILE(value: NOT_A_FILE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOT_A_FILE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNOT_A_DIRECTORY(value: NOT_A_DIRECTORY): Self = this.set("NOT_A_DIRECTORY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNOT_EMPTY(value: NOT_EMPTY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOT_EMPTY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNOT_A_FILE(value: NOT_A_FILE): Self = this.set("NOT_A_FILE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNOT_FOUND(value: NOT_FOUND): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOT_FOUND")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNOT_EMPTY(value: NOT_EMPTY): Self = this.set("NOT_EMPTY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNO_MEMORY(value: NO_MEMORY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NO_MEMORY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNOT_FOUND(value: NOT_FOUND): Self = this.set("NOT_FOUND", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNO_SPACE(value: NO_SPACE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NO_SPACE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNO_MEMORY(value: NO_MEMORY): Self = this.set("NO_MEMORY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOK(value: OK): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNO_SPACE(value: NO_SPACE): Self = this.set("NO_SPACE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSECURITY(value: SECURITY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SECURITY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOK(value: OK): Self = this.set("OK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTOO_MANY_OPENED(value: TOO_MANY_OPENED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TOO_MANY_OPENED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSECURITY(value: SECURITY): Self = this.set("SECURITY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTOO_MANY_OPENED(value: TOO_MANY_OPENED): Self = this.set("TOO_MANY_OPENED", value.asInstanceOf[js.Any])
   }
   
 }

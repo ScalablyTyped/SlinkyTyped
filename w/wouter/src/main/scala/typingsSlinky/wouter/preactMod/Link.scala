@@ -1,12 +1,14 @@
 package typingsSlinky.wouter.preactMod
 
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.preact.mod.FunctionComponent
+import typingsSlinky.preact.mod.VNode
+import typingsSlinky.wouter.useLocationMod.BaseLocationHook
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("wouter/preact", "Link")
 @js.native
-object Link extends TopLevel[FunctionComponent[LinkProps]]
+object Link extends js.Object {
+  def apply[H /* <: BaseLocationHook */](props: LinkProps[H]): VNode[_] | Null = js.native
+}
 

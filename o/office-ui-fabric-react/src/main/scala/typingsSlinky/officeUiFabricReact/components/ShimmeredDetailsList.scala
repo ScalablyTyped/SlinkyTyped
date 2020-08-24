@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsListStyleProps
@@ -34,7 +34,7 @@ object ShimmeredDetailsList {
     def enableShimmer(value: Boolean): this.type = set("enableShimmer", value.asInstanceOf[js.Any])
     @scala.inline
     def onRenderCustomPlaceholder(
-      value: (/* rowProps */ IDetailsRowProps, /* index */ js.UndefOr[Double], /* defaultRender */ js.UndefOr[js.Function1[/* props */ IDetailsRowProps, TagMod[Any]]]) => TagMod[Any]
+      value: (/* rowProps */ IDetailsRowProps, /* index */ js.UndefOr[Double], /* defaultRender */ js.UndefOr[js.Function1[/* props */ IDetailsRowProps, ReactElement]]) => ReactElement
     ): this.type = set("onRenderCustomPlaceholder", js.Any.fromFunction3(value))
     @scala.inline
     def removeFadingOverlay(value: Boolean): this.type = set("removeFadingOverlay", value.asInstanceOf[js.Any])

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -25,7 +25,6 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadLabelKey
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
-import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMulitInputWithHocProps
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings._empty
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`additions text`
@@ -79,9 +78,9 @@ object TypeaheadInputMulti {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: TypeaheadModel] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadInputMulti[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadInputMulti[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -204,6 +203,8 @@ object TypeaheadInputMulti {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -427,6 +428,8 @@ object TypeaheadInputMulti {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
+    def placeholderNull: this.type = set("placeholder", null)
+    @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -476,9 +479,9 @@ object TypeaheadInputMulti {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: TypeaheadModel](p: TypeaheadMulitInputWithHocProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](p: TypeaheadMulitInputWithHocProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: TypeaheadModel](
+  def apply[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](
     `aria-activedescendant`: String,
     `aria-autocomplete`: list | both,
     `aria-expanded`: Boolean,
@@ -494,7 +497,7 @@ object TypeaheadInputMulti {
     onFocus: /* e */ Event => Unit,
     onKeyDown: /* e */ Event => Unit,
     onRemove: Event => Unit,
-    renderToken: (T, TypeaheadMenuProps[T], Double) => TagMod[Any],
+    renderToken: (T, TypeaheadMenuProps[T], Double) => ReactElement,
     role: _empty,
     selected: js.Array[T],
     `type`: text,

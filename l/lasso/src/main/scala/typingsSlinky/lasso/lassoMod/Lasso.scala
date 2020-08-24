@@ -49,6 +49,7 @@ trait Lasso extends EventEmitter {
     callback: js.Function2[/* err */ js.Error | Null, /* result */ LassoPageResult, Unit]
   ): js.Promise[_] = js.native
   def lassoResource(path: String): Unit = js.native
+  def lassoResource(path: String, options: js.UndefOr[scala.Nothing], callback: Callback): Unit = js.native
   def lassoResource(path: String, options: js.Any): Unit = js.native
   def lassoResource(path: String, options: js.Any, callback: Callback): Unit = js.native
   def setCSPNonceProvider(func: js.Any): js.Any = js.native

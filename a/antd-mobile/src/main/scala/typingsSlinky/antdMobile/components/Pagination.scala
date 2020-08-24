@@ -6,21 +6,20 @@ import typingsSlinky.antdMobile.antdMobileStrings.button
 import typingsSlinky.antdMobile.antdMobileStrings.number
 import typingsSlinky.antdMobile.antdMobileStrings.pointer
 import typingsSlinky.antdMobile.paginationMod.PaginationProps
-import typingsSlinky.antdMobile.paginationMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pagination {
-  @JSImport("antd-mobile/lib/pagination", JSImport.Default)
+  @JSImport("antd-mobile", "Pagination")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Pagination] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

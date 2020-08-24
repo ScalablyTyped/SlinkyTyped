@@ -29,29 +29,18 @@ object BULK {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBULK(value: bulk_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BULK")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCONTROL(value: control_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONTROL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBULK(value: bulk_): Self = this.set("BULK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withINTERRUPT(value: interrupt_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INTERRUPT")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCONTROL(value: control_): Self = this.set("CONTROL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withISOCHRONOUS(value: isochronous_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ISOCHRONOUS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINTERRUPT(value: interrupt_): Self = this.set("INTERRUPT", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setISOCHRONOUS(value: isochronous_): Self = this.set("ISOCHRONOUS", value.asInstanceOf[js.Any])
   }
   
 }

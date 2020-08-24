@@ -42,6 +42,18 @@ class BoringLayout protected ()
     spacingadd: Double,
     metrics: Metrics,
     includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: Double
+  ) = this()
+  def this(
+    source: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    spacingmult: Double,
+    spacingadd: Double,
+    metrics: Metrics,
+    includepad: Boolean,
     ellipsize: TruncateAt,
     ellipsizedWidth: Double
   ) = this()
@@ -58,6 +70,12 @@ object BoringLayout extends js.Object {
   var FIRST_RIGHT_TO_LEFT: js.Any = js.native
   var sTemp: js.Any = js.native
   def isBoring(text: String, paint: typingsSlinky.androiduix.android.text.TextPaint): typingsSlinky.androiduix.android.text.BoringLayout.Metrics = js.native
+  def isBoring(
+    text: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    textDir: js.UndefOr[scala.Nothing],
+    metrics: typingsSlinky.androiduix.android.text.BoringLayout.Metrics
+  ): typingsSlinky.androiduix.android.text.BoringLayout.Metrics = js.native
   def isBoring(
     text: String,
     paint: typingsSlinky.androiduix.android.text.TextPaint,
@@ -78,6 +96,18 @@ object BoringLayout extends js.Object {
     spacingadd: Double,
     metrics: typingsSlinky.androiduix.android.text.BoringLayout.Metrics,
     includepad: Boolean
+  ): typingsSlinky.androiduix.android.text.BoringLayout = js.native
+  def make(
+    source: String,
+    paint: typingsSlinky.androiduix.android.text.TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    spacingmult: Double,
+    spacingadd: Double,
+    metrics: typingsSlinky.androiduix.android.text.BoringLayout.Metrics,
+    includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: Double
   ): typingsSlinky.androiduix.android.text.BoringLayout = js.native
   def make(
     source: String,

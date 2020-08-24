@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.AccessibleDependencyInfo
 import typingsSlinky.oracleOraclejet.anon.Baseline
 import typingsSlinky.oracleOraclejet.anon.BaselineDate
-import typingsSlinky.oracleOraclejet.anon.HeightNumber
 import typingsSlinky.oracleOraclejet.anon.Index
 import typingsSlinky.oracleOraclejet.anon.MaxWidth
 import typingsSlinky.oracleOraclejet.anon.Move
@@ -14,7 +13,8 @@ import typingsSlinky.oracleOraclejet.anon.OffsetY
 import typingsSlinky.oracleOraclejet.anon.RowIndex
 import typingsSlinky.oracleOraclejet.anon.Scale
 import typingsSlinky.oracleOraclejet.anon.Vertical
-import typingsSlinky.oracleOraclejet.anon.`7`
+import typingsSlinky.oracleOraclejet.anon.`8`
+import typingsSlinky.oracleOraclejet.anon.`9`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojganttMod.ojGantt.ReferenceObject
 import typingsSlinky.oracleOraclejet.ojtimeBaseMod.dvtTimeComponent
@@ -116,14 +116,14 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   var onViewportStartChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var referenceObjects: js.Array[ReferenceObject] = js.native
   var rowAxis: MaxWidth[K2, D2] = js.native
-  var rowDefaults: HeightNumber = js.native
+  var rowDefaults: `8` = js.native
   var scrollPosition: OffsetY = js.native
   var selection: js.Array[K2] = js.native
   var selectionMode: single | multiple | none = js.native
   var start: String = js.native
   var taskData: js.UndefOr[DataProvider[K2, D2]] = js.native
   var taskDefaults: Baseline = js.native
-  var tooltip: `7`[K2, D2] = js.native
+  var tooltip: `9`[K2, D2] = js.native
   @JSName("translations")
   var translations_ojGantt_ : AccessibleDependencyInfo = js.native
   var valueFormats: BaselineDate = js.native
@@ -356,7 +356,7 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("getProperty")
   def getProperty_rowAxis(property: rowAxis): MaxWidth[K2, D2] = js.native
   @JSName("getProperty")
-  def getProperty_rowDefaults(property: rowDefaults): HeightNumber = js.native
+  def getProperty_rowDefaults(property: rowDefaults): `8` = js.native
   @JSName("getProperty")
   def getProperty_scrollPosition(property: scrollPosition): OffsetY = js.native
   @JSName("getProperty")
@@ -370,7 +370,7 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("getProperty")
   def getProperty_taskDefaults(property: taskDefaults): Baseline = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `7`[K2, D2] = js.native
+  def getProperty_tooltip(property: tooltip): `9`[K2, D2] = js.native
   @JSName("getProperty")
   def getProperty_valueFormats(property: valueFormats): BaselineDate = js.native
   @JSName("getProperty")
@@ -390,6 +390,8 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("setProperty")
   def setProperty_as(property: as, value: String): Unit = js.native
   @JSName("setProperty")
+  def setProperty_dependencyData(property: dependencyData): Unit = js.native
+  @JSName("setProperty")
   def setProperty_dependencyData(property: dependencyData, value: DataProvider[K1, D1]): Unit = js.native
   @JSName("setProperty")
   def setProperty_dnd(property: dnd, value: Move): Unit = js.native
@@ -406,7 +408,7 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("setProperty")
   def setProperty_rowAxis(property: rowAxis, value: MaxWidth[K2, D2]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_rowDefaults(property: rowDefaults, value: HeightNumber): Unit = js.native
+  def setProperty_rowDefaults(property: rowDefaults, value: `8`): Unit = js.native
   @JSName("setProperty")
   def setProperty_scrollPosition(property: scrollPosition, value: OffsetY): Unit = js.native
   @JSName("setProperty")
@@ -414,11 +416,13 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("setProperty")
   def setProperty_start(property: start, value: String): Unit = js.native
   @JSName("setProperty")
+  def setProperty_taskData(property: taskData): Unit = js.native
+  @JSName("setProperty")
   def setProperty_taskData(property: taskData, value: DataProvider[K2, D2]): Unit = js.native
   @JSName("setProperty")
   def setProperty_taskDefaults(property: taskDefaults, value: Baseline): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `7`[K2, D2]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `9`[K2, D2]): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: AccessibleDependencyInfo): Unit = js.native
   @JSName("setProperty")

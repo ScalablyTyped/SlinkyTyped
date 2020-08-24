@@ -54,6 +54,8 @@ object UncontrolledReactSVGPanZoom {
     @scala.inline
     def miniatureProps(value: Background): this.type = set("miniatureProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def modifierKeysVarargs(value: String*): this.type = set("modifierKeys", js.Array(value :_*))
+    @scala.inline
     def modifierKeys(value: js.Array[String]): this.type = set("modifierKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def onChangeTool(value: /* tool */ Tool => Unit): this.type = set("onChangeTool", js.Any.fromFunction1(value))
@@ -91,6 +93,8 @@ object UncontrolledReactSVGPanZoom {
     def toolbarProps(value: Position): this.type = set("toolbarProps", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Value): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
   }
   
   def withProps(p: UncontrolledProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

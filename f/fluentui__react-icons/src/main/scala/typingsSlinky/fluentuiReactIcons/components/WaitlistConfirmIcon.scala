@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WaitlistConfirmIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WaitlistConfirmIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WaitlistConfirmIcon")
   @js.native
   object component extends js.Object
   

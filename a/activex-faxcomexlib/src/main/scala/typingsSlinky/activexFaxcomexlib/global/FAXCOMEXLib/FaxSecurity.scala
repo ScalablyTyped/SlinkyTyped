@@ -1,6 +1,5 @@
 package typingsSlinky.activexFaxcomexlib.global.FAXCOMEXLib
 
-import typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FAX_ACCESS_RIGHTS_ENUM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,24 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FAXCOMEXLib.FaxSecurity")
 @js.native
 class FaxSecurity protected ()
-  extends typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxSecurity {
-  /** Security descriptor */
-  /* CompleteClass */
-  override var Descriptor: js.Any = js.native
-  /* CompleteClass */
-  @JSName("FAXCOMEXLib.FaxSecurity_typekey")
-  override var FAXCOMEXLibDotFaxSecurity_typekey: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxSecurity = js.native
-  /** Granted rights, a bit-wise combination of FAX_ACCESS_RIGHTS values */
-  /* CompleteClass */
-  override val GrantedRights: FAX_ACCESS_RIGHTS_ENUM = js.native
-  /** Security Information Type */
-  /* CompleteClass */
-  override var InformationType: Double = js.native
-  /** Refresh the object */
-  /* CompleteClass */
-  override def Refresh(): Unit = js.native
-  /** Save the object */
-  /* CompleteClass */
-  override def Save(): Unit = js.native
-}
+  extends typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxSecurity
 

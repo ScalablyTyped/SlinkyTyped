@@ -44,17 +44,14 @@ object NativeSurface {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLockedCanvas(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedCanvas")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSurfaceId(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLockedCanvas(value: js.Any): Self = this.set("lockedCanvas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSurfaceId(value: js.Any): Self = this.set("surfaceId", value.asInstanceOf[js.Any])
   }
   
 }

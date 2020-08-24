@@ -3,9 +3,9 @@ package typingsSlinky.victory.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.victory.anon.XBoolean
 import typingsSlinky.victory.anon.Y
 import typingsSlinky.victory.anon.`1`
+import typingsSlinky.victory.anon.`2`
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
 import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.ColorScalePropType
@@ -38,11 +38,15 @@ object VictoryPie {
     @scala.inline
     def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorScaleVarargs(value: String*): this.type = set("colorScale", js.Array(value :_*))
+    @scala.inline
     def colorScale(value: ColorScalePropType): this.type = set("colorScale", value.asInstanceOf[js.Any])
     @scala.inline
     def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def cornerRadius(value: Double): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,6 +57,10 @@ object VictoryPie {
     def eventKeyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("eventKey", js.Any.fromFunction1(value))
     @scala.inline
     def eventKey(value: StringOrNumberOrCallback): this.type = set("eventKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventsVarargs(
+      value: (EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback | (js.Array[Double | String])])*
+    ): this.type = set("events", js.Array(value :_*))
     @scala.inline
     def events(
       value: js.Array[
@@ -74,6 +82,8 @@ object VictoryPie {
     @scala.inline
     def labelRadius(value: Double): this.type = set("labelRadius", value.asInstanceOf[js.Any])
     @scala.inline
+    def labelsVarargs(value: String*): this.type = set("labels", js.Array(value :_*))
+    @scala.inline
     def labelsFunction1(value: /* data */ js.Any => String): this.type = set("labels", js.Any.fromFunction1(value))
     @scala.inline
     def labels(value: js.Array[String] | (js.Function1[/* data */ js.Any, String])): this.type = set("labels", value.asInstanceOf[js.Any])
@@ -92,7 +102,7 @@ object VictoryPie {
     @scala.inline
     def scale(value: ScalePropType | D3Scale | `1`): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
-    def singleQuadrantDomainPadding(value: Boolean | XBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    def singleQuadrantDomainPadding(value: Boolean | `2`): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
     @scala.inline
@@ -104,9 +114,13 @@ object VictoryPie {
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
+    def xVarargs(value: String*): this.type = set("x", js.Array(value :_*))
+    @scala.inline
     def xFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("x", js.Any.fromFunction1(value))
     @scala.inline
     def x(value: DataGetterPropType): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yVarargs(value: String*): this.type = set("y", js.Array(value :_*))
     @scala.inline
     def yFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("y", js.Any.fromFunction1(value))
     @scala.inline

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DecreaseIndentIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DecreaseIndentIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DecreaseIndentIcon")
   @js.native
   object component extends js.Object
   

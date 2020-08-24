@@ -6,7 +6,7 @@ import typingsSlinky.antd.formContextMod.FormProviderProps
 import typingsSlinky.antd.formFormMod.FormProps
 import typingsSlinky.antd.formItemMod.FormItemProps
 import typingsSlinky.antd.formListMod.FormListProps
-import typingsSlinky.antd.formUtilMod.FormInstance
+import typingsSlinky.antd.useFormMod.FormInstance
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js

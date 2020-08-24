@@ -47,8 +47,96 @@ class ^ () extends XDate {
     */
   def this(year: Double, month: Double, date: Double) = this()
   def this(year: Double, month: Double, date: Double, hours: Double) = this()
+  def this(year: Double, month: Double, date: Double, hours: js.UndefOr[scala.Nothing], minutes: Double) = this()
   def this(year: Double, month: Double, date: Double, hours: Double, minutes: Double) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ) = this()
   def this(year: Double, month: Double, date: Double, hours: Double, minutes: Double, seconds: Double) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double,
+    milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double
+  ) = this()
   def this(
     year: Double,
     month: Double,
@@ -57,6 +145,156 @@ class ^ () extends XDate {
     minutes: Double,
     seconds: Double,
     milliseconds: Double
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double,
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double,
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    milliseconds: Double,
+    utcmode: Boolean
+  ) = this()
+  def this(
+    year: Double,
+    month: Double,
+    date: Double,
+    hours: Double,
+    minutes: Double,
+    seconds: Double,
+    milliseconds: js.UndefOr[scala.Nothing],
+    utcmode: Boolean
   ) = this()
   def this(
     year: Double,
@@ -89,8 +327,96 @@ object ^ extends js.Object {
     milliseconds: Double
   ): XDate = js.native
   def UTC(year: Double, month: Double, day: Double): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    ms: Double
+  ): Double = js.native
+  def UTC(year: Double, month: Double, day: Double, hours: js.UndefOr[scala.Nothing], minutes: Double): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double
+  ): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: js.UndefOr[scala.Nothing],
+    minutes: Double,
+    seconds: Double,
+    ms: Double
+  ): Double = js.native
   def UTC(year: Double, month: Double, day: Double, hours: Double): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double
+  ): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: Double,
+    minutes: js.UndefOr[scala.Nothing],
+    seconds: Double,
+    ms: Double
+  ): Double = js.native
   def UTC(year: Double, month: Double, day: Double, hours: Double, minutes: Double): Double = js.native
+  def UTC(
+    year: Double,
+    month: Double,
+    day: Double,
+    hours: Double,
+    minutes: Double,
+    seconds: js.UndefOr[scala.Nothing],
+    ms: Double
+  ): Double = js.native
   def UTC(year: Double, month: Double, day: Double, hours: Double, minutes: Double, seconds: Double): Double = js.native
   @JSName("UTC")
   def UTC_Double(

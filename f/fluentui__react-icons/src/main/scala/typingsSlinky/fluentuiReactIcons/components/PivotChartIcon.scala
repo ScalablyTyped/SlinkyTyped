@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PivotChartIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PivotChartIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PivotChartIcon")
   @js.native
   object component extends js.Object
   

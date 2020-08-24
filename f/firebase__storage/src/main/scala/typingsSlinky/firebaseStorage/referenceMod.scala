@@ -1,10 +1,9 @@
 package typingsSlinky.firebaseStorage
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.firebaseStorage.authwrapperMod.AuthWrapper
 import typingsSlinky.firebaseStorage.locationMod.Location
 import typingsSlinky.firebaseStorage.metadataMod.Mappings
-import typingsSlinky.firebaseStorage.serviceMod.Service
+import typingsSlinky.firebaseStorage.serviceMod.StorageService
 import typingsSlinky.firebaseStorage.srcListMod.ListOptions
 import typingsSlinky.firebaseStorage.srcListMod.ListResult
 import typingsSlinky.firebaseStorage.srcMetadataMod.Metadata
@@ -19,11 +18,11 @@ import scala.scalajs.js.annotation._
 object referenceMod extends js.Object {
   @js.native
   class Reference protected () extends js.Object {
-    def this(authWrapper: AuthWrapper, location: String) = this()
-    def this(authWrapper: AuthWrapper, location: Location) = this()
-    var authWrapper: AuthWrapper = js.native
+    def this(service: StorageService, location: String) = this()
+    def this(service: StorageService, location: Location) = this()
     var listAllHelper: js.Any = js.native
     var location: Location = js.native
+    var service: StorageService = js.native
     var throwIfRoot_ : js.Any = js.native
     def bucket: String = js.native
     /**
@@ -91,7 +90,7 @@ object referenceMod extends js.Object {
     def listAll(): js.Promise[ListResult] = js.native
     /* protected */ def mappings(): Mappings = js.native
     def name: String = js.native
-    /* protected */ def newRef(authWrapper: AuthWrapper, location: Location): Reference = js.native
+    /* protected */ def newRef(service: StorageService, location: Location): Reference = js.native
     /**
       * @return A reference to the parent of the
       *     current object, or null if the current object is the root.
@@ -117,6 +116,7 @@ object referenceMod extends js.Object {
       *     observe the upload.
       */
     def putString(value: String): UploadTask = js.native
+    def putString(value: String, format: js.UndefOr[scala.Nothing], metadata: Metadata): UploadTask = js.native
     def putString(value: String, format: StringFormat): UploadTask = js.native
     def putString(value: String, format: StringFormat, metadata: Metadata): UploadTask = js.native
     /**
@@ -124,7 +124,7 @@ object referenceMod extends js.Object {
       *     object's bucket.
       */
     def root: Reference = js.native
-    def storage: Service = js.native
+    def storage: StorageService = js.native
     /**
       * Updates the metadata for this object.
       * @param metadata The new metadata for the object.

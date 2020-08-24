@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -19,7 +19,6 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.dialogMod.DialogProps
-import typingsSlinky.fundamentalReact.dialogMod.default
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
@@ -74,14 +73,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dialog {
-  @JSImport("fundamental-react/lib/Dialog/Dialog", JSImport.Default)
+  @JSImport("fundamental-react", "Dialog")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.Dialog] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -208,6 +207,8 @@ object Dialog {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -441,8 +442,6 @@ object Dialog {
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
-    @scala.inline
     def titleProps(value: js.Any): this.type = set("titleProps", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -456,8 +455,8 @@ object Dialog {
   
   def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(actions: js.Array[TagMod[Any]]): Builder = {
-    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any])
+  def apply(actions: js.Array[ReactElement], title: String with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[DialogProps]))
   }
 }

@@ -32,53 +32,26 @@ object GateSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDotbody(value: SVGRectAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".body")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDotbody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".body")(js.undefined)
-        ret
-    }
+    def setDotbody(value: SVGRectAttributes): Self = this.set(".body", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotwire(value: SVGPathAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".wire")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotbody: Self = this.set(".body", js.undefined)
     @scala.inline
-    def withoutDotwire: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".wire")(js.undefined)
-        ret
-    }
+    def setDotwire(value: SVGPathAttributes): Self = this.set(".wire", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCircle(value: SVGCircleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotwire: Self = this.set(".wire", js.undefined)
     @scala.inline
-    def withoutCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(js.undefined)
-        ret
-    }
+    def setCircle(value: SVGCircleAttributes): Self = this.set("circle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withText(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCircle: Self = this.set("circle", js.undefined)
     @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
+    def setText(value: SVGTextAttributes): Self = this.set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteText: Self = this.set("text", js.undefined)
   }
   
 }

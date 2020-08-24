@@ -54,65 +54,34 @@ object BlockingResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthCredentials(value: AuthCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authCredentials")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAuthCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authCredentials")(js.undefined)
-        ret
-    }
+    def setAuthCredentials(value: AuthCredentials): Self = this.set("authCredentials", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAuthCredentials: Self = this.set("authCredentials", js.undefined)
     @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
+    def setCancel(value: Boolean): Self = this.set("cancel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRedirectUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCancel: Self = this.set("cancel", js.undefined)
     @scala.inline
-    def withoutRedirectUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUrl")(js.undefined)
-        ret
-    }
+    def setRedirectUrl(value: String): Self = this.set("redirectUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequestHeaders(value: js.Array[HttpHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRedirectUrl: Self = this.set("redirectUrl", js.undefined)
     @scala.inline
-    def withoutRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(js.undefined)
-        ret
-    }
+    def setRequestHeadersVarargs(value: HttpHeader*): Self = this.set("requestHeaders", js.Array(value :_*))
     @scala.inline
-    def withResponseHeaders(value: js.Array[HttpHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRequestHeaders(value: js.Array[HttpHeader]): Self = this.set("requestHeaders", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutResponseHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(js.undefined)
-        ret
-    }
+    def deleteRequestHeaders: Self = this.set("requestHeaders", js.undefined)
+    @scala.inline
+    def setResponseHeadersVarargs(value: HttpHeader*): Self = this.set("responseHeaders", js.Array(value :_*))
+    @scala.inline
+    def setResponseHeaders(value: js.Array[HttpHeader]): Self = this.set("responseHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResponseHeaders: Self = this.set("responseHeaders", js.undefined)
   }
   
 }

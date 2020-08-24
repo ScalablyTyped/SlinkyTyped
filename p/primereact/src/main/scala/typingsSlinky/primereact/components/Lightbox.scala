@@ -25,6 +25,8 @@ object Lightbox {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def imagesVarargs(value: js.Any*): this.type = set("images", js.Array(value :_*))
+    @scala.inline
     def images(value: js.Array[_]): this.type = set("images", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])

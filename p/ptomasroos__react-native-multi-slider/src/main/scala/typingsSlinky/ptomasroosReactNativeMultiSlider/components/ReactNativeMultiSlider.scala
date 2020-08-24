@@ -72,6 +72,8 @@ object ReactNativeMultiSlider {
     @scala.inline
     def onValuesChangeStart(value: () => Unit): this.type = set("onValuesChangeStart", js.Any.fromFunction0(value))
     @scala.inline
+    def optionsArrayVarargs(value: Double*): this.type = set("optionsArray", js.Array(value :_*))
+    @scala.inline
     def optionsArray(value: js.Array[Double]): this.type = set("optionsArray", value.asInstanceOf[js.Any])
     @scala.inline
     def pressedMarkerStyle(value: ViewStyle): this.type = set("pressedMarkerStyle", value.asInstanceOf[js.Any])
@@ -93,6 +95,8 @@ object ReactNativeMultiSlider {
     def valuePrefix(value: String): this.type = set("valuePrefix", value.asInstanceOf[js.Any])
     @scala.inline
     def valueSuffix(value: String): this.type = set("valueSuffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valuesVarargs(value: Double*): this.type = set("values", js.Array(value :_*))
     @scala.inline
     def values(value: js.Array[Double]): this.type = set("values", value.asInstanceOf[js.Any])
   }

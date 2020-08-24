@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "notifyjs-browser"
-version := "0.0-unknown-dt-20200515Z-fd54c1"
-scalaVersion := "2.13.2"
+version := "0.0-unknown-dt-20200515Z-d6fd26"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,6 +1,6 @@
 package typingsSlinky.next
 
-import typingsSlinky.next.checkCustomRoutesMod.RouteType
+import typingsSlinky.next.loadCustomRoutesMod.RouteType
 import typingsSlinky.next.routerMod.HistoryMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`

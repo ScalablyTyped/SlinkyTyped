@@ -3,6 +3,7 @@ package typingsSlinky.three.webGLRenderTargetMod
 import typingsSlinky.three.depthTextureMod.DepthTexture
 import typingsSlinky.three.eventDispatcherMod.EventDispatcher
 import typingsSlinky.three.textureMod.Texture
+import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.vector4Mod.Vector4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,6 +29,7 @@ class WebGLRenderTarget protected () extends EventDispatcher {
   	 */
   var generateMipmaps: js.Any = js.native
   var height: Double = js.native
+  val isWebGLRenderTarget: `true` = js.native
   /**
   	 * @deprecated Use {@link Texture#magFilter texture.magFilter} instead.
   	 */

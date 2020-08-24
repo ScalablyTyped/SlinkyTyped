@@ -2,10 +2,10 @@ package typingsSlinky.mochaSugarFree.mod
 
 import typingsSlinky.mocha.mod.Suite_
 import typingsSlinky.mocha.mod.Test_
-import typingsSlinky.mochaSugarFree.anon.OptionsasyncfalsefnTestCa
+import typingsSlinky.mochaSugarFree.anon.Optionsasyncfalseundefine
 import typingsSlinky.mochaSugarFree.anon.OptionsasynctruefnTestCas
-import typingsSlinky.mochaSugarFree.anon.OptionsfnHookFunc
-import typingsSlinky.mochaSugarFree.anon.OptionsfnSuiteFunc
+import typingsSlinky.mochaSugarFree.anon.OptionsfnHookFuncundefine
+import typingsSlinky.mochaSugarFree.anon.OptionsfnSuiteFuncundefin
 import typingsSlinky.mochaSugarFree.anon.OptionstitlestringfnSuite
 import typingsSlinky.mochaSugarFree.mochaSugarFreeStrings.tdd
 import scala.scalajs.js
@@ -84,8 +84,8 @@ trait TDD extends BaseInterface {
     *
     * @see https://mochajs.org/api/global.html#beforeEach
     */
-  def setup(options: OptionsfnHookFunc): Unit = js.native
-  def setup(options: OptionsfnHookFunc, fn: HookFunc): Unit = js.native
+  def setup(options: OptionsfnHookFuncundefine): Unit = js.native
+  def setup(options: OptionsfnHookFuncundefine, fn: HookFunc): Unit = js.native
   // tslint:disable-next-line: unified-signatures
   /**
     * [tdd, qunit]
@@ -101,8 +101,9 @@ trait TDD extends BaseInterface {
     */
   def suite(title: String): Suite_ = js.native
   def suite(title: String, fn: SuiteFunc): Suite_ = js.native
-  def suite(title: String, options: OptionsfnSuiteFunc): Suite_ = js.native
-  def suite(title: String, options: OptionsfnSuiteFunc, fn: SuiteFunc): Suite_ = js.native
+  def suite(title: String, options: js.UndefOr[scala.Nothing], fn: SuiteFunc): Suite_ = js.native
+  def suite(title: String, options: OptionsfnSuiteFuncundefin): Suite_ = js.native
+  def suite(title: String, options: OptionsfnSuiteFuncundefin, fn: SuiteFunc): Suite_ = js.native
   /**
     * [tdd]
     *
@@ -119,8 +120,8 @@ trait TDD extends BaseInterface {
     *
     * @see https://mochajs.org/api/global.html#before
     */
-  def suiteSetup(options: OptionsfnHookFunc): Unit = js.native
-  def suiteSetup(options: OptionsfnHookFunc, fn: HookFunc): Unit = js.native
+  def suiteSetup(options: OptionsfnHookFuncundefine): Unit = js.native
+  def suiteSetup(options: OptionsfnHookFuncundefine, fn: HookFunc): Unit = js.native
   /**
     * [tdd]
     *
@@ -137,8 +138,8 @@ trait TDD extends BaseInterface {
     *
     * @see https://mochajs.org/api/global.html#after
     */
-  def suiteTeardown(options: OptionsfnHookFunc): Unit = js.native
-  def suiteTeardown(options: OptionsfnHookFunc, fn: HookFunc): Unit = js.native
+  def suiteTeardown(options: OptionsfnHookFuncundefine): Unit = js.native
+  def suiteTeardown(options: OptionsfnHookFuncundefine, fn: HookFunc): Unit = js.native
   /**
     * [tdd]
     *
@@ -155,8 +156,8 @@ trait TDD extends BaseInterface {
     *
     * @see https://mochajs.org/api/global.html#afterEach
     */
-  def teardown(options: OptionsfnHookFunc): Unit = js.native
-  def teardown(options: OptionsfnHookFunc, fn: HookFunc): Unit = js.native
+  def teardown(options: OptionsfnHookFuncundefine): Unit = js.native
+  def teardown(options: OptionsfnHookFuncundefine, fn: HookFunc): Unit = js.native
   /**
     * [tdd, qunit]
     *
@@ -173,8 +174,8 @@ trait TDD extends BaseInterface {
     *
     * The name of the function is used as the name of the test if `title` is not supplied.
     */
-  def test(options: OptionsasyncfalsefnTestCa): Test_ = js.native
-  def test(options: OptionsasyncfalsefnTestCa, fn: TestCase): Test_ = js.native
+  def test(options: Optionsasyncfalseundefine): Test_ = js.native
+  def test(options: Optionsasyncfalseundefine, fn: TestCase): Test_ = js.native
   /**
     * [tdd, qunit]
     *
@@ -200,8 +201,8 @@ trait TDD extends BaseInterface {
     *
     * The name of the function is used as the name of the test if `title` is not supplied.
     */
-  def test(title: String, options: OptionsasyncfalsefnTestCa): Test_ = js.native
-  def test(title: String, options: OptionsasyncfalsefnTestCa, fn: TestCase): Test_ = js.native
+  def test(title: String, options: Optionsasyncfalseundefine): Test_ = js.native
+  def test(title: String, options: Optionsasyncfalseundefine, fn: TestCase): Test_ = js.native
   /**
     * [tdd, qunit]
     *

@@ -1,6 +1,5 @@
 package typingsSlinky.rmcDialog.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -19,13 +18,15 @@ class SharedBuilder_IDialogPropTypes371968260[R <: js.Object] (val args: js.Arra
   @scala.inline
   def bodyStyle(value: js.Object): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
   @scala.inline
+  def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+  @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
   def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
   @scala.inline
   def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
   @scala.inline
-  def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+  def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
   @scala.inline
   def mask(value: Boolean): this.type = set("mask", value.asInstanceOf[js.Any])
   @scala.inline
@@ -49,7 +50,7 @@ class SharedBuilder_IDialogPropTypes371968260[R <: js.Object] (val args: js.Arra
   @scala.inline
   def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
-  def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   @scala.inline

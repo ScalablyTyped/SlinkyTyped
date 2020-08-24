@@ -2,7 +2,6 @@ package typingsSlinky.antdMobile.customInputMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -14,7 +13,7 @@ trait NumberInput
   extends Component[NumberInputProps, js.Any, js.Any] {
   var container: HTMLDivElement = js.native
   var inputRef: HTMLDivElement | Null = js.native
-  var keyBoard: TagMod[Any] | Null = js.native
+  var keyBoard: ReactElement | Null = js.native
   def addBlurListener(): Unit = js.native
   @JSName("componentWillReceiveProps")
   def componentWillReceiveProps_MNumberInput(nextProps: NumberInputProps): Unit = js.native

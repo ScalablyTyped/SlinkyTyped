@@ -1,7 +1,11 @@
 package typingsSlinky.reactNativeNavigation
 
+import typingsSlinky.reactNativeNavigation.commandsObserverMod.CommandsObserver
+import typingsSlinky.reactNativeNavigation.componentEventsObserverMod.ComponentEventsObserver
 import typingsSlinky.reactNativeNavigation.constantsMod.NavigationConstants
+import typingsSlinky.reactNativeNavigation.nativeEventsReceiverMod.NativeEventsReceiver
 import typingsSlinky.reactNativeNavigation.navigationMod.NavigationRoot
+import typingsSlinky.reactNativeNavigation.optionsMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +17,58 @@ object reactNativeNavigationMod extends js.Object {
   class Constants protected ()
     extends typingsSlinky.reactNativeNavigation.constantsMod.Constants
   
+  @js.native
+  class EventsRegistry protected ()
+    extends typingsSlinky.reactNativeNavigation.eventsRegistryMod.EventsRegistry {
+    def this(
+      nativeEventsReceiver: NativeEventsReceiver,
+      commandsObserver: CommandsObserver,
+      componentEventsObserver: ComponentEventsObserver
+    ) = this()
+  }
+  
+  @js.native
+  class NavigationComponent[Props, State, Snapshot] ()
+    extends typingsSlinky.reactNativeNavigation.navigationComponentMod.NavigationComponent[Props, State, Snapshot]
+  
   val Navigation: NavigationRoot = js.native
+  @js.native
+  object CommandName extends js.Object {
+    /* "dismissAllModals" */ val DismissAllModals: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.DismissAllModals with String = js.native
+    /* "dismissModal" */ val DismissModal: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.DismissModal with String = js.native
+    /* "dismissOverlay" */ val DismissOverlay: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.DismissOverlay with String = js.native
+    /* "getLaunchArgs" */ val GetLaunchArgs: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.GetLaunchArgs with String = js.native
+    /* "mergeOptions" */ val MergeOptions: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.MergeOptions with String = js.native
+    /* "pop" */ val Pop: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.Pop with String = js.native
+    /* "popTo" */ val PopTo: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.PopTo with String = js.native
+    /* "popToRoot" */ val PopToRoot: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.PopToRoot with String = js.native
+    /* "push" */ val Push: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.Push with String = js.native
+    /* "setDefaultOptions" */ val SetDefaultOptions: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.SetDefaultOptions with String = js.native
+    /* "setRoot" */ val SetRoot: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.SetRoot with String = js.native
+    /* "setStackRoot" */ val SetStackRoot: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.SetStackRoot with String = js.native
+    /* "showModal" */ val ShowModal: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.ShowModal with String = js.native
+    /* "showOverlay" */ val ShowOverlay: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.ShowOverlay with String = js.native
+    /* "updateProps" */ val UpdateProps: typingsSlinky.reactNativeNavigation.commandNameMod.CommandName.UpdateProps with String = js.native
+    @JSBracketAccess
+    def apply(value: String): js.UndefOr[typingsSlinky.reactNativeNavigation.commandNameMod.CommandName with String] = js.native
+  }
+  
   /* static members */
   @js.native
   object Constants extends js.Object {
-    var instance: js.Any = js.native
     def get(): js.Promise[NavigationConstants] = js.native
+  }
+  
+  /* static members */
+  @js.native
+  object NavigationComponent extends js.Object {
+    /**
+      * Options used to apply a style configuration when the screen appears.
+      *
+      * This field can either contain the concrete options to be applied, or a generator function
+      * which accepts props and returns an Options object.
+      */
+    var options: (js.Function1[/* props */ js.UndefOr[js.Any], Options]) | Options = js.native
   }
   
   @js.native
@@ -30,7 +80,7 @@ object reactNativeNavigationMod extends js.Object {
     /* "overCurrentContext" */ val overCurrentContext: typingsSlinky.reactNativeNavigation.optionsMod.OptionsModalPresentationStyle.overCurrentContext with String = js.native
     /* "overFullScreen" */ val overFullScreen: typingsSlinky.reactNativeNavigation.optionsMod.OptionsModalPresentationStyle.overFullScreen with String = js.native
     /* "pageSheet" */ val pageSheet: typingsSlinky.reactNativeNavigation.optionsMod.OptionsModalPresentationStyle.pageSheet with String = js.native
-    /* "popOver" */ val popOver: typingsSlinky.reactNativeNavigation.optionsMod.OptionsModalPresentationStyle.popOver with String = js.native
+    /* "popover" */ val popover: typingsSlinky.reactNativeNavigation.optionsMod.OptionsModalPresentationStyle.popover with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[
         typingsSlinky.reactNativeNavigation.optionsMod.OptionsModalPresentationStyle with String

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "esrever"
-version := "0.2-dt-20190905Z-a5a480"
-scalaVersion := "2.13.2"
+version := "0.2-dt-20190905Z-4a033a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

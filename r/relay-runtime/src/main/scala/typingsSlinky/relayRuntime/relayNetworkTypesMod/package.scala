@@ -19,6 +19,7 @@ package object relayNetworkTypesMod {
     /* uploadables */ js.UndefOr[typingsSlinky.relayRuntime.relayNetworkTypesMod.UploadableMap | scala.Null], 
     typingsSlinky.relayRuntime.relayObservableMod.ObservableFromValue[typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse]
   ]
+  type GraphQLResponse = typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLSingularResponse | js.Array[typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLSingularResponse]
   type LogRequestInfoFunction = js.Function1[/* arg */ js.Any, scala.Unit]
   type PayloadData = org.scalablytyped.runtime.StringDictionary[js.Any]
   type PayloadExtensions = org.scalablytyped.runtime.StringDictionary[js.Any]

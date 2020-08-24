@@ -1,7 +1,7 @@
 package typingsSlinky.distributionsPoissonQuantile.mod
 
 import typingsSlinky.distributionsPoissonQuantile.anon.Optionsdtypefloat32
-import typingsSlinky.distributionsPoissonQuantile.anon.Optionsdtypefloat64
+import typingsSlinky.distributionsPoissonQuantile.anon.Optionsdtypefloat64undefi
 import typingsSlinky.distributionsPoissonQuantile.anon.Optionsdtypeint16
 import typingsSlinky.distributionsPoissonQuantile.anon.Optionsdtypeint32
 import typingsSlinky.distributionsPoissonQuantile.anon.Optionsdtypeint8
@@ -29,7 +29,7 @@ object ^ extends js.Object {
   def apply(p: Double, options: Options): Double | Data | Matrix = js.native
   def apply(p: Data): Double | Data | Matrix = js.native
   def apply(p: Data, options: Optionsdtypefloat32): js.typedarray.Float32Array = js.native
-  def apply(p: Data, options: Optionsdtypefloat64): js.typedarray.Float64Array = js.native
+  def apply(p: Data, options: Optionsdtypefloat64undefi): js.typedarray.Float64Array = js.native
   def apply(p: Data, options: Optionsdtypeint16): js.typedarray.Int16Array = js.native
   def apply(p: Data, options: Optionsdtypeint32): js.typedarray.Int32Array = js.native
   def apply(p: Data, options: Optionsdtypeint8): js.typedarray.Int8Array = js.native

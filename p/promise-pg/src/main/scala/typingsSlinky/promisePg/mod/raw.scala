@@ -1,12 +1,13 @@
 package typingsSlinky.promisePg.mod
 
 import typingsSlinky.pg.anon.TypeofPg
-import typingsSlinky.pg.anon.TypeofarrayParser
 import typingsSlinky.pg.mod.ConnectionConfig
 import typingsSlinky.pg.mod.Defaults_
 import typingsSlinky.pg.mod.PoolConfig
 import typingsSlinky.pg.mod.QueryResultRow
-import typingsSlinky.pgTypes.mod.TypeParser
+import typingsSlinky.pgTypes.mod.TypeFormat
+import typingsSlinky.pgTypes.mod.TypeId
+import typingsSlinky.pgTypes.mod.TypesBuiltins
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,6 +55,7 @@ object raw extends js.Object {
     extends typingsSlinky.pg.mod.Query[R, I] {
     def this(queryTextOrConfig: String) = this()
     def this(queryTextOrConfig: typingsSlinky.pg.mod.QueryConfig[I]) = this()
+    def this(queryTextOrConfig: js.UndefOr[scala.Nothing], values: I) = this()
     def this(queryTextOrConfig: String, values: I) = this()
     def this(queryTextOrConfig: typingsSlinky.pg.mod.QueryConfig[I], values: I) = this()
   }
@@ -62,10 +64,12 @@ object raw extends js.Object {
   val native: TypeofPg | Null = js.native
   @js.native
   object types extends js.Object {
-    val arrayParser: TypeofarrayParser = js.native
-    def getTypeParser(oid: Double, format: String): TypeParser = js.native
-    def setTypeParser(oid: Double, format: String, parseFn: TypeParser): Unit = js.native
-    def setTypeParser(oid: Double, parseFn: TypeParser): Unit = js.native
+    val builtins: TypesBuiltins = js.native
+    def arrayParser(source: String, transform: js.Function1[/* entry */ js.Any, _]): js.Array[_] = js.native
+    def getTypeParser(id: TypeId): js.Any = js.native
+    def getTypeParser(id: TypeId, format: TypeFormat): js.Any = js.native
+    def setTypeParser(id: TypeId, format: TypeFormat, parseFn: js.Function1[/* value */ String, _]): Unit = js.native
+    def setTypeParser(id: TypeId, parseFn: js.Function1[/* value */ String, _]): Unit = js.native
   }
   
 }

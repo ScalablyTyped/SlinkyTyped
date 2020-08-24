@@ -1,12 +1,12 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react", "colGroupProperties")
 @js.native
-object colGroupProperties
-  extends TopLevel[js.Array[String]]
+object colGroupProperties extends TopLevel[Record[String, Double]]
 

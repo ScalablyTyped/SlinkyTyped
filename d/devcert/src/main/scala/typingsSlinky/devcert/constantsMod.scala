@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation._
 @JSImport("devcert/dist/constants", JSImport.Namespace)
 @js.native
 object constantsMod extends js.Object {
+  val VALID_DOMAIN: js.RegExp = js.native
+  val VALID_IP: js.RegExp = js.native
   val caSelfSignConfig: String = js.native
   val caVersionFile: String = js.native
   val configDir: js.Any = js.native

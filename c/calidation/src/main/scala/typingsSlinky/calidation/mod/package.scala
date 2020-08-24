@@ -5,35 +5,55 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type BlacklistValidator = typingsSlinky.calidation.mod.BlacklistValidatorConfig | (js.Function1[
-    /* context */ typingsSlinky.calidation.mod.ValidatorContext, 
-    typingsSlinky.calidation.mod.BlacklistValidatorConfig
+  type BlacklistValidator[T /* <: js.Object */] = typingsSlinky.calidation.mod.BlacklistValidatorConfig[T] | (js.Function1[
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    typingsSlinky.calidation.mod.BlacklistValidatorConfig[T]
   ])
-  type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
-  type Dirty = typingsSlinky.calidation.mod.Dictionary[scala.Boolean]
-  type Errors = typingsSlinky.calidation.mod.Dictionary[java.lang.String | scala.Null]
-  type Fields = typingsSlinky.calidation.mod.Dictionary[js.Any]
-  type FieldsConfig = typingsSlinky.calidation.mod.Dictionary[typingsSlinky.calidation.mod.FieldConfig]
-  type LengthValidator = typingsSlinky.calidation.mod.LengthValidatorConfig | (js.Function1[
-    /* context */ typingsSlinky.calidation.mod.ValidatorContext, 
-    typingsSlinky.calidation.mod.LengthValidatorConfig
+  type CustomValidatorFunction[T /* <: js.Object */] = js.Function2[
+    /* config */ typingsSlinky.calidation.mod.SimpleValidatorConfig[T], 
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    js.Function1[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+      java.lang.String | scala.Null
+    ]
+  ]
+  type Dirty[T /* <: js.Object */] = typingsSlinky.std.Record[/* keyof T */ java.lang.String, scala.Boolean]
+  type Errors[T /* <: js.Object */] = typingsSlinky.std.Record[/* keyof T */ java.lang.String, java.lang.String | scala.Null]
+  type Fields[T /* <: js.Object */] = T
+  type FieldsConfig[T /* <: js.Object */] = typingsSlinky.std.Record[
+    java.lang.String, 
+    typingsSlinky.calidation.mod.FieldConfig[T] | (typingsSlinky.std.Record[
+      java.lang.String, 
+      typingsSlinky.calidation.mod.SimpleValidator[T] | (typingsSlinky.calidation.mod.ValueValidator[js.Any, T])
+    ])
+  ]
+  type LengthValidator[T /* <: js.Object */] = typingsSlinky.calidation.mod.LengthValidatorConfig[T] | (js.Function1[
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    typingsSlinky.calidation.mod.LengthValidatorConfig[T]
   ])
-  type RegexValidator = typingsSlinky.calidation.mod.RegexValidatorConfig | (js.Function1[
-    /* context */ typingsSlinky.calidation.mod.ValidatorContext, 
-    typingsSlinky.calidation.mod.RegexValidatorConfig
+  type RegexValidator[T /* <: js.Object */] = typingsSlinky.calidation.mod.RegexValidatorConfig[T] | (js.Function1[
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    typingsSlinky.calidation.mod.RegexValidatorConfig[T]
   ])
-  type SimpleValidator = java.lang.String | typingsSlinky.calidation.mod.SimpleValidatorConfig | (js.Function1[
-    /* context */ typingsSlinky.calidation.mod.ValidatorContext, 
-    typingsSlinky.calidation.mod.SimpleValidatorConfig
+  type SimpleValidator[T /* <: js.Object */] = java.lang.String | typingsSlinky.calidation.mod.SimpleValidatorConfig[T] | (js.Function1[
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    typingsSlinky.calidation.mod.SimpleValidatorConfig[T]
   ])
-  type Transforms = typingsSlinky.calidation.mod.Dictionary[js.Function1[/* value */ js.Any, js.Any]]
-  type Validator = typingsSlinky.calidation.mod.SimpleValidator | typingsSlinky.calidation.mod.BlacklistValidator | typingsSlinky.calidation.mod.ValueValidator[js.Any] | typingsSlinky.calidation.mod.RegexValidator | typingsSlinky.calidation.mod.WhitelistValidator | typingsSlinky.calidation.mod.LengthValidator
-  type ValueValidator[T] = typingsSlinky.calidation.mod.ValueValidatorConfig[T] | (js.Function1[
-    /* context */ typingsSlinky.calidation.mod.ValidatorContext, 
-    typingsSlinky.calidation.mod.ValueValidatorConfig[T]
+  type Transform[T /* <: js.Object */] = typingsSlinky.std.Record[
+    /* keyof T */ java.lang.String, 
+    js.Function1[
+      /* value */ js.Any, 
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ]
+  type Transforms[T /* <: js.Object */] = typingsSlinky.std.Partial[typingsSlinky.calidation.mod.Transform[T]]
+  type Validator[T /* <: js.Object */] = typingsSlinky.calidation.mod.SimpleValidator[T] | typingsSlinky.calidation.mod.BlacklistValidator[T] | (typingsSlinky.calidation.mod.ValueValidator[js.Any, T]) | typingsSlinky.calidation.mod.RegexValidator[T] | typingsSlinky.calidation.mod.WhitelistValidator[T] | typingsSlinky.calidation.mod.LengthValidator[T]
+  type ValueValidator[P, T /* <: js.Object */] = (typingsSlinky.calidation.mod.ValueValidatorConfig[P, T]) | (js.Function1[
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    typingsSlinky.calidation.mod.ValueValidatorConfig[P, T]
   ])
-  type WhitelistValidator = typingsSlinky.calidation.mod.WhitelistValidatorConfig | (js.Function1[
-    /* context */ typingsSlinky.calidation.mod.ValidatorContext, 
-    typingsSlinky.calidation.mod.RegexValidatorConfig
+  type WhitelistValidator[T /* <: js.Object */] = typingsSlinky.calidation.mod.WhitelistValidatorConfig[T] | (js.Function1[
+    /* context */ typingsSlinky.calidation.mod.ValidatorContext[T], 
+    typingsSlinky.calidation.mod.RegexValidatorConfig[T]
   ])
 }

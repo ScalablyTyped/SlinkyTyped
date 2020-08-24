@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeactivateOrdersIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DeactivateOrdersIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DeactivateOrdersIcon")
   @js.native
   object component extends js.Object
   

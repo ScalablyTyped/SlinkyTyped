@@ -2,8 +2,8 @@ package typingsSlinky.antDesignPro.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
-import org.scalajs.dom.raw.Node
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -50,6 +50,8 @@ object Chart {
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterVarargs(value: js.Any*): this.type = set("filter", js.Array(value :_*))
     @scala.inline
     def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
     @scala.inline
@@ -238,14 +240,14 @@ object Chart {
     def onWheel(value: SyntheticWheelEvent[js.Object] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
     def padding(
-      value: String | Bottom | Double | (js.Tuple4[Double, Double, Double, Double]) | (js.Tuple2[String, String])
+      value: String | Bottom | Double | (js.Tuple4[Double | String, Double | String, Double | String, Double | String]) | (js.Tuple2[String, String])
     ): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline
     def pixelRatio(value: Double): this.type = set("pixelRatio", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholderNode(value: Node): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholder(value: Node | String | Boolean): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement | String | Boolean): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def plotBackground(value: background): this.type = set("plotBackground", value.asInstanceOf[js.Any])
     @scala.inline

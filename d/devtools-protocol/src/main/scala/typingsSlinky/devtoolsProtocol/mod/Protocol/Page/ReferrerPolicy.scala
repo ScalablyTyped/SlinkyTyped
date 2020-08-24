@@ -1,0 +1,37 @@
+package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrer
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrerWhenDowngrade
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.origin
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.originWhenCrossOrigin
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOrigin
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOriginWhenCrossOrigin
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unsafeUrl
+*/
+trait ReferrerPolicy extends js.Object
+
+object ReferrerPolicy {
+  @scala.inline
+  def noReferrer: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrer = "noReferrer".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrer]
+  @scala.inline
+  def noReferrerWhenDowngrade: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrerWhenDowngrade = "noReferrerWhenDowngrade".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrerWhenDowngrade]
+  @scala.inline
+  def origin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.origin = "origin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.origin]
+  @scala.inline
+  def originWhenCrossOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.originWhenCrossOrigin = "originWhenCrossOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.originWhenCrossOrigin]
+  @scala.inline
+  def sameOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin = "sameOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin]
+  @scala.inline
+  def strictOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOrigin = "strictOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOrigin]
+  @scala.inline
+  def strictOriginWhenCrossOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOriginWhenCrossOrigin = "strictOriginWhenCrossOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOriginWhenCrossOrigin]
+  @scala.inline
+  def unsafeUrl: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unsafeUrl = "unsafeUrl".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unsafeUrl]
+}
+

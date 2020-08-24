@@ -235,6 +235,8 @@ object ChoiceGroupBase {
     @scala.inline
     def defaultSelectedKey(value: String | Double): this.type = set("defaultSelectedKey", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -459,6 +461,8 @@ object ChoiceGroupBase {
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLElement | HTMLInputElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
+    def optionsVarargs(value: IChoiceGroupOption*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[IChoiceGroupOption]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
@@ -518,6 +522,8 @@ object ChoiceGroupBase {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

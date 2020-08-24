@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "react-native-restart"
-version := "0.0-dt-20200515Z-917998"
-scalaVersion := "2.13.2"
+version := "0.0-dt-20200515Z-6e6649"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

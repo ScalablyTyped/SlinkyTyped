@@ -5,7 +5,7 @@ import typingsSlinky.ionicCore.ionicCoreStrings.bottom
 import typingsSlinky.ionicCore.ionicCoreStrings.end
 import typingsSlinky.ionicCore.ionicCoreStrings.start
 import typingsSlinky.ionicCore.ionicCoreStrings.top
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

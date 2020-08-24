@@ -106,19 +106,16 @@ object TypeofcertificateProvider {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPinRequestErrorType(value: INVALIDPIN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PinRequestErrorType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPinRequestType(value: PIN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PinRequestType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPinRequestErrorType(value: INVALIDPIN): Self = this.set("PinRequestErrorType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnCertificatesRequested(
+    def setPinRequestType(value: PIN): Self = this.set("PinRequestType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnCertificatesRequested(
       value: Event[
           js.Function2[
             /* certificates */ js.Array[CertificateInfo], 
@@ -126,13 +123,9 @@ object TypeofcertificateProvider {
             _
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCertificatesRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onCertificatesRequested", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnSignDigestRequested(
+    def setOnSignDigestRequested(
       value: Event[
           js.Function2[
             /* signRequest */ SignRequest, 
@@ -140,25 +133,13 @@ object TypeofcertificateProvider {
             _
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSignDigestRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onSignDigestRequested", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequestPin(
+    def setRequestPin(
       value: (RequestPinDetails, js.Function1[/* details */ js.UndefOr[PinResponseDetails], Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPin")(js.Any.fromFunction2(value))
-        ret
-    }
+    ): Self = this.set("requestPin", js.Any.fromFunction2(value))
     @scala.inline
-    def withStopPinRequest(value: (StopRequestPinDetails, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPinRequest")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setStopPinRequest(value: (StopRequestPinDetails, js.Function0[Unit]) => Unit): Self = this.set("stopPinRequest", js.Any.fromFunction2(value))
   }
   
 }

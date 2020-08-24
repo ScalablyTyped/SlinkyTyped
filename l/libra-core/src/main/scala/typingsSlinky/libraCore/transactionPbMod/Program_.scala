@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Program_ () extends Message {
   def addArguments(): TransactionArgument = js.native
+  def addArguments(value: js.UndefOr[scala.Nothing], index: Double): TransactionArgument = js.native
   def addArguments(value: TransactionArgument): TransactionArgument = js.native
   def addArguments(value: TransactionArgument, index: Double): TransactionArgument = js.native
   def addModules(value: String): js.typedarray.Uint8Array | String = js.native

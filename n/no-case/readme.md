@@ -1,7 +1,7 @@
 
 # Scala.js typings for no-case
 
-Typings are for version 2.3.2
+Typings are for version 3.0.3
 
 ## Library description:
 Transform into a lower cased string with spaces between words

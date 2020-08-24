@@ -27,6 +27,16 @@ class FormArray protected () extends AbstractControl {
   def this(controls: js.Array[AbstractControl], validatorOrOpts: ValidatorFn) = this()
   def this(
     controls: js.Array[AbstractControl],
+    validatorOrOpts: js.UndefOr[scala.Nothing],
+    asyncValidator: js.Array[AsyncValidatorFn]
+  ) = this()
+  def this(
+    controls: js.Array[AbstractControl],
+    validatorOrOpts: js.UndefOr[scala.Nothing],
+    asyncValidator: AsyncValidatorFn
+  ) = this()
+  def this(
+    controls: js.Array[AbstractControl],
     validatorOrOpts: js.Array[ValidatorFn],
     asyncValidator: js.Array[AsyncValidatorFn]
   ) = this()
@@ -63,10 +73,6 @@ class FormArray protected () extends AbstractControl {
   ) = this()
   var _registerControl: js.Any = js.native
   var controls: js.Array[AbstractControl] = js.native
-  /**
-    * Length of the control array.
-    */
-  val length: Double = js.native
   /**
     * Get the `AbstractControl` at the given `index` in the array.
     *
@@ -119,6 +125,10 @@ class FormArray protected () extends AbstractControl {
     */
   def insert(index: Double, control: AbstractControl): Unit = js.native
   /**
+    * Length of the control array.
+    */
+  def length: Double = js.native
+  /**
     * Patches the value of the `FormArray`. It accepts an array that matches the
     * structure of the control, and does its best to match the values to the correct
     * controls in the group.
@@ -166,6 +176,7 @@ class FormArray protected () extends AbstractControl {
     * @param index Index in the array to remove the control
     */
   def removeAt(index: Double): Unit = js.native
+  def reset(value: js.UndefOr[scala.Nothing], options: EmitEvent): Unit = js.native
   def reset(value: js.Any, options: EmitEvent): Unit = js.native
   /**
     * Replace an existing control.

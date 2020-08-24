@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "zeit__next-source-maps"
-version := "0.0-dt-20191112Z-6ae19a"
-scalaVersion := "2.13.2"
+version := "0.0-dt-20191112Z-cdf6a3"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

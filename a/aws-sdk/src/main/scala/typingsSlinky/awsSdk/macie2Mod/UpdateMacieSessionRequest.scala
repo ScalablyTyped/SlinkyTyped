@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateMacieSessionRequest extends js.Object {
   /**
-    * Specifies how often to publish findings for the account. This includes adding findings to AWS Security Hub and exporting finding events to Amazon CloudWatch.
+    * Specifies how often to publish updates to policy findings for the account. This includes publishing updates to AWS Security Hub and Amazon EventBridge (formerly called Amazon CloudWatch Events).
     */
   var findingPublishingFrequency: js.UndefOr[FindingPublishingFrequency] = js.native
   /**
@@ -18,11 +18,30 @@ trait UpdateMacieSessionRequest extends js.Object {
 
 object UpdateMacieSessionRequest {
   @scala.inline
-  def apply(findingPublishingFrequency: FindingPublishingFrequency = null, status: MacieStatus = null): UpdateMacieSessionRequest = {
+  def apply(): UpdateMacieSessionRequest = {
     val __obj = js.Dynamic.literal()
-    if (findingPublishingFrequency != null) __obj.updateDynamic("findingPublishingFrequency")(findingPublishingFrequency.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMacieSessionRequest]
   }
+  @scala.inline
+  implicit class UpdateMacieSessionRequestOps[Self <: UpdateMacieSessionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFindingPublishingFrequency(value: FindingPublishingFrequency): Self = this.set("findingPublishingFrequency", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFindingPublishingFrequency: Self = this.set("findingPublishingFrequency", js.undefined)
+    @scala.inline
+    def setStatus(value: MacieStatus): Self = this.set("status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStatus: Self = this.set("status", js.undefined)
+  }
+  
 }
 

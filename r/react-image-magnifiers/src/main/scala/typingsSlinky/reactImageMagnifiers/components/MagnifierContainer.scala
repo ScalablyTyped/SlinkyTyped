@@ -15,7 +15,7 @@ object MagnifierContainer {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactImageMagnifiers.mod.MagnifierContainer] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def autoInPlace(value: Boolean): this.type = set("autoInPlace", value.asInstanceOf[js.Any])
     @scala.inline

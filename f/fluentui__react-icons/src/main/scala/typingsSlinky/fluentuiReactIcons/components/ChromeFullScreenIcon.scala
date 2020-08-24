@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChromeFullScreenIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ChromeFullScreenIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChromeFullScreenIcon")
   @js.native
   object component extends js.Object
   

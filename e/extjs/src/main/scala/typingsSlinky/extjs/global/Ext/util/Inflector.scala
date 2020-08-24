@@ -74,6 +74,7 @@ object Inflector extends js.Object {
     * @param replacer String The replacement string, which can reference matches from the matcher argument
     */
   def plural(): Unit = js.native
+  def plural(matcher: js.UndefOr[scala.Nothing], replacer: String): Unit = js.native
   def plural(matcher: js.RegExp): Unit = js.native
   def plural(matcher: js.RegExp, replacer: String): Unit = js.native
   /** [Method] Returns the pluralized form of a word e g
@@ -87,6 +88,7 @@ object Inflector extends js.Object {
     * @param replacer String The replacement string, which can reference matches from the matcher argument
     */
   def singular(): Unit = js.native
+  def singular(matcher: js.UndefOr[scala.Nothing], replacer: String): Unit = js.native
   def singular(matcher: js.RegExp): Unit = js.native
   def singular(matcher: js.RegExp, replacer: String): Unit = js.native
   /** [Method] Returns the singularized form of a word e g

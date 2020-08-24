@@ -11,6 +11,11 @@ object ColorPresentation extends js.Object {
     * Creates a new ColorInformation literal.
     */
   def create(label: String): typingsSlinky.vscodeLanguageserverTypes.mod.ColorPresentation = js.native
+  def create(
+    label: String,
+    textEdit: js.UndefOr[scala.Nothing],
+    additionalTextEdits: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit]
+  ): typingsSlinky.vscodeLanguageserverTypes.mod.ColorPresentation = js.native
   def create(label: String, textEdit: typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit): typingsSlinky.vscodeLanguageserverTypes.mod.ColorPresentation = js.native
   def create(
     label: String,

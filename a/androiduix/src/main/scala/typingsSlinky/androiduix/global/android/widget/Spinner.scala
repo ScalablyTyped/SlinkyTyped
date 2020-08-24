@@ -14,7 +14,21 @@ class Spinner protected ()
   extends typingsSlinky.androiduix.android.widget.Spinner {
   def this(context: Context) = this()
   def this(context: Context, bindElement: HTMLElement) = this()
+  def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
   def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
+  def this(
+    context: Context,
+    bindElement: js.UndefOr[scala.Nothing],
+    defStyle: js.UndefOr[scala.Nothing],
+    mode: Double
+  ) = this()
+  def this(
+    context: Context,
+    bindElement: js.UndefOr[scala.Nothing],
+    defStyle: Map[String, String],
+    mode: Double
+  ) = this()
+  def this(context: Context, bindElement: HTMLElement, defStyle: js.UndefOr[scala.Nothing], mode: Double) = this()
   def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String], mode: Double) = this()
 }
 

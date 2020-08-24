@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "apollo-link-ws"
-version := "1.0.19-5870e2"
-scalaVersion := "2.13.2"
+version := "1.0.19-d7bc12"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "apollo-link" % "1.2.13-f31c99",
-  "org.scalablytyped.slinky" %%% "eventemitter3" % "4.0.4-7a8486",
-  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-19956e",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "subscriptions-transport-ws" % "0.9.16-abed32",
-  "org.scalablytyped.slinky" %%% "ws" % "7.2-dt-20200413Z-4b6676",
-  "org.scalablytyped.slinky" %%% "zen-observable-ts" % "0.8.20-ba96e6")
+  "org.scalablytyped.slinky" %%% "apollo-link" % "1.2.14-e66111",
+  "org.scalablytyped.slinky" %%% "eventemitter3" % "4.0.4-d29930",
+  "org.scalablytyped.slinky" %%% "graphql" % "15.3.0-079e56",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
+  "org.scalablytyped.slinky" %%% "subscriptions-transport-ws" % "0.9.17-5e19b7",
+  "org.scalablytyped.slinky" %%% "ws" % "7.2-dt-20200629Z-0c6bfe",
+  "org.scalablytyped.slinky" %%% "zen-observable-ts" % "0.8.21-82acd0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

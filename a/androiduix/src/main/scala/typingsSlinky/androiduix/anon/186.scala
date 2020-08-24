@@ -52,65 +52,30 @@ object `186` {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with186(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("186")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def with187(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("187")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set186(value: Double): Self = this.set("186", value.asInstanceOf[js.Any])
     @scala.inline
-    def with188(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("188")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set187(value: Double): Self = this.set("187", value.asInstanceOf[js.Any])
     @scala.inline
-    def with189(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("189")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set188(value: Double): Self = this.set("188", value.asInstanceOf[js.Any])
     @scala.inline
-    def with190(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("190")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set189(value: Double): Self = this.set("189", value.asInstanceOf[js.Any])
     @scala.inline
-    def with191(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("191")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set190(value: Double): Self = this.set("190", value.asInstanceOf[js.Any])
     @scala.inline
-    def with192(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("192")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set191(value: Double): Self = this.set("191", value.asInstanceOf[js.Any])
     @scala.inline
-    def with219(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("219")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set192(value: Double): Self = this.set("192", value.asInstanceOf[js.Any])
     @scala.inline
-    def with220(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("220")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set219(value: Double): Self = this.set("219", value.asInstanceOf[js.Any])
     @scala.inline
-    def with221(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("221")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set220(value: Double): Self = this.set("220", value.asInstanceOf[js.Any])
+    @scala.inline
+    def set221(value: Double): Self = this.set("221", value.asInstanceOf[js.Any])
   }
   
 }

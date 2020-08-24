@@ -3,21 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.listListDividerMod.ListDividerProps
-import typingsSlinky.reactToolbox.listListDividerMod.ListDividerTheme
+import typingsSlinky.reactToolbox.listDividerMod.ListDividerProps
+import typingsSlinky.reactToolbox.listDividerMod.ListDividerTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListDivider {
-  @JSImport("react-toolbox", "ListDivider")
+  @JSImport("react-toolbox/components/list", "ListDivider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.ListDivider] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.listMod.ListDivider] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

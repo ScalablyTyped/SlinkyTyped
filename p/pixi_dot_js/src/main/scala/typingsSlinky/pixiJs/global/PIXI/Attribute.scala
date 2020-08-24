@@ -19,15 +19,188 @@ class Attribute protected ()
   extends typingsSlinky.pixiJs.PIXI.Attribute {
   def this(buffer: String) = this()
   def this(buffer: String, size: Double) = this()
+  def this(buffer: String, size: js.UndefOr[scala.Nothing], normalized: Boolean) = this()
   def this(buffer: String, size: Double, normalized: Boolean) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ) = this()
+  def this(buffer: String, size: js.UndefOr[scala.Nothing], normalized: Boolean, `type`: Double) = this()
+  def this(buffer: String, size: Double, normalized: js.UndefOr[scala.Nothing], `type`: Double) = this()
   def this(buffer: String, size: Double, normalized: Boolean, `type`: Double) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: Double,
+    stride: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ) = this()
   def this(buffer: String, size: Double, normalized: Boolean, `type`: Double, stride: Double) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: Double,
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: Double,
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double,
+    start: Double
+  ) = this()
+  def this(
+    buffer: String,
+    size: Double,
+    normalized: Boolean,
+    `type`: Double,
+    stride: js.UndefOr[scala.Nothing],
+    start: Double
+  ) = this()
   def this(buffer: String, size: Double, normalized: Boolean, `type`: Double, stride: Double, start: Double) = this()
-  /**
-    * Destroys the Attribute.
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
 }
 
 /* static members */
@@ -38,20 +211,76 @@ object Attribute extends js.Object {
     * Helper function that creates an Attribute based on the information provided
     *
     * @static
-    * @param {string} buffer  the id of the buffer that this attribute will look for
-    * @param {Number} [size=0] the size of the attribute. If you have 2 floats per vertex (eg position x and y) this would be 2
-    * @param {Boolean} [normalized=false] should the data be normalized.
-    * @param {Number} [start=0] How far into the array to start reading values (used for interleaving data)
-    * @param {Number} [type=PIXI.TYPES.FLOAT] what type of number is the attribute. Check {@link PIXI.TYPES} to see the ones available
-    * @param {Number} [stride=0] How far apart (in floats) the start of each value is. (used for interleaving data)
+    * @param {string} buffer - the id of the buffer that this attribute will look for
+    * @param {Number} [size=0] - the size of the attribute. If you have 2 floats per vertex (eg position x and y) this would be 2
+    * @param {Boolean} [normalized=false] - should the data be normalized.
+    * @param {Number} [type=PIXI.TYPES.FLOAT] - what type of number is the attribute. Check {@link PIXI.TYPES} to see the ones available
+    * @param {Number} [stride=0] - How far apart (in floats) the start of each value is. (used for interleaving data)
     *
     * @returns {PIXI.Attribute} A new {@link PIXI.Attribute} based on the information provided
     */
   def from(buffer: String): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(buffer: String, size: js.UndefOr[scala.Nothing], normalized: Boolean): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(buffer: String, size: js.UndefOr[scala.Nothing], normalized: Boolean, `type`: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: js.UndefOr[scala.Nothing],
+    normalized: Boolean,
+    `type`: Double,
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
   def from(buffer: String, size: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(buffer: String, size: Double, normalized: js.UndefOr[scala.Nothing], `type`: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: Double,
+    normalized: js.UndefOr[scala.Nothing],
+    `type`: Double,
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
   def from(buffer: String, size: Double, normalized: Boolean): typingsSlinky.pixiJs.PIXI.Attribute = js.native
-  def from(buffer: String, size: Double, normalized: Boolean, start: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
-  def from(buffer: String, size: Double, normalized: Boolean, start: Double, `type`: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
-  def from(buffer: String, size: Double, normalized: Boolean, start: Double, `type`: Double, stride: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(
+    buffer: String,
+    size: Double,
+    normalized: Boolean,
+    `type`: js.UndefOr[scala.Nothing],
+    stride: Double
+  ): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(buffer: String, size: Double, normalized: Boolean, `type`: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
+  def from(buffer: String, size: Double, normalized: Boolean, `type`: Double, stride: Double): typingsSlinky.pixiJs.PIXI.Attribute = js.native
 }
 

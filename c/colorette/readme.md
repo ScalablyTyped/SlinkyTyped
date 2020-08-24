@@ -1,7 +1,7 @@
 
 # Scala.js typings for colorette
 
-Typings are for version 1.1.0
+Typings are for version 1.2.1
 
 ## Library description:
 Color your terminal using pure idiomatic JavaScript.

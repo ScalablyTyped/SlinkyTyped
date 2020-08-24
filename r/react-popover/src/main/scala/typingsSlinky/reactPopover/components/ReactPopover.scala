@@ -2,7 +2,6 @@ package typingsSlinky.reactPopover.components
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -26,7 +25,7 @@ object ReactPopover {
     @scala.inline
     def appendTarget(value: Element): this.type = set("appendTarget", value.asInstanceOf[js.Any])
     @scala.inline
-    def body(value: TagMod[Any]): this.type = set("body", value.asInstanceOf[js.Any])
+    def body(value: ReactElement): this.type = set("body", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

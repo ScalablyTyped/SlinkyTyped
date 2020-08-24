@@ -1,8 +1,8 @@
 package typingsSlinky.pulumiAws
 
-import typingsSlinky.pulumiAws.anon.Accessanalyzer
-import typingsSlinky.pulumiAws.anon.ExternalId
-import typingsSlinky.pulumiAws.anon.KeyPrefixes
+import typingsSlinky.pulumiAws.outputMod.config.AssumeRole
+import typingsSlinky.pulumiAws.outputMod.config.Endpoints
+import typingsSlinky.pulumiAws.outputMod.config.IgnoreTags
 import typingsSlinky.pulumiAws.regionMod.Region
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
 object varsMod extends js.Object {
   var accessKey: js.UndefOr[String] = js.native
   var allowedAccountIds: js.UndefOr[js.Array[String]] = js.native
-  var assumeRole: js.UndefOr[ExternalId] = js.native
-  var endpoints: js.UndefOr[js.Array[Accessanalyzer]] = js.native
+  var assumeRole: js.UndefOr[AssumeRole] = js.native
+  var endpoints: js.UndefOr[js.Array[Endpoints]] = js.native
   var forbiddenAccountIds: js.UndefOr[js.Array[String]] = js.native
-  var ignoreTags: js.UndefOr[KeyPrefixes] = js.native
+  var ignoreTags: js.UndefOr[IgnoreTags] = js.native
   var insecure: js.UndefOr[Boolean] = js.native
   var maxRetries: js.UndefOr[Double] = js.native
   var profile: js.UndefOr[String] = js.native

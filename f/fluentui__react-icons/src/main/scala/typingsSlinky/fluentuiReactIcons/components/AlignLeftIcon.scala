@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AlignLeftIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AlignLeftIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AlignLeftIcon")
   @js.native
   object component extends js.Object
   

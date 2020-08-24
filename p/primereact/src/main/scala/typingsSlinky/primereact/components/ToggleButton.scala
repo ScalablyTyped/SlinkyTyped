@@ -1,8 +1,9 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.ValueBoolean
+import typingsSlinky.primereact.anon.TargetNameType
 import typingsSlinky.primereact.toggleButtonMod.ToggleButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -31,7 +32,11 @@ object ToggleButton {
     @scala.inline
     def offLabel(value: String): this.type = set("offLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ ValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* e */ TargetNameType => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* event */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onIcon(value: String): this.type = set("onIcon", value.asInstanceOf[js.Any])
     @scala.inline

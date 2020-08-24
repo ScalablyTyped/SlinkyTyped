@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SkipForward30Icon {
-  @JSImport("@fluentui/react-icons/lib/components/SkipForward30Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SkipForward30Icon")
   @js.native
   object component extends js.Object
   

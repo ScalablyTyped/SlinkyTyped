@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "vscode-windows-registry"
-version := "1.0-dt-20191218Z-5e7f7f"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20191218Z-c41c27"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

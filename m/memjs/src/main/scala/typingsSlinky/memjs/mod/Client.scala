@@ -206,6 +206,7 @@ class Client protected () extends js.Object {
     * @param retries
     */
   def perform(key: String, request: Buffer, seq: Double): Unit = js.native
+  def perform(key: String, request: Buffer, seq: Double, callback: js.UndefOr[scala.Nothing], retries: Double): Unit = js.native
   def perform(
     key: String,
     request: Buffer,
@@ -449,6 +450,7 @@ object Client extends js.Object {
     *                    probe is sent on an idle socket. Defaults is 30 seconds.
     */
   def create(): Client = js.native
+  def create(serversStr: js.UndefOr[scala.Nothing], options: ClientOptions): Client = js.native
   def create(serversStr: String): Client = js.native
   def create(serversStr: String, options: ClientOptions): Client = js.native
 }

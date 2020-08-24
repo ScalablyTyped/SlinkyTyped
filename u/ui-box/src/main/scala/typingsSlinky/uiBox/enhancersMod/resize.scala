@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ui-box/dist/enhancers", "resize")
+@JSImport("ui-box/dist/src/enhancers", "resize")
 @js.native
 object resize extends js.Object {
   val propEnhancers: PropEnhancers = js.native

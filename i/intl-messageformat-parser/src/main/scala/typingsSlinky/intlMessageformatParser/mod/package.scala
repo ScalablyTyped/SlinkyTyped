@@ -19,6 +19,7 @@ package object mod {
     - typingsSlinky.intlMessageformatParser.mod.TimeElement
     - typingsSlinky.intlMessageformatParser.mod.SelectElement
     - typingsSlinky.intlMessageformatParser.mod.PluralElement
+    - typingsSlinky.intlMessageformatParser.mod.TagElement
     - typingsSlinky.intlMessageformatParser.mod.PoundElement
   */
   type MessageFormatElement = typingsSlinky.intlMessageformatParser.mod._MessageFormatElement | typingsSlinky.intlMessageformatParser.mod.LiteralElement | typingsSlinky.intlMessageformatParser.mod.ArgumentElement | typingsSlinky.intlMessageformatParser.mod.NumberElement | typingsSlinky.intlMessageformatParser.mod.DateElement | typingsSlinky.intlMessageformatParser.mod.TimeElement
@@ -26,6 +27,7 @@ package object mod {
     typingsSlinky.intlMessageformatParser.mod.TYPE.number, 
     typingsSlinky.intlMessageformatParser.mod.NumberSkeleton
   ]
+  type NumberFormatOptionsNotation = typingsSlinky.intlMessageformatParser.mod.NumberFormatNotation
   type ParseFunction = js.Function2[
     /* input */ java.lang.String, 
     /* options */ js.UndefOr[typingsSlinky.intlMessageformatParser.mod.IParseOptions], 

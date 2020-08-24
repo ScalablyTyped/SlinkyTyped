@@ -1,7 +1,6 @@
 package typingsSlinky.reactour.components
 
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
@@ -29,7 +28,7 @@ object Arrow {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ArrowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

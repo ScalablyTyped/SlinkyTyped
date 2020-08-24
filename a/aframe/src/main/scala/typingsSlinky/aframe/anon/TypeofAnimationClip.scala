@@ -14,7 +14,7 @@ trait TypeofAnimationClip extends Instantiable0[AnimationClip] {
   def CreateFromMorphTargetSequence(name: String, morphTargetSequence: js.Array[MorphTarget], fps: Double, noLoop: Boolean): typingsSlinky.three.animationClipMod.AnimationClip = js.native
   def findByName(clipArray: js.Array[typingsSlinky.three.animationClipMod.AnimationClip], name: String): typingsSlinky.three.animationClipMod.AnimationClip = js.native
   def parse(json: js.Any): typingsSlinky.three.animationClipMod.AnimationClip = js.native
-  def parseAnimation(animation: js.Any, bones: js.Array[Bone], nodeName: String): typingsSlinky.three.animationClipMod.AnimationClip = js.native
+  def parseAnimation(animation: js.Any, bones: js.Array[Bone]): typingsSlinky.three.animationClipMod.AnimationClip = js.native
   def toJSON(): js.Any = js.native
 }
 

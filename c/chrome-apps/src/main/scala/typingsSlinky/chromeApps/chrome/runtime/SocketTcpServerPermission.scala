@@ -26,17 +26,16 @@ object SocketTcpServerPermission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withListen(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listen")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutListen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listen")(js.undefined)
-        ret
-    }
+    def setListenVarargs(value: String*): Self = this.set("listen", js.Array(value :_*))
+    @scala.inline
+    def setListen(value: String | js.Array[String]): Self = this.set("listen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteListen: Self = this.set("listen", js.undefined)
   }
   
 }

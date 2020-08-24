@@ -22,6 +22,12 @@ object mod extends js.Object {
   def instrument[TFunc /* <: js.Function */](
     fn: TFunc,
     callback: js.Function1[/* stackFrames */ js.Array[StackFrame], Unit],
+    errback: js.UndefOr[scala.Nothing],
+    thisArg: js.Any
+  ): TFunc = js.native
+  def instrument[TFunc /* <: js.Function */](
+    fn: TFunc,
+    callback: js.Function1[/* stackFrames */ js.Array[StackFrame], Unit],
     errback: js.Function1[/* error */ js.Error, Unit]
   ): TFunc = js.native
   def instrument[TFunc /* <: js.Function */](
@@ -31,6 +37,12 @@ object mod extends js.Object {
     thisArg: js.Any
   ): TFunc = js.native
   def report(stackframes: js.Array[StackFrame], url: String): js.Promise[_] = js.native
+  def report(
+    stackframes: js.Array[StackFrame],
+    url: String,
+    errorMsg: js.UndefOr[scala.Nothing],
+    requestOptions: js.Object
+  ): js.Promise[_] = js.native
   def report(stackframes: js.Array[StackFrame], url: String, errorMsg: String): js.Promise[_] = js.native
   def report(stackframes: js.Array[StackFrame], url: String, errorMsg: String, requestOptions: js.Object): js.Promise[_] = js.native
 }

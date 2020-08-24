@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ASTWithSource")
 @js.native
 class ASTWithSource protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ASTWithSource {
+  extends typingsSlinky.angularCompiler.compilerMod.ASTWithSource {
   def this(
     ast: typingsSlinky.angularCompiler.astMod.AST,
     source: String,

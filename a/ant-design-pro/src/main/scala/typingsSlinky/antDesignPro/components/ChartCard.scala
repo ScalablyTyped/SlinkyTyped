@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -20,7 +19,6 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.chartCardMod.IChartCardProps
-import typingsSlinky.antDesignPro.chartCardMod.default
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -79,14 +77,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChartCard {
-  @JSImport("ant-design-pro/lib/Charts/ChartCard", JSImport.Default)
+  @JSImport("ant-design-pro/lib/Charts", "ChartCard")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.chartsMod.ChartCard] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -94,9 +92,11 @@ object ChartCard {
     @scala.inline
     def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def actions(value: js.Array[TagMod[Any]]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
+    @scala.inline
+    def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def activeTabKey(value: String): this.type = set("activeTabKey", value.asInstanceOf[js.Any])
     @scala.inline
@@ -204,7 +204,7 @@ object ChartCard {
     @scala.inline
     def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def avatar(value: TagMod[Any]): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -222,7 +222,7 @@ object ChartCard {
     @scala.inline
     def coverReactElement(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
     @scala.inline
-    def cover(value: TagMod[Any]): this.type = set("cover", value.asInstanceOf[js.Any])
+    def cover(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
@@ -232,6 +232,8 @@ object ChartCard {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -240,11 +242,11 @@ object ChartCard {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def headStyle(value: CSSProperties): this.type = set("headStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -466,23 +468,25 @@ object ChartCard {
     @scala.inline
     def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def tabBarExtraContent(value: TagMod[Any]): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def tabBarExtraContent(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     @scala.inline
     def tabBarExtraContentNull: this.type = set("tabBarExtraContent", null)
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def tabListVarargs(value: CardTabListType*): this.type = set("tabList", js.Array(value :_*))
+    @scala.inline
     def tabList(value: js.Array[CardTabListType]): this.type = set("tabList", value.asInstanceOf[js.Any])
     @scala.inline
     def tabProps(value: TabsProps): this.type = set("tabProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def totalReactElement(value: ReactElement): this.type = set("total", value.asInstanceOf[js.Any])
     @scala.inline
-    def totalFunction0(value: () => TagMod[Any] | Double): this.type = set("total", js.Any.fromFunction0(value))
+    def totalFunction0(value: () => ReactElement | Double): this.type = set("total", js.Any.fromFunction0(value))
     @scala.inline
-    def total(value: TagMod[Any] | Double | (js.Function0[TagMod[Any] | Double])): this.type = set("total", value.asInstanceOf[js.Any])
+    def total(value: ReactElement | Double | (js.Function0[ReactElement | Double])): this.type = set("total", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     @scala.inline

@@ -39,12 +39,7 @@ object webGLStateMod extends js.Object {
   
   @js.native
   class WebGLState protected () extends js.Object {
-    def this(
-      gl: WebGLRenderingContext,
-      extensions: WebGLExtensions,
-      utils: js.Any,
-      capabilities: WebGLCapabilities
-    ) = this()
+    def this(gl: WebGLRenderingContext, extensions: WebGLExtensions, capabilities: WebGLCapabilities) = this()
     var buffers: Stencil = js.native
     def activeTexture(webglSlot: Double): Unit = js.native
     def bindTexture(webglType: Double, webglTexture: js.Any): Unit = js.native
@@ -63,7 +58,6 @@ object webGLStateMod extends js.Object {
     def enable(id: Double): Unit = js.native
     def enableAttribute(attribute: Double): Unit = js.native
     def enableAttributeAndDivisor(attribute: Double, meshPerAttribute: Double): Unit = js.native
-    def getCompressedTextureFormats(): js.Array[Double] = js.native
     def initAttributes(): Unit = js.native
     def reset(): Unit = js.native
     def scissor(scissor: Vector4): Unit = js.native
@@ -81,6 +75,9 @@ object webGLStateMod extends js.Object {
     def setFlipSided(flipSided: Boolean): Unit = js.native
     def setLineWidth(width: Double): Unit = js.native
     def setMaterial(material: Material, frontFaceCW: Boolean): Unit = js.native
+    def setPolygonOffset(polygonoffset: Boolean): Unit = js.native
+    def setPolygonOffset(polygonoffset: Boolean, factor: js.UndefOr[scala.Nothing], units: Double): Unit = js.native
+    def setPolygonOffset(polygonoffset: Boolean, factor: Double): Unit = js.native
     def setPolygonOffset(polygonoffset: Boolean, factor: Double, units: Double): Unit = js.native
     def setScissorTest(scissorTest: Boolean): Unit = js.native
     def texImage2D(
@@ -91,6 +88,7 @@ object webGLStateMod extends js.Object {
       `type`: Double,
       source: js.Any
     ): Unit = js.native
+    // Same interface as https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D
     def texImage2D(
       target: Double,
       level: Double,
@@ -101,7 +99,6 @@ object webGLStateMod extends js.Object {
       format: Double,
       `type`: Double
     ): Unit = js.native
-    // Same interface as https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D
     def texImage2D(
       target: Double,
       level: Double,
@@ -125,7 +122,9 @@ object webGLStateMod extends js.Object {
       `type`: Double,
       pixels: js.Any
     ): Unit = js.native
+    def unbindTexture(): Unit = js.native
     def useProgram(program: js.Any): Boolean = js.native
+    def vertexAttribPointer(index: Double, size: Double, `type`: Double, normalized: Boolean, stride: Double, offset: Double): Unit = js.native
     def viewport(viewport: Vector4): Unit = js.native
   }
   

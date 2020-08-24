@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiCloud.httpServerMod
 
-import typingsSlinky.pulumiPulumi.outputMod.Output_
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +17,5 @@ class HttpServerCls protected () extends HttpServer {
     */
   def this(name: String, createRequestListener: RequestListenerFactory) = this()
   def this(name: String, createRequestListener: RequestListenerFactory, opts: ResourceOptions) = this()
-  /* CompleteClass */
-  override val url: Output_[String] = js.native
 }
 

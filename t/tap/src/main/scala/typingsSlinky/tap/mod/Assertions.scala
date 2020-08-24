@@ -13,13 +13,67 @@ object Assertions extends js.Object {
   @js.native
   trait Throws extends js.Object {
     def apply(): Boolean = js.native
+    def apply(
+      fn: js.UndefOr[scala.Nothing],
+      expectedError: js.UndefOr[scala.Nothing],
+      message: js.UndefOr[scala.Nothing],
+      extra: Assert
+    ): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], expectedError: js.UndefOr[scala.Nothing], message: String): Boolean = js.native
+    def apply(
+      fn: js.UndefOr[scala.Nothing],
+      expectedError: js.UndefOr[scala.Nothing],
+      message: String,
+      extra: Assert
+    ): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], expectedError: js.Error): Boolean = js.native
+    def apply(
+      fn: js.UndefOr[scala.Nothing],
+      expectedError: js.Error,
+      message: js.UndefOr[scala.Nothing],
+      extra: Assert
+    ): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], expectedError: js.Error, message: String): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], expectedError: js.Error, message: String, extra: Assert): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], messageOrExpectedError: js.UndefOr[scala.Nothing], extra: Assert): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], messageOrExpectedError: String): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], messageOrExpectedError: String, extra: Assert): Boolean = js.native
+    def apply(fn: js.UndefOr[scala.Nothing], messageOrExpectedError: js.Error, extra: Assert): Boolean = js.native
     def apply(fn: js.Function1[/* repeated */ js.Any, _]): Boolean = js.native
+    def apply(
+      fn: js.Function1[/* repeated */ js.Any, _],
+      expectedError: js.UndefOr[scala.Nothing],
+      message: js.UndefOr[scala.Nothing],
+      extra: Assert
+    ): Boolean = js.native
+    def apply(
+      fn: js.Function1[/* repeated */ js.Any, _],
+      expectedError: js.UndefOr[scala.Nothing],
+      message: String
+    ): Boolean = js.native
+    def apply(
+      fn: js.Function1[/* repeated */ js.Any, _],
+      expectedError: js.UndefOr[scala.Nothing],
+      message: String,
+      extra: Assert
+    ): Boolean = js.native
     def apply(fn: js.Function1[/* repeated */ js.Any, _], expectedError: js.Error): Boolean = js.native
+    def apply(
+      fn: js.Function1[/* repeated */ js.Any, _],
+      expectedError: js.Error,
+      message: js.UndefOr[scala.Nothing],
+      extra: Assert
+    ): Boolean = js.native
     def apply(fn: js.Function1[/* repeated */ js.Any, _], expectedError: js.Error, message: String): Boolean = js.native
     def apply(
       fn: js.Function1[/* repeated */ js.Any, _],
       expectedError: js.Error,
       message: String,
+      extra: Assert
+    ): Boolean = js.native
+    def apply(
+      fn: js.Function1[/* repeated */ js.Any, _],
+      messageOrExpectedError: js.UndefOr[scala.Nothing],
       extra: Assert
     ): Boolean = js.native
     def apply(fn: js.Function1[/* repeated */ js.Any, _], messageOrExpectedError: String): Boolean = js.native

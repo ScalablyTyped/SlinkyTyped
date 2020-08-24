@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DoubleColumnEditIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DoubleColumnEditIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DoubleColumnEditIcon")
   @js.native
   object component extends js.Object
   

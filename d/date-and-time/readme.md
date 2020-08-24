@@ -1,7 +1,7 @@
 
 # Scala.js typings for date-and-time
 
-Typings are for version 0.6
+Typings are for version 0.13
 
 ## Library description:
 A Minimalist DateTime utility for Node.js and the browser

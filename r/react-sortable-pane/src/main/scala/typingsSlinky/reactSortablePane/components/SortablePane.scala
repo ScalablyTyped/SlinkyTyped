@@ -3,6 +3,7 @@ package typingsSlinky.reactSortablePane.components
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
@@ -30,6 +31,8 @@ object SortablePane {
        with StBuildingComponent[tag.type, typingsSlinky.reactSortablePane.mod.SortablePane] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOrderVarargs(value: String*): this.type = set("defaultOrder", js.Array(value :_*))
     @scala.inline
     def defaultOrder(value: js.Array[String]): this.type = set("defaultOrder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,6 +68,8 @@ object SortablePane {
       value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit
     ): this.type = set("onResizeStop", js.Any.fromFunction5(value))
     @scala.inline
+    def orderVarargs(value: String*): this.type = set("order", js.Array(value :_*))
+    @scala.inline
     def order(value: js.Array[String]): this.type = set("order", value.asInstanceOf[js.Any])
     @scala.inline
     def springConfig(value: SpringHelperConfig): this.type = set("springConfig", value.asInstanceOf[js.Any])
@@ -73,6 +78,10 @@ object SortablePane {
   }
   
   def withProps(p: SortablePaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: SortablePane.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SortablePaneProps]))
+  }
 }
 

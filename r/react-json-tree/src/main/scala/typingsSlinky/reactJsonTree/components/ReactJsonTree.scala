@@ -31,6 +31,8 @@ object ReactJsonTree {
     @scala.inline
     def isCustomNode(value: () => Boolean): this.type = set("isCustomNode", js.Any.fromFunction0(value))
     @scala.inline
+    def keyPathVarargs(value: (String | Double)*): this.type = set("keyPath", js.Array(value :_*))
+    @scala.inline
     def keyPath(value: js.Array[String | Double]): this.type = set("keyPath", value.asInstanceOf[js.Any])
     @scala.inline
     def labelRenderer(

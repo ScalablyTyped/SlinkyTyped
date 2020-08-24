@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.localeReceiverMod.LocaleReceiverProps
@@ -24,6 +25,10 @@ object LocaleReceiver {
   }
   
   def withProps(p: LocaleReceiverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: LocaleReceiver.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: (js.Object, js.UndefOr[String], js.UndefOr[js.Object]) => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction3(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[LocaleReceiverProps]))
+  }
 }
 

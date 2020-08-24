@@ -1,6 +1,6 @@
 package typingsSlinky.rcTable
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.anon.Columns
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("rc-table/lib/hooks/useColumns", JSImport.Namespace)
 @js.native
 object useColumnsMod extends js.Object {
-  def convertChildrenToColumns[RecordType](children: TagMod[Any]): ColumnsType[RecordType] = js.native
+  def convertChildrenToColumns[RecordType](children: ReactElement): ColumnsType[RecordType] = js.native
   /**
     * Parse `columns` & `children` into `columns`.
     */

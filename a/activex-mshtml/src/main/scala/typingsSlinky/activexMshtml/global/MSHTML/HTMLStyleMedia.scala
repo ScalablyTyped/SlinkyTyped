@@ -7,13 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.HTMLStyleMedia")
 @js.native
 class HTMLStyleMedia protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.HTMLStyleMedia {
-  /* CompleteClass */
-  @JSName("MSHTML.HTMLStyleMedia_typekey")
-  override var MSHTMLDotHTMLStyleMedia_typekey: typingsSlinky.activexMshtml.MSHTML.HTMLStyleMedia = js.native
-  /* CompleteClass */
-  override val `type`: String = js.native
-  /* CompleteClass */
-  override def matchMedium(mediaQuery: String): Boolean = js.native
-}
+  extends typingsSlinky.activexMshtml.MSHTML.HTMLStyleMedia
 

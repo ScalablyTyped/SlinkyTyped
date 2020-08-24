@@ -1,6 +1,5 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -24,13 +23,17 @@ object NoticeIconTab {
     @scala.inline
     def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def emptyImage(value: String): this.type = set("emptyImage", value.asInstanceOf[js.Any])
     @scala.inline
     def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
     @scala.inline
-    def emptyText(value: TagMod[Any]): this.type = set("emptyText", value.asInstanceOf[js.Any])
+    def emptyText(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listVarargs(value: NoticeIconData*): this.type = set("list", js.Array(value :_*))
     @scala.inline
     def list(value: js.Array[NoticeIconData]): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline

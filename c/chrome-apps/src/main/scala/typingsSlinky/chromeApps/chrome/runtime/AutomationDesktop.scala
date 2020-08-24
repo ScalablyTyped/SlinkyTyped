@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AutomationDesktop extends AutomationOptions {
+trait AutomationDesktop extends _AutomationOptions {
   var desktop: `true` = js.native
   var interact: js.UndefOr[`true`] = js.native
 }
@@ -24,23 +24,16 @@ object AutomationDesktop {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDesktop(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withInteract(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interact")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDesktop(value: `true`): Self = this.set("desktop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInteract: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interact")(js.undefined)
-        ret
-    }
+    def setInteract(value: `true`): Self = this.set("interact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInteract: Self = this.set("interact", js.undefined)
   }
   
 }

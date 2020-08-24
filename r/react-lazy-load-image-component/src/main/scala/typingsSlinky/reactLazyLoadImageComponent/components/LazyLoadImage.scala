@@ -3,6 +3,7 @@ package typingsSlinky.reactLazyLoadImageComponent.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
@@ -22,6 +23,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactLazyLoadImageComponent.mod.DelayMethod
 import typingsSlinky.reactLazyLoadImageComponent.mod.Effect
 import typingsSlinky.reactLazyLoadImageComponent.mod.LazyLoadImageProps
@@ -225,6 +227,8 @@ object LazyLoadImage {
     def decoding(value: async | auto | sync): this.type = set("decoding", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -485,6 +489,8 @@ object LazyLoadImage {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
     def wrapperClassName(value: String): this.type = set("wrapperClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperProps(value: HTMLAttributes[HTMLSpanElement]): this.type = set("wrapperProps", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: LazyLoadImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

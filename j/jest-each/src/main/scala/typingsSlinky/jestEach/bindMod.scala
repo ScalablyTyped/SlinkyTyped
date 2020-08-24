@@ -4,6 +4,7 @@ import typingsSlinky.jestEach.anon.Arguments
 import typingsSlinky.jestTypes.globalMod.DoneFn
 import typingsSlinky.jestTypes.globalMod.EachTable
 import typingsSlinky.jestTypes.globalMod.EachTestFn
+import typingsSlinky.jestTypes.globalMod.TemplateData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +14,12 @@ import scala.scalajs.js.annotation._
 object bindMod extends js.Object {
   def default(cb: GlobalCallback): js.Function2[
     /* table */ EachTable, 
-    /* repeated */ js.Any, 
+    /* taggedTemplateData */ TemplateData, 
     js.Function3[/* title */ String, /* test */ EachTestFn, /* timeout */ js.UndefOr[Double], Unit]
   ] = js.native
   def default(cb: GlobalCallback, supportsDone: Boolean): js.Function2[
     /* table */ EachTable, 
-    /* repeated */ js.Any, 
+    /* taggedTemplateData */ TemplateData, 
     js.Function3[/* title */ String, /* test */ EachTestFn, /* timeout */ js.UndefOr[Double], Unit]
   ] = js.native
   type EachTests = js.Array[Arguments]

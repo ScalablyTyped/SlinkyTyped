@@ -5,6 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object runtime {
+  /* Rewritten from type alias, can be one of: 
+    - scala.Boolean
+    - typingsSlinky.chromeApps.chrome.runtime.AutomationDesktop
+    - typingsSlinky.chromeApps.chrome.runtime.AutomationNonInteractive
+  */
+  type AutomationOptions = typingsSlinky.chromeApps.chrome.runtime._AutomationOptions | scala.Boolean
   type ExtensionConnectEvent = typingsSlinky.chromeApps.chrome.events.Event[
     js.Function1[/* port */ typingsSlinky.chromeApps.chrome.runtime.Port, scala.Unit]
   ]

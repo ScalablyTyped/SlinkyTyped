@@ -8,17 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("VREyeParameters")
 @js.native
 class VREyeParameters ()
-  extends typingsSlinky.std.VREyeParameters {
-  /** @deprecated */
-  /* CompleteClass */
-  override val fieldOfView: typingsSlinky.std.VRFieldOfView = js.native
-  /* CompleteClass */
-  override val offset: js.typedarray.Float32Array = js.native
-  /* CompleteClass */
-  override val renderHeight: Double = js.native
-  /* CompleteClass */
-  override val renderWidth: Double = js.native
-}
+  extends typingsSlinky.std.VREyeParameters
 
 @JSGlobal("VREyeParameters")
 @js.native

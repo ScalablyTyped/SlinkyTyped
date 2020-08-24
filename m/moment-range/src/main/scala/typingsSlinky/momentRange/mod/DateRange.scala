@@ -6,8 +6,8 @@ import typingsSlinky.momentRange.anon.Adjacent
 import typingsSlinky.momentRange.anon.ExcludeEnd
 import typingsSlinky.momentRange.anon.ExcludeStart
 import typingsSlinky.momentRange.anon.Exclusive
-import typingsSlinky.momentRange.anon.ExclusiveBoolean
 import typingsSlinky.momentRange.anon.Step
+import typingsSlinky.momentRange.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,17 +35,19 @@ class DateRange () extends js.Object {
   def center(): Moment = js.native
   def contains(other: Moment): Boolean = js.native
   def contains(other: Moment, options: ExcludeStart): Boolean = js.native
-  def contains(other: Moment, options: ExclusiveBoolean): Boolean = js.native
+  def contains(other: Moment, options: `0`): Boolean = js.native
   def contains(other: DateRange): Boolean = js.native
   def contains(other: DateRange, options: ExcludeStart): Boolean = js.native
-  def contains(other: DateRange, options: ExclusiveBoolean): Boolean = js.native
+  def contains(other: DateRange, options: `0`): Boolean = js.native
   def contains(other: js.Date): Boolean = js.native
   def contains(other: js.Date, options: ExcludeStart): Boolean = js.native
-  def contains(other: js.Date, options: ExclusiveBoolean): Boolean = js.native
+  def contains(other: js.Date, options: `0`): Boolean = js.native
   def diff(): Double = js.native
+  def diff(unit: js.UndefOr[scala.Nothing], precise: Boolean): Double = js.native
   def diff(unit: Diff): Double = js.native
   def diff(unit: Diff, precise: Boolean): Double = js.native
   def duration(): Double = js.native
+  def duration(unit: js.UndefOr[scala.Nothing], precise: Boolean): Double = js.native
   def duration(unit: Diff): Double = js.native
   def duration(unit: Diff, precise: Boolean): Double = js.native
   def intersect(other: DateRange): DateRange | Null = js.native

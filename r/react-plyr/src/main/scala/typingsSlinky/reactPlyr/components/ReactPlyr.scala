@@ -38,11 +38,15 @@ object ReactPlyr {
     @scala.inline
     def blankVideo(value: String): this.type = set("blankVideo", value.asInstanceOf[js.Any])
     @scala.inline
+    def captionsVarargs(value: Kind*): this.type = set("captions", js.Array(value :_*))
+    @scala.inline
     def captions(value: js.Array[Kind]): this.type = set("captions", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def clickToPlay(value: Boolean): this.type = set("clickToPlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controlsVarargs(value: String*): this.type = set("controls", js.Array(value :_*))
     @scala.inline
     def controls(value: js.Array[String]): this.type = set("controls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -108,7 +112,11 @@ object ReactPlyr {
     @scala.inline
     def seekTime(value: Double): this.type = set("seekTime", value.asInstanceOf[js.Any])
     @scala.inline
+    def settingsVarargs(value: String*): this.type = set("settings", js.Array(value :_*))
+    @scala.inline
     def settings(value: js.Array[String]): this.type = set("settings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sourcesVarargs(value: Size*): this.type = set("sources", js.Array(value :_*))
     @scala.inline
     def sources(value: js.Array[Size]): this.type = set("sources", value.asInstanceOf[js.Any])
     @scala.inline

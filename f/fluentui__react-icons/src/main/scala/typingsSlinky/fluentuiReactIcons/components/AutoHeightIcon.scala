@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AutoHeightIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AutoHeightIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AutoHeightIcon")
   @js.native
   object component extends js.Object
   

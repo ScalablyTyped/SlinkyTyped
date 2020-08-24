@@ -38,77 +38,38 @@ object CopyOnWriteArray {
     __obj.asInstanceOf[CopyOnWriteArray[T]]
   }
   @scala.inline
-  implicit class CopyOnWriteArrayOps[Self[t] <: CopyOnWriteArray[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class CopyOnWriteArrayOps[Self <: CopyOnWriteArray[_], T] (val x: Self with CopyOnWriteArray[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdd(value: /* repeated */ T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAddAll(value: CopyOnWriteArray[T] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAll")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAdd(value: /* repeated */ T => Unit): Self = this.set("add", js.Any.fromFunction1(value))
     @scala.inline
-    def withEnd(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddAll(value: CopyOnWriteArray[T] => Unit): Self = this.set("addAll", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetArray(value: () => js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getArray")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setEnd(value: () => Unit): Self = this.set("end", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAccess(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetArray(value: () => js.Any): Self = this.set("getArray", js.Any.fromFunction0(value))
     @scala.inline
-    def withMData(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mData")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAccess(value: js.Any): Self = this.set("mAccess", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDataCopy(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDataCopy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMData(value: js.Any): Self = this.set("mData", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStart(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDataCopy(value: js.Any): Self = this.set("mDataCopy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemove(value: T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMStart(value: js.Any): Self = this.set("mStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSize(value: () => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setRemove(value: T => Unit): Self = this.set("remove", js.Any.fromFunction1(value))
     @scala.inline
-    def withStart(value: () => js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSize(value: () => Double): Self = this.set("size", js.Any.fromFunction0(value))
+    @scala.inline
+    def setStart(value: () => js.Array[T]): Self = this.set("start", js.Any.fromFunction0(value))
   }
   
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "Identifiers")
 @js.native
 class Identifiers ()
-  extends typingsSlinky.angularCompiler.publicApiMod.Identifiers
+  extends typingsSlinky.angularCompiler.compilerMod.Identifiers
 
 /* static members */
 @JSImport("@angular/compiler", "Identifiers")
@@ -45,6 +45,7 @@ object Identifiers extends js.Object {
   var createModuleFactory: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   var createRendererType2: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   var directiveDef: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
+  var directiveInject: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   var elementDef: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   var inject: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   var inlineInterpolate: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native

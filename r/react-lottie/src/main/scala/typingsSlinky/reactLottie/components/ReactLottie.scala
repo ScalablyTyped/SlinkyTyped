@@ -29,6 +29,8 @@ object ReactLottie {
     @scala.inline
     def direction(value: Double): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
+    def eventListenersVarargs(value: EventListener*): this.type = set("eventListeners", js.Array(value :_*))
+    @scala.inline
     def eventListeners(value: js.Array[EventListener]): this.type = set("eventListeners", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
@@ -38,6 +40,8 @@ object ReactLottie {
     def isPaused(value: Boolean): this.type = set("isPaused", value.asInstanceOf[js.Any])
     @scala.inline
     def isStopped(value: Boolean): this.type = set("isStopped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def segmentsVarargs(value: Double*): this.type = set("segments", js.Array(value :_*))
     @scala.inline
     def segments(value: js.Array[Double]): this.type = set("segments", value.asInstanceOf[js.Any])
     @scala.inline

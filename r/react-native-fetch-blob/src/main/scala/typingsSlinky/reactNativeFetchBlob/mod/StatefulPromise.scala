@@ -1,13 +1,13 @@
 package typingsSlinky.reactNativeFetchBlob.mod
 
 import typingsSlinky.reactNativeFetchBlob.anon.Count
-import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StatefulPromise[T] extends Promise[T] {
+trait StatefulPromise[T]
+  extends js.Promise[T] {
   /**
     * Cancel the request when invoke this method.
     */

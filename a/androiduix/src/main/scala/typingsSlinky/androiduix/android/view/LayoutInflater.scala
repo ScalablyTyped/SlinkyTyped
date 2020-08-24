@@ -11,9 +11,11 @@ trait LayoutInflater extends js.Object {
   var mContext: Context = js.native
   def getContext(): Context = js.native
   def inflate(layout: String): View = js.native
+  def inflate(layout: String, viewParent: js.UndefOr[scala.Nothing], attachToRoot: Boolean): View = js.native
   def inflate(layout: String, viewParent: ViewGroup): View = js.native
   def inflate(layout: String, viewParent: ViewGroup, attachToRoot: Boolean): View = js.native
   def inflate(layout: HTMLElement): View = js.native
+  def inflate(layout: HTMLElement, viewParent: js.UndefOr[scala.Nothing], attachToRoot: Boolean): View = js.native
   def inflate(layout: HTMLElement, viewParent: ViewGroup): View = js.native
   def inflate(layout: HTMLElement, viewParent: ViewGroup, attachToRoot: Boolean): View = js.native
 }

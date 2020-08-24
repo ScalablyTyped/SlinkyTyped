@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -111,6 +110,8 @@ object Textfield {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -127,7 +128,7 @@ object Textfield {
     @scala.inline
     def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
     def expandable(value: Boolean): this.type = set("expandable", value.asInstanceOf[js.Any])
     @scala.inline

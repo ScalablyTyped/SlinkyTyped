@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CompassNWIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CompassNWIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CompassNWIcon")
   @js.native
   object component extends js.Object
   

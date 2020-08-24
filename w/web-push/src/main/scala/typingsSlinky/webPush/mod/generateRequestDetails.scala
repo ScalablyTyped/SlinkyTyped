@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object generateRequestDetails extends js.Object {
   def apply(subscription: PushSubscription): RequestDetails = js.native
+  def apply(subscription: PushSubscription, payload: js.UndefOr[scala.Nothing], options: RequestOptions): RequestDetails = js.native
   def apply(subscription: PushSubscription, payload: String): RequestDetails = js.native
   def apply(subscription: PushSubscription, payload: String, options: RequestOptions): RequestDetails = js.native
   def apply(subscription: PushSubscription, payload: Null, options: RequestOptions): RequestDetailsbodynull = js.native

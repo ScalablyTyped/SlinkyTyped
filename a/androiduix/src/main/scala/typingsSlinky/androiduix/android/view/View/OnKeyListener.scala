@@ -23,11 +23,12 @@ object OnKeyListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnKey(value: (typingsSlinky.androiduix.android.view.View, Double, KeyEvent) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKey")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnKey(value: (typingsSlinky.androiduix.android.view.View, Double, KeyEvent) => Unit): Self = this.set("onKey", js.Any.fromFunction3(value))
   }
   
 }

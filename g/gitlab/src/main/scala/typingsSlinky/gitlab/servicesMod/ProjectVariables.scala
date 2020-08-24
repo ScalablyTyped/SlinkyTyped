@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("gitlab/dist/types/core/services", "ProjectVariables")
 @js.native
-class ProjectVariables ()
+class ProjectVariables protected ()
   extends typingsSlinky.gitlab.projectVariablesMod.ProjectVariables {
   def this(options: BaseServiceOptions) = this()
 }

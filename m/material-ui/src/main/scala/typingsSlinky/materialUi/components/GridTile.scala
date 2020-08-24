@@ -1,13 +1,11 @@
 package typingsSlinky.materialUi.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.GridList.GridTileProps
-import typingsSlinky.materialUi.gridTileMod.default
 import typingsSlinky.materialUi.materialUiStrings.bottom
 import typingsSlinky.materialUi.materialUiStrings.left
 import typingsSlinky.materialUi.materialUiStrings.right
@@ -18,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GridTile {
-  @JSImport("material-ui/GridList/GridTile", JSImport.Default)
+  @JSImport("material-ui", "GridTile")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.GridTile] {
     @scala.inline
     def actionIcon(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,13 +45,13 @@ object GridTile {
     @scala.inline
     def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def subtitleStyle(value: CSSProperties): this.type = set("subtitleStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titleBackground(value: String): this.type = set("titleBackground", value.asInstanceOf[js.Any])
     @scala.inline

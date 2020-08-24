@@ -11,6 +11,10 @@ class LargeObjectManager protected () extends js.Object {
   def this(options: LargeObjectManagerSettings) = this()
   def create(callback: js.Function2[/* error */ js.Error, /* oid */ Double, Unit]): Unit = js.native
   def createAndWritableStream(): Unit = js.native
+  def createAndWritableStream(
+    bufferSize: js.UndefOr[scala.Nothing],
+    callback: js.Function3[/* error */ js.Error, /* oid */ Double, /* stream */ WriteStream, Unit]
+  ): Unit = js.native
   def createAndWritableStream(bufferSize: Double): Unit = js.native
   def createAndWritableStream(
     bufferSize: Double,

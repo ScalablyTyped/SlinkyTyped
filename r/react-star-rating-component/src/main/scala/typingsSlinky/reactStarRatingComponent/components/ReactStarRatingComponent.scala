@@ -1,6 +1,6 @@
 package typingsSlinky.reactStarRatingComponent.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactStarRatingComponent.mod.StarRatingComponentProps
@@ -29,9 +29,13 @@ object ReactStarRatingComponent {
     @scala.inline
     def onStarHoverOut(value: (/* nextValue */ Double, /* prevValue */ Double, /* name */ String) => Unit): this.type = set("onStarHoverOut", js.Any.fromFunction3(value))
     @scala.inline
-    def renderStarIcon(value: (/* nextValue */ Double, /* prevValue */ Double, /* name */ String) => TagMod[Any] | String): this.type = set("renderStarIcon", js.Any.fromFunction3(value))
+    def renderStarIcon(
+      value: (/* nextValue */ Double, /* prevValue */ Double, /* name */ String) => ReactElement | String
+    ): this.type = set("renderStarIcon", js.Any.fromFunction3(value))
     @scala.inline
-    def renderStarIconHalf(value: (/* nextValue */ Double, /* prevValue */ Double, /* name */ String) => TagMod[Any] | String): this.type = set("renderStarIconHalf", js.Any.fromFunction3(value))
+    def renderStarIconHalf(
+      value: (/* nextValue */ Double, /* prevValue */ Double, /* name */ String) => ReactElement | String
+    ): this.type = set("renderStarIconHalf", js.Any.fromFunction3(value))
     @scala.inline
     def starColor(value: String): this.type = set("starColor", value.asInstanceOf[js.Any])
     @scala.inline

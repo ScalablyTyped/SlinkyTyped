@@ -30,6 +30,8 @@ object PanelStack {
     @scala.inline
     def showPanelHeader(value: Boolean): this.type = set("showPanelHeader", value.asInstanceOf[js.Any])
     @scala.inline
+    def stackVarargs(value: IPanel[js.Any]*): this.type = set("stack", js.Array(value :_*))
+    @scala.inline
     def stack(value: js.Array[IPanel[_]]): this.type = set("stack", value.asInstanceOf[js.Any])
   }
   

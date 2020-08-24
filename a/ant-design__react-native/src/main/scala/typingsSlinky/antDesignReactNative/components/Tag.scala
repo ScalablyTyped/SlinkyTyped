@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.tagMod.TagNativeProps
-import typingsSlinky.antDesignReactNative.tagMod.default
 import typingsSlinky.antDesignReactNative.tagStyleMod.TagStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -13,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tag {
-  @JSImport("@ant-design/react-native/lib/tag", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Tag")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Tag] {
     @scala.inline
     def afterClose(value: () => Unit): this.type = set("afterClose", js.Any.fromFunction0(value))
     @scala.inline

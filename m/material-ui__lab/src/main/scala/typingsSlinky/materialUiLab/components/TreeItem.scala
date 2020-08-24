@@ -1,11 +1,11 @@
 package typingsSlinky.materialUiLab.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLLIElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -78,7 +78,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeItem {
-  @JSImport("@material-ui/lab/TreeItem/TreeItem", JSImport.Default)
+  @JSImport("@material-ui/lab", "TreeItem")
   @js.native
   object component extends js.Object
   
@@ -221,7 +221,7 @@ object TreeItem {
     @scala.inline
     def collapseIconReactElement(value: ReactElement): this.type = set("collapseIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def collapseIcon(value: TagMod[Any]): this.type = set("collapseIcon", value.asInstanceOf[js.Any])
+    def collapseIcon(value: ReactElement): this.type = set("collapseIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
@@ -235,6 +235,8 @@ object TreeItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -243,17 +245,17 @@ object TreeItem {
     @scala.inline
     def endIconReactElement(value: ReactElement): this.type = set("endIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def endIcon(value: TagMod[Any]): this.type = set("endIcon", value.asInstanceOf[js.Any])
+    def endIcon(value: ReactElement): this.type = set("endIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandIcon(value: TagMod[Any]): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -283,7 +285,7 @@ object TreeItem {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
@@ -351,6 +353,8 @@ object TreeItem {
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLLIElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
+    def onIconClick(value: SyntheticMouseEvent[Element] => Unit): this.type = set("onIconClick", js.Any.fromFunction1(value))
+    @scala.inline
     def onInput(value: SyntheticEvent[EventTarget with HTMLLIElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
     def onInvalid(value: SyntheticEvent[EventTarget with HTMLLIElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
@@ -360,6 +364,8 @@ object TreeItem {
     def onKeyPress(value: SyntheticKeyboardEvent[HTMLLIElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyUp(value: SyntheticKeyboardEvent[HTMLLIElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLabelClick(value: SyntheticMouseEvent[Element] => Unit): this.type = set("onLabelClick", js.Any.fromFunction1(value))
     @scala.inline
     def onLoad(value: SyntheticEvent[Event, HTMLLIElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline

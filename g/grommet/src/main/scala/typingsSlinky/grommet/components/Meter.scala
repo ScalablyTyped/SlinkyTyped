@@ -22,7 +22,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Meter {
-  @JSImport("grommet", "Meter")
+  @JSImport("grommet/es6", "Meter")
   @js.native
   object component extends js.Object
   
@@ -50,6 +50,8 @@ object Meter {
     def thickness(value: xsmall | small | medium | large | xlarge | String): this.type = set("thickness", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: bar | circle): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valuesVarargs(value: Highlight*): this.type = set("values", js.Array(value :_*))
     @scala.inline
     def values(value: js.Array[Highlight]): this.type = set("values", value.asInstanceOf[js.Any])
   }

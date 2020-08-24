@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SwayLogoFill16Icon {
-  @JSImport("@fluentui/react-icons/lib/components/SwayLogoFill16Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SwayLogoFill16Icon")
   @js.native
   object component extends js.Object
   

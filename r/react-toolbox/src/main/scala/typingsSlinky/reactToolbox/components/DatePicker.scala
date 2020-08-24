@@ -1,14 +1,13 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libDatePickerDatePickerMod.DatePickerLocale
-import typingsSlinky.reactToolbox.libDatePickerDatePickerMod.DatePickerProps
-import typingsSlinky.reactToolbox.libDatePickerDatePickerMod.DatePickerTheme
-import typingsSlinky.reactToolbox.libDatePickerMod.default
+import typingsSlinky.reactToolbox.datePickerDatePickerMod.DatePickerLocale
+import typingsSlinky.reactToolbox.datePickerDatePickerMod.DatePickerProps
+import typingsSlinky.reactToolbox.datePickerDatePickerMod.DatePickerTheme
+import typingsSlinky.reactToolbox.datePickerMod.default
 import typingsSlinky.reactToolbox.reactToolboxStrings.`zh-cn`
 import typingsSlinky.reactToolbox.reactToolboxStrings.`zh-hk`
 import typingsSlinky.reactToolbox.reactToolboxStrings.`zh-tw`
@@ -37,7 +36,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DatePicker {
-  @JSImport("react-toolbox/lib/date_picker", JSImport.Default)
+  @JSImport("react-toolbox/components/date_picker", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -54,7 +53,11 @@ object DatePicker {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
+    @scala.inline
     def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enabledDatesVarargs(value: js.Date*): this.type = set("enabledDates", js.Array(value :_*))
     @scala.inline
     def enabledDates(value: js.Array[js.Date]): this.type = set("enabledDates", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,7 +65,7 @@ object DatePicker {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def inputClassName(value: String): this.type = set("inputClassName", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,7 +1,5 @@
 package typingsSlinky.winrt.global.Windows.Storage
 
-import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
-import typingsSlinky.winrt.Windows.Storage.AccessCache.AccessListEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +9,11 @@ import scala.scalajs.js.annotation._
 object AccessCache extends js.Object {
   @js.native
   class AccessListEntryView ()
-    extends typingsSlinky.winrt.Windows.Storage.AccessCache.AccessListEntryView {
-    /* CompleteClass */
-    override def first(): IIterator[AccessListEntry] = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Storage.AccessCache.AccessListEntryView
   
   @js.native
   class ItemRemovedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Storage.AccessCache.ItemRemovedEventArgs {
-    /* CompleteClass */
-    override var removedEntry: AccessListEntry = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Storage.AccessCache.ItemRemovedEventArgs
   
   @js.native
   class StorageApplicationPermissions ()

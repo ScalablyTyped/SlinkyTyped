@@ -1,17 +1,12 @@
 package typingsSlinky.jointjs.anon
 
-import typingsSlinky.jointjs.mod.dia.Paper
-import typingsSlinky.jointjs.mod.dia.Paper.ViewportCallback
-import typingsSlinky.jointjs.mod.mvc.View
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait UnmountBatchSize extends js.Object {
-  var mountBatchSize: js.UndefOr[Double] = js.native
   var unmountBatchSize: js.UndefOr[Double] = js.native
-  var viewport: js.UndefOr[ViewportCallback] = js.native
 }
 
 object UnmountBatchSize {
@@ -27,41 +22,14 @@ object UnmountBatchSize {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMountBatchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountBatchSize")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutMountBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountBatchSize")(js.undefined)
-        ret
-    }
+    def setUnmountBatchSize(value: Double): Self = this.set("unmountBatchSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUnmountBatchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountBatchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmountBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountBatchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewport(value: (/* view */ View[js.Any], /* isDetached */ Boolean, /* paper */ Paper) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.undefined)
-        ret
-    }
+    def deleteUnmountBatchSize: Self = this.set("unmountBatchSize", js.undefined)
   }
   
 }

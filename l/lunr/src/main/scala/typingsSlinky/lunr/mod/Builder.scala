@@ -1,8 +1,8 @@
 package typingsSlinky.lunr.mod
 
 import typingsSlinky.lunr.anon.Boost
-import typingsSlinky.lunr.anon.BoostNumber
 import typingsSlinky.lunr.anon.Typeoftokenizer
+import typingsSlinky.lunr.anon.`0`
 import typingsSlinky.lunr.mod.Builder.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -89,7 +89,7 @@ class Builder () extends js.Object {
     * @param attributes - Optional attributes associated with this document.
     */
   def add(doc: js.Object): Unit = js.native
-  def add(doc: js.Object, attributes: BoostNumber): Unit = js.native
+  def add(doc: js.Object, attributes: `0`): Unit = js.native
   /**
     * A parameter to tune the amount of field length normalisation that is applied when
     * calculating relevance scores. A value of 0 will completely disable any normalisation

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "wtfnode"
-version := "0.7-dt-20200515Z-df5fc2"
-scalaVersion := "2.13.2"
+version := "0.7-dt-20200515Z-d2a55b"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

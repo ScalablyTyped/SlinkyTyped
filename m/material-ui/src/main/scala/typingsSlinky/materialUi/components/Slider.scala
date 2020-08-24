@@ -9,21 +9,20 @@ import typingsSlinky.materialUi.materialUiStrings.`x-reverse`
 import typingsSlinky.materialUi.materialUiStrings.`y-reverse`
 import typingsSlinky.materialUi.materialUiStrings.x
 import typingsSlinky.materialUi.materialUiStrings.y
-import typingsSlinky.materialUi.sliderMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Slider {
-  @JSImport("material-ui/Slider", JSImport.Default)
+  @JSImport("material-ui", "Slider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.Slider] {
     @scala.inline
     def axis(value: x | `x-reverse` | y | `y-reverse`): this.type = set("axis", value.asInstanceOf[js.Any])
     @scala.inline

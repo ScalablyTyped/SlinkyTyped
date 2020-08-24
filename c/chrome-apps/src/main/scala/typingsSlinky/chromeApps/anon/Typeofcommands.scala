@@ -30,17 +30,14 @@ object Typeofcommands {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetAll(value: js.Function1[/* commands */ js.Array[Command], Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAll")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnCommand(value: CommandEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetAll(value: js.Function1[/* commands */ js.Array[Command], Unit] => Unit): Self = this.set("getAll", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnCommand(value: CommandEvent): Self = this.set("onCommand", value.asInstanceOf[js.Any])
   }
   
 }

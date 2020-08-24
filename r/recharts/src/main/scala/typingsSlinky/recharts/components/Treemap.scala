@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -33,13 +32,21 @@ object Treemap {
     @scala.inline
     def aspectRatio(value: Double): this.type = set("aspectRatio", value.asInstanceOf[js.Any])
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction1(value: _ => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    def contentFunction1(value: _ => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     @scala.inline
     def content(value: ReactElement | ContentRenderer[_]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline

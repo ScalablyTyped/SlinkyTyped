@@ -4,47 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FeeStatsResponse extends js.Object {
-  var last_ledger: String
-  var last_ledger_base_fee: String
-  var ledger_capacity_usage: String
-  var min_accepted_fee: String
-  var mode_accepted_fee: String
-  var p10_accepted_fee: String
-  var p20_accepted_fee: String
-  var p30_accepted_fee: String
-  var p40_accepted_fee: String
-  var p50_accepted_fee: String
-  var p60_accepted_fee: String
-  var p70_accepted_fee: String
-  var p80_accepted_fee: String
-  var p90_accepted_fee: String
-  var p95_accepted_fee: String
-  var p99_accepted_fee: String
+  var fee_charged: FeeDistribution = js.native
+  var last_ledger: String = js.native
+  var last_ledger_base_fee: String = js.native
+  var ledger_capacity_usage: String = js.native
+  var max_fee: FeeDistribution = js.native
 }
 
 object FeeStatsResponse {
   @scala.inline
   def apply(
+    fee_charged: FeeDistribution,
     last_ledger: String,
     last_ledger_base_fee: String,
     ledger_capacity_usage: String,
-    min_accepted_fee: String,
-    mode_accepted_fee: String,
-    p10_accepted_fee: String,
-    p20_accepted_fee: String,
-    p30_accepted_fee: String,
-    p40_accepted_fee: String,
-    p50_accepted_fee: String,
-    p60_accepted_fee: String,
-    p70_accepted_fee: String,
-    p80_accepted_fee: String,
-    p90_accepted_fee: String,
-    p95_accepted_fee: String,
-    p99_accepted_fee: String
+    max_fee: FeeDistribution
   ): FeeStatsResponse = {
-    val __obj = js.Dynamic.literal(last_ledger = last_ledger.asInstanceOf[js.Any], last_ledger_base_fee = last_ledger_base_fee.asInstanceOf[js.Any], ledger_capacity_usage = ledger_capacity_usage.asInstanceOf[js.Any], min_accepted_fee = min_accepted_fee.asInstanceOf[js.Any], mode_accepted_fee = mode_accepted_fee.asInstanceOf[js.Any], p10_accepted_fee = p10_accepted_fee.asInstanceOf[js.Any], p20_accepted_fee = p20_accepted_fee.asInstanceOf[js.Any], p30_accepted_fee = p30_accepted_fee.asInstanceOf[js.Any], p40_accepted_fee = p40_accepted_fee.asInstanceOf[js.Any], p50_accepted_fee = p50_accepted_fee.asInstanceOf[js.Any], p60_accepted_fee = p60_accepted_fee.asInstanceOf[js.Any], p70_accepted_fee = p70_accepted_fee.asInstanceOf[js.Any], p80_accepted_fee = p80_accepted_fee.asInstanceOf[js.Any], p90_accepted_fee = p90_accepted_fee.asInstanceOf[js.Any], p95_accepted_fee = p95_accepted_fee.asInstanceOf[js.Any], p99_accepted_fee = p99_accepted_fee.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(fee_charged = fee_charged.asInstanceOf[js.Any], last_ledger = last_ledger.asInstanceOf[js.Any], last_ledger_base_fee = last_ledger_base_fee.asInstanceOf[js.Any], ledger_capacity_usage = ledger_capacity_usage.asInstanceOf[js.Any], max_fee = max_fee.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeeStatsResponse]
   }
+  @scala.inline
+  implicit class FeeStatsResponseOps[Self <: FeeStatsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFee_charged(value: FeeDistribution): Self = this.set("fee_charged", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLast_ledger(value: String): Self = this.set("last_ledger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLast_ledger_base_fee(value: String): Self = this.set("last_ledger_base_fee", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLedger_capacity_usage(value: String): Self = this.set("ledger_capacity_usage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMax_fee(value: FeeDistribution): Self = this.set("max_fee", value.asInstanceOf[js.Any])
+  }
+  
 }
 

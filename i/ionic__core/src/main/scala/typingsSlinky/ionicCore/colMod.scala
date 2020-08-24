@@ -1,7 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod.global.HTMLIonColElement
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,6 @@ object colMod extends js.Object {
     var calculatePull: js.Any = js.native
     var calculatePush: js.Any = js.native
     var calculateSize: js.Any = js.native
-    var el: HTMLIonColElement = js.native
     var getColumns: js.Any = js.native
     /**
       * The amount to offset the column, in terms of how many columns it should shift to the end

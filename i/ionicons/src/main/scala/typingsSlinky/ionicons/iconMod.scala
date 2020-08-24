@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ionicons/dist/types/icon/icon", JSImport.Namespace)
+@JSImport("ionicons/dist/types/components/icon/icon", JSImport.Namespace)
 @js.native
 object iconMod extends js.Object {
   @js.native
@@ -29,7 +29,7 @@ object iconMod extends js.Object {
       * SVG and set the `name` property.
       */
     var icon: js.UndefOr[js.Any] = js.native
-    var io: js.UndefOr[js.Any] = js.native
+    var io: js.Any = js.native
     /**
       * Specifies which icon to use on `ios` mode.
       */
@@ -44,6 +44,9 @@ object iconMod extends js.Object {
       * Specifies which icon to use on `md` mode.
       */
     var md: js.UndefOr[String] = js.native
+    /**
+      * The mode determines which platform styles to use.
+      */
     var mode: String = js.native
     /**
       * Specifies which icon to use from the built-in set of icons.
@@ -58,7 +61,7 @@ object iconMod extends js.Object {
       * Specifies the exact `src` of an SVG file to use.
       */
     var src: js.UndefOr[String] = js.native
-    var svgContent: js.UndefOr[js.Any] = js.native
+    var svgContent: js.Any = js.native
     var waitUntilVisible: js.Any = js.native
     def connectedCallback(): Unit = js.native
     def disconnectedCallback(): Unit = js.native

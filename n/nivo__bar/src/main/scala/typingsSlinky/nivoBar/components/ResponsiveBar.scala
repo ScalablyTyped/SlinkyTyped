@@ -5,9 +5,10 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.svg.rect.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.nivoAxes.mod.AxisProps
+import typingsSlinky.nivoAxes.mod.GridValues
 import typingsSlinky.nivoBar.anon.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.mod.AccessorFunc
-import typingsSlinky.nivoBar.mod.Axis
 import typingsSlinky.nivoBar.mod.BarDatum
 import typingsSlinky.nivoBar.mod.BarDatumWithColor
 import typingsSlinky.nivoBar.mod.BarExtendedDatum
@@ -16,6 +17,7 @@ import typingsSlinky.nivoBar.mod.BarSvgProps
 import typingsSlinky.nivoBar.mod.IndexByFunc
 import typingsSlinky.nivoBar.mod.LabelFormatter
 import typingsSlinky.nivoBar.mod.Layer
+import typingsSlinky.nivoBar.mod.Value
 import typingsSlinky.nivoBar.mod.ValueFormatter
 import typingsSlinky.nivoBar.nivoBarStrings.auto
 import typingsSlinky.nivoBar.nivoBarStrings.grouped
@@ -45,23 +47,39 @@ object ResponsiveBar {
     @scala.inline
     def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
-    def axisBottom(value: Axis): this.type = set("axisBottom", value.asInstanceOf[js.Any])
+    def axisBottom(value: AxisProps): this.type = set("axisBottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def axisLeft(value: Axis): this.type = set("axisLeft", value.asInstanceOf[js.Any])
+    def axisBottomNull: this.type = set("axisBottom", null)
     @scala.inline
-    def axisRight(value: Axis): this.type = set("axisRight", value.asInstanceOf[js.Any])
+    def axisLeft(value: AxisProps): this.type = set("axisLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def axisTop(value: Axis): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    def axisLeftNull: this.type = set("axisLeft", null)
+    @scala.inline
+    def axisRight(value: AxisProps): this.type = set("axisRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisRightNull: this.type = set("axisRight", null)
+    @scala.inline
+    def axisTop(value: AxisProps): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisTopNull: this.type = set("axisTop", null)
     @scala.inline
     def barComponent(value: ReactComponentClass[BarItemProps]): this.type = set("barComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderColorFunction1(value: BarDatumWithColor => String): this.type = set("borderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def borderColor(value: InheritedColorProp[BarDatumWithColor]): this.type = set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline
     def borderRadius(value: Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
     @scala.inline
     def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defsVarargs(value: Dictkey*): this.type = set("defs", js.Array(value :_*))
     @scala.inline
     def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
@@ -71,7 +89,17 @@ object ResponsiveBar {
     @scala.inline
     def enableLabel(value: Boolean): this.type = set("enableLabel", value.asInstanceOf[js.Any])
     @scala.inline
+    def fillVarargs(value: Id[BarDatum]*): this.type = set("fill", js.Array(value :_*))
+    @scala.inline
     def fill(value: js.Array[Id[BarDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridXValuesVarargs(value: (js.Date | Double | String)*): this.type = set("gridXValues", js.Array(value :_*))
+    @scala.inline
+    def gridXValues(value: GridValues[Value]): this.type = set("gridXValues", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridYValuesVarargs(value: (js.Date | Double | String)*): this.type = set("gridYValues", js.Array(value :_*))
+    @scala.inline
+    def gridYValues(value: GridValues[Value]): this.type = set("gridYValues", value.asInstanceOf[js.Any])
     @scala.inline
     def groupMode(value: stacked | grouped): this.type = set("groupMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -82,6 +110,8 @@ object ResponsiveBar {
     def innerPadding(value: Double): this.type = set("innerPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keysVarargs(value: String*): this.type = set("keys", js.Array(value :_*))
     @scala.inline
     def keys(value: js.Array[String]): this.type = set("keys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -105,13 +135,19 @@ object ResponsiveBar {
     @scala.inline
     def labelTextColor(value: InheritedColorProp[BarDatumWithColor]): this.type = set("labelTextColor", value.asInstanceOf[js.Any])
     @scala.inline
+    def layersVarargs(value: Layer*): this.type = set("layers", js.Array(value :_*))
+    @scala.inline
     def layers(value: js.Array[Layer]): this.type = set("layers", value.asInstanceOf[js.Any])
     @scala.inline
     def layout(value: horizontal | vertical): this.type = set("layout", value.asInstanceOf[js.Any])
     @scala.inline
+    def legendsVarargs(value: dataFromindexeskeysLegend*): this.type = set("legends", js.Array(value :_*))
+    @scala.inline
     def legends(value: js.Array[dataFromindexeskeysLegend]): this.type = set("legends", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markersVarargs(value: CartesianMarkerProps*): this.type = set("markers", js.Array(value :_*))
     @scala.inline
     def markers(value: js.Array[CartesianMarkerProps]): this.type = set("markers", value.asInstanceOf[js.Any])
     @scala.inline
@@ -124,6 +160,10 @@ object ResponsiveBar {
     def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: (/* datum */ BarExtendedDatum, /* event */ SyntheticMouseEvent[SVGRectElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseEnter(value: (/* datum */ BarExtendedDatum, /* event */ SyntheticMouseEvent[SVGRectElement]) => Unit): this.type = set("onMouseEnter", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseLeave(value: (/* datum */ BarExtendedDatum, /* event */ SyntheticMouseEvent[SVGRectElement]) => Unit): this.type = set("onMouseLeave", js.Any.fromFunction2(value))
     @scala.inline
     def padding(value: Double): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline

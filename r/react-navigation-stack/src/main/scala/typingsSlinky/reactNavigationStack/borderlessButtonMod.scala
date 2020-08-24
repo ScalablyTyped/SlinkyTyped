@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("react-navigation-stack/lib/typescript/views/BorderlessButton", JSImport.Namespace)
+@JSImport("react-navigation-stack/lib/typescript/src/vendor/views/BorderlessButton", JSImport.Namespace)
 @js.native
 object borderlessButtonMod extends js.Object {
   @js.native

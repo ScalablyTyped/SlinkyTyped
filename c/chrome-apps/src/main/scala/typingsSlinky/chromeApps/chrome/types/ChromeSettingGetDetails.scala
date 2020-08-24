@@ -23,17 +23,14 @@ object ChromeSettingGetDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIncognito(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incognito")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutIncognito: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incognito")(js.undefined)
-        ret
-    }
+    def setIncognito(value: Boolean): Self = this.set("incognito", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIncognito: Self = this.set("incognito", js.undefined)
   }
   
 }

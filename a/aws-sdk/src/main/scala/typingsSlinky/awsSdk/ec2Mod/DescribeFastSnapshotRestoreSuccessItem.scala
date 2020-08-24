@@ -31,11 +31,11 @@ trait DescribeFastSnapshotRestoreSuccessItem extends js.Object {
     */
   var OptimizingTime: js.UndefOr[js.Date] = js.native
   /**
-    * The alias of the snapshot owner.
+    * The AWS owner alias that enabled fast snapshot restores on the snapshot. This is intended for future use.
     */
   var OwnerAlias: js.UndefOr[String] = js.native
   /**
-    * The ID of the AWS account that owns the snapshot.
+    * The ID of the AWS account that enabled fast snapshot restores on the snapshot.
     */
   var OwnerId: js.UndefOr[String] = js.native
   /**
@@ -54,32 +54,66 @@ trait DescribeFastSnapshotRestoreSuccessItem extends js.Object {
 
 object DescribeFastSnapshotRestoreSuccessItem {
   @scala.inline
-  def apply(
-    AvailabilityZone: String = null,
-    DisabledTime: js.Date = null,
-    DisablingTime: js.Date = null,
-    EnabledTime: js.Date = null,
-    EnablingTime: js.Date = null,
-    OptimizingTime: js.Date = null,
-    OwnerAlias: String = null,
-    OwnerId: String = null,
-    SnapshotId: String = null,
-    State: FastSnapshotRestoreStateCode = null,
-    StateTransitionReason: String = null
-  ): DescribeFastSnapshotRestoreSuccessItem = {
+  def apply(): DescribeFastSnapshotRestoreSuccessItem = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (DisabledTime != null) __obj.updateDynamic("DisabledTime")(DisabledTime.asInstanceOf[js.Any])
-    if (DisablingTime != null) __obj.updateDynamic("DisablingTime")(DisablingTime.asInstanceOf[js.Any])
-    if (EnabledTime != null) __obj.updateDynamic("EnabledTime")(EnabledTime.asInstanceOf[js.Any])
-    if (EnablingTime != null) __obj.updateDynamic("EnablingTime")(EnablingTime.asInstanceOf[js.Any])
-    if (OptimizingTime != null) __obj.updateDynamic("OptimizingTime")(OptimizingTime.asInstanceOf[js.Any])
-    if (OwnerAlias != null) __obj.updateDynamic("OwnerAlias")(OwnerAlias.asInstanceOf[js.Any])
-    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
-    if (SnapshotId != null) __obj.updateDynamic("SnapshotId")(SnapshotId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (StateTransitionReason != null) __obj.updateDynamic("StateTransitionReason")(StateTransitionReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFastSnapshotRestoreSuccessItem]
   }
+  @scala.inline
+  implicit class DescribeFastSnapshotRestoreSuccessItemOps[Self <: DescribeFastSnapshotRestoreSuccessItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAvailabilityZone(value: String): Self = this.set("AvailabilityZone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAvailabilityZone: Self = this.set("AvailabilityZone", js.undefined)
+    @scala.inline
+    def setDisabledTime(value: js.Date): Self = this.set("DisabledTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabledTime: Self = this.set("DisabledTime", js.undefined)
+    @scala.inline
+    def setDisablingTime(value: js.Date): Self = this.set("DisablingTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisablingTime: Self = this.set("DisablingTime", js.undefined)
+    @scala.inline
+    def setEnabledTime(value: js.Date): Self = this.set("EnabledTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnabledTime: Self = this.set("EnabledTime", js.undefined)
+    @scala.inline
+    def setEnablingTime(value: js.Date): Self = this.set("EnablingTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnablingTime: Self = this.set("EnablingTime", js.undefined)
+    @scala.inline
+    def setOptimizingTime(value: js.Date): Self = this.set("OptimizingTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptimizingTime: Self = this.set("OptimizingTime", js.undefined)
+    @scala.inline
+    def setOwnerAlias(value: String): Self = this.set("OwnerAlias", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOwnerAlias: Self = this.set("OwnerAlias", js.undefined)
+    @scala.inline
+    def setOwnerId(value: String): Self = this.set("OwnerId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOwnerId: Self = this.set("OwnerId", js.undefined)
+    @scala.inline
+    def setSnapshotId(value: String): Self = this.set("SnapshotId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSnapshotId: Self = this.set("SnapshotId", js.undefined)
+    @scala.inline
+    def setState(value: FastSnapshotRestoreStateCode): Self = this.set("State", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteState: Self = this.set("State", js.undefined)
+    @scala.inline
+    def setStateTransitionReason(value: String): Self = this.set("StateTransitionReason", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStateTransitionReason: Self = this.set("StateTransitionReason", js.undefined)
+  }
+  
 }
 

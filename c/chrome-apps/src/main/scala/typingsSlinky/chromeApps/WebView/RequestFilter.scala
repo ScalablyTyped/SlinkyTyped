@@ -34,47 +34,28 @@ object RequestFilter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withTabId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUrlsVarargs(value: String*): Self = this.set("urls", js.Array(value :_*))
     @scala.inline
-    def withoutTabId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(js.undefined)
-        ret
-    }
+    def setUrls(value: js.Array[String]): Self = this.set("urls", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTypes(value: js.Array[ResourceType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTabId(value: integer): Self = this.set("tabId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
+    def deleteTabId: Self = this.set("tabId", js.undefined)
     @scala.inline
-    def withWindowId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTypesVarargs(value: ResourceType*): Self = this.set("types", js.Array(value :_*))
     @scala.inline
-    def withoutWindowId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(js.undefined)
-        ret
-    }
+    def setTypes(value: js.Array[ResourceType]): Self = this.set("types", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTypes: Self = this.set("types", js.undefined)
+    @scala.inline
+    def setWindowId(value: integer): Self = this.set("windowId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWindowId: Self = this.set("windowId", js.undefined)
   }
   
 }

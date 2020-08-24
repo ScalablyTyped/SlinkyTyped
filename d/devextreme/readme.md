@@ -1,7 +1,7 @@
 
 # Scala.js typings for devextreme
 
-Typings are for version 19.2.7
+Typings are for version 20.1.6
 
 ## Library description:
 HTML5 JavaScript Component Suite for Responsive Web Development

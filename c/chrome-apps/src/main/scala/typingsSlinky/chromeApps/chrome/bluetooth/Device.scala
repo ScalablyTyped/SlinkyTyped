@@ -70,167 +70,66 @@ object Device {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withInquiryRssi(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inquiryRssi")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInquiryTxPower(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inquiryTxPower")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInquiryRssi(value: integer): Self = this.set("inquiryRssi", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInquiryTxPower(value: integer): Self = this.set("inquiryTxPower", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutConnectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectable")(js.undefined)
-        ret
-    }
+    def setConnectable(value: Boolean): Self = this.set("connectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteConnectable: Self = this.set("connectable", js.undefined)
     @scala.inline
-    def withoutConnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(js.undefined)
-        ret
-    }
+    def setConnected(value: Boolean): Self = this.set("connected", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnecting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connecting")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteConnected: Self = this.set("connected", js.undefined)
     @scala.inline
-    def withoutConnecting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connecting")(js.undefined)
-        ret
-    }
+    def setConnecting(value: Boolean): Self = this.set("connecting", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDeviceClass(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteConnecting: Self = this.set("connecting", js.undefined)
     @scala.inline
-    def withoutDeviceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceClass")(js.undefined)
-        ret
-    }
+    def setDeviceClass(value: integer): Self = this.set("deviceClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDeviceId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDeviceClass: Self = this.set("deviceClass", js.undefined)
     @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
+    def setDeviceId(value: integer): Self = this.set("deviceId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDeviceId: Self = this.set("deviceId", js.undefined)
     @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPaired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paired")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteName: Self = this.set("name", js.undefined)
     @scala.inline
-    def withoutPaired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paired")(js.undefined)
-        ret
-    }
+    def setPaired(value: Boolean): Self = this.set("paired", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProductId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePaired: Self = this.set("paired", js.undefined)
     @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
+    def setProductId(value: integer): Self = this.set("productId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: DeviceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteProductId: Self = this.set("productId", js.undefined)
     @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
+    def setType(value: DeviceType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUuids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuids")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteType: Self = this.set("type", js.undefined)
     @scala.inline
-    def withoutUuids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuids")(js.undefined)
-        ret
-    }
+    def setUuidsVarargs(value: String*): Self = this.set("uuids", js.Array(value :_*))
     @scala.inline
-    def withVendorId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUuids(value: js.Array[String]): Self = this.set("uuids", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutVendorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(js.undefined)
-        ret
-    }
+    def deleteUuids: Self = this.set("uuids", js.undefined)
     @scala.inline
-    def withVendorIdSource(value: DeviceVendorIdSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorIdSource")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVendorId(value: integer): Self = this.set("vendorId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutVendorIdSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorIdSource")(js.undefined)
-        ret
-    }
+    def deleteVendorId: Self = this.set("vendorId", js.undefined)
+    @scala.inline
+    def setVendorIdSource(value: DeviceVendorIdSource): Self = this.set("vendorIdSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVendorIdSource: Self = this.set("vendorIdSource", js.undefined)
   }
   
 }

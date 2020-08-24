@@ -13,11 +13,16 @@ import typingsSlinky.materialUiLab.speedDialIconSpeedDialIconMod.SpeedDialIconCl
 import typingsSlinky.materialUiLab.speedDialSpeedDialMod.CloseReason
 import typingsSlinky.materialUiLab.speedDialSpeedDialMod.OpenReason
 import typingsSlinky.materialUiLab.speedDialSpeedDialMod.SpeedDialClassKey
+import typingsSlinky.materialUiLab.timelineDotTimelineDotMod.TimelineDotClassKey
+import typingsSlinky.materialUiLab.timelineItemTimelineItemMod.TimelineItemClassKey
+import typingsSlinky.materialUiLab.timelineOppositeContentTimelineOppositeContentMod.TimelineOppositeContentClassKey
+import typingsSlinky.materialUiLab.timelineTimelineMod.TimelineClassKey
 import typingsSlinky.materialUiLab.toggleButtonGroupToggleButtonGroupMod.ToggleButtonGroupClassKey
 import typingsSlinky.materialUiLab.toggleButtonToggleButtonMod.ToggleButtonClassKey
 import typingsSlinky.materialUiLab.treeItemTreeItemMod.TreeItemClassKey
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteChangeReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteCloseReason
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteHighlightChangeReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteInputChangeReason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +45,26 @@ object materialUiLabStrings {
   sealed trait `additions text` extends js.Object
   
   @js.native
+  sealed trait alignAlternate
+    extends TimelineClassKey
+       with TimelineItemClassKey
+  
+  @js.native
+  sealed trait alignLeft
+    extends TimelineClassKey
+       with TimelineItemClassKey
+  
+  @js.native
+  sealed trait alignRight
+    extends TimelineClassKey
+       with TimelineItemClassKey
+       with TimelineOppositeContentClassKey
+  
+  @js.native
   sealed trait all extends js.Object
+  
+  @js.native
+  sealed trait alternate extends js.Object
   
   @js.native
   sealed trait any extends js.Object
@@ -52,7 +76,7 @@ object materialUiLabStrings {
   sealed trait assertive extends js.Object
   
   @js.native
-  sealed trait auto extends js.Object
+  sealed trait auto extends AutocompleteHighlightChangeReason
   
   @js.native
   sealed trait avatar extends AvatarGroupClassKey
@@ -109,6 +133,15 @@ object materialUiLabStrings {
   
   @js.native
   sealed trait default extends js.Object
+  
+  @js.native
+  sealed trait defaultDefault extends TimelineDotClassKey
+  
+  @js.native
+  sealed trait defaultPrimary extends TimelineDotClassKey
+  
+  @js.native
+  sealed trait defaultSecondary extends TimelineDotClassKey
   
   @js.native
   sealed trait descending extends js.Object
@@ -197,6 +230,9 @@ object materialUiLabStrings {
   sealed trait first extends js.Object
   
   @js.native
+  sealed trait fitContent extends SkeletonClassKey
+  
+  @js.native
   sealed trait focus extends OpenReason
   
   @js.native
@@ -209,6 +245,9 @@ object materialUiLabStrings {
   
   @js.native
   sealed trait grammar extends js.Object
+  
+  @js.native
+  sealed trait grey extends js.Object
   
   @js.native
   sealed trait grid extends js.Object
@@ -226,10 +265,13 @@ object materialUiLabStrings {
   sealed trait grouped extends ToggleButtonGroupClassKey
   
   @js.native
-  sealed trait groupedSizeLarge extends ToggleButtonGroupClassKey
+  sealed trait groupedHorizontal extends ToggleButtonGroupClassKey
   
   @js.native
-  sealed trait groupedSizeSmall extends ToggleButtonGroupClassKey
+  sealed trait groupedVertical extends ToggleButtonGroupClassKey
+  
+  @js.native
+  sealed trait heightAuto extends SkeletonClassKey
   
   @js.native
   sealed trait horizontal extends js.Object
@@ -286,6 +328,9 @@ object materialUiLabStrings {
   sealed trait inputRoot extends AutocompleteClassKey
   
   @js.native
+  sealed trait keyboard extends AutocompleteHighlightChangeReason
+  
+  @js.native
   sealed trait label
     extends RatingClassKey
        with ToggleButtonClassKey
@@ -331,10 +376,13 @@ object materialUiLabStrings {
   sealed trait message extends AlertClassKey
   
   @js.native
+  sealed trait missingOppositeContent extends TimelineItemClassKey
+  
+  @js.native
   sealed trait mixed extends js.Object
   
   @js.native
-  sealed trait mouse extends js.Object
+  sealed trait mouse extends AutocompleteHighlightChangeReason
   
   @js.native
   sealed trait mouseEnter extends OpenReason
@@ -382,16 +430,23 @@ object materialUiLabStrings {
   sealed trait outlined extends PaginationItemClassKey
   
   @js.native
+  sealed trait outlinedDefault extends TimelineDotClassKey
+  
+  @js.native
   sealed trait outlinedError extends AlertClassKey
   
   @js.native
   sealed trait outlinedInfo extends AlertClassKey
   
   @js.native
-  sealed trait outlinedPrimary extends PaginationItemClassKey
+  sealed trait outlinedPrimary
+    extends PaginationItemClassKey
+       with TimelineDotClassKey
   
   @js.native
-  sealed trait outlinedSecondary extends PaginationItemClassKey
+  sealed trait outlinedSecondary
+    extends PaginationItemClassKey
+       with TimelineDotClassKey
   
   @js.native
   sealed trait outlinedSuccess extends AlertClassKey
@@ -470,6 +525,10 @@ object materialUiLabStrings {
        with SkeletonClassKey
        with SpeedDialClassKey
        with SpeedDialIconClassKey
+       with TimelineClassKey
+       with TimelineDotClassKey
+       with TimelineItemClassKey
+       with TimelineOppositeContentClassKey
        with ToggleButtonClassKey
        with ToggleButtonGroupClassKey
        with TreeItemClassKey
@@ -611,7 +670,10 @@ object materialUiLabStrings {
   sealed trait url extends js.Object
   
   @js.native
-  sealed trait vertical extends js.Object
+  sealed trait value extends js.Object
+  
+  @js.native
+  sealed trait vertical extends ToggleButtonGroupClassKey
   
   @js.native
   sealed trait visuallyhidden extends RatingClassKey
@@ -621,6 +683,9 @@ object materialUiLabStrings {
   
   @js.native
   sealed trait wave extends SkeletonClassKey
+  
+  @js.native
+  sealed trait withChildren extends SkeletonClassKey
   
   @js.native
   sealed trait yes extends js.Object
@@ -636,7 +701,15 @@ object materialUiLabStrings {
   @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   @scala.inline
+  def alignAlternate: alignAlternate = "alignAlternate".asInstanceOf[alignAlternate]
+  @scala.inline
+  def alignLeft: alignLeft = "alignLeft".asInstanceOf[alignLeft]
+  @scala.inline
+  def alignRight: alignRight = "alignRight".asInstanceOf[alignRight]
+  @scala.inline
   def all: all = "all".asInstanceOf[all]
+  @scala.inline
+  def alternate: alternate = "alternate".asInstanceOf[alternate]
   @scala.inline
   def any: any = "any".asInstanceOf[any]
   @scala.inline
@@ -679,6 +752,12 @@ object materialUiLabStrings {
   def decimal: decimal = "decimal".asInstanceOf[decimal]
   @scala.inline
   def default: default = "default".asInstanceOf[default]
+  @scala.inline
+  def defaultDefault: defaultDefault = "defaultDefault".asInstanceOf[defaultDefault]
+  @scala.inline
+  def defaultPrimary: defaultPrimary = "defaultPrimary".asInstanceOf[defaultPrimary]
+  @scala.inline
+  def defaultSecondary: defaultSecondary = "defaultSecondary".asInstanceOf[defaultSecondary]
   @scala.inline
   def descending: descending = "descending".asInstanceOf[descending]
   @scala.inline
@@ -734,6 +813,8 @@ object materialUiLabStrings {
   @scala.inline
   def first: first = "first".asInstanceOf[first]
   @scala.inline
+  def fitContent: fitContent = "fitContent".asInstanceOf[fitContent]
+  @scala.inline
   def focus: focus = "focus".asInstanceOf[focus]
   @scala.inline
   def focusVisible: focusVisible = "focusVisible".asInstanceOf[focusVisible]
@@ -741,6 +822,8 @@ object materialUiLabStrings {
   def focused: focused = "focused".asInstanceOf[focused]
   @scala.inline
   def grammar: grammar = "grammar".asInstanceOf[grammar]
+  @scala.inline
+  def grey: grey = "grey".asInstanceOf[grey]
   @scala.inline
   def grid: grid = "grid".asInstanceOf[grid]
   @scala.inline
@@ -752,9 +835,11 @@ object materialUiLabStrings {
   @scala.inline
   def grouped: grouped = "grouped".asInstanceOf[grouped]
   @scala.inline
-  def groupedSizeLarge: groupedSizeLarge = "groupedSizeLarge".asInstanceOf[groupedSizeLarge]
+  def groupedHorizontal: groupedHorizontal = "groupedHorizontal".asInstanceOf[groupedHorizontal]
   @scala.inline
-  def groupedSizeSmall: groupedSizeSmall = "groupedSizeSmall".asInstanceOf[groupedSizeSmall]
+  def groupedVertical: groupedVertical = "groupedVertical".asInstanceOf[groupedVertical]
+  @scala.inline
+  def heightAuto: heightAuto = "heightAuto".asInstanceOf[heightAuto]
   @scala.inline
   def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
   @scala.inline
@@ -788,6 +873,8 @@ object materialUiLabStrings {
   @scala.inline
   def inputRoot: inputRoot = "inputRoot".asInstanceOf[inputRoot]
   @scala.inline
+  def keyboard: keyboard = "keyboard".asInstanceOf[keyboard]
+  @scala.inline
   def label: label = "label".asInstanceOf[label]
   @scala.inline
   def large: large = "large".asInstanceOf[large]
@@ -815,6 +902,8 @@ object materialUiLabStrings {
   def menu: menu = "menu".asInstanceOf[menu]
   @scala.inline
   def message: message = "message".asInstanceOf[message]
+  @scala.inline
+  def missingOppositeContent: missingOppositeContent = "missingOppositeContent".asInstanceOf[missingOppositeContent]
   @scala.inline
   def mixed: mixed = "mixed".asInstanceOf[mixed]
   @scala.inline
@@ -849,6 +938,8 @@ object materialUiLabStrings {
   def other: other = "other".asInstanceOf[other]
   @scala.inline
   def outlined: outlined = "outlined".asInstanceOf[outlined]
+  @scala.inline
+  def outlinedDefault: outlinedDefault = "outlinedDefault".asInstanceOf[outlinedDefault]
   @scala.inline
   def outlinedError: outlinedError = "outlinedError".asInstanceOf[outlinedError]
   @scala.inline
@@ -986,6 +1077,8 @@ object materialUiLabStrings {
   @scala.inline
   def url: url = "url".asInstanceOf[url]
   @scala.inline
+  def value: value = "value".asInstanceOf[value]
+  @scala.inline
   def vertical: vertical = "vertical".asInstanceOf[vertical]
   @scala.inline
   def visuallyhidden: visuallyhidden = "visuallyhidden".asInstanceOf[visuallyhidden]
@@ -993,6 +1086,8 @@ object materialUiLabStrings {
   def warning: warning = "warning".asInstanceOf[warning]
   @scala.inline
   def wave: wave = "wave".asInstanceOf[wave]
+  @scala.inline
+  def withChildren: withChildren = "withChildren".asInstanceOf[withChildren]
   @scala.inline
   def yes: yes = "yes".asInstanceOf[yes]
 }

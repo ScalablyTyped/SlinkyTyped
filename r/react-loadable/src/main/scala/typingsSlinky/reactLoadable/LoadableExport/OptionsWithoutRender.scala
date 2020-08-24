@@ -2,11 +2,11 @@ package typingsSlinky.reactLoadable.LoadableExport
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.reactLoadable.anon.Default
-import typingsSlinky.reactLoadable.reactLoadableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsWithoutRender[Props]
   extends CommonOptions
      with Options[Props, js.Any] {
@@ -15,25 +15,32 @@ trait OptionsWithoutRender[Props]
     *
     * Resulting React component receives all the props passed to the generated component.
     */
-  def loader(): js.Promise[ReactComponentClass[Props] | Default[Props]]
+  def loader(): js.Promise[ReactComponentClass[Props] | Default[Props]] = js.native
 }
 
 object OptionsWithoutRender {
   @scala.inline
   def apply[Props](
     loader: () => js.Promise[ReactComponentClass[Props] | Default[Props]],
-    loading: ReactComponentClass[LoadingComponentProps],
-    delay: js.UndefOr[Null | Double | `false`] = js.undefined,
-    modules: js.Array[String] = null,
-    timeout: js.UndefOr[Null | Double | `false`] = js.undefined,
-    webpack: () => js.Array[String | Double] = null
+    loading: ReactComponentClass[LoadingComponentProps]
   ): OptionsWithoutRender[Props] = {
     val __obj = js.Dynamic.literal(loader = js.Any.fromFunction0(loader), loading = loading.asInstanceOf[js.Any])
-    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
-    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (webpack != null) __obj.updateDynamic("webpack")(js.Any.fromFunction0(webpack))
     __obj.asInstanceOf[OptionsWithoutRender[Props]]
   }
+  @scala.inline
+  implicit class OptionsWithoutRenderOps[Self <: OptionsWithoutRender[_], Props] (val x: Self with OptionsWithoutRender[Props]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLoader(value: () => js.Promise[ReactComponentClass[Props] | Default[Props]]): Self = this.set("loader", js.Any.fromFunction0(value))
+  }
+  
 }
 

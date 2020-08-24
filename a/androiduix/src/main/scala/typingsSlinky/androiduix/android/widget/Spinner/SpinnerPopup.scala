@@ -48,77 +48,34 @@ object SpinnerPopup {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDismiss(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismiss")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetBackground(value: () => Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBackground")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDismiss(value: () => Unit): Self = this.set("dismiss", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetHintText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHintText")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetBackground(value: () => Drawable): Self = this.set("getBackground", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetHorizontalOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHorizontalOffset")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetHintText(value: () => String): Self = this.set("getHintText", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetVerticalOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVerticalOffset")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetHorizontalOffset(value: () => Double): Self = this.set("getHorizontalOffset", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsShowing(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isShowing")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetVerticalOffset(value: () => Double): Self = this.set("getVerticalOffset", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetAdapter(value: ListAdapter => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAdapter")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsShowing(value: () => Boolean): Self = this.set("isShowing", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetBackgroundDrawable(value: Drawable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackgroundDrawable")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetAdapter(value: ListAdapter => Unit): Self = this.set("setAdapter", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetHorizontalOffset(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHorizontalOffset")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetBackgroundDrawable(value: Drawable => Unit): Self = this.set("setBackgroundDrawable", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetPromptText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPromptText")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetHorizontalOffset(value: Double => Unit): Self = this.set("setHorizontalOffset", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetVerticalOffset(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVerticalOffset")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetPromptText(value: String => Unit): Self = this.set("setPromptText", js.Any.fromFunction1(value))
     @scala.inline
-    def withShowPopup(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPopup")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetVerticalOffset(value: Double => Unit): Self = this.set("setVerticalOffset", js.Any.fromFunction1(value))
+    @scala.inline
+    def setShowPopup(value: (Double, Double) => Unit): Self = this.set("showPopup", js.Any.fromFunction2(value))
   }
   
 }

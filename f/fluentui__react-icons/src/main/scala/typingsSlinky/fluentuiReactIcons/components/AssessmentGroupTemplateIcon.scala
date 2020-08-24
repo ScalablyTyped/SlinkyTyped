@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AssessmentGroupTemplateIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AssessmentGroupTemplateIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AssessmentGroupTemplateIcon")
   @js.native
   object component extends js.Object
   

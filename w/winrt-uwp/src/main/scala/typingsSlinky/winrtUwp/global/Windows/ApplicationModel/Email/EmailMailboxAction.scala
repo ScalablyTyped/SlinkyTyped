@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Email.EmailMailboxAction")
 @js.native
 abstract class EmailMailboxAction ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxAction {
-  /** Gets the number that identifies the change that happened to the mailbox. */
-  /* CompleteClass */
-  override var changeNumber: Double = js.native
-  /** Gets the value that represents the kind of change that happened to the mailbox. */
-  /* CompleteClass */
-  override var kind: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxActionKind = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxAction
 

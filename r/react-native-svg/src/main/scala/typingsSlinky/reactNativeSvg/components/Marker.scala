@@ -2,6 +2,7 @@ package typingsSlinky.reactNativeSvg.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNativeSvg.mod.MarkerCls
 import typingsSlinky.reactNativeSvg.mod.MarkerProps
 import typingsSlinky.reactNativeSvg.mod.MarkerUnits
 import typingsSlinky.reactNativeSvg.mod.NumberProp
@@ -18,7 +19,7 @@ object Marker {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Marker] {
+       with StBuildingComponent[tag.type, MarkerCls] {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline

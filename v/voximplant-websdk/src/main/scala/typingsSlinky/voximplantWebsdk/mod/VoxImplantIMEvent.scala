@@ -77,10 +77,9 @@ object VoxImplantIMEvent {
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def MessageStatus(id: String, message_id: String, `type`: MessageEventType, resource: String = null): VoxImplantIMEvent = {
+  def MessageStatus(id: String, message_id: String, `type`: MessageEventType): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
@@ -97,9 +96,8 @@ object VoxImplantIMEvent {
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def ChatStateUpdate(id: String, state: ChatStateType, resource: String = null): VoxImplantIMEvent = {
+  def ChatStateUpdate(id: String, state: ChatStateType): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
@@ -113,9 +111,8 @@ object VoxImplantIMEvent {
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def PresenceUpdate(id: String, message: String, presence: UserStatuses, resource: String = null): VoxImplantIMEvent = {
+  def PresenceUpdate(id: String, message: String, presence: UserStatuses): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], presence = presence.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
@@ -169,11 +166,9 @@ object VoxImplantIMEvent {
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def SubscriptionRequest(id: String, `type`: SubscriptionRequestType, message: String = null, resource: String = null): VoxImplantIMEvent = {
+  def SubscriptionRequest(id: String, `type`: SubscriptionRequestType): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
@@ -214,16 +209,13 @@ object VoxImplantIMEvent {
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def MessageReceived(content: String, id: String, message_id: String, to: String, resource: String = null): VoxImplantIMEvent = {
+  def MessageReceived(content: String, id: String, message_id: String, to: String): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], message_id = message_id.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def RosterPresenceUpdate(id: String, presence: UserStatuses, message: String = null, resource: String = null): VoxImplantIMEvent = {
+  def RosterPresenceUpdate(id: String, presence: UserStatuses): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], presence = presence.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
@@ -237,16 +229,9 @@ object VoxImplantIMEvent {
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
   @scala.inline
-  def RosterItemChange(
-    displayName: String,
-    groups: js.Array[String],
-    id: String,
-    `type`: RosterItemEvent,
-    resource: String = null
-  ): VoxImplantIMEvent = {
+  def RosterItemChange(displayName: String, groups: js.Array[String], id: String, `type`: RosterItemEvent): VoxImplantIMEvent = {
     val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoxImplantIMEvent]
   }
 }

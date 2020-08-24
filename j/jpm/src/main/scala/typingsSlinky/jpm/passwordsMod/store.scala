@@ -1,6 +1,6 @@
 package typingsSlinky.jpm.passwordsMod
 
-import typingsSlinky.jpm.anon.CredentialonCompleteanyon
+import typingsSlinky.jpm.anon.CredentialonCompleteanyun
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("sdk/passwords", "store")
 @js.native
 object store extends js.Object {
-  def apply(options: CredentialonCompleteanyon): Unit = js.native
+  def apply(options: CredentialonCompleteanyun): Unit = js.native
 }
 

@@ -8,5 +8,5 @@ package object mod {
   /**
     * A progress bar plugin for Webpack.
     */
-  type ProgressBarPlugin = typingsSlinky.webpack.mod.Plugin
+  type ProgressBarPlugin = typingsSlinky.std.Plugin
 }

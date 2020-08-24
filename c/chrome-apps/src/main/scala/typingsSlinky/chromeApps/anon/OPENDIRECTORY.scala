@@ -34,29 +34,18 @@ object OPENDIRECTORY {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOPEN_DIRECTORY(value: openDirectory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_DIRECTORY")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOPEN_FILE(value: openFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_FILE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPEN_DIRECTORY(value: openDirectory): Self = this.set("OPEN_DIRECTORY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOPEN_WRITABLE_FILE(value: openWritableFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_WRITABLE_FILE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPEN_FILE(value: openFile): Self = this.set("OPEN_FILE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSAVE_FILE(value: saveFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SAVE_FILE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPEN_WRITABLE_FILE(value: openWritableFile): Self = this.set("OPEN_WRITABLE_FILE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSAVE_FILE(value: saveFile): Self = this.set("SAVE_FILE", value.asInstanceOf[js.Any])
   }
   
 }

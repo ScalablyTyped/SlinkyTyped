@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object typesMod {
   type SvgIconChildrenFn[TProps] = js.Function1[
     /* svgIcon */ typingsSlinky.fluentuiReactIcons.typesMod.SvgIconFuncArg[TProps], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type SvgIconChildrenFnWithRoot[TProps] = js.Function1[
     /* svgIcon */ typingsSlinky.fluentuiReactIcons.typesMod.SvgIconFuncWithRootArg[TProps], 

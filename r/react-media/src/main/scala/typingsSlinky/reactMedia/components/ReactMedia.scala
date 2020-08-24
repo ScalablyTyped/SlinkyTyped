@@ -1,7 +1,7 @@
 package typingsSlinky.reactMedia.components
 
 import org.scalajs.dom.raw.Window
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMedia.mod.MediaQueryValue
@@ -20,11 +20,17 @@ object ReactMedia {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* matches */ Boolean => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: (js.Function1[/* matches */ Boolean, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def defaultMatches(value: Boolean): this.type = set("defaultMatches", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: /* matches */ Boolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def render(value: () => TagMod[Any]): this.type = set("render", js.Any.fromFunction0(value))
+    def render(value: () => ReactElement): this.type = set("render", js.Any.fromFunction0(value))
     @scala.inline
     def targetWindow(value: Window): this.type = set("targetWindow", value.asInstanceOf[js.Any])
   }

@@ -66,7 +66,6 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactBootstrapTypeahead.mod.MenuItemProps
-import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.li
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -78,9 +77,9 @@ object MenuItem {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: TypeaheadModel] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.MenuItem[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.MenuItem[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -259,6 +258,8 @@ object MenuItem {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -628,6 +629,8 @@ object MenuItem {
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -639,9 +642,9 @@ object MenuItem {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: TypeaheadModel](p: MenuItemProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](p: MenuItemProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: TypeaheadModel](option: T, position: Double): Builder[T] = {
+  def apply[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](option: T, position: Double): Builder[T] = {
     val __props = js.Dynamic.literal(option = option.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[MenuItemProps[T]]))
   }

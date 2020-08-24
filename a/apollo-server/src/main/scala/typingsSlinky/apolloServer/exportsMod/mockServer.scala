@@ -1,9 +1,9 @@
 package typingsSlinky.apolloServer.exportsMod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
-import typingsSlinky.graphqlTools.interfacesMod.IMockServer
-import typingsSlinky.graphqlTools.interfacesMod.IMocks
-import typingsSlinky.graphqlTools.interfacesMod.ITypeDefinitions
+import typingsSlinky.graphqlToolsMock.typesMod.IMockServer
+import typingsSlinky.graphqlToolsMock.typesMod.IMocks
+import typingsSlinky.graphqlToolsUtils.interfacesMod.ITypeDefinitions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

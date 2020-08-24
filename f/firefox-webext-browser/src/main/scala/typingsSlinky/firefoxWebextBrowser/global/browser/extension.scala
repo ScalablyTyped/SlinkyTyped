@@ -3,7 +3,7 @@ package typingsSlinky.firefoxWebextBrowser.global.browser
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
 import typingsSlinky.firefoxWebextBrowser.Window
 import typingsSlinky.firefoxWebextBrowser.anon.Message
-import typingsSlinky.firefoxWebextBrowser.anon.TabId
+import typingsSlinky.firefoxWebextBrowser.anon.Type
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.MessageSender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -81,7 +81,7 @@ object extension extends js.Object {
     * @returns Array of global objects
     */
   def getViews(): js.Array[Window] = js.native
-  def getViews(fetchProperties: TabId): js.Array[Window] = js.native
+  def getViews(fetchProperties: Type): js.Array[Window] = js.native
   /**
     * Retrieves the state of the extension's access to the 'file://' scheme (as determined by the user-controlled
     * 'Allow access to File URLs' checkbox.

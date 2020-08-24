@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AlignCenterIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AlignCenterIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AlignCenterIcon")
   @js.native
   object component extends js.Object
   

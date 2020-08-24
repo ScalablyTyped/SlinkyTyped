@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "NavController")
 @js.native
 class NavController protected ()
-  extends typingsSlinky.ionicAngular.distMod.NavController {
+  extends typingsSlinky.ionicAngular.navControllerMod.NavController {
   def this(
     platform: typingsSlinky.ionicAngular.platformMod.Platform,
     location: Location,

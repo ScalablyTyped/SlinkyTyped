@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined @grpc/grpc-js.@grpc/grpc-js/build/src/server-call.ServerSurfaceCall & {  request  :RequestType | null} */
+/* Inlined @grpc/grpc-js.@grpc/grpc-js/build/src/server-call.ServerSurfaceCall & {  request :RequestType | null} */
 @js.native
 trait ServerUnaryCall[RequestType, ResponseType] extends js.Object {
   var cancelled: Boolean = js.native

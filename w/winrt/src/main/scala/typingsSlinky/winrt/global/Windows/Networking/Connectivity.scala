@@ -4,10 +4,6 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
-import typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkAuthenticationType
-import typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkCostType
-import typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkEncryptionType
-import typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,16 +13,7 @@ import scala.scalajs.js.annotation._
 object Connectivity extends js.Object {
   @js.native
   class ConnectionCost ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.ConnectionCost {
-    /* CompleteClass */
-    override var approachingDataLimit: Boolean = js.native
-    /* CompleteClass */
-    override var networkCostType: NetworkCostType = js.native
-    /* CompleteClass */
-    override var overDataLimit: Boolean = js.native
-    /* CompleteClass */
-    override var roaming: Boolean = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.ConnectionCost
   
   @js.native
   class ConnectionProfile ()
@@ -34,84 +21,31 @@ object Connectivity extends js.Object {
   
   @js.native
   class DataPlanStatus ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.DataPlanStatus {
-    /* CompleteClass */
-    override var dataLimitInMegabytes: Double = js.native
-    /* CompleteClass */
-    override var dataPlanUsage: typingsSlinky.winrt.Windows.Networking.Connectivity.DataPlanUsage = js.native
-    /* CompleteClass */
-    override var inboundBitsPerSecond: Double = js.native
-    /* CompleteClass */
-    override var maxTransferSizeInMegabytes: Double = js.native
-    /* CompleteClass */
-    override var nextBillingCycle: js.Date = js.native
-    /* CompleteClass */
-    override var outboundBitsPerSecond: Double = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.DataPlanStatus
   
   @js.native
   class DataPlanUsage ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.DataPlanUsage {
-    /* CompleteClass */
-    override var lastSyncTime: js.Date = js.native
-    /* CompleteClass */
-    override var megabytesUsed: Double = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.DataPlanUsage
   
   @js.native
   class DataUsage ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.DataUsage {
-    /* CompleteClass */
-    override var bytesReceived: Double = js.native
-    /* CompleteClass */
-    override var bytesSent: Double = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.DataUsage
   
   @js.native
   class IPInformation ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.IPInformation {
-    /* CompleteClass */
-    override var networkAdapter: typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkAdapter = js.native
-    /* CompleteClass */
-    override var prefixLength: Double = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.IPInformation
   
   @js.native
   class LanIdentifier ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.LanIdentifier {
-    /* CompleteClass */
-    override var infrastructureId: typingsSlinky.winrt.Windows.Networking.Connectivity.LanIdentifierData = js.native
-    /* CompleteClass */
-    override var networkAdapterId: String = js.native
-    /* CompleteClass */
-    override var portId: typingsSlinky.winrt.Windows.Networking.Connectivity.LanIdentifierData = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.LanIdentifier
   
   @js.native
   class LanIdentifierData ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.LanIdentifierData {
-    /* CompleteClass */
-    override var `type`: Double = js.native
-    /* CompleteClass */
-    override var value: IVectorView[Double] = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.LanIdentifierData
   
   @js.native
   class NetworkAdapter ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkAdapter {
-    /* CompleteClass */
-    override var ianaInterfaceType: Double = js.native
-    /* CompleteClass */
-    override var inboundMaxBitsPerSecond: Double = js.native
-    /* CompleteClass */
-    override var networkAdapterId: String = js.native
-    /* CompleteClass */
-    override var networkItem: typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkItem = js.native
-    /* CompleteClass */
-    override var outboundMaxBitsPerSecond: Double = js.native
-    /* CompleteClass */
-    override def getConnectedProfileAsync(): IAsyncOperation[typingsSlinky.winrt.Windows.Networking.Connectivity.ConnectionProfile] = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkAdapter
   
   @js.native
   class NetworkInformation ()
@@ -119,30 +53,15 @@ object Connectivity extends js.Object {
   
   @js.native
   class NetworkItem ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkItem {
-    /* CompleteClass */
-    override var networkId: String = js.native
-    /* CompleteClass */
-    override def getNetworkTypes(): NetworkTypes = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkItem
   
   @js.native
   class NetworkSecuritySettings ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkSecuritySettings {
-    /* CompleteClass */
-    override var networkAuthenticationType: NetworkAuthenticationType = js.native
-    /* CompleteClass */
-    override var networkEncryptionType: NetworkEncryptionType = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkSecuritySettings
   
   @js.native
   class ProxyConfiguration ()
-    extends typingsSlinky.winrt.Windows.Networking.Connectivity.ProxyConfiguration {
-    /* CompleteClass */
-    override var canConnectDirectly: Boolean = js.native
-    /* CompleteClass */
-    override var proxyUris: IVectorView[Uri] = js.native
-  }
+    extends typingsSlinky.winrt.Windows.Networking.Connectivity.ProxyConfiguration
   
   @js.native
   object NetworkAuthenticationType extends js.Object {

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("gitlab", "EpicNotes")
 @js.native
-class EpicNotes ()
+class EpicNotes protected ()
   extends typingsSlinky.gitlab.servicesMod.EpicNotes {
   def this(options: BaseServiceOptions) = this()
 }

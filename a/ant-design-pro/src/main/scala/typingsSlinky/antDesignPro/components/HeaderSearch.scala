@@ -3,23 +3,24 @@ package typingsSlinky.antDesignPro.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.headerSearchMod.HeaderSearchProps
-import typingsSlinky.antDesignPro.headerSearchMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HeaderSearch {
-  @JSImport("ant-design-pro/lib/HeaderSearch", JSImport.Default)
+  @JSImport("ant-design-pro", "HeaderSearch")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.HeaderSearch] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataSourceVarargs(value: String*): this.type = set("dataSource", js.Array(value :_*))
     @scala.inline
     def dataSource(value: js.Array[String]): this.type = set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline

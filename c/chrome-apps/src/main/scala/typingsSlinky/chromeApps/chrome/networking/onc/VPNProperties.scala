@@ -21,52 +21,33 @@ trait VPNProperties[M /* <: ManagedObject */, B, S] extends js.Object {
 
 object VPNProperties {
   @scala.inline
-  def apply[M, B, S](): VPNProperties[M, B, S] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, B, S](): VPNProperties[M, B, S] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[VPNProperties[M, B, S]]
   }
   @scala.inline
-  implicit class VPNPropertiesOps[Self[m, b, s] <: VPNProperties[m, b, s], M, B, S] (val x: Self[M, B, S]) extends AnyVal {
+  implicit class VPNPropertiesOps[Self <: VPNProperties[_, _, _], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, B, S] (val x: Self with (VPNProperties[M, B, S])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, B, S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, B, S]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, B, S]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, B, S]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAutoConnect(value: B): Self[M, B, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAutoConnect: Self[M, B, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(js.undefined)
-        ret
-    }
+    def setAutoConnect(value: B): Self = this.set("AutoConnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHost(value: S): Self[M, B, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoConnect: Self = this.set("AutoConnect", js.undefined)
     @scala.inline
-    def withoutHost: Self[M, B, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(js.undefined)
-        ret
-    }
+    def setHost(value: S): Self = this.set("Host", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: S): Self[M, B, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHost: Self = this.set("Host", js.undefined)
     @scala.inline
-    def withoutType: Self[M, B, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
+    def setType(value: S): Self = this.set("Type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("Type", js.undefined)
   }
   
 }

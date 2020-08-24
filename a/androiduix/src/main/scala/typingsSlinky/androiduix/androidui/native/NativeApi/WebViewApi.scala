@@ -34,41 +34,22 @@ object WebViewApi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreateWebView(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWebView")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDestroyWebView(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyWebView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setCreateWebView(value: Double => Unit): Self = this.set("createWebView", js.Any.fromFunction1(value))
     @scala.inline
-    def withWebViewBoundChange(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewBoundChange")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setDestroyWebView(value: Double => Unit): Self = this.set("destroyWebView", js.Any.fromFunction1(value))
     @scala.inline
-    def withWebViewGoBack(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewGoBack")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setWebViewBoundChange(value: (Double, Double, Double, Double, Double) => Unit): Self = this.set("webViewBoundChange", js.Any.fromFunction5(value))
     @scala.inline
-    def withWebViewLoadUrl(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewLoadUrl")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setWebViewGoBack(value: Double => Unit): Self = this.set("webViewGoBack", js.Any.fromFunction1(value))
     @scala.inline
-    def withWebViewReload(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewReload")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setWebViewLoadUrl(value: (Double, String) => Unit): Self = this.set("webViewLoadUrl", js.Any.fromFunction2(value))
+    @scala.inline
+    def setWebViewReload(value: Double => Unit): Self = this.set("webViewReload", js.Any.fromFunction1(value))
   }
   
 }

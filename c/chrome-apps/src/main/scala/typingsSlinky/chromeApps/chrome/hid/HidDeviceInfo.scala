@@ -64,65 +64,32 @@ object HidDeviceInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCollections(value: js.Array[Collection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collections")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDeviceId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCollectionsVarargs(value: Collection*): Self = this.set("collections", js.Array(value :_*))
     @scala.inline
-    def withMaxFeatureReportSize(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFeatureReportSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCollections(value: js.Array[Collection]): Self = this.set("collections", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxInputReportSize(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInputReportSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDeviceId(value: integer): Self = this.set("deviceId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxOutputReportSize(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOutputReportSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaxFeatureReportSize(value: integer): Self = this.set("maxFeatureReportSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProductId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaxInputReportSize(value: integer): Self = this.set("maxInputReportSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProductName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaxOutputReportSize(value: integer): Self = this.set("maxOutputReportSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReportDescriptor(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProductId(value: integer): Self = this.set("productId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSerialNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProductName(value: String): Self = this.set("productName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVendorId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setReportDescriptor(value: js.typedarray.ArrayBuffer): Self = this.set("reportDescriptor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSerialNumber(value: String): Self = this.set("serialNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVendorId(value: integer): Self = this.set("vendorId", value.asInstanceOf[js.Any])
   }
   
 }

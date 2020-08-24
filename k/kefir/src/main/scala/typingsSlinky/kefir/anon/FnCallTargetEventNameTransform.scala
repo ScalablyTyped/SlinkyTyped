@@ -2,7 +2,7 @@ package typingsSlinky.kefir.anon
 
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.kefir.mod.Stream_
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

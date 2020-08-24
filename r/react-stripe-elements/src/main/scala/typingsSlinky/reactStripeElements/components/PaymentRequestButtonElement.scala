@@ -57,7 +57,11 @@ object PaymentRequestButtonElement {
     @scala.inline
     def placeholderCountry(value: String): this.type = set("placeholderCountry", value.asInstanceOf[js.Any])
     @scala.inline
+    def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def style(value: Complete): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def supportedCountriesVarargs(value: String*): this.type = set("supportedCountries", js.Array(value :_*))
     @scala.inline
     def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
     @scala.inline

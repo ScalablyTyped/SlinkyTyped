@@ -11,7 +11,7 @@ trait CreateVpcRequest extends js.Object {
     */
   var AmazonProvidedIpv6CidrBlock: js.UndefOr[Boolean] = js.native
   /**
-    * The IPv4 network range for the VPC, in CIDR notation. For example, 10.0.0.0/16.
+    * The IPv4 network range for the VPC, in CIDR notation. For example, 10.0.0.0/16. We modify the specified CIDR block to its canonical form; for example, if you specify 100.68.0.18/18, we modify it to 100.68.0.0/18.
     */
   var CidrBlock: String = js.native
   /**
@@ -34,27 +34,62 @@ trait CreateVpcRequest extends js.Object {
     * The ID of an IPv6 address pool from which to allocate the IPv6 CIDR block.
     */
   var Ipv6Pool: js.UndefOr[Ipv6PoolEc2Id] = js.native
+  /**
+    * The tags to assign to the VPC.
+    */
+  var TagSpecifications: js.UndefOr[TagSpecificationList] = js.native
 }
 
 object CreateVpcRequest {
   @scala.inline
-  def apply(
-    CidrBlock: String,
-    AmazonProvidedIpv6CidrBlock: js.UndefOr[Boolean] = js.undefined,
-    DryRun: js.UndefOr[Boolean] = js.undefined,
-    InstanceTenancy: Tenancy = null,
-    Ipv6CidrBlock: String = null,
-    Ipv6CidrBlockNetworkBorderGroup: String = null,
-    Ipv6Pool: Ipv6PoolEc2Id = null
-  ): CreateVpcRequest = {
+  def apply(CidrBlock: String): CreateVpcRequest = {
     val __obj = js.Dynamic.literal(CidrBlock = CidrBlock.asInstanceOf[js.Any])
-    if (!js.isUndefined(AmazonProvidedIpv6CidrBlock)) __obj.updateDynamic("AmazonProvidedIpv6CidrBlock")(AmazonProvidedIpv6CidrBlock.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
-    if (InstanceTenancy != null) __obj.updateDynamic("InstanceTenancy")(InstanceTenancy.asInstanceOf[js.Any])
-    if (Ipv6CidrBlock != null) __obj.updateDynamic("Ipv6CidrBlock")(Ipv6CidrBlock.asInstanceOf[js.Any])
-    if (Ipv6CidrBlockNetworkBorderGroup != null) __obj.updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(Ipv6CidrBlockNetworkBorderGroup.asInstanceOf[js.Any])
-    if (Ipv6Pool != null) __obj.updateDynamic("Ipv6Pool")(Ipv6Pool.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcRequest]
   }
+  @scala.inline
+  implicit class CreateVpcRequestOps[Self <: CreateVpcRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCidrBlock(value: String): Self = this.set("CidrBlock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAmazonProvidedIpv6CidrBlock(value: Boolean): Self = this.set("AmazonProvidedIpv6CidrBlock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAmazonProvidedIpv6CidrBlock: Self = this.set("AmazonProvidedIpv6CidrBlock", js.undefined)
+    @scala.inline
+    def setDryRun(value: Boolean): Self = this.set("DryRun", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDryRun: Self = this.set("DryRun", js.undefined)
+    @scala.inline
+    def setInstanceTenancy(value: Tenancy): Self = this.set("InstanceTenancy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInstanceTenancy: Self = this.set("InstanceTenancy", js.undefined)
+    @scala.inline
+    def setIpv6CidrBlock(value: String): Self = this.set("Ipv6CidrBlock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIpv6CidrBlock: Self = this.set("Ipv6CidrBlock", js.undefined)
+    @scala.inline
+    def setIpv6CidrBlockNetworkBorderGroup(value: String): Self = this.set("Ipv6CidrBlockNetworkBorderGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIpv6CidrBlockNetworkBorderGroup: Self = this.set("Ipv6CidrBlockNetworkBorderGroup", js.undefined)
+    @scala.inline
+    def setIpv6Pool(value: Ipv6PoolEc2Id): Self = this.set("Ipv6Pool", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIpv6Pool: Self = this.set("Ipv6Pool", js.undefined)
+    @scala.inline
+    def setTagSpecificationsVarargs(value: TagSpecification*): Self = this.set("TagSpecifications", js.Array(value :_*))
+    @scala.inline
+    def setTagSpecifications(value: TagSpecificationList): Self = this.set("TagSpecifications", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTagSpecifications: Self = this.set("TagSpecifications", js.undefined)
+  }
+  
 }
 

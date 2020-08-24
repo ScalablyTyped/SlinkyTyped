@@ -5,6 +5,7 @@ import typingsSlinky.three.line3Mod.Line3
 import typingsSlinky.three.matrix3Mod.Matrix3
 import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.sphereMod.Sphere
+import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.vector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,8 +17,10 @@ object planeMod extends js.Object {
   @js.native
   class Plane () extends js.Object {
     def this(normal: Vector3) = this()
+    def this(normal: js.UndefOr[scala.Nothing], constant: Double) = this()
     def this(normal: Vector3, constant: Double) = this()
     var constant: Double = js.native
+    val isPlane: `true` = js.native
     var normal: Vector3 = js.native
     def applyMatrix4(matrix: Matrix4): Plane = js.native
     def applyMatrix4(matrix: Matrix4, optionalNormalMatrix: Matrix3): Plane = js.native
@@ -26,7 +29,7 @@ object planeMod extends js.Object {
     def distanceToPoint(point: Vector3): Double = js.native
     def distanceToSphere(sphere: Sphere): Double = js.native
     def equals(plane: Plane): Boolean = js.native
-    def intersectLine(line: Line3, target: Vector3): Vector3 = js.native
+    def intersectLine(line: Line3, target: Vector3): js.UndefOr[Vector3] = js.native
     def intersectsBox(box: Box3): Boolean = js.native
     def intersectsLine(line: Line3): Boolean = js.native
     def intersectsSphere(sphere: Sphere): Boolean = js.native

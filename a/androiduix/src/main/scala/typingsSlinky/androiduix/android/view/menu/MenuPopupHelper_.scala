@@ -67,95 +67,40 @@ object MenuPopupHelper_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDismiss(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismiss")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withIsShowing(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isShowing")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDismiss(value: () => Unit): Self = this.set("dismiss", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAdapter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsShowing(value: () => Boolean): Self = this.set("isShowing", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAnchorView(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAnchorView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAdapter(value: js.Any): Self = this.set("mAdapter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mContext")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAnchorView(value: js.Any): Self = this.set("mAnchorView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInflater(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInflater")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMContext(value: js.Any): Self = this.set("mContext", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMeasureParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMeasureParent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInflater(value: js.Any): Self = this.set("mInflater", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMenu(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMeasureParent(value: js.Any): Self = this.set("mMeasureParent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPopup(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPopup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMenu(value: js.Any): Self = this.set("mMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPopupMaxWidth(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPopupMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPopup(value: js.Any): Self = this.set("mPopup", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTreeObserver(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTreeObserver")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPopupMaxWidth(value: js.Any): Self = this.set("mPopupMaxWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMeasureContentWidth(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureContentWidth")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMTreeObserver(value: js.Any): Self = this.set("mTreeObserver", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetAnchorView(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnchorView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMeasureContentWidth(value: js.Any => js.Any): Self = this.set("measureContentWidth", js.Any.fromFunction1(value))
     @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSetAnchorView(value: View => Unit): Self = this.set("setAnchorView", js.Any.fromFunction1(value))
     @scala.inline
-    def withTryShow(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tryShow")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setShow(value: () => Unit): Self = this.set("show", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTryShow(value: () => Boolean): Self = this.set("tryShow", js.Any.fromFunction0(value))
   }
   
 }

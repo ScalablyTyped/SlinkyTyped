@@ -2,8 +2,8 @@ package typingsSlinky.antd.mod
 
 import typingsSlinky.antd.anon.Indeterminate
 import typingsSlinky.antd.anon.TypeofCheckboxGroup
+import typingsSlinky.antd.checkboxGroupMod.CheckboxGroupContext
 import typingsSlinky.antd.checkboxMod.default
-import typingsSlinky.antd.groupMod.CheckboxGroupContext
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`

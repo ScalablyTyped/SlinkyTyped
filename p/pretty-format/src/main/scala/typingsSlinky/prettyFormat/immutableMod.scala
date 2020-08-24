@@ -3,6 +3,8 @@ package typingsSlinky.prettyFormat
 import typingsSlinky.prettyFormat.typesMod.Config
 import typingsSlinky.prettyFormat.typesMod.NewPlugin
 import typingsSlinky.prettyFormat.typesMod.Printer
+import typingsSlinky.prettyFormat.typesMod.Refs
+import typingsSlinky.prettyFormat.typesMod.Test
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +13,15 @@ import scala.scalajs.js.annotation._
 @js.native
 object immutableMod extends js.Object {
   val default: NewPlugin = js.native
-  def serialize(
-    `val`: js.Any,
-    config: Config,
-    indentation: String,
-    depth: Double,
-    refs: js.Array[_],
-    printer: Printer
-  ): String = js.native
-  def test(`val`: js.Any): Boolean = js.native
+  val serialize: js.Function6[
+    /* val */ js.Any, 
+    /* config */ Config, 
+    /* indentation */ String, 
+    /* depth */ Double, 
+    /* refs */ Refs, 
+    /* printer */ Printer, 
+    String
+  ] = js.native
+  val test: Test = js.native
 }
 

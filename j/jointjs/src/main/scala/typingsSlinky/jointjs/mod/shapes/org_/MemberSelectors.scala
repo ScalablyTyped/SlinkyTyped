@@ -32,53 +32,26 @@ object MemberSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDotcard(value: SVGRectAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".card")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDotcard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".card")(js.undefined)
-        ret
-    }
+    def setDotcard(value: SVGRectAttributes): Self = this.set(".card", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotname(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotcard: Self = this.set(".card", js.undefined)
     @scala.inline
-    def withoutDotname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".name")(js.undefined)
-        ret
-    }
+    def setDotname(value: SVGTextAttributes): Self = this.set(".name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotrank(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".rank")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotname: Self = this.set(".name", js.undefined)
     @scala.inline
-    def withoutDotrank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".rank")(js.undefined)
-        ret
-    }
+    def setDotrank(value: SVGTextAttributes): Self = this.set(".rank", value.asInstanceOf[js.Any])
     @scala.inline
-    def withImage(value: SVGImageAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotrank: Self = this.set(".rank", js.undefined)
     @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
+    def setImage(value: SVGImageAttributes): Self = this.set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImage: Self = this.set("image", js.undefined)
   }
   
 }

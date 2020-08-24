@@ -5,12 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typesMod {
-  type AnyResponse = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.OctokitResponse<any> */ js.Any
-  type EndpointDefaults = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.EndpointDefaults */ js.Any
-  type EndpointOptions = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.EndpointOptions */ js.Any
-  type RequestInterface = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.RequestInterface */ js.Any
-  type RequestParameters = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.RequestParameters */ js.Any
-  type Route = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.Route */ js.Any
-  type StrategyInterface = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitTypes.StrategyInterface<[Token], [], Authentication> */ js.Any
+  type AnyResponse = typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse[js.Any]
+  type EndpointDefaults = typingsSlinky.octokitTypes.endpointDefaultsMod.EndpointDefaults
+  type EndpointOptions = typingsSlinky.octokitTypes.endpointOptionsMod.EndpointOptions
+  type RequestInterface = typingsSlinky.octokitTypes.requestInterfaceMod.RequestInterface[js.Object]
+  type RequestParameters = typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
+  type Route = typingsSlinky.octokitTypes.routeMod.Route
+  type StrategyInterface = typingsSlinky.octokitTypes.strategyInterfaceMod.StrategyInterface[
+    js.Array[typingsSlinky.octokitAuthToken.typesMod.Token], 
+    js.Array[js.Any], 
+    typingsSlinky.octokitAuthToken.typesMod.Authentication
+  ]
   type Token = java.lang.String
 }

@@ -3,22 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.menuMenuDividerMod.MenuDividerProps
-import typingsSlinky.reactToolbox.menuMenuDividerMod.MenuDividerTheme
-import typingsSlinky.reactToolbox.menuMenuDividerMod.default
+import typingsSlinky.reactToolbox.menuDividerMod.MenuDividerProps
+import typingsSlinky.reactToolbox.menuDividerMod.MenuDividerTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MenuDivider {
-  @JSImport("react-toolbox/lib/menu/MenuDivider", JSImport.Default)
+  @JSImport("react-toolbox/components/menu", "MenuDivider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.menuMod.MenuDivider] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

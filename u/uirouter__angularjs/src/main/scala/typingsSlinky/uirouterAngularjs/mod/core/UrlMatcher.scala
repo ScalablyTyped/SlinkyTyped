@@ -32,7 +32,7 @@ class UrlMatcher protected ()
 @JSImport("@uirouter/angularjs", "core.UrlMatcher")
 @js.native
 object UrlMatcher extends js.Object {
-  /** @hidden */
+  /** @internal */
   var nameValidator: js.RegExp = js.native
   /**
     * Compare two UrlMatchers
@@ -47,11 +47,11 @@ object UrlMatcher extends js.Object {
     a: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher,
     b: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
   ): Double = js.native
-  /** @hidden */
+  /** @internal */
   def encodeDashes(str: String): String = js.native
-  /** @hidden Given a matcher, return an array with the matcher's path segments and path params, in order */
+  /** @internal Given a matcher, return an array with the matcher's path segments and path params, in order */
   def pathSegmentsAndParams(matcher: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher): js.Any = js.native
-  /** @hidden Given a matcher, return an array with the matcher's query params */
+  /** @internal Given a matcher, return an array with the matcher's query params */
   def queryParams(matcher: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
 }
 

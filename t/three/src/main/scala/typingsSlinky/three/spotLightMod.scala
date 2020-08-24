@@ -4,6 +4,7 @@ import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.spotLightShadowMod.SpotLightShadow
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +15,11 @@ object spotLightMod extends js.Object {
   @js.native
   class SpotLight protected () extends Light {
     def this(
-      color: js.UndefOr[Color | Double | String],
+      color: js.UndefOr[Color | String | Double],
       intensity: js.UndefOr[Double],
       distance: js.UndefOr[Double],
       angle: js.UndefOr[Double],
-      exponent: js.UndefOr[Double],
+      penumbra: js.UndefOr[Double],
       decay: js.UndefOr[Double]
     ) = this()
     /*
@@ -32,11 +33,7 @@ object spotLightMod extends js.Object {
     	 * Default — 0.0.
     	 */
     var distance: Double = js.native
-    /**
-    	 * Rapidity of the falloff of light from its target direction.
-    	 * Default — 10.0.
-    	 */
-    var exponent: Double = js.native
+    val isSpotLight: `true` = js.native
     var penumbra: Double = js.native
     var power: Double = js.native
     @JSName("shadow")

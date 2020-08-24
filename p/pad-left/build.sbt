@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "pad-left"
-version := "2.1-dt-20200125Z-f2bb19"
-scalaVersion := "2.13.2"
+version := "2.1-dt-20200125Z-6f0286"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

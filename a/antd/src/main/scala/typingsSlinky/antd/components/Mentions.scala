@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -21,7 +20,6 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.textarea.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.mentionsMod.MentionProps
-import typingsSlinky.antd.mentionsMod.default
 import typingsSlinky.rcMentions.mentionsMod.Direction
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import typingsSlinky.rcMentions.optionMod.OptionProps
@@ -71,23 +69,26 @@ import typingsSlinky.rcMentions.rcMentionsStrings.tree
 import typingsSlinky.rcMentions.rcMentionsStrings.url
 import typingsSlinky.rcMentions.rcMentionsStrings.vertical
 import typingsSlinky.rcMentions.rcMentionsStrings.yes
+import typingsSlinky.rcTextarea.anon.Height
+import typingsSlinky.rcTextarea.resizableTextAreaMod.AutoSizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Mentions {
-  @JSImport("antd/lib/mentions", JSImport.Default)
+  @JSImport("antd", "Mentions")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, HTMLElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -199,6 +200,8 @@ object Mentions {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
+    def autoSize(value: Boolean | AutoSizeType): this.type = set("autoSize", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
@@ -267,7 +270,7 @@ object Mentions {
     @scala.inline
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
@@ -389,11 +392,15 @@ object Mentions {
     @scala.inline
     def onPointerUp(value: SyntheticPointerEvent[HTMLTextAreaElement] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
     @scala.inline
+    def onPressEnter(value: SyntheticKeyboardEvent[HTMLTextAreaElement] => Unit): this.type = set("onPressEnter", js.Any.fromFunction1(value))
+    @scala.inline
     def onProgress(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
     def onRateChange(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
     @scala.inline
     def onReset(value: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResize(value: /* size */ Height => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
     @scala.inline
     def onScroll(value: SyntheticUIEvent[HTMLTextAreaElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
@@ -432,6 +439,8 @@ object Mentions {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixVarargs(value: String*): this.type = set("prefix", js.Array(value :_*))
     @scala.inline
     def prefix(value: String | js.Array[String]): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
@@ -488,7 +497,16 @@ object Mentions {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MentionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: MentionProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Mentions.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Option {
+    @JSImport("antd", "Mentions.Option")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: OptionProps): SharedBuilder_OptionProps474254931 = new SharedBuilder_OptionProps474254931(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Option.type): SharedBuilder_OptionProps474254931 = new SharedBuilder_OptionProps474254931(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

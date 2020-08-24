@@ -16,10 +16,5 @@ class ASPxClientFileManagerItemsDeletedEventArgs protected ()
     * @param items An array of ASPxClientFileManagerItem objects that are items currently being processed.
     */
   def this(items: js.Array[typingsSlinky.devexpressWeb.ASPxClientFileManagerItem]) = this()
-  /**
-    * Gets an array of the currently processed items.
-    */
-  /* CompleteClass */
-  override var items: js.Array[typingsSlinky.devexpressWeb.ASPxClientFileManagerItem] = js.native
 }
 

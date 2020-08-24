@@ -24,41 +24,22 @@ object ManifestAction {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDefault_icon(value: ManifestIcons): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDefault_icon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(js.undefined)
-        ret
-    }
+    def setDefault_icon(value: ManifestIcons): Self = this.set("default_icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDefault_popup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_popup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefault_icon: Self = this.set("default_icon", js.undefined)
     @scala.inline
-    def withoutDefault_popup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_popup")(js.undefined)
-        ret
-    }
+    def setDefault_popup(value: String): Self = this.set("default_popup", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDefault_title(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefault_popup: Self = this.set("default_popup", js.undefined)
     @scala.inline
-    def withoutDefault_title: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(js.undefined)
-        ret
-    }
+    def setDefault_title(value: String): Self = this.set("default_title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefault_title: Self = this.set("default_title", js.undefined)
   }
   
 }

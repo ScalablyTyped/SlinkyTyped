@@ -8,7 +8,7 @@ import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.baseui.anon.Clearable
 import typingsSlinky.baseui.anon.ItemOption
@@ -32,10 +32,10 @@ class Select ()
   def filterOption(): Value = js.native
   def filterOption(excludeOptions: Value): Value = js.native
   def focus(): Unit = js.native
-  def getOptionLabel(locale: Locale, hasOption: OptionState): TagMod[Any] = js.native
+  def getOptionLabel(locale: Locale, hasOption: OptionState): ReactElement = js.native
   def getSharedProps(): Clearable = js.native
   def getValueArray(value: Value): js.Array[Option] = js.native
-  def getValueLabel(hasOption: OptionOption): TagMod[Any] = js.native
+  def getValueLabel(hasOption: OptionOption): ReactElement = js.native
   def handleBlur(event: Event): Unit = js.native
   def handleClick(event: MouseEvent): Unit = js.native
   def handleClick(event: TouchEvent): Unit = js.native
@@ -50,12 +50,12 @@ class Select ()
   def handleTouchStart(): Unit = js.native
   def popValue(): Unit = js.native
   def removeValue(item: Option): Unit = js.native
-  def renderArrow(): TagMod[Any] = js.native
-  def renderClear(): TagMod[Any] = js.native
-  def renderInput(): TagMod[Any] = js.native
-  def renderLoading(): TagMod[Any] = js.native
-  def renderSearch(): TagMod[Any] = js.native
-  def renderValue(valueArray: Value, isOpen: Boolean, locale: Locale): TagMod[Any] = js.native
+  def renderArrow(): ReactElement = js.native
+  def renderClear(): ReactElement = js.native
+  def renderInput(): ReactElement = js.native
+  def renderLoading(): ReactElement = js.native
+  def renderSearch(): ReactElement = js.native
+  def renderValue(valueArray: Value, isOpen: Boolean, locale: Locale): ReactElement = js.native
   def selectValue(hasItem: ItemOption): Unit = js.native
   def setValue(value: Value, option: Option, `type`: ChangeAction): Unit = js.native
 }

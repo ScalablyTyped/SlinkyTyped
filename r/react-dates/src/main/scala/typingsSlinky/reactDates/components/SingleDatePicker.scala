@@ -134,7 +134,7 @@ object SingleDatePicker {
     @scala.inline
     def renderMonthText(value: /* day */ momentObj => String | ReactElement): this.type = set("renderMonthText", js.Any.fromFunction1(value))
     @scala.inline
-    def reopenPickerOnClearDates(value: Boolean): this.type = set("reopenPickerOnClearDates", value.asInstanceOf[js.Any])
+    def reopenPickerOnClearDate(value: Boolean): this.type = set("reopenPickerOnClearDate", value.asInstanceOf[js.Any])
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline

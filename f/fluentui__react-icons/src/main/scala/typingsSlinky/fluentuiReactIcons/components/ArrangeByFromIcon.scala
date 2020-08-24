@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ArrangeByFromIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ArrangeByFromIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ArrangeByFromIcon")
   @js.native
   object component extends js.Object
   

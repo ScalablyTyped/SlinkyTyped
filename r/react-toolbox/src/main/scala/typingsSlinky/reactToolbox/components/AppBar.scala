@@ -1,19 +1,18 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libAppBarAppBarMod.AppBarProps
-import typingsSlinky.reactToolbox.libAppBarAppBarMod.AppBarTheme
-import typingsSlinky.reactToolbox.libAppBarMod.default
+import typingsSlinky.reactToolbox.appBarAppBarMod.AppBarProps
+import typingsSlinky.reactToolbox.appBarAppBarMod.AppBarTheme
+import typingsSlinky.reactToolbox.appBarMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AppBar {
-  @JSImport("react-toolbox/lib/app_bar", JSImport.Default)
+  @JSImport("react-toolbox/components/app_bar", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -30,7 +29,7 @@ object AppBar {
     @scala.inline
     def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def leftIcon(value: TagMod[Any]): this.type = set("leftIcon", value.asInstanceOf[js.Any])
+    def leftIcon(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: js.Function): this.type = set("onClick", value.asInstanceOf[js.Any])
     @scala.inline
@@ -82,7 +81,7 @@ object AppBar {
     @scala.inline
     def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def rightIcon(value: TagMod[Any]): this.type = set("rightIcon", value.asInstanceOf[js.Any])
+    def rightIcon(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def scrollHide(value: Boolean): this.type = set("scrollHide", value.asInstanceOf[js.Any])
     @scala.inline

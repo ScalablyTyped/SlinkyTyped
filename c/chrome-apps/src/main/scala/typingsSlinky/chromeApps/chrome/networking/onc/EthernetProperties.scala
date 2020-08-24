@@ -16,52 +16,33 @@ trait EthernetProperties[M /* <: ManagedObject */] extends js.Object {
 
 object EthernetProperties {
   @scala.inline
-  def apply[M](): EthernetProperties[M] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M](): EthernetProperties[M] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[EthernetProperties[M]]
   }
   @scala.inline
-  implicit class EthernetPropertiesOps[Self[m] <: EthernetProperties[m], M] (val x: Self[M]) extends AnyVal {
+  implicit class EthernetPropertiesOps[Self <: EthernetProperties[_], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M] (val x: Self with EthernetProperties[M]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[M] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[M] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthentication(value: EthernetAuthenticationType | ManagedType[EthernetAuthenticationType]): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Authentication")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAuthentication: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Authentication")(js.undefined)
-        ret
-    }
+    def setAuthentication(value: EthernetAuthenticationType | ManagedType[EthernetAuthenticationType]): Self = this.set("Authentication", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAutoConnect(value: Boolean | ManagedBoolean): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAuthentication: Self = this.set("Authentication", js.undefined)
     @scala.inline
-    def withoutAutoConnect: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(js.undefined)
-        ret
-    }
+    def setAutoConnect(value: Boolean | ManagedBoolean): Self = this.set("AutoConnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEAP(value: EAPProperties): Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EAP")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoConnect: Self = this.set("AutoConnect", js.undefined)
     @scala.inline
-    def withoutEAP: Self[M] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EAP")(js.undefined)
-        ret
-    }
+    def setEAP(value: EAPProperties): Self = this.set("EAP", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEAP: Self = this.set("EAP", js.undefined)
   }
   
 }

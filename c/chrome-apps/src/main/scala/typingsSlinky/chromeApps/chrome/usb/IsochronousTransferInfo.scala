@@ -32,23 +32,16 @@ object IsochronousTransferInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPacketLength(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetLength")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPackets(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packets")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPacketLength(value: integer): Self = this.set("packetLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTransferInfo(value: GenericTransferInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPackets(value: integer): Self = this.set("packets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransferInfo(value: GenericTransferInfo): Self = this.set("transferInfo", value.asInstanceOf[js.Any])
   }
   
 }

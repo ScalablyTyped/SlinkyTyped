@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.ValueBoolean
+import typingsSlinky.primereact.anon.TargetValue
 import typingsSlinky.primereact.inputSwitchMod.InputSwitchProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -34,7 +34,7 @@ object InputSwitch {
     @scala.inline
     def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ ValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ TargetValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: /* event */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline

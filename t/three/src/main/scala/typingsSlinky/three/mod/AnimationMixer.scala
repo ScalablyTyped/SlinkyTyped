@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class AnimationMixer protected ()
   extends typingsSlinky.three.animationMixerMod.AnimationMixer {
-  def this(root: js.Any) = this()
+  def this(root: typingsSlinky.three.animationObjectGroupMod.AnimationObjectGroup) = this()
+  def this(root: typingsSlinky.three.object3DMod.Object3D) = this()
 }
 

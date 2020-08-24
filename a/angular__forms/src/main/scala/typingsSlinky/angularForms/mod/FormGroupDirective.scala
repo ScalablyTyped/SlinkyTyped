@@ -3,7 +3,6 @@ package typingsSlinky.angularForms.mod
 import org.scalajs.dom.raw.Event
 import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularCore.mod.OnChanges
-import typingsSlinky.angularCore.mod.SimpleChanges
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,12 +22,6 @@ class FormGroupDirective protected ()
   var _validators: js.Any = js.native
   /**
     * @description
-    * Returns the `FormGroup` bound to this directive.
-    */
-  @JSName("control")
-  val control_FormGroupDirective: FormGroup = js.native
-  /**
-    * @description
     * Tracks the list of added `FormControlName` instances
     */
   var directives: js.Array[FormControlName] = js.native
@@ -39,22 +32,9 @@ class FormGroupDirective protected ()
   var form: FormGroup = js.native
   /**
     * @description
-    * Returns this directive's instance.
-    */
-  @JSName("formDirective")
-  val formDirective_FormGroupDirective: Form = js.native
-  /**
-    * @description
     * Emits an event when the form submission has been triggered.
     */
   var ngSubmit: EventEmitter[_] = js.native
-  /**
-    * @description
-    * Returns an array representing the path to this group. Because this directive
-    * always lives at the top level of a form, it always an empty array.
-    */
-  @JSName("path")
-  val path_FormGroupDirective: js.Array[String] = js.native
   /**
     * @description
     * Reports whether the form submission has been triggered.
@@ -69,27 +49,11 @@ class FormGroupDirective protected ()
     */
   def addControl(dir: FormControlName): FormControl = js.native
   /**
-    * @description
-    * Add a control to this form.
-    *
-    * @param dir The control directive to add to the form.
-    */
-  /* CompleteClass */
-  override def addControl(dir: NgControl): Unit = js.native
-  /**
     * Adds a new `FormArrayName` directive instance to the form.
     *
     * @param dir The `FormArrayName` directive instance.
     */
   def addFormArray(dir: FormArrayName): Unit = js.native
-  /**
-    * @description
-    * Add a group of controls to this form.
-    *
-    * @param dir: The control group directive to add.
-    */
-  /* CompleteClass */
-  override def addFormGroup(dir: AbstractFormGroupDirective): Unit = js.native
   /**
     * Adds a new `FormGroupName` directive instance to the form.
     *
@@ -105,14 +69,6 @@ class FormGroupDirective protected ()
   def getControl(dir: FormControlName): FormControl = js.native
   /**
     * @description
-    * The control directive from which to get the `FormControl`.
-    *
-    * @param dir: The control directive.
-    */
-  /* CompleteClass */
-  override def getControl(dir: NgControl): FormControl = js.native
-  /**
-    * @description
     * Retrieves the `FormArray` for a provided `FormArrayName` directive instance.
     *
     * @param dir The `FormArrayName` directive instance.
@@ -120,28 +76,11 @@ class FormGroupDirective protected ()
   def getFormArray(dir: FormArrayName): FormArray = js.native
   /**
     * @description
-    * The `FormGroup` associated with a particular `AbstractFormGroupDirective`.
-    *
-    * @param dir: The form group directive from which to get the `FormGroup`.
-    */
-  /* CompleteClass */
-  override def getFormGroup(dir: AbstractFormGroupDirective): FormGroup = js.native
-  /**
-    * @description
     * Retrieves the `FormGroup` for a provided `FormGroupName` directive instance
     *
     * @param dir The `FormGroupName` directive instance.
     */
   def getFormGroup(dir: FormGroupName): FormGroup = js.native
-  /**
-    * A callback method that is invoked immediately after the
-    * default change detector has checked data-bound properties
-    * if at least one has changed, and before the view and content
-    * children are checked.
-    * @param changes The changed properties.
-    */
-  /* CompleteClass */
-  override def ngOnChanges(changes: SimpleChanges): Unit = js.native
   /**
     * @description
     * Method called when the "reset" event is triggered on the form.
@@ -163,27 +102,11 @@ class FormGroupDirective protected ()
     */
   def removeControl(dir: FormControlName): Unit = js.native
   /**
-    * @description
-    * Remove a control from this form.
-    *
-    * @param dir: The control directive to remove from the form.
-    */
-  /* CompleteClass */
-  override def removeControl(dir: NgControl): Unit = js.native
-  /**
     * No-op method to remove the form array.
     *
     * @param dir The `FormArrayName` directive instance.
     */
   def removeFormArray(dir: FormArrayName): Unit = js.native
-  /**
-    * @description
-    * Remove a group of controls to this form.
-    *
-    * @param dir: The control group directive to remove.
-    */
-  /* CompleteClass */
-  override def removeFormGroup(dir: AbstractFormGroupDirective): Unit = js.native
   /**
     * No-op method to remove the form group.
     *
@@ -205,14 +128,5 @@ class FormGroupDirective protected ()
     * @param value The new value for the directive's control.
     */
   def updateModel(dir: FormControlName, value: js.Any): Unit = js.native
-  /**
-    * @description
-    * Update the model for a particular control with a new value.
-    *
-    * @param dir: The control directive to update.
-    * @param value: The new value for the control.
-    */
-  /* CompleteClass */
-  override def updateModel(dir: NgControl, value: js.Any): Unit = js.native
 }
 

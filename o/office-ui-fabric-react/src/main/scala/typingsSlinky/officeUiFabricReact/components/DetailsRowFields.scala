@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.anon.kinkeyofPickIDetailsRowSt
@@ -32,7 +32,7 @@ object DetailsRowFields {
     ): this.type = set("getCellValueKey", js.Any.fromFunction3(value))
     @scala.inline
     def onRenderItemColumn(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any]
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => ReactElement
     ): this.type = set("onRenderItemColumn", js.Any.fromFunction3(value))
   }
   

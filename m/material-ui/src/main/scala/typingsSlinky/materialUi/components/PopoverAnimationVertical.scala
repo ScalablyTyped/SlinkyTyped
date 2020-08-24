@@ -4,21 +4,20 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationVerticalProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
-import typingsSlinky.materialUi.popoverAnimationVerticalMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PopoverAnimationVertical {
-  @JSImport("material-ui/Popover/PopoverAnimationVertical", JSImport.Default)
+  @JSImport("material-ui/Popover", "PopoverAnimationVertical")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.popoverMod.PopoverAnimationVertical] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

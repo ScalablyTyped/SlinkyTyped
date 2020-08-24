@@ -88,131 +88,52 @@ object OnClickData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMenuItemId(value: integer | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEditable(value: Boolean): Self = this.set("editable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMenuItemId(value: integer | String): Self = this.set("menuItemId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPageUrl(value: String): Self = this.set("pageUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
-        ret
-    }
+    def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFrameId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteChecked: Self = this.set("checked", js.undefined)
     @scala.inline
-    def withoutFrameId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(js.undefined)
-        ret
-    }
+    def setFrameId(value: integer): Self = this.set("frameId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFrameUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFrameId: Self = this.set("frameId", js.undefined)
     @scala.inline
-    def withoutFrameUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameUrl")(js.undefined)
-        ret
-    }
+    def setFrameUrl(value: String): Self = this.set("frameUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLinkUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFrameUrl: Self = this.set("frameUrl", js.undefined)
     @scala.inline
-    def withoutLinkUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkUrl")(js.undefined)
-        ret
-    }
+    def setLinkUrl(value: String): Self = this.set("linkUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMediaType(value: MediaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLinkUrl: Self = this.set("linkUrl", js.undefined)
     @scala.inline
-    def withoutMediaType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaType")(js.undefined)
-        ret
-    }
+    def setMediaType(value: MediaType): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withParentMenuItemId(value: integer | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenuItemId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMediaType: Self = this.set("mediaType", js.undefined)
     @scala.inline
-    def withoutParentMenuItemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenuItemId")(js.undefined)
-        ret
-    }
+    def setParentMenuItemId(value: integer | String): Self = this.set("parentMenuItemId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelectionText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteParentMenuItemId: Self = this.set("parentMenuItemId", js.undefined)
     @scala.inline
-    def withoutSelectionText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionText")(js.undefined)
-        ret
-    }
+    def setSelectionText(value: String): Self = this.set("selectionText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSrcUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSelectionText: Self = this.set("selectionText", js.undefined)
     @scala.inline
-    def withoutSrcUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcUrl")(js.undefined)
-        ret
-    }
+    def setSrcUrl(value: String): Self = this.set("srcUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWasChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wasChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSrcUrl: Self = this.set("srcUrl", js.undefined)
     @scala.inline
-    def withoutWasChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wasChecked")(js.undefined)
-        ret
-    }
+    def setWasChecked(value: Boolean): Self = this.set("wasChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWasChecked: Self = this.set("wasChecked", js.undefined)
   }
   
 }

@@ -204,6 +204,8 @@ object Link {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -407,6 +409,8 @@ object Link {
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ref(value: String): this.type = set("ref", value.asInstanceOf[js.Any])
     @scala.inline
     def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     @scala.inline

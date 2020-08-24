@@ -22,88 +22,45 @@ trait IPConfigProperties[M /* <: ManagedObject */, B, S, SL, L] extends js.Objec
 
 object IPConfigProperties {
   @scala.inline
-  def apply[M, B, S, SL, L](): IPConfigProperties[M, B, S, SL, L] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, B, S, SL, L](): IPConfigProperties[M, B, S, SL, L] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[IPConfigProperties[M, B, S, SL, L]]
   }
   @scala.inline
-  implicit class IPConfigPropertiesOps[Self[m, b, s, sl, l] <: IPConfigProperties[m, b, s, sl, l], M, B, S, SL, L] (val x: Self[M, B, S, SL, L]) extends AnyVal {
+  implicit class IPConfigPropertiesOps[Self <: IPConfigProperties[_, _, _, _, _], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, B, S, SL, L] (val x: Self with (IPConfigProperties[M, B, S, SL, L])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, B, S, SL, L] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, B, S, SL, L]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, B, S, SL, L]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, B, S, SL, L]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGateway(value: S): Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateway")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutGateway: Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateway")(js.undefined)
-        ret
-    }
+    def setGateway(value: S): Self = this.set("Gateway", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIPAddress(value: S): Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGateway: Self = this.set("Gateway", js.undefined)
     @scala.inline
-    def withoutIPAddress: Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(js.undefined)
-        ret
-    }
+    def setIPAddress(value: S): Self = this.set("IPAddress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNameServers(value: SL): Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIPAddress: Self = this.set("IPAddress", js.undefined)
     @scala.inline
-    def withoutNameServers: Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServers")(js.undefined)
-        ret
-    }
+    def setNameServers(value: SL): Self = this.set("NameServers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoutingPrefix(value: L): Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteNameServers: Self = this.set("NameServers", js.undefined)
     @scala.inline
-    def withoutRoutingPrefix: Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingPrefix")(js.undefined)
-        ret
-    }
+    def setRoutingPrefix(value: L): Self = this.set("RoutingPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: IPConfigurationType | ManagedType[IPConfigurationType]): Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRoutingPrefix: Self = this.set("RoutingPrefix", js.undefined)
     @scala.inline
-    def withoutType: Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
+    def setType(value: IPConfigurationType | ManagedType[IPConfigurationType]): Self = this.set("Type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWebProxyAutoDiscoveryUrl(value: S): Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebProxyAutoDiscoveryUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteType: Self = this.set("Type", js.undefined)
     @scala.inline
-    def withoutWebProxyAutoDiscoveryUrl: Self[M, B, S, SL, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebProxyAutoDiscoveryUrl")(js.undefined)
-        ret
-    }
+    def setWebProxyAutoDiscoveryUrl(value: S): Self = this.set("WebProxyAutoDiscoveryUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebProxyAutoDiscoveryUrl: Self = this.set("WebProxyAutoDiscoveryUrl", js.undefined)
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler.srcCompilerMod
 
+import typingsSlinky.angularCompiler.astMod.TemplateBinding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 class TemplateBindingParseResult protected ()
   extends typingsSlinky.angularCompiler.parserMod.TemplateBindingParseResult {
   def this(
-    templateBindings: js.Array[typingsSlinky.angularCompiler.astMod.TemplateBinding],
+    templateBindings: js.Array[TemplateBinding],
     warnings: js.Array[String],
     errors: js.Array[typingsSlinky.angularCompiler.astMod.ParserError]
   ) = this()

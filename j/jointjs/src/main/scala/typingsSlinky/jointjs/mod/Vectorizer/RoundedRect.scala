@@ -28,77 +28,34 @@ object RoundedRect {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withBottom-rx`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-rx")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def `withoutBottom-rx`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-rx")(js.undefined)
-        ret
-    }
+    def `setBottom-rx`(value: Double): Self = this.set("bottom-rx", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withBottom-ry`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-ry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteBottom-rx`: Self = this.set("bottom-rx", js.undefined)
     @scala.inline
-    def `withoutBottom-ry`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom-ry")(js.undefined)
-        ret
-    }
+    def `setBottom-ry`(value: Double): Self = this.set("bottom-ry", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteBottom-ry`: Self = this.set("bottom-ry", js.undefined)
     @scala.inline
-    def withoutRx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(js.undefined)
-        ret
-    }
+    def setRx(value: Double): Self = this.set("rx", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRx: Self = this.set("rx", js.undefined)
     @scala.inline
-    def withoutRy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(js.undefined)
-        ret
-    }
+    def setRy(value: Double): Self = this.set("ry", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withTop-rx`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-rx")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRy: Self = this.set("ry", js.undefined)
     @scala.inline
-    def `withoutTop-rx`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-rx")(js.undefined)
-        ret
-    }
+    def `setTop-rx`(value: Double): Self = this.set("top-rx", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withTop-ry`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-ry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteTop-rx`: Self = this.set("top-rx", js.undefined)
     @scala.inline
-    def `withoutTop-ry`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top-ry")(js.undefined)
-        ret
-    }
+    def `setTop-ry`(value: Double): Self = this.set("top-ry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteTop-ry`: Self = this.set("top-ry", js.undefined)
   }
   
 }

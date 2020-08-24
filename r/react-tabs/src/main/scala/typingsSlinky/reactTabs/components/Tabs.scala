@@ -227,6 +227,8 @@ object Tabs {
     @scala.inline
     def classID(value: String): this.type = set("classID", value.asInstanceOf[js.Any])
     @scala.inline
+    def classNameVarargs(value: String*): this.type = set("className", js.Array(value :_*))
+    @scala.inline
     def className(value: String | js.Array[String] | StringDictionary[Boolean]): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
@@ -262,6 +264,8 @@ object Tabs {
     def defaultFocus(value: Boolean): this.type = set("defaultFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultIndex(value: Double): this.type = set("defaultIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -642,6 +646,8 @@ object Tabs {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

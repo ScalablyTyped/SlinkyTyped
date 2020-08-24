@@ -1,6 +1,6 @@
 package typingsSlinky.cswAasJs.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cswAasJs.clientRoleMod.ClientRoleProps
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClientRole {
-  @JSImport("csw-aas-js/dist/components/authorization/ClientRole", JSImport.Default)
+  @JSImport("csw-aas-js", "ClientRole")
   @js.native
   object component extends js.Object
   
@@ -20,7 +20,7 @@ object ClientRole {
     @scala.inline
     def client(value: String): this.type = set("client", value.asInstanceOf[js.Any])
     @scala.inline
-    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ClientRoleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.components
 
 import org.scalajs.dom.raw.Event
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.OriginalEventEvent
+import typingsSlinky.primereact.anon.OriginalEventTarget
 import typingsSlinky.primereact.anon.OriginalEventValue
 import typingsSlinky.primereact.calendarCalendarMod.CalendarProps
 import typingsSlinky.primereact.calendarCalendarMod.DateMetaData
@@ -34,21 +34,25 @@ object Calendar {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def clearButtonStyleClass(value: String): this.type = set("clearButtonStyleClass", value.asInstanceOf[js.Any])
+    def clearButtonClassName(value: String): this.type = set("clearButtonClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def dateFormat(value: String): this.type = set("dateFormat", value.asInstanceOf[js.Any])
     @scala.inline
-    def dateTemplate(value: /* dateMeta */ DateMetaData => TagMod[Any]): this.type = set("dateTemplate", js.Any.fromFunction1(value))
+    def dateTemplate(value: /* dateMeta */ DateMetaData => ReactElement): this.type = set("dateTemplate", js.Any.fromFunction1(value))
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def disabledDatesVarargs(value: js.Date*): this.type = set("disabledDates", js.Array(value :_*))
+    @scala.inline
     def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledDaysVarargs(value: Double*): this.type = set("disabledDays", js.Array(value :_*))
     @scala.inline
     def disabledDays(value: js.Array[Double]): this.type = set("disabledDays", value.asInstanceOf[js.Any])
     @scala.inline
-    def footerTemplate(value: () => TagMod[Any]): this.type = set("footerTemplate", js.Any.fromFunction0(value))
+    def footerTemplate(value: () => ReactElement): this.type = set("footerTemplate", js.Any.fromFunction0(value))
     @scala.inline
-    def headerTemplate(value: () => TagMod[Any]): this.type = set("headerTemplate", js.Any.fromFunction0(value))
+    def headerTemplate(value: () => ReactElement): this.type = set("headerTemplate", js.Any.fromFunction0(value))
     @scala.inline
     def hideOnDateTimeSelect(value: Boolean): this.type = set("hideOnDateTimeSelect", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,6 +70,8 @@ object Calendar {
     @scala.inline
     def inputStyle(value: js.Object): this.type = set("inputStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def keepInvalid(value: Boolean): this.type = set("keepInvalid", value.asInstanceOf[js.Any])
+    @scala.inline
     def locale(value: LocaleSettings): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
@@ -82,7 +88,7 @@ object Calendar {
     @scala.inline
     def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ OriginalEventEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ OriginalEventTarget => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClearButtonClick(value: /* event */ Event => Unit): this.type = set("onClearButtonClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -116,6 +122,8 @@ object Calendar {
     @scala.inline
     def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
     @scala.inline
+    def showMillisec(value: Boolean): this.type = set("showMillisec", value.asInstanceOf[js.Any])
+    @scala.inline
     def showOnFocus(value: Boolean): this.type = set("showOnFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def showOtherMonths(value: Boolean): this.type = set("showOtherMonths", value.asInstanceOf[js.Any])
@@ -127,6 +135,8 @@ object Calendar {
     def showWeek(value: Boolean): this.type = set("showWeek", value.asInstanceOf[js.Any])
     @scala.inline
     def stepHour(value: Double): this.type = set("stepHour", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stepMillisec(value: Double): this.type = set("stepMillisec", value.asInstanceOf[js.Any])
     @scala.inline
     def stepMinute(value: Double): this.type = set("stepMinute", value.asInstanceOf[js.Any])
     @scala.inline
@@ -145,6 +155,8 @@ object Calendar {
     def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def touchUI(value: Boolean): this.type = set("touchUI", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Date*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

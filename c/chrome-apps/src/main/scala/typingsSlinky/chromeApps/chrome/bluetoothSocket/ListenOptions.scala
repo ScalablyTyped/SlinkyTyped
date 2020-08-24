@@ -41,41 +41,22 @@ object ListenOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBacklog(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlog")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBacklog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlog")(js.undefined)
-        ret
-    }
+    def setBacklog(value: integer): Self = this.set("backlog", value.asInstanceOf[js.Any])
     @scala.inline
-    def withChannel(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBacklog: Self = this.set("backlog", js.undefined)
     @scala.inline
-    def withoutChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
-        ret
-    }
+    def setChannel(value: integer): Self = this.set("channel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPsm(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("psm")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteChannel: Self = this.set("channel", js.undefined)
     @scala.inline
-    def withoutPsm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("psm")(js.undefined)
-        ret
-    }
+    def setPsm(value: integer): Self = this.set("psm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePsm: Self = this.set("psm", js.undefined)
   }
   
 }

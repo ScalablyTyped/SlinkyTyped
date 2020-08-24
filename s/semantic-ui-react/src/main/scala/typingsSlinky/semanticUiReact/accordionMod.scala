@@ -19,7 +19,12 @@ object accordionMod extends js.Object {
   }
   
   @js.native
-  object default extends TopLevel[AccordionComponent]
+  object default extends TopLevel[AccordionComponent] {
+    @js.native
+    class Panel ()
+      extends typingsSlinky.semanticUiReact.accordionPanelMod.default
+    
+  }
   
 }
 

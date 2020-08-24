@@ -64,19 +64,16 @@ object TypeofdesktopCapture {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDesktopCaptureSourceType(value: AUDIO): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesktopCaptureSourceType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCancelChooseDesktopMedia(value: integer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelChooseDesktopMedia")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDesktopCaptureSourceType(value: AUDIO): Self = this.set("DesktopCaptureSourceType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withChooseDesktopMedia(
+    def setCancelChooseDesktopMedia(value: integer => Unit): Self = this.set("cancelChooseDesktopMedia", js.Any.fromFunction1(value))
+    @scala.inline
+    def setChooseDesktopMedia(
       value: (js.Array[
           ToStringLiteral[
             /* import warning: importer.ImportType#apply Failed type conversion: typeof DesktopCaptureSourceType */ js.Any, 
@@ -87,11 +84,7 @@ object TypeofdesktopCapture {
             ]
           ]
         ], js.Function1[/* streamId */ String, Unit]) => integer
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chooseDesktopMedia")(js.Any.fromFunction2(value))
-        ret
-    }
+    ): Self = this.set("chooseDesktopMedia", js.Any.fromFunction2(value))
   }
   
 }

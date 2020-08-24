@@ -12,16 +12,14 @@ trait API extends js.Object {
   var jscodeshift_Original: JSCodeshift = js.native
   @JSName("stats")
   var stats_Original: Stats = js.native
+  def j(source: ASTNode | ASTPath[ASTNode]): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def j(source: String): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def j(source: String, options: Options): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def j(source: js.Array[ASTNode | ASTPath[ASTNode]]): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
-  def j(source: ASTNode): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
-  def j(source: ASTPath[ASTNode]): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
+  def jscodeshift(source: ASTNode | ASTPath[ASTNode]): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def jscodeshift(source: String): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def jscodeshift(source: String, options: Options): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def jscodeshift(source: js.Array[ASTNode | ASTPath[ASTNode]]): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
-  def jscodeshift(source: ASTNode): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
-  def jscodeshift(source: ASTPath[ASTNode]): typingsSlinky.jscodeshift.collectionMod.Collection[_] = js.native
   def report(msg: String): Unit = js.native
   def stats(name: String): Unit = js.native
   def stats(name: String, quantity: Double): Unit = js.native

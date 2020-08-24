@@ -22,11 +22,12 @@ object OnCheckedChangeListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnCheckedChanged(value: (typingsSlinky.androiduix.android.widget.RadioGroup, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCheckedChanged")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnCheckedChanged(value: (typingsSlinky.androiduix.android.widget.RadioGroup, String) => Unit): Self = this.set("onCheckedChanged", js.Any.fromFunction2(value))
   }
   
 }

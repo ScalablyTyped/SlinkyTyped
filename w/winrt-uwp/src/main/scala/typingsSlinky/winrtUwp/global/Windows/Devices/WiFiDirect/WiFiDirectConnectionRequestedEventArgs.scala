@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs")
 @js.native
 abstract class WiFiDirectConnectionRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs {
-  /**
-    * Retrieves the WiFiDirectConnectionRequest received on a ConnectionRequested event by a WiFiDirectConnectionListener .
-    * @return The Wi-FI Direct connection request.
-    */
-  /* CompleteClass */
-  override def getConnectionRequest(): typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs
 

@@ -7,6 +7,7 @@ import typingsSlinky.cathoQuantum.alertMod.AlertProps
 import typingsSlinky.cathoQuantum.anon.TypeofButtonComponent
 import typingsSlinky.cathoQuantum.anon.TypeofCardComponent
 import typingsSlinky.cathoQuantum.anon.TypeofCheckboxGroupCompon
+import typingsSlinky.cathoQuantum.anon.TypeofModalComponent
 import typingsSlinky.cathoQuantum.anon.TypeofRadioGroupComponent
 import typingsSlinky.cathoQuantum.badgeMod.BadgeProps
 import typingsSlinky.cathoQuantum.buttonMod.ButtonProps
@@ -100,12 +101,7 @@ object global extends js.Object {
     js.Object, 
     scala.Nothing
   ] = js.native
-  val Modal: StyledComponent[
-    Instantiable0[typingsSlinky.cathoQuantum.modalMod.default], 
-    ModalProps, 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
+  val Modal: StyledComponent[TypeofModalComponent, ModalProps, js.Object, scala.Nothing] = js.native
   val Pagination: StyledComponent[
     Instantiable0[typingsSlinky.cathoQuantum.paginationMod.default], 
     PaginationProps, 

@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.cardMod.CardNativeProps
-import typingsSlinky.antDesignReactNative.cardMod.default
 import typingsSlinky.antDesignReactNative.cardStyleMod.CardStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -13,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Card {
-  @JSImport("@ant-design/react-native/lib/card", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Card")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Card] {
     @scala.inline
     def full(value: Boolean): this.type = set("full", value.asInstanceOf[js.Any])
     @scala.inline

@@ -7,10 +7,11 @@ import typingsSlinky.angularCore.mod.ComponentDefFeature
 import typingsSlinky.angularCore.mod.ComponentTemplate
 import typingsSlinky.angularCore.mod.ContentQueriesFunction
 import typingsSlinky.angularCore.mod.DirectiveTypesOrFactory
-import typingsSlinky.angularCore.mod.FactoryFn
 import typingsSlinky.angularCore.mod.HostBindingsFunction
 import typingsSlinky.angularCore.mod.PipeTypesOrFactory
 import typingsSlinky.angularCore.mod.SchemaMetadata
+import typingsSlinky.angularCore.mod.TAttributes
+import typingsSlinky.angularCore.mod.TConstants
 import typingsSlinky.angularCore.mod.Type
 import typingsSlinky.angularCore.mod.ViewEncapsulation
 import typingsSlinky.angularCore.mod.ViewQueriesFunction
@@ -28,12 +29,10 @@ trait ChangeDetection[T] extends js.Object {
     */
   var changeDetection: js.UndefOr[ChangeDetectionStrategy] = js.native
   /**
-    * The number of nodes, local refs, and pipes in this component template.
-    *
-    * Used to calculate the length of this component's LView array, so we
-    * can pre-fill the array and set the binding start index.
+    * Constants for the nodes in the component's view.
+    * Includes attribute arrays, local definition arrays etc.
     */
-  var consts: Double = js.native
+  var consts: js.UndefOr[TConstants] = js.native
   /**
     * Function to create instances of content queries associated with a given directive.
     */
@@ -45,6 +44,13 @@ trait ChangeDetection[T] extends js.Object {
     * see: animation
     */
   var data: js.UndefOr[StringDictionary[js.Any]] = js.native
+  /**
+    * The number of nodes, local refs, and pipes in this component template.
+    *
+    * Used to calculate the length of this component's LView array, so we
+    * can pre-fill the array and set the binding start index.
+    */
+  var decls: Double = js.native
   /**
     * Registry of directives and components that may be found in this component's view.
     *
@@ -63,20 +69,53 @@ trait ChangeDetection[T] extends js.Object {
     */
   var exportAs: js.UndefOr[js.Array[String]] = js.native
   /**
-    * Factory method used to create an instance of directive.
-    */
-  @JSName("factory")
-  var factory_Original: FactoryFn[T] = js.native
-  /**
     * A list of optional features to apply.
     *
     * See: {@link NgOnChangesFeature}, {@link ProvidersFeature}
     */
   var features: js.UndefOr[js.Array[ComponentDefFeature]] = js.native
   /**
+    * Assign static attribute values to a host element.
+    *
+    * This property will assign static attribute values as well as class and style
+    * values to a host element. Since attribute values can consist of different types of values, the
+    * `hostAttrs` array must include the values in the following format:
+    *
+    * attrs = [
+    *   // static attributes (like `title`, `name`, `id`...)
+    *   attr1, value1, attr2, value,
+    *
+    *   // a single namespace value (like `x:id`)
+    *   NAMESPACE_MARKER, namespaceUri1, name1, value1,
+    *
+    *   // another single namespace value (like `x:name`)
+    *   NAMESPACE_MARKER, namespaceUri2, name2, value2,
+    *
+    *   // a series of CSS classes that will be applied to the element (no spaces)
+    *   CLASSES_MARKER, class1, class2, class3,
+    *
+    *   // a series of CSS styles (property + value) that will be applied to the element
+    *   STYLES_MARKER, prop1, value1, prop2, value2
+    * ]
+    *
+    * All non-class and non-style attributes must be defined at the start of the list
+    * first before all class and style values are set. When there is a change in value
+    * type (like when classes and styles are introduced) a marker must be used to separate
+    * the entries. The marker values themselves are set via entries found in the
+    * [AttributeMarker] enum.
+    */
+  var hostAttrs: js.UndefOr[TAttributes] = js.native
+  /**
     * Function executed by the parent template to allow child directive to apply host bindings.
     */
   var hostBindings: js.UndefOr[HostBindingsFunction[T]] = js.native
+  /**
+    * The number of bindings in this directive `hostBindings` (including pure fn bindings).
+    *
+    * Used to calculate the length of the component's LView array, so we
+    * can pre-fill the array and set the host binding start index.
+    */
+  var hostVars: js.UndefOr[Double] = js.native
   /**
     * A map of input names.
     *
@@ -156,7 +195,7 @@ trait ChangeDetection[T] extends js.Object {
     */
   var schemas: js.UndefOr[js.Array[SchemaMetadata] | Null] = js.native
   /** The selectors that will be used to match nodes to this component. */
-  var selectors: ɵCssSelectorList = js.native
+  var selectors: js.UndefOr[ɵCssSelectorList] = js.native
   /**
     * A set of styles that the component needs to be present for component to render correctly.
     */
@@ -212,21 +251,6 @@ trait ChangeDetection[T] extends js.Object {
     * before view hooks).
     */
   var viewQuery: js.UndefOr[ViewQueriesFunction[T] | Null] = js.native
-  /**
-    * If no constructor to instantiate is provided, an instance of type T itself is created.
-    */
-  /**
-    * Factory method used to create an instance of directive.
-    */
-  def factory(): T = js.native
-  /**
-    * Subclasses without an explicit constructor call through to the factory of their base
-    * definition, providing it with their own constructor to instantiate.
-    */
-  /**
-    * Factory method used to create an instance of directive.
-    */
-  def factory[U /* <: T */](t: Type[U]): U = js.native
   /**
     * Template function use for rendering DOM.
     *

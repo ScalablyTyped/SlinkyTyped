@@ -11,28 +11,29 @@ import org.scalajs.dom.raw.SVGMatrix
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.jointjs.anon.BatchSize
 import typingsSlinky.jointjs.anon.Batches
+import typingsSlinky.jointjs.anon.Before
 import typingsSlinky.jointjs.anon.Highlighter
-import typingsSlinky.jointjs.anon.Key
 import typingsSlinky.jointjs.anon.MountBatchSize
-import typingsSlinky.jointjs.anon.MountBatchSizeNumber
 import typingsSlinky.jointjs.anon.Mounted
 import typingsSlinky.jointjs.anon.Position
 import typingsSlinky.jointjs.anon.Progress
 import typingsSlinky.jointjs.anon.Strict
 import typingsSlinky.jointjs.anon.UnmountBatchSize
-import typingsSlinky.jointjs.anon.UnmountBatchSizeNumber
 import typingsSlinky.jointjs.anon.UseModelGeometryBoolean
 import typingsSlinky.jointjs.anon.Viewport
+import typingsSlinky.jointjs.anon.`0`
 import typingsSlinky.jointjs.mod.Vectorizer.Matrix
 import typingsSlinky.jointjs.mod.Vectorizer.Scale
 import typingsSlinky.jointjs.mod.Vectorizer.Translation
 import typingsSlinky.jointjs.mod.dia.Paper.BackgroundOptions
 import typingsSlinky.jointjs.mod.dia.Paper.Dimension
 import typingsSlinky.jointjs.mod.dia.Paper.FitToContentOptions
+import typingsSlinky.jointjs.mod.dia.Paper.FreezeOptions
 import typingsSlinky.jointjs.mod.dia.Paper.GradientOptions
 import typingsSlinky.jointjs.mod.dia.Paper.GridOptions
 import typingsSlinky.jointjs.mod.dia.Paper.Options
 import typingsSlinky.jointjs.mod.dia.Paper.ScaleContentOptions
+import typingsSlinky.jointjs.mod.dia.Paper.UnfreezeOptions
 import typingsSlinky.jointjs.mod.dia.Paper.UpdateStats
 import typingsSlinky.jointjs.mod.dia.Paper.ViewportCallback
 import typingsSlinky.jointjs.mod.g.Rect
@@ -62,11 +63,11 @@ class Paper_ protected () extends View[Graph] {
   var viewport: SVGGElement = js.native
   /* protected */ def addZPivot(z: Double): Comment = js.native
   /* protected */ def checkMountedViews(viewport: ViewportCallback): Double = js.native
-  /* protected */ def checkMountedViews(viewport: ViewportCallback, opt: UnmountBatchSizeNumber): Double = js.native
+  /* protected */ def checkMountedViews(viewport: ViewportCallback, opt: UnmountBatchSize): Double = js.native
   /* protected */ def checkUnmountedViews(viewport: ViewportCallback): Double = js.native
-  /* protected */ def checkUnmountedViews(viewport: ViewportCallback, opt: MountBatchSizeNumber): Double = js.native
+  /* protected */ def checkUnmountedViews(viewport: ViewportCallback, opt: `0`): Double = js.native
   def checkViewport(): Mounted = js.native
-  def checkViewport(opt: UnmountBatchSize): Mounted = js.native
+  def checkViewport(opt: MountBatchSize): Mounted = js.native
   def clearGrid(): this.type = js.native
   def clientMatrix(): SVGMatrix = js.native
   def clientOffset(): typingsSlinky.jointjs.mod.g.Point = js.native
@@ -91,7 +92,7 @@ class Paper_ protected () extends View[Graph] {
   /* protected */ def dumpView(view: View[_], opt: StringDictionary[js.Any]): Double = js.native
   /* protected */ def dumpViewUpdate(view: View[_]): Double = js.native
   def dumpViews(): Unit = js.native
-  def dumpViews(opt: MountBatchSize): Unit = js.native
+  def dumpViews(opt: BatchSize): Unit = js.native
   def findView[T /* <: ElementView | LinkView */](element: String): T = js.native
   def findView[T /* <: ElementView | LinkView */](element: JQuery[HTMLElement]): T = js.native
   def findView[T /* <: ElementView | LinkView */](element: SVGElement): T = js.native
@@ -103,14 +104,45 @@ class Paper_ protected () extends View[Graph] {
   def findViewsInArea(rect: BBox): js.Array[ElementView] = js.native
   def findViewsInArea(rect: BBox, opt: Strict): js.Array[ElementView] = js.native
   def fitToContent(): Rect = js.native
+  def fitToContent(
+    gridWidth: js.UndefOr[scala.Nothing],
+    gridHeight: js.UndefOr[scala.Nothing],
+    padding: js.UndefOr[scala.Nothing],
+    opt: js.Any
+  ): Rect = js.native
+  def fitToContent(gridWidth: js.UndefOr[scala.Nothing], gridHeight: js.UndefOr[scala.Nothing], padding: Double): Rect = js.native
+  def fitToContent(
+    gridWidth: js.UndefOr[scala.Nothing],
+    gridHeight: js.UndefOr[scala.Nothing],
+    padding: Double,
+    opt: js.Any
+  ): Rect = js.native
+  def fitToContent(gridWidth: js.UndefOr[scala.Nothing], gridHeight: Double): Rect = js.native
+  def fitToContent(
+    gridWidth: js.UndefOr[scala.Nothing],
+    gridHeight: Double,
+    padding: js.UndefOr[scala.Nothing],
+    opt: js.Any
+  ): Rect = js.native
+  def fitToContent(gridWidth: js.UndefOr[scala.Nothing], gridHeight: Double, padding: Double): Rect = js.native
+  def fitToContent(gridWidth: js.UndefOr[scala.Nothing], gridHeight: Double, padding: Double, opt: js.Any): Rect = js.native
   def fitToContent(gridWidth: Double): Rect = js.native
+  def fitToContent(
+    gridWidth: Double,
+    gridHeight: js.UndefOr[scala.Nothing],
+    padding: js.UndefOr[scala.Nothing],
+    opt: js.Any
+  ): Rect = js.native
+  def fitToContent(gridWidth: Double, gridHeight: js.UndefOr[scala.Nothing], padding: Double): Rect = js.native
+  def fitToContent(gridWidth: Double, gridHeight: js.UndefOr[scala.Nothing], padding: Double, opt: js.Any): Rect = js.native
   def fitToContent(gridWidth: Double, gridHeight: Double): Rect = js.native
+  def fitToContent(gridWidth: Double, gridHeight: Double, padding: js.UndefOr[scala.Nothing], opt: js.Any): Rect = js.native
   def fitToContent(gridWidth: Double, gridHeight: Double, padding: Double): Rect = js.native
   def fitToContent(gridWidth: Double, gridHeight: Double, padding: Double, opt: js.Any): Rect = js.native
   def fitToContent(opt: FitToContentOptions): Rect = js.native
   // rendering
   def freeze(): Unit = js.native
-  def freeze(opt: Key): Unit = js.native
+  def freeze(opt: FreezeOptions): Unit = js.native
   def getArea(): Rect = js.native
   def getComputedSize(): Size = js.native
   def getContentArea(): Rect = js.native
@@ -124,6 +156,7 @@ class Paper_ protected () extends View[Graph] {
   def getPointerArgs(evt: Event): js.Tuple3[Event, Double, Double] = js.native
   def getRestrictedArea(): js.UndefOr[Rect] = js.native
   /* protected */ def guard(evt: Event, view: CellView): Boolean = js.native
+  def hasScheduledUpdates(): Boolean = js.native
   def hideTools(): this.type = js.native
   /* protected */ def insertView(view: CellView): Unit = js.native
   /* protected */ def isAsync(): Boolean = js.native
@@ -195,11 +228,16 @@ class Paper_ protected () extends View[Graph] {
   def requireView[T /* <: ElementView | LinkView */](model: Cell): T = js.native
   def requireView[T /* <: ElementView | LinkView */](model: Cell, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): T = js.native
   /* protected */ def resetViews(): Unit = js.native
+  /* protected */ def resetViews(cells: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]): Unit = js.native
   /* protected */ def resetViews(cells: js.Array[Cell]): Unit = js.native
   /* protected */ def resetViews(cells: js.Array[Cell], opt: StringDictionary[js.Any]): Unit = js.native
   def scale(): Scale = js.native
   def scale(sx: Double): this.type = js.native
+  def scale(sx: Double, sy: js.UndefOr[scala.Nothing], ox: js.UndefOr[scala.Nothing], oy: Double): this.type = js.native
+  def scale(sx: Double, sy: js.UndefOr[scala.Nothing], ox: Double): this.type = js.native
+  def scale(sx: Double, sy: js.UndefOr[scala.Nothing], ox: Double, oy: Double): this.type = js.native
   def scale(sx: Double, sy: Double): this.type = js.native
+  def scale(sx: Double, sy: Double, ox: js.UndefOr[scala.Nothing], oy: Double): this.type = js.native
   def scale(sx: Double, sy: Double, ox: Double): this.type = js.native
   def scale(sx: Double, sy: Double, ox: Double, oy: Double): this.type = js.native
   def scaleContentToFit(): Unit = js.native
@@ -220,7 +258,7 @@ class Paper_ protected () extends View[Graph] {
   def translate(tx: Double): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def unfreeze(): Unit = js.native
-  def unfreeze(opt: BatchSize): Unit = js.native
+  def unfreeze(opt: UnfreezeOptions): Unit = js.native
   def update(): this.type = js.native
   /* protected */ def updateBackgroundColor(color: String): Unit = js.native
   /* protected */ def updateBackgroundImage(opt: Position): Unit = js.native
@@ -229,7 +267,7 @@ class Paper_ protected () extends View[Graph] {
   def updateViews(): Batches = js.native
   def updateViews(opt: Progress): Batches = js.native
   /* protected */ def updateViewsAsync(): Unit = js.native
-  /* protected */ def updateViewsAsync(opt: MountBatchSize): Unit = js.native
+  /* protected */ def updateViewsAsync(opt: Before): Unit = js.native
   /* protected */ def updateViewsBatch(): UpdateStats = js.native
   /* protected */ def updateViewsBatch(opt: Viewport): UpdateStats = js.native
 }

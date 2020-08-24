@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StackedColumnChart2FillIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StackedColumnChart2FillIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StackedColumnChart2FillIcon")
   @js.native
   object component extends js.Object
   

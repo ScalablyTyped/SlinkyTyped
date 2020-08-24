@@ -195,31 +195,22 @@ object ExtensionInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHostPermissions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHostPermissionsVarargs(value: String*): Self = this.set("hostPermissions", js.Array(value :_*))
     @scala.inline
-    def withInstallType(
+    def setHostPermissions(value: js.Array[String]): Self = this.set("hostPermissions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInstallType(
       value: ToStringLiteral[
           ADMIN, 
           /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
@@ -228,73 +219,42 @@ object ExtensionInfo {
             other_ | normal_ | development_ | admin_ | sideload_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("installType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMayDisable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mayDisable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMayDisable(value: Boolean): Self = this.set("mayDisable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOfflineEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offlineEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOfflineEnabled(value: Boolean): Self = this.set("offlineEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPermissions(value: js.Array[Permission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissionsVarargs(value: Permission*): Self = this.set("permissions", js.Array(value :_*))
     @scala.inline
-    def withShortName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissions(value: js.Array[Permission]): Self = this.set("permissions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: packaged_app): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setShortName(value: String): Self = this.set("shortName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: packaged_app): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVersionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAppLaunchUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appLaunchUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVersionName(value: String): Self = this.set("versionName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAppLaunchUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appLaunchUrl")(js.undefined)
-        ret
-    }
+    def setAppLaunchUrl(value: String): Self = this.set("appLaunchUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAvailableLaunchTypes(
+    def deleteAppLaunchUrl: Self = this.set("appLaunchUrl", js.undefined)
+    @scala.inline
+    def setAvailableLaunchTypesVarargs(
+      value: (ToStringLiteral[
+          OPENASPINNEDTAB, 
+          /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+          Exclude[
+            /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+            OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN
+          ]
+        ])*
+    ): Self = this.set("availableLaunchTypes", js.Array(value :_*))
+    @scala.inline
+    def setAvailableLaunchTypes(
       value: js.Array[
           ToStringLiteral[
             OPENASPINNEDTAB, 
@@ -305,19 +265,11 @@ object ExtensionInfo {
             ]
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableLaunchTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("availableLaunchTypes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAvailableLaunchTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableLaunchTypes")(js.undefined)
-        ret
-    }
+    def deleteAvailableLaunchTypes: Self = this.set("availableLaunchTypes", js.undefined)
     @scala.inline
-    def withDisabledReason(
+    def setDisabledReason(
       value: ToStringLiteral[
           PERMISSIONSINCREASE, 
           /* keyof chrome-apps.anon.PERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
@@ -326,55 +278,25 @@ object ExtensionInfo {
             unknown__ | permissions_increase_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledReason")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("disabledReason", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisabledReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledReason")(js.undefined)
-        ret
-    }
+    def deleteDisabledReason: Self = this.set("disabledReason", js.undefined)
     @scala.inline
-    def withHomepageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("homepageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHomepageUrl(value: String): Self = this.set("homepageUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHomepageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("homepageUrl")(js.undefined)
-        ret
-    }
+    def deleteHomepageUrl: Self = this.set("homepageUrl", js.undefined)
     @scala.inline
-    def withIcons(value: js.Array[IconInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIconsVarargs(value: IconInfo*): Self = this.set("icons", js.Array(value :_*))
     @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
+    def setIcons(value: js.Array[IconInfo]): Self = this.set("icons", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsApp(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isApp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIcons: Self = this.set("icons", js.undefined)
     @scala.inline
-    def withoutIsApp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isApp")(js.undefined)
-        ret
-    }
+    def setIsApp(value: `true`): Self = this.set("isApp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLaunchType(
+    def deleteIsApp: Self = this.set("isApp", js.undefined)
+    @scala.inline
+    def setLaunchType(
       value: ToStringLiteral[
           OPENASPINNEDTAB, 
           /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
@@ -383,29 +305,13 @@ object ExtensionInfo {
             OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("launchType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLaunchType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchType")(js.undefined)
-        ret
-    }
+    def deleteLaunchType: Self = this.set("launchType", js.undefined)
     @scala.inline
-    def withUpdateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUpdateUrl(value: String): Self = this.set("updateUrl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutUpdateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUrl")(js.undefined)
-        ret
-    }
+    def deleteUpdateUrl: Self = this.set("updateUrl", js.undefined)
   }
   
 }

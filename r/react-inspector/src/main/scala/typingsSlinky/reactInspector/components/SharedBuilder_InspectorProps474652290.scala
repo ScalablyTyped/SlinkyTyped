@@ -12,6 +12,8 @@ class SharedBuilder_InspectorProps474652290 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
   @scala.inline
+  def columnsVarargs(value: String*): this.type = set("columns", js.Array(value :_*))
+  @scala.inline
   def columns(value: js.Array[String]): this.type = set("columns", value.asInstanceOf[js.Any])
   @scala.inline
   def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])

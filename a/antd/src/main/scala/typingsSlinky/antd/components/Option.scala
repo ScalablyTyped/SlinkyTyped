@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Option {
-  @JSImport("antd/lib/mentions", "default.Option")
+  @JSImport("antd/lib/mentions", "Option")
   @js.native
   object component extends js.Object
   

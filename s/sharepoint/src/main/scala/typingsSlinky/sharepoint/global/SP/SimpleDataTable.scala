@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.SimpleDataTable")
 @js.native
 class SimpleDataTable ()
-  extends typingsSlinky.sharepoint.SP.SimpleDataTable {
-  /* CompleteClass */
-  override def get_rows(): js.Array[_] = js.native
-}
+  extends typingsSlinky.sharepoint.SP.SimpleDataTable
 

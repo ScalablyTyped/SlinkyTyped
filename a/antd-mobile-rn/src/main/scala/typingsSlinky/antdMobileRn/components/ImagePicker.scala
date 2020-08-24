@@ -18,6 +18,8 @@ object ImagePicker {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.ImagePicker] {
     @scala.inline
+    def filesVarargs(value: js.Object*): this.type = set("files", js.Array(value :_*))
+    @scala.inline
     def files(value: js.Array[js.Object]): this.type = set("files", value.asInstanceOf[js.Any])
     @scala.inline
     def onAddImageClick(value: () => Unit): this.type = set("onAddImageClick", js.Any.fromFunction0(value))

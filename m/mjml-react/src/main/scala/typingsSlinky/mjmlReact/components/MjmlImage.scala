@@ -2,8 +2,8 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.BorderProperty
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.Border
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlImageProps
@@ -26,11 +26,11 @@ object MjmlImage {
     @scala.inline
     def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
     @scala.inline
-    def border(value: BorderProperty[String | Double]): this.type = set("border", value.asInstanceOf[js.Any])
+    def border(value: Border[String | Double]): this.type = set("border", value.asInstanceOf[js.Any])
     @scala.inline
     def borderRadius(value: String | Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def containerBackgroundColor(value: BackgroundColor): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
     @scala.inline

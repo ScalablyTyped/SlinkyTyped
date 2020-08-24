@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object YammerLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/YammerLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "YammerLogoIcon")
   @js.native
   object component extends js.Object
   

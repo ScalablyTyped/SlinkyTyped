@@ -34,53 +34,28 @@ object Descriptor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPermissions(value: js.Array[DescriptorPermissions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissionsVarargs(value: DescriptorPermissions*): Self = this.set("permissions", js.Array(value :_*))
     @scala.inline
-    def withCharacteristic(value: Characteristic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characteristic")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissions(value: js.Array[DescriptorPermissions]): Self = this.set("permissions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutCharacteristic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characteristic")(js.undefined)
-        ret
-    }
+    def setUuid(value: String): Self = this.set("uuid", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCharacteristic(value: Characteristic): Self = this.set("characteristic", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
+    def deleteCharacteristic: Self = this.set("characteristic", js.undefined)
     @scala.inline
-    def withValue(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInstanceId(value: String): Self = this.set("instanceId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
+    def deleteInstanceId: Self = this.set("instanceId", js.undefined)
+    @scala.inline
+    def setValue(value: js.typedarray.ArrayBuffer): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
   }
   
 }

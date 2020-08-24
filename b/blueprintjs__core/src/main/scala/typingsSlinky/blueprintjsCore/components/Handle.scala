@@ -6,6 +6,7 @@ import typingsSlinky.blueprintjsCore.handleMod.IInternalHandleProps
 import typingsSlinky.blueprintjsCore.handlePropsMod.HandleInteractionKind
 import typingsSlinky.blueprintjsCore.handlePropsMod.HandleType
 import typingsSlinky.blueprintjsCore.intentMod.Intent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactChild
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,6 +45,10 @@ object Handle {
     def tickSize(value: Double): this.type = set("tickSize", value.asInstanceOf[js.Any])
     @scala.inline
     def tickSizeRatio(value: Double): this.type = set("tickSizeRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trackStyleAfter(value: CSSProperties): this.type = set("trackStyleAfter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trackStyleBefore(value: CSSProperties): this.type = set("trackStyleBefore", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: HandleType): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

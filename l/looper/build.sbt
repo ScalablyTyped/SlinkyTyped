@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "looper"
-version := "4.0-dt-20200401Z-15b4d0"
-scalaVersion := "2.13.2"
+version := "4.0-dt-20200401Z-63a0c6"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

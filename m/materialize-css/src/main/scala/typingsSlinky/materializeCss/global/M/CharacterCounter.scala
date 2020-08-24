@@ -1,32 +1,15 @@
 package typingsSlinky.materializeCss.global.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("M.CharacterCounter")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<undefined> * / any */ @JSGlobal("M.CharacterCounter")
 @js.native
-class CharacterCounter ()
-  extends typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]] {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: js.UndefOr[scala.Nothing] = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-}
+class CharacterCounter () extends js.Object
 
 /* static members */
 @JSGlobal("M.CharacterCounter")
@@ -39,8 +22,13 @@ object CharacterCounter extends js.Object {
   /**
     * Init CharacterCounters
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.CharacterCounter] = js.native
-  def init(els: MElements, options: Partial[js.UndefOr[scala.Nothing]]): js.Array[typingsSlinky.materializeCss.M.CharacterCounter] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.CharacterCounter] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: Partial[js.UndefOr[scala.Nothing]]
+  ): js.Array[typingsSlinky.materializeCss.M.CharacterCounter] = js.native
   /**
     * Init CharacterCounter
     */

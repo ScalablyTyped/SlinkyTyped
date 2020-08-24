@@ -22,13 +22,13 @@ trait RangeConstructor
 Instantiable0[org.scalajs.dom.raw.Range]
      with Instantiable1[/* begin */ Endpoint, org.scalajs.dom.raw.Range]
      with Instantiable2[
-      (/* begin */ Endpoint) | (/* begin */ Null), 
+      js.UndefOr[(/* begin */ Endpoint) | (/* begin */ Null)], 
       /* end */ Endpoint, 
       org.scalajs.dom.raw.Range
     ]
      with Instantiable3[
-      (/* begin */ Endpoint) | (/* begin */ Null), 
-      (/* end */ Endpoint) | (/* end */ Null), 
+      js.UndefOr[(/* begin */ Endpoint) | (/* begin */ Null)], 
+      js.UndefOr[(/* end */ Endpoint) | (/* end */ Null)], 
       /* bounds */ Bounds, 
       org.scalajs.dom.raw.Range
     ] {
@@ -42,9 +42,15 @@ Instantiable0[org.scalajs.dom.raw.Range]
   def apply[T /* <: Endpoint */](begin: T): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: T, end: T): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: T, end: T, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
+  def apply[T /* <: Endpoint */](begin: T, end: js.UndefOr[scala.Nothing], bounds: Bounds): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: T, end: Null, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
+  def apply[T /* <: Endpoint */](begin: js.UndefOr[scala.Nothing], end: T): org.scalajs.dom.raw.Range = js.native
+  def apply[T /* <: Endpoint */](begin: js.UndefOr[scala.Nothing], end: T, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
+  def apply[T /* <: Endpoint */](begin: js.UndefOr[scala.Nothing], end: js.UndefOr[scala.Nothing], bounds: Bounds): org.scalajs.dom.raw.Range = js.native
+  def apply[T /* <: Endpoint */](begin: js.UndefOr[scala.Nothing], end: Null, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: Null, end: T): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: Null, end: T, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
+  def apply[T /* <: Endpoint */](begin: Null, end: js.UndefOr[scala.Nothing], bounds: Bounds): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: Null, end: Null, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
   /**
     * Compares two range's beginnings.

@@ -231,11 +231,15 @@ object CommandBar {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def farItemsVarargs(value: ICommandBarItemProps*): this.type = set("farItems", js.Array(value :_*))
     @scala.inline
     def farItems(value: js.Array[ICommandBarItemProps]): this.type = set("farItems", value.asInstanceOf[js.Any])
     @scala.inline
@@ -434,6 +438,8 @@ object CommandBar {
     def overflowButtonAs(value: IComponentAs[IButtonProps]): this.type = set("overflowButtonAs", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowButtonProps(value: IButtonProps): this.type = set("overflowButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowItemsVarargs(value: ICommandBarItemProps*): this.type = set("overflowItems", js.Array(value :_*))
     @scala.inline
     def overflowItems(value: js.Array[ICommandBarItemProps]): this.type = set("overflowItems", value.asInstanceOf[js.Any])
     @scala.inline

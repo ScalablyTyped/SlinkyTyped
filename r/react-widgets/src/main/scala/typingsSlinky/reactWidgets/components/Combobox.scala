@@ -1,10 +1,10 @@
 package typingsSlinky.reactWidgets.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactWidgets.comboboxMod.ComboboxMessages
 import typingsSlinky.reactWidgets.comboboxMod.ComboboxProps
 import typingsSlinky.reactWidgets.mod.Combobox.^
@@ -28,15 +28,19 @@ object Combobox {
     @scala.inline
     def busySpinnerReactElement(value: ReactElement): this.type = set("busySpinner", value.asInstanceOf[js.Any])
     @scala.inline
-    def busySpinner(value: TagMod[Any]): this.type = set("busySpinner", value.asInstanceOf[js.Any])
+    def busySpinner(value: ReactElement): this.type = set("busySpinner", value.asInstanceOf[js.Any])
     @scala.inline
     def caseSensitive(value: Boolean): this.type = set("caseSensitive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValue(value: js.Any): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledVarargs(value: js.Any*): this.type = set("disabled", js.Array(value :_*))
     @scala.inline
     def disabled(value: Boolean | js.Array[_]): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -56,7 +60,7 @@ object Combobox {
     @scala.inline
     def groupComponentComponentClass(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def groupComponent(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    def groupComponent(value: ReactType[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -68,13 +72,13 @@ object Combobox {
     @scala.inline
     def itemComponentComponentClass(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemComponent(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    def itemComponent(value: ReactType[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def listComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("listComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def listComponentComponentClass(value: ReactComponentClass[_]): this.type = set("listComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def listComponent(value: ReactComponentClass[_] | String): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    def listComponent(value: ReactType[_] | String): this.type = set("listComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def listProps(value: js.Object): this.type = set("listProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,7 +102,9 @@ object Combobox {
     @scala.inline
     def popupTransitionComponentClass(value: ReactComponentClass[_]): this.type = set("popupTransition", value.asInstanceOf[js.Any])
     @scala.inline
-    def popupTransition(value: ReactComponentClass[_] | String): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    def popupTransition(value: ReactType[_] | String): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnlyVarargs(value: js.Any*): this.type = set("readOnly", js.Array(value :_*))
     @scala.inline
     def readOnly(value: Boolean | js.Array[_]): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline

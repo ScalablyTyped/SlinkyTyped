@@ -5,8 +5,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.accordionMod.AccordionOverrides
 import typingsSlinky.baseui.accordionMod.AccordionProps
 import typingsSlinky.baseui.accordionMod.AccordionState
+import typingsSlinky.baseui.accordionMod.SharedProps
 import typingsSlinky.baseui.anon.Expanded
-import typingsSlinky.baseui.anon.SharedPropsexpandednever
 import typingsSlinky.baseui.baseuiStrings.expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ object Accordion {
     @scala.inline
     def onChange(value: /* args */ Expanded => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def overrides(value: AccordionOverrides[SharedPropsexpandednever]): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: AccordionOverrides[SharedProps]): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
     @scala.inline

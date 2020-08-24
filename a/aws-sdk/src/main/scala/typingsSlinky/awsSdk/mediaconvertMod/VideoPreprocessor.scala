@@ -27,6 +27,10 @@ trait VideoPreprocessor extends js.Object {
     */
   var NoiseReducer: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.NoiseReducer] = js.native
   /**
+    * If you work with a third party video watermarking partner, use the group of settings that correspond with your watermarking partner to include watermarks in your output.
+    */
+  var PartnerWatermarking: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.PartnerWatermarking] = js.native
+  /**
     * Timecode burn-in (TimecodeBurnIn)--Burns the output timecode and specified prefix into the output.
     */
   var TimecodeBurnin: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.TimecodeBurnin] = js.native
@@ -34,22 +38,50 @@ trait VideoPreprocessor extends js.Object {
 
 object VideoPreprocessor {
   @scala.inline
-  def apply(
-    ColorCorrector: ColorCorrector = null,
-    Deinterlacer: Deinterlacer = null,
-    DolbyVision: DolbyVision = null,
-    ImageInserter: ImageInserter = null,
-    NoiseReducer: NoiseReducer = null,
-    TimecodeBurnin: TimecodeBurnin = null
-  ): VideoPreprocessor = {
+  def apply(): VideoPreprocessor = {
     val __obj = js.Dynamic.literal()
-    if (ColorCorrector != null) __obj.updateDynamic("ColorCorrector")(ColorCorrector.asInstanceOf[js.Any])
-    if (Deinterlacer != null) __obj.updateDynamic("Deinterlacer")(Deinterlacer.asInstanceOf[js.Any])
-    if (DolbyVision != null) __obj.updateDynamic("DolbyVision")(DolbyVision.asInstanceOf[js.Any])
-    if (ImageInserter != null) __obj.updateDynamic("ImageInserter")(ImageInserter.asInstanceOf[js.Any])
-    if (NoiseReducer != null) __obj.updateDynamic("NoiseReducer")(NoiseReducer.asInstanceOf[js.Any])
-    if (TimecodeBurnin != null) __obj.updateDynamic("TimecodeBurnin")(TimecodeBurnin.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoPreprocessor]
   }
+  @scala.inline
+  implicit class VideoPreprocessorOps[Self <: VideoPreprocessor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColorCorrector(value: ColorCorrector): Self = this.set("ColorCorrector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColorCorrector: Self = this.set("ColorCorrector", js.undefined)
+    @scala.inline
+    def setDeinterlacer(value: Deinterlacer): Self = this.set("Deinterlacer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeinterlacer: Self = this.set("Deinterlacer", js.undefined)
+    @scala.inline
+    def setDolbyVision(value: DolbyVision): Self = this.set("DolbyVision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDolbyVision: Self = this.set("DolbyVision", js.undefined)
+    @scala.inline
+    def setImageInserter(value: ImageInserter): Self = this.set("ImageInserter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImageInserter: Self = this.set("ImageInserter", js.undefined)
+    @scala.inline
+    def setNoiseReducer(value: NoiseReducer): Self = this.set("NoiseReducer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNoiseReducer: Self = this.set("NoiseReducer", js.undefined)
+    @scala.inline
+    def setPartnerWatermarking(value: PartnerWatermarking): Self = this.set("PartnerWatermarking", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePartnerWatermarking: Self = this.set("PartnerWatermarking", js.undefined)
+    @scala.inline
+    def setTimecodeBurnin(value: TimecodeBurnin): Self = this.set("TimecodeBurnin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimecodeBurnin: Self = this.set("TimecodeBurnin", js.undefined)
+  }
+  
 }
 

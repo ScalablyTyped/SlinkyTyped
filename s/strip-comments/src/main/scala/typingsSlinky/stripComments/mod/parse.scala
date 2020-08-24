@@ -1,0 +1,13 @@
+package typingsSlinky.stripComments.mod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.stripComments.nodeMod.Block
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("strip-comments", "parse")
+@js.native
+object parse
+  extends TopLevel[js.Function2[/* input */ String, /* options */ js.UndefOr[Options], Block]]
+

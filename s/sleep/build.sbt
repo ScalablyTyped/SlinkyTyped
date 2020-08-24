@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "sleep"
-version := "0.0-unknown-dt-20200515Z-07a677"
-scalaVersion := "2.13.2"
+version := "0.0-unknown-dt-20200515Z-407a15"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

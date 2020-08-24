@@ -3,21 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.layoutPanelMod.PanelProps
-import typingsSlinky.reactToolbox.layoutPanelMod.PanelTheme
+import typingsSlinky.reactToolbox.panelMod.PanelProps
+import typingsSlinky.reactToolbox.panelMod.PanelTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Panel {
-  @JSImport("react-toolbox", "Panel")
+  @JSImport("react-toolbox/components/layout", "Panel")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.Panel] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.layoutMod.Panel] {
     @scala.inline
     def bodyScroll(value: Boolean): this.type = set("bodyScroll", value.asInstanceOf[js.Any])
     @scala.inline

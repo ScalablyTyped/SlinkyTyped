@@ -33,7 +33,13 @@ object VictoryLabel {
     @scala.inline
     def capHeight(value: StringOrNumberOrCallback): this.type = set("capHeight", value.asInstanceOf[js.Any])
     @scala.inline
+    def childrenFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: StringOrNumberOrCallback): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,7 +67,11 @@ object VictoryLabel {
     @scala.inline
     def renderInPortal(value: Boolean): this.type = set("renderInPortal", value.asInstanceOf[js.Any])
     @scala.inline
+    def styleVarargs(value: CSSProperties*): this.type = set("style", js.Array(value :_*))
+    @scala.inline
     def style(value: CSSProperties | js.Array[CSSProperties]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textVarargs(value: String*): this.type = set("text", js.Array(value :_*))
     @scala.inline
     def textFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("text", js.Any.fromFunction1(value))
     @scala.inline

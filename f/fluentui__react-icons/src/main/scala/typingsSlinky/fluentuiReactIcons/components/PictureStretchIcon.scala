@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PictureStretchIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PictureStretchIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PictureStretchIcon")
   @js.native
   object component extends js.Object
   

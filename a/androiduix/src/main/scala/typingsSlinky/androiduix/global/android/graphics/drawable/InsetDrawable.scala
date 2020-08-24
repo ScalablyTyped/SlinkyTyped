@@ -17,8 +17,35 @@ class InsetDrawable protected ()
   def this(
     drawable: typingsSlinky.androiduix.android.graphics.drawable.Drawable,
     insetLeft: Double,
+    insetTop: js.UndefOr[scala.Nothing],
+    insetRight: Double
+  ) = this()
+  def this(
+    drawable: typingsSlinky.androiduix.android.graphics.drawable.Drawable,
+    insetLeft: Double,
     insetTop: Double,
     insetRight: Double
+  ) = this()
+  def this(
+    drawable: typingsSlinky.androiduix.android.graphics.drawable.Drawable,
+    insetLeft: Double,
+    insetTop: js.UndefOr[scala.Nothing],
+    insetRight: js.UndefOr[scala.Nothing],
+    insetBottom: Double
+  ) = this()
+  def this(
+    drawable: typingsSlinky.androiduix.android.graphics.drawable.Drawable,
+    insetLeft: Double,
+    insetTop: js.UndefOr[scala.Nothing],
+    insetRight: Double,
+    insetBottom: Double
+  ) = this()
+  def this(
+    drawable: typingsSlinky.androiduix.android.graphics.drawable.Drawable,
+    insetLeft: Double,
+    insetTop: Double,
+    insetRight: js.UndefOr[scala.Nothing],
+    insetBottom: Double
   ) = this()
   def this(
     drawable: typingsSlinky.androiduix.android.graphics.drawable.Drawable,

@@ -10,7 +10,7 @@ object Backpack {
   @js.native
   object component extends js.Object
   
-  def withProps(p: KawaiiProps): SharedBuilder_KawaiiProps_1650325302[typingsSlinky.reactKawaii.mod.Backpack] = new SharedBuilder_KawaiiProps_1650325302[typingsSlinky.reactKawaii.mod.Backpack](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Backpack.type): SharedBuilder_KawaiiProps_1650325302[typingsSlinky.reactKawaii.mod.Backpack] = new SharedBuilder_KawaiiProps_1650325302[typingsSlinky.reactKawaii.mod.Backpack](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: KawaiiProps): SharedBuilder_KawaiiProps1805116402 = new SharedBuilder_KawaiiProps1805116402(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Backpack.type): SharedBuilder_KawaiiProps1805116402 = new SharedBuilder_KawaiiProps1805116402(js.Array(this.component, js.Dictionary.empty))()
 }
 

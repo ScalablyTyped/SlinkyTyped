@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 - org.scalablytyped.runtime.StringDictionary because Already inherited */ @JSImport("survey-knockout", "JsonObjectProperty")
 @js.native
 class JsonObjectProperty protected () extends IObject {
-  def this(name: String) = this()
-  def this(name: String, isRequired: Boolean) = this()
+  def this(classInfo: JsonMetadataClass, name: String) = this()
+  def this(classInfo: JsonMetadataClass, name: String, isRequired: Boolean) = this()
   var alternativeName: String = js.native
   var baseClassName: String = js.native
   var category: String = js.native
@@ -18,6 +18,7 @@ class JsonObjectProperty protected () extends IObject {
     * Depricated, please use getChoices
     */
   val choices: js.Array[_] = js.native
+  val classInfo: JsonMetadataClass = js.native
   var className: String = js.native
   var classNamePart: String = js.native
   var defaultValue: js.Any = js.native
@@ -38,6 +39,7 @@ class JsonObjectProperty protected () extends IObject {
   var maxValue: js.Any = js.native
   var minValue: js.Any = js.native
   var name: String = js.native
+  var nextToProperty: String = js.native
   var readOnly: Boolean = js.native
   var serializationProperty: String = js.native
   var showMode: String = js.native
@@ -58,9 +60,11 @@ class JsonObjectProperty protected () extends IObject {
   def isVisible(layout: String, obj: js.Any): Boolean = js.native
   def mergeWith(prop: JsonObjectProperty): Unit = js.native
   def onGetValue(obj: js.Any): js.Any = js.native
+  def onPropertyEditorUpdate(obj: js.Any, propEditor: js.Any): js.Any = js.native
   def onSetValue(obj: js.Any, value: js.Any, jsonConv: JsonObject): js.Any = js.native
   def setBaseValue(`val`: js.Any): Unit = js.native
-  def setChoices(value: js.Array[_], valueFunc: js.Function0[js.Array[_]]): Unit = js.native
+  def setChoices(value: js.Array[_]): Unit = js.native
+  def setChoices(value: js.Array[_], valueFunc: js.Function1[/* obj */ js.Any, js.Array[_]]): Unit = js.native
   def setValue(obj: js.Any, value: js.Any, jsonConv: JsonObject): Unit = js.native
   def visibleIf(obj: js.Any): Boolean = js.native
 }

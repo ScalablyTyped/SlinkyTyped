@@ -4,8 +4,8 @@ import typingsSlinky.highland.Highland.MappingHint
 import typingsSlinky.highland.Highland.Nil
 import typingsSlinky.highland.Highland.OnFinished
 import typingsSlinky.highland.Highland.Stream
-import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.NodeJS.ReadableStream
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

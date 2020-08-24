@@ -40,65 +40,30 @@ object FeatureRestrictions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAutoCompleteEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCompleteEnabled")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAutoCompleteEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCompleteEnabled")(js.undefined)
-        ret
-    }
+    def setAutoCompleteEnabled(value: Boolean): Self = this.set("autoCompleteEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAutoCorrectEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrectEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoCompleteEnabled: Self = this.set("autoCompleteEnabled", js.undefined)
     @scala.inline
-    def withoutAutoCorrectEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrectEnabled")(js.undefined)
-        ret
-    }
+    def setAutoCorrectEnabled(value: Boolean): Self = this.set("autoCorrectEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHandwritingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handwritingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoCorrectEnabled: Self = this.set("autoCorrectEnabled", js.undefined)
     @scala.inline
-    def withoutHandwritingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handwritingEnabled")(js.undefined)
-        ret
-    }
+    def setHandwritingEnabled(value: Boolean): Self = this.set("handwritingEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSpellCheckEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheckEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHandwritingEnabled: Self = this.set("handwritingEnabled", js.undefined)
     @scala.inline
-    def withoutSpellCheckEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheckEnabled")(js.undefined)
-        ret
-    }
+    def setSpellCheckEnabled(value: Boolean): Self = this.set("spellCheckEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVoiceInputEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceInputEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSpellCheckEnabled: Self = this.set("spellCheckEnabled", js.undefined)
     @scala.inline
-    def withoutVoiceInputEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceInputEnabled")(js.undefined)
-        ret
-    }
+    def setVoiceInputEnabled(value: Boolean): Self = this.set("voiceInputEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVoiceInputEnabled: Self = this.set("voiceInputEnabled", js.undefined)
   }
   
 }

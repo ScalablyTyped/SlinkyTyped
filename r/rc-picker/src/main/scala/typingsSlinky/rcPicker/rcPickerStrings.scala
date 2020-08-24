@@ -3,6 +3,7 @@ package typingsSlinky.rcPicker
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import typingsSlinky.rcPicker.pickerTriggerMod.Placement
+import typingsSlinky.rcPicker.rangePickerMod.RangeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,6 +42,9 @@ object rcPickerStrings {
        with PickerMode
   
   @js.native
+  sealed trait dateRender extends js.Object
+  
+  @js.native
   sealed trait decade extends PanelMode
   
   @js.native
@@ -62,7 +66,7 @@ object rcPickerStrings {
   sealed trait disabledTime extends js.Object
   
   @js.native
-  sealed trait end extends js.Object
+  sealed trait end extends RangeType
   
   @js.native
   sealed trait execute extends js.Object
@@ -186,7 +190,7 @@ object rcPickerStrings {
   sealed trait spelling extends js.Object
   
   @js.native
-  sealed trait start extends js.Object
+  sealed trait start extends RangeType
   
   @js.native
   sealed trait step extends js.Object
@@ -247,6 +251,8 @@ object rcPickerStrings {
   def copy: copy = "copy".asInstanceOf[copy]
   @scala.inline
   def date: date = "date".asInstanceOf[date]
+  @scala.inline
+  def dateRender: dateRender = "dateRender".asInstanceOf[dateRender]
   @scala.inline
   def decade: decade = "decade".asInstanceOf[decade]
   @scala.inline

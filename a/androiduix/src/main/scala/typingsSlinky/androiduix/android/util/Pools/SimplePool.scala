@@ -24,29 +24,24 @@ object SimplePool {
     __obj.asInstanceOf[SimplePool[T]]
   }
   @scala.inline
-  implicit class SimplePoolOps[Self[t] <: SimplePool[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class SimplePoolOps[Self <: SimplePool[_], T] (val x: Self with SimplePool[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIsInPool(value: js.Any => js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInPool")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMPool(value: js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPool")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsInPool(value: js.Any => js.Any): Self = this.set("isInPool", js.Any.fromFunction1(value))
     @scala.inline
-    def withMPoolSize(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPoolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPoolVarargs(value: T*): Self = this.set("mPool", js.Array(value :_*))
+    @scala.inline
+    def setMPool(value: js.Array[T]): Self = this.set("mPool", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMPoolSize(value: Double): Self = this.set("mPoolSize", value.asInstanceOf[js.Any])
   }
   
 }

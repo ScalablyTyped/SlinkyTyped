@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-plugin-context"
-version := "2.9-dt-20200403Z-0d411b"
-scalaVersion := "2.13.2"
+version := "2.9-dt-20200403Z-b946a9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

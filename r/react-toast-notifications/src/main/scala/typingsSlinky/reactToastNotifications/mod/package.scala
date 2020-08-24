@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type AddToast = js.Function3[
-    /* content */ slinky.core.TagMod[scala.Any], 
+    /* content */ slinky.core.facade.ReactElement, 
     /* options */ js.UndefOr[typingsSlinky.reactToastNotifications.mod.Options], 
     /* callback */ js.UndefOr[js.Function1[/* id */ java.lang.String, scala.Unit]], 
     scala.Unit

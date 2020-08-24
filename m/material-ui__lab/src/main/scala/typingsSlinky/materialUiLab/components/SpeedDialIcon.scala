@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -77,7 +76,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SpeedDialIcon {
-  @JSImport("@material-ui/lab/SpeedDialIcon/SpeedDialIcon", JSImport.Default)
+  @JSImport("@material-ui/lab", "SpeedDialIcon")
   @js.native
   object component extends js.Object
   
@@ -208,6 +207,8 @@ object SpeedDialIcon {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -218,7 +219,7 @@ object SpeedDialIcon {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -410,7 +411,7 @@ object SpeedDialIcon {
     @scala.inline
     def openIconReactElement(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def openIcon(value: TagMod[Any]): this.type = set("openIcon", value.asInstanceOf[js.Any])
+    def openIcon(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

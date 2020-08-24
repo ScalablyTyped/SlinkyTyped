@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ui-box/dist/enhancers/outline", JSImport.Namespace)
+@JSImport("ui-box/dist/src/enhancers/outline", JSImport.Namespace)
 @js.native
 object outlineMod extends js.Object {
   val propEnhancers: PropEnhancers = js.native

@@ -79,161 +79,62 @@ object ViewTreeObserver_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddOnDrawListener(value: OnDrawListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnDrawListener")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAddOnGlobalLayoutListener(value: OnGlobalLayoutListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnGlobalLayoutListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAddOnDrawListener(value: OnDrawListener => Unit): Self = this.set("addOnDrawListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withAddOnPreDrawListener(value: OnPreDrawListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPreDrawListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAddOnGlobalLayoutListener(value: OnGlobalLayoutListener => Unit): Self = this.set("addOnGlobalLayoutListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withAddOnScrollChangedListener(value: OnScrollChangedListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnScrollChangedListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAddOnPreDrawListener(value: OnPreDrawListener => Unit): Self = this.set("addOnPreDrawListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withAddOnTouchModeChangeListener(value: OnTouchModeChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnTouchModeChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAddOnScrollChangedListener(value: OnScrollChangedListener => Unit): Self = this.set("addOnScrollChangedListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withCheckIsAlive(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkIsAlive")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddOnTouchModeChangeListener(value: OnTouchModeChangeListener => Unit): Self = this.set("addOnTouchModeChangeListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withDispatchOnDraw(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchOnDraw")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCheckIsAlive(value: () => js.Any): Self = this.set("checkIsAlive", js.Any.fromFunction0(value))
     @scala.inline
-    def withDispatchOnGlobalLayout(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchOnGlobalLayout")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDispatchOnDraw(value: () => Unit): Self = this.set("dispatchOnDraw", js.Any.fromFunction0(value))
     @scala.inline
-    def withDispatchOnPreDraw(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchOnPreDraw")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDispatchOnGlobalLayout(value: () => Unit): Self = this.set("dispatchOnGlobalLayout", js.Any.fromFunction0(value))
     @scala.inline
-    def withDispatchOnScrollChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchOnScrollChanged")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDispatchOnPreDraw(value: () => Boolean): Self = this.set("dispatchOnPreDraw", js.Any.fromFunction0(value))
     @scala.inline
-    def withDispatchOnTouchModeChanged(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchOnTouchModeChanged")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDispatchOnScrollChanged(value: () => Unit): Self = this.set("dispatchOnScrollChanged", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsAlive(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlive")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDispatchOnTouchModeChanged(value: Boolean => Unit): Self = this.set("dispatchOnTouchModeChanged", js.Any.fromFunction1(value))
     @scala.inline
-    def withKill(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kill")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsAlive(value: () => Boolean): Self = this.set("isAlive", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAlive(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAlive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKill(value: () => js.Any): Self = this.set("kill", js.Any.fromFunction0(value))
     @scala.inline
-    def withMOnDrawListeners(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnDrawListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAlive(value: js.Any): Self = this.set("mAlive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnGlobalLayoutListeners(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnGlobalLayoutListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnDrawListeners(value: js.Any): Self = this.set("mOnDrawListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnPreDrawListeners(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnPreDrawListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnGlobalLayoutListeners(value: js.Any): Self = this.set("mOnGlobalLayoutListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnScrollChangedListeners(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnScrollChangedListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnPreDrawListeners(value: js.Any): Self = this.set("mOnPreDrawListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOnTouchModeChangeListeners(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOnTouchModeChangeListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOnScrollChangedListeners(value: js.Any): Self = this.set("mOnScrollChangedListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMerge(value: ViewTreeObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMOnTouchModeChangeListeners(value: js.Any): Self = this.set("mOnTouchModeChangeListeners", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveGlobalOnLayoutListener(value: OnGlobalLayoutListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeGlobalOnLayoutListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMerge(value: ViewTreeObserver => Unit): Self = this.set("merge", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemoveOnDrawListener(value: OnDrawListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnDrawListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveGlobalOnLayoutListener(value: OnGlobalLayoutListener => Unit): Self = this.set("removeGlobalOnLayoutListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemoveOnGlobalLayoutListener(value: OnGlobalLayoutListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnGlobalLayoutListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveOnDrawListener(value: OnDrawListener => Unit): Self = this.set("removeOnDrawListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemoveOnPreDrawListener(value: OnPreDrawListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnPreDrawListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveOnGlobalLayoutListener(value: OnGlobalLayoutListener => Unit): Self = this.set("removeOnGlobalLayoutListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemoveOnScrollChangedListener(value: OnScrollChangedListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnScrollChangedListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveOnPreDrawListener(value: OnPreDrawListener => Unit): Self = this.set("removeOnPreDrawListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemoveOnTouchModeChangeListener(value: OnTouchModeChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnTouchModeChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveOnScrollChangedListener(value: OnScrollChangedListener => Unit): Self = this.set("removeOnScrollChangedListener", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRemoveOnTouchModeChangeListener(value: OnTouchModeChangeListener => Unit): Self = this.set("removeOnTouchModeChangeListener", js.Any.fromFunction1(value))
   }
   
 }

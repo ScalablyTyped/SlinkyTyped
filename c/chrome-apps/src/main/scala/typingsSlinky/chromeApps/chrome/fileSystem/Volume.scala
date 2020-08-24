@@ -31,23 +31,16 @@ object Volume {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withWritable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVolumeId(value: String): Self = this.set("volumeId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutWritable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(js.undefined)
-        ret
-    }
+    def setWritable(value: Boolean): Self = this.set("writable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWritable: Self = this.set("writable", js.undefined)
   }
   
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StopwatchIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StopwatchIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StopwatchIcon")
   @js.native
   object component extends js.Object
   

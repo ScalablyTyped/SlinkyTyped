@@ -42,6 +42,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.swiper.swiperStrings.autoplay
   - typingsSlinky.swiper.swiperStrings.lazyImageLoad
   - typingsSlinky.swiper.swiperStrings.lazyImageReady
+  - typingsSlinky.swiper.swiperStrings.hashChange
+  - typingsSlinky.swiper.swiperStrings.hashSet
 */
 trait SwiperEvent extends js.Object
 
@@ -62,6 +64,10 @@ object SwiperEvent {
   def doubleTap: typingsSlinky.swiper.swiperStrings.doubleTap = "doubleTap".asInstanceOf[typingsSlinky.swiper.swiperStrings.doubleTap]
   @scala.inline
   def fromEdge: typingsSlinky.swiper.swiperStrings.fromEdge = "fromEdge".asInstanceOf[typingsSlinky.swiper.swiperStrings.fromEdge]
+  @scala.inline
+  def hashChange: typingsSlinky.swiper.swiperStrings.hashChange = "hashChange".asInstanceOf[typingsSlinky.swiper.swiperStrings.hashChange]
+  @scala.inline
+  def hashSet: typingsSlinky.swiper.swiperStrings.hashSet = "hashSet".asInstanceOf[typingsSlinky.swiper.swiperStrings.hashSet]
   @scala.inline
   def imagesReady: typingsSlinky.swiper.swiperStrings.imagesReady = "imagesReady".asInstanceOf[typingsSlinky.swiper.swiperStrings.imagesReady]
   @scala.inline

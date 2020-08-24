@@ -74,7 +74,7 @@ class QuestionPanelDynamicModel protected ()
     */
   var defaultValueFromLastPanel: Boolean = js.native
   /**
-    * Returns true when currentIndex is more than or equal 0 and less then panelCount - 1.
+    * Returns true when currentIndex is more than or equal 0 and less than panelCount - 1.
     * @see currenIndex
     * @see currenPanel
     * @see panelCount
@@ -174,10 +174,10 @@ class QuestionPanelDynamicModel protected ()
   val panels: js.Array[PanelModel] = js.native
   /**
     * Use this property to allow the end-user to collapse/expand the panels. It works only if the renderMode property equals to "list" and templateTitle property is not empty. The following values are available:
-    * <br/> default - the default value. User can't collpase/expand panels
-    * <br/> expanded - User can collpase/expand panels and all panels are expanded by default
-    * <br/> collapsed - User can collpase/expand panels and all panels are collapsed by default
-    * <br/> firstExpanded - User can collpase/expand panels. The first panel is expanded and others are collapsed
+    * <br/> default - the default value. User can't collapse/expand panels
+    * <br/> expanded - User can collapse/expand panels and all panels are expanded by default
+    * <br/> collapsed - User can collapse/expand panels and all panels are collapsed by default
+    * <br/> firstExpanded - User can collapse/expand panels. The first panel is expanded and others are collapsed
     * @see renderMode
     * @see templateTitle
     */
@@ -252,17 +252,7 @@ class QuestionPanelDynamicModel protected ()
   /* protected */ def createNewPanel(): PanelModel = js.native
   /* protected */ def createNewPanelObject(): PanelModel = js.native
   def currentIndexChangedCallback(): Unit = js.native
-  /* CompleteClass */
-  override def getItemIndex(item: ISurveyData): Double = js.native
-  /* CompleteClass */
-  override def getPanelItemData(item: ISurveyData): js.Any = js.native
   def getPlainData(options: Calculations): js.Any = js.native
-  /* CompleteClass */
-  override def getRootData(): ISurveyData = js.native
-  /* CompleteClass */
-  override def getSharedQuestionFromArray(name: String, panelIndex: Double): Question = js.native
-  /* CompleteClass */
-  override def getSurvey(): ISurvey = js.native
   /* InferMemberOverrides */
   override def getType(): String = js.native
   /**
@@ -298,7 +288,5 @@ class QuestionPanelDynamicModel protected ()
   def removePanelUI(value: js.Any): Unit = js.native
   def renderModeChangedCallback(): Unit = js.native
   /* protected */ def runPanelsCondition(values: HashTable[_], properties: HashTable[_]): Unit = js.native
-  /* CompleteClass */
-  override def setPanelItemData(item: ISurveyData, name: String, `val`: js.Any): js.Any = js.native
 }
 

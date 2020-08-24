@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DisconnectVirtualMachineIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DisconnectVirtualMachineIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DisconnectVirtualMachineIcon")
   @js.native
   object component extends js.Object
   

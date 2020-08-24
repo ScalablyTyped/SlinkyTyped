@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "bezier-easing"
-version := "2.1.0-89fdd7"
-scalaVersion := "2.13.2"
+version := "2.1.0-28a7f3"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

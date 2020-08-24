@@ -11,6 +11,7 @@ object commentsCommentMod extends js.Object {
   @js.native
   class Comment () extends js.Object {
     def this(shortText: String) = this()
+    def this(shortText: js.UndefOr[scala.Nothing], text: String) = this()
     def this(shortText: String, text: String) = this()
     var returns: js.UndefOr[String] = js.native
     var shortText: String = js.native
@@ -21,7 +22,7 @@ object commentsCommentMod extends js.Object {
     def getTag(tagName: String, paramName: String): js.UndefOr[CommentTag] = js.native
     def hasTag(tagName: String): Boolean = js.native
     def hasVisibleComponent(): Boolean = js.native
-    def toObject(): js.Any = js.native
+    def removeTags(tagName: String): Unit = js.native
   }
   
 }

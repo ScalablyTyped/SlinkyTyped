@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class UrlConfig protected ()
   extends typingsSlinky.uirouterCore.mod.UrlConfig {
-  /** @hidden */ def this(/** @hidden */ router: typingsSlinky.uirouterCore.routerMod.UIRouter) = this()
+  /** @internal */ def this(/** @internal */ router: typingsSlinky.uirouterCore.routerMod.UIRouter) = this()
 }
 

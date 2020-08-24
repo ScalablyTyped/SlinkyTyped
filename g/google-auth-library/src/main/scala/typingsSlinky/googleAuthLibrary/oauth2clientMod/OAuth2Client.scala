@@ -3,7 +3,6 @@ package typingsSlinky.googleAuthLibrary.oauth2clientMod
 import typingsSlinky.gaxios.commonMod.GaxiosOptions
 import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.gaxios.commonMod.GaxiosResponse
-import typingsSlinky.googleAuthLibrary.anon.CodeChallenge
 import typingsSlinky.googleAuthLibrary.authclientMod.AuthClient
 import typingsSlinky.googleAuthLibrary.loginticketMod.LoginTicket
 import typingsSlinky.googleAuthLibrary.transportersMod.BodyResponseCallback
@@ -27,7 +26,11 @@ import scala.scalajs.js.annotation._
 class OAuth2Client () extends AuthClient {
   def this(clientId: String) = this()
   def this(options: OAuth2ClientOptions) = this()
+  def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String) = this()
   def this(clientId: String, clientSecret: String) = this()
+  def this(clientId: js.UndefOr[scala.Nothing], clientSecret: js.UndefOr[scala.Nothing], redirectUri: String) = this()
+  def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String, redirectUri: String) = this()
+  def this(clientId: String, clientSecret: js.UndefOr[scala.Nothing], redirectUri: String) = this()
   def this(clientId: String, clientSecret: String, redirectUri: String) = this()
   var _clientId: js.UndefOr[String] = js.native
   var _clientSecret: js.UndefOr[String] = js.native
@@ -36,10 +39,11 @@ class OAuth2Client () extends AuthClient {
   var certificateCacheFormat: js.Any = js.native
   var certificateExpiry: js.Any = js.native
   var eagerRefreshThresholdMillis: Double = js.native
+  var forceRefreshOnFailure: Boolean = js.native
   var getAccessTokenAsync: js.Any = js.native
   var getTokenAsync: js.Any = js.native
   var projectId: js.UndefOr[String] = js.native
-  var redirectUri: js.UndefOr[js.Any] = js.native
+  var redirectUri: js.Any = js.native
   var refreshAccessTokenAsync: js.Any = js.native
   var refreshTokenPromises: Map[String, js.Promise[GetTokenResponse]] = js.native
   var revokeCredentialsAsync: js.Any = js.native
@@ -56,8 +60,11 @@ class OAuth2Client () extends AuthClient {
     * Convenience method to automatically generate a code_verifier, and it's
     * resulting SHA256. If used, this must be paired with a S256
     * code_challenge_method.
+    *
+    * For a full example see:
+    * https://github.com/googleapis/google-auth-library-nodejs/blob/master/samples/oauth2-codeVerifier.js
     */
-  def generateCodeVerifierAsync(): js.Promise[CodeChallenge] = js.native
+  def generateCodeVerifierAsync(): js.Promise[CodeVerifierResults] = js.native
   /**
     * Get a non-expired access token, after refreshing if necessary
     *
@@ -75,6 +82,15 @@ class OAuth2Client () extends AuthClient {
   def getFederatedSignonCerts(callback: GetFederatedSignonCertsCallback): Unit = js.native
   def getFederatedSignonCertsAsync(): js.Promise[FederatedSignonCertsResponse] = js.native
   /**
+    * Gets federated sign-on certificates to use for verifying identity tokens.
+    * Returns certs as array structure, where keys are key ids, and values
+    * are certificates in either PEM or JWK format.
+    * @param callback Callback supplying the certificates
+    */
+  def getIapPublicKeys(): js.Promise[IapPublicKeysResponse] = js.native
+  def getIapPublicKeys(callback: GetIapPublicKeysCallback): Unit = js.native
+  def getIapPublicKeysAsync(): js.Promise[IapPublicKeysResponse] = js.native
+  /**
     * The main authentication interface.  It takes an optional url which when
     * present is the endpoint being accessed, and returns a Promise which
     * resolves with authorization header fields.
@@ -85,17 +101,6 @@ class OAuth2Client () extends AuthClient {
     */
   def getRequestHeaders(): js.Promise[Headers] = js.native
   def getRequestHeaders(url: String): js.Promise[Headers] = js.native
-  /**
-    * Obtain the set of headers required to authenticate a request.
-    *
-    * @deprecated Use getRequestHeaders instead.
-    * @param url the Uri being authorized
-    * @param callback the func described above
-    */
-  def getRequestMetadata(): js.Promise[RequestMetadataResponse] = js.native
-  def getRequestMetadata(url: String): js.Promise[RequestMetadataResponse] = js.native
-  def getRequestMetadata(url: String, callback: RequestMetadataCallback): Unit = js.native
-  def getRequestMetadata(url: Null, callback: RequestMetadataCallback): Unit = js.native
   /* protected */ def getRequestMetadataAsync(): js.Promise[RequestMetadataResponse] = js.native
   /* protected */ def getRequestMetadataAsync(url: String): js.Promise[RequestMetadataResponse] = js.native
   /**
@@ -175,20 +180,60 @@ class OAuth2Client () extends AuthClient {
     * @param maxExpiry The max expiry the certificate can be (Optional).
     * @return Returns a promise resolving to LoginTicket on verification.
     */
-  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates, requiredAudience: String): js.Promise[LoginTicket] = js.native
-  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates, requiredAudience: String, issuers: js.Array[String]): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates | PublicKeys): js.Promise[LoginTicket] = js.native
   def verifySignedJwtWithCertsAsync(
     jwt: String,
-    certs: Certificates,
+    certs: Certificates | PublicKeys,
+    requiredAudience: js.UndefOr[scala.Nothing],
+    issuers: js.UndefOr[scala.Nothing],
+    maxExpiry: Double
+  ): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(
+    jwt: String,
+    certs: Certificates | PublicKeys,
+    requiredAudience: js.UndefOr[scala.Nothing],
+    issuers: js.Array[String]
+  ): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(
+    jwt: String,
+    certs: Certificates | PublicKeys,
+    requiredAudience: js.UndefOr[scala.Nothing],
+    issuers: js.Array[String],
+    maxExpiry: Double
+  ): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates | PublicKeys, requiredAudience: String): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(
+    jwt: String,
+    certs: Certificates | PublicKeys,
+    requiredAudience: String,
+    issuers: js.UndefOr[scala.Nothing],
+    maxExpiry: Double
+  ): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates | PublicKeys, requiredAudience: String, issuers: js.Array[String]): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(
+    jwt: String,
+    certs: Certificates | PublicKeys,
     requiredAudience: String,
     issuers: js.Array[String],
     maxExpiry: Double
   ): js.Promise[LoginTicket] = js.native
-  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates, requiredAudience: js.Array[String]): js.Promise[LoginTicket] = js.native
-  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates, requiredAudience: js.Array[String], issuers: js.Array[String]): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(jwt: String, certs: Certificates | PublicKeys, requiredAudience: js.Array[String]): js.Promise[LoginTicket] = js.native
   def verifySignedJwtWithCertsAsync(
     jwt: String,
-    certs: Certificates,
+    certs: Certificates | PublicKeys,
+    requiredAudience: js.Array[String],
+    issuers: js.UndefOr[scala.Nothing],
+    maxExpiry: Double
+  ): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(
+    jwt: String,
+    certs: Certificates | PublicKeys,
+    requiredAudience: js.Array[String],
+    issuers: js.Array[String]
+  ): js.Promise[LoginTicket] = js.native
+  def verifySignedJwtWithCertsAsync(
+    jwt: String,
+    certs: Certificates | PublicKeys,
     requiredAudience: js.Array[String],
     issuers: js.Array[String],
     maxExpiry: Double
@@ -215,6 +260,10 @@ object OAuth2Client extends js.Object {
     * Google Sign on certificates in PEM format.
     */
   val GOOGLE_OAUTH2_FEDERATED_SIGNON_PEM_CERTS_URL_ : js.Any = js.native
+  /**
+    * Google Sign on certificates in JWK format.
+    */
+  val GOOGLE_OAUTH2_IAP_PUBLIC_KEY_URL_ : js.Any = js.native
   /**
     * The base endpoint to revoke tokens.
     */

@@ -1,6 +1,7 @@
 
 # Scala.js typings for weighted
 
+Typings are for version 0.3
 
 ## Library description:
 A dead-simple module for picking a random item with weights.

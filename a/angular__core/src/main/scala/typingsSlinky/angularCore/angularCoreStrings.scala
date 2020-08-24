@@ -1,8 +1,8 @@
 package typingsSlinky.angularCore
 
 import typingsSlinky.angularCore.helpersMod.HelperFunction
-import typingsSlinky.angularCore.mod.BypassType
 import typingsSlinky.angularCore.mod.GlobalTargetName
+import typingsSlinky.angularCore.mod.ɵBypassType
 import typingsSlinky.angularCore.propertyNameMod.PropertyNameWithText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,25 +28,25 @@ object angularCoreStrings {
   sealed trait ContentQueries extends js.Object
   
   @js.native
-  sealed trait ExportAs extends js.Object
-  
-  @js.native
-  sealed trait Html extends BypassType
+  sealed trait HTML extends ɵBypassType
   
   @js.native
   sealed trait NO_CHANGE extends js.Object
   
   @js.native
-  sealed trait ResourceUrl extends BypassType
+  sealed trait ResourceURL extends ɵBypassType
   
   @js.native
-  sealed trait Script extends BypassType
+  sealed trait Script extends ɵBypassType
   
   @js.native
-  sealed trait Style extends BypassType
+  sealed trait Style extends ɵBypassType
   
   @js.native
-  sealed trait Url extends BypassType
+  sealed trait TStylingRange extends js.Object
+  
+  @js.native
+  sealed trait URL extends ɵBypassType
   
   @js.native
   sealed trait __ngRendererAnimateHelper extends HelperFunction
@@ -82,6 +82,9 @@ object angularCoreStrings {
   sealed trait any extends js.Object
   
   @js.native
+  sealed trait `array-map` extends js.Object
+  
+  @js.native
   sealed trait body extends GlobalTargetName
   
   @js.native
@@ -109,6 +112,9 @@ object angularCoreStrings {
   sealed trait originalKeywordKind extends PropertyNameWithText
   
   @js.native
+  sealed trait platform extends js.Object
+  
+  @js.native
   sealed trait root extends js.Object
   
   @js.native
@@ -121,7 +127,7 @@ object angularCoreStrings {
   sealed trait zoneDotjs extends js.Object
   
   @js.native
-  sealed trait ɵɵBaseDef extends js.Object
+  sealed trait ɵDirectiveDef extends js.Object
   
   @scala.inline
   def AnyDuringRendererMigration: AnyDuringRendererMigration = "AnyDuringRendererMigration".asInstanceOf[AnyDuringRendererMigration]
@@ -136,19 +142,19 @@ object angularCoreStrings {
   @scala.inline
   def ContentQueries: ContentQueries = "ContentQueries".asInstanceOf[ContentQueries]
   @scala.inline
-  def ExportAs: ExportAs = "ExportAs".asInstanceOf[ExportAs]
-  @scala.inline
-  def Html: Html = "Html".asInstanceOf[Html]
+  def HTML: HTML = "HTML".asInstanceOf[HTML]
   @scala.inline
   def NO_CHANGE: NO_CHANGE = "NO_CHANGE".asInstanceOf[NO_CHANGE]
   @scala.inline
-  def ResourceUrl: ResourceUrl = "ResourceUrl".asInstanceOf[ResourceUrl]
+  def ResourceURL: ResourceURL = "ResourceURL".asInstanceOf[ResourceURL]
   @scala.inline
   def Script: Script = "Script".asInstanceOf[Script]
   @scala.inline
   def Style: Style = "Style".asInstanceOf[Style]
   @scala.inline
-  def Url: Url = "Url".asInstanceOf[Url]
+  def TStylingRange: TStylingRange = "TStylingRange".asInstanceOf[TStylingRange]
+  @scala.inline
+  def URL: URL = "URL".asInstanceOf[URL]
   @scala.inline
   def __ngRendererAnimateHelper: __ngRendererAnimateHelper = "__ngRendererAnimateHelper".asInstanceOf[__ngRendererAnimateHelper]
   @scala.inline
@@ -172,6 +178,8 @@ object angularCoreStrings {
   @scala.inline
   def any: any = "any".asInstanceOf[any]
   @scala.inline
+  def `array-map`: `array-map` = "array-map".asInstanceOf[`array-map`]
+  @scala.inline
   def body: body = "body".asInstanceOf[body]
   @scala.inline
   def comment: comment = "comment".asInstanceOf[comment]
@@ -190,6 +198,8 @@ object angularCoreStrings {
   @scala.inline
   def originalKeywordKind: originalKeywordKind = "originalKeywordKind".asInstanceOf[originalKeywordKind]
   @scala.inline
+  def platform: platform = "platform".asInstanceOf[platform]
+  @scala.inline
   def root: root = "root".asInstanceOf[root]
   @scala.inline
   def text: text = "text".asInstanceOf[text]
@@ -198,6 +208,6 @@ object angularCoreStrings {
   @scala.inline
   def zoneDotjs: zoneDotjs = "zone.js".asInstanceOf[zoneDotjs]
   @scala.inline
-  def ɵɵBaseDef: ɵɵBaseDef = "\u0275\u0275BaseDef".asInstanceOf[ɵɵBaseDef]
+  def ɵDirectiveDef: ɵDirectiveDef = "\u0275DirectiveDef".asInstanceOf[ɵDirectiveDef]
 }
 

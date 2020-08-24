@@ -54,95 +54,40 @@ object ViewParent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBringChildToFront(value: View => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bringChildToFront")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withChildDrawableStateChanged(value: View => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childDrawableStateChanged")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setBringChildToFront(value: View => js.Any): Self = this.set("bringChildToFront", js.Any.fromFunction1(value))
     @scala.inline
-    def withChildHasTransientStateChanged(value: (View, Boolean) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childHasTransientStateChanged")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setChildDrawableStateChanged(value: View => js.Any): Self = this.set("childDrawableStateChanged", js.Any.fromFunction1(value))
     @scala.inline
-    def withClearChildFocus(value: View => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearChildFocus")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setChildHasTransientStateChanged(value: (View, Boolean) => js.Any): Self = this.set("childHasTransientStateChanged", js.Any.fromFunction2(value))
     @scala.inline
-    def withFocusSearch(value: (View, Double) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusSearch")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setClearChildFocus(value: View => js.Any): Self = this.set("clearChildFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def withFocusableViewAvailable(value: View => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusableViewAvailable")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setFocusSearch(value: (View, Double) => View): Self = this.set("focusSearch", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetChildVisibleRect(value: (View, Rect, Point) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildVisibleRect")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setFocusableViewAvailable(value: View => js.Any): Self = this.set("focusableViewAvailable", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetParent(value: () => ViewParent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParent")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetChildVisibleRect(value: (View, Rect, Point) => Boolean): Self = this.set("getChildVisibleRect", js.Any.fromFunction3(value))
     @scala.inline
-    def withInvalidateChild(value: (View, Rect) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidateChild")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetParent(value: () => ViewParent): Self = this.set("getParent", js.Any.fromFunction0(value))
     @scala.inline
-    def withInvalidateChildInParent(value: (js.Array[Double], Rect) => ViewParent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidateChildInParent")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setInvalidateChild(value: (View, Rect) => js.Any): Self = this.set("invalidateChild", js.Any.fromFunction2(value))
     @scala.inline
-    def withIsLayoutRequested(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLayoutRequested")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInvalidateChildInParent(value: (js.Array[Double], Rect) => ViewParent): Self = this.set("invalidateChildInParent", js.Any.fromFunction2(value))
     @scala.inline
-    def withRequestChildFocus(value: (View, View) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestChildFocus")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setIsLayoutRequested(value: () => Boolean): Self = this.set("isLayoutRequested", js.Any.fromFunction0(value))
     @scala.inline
-    def withRequestChildRectangleOnScreen(value: (View, Rect, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestChildRectangleOnScreen")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setRequestChildFocus(value: (View, View) => js.Any): Self = this.set("requestChildFocus", js.Any.fromFunction2(value))
     @scala.inline
-    def withRequestDisallowInterceptTouchEvent(value: Boolean => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestDisallowInterceptTouchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRequestChildRectangleOnScreen(value: (View, Rect, Boolean) => Boolean): Self = this.set("requestChildRectangleOnScreen", js.Any.fromFunction3(value))
     @scala.inline
-    def withRequestLayout(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestLayout")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setRequestDisallowInterceptTouchEvent(value: Boolean => js.Any): Self = this.set("requestDisallowInterceptTouchEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRequestLayout(value: () => js.Any): Self = this.set("requestLayout", js.Any.fromFunction0(value))
   }
   
 }

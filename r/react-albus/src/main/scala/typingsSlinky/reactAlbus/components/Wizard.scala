@@ -1,6 +1,6 @@
 package typingsSlinky.reactAlbus.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.History
@@ -19,7 +19,7 @@ object Wizard {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactAlbus.mod.Wizard] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def basename(value: String): this.type = set("basename", value.asInstanceOf[js.Any])
     @scala.inline
@@ -27,7 +27,7 @@ object Wizard {
     @scala.inline
     def onNext(value: /* wizard */ WizardContext => Unit): this.type = set("onNext", js.Any.fromFunction1(value))
     @scala.inline
-    def render(value: /* wizard */ WizardContext => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: /* wizard */ WizardContext => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
   }
   
   def withProps(p: WizardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

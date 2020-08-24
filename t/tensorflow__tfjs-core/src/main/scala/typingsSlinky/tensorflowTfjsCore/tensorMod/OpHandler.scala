@@ -5,31 +5,15 @@ import typingsSlinky.tensorflowTfjsCore.anon.Indices
 import typingsSlinky.tensorflowTfjsCore.anon.ResizeBilinear
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R2
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R3
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R4
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike1D
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike3D
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike4D
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCW
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NHWC
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NWC
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.avg
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bool
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.ceil
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.complex64
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.euclidean
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.floor
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.fro
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.max
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.round
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.string
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,23 +36,7 @@ trait OpHandler extends js.Object {
   def asin[T /* <: Tensor[Rank] */](x: T): T = js.native
   def asinh[T /* <: Tensor[Rank] */](x: T): T = js.native
   def atan[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def atan2[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def atan2[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def atanh[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def avgPool(
-    x: Tensor[R3 | R4],
-    filterSize: Double | (js.Tuple2[Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_
-  ): Tensor[R3] = js.native
-  def avgPool(
-    x: Tensor[R3 | R4],
-    filterSize: Double | (js.Tuple2[Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dimRoundingMode: ceil | floor | round
-  ): Tensor[R3] = js.native
-  def batchToSpaceND[T /* <: Tensor[Rank] */](x: T, blockShape: js.Array[Double], crops: js.Array[js.Array[Double]]): T = js.native
   @JSName("buffer")
   def buffer_bool[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
@@ -128,84 +96,10 @@ trait OpHandler extends js.Object {
   def ceil[T /* <: Tensor[Rank] */](x: T): T = js.native
   def clipByValue[T /* <: Tensor[Rank] */](x: T, clipValueMin: Double, clipValueMax: Double): T = js.native
   def clone[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def concat[T /* <: Tensor[Rank] */](tensors: js.Array[T | TensorLike], axis: Double): T = js.native
-  def conv1d(
-    x: Tensor[R2 | R3],
-    filter: Tensor3D | TensorLike3D,
-    stride: Double,
-    pad: Double | same_ | valid_,
-    dataFormat: NCW | NWC,
-    dilation: Double
-  ): Tensor[R2] = js.native
-  def conv1d(
-    x: Tensor[R2 | R3],
-    filter: Tensor3D | TensorLike3D,
-    stride: Double,
-    pad: Double | same_ | valid_,
-    dataFormat: NCW | NWC,
-    dilation: Double,
-    dimRoundingMode: ceil | floor | round
-  ): Tensor[R2] = js.native
-  def conv2d(
-    x: Tensor[R3 | R4],
-    filter: Tensor4D | TensorLike4D,
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dataFormat: NCHW | NHWC,
-    dilations: Double | (js.Tuple2[Double, Double])
-  ): Tensor[R3] = js.native
-  def conv2d(
-    x: Tensor[R3 | R4],
-    filter: Tensor4D | TensorLike4D,
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dataFormat: NCHW | NHWC,
-    dilations: Double | (js.Tuple2[Double, Double]),
-    dimRoundingMode: ceil | floor | round
-  ): Tensor[R3] = js.native
-  def conv2dTranspose(
-    x: Tensor[R3 | R4],
-    filter: Tensor4D | TensorLike4D,
-    outputShape: (js.Tuple3[Double, Double, Double]) | (js.Tuple4[Double, Double, Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_
-  ): Tensor[R3] = js.native
-  def conv2dTranspose(
-    x: Tensor[R3 | R4],
-    filter: Tensor4D | TensorLike4D,
-    outputShape: (js.Tuple3[Double, Double, Double]) | (js.Tuple4[Double, Double, Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dimRoundingMode: ceil | floor | round
-  ): Tensor[R3] = js.native
   def cos[T /* <: Tensor[Rank] */](x: T): T = js.native
   def cosh[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def cumsum[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: Double, exclusive: Boolean, reverse: Boolean): T = js.native
-  def depthToSpace(x: Tensor4D, blockSize: Double, dataFormat: String): Tensor4D = js.native
-  def depthwiseConv2d(
-    x: Tensor[R3 | R4],
-    filter: Tensor4D | TensorLike4D,
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dataFormat: NCHW | NHWC,
-    dilations: Double | (js.Tuple2[Double, Double])
-  ): Tensor[R3] = js.native
-  def depthwiseConv2d(
-    x: Tensor[R3 | R4],
-    filter: Tensor4D | TensorLike4D,
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dataFormat: NCHW | NHWC,
-    dilations: Double | (js.Tuple2[Double, Double]),
-    dimRoundingMode: ceil | floor | round
-  ): Tensor[R3] = js.native
   def divStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def divStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
-  def dot(t1: Tensor[Rank], t2: TensorLike): Tensor[Rank] = js.native
-  def dot(t1: Tensor[Rank], t2: Tensor[Rank]): Tensor[Rank] = js.native
-  def elu[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def equal[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def equal[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def equalStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def equalStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def erf[T /* <: Tensor[Rank] */](x: T): T = js.native
@@ -213,14 +107,8 @@ trait OpHandler extends js.Object {
   def expandDims[R2 /* <: Rank */](x: Tensor[Rank], axis: Double): Tensor[R2] = js.native
   def expm1[T /* <: Tensor[Rank] */](x: T): T = js.native
   def floor[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def floorDiv[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def floorDiv[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def gather[T /* <: Tensor[Rank] */](x: T, indices: TensorLike, axis: Double): T = js.native
   def gather[T /* <: Tensor[Rank] */](x: T, indices: Tensor[Rank], axis: Double): T = js.native
-  def greater[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def greater[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
-  def greaterEqual[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def greaterEqual[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def greaterEqualStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def greaterEqualStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def greaterStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
@@ -228,16 +116,10 @@ trait OpHandler extends js.Object {
   def isFinite[T /* <: Tensor[Rank] */](x: T): T = js.native
   def isInf[T /* <: Tensor[Rank] */](x: T): T = js.native
   def isNaN[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def leakyRelu[T /* <: Tensor[Rank] */](x: T, alpha: Double): T = js.native
-  def less[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def less[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
-  def lessEqual[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def lessEqual[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def lessEqualStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def lessEqualStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def lessStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def lessStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
-  def localResponseNormalization(x: Tensor[R3 | R4], depthRadius: Double, bias: Double, alpha: Double, beta: Double): Tensor[R3] = js.native
   def log[T /* <: Tensor[Rank] */](x: T): T = js.native
   def log1p[T /* <: Tensor[Rank] */](x: T): T = js.native
   def logSigmoid[T /* <: Tensor[Rank] */](x: T): T = js.native
@@ -251,41 +133,16 @@ trait OpHandler extends js.Object {
   def logicalOr[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def logicalXor[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
   def logicalXor[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
-  def matMul[T /* <: Tensor[Rank] */](a: T, b: T, transposeA: Boolean, transposeB: Boolean): T = js.native
-  def matMul[T /* <: Tensor[Rank] */](a: T, b: TensorLike, transposeA: Boolean, transposeB: Boolean): T = js.native
-  def max[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: js.Array[Double], keepDims: Boolean): T = js.native
-  def max[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: Double, keepDims: Boolean): T = js.native
-  def maxPool(
-    x: Tensor[R3 | R4],
-    filterSize: Double | (js.Tuple2[Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_
-  ): Tensor[R3] = js.native
-  def maxPool(
-    x: Tensor[R3 | R4],
-    filterSize: Double | (js.Tuple2[Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double]),
-    pad: Double | same_ | valid_,
-    dimRoundingMode: ceil | floor | round
-  ): Tensor[R3] = js.native
-  def maximum[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def maximum[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def maximumStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def maximumStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def mean[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: js.Array[Double], keepDims: Boolean): T = js.native
   def mean[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: Double, keepDims: Boolean): T = js.native
   def min[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: js.Array[Double], keepDims: Boolean): T = js.native
   def min[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: Double, keepDims: Boolean): T = js.native
-  def minimum[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def minimum[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def minimumStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def minimumStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
-  def mod[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def mod[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def modStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def modStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
-  def mul[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def mul[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def mulStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def mulStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def neg[T /* <: Tensor[Rank] */](x: T): T = js.native
@@ -299,44 +156,15 @@ trait OpHandler extends js.Object {
   def norm_fro(x: Tensor[Rank], ord: fro, axis: js.Array[Double], keepDims: Boolean): Tensor[Rank] = js.native
   @JSName("norm")
   def norm_fro(x: Tensor[Rank], ord: fro, axis: Double, keepDims: Boolean): Tensor[Rank] = js.native
-  def notEqual[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def notEqual[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def notEqualStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def notEqualStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def onesLike[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def pool(
-    input: Tensor[R3 | R4],
-    windowShape: Double | (js.Tuple2[Double, Double]),
-    poolingType: avg | max,
-    padding: Double | same_ | valid_
-  ): Tensor[R3] = js.native
-  def pool(
-    input: Tensor[R3 | R4],
-    windowShape: Double | (js.Tuple2[Double, Double]),
-    poolingType: avg | max,
-    padding: Double | same_ | valid_,
-    diationRate: Double | (js.Tuple2[Double, Double])
-  ): Tensor[R3] = js.native
-  def pool(
-    input: Tensor[R3 | R4],
-    windowShape: Double | (js.Tuple2[Double, Double]),
-    poolingType: avg | max,
-    padding: Double | same_ | valid_,
-    diationRate: Double | (js.Tuple2[Double, Double]),
-    strides: Double | (js.Tuple2[Double, Double])
-  ): Tensor[R3] = js.native
-  def pow[T /* <: Tensor[Rank] */](base: T, exp: TensorLike): T = js.native
-  def pow[T /* <: Tensor[Rank] */](base: T, exp: Tensor[Rank]): T = js.native
   def powStrict[T /* <: Tensor[Rank] */](base: T, exp: TensorLike): T = js.native
   def powStrict[T /* <: Tensor[Rank] */](base: T, exp: Tensor[Rank]): T = js.native
-  def prelu[T /* <: Tensor[Rank] */](x: T, alpha: T): T = js.native
-  def prelu[T /* <: Tensor[Rank] */](x: T, alpha: TensorLike): T = js.native
   def print[T /* <: Tensor[Rank] */](x: T, verbose: Boolean): Unit = js.native
   def prod[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: js.Array[Double], keepDims: Boolean): T = js.native
   def prod[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: Double, keepDims: Boolean): T = js.native
   def reciprocal[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def relu[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def relu6[T /* <: Tensor[Rank] */](x: T): T = js.native
   def reshape[R2 /* <: Rank */](
     x: Tensor[Rank],
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R2] */ js.Any
@@ -346,16 +174,6 @@ trait OpHandler extends js.Object {
   def reverse[T /* <: Tensor[Rank] */](x: T, axis: Double): T = js.native
   def round[T /* <: Tensor[Rank] */](x: T): T = js.native
   def rsqrt[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def selu[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def separableConv2d[T /* <: Tensor3D | Tensor4D */](
-    x: T | TensorLike,
-    depthwiseFilter: Tensor4D | TensorLike4D,
-    pointwiseFilter: Tensor4D | TensorLike,
-    strides: (js.Tuple2[Double, Double]) | Double,
-    pad: valid_ | same_,
-    dilation: (js.Tuple2[Double, Double]) | Double,
-    dataFormat: NHWC | NCHW
-  ): T = js.native
   def sigmoid[T /* <: Tensor[Rank] */](x: T): T = js.native
   def sign[T /* <: Tensor[Rank] */](x: T): T = js.native
   def sin[T /* <: Tensor[Rank] */](x: T): T = js.native
@@ -368,11 +186,6 @@ trait OpHandler extends js.Object {
   def slice[R /* <: Rank */, T /* <: Tensor[R] */](x: T, begin: Double, size: Double): T = js.native
   def softmax[T /* <: Tensor[Rank] */](logits: T, dim: Double): T = js.native
   def softplus[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def spaceToBatchND[T /* <: Tensor[Rank] */](x: T, blockShape: js.Array[Double], paddings: js.Array[js.Array[Double]]): T = js.native
-  def split[T /* <: Tensor[Rank] */](x: T, numOrSizeSplits: js.Array[Double]): js.Array[T] = js.native
-  def split[T /* <: Tensor[Rank] */](x: T, numOrSizeSplits: js.Array[Double], axis: Double): js.Array[T] = js.native
-  def split[T /* <: Tensor[Rank] */](x: T, numOrSizeSplits: Double): js.Array[T] = js.native
-  def split[T /* <: Tensor[Rank] */](x: T, numOrSizeSplits: Double, axis: Double): js.Array[T] = js.native
   def sqrt[T /* <: Tensor[Rank] */](x: T): T = js.native
   def square[T /* <: Tensor[Rank] */](x: T): T = js.native
   def squaredDifferenceStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
@@ -392,8 +205,6 @@ trait OpHandler extends js.Object {
     newAxisMask: Double,
     shrinkAxisMask: Double
   ): Tensor[Rank] = js.native
-  def sub[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def sub[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def subStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def subStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def sum[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: js.Array[Double], keepDims: Boolean): T = js.native

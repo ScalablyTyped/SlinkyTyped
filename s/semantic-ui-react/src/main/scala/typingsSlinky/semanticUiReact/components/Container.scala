@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Container {
-  @JSImport("semantic-ui-react/dist/commonjs/elements/Container", JSImport.Default)
+  @JSImport("semantic-ui-react", "Container")
   @js.native
   object component extends js.Object
   

@@ -22,11 +22,12 @@ object OnLongClickListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnLongClick(value: typingsSlinky.androiduix.android.view.View => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongClick")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnLongClick(value: typingsSlinky.androiduix.android.view.View => Boolean): Self = this.set("onLongClick", js.Any.fromFunction1(value))
   }
   
 }

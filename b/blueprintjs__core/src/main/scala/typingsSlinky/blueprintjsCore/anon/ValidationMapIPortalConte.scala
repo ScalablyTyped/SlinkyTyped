@@ -1,21 +1,41 @@
 package typingsSlinky.blueprintjsCore.anon
 
-import typingsSlinky.propTypes.mod.Validator
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.blueprintjsCore.contextMod.Validator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined prop-types.prop-types.ValidationMap<@blueprintjs/core.@blueprintjs/core/lib/esm/components/portal/portal.IPortalContext> */
+/* Inlined @blueprintjs/core.@blueprintjs/core/lib/esm/common/context.ValidationMap<@blueprintjs/core.@blueprintjs/core/lib/esm/components/portal/portal.IPortalContext> */
+@js.native
 trait ValidationMapIPortalConte extends js.Object {
-  var blueprintPortalClassName: js.UndefOr[Validator[js.UndefOr[String]]] = js.undefined
+  var blueprintPortalClassName: js.UndefOr[Validator] = js.native
 }
 
 object ValidationMapIPortalConte {
   @scala.inline
-  def apply(blueprintPortalClassName: Validator[js.UndefOr[String]] = null): ValidationMapIPortalConte = {
+  def apply(): ValidationMapIPortalConte = {
     val __obj = js.Dynamic.literal()
-    if (blueprintPortalClassName != null) __obj.updateDynamic("blueprintPortalClassName")(blueprintPortalClassName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidationMapIPortalConte]
   }
+  @scala.inline
+  implicit class ValidationMapIPortalConteOps[Self <: ValidationMapIPortalConte] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBlueprintPortalClassName(
+      value: (/* props */ StringDictionary[js.Any], /* propName */ String, /* componentName */ String, /* location */ String, /* propFullName */ String) => js.Error | Null
+    ): Self = this.set("blueprintPortalClassName", js.Any.fromFunction5(value))
+    @scala.inline
+    def deleteBlueprintPortalClassName: Self = this.set("blueprintPortalClassName", js.undefined)
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.reactWow.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactWow.mod.ReactWOWProps
@@ -30,6 +31,8 @@ object ReactWow {
     @scala.inline
     def iteration(value: String): this.type = set("iteration", value.asInstanceOf[js.Any])
     @scala.inline
+    def offsetVarargs(value: Double*): this.type = set("offset", js.Array(value :_*))
+    @scala.inline
     def offset(value: Double | js.Array[Double]): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def overflow(value: Boolean): this.type = set("overflow", value.asInstanceOf[js.Any])
@@ -42,9 +45,10 @@ object ReactWow {
   def withProps(p: ReactWOWProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
-    animation: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 76 */ js.Any
+    animation: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 76 */ js.Any,
+    children: ReactElement
   ): Builder = {
-    val __props = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ReactWOWProps]))
   }
 }

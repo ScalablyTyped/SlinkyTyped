@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet/components/Chart", "Chart")
+@JSImport("grommet/es6/components/Chart", "Chart")
 @js.native
 class Chart protected ()
   extends Component[ChartProps, js.Object, js.Any] {
@@ -15,7 +15,7 @@ class Chart protected ()
   def this(props: ChartProps, context: js.Any) = this()
 }
 
-@JSImport("grommet/components/Chart", "Chart")
+@JSImport("grommet/es6/components/Chart", "Chart")
 @js.native
 object Chart extends TopLevel[ReactComponentClass[ChartProps]]
 

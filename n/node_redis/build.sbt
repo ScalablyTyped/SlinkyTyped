@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "node_redis"
-version := "0.8-dt-20200515Z-58ebbe"
-scalaVersion := "2.13.2"
+version := "0.8-dt-20200515Z-cfc851"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

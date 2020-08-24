@@ -10,11 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDynamicLookUpValuesLoadedEventArgs")
 @js.native
 class ASPxClientDynamicLookUpValuesLoadedEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDynamicLookUpValuesLoadedEventArgs {
-  /**
-    * Gets the dashboard parameter name whose values have been loaded.
-    */
-  /* CompleteClass */
-  override var ParameterName: String = js.native
-}
+  extends typingsSlinky.devexpressWeb.ASPxClientDynamicLookUpValuesLoadedEventArgs
 

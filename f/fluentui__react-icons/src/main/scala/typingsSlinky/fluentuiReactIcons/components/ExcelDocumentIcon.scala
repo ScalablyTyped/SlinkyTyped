@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ExcelDocumentIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ExcelDocumentIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ExcelDocumentIcon")
   @js.native
   object component extends js.Object
   

@@ -2,7 +2,7 @@ package typingsSlinky.materialIconButton
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.materialIconButton.adapterMod.MDCIconButtonToggleAdapter
-import typingsSlinky.materialIconButton.anon.ARIAPRESSED
+import typingsSlinky.materialIconButton.anon.ARIALABEL
 import typingsSlinky.materialIconButton.anon.ICONBUTTONON
 import typingsSlinky.materialIconButton.anon.PartialMDCIconButtonToggl
 import scala.scalajs.js
@@ -31,9 +31,9 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object MDCIconButtonToggleFoundation extends js.Object {
-    val cssClasses: ICONBUTTONON = js.native
-    val defaultAdapter: MDCIconButtonToggleAdapter = js.native
-    val strings: ARIAPRESSED = js.native
+    def cssClasses: ICONBUTTONON = js.native
+    def defaultAdapter: MDCIconButtonToggleAdapter = js.native
+    def strings: ARIALABEL = js.native
   }
   
   @js.native
@@ -44,8 +44,11 @@ object mod extends js.Object {
   
   @js.native
   object strings extends js.Object {
+    var ARIA_LABEL: String = js.native
     var ARIA_PRESSED: String = js.native
     var CHANGE_EVENT: String = js.native
+    var DATA_ARIA_LABEL_OFF: String = js.native
+    var DATA_ARIA_LABEL_ON: String = js.native
   }
   
 }

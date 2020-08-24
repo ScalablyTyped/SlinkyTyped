@@ -1,5 +1,9 @@
 package typingsSlinky.awsSdk.elasticbeanstalkMod
 
+import typingsSlinky.awsSdk.anon.DescribeEnvironmentsMessa
+import typingsSlinky.awsSdk.awsSdkStrings.environmentExists
+import typingsSlinky.awsSdk.awsSdkStrings.environmentTerminated
+import typingsSlinky.awsSdk.awsSdkStrings.environmentUpdated
 import typingsSlinky.awsSdk.configMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
@@ -38,6 +42,19 @@ trait ElasticBeanstalk extends Service {
     params: ApplyEnvironmentManagedActionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ApplyEnvironmentManagedActionResult, Unit]
   ): Request[ApplyEnvironmentManagedActionResult, AWSError] = js.native
+  /**
+    * Add or change the operations role used by an environment. After this call is made, Elastic Beanstalk uses the associated operations role for permissions to downstream services during subsequent calls acting on this environment. For more information, see Operations roles in the AWS Elastic Beanstalk Developer Guide.
+    */
+  def associateEnvironmentOperationsRole(): Request[js.Object, AWSError] = js.native
+  def associateEnvironmentOperationsRole(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Add or change the operations role used by an environment. After this call is made, Elastic Beanstalk uses the associated operations role for permissions to downstream services during subsequent calls acting on this environment. For more information, see Operations roles in the AWS Elastic Beanstalk Developer Guide.
+    */
+  def associateEnvironmentOperationsRole(params: AssociateEnvironmentOperationsRoleMessage): Request[js.Object, AWSError] = js.native
+  def associateEnvironmentOperationsRole(
+    params: AssociateEnvironmentOperationsRoleMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
   /**
     * Checks if the specified CNAME is available.
     */
@@ -367,6 +384,19 @@ trait ElasticBeanstalk extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribePlatformVersionResult, Unit]
   ): Request[DescribePlatformVersionResult, AWSError] = js.native
   /**
+    * Disassociate the operations role from an environment. After this call is made, Elastic Beanstalk uses the caller's permissions for permissions to downstream services during subsequent calls acting on this environment. For more information, see Operations roles in the AWS Elastic Beanstalk Developer Guide.
+    */
+  def disassociateEnvironmentOperationsRole(): Request[js.Object, AWSError] = js.native
+  def disassociateEnvironmentOperationsRole(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Disassociate the operations role from an environment. After this call is made, Elastic Beanstalk uses the caller's permissions for permissions to downstream services during subsequent calls acting on this environment. For more information, see Operations roles in the AWS Elastic Beanstalk Developer Guide.
+    */
+  def disassociateEnvironmentOperationsRole(params: DisassociateEnvironmentOperationsRoleMessage): Request[js.Object, AWSError] = js.native
+  def disassociateEnvironmentOperationsRole(
+    params: DisassociateEnvironmentOperationsRoleMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  /**
     * Returns a list of the available solution stack names, with the public version first and then in reverse chronological order.
     */
   def listAvailableSolutionStacks(): Request[ListAvailableSolutionStacksResultMessage, AWSError] = js.native
@@ -585,5 +615,68 @@ trait ElasticBeanstalk extends Service {
     params: ValidateConfigurationSettingsMessage,
     callback: js.Function2[/* err */ AWSError, /* data */ ConfigurationSettingsValidationMessages, Unit]
   ): Request[ConfigurationSettingsValidationMessages, AWSError] = js.native
+  /**
+    * Waits for the environmentExists state by periodically calling the underlying ElasticBeanstalk.describeEnvironmentsoperation every 20 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_environmentExists(state: environmentExists): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_environmentExists(
+    state: environmentExists,
+    callback: js.Function2[/* err */ AWSError, /* data */ EnvironmentDescriptionsMessage, Unit]
+  ): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  /**
+    * Waits for the environmentExists state by periodically calling the underlying ElasticBeanstalk.describeEnvironmentsoperation every 20 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_environmentExists(state: environmentExists, params: DescribeEnvironmentsMessa): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_environmentExists(
+    state: environmentExists,
+    params: DescribeEnvironmentsMessa,
+    callback: js.Function2[/* err */ AWSError, /* data */ EnvironmentDescriptionsMessage, Unit]
+  ): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  /**
+    * Waits for the environmentTerminated state by periodically calling the underlying ElasticBeanstalk.describeEnvironmentsoperation every 20 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_environmentTerminated(state: environmentTerminated): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_environmentTerminated(
+    state: environmentTerminated,
+    callback: js.Function2[/* err */ AWSError, /* data */ EnvironmentDescriptionsMessage, Unit]
+  ): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  /**
+    * Waits for the environmentTerminated state by periodically calling the underlying ElasticBeanstalk.describeEnvironmentsoperation every 20 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_environmentTerminated(state: environmentTerminated, params: DescribeEnvironmentsMessa): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_environmentTerminated(
+    state: environmentTerminated,
+    params: DescribeEnvironmentsMessa,
+    callback: js.Function2[/* err */ AWSError, /* data */ EnvironmentDescriptionsMessage, Unit]
+  ): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  /**
+    * Waits for the environmentUpdated state by periodically calling the underlying ElasticBeanstalk.describeEnvironmentsoperation every 20 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_environmentUpdated(state: environmentUpdated): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_environmentUpdated(
+    state: environmentUpdated,
+    callback: js.Function2[/* err */ AWSError, /* data */ EnvironmentDescriptionsMessage, Unit]
+  ): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  /**
+    * Waits for the environmentUpdated state by periodically calling the underlying ElasticBeanstalk.describeEnvironmentsoperation every 20 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_environmentUpdated(state: environmentUpdated, params: DescribeEnvironmentsMessa): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_environmentUpdated(
+    state: environmentUpdated,
+    params: DescribeEnvironmentsMessa,
+    callback: js.Function2[/* err */ AWSError, /* data */ EnvironmentDescriptionsMessage, Unit]
+  ): Request[EnvironmentDescriptionsMessage, AWSError] = js.native
 }
 

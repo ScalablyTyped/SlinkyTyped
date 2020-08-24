@@ -7,7 +7,6 @@ import typingsSlinky.baseui.accordionMod.PanelOverrides
 import typingsSlinky.baseui.accordionMod.SharedProps
 import typingsSlinky.baseui.accordionMod.StatelessAccordionProps
 import typingsSlinky.baseui.anon.Key
-import typingsSlinky.baseui.anon.SharedPropsexpandednever
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +27,7 @@ object StatelessAccordion {
     @scala.inline
     def onChange(value: /* args */ Key => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def overrides(value: AccordionOverrides[SharedPropsexpandednever] with PanelOverrides[SharedProps]): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: AccordionOverrides[SharedProps] with PanelOverrides[SharedProps]): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
     @scala.inline

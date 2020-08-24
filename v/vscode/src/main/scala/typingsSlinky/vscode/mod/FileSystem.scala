@@ -1,8 +1,8 @@
 package typingsSlinky.vscode.mod
 
 import typingsSlinky.vscode.Thenable
-import typingsSlinky.vscode.anon.OverwriteBoolean
 import typingsSlinky.vscode.anon.UseTrash
+import typingsSlinky.vscode.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait FileSystem extends js.Object {
     * @param options Defines if existing files should be overwritten.
     */
   def copy(source: Uri, target: Uri): Thenable[Unit] = js.native
-  def copy(source: Uri, target: Uri, options: OverwriteBoolean): Thenable[Unit] = js.native
+  def copy(source: Uri, target: Uri, options: `0`): Thenable[Unit] = js.native
   /**
     * Create a new directory (Note, that new files are created via `write`-calls).
     *
@@ -57,7 +57,7 @@ trait FileSystem extends js.Object {
     * @param options Defines if existing files should be overwritten.
     */
   def rename(source: Uri, target: Uri): Thenable[Unit] = js.native
-  def rename(source: Uri, target: Uri, options: OverwriteBoolean): Thenable[Unit] = js.native
+  def rename(source: Uri, target: Uri, options: `0`): Thenable[Unit] = js.native
   /**
     * Retrieve metadata about a file.
     *

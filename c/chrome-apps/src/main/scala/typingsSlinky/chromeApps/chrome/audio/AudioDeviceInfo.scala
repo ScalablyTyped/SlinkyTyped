@@ -46,59 +46,28 @@ object AudioDeviceInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeviceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDeviceType(value: DeviceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDeviceName(value: String): Self = this.set("deviceName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDeviceType(value: DeviceType): Self = this.set("deviceType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLevel(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsActive(value: Boolean): Self = this.set("isActive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStreamType(value: StreamType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLevel(value: integer): Self = this.set("level", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStableDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stableDeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStreamType(value: StreamType): Self = this.set("streamType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutStableDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stableDeviceId")(js.undefined)
-        ret
-    }
+    def setStableDeviceId(value: String): Self = this.set("stableDeviceId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStableDeviceId: Self = this.set("stableDeviceId", js.undefined)
   }
   
 }

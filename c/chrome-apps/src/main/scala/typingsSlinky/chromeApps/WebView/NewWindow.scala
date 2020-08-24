@@ -31,17 +31,14 @@ object NewWindow {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttach(value: HTMLWebViewElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attach")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDiscard(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discard")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAttach(value: HTMLWebViewElement => Unit): Self = this.set("attach", js.Any.fromFunction1(value))
+    @scala.inline
+    def setDiscard(value: () => Unit): Self = this.set("discard", js.Any.fromFunction0(value))
   }
   
 }

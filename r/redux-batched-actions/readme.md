@@ -1,7 +1,7 @@
 
 # Scala.js typings for redux-batched-actions
 
-Typings are for version 0.4.1
+Typings are for version 0.5.0
 
 ## Library description:
 redux higher order reducer + action creator to reduce actions under a single subscriber notification

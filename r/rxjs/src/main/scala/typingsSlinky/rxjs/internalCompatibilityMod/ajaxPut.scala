@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ajaxPut extends js.Object {
   def apply(url: String): Observable[typingsSlinky.rxjs.ajaxObservableMod.AjaxResponse] = js.native
+  def apply(url: String, body: js.UndefOr[scala.Nothing], headers: js.Object): Observable[typingsSlinky.rxjs.ajaxObservableMod.AjaxResponse] = js.native
   def apply(url: String, body: js.Any): Observable[typingsSlinky.rxjs.ajaxObservableMod.AjaxResponse] = js.native
   def apply(url: String, body: js.Any, headers: js.Object): Observable[typingsSlinky.rxjs.ajaxObservableMod.AjaxResponse] = js.native
 }

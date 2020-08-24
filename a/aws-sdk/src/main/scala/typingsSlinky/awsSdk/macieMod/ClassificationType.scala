@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClassificationType extends js.Object {
   /**
-    * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie begins performing continuous classification after a bucket is successfully associated with Amazon Macie. 
+    * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic begins performing continuous classification after a bucket is successfully associated with Amazon Macie Classic. 
     */
   var continuous: S3ContinuousClassificationType = js.native
   /**
@@ -22,5 +22,22 @@ object ClassificationType {
     val __obj = js.Dynamic.literal(continuous = continuous.asInstanceOf[js.Any], oneTime = oneTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassificationType]
   }
+  @scala.inline
+  implicit class ClassificationTypeOps[Self <: ClassificationType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContinuous(value: S3ContinuousClassificationType): Self = this.set("continuous", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOneTime(value: S3OneTimeClassificationType): Self = this.set("oneTime", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -28,6 +28,8 @@ object ZAxis {
     @scala.inline
     def name(value: String | Double): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def rangeVarargs(value: Double*): this.type = set("range", js.Array(value :_*))
+    @scala.inline
     def range(value: js.Array[Double]): this.type = set("range", value.asInstanceOf[js.Any])
     @scala.inline
     def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))

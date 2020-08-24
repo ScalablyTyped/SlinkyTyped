@@ -3,20 +3,19 @@ package typingsSlinky.antdMobile.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.stepsMod.StepsProps
-import typingsSlinky.antdMobile.stepsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Steps {
-  @JSImport("antd-mobile/lib/steps", JSImport.Default)
+  @JSImport("antd-mobile", "Steps")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Steps] {
     @scala.inline
     def current(value: Double): this.type = set("current", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,6 +33,10 @@ object Steps {
   }
   
   def withProps(p: StepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Steps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: js.Array[_]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
+  }
 }
 

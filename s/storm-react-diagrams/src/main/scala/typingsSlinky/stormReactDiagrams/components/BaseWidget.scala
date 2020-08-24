@@ -2,7 +2,6 @@ package typingsSlinky.stormReactDiagrams.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.stormReactDiagrams.baseWidgetMod.BaseWidgetProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +13,11 @@ object BaseWidget {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: BaseWidgetProps, S] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.stormReactDiagrams.baseWidgetMod.BaseWidgetProps */ P, S] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.stormReactDiagrams.mod.BaseWidget[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.stormReactDiagrams.mod.BaseWidget[P, S]]
   
-  def apply[P <: BaseWidgetProps, S](p: P): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: BaseWidgetProps, S](companion: BaseWidget.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.stormReactDiagrams.baseWidgetMod.BaseWidgetProps */ P, S](p: P): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.stormReactDiagrams.baseWidgetMod.BaseWidgetProps */ P, S](companion: BaseWidget.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()
 }
 

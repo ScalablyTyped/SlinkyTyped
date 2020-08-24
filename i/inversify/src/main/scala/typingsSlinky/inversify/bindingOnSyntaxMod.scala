@@ -1,8 +1,6 @@
 package typingsSlinky.inversify
 
 import typingsSlinky.inversify.interfacesMod.interfaces.Binding
-import typingsSlinky.inversify.interfacesMod.interfaces.BindingWhenSyntax
-import typingsSlinky.inversify.interfacesMod.interfaces.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +13,6 @@ object bindingOnSyntaxMod extends js.Object {
     extends typingsSlinky.inversify.interfacesMod.interfaces.BindingOnSyntax[T] {
     def this(binding: Binding[T]) = this()
     var _binding: js.Any = js.native
-    /* CompleteClass */
-    override def onActivation(fn: js.Function2[/* context */ Context, T, T]): BindingWhenSyntax[T] = js.native
   }
   
 }

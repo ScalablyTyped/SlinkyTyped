@@ -1,7 +1,7 @@
 package typingsSlinky.webpackMergeAndIncludeGlobally.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

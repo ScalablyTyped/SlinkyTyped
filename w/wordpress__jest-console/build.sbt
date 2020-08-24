@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "wordpress__jest-console"
-version := "3.0-dt-20200403Z-b3a247"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200403Z-1d7d9e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

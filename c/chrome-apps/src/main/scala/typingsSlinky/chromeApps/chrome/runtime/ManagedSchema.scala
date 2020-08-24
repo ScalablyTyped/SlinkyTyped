@@ -42,39 +42,24 @@ object ManagedSchema {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: `object`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def with$ref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: `object`): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def without$ref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(js.undefined)
-        ret
-    }
+    def set$ref(value: String): Self = this.set("$ref", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProperties(
+    def delete$ref: Self = this.set("$ref", js.undefined)
+    @scala.inline
+    def setProperties(
       value: StringDictionary[
           JSONSchemaBasicType | JSONSchemaArrayType | JSONSchemaObjectType | JSONSchemaRefType
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("properties", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
+    def deleteProperties: Self = this.set("properties", js.undefined)
   }
   
 }

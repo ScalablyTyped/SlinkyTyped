@@ -1,10 +1,12 @@
 package typingsSlinky.storybookApi.components
 
+import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reachRouter.mod.NavigateFn
 import typingsSlinky.reachRouter.mod.WindowLocation
+import typingsSlinky.storybookApi.mod.Combo
 import typingsSlinky.storybookApi.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,8 +39,12 @@ object Provider {
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(docsMode: Boolean, provider: typingsSlinky.storybookApi.initProviderApiMod.Provider): Builder = {
-    val __props = js.Dynamic.literal(docsMode = docsMode.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
+  def apply(
+    children: ReactComponentClass[js.Object] | (js.Function1[/* props */ Combo, ReactComponentClass[js.Object]]),
+    docsMode: Boolean,
+    provider: typingsSlinky.storybookApi.initProviderApiMod.Provider
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], docsMode = docsMode.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }

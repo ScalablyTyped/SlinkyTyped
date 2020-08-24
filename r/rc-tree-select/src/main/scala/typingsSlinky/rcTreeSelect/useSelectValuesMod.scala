@@ -1,6 +1,8 @@
 package typingsSlinky.rcTreeSelect
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.rcSelect.generatorMod.DefaultValueType
+import typingsSlinky.rcTree.interfaceMod.DataEntity
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
@@ -13,24 +15,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-tree-select/lib/hooks/useSelectValues", JSImport.Namespace)
+@JSImport("rc-tree-select/es/hooks/useSelectValues", JSImport.Namespace)
 @js.native
 object useSelectValuesMod extends js.Object {
   @js.native
   trait Config extends js.Object {
-    var conductKeyEntities: Record[
-        Key, 
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataEntity */ _
-      ] = js.native
+    var conductKeyEntities: Record[Key, DataEntity] = js.native
     var showCheckedStrategy: CheckedStrategy = js.native
     var treeConduction: Boolean = js.native
     /** Current `value` of TreeSelect */
-    var value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DefaultValueType */ js.Any = js.native
+    var value: DefaultValueType = js.native
     def getEntityByKey(key: Key): FlattenDataNode = js.native
+    def getEntityByKey(key: Key, skipType: js.UndefOr[SkipType], ignoreDisabledCheck: Boolean): FlattenDataNode = js.native
     def getEntityByKey(key: Key, skipType: SkipType): FlattenDataNode = js.native
     def getEntityByValue(value: RawValueType): FlattenDataNode = js.native
+    def getEntityByValue(value: RawValueType, skipType: js.UndefOr[SkipType], ignoreDisabledCheck: Boolean): FlattenDataNode = js.native
     def getEntityByValue(value: RawValueType, skipType: SkipType): FlattenDataNode = js.native
-    def getLabelProp(node: DataNode): TagMod[Any] = js.native
+    def getLabelProp(node: DataNode): ReactElement = js.native
   }
   
   def default(

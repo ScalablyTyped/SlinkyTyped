@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* keyof @ant-design/icons-react-native.anon.Alert */ /* Rewritten from type alias, can be one of: 
+/* keyof @ant-design/icons-react-native.anon.Aim */ /* Rewritten from type alias, can be one of: 
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`account-book`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.aim
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.alert
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.alibaba
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`align-center`
@@ -22,6 +23,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.apartment
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.api
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.apple
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`appstore-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.appstore
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`area-chart`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`arrow-down`
@@ -29,6 +31,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`arrow-right`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`arrow-up`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`arrows-alt`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`audio-muted`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.audio
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.audit
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.backward
@@ -52,8 +55,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`border-top`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`border-verticle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.border
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`borderless-table`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`box-plot`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.branches
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.bug
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.build
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.bulb
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.calculator
@@ -69,7 +74,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`check-square`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.check
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.chrome
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`ci-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.ci
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.clear
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`clock-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`close-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`close-square`
@@ -85,13 +92,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`codepen-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.codepen
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.coffee
-  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`colum-height`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`column-height`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`column-width`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.comment
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.compass
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.compress
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`console-sql`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.contacts
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.container
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.control
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.copy
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`copyright-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.copyright
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`credit-card`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.crown
@@ -99,13 +110,18 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.dash
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.dashboard
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.database
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`delete-column`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`delete-row`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.delete
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`delivered-procedure`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`deployment-unit`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.desktop
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.diff
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.dingding
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.dingtalk
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.disconnect
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.dislike
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`dollar-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.dollar
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`dot-chart`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`double-left`
@@ -122,10 +138,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.ellipsis
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.enter
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.environment
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`euro-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.euro
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.exception
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`exclamation-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.exclamation
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`expand-alt`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.expand
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.experiment
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.export
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`eye-invisible`
@@ -134,10 +153,15 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.fall
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`fast-backward`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`fast-forward`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`field-binary`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`field-number`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`field-string`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`field-time`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-done`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-excel`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-exclamation`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-gif`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-image`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-jpg`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`file-markdown`
@@ -156,18 +180,24 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.flag
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`folder-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`folder-open`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`folder-view`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.folder
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`font-colors`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`font-size`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.fork
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.form
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`format-painter`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.forward
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.frown
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`fullscreen-exit`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.fullscreen
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.function
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`fund-projection-screen`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`fund-view`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.fund
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`funnel-plot`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gateway
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gif
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gift
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.github
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gitlab
@@ -175,10 +205,12 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gold
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`google-plus`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.google
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.group
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.hdd
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.heart
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`heat-map`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.highlight
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.history
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.home
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.hourglass
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.html5
@@ -188,9 +220,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.inbox
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`info-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.info
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`insert-row-above`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`insert-row-below`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`insert-row-left`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`insert-row-right`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.instagram
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.insurance
-  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.interation
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.interaction
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`issues-close`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.italic
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.key
@@ -210,6 +246,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.lock
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.login
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.logout
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`mac-command`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.mail
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.man
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`medicine-box`
@@ -219,6 +256,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`menu-fold`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`menu-unfold`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.menu
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`merge-cells`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.message
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`minus-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`minus-square`
@@ -226,11 +264,16 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.mobile
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`money-collect`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.monitor
-  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.mr
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.more
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`node-collapse`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`node-expand`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`node-index`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.notification
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.number
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`one-to-one`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`ordered-list`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`paper-clip`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.partition
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`pause-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.pause
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`pay-circle`
@@ -246,12 +289,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`plus-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`plus-square`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.plus
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`pound-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.pound
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.poweroff
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.printer
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.profile
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.project
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`property-safety`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`pull-request`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.pushpin
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.qq
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.qrcode
@@ -268,7 +313,6 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`red-envelope`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.reddit
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.redo
-  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`reload-time`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.reload
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.rest
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.retweet
@@ -279,6 +323,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.robot
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.rocket
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.rollback
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`rotate-left`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`rotate-right`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`safety-certificate`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.safety
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.save
@@ -288,6 +334,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.search
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`security-scan`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.select
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.send
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.setting
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.shake
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`share-alt`
@@ -295,6 +342,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`shopping-cart`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.shopping
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.shrink
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.sisternode
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.sketch
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.skin
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.skype
@@ -308,12 +356,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`sort-ascending`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`sort-descending`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.sound
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`split-cells`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.star
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`step-backward`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`step-forward`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.stock
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.stop
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.strikethrough
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.subnode
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`swap-left`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`swap-right`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.swap
@@ -329,12 +379,15 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.thunderbolt
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`to-top`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.tool
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`trademark-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.trademark
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.transaction
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.translation
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.trophy
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.twitter
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.underline
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.undo
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.ungroup
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.unlock
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`unordered-list`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`up-circle`
@@ -344,14 +397,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.usb
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`user-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`user-delete`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`user-switch`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.user
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`usergroup-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`usergroup-delete`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.verified
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`vertical-align-bottom`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`vertical-align-middle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`vertical-align-top`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`vertical-left`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`vertical-right`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`video-camera-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`video-camera`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.wallet
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.warning
@@ -359,6 +415,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`weibo-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`weibo-square`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.weibo
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`whats-app`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.wifi
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.windows
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.woman

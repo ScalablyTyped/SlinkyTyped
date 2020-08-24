@@ -11,21 +11,20 @@ import typingsSlinky.materialUi.MaterialUI.Menus.IconMenuProps
 import typingsSlinky.materialUi.MaterialUI.Menus.MenuItemProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
-import typingsSlinky.materialUi.iconMenuMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IconMenu {
-  @JSImport("material-ui/IconMenu", JSImport.Default)
+  @JSImport("material-ui", "IconMenu")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.IconMenu] {
     @scala.inline
     def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -84,6 +83,8 @@ object IconMenu {
     def targetOrigin(value: origin): this.type = set("targetOrigin", value.asInstanceOf[js.Any])
     @scala.inline
     def useLayerForClickAway(value: Boolean): this.type = set("useLayerForClickAway", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StarburstIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StarburstIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StarburstIcon")
   @js.native
   object component extends js.Object
   

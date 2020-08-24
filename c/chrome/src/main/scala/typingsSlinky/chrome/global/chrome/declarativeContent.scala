@@ -1,5 +1,6 @@
 package typingsSlinky.chrome.global.chrome
 
+import typingsSlinky.chrome.anon.ImageData
 import typingsSlinky.chrome.chrome.declarativeContent.PageChangedEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,6 +26,12 @@ object declarativeContent extends js.Object {
   @js.native
   class PageStateMatcherProperties ()
     extends typingsSlinky.chrome.chrome.declarativeContent.PageStateMatcherProperties
+  
+  @js.native
+  class SetIcon ()
+    extends typingsSlinky.chrome.chrome.declarativeContent.SetIcon {
+    def this(options: ImageData) = this()
+  }
   
   @js.native
   class ShowPageAction ()

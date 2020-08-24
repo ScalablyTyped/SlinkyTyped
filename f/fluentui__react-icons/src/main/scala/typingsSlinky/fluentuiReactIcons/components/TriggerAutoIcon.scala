@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TriggerAutoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TriggerAutoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TriggerAutoIcon")
   @js.native
   object component extends js.Object
   

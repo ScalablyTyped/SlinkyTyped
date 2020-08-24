@@ -32,6 +32,8 @@ object ReactDatagrid {
     @scala.inline
     def emptyText(value: String): this.type = set("emptyText", value.asInstanceOf[js.Any])
     @scala.inline
+    def groupByVarargs(value: js.Any*): this.type = set("groupBy", js.Array(value :_*))
+    @scala.inline
     def groupBy(value: js.Array[_]): this.type = set("groupBy", value.asInstanceOf[js.Any])
     @scala.inline
     def liveFilter(value: Boolean): this.type = set("liveFilter", value.asInstanceOf[js.Any])
@@ -52,7 +54,7 @@ object ReactDatagrid {
     @scala.inline
     def onPageChange(value: /* page */ Double => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onPageSizeChange(value: (/* pageSize */ Double, /* props */ DataGridProps) => Unit): this.type = set("onPageSizeChange", js.Any.fromFunction2(value))
+    def onPageSizeChange(value: (/* pageSize */ Double, DataGridProps) => Unit): this.type = set("onPageSizeChange", js.Any.fromFunction2(value))
     @scala.inline
     def onSelectionChange(value: (/* newSelected */ js.Object, /* data */ js.Any) => Unit): this.type = set("onSelectionChange", js.Any.fromFunction2(value))
     @scala.inline
@@ -75,6 +77,8 @@ object ReactDatagrid {
     def selected(value: js.Object): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline
     def showCellBorders(value: Boolean | String): this.type = set("showCellBorders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortInfoVarargs(value: SortInfo*): this.type = set("sortInfo", js.Array(value :_*))
     @scala.inline
     def sortInfo(value: js.Array[SortInfo]): this.type = set("sortInfo", value.asInstanceOf[js.Any])
     @scala.inline

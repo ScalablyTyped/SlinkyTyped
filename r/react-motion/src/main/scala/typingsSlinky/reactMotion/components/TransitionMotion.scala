@@ -1,5 +1,6 @@
 package typingsSlinky.reactMotion.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.InterpolateFunction
@@ -21,6 +22,10 @@ object TransitionMotion {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMotion.mod.TransitionMotion] {
+    @scala.inline
+    def children(value: /* interpolatedStyles */ js.Array[TransitionPlainStyle] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def defaultStylesVarargs(value: TransitionPlainStyle*): this.type = set("defaultStyles", js.Array(value :_*))
     @scala.inline
     def defaultStyles(value: js.Array[TransitionPlainStyle]): this.type = set("defaultStyles", value.asInstanceOf[js.Any])
     @scala.inline

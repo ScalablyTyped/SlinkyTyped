@@ -7,6 +7,21 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol", "DocumentSymbol")
 @js.native
 object DocumentSymbol extends js.Object {
+  def create(
+    name: String,
+    detail: js.UndefOr[scala.Nothing],
+    kind: typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind,
+    range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
+    selectionRange: typingsSlinky.vscodeLanguageserverTypes.mod.Range
+  ): typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol = js.native
+  def create(
+    name: String,
+    detail: js.UndefOr[scala.Nothing],
+    kind: typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind,
+    range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
+    selectionRange: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
+    children: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol]
+  ): typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol = js.native
   /**
     * Creates a new symbol information literal.
     *
@@ -19,14 +34,14 @@ object DocumentSymbol extends js.Object {
     */
   def create(
     name: String,
-    detail: js.UndefOr[String],
+    detail: String,
     kind: typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind,
     range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
     selectionRange: typingsSlinky.vscodeLanguageserverTypes.mod.Range
   ): typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol = js.native
   def create(
     name: String,
-    detail: js.UndefOr[String],
+    detail: String,
     kind: typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind,
     range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
     selectionRange: typingsSlinky.vscodeLanguageserverTypes.mod.Range,

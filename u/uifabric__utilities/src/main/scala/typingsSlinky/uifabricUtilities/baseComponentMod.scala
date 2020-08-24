@@ -1,6 +1,5 @@
 package typingsSlinky.uifabricUtilities
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.uifabricUtilities.asyncMod.Async
@@ -65,7 +64,7 @@ object baseComponentMod extends js.Object {
       * @returns A function instance keyed from the given refname.
       * @deprecated Use `createRef` from React.createRef.
       */
-    /* protected */ def _resolveRef(refName: String): js.Function1[/* ref */ TagMod[Any], TagMod[Any]] = js.native
+    /* protected */ def _resolveRef(refName: String): js.Function1[/* ref */ ReactElement, ReactElement] = js.native
     /**
       * Updates the componentRef (by calling it with "this" when necessary.)
       */
@@ -117,6 +116,7 @@ object baseComponentMod extends js.Object {
       * @deprecated Use React's error boundaries instead.
       */
     def onError(): Unit = js.native
+    def onError(errorMessage: js.UndefOr[scala.Nothing], ex: js.Any): Unit = js.native
     def onError(errorMessage: String): Unit = js.native
     def onError(errorMessage: String, ex: js.Any): Unit = js.native
   }

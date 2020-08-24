@@ -4,6 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.ionicReact.ionLifeCycleContextMod.IonLifeCycleContextInterface
+import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.ContextType
 import typingsSlinky.react.mod.ErrorInfo
 import typingsSlinky.react.mod.ReactInstance
 import scala.scalajs.js
@@ -33,7 +35,7 @@ trait ComponentDidCatch extends js.Object {
   var componentWillUpdate: js.UndefOr[
     js.Function3[/* nextProps */ js.Any, /* nextState */ js.Any, /* nextContext */ js.Any, Unit]
   ] = js.native
-  var context: IonLifeCycleContextInterface = js.native
+  var context: ContextType[Context[IonLifeCycleContextInterface]] = js.native
   var getSnapshotBeforeUpdate: js.UndefOr[js.Function2[/* prevProps */ js.Any, /* prevState */ js.Any, _]] = js.native
   val props: js.Any with ReadonlychildrenReactNode = js.native
   var refs: StringDictionary[ReactInstance] = js.native

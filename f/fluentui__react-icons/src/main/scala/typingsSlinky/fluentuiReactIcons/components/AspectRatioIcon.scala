@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AspectRatioIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AspectRatioIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AspectRatioIcon")
   @js.native
   object component extends js.Object
   

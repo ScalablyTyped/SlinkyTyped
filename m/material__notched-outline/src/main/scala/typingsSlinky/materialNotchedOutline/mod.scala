@@ -2,7 +2,10 @@ package typingsSlinky.materialNotchedOutline
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialNotchedOutline.adapterMod.MDCNotchedOutlineAdapter
-import typingsSlinky.materialNotchedOutline.foundationMod.default
+import typingsSlinky.materialNotchedOutline.anon.NOLABEL
+import typingsSlinky.materialNotchedOutline.anon.NOTCHELEMENTPADDING
+import typingsSlinky.materialNotchedOutline.anon.NOTCHELEMENTSELECTOR
+import typingsSlinky.materialNotchedOutline.anon.PartialMDCNotchedOutlineA
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,33 +15,69 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class MDCNotchedOutline ()
-    extends typingsSlinky.materialBase.componentMod.default[MDCNotchedOutlineAdapter, default] {
-    /**
-      * Updates the outline selectors to close notch and return it to idle state.
-      */
-    def closeNotch(): Unit = js.native
-    /**
-      * Updates outline selectors and SVG path to open notch.
-      */
-    def notch(notchWidth: Double): Unit = js.native
-    def notch(notchWidth: Double, isRtl: Boolean): Unit = js.native
-  }
+    extends typingsSlinky.materialNotchedOutline.componentMod.MDCNotchedOutline
   
   @js.native
-  class MDCNotchedOutlineFoundation () extends default
+  class MDCNotchedOutlineFoundation ()
+    extends typingsSlinky.materialNotchedOutline.foundationMod.MDCNotchedOutlineFoundation {
+    def this(adapter: PartialMDCNotchedOutlineA) = this()
+  }
   
   /* static members */
   @js.native
   object MDCNotchedOutline extends js.Object {
-    def attachTo(root: Element): MDCNotchedOutline = js.native
+    def attachTo(root: Element): typingsSlinky.materialNotchedOutline.componentMod.MDCNotchedOutline = js.native
   }
   
   /* static members */
   @js.native
   object MDCNotchedOutlineFoundation extends js.Object {
-    val cssClasses: typingsSlinky.materialNotchedOutline.constantsMod.cssClasses = js.native
-    val defaultAdapter: MDCNotchedOutlineAdapter = js.native
-    val strings: typingsSlinky.materialNotchedOutline.constantsMod.strings = js.native
+    def cssClasses: NOLABEL = js.native
+    /**
+      * See {@link MDCNotchedOutlineAdapter} for typing information on parameters and return types.
+      */
+    def defaultAdapter: MDCNotchedOutlineAdapter = js.native
+    def numbers: NOTCHELEMENTPADDING = js.native
+    def strings: NOTCHELEMENTSELECTOR = js.native
+  }
+  
+  @js.native
+  object cssClasses extends js.Object {
+    var NO_LABEL: String = js.native
+    var OUTLINE_NOTCHED: String = js.native
+    var OUTLINE_UPGRADED: String = js.native
+  }
+  
+  @js.native
+  object numbers extends js.Object {
+    var NOTCH_ELEMENT_PADDING: Double = js.native
+  }
+  
+  /**
+    * @license
+    * Copyright 2018 Google Inc.
+    *
+    * Permission is hereby granted, free of charge, to any person obtaining a copy
+    * of this software and associated documentation files (the "Software"), to deal
+    * in the Software without restriction, including without limitation the rights
+    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    * copies of the Software, and to permit persons to whom the Software is
+    * furnished to do so, subject to the following conditions:
+    *
+    * The above copyright notice and this permission notice shall be included in
+    * all copies or substantial portions of the Software.
+    *
+    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    * THE SOFTWARE.
+    */
+  @js.native
+  object strings extends js.Object {
+    var NOTCH_ELEMENT_SELECTOR: String = js.native
   }
   
 }

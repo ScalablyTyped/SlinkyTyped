@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CommonDataServiceCDSIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CommonDataServiceCDSIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CommonDataServiceCDSIcon")
   @js.native
   object component extends js.Object
   

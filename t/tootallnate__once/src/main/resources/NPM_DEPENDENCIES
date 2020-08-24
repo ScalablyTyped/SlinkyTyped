@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@tootallnate/once" : "1.1.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@tootallnate/once" : "1.1.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

@@ -13,7 +13,6 @@ import typingsSlinky.emojiMart.nimbleEmojiIndexMod.CustomEmoji
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiData
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiSkin
 import typingsSlinky.emojiMart.nimblePickerMod.NimblePickerProps
-import typingsSlinky.emojiMart.nimblePickerMod.default
 import typingsSlinky.emojiMart.sharedPropsMod.CategoryName
 import typingsSlinky.emojiMart.sharedPropsMod.CustomIcons
 import typingsSlinky.emojiMart.sharedPropsMod.EmojiSet
@@ -25,20 +24,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NimblePicker {
-  @JSImport("emoji-mart/dist-es/components/picker/nimble-picker", JSImport.Default)
+  @JSImport("emoji-mart/dist-es/components", "NimblePicker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.emojiMart.componentsMod.NimblePicker] {
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def backgroundImageFn(value: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String): this.type = set("backgroundImageFn", js.Any.fromFunction2(value))
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customVarargs(value: CustomEmoji*): this.type = set("custom", js.Array(value :_*))
     @scala.inline
     def custom(value: js.Array[CustomEmoji]): this.type = set("custom", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,11 +55,15 @@ object NimblePicker {
     @scala.inline
     def enableFrequentEmojiSort(value: Boolean): this.type = set("enableFrequentEmojiSort", value.asInstanceOf[js.Any])
     @scala.inline
+    def excludeVarargs(value: CategoryName*): this.type = set("exclude", js.Array(value :_*))
+    @scala.inline
     def exclude(value: js.Array[CategoryName]): this.type = set("exclude", value.asInstanceOf[js.Any])
     @scala.inline
     def i18n(value: PartialI18n): this.type = set("i18n", value.asInstanceOf[js.Any])
     @scala.inline
     def icons(value: CustomIcons): this.type = set("icons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def includeVarargs(value: CategoryName*): this.type = set("include", js.Array(value :_*))
     @scala.inline
     def include(value: js.Array[CategoryName]): this.type = set("include", value.asInstanceOf[js.Any])
     @scala.inline
@@ -75,6 +80,8 @@ object NimblePicker {
     def onSkinChange(value: /* skin */ EmojiSkin => Unit): this.type = set("onSkinChange", js.Any.fromFunction1(value))
     @scala.inline
     def perLine(value: Double): this.type = set("perLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def recentVarargs(value: String*): this.type = set("recent", js.Array(value :_*))
     @scala.inline
     def recent(value: js.Array[String]): this.type = set("recent", value.asInstanceOf[js.Any])
     @scala.inline

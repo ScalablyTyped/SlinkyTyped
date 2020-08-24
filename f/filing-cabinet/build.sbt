@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "filing-cabinet"
-version := "2.5-dt-20200302Z-113a97"
-scalaVersion := "2.13.2"
+version := "2.5-dt-20200302Z-f35600"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

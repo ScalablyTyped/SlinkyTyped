@@ -251,7 +251,26 @@ trait WebGLRenderer extends js.Object {
     * @param flipY Should the WebGL Texture set `UNPACK_MULTIPLY_FLIP_Y`? Default false.
     */
   def canvasToTexture(srcCanvas: HTMLCanvasElement): WebGLTexture = js.native
+  def canvasToTexture(
+    srcCanvas: HTMLCanvasElement,
+    dstTexture: js.UndefOr[scala.Nothing],
+    noRepeat: js.UndefOr[scala.Nothing],
+    flipY: Boolean
+  ): WebGLTexture = js.native
+  def canvasToTexture(srcCanvas: HTMLCanvasElement, dstTexture: js.UndefOr[scala.Nothing], noRepeat: Boolean): WebGLTexture = js.native
+  def canvasToTexture(
+    srcCanvas: HTMLCanvasElement,
+    dstTexture: js.UndefOr[scala.Nothing],
+    noRepeat: Boolean,
+    flipY: Boolean
+  ): WebGLTexture = js.native
   def canvasToTexture(srcCanvas: HTMLCanvasElement, dstTexture: WebGLTexture): WebGLTexture = js.native
+  def canvasToTexture(
+    srcCanvas: HTMLCanvasElement,
+    dstTexture: WebGLTexture,
+    noRepeat: js.UndefOr[scala.Nothing],
+    flipY: Boolean
+  ): WebGLTexture = js.native
   def canvasToTexture(srcCanvas: HTMLCanvasElement, dstTexture: WebGLTexture, noRepeat: Boolean): WebGLTexture = js.native
   def canvasToTexture(srcCanvas: HTMLCanvasElement, dstTexture: WebGLTexture, noRepeat: Boolean, flipY: Boolean): WebGLTexture = js.native
   /**
@@ -268,6 +287,7 @@ trait WebGLRenderer extends js.Object {
     * @param flipY Should the WebGL Texture set `UNPACK_MULTIPLY_FLIP_Y`? Default false.
     */
   def createCanvasTexture(srcCanvas: HTMLCanvasElement): WebGLTexture = js.native
+  def createCanvasTexture(srcCanvas: HTMLCanvasElement, noRepeat: js.UndefOr[scala.Nothing], flipY: Boolean): WebGLTexture = js.native
   def createCanvasTexture(srcCanvas: HTMLCanvasElement, noRepeat: Boolean): WebGLTexture = js.native
   def createCanvasTexture(srcCanvas: HTMLCanvasElement, noRepeat: Boolean, flipY: Boolean): WebGLTexture = js.native
   /**
@@ -326,7 +346,62 @@ trait WebGLRenderer extends js.Object {
     pixels: js.Object,
     width: integer,
     height: integer,
+    pma: js.UndefOr[scala.Nothing],
+    forceSize: js.UndefOr[scala.Nothing],
+    flipY: Boolean
+  ): WebGLTexture = js.native
+  def createTexture2D(
+    mipLevel: integer,
+    minFilter: integer,
+    magFilter: integer,
+    wrapT: integer,
+    wrapS: integer,
+    format: integer,
+    pixels: js.Object,
+    width: integer,
+    height: integer,
+    pma: js.UndefOr[scala.Nothing],
+    forceSize: Boolean
+  ): WebGLTexture = js.native
+  def createTexture2D(
+    mipLevel: integer,
+    minFilter: integer,
+    magFilter: integer,
+    wrapT: integer,
+    wrapS: integer,
+    format: integer,
+    pixels: js.Object,
+    width: integer,
+    height: integer,
+    pma: js.UndefOr[scala.Nothing],
+    forceSize: Boolean,
+    flipY: Boolean
+  ): WebGLTexture = js.native
+  def createTexture2D(
+    mipLevel: integer,
+    minFilter: integer,
+    magFilter: integer,
+    wrapT: integer,
+    wrapS: integer,
+    format: integer,
+    pixels: js.Object,
+    width: integer,
+    height: integer,
     pma: Boolean
+  ): WebGLTexture = js.native
+  def createTexture2D(
+    mipLevel: integer,
+    minFilter: integer,
+    magFilter: integer,
+    wrapT: integer,
+    wrapS: integer,
+    format: integer,
+    pixels: js.Object,
+    width: integer,
+    height: integer,
+    pma: Boolean,
+    forceSize: js.UndefOr[scala.Nothing],
+    flipY: Boolean
   ): WebGLTexture = js.native
   def createTexture2D(
     mipLevel: integer,
@@ -376,6 +451,7 @@ trait WebGLRenderer extends js.Object {
     * @param flipY Should the WebGL Texture set `UNPACK_MULTIPLY_FLIP_Y`? Default false.
     */
   def createVideoTexture(srcVideo: HTMLVideoElement): WebGLTexture = js.native
+  def createVideoTexture(srcVideo: HTMLVideoElement, noRepeat: js.UndefOr[scala.Nothing], flipY: Boolean): WebGLTexture = js.native
   def createVideoTexture(srcVideo: HTMLVideoElement, noRepeat: Boolean): WebGLTexture = js.native
   def createVideoTexture(srcVideo: HTMLVideoElement, noRepeat: Boolean, flipY: Boolean): WebGLTexture = js.native
   /**
@@ -537,7 +613,11 @@ trait WebGLRenderer extends js.Object {
     * @param resolution The new resolution of the renderer.
     */
   def resize(): this.type = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], resolution: Double): this.type = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: Double): this.type = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: Double, resolution: Double): this.type = js.native
   def resize(width: Double): this.type = js.native
+  def resize(width: Double, height: js.UndefOr[scala.Nothing], resolution: Double): this.type = js.native
   def resize(width: Double, height: Double): this.type = js.native
   def resize(width: Double, height: Double, resolution: Double): this.type = js.native
   /**
@@ -771,6 +851,7 @@ trait WebGLRenderer extends js.Object {
     * @param encoderOptions The image quality, between 0 and 1. Used for image formats with lossy compression, such as `image/jpeg`. Default 0.92.
     */
   def snapshot(callback: SnapshotCallback): this.type = js.native
+  def snapshot(callback: SnapshotCallback, `type`: js.UndefOr[scala.Nothing], encoderOptions: Double): this.type = js.native
   def snapshot(callback: SnapshotCallback, `type`: String): this.type = js.native
   def snapshot(callback: SnapshotCallback, `type`: String, encoderOptions: Double): this.type = js.native
   /**
@@ -794,6 +875,15 @@ trait WebGLRenderer extends js.Object {
     * @param encoderOptions The image quality, between 0 and 1. Used for image formats with lossy compression, such as `image/jpeg`. Default 0.92.
     */
   def snapshotArea(x: integer, y: integer, width: integer, height: integer, callback: SnapshotCallback): this.type = js.native
+  def snapshotArea(
+    x: integer,
+    y: integer,
+    width: integer,
+    height: integer,
+    callback: SnapshotCallback,
+    `type`: js.UndefOr[scala.Nothing],
+    encoderOptions: Double
+  ): this.type = js.native
   def snapshotArea(
     x: integer,
     y: integer,

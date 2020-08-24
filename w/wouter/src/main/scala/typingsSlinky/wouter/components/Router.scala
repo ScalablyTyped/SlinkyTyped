@@ -3,11 +3,9 @@ package typingsSlinky.wouter.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wouter.anon.PartialRouterPropschildre
-import typingsSlinky.wouter.mod.DefaultParams
-import typingsSlinky.wouter.mod.LocationHookOptions
-import typingsSlinky.wouter.mod.LocationTuple
-import typingsSlinky.wouter.mod.Match
-import typingsSlinky.wouter.mod.Path
+import typingsSlinky.wouter.matcherMod.DefaultParams
+import typingsSlinky.wouter.matcherMod.Match
+import typingsSlinky.wouter.wouterUseLocationMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +22,9 @@ object Router {
     @scala.inline
     def base(value: Path): this.type = set("base", value.asInstanceOf[js.Any])
     @scala.inline
-    def hook(value: /* options */ js.UndefOr[LocationHookOptions] => LocationTuple): this.type = set("hook", js.Any.fromFunction1(value))
+    def hook(
+      value: /* repeated */ js.Any => js.Tuple2[Path, js.Function2[/* path */ Path, /* repeated */ js.Any, js.Any]]
+    ): this.type = set("hook", js.Any.fromFunction1(value))
     @scala.inline
     def matcher(value: (/* pattern */ Path, /* path */ Path) => Match[DefaultParams]): this.type = set("matcher", js.Any.fromFunction2(value))
   }

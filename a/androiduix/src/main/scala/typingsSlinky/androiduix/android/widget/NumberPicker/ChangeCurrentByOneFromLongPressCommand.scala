@@ -30,23 +30,16 @@ object ChangeCurrentByOneFromLongPressCommand {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_NumberPicker_this(value: typingsSlinky.androiduix.android.widget.NumberPicker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_NumberPicker_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMIncrement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_NumberPicker_this(value: typingsSlinky.androiduix.android.widget.NumberPicker): Self = this.set("_NumberPicker_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetStep(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStep")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMIncrement(value: js.Any): Self = this.set("mIncrement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSetStep(value: Boolean => Unit): Self = this.set("setStep", js.Any.fromFunction1(value))
   }
   
 }

@@ -1,10 +1,13 @@
 package typingsSlinky.circularDependencyPlugin.mod
 
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/**
+  * Detect modules with circular dependencies when bundling with webpack.
+  */
 @JSImport("circular-dependency-plugin", JSImport.Namespace)
 @js.native
 class ^ () extends Plugin {

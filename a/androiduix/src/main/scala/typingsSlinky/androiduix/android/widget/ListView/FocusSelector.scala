@@ -32,29 +32,18 @@ object FocusSelector {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_ListView_this(value: typingsSlinky.androiduix.android.widget.ListView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_ListView_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMPosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_ListView_this(value: typingsSlinky.androiduix.android.widget.ListView): Self = this.set("_ListView_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPositionTop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPositionTop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPosition(value: js.Any): Self = this.set("mPosition", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetup(value: (Double, Double) => FocusSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMPositionTop(value: js.Any): Self = this.set("mPositionTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSetup(value: (Double, Double) => FocusSelector): Self = this.set("setup", js.Any.fromFunction2(value))
   }
   
 }

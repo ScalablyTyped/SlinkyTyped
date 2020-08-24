@@ -3,7 +3,6 @@ package typingsSlinky.materialUi.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.GridList.GridListProps
-import typingsSlinky.materialUi.gridListMod.default
 import typingsSlinky.materialUi.materialUiStrings.auto
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -11,14 +10,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GridList {
-  @JSImport("material-ui/GridList", JSImport.Default)
+  @JSImport("material-ui", "GridList")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.GridList] {
     @scala.inline
     def cellHeight(value: Double | auto): this.type = set("cellHeight", value.asInstanceOf[js.Any])
     @scala.inline

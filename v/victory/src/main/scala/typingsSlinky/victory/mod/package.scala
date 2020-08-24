@@ -39,8 +39,8 @@ package object mod {
   type DomainPaddingPropType = scala.Double | typingsSlinky.victory.anon.`0`
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.victory.mod.DomainTuple
-    - typingsSlinky.victory.anon.XDomainTuple
     - typingsSlinky.victory.anon.YDomainTuple
+    - typingsSlinky.victory.anon.XDomainTuple
   */
   type DomainPropType = typingsSlinky.victory.mod._DomainPropType | typingsSlinky.victory.mod.DomainTuple
   /**

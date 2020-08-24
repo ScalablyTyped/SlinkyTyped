@@ -1,10 +1,14 @@
 package typingsSlinky.reactNativeSnapCarousel.components
 
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.AverageItemLength
+import typingsSlinky.reactNative.anon.Changed
+import typingsSlinky.reactNative.anon.DistanceFromEnd
+import typingsSlinky.reactNative.anon.Index
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -15,15 +19,19 @@ import typingsSlinky.reactNative.mod.Animated.AnimatedValue
 import typingsSlinky.reactNative.mod.Animated.DecayAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.PointPropType
+import typingsSlinky.reactNative.mod.ScrollViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.mod.ViewabilityConfigCallbackPair
+import typingsSlinky.reactNative.mod.ViewabilityConfigCallbackPairs
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
 import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
@@ -47,7 +55,6 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.scrollableAxes
 import typingsSlinky.reactNative.reactNativeStrings.white
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeSnapCarousel.anon.Index
 import typingsSlinky.reactNativeSnapCarousel.anon.InputRange
 import typingsSlinky.reactNativeSnapCarousel.mod.AdditionalParallaxProps
 import typingsSlinky.reactNativeSnapCarousel.mod.CarouselProperties
@@ -73,7 +80,61 @@ object ReactNativeSnapCarousel {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
+    @scala.inline
+    def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def CellRendererComponentComponentClass(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def CellRendererComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ItemSeparatorComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ItemSeparatorComponent(value: ReactComponentClass[_]): this.type = set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ItemSeparatorComponentNull: this.type = set("ItemSeparatorComponent", null)
+    @scala.inline
+    def ListEmptyComponentReactElement(value: ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListEmptyComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListEmptyComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListEmptyComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListEmptyComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListEmptyComponentNull: this.type = set("ListEmptyComponent", null)
+    @scala.inline
+    def ListFooterComponentReactElement(value: ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListFooterComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListFooterComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListFooterComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListFooterComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListFooterComponentNull: this.type = set("ListFooterComponent", null)
+    @scala.inline
+    def ListFooterComponentStyle(value: ViewStyle): this.type = set("ListFooterComponentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListFooterComponentStyleNull: this.type = set("ListFooterComponentStyle", null)
+    @scala.inline
+    def ListHeaderComponentReactElement(value: ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListHeaderComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListHeaderComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListHeaderComponent(value: ReactComponentClass[_] | ReactElement): this.type = set("ListHeaderComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListHeaderComponentNull: this.type = set("ListHeaderComponent", null)
+    @scala.inline
+    def ListHeaderComponentStyle(value: ViewStyle): this.type = set("ListHeaderComponentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ListHeaderComponentStyleNull: this.type = set("ListHeaderComponentStyle", null)
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -92,6 +153,8 @@ object ReactNativeSnapCarousel {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -135,6 +198,10 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("columnWrapperStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnWrapperStyleNull: this.type = set("columnWrapperStyle", null)
+    @scala.inline
     def containerCustomStyle(value: StyleProp[ViewStyle]): this.type = set("containerCustomStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def containerCustomStyleNull: this.type = set("containerCustomStyle", null)
@@ -153,6 +220,8 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def contentOffset(value: PointPropType): this.type = set("contentOffset", value.asInstanceOf[js.Any])
     @scala.inline
+    def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
+    @scala.inline
     def decelerationRate(value: fast | normal_ | Double): this.type = set("decelerationRate", value.asInstanceOf[js.Any])
     @scala.inline
     def directionalLockEnabled(value: Boolean): this.type = set("directionalLockEnabled", value.asInstanceOf[js.Any])
@@ -161,15 +230,27 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def disableScrollViewPanResponder(value: Boolean): this.type = set("disableScrollViewPanResponder", value.asInstanceOf[js.Any])
     @scala.inline
+    def disableVirtualization(value: Boolean): this.type = set("disableVirtualization", value.asInstanceOf[js.Any])
+    @scala.inline
     def enableMomentum(value: Boolean): this.type = set("enableMomentum", value.asInstanceOf[js.Any])
     @scala.inline
     def enableSnap(value: Boolean): this.type = set("enableSnap", value.asInstanceOf[js.Any])
     @scala.inline
-    def endFillColor(value: String): this.type = set("endFillColor", value.asInstanceOf[js.Any])
+    def endFillColor(value: ColorValue): this.type = set("endFillColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraData(value: js.Any): this.type = set("extraData", value.asInstanceOf[js.Any])
     @scala.inline
     def fadingEdgeLength(value: Double): this.type = set("fadingEdgeLength", value.asInstanceOf[js.Any])
     @scala.inline
     def firstItem(value: Double): this.type = set("firstItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getItem(value: (/* data */ js.Any, /* index */ Double) => T): this.type = set("getItem", js.Any.fromFunction2(value))
+    @scala.inline
+    def getItemCount(value: /* data */ js.Any => Double): this.type = set("getItemCount", js.Any.fromFunction1(value))
+    @scala.inline
+    def getItemLayout(value: (/* data */ js.UndefOr[js.Array[T] | Null], /* index */ Double) => Index): this.type = set("getItemLayout", js.Any.fromFunction2(value))
     @scala.inline
     def hasParallaxImages(value: Boolean): this.type = set("hasParallaxImages", value.asInstanceOf[js.Any])
     @scala.inline
@@ -193,15 +274,23 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def initialNumToRender(value: Double): this.type = set("initialNumToRender", value.asInstanceOf[js.Any])
     @scala.inline
+    def initialScrollIndex(value: Double): this.type = set("initialScrollIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialScrollIndexNull: this.type = set("initialScrollIndex", null)
+    @scala.inline
     def invertStickyHeaders(value: Boolean): this.type = set("invertStickyHeaders", value.asInstanceOf[js.Any])
     @scala.inline
     def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def invertedNull: this.type = set("inverted", null)
     @scala.inline
     def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
     @scala.inline
     def itemHeight(value: Double): this.type = set("itemHeight", value.asInstanceOf[js.Any])
     @scala.inline
     def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyExtractor(value: (T, /* index */ Double) => String): this.type = set("keyExtractor", js.Any.fromFunction2(value))
     @scala.inline
     def keyboardDismissMode(value: none | interactive | `on-drag`): this.type = set("keyboardDismissMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -213,6 +302,10 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def layoutCardOffset(value: Double): this.type = set("layoutCardOffset", value.asInstanceOf[js.Any])
     @scala.inline
+    def legacyImplementation(value: Boolean): this.type = set("legacyImplementation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listKey(value: String): this.type = set("listKey", value.asInstanceOf[js.Any])
+    @scala.inline
     def lockScrollTimeoutDuration(value: Double): this.type = set("lockScrollTimeoutDuration", value.asInstanceOf[js.Any])
     @scala.inline
     def lockScrollWhileSnapping(value: Boolean): this.type = set("lockScrollWhileSnapping", value.asInstanceOf[js.Any])
@@ -220,6 +313,8 @@ object ReactNativeSnapCarousel {
     def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
     @scala.inline
     def loopClonesPerSide(value: Double): this.type = set("loopClonesPerSide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxToRenderPerBatch(value: Double): this.type = set("maxToRenderPerBatch", value.asInstanceOf[js.Any])
     @scala.inline
     def maximumZoomScale(value: Double): this.type = set("maximumZoomScale", value.asInstanceOf[js.Any])
     @scala.inline
@@ -231,6 +326,8 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def nestedScrollEnabled(value: Boolean): this.type = set("nestedScrollEnabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def numColumns(value: Double): this.type = set("numColumns", value.asInstanceOf[js.Any])
+    @scala.inline
     def onAccessibilityAction(value: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit): this.type = set("onAccessibilityAction", js.Any.fromFunction1(value))
     @scala.inline
     def onAccessibilityEscape(value: () => Unit): this.type = set("onAccessibilityEscape", js.Any.fromFunction0(value))
@@ -240,6 +337,14 @@ object ReactNativeSnapCarousel {
     def onBeforeSnapToItem(value: /* slideIndex */ Double => Unit): this.type = set("onBeforeSnapToItem", js.Any.fromFunction1(value))
     @scala.inline
     def onContentSizeChange(value: (/* w */ Double, /* h */ Double) => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onEndReached(value: /* info */ DistanceFromEnd => Unit): this.type = set("onEndReached", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEndReachedNull: this.type = set("onEndReached", null)
+    @scala.inline
+    def onEndReachedThreshold(value: Double): this.type = set("onEndReachedThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEndReachedThresholdNull: this.type = set("onEndReachedThreshold", null)
     @scala.inline
     def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     @scala.inline
@@ -252,6 +357,10 @@ object ReactNativeSnapCarousel {
     def onMoveShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponder", js.Any.fromFunction1(value))
     @scala.inline
     def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRefresh(value: () => Unit): this.type = set("onRefresh", js.Any.fromFunction0(value))
+    @scala.inline
+    def onRefreshNull: this.type = set("onRefresh", null)
     @scala.inline
     def onResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -277,6 +386,8 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def onScrollEndDrag(value: SyntheticEvent[NodeHandle, NativeScrollEvent] => Unit): this.type = set("onScrollEndDrag", js.Any.fromFunction1(value))
     @scala.inline
+    def onScrollToIndexFailed(value: /* info */ AverageItemLength => Unit): this.type = set("onScrollToIndexFailed", js.Any.fromFunction1(value))
+    @scala.inline
     def onScrollToTop(value: SyntheticEvent[NodeHandle, NativeScrollEvent] => Unit): this.type = set("onScrollToTop", js.Any.fromFunction1(value))
     @scala.inline
     def onSnapToItem(value: /* slideIndex */ Double => Unit): this.type = set("onSnapToItem", js.Any.fromFunction1(value))
@@ -295,6 +406,10 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def onTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
     @scala.inline
+    def onViewableItemsChanged(value: /* info */ Changed => Unit): this.type = set("onViewableItemsChanged", js.Any.fromFunction1(value))
+    @scala.inline
+    def onViewableItemsChangedNull: this.type = set("onViewableItemsChanged", null)
+    @scala.inline
     def overScrollMode(value: auto | always | never): this.type = set("overScrollMode", value.asInstanceOf[js.Any])
     @scala.inline
     def pagingEnabled(value: Boolean): this.type = set("pagingEnabled", value.asInstanceOf[js.Any])
@@ -305,9 +420,17 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
+    def progressViewOffset(value: Double): this.type = set("progressViewOffset", value.asInstanceOf[js.Any])
+    @scala.inline
     def refreshControl(value: ReactElement): this.type = set("refreshControl", value.asInstanceOf[js.Any])
     @scala.inline
+    def refreshing(value: Boolean): this.type = set("refreshing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshingNull: this.type = set("refreshing", null)
+    @scala.inline
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderScrollComponent(value: /* props */ ScrollViewProps => ReactElement): this.type = set("renderScrollComponent", js.Any.fromFunction1(value))
     @scala.inline
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
     @scala.inline
@@ -355,9 +478,13 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def snapToInterval(value: Double): this.type = set("snapToInterval", value.asInstanceOf[js.Any])
     @scala.inline
+    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
+    @scala.inline
     def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
     @scala.inline
     def snapToStart(value: Boolean): this.type = set("snapToStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
     @scala.inline
     def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
     @scala.inline
@@ -379,16 +506,29 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
     @scala.inline
+    def updateCellsBatchingPeriod(value: Double): this.type = set("updateCellsBatchingPeriod", value.asInstanceOf[js.Any])
+    @scala.inline
     def useScrollView(value: Boolean): this.type = set("useScrollView", value.asInstanceOf[js.Any])
     @scala.inline
     def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewabilityConfig(value: js.Any): this.type = set("viewabilityConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
+    @scala.inline
+    def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def windowSize(value: Double): this.type = set("windowSize", value.asInstanceOf[js.Any])
     @scala.inline
     def zoomScale(value: Double): this.type = set("zoomScale", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: CarouselProperties[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](data: js.Array[T], renderItem: (Index[T], js.UndefOr[AdditionalParallaxProps]) => TagMod[Any]): Builder[T] = {
+  def apply[T](
+    data: js.Array[T],
+    renderItem: (typingsSlinky.reactNativeSnapCarousel.anon.Index[T], js.UndefOr[AdditionalParallaxProps]) => ReactElement
+  ): Builder[T] = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction2(renderItem))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[CarouselProperties[T]]))
   }

@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.templateAstMod
 
-import typingsSlinky.angularCompiler.astMod.AST
+import typingsSlinky.angularCompiler.astMod.ASTWithSource
 import typingsSlinky.angularCompiler.astMod.ParsedEvent
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
@@ -14,7 +14,7 @@ class BoundEventAst protected () extends TemplateAst {
     name: String,
     target: String,
     phase: String,
-    handler: AST,
+    handler: ASTWithSource,
     sourceSpan: ParseSourceSpan,
     handlerSpan: ParseSourceSpan
   ) = this()
@@ -22,7 +22,7 @@ class BoundEventAst protected () extends TemplateAst {
     name: String,
     target: String,
     phase: Null,
-    handler: AST,
+    handler: ASTWithSource,
     sourceSpan: ParseSourceSpan,
     handlerSpan: ParseSourceSpan
   ) = this()
@@ -30,7 +30,7 @@ class BoundEventAst protected () extends TemplateAst {
     name: String,
     target: Null,
     phase: String,
-    handler: AST,
+    handler: ASTWithSource,
     sourceSpan: ParseSourceSpan,
     handlerSpan: ParseSourceSpan
   ) = this()
@@ -38,27 +38,17 @@ class BoundEventAst protected () extends TemplateAst {
     name: String,
     target: Null,
     phase: Null,
-    handler: AST,
+    handler: ASTWithSource,
     sourceSpan: ParseSourceSpan,
     handlerSpan: ParseSourceSpan
   ) = this()
   val fullName: String = js.native
-  var handler: AST = js.native
+  var handler: ASTWithSource = js.native
   var handlerSpan: ParseSourceSpan = js.native
   val isAnimation: Boolean = js.native
   var name: String = js.native
   var phase: String | Null = js.native
-  /**
-    * The source span from which this node was parsed.
-    */
-  /* CompleteClass */
-  override var sourceSpan: ParseSourceSpan = js.native
   var target: String | Null = js.native
-  /**
-    * Visit this node and possibly transform it.
-    */
-  /* CompleteClass */
-  override def visit(visitor: TemplateAstVisitor, context: js.Any): js.Any = js.native
 }
 
 /* static members */

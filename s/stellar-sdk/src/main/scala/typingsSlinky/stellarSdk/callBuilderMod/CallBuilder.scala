@@ -6,6 +6,7 @@ import typingsSlinky.stellarSdk.serverApiMod.ServerApi.CollectionPage
 import typingsSlinky.stellarSdk.stellarSdkStrings.asc
 import typingsSlinky.stellarSdk.stellarSdkStrings.desc
 import typingsSlinky.stellarSdk.stellarSdkStrings.transactions
+import typingsSlinky.urijs.mod.URI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation._
 @JSImport("stellar-sdk/lib/call_builder", "CallBuilder")
 @js.native
 class CallBuilder[T /* <: FeeStatsResponse | BaseResponse[scala.Nothing] | CollectionPage[BaseResponse[scala.Nothing]] */] protected () extends js.Object {
-  def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any) = this()
+  def this(serverUrl: URI) = this()
   var _handleNetworkError: js.Any = js.native
   var _parseRecord: js.Any = js.native
   var _parseResponse: js.Any = js.native
@@ -23,7 +24,7 @@ class CallBuilder[T /* <: FeeStatsResponse | BaseResponse[scala.Nothing] | Colle
   var checkFilter: js.Any = js.native
   var filter: js.Array[js.Array[String]] = js.native
   var originalSegments: js.Array[String] = js.native
-  var url: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any = js.native
+  var url: URI = js.native
   def call(): js.Promise[T] = js.native
   def cursor(cursor: String): this.type = js.native
   @JSName("join")

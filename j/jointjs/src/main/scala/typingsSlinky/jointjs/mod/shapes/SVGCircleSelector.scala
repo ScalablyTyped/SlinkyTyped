@@ -24,17 +24,14 @@ object SVGCircleSelector {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCircle(value: SVGCircleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(js.undefined)
-        ret
-    }
+    def setCircle(value: SVGCircleAttributes): Self = this.set("circle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCircle: Self = this.set("circle", js.undefined)
   }
   
 }

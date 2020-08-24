@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.ObjectPath")
 @js.native
 class ObjectPath ()
-  extends typingsSlinky.sharepoint.SP.ObjectPath {
-  /* CompleteClass */
-  override def setPendingReplace(): Unit = js.native
-}
+  extends typingsSlinky.sharepoint.SP.ObjectPath
 

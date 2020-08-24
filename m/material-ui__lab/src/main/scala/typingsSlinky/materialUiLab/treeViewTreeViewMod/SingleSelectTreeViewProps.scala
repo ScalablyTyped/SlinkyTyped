@@ -47,53 +47,26 @@ object SingleSelectTreeViewProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDefaultSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelected")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDefaultSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelected")(js.undefined)
-        ret
-    }
+    def setDefaultSelected(value: String): Self = this.set("defaultSelected", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMultiSelect(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefaultSelected: Self = this.set("defaultSelected", js.undefined)
     @scala.inline
-    def withoutMultiSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelect")(js.undefined)
-        ret
-    }
+    def setMultiSelect(value: `false`): Self = this.set("multiSelect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnNodeSelect(value: (/* event */ ChangeEvent[js.Object], /* nodeIds */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelect")(js.Any.fromFunction2(value))
-        ret
-    }
+    def deleteMultiSelect: Self = this.set("multiSelect", js.undefined)
     @scala.inline
-    def withoutOnNodeSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelect")(js.undefined)
-        ret
-    }
+    def setOnNodeSelect(value: (/* event */ ChangeEvent[js.Object], /* nodeIds */ String) => Unit): Self = this.set("onNodeSelect", js.Any.fromFunction2(value))
     @scala.inline
-    def withSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOnNodeSelect: Self = this.set("onNodeSelect", js.undefined)
     @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
+    def setSelected(value: String): Self = this.set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelected: Self = this.set("selected", js.undefined)
   }
   
 }

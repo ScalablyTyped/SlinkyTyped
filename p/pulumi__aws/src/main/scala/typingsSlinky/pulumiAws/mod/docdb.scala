@@ -32,6 +32,7 @@ object docdb extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: ClusterArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: ClusterArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -101,8 +102,10 @@ object docdb extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.docdbClusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.docdbClusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.docdbClusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.docdbClusterMod.Cluster = js.native
     /**
@@ -122,8 +125,10 @@ object docdb extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.clusterInstanceMod.ClusterInstance = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterInstanceMod.ClusterInstance = js.native
     def get(name: String, id: Input[ID], state: ClusterInstanceState): typingsSlinky.pulumiAws.clusterInstanceMod.ClusterInstance = js.native
     def get(name: String, id: Input[ID], state: ClusterInstanceState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterInstanceMod.ClusterInstance = js.native
     /**
@@ -143,8 +148,10 @@ object docdb extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.clusterParameterGroupMod.ClusterParameterGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterParameterGroupMod.ClusterParameterGroup = js.native
     def get(name: String, id: Input[ID], state: ClusterParameterGroupState): typingsSlinky.pulumiAws.clusterParameterGroupMod.ClusterParameterGroup = js.native
     def get(name: String, id: Input[ID], state: ClusterParameterGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterParameterGroupMod.ClusterParameterGroup = js.native
     /**
@@ -164,8 +171,10 @@ object docdb extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.clusterSnapshotMod.ClusterSnapshot = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterSnapshotMod.ClusterSnapshot = js.native
     def get(name: String, id: Input[ID], state: ClusterSnapshotState): typingsSlinky.pulumiAws.clusterSnapshotMod.ClusterSnapshot = js.native
     def get(name: String, id: Input[ID], state: ClusterSnapshotState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterSnapshotMod.ClusterSnapshot = js.native
     /**
@@ -185,8 +194,10 @@ object docdb extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.docdbSubnetGroupMod.SubnetGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.docdbSubnetGroupMod.SubnetGroup = js.native
     def get(name: String, id: Input[ID], state: SubnetGroupState): typingsSlinky.pulumiAws.docdbSubnetGroupMod.SubnetGroup = js.native
     def get(name: String, id: Input[ID], state: SubnetGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.docdbSubnetGroupMod.SubnetGroup = js.native
     /**

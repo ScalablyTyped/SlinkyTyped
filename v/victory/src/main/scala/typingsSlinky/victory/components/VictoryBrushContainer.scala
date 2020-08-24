@@ -52,7 +52,7 @@ object VictoryBrushContainer {
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBrushDomainChange(value: (/* domain */ DomainPropType, /* props */ VictoryBrushContainerProps) => Unit): this.type = set("onBrushDomainChange", js.Any.fromFunction2(value))
+    def onBrushDomainChange(value: (/* domain */ DomainPropType, VictoryBrushContainerProps) => Unit): this.type = set("onBrushDomainChange", js.Any.fromFunction2(value))
     @scala.inline
     def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

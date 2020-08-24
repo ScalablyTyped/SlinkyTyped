@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("express", JSImport.Namespace)
 @js.native
 object expressAugmentingMod extends js.Object {
-  def Router(): typingsSlinky.express.mod.Router = js.native
-  def Router(options: RouterOptions): typingsSlinky.express.mod.Router = js.native
+  def Router(options: js.UndefOr[RouterOptions]): typingsSlinky.express.mod.Router = js.native
 }
 

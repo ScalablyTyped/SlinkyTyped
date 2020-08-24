@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("stellar-base", "Operation.bumpSequence")
 @js.native
 object bumpSequence extends js.Object {
-  def apply(options: BumpSequence): typingsSlinky.stellarBase.mod.xdr.Operation[BumpSequence_] = js.native
+  def apply(options: BumpSequence): typingsSlinky.stellarBase.xdrMod.default.Operation[BumpSequence_] = js.native
 }
 

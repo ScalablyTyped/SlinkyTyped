@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 trait jsendExport
   extends typingsSlinky.jsend.jsend.jsend {
   def apply(): typingsSlinky.jsend.jsend.jsend = js.native
+  def apply(config: js.UndefOr[scala.Nothing], host: js.Object): typingsSlinky.jsend.jsend.jsend = js.native
   def apply(config: Strict): typingsSlinky.jsend.jsend.jsend = js.native
   def apply(config: Strict, host: js.Object): typingsSlinky.jsend.jsend.jsend = js.native
 }

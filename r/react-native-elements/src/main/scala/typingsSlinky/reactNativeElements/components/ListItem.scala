@@ -11,6 +11,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -66,6 +67,8 @@ object ListItem {
     @scala.inline
     def ViewComponent(value: ReactComponentClass[js.Object]): this.type = set("ViewComponent", value.asInstanceOf[js.Any])
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -83,6 +86,8 @@ object ListItem {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -125,6 +130,8 @@ object ListItem {
     def delayPressOut(value: Double): this.type = set("delayPressOut", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledNull: this.type = set("disabled", null)
     @scala.inline
     def disabledStyle(value: StyleProp[ViewStyle]): this.type = set("disabledStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -244,9 +251,13 @@ object ListItem {
     @scala.inline
     def topDivider(value: Boolean): this.type = set("topDivider", value.asInstanceOf[js.Any])
     @scala.inline
+    def touchSoundDisabled(value: Boolean): this.type = set("touchSoundDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def touchSoundDisabledNull: this.type = set("touchSoundDisabled", null)
+    @scala.inline
     def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
     @scala.inline
-    def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
+    def underlayColor(value: ColorValue): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -4,7 +4,6 @@ import typingsSlinky.keycloakJs.mod.KeycloakFlow
 import typingsSlinky.keycloakJs.mod.KeycloakOnLoad
 import typingsSlinky.keycloakJs.mod.KeycloakResponseMode
 import typingsSlinky.keycloakJs.mod.KeycloakResponseType
-import typingsSlinky.keycloakJs.mod._KeycloakAdapterName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +11,9 @@ import scala.scalajs.js.annotation._
 object keycloakJsStrings {
   @js.native
   sealed trait S256 extends js.Object
+  
+  @js.native
+  sealed trait cancelled extends js.Object
   
   @js.native
   sealed trait `check-sso` extends KeycloakOnLoad
@@ -23,13 +25,16 @@ object keycloakJsStrings {
   sealed trait `code id_token token` extends KeycloakResponseType
   
   @js.native
-  sealed trait cordova extends _KeycloakAdapterName
+  sealed trait cordova extends js.Object
   
   @js.native
-  sealed trait `cordova-native` extends _KeycloakAdapterName
+  sealed trait `cordova-native` extends js.Object
   
   @js.native
-  sealed trait default extends _KeycloakAdapterName
+  sealed trait default extends js.Object
+  
+  @js.native
+  sealed trait error extends js.Object
   
   @js.native
   sealed trait fragment extends KeycloakResponseMode
@@ -50,22 +55,21 @@ object keycloakJsStrings {
   sealed trait `login-required` extends KeycloakOnLoad
   
   @js.native
-  sealed trait native extends js.Object
-  
-  @js.native
   sealed trait none extends js.Object
   
   @js.native
   sealed trait query extends KeycloakResponseMode
   
   @js.native
-  sealed trait register extends js.Object
+  sealed trait standard extends KeycloakFlow
   
   @js.native
-  sealed trait standard extends KeycloakFlow
+  sealed trait success extends js.Object
   
   @scala.inline
   def S256: S256 = "S256".asInstanceOf[S256]
+  @scala.inline
+  def cancelled: cancelled = "cancelled".asInstanceOf[cancelled]
   @scala.inline
   def `check-sso`: `check-sso` = "check-sso".asInstanceOf[`check-sso`]
   @scala.inline
@@ -79,6 +83,8 @@ object keycloakJsStrings {
   @scala.inline
   def default: default = "default".asInstanceOf[default]
   @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  @scala.inline
   def fragment: fragment = "fragment".asInstanceOf[fragment]
   @scala.inline
   def hybrid: hybrid = "hybrid".asInstanceOf[hybrid]
@@ -91,14 +97,12 @@ object keycloakJsStrings {
   @scala.inline
   def `login-required`: `login-required` = "login-required".asInstanceOf[`login-required`]
   @scala.inline
-  def native: native = "native".asInstanceOf[native]
-  @scala.inline
   def none: none = "none".asInstanceOf[none]
   @scala.inline
   def query: query = "query".asInstanceOf[query]
   @scala.inline
-  def register: register = "register".asInstanceOf[register]
-  @scala.inline
   def standard: standard = "standard".asInstanceOf[standard]
+  @scala.inline
+  def success: success = "success".asInstanceOf[success]
 }
 

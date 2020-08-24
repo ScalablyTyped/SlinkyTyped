@@ -14,7 +14,7 @@ class BoundElementPropertyAst protected ()
     name: String,
     `type`: PropertyBindingType,
     securityContext: SecurityContext,
-    value: typingsSlinky.angularCompiler.astMod.AST,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     unit: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -22,7 +22,7 @@ class BoundElementPropertyAst protected ()
     name: String,
     `type`: PropertyBindingType,
     securityContext: SecurityContext,
-    value: typingsSlinky.angularCompiler.astMod.AST,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     unit: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

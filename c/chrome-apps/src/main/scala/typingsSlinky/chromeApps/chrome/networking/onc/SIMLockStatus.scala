@@ -31,29 +31,18 @@ object SIMLockStatus {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLockEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockEnabled")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withLockType(value: `sim-pin` | `sim-puk` | _empty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLockEnabled(value: Boolean): Self = this.set("LockEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRetriesLeft(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetriesLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLockType(value: `sim-pin` | `sim-puk` | _empty): Self = this.set("LockType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRetriesLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetriesLeft")(js.undefined)
-        ret
-    }
+    def setRetriesLeft(value: integer): Self = this.set("RetriesLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRetriesLeft: Self = this.set("RetriesLeft", js.undefined)
   }
   
 }

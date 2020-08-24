@@ -1,7 +1,7 @@
 package typingsSlinky.recompose
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.recompose.mod.ObservableConfig
 import typingsSlinky.recompose.mod.Subscribable
 import typingsSlinky.recompose.mod.mapper
@@ -14,9 +14,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object componentFromStreamMod extends js.Object {
   def componentFromStreamWithConfig(config: ObservableConfig): js.Function1[
-    /* propsToReactNode */ mapper[Subscribable[_], Subscribable[TagMod[Any]]], 
+    /* propsToReactNode */ mapper[Subscribable[_], Subscribable[ReactElement]], 
     ReactComponentClass[_]
   ] = js.native
-  def default[TProps](propsToReactNode: mapper[Subscribable[TProps], Subscribable[TagMod[Any]]]): ReactComponentClass[TProps] = js.native
+  def default[TProps](propsToReactNode: mapper[Subscribable[TProps], Subscribable[ReactElement]]): ReactComponentClass[TProps] = js.native
 }
 

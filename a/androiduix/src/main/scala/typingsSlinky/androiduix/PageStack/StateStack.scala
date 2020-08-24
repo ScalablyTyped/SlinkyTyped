@@ -24,29 +24,20 @@ object StateStack {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withStack(value: js.Array[StateSaved]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPageId(value: String): Self = this.set("pageId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsRoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStackVarargs(value: StateSaved*): Self = this.set("stack", js.Array(value :_*))
     @scala.inline
-    def withoutIsRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRoot")(js.undefined)
-        ret
-    }
+    def setStack(value: js.Array[StateSaved]): Self = this.set("stack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsRoot(value: Boolean): Self = this.set("isRoot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsRoot: Self = this.set("isRoot", js.undefined)
   }
   
 }

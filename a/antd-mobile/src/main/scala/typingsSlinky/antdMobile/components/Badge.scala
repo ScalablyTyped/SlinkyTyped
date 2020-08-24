@@ -5,21 +5,20 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.large
 import typingsSlinky.antdMobile.antdMobileStrings.small
 import typingsSlinky.antdMobile.badgeMod.BadgeProps
-import typingsSlinky.antdMobile.badgeMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Badge {
-  @JSImport("antd-mobile/lib/badge", JSImport.Default)
+  @JSImport("antd-mobile", "Badge")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Badge] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

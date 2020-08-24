@@ -1,6 +1,5 @@
 package typingsSlinky.antDesignReactNative.portalHostMod
 
-import slinky.core.TagMod
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.mount
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.unmount
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.update
@@ -17,17 +16,15 @@ trait Operation extends js.Object
 
 object Operation {
   @scala.inline
-  def ChildrenKey(key: Double, `type`: mount, children: TagMod[Any] = null): Operation = {
+  def ChildrenKey(key: Double, `type`: mount): Operation = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     __obj.asInstanceOf[Operation]
   }
   @scala.inline
-  def KeyType(key: Double, `type`: update, children: TagMod[Any] = null): Operation = {
+  def KeyType(key: Double, `type`: update): Operation = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     __obj.asInstanceOf[Operation]
   }
   @scala.inline

@@ -79,173 +79,66 @@ object TypedArray {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttrMap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrMap")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAttrMapKeysCache(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrMapKeysCache")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAttrMap(value: js.Any): Self = this.set("attrMap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCheckRecycled(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkRecycled")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAttrMapKeysCache(value: js.Any): Self = this.set("attrMapKeysCache", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetAttrValue(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrValue")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setCheckRecycled(value: () => js.Any): Self = this.set("checkRecycled", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetBoolean(value: (String, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoolean")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetAttrValue(value: String => String): Self = this.set("getAttrValue", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetColor(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColor")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetBoolean(value: (String, Boolean) => Boolean): Self = this.set("getBoolean", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetColorStateList(value: String => ColorStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColorStateList")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetColor(value: (String, Double) => Double): Self = this.set("getColor", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetDimension(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimension")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetColorStateList(value: String => ColorStateList): Self = this.set("getColorStateList", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetDimensionPixelOffset(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimensionPixelOffset")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetDimension(value: (String, Double) => Double): Self = this.set("getDimension", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetDimensionPixelSize(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimensionPixelSize")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetDimensionPixelOffset(value: (String, Double) => Double): Self = this.set("getDimensionPixelOffset", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetDrawable(value: String => Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDrawable")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetDimensionPixelSize(value: (String, Double) => Double): Self = this.set("getDimensionPixelSize", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetFloat(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFloat")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetDrawable(value: String => Drawable): Self = this.set("getDrawable", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetIndex(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndex")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetFloat(value: (String, Double) => Double): Self = this.set("getFloat", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetInt(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInt")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetIndex(value: Double => String): Self = this.set("getIndex", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetInteger(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInteger")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetInt(value: (String, Double) => Double): Self = this.set("getInt", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetLayoutDimension(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLayoutDimension")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetInteger(value: (String, Double) => Double): Self = this.set("getInteger", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetLowerCaseNoNamespaceAttrNames(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLowerCaseNoNamespaceAttrNames")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetLayoutDimension(value: (String, Double) => Double): Self = this.set("getLayoutDimension", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetResourceId(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResourceId")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetLowerCaseNoNamespaceAttrNames(value: () => js.Array[String]): Self = this.set("getLowerCaseNoNamespaceAttrNames", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetResources(value: () => Resources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResources")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetResourceId(value: (String, String) => String): Self = this.set("getResourceId", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetString(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getString")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetResources(value: () => Resources): Self = this.set("getResources", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetText(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getText")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetString(value: String => String): Self = this.set("getString", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetTextArray(value: String => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextArray")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetText(value: String => String): Self = this.set("getText", js.Any.fromFunction1(value))
     @scala.inline
-    def withHasValue(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasValue")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetTextArray(value: String => js.Array[String]): Self = this.set("getTextArray", js.Any.fromFunction1(value))
     @scala.inline
-    def withHasValueOrEmpty(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasValueOrEmpty")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setHasValue(value: String => Boolean): Self = this.set("hasValue", js.Any.fromFunction1(value))
     @scala.inline
-    def withLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHasValueOrEmpty(value: String => Boolean): Self = this.set("hasValueOrEmpty", js.Any.fromFunction1(value))
     @scala.inline
-    def withMRecycled(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRecycled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLength(value: () => Double): Self = this.set("length", js.Any.fromFunction0(value))
     @scala.inline
-    def withMResources(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mResources")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRecycled(value: js.Any): Self = this.set("mRecycled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRecycle(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycle")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMResources(value: js.Any): Self = this.set("mResources", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRecycle(value: () => Unit): Self = this.set("recycle", js.Any.fromFunction0(value))
   }
   
 }

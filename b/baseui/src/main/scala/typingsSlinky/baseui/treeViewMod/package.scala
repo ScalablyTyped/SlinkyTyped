@@ -11,7 +11,7 @@ package object treeViewMod {
   ]
   type toggleIsExpandedT = js.Function3[
     /* data */ js.Array[typingsSlinky.baseui.treeViewMod.TreeNode[js.Any]], 
-    /* togggledNode */ typingsSlinky.baseui.treeViewMod.TreeNode[js.Any], 
+    /* toggledNode */ typingsSlinky.baseui.treeViewMod.TreeNode[js.Any], 
     /* getId */ js.UndefOr[typingsSlinky.baseui.treeViewMod.TGetId], 
     js.Array[typingsSlinky.baseui.treeViewMod.TreeNode[js.Any]]
   ]

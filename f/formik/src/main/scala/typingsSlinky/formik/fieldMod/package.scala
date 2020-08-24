@@ -5,5 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object fieldMod {
-  type FieldAttributes[T] = typingsSlinky.formik.typesMod.GenericFieldHTMLAttributes with typingsSlinky.formik.fieldMod.FieldConfig with T
+  type FieldAttributes[T] = typingsSlinky.formik.typesMod.GenericFieldHTMLAttributes with typingsSlinky.formik.fieldMod.FieldConfig[T] with T with typingsSlinky.formik.anon.Name
+  type FieldHookConfig[T] = typingsSlinky.formik.typesMod.GenericFieldHTMLAttributes with typingsSlinky.formik.fieldMod.FieldConfig[T]
 }

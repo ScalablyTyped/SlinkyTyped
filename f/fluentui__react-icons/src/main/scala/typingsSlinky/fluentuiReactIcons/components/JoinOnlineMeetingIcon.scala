@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object JoinOnlineMeetingIcon {
-  @JSImport("@fluentui/react-icons/lib/components/JoinOnlineMeetingIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "JoinOnlineMeetingIcon")
   @js.native
   object component extends js.Object
   

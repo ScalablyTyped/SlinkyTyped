@@ -1,7 +1,6 @@
 package typingsSlinky.rcRate.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -14,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Star {
-  @JSImport("rc-rate/lib/Star", JSImport.Default)
+  @JSImport("rc-rate/es/Star", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -25,11 +24,9 @@ object Star {
     @scala.inline
     def allowHalf(value: Boolean): this.type = set("allowHalf", value.asInstanceOf[js.Any])
     @scala.inline
-    def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+    def character(value: StarProps => ReactElement): this.type = set("character", js.Any.fromFunction1(value))
     @scala.inline
-    def character(value: TagMod[Any]): this.type = set("character", value.asInstanceOf[js.Any])
-    @scala.inline
-    def characterRender(value: (/* origin */ ReactElement, /* props */ StarProps) => TagMod[Any]): this.type = set("characterRender", js.Any.fromFunction2(value))
+    def characterRender(value: (/* origin */ ReactElement, StarProps) => ReactElement): this.type = set("characterRender", js.Any.fromFunction2(value))
     @scala.inline
     def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
     @scala.inline

@@ -11,7 +11,7 @@ trait Options[T /* <: Cell */] extends ViewOptions[T]
 
 object Options {
   @scala.inline
-  def apply[T](): Options[T] = {
+  def apply[/* <: typingsSlinky.jointjs.mod.dia.Cell */ T](): Options[T] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Options[T]]
   }

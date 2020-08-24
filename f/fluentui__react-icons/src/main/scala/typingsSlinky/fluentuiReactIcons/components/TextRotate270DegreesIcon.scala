@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TextRotate270DegreesIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TextRotate270DegreesIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TextRotate270DegreesIcon")
   @js.native
   object component extends js.Object
   

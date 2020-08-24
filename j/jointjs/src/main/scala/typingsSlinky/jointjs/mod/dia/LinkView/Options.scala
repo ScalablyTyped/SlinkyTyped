@@ -29,77 +29,34 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDoubleLinkTools(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleLinkTools")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDoubleLinkTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleLinkTools")(js.undefined)
-        ret
-    }
+    def setDoubleLinkTools(value: Boolean): Self = this.set("doubleLinkTools", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDoubleLinkToolsOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleLinkToolsOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDoubleLinkTools: Self = this.set("doubleLinkTools", js.undefined)
     @scala.inline
-    def withoutDoubleLinkToolsOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleLinkToolsOffset")(js.undefined)
-        ret
-    }
+    def setDoubleLinkToolsOffset(value: Double): Self = this.set("doubleLinkToolsOffset", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLinkToolsOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkToolsOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDoubleLinkToolsOffset: Self = this.set("doubleLinkToolsOffset", js.undefined)
     @scala.inline
-    def withoutLinkToolsOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkToolsOffset")(js.undefined)
-        ret
-    }
+    def setLinkToolsOffset(value: Double): Self = this.set("linkToolsOffset", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLongLinkLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longLinkLength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLinkToolsOffset: Self = this.set("linkToolsOffset", js.undefined)
     @scala.inline
-    def withoutLongLinkLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longLinkLength")(js.undefined)
-        ret
-    }
+    def setLongLinkLength(value: Double): Self = this.set("longLinkLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSampleInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLongLinkLength: Self = this.set("longLinkLength", js.undefined)
     @scala.inline
-    def withoutSampleInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleInterval")(js.undefined)
-        ret
-    }
+    def setSampleInterval(value: Double): Self = this.set("sampleInterval", value.asInstanceOf[js.Any])
     @scala.inline
-    def withShortLinkLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortLinkLength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSampleInterval: Self = this.set("sampleInterval", js.undefined)
     @scala.inline
-    def withoutShortLinkLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortLinkLength")(js.undefined)
-        ret
-    }
+    def setShortLinkLength(value: Double): Self = this.set("shortLinkLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShortLinkLength: Self = this.set("shortLinkLength", js.undefined)
   }
   
 }

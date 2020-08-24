@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class ReciprocalInverseGaussian ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.ReciprocalInverseGaussian] {
   def this(mu: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], lambda: Double) = this()
   def this(mu: Double, lambda: Double) = this()
 }
 

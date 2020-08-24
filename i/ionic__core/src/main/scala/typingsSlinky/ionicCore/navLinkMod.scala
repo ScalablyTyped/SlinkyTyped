@@ -1,10 +1,11 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.navInterfaceMod.NavComponent
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +25,10 @@ object navLinkMod extends js.Object {
     var componentProps: js.UndefOr[ComponentProps[Null]] = js.native
     var el: HTMLElement = js.native
     var onClick: js.Any = js.native
+    /**
+      * The transition animation when navigating to another page.
+      */
+    var routerAnimation: js.UndefOr[AnimationBuilder] = js.native
     /**
       * The transition direction when navigating to another page.
       */

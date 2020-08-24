@@ -3,22 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.cardCardActionsMod.CardActionsProps
-import typingsSlinky.reactToolbox.cardCardActionsMod.CardActionsTheme
-import typingsSlinky.reactToolbox.cardCardActionsMod.default
+import typingsSlinky.reactToolbox.cardActionsMod.CardActionsProps
+import typingsSlinky.reactToolbox.cardActionsMod.CardActionsTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CardActions {
-  @JSImport("react-toolbox/lib/card/CardActions", JSImport.Default)
+  @JSImport("react-toolbox/components/card", "CardActions")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.cardMod.CardActions] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

@@ -53,119 +53,52 @@ object ArrayMap {
     __obj.asInstanceOf[ArrayMap[K, V]]
   }
   @scala.inline
-  implicit class ArrayMapOps[Self[k, v] <: ArrayMap[k, v], K, V] (val x: Self[K, V]) extends AnyVal {
+  implicit class ArrayMapOps[Self <: ArrayMap[_, _], K, V] (val x: Self with (ArrayMap[K, V])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[K, V] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, V]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, V]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, V]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAppend(value: (K, V) => Unit): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClear(value: () => Unit): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAppend(value: (K, V) => Unit): Self = this.set("append", js.Any.fromFunction2(value))
     @scala.inline
-    def withContainsKey(value: K => Boolean): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsKey")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
     @scala.inline
-    def withContainsValue(value: V => Boolean): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsValue")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setContainsKey(value: K => Boolean): Self = this.set("containsKey", js.Any.fromFunction1(value))
     @scala.inline
-    def withEnsureCapacity(value: Double => Unit): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ensureCapacity")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setContainsValue(value: V => Boolean): Self = this.set("containsValue", js.Any.fromFunction1(value))
     @scala.inline
-    def withErase(value: () => Unit): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("erase")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setEnsureCapacity(value: Double => Unit): Self = this.set("ensureCapacity", js.Any.fromFunction1(value))
     @scala.inline
-    def withGet(value: K => V): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setErase(value: () => Unit): Self = this.set("erase", js.Any.fromFunction0(value))
     @scala.inline
-    def withIndexOfValue(value: V => Double): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexOfValue")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGet(value: K => V): Self = this.set("get", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsEmpty(value: () => Boolean): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIndexOfValue(value: V => Double): Self = this.set("indexOfValue", js.Any.fromFunction1(value))
     @scala.inline
-    def withKeyAt(value: Double => K): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyAt")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsEmpty(value: () => Boolean): Self = this.set("isEmpty", js.Any.fromFunction0(value))
     @scala.inline
-    def withKeySet(value: () => Set[K]): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keySet")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setKeyAt(value: Double => K): Self = this.set("keyAt", js.Any.fromFunction1(value))
     @scala.inline
-    def withMap(value: js.Any): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKeySet(value: () => Set[K]): Self = this.set("keySet", js.Any.fromFunction0(value))
     @scala.inline
-    def withPut(value: (K, V) => V): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMap(value: js.Any): Self = this.set("map", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemove(value: K => V): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setPut(value: (K, V) => V): Self = this.set("put", js.Any.fromFunction2(value))
     @scala.inline
-    def withRemoveAt(value: Double => V): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAt")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemove(value: K => V): Self = this.set("remove", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetValueAt(value: (Double, V) => V): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setValueAt")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setRemoveAt(value: Double => V): Self = this.set("removeAt", js.Any.fromFunction1(value))
     @scala.inline
-    def withSize(value: () => Double): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSetValueAt(value: (Double, V) => V): Self = this.set("setValueAt", js.Any.fromFunction2(value))
     @scala.inline
-    def withValueAt(value: Double => V): Self[K, V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAt")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSize(value: () => Double): Self = this.set("size", js.Any.fromFunction0(value))
+    @scala.inline
+    def setValueAt(value: Double => V): Self = this.set("valueAt", js.Any.fromFunction1(value))
   }
   
 }

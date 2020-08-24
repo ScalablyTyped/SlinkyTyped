@@ -13,6 +13,7 @@ object shortcutPanelMod extends js.Object {
   trait PropsType extends js.Object {
     var locale: Locale = js.native
     def onSelect(): Unit = js.native
+    def onSelect(startDate: js.UndefOr[scala.Nothing], endDate: js.Date): Unit = js.native
     def onSelect(startDate: js.Date): Unit = js.native
     def onSelect(startDate: js.Date, endDate: js.Date): Unit = js.native
   }

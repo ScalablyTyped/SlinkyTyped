@@ -1,7 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.Color
+import typingsSlinky.firefoxWebextBrowser.anon.ColorIcon
 import typingsSlinky.firefoxWebextBrowser.anon.ContextualIdentity
 import typingsSlinky.firefoxWebextBrowser.anon.Icon
 import typingsSlinky.firefoxWebextBrowser.anon.Name
@@ -30,7 +30,7 @@ object contextualIdentities extends js.Object {
     * Creates a contextual identity with the given data.
     * @param details Details about the contextual identity being created.
     */
-  def create(details: Color): js.Promise[
+  def create(details: Icon): js.Promise[
     typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.ContextualIdentity
   ] = js.native
   /* contextualIdentities functions */
@@ -62,7 +62,7 @@ object contextualIdentities extends js.Object {
     * @param cookieStoreId The ID of the contextual identity cookie store.
     * @param details Details about the contextual identity being created.
     */
-  def update(cookieStoreId: String, details: Icon): js.Promise[
+  def update(cookieStoreId: String, details: ColorIcon): js.Promise[
     typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.ContextualIdentity
   ] = js.native
 }

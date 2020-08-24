@@ -1,7 +1,9 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.pan
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +23,7 @@ trait NavigationToggleViewModel extends Accessor {
     *
     * @default pan
     */
-  var navigationMode: String = js.native
+  var navigationMode: pan | rotate = js.native
   /**
     * The state of the widget.
     *

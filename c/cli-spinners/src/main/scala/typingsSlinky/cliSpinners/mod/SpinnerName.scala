@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cliSpinners.cliSpinnersStrings.dots10
   - typingsSlinky.cliSpinners.cliSpinnersStrings.dots11
   - typingsSlinky.cliSpinners.cliSpinnersStrings.dots12
+  - typingsSlinky.cliSpinners.cliSpinnersStrings.dots8Bit
   - typingsSlinky.cliSpinners.cliSpinnersStrings.line
   - typingsSlinky.cliSpinners.cliSpinnersStrings.line2
   - typingsSlinky.cliSpinners.cliSpinnersStrings.pipe
@@ -64,6 +65,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cliSpinners.cliSpinnersStrings.hearts
   - typingsSlinky.cliSpinners.cliSpinnersStrings.clock
   - typingsSlinky.cliSpinners.cliSpinnersStrings.earth
+  - typingsSlinky.cliSpinners.cliSpinnersStrings.material
   - typingsSlinky.cliSpinners.cliSpinnersStrings.moon
   - typingsSlinky.cliSpinners.cliSpinnersStrings.runner
   - typingsSlinky.cliSpinners.cliSpinnersStrings.pong
@@ -74,6 +76,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cliSpinners.cliSpinnersStrings.grenade
   - typingsSlinky.cliSpinners.cliSpinnersStrings.point
   - typingsSlinky.cliSpinners.cliSpinnersStrings.layer
+  - typingsSlinky.cliSpinners.cliSpinnersStrings.betaWave
 */
 trait SpinnerName extends js.Object
 
@@ -90,6 +93,8 @@ object SpinnerName {
   def balloon: typingsSlinky.cliSpinners.cliSpinnersStrings.balloon = "balloon".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.balloon]
   @scala.inline
   def balloon2: typingsSlinky.cliSpinners.cliSpinnersStrings.balloon2 = "balloon2".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.balloon2]
+  @scala.inline
+  def betaWave: typingsSlinky.cliSpinners.cliSpinnersStrings.betaWave = "betaWave".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.betaWave]
   @scala.inline
   def bounce: typingsSlinky.cliSpinners.cliSpinnersStrings.bounce = "bounce".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.bounce]
   @scala.inline
@@ -133,6 +138,8 @@ object SpinnerName {
   @scala.inline
   def dots8: typingsSlinky.cliSpinners.cliSpinnersStrings.dots8 = "dots8".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.dots8]
   @scala.inline
+  def dots8Bit: typingsSlinky.cliSpinners.cliSpinnersStrings.dots8Bit = "dots8Bit".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.dots8Bit]
+  @scala.inline
   def dots9: typingsSlinky.cliSpinners.cliSpinnersStrings.dots9 = "dots9".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.dots9]
   @scala.inline
   def dqpb: typingsSlinky.cliSpinners.cliSpinnersStrings.dqpb = "dqpb".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.dqpb]
@@ -156,6 +163,8 @@ object SpinnerName {
   def line: typingsSlinky.cliSpinners.cliSpinnersStrings.line = "line".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.line]
   @scala.inline
   def line2: typingsSlinky.cliSpinners.cliSpinnersStrings.line2 = "line2".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.line2]
+  @scala.inline
+  def material: typingsSlinky.cliSpinners.cliSpinnersStrings.material = "material".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.material]
   @scala.inline
   def monkey: typingsSlinky.cliSpinners.cliSpinnersStrings.monkey = "monkey".asInstanceOf[typingsSlinky.cliSpinners.cliSpinnersStrings.monkey]
   @scala.inline

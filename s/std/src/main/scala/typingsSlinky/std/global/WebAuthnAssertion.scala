@@ -8,16 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("WebAuthnAssertion")
 @js.native
 class WebAuthnAssertion ()
-  extends typingsSlinky.std.WebAuthnAssertion {
-  /* CompleteClass */
-  override val authenticatorData: js.typedarray.ArrayBuffer = js.native
-  /* CompleteClass */
-  override val clientData: js.typedarray.ArrayBuffer = js.native
-  /* CompleteClass */
-  override val credential: typingsSlinky.std.ScopedCredential = js.native
-  /* CompleteClass */
-  override val signature: js.typedarray.ArrayBuffer = js.native
-}
+  extends typingsSlinky.std.WebAuthnAssertion
 
 @JSGlobal("WebAuthnAssertion")
 @js.native

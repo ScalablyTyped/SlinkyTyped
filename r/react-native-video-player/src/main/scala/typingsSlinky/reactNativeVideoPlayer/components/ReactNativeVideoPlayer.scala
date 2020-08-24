@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeVideoPlayer.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
+import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeVideoPlayer.anon.ControlButton
@@ -43,6 +44,8 @@ object ReactNativeVideoPlayer {
     @scala.inline
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     @scala.inline
+    def endThumbnailVarargs(value: ImageURISource*): this.type = set("endThumbnail", js.Array(value :_*))
+    @scala.inline
     def endThumbnail(value: ImageSourcePropType): this.type = set("endThumbnail", value.asInstanceOf[js.Any])
     @scala.inline
     def endWithThumbnail(value: Boolean): this.type = set("endWithThumbnail", value.asInstanceOf[js.Any])
@@ -80,6 +83,8 @@ object ReactNativeVideoPlayer {
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def styleNull: this.type = set("style", null)
+    @scala.inline
+    def thumbnailVarargs(value: ImageURISource*): this.type = set("thumbnail", js.Array(value :_*))
     @scala.inline
     def thumbnail(value: ImageSourcePropType): this.type = set("thumbnail", value.asInstanceOf[js.Any])
     @scala.inline

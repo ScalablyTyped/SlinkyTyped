@@ -1,9 +1,6 @@
 package typingsSlinky.blueprintjsDatetime.dateRangeInputMod
 
-import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.blueprintjsCore.mod.AbstractPureComponent2
-import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
-import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import typingsSlinky.blueprintjsDatetime.anon.PartialIDateRangeInputPro
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,10 +58,6 @@ class DateRangeInput protected ()
   var startInputRef: js.Any = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MDateRangeInput(prevProps: IDateRangeInputProps, prevState: IDateRangeInputState): Unit = js.native
-  @JSName("componentDidUpdate")
-  def componentDidUpdate_MDateRangeInput(prevProps: IDateRangeInputProps, prevState: IDateRangeInputState, snapshot: js.Object): Unit = js.native
-  /* protected */ def getEndInputRefHandler(): IRefCallback[HTMLInputElement] | IRefObject[HTMLInputElement] = js.native
-  /* protected */ def getStartRefHandler(): IRefCallback[HTMLInputElement] | IRefObject[HTMLInputElement] = js.native
   /**
     * Public method intended for unit testing only. Do not use in feature work!
     */

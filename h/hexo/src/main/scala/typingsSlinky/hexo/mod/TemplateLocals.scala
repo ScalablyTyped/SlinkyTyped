@@ -4,9 +4,7 @@ import typingsSlinky.hexo.anon.Args
 import typingsSlinky.hexo.mod.Locals.Category
 import typingsSlinky.hexo.mod.Locals.Page
 import typingsSlinky.hexo.mod.Locals.Tag
-import typingsSlinky.underscore.mod.Dictionary
-import typingsSlinky.underscore.mod.List
-import typingsSlinky.underscore.mod.TypeOfDictionary
+import typingsSlinky.underscore.mod.TypeOfCollection
 import typingsSlinky.underscore.mod.Underscore
 import typingsSlinky.underscore.mod.UnderscoreStatic
 import scala.scalajs.js
@@ -33,29 +31,15 @@ trait TemplateLocals extends js.Object {
   var url: String = js.native
   var view_dir: String = js.native
   /**
-    * Underscore object
-    */
-  @JSName("_")
-  def _underscore[T](value: T): Underscore[T, T] = js.native
-  /**
-    * Underscore object
-    */
-  @JSName("_")
-  def _underscore[T](value: js.Array[T]): Underscore[T, js.Array[T]] = js.native
-  /**
     * Underscore OOP Wrapper, all Underscore functions that take an object
     * as the first parameter can be invoked through this function.
-    * @param key First argument to Underscore object functions.
+    * @param value First argument to Underscore object functions.
+    * @returns An Underscore wrapper around the supplied value.
     **/
   /**
     * Underscore object
     */
   @JSName("_")
-  def _underscore[T](value: List[T]): Underscore[T, List[T]] = js.native
-  /**
-    * Underscore object
-    */
-  @JSName("_")
-  def _underscore_T_TypeOfDictionaryVV_DictionaryWildcard[T /* <: TypeOfDictionary[V] */, V /* <: Dictionary[_] */](value: V): Underscore[T, V] = js.native
+  def _underscore[V](value: V): Underscore[TypeOfCollection[V], V] = js.native
 }
 

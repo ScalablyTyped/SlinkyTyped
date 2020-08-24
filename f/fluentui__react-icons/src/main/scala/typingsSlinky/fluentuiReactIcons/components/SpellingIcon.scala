@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SpellingIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SpellingIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SpellingIcon")
   @js.native
   object component extends js.Object
   

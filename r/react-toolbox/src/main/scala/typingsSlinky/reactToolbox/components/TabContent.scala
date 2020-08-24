@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.tabsTabContentMod.TabContentProps
-import typingsSlinky.reactToolbox.tabsTabContentMod.TabContentTheme
-import typingsSlinky.reactToolbox.tabsTabContentMod.default
+import typingsSlinky.reactToolbox.tabContentMod.TabContentProps
+import typingsSlinky.reactToolbox.tabContentMod.TabContentTheme
+import typingsSlinky.reactToolbox.tabContentMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabContent {
-  @JSImport("react-toolbox/lib/tabs/TabContent", JSImport.Default)
+  @JSImport("react-toolbox/components/tabs/TabContent", JSImport.Default)
   @js.native
   object component extends js.Object
   

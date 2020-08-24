@@ -2,26 +2,25 @@ package typingsSlinky.reactLazylog.components
 
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.raw.Range
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazylog.lazyLogMod.LazyLogProps
 import typingsSlinky.reactLazylog.lazyLogMod.WebsocketOptions
-import typingsSlinky.reactLazylog.lazyLogMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LazyLog {
-  @JSImport("react-lazylog/build/LazyLog", JSImport.Default)
+  @JSImport("react-lazylog", "LazyLog")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactLazylog.mod.LazyLog] {
     @scala.inline
     def caseInsensitive(value: Boolean): this.type = set("caseInsensitive", value.asInstanceOf[js.Any])
     @scala.inline
@@ -35,9 +34,11 @@ object LazyLog {
     @scala.inline
     def follow(value: Boolean): this.type = set("follow", value.asInstanceOf[js.Any])
     @scala.inline
-    def formatPart(value: /* text */ String => TagMod[Any]): this.type = set("formatPart", js.Any.fromFunction1(value))
+    def formatPart(value: /* text */ String => ReactElement): this.type = set("formatPart", js.Any.fromFunction1(value))
     @scala.inline
     def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightVarargs(value: Double*): this.type = set("highlight", js.Array(value :_*))
     @scala.inline
     def highlight(value: Double | js.Array[Double]): this.type = set("highlight", value.asInstanceOf[js.Any])
     @scala.inline

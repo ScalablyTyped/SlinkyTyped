@@ -1,8 +1,8 @@
 package typingsSlinky.wordpressComponents.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressComponents.mod.TabPanel.^
 import typingsSlinky.wordpressComponents.tabPanelMod.TabPanel.Props
 import typingsSlinky.wordpressComponents.tabPanelMod.TabPanel.Tab
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.horizontal
@@ -19,7 +19,7 @@ object TabPanel {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def activeClass(value: String): this.type = set("activeClass", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,8 +34,8 @@ object TabPanel {
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(tabs: js.Array[Tab]): Builder = {
-    val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
+  def apply(children: Tab => ReactElement, tabs: js.Array[Tab]): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), tabs = tabs.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }

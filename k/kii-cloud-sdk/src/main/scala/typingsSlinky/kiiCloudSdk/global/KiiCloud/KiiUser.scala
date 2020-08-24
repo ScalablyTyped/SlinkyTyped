@@ -132,6 +132,7 @@ object KiiUser extends js.Object {
     *     );
     */
   def authenticateWithToken(accessToken: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  def authenticateWithToken(accessToken: String, callbacks: js.UndefOr[scala.Nothing], expiresAt: js.Date): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def authenticateWithToken(accessToken: String, callbacks: `32`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def authenticateWithToken(accessToken: String, callbacks: `32`, expiresAt: js.Date): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   /**
@@ -182,6 +183,7 @@ object KiiUser extends js.Object {
     *         });
     */
   def completeResetPassword(userIdentifier: String, pinCode: String): js.Promise[Unit] = js.native
+  def completeResetPassword(userIdentifier: String, pinCode: String, newPassword: js.UndefOr[scala.Nothing], callbacks: `19`): js.Promise[Unit] = js.native
   def completeResetPassword(userIdentifier: String, pinCode: String, newPassword: String): js.Promise[Unit] = js.native
   def completeResetPassword(userIdentifier: String, pinCode: String, newPassword: String, callbacks: `19`): js.Promise[Unit] = js.native
   /**
@@ -395,6 +397,7 @@ object KiiUser extends js.Object {
     *     );
     */
   def registerAsPseudoUser(): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  def registerAsPseudoUser(callbacks: js.UndefOr[scala.Nothing], userFields: js.Any): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def registerAsPseudoUser(callbacks: `32`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def registerAsPseudoUser(callbacks: `32`, userFields: js.Any): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   /**

@@ -15,6 +15,7 @@ object keytipsMod extends js.Object {
   class KeytipManager ()
     extends typingsSlinky.officeUiFabricReact.keytipManagerMod.KeytipManager
   
+  val DATAKTP_ARIA_TARGET: /* "data-ktp-aria-target" */ String = js.native
   val DATAKTP_EXECUTE_TARGET: /* "data-ktp-execute-target" */ String = js.native
   val DATAKTP_TARGET: /* "data-ktp-target" */ String = js.native
   val KTP_ARIA_SEPARATOR: /* ", " */ String = js.native
@@ -53,18 +54,6 @@ object keytipsMod extends js.Object {
       * @returns {KeytipManager} Singleton KeytipManager instance
       */
     def getInstance(): typingsSlinky.officeUiFabricReact.keytipManagerMod.KeytipManager = js.native
-  }
-  
-  @js.native
-  object KeytipTransitionModifier extends js.Object {
-    /* 2 */ val alt: typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.KeytipTransitionModifier.alt with Double = js.native
-    /* 1 */ val ctrl: typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.KeytipTransitionModifier.ctrl with Double = js.native
-    /* 3 */ val meta: typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.KeytipTransitionModifier.meta with Double = js.native
-    /* 0 */ val shift: typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.KeytipTransitionModifier.shift with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[
-        typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.KeytipTransitionModifier with Double
-      ] = js.native
   }
   
 }

@@ -32,35 +32,20 @@ object JSONSchemaObjectType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: `object`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAdditionalProperties(value: JSONSchemaObjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: `object`): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAdditionalProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(js.undefined)
-        ret
-    }
+    def setAdditionalProperties(value: JSONSchemaObjectType): Self = this.set("additionalProperties", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProperties(value: StringDictionary[JSONSchemaBasicType | JSONSchemaRefType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAdditionalProperties: Self = this.set("additionalProperties", js.undefined)
     @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
+    def setProperties(value: StringDictionary[JSONSchemaBasicType | JSONSchemaRefType]): Self = this.set("properties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProperties: Self = this.set("properties", js.undefined)
   }
   
 }

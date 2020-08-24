@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RegistryEditorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RegistryEditorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RegistryEditorIcon")
   @js.native
   object component extends js.Object
   

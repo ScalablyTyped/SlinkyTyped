@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.mod.RippleFeedbackProps
@@ -23,6 +24,10 @@ object RippleFeedback {
   }
   
   def withProps(p: RippleFeedbackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: RippleFeedback.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RippleFeedbackProps]))
+  }
 }
 

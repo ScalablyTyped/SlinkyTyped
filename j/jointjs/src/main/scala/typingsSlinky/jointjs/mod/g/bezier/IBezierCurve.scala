@@ -26,29 +26,18 @@ object IBezierCurve {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withP0(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p0")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withP1(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p1")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setP0(value: Point): Self = this.set("p0", value.asInstanceOf[js.Any])
     @scala.inline
-    def withP2(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p2")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setP1(value: Point): Self = this.set("p1", value.asInstanceOf[js.Any])
     @scala.inline
-    def withP3(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p3")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setP2(value: Point): Self = this.set("p2", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setP3(value: Point): Self = this.set("p3", value.asInstanceOf[js.Any])
   }
   
 }

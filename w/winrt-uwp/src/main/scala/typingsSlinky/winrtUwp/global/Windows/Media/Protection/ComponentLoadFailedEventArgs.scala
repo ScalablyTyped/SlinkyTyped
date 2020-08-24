@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Protection.ComponentLoadFailedEventArgs")
 @js.native
 abstract class ComponentLoadFailedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Protection.ComponentLoadFailedEventArgs {
-  /** Returns an indication of the completion of the event. */
-  /* CompleteClass */
-  override var completion: typingsSlinky.winrtUwp.Windows.Media.Protection.MediaProtectionServiceCompletion = js.native
-  /** Returns a list of components in the RevocationAndRenewalInformation object that need to be revoked and renewed with updated components. */
-  /* CompleteClass */
-  override var information: typingsSlinky.winrtUwp.Windows.Media.Protection.RevocationAndRenewalInformation = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Protection.ComponentLoadFailedEventArgs
 

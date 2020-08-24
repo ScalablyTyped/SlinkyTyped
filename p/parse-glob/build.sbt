@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "parse-glob"
-version := "3.0.4-dt-20200515Z-bb4bc5"
-scalaVersion := "2.13.2"
+version := "3.0.4-dt-20200515Z-b9fe66"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

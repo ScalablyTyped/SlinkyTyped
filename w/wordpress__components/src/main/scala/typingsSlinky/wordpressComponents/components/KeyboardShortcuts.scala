@@ -3,7 +3,6 @@ package typingsSlinky.wordpressComponents.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressComponents.mod.KeyboardShortcuts.^
 import typingsSlinky.wordpressComponents.wordpressComponentsBooleans.`true`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.keydown
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.keypress
@@ -21,7 +20,7 @@ object KeyboardShortcuts {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def bindGlobal(value: Boolean): this.type = set("bindGlobal", value.asInstanceOf[js.Any])
       @scala.inline
@@ -44,7 +43,7 @@ object KeyboardShortcuts {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def eventName(value: keydown | keypress | keyup): this.type = set("eventName", value.asInstanceOf[js.Any])
     }

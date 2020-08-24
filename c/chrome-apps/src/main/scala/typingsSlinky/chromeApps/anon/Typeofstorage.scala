@@ -50,33 +50,22 @@ object Typeofstorage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLocal(value: LocalStorageArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withManaged(value: ManagedStorageArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managed")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLocal(value: LocalStorageArea): Self = this.set("local", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnChanged(
+    def setManaged(value: ManagedStorageArea): Self = this.set("managed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnChanged(
       value: Event[
           js.Function2[/* changes */ StringDictionary[StorageChange], /* areaName */ StorageAreas, Unit]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("onChanged", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSync(value: SyncStorageArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSync(value: SyncStorageArea): Self = this.set("sync", value.asInstanceOf[js.Any])
   }
   
 }

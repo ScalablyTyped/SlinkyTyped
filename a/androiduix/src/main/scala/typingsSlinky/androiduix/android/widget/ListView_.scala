@@ -31,9 +31,11 @@ trait ListView_ extends AbsListView {
   var mOverScrollHeader: Drawable = js.native
   var mTempRect: js.Any = js.native
   def addFooterView(v: View): Unit = js.native
+  def addFooterView(v: View, data: js.UndefOr[scala.Nothing], isSelectable: Boolean): Unit = js.native
   def addFooterView(v: View, data: js.Any): Unit = js.native
   def addFooterView(v: View, data: js.Any, isSelectable: Boolean): Unit = js.native
   def addHeaderView(v: View): Unit = js.native
+  def addHeaderView(v: View, data: js.UndefOr[scala.Nothing], isSelectable: Boolean): Unit = js.native
   def addHeaderView(v: View, data: js.Any): Unit = js.native
   def addHeaderView(v: View, data: js.Any, isSelectable: Boolean): Unit = js.native
   /* private */ def addViewAbove(theView: js.Any, position: js.Any): js.Any = js.native

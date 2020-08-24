@@ -1,7 +1,7 @@
 
 # Scala.js typings for escape-string-regexp
 
-Typings are for version 2.0.0
+Typings are for version 4.0.0
 
 ## Library description:
 Escape RegExp special characters

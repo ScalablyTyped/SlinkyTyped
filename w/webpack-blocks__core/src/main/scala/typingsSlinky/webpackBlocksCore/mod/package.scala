@@ -9,8 +9,8 @@ package object mod {
     /* context */ T, 
     /* util */ typingsSlinky.webpackBlocksCore.mod.Util, 
     js.Function1[
-      /* config */ typingsSlinky.webpack.mod.Configuration, 
-      typingsSlinky.webpack.mod.Configuration
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Configuration */ /* config */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Configuration */ js.Any
     ]
   ]
 }

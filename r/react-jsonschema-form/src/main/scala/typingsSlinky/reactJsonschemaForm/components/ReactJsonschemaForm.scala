@@ -28,7 +28,7 @@ object ReactJsonschemaForm {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
     @scala.inline
     def ArrayFieldTemplate(value: ReactComponentClass[ArrayFieldTemplateProps[_]]): this.type = set("ArrayFieldTemplate", value.asInstanceOf[js.Any])
     @scala.inline
@@ -41,6 +41,8 @@ object ReactJsonschemaForm {
     def acceptcharset(value: String): this.type = set("acceptcharset", value.asInstanceOf[js.Any])
     @scala.inline
     def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def additionalMetaSchemasVarargs(value: js.Object*): this.type = set("additionalMetaSchemas", js.Array(value :_*))
     @scala.inline
     def additionalMetaSchemas(value: js.Array[js.Object]): this.type = set("additionalMetaSchemas", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,13 +1,11 @@
 package typingsSlinky.antDesignPro.components
 
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.Dictkey
 import typingsSlinky.antDesignPro.noticeIconMod.NoticeIconProps
-import typingsSlinky.antDesignPro.noticeIconMod.default
 import typingsSlinky.antDesignPro.noticeIconTabMod.NoticeIconData
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -15,18 +13,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NoticeIcon {
-  @JSImport("ant-design-pro/lib/NoticeIcon", JSImport.Default)
+  @JSImport("ant-design-pro", "NoticeIcon")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.NoticeIcon] {
     @scala.inline
     def bellReactElement(value: ReactElement): this.type = set("bell", value.asInstanceOf[js.Any])
     @scala.inline
-    def bell(value: TagMod[Any]): this.type = set("bell", value.asInstanceOf[js.Any])
+    def bell(value: ReactElement): this.type = set("bell", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,13 +38,13 @@ object NoticeIcon {
     @scala.inline
     def onClear(value: /* tabName */ String => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemClick(value: (/* item */ NoticeIconData, /* tabProps */ NoticeIconProps) => Unit): this.type = set("onItemClick", js.Any.fromFunction2(value))
+    def onItemClick(value: (/* item */ NoticeIconData, NoticeIconProps) => Unit): this.type = set("onItemClick", js.Any.fromFunction2(value))
     @scala.inline
     def onPopupVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("onPopupVisibleChange", js.Any.fromFunction1(value))
     @scala.inline
     def onTabChange(value: /* tabTile */ String => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onViewMore(value: (/* tabProps */ NoticeIconProps, /* e */ MouseEvent) => Unit): this.type = set("onViewMore", js.Any.fromFunction2(value))
+    def onViewMore(value: (NoticeIconProps, /* e */ MouseEvent) => Unit): this.type = set("onViewMore", js.Any.fromFunction2(value))
     @scala.inline
     def popupVisible(value: Boolean): this.type = set("popupVisible", value.asInstanceOf[js.Any])
     @scala.inline

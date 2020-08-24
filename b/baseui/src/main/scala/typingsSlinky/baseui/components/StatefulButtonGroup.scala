@@ -50,6 +50,8 @@ object StatefulButtonGroup {
     @scala.inline
     def overrides(value: ButtonGroupOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    @scala.inline
     def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline
     def shape(value: default_ | pill | round | square): this.type = set("shape", value.asInstanceOf[js.Any])

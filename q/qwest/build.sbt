@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "qwest"
-version := "v1.7.0-dt-20200515Z-9d524d"
-scalaVersion := "2.13.2"
+version := "v1.7.0-dt-20200515Z-804440"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

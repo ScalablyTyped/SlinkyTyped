@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PasteAsTextIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PasteAsTextIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PasteAsTextIcon")
   @js.native
   object component extends js.Object
   

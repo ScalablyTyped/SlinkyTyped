@@ -20,6 +20,8 @@ object ColGroup {
     @scala.inline
     def columCount(value: Double): this.type = set("columCount", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(value: ColumnType[RecordType]*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[ColumnType[RecordType]]): this.type = set("columns", value.asInstanceOf[js.Any])
   }
   

@@ -1,7 +1,6 @@
 package typingsSlinky.angularRouter.mod
 
 import typingsSlinky.angularCommon.mod.Location
-import typingsSlinky.angularCore.mod.ApplicationRef
 import typingsSlinky.angularCore.mod.Compiler
 import typingsSlinky.angularCore.mod.Injector
 import typingsSlinky.angularCore.mod.NgModuleFactoryLoader
@@ -13,7 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object ɵangularPackagesRouterRouterF extends js.Object {
   def apply(
-    ref: ApplicationRef,
     urlSerializer: UrlSerializer,
     contexts: ChildrenOutletContexts,
     location: Location,
@@ -23,7 +21,41 @@ object ɵangularPackagesRouterRouterF extends js.Object {
     config: js.Array[js.Array[Route]]
   ): Router = js.native
   def apply(
-    ref: ApplicationRef,
+    urlSerializer: UrlSerializer,
+    contexts: ChildrenOutletContexts,
+    location: Location,
+    injector: Injector,
+    loader: NgModuleFactoryLoader,
+    compiler: Compiler,
+    config: js.Array[js.Array[Route]],
+    opts: js.UndefOr[scala.Nothing],
+    urlHandlingStrategy: js.UndefOr[scala.Nothing],
+    routeReuseStrategy: RouteReuseStrategy
+  ): Router = js.native
+  def apply(
+    urlSerializer: UrlSerializer,
+    contexts: ChildrenOutletContexts,
+    location: Location,
+    injector: Injector,
+    loader: NgModuleFactoryLoader,
+    compiler: Compiler,
+    config: js.Array[js.Array[Route]],
+    opts: js.UndefOr[scala.Nothing],
+    urlHandlingStrategy: UrlHandlingStrategy
+  ): Router = js.native
+  def apply(
+    urlSerializer: UrlSerializer,
+    contexts: ChildrenOutletContexts,
+    location: Location,
+    injector: Injector,
+    loader: NgModuleFactoryLoader,
+    compiler: Compiler,
+    config: js.Array[js.Array[Route]],
+    opts: js.UndefOr[scala.Nothing],
+    urlHandlingStrategy: UrlHandlingStrategy,
+    routeReuseStrategy: RouteReuseStrategy
+  ): Router = js.native
+  def apply(
     urlSerializer: UrlSerializer,
     contexts: ChildrenOutletContexts,
     location: Location,
@@ -34,7 +66,18 @@ object ɵangularPackagesRouterRouterF extends js.Object {
     opts: ExtraOptions
   ): Router = js.native
   def apply(
-    ref: ApplicationRef,
+    urlSerializer: UrlSerializer,
+    contexts: ChildrenOutletContexts,
+    location: Location,
+    injector: Injector,
+    loader: NgModuleFactoryLoader,
+    compiler: Compiler,
+    config: js.Array[js.Array[Route]],
+    opts: ExtraOptions,
+    urlHandlingStrategy: js.UndefOr[scala.Nothing],
+    routeReuseStrategy: RouteReuseStrategy
+  ): Router = js.native
+  def apply(
     urlSerializer: UrlSerializer,
     contexts: ChildrenOutletContexts,
     location: Location,
@@ -46,7 +89,6 @@ object ɵangularPackagesRouterRouterF extends js.Object {
     urlHandlingStrategy: UrlHandlingStrategy
   ): Router = js.native
   def apply(
-    ref: ApplicationRef,
     urlSerializer: UrlSerializer,
     contexts: ChildrenOutletContexts,
     location: Location,

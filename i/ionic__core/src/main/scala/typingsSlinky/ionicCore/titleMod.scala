@@ -5,8 +5,8 @@ import typingsSlinky.ionicCore.ionicCoreStrings.large
 import typingsSlinky.ionicCore.ionicCoreStrings.small
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,6 @@ object titleMod extends js.Object {
     var color: js.UndefOr[Color] = js.native
     var el: HTMLElement = js.native
     var emitStyle: js.Any = js.native
-    var getMode: js.Any = js.native
     var getSize: js.Any = js.native
     /**
       * Emitted when the styles change.

@@ -48,9 +48,9 @@ package object mod {
   type NavigationSwitchAction = typingsSlinky.reactNavigation.mod.NavigationJumpToAction
   type NavigationSwitchScreenComponent[Params, ScreenProps] = (slinky.core.ReactComponentClass[
     typingsSlinky.reactNavigation.mod.NavigationSwitchScreenProps[Params, ScreenProps]
-  ]) with (typingsSlinky.reactNavigation.anon.NavigationOptionsNavigationScreenConfig[Params, ScreenProps])
+  ]) with (typingsSlinky.reactNavigation.anon.`1`[Params, ScreenProps])
   type NavigationView[Options, State, ScreenProps] = slinky.core.ReactComponentClass[
-    (typingsSlinky.reactNavigation.anon.Descriptors[Options, ScreenProps]) with typingsSlinky.reactNavigation.mod.NavigationInjectedProps[typingsSlinky.reactNavigation.mod.NavigationParams]
+    ((typingsSlinky.reactNavigation.anon.Descriptors[Options, ScreenProps]) with typingsSlinky.reactNavigation.mod.NavigationInjectedProps[typingsSlinky.reactNavigation.mod.NavigationParams]) | js.Any
   ]
   type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   // Themed components

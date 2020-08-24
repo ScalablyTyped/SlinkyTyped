@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HostPathVolume extends Volume {
-  var kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.HostPathVolume
-  var path: String
+  var kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.HostPathVolume = js.native
+  var path: String = js.native
 }
 
 @JSImport("@pulumi/cloud/service", "HostPathVolume")

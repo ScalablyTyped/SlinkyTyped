@@ -35,7 +35,9 @@ object SizePerPageDropdownStandalone {
     @scala.inline
     def custom(value: Boolean): this.type = set("custom", value.asInstanceOf[js.Any])
     @scala.inline
-    def firstPageText(value: String): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+    def firstPageTextReactElement(value: ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstPageText(value: String | ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
     @scala.inline
     def firstPageTitle(value: String): this.type = set("firstPageTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,11 +47,15 @@ object SizePerPageDropdownStandalone {
     @scala.inline
     def hideSizePerPage(value: Boolean): this.type = set("hideSizePerPage", value.asInstanceOf[js.Any])
     @scala.inline
-    def lastPageText(value: String): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+    def lastPageTextReactElement(value: ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastPageText(value: String | ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
     @scala.inline
     def lastPageTitle(value: String): this.type = set("lastPageTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextPageText(value: String): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+    def nextPageTextReactElement(value: ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextPageText(value: String | ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
     @scala.inline
     def nextPageTitle(value: String): this.type = set("nextPageTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -71,13 +77,17 @@ object SizePerPageDropdownStandalone {
     @scala.inline
     def paginationTotalRenderer(value: (/* from */ Double, /* to */ Double, /* size */ Double) => ReactElement): this.type = set("paginationTotalRenderer", js.Any.fromFunction3(value))
     @scala.inline
-    def prePageText(value: String): this.type = set("prePageText", value.asInstanceOf[js.Any])
+    def prePageTextReactElement(value: ReactElement): this.type = set("prePageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prePageText(value: String | ReactElement): this.type = set("prePageText", value.asInstanceOf[js.Any])
     @scala.inline
     def prePageTitle(value: String): this.type = set("prePageTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def showTotal(value: Boolean): this.type = set("showTotal", value.asInstanceOf[js.Any])
     @scala.inline
     def sizePerPage(value: Double): this.type = set("sizePerPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sizePerPageListVarargs(value: (Double | Text)*): this.type = set("sizePerPageList", js.Array(value :_*))
     @scala.inline
     def sizePerPageList(value: js.Array[Double | Text]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
     @scala.inline

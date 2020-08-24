@@ -125,8 +125,8 @@ object storagegatewayMod extends js.Object {
     def this(name: String, args: WorkingStorageArgs, opts: CustomResourceOptions) = this()
   }
   
-  def getLocalDisk(args: GetLocalDiskArgs): js.Promise[GetLocalDiskResult] with GetLocalDiskResult = js.native
-  def getLocalDisk(args: GetLocalDiskArgs, opts: InvokeOptions): js.Promise[GetLocalDiskResult] with GetLocalDiskResult = js.native
+  def getLocalDisk(args: GetLocalDiskArgs): js.Promise[GetLocalDiskResult] = js.native
+  def getLocalDisk(args: GetLocalDiskArgs, opts: InvokeOptions): js.Promise[GetLocalDiskResult] = js.native
   /* static members */
   @js.native
   object Cache extends js.Object {
@@ -137,8 +137,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.cacheMod.Cache = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.cacheMod.Cache = js.native
     def get(name: String, id: Input[ID], state: CacheState): typingsSlinky.pulumiAws.cacheMod.Cache = js.native
     def get(name: String, id: Input[ID], state: CacheState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.cacheMod.Cache = js.native
     /**
@@ -158,8 +160,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.cachesIscsiVolumeMod.CachesIscsiVolume = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.cachesIscsiVolumeMod.CachesIscsiVolume = js.native
     def get(name: String, id: Input[ID], state: CachesIscsiVolumeState): typingsSlinky.pulumiAws.cachesIscsiVolumeMod.CachesIscsiVolume = js.native
     def get(name: String, id: Input[ID], state: CachesIscsiVolumeState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.cachesIscsiVolumeMod.CachesIscsiVolume = js.native
     /**
@@ -179,8 +183,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.storagegatewayGatewayMod.Gateway = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.storagegatewayGatewayMod.Gateway = js.native
     def get(name: String, id: Input[ID], state: GatewayState): typingsSlinky.pulumiAws.storagegatewayGatewayMod.Gateway = js.native
     def get(name: String, id: Input[ID], state: GatewayState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.storagegatewayGatewayMod.Gateway = js.native
     /**
@@ -200,8 +206,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.nfsFileShareMod.NfsFileShare = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.nfsFileShareMod.NfsFileShare = js.native
     def get(name: String, id: Input[ID], state: NfsFileShareState): typingsSlinky.pulumiAws.nfsFileShareMod.NfsFileShare = js.native
     def get(name: String, id: Input[ID], state: NfsFileShareState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.nfsFileShareMod.NfsFileShare = js.native
     /**
@@ -221,8 +229,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.smbFileShareMod.SmbFileShare = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.smbFileShareMod.SmbFileShare = js.native
     def get(name: String, id: Input[ID], state: SmbFileShareState): typingsSlinky.pulumiAws.smbFileShareMod.SmbFileShare = js.native
     def get(name: String, id: Input[ID], state: SmbFileShareState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.smbFileShareMod.SmbFileShare = js.native
     /**
@@ -242,8 +252,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.uploadBufferMod.UploadBuffer = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.uploadBufferMod.UploadBuffer = js.native
     def get(name: String, id: Input[ID], state: UploadBufferState): typingsSlinky.pulumiAws.uploadBufferMod.UploadBuffer = js.native
     def get(name: String, id: Input[ID], state: UploadBufferState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.uploadBufferMod.UploadBuffer = js.native
     /**
@@ -263,8 +275,10 @@ object storagegatewayMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.workingStorageMod.WorkingStorage = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.workingStorageMod.WorkingStorage = js.native
     def get(name: String, id: Input[ID], state: WorkingStorageState): typingsSlinky.pulumiAws.workingStorageMod.WorkingStorage = js.native
     def get(name: String, id: Input[ID], state: WorkingStorageState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.workingStorageMod.WorkingStorage = js.native
     /**

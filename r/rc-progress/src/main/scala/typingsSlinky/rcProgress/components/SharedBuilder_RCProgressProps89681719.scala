@@ -25,9 +25,13 @@ class SharedBuilder_RCProgressProps89681719[R <: js.Object] (val args: js.Array[
   @scala.inline
   def gapPosition(value: top | right | bottom | left): this.type = set("gapPosition", value.asInstanceOf[js.Any])
   @scala.inline
+  def percentVarargs(value: Double*): this.type = set("percent", js.Array(value :_*))
+  @scala.inline
   def percent(value: Double | js.Array[Double]): this.type = set("percent", value.asInstanceOf[js.Any])
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+  @scala.inline
+  def strokeColorVarargs(value: String*): this.type = set("strokeColor", js.Array(value :_*))
   @scala.inline
   def strokeColor(value: String | js.Array[String] | js.Object): this.type = set("strokeColor", value.asInstanceOf[js.Any])
   @scala.inline

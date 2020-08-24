@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.blueprintjsCore.tabMod.TabId
 import typingsSlinky.blueprintjsCore.tabsMod.ITabsProps
 import scala.scalajs.js
@@ -45,5 +46,14 @@ object Tabs {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ITabsProps]))
   }
+  object Expander {
+    @JSImport("@blueprintjs/core", "Tabs.Expander")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Expander.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

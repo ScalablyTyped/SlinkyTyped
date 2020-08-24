@@ -37,11 +37,12 @@ object SpinnerAdapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetDropDownView(value: (Double, View, ViewGroup) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDropDownView")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setGetDropDownView(value: (Double, View, ViewGroup) => View): Self = this.set("getDropDownView", js.Any.fromFunction3(value))
   }
   
 }

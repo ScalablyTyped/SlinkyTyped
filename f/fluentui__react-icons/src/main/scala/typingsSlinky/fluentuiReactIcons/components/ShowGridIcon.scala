@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ShowGridIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ShowGridIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ShowGridIcon")
   @js.native
   object component extends js.Object
   

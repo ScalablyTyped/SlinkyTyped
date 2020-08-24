@@ -30,7 +30,6 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.detectBrowser.detectBrowserStrings.BeOS
   - typingsSlinky.detectBrowser.detectBrowserStrings.OSSlash2
   - typingsSlinky.detectBrowser.detectBrowserStrings.`Chrome OS`
-  - typingsSlinky.detectBrowser.detectBrowserStrings.`Search Bot`
 */
 trait OperatingSystem extends js.Object
 
@@ -55,8 +54,6 @@ object OperatingSystem {
   def `Open BSD`: typingsSlinky.detectBrowser.detectBrowserStrings.`Open BSD` = ("Open BSD").asInstanceOf[typingsSlinky.detectBrowser.detectBrowserStrings.`Open BSD`]
   @scala.inline
   def QNX: typingsSlinky.detectBrowser.detectBrowserStrings.QNX = "QNX".asInstanceOf[typingsSlinky.detectBrowser.detectBrowserStrings.QNX]
-  @scala.inline
-  def `Search Bot`: typingsSlinky.detectBrowser.detectBrowserStrings.`Search Bot` = ("Search Bot").asInstanceOf[typingsSlinky.detectBrowser.detectBrowserStrings.`Search Bot`]
   @scala.inline
   def `Sun OS`: typingsSlinky.detectBrowser.detectBrowserStrings.`Sun OS` = ("Sun OS").asInstanceOf[typingsSlinky.detectBrowser.detectBrowserStrings.`Sun OS`]
   @scala.inline

@@ -7,11 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.ICanvasTextMetrics")
 @js.native
 class ICanvasTextMetrics protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.ICanvasTextMetrics {
-  /* CompleteClass */
-  @JSName("MSHTML.ICanvasTextMetrics_typekey")
-  override var MSHTMLDotICanvasTextMetrics_typekey: typingsSlinky.activexMshtml.MSHTML.ICanvasTextMetrics = js.native
-  /* CompleteClass */
-  override val width: Double = js.native
-}
+  extends typingsSlinky.activexMshtml.MSHTML.ICanvasTextMetrics
 

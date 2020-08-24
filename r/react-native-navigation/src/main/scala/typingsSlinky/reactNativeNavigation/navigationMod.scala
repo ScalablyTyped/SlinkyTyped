@@ -1,13 +1,14 @@
 package typingsSlinky.reactNativeNavigation
 
 import typingsSlinky.reactNative.mod.ComponentProvider
-import typingsSlinky.reactNativeNavigation.anon.TypeofSharedElement
 import typingsSlinky.reactNativeNavigation.anon.TypeofTouchablePreview
+import typingsSlinky.reactNativeNavigation.commandNameMod.CommandName
 import typingsSlinky.reactNativeNavigation.constantsMod.NavigationConstants
 import typingsSlinky.reactNativeNavigation.eventsRegistryMod.EventsRegistry
 import typingsSlinky.reactNativeNavigation.layoutMod.Layout
 import typingsSlinky.reactNativeNavigation.layoutMod.LayoutRoot
 import typingsSlinky.reactNativeNavigation.optionsMod.Options
+import typingsSlinky.reactNativeNavigation.processorSubscriptionMod.ProcessorSubscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,6 @@ import scala.scalajs.js.annotation._
 object navigationMod extends js.Object {
   @js.native
   class NavigationRoot () extends js.Object {
-    val Element: TypeofSharedElement = js.native
     val TouchablePreview: TypeofTouchablePreview = js.native
     val commands: js.Any = js.native
     val commandsObserver: js.Any = js.native
@@ -25,12 +25,24 @@ object navigationMod extends js.Object {
     val componentRegistry: js.Any = js.native
     val componentWrapper: js.Any = js.native
     val eventsRegistry: js.Any = js.native
+    val layoutProcessorsStore: js.Any = js.native
     val layoutTreeCrawler: js.Any = js.native
     val layoutTreeParser: js.Any = js.native
     val nativeCommandsSender: js.Any = js.native
     val nativeEventsReceiver: js.Any = js.native
+    val optionProcessorsStore: js.Any = js.native
     val store: js.Any = js.native
     val uniqueIdProvider: js.Any = js.native
+    /**
+      * Method to be invoked when a layout is processed and is about to be created. This can be used to change layout options or even inject props to components.
+      */
+    def addLayoutProcessor(
+      processor: js.Function2[/* layout */ Layout[js.Object], /* commandName */ CommandName, Layout[js.Object]]
+    ): ProcessorSubscription = js.native
+    /**
+      * Adds an option processor which allows option interpolation by optionPath.
+      */
+    def addOptionProcessor[T](optionPath: String, processor: js.Function2[/* value */ T, /* commandName */ CommandName, T]): ProcessorSubscription = js.native
     /**
       * Constants coming from native
       */
@@ -116,6 +128,7 @@ object navigationMod extends js.Object {
       * Set default options to all screens. Useful for declaring a consistent style across the app.
       */
     def setDefaultOptions(options: Options): Unit = js.native
+    def setLazyComponentRegistrator(lazyRegistratorFn: js.Function1[/* lazyComponentRequest */ String | Double, Unit]): Unit = js.native
     /**
       * Reset the app to a new layout
       */

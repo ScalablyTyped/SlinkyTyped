@@ -12,8 +12,14 @@ trait TreeViewProps extends js.Object
 
 object TreeViewProps {
   @scala.inline
-  implicit def apply(value: MultiSelectTreeViewProps): TreeViewProps = value.asInstanceOf[TreeViewProps]
+  def SingleSelectTreeViewProps(): TreeViewProps = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[TreeViewProps]
+  }
   @scala.inline
-  implicit def apply(value: SingleSelectTreeViewProps): TreeViewProps = value.asInstanceOf[TreeViewProps]
+  def MultiSelectTreeViewProps(): TreeViewProps = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[TreeViewProps]
+  }
 }
 

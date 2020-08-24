@@ -1,8 +1,6 @@
 package typingsSlinky.formatjsIntlRelativetimeformat.mod
 
 import typingsSlinky.formatjsIntlRelativetimeformat.anon.PickIntlRelativeTimeForma
-import typingsSlinky.formatjsIntlUtils.relativeTimeTypesMod.RelativeTimeLocaleData
-import typingsSlinky.formatjsIntlUtils.relativeTimeTypesMod.UnpackedLocaleFieldsData
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +11,9 @@ import scala.scalajs.js.annotation._
 class default () extends RelativeTimeFormat {
   def this(locales: String) = this()
   def this(locales: js.Array[String]) = this()
+  def this(locales: js.UndefOr[scala.Nothing], options: IntlRelativeTimeFormatOptions) = this()
   def this(locales: String, options: IntlRelativeTimeFormatOptions) = this()
   def this(locales: js.Array[String], options: IntlRelativeTimeFormatOptions) = this()
-  /* CompleteClass */
-  override def format(value: Double, unit: FormattableUnit): String = js.native
-  /* CompleteClass */
-  override def formatToParts(value: Double, unit: FormattableUnit): js.Array[Part] = js.native
-  /* CompleteClass */
-  override def resolvedOptions(): ResolvedIntlRelativeTimeFormatOptions = js.native
 }
 
 /* static members */
@@ -31,7 +24,7 @@ object default extends js.Object {
   var __defaultLocale: js.Any = js.native
   var availableLocales: js.Any = js.native
   var getDefaultLocale: js.Any = js.native
-  var localeData: Record[String, UnpackedLocaleFieldsData] = js.native
+  var localeData: Record[String, LocaleFieldsData] = js.native
   var polyfilled: Boolean = js.native
   var relevantExtensionKeys: js.Any = js.native
   def __addLocaleData(data: RelativeTimeLocaleData*): scala.Unit = js.native

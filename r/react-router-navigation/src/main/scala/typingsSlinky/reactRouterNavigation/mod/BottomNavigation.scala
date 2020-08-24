@@ -1,6 +1,5 @@
 package typingsSlinky.reactRouterNavigation.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactRouterNavigation.anon.Key
@@ -13,10 +12,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class BottomNavigation ()
   extends Component[BottomNavigationProps, Key, js.Any] {
-  def renderNavigationBar(sceneProps: TabSubViewProps, props: TabSubViewProps): TagMod[Any] = js.native
-  def renderPager(sceneProps: TabSubViewProps): TagMod[Any] = js.native
+  def renderNavigationBar(sceneProps: TabSubViewProps, props: TabSubViewProps): ReactElement = js.native
+  def renderPager(sceneProps: TabSubViewProps): ReactElement = js.native
   def renderScene(sceneProps: TabSubViewProps): ReactElement = js.native
-  def renderSceneView(sceneProps: TabSubViewProps): TagMod[Any] = js.native
+  def renderSceneView(sceneProps: TabSubViewProps): ReactElement = js.native
 }
 
 /* static members */

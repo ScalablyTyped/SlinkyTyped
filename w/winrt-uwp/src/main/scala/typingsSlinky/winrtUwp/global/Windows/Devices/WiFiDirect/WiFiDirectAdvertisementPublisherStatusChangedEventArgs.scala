@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs")
 @js.native
 abstract class WiFiDirectAdvertisementPublisherStatusChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs {
-  /** Gets the error status for a StatusChanged event on a WiFiDirectAdvertisementPublisher . */
-  /* CompleteClass */
-  override var error: typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectError = js.native
-  /** Gets the new status of the WiFiDirectAdvertisementPublisher . */
-  /* CompleteClass */
-  override var status: typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs
 

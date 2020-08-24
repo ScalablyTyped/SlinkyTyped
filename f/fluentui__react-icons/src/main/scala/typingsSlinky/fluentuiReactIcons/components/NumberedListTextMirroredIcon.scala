@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NumberedListTextMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/NumberedListTextMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "NumberedListTextMirroredIcon")
   @js.native
   object component extends js.Object
   

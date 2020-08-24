@@ -1,21 +1,14 @@
 package typingsSlinky.winrtUwp.global.Windows.Security.Authentication.Web
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
-import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Core.WebProviderError
-import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Core.WebTokenRequest
 import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Core.WebTokenResponse
-import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation
 import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountClientViewType
-import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind
 import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountScope
-import typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountSelectionOptions
 import typingsSlinky.winrtUwp.Windows.Security.Credentials.WebAccount
-import typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.CryptographicKey
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStream
 import typingsSlinky.winrtUwp.Windows.Web.Http.HttpCookie
 import scala.scalajs.js
@@ -43,15 +36,6 @@ object Provider extends js.Object {
       * @param accountPairwiseId The account pairwise Id.
       */
     def this(viewType: WebAccountClientViewType, applicationCallbackUri: Uri, accountPairwiseId: String) = this()
-    /** Gets the account pairwise Id. */
-    /* CompleteClass */
-    override var accountPairwiseId: String = js.native
-    /** Gets the app callback Uri. */
-    /* CompleteClass */
-    override var applicationCallbackUri: Uri = js.native
-    /** Gets the type of web account client view. */
-    /* CompleteClass */
-    override var `type`: WebAccountClientViewType = js.native
   }
   
   /** Provides methods for managing web accounts. */
@@ -62,35 +46,12 @@ object Provider extends js.Object {
   /** Represents an add account operation. */
   @js.native
   abstract class WebAccountProviderAddAccountOperation ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation {
-    /** Gets the kind of web account provider operation. */
-    /* CompleteClass */
-    override var kind: WebAccountProviderOperationKind = js.native
-    /** Informs the activating app that the operation completed successfully. */
-    /* CompleteClass */
-    override def reportCompleted(): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation
   
   /** Represents a delete account operation. */
   @js.native
   abstract class WebAccountProviderDeleteAccountOperation ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation {
-    /** Gets the kind of web account provider operation. */
-    /* CompleteClass */
-    override var kind: WebAccountProviderOperationKind = js.native
-    /** Gets the web account to delete. */
-    /* CompleteClass */
-    override var webAccount: WebAccount = js.native
-    /** Informs the activating app that the operation completed successfully. */
-    /* CompleteClass */
-    override def reportCompleted(): Unit = js.native
-    /**
-      * Informs the activating app that the operation encountered an error.
-      * @param value The type of error encountered.
-      */
-    /* CompleteClass */
-    override def reportError(value: WebProviderError): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation
   
   /** Represents a get token silently operation. */
   @js.native
@@ -100,144 +61,32 @@ object Provider extends js.Object {
   /** Represents a manage account operation. */
   @js.native
   abstract class WebAccountProviderManageAccountOperation ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation {
-    /** Gets the kind of web provider operation. */
-    /* CompleteClass */
-    override var kind: WebAccountProviderOperationKind = js.native
-    /** Gets the web account to manage. */
-    /* CompleteClass */
-    override var webAccount: WebAccount = js.native
-    /** Informs the activating application that the operation completed successfully. */
-    /* CompleteClass */
-    override def reportCompleted(): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation
   
   /** Represents a request token operation. */
   @js.native
   abstract class WebAccountProviderRequestTokenOperation ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation {
-    /** Gets or sets the cache expiration time. */
-    /* CompleteClass */
-    override var cacheExpirationTime: js.Date = js.native
-    /** Gets the kind of web account provider operation. */
-    /* CompleteClass */
-    override var kind: WebAccountProviderOperationKind = js.native
-    /** Gets the web provider token request. */
-    /* CompleteClass */
-    override var providerRequest: typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest = js.native
-    /** Gets the web provider token responses. */
-    /* CompleteClass */
-    override var providerResponses: IVector[
-        typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse
-      ] = js.native
-    /** Informs the activating app that the operation completed successfully. */
-    /* CompleteClass */
-    override def reportCompleted(): Unit = js.native
-    /**
-      * Informs the activating app that the operation encountered an error.
-      * @param value The type of error encountered.
-      */
-    /* CompleteClass */
-    override def reportError(value: WebProviderError): Unit = js.native
-    /** Informs the activating app that the user cancelled the operation. */
-    /* CompleteClass */
-    override def reportUserCanceled(): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation
   
   /** Represents a retrieve cookies operation made by a web account provider. */
   @js.native
   abstract class WebAccountProviderRetrieveCookiesOperation ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation {
-    /** Gets the app callback Uri. */
-    /* CompleteClass */
-    override var applicationCallbackUri: Uri = js.native
-    /** Gets the context of the retrieve cookies operation. */
-    /* CompleteClass */
-    override var context: Uri = js.native
-    /** Gets the cookies. */
-    /* CompleteClass */
-    override var cookies: IVector[HttpCookie] = js.native
-    /** Gets the kind of web account provider operation. */
-    /* CompleteClass */
-    override var kind: WebAccountProviderOperationKind = js.native
-    /** Gets or sets the Uri to retrieve cookies from. */
-    /* CompleteClass */
-    override var uri: Uri = js.native
-    /** Informs the activating app that the operation completed successfully. */
-    /* CompleteClass */
-    override def reportCompleted(): Unit = js.native
-    /**
-      * Informs the activating app that the operation encountered an error.
-      * @param value The type of error encountered.
-      */
-    /* CompleteClass */
-    override def reportError(value: WebProviderError): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation
   
   /** Represents a sign out account operation made by a web account provider. */
   @js.native
   abstract class WebAccountProviderSignOutAccountOperation ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation {
-    /** Gets the app callback Uri. */
-    /* CompleteClass */
-    override var applicationCallbackUri: Uri = js.native
-    /** Gets the client Id. */
-    /* CompleteClass */
-    override var clientId: String = js.native
-    /** Gets the kind of web account provider operation. */
-    /* CompleteClass */
-    override var kind: WebAccountProviderOperationKind = js.native
-    /** Gets the web account to sign out. */
-    /* CompleteClass */
-    override var webAccount: WebAccount = js.native
-    /** Informs the activating app that the operation completed successfully. */
-    /* CompleteClass */
-    override def reportCompleted(): Unit = js.native
-    /**
-      * Informs the activating app that the operation encountered an error.
-      * @param value The type of error encountered.
-      */
-    /* CompleteClass */
-    override def reportError(value: WebProviderError): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation
   
   /** Provides information about a web account provider trigger. */
   @js.native
   abstract class WebAccountProviderTriggerDetails ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails {
-    /** Gets the web account provider operation. */
-    /* CompleteClass */
-    override var operation: IWebAccountProviderOperation = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails
   
   /** Represents a request for a token from a client to a provider. */
   @js.native
   abstract class WebProviderTokenRequest ()
-    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest {
-    /** Gets the app callback Uri. */
-    /* CompleteClass */
-    override var applicationCallbackUri: Uri = js.native
-    /** Gets the web token request made by the client. */
-    /* CompleteClass */
-    override var clientRequest: WebTokenRequest = js.native
-    /** Gets the web account selection options. */
-    /* CompleteClass */
-    override var webAccountSelectionOptions: WebAccountSelectionOptions = js.native
-    /** Gets the web accounts for the request. */
-    /* CompleteClass */
-    override var webAccounts: IVectorView[WebAccount] = js.native
-    /**
-      * Gets a token binding key for the app asynchronously.
-      * @param keyType The type of key to get.
-      * @param target The target Uri.
-      * @return When this method completes, it returns a cryptographic key.
-      */
-    /* CompleteClass */
-    override def getApplicationTokenBindingKeyAsync(
-      keyType: typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.TokenBindingKeyType,
-      target: Uri
-    ): IPromiseWithIAsyncOperation[CryptographicKey] = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest
   
   /** Represents a web provider token response. */
   @js.native
@@ -248,9 +97,6 @@ object Provider extends js.Object {
       * @param webTokenResponse The web token response from the client.
       */
     def this(webTokenResponse: WebTokenResponse) = this()
-    /** Gets the response from the provider to the client. */
-    /* CompleteClass */
-    override var clientResponse: WebTokenResponse = js.native
   }
   
   /** Represents the levels of information about a web account shown to the client. */

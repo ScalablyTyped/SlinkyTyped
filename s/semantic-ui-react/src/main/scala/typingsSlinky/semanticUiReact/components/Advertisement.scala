@@ -33,7 +33,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Advertisement {
-  @JSImport("semantic-ui-react/dist/commonjs/views/Advertisement", JSImport.Default)
+  @JSImport("semantic-ui-react", "Advertisement")
   @js.native
   object component extends js.Object
   

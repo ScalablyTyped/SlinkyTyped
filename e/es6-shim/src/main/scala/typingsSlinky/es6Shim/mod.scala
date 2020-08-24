@@ -41,26 +41,12 @@ object mod extends js.Object {
   class WeakMap[K /* <: js.Object */, V] ()
     extends typingsSlinky.es6Shim.WeakMap[K, V] {
     def this(iterable: IterableShim[js.Tuple2[K, V]]) = this()
-    /* CompleteClass */
-    override def delete(key: K): Boolean = js.native
-    /* CompleteClass */
-    override def get(key: K): js.UndefOr[V] = js.native
-    /* CompleteClass */
-    override def has(key: K): Boolean = js.native
-    /* CompleteClass */
-    override def set(key: K, value: V): typingsSlinky.es6Shim.WeakMap[K, V] = js.native
   }
   
   @js.native
   class WeakSet[T] ()
     extends typingsSlinky.es6Shim.WeakSet[T] {
     def this(iterable: IterableShim[T]) = this()
-    /* CompleteClass */
-    override def add(value: T): typingsSlinky.es6Shim.WeakSet[T] = js.native
-    /* CompleteClass */
-    override def delete(value: T): Boolean = js.native
-    /* CompleteClass */
-    override def has(value: T): Boolean = js.native
   }
   
   var Array: ArrayConstructor = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore.mod
 
+import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.angularCore.anon.Read
 import scala.scalajs.js
@@ -8,12 +9,18 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ContentChildDecorator
-  extends Instantiable2[
+  extends Instantiable1[
+      (/* selector */ js.Function) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
+      ContentChild
+    ]
+     with Instantiable2[
       (/* selector */ js.Function) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
       /* opts */ Read, 
       ContentChild
     ] {
+  def apply(selector: String): js.Any = js.native
   def apply(selector: String, opts: Read): js.Any = js.native
+  def apply(selector: js.Function): js.Any = js.native
   def apply(selector: js.Function, opts: Read): js.Any = js.native
   /**
     * Parameter decorator that configures a content query.
@@ -30,14 +37,9 @@ trait ContentChildDecorator
     * **Metadata Properties**:
     *
     * * **selector** - The directive type or the name used for querying.
-    * * **read** - True to read a different token from the queried element.
+    * * **read** - Used to read a different token from the queried element.
     * * **static** - True to resolve query results before change detection runs,
-    * false to resolve after change detection.
-    *
-    * When `static` is not provided, uses the query results to determine the timing of query
-    * resolution. If any query results are inside a nested view (such as `*ngIf`), the query is
-    * resolved after change detection runs. Otherwise, it is resolved before change detection
-    * runs.
+    * false to resolve after change detection. Defaults to false.
     *
     * @usageNotes
     *
@@ -49,6 +51,7 @@ trait ContentChildDecorator
     *
     * @Annotation
     */
+  def apply(selector: Type[_]): js.Any = js.native
   def apply(selector: Type[_], opts: Read): js.Any = js.native
 }
 

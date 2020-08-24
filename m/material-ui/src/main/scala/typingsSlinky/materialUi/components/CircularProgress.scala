@@ -3,7 +3,6 @@ package typingsSlinky.materialUi.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.CircularProgressProps
-import typingsSlinky.materialUi.circularProgressMod.default
 import typingsSlinky.materialUi.materialUiStrings.determinate
 import typingsSlinky.materialUi.materialUiStrings.indeterminate
 import typingsSlinky.react.mod.CSSProperties
@@ -12,14 +11,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CircularProgress {
-  @JSImport("material-ui/CircularProgress", JSImport.Default)
+  @JSImport("material-ui", "CircularProgress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.CircularProgress] {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline

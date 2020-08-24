@@ -1,13 +1,8 @@
 package typingsSlinky.antdMobile.buttonMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antdMobile.antdMobileStrings.ghost
-import typingsSlinky.antdMobile.antdMobileStrings.large
-import typingsSlinky.antdMobile.antdMobileStrings.primary
-import typingsSlinky.antdMobile.antdMobileStrings.small
-import typingsSlinky.antdMobile.antdMobileStrings.warning
 import typingsSlinky.antdMobile.buttonPropsTypeMod.ButtonPropsType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
@@ -15,50 +10,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ButtonProps extends ButtonPropsType {
-  var activeClassName: js.UndefOr[String] = js.undefined
-  var activeStyle: js.UndefOr[Boolean | CSSProperties] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
-  var `inline`: js.UndefOr[Boolean] = js.undefined
-  var onClick: js.UndefOr[MouseEventHandler[HTMLAnchorElement]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var role: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var activeClassName: js.UndefOr[String] = js.native
+  var activeStyle: js.UndefOr[Boolean | CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[ReactElement] = js.native
+  var `inline`: js.UndefOr[Boolean] = js.native
+  var onClick: js.UndefOr[MouseEventHandler[HTMLAnchorElement]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var role: js.UndefOr[String] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object ButtonProps {
   @scala.inline
-  def apply(
-    activeClassName: String = null,
-    activeStyle: Boolean | CSSProperties = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    icon: TagMod[Any] = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    onClick: SyntheticMouseEvent[HTMLAnchorElement] => Unit = null,
-    prefixCls: String = null,
-    role: String = null,
-    size: large | small = null,
-    style: CSSProperties = null,
-    `type`: primary | warning | ghost = null
-  ): ButtonProps = {
+  def apply(): ButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (activeClassName != null) __obj.updateDynamic("activeClassName")(activeClassName.asInstanceOf[js.Any])
-    if (activeStyle != null) __obj.updateDynamic("activeStyle")(activeStyle.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonProps]
   }
+  @scala.inline
+  implicit class ButtonPropsOps[Self <: ButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActiveClassName(value: String): Self = this.set("activeClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveClassName: Self = this.set("activeClassName", js.undefined)
+    @scala.inline
+    def setActiveStyle(value: Boolean | CSSProperties): Self = this.set("activeStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveStyle: Self = this.set("activeStyle", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setInline(value: Boolean): Self = this.set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInline: Self = this.set("inline", js.undefined)
+    @scala.inline
+    def setOnClick(value: SyntheticMouseEvent[HTMLAnchorElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

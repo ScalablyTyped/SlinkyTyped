@@ -57,101 +57,42 @@ object GestureDetector_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetActiveX(value: MotionEvent => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveX")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetActiveY(value: MotionEvent => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveY")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetActiveX(value: MotionEvent => Double): Self = this.set("getActiveX", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsDragging(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDragging")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetActiveY(value: MotionEvent => Double): Self = this.set("getActiveY", js.Any.fromFunction1(value))
     @scala.inline
-    def withIsScaling(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScaling")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsDragging(value: () => Boolean): Self = this.set("isDragging", js.Any.fromFunction0(value))
     @scala.inline
-    def withMActivePointerId(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActivePointerId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsScaling(value: () => Boolean): Self = this.set("isScaling", js.Any.fromFunction0(value))
     @scala.inline
-    def withMActivePointerIndex(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActivePointerIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActivePointerId(value: js.Any): Self = this.set("mActivePointerId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsDragging(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsDragging")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActivePointerIndex(value: js.Any): Self = this.set("mActivePointerIndex", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLastTouchX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLastTouchX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIsDragging(value: js.Any): Self = this.set("mIsDragging", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLastTouchY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLastTouchY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLastTouchX(value: Double): Self = this.set("mLastTouchX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMListener(value: OnGestureListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLastTouchY(value: Double): Self = this.set("mLastTouchY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMinimumVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMinimumVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMListener(value: OnGestureListener): Self = this.set("mListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScaleDetector(value: ScaleGestureDetector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScaleDetector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMinimumVelocity(value: Double): Self = this.set("mMinimumVelocity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScaleDetector(value: ScaleGestureDetector): Self = this.set("mScaleDetector", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMVelocityTracker(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mVelocityTracker")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchSlop(value: Double): Self = this.set("mTouchSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnTouchEvent(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEvent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMVelocityTracker(value: js.Any): Self = this.set("mVelocityTracker", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetOnGestureListener(value: OnGestureListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnGestureListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnTouchEvent(value: MotionEvent => Boolean): Self = this.set("onTouchEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetOnGestureListener(value: OnGestureListener => Unit): Self = this.set("setOnGestureListener", js.Any.fromFunction1(value))
   }
   
 }

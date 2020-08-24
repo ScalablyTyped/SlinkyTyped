@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OutOfOfficeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OutOfOfficeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OutOfOfficeIcon")
   @js.native
   object component extends js.Object
   

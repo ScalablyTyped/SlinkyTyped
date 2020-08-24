@@ -42,6 +42,8 @@ object Toolbar {
     @scala.inline
     def rightElementReactElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
     @scala.inline
+    def rightElementVarargs(value: String*): this.type = set("rightElement", js.Array(value :_*))
+    @scala.inline
     def rightElement(value: ReactElement | String | js.Array[String] | ToolBarRightElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
     @scala.inline
     def searchable(value: Searchable): this.type = set("searchable", value.asInstanceOf[js.Any])

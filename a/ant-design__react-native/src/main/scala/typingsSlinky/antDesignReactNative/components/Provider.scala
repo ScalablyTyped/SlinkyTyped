@@ -5,20 +5,19 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.anon.PartialLocale
 import typingsSlinky.antDesignReactNative.anon.PartialTheme
 import typingsSlinky.antDesignReactNative.providerMod.ProviderProps
-import typingsSlinky.antDesignReactNative.providerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Provider {
-  @JSImport("@ant-design/react-native/lib/provider", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Provider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Provider] {
     @scala.inline
     def locale(value: PartialLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline

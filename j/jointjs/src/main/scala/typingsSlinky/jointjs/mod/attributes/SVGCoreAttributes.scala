@@ -29,65 +29,30 @@ object SVGCoreAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTabindex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabindex")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteId: Self = this.set("id", js.undefined)
     @scala.inline
-    def withoutTabindex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabindex")(js.undefined)
-        ret
-    }
+    def setTabindex(value: Double): Self = this.set("tabindex", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXmlColonbase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml:base")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTabindex: Self = this.set("tabindex", js.undefined)
     @scala.inline
-    def withoutXmlColonbase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml:base")(js.undefined)
-        ret
-    }
+    def setXmlColonbase(value: String): Self = this.set("xml:base", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXmlColonlang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml:lang")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXmlColonbase: Self = this.set("xml:base", js.undefined)
     @scala.inline
-    def withoutXmlColonlang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml:lang")(js.undefined)
-        ret
-    }
+    def setXmlColonlang(value: String): Self = this.set("xml:lang", value.asInstanceOf[js.Any])
     @scala.inline
-    def withXmlColonspace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml:space")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteXmlColonlang: Self = this.set("xml:lang", js.undefined)
     @scala.inline
-    def withoutXmlColonspace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml:space")(js.undefined)
-        ret
-    }
+    def setXmlColonspace(value: String): Self = this.set("xml:space", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteXmlColonspace: Self = this.set("xml:space", js.undefined)
   }
   
 }

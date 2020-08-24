@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("gitlab", "MergeRequestDiscussions")
 @js.native
-class MergeRequestDiscussions ()
+class MergeRequestDiscussions protected ()
   extends typingsSlinky.gitlab.servicesMod.MergeRequestDiscussions {
   def this(options: BaseServiceOptions) = this()
 }

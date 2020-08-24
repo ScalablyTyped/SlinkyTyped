@@ -23,12 +23,42 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("pixi.js", "MeshGeometry")
 @js.native
-class MeshGeometry protected ()
+class MeshGeometry ()
   extends typingsSlinky.pixiJs.PIXI.MeshGeometry {
+  def this(vertices: js.Array[Double]) = this()
+  def this(vertices: js.typedarray.Float32Array) = this()
+  def this(vertices: js.UndefOr[scala.Nothing], uvs: js.Array[Double]) = this()
+  def this(vertices: js.UndefOr[scala.Nothing], uvs: js.typedarray.Float32Array) = this()
+  def this(vertices: js.Array[Double], uvs: js.Array[Double]) = this()
+  def this(vertices: js.Array[Double], uvs: js.typedarray.Float32Array) = this()
+  def this(vertices: js.typedarray.Float32Array, uvs: js.Array[Double]) = this()
+  def this(vertices: js.typedarray.Float32Array, uvs: js.typedarray.Float32Array) = this()
+  def this(vertices: js.UndefOr[scala.Nothing], uvs: js.UndefOr[scala.Nothing], index: js.Array[Double]) = this()
+  def this(
+    vertices: js.UndefOr[scala.Nothing],
+    uvs: js.UndefOr[scala.Nothing],
+    index: js.typedarray.Uint16Array
+  ) = this()
+  def this(vertices: js.UndefOr[scala.Nothing], uvs: js.Array[Double], index: js.Array[Double]) = this()
+  def this(vertices: js.UndefOr[scala.Nothing], uvs: js.Array[Double], index: js.typedarray.Uint16Array) = this()
+  def this(vertices: js.UndefOr[scala.Nothing], uvs: js.typedarray.Float32Array, index: js.Array[Double]) = this()
+  def this(
+    vertices: js.UndefOr[scala.Nothing],
+    uvs: js.typedarray.Float32Array,
+    index: js.typedarray.Uint16Array
+  ) = this()
+  def this(vertices: js.Array[Double], uvs: js.UndefOr[scala.Nothing], index: js.Array[Double]) = this()
+  def this(vertices: js.Array[Double], uvs: js.UndefOr[scala.Nothing], index: js.typedarray.Uint16Array) = this()
   def this(vertices: js.Array[Double], uvs: js.Array[Double], index: js.Array[Double]) = this()
   def this(vertices: js.Array[Double], uvs: js.Array[Double], index: js.typedarray.Uint16Array) = this()
   def this(vertices: js.Array[Double], uvs: js.typedarray.Float32Array, index: js.Array[Double]) = this()
   def this(vertices: js.Array[Double], uvs: js.typedarray.Float32Array, index: js.typedarray.Uint16Array) = this()
+  def this(vertices: js.typedarray.Float32Array, uvs: js.UndefOr[scala.Nothing], index: js.Array[Double]) = this()
+  def this(
+    vertices: js.typedarray.Float32Array,
+    uvs: js.UndefOr[scala.Nothing],
+    index: js.typedarray.Uint16Array
+  ) = this()
   def this(vertices: js.typedarray.Float32Array, uvs: js.Array[Double], index: js.Array[Double]) = this()
   def this(vertices: js.typedarray.Float32Array, uvs: js.Array[Double], index: js.typedarray.Uint16Array) = this()
   def this(vertices: js.typedarray.Float32Array, uvs: js.typedarray.Float32Array, index: js.Array[Double]) = this()

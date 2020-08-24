@@ -37,6 +37,7 @@ object elasticbeanstalk extends js.Object {
       */
     def this(name: String) = this()
     def this(name: String, args: ApplicationArgs) = this()
+    def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: ApplicationArgs, opts: CustomResourceOptions) = this()
   }
   
@@ -82,13 +83,14 @@ object elasticbeanstalk extends js.Object {
     def this(name: String, args: EnvironmentArgs, opts: CustomResourceOptions) = this()
   }
   
-  def getApplication(args: GetApplicationArgs): js.Promise[GetApplicationResult] with GetApplicationResult = js.native
-  def getApplication(args: GetApplicationArgs, opts: InvokeOptions): js.Promise[GetApplicationResult] with GetApplicationResult = js.native
-  def getHostedZone(): js.Promise[GetHostedZoneResult] with GetHostedZoneResult = js.native
-  def getHostedZone(args: GetHostedZoneArgs): js.Promise[GetHostedZoneResult] with GetHostedZoneResult = js.native
-  def getHostedZone(args: GetHostedZoneArgs, opts: InvokeOptions): js.Promise[GetHostedZoneResult] with GetHostedZoneResult = js.native
-  def getSolutionStack(args: GetSolutionStackArgs): js.Promise[GetSolutionStackResult] with GetSolutionStackResult = js.native
-  def getSolutionStack(args: GetSolutionStackArgs, opts: InvokeOptions): js.Promise[GetSolutionStackResult] with GetSolutionStackResult = js.native
+  def getApplication(args: GetApplicationArgs): js.Promise[GetApplicationResult] = js.native
+  def getApplication(args: GetApplicationArgs, opts: InvokeOptions): js.Promise[GetApplicationResult] = js.native
+  def getHostedZone(): js.Promise[GetHostedZoneResult] = js.native
+  def getHostedZone(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetHostedZoneResult] = js.native
+  def getHostedZone(args: GetHostedZoneArgs): js.Promise[GetHostedZoneResult] = js.native
+  def getHostedZone(args: GetHostedZoneArgs, opts: InvokeOptions): js.Promise[GetHostedZoneResult] = js.native
+  def getSolutionStack(args: GetSolutionStackArgs): js.Promise[GetSolutionStackResult] = js.native
+  def getSolutionStack(args: GetSolutionStackArgs, opts: InvokeOptions): js.Promise[GetSolutionStackResult] = js.native
   /* static members */
   @js.native
   object Application extends js.Object {
@@ -99,8 +101,10 @@ object elasticbeanstalk extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.elasticbeanstalkApplicationMod.Application = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticbeanstalkApplicationMod.Application = js.native
     def get(name: String, id: Input[ID], state: ApplicationState): typingsSlinky.pulumiAws.elasticbeanstalkApplicationMod.Application = js.native
     def get(name: String, id: Input[ID], state: ApplicationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticbeanstalkApplicationMod.Application = js.native
     /**
@@ -120,8 +124,10 @@ object elasticbeanstalk extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.applicationVersionMod.ApplicationVersion = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.applicationVersionMod.ApplicationVersion = js.native
     def get(name: String, id: Input[ID], state: ApplicationVersionState): typingsSlinky.pulumiAws.applicationVersionMod.ApplicationVersion = js.native
     def get(name: String, id: Input[ID], state: ApplicationVersionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.applicationVersionMod.ApplicationVersion = js.native
     /**
@@ -141,8 +147,10 @@ object elasticbeanstalk extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.configurationTemplateMod.ConfigurationTemplate = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.configurationTemplateMod.ConfigurationTemplate = js.native
     def get(name: String, id: Input[ID], state: ConfigurationTemplateState): typingsSlinky.pulumiAws.configurationTemplateMod.ConfigurationTemplate = js.native
     def get(name: String, id: Input[ID], state: ConfigurationTemplateState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.configurationTemplateMod.ConfigurationTemplate = js.native
     /**
@@ -162,8 +170,10 @@ object elasticbeanstalk extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.environmentMod.Environment = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.environmentMod.Environment = js.native
     def get(name: String, id: Input[ID], state: EnvironmentState): typingsSlinky.pulumiAws.environmentMod.Environment = js.native
     def get(name: String, id: Input[ID], state: EnvironmentState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.environmentMod.Environment = js.native
     /**

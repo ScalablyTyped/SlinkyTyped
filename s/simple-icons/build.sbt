@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "simple-icons"
-version := "2.5-dt-20200226Z-72d8b6"
-scalaVersion := "2.13.2"
+version := "2.5-dt-20200226Z-96f6ac"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

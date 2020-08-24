@@ -27,29 +27,18 @@ object CirculoidSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDotinner(value: SVGCircleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".inner")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDotinner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".inner")(js.undefined)
-        ret
-    }
+    def setDotinner(value: SVGCircleAttributes): Self = this.set(".inner", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotouter(value: SVGCircleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".outer")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotinner: Self = this.set(".inner", js.undefined)
     @scala.inline
-    def withoutDotouter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".outer")(js.undefined)
-        ret
-    }
+    def setDotouter(value: SVGCircleAttributes): Self = this.set(".outer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDotouter: Self = this.set(".outer", js.undefined)
   }
   
 }

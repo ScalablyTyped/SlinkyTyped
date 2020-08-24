@@ -11,14 +11,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.alienarena
   - typingsSlinky.gamedig.gamedigStrings.alienswarm
   - typingsSlinky.gamedig.gamedigStrings.arkse
+  - typingsSlinky.gamedig.gamedigStrings.assettocorsa
+  - typingsSlinky.gamedig.gamedigStrings.atlas
   - typingsSlinky.gamedig.gamedigStrings.avp2
   - typingsSlinky.gamedig.gamedigStrings.avp2010
   - typingsSlinky.gamedig.gamedigStrings.americasarmy
   - typingsSlinky.gamedig.gamedigStrings.americasarmy2
   - typingsSlinky.gamedig.gamedigStrings.americasarmy3
   - typingsSlinky.gamedig.gamedigStrings.americasarmypg
+  - typingsSlinky.gamedig.gamedigStrings.arcasimracing
   - typingsSlinky.gamedig.gamedigStrings.arma
   - typingsSlinky.gamedig.gamedigStrings.arma2
+  - typingsSlinky.gamedig.gamedigStrings.arma2oa
+  - typingsSlinky.gamedig.gamedigStrings.armacwa
+  - typingsSlinky.gamedig.gamedigStrings.armar
   - typingsSlinky.gamedig.gamedigStrings.arma3
   - typingsSlinky.gamedig.gamedigStrings.armagetron
   - typingsSlinky.gamedig.gamedigStrings.baldursgate
@@ -50,8 +56,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.commandos3
   - typingsSlinky.gamedig.gamedigStrings.cacrenegade
   - typingsSlinky.gamedig.gamedigStrings.conanexiles
+  - typingsSlinky.gamedig.gamedigStrings.contagion
   - typingsSlinky.gamedig.gamedigStrings.contactjack
+  - typingsSlinky.gamedig.gamedigStrings.cs15
   - typingsSlinky.gamedig.gamedigStrings.cs16
+  - typingsSlinky.gamedig.gamedigStrings.cs2d
   - typingsSlinky.gamedig.gamedigStrings.cscz
   - typingsSlinky.gamedig.gamedigStrings.css
   - typingsSlinky.gamedig.gamedigStrings.csgo
@@ -62,6 +71,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.daikatana
   - typingsSlinky.gamedig.gamedigStrings.dmomam
   - typingsSlinky.gamedig.gamedigStrings.darkesthour
+  - typingsSlinky.gamedig.gamedigStrings.daysofwar
   - typingsSlinky.gamedig.gamedigStrings.dayz
   - typingsSlinky.gamedig.gamedigStrings.dayzmod
   - typingsSlinky.gamedig.gamedigStrings.deadlydozenpt
@@ -78,6 +88,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.doom3
   - typingsSlinky.gamedig.gamedigStrings.dota2
   - typingsSlinky.gamedig.gamedigStrings.drakan
+  - typingsSlinky.gamedig.gamedigStrings.empyrion
   - typingsSlinky.gamedig.gamedigStrings.etqw
   - typingsSlinky.gamedig.gamedigStrings.fear
   - typingsSlinky.gamedig.gamedigStrings.f12002
@@ -85,25 +96,31 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.farcry
   - typingsSlinky.gamedig.gamedigStrings.farcry2
   - typingsSlinky.gamedig.gamedigStrings.fortressforever
+  - typingsSlinky.gamedig.gamedigStrings.operationflashpoint
   - typingsSlinky.gamedig.gamedigStrings.flashpoint
+  - typingsSlinky.gamedig.gamedigStrings.flashpointresistance
   - typingsSlinky.gamedig.gamedigStrings.ffow
   - typingsSlinky.gamedig.gamedigStrings.fivem
+  - typingsSlinky.gamedig.gamedigStrings.forrest
   - typingsSlinky.gamedig.gamedigStrings.garrysmod
   - typingsSlinky.gamedig.gamedigStrings.graw
   - typingsSlinky.gamedig.gamedigStrings.graw2
   - typingsSlinky.gamedig.gamedigStrings.giantscitizenkabuto
   - typingsSlinky.gamedig.gamedigStrings.globaloperations
   - typingsSlinky.gamedig.gamedigStrings.geneshift
+  - typingsSlinky.gamedig.gamedigStrings.mutantfactions
   - typingsSlinky.gamedig.gamedigStrings.ges
   - typingsSlinky.gamedig.gamedigStrings.gore
   - typingsSlinky.gamedig.gamedigStrings.gunmanchronicles
   - typingsSlinky.gamedig.gamedigStrings.hldm
+  - typingsSlinky.gamedig.gamedigStrings.hldms
   - typingsSlinky.gamedig.gamedigStrings.hl2dm
   - typingsSlinky.gamedig.gamedigStrings.halo
   - typingsSlinky.gamedig.gamedigStrings.halo2
   - typingsSlinky.gamedig.gamedigStrings.heretic2
   - typingsSlinky.gamedig.gamedigStrings.hexen2
   - typingsSlinky.gamedig.gamedigStrings.hidden
+  - typingsSlinky.gamedig.gamedigStrings.hll
   - typingsSlinky.gamedig.gamedigStrings.had2
   - typingsSlinky.gamedig.gamedigStrings.homefront
   - typingsSlinky.gamedig.gamedigStrings.homeworld2
@@ -111,9 +128,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.igi2
   - typingsSlinky.gamedig.gamedigStrings.il2
   - typingsSlinky.gamedig.gamedigStrings.insurgency
+  - typingsSlinky.gamedig.gamedigStrings.insurgencysandstorm
   - typingsSlinky.gamedig.gamedigStrings.ironstorm
   - typingsSlinky.gamedig.gamedigStrings.jamesbondnightfire
   - typingsSlinky.gamedig.gamedigStrings.jc2mp
+  - typingsSlinky.gamedig.gamedigStrings.jc3mp
   - typingsSlinky.gamedig.gamedigStrings.killingfloor
   - typingsSlinky.gamedig.gamedigStrings.killingfloor2
   - typingsSlinky.gamedig.gamedigStrings.kingpin
@@ -123,23 +142,25 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.left4dead
   - typingsSlinky.gamedig.gamedigStrings.left4dead2
   - typingsSlinky.gamedig.gamedigStrings.m2mp
+  - typingsSlinky.gamedig.gamedigStrings.m2o
   - typingsSlinky.gamedig.gamedigStrings.medievalengineers
   - typingsSlinky.gamedig.gamedigStrings.mohaa
-  - typingsSlinky.gamedig.gamedigStrings.mohpa
-  - typingsSlinky.gamedig.gamedigStrings.mohab
   - typingsSlinky.gamedig.gamedigStrings.mohsh
   - typingsSlinky.gamedig.gamedigStrings.mohbt
+  - typingsSlinky.gamedig.gamedigStrings.mohpa
+  - typingsSlinky.gamedig.gamedigStrings.mohab
   - typingsSlinky.gamedig.gamedigStrings.moh2010
   - typingsSlinky.gamedig.gamedigStrings.mohwf
   - typingsSlinky.gamedig.gamedigStrings.minecraft
-  - typingsSlinky.gamedig.gamedigStrings.minecraftpe
   - typingsSlinky.gamedig.gamedigStrings.minecraftping
+  - typingsSlinky.gamedig.gamedigStrings.minecraftpe
+  - typingsSlinky.gamedig.gamedigStrings.minecraftbe
   - typingsSlinky.gamedig.gamedigStrings.mnc
+  - typingsSlinky.gamedig.gamedigStrings.mordhau
   - typingsSlinky.gamedig.gamedigStrings.mtavc
   - typingsSlinky.gamedig.gamedigStrings.mtasa
   - typingsSlinky.gamedig.gamedigStrings.mumble
   - typingsSlinky.gamedig.gamedigStrings.mumbleping
-  - typingsSlinky.gamedig.gamedigStrings.mutantfactions
   - typingsSlinky.gamedig.gamedigStrings.nascarthunder2004
   - typingsSlinky.gamedig.gamedigStrings.netpanzer
   - typingsSlinky.gamedig.gamedigStrings.nmrih
@@ -156,15 +177,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.nucleardawn
   - typingsSlinky.gamedig.gamedigStrings.openarena
   - typingsSlinky.gamedig.gamedigStrings.openttd
-  - typingsSlinky.gamedig.gamedigStrings.operationflashpoint
   - typingsSlinky.gamedig.gamedigStrings.painkiller
+  - typingsSlinky.gamedig.gamedigStrings.pixark
   - typingsSlinky.gamedig.gamedigStrings.postal2
   - typingsSlinky.gamedig.gamedigStrings.prey
   - typingsSlinky.gamedig.gamedigStrings.primalcarnage
+  - typingsSlinky.gamedig.gamedigStrings.prbf2
   - typingsSlinky.gamedig.gamedigStrings.quake1
   - typingsSlinky.gamedig.gamedigStrings.quake2
   - typingsSlinky.gamedig.gamedigStrings.quake3
   - typingsSlinky.gamedig.gamedigStrings.quake4
+  - typingsSlinky.gamedig.gamedigStrings.quakelive
   - typingsSlinky.gamedig.gamedigStrings.ragdollkungfu
   - typingsSlinky.gamedig.gamedigStrings.r6
   - typingsSlinky.gamedig.gamedigStrings.r6roguespear
@@ -176,8 +199,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.redorchestra2
   - typingsSlinky.gamedig.gamedigStrings.redline
   - typingsSlinky.gamedig.gamedigStrings.rtcw
+  - typingsSlinky.gamedig.gamedigStrings.rfactor
   - typingsSlinky.gamedig.gamedigStrings.ricochet
   - typingsSlinky.gamedig.gamedigStrings.riseofnations
+  - typingsSlinky.gamedig.gamedigStrings.rs2
   - typingsSlinky.gamedig.gamedigStrings.rune
   - typingsSlinky.gamedig.gamedigStrings.rust
   - typingsSlinky.gamedig.gamedigStrings.samp
@@ -197,6 +222,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.stbc
   - typingsSlinky.gamedig.gamedigStrings.stvef
   - typingsSlinky.gamedig.gamedigStrings.stvef2
+  - typingsSlinky.gamedig.gamedigStrings.squad
   - typingsSlinky.gamedig.gamedigStrings.swbf
   - typingsSlinky.gamedig.gamedigStrings.swbf2
   - typingsSlinky.gamedig.gamedigStrings.swjk
@@ -204,11 +230,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.swrc
   - typingsSlinky.gamedig.gamedigStrings.starbound
   - typingsSlinky.gamedig.gamedigStrings.starmade
+  - typingsSlinky.gamedig.gamedigStrings.starsiege
   - typingsSlinky.gamedig.gamedigStrings.suicidesurvival
   - typingsSlinky.gamedig.gamedigStrings.swat4
   - typingsSlinky.gamedig.gamedigStrings.svencoop
   - typingsSlinky.gamedig.gamedigStrings.synergy
   - typingsSlinky.gamedig.gamedigStrings.tacticalops
+  - typingsSlinky.gamedig.gamedigStrings.takeonhelicopters
   - typingsSlinky.gamedig.gamedigStrings.teamfactor
   - typingsSlinky.gamedig.gamedigStrings.tfc
   - typingsSlinky.gamedig.gamedigStrings.tf2
@@ -216,6 +244,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.teamspeak3
   - typingsSlinky.gamedig.gamedigStrings.terminus
   - typingsSlinky.gamedig.gamedigStrings.terraria
+  - typingsSlinky.gamedig.gamedigStrings.tshock
   - typingsSlinky.gamedig.gamedigStrings.thps3
   - typingsSlinky.gamedig.gamedigStrings.thps4
   - typingsSlinky.gamedig.gamedigStrings.thu2
@@ -236,6 +265,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gamedig.gamedigStrings.ut3
   - typingsSlinky.gamedig.gamedigStrings.urbanterror
   - typingsSlinky.gamedig.gamedigStrings.v8supercar
+  - typingsSlinky.gamedig.gamedigStrings.vcmp
   - typingsSlinky.gamedig.gamedigStrings.ventrilo
   - typingsSlinky.gamedig.gamedigStrings.vietcong
   - typingsSlinky.gamedig.gamedigStrings.vietcong2
@@ -269,15 +299,27 @@ object Type {
   @scala.inline
   def aoe2: typingsSlinky.gamedig.gamedigStrings.aoe2 = "aoe2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.aoe2]
   @scala.inline
+  def arcasimracing: typingsSlinky.gamedig.gamedigStrings.arcasimracing = "arcasimracing".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.arcasimracing]
+  @scala.inline
   def arkse: typingsSlinky.gamedig.gamedigStrings.arkse = "arkse".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.arkse]
   @scala.inline
   def arma: typingsSlinky.gamedig.gamedigStrings.arma = "arma".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.arma]
   @scala.inline
   def arma2: typingsSlinky.gamedig.gamedigStrings.arma2 = "arma2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.arma2]
   @scala.inline
+  def arma2oa: typingsSlinky.gamedig.gamedigStrings.arma2oa = "arma2oa".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.arma2oa]
+  @scala.inline
   def arma3: typingsSlinky.gamedig.gamedigStrings.arma3 = "arma3".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.arma3]
   @scala.inline
+  def armacwa: typingsSlinky.gamedig.gamedigStrings.armacwa = "armacwa".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.armacwa]
+  @scala.inline
   def armagetron: typingsSlinky.gamedig.gamedigStrings.armagetron = "armagetron".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.armagetron]
+  @scala.inline
+  def armar: typingsSlinky.gamedig.gamedigStrings.armar = "armar".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.armar]
+  @scala.inline
+  def assettocorsa: typingsSlinky.gamedig.gamedigStrings.assettocorsa = "assettocorsa".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.assettocorsa]
+  @scala.inline
+  def atlas: typingsSlinky.gamedig.gamedigStrings.atlas = "atlas".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.atlas]
   @scala.inline
   def avp2: typingsSlinky.gamedig.gamedigStrings.avp2 = "avp2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.avp2]
   @scala.inline
@@ -343,6 +385,8 @@ object Type {
   @scala.inline
   def contactjack: typingsSlinky.gamedig.gamedigStrings.contactjack = "contactjack".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.contactjack]
   @scala.inline
+  def contagion: typingsSlinky.gamedig.gamedigStrings.contagion = "contagion".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.contagion]
+  @scala.inline
   def crossracing: typingsSlinky.gamedig.gamedigStrings.crossracing = "crossracing".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.crossracing]
   @scala.inline
   def crysis: typingsSlinky.gamedig.gamedigStrings.crysis = "crysis".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.crysis]
@@ -351,7 +395,11 @@ object Type {
   @scala.inline
   def crysiswars: typingsSlinky.gamedig.gamedigStrings.crysiswars = "crysiswars".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.crysiswars]
   @scala.inline
+  def cs15: typingsSlinky.gamedig.gamedigStrings.cs15 = "cs15".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.cs15]
+  @scala.inline
   def cs16: typingsSlinky.gamedig.gamedigStrings.cs16 = "cs16".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.cs16]
+  @scala.inline
+  def cs2d: typingsSlinky.gamedig.gamedigStrings.cs2d = "cs2d".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.cs2d]
   @scala.inline
   def cscz: typingsSlinky.gamedig.gamedigStrings.cscz = "cscz".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.cscz]
   @scala.inline
@@ -362,6 +410,8 @@ object Type {
   def daikatana: typingsSlinky.gamedig.gamedigStrings.daikatana = "daikatana".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.daikatana]
   @scala.inline
   def darkesthour: typingsSlinky.gamedig.gamedigStrings.darkesthour = "darkesthour".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.darkesthour]
+  @scala.inline
+  def daysofwar: typingsSlinky.gamedig.gamedigStrings.daysofwar = "daysofwar".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.daysofwar]
   @scala.inline
   def dayz: typingsSlinky.gamedig.gamedigStrings.dayz = "dayz".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.dayz]
   @scala.inline
@@ -397,6 +447,8 @@ object Type {
   @scala.inline
   def drakan: typingsSlinky.gamedig.gamedigStrings.drakan = "drakan".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.drakan]
   @scala.inline
+  def empyrion: typingsSlinky.gamedig.gamedigStrings.empyrion = "empyrion".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.empyrion]
+  @scala.inline
   def etqw: typingsSlinky.gamedig.gamedigStrings.etqw = "etqw".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.etqw]
   @scala.inline
   def f12002: typingsSlinky.gamedig.gamedigStrings.f12002 = "f12002".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.f12002]
@@ -414,6 +466,10 @@ object Type {
   def fivem: typingsSlinky.gamedig.gamedigStrings.fivem = "fivem".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.fivem]
   @scala.inline
   def flashpoint: typingsSlinky.gamedig.gamedigStrings.flashpoint = "flashpoint".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.flashpoint]
+  @scala.inline
+  def flashpointresistance: typingsSlinky.gamedig.gamedigStrings.flashpointresistance = "flashpointresistance".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.flashpointresistance]
+  @scala.inline
+  def forrest: typingsSlinky.gamedig.gamedigStrings.forrest = "forrest".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.forrest]
   @scala.inline
   def fortressforever: typingsSlinky.gamedig.gamedigStrings.fortressforever = "fortressforever".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.fortressforever]
   @scala.inline
@@ -451,6 +507,10 @@ object Type {
   @scala.inline
   def hldm: typingsSlinky.gamedig.gamedigStrings.hldm = "hldm".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.hldm]
   @scala.inline
+  def hldms: typingsSlinky.gamedig.gamedigStrings.hldms = "hldms".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.hldms]
+  @scala.inline
+  def hll: typingsSlinky.gamedig.gamedigStrings.hll = "hll".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.hll]
+  @scala.inline
   def homefront: typingsSlinky.gamedig.gamedigStrings.homefront = "homefront".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.homefront]
   @scala.inline
   def homeworld2: typingsSlinky.gamedig.gamedigStrings.homeworld2 = "homeworld2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.homeworld2]
@@ -463,11 +523,15 @@ object Type {
   @scala.inline
   def insurgency: typingsSlinky.gamedig.gamedigStrings.insurgency = "insurgency".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.insurgency]
   @scala.inline
+  def insurgencysandstorm: typingsSlinky.gamedig.gamedigStrings.insurgencysandstorm = "insurgencysandstorm".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.insurgencysandstorm]
+  @scala.inline
   def ironstorm: typingsSlinky.gamedig.gamedigStrings.ironstorm = "ironstorm".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.ironstorm]
   @scala.inline
   def jamesbondnightfire: typingsSlinky.gamedig.gamedigStrings.jamesbondnightfire = "jamesbondnightfire".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.jamesbondnightfire]
   @scala.inline
   def jc2mp: typingsSlinky.gamedig.gamedigStrings.jc2mp = "jc2mp".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.jc2mp]
+  @scala.inline
+  def jc3mp: typingsSlinky.gamedig.gamedigStrings.jc3mp = "jc3mp".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.jc3mp]
   @scala.inline
   def killingfloor: typingsSlinky.gamedig.gamedigStrings.killingfloor = "killingfloor".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.killingfloor]
   @scala.inline
@@ -487,9 +551,13 @@ object Type {
   @scala.inline
   def m2mp: typingsSlinky.gamedig.gamedigStrings.m2mp = "m2mp".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.m2mp]
   @scala.inline
+  def m2o: typingsSlinky.gamedig.gamedigStrings.m2o = "m2o".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.m2o]
+  @scala.inline
   def medievalengineers: typingsSlinky.gamedig.gamedigStrings.medievalengineers = "medievalengineers".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.medievalengineers]
   @scala.inline
   def minecraft: typingsSlinky.gamedig.gamedigStrings.minecraft = "minecraft".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.minecraft]
+  @scala.inline
+  def minecraftbe: typingsSlinky.gamedig.gamedigStrings.minecraftbe = "minecraftbe".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.minecraftbe]
   @scala.inline
   def minecraftpe: typingsSlinky.gamedig.gamedigStrings.minecraftpe = "minecraftpe".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.minecraftpe]
   @scala.inline
@@ -510,6 +578,8 @@ object Type {
   def mohsh: typingsSlinky.gamedig.gamedigStrings.mohsh = "mohsh".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.mohsh]
   @scala.inline
   def mohwf: typingsSlinky.gamedig.gamedigStrings.mohwf = "mohwf".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.mohwf]
+  @scala.inline
+  def mordhau: typingsSlinky.gamedig.gamedigStrings.mordhau = "mordhau".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.mordhau]
   @scala.inline
   def mtasa: typingsSlinky.gamedig.gamedigStrings.mtasa = "mtasa".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.mtasa]
   @scala.inline
@@ -557,7 +627,11 @@ object Type {
   @scala.inline
   def painkiller: typingsSlinky.gamedig.gamedigStrings.painkiller = "painkiller".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.painkiller]
   @scala.inline
+  def pixark: typingsSlinky.gamedig.gamedigStrings.pixark = "pixark".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.pixark]
+  @scala.inline
   def postal2: typingsSlinky.gamedig.gamedigStrings.postal2 = "postal2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.postal2]
+  @scala.inline
+  def prbf2: typingsSlinky.gamedig.gamedigStrings.prbf2 = "prbf2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.prbf2]
   @scala.inline
   def prey: typingsSlinky.gamedig.gamedigStrings.prey = "prey".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.prey]
   @scala.inline
@@ -570,6 +644,8 @@ object Type {
   def quake3: typingsSlinky.gamedig.gamedigStrings.quake3 = "quake3".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.quake3]
   @scala.inline
   def quake4: typingsSlinky.gamedig.gamedigStrings.quake4 = "quake4".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.quake4]
+  @scala.inline
+  def quakelive: typingsSlinky.gamedig.gamedigStrings.quakelive = "quakelive".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.quakelive]
   @scala.inline
   def r6: typingsSlinky.gamedig.gamedigStrings.r6 = "r6".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.r6]
   @scala.inline
@@ -591,9 +667,13 @@ object Type {
   @scala.inline
   def redorchestraost: typingsSlinky.gamedig.gamedigStrings.redorchestraost = "redorchestraost".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.redorchestraost]
   @scala.inline
+  def rfactor: typingsSlinky.gamedig.gamedigStrings.rfactor = "rfactor".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.rfactor]
+  @scala.inline
   def ricochet: typingsSlinky.gamedig.gamedigStrings.ricochet = "ricochet".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.ricochet]
   @scala.inline
   def riseofnations: typingsSlinky.gamedig.gamedigStrings.riseofnations = "riseofnations".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.riseofnations]
+  @scala.inline
+  def rs2: typingsSlinky.gamedig.gamedigStrings.rs2 = "rs2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.rs2]
   @scala.inline
   def rtcw: typingsSlinky.gamedig.gamedigStrings.rtcw = "rtcw".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.rtcw]
   @scala.inline
@@ -623,6 +703,8 @@ object Type {
   @scala.inline
   def spaceengineers: typingsSlinky.gamedig.gamedigStrings.spaceengineers = "spaceengineers".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.spaceengineers]
   @scala.inline
+  def squad: typingsSlinky.gamedig.gamedigStrings.squad = "squad".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.squad]
+  @scala.inline
   def ss: typingsSlinky.gamedig.gamedigStrings.ss = "ss".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.ss]
   @scala.inline
   def ss2: typingsSlinky.gamedig.gamedigStrings.ss2 = "ss2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.ss2]
@@ -632,6 +714,8 @@ object Type {
   def starbound: typingsSlinky.gamedig.gamedigStrings.starbound = "starbound".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.starbound]
   @scala.inline
   def starmade: typingsSlinky.gamedig.gamedigStrings.starmade = "starmade".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.starmade]
+  @scala.inline
+  def starsiege: typingsSlinky.gamedig.gamedigStrings.starsiege = "starsiege".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.starsiege]
   @scala.inline
   def stbc: typingsSlinky.gamedig.gamedigStrings.stbc = "stbc".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.stbc]
   @scala.inline
@@ -658,6 +742,8 @@ object Type {
   def synergy: typingsSlinky.gamedig.gamedigStrings.synergy = "synergy".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.synergy]
   @scala.inline
   def tacticalops: typingsSlinky.gamedig.gamedigStrings.tacticalops = "tacticalops".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.tacticalops]
+  @scala.inline
+  def takeonhelicopters: typingsSlinky.gamedig.gamedigStrings.takeonhelicopters = "takeonhelicopters".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.takeonhelicopters]
   @scala.inline
   def teamfactor: typingsSlinky.gamedig.gamedigStrings.teamfactor = "teamfactor".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.teamfactor]
   @scala.inline
@@ -693,6 +779,8 @@ object Type {
   @scala.inline
   def tron20: typingsSlinky.gamedig.gamedigStrings.tron20 = "tron20".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.tron20]
   @scala.inline
+  def tshock: typingsSlinky.gamedig.gamedigStrings.tshock = "tshock".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.tshock]
+  @scala.inline
   def turok2: typingsSlinky.gamedig.gamedigStrings.turok2 = "turok2".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.turok2]
   @scala.inline
   def universalcombat: typingsSlinky.gamedig.gamedigStrings.universalcombat = "universalcombat".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.universalcombat]
@@ -712,6 +800,8 @@ object Type {
   def ut3: typingsSlinky.gamedig.gamedigStrings.ut3 = "ut3".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.ut3]
   @scala.inline
   def v8supercar: typingsSlinky.gamedig.gamedigStrings.v8supercar = "v8supercar".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.v8supercar]
+  @scala.inline
+  def vcmp: typingsSlinky.gamedig.gamedigStrings.vcmp = "vcmp".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.vcmp]
   @scala.inline
   def ventrilo: typingsSlinky.gamedig.gamedigStrings.ventrilo = "ventrilo".asInstanceOf[typingsSlinky.gamedig.gamedigStrings.ventrilo]
   @scala.inline

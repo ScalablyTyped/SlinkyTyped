@@ -147,7 +147,7 @@ trait TypeofwebViewRequest extends js.Object {
     * @description Matches network events by various criteria.
     */
   var RequestMatcher: Instantiable1[
-    js.UndefOr[/* parameters */ RequestMatcherFields], 
+    /* parameters */ js.UndefOr[RequestMatcherFields], 
     typingsSlinky.chromeApps.chrome.webViewRequest.RequestMatcher
   ] = js.native
   /**
@@ -190,7 +190,7 @@ object TypeofwebViewRequest {
     RemoveRequestHeader: Instantiable1[/* parameters */ RemoveRequestHeaderParams, RemoveRequestHeader],
     RemoveResponseCookie: Instantiable1[/* parameters */ RemoveCookieParams[FilterResponseCookie], RemoveResponseCookie],
     RemoveResponseHeader: Instantiable1[/* parameters */ RemoveResponseHeaderParams, RemoveResponseHeader],
-    RequestMatcher: Instantiable1[js.UndefOr[/* parameters */ RequestMatcherFields], RequestMatcher],
+    RequestMatcher: Instantiable1[/* parameters */ js.UndefOr[RequestMatcherFields], RequestMatcher],
     SendMessageToExtension: Instantiable1[/* parameters */ SendMessageParams, SendMessageToExtension],
     SetRequestHeader: Instantiable1[/* parameters */ SetRequestHeaderParams, SetRequestHeader]
   ): TypeofwebViewRequest = {
@@ -204,122 +204,55 @@ object TypeofwebViewRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddRequestCookie(value: Instantiable1[/* parameters */ AddCookie[RequestCookie], AddRequestCookie]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddRequestCookie")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAddResponseCookie(value: Instantiable1[/* parameters */ AddCookie[ResponseCookie], AddResponseCookie]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddResponseCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddRequestCookie(value: Instantiable1[/* parameters */ AddCookie[RequestCookie], AddRequestCookie]): Self = this.set("AddRequestCookie", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAddResponseHeader(value: Instantiable1[/* parameters */ AddResponseHeaderParams, AddResponseHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddResponseHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddResponseCookie(value: Instantiable1[/* parameters */ AddCookie[ResponseCookie], AddResponseCookie]): Self = this.set("AddResponseCookie", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCancelRequest(value: Instantiable0[CancelRequest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CancelRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddResponseHeader(value: Instantiable1[/* parameters */ AddResponseHeaderParams, AddResponseHeader]): Self = this.set("AddResponseHeader", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEditRequestCookie(
+    def setCancelRequest(value: Instantiable0[CancelRequest]): Self = this.set("CancelRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEditRequestCookie(
       value: Instantiable1[/* parameters */ EditCookieParams[RequestCookie, RequestCookie], EditRequestCookie]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EditRequestCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("EditRequestCookie", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEditResponseCookie(
+    def setEditResponseCookie(
       value: Instantiable1[
           /* parameter */ EditCookieParams[FilterResponseCookie, ResponseCookie], 
           EditResponseCookie
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EditResponseCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("EditResponseCookie", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIgnoreRules(value: Instantiable1[/* parameters */ IgnoreRulesParams, IgnoreRules]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreRules")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIgnoreRules(value: Instantiable1[/* parameters */ IgnoreRulesParams, IgnoreRules]): Self = this.set("IgnoreRules", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRedirectByRegEx(value: Instantiable1[/* parameters */ RedirectByRegExParams, RedirectByRegEx]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectByRegEx")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRedirectByRegEx(value: Instantiable1[/* parameters */ RedirectByRegExParams, RedirectByRegEx]): Self = this.set("RedirectByRegEx", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRedirectRequest(value: Instantiable1[/* parameters */ RedirectRequestParams, RedirectRequest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRedirectRequest(value: Instantiable1[/* parameters */ RedirectRequestParams, RedirectRequest]): Self = this.set("RedirectRequest", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRedirectToEmptyDocument(value: Instantiable0[RedirectToEmptyDocument]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectToEmptyDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRedirectToEmptyDocument(value: Instantiable0[RedirectToEmptyDocument]): Self = this.set("RedirectToEmptyDocument", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRedirectToTransparentImage(value: Instantiable0[RedirectToTransparentImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectToTransparentImage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRedirectToTransparentImage(value: Instantiable0[RedirectToTransparentImage]): Self = this.set("RedirectToTransparentImage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveRequestCookie(value: Instantiable1[/* parameters */ RemoveCookieParams[RequestCookie], RemoveRequestCookie]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveRequestCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRemoveRequestCookie(value: Instantiable1[/* parameters */ RemoveCookieParams[RequestCookie], RemoveRequestCookie]): Self = this.set("RemoveRequestCookie", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveRequestHeader(value: Instantiable1[/* parameters */ RemoveRequestHeaderParams, RemoveRequestHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveRequestHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRemoveRequestHeader(value: Instantiable1[/* parameters */ RemoveRequestHeaderParams, RemoveRequestHeader]): Self = this.set("RemoveRequestHeader", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveResponseCookie(
+    def setRemoveResponseCookie(
       value: Instantiable1[/* parameters */ RemoveCookieParams[FilterResponseCookie], RemoveResponseCookie]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveResponseCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("RemoveResponseCookie", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveResponseHeader(value: Instantiable1[/* parameters */ RemoveResponseHeaderParams, RemoveResponseHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveResponseHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRemoveResponseHeader(value: Instantiable1[/* parameters */ RemoveResponseHeaderParams, RemoveResponseHeader]): Self = this.set("RemoveResponseHeader", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequestMatcher(value: Instantiable1[js.UndefOr[/* parameters */ RequestMatcherFields], RequestMatcher]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestMatcher")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRequestMatcher(value: Instantiable1[/* parameters */ js.UndefOr[RequestMatcherFields], RequestMatcher]): Self = this.set("RequestMatcher", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSendMessageToExtension(value: Instantiable1[/* parameters */ SendMessageParams, SendMessageToExtension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendMessageToExtension")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSendMessageToExtension(value: Instantiable1[/* parameters */ SendMessageParams, SendMessageToExtension]): Self = this.set("SendMessageToExtension", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetRequestHeader(value: Instantiable1[/* parameters */ SetRequestHeaderParams, SetRequestHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRequestHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSetRequestHeader(value: Instantiable1[/* parameters */ SetRequestHeaderParams, SetRequestHeader]): Self = this.set("SetRequestHeader", value.asInstanceOf[js.Any])
   }
   
 }

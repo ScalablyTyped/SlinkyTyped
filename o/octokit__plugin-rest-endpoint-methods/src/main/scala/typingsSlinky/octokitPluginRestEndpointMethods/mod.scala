@@ -1,5 +1,6 @@
 package typingsSlinky.octokitPluginRestEndpointMethods
 
+import typingsSlinky.octokitCore.mod.Octokit
 import typingsSlinky.octokitPluginRestEndpointMethods.typesMod.Api
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,9 +12,7 @@ object mod extends js.Object {
   @js.native
   object restEndpointMethods extends js.Object {
     var VERSION: String = js.native
-    def apply(
-      octokit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Octokit */ js.Any
-    ): Api = js.native
+    def apply(octokit: Octokit): Api = js.native
   }
   
 }

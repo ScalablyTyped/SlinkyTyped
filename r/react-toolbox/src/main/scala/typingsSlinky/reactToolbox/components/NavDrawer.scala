@@ -2,8 +2,8 @@ package typingsSlinky.reactToolbox.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactToolbox.layoutNavDrawerMod.NavDrawerProps
-import typingsSlinky.reactToolbox.layoutNavDrawerMod.NavDrawerTheme
+import typingsSlinky.reactToolbox.navDrawerMod.NavDrawerProps
+import typingsSlinky.reactToolbox.navDrawerMod.NavDrawerTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.left
 import typingsSlinky.reactToolbox.reactToolboxStrings.lg
 import typingsSlinky.reactToolbox.reactToolboxStrings.lgTablet
@@ -19,14 +19,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NavDrawer {
-  @JSImport("react-toolbox", "NavDrawer")
+  @JSImport("react-toolbox/components/layout", "NavDrawer")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.NavDrawer] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.layoutMod.NavDrawer] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline

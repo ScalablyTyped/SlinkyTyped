@@ -4,21 +4,20 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.anon.Y
 import typingsSlinky.antDesignPro.miniBarMod.IMiniBarProps
-import typingsSlinky.antDesignPro.miniBarMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MiniBar {
-  @JSImport("ant-design-pro/lib/Charts/MiniBar", JSImport.Default)
+  @JSImport("ant-design-pro/lib/Charts", "MiniBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.chartsMod.MiniBar] {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline

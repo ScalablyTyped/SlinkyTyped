@@ -6,7 +6,6 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactFocusLock.anon.Children
 import typingsSlinky.reactFocusLock.anon.ReactFocusLockPropsReactN
 import typingsSlinky.reactFocusLock.reactFocusLockStrings.tail
@@ -24,7 +23,7 @@ object UI {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLElement] {
     @scala.inline
     def allowTextSelection(value: Boolean): this.type = set("allowTextSelection", value.asInstanceOf[js.Any])
     @scala.inline
@@ -55,6 +54,8 @@ object UI {
     def persistentFocus(value: Boolean): this.type = set("persistentFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def returnFocus(value: Boolean | FocusOptions): this.type = set("returnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shardsVarargs(value: (ReactRef[js.Any] | HTMLElement)*): this.type = set("shards", js.Array(value :_*))
     @scala.inline
     def shards(value: js.Array[ReactRef[_] | HTMLElement]): this.type = set("shards", value.asInstanceOf[js.Any])
     @scala.inline

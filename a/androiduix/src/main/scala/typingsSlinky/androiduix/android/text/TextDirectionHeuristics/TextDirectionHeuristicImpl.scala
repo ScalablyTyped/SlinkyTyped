@@ -30,23 +30,16 @@ object TextDirectionHeuristicImpl {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDefaultIsRtl(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIsRtl")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDoCheck(value: (js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doCheck")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setDefaultIsRtl(value: () => Boolean): Self = this.set("defaultIsRtl", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAlgorithm(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDoCheck(value: (js.Any, js.Any, js.Any) => js.Any): Self = this.set("doCheck", js.Any.fromFunction3(value))
+    @scala.inline
+    def setMAlgorithm(value: js.Any): Self = this.set("mAlgorithm", value.asInstanceOf[js.Any])
   }
   
 }

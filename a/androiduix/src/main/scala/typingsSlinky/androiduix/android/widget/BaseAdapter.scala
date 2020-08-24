@@ -46,23 +46,16 @@ object BaseAdapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMDataSetObservable(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDataSetObservable")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withNotifyDataSetChanged(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyDataSetChanged")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMDataSetObservable(value: js.Any): Self = this.set("mDataSetObservable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNotifyDataSetInvalidated(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyDataSetInvalidated")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setNotifyDataSetChanged(value: () => Unit): Self = this.set("notifyDataSetChanged", js.Any.fromFunction0(value))
+    @scala.inline
+    def setNotifyDataSetInvalidated(value: () => Unit): Self = this.set("notifyDataSetInvalidated", js.Any.fromFunction0(value))
   }
   
 }

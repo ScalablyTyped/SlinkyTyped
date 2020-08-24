@@ -2,8 +2,8 @@ package typingsSlinky.ionicCore.reorderGroupMod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.reorderGroupInterfaceMod.ItemReorderEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ class ReorderGroup () extends ComponentInterface {
     */
   var disabled: Boolean = js.native
   var el: HTMLElement = js.native
-  var gesture: js.UndefOr[js.Any] = js.native
+  var gesture: js.Any = js.native
   /**
     * Event that needs to be listened to in order to complete the reorder action.
     * Once the event has been emitted, the `complete()` method then needs
@@ -36,11 +36,11 @@ class ReorderGroup () extends ComponentInterface {
   var onStart: js.Any = js.native
   /********* DOM WRITE ********* */
   var reorderMove: js.Any = js.native
-  var scrollEl: js.UndefOr[js.Any] = js.native
+  var scrollEl: js.Any = js.native
   var scrollElBottom: js.Any = js.native
   var scrollElInitial: js.Any = js.native
   var scrollElTop: js.Any = js.native
-  var selectedItemEl: js.UndefOr[js.Any] = js.native
+  var selectedItemEl: js.Any = js.native
   var selectedItemHeight: js.Any = js.native
   var state: ReorderGroupState = js.native
   /**

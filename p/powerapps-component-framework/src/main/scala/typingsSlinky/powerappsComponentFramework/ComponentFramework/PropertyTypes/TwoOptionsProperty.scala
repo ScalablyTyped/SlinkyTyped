@@ -1,8 +1,6 @@
 package typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyTypes
 
-import typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.FieldPropertyMetadata.Metadata
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.FieldPropertyMetadata.TwoOptionMetadata
-import typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.SecurityValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,31 +8,39 @@ import scala.scalajs.js.annotation._
 /**
   * Property Interface for context.parameters.[property_key], when property manifest type is TwoOptions
   */
+@js.native
 trait TwoOptionsProperty extends Property {
-  var attributes: js.UndefOr[TwoOptionMetadata] = js.undefined
+  @JSName("attributes")
+  var attributes_TwoOptionsProperty: js.UndefOr[TwoOptionMetadata] = js.native
   @JSName("raw")
-  var raw_TwoOptionsProperty: Boolean
+  var raw_TwoOptionsProperty: Boolean = js.native
 }
 
 object TwoOptionsProperty {
   @scala.inline
-  def apply(
-    error: Boolean,
-    errorMessage: String,
-    raw: Boolean,
-    `type`: String,
-    attribute: Metadata = null,
-    attributes: TwoOptionMetadata = null,
-    formatted: String = null,
-    security: SecurityValues = null
-  ): TwoOptionsProperty = {
+  def apply(error: Boolean, errorMessage: String, raw: Boolean, `type`: String): TwoOptionsProperty = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], errorMessage = errorMessage.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (formatted != null) __obj.updateDynamic("formatted")(formatted.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     __obj.asInstanceOf[TwoOptionsProperty]
   }
+  @scala.inline
+  implicit class TwoOptionsPropertyOps[Self <: TwoOptionsProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRaw(value: Boolean): Self = this.set("raw", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAttributes(value: TwoOptionMetadata): Self = this.set("attributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAttributes: Self = this.set("attributes", js.undefined)
+  }
+  
 }
 

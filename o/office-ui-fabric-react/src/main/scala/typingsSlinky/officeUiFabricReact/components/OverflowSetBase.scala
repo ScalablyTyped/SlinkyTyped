@@ -42,9 +42,15 @@ object OverflowSetBase {
     @scala.inline
     def itemSubMenuProvider(value: /* item */ IOverflowSetItemProps => js.UndefOr[js.Array[_]]): this.type = set("itemSubMenuProvider", js.Any.fromFunction1(value))
     @scala.inline
+    def itemsVarargs(value: IOverflowSetItemProps*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
     def items(value: js.Array[IOverflowSetItemProps]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
+    def keytipSequencesVarargs(value: String*): this.type = set("keytipSequences", js.Array(value :_*))
+    @scala.inline
     def keytipSequences(value: js.Array[String]): this.type = set("keytipSequences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowItemsVarargs(value: IOverflowSetItemProps*): this.type = set("overflowItems", js.Array(value :_*))
     @scala.inline
     def overflowItems(value: js.Array[IOverflowSetItemProps]): this.type = set("overflowItems", value.asInstanceOf[js.Any])
     @scala.inline

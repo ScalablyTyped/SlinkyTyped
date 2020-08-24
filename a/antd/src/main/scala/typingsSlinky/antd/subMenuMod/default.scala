@@ -1,6 +1,7 @@
 package typingsSlinky.antd.subMenuMod
 
-import typingsSlinky.antd.anon.AntdMenuTheme
+import typingsSlinky.antd.menuContextMod.MenuContextProps
+import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,7 @@ class default () extends SubMenu
 @JSImport("antd/lib/menu/SubMenu", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var contextTypes: AntdMenuTheme = js.native
+  var contextType: Context[MenuContextProps] = js.native
   var isSubMenu: Double = js.native
 }
 

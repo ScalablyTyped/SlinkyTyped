@@ -16,15 +16,5 @@ class ASPxClientTreeListBatchEditTemplateCellFocusedEventArgs protected ()
     * @param column An ASPxClientTreeListColumn object specifying the column.
     */
   def this(column: typingsSlinky.devexpressWeb.ASPxClientTreeListColumn) = this()
-  /**
-    * Gets the currently processed column.
-    */
-  /* CompleteClass */
-  override var column: typingsSlinky.devexpressWeb.ASPxClientTreeListColumn = js.native
-  /**
-    * Gets or sets a value specifying whether the event was handled.
-    */
-  /* CompleteClass */
-  override var handled: Boolean = js.native
 }
 

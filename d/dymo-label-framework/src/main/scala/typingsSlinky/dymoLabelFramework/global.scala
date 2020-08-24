@@ -6,7 +6,6 @@ import typingsSlinky.dymoLabelFramework.dymo.label.framework.CreateLabelRenderPa
 import typingsSlinky.dymoLabelFramework.dymo.label.framework.CreateLabelWriterPrintParamsXmlParams
 import typingsSlinky.dymoLabelFramework.dymo.label.framework.CreateTapePrintParamsXmlParams
 import typingsSlinky.dymoLabelFramework.dymo.label.framework.ILabel
-import typingsSlinky.dymoLabelFramework.dymo.label.framework.ILabelSetRecord
 import typingsSlinky.dymoLabelFramework.dymo.label.framework.PrintJob
 import typingsSlinky.dymoLabelFramework.dymo.label.framework.PrintJobStatusInfo
 import typingsSlinky.dymoLabelFramework.dymo.label.framework.PrinterInfo
@@ -31,18 +30,7 @@ object global extends js.Object {
           */
         @js.native
         class LabelSetBuilder ()
-          extends typingsSlinky.dymoLabelFramework.dymo.label.framework.LabelSetBuilder {
-          /**
-            * Adds a new record to the LabelSet. Returns a record object.
-            */
-          /* CompleteClass */
-          override def addRecord(): ILabelSetRecord = js.native
-          /**
-            * Get all record objects in this LabelSetBuilder.
-            */
-          /* CompleteClass */
-          override def getRecords(): js.Array[ILabelSetRecord] = js.native
-        }
+          extends typingsSlinky.dymoLabelFramework.dymo.label.framework.LabelSetBuilder
         
         /** Returns the library version number, e.g. "1.2.6" */
         var VERSION: String = js.native
@@ -50,7 +38,26 @@ object global extends js.Object {
           * Undocumented, removed, see http://developers.dymo.com/2013/08/14/dymo-sdk-qa/#comment-27119
           */
         def addPrinterUri(printerUri: String): Unit = js.native
+        def addPrinterUri(
+          printerUri: String,
+          location: js.UndefOr[scala.Nothing],
+          successCallback: js.UndefOr[scala.Nothing],
+          errorCallback: AddPrinterUriCallback
+        ): Unit = js.native
+        def addPrinterUri(printerUri: String, location: js.UndefOr[scala.Nothing], successCallback: AddPrinterUriCallback): Unit = js.native
+        def addPrinterUri(
+          printerUri: String,
+          location: js.UndefOr[scala.Nothing],
+          successCallback: AddPrinterUriCallback,
+          errorCallback: AddPrinterUriCallback
+        ): Unit = js.native
         def addPrinterUri(printerUri: String, location: String): Unit = js.native
+        def addPrinterUri(
+          printerUri: String,
+          location: String,
+          successCallback: js.UndefOr[scala.Nothing],
+          errorCallback: AddPrinterUriCallback
+        ): Unit = js.native
         def addPrinterUri(printerUri: String, location: String, successCallback: AddPrinterUriCallback): Unit = js.native
         def addPrinterUri(
           printerUri: String,

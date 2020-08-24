@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HexaditeInvestigationIcon {
-  @JSImport("@fluentui/react-icons/lib/components/HexaditeInvestigationIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "HexaditeInvestigationIcon")
   @js.native
   object component extends js.Object
   

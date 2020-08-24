@@ -10,7 +10,6 @@ import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactPdf.anon.PageNumber
 import typingsSlinky.reactPdf.documentMod.Props
 import typingsSlinky.reactPdf.documentMod.RenderFunction
-import typingsSlinky.reactPdf.documentMod.default
 import typingsSlinky.reactPdf.reactPdfStrings._blank
 import typingsSlinky.reactPdf.reactPdfStrings._parent
 import typingsSlinky.reactPdf.reactPdfStrings._self
@@ -23,14 +22,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Document {
-  @JSImport("react-pdf/dist/Document", JSImport.Default)
+  @JSImport("react-pdf", "Document")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactPdf.mod.Document] {
+    @scala.inline
+    def classNameVarargs(value: String*): this.type = set("className", js.Array(value :_*))
     @scala.inline
     def className(value: String | js.Array[String]): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

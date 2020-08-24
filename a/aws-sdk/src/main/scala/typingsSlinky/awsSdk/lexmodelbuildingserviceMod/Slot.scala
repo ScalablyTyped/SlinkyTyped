@@ -19,7 +19,7 @@ trait Slot extends js.Object {
     */
   var obfuscationSetting: js.UndefOr[ObfuscationSetting] = js.native
   /**
-    *  Directs Lex the order in which to elicit this slot value from the user. For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits values is arbitrary.
+    *  Directs Amazon Lex the order in which to elicit this slot value from the user. For example, if the intent has two slots with priorities 1 and 2, AWS Amazon Lex first elicits a value for the slot with priority 1. If multiple slots share the same priority, the order in which Amazon Lex elicits values is arbitrary.
     */
   var priority: js.UndefOr[Priority] = js.native
   /**
@@ -50,28 +50,60 @@ trait Slot extends js.Object {
 
 object Slot {
   @scala.inline
-  def apply(
-    name: SlotName,
-    slotConstraint: SlotConstraint,
-    description: Description = null,
-    obfuscationSetting: ObfuscationSetting = null,
-    priority: js.UndefOr[Priority] = js.undefined,
-    responseCard: ResponseCard = null,
-    sampleUtterances: SlotUtteranceList = null,
-    slotType: CustomOrBuiltinSlotTypeName = null,
-    slotTypeVersion: Version = null,
-    valueElicitationPrompt: Prompt = null
-  ): Slot = {
+  def apply(name: SlotName, slotConstraint: SlotConstraint): Slot = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], slotConstraint = slotConstraint.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (obfuscationSetting != null) __obj.updateDynamic("obfuscationSetting")(obfuscationSetting.asInstanceOf[js.Any])
-    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
-    if (responseCard != null) __obj.updateDynamic("responseCard")(responseCard.asInstanceOf[js.Any])
-    if (sampleUtterances != null) __obj.updateDynamic("sampleUtterances")(sampleUtterances.asInstanceOf[js.Any])
-    if (slotType != null) __obj.updateDynamic("slotType")(slotType.asInstanceOf[js.Any])
-    if (slotTypeVersion != null) __obj.updateDynamic("slotTypeVersion")(slotTypeVersion.asInstanceOf[js.Any])
-    if (valueElicitationPrompt != null) __obj.updateDynamic("valueElicitationPrompt")(valueElicitationPrompt.asInstanceOf[js.Any])
     __obj.asInstanceOf[Slot]
   }
+  @scala.inline
+  implicit class SlotOps[Self <: Slot] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: SlotName): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSlotConstraint(value: SlotConstraint): Self = this.set("slotConstraint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: Description): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setObfuscationSetting(value: ObfuscationSetting): Self = this.set("obfuscationSetting", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteObfuscationSetting: Self = this.set("obfuscationSetting", js.undefined)
+    @scala.inline
+    def setPriority(value: Priority): Self = this.set("priority", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePriority: Self = this.set("priority", js.undefined)
+    @scala.inline
+    def setResponseCard(value: ResponseCard): Self = this.set("responseCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResponseCard: Self = this.set("responseCard", js.undefined)
+    @scala.inline
+    def setSampleUtterancesVarargs(value: Utterance*): Self = this.set("sampleUtterances", js.Array(value :_*))
+    @scala.inline
+    def setSampleUtterances(value: SlotUtteranceList): Self = this.set("sampleUtterances", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSampleUtterances: Self = this.set("sampleUtterances", js.undefined)
+    @scala.inline
+    def setSlotType(value: CustomOrBuiltinSlotTypeName): Self = this.set("slotType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSlotType: Self = this.set("slotType", js.undefined)
+    @scala.inline
+    def setSlotTypeVersion(value: Version): Self = this.set("slotTypeVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSlotTypeVersion: Self = this.set("slotTypeVersion", js.undefined)
+    @scala.inline
+    def setValueElicitationPrompt(value: Prompt): Self = this.set("valueElicitationPrompt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValueElicitationPrompt: Self = this.set("valueElicitationPrompt", js.undefined)
+  }
+  
 }
 

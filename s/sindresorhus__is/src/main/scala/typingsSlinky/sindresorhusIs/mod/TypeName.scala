@@ -12,6 +12,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.number
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.symbol
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Function
+  - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.GeneratorFunction
+  - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.AsyncFunction
+  - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Observable
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Array
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Buffer
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Object
@@ -35,6 +38,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.SharedArrayBuffer
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.DataView
   - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Promise
+  - typingsSlinky.sindresorhusIs.sindresorhusIsStrings.URL
 */
 trait TypeName extends js.Object
 
@@ -43,6 +47,8 @@ object TypeName {
   def Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Array = "Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Array]
   @scala.inline
   def ArrayBuffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.ArrayBuffer = "ArrayBuffer".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.ArrayBuffer]
+  @scala.inline
+  def AsyncFunction: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.AsyncFunction = "AsyncFunction".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.AsyncFunction]
   @scala.inline
   def Buffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Buffer = "Buffer".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Buffer]
   @scala.inline
@@ -58,6 +64,8 @@ object TypeName {
   @scala.inline
   def Function: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Function = "Function".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Function]
   @scala.inline
+  def GeneratorFunction: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.GeneratorFunction = "GeneratorFunction".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.GeneratorFunction]
+  @scala.inline
   def Int16Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int16Array = "Int16Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int16Array]
   @scala.inline
   def Int32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int32Array = "Int32Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int32Array]
@@ -68,6 +76,8 @@ object TypeName {
   @scala.inline
   def Object: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Object = "Object".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Object]
   @scala.inline
+  def Observable: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Observable = "Observable".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Observable]
+  @scala.inline
   def Promise: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Promise = "Promise".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Promise]
   @scala.inline
   def RegExp: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.RegExp = "RegExp".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.RegExp]
@@ -75,6 +85,8 @@ object TypeName {
   def Set: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Set = "Set".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Set]
   @scala.inline
   def SharedArrayBuffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.SharedArrayBuffer = "SharedArrayBuffer".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.SharedArrayBuffer]
+  @scala.inline
+  def URL: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.URL = "URL".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.URL]
   @scala.inline
   def Uint16Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint16Array = "Uint16Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint16Array]
   @scala.inline

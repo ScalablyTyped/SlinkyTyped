@@ -8,7 +8,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object settings extends js.Object {
   /**
-    * Set to false to hide empty page title in design mode
+    * Set to false to hide empty page description in design mode
+    */
+  var allowShowEmptyDescriptionInDesignMode: Boolean = js.native
+  /**
+    * Set to false to hide empty page title and description in design mode
     */
   var allowShowEmptyTitleInDesignMode: Boolean = js.native
   /**
@@ -49,6 +53,14 @@ object settings extends js.Object {
     */
   var matrixTotalValuePostFix: String = js.native
   /**
+    * Set this property to change the default value of the minWidth constraint
+    */
+  var maxWidth: String = js.native
+  /**
+    * Set this property to change the default value of the minWidth constraint
+    */
+  var minWidth: String = js.native
+  /**
     * Maximum panel count in dynamic panel
     */
   var panelMaximumPanelCount: Double = js.native
@@ -56,6 +68,10 @@ object settings extends js.Object {
     * Maximum rate value count in rating question
     */
   var ratingMaximumRateValueCount: Double = js.native
+  /**
+    * Set this property to change readOnlyCommentRenderMode: "textarea" (default) or (div)
+    */
+  var readOnlyCommentRenderMode: String = js.native
   /**
     * Set to true to always serialize the localization string as object even if there is only one value for default locale. Instead of string "MyStr" serialize as {default: "MyStr"}
     */
@@ -68,5 +84,10 @@ object settings extends js.Object {
     * Encode parameter on calling restfull web API
     */
   var webserviceEncodeParameters: Boolean = js.native
+  /**
+    * Override this function, set your function, if you want to show your own dialog confirm window instead of standard browser window.
+    * @param message
+    */
+  def confirmActionFunc(message: String): Boolean = js.native
 }
 

@@ -20,6 +20,11 @@ trait Adapter extends js.Object {
     * by synchronously returning a Query stream
     */
   def createQuery(text: String): Query = js.native
+  def createQuery(
+    text: String,
+    params: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* result */ ResultSet, Unit]
+  ): Query = js.native
   def createQuery(text: String, params: js.Array[_]): Query = js.native
   def createQuery(
     text: String,

@@ -1,16 +1,11 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.carouselMod.CarouselProps
-import typingsSlinky.antDesignReactNative.carouselMod.CarouselState
 import typingsSlinky.antDesignReactNative.carouselMod.PaginationProps
-import typingsSlinky.antDesignReactNative.carouselMod.default
 import typingsSlinky.antDesignReactNative.carouselStyleMod.CarouselStyle
-import typingsSlinky.reactNative.mod.NativeScrollEvent
-import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
@@ -19,22 +14,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Carousel {
-  @JSImport("@ant-design/react-native/lib/carousel", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Carousel")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Carousel] {
     @scala.inline
     def afterChange(value: /* index */ Double => Unit): this.type = set("afterChange", js.Any.fromFunction1(value))
     @scala.inline
     def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
     @scala.inline
     def autoplayInterval(value: Double): this.type = set("autoplayInterval", value.asInstanceOf[js.Any])
-    @scala.inline
-    def bounces(value: Boolean): this.type = set("bounces", value.asInstanceOf[js.Any])
     @scala.inline
     def dotActiveStyle(value: StyleProp[ViewStyle]): this.type = set("dotActiveStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,17 +41,7 @@ object Carousel {
     @scala.inline
     def infinite(value: Boolean): this.type = set("infinite", value.asInstanceOf[js.Any])
     @scala.inline
-    def initialSlideWidth(value: Double): this.type = set("initialSlideWidth", value.asInstanceOf[js.Any])
-    @scala.inline
-    def onMomentumScrollEnd(
-      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ typingsSlinky.antDesignReactNative.carouselMod.Carousel) => Unit
-    ): this.type = set("onMomentumScrollEnd", js.Any.fromFunction3(value))
-    @scala.inline
-    def onScrollBeginDrag(
-      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ typingsSlinky.antDesignReactNative.carouselMod.Carousel) => Unit
-    ): this.type = set("onScrollBeginDrag", js.Any.fromFunction3(value))
-    @scala.inline
-    def pagination(value: /* props */ PaginationProps => TagMod[Any]): this.type = set("pagination", js.Any.fromFunction1(value))
+    def pagination(value: /* props */ PaginationProps => ReactElement): this.type = set("pagination", js.Any.fromFunction1(value))
     @scala.inline
     def selectedIndex(value: Double): this.type = set("selectedIndex", value.asInstanceOf[js.Any])
     @scala.inline

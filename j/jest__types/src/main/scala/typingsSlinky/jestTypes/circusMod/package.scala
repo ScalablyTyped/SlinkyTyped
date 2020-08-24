@@ -27,7 +27,7 @@ package object circusMod {
     /* done */ js.UndefOr[typingsSlinky.jestTypes.circusMod.DoneFn], 
     js.UndefOr[js.Promise[js.Any] | scala.Null]
   ]
-  type Process = typingsSlinky.node.NodeJS.Process
+  type Process = typingsSlinky.node.processMod.global.NodeJS.Process
   type TestContext = typingsSlinky.std.Record[java.lang.String, js.Any]
   type TestError = typingsSlinky.jestTypes.circusMod.Exception | (js.Array[
     js.Tuple2[

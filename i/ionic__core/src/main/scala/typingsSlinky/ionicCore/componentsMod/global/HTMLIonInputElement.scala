@@ -3,26 +3,33 @@ package typingsSlinky.ionicCore.componentsMod.global
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.ionicCore.ionicCoreStrings.decimal
+import typingsSlinky.ionicCore.ionicCoreStrings.done
 import typingsSlinky.ionicCore.ionicCoreStrings.email
+import typingsSlinky.ionicCore.ionicCoreStrings.enter
+import typingsSlinky.ionicCore.ionicCoreStrings.go
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
+import typingsSlinky.ionicCore.ionicCoreStrings.next
 import typingsSlinky.ionicCore.ionicCoreStrings.none
 import typingsSlinky.ionicCore.ionicCoreStrings.numeric
 import typingsSlinky.ionicCore.ionicCoreStrings.off
 import typingsSlinky.ionicCore.ionicCoreStrings.on
+import typingsSlinky.ionicCore.ionicCoreStrings.previous
 import typingsSlinky.ionicCore.ionicCoreStrings.search
+import typingsSlinky.ionicCore.ionicCoreStrings.send
 import typingsSlinky.ionicCore.ionicCoreStrings.tel
 import typingsSlinky.ionicCore.ionicCoreStrings.text
 import typingsSlinky.ionicCore.ionicCoreStrings.url
+import typingsSlinky.ionicCore.mod.AutocompleteTypes
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.TextFieldTypes
-import typingsSlinky.ionicCore.stencilCoreMod.HTMLStencilElement
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.HTMLStencilElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.ionicCore.componentsMod.Components.IonInput because var conflicts: autocapitalize, autofocus, spellcheck. Inlined accept, autocomplete, autocorrect, clearInput, clearOnEdit, color, debounce, disabled, getInputElement, inputmode, max, maxlength, min, minlength, mode, multiple, name, pattern, placeholder, readonly, required, setFocus, size, step, `type`, value */ @js.native
+- typingsSlinky.ionicCore.componentsMod.Components.IonInput because var conflicts: autocapitalize, autofocus, spellcheck. Inlined accept, autocomplete, autocorrect, clearInput, clearOnEdit, color, debounce, disabled, enterkeyhint, getInputElement, inputmode, max, maxlength, min, minlength, mode, multiple, name, pattern, placeholder, readonly, required, setFocus, size, step, `type`, value */ @js.native
 trait HTMLIonInputElement extends HTMLStencilElement {
   /**
     * If the value of the type attribute is `"file"`, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers.
@@ -31,7 +38,7 @@ trait HTMLIonInputElement extends HTMLStencilElement {
   /**
     * Indicates whether the value of the control can be automatically completed by the browser.
     */
-  var autocomplete: on | off = js.native
+  var autocomplete: AutocompleteTypes = js.native
   /**
     * Whether auto correction should be enabled when the user is entering/editing the text value.
     */
@@ -56,6 +63,10 @@ trait HTMLIonInputElement extends HTMLStencilElement {
     * If `true`, the user cannot interact with the input.
     */
   var disabled: Boolean = js.native
+  /**
+    * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
+    */
+  var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   /**
     * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
     */
@@ -89,7 +100,7 @@ trait HTMLIonInputElement extends HTMLStencilElement {
     */
   var name: String = js.native
   /**
-    * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the title attribute to describe the pattern to help the user. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, or `"password"`, otherwise it is ignored.
+    * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the title attribute to describe the pattern to help the user. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, `"date"`, or `"password"`, otherwise it is ignored. When the type attribute is `"date"`, `pattern` will only be used in browsers that do not support the `"date"` input type natively. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date for more information.
     */
   var pattern: js.UndefOr[String] = js.native
   /**
@@ -119,7 +130,7 @@ trait HTMLIonInputElement extends HTMLStencilElement {
   /**
     * The value of the input.
     */
-  var value: js.UndefOr[String | Null] = js.native
+  var value: js.UndefOr[String | Double | Null] = js.native
   /**
     * Returns the native `<input>` element used under the hood.
     */

@@ -25,9 +25,13 @@ object Node {
     @scala.inline
     def blendFunc(value: Dst): this.type = set("blendFunc", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def clear(value: Color): this.type = set("clear", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreUnusedUniformsVarargs(value: String*): this.type = set("ignoreUnusedUniforms", js.Array(value :_*))
     @scala.inline
     def ignoreUnusedUniforms(value: js.Array[String] | Boolean): this.type = set("ignoreUnusedUniforms", value.asInstanceOf[js.Any])
     @scala.inline

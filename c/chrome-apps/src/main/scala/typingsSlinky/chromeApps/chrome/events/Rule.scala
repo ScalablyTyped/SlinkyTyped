@@ -32,64 +32,43 @@ trait Rule[T /* <: js.Object */, K /* <: js.Object */] extends js.Object {
 
 object Rule {
   @scala.inline
-  def apply[T, K](actions: js.Array[K], conditions: js.Array[T]): Rule[T, K] = {
+  def apply[/* <: js.Object */ T, /* <: js.Object */ K](actions: js.Array[K], conditions: js.Array[T]): Rule[T, K] = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], conditions = conditions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rule[T, K]]
   }
   @scala.inline
-  implicit class RuleOps[Self[t, k] <: Rule[t, k], T, K] (val x: Self[T, K]) extends AnyVal {
+  implicit class RuleOps[Self <: Rule[_, _], /* <: js.Object */ T, /* <: js.Object */ K] (val x: Self with (Rule[T, K])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T, K] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, K]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, K]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, K]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: js.Array[K]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withConditions(value: js.Array[T]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setActionsVarargs(value: K*): Self = this.set("actions", js.Array(value :_*))
     @scala.inline
-    def withId(value: String): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setActions(value: js.Array[K]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutId: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
+    def setConditionsVarargs(value: T*): Self = this.set("conditions", js.Array(value :_*))
     @scala.inline
-    def withPriority(value: integer): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConditions(value: js.Array[T]): Self = this.set("conditions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPriority: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTags(value: js.Array[String]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteId: Self = this.set("id", js.undefined)
     @scala.inline
-    def withoutTags: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
+    def setPriority(value: integer): Self = this.set("priority", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePriority: Self = this.set("priority", js.undefined)
+    @scala.inline
+    def setTagsVarargs(value: String*): Self = this.set("tags", js.Array(value :_*))
+    @scala.inline
+    def setTags(value: js.Array[String]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
   
 }

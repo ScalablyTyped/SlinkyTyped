@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.OriginalEvent
+import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.autocompleteAutoCompleteMod.AutoCompleteProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
@@ -62,7 +63,7 @@ object AutoComplete {
     @scala.inline
     def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClear(value: /* event */ Event => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
     @scala.inline
@@ -92,11 +93,13 @@ object AutoComplete {
     @scala.inline
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectedItemTemplate(value: /* data */ js.Any => js.UndefOr[ReactElement]): this.type = set("selectedItemTemplate", js.Any.fromFunction1(value))
+    def selectedItemTemplate(value: /* data */ js.Any => String): this.type = set("selectedItemTemplate", js.Any.fromFunction1(value))
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestionsVarargs(value: js.Any*): this.type = set("suggestions", js.Array(value :_*))
     @scala.inline
     def suggestions(value: js.Array[_]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     @scala.inline

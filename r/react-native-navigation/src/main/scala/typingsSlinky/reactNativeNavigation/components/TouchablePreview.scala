@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeNavigation.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -35,7 +34,7 @@ object TouchablePreview {
     def touchableComponentReactElement(value: ReactElement): this.type = set("touchableComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def touchableComponent(
-      value: TouchableHighlight | TouchableOpacity | TouchableNativeFeedback | TouchableWithoutFeedback | TagMod[Any]
+      value: TouchableHighlight | TouchableOpacity | TouchableNativeFeedback | TouchableWithoutFeedback | ReactElement
     ): this.type = set("touchableComponent", value.asInstanceOf[js.Any])
   }
   

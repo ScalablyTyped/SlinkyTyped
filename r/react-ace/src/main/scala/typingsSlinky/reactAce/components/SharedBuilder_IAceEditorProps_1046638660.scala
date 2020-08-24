@@ -2,9 +2,10 @@ package typingsSlinky.reactAce.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.brace.mod.Annotation
+import typingsSlinky.aceBuilds.mod.Ace.Annotation
+import typingsSlinky.aceBuilds.mod.Ace.Editor
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactAce.aceEditorClassMod.AceEditorClass
+import typingsSlinky.reactAce.anon.TypeofAceBuilds
 import typingsSlinky.reactAce.typesMod.IAceOptions
 import typingsSlinky.reactAce.typesMod.ICommand
 import typingsSlinky.reactAce.typesMod.IEditorProps
@@ -18,9 +19,13 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def annotationsVarargs(value: Annotation*): this.type = set("annotations", js.Array(value :_*))
+  @scala.inline
   def annotations(value: js.Array[Annotation]): this.type = set("annotations", value.asInstanceOf[js.Any])
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  @scala.inline
+  def commandsVarargs(value: ICommand*): this.type = set("commands", js.Array(value :_*))
   @scala.inline
   def commands(value: js.Array[ICommand]): this.type = set("commands", value.asInstanceOf[js.Any])
   @scala.inline
@@ -32,7 +37,11 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   @scala.inline
   def editorProps(value: IEditorProps): this.type = set("editorProps", value.asInstanceOf[js.Any])
   @scala.inline
+  def enableBasicAutocompletionVarargs(value: String*): this.type = set("enableBasicAutocompletion", js.Array(value :_*))
+  @scala.inline
   def enableBasicAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableBasicAutocompletion", value.asInstanceOf[js.Any])
+  @scala.inline
+  def enableLiveAutocompletionVarargs(value: String*): this.type = set("enableLiveAutocompletion", js.Array(value :_*))
   @scala.inline
   def enableLiveAutocompletion(value: Boolean | js.Array[String]): this.type = set("enableLiveAutocompletion", value.asInstanceOf[js.Any])
   @scala.inline
@@ -48,21 +57,23 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   @scala.inline
   def keyboardHandler(value: String): this.type = set("keyboardHandler", value.asInstanceOf[js.Any])
   @scala.inline
+  def markersVarargs(value: IMarker*): this.type = set("markers", js.Array(value :_*))
+  @scala.inline
   def markers(value: js.Array[IMarker]): this.type = set("markers", value.asInstanceOf[js.Any])
   @scala.inline
   def maxLines(value: Double): this.type = set("maxLines", value.asInstanceOf[js.Any])
   @scala.inline
   def minLines(value: Double): this.type = set("minLines", value.asInstanceOf[js.Any])
   @scala.inline
-  def mode(value: String): this.type = set("mode", value.asInstanceOf[js.Any])
+  def mode(value: String | js.Object): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline
   def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   @scala.inline
   def navigateToFileEnd(value: Boolean): this.type = set("navigateToFileEnd", value.asInstanceOf[js.Any])
   @scala.inline
-  def onBeforeLoad(value: /* ace */ js.Any => Unit): this.type = set("onBeforeLoad", js.Any.fromFunction1(value))
+  def onBeforeLoad(value: /* ace */ TypeofAceBuilds => Unit): this.type = set("onBeforeLoad", js.Any.fromFunction1(value))
   @scala.inline
-  def onBlur(value: (/* event */ js.Any, /* editor */ js.UndefOr[AceEditorClass]) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
+  def onBlur(value: (/* event */ js.Any, /* editor */ js.UndefOr[Editor]) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
   @scala.inline
   def onChange(value: (/* value */ String, /* event */ js.UndefOr[js.Any]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
   @scala.inline
@@ -70,11 +81,11 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   @scala.inline
   def onCursorChange(value: (/* value */ js.Any, /* event */ js.UndefOr[js.Any]) => Unit): this.type = set("onCursorChange", js.Any.fromFunction2(value))
   @scala.inline
-  def onFocus(value: (/* event */ js.Any, /* editor */ js.UndefOr[AceEditorClass]) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
+  def onFocus(value: (/* event */ js.Any, /* editor */ js.UndefOr[Editor]) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
   @scala.inline
   def onInput(value: /* event */ js.UndefOr[js.Any] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
   @scala.inline
-  def onLoad(value: /* editor */ IEditorProps => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+  def onLoad(value: /* editor */ Editor => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
   @scala.inline
   def onPaste(value: /* value */ String => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
   @scala.inline
@@ -89,6 +100,8 @@ class SharedBuilder_IAceEditorProps_1046638660[R <: js.Object] (val args: js.Arr
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   @scala.inline
   def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+  @scala.inline
+  def scrollMarginVarargs(value: Double*): this.type = set("scrollMargin", js.Array(value :_*))
   @scala.inline
   def scrollMargin(value: js.Array[Double]): this.type = set("scrollMargin", value.asInstanceOf[js.Any])
   @scala.inline

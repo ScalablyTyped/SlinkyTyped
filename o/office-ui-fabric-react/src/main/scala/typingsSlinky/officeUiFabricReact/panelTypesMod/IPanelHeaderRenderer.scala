@@ -16,7 +16,11 @@ trait IPanelHeaderRenderer extends IRenderFunction[IPanelProps] {
     * panel's title, because the panel popup uses this ID as its aria-labelledby.
     */
   def apply(): ReactElement | Null = js.native
+  def apply(props: js.UndefOr[scala.Nothing], defaultRender: js.UndefOr[scala.Nothing], headerTextId: String): ReactElement | Null = js.native
+  def apply(props: js.UndefOr[scala.Nothing], defaultRender: IPanelHeaderRenderer): ReactElement | Null = js.native
+  def apply(props: js.UndefOr[scala.Nothing], defaultRender: IPanelHeaderRenderer, headerTextId: String): ReactElement | Null = js.native
   def apply(props: IPanelProps): ReactElement | Null = js.native
+  def apply(props: IPanelProps, defaultRender: js.UndefOr[scala.Nothing], headerTextId: String): ReactElement | Null = js.native
   def apply(props: IPanelProps, defaultRender: IPanelHeaderRenderer): ReactElement | Null = js.native
   def apply(props: IPanelProps, defaultRender: IPanelHeaderRenderer, headerTextId: String): ReactElement | Null = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Trophy2Icon {
-  @JSImport("@fluentui/react-icons/lib/components/Trophy2Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Trophy2Icon")
   @js.native
   object component extends js.Object
   

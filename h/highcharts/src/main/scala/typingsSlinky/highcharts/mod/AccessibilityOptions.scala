@@ -1,16 +1,12 @@
 package typingsSlinky.highcharts.mod
 
-import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AccessibilityOptions extends js.Object {
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Whether or not to add a shortcut
-    * button in the screen reader information region to show the data table.
-    */
-  var addTableShortcut: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for announcing new data
     * to screen reader users. Useful for dynamic data applications and
@@ -21,14 +17,7 @@ trait AccessibilityOptions extends js.Object {
     * consider making snapshots of the data accessible, and do the
     * announcements in batches.
     */
-  var announceNewData: js.UndefOr[AccessibilityAnnounceNewDataOptions] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Date format to use to describe
-    * range of datetime axes.
-    *
-    * For an overview of the replacement codes, see dateFormat.
-    */
-  var axisRangeDateFormat: js.UndefOr[String] = js.undefined
+  var announceNewData: js.UndefOr[AccessibilityAnnounceNewDataOptionsObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A hook for adding custom
     * components to the accessibility module. Should be an object mapping
@@ -37,41 +26,38 @@ trait AccessibilityOptions extends js.Object {
     * component to the keyboardNavigation.order for the keyboard navigation to
     * be usable.
     */
-  var customComponents: js.UndefOr[js.Object] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Whether or not to add series
-    * descriptions to charts with a single series.
-    */
-  var describeSingleSeries: js.UndefOr[Boolean] = js.undefined
+  var customComponents: js.UndefOr[js.Any] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A text description of the chart.
     *
-    * **Note: Prefer using caption instead.**
+    * **Note: Prefer using linkedDescription or caption instead.**
     *
     * If the Accessibility module is loaded, this option is included by default
     * as a long description of the chart in the hidden screen reader
     * information region.
     *
-    * Note: Since Highcharts now supports captions, it is preferred to define
-    * the description there, as the caption benefits all users. The caption
-    * will be available to screen reader users. If this option is defined
-    * instead, the caption is hidden from screen reader users.
+    * Note: Since Highcharts now supports captions and linked descriptions, it
+    * is preferred to define the description using those methods, as a visible
+    * caption/description benefits all users. If the
+    * `accessibility.description` option is defined, the linked description is
+    * ignored, and the caption is hidden from screen reader users.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable accessibility
     * functionality for the chart.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Theme to apply to the chart when
-    * Windows High Contrast Mode is detected.
+    * Windows High Contrast Mode is detected. By default, a high contrast theme
+    * matching the high contrast system system colors is used.
     */
-  var highContrastTheme: js.UndefOr[js.Object] = js.undefined
+  var highContrastTheme: js.UndefOr[js.Any] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for keyboard navigation.
     */
-  var keyboardNavigation: js.UndefOr[AccessibilityKeyboardNavigationOptions] = js.undefined
+  var keyboardNavigation: js.UndefOr[KeyboardNavigationOptionsObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Amount of landmarks/regions to
     * create for screen reader users. More landmarks can make navigation with
@@ -84,89 +70,52 @@ trait AccessibilityOptions extends js.Object {
     *
     * - `disabled`: No landmarks are added.
     */
-  var landmarkVerbosity: js.UndefOr[OptionsLandmarkVerbosityValue] = js.undefined
+  var landmarkVerbosity: js.UndefOr[OptionsLandmarkVerbosityValue] = js.native
   /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Function to run upon clicking
-    * the "View as Data Table" link in the screen reader region.
+    * (Highcharts, Highstock, Highmaps, Gantt) Link the chart to an HTML
+    * element describing the contents of the chart.
     *
-    * By default Highcharts will insert and set focus to a data table
-    * representation of the chart.
-    */
-  var onTableAnchorClick: js.UndefOr[ScreenReaderClickCallbackFunction] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Date format to use for points on
-    * datetime axes when describing them to screen reader users.
+    * It is always recommended to describe charts using visible text, to
+    * improve SEO as well as accessibility for users with disabilities. This
+    * option lets an HTML element with a description be linked to the chart, so
+    * that screen reader users can connect the two.
     *
-    * Defaults to the same format as in tooltip.
+    * By setting this option to a string, Highcharts runs the string as an HTML
+    * selector query on the entire document. If there is only a single match,
+    * this element is linked to the chart. The content of the linked element
+    * will be included in the chart description for screen reader users.
     *
-    * For an overview of the replacement codes, see dateFormat.
-    */
-  var pointDateFormat: js.UndefOr[String] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Formatter function to determine
-    * the date/time format used with points on datetime axes when describing
-    * them to screen reader users. Receives one argument, `point`, referring to
-    * the point to describe. Should return a date format string compatible with
-    * dateFormat.
-    */
-  var pointDateFormatter: js.UndefOr[ScreenReaderFormatterCallbackFunction[Point]] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Formatter function to use
-    * instead of the default for point descriptions. Receives one argument,
-    * `point`, referring to the point to describe. Should return a string with
-    * the description of the point for a screen reader user. If `false` is
-    * returned, the default formatter will be used for that point.
-    */
-  var pointDescriptionFormatter: js.UndefOr[ScreenReaderFormatterCallbackFunction[Point]] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) When a series contains more
-    * points than this, we no longer expose information about individual points
-    * to screen readers.
+    * By default, the chart looks for an adjacent sibling element with the
+    * `highcharts-description` class.
     *
-    * Set to `false` to disable.
-    */
-  var pointDescriptionThreshold: js.UndefOr[Boolean | Double] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) When a series contains more
-    * points than this, we no longer allow keyboard navigation for it.
+    * The feature can be disabled by setting the option to an empty string, or
+    * overridden by providing the accessibility.description option.
+    * Alternatively, the HTML element to link can be passed in directly as an
+    * HTML node.
     *
-    * Set to `false` to disable.
-    */
-  var pointNavigationThreshold: js.UndefOr[Boolean | Double] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Decimals to use for the values
-    * in the point descriptions. Uses tooltip.valueDecimals if not defined.
-    */
-  var pointValueDecimals: js.UndefOr[String] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Prefix to add to the values in
-    * the point descriptions. Uses tooltip.valuePrefix if not defined.
-    */
-  var pointValuePrefix: js.UndefOr[String] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Suffix to add to the values in
-    * the point descriptions. Uses tooltip.valueSuffix if not defined.
-    */
-  var pointValueSuffix: js.UndefOr[String] = js.undefined
-  /**
-    * (Highcharts, Highstock, Highmaps, Gantt) A formatter function to create
-    * the HTML contents of the hidden screen reader information region.
-    * Receives one argument, `chart`, referring to the chart object. Should
-    * return a string with the HTML content of the region. By default this
-    * returns an automatic description of the chart.
+    * If you need the description to be part of the exported image, consider
+    * using the caption feature.
     *
-    * The button to view the chart as a data table will be added automatically
-    * after the custom HTML content if enabled.
+    * If you need the description to be hidden visually, use the
+    * accessibility.description option.
     */
-  var screenReaderSectionFormatter: js.UndefOr[ScreenReaderFormatterCallbackFunction[Chart_]] = js.undefined
+  var linkedDescription: js.UndefOr[String | HTMLElement] = js.native
   /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Formatter function to use
-    * instead of the default for series descriptions. Receives one argument,
-    * `series`, referring to the series to describe. Should return a string
-    * with the description of the series for a screen reader user. If `false`
-    * is returned, the default formatter will be used for that series.
+    * (Highcharts, Highstock, Highmaps, Gantt) Options for descriptions of
+    * individual data points.
     */
-  var seriesDescriptionFormatter: js.UndefOr[ScreenReaderFormatterCallbackFunction[Series]] = js.undefined
+  var point: js.UndefOr[AccessibilityPointOptions] = js.native
+  /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Accessibility options for the
+    * screen reader information sections added before and after the chart.
+    */
+  var screenReaderSection: js.UndefOr[AccessibilityScreenReaderSectionOptions] = js.native
+  /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Accessibility options global to
+    * all data series. Individual series can also have specific accessibility
+    * options set.
+    */
+  var series: js.UndefOr[AccessibilitySeriesOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A text description of the chart
     * type.
@@ -177,59 +126,77 @@ trait AccessibilityOptions extends js.Object {
     * Highcharts will by default attempt to guess the chart type, but for more
     * complex charts it is recommended to specify this property for clarity.
     */
-  var typeDescription: js.UndefOr[String] = js.undefined
+  var typeDescription: js.UndefOr[String] = js.native
 }
 
 object AccessibilityOptions {
   @scala.inline
-  def apply(
-    addTableShortcut: js.UndefOr[Boolean] = js.undefined,
-    announceNewData: AccessibilityAnnounceNewDataOptions = null,
-    axisRangeDateFormat: String = null,
-    customComponents: js.Object = null,
-    describeSingleSeries: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    highContrastTheme: js.Object = null,
-    keyboardNavigation: AccessibilityKeyboardNavigationOptions = null,
-    landmarkVerbosity: OptionsLandmarkVerbosityValue = null,
-    onTableAnchorClick: /* evt */ MouseEvent => Unit = null,
-    pointDateFormat: String = null,
-    pointDateFormatter: Point => String = null,
-    pointDescriptionFormatter: Point => String = null,
-    pointDescriptionThreshold: Boolean | Double = null,
-    pointNavigationThreshold: Boolean | Double = null,
-    pointValueDecimals: String = null,
-    pointValuePrefix: String = null,
-    pointValueSuffix: String = null,
-    screenReaderSectionFormatter: Chart_ => String = null,
-    seriesDescriptionFormatter: Series => String = null,
-    typeDescription: String = null
-  ): AccessibilityOptions = {
+  def apply(): AccessibilityOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addTableShortcut)) __obj.updateDynamic("addTableShortcut")(addTableShortcut.get.asInstanceOf[js.Any])
-    if (announceNewData != null) __obj.updateDynamic("announceNewData")(announceNewData.asInstanceOf[js.Any])
-    if (axisRangeDateFormat != null) __obj.updateDynamic("axisRangeDateFormat")(axisRangeDateFormat.asInstanceOf[js.Any])
-    if (customComponents != null) __obj.updateDynamic("customComponents")(customComponents.asInstanceOf[js.Any])
-    if (!js.isUndefined(describeSingleSeries)) __obj.updateDynamic("describeSingleSeries")(describeSingleSeries.get.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
-    if (highContrastTheme != null) __obj.updateDynamic("highContrastTheme")(highContrastTheme.asInstanceOf[js.Any])
-    if (keyboardNavigation != null) __obj.updateDynamic("keyboardNavigation")(keyboardNavigation.asInstanceOf[js.Any])
-    if (landmarkVerbosity != null) __obj.updateDynamic("landmarkVerbosity")(landmarkVerbosity.asInstanceOf[js.Any])
-    if (onTableAnchorClick != null) __obj.updateDynamic("onTableAnchorClick")(js.Any.fromFunction1(onTableAnchorClick))
-    if (pointDateFormat != null) __obj.updateDynamic("pointDateFormat")(pointDateFormat.asInstanceOf[js.Any])
-    if (pointDateFormatter != null) __obj.updateDynamic("pointDateFormatter")(js.Any.fromFunction1(pointDateFormatter))
-    if (pointDescriptionFormatter != null) __obj.updateDynamic("pointDescriptionFormatter")(js.Any.fromFunction1(pointDescriptionFormatter))
-    if (pointDescriptionThreshold != null) __obj.updateDynamic("pointDescriptionThreshold")(pointDescriptionThreshold.asInstanceOf[js.Any])
-    if (pointNavigationThreshold != null) __obj.updateDynamic("pointNavigationThreshold")(pointNavigationThreshold.asInstanceOf[js.Any])
-    if (pointValueDecimals != null) __obj.updateDynamic("pointValueDecimals")(pointValueDecimals.asInstanceOf[js.Any])
-    if (pointValuePrefix != null) __obj.updateDynamic("pointValuePrefix")(pointValuePrefix.asInstanceOf[js.Any])
-    if (pointValueSuffix != null) __obj.updateDynamic("pointValueSuffix")(pointValueSuffix.asInstanceOf[js.Any])
-    if (screenReaderSectionFormatter != null) __obj.updateDynamic("screenReaderSectionFormatter")(js.Any.fromFunction1(screenReaderSectionFormatter))
-    if (seriesDescriptionFormatter != null) __obj.updateDynamic("seriesDescriptionFormatter")(js.Any.fromFunction1(seriesDescriptionFormatter))
-    if (typeDescription != null) __obj.updateDynamic("typeDescription")(typeDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityOptions]
   }
+  @scala.inline
+  implicit class AccessibilityOptionsOps[Self <: AccessibilityOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnnounceNewData(value: AccessibilityAnnounceNewDataOptionsObject): Self = this.set("announceNewData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnnounceNewData: Self = this.set("announceNewData", js.undefined)
+    @scala.inline
+    def setCustomComponents(value: js.Any): Self = this.set("customComponents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCustomComponents: Self = this.set("customComponents", js.undefined)
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnabled: Self = this.set("enabled", js.undefined)
+    @scala.inline
+    def setHighContrastTheme(value: js.Any): Self = this.set("highContrastTheme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHighContrastTheme: Self = this.set("highContrastTheme", js.undefined)
+    @scala.inline
+    def setKeyboardNavigation(value: KeyboardNavigationOptionsObject): Self = this.set("keyboardNavigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyboardNavigation: Self = this.set("keyboardNavigation", js.undefined)
+    @scala.inline
+    def setLandmarkVerbosity(value: OptionsLandmarkVerbosityValue): Self = this.set("landmarkVerbosity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLandmarkVerbosity: Self = this.set("landmarkVerbosity", js.undefined)
+    @scala.inline
+    def setLinkedDescriptionHTMLElement(value: HTMLElement): Self = this.set("linkedDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLinkedDescription(value: String | HTMLElement): Self = this.set("linkedDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLinkedDescription: Self = this.set("linkedDescription", js.undefined)
+    @scala.inline
+    def setPoint(value: AccessibilityPointOptions): Self = this.set("point", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePoint: Self = this.set("point", js.undefined)
+    @scala.inline
+    def setScreenReaderSection(value: AccessibilityScreenReaderSectionOptions): Self = this.set("screenReaderSection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScreenReaderSection: Self = this.set("screenReaderSection", js.undefined)
+    @scala.inline
+    def setSeries(value: AccessibilitySeriesOptions): Self = this.set("series", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSeries: Self = this.set("series", js.undefined)
+    @scala.inline
+    def setTypeDescription(value: String): Self = this.set("typeDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTypeDescription: Self = this.set("typeDescription", js.undefined)
+  }
+  
 }
 

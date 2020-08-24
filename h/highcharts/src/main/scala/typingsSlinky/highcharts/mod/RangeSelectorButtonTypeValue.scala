@@ -1,16 +1,18 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.highchartsStrings.day_
+import typingsSlinky.highcharts.highchartsStrings.month_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.highcharts.highchartsStrings.all
-  - typingsSlinky.highcharts.highchartsStrings.day
+  - typingsSlinky.highcharts.highchartsStrings.day_
   - typingsSlinky.highcharts.highchartsStrings.hour
   - typingsSlinky.highcharts.highchartsStrings.millisecond
   - typingsSlinky.highcharts.highchartsStrings.minute
-  - typingsSlinky.highcharts.highchartsStrings.month
+  - typingsSlinky.highcharts.highchartsStrings.month_
   - typingsSlinky.highcharts.highchartsStrings.second
   - typingsSlinky.highcharts.highchartsStrings.week
   - typingsSlinky.highcharts.highchartsStrings.year
@@ -22,7 +24,7 @@ object RangeSelectorButtonTypeValue {
   @scala.inline
   def all: typingsSlinky.highcharts.highchartsStrings.all = "all".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.all]
   @scala.inline
-  def day: typingsSlinky.highcharts.highchartsStrings.day = "day".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.day]
+  def day: day_ = "day".asInstanceOf[day_]
   @scala.inline
   def hour: typingsSlinky.highcharts.highchartsStrings.hour = "hour".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.hour]
   @scala.inline
@@ -30,7 +32,7 @@ object RangeSelectorButtonTypeValue {
   @scala.inline
   def minute: typingsSlinky.highcharts.highchartsStrings.minute = "minute".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.minute]
   @scala.inline
-  def month: typingsSlinky.highcharts.highchartsStrings.month = "month".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.month]
+  def month: month_ = "month".asInstanceOf[month_]
   @scala.inline
   def second: typingsSlinky.highcharts.highchartsStrings.second = "second".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.second]
   @scala.inline

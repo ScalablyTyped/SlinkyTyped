@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "throttleit"
-version := "1.0-dt-20190416Z-36723e"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190416Z-40db6d"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -17,7 +17,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.svg.svg.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.anon.Light
+import typingsSlinky.grommet.anon.Dark
 import typingsSlinky.grommet.anon.Location
 import typingsSlinky.grommet.anon.Name
 import typingsSlinky.grommet.utilsMod.A11yTitleType
@@ -105,7 +105,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WorldMap {
-  @JSImport("grommet", "WorldMap")
+  @JSImport("grommet/es6", "WorldMap")
   @js.native
   object component extends js.Object
   
@@ -284,6 +284,8 @@ object WorldMap {
     @scala.inline
     def contentStyleType(value: Double | String): this.type = set("contentStyleType", value.asInstanceOf[js.Any])
     @scala.inline
+    def continentsVarargs(value: Name*): this.type = set("continents", js.Array(value :_*))
+    @scala.inline
     def continents(value: js.Array[Name]): this.type = set("continents", value.asInstanceOf[js.Any])
     @scala.inline
     def crossOrigin(value: anonymous | `use-credentials` | _empty): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
@@ -396,7 +398,7 @@ object WorldMap {
     @scala.inline
     def horizOriginX(value: Double | String): this.type = set("horizOriginX", value.asInstanceOf[js.Any])
     @scala.inline
-    def hoverColor(value: String | Light): this.type = set("hoverColor", value.asInstanceOf[js.Any])
+    def hoverColor(value: String | Dark): this.type = set("hoverColor", value.asInstanceOf[js.Any])
     @scala.inline
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     @scala.inline
@@ -675,6 +677,8 @@ object WorldMap {
     def patternTransform(value: Double | String): this.type = set("patternTransform", value.asInstanceOf[js.Any])
     @scala.inline
     def patternUnits(value: String): this.type = set("patternUnits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placesVarargs(value: Location*): this.type = set("places", js.Array(value :_*))
     @scala.inline
     def places(value: js.Array[Location]): this.type = set("places", value.asInstanceOf[js.Any])
     @scala.inline

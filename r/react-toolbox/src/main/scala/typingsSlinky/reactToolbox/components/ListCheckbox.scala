@@ -3,21 +3,21 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.listListCheckboxMod.ListCheckboxProps
-import typingsSlinky.reactToolbox.listListCheckboxMod.ListCheckboxTheme
+import typingsSlinky.reactToolbox.listCheckboxMod.ListCheckboxProps
+import typingsSlinky.reactToolbox.listCheckboxMod.ListCheckboxTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListCheckbox {
-  @JSImport("react-toolbox", "ListCheckbox")
+  @JSImport("react-toolbox/components/list", "ListCheckbox")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.ListCheckbox] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.listMod.ListCheckbox] {
     @scala.inline
     def caption(value: String): this.type = set("caption", value.asInstanceOf[js.Any])
     @scala.inline

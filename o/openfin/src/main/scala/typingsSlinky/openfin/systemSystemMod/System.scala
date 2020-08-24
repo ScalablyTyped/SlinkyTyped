@@ -1,6 +1,7 @@
 package typingsSlinky.openfin.systemSystemMod
 
 import typingsSlinky.openfin.baseMod.EmitterBase
+import typingsSlinky.openfin.certifiedAppInfoMod.CertifiedAppInfo
 import typingsSlinky.openfin.clearCacheOptionMod.ClearCacheOption
 import typingsSlinky.openfin.cookieMod.CookieInfo
 import typingsSlinky.openfin.cookieMod.CookieOption
@@ -20,6 +21,7 @@ import typingsSlinky.openfin.externalProcessMod.ServiceConfiguration
 import typingsSlinky.openfin.externalProcessMod.TerminateExternalRequestType
 import typingsSlinky.openfin.hostSpecsMod.HostSpecs
 import typingsSlinky.openfin.identityMod.Identity
+import typingsSlinky.openfin.installedAppsMod.InstalledApps
 import typingsSlinky.openfin.logMod.GetLogRequestType
 import typingsSlinky.openfin.logMod.LogInfo
 import typingsSlinky.openfin.logMod.LogLevel
@@ -198,6 +200,7 @@ trait System extends EmitterBase[SystemEvents] {
     * @tutorial System.getHostSpecs
     */
   def getHostSpecs(): js.Promise[HostSpecs] = js.native
+  def getInstalledApps(): js.Promise[InstalledApps] = js.native
   /**
     * Returns an array of all the installed runtime versions in an object.
     * @return {Promise.<string[]>}
@@ -369,6 +372,12 @@ trait System extends EmitterBase[SystemEvents] {
     * @tutorial System.getVersion
     */
   def getVersion(): js.Promise[String] = js.native
+  /**
+    * Returns information about the given app's certification status
+    * @return {Promise.<CertifiedAppInfo>}
+    * @tutorial System.isAppCertified
+    */
+  def isAppCertified(manifestUrl: String): js.Promise[CertifiedAppInfo] = js.native
   /**
     * Runs an executable or batch file. A path to the file must be included in options.
     * <br> A uuid may be optionally provided. If not provided, OpenFin will create a uuid for the new process.

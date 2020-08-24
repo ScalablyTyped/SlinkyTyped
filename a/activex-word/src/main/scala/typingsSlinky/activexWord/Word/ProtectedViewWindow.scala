@@ -26,7 +26,23 @@ trait ProtectedViewWindow extends js.Object {
   def Activate(): Unit = js.native
   def Close(): Unit = js.native
   def Edit(): typingsSlinky.activexWord.Word.Document = js.native
+  def Edit(
+    PasswordTemplate: js.UndefOr[scala.Nothing],
+    WritePasswordDocument: js.UndefOr[scala.Nothing],
+    WritePasswordTemplate: js.Any
+  ): typingsSlinky.activexWord.Word.Document = js.native
+  def Edit(PasswordTemplate: js.UndefOr[scala.Nothing], WritePasswordDocument: js.Any): typingsSlinky.activexWord.Word.Document = js.native
+  def Edit(
+    PasswordTemplate: js.UndefOr[scala.Nothing],
+    WritePasswordDocument: js.Any,
+    WritePasswordTemplate: js.Any
+  ): typingsSlinky.activexWord.Word.Document = js.native
   def Edit(PasswordTemplate: js.Any): typingsSlinky.activexWord.Word.Document = js.native
+  def Edit(
+    PasswordTemplate: js.Any,
+    WritePasswordDocument: js.UndefOr[scala.Nothing],
+    WritePasswordTemplate: js.Any
+  ): typingsSlinky.activexWord.Word.Document = js.native
   def Edit(PasswordTemplate: js.Any, WritePasswordDocument: js.Any): typingsSlinky.activexWord.Word.Document = js.native
   def Edit(PasswordTemplate: js.Any, WritePasswordDocument: js.Any, WritePasswordTemplate: js.Any): typingsSlinky.activexWord.Word.Document = js.native
   def ToggleRibbon(): Unit = js.native

@@ -2,7 +2,6 @@ package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
@@ -57,7 +56,7 @@ object ModalButton {
     @scala.inline
     def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def endEnhancer(value: TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    def endEnhancer(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     @scala.inline
@@ -77,7 +76,7 @@ object ModalButton {
     @scala.inline
     def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
-    def startEnhancer(value: TagMod[Any]): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    def startEnhancer(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline

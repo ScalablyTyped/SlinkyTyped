@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 class Argument ()
   extends typingsSlinky.grammarkdown.nodesMod.Argument {
   def this(operatorToken: typingsSlinky.grammarkdown.nodesMod.Token[ArgumentOperatorKind]) = this()
+  def this(operatorToken: js.UndefOr[scala.Nothing], name: typingsSlinky.grammarkdown.nodesMod.Identifier) = this()
   def this(
     operatorToken: typingsSlinky.grammarkdown.nodesMod.Token[ArgumentOperatorKind],
     name: typingsSlinky.grammarkdown.nodesMod.Identifier

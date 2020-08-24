@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "micro-events"
-version := "1.0-dt-20200515Z-cf5fae"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-0b6267"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

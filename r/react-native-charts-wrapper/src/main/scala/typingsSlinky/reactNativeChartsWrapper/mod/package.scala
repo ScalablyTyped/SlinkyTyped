@@ -13,7 +13,7 @@ package object mod {
     typingsSlinky.reactNative.mod.NodeHandle, 
     typingsSlinky.reactNativeChartsWrapper.anon.Y | scala.Null
   ]
-  type Color = scala.Double
+  type Color = typingsSlinky.std.ReturnType[typingsSlinky.reactNativeChartsWrapper.anon.FnCall]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.largeValue
     - typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.percent

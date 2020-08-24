@@ -1,5 +1,6 @@
 package typingsSlinky.jestValidate
 
+import typingsSlinky.jestValidate.typesMod.DeprecatedOptions
 import typingsSlinky.jestValidate.typesMod.ValidationOptions
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -12,7 +13,7 @@ object deprecatedMod extends js.Object {
   def deprecationWarning(
     config: Record[String, _],
     option: String,
-    deprecatedOptions: Record[String, js.Function],
+    deprecatedOptions: DeprecatedOptions,
     options: ValidationOptions
   ): Boolean = js.native
 }

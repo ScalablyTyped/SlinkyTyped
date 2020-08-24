@@ -5,9 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/**
-  * @publicApi
-  */
 @JSImport("@angular/animations/browser/browser", "AnimationDriver")
 @js.native
 abstract class AnimationDriver () extends js.Object {
@@ -22,7 +19,42 @@ abstract class AnimationDriver () extends js.Object {
     keyframes: js.Array[StringDictionary[String | Double]],
     duration: Double,
     delay: Double,
+    easing: js.UndefOr[scala.Nothing],
+    previousPlayers: js.UndefOr[scala.Nothing],
+    scrubberAccessRequested: Boolean
+  ): js.Any = js.native
+  def animate(
+    element: js.Any,
+    keyframes: js.Array[StringDictionary[String | Double]],
+    duration: Double,
+    delay: Double,
+    easing: js.UndefOr[scala.Nothing],
+    previousPlayers: js.Array[_]
+  ): js.Any = js.native
+  def animate(
+    element: js.Any,
+    keyframes: js.Array[StringDictionary[String | Double]],
+    duration: Double,
+    delay: Double,
+    easing: js.UndefOr[scala.Nothing],
+    previousPlayers: js.Array[_],
+    scrubberAccessRequested: Boolean
+  ): js.Any = js.native
+  def animate(
+    element: js.Any,
+    keyframes: js.Array[StringDictionary[String | Double]],
+    duration: Double,
+    delay: Double,
     easing: String
+  ): js.Any = js.native
+  def animate(
+    element: js.Any,
+    keyframes: js.Array[StringDictionary[String | Double]],
+    duration: Double,
+    delay: Double,
+    easing: String,
+    previousPlayers: js.UndefOr[scala.Nothing],
+    scrubberAccessRequested: Boolean
   ): js.Any = js.native
   def animate(
     element: js.Any,
@@ -39,6 +71,15 @@ abstract class AnimationDriver () extends js.Object {
     delay: Double,
     easing: String,
     previousPlayers: js.Array[_],
+    scrubberAccessRequested: Boolean
+  ): js.Any = js.native
+  def animate(
+    element: js.Any,
+    keyframes: js.Array[StringDictionary[String | Double]],
+    duration: Double,
+    delay: Double,
+    easing: Null,
+    previousPlayers: js.UndefOr[scala.Nothing],
     scrubberAccessRequested: Boolean
   ): js.Any = js.native
   def animate(

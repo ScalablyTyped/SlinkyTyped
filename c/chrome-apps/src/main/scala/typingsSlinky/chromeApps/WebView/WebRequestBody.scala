@@ -34,41 +34,24 @@ object WebRequestBody {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
+    def setError(value: String): Self = this.set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFormData(value: StringDictionary[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteError: Self = this.set("error", js.undefined)
     @scala.inline
-    def withoutFormData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(js.undefined)
-        ret
-    }
+    def setFormData(value: StringDictionary[js.Array[String]]): Self = this.set("formData", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRaw(value: js.Array[UploadData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFormData: Self = this.set("formData", js.undefined)
     @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
+    def setRawVarargs(value: UploadData*): Self = this.set("raw", js.Array(value :_*))
+    @scala.inline
+    def setRaw(value: js.Array[UploadData]): Self = this.set("raw", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRaw: Self = this.set("raw", js.undefined)
   }
   
 }

@@ -72,125 +72,58 @@ object ContentScriptDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMatches(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMatchesVarargs(value: String*): Self = this.set("matches", js.Array(value :_*))
     @scala.inline
-    def withAll_frames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all_frames")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMatches(value: js.Array[String]): Self = this.set("matches", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAll_frames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all_frames")(js.undefined)
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAll_frames(value: Boolean): Self = this.set("all_frames", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
+    def deleteAll_frames: Self = this.set("all_frames", js.undefined)
     @scala.inline
-    def withCss(value: InjectionItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
+    def deleteCode: Self = this.set("code", js.undefined)
     @scala.inline
-    def withExclude_globs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_globs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCss(value: InjectionItems): Self = this.set("css", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutExclude_globs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_globs")(js.undefined)
-        ret
-    }
+    def deleteCss: Self = this.set("css", js.undefined)
     @scala.inline
-    def withExclude_matches(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_matches")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExclude_globsVarargs(value: String*): Self = this.set("exclude_globs", js.Array(value :_*))
     @scala.inline
-    def withoutExclude_matches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_matches")(js.undefined)
-        ret
-    }
+    def setExclude_globs(value: js.Array[String]): Self = this.set("exclude_globs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInclude_globs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_globs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExclude_globs: Self = this.set("exclude_globs", js.undefined)
     @scala.inline
-    def withoutInclude_globs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_globs")(js.undefined)
-        ret
-    }
+    def setExclude_matchesVarargs(value: String*): Self = this.set("exclude_matches", js.Array(value :_*))
     @scala.inline
-    def withJs_(value: InjectionItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExclude_matches(value: js.Array[String]): Self = this.set("exclude_matches", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutJs_ : Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(js.undefined)
-        ret
-    }
+    def deleteExclude_matches: Self = this.set("exclude_matches", js.undefined)
     @scala.inline
-    def withMatch_about_blank(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("match_about_blank")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInclude_globsVarargs(value: String*): Self = this.set("include_globs", js.Array(value :_*))
     @scala.inline
-    def withoutMatch_about_blank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("match_about_blank")(js.undefined)
-        ret
-    }
+    def setInclude_globs(value: js.Array[String]): Self = this.set("include_globs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRun_at(value: RunAt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run_at")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInclude_globs: Self = this.set("include_globs", js.undefined)
     @scala.inline
-    def withoutRun_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run_at")(js.undefined)
-        ret
-    }
+    def setJs_(value: InjectionItems): Self = this.set("js", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJs_ : Self = this.set("js", js.undefined)
+    @scala.inline
+    def setMatch_about_blank(value: Boolean): Self = this.set("match_about_blank", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMatch_about_blank: Self = this.set("match_about_blank", js.undefined)
+    @scala.inline
+    def setRun_at(value: RunAt): Self = this.set("run_at", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRun_at: Self = this.set("run_at", js.undefined)
   }
   
 }

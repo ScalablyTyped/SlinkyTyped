@@ -15,11 +15,12 @@ object lightMod extends js.Object {
   class Light () extends Object3D {
     def this(hex: String) = this()
     def this(hex: Double) = this()
+    def this(hex: js.UndefOr[scala.Nothing], intensity: Double) = this()
     def this(hex: String, intensity: Double) = this()
     def this(hex: Double, intensity: Double) = this()
     var color: Color = js.native
     var intensity: Double = js.native
-    var isLight: `true` = js.native
+    val isLight: `true` = js.native
     var shadow: LightShadow = js.native
     /**
     	 * @deprecated Use shadow.bias instead.

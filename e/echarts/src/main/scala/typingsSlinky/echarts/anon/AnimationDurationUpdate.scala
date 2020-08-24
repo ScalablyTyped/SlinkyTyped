@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnimationDurationUpdate extends js.Object {
   /**
     * Whether to enable animation.
@@ -11,9 +12,9 @@ trait AnimationDurationUpdate extends js.Object {
     *
     * @default
     * "true"
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animation
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
     * Delay before updating the first animation, which supports
     * callback function for different data to have different animation
@@ -21,58 +22,56 @@ trait AnimationDurationUpdate extends js.Object {
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
+    * [see doc](https://echarts.apache.org/en/option.html#series-boxplot.boxplot.markLine)
     *
     * See
     * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
     * for more information.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationDelay
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Delay before updating animation, which supports callback
     * function for different data to have different animation effect.
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
+    * [see doc](https://echarts.apache.org/en/option.html#series-boxplot.boxplot.markLine)
     *
     * See
     * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
     * for more information.
     *
-    * prefix
     *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationDelayUpdate
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback
     * function for different data to have different animation effect:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
+    * [see doc](https://echarts.apache.org/en/option.html#series-boxplot.boxplot.markLine)
     *
     *
     * @default
     * 1000
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationDuration
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
+    * [see doc](https://echarts.apache.org/en/option.html#series-boxplot.boxplot.markLine)
     *
     *
     * @default
     * 300
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationDurationUpdate
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -82,18 +81,18 @@ trait AnimationDurationUpdate extends js.Object {
     *
     * @default
     * "cubicOut"
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationEasing
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
     *
     * @default
     * "cubicOut"
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationEasingUpdate
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger
@@ -102,202 +101,196 @@ trait AnimationDurationUpdate extends js.Object {
     *
     * @default
     * 2000
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.animationThreshold
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
   /**
-    * Data array for mark points, each of which is an object.
-    * Here are some ways to assign mark point position.
+    * Data array of marking line.
+    * Every array item can be an array of one or two values, representing
+    * starting and ending point of the line, and every item is
+    * an object.
+    * Here are several ways to assign the positions of starting
+    * and ending point.
     *
     * 1. Assign coordinate according to container with
-    * [x](https://echarts.apache.org/en/option.html#series-pie.markPoint.data.x)
+    * [x](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.x)
     * ,
-    * [y](https://echarts.apache.org/en/option.html#series-pie.markPoint.data.y)
+    * [y](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.y)
     * attribute, in which pixel values and percentage are supported.
+    *
+    * 2. Assign coordinate position with
+    * [coord](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.coord)
+    * attribute, in which `'min'`, `'max'`, `'average'` are supported
+    * for each dimension.
+    *
+    * 3. Use
+    * [type](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.type)
+    * attribute to mark the maximum and minimum values in the series,
+    * in which
+    * [valueIndex](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.valueIndex)
+    * or
+    * [valueDim](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.valueDim)
+    * can be used to assign the dimension.
+    *
+    * 4.
+    * You may also create a mark line in Cartesian coordinate at
+    * a specific position in X or Y axis by assigning `xAxis` or
+    * `yAxis`. See
+    * [scatter-weight](https://echarts.apache.org/examples/en/editor.html?c=scatter-weight)
+    * for example.
     *
     * When multiple attributes exist, priority is as the above
     * order.
     *
-    * **For example:**
+    * You may also set the type of mark line through `type`, stating
+    * whether it is for the maximum value or average value.
+    * Likewise, dimensions can be assigned through `valueIndex`.
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
+    * [see doc](https://echarts.apache.org/en/option.html#series-boxplot.boxplot.markLine)
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.data
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.data
     */
-  var data: js.UndefOr[Symbol] = js.undefined
+  var data: js.UndefOr[`01`] = js.native
   /**
-    * Mark point style.
+    * Mark line text.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.itemStyle
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.label
     */
-  var itemStyle: js.UndefOr[Emphasis] = js.undefined
+  var label: js.UndefOr[Position] = js.native
   /**
-    * Label of mark point.
+    * Mark line style.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.label
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.lineStyle
     */
-  var label: js.UndefOr[BorderWidth] = js.undefined
+  var lineStyle: js.UndefOr[Curveness] = js.native
+  /**
+    * Precison of marking line value, which is useful when displaying
+    * average value mark line.
+    *
+    *
+    * @default
+    * 2
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.precision
+    */
+  var precision: js.UndefOr[Double] = js.native
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to
     * mouse events.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.silent
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
-    * Symbol of .
-    *
-    * Icon types provided by ECharts includes `'circle'`, `'rect'`,
-    * `'roundRect'`, `'triangle'`, `'diamond'`, `'pin'`, `'arrow'`,
-    * `'none'`
-    *
-    * It can be set to an image with `'image://url'` , in which
-    * URL is the link to an image, or `dataURI` of an image.
-    *
-    * An image URL example:
-    *
-    * ```
-    * 'image://http://xxx.xxx.xxx/a/b.png'
-    *
-    * ```
-    *
-    * A `dataURI` example:
-    *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
-    *
-    * Icons can be set to arbitrary vector path via `'path://'`
-    * in ECharts.
-    * As compared with raster image, vector paths prevent from
-    * jagging and blurring when scaled, and have a better control
-    * over changing colors.
-    * Size of vectoer icon will be adapted automatically.
-    * Refer to
-    * [SVG PathData](http://www.w3.org/TR/SVG/paths.html#PathData)
-    * for more information about format of path.
-    * You may export vector paths from tools like Adobe Illustrator.
-    *
-    * For example:
-    *
-    * [see doc](https://echarts.apache.org/en/option.html#series-pie.pie.markPoint)
+    * Symbol type at the two ends of the mark line.
+    * It can be an array for two ends, or assigned seperately.
+    * See
+    * [data.symbol](https://echarts.apache.org/en/option.html#series-boxplot.markLine.data.0.symbol)
+    * for more format information.
     *
     *
-    * @default
-    * "pin"
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.symbol
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.symbol
     */
-  var symbol: js.UndefOr[String] = js.undefined
+  var symbol: js.UndefOr[js.Array[_] | String] = js.native
   /**
-    * Whether to keep aspect for symbols in the form of `path://`.
+    * Symbol size at the two ends of the mark line.
+    * It can be an array for two ends, or assigned seperately.
+    *
+    * **Attention:** You cannot assgin width and height seperately
+    * as normal `symbolSize`.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.symbolKeepAspect
+    * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine.symbolSize
     */
-  var symbolKeepAspect: js.UndefOr[Boolean] = js.undefined
-  /**
-    * Offset of symbol relative to original position.
-    * By default, symbol will be put in the center position of
-    * data.
-    * But if symbol is from user-defined vector path or image,
-    * you may not expect symbol to be in center.
-    * In this case, you may use this attribute to set offset to
-    * default position.
-    * It can be in absolute pixel value, or in relative percentage
-    * value.
-    *
-    * For example, `[0, '50%']` means to move upside side position
-    * of symbol height.
-    * It can be used to make the arrow in the bottom to be at data
-    * position when symbol is pin.
-    *
-    *
-    * @default
-    * [0, 0]
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.symbolOffset
-    */
-  var symbolOffset: js.UndefOr[js.Array[_]] = js.undefined
-  /**
-    * Rotate degree of symbol.
-    * Note that when `symbol` is set to be `'arrow'` in `markLine`,
-    * `symbolRotate` value will be ignored, and compulsively use
-    * tangent angle.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.symbolRotate
-    */
-  var symbolRotate: js.UndefOr[Double] = js.undefined
-  /**
-    * symbol size.
-    * It can be set to single numbers like `10`, or use an array
-    * to represent width and height.
-    * For example, `[20, 10]` means symbol width is `20`, and height
-    * is`10`.
-    *
-    * If size of symbols needs to be different, you can set with
-    * callback function in the following format:
-    *
-    * ```
-    * (value: Array|number, params: Object) => number|Array
-    *
-    * ```
-    *
-    * The first parameter `value` is the value in
-    * [data](https://echarts.apache.org/en/option.html#series-.data)
-    * , and the second parameter `params` is the rest parameters
-    * of data item.
-    *
-    *
-    * @default
-    * 50
-    * @see https://echarts.apache.org/en/option.html#series-pie.markPoint.symbolSize
-    */
-  var symbolSize: js.UndefOr[js.Array[_] | js.Function | Double] = js.undefined
+  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
 }
 
 object AnimationDurationUpdate {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: js.UndefOr[Double] = js.undefined,
-    data: Symbol = null,
-    itemStyle: Emphasis = null,
-    label: BorderWidth = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    symbol: String = null,
-    symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
-    symbolOffset: js.Array[_] = null,
-    symbolRotate: js.UndefOr[Double] = js.undefined,
-    symbolSize: js.Array[_] | js.Function | Double = null
-  ): AnimationDurationUpdate = {
+  def apply(): AnimationDurationUpdate = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (!js.isUndefined(animationThreshold)) __obj.updateDynamic("animationThreshold")(animationThreshold.get.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(symbolKeepAspect)) __obj.updateDynamic("symbolKeepAspect")(symbolKeepAspect.get.asInstanceOf[js.Any])
-    if (symbolOffset != null) __obj.updateDynamic("symbolOffset")(symbolOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(symbolRotate)) __obj.updateDynamic("symbolRotate")(symbolRotate.get.asInstanceOf[js.Any])
-    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationDurationUpdate]
   }
+  @scala.inline
+  implicit class AnimationDurationUpdateOps[Self <: AnimationDurationUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimation(value: Boolean): Self = this.set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
+    @scala.inline
+    def setAnimationDelay(value: js.Function | Double): Self = this.set("animationDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationDelay: Self = this.set("animationDelay", js.undefined)
+    @scala.inline
+    def setAnimationDelayUpdate(value: js.Function | Double): Self = this.set("animationDelayUpdate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationDelayUpdate: Self = this.set("animationDelayUpdate", js.undefined)
+    @scala.inline
+    def setAnimationDuration(value: js.Function | Double): Self = this.set("animationDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationDuration: Self = this.set("animationDuration", js.undefined)
+    @scala.inline
+    def setAnimationDurationUpdate(value: js.Function | Double): Self = this.set("animationDurationUpdate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationDurationUpdate: Self = this.set("animationDurationUpdate", js.undefined)
+    @scala.inline
+    def setAnimationEasing(value: String): Self = this.set("animationEasing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationEasing: Self = this.set("animationEasing", js.undefined)
+    @scala.inline
+    def setAnimationEasingUpdate(value: String): Self = this.set("animationEasingUpdate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationEasingUpdate: Self = this.set("animationEasingUpdate", js.undefined)
+    @scala.inline
+    def setAnimationThreshold(value: Double): Self = this.set("animationThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
+    @scala.inline
+    def setData(value: `01`): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setLabel(value: Position): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    @scala.inline
+    def setLineStyle(value: Curveness): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLineStyle: Self = this.set("lineStyle", js.undefined)
+    @scala.inline
+    def setPrecision(value: Double): Self = this.set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrecision: Self = this.set("precision", js.undefined)
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setSymbolVarargs(value: js.Any*): Self = this.set("symbol", js.Array(value :_*))
+    @scala.inline
+    def setSymbol(value: js.Array[_] | String): Self = this.set("symbol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSymbol: Self = this.set("symbol", js.undefined)
+    @scala.inline
+    def setSymbolSizeVarargs(value: js.Any*): Self = this.set("symbolSize", js.Array(value :_*))
+    @scala.inline
+    def setSymbolSize(value: js.Array[_] | Double): Self = this.set("symbolSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSymbolSize: Self = this.set("symbolSize", js.undefined)
+  }
+  
 }
 

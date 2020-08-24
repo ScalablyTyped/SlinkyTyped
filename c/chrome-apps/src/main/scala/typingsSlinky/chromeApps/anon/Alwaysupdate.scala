@@ -30,29 +30,18 @@ object Alwaysupdate {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlways_update(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("always_update")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAlways_update: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("always_update")(js.undefined)
-        ret
-    }
+    def setAlways_update(value: Boolean): Self = this.set("always_update", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRequired_platform_version(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required_platform_version")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAlways_update: Self = this.set("always_update", js.undefined)
     @scala.inline
-    def withoutRequired_platform_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required_platform_version")(js.undefined)
-        ret
-    }
+    def setRequired_platform_version(value: String): Self = this.set("required_platform_version", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequired_platform_version: Self = this.set("required_platform_version", js.undefined)
   }
   
 }

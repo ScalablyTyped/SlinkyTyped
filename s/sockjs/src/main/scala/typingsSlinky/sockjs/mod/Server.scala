@@ -1,6 +1,6 @@
 package typingsSlinky.sockjs.mod
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.sockjs.sockjsStrings.connection
 import scala.scalajs.js
 import scala.scalajs.js.`|`

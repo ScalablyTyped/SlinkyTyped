@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DataSource extends js.Object {
   /**
+    * A set of alternate data source parameters that you want to share for the credentials stored with this data source. The credentials are applied in tandem with the data source parameters when you copy a data source by using a create or update request. The API compares the DataSourceParameters structure that's in the request with the structures in the AlternateDataSourceParameters allowlist. If the structures are an exact match, the request is allowed to use the credentials from this existing data source. If the AlternateDataSourceParameters list is null, the Credentials originally used with this DataSourceParameters are automatically allowed.
+    */
+  var AlternateDataSourceParameters: js.UndefOr[DataSourceParametersList] = js.native
+  /**
     * The Amazon Resource Name (ARN) of the data source.
     */
   var Arn: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Arn] = js.native
@@ -54,32 +58,72 @@ trait DataSource extends js.Object {
 
 object DataSource {
   @scala.inline
-  def apply(
-    Arn: Arn = null,
-    CreatedTime: js.Date = null,
-    DataSourceId: ResourceId = null,
-    DataSourceParameters: DataSourceParameters = null,
-    ErrorInfo: DataSourceErrorInfo = null,
-    LastUpdatedTime: js.Date = null,
-    Name: ResourceName = null,
-    SslProperties: SslProperties = null,
-    Status: ResourceStatus = null,
-    Type: DataSourceType = null,
-    VpcConnectionProperties: VpcConnectionProperties = null
-  ): DataSource = {
+  def apply(): DataSource = {
     val __obj = js.Dynamic.literal()
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
-    if (DataSourceId != null) __obj.updateDynamic("DataSourceId")(DataSourceId.asInstanceOf[js.Any])
-    if (DataSourceParameters != null) __obj.updateDynamic("DataSourceParameters")(DataSourceParameters.asInstanceOf[js.Any])
-    if (ErrorInfo != null) __obj.updateDynamic("ErrorInfo")(ErrorInfo.asInstanceOf[js.Any])
-    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (SslProperties != null) __obj.updateDynamic("SslProperties")(SslProperties.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
-    if (VpcConnectionProperties != null) __obj.updateDynamic("VpcConnectionProperties")(VpcConnectionProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSource]
   }
+  @scala.inline
+  implicit class DataSourceOps[Self <: DataSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlternateDataSourceParametersVarargs(value: DataSourceParameters*): Self = this.set("AlternateDataSourceParameters", js.Array(value :_*))
+    @scala.inline
+    def setAlternateDataSourceParameters(value: DataSourceParametersList): Self = this.set("AlternateDataSourceParameters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlternateDataSourceParameters: Self = this.set("AlternateDataSourceParameters", js.undefined)
+    @scala.inline
+    def setArn(value: Arn): Self = this.set("Arn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArn: Self = this.set("Arn", js.undefined)
+    @scala.inline
+    def setCreatedTime(value: js.Date): Self = this.set("CreatedTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCreatedTime: Self = this.set("CreatedTime", js.undefined)
+    @scala.inline
+    def setDataSourceId(value: ResourceId): Self = this.set("DataSourceId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataSourceId: Self = this.set("DataSourceId", js.undefined)
+    @scala.inline
+    def setDataSourceParameters(value: DataSourceParameters): Self = this.set("DataSourceParameters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataSourceParameters: Self = this.set("DataSourceParameters", js.undefined)
+    @scala.inline
+    def setErrorInfo(value: DataSourceErrorInfo): Self = this.set("ErrorInfo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteErrorInfo: Self = this.set("ErrorInfo", js.undefined)
+    @scala.inline
+    def setLastUpdatedTime(value: js.Date): Self = this.set("LastUpdatedTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLastUpdatedTime: Self = this.set("LastUpdatedTime", js.undefined)
+    @scala.inline
+    def setName(value: ResourceName): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("Name", js.undefined)
+    @scala.inline
+    def setSslProperties(value: SslProperties): Self = this.set("SslProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSslProperties: Self = this.set("SslProperties", js.undefined)
+    @scala.inline
+    def setStatus(value: ResourceStatus): Self = this.set("Status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStatus: Self = this.set("Status", js.undefined)
+    @scala.inline
+    def setType(value: DataSourceType): Self = this.set("Type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("Type", js.undefined)
+    @scala.inline
+    def setVpcConnectionProperties(value: VpcConnectionProperties): Self = this.set("VpcConnectionProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVpcConnectionProperties: Self = this.set("VpcConnectionProperties", js.undefined)
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 
 # Scala.js typings for inversify-restify-utils
 
-Typings are for version 3.4.0
+Typings are for version 3.4.1
 
 ## Library description:
 Some utilities for the development of restify applications with Inversify

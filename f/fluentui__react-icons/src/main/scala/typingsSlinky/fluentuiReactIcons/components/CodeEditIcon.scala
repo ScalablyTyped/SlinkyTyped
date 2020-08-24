@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CodeEditIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CodeEditIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CodeEditIcon")
   @js.native
   object component extends js.Object
   

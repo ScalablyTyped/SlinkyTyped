@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BackTop {
-  @JSImport("antd/lib/back-top", JSImport.Default)
+  @JSImport("antd", "BackTop")
   @js.native
   object component extends js.Object
   
@@ -23,6 +23,8 @@ object BackTop {
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline

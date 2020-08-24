@@ -46,6 +46,8 @@ object ChordCanvas {
     @scala.inline
     def arcTooltip(value: js.Any): this.type = set("arcTooltip", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])

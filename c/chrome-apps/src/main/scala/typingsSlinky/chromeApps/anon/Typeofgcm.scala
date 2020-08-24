@@ -70,47 +70,24 @@ object Typeofgcm {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMAX_MESSAGE_SIZE(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MAX_MESSAGE_SIZE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnMessage(value: Event[js.Function1[/* message */ IncomingMessage, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAX_MESSAGE_SIZE(value: integer): Self = this.set("MAX_MESSAGE_SIZE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnMessagesDeleted(value: Event[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessagesDeleted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnMessage(value: Event[js.Function1[/* message */ IncomingMessage, Unit]]): Self = this.set("onMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnSendError(value: Event[js.Function1[/* error */ GcmError, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSendError")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnMessagesDeleted(value: Event[js.Function0[Unit]]): Self = this.set("onMessagesDeleted", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRegister(value: (js.Array[String], js.Function1[/* registrationId */ String, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnSendError(value: Event[js.Function1[/* error */ GcmError, Unit]]): Self = this.set("onSendError", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSend(value: (OutgoingMessage, js.Function1[/* messageId */ String, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setRegister(value: (js.Array[String], js.Function1[/* registrationId */ String, Unit]) => Unit): Self = this.set("register", js.Any.fromFunction2(value))
     @scala.inline
-    def withUnregister(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unregister")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSend(value: (OutgoingMessage, js.Function1[/* messageId */ String, Unit]) => Unit): Self = this.set("send", js.Any.fromFunction2(value))
+    @scala.inline
+    def setUnregister(value: js.Function0[Unit] => Unit): Self = this.set("unregister", js.Any.fromFunction1(value))
   }
   
 }

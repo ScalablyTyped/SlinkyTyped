@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ImageData
+import typingsSlinky.std.CanvasImageSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -92,14 +93,13 @@ trait Raster extends Item {
     */
   def clear(): Unit = js.native
   def createImageData(size: Size): ImageData = js.native
-  def drawImage(image: HTMLCanvasElement, point: Point): Unit = js.native
   /** 
     * Draws an image on the raster.
     * 
     * @param point - the offset of the image as a point in pixel
     * coordinates
     */
-  def drawImage(image: HTMLImageElement, point: Point): Unit = js.native
+  def drawImage(image: CanvasImageSource, point: Point): Unit = js.native
   /** 
     * Calculates the average color of the image within the given path,
     * rectangle or point. This can be used for creating raster image

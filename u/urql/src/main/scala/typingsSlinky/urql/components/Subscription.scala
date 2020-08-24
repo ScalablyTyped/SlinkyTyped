@@ -1,10 +1,12 @@
 package typingsSlinky.urql.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.urql.anon.PartialOperationContext
 import typingsSlinky.urql.subscriptionMod.SubscriptionProps
+import typingsSlinky.urql.subscriptionMod.SubscriptionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,8 +32,8 @@ object Subscription {
   
   def withProps[T, R, V](p: SubscriptionProps[T, R, V]): Builder[T, R, V] = new Builder[T, R, V](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T, R, V](query: DocumentNode | String): Builder[T, R, V] = {
-    val __props = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+  def apply[T, R, V](children: SubscriptionState[R] => ReactElement, query: DocumentNode | String): Builder[T, R, V] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), query = query.asInstanceOf[js.Any])
     new Builder[T, R, V](js.Array(this.component, __props.asInstanceOf[SubscriptionProps[T, R, V]]))
   }
 }

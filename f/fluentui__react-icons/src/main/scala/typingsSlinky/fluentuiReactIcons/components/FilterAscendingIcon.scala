@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FilterAscendingIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FilterAscendingIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FilterAscendingIcon")
   @js.native
   object component extends js.Object
   

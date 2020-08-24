@@ -2,10 +2,6 @@ package typingsSlinky.reactLeaflet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.geojson.mod.LineString
-import typingsSlinky.geojson.mod.MultiLineString
-import typingsSlinky.leaflet.mod.Polyline_
-import typingsSlinky.reactLeaflet.mod.PolylineProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,11 +13,15 @@ object Polyline {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: PolylineProps, E <: Polyline_[LineString | MultiLineString, js.Any]] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.Polyline[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.Polyline[P, E]]
   
-  def apply[P <: PolylineProps, E <: Polyline_[LineString | MultiLineString, js.Any]](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: PolylineProps, E <: Polyline_[LineString | MultiLineString, js.Any]](companion: Polyline.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeaflet.mod.PolylineProps */ P, /* <: typingsSlinky.leaflet.mod.Polyline_[
+  typingsSlinky.geojson.mod.LineString | typingsSlinky.geojson.mod.MultiLineString, 
+  js.Any] */ E](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeaflet.mod.PolylineProps */ P, /* <: typingsSlinky.leaflet.mod.Polyline_[
+  typingsSlinky.geojson.mod.LineString | typingsSlinky.geojson.mod.MultiLineString, 
+  js.Any] */ E](companion: Polyline.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
 }
 

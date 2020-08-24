@@ -423,13 +423,13 @@ object antvG2Strings {
   sealed trait top extends js.Object
   
   @js.native
-  sealed trait `top-bottom` extends js.Object
-  
-  @js.native
   sealed trait `top-center` extends js.Object
   
   @js.native
   sealed trait `top-left` extends js.Object
+  
+  @js.native
+  sealed trait `top-right` extends js.Object
   
   @js.native
   sealed trait touchcancel extends js.Object
@@ -459,7 +459,7 @@ object antvG2Strings {
   sealed trait tree extends js.Object
   
   @js.native
-  sealed trait vertica extends js.Object
+  sealed trait vertical extends js.Object
   
   @js.native
   sealed trait volumechange extends js.Object
@@ -758,11 +758,11 @@ object antvG2Strings {
   @scala.inline
   def top: top = "top".asInstanceOf[top]
   @scala.inline
-  def `top-bottom`: `top-bottom` = "top-bottom".asInstanceOf[`top-bottom`]
-  @scala.inline
   def `top-center`: `top-center` = "top-center".asInstanceOf[`top-center`]
   @scala.inline
   def `top-left`: `top-left` = "top-left".asInstanceOf[`top-left`]
+  @scala.inline
+  def `top-right`: `top-right` = "top-right".asInstanceOf[`top-right`]
   @scala.inline
   def touchcancel: touchcancel = "touchcancel".asInstanceOf[touchcancel]
   @scala.inline
@@ -782,7 +782,7 @@ object antvG2Strings {
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
   @scala.inline
-  def vertica: vertica = "vertica".asInstanceOf[vertica]
+  def vertical: vertical = "vertical".asInstanceOf[vertical]
   @scala.inline
   def volumechange: volumechange = "volumechange".asInstanceOf[volumechange]
   @scala.inline

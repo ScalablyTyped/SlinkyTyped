@@ -22,17 +22,16 @@ object SegmentSubdivisionsOpt {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSegmentSubdivisions(value: js.Array[js.Array[Curve]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSubdivisions")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutSegmentSubdivisions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSubdivisions")(js.undefined)
-        ret
-    }
+    def setSegmentSubdivisionsVarargs(value: js.Array[Curve]*): Self = this.set("segmentSubdivisions", js.Array(value :_*))
+    @scala.inline
+    def setSegmentSubdivisions(value: js.Array[js.Array[Curve]]): Self = this.set("segmentSubdivisions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSegmentSubdivisions: Self = this.set("segmentSubdivisions", js.undefined)
   }
   
 }

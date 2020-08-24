@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class WebGLBufferRenderer protected ()
   extends typingsSlinky.three.webGLBufferRendererMod.WebGLBufferRenderer {
-  def this(_gl: WebGLRenderingContext, extensions: js.Any, _infoRender: js.Any) = this()
+  def this(
+    gl: WebGLRenderingContext,
+    extensions: typingsSlinky.three.webGLExtensionsMod.WebGLExtensions,
+    info: typingsSlinky.three.webGLInfoMod.WebGLInfo,
+    capabilities: typingsSlinky.three.webGLCapabilitiesMod.WebGLCapabilities
+  ) = this()
 }
 

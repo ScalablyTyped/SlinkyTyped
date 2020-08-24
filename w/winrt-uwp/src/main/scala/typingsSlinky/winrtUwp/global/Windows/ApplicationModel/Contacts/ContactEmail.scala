@@ -9,15 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Initializes a new instance of a ContactEmail class. */
 class ContactEmail ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactEmail {
-  /** Gets and sets the email address of a contact. The maximum string length for the description is 321 characters. */
-  /* CompleteClass */
-  override var address: String = js.native
-  /** Gets and sets the description of an email address of a contact. The maximum string length for the description is 512 characters. */
-  /* CompleteClass */
-  override var description: String = js.native
-  /** Gets and sets the kind of email address of a contact. */
-  /* CompleteClass */
-  override var kind: typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactEmailKind = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactEmail
 

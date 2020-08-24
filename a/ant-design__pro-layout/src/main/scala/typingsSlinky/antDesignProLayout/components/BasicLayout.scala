@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BasicLayout {
-  @JSImport("@ant-design/pro-layout/lib/BasicLayout", JSImport.Default)
+  @JSImport("@ant-design/pro-layout", "BasicLayout")
   @js.native
   object component extends js.Object
   

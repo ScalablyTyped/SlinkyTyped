@@ -1,20 +1,19 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactToolbox.libTimePickerMod.default
-import typingsSlinky.reactToolbox.libTimePickerTimePickerMod.TimePickerProps
-import typingsSlinky.reactToolbox.libTimePickerTimePickerMod.TimePickerTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.`24hr`
 import typingsSlinky.reactToolbox.reactToolboxStrings.ampm
+import typingsSlinky.reactToolbox.timePickerMod.default
+import typingsSlinky.reactToolbox.timePickerTimePickerMod.TimePickerProps
+import typingsSlinky.reactToolbox.timePickerTimePickerMod.TimePickerTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimePicker {
-  @JSImport("react-toolbox/lib/time_picker", JSImport.Default)
+  @JSImport("react-toolbox/components/time_picker", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -33,7 +32,7 @@ object TimePicker {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def inputClassName(value: String): this.type = set("inputClassName", value.asInstanceOf[js.Any])
     @scala.inline

@@ -3,10 +3,10 @@ package typingsSlinky.firefoxWebextBrowser.global.browser
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
 import typingsSlinky.firefoxWebextBrowser.Window
 import typingsSlinky.firefoxWebextBrowser.anon.IncludeTlsChannelId
-import typingsSlinky.firefoxWebextBrowser.anon.MessageString
 import typingsSlinky.firefoxWebextBrowser.anon.PreviousVersion
-import typingsSlinky.firefoxWebextBrowser.anon.ToProxyScript
 import typingsSlinky.firefoxWebextBrowser.anon.Version
+import typingsSlinky.firefoxWebextBrowser.anon.`0`
+import typingsSlinky.firefoxWebextBrowser.anon.`1`
 import typingsSlinky.firefoxWebextBrowser.browser.manifest.WebExtensionManifest
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.BrowserInfo
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.MessageSender
@@ -21,8 +21,6 @@ import scala.scalajs.js.annotation._
   * Use the `browser.runtime` API to retrieve the background page, return details about the manifest, and listen for and
   * respond to events in the app or extension lifecycle. You can also use this API to convert the relative path of URLs
   * to fully-qualified URLs.
-  *
-  * Allowed in: Proxy scripts
   */
 @JSGlobal("browser.runtime")
 @js.native
@@ -31,7 +29,7 @@ object runtime extends js.Object {
   val id: String = js.native
   /* runtime properties */
   /** This will be defined during an API method callback if there was an error */
-  val lastError: js.UndefOr[MessageString] = js.native
+  val lastError: js.UndefOr[`0`] = js.native
   /**
     * Fired when an update for the browser is available, but isn't installed immediately because a browser restart is
     * required.
@@ -49,8 +47,6 @@ object runtime extends js.Object {
   val onInstalled: WebExtEvent[js.Function1[/* details */ PreviousVersion, Unit]] = js.native
   /**
     * Fired when a message is sent from either an extension process or a content script.
-    *
-    * Allowed in: Proxy scripts
     * @param message The message sent by the calling script.
     * @param sendResponse Function to call (at most once) when you have a response. The argument should be any
     *     JSON-ifiable object. If you have more than one `onMessage` listener in the same document, then only one may
@@ -136,6 +132,7 @@ object runtime extends js.Object {
     *     fired if the extension/app does not exist.
     */
   def connect(): Port = js.native
+  def connect(extensionId: js.UndefOr[scala.Nothing], connectInfo: IncludeTlsChannelId): Port = js.native
   def connect(extensionId: String): Port = js.native
   def connect(extensionId: String, connectInfo: IncludeTlsChannelId): Port = js.native
   /**
@@ -201,24 +198,20 @@ object runtime extends js.Object {
     * `runtime.onMessage` event will be fired in each page, or `runtime.onMessageExternal`, if a different extension.
     * Note that extensions cannot send messages to content scripts using this method. To send messages to content
     * scripts, use `tabs.sendMessage`.
-    *
-    * Allowed in: Proxy scripts
     * @param extensionId The ID of the extension/app to send the message to. If omitted, the message will be sent to
     *     your own extension/app. Required if sending messages from a web page for web messaging.
     */
   def sendMessage(extensionId: String, message: js.Any): js.Promise[_] = js.native
-  def sendMessage(extensionId: String, message: js.Any, options: ToProxyScript): js.Promise[_] = js.native
+  def sendMessage(extensionId: String, message: js.Any, options: `1`): js.Promise[_] = js.native
   /**
     * Sends a single message to event listeners within your extension/app or a different extension/app. Similar to
     * `runtime.connect` but only sends a single message, with an optional response. If sending to your extension, the
     * `runtime.onMessage` event will be fired in each page, or `runtime.onMessageExternal`, if a different extension.
     * Note that extensions cannot send messages to content scripts using this method. To send messages to content
     * scripts, use `tabs.sendMessage`.
-    *
-    * Allowed in: Proxy scripts
     */
   def sendMessage(message: js.Any): js.Promise[_] = js.native
-  def sendMessage(message: js.Any, options: ToProxyScript): js.Promise[_] = js.native
+  def sendMessage(message: js.Any, options: `1`): js.Promise[_] = js.native
   /**
     * Send a single message to a native application.
     *

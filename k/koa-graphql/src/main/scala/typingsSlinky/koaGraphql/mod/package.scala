@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object mod {
   type Options = (js.Function3[
     /* request */ typingsSlinky.koa.mod.Request, 
-    /* repsonse */ typingsSlinky.koa.mod.Response, 
+    /* response */ typingsSlinky.koa.mod.Response, 
     /* ctx */ typingsSlinky.koa.mod.Context, 
     typingsSlinky.koaGraphql.mod.OptionsResult
   ]) | typingsSlinky.koaGraphql.mod.OptionsResult

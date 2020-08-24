@@ -10,6 +10,7 @@ object ^ extends js.Object {
   var scrollSize: Double = js.native
   var zIndexBase: Double = js.native
   def apply(config: js.Any): typingsSlinky.webix.webix.ui.baseview = js.native
+  def apply(config: js.Any, parent: js.UndefOr[scala.Nothing], replacement: js.Any): typingsSlinky.webix.webix.ui.baseview = js.native
   def apply(config: js.Any, parent: js.Any): typingsSlinky.webix.webix.ui.baseview = js.native
   def apply(config: js.Any, parent: js.Any, replacement: js.Any): typingsSlinky.webix.webix.ui.baseview = js.native
 }

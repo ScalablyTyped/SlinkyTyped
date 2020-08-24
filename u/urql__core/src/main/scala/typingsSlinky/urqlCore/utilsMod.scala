@@ -1,6 +1,7 @@
 package typingsSlinky.urqlCore
 
 import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.std.Exclude
 import typingsSlinky.urqlCore.anon.Context
 import typingsSlinky.urqlCore.anon.NetworkError
 import typingsSlinky.urqlCore.typesMod.GraphQLRequest
@@ -22,13 +23,13 @@ object utilsMod extends js.Object {
     def this(hasNetworkErrorGraphQLErrorsResponse: NetworkError) = this()
   }
   
-  def addMetadata(source: Operation, meta: OperationDebugMeta): Context = js.native
+  def addMetadata(source: Operation, meta: Exclude[js.UndefOr[OperationDebugMeta], js.UndefOr[scala.Nothing]]): Context = js.native
   def collectTypesFromResponse(response: js.Object): js.Array[String] = js.native
   def createRequest(q: String): GraphQLRequest = js.native
   def createRequest(q: String, vars: js.Object): GraphQLRequest = js.native
   def createRequest(q: DocumentNode): GraphQLRequest = js.native
   def createRequest(q: DocumentNode, vars: js.Object): GraphQLRequest = js.native
-  def formatDocument(node: DocumentNode): js.Any = js.native
+  def formatDocument(node: DocumentNode): DocumentNode = js.native
   def makeErrorResult(operation: Operation, error: js.Error): OperationResult[_] = js.native
   def makeErrorResult(operation: Operation, error: js.Error, response: js.Any): OperationResult[_] = js.native
   def makeResult(operation: Operation, result: js.Any): OperationResult[_] = js.native

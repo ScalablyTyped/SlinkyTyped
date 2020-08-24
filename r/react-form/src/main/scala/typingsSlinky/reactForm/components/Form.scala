@@ -3,11 +3,14 @@ package typingsSlinky.reactForm.components
 import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactForm.anon.FormApi
 import typingsSlinky.reactForm.anon.FormPropschildrenpropsFor
 import typingsSlinky.reactForm.mod.FormErrors
+import typingsSlinky.reactForm.mod.FormFunctionProps
 import typingsSlinky.reactForm.mod.FormState
 import typingsSlinky.reactForm.mod.FormValues
 import typingsSlinky.reactForm.mod.RenderReturn
@@ -25,11 +28,21 @@ object Form {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactForm.mod.Form] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: scala.Nothing*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def childrenFunction1(value: /* props */ FormFunctionProps => RenderReturn): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: (js.Function1[/* props */ FormFunctionProps, RenderReturn]) | RenderReturn): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenNull: this.type = set("children", null)
+    @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValues(value: FormValues): this.type = set("defaultValues", value.asInstanceOf[js.Any])
     @scala.inline

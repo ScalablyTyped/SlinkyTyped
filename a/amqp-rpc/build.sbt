@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "amqp-rpc"
-version := "v0.0.8-dt-20200515Z-f9a7dd"
-scalaVersion := "2.13.2"
+version := "v0.0.8-dt-20200515Z-7bfed0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

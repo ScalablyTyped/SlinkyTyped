@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.sliderIndexNativeMod.SliderProps
@@ -38,7 +38,7 @@ object Slider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def tipFormatter(value: /* value */ js.UndefOr[String] => TagMod[Any]): this.type = set("tipFormatter", js.Any.fromFunction1(value))
+    def tipFormatter(value: /* value */ js.UndefOr[String] => ReactElement): this.type = set("tipFormatter", js.Any.fromFunction1(value))
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }

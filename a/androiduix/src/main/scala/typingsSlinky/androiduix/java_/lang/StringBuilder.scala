@@ -34,41 +34,24 @@ object StringBuilder {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAppend(value: js.Any => StringBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withArray(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAppend(value: js.Any => StringBuilder): Self = this.set("append", js.Any.fromFunction1(value))
     @scala.inline
-    def withDeleteCharAt(value: Double => StringBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteCharAt")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setArrayVarargs(value: String*): Self = this.set("array", js.Array(value :_*))
     @scala.inline
-    def withLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setArray(value: js.Array[String]): Self = this.set("array", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReplace(value: (Double, Double, String) => StringBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setDeleteCharAt(value: Double => StringBuilder): Self = this.set("deleteCharAt", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetLength(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLength")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLength(value: () => Double): Self = this.set("length", js.Any.fromFunction0(value))
+    @scala.inline
+    def setReplace(value: (Double, Double, String) => StringBuilder): Self = this.set("replace", js.Any.fromFunction3(value))
+    @scala.inline
+    def setSetLength(value: Double => Unit): Self = this.set("setLength", js.Any.fromFunction1(value))
   }
   
 }

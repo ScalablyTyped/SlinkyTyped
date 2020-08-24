@@ -15,7 +15,7 @@ trait RestoreRequest extends js.Object {
     */
   var Description: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Description] = js.native
   /**
-    * Glacier related parameters pertaining to this job. Do not use with restores that specify OutputLocation.
+    * S3 Glacier related parameters pertaining to this job. Do not use with restores that specify OutputLocation.
     */
   var GlacierJobParameters: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GlacierJobParameters] = js.native
   /**
@@ -27,7 +27,7 @@ trait RestoreRequest extends js.Object {
     */
   var SelectParameters: js.UndefOr[typingsSlinky.awsSdk.s3Mod.SelectParameters] = js.native
   /**
-    * Glacier retrieval tier at which the restore will be processed.
+    * S3 Glacier retrieval tier at which the restore will be processed.
     */
   var Tier: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Tier] = js.native
   /**
@@ -38,24 +38,50 @@ trait RestoreRequest extends js.Object {
 
 object RestoreRequest {
   @scala.inline
-  def apply(
-    Days: js.UndefOr[Days] = js.undefined,
-    Description: Description = null,
-    GlacierJobParameters: GlacierJobParameters = null,
-    OutputLocation: OutputLocation = null,
-    SelectParameters: SelectParameters = null,
-    Tier: Tier = null,
-    Type: RestoreRequestType = null
-  ): RestoreRequest = {
+  def apply(): RestoreRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Days)) __obj.updateDynamic("Days")(Days.get.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (GlacierJobParameters != null) __obj.updateDynamic("GlacierJobParameters")(GlacierJobParameters.asInstanceOf[js.Any])
-    if (OutputLocation != null) __obj.updateDynamic("OutputLocation")(OutputLocation.asInstanceOf[js.Any])
-    if (SelectParameters != null) __obj.updateDynamic("SelectParameters")(SelectParameters.asInstanceOf[js.Any])
-    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreRequest]
   }
+  @scala.inline
+  implicit class RestoreRequestOps[Self <: RestoreRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDays(value: Days): Self = this.set("Days", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDays: Self = this.set("Days", js.undefined)
+    @scala.inline
+    def setDescription(value: Description): Self = this.set("Description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
+    @scala.inline
+    def setGlacierJobParameters(value: GlacierJobParameters): Self = this.set("GlacierJobParameters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGlacierJobParameters: Self = this.set("GlacierJobParameters", js.undefined)
+    @scala.inline
+    def setOutputLocation(value: OutputLocation): Self = this.set("OutputLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutputLocation: Self = this.set("OutputLocation", js.undefined)
+    @scala.inline
+    def setSelectParameters(value: SelectParameters): Self = this.set("SelectParameters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectParameters: Self = this.set("SelectParameters", js.undefined)
+    @scala.inline
+    def setTier(value: Tier): Self = this.set("Tier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTier: Self = this.set("Tier", js.undefined)
+    @scala.inline
+    def setType(value: RestoreRequestType): Self = this.set("Type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("Type", js.undefined)
+  }
+  
 }
 

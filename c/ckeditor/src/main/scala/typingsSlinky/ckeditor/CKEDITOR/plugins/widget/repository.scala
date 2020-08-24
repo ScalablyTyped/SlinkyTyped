@@ -29,6 +29,11 @@ trait repository extends event {
   def finalizeCreation(container: js.Any): Unit = js.native
   def getByElement(element: js.Any, checkWrapperOnly: Boolean): typingsSlinky.ckeditor.CKEDITOR.plugins.widget = js.native
   def initOn(element: typingsSlinky.ckeditor.CKEDITOR.dom.element): typingsSlinky.ckeditor.CKEDITOR.plugins.widget = js.native
+  def initOn(
+    element: typingsSlinky.ckeditor.CKEDITOR.dom.element,
+    widgetDef: js.UndefOr[scala.Nothing],
+    startupData: StringDictionary[js.Any]
+  ): typingsSlinky.ckeditor.CKEDITOR.plugins.widget = js.native
   def initOn(element: typingsSlinky.ckeditor.CKEDITOR.dom.element, widgetDef: String): typingsSlinky.ckeditor.CKEDITOR.plugins.widget = js.native
   def initOn(
     element: typingsSlinky.ckeditor.CKEDITOR.dom.element,

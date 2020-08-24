@@ -17,6 +17,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonButtonElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicReact.anon.PickIonButtondisabledstro
@@ -82,10 +83,10 @@ import typingsSlinky.ionicReact.ionicReactStrings.tree
 import typingsSlinky.ionicReact.ionicReactStrings.url
 import typingsSlinky.ionicReact.ionicReactStrings.vertical
 import typingsSlinky.ionicReact.ionicReactStrings.yes
+import typingsSlinky.ionicReact.routerOptionsMod.RouterOptions
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,7 +99,7 @@ object IonButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonButtonElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -212,8 +213,6 @@ object IonButton {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: Color with String): this.type = set("color", value.asInstanceOf[js.Any])
-    @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -223,6 +222,8 @@ object IonButton {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -604,9 +605,13 @@ object IonButton {
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
+    def routerAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("routerAnimation", js.Any.fromFunction2(value))
+    @scala.inline
     def routerDirection(value: none | forward | back | root): this.type = set("routerDirection", value.asInstanceOf[js.Any])
     @scala.inline
     def routerLink(value: String): this.type = set("routerLink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def routerOptions(value: RouterOptions): this.type = set("routerOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
@@ -642,6 +647,10 @@ object IonButton {
   }
   
   def withProps(p: PickIonButtondisabledstro): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: IonButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(color: js.UndefOr[Color] with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PickIonButtondisabledstro]))
+  }
 }
 

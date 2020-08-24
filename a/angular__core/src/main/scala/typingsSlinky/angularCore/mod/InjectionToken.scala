@@ -11,6 +11,6 @@ class InjectionToken[T] protected () extends js.Object {
   def this(_desc: String) = this()
   def this(_desc: String, options: FactoryProvidedIn[T]) = this()
   var _desc: String = js.native
-  val ngInjectableDef: js.UndefOr[scala.Nothing] = js.native
+  val ɵprov: js.UndefOr[scala.Nothing] = js.native
 }
 

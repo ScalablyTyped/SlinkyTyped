@@ -1,6 +1,6 @@
 package typingsSlinky.gitlab
 
-import typingsSlinky.gitlab.anon.searchstringSudo
+import typingsSlinky.gitlab.anon.searchstringundefinedSudo
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
@@ -15,8 +15,10 @@ object namespacesMod extends js.Object {
   class Namespaces () extends BaseService {
     def all(): js.Promise[GetResponse] = js.native
     def all(options: PaginatedRequestOptions): js.Promise[GetResponse] = js.native
-    def show(namespaceId: String, options: searchstringSudo): js.Promise[GetResponse] = js.native
-    def show(namespaceId: Double, options: searchstringSudo): js.Promise[GetResponse] = js.native
+    def show(namespaceId: String): js.Promise[GetResponse] = js.native
+    def show(namespaceId: String, options: searchstringundefinedSudo): js.Promise[GetResponse] = js.native
+    def show(namespaceId: Double): js.Promise[GetResponse] = js.native
+    def show(namespaceId: Double, options: searchstringundefinedSudo): js.Promise[GetResponse] = js.native
   }
   
 }

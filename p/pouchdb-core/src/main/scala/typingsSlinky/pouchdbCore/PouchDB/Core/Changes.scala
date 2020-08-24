@@ -4,15 +4,14 @@ import typingsSlinky.pouchdbCore.EventEmitter
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.change
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.complete
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.error
-import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Changes[Content /* <: js.Object */]
-  extends EventEmitter
-     with Promise[ChangesResponse[Content]] {
+  extends js.Promise[ChangesResponse[Content]]
+     with EventEmitter {
   def cancel(): Unit = js.native
   @JSName("on")
   def on_change(event: change, listener: js.Function1[/* value */ ChangesResponseChange[Content], _]): this.type = js.native

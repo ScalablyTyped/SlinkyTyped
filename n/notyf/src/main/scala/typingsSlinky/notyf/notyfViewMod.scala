@@ -2,6 +2,7 @@ package typingsSlinky.notyf
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.notyf.notyfModelsMod.NotyfArrayEvent
+import typingsSlinky.notyf.notyfModelsMod.NotyfEventCallback
 import typingsSlinky.notyf.notyfModelsMod.NotyfNotification
 import typingsSlinky.notyf.notyfOptionsMod.NotyfEvent
 import scala.scalajs.js
@@ -36,12 +37,12 @@ object notyfViewMod extends js.Object {
     var adjustContainerAlignment: js.Any = js.native
     var animationEndEventName: String = js.native
     var container: HTMLElement = js.native
-    var events: js.UndefOr[js.Any] = js.native
+    var events: js.Any = js.native
     var getXPosition: js.Any = js.native
     var getYPosition: js.Any = js.native
     var notifications: js.Any = js.native
     def addNotification(notification: NotyfNotification): Unit = js.native
-    def on(event: NotyfEvent, cb: js.Function1[/* notification */ NotyfNotification, Unit]): Unit = js.native
+    def on(event: NotyfEvent, cb: NotyfEventCallback): Unit = js.native
     def removeNotification(notification: NotyfNotification): Unit = js.native
     def update(notification: NotyfNotification, `type`: NotyfArrayEvent): Unit = js.native
   }

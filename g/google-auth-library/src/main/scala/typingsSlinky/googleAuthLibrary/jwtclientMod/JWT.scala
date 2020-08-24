@@ -3,6 +3,7 @@ package typingsSlinky.googleAuthLibrary.jwtclientMod
 import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
 import typingsSlinky.googleAuthLibrary.credentialsMod.Credentials
 import typingsSlinky.googleAuthLibrary.credentialsMod.JWTInput
+import typingsSlinky.googleAuthLibrary.idtokenclientMod.IdTokenProvider
 import typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2Client
 import typingsSlinky.gtoken.mod.GoogleToken
 import typingsSlinky.node.streamMod.Readable
@@ -12,7 +13,9 @@ import scala.scalajs.js.annotation._
 
 @JSImport("google-auth-library/build/src/auth/jwtclient", "JWT")
 @js.native
-class JWT protected () extends OAuth2Client {
+class JWT protected ()
+  extends OAuth2Client
+     with IdTokenProvider {
   /**
     * JWT service account credentials.
     *
@@ -30,11 +33,11 @@ class JWT protected () extends OAuth2Client {
     email: js.UndefOr[String],
     keyFile: js.UndefOr[String],
     key: js.UndefOr[String],
-    scopes: js.UndefOr[js.Array[String] | String],
+    scopes: js.UndefOr[String | js.Array[String]],
     subject: js.UndefOr[String],
     keyId: js.UndefOr[String]
   ) = this()
-  var access: js.UndefOr[js.Any] = js.native
+  var access: js.Any = js.native
   var additionalClaims: js.UndefOr[js.Object] = js.native
   var authorizeAsync: js.Any = js.native
   /**
@@ -69,13 +72,6 @@ class JWT protected () extends OAuth2Client {
   def createScoped(): JWT = js.native
   def createScoped(scopes: String): JWT = js.native
   def createScoped(scopes: js.Array[String]): JWT = js.native
-  /**
-    * Indicates whether the credential requires scopes to be created by calling
-    * createScoped before use.
-    * @deprecated
-    * @return false if createScoped does not need to be called.
-    */
-  def createScopedRequired(): Boolean = js.native
   /**
     * Creates a JWT credentials instance using an API Key for authentication.
     * @param apiKey The API Key in string form.

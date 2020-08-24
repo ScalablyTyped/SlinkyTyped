@@ -15,7 +15,36 @@ class DigestAuthentication protected ()
     * @param password - Password.
     */
   def this(loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory) = this()
-  def this(loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory, username: String) = this()
-  def this(loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory, username: String, password: String) = this()
+  def this(loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory, ha1: String) = this()
+  def this(
+    loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory,
+    ha1: js.UndefOr[scala.Nothing],
+    username: String
+  ) = this()
+  def this(loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory, ha1: String, username: String) = this()
+  def this(
+    loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory,
+    ha1: js.UndefOr[scala.Nothing],
+    username: js.UndefOr[scala.Nothing],
+    password: String
+  ) = this()
+  def this(
+    loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory,
+    ha1: js.UndefOr[scala.Nothing],
+    username: String,
+    password: String
+  ) = this()
+  def this(
+    loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory,
+    ha1: String,
+    username: js.UndefOr[scala.Nothing],
+    password: String
+  ) = this()
+  def this(
+    loggerFactory: typingsSlinky.sipJs.logMod.LoggerFactory,
+    ha1: String,
+    username: String,
+    password: String
+  ) = this()
 }
 

@@ -1,16 +1,18 @@
 package typingsSlinky.nivoScatterplot.components
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAxes.mod.AxisProps
+import typingsSlinky.nivoAxes.mod.GridValues
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.CssMixBlendMode
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
+import typingsSlinky.nivoScales.mod.Scale
 import typingsSlinky.nivoScatterplot.mod.CustomCanvasLayer
 import typingsSlinky.nivoScatterplot.mod.CustomLayerId
 import typingsSlinky.nivoScatterplot.mod.Datum
@@ -20,6 +22,7 @@ import typingsSlinky.nivoScatterplot.mod.Node
 import typingsSlinky.nivoScatterplot.mod.NodeProps
 import typingsSlinky.nivoScatterplot.mod.ScatterPlotCanvasProps
 import typingsSlinky.nivoScatterplot.mod.Serie
+import typingsSlinky.nivoScatterplot.mod.TooltipProps
 import typingsSlinky.nivoScatterplot.mod.Value
 import typingsSlinky.nivoScatterplot.mod.ValueFormatter
 import scala.scalajs.js
@@ -54,6 +57,8 @@ object ResponsiveScatterPlotCanvas {
     @scala.inline
     def blendMode(value: CssMixBlendMode): this.type = set("blendMode", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
@@ -64,9 +69,21 @@ object ResponsiveScatterPlotCanvas {
     @scala.inline
     def enableGridY(value: Boolean): this.type = set("enableGridY", value.asInstanceOf[js.Any])
     @scala.inline
+    def gridXValuesVarargs(value: (js.Date | Double | String)*): this.type = set("gridXValues", js.Array(value :_*))
+    @scala.inline
+    def gridXValues(value: GridValues[Value]): this.type = set("gridXValues", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridYValuesVarargs(value: (js.Date | Double | String)*): this.type = set("gridYValues", js.Array(value :_*))
+    @scala.inline
+    def gridYValues(value: GridValues[Value]): this.type = set("gridYValues", value.asInstanceOf[js.Any])
+    @scala.inline
     def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
     @scala.inline
+    def layersVarargs(value: (CustomLayerId | CustomCanvasLayer)*): this.type = set("layers", js.Array(value :_*))
+    @scala.inline
     def layers(value: js.Array[CustomLayerId | CustomCanvasLayer]): this.type = set("layers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legendsVarargs(value: LegendProps*): this.type = set("legends", js.Array(value :_*))
     @scala.inline
     def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,7 +107,7 @@ object ResponsiveScatterPlotCanvas {
     @scala.inline
     def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: /* hasNode */ js.Any => TagMod[Any]): this.type = set("tooltip", js.Any.fromFunction1(value))
+    def tooltip(value: /* props */ TooltipProps => ReactElement): this.type = set("tooltip", js.Any.fromFunction1(value))
     @scala.inline
     def useMesh(value: Boolean): this.type = set("useMesh", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,13 +115,13 @@ object ResponsiveScatterPlotCanvas {
     @scala.inline
     def xFormat(value: String | ValueFormatter): this.type = set("xFormat", value.asInstanceOf[js.Any])
     @scala.inline
-    def xScale(value: /* value */ Value => Double): this.type = set("xScale", js.Any.fromFunction1(value))
+    def xScale(value: Scale): this.type = set("xScale", value.asInstanceOf[js.Any])
     @scala.inline
     def yFormatFunction1(value: /* value */ Value => String | Double): this.type = set("yFormat", js.Any.fromFunction1(value))
     @scala.inline
     def yFormat(value: String | ValueFormatter): this.type = set("yFormat", value.asInstanceOf[js.Any])
     @scala.inline
-    def yScale(value: /* value */ Value => Double): this.type = set("yScale", js.Any.fromFunction1(value))
+    def yScale(value: Scale): this.type = set("yScale", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ScatterPlotCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

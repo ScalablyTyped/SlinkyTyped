@@ -1,6 +1,6 @@
 package typingsSlinky.atlaskitTree.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,6 +25,6 @@ trait TreeProps extends js.Object {
   /** Function that will be called when a parent item needs to be expanded. */
   def onExpand(itemId: ItemId, path: Path): Unit = js.native
   /** Function that will be called to render a single item. */
-  def renderItem(itemProps: RenderItemParams): TagMod[Any] = js.native
+  def renderItem(itemProps: RenderItemParams): ReactElement = js.native
 }
 

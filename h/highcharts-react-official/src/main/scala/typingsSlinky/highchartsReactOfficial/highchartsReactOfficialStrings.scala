@@ -9,6 +9,9 @@ object highchartsReactOfficialStrings {
   sealed trait Annotation extends js.Object
   
   @js.native
+  sealed trait AnnotationControlPoint extends js.Object
+  
+  @js.native
   sealed trait Axis extends js.Object
   
   @js.native
@@ -132,9 +135,6 @@ object highchartsReactOfficialStrings {
   sealed trait format extends js.Object
   
   @js.native
-  sealed trait formatSingle extends js.Object
-  
-  @js.native
   sealed trait getMagnitude extends js.Object
   
   @js.native
@@ -234,10 +234,15 @@ object highchartsReactOfficialStrings {
   sealed trait uniqueKey extends js.Object
   
   @js.native
+  sealed trait useSerialIds extends js.Object
+  
+  @js.native
   sealed trait wrap extends js.Object
   
   @scala.inline
   def Annotation: Annotation = "Annotation".asInstanceOf[Annotation]
+  @scala.inline
+  def AnnotationControlPoint: AnnotationControlPoint = "AnnotationControlPoint".asInstanceOf[AnnotationControlPoint]
   @scala.inline
   def Axis: Axis = "Axis".asInstanceOf[Axis]
   @scala.inline
@@ -321,8 +326,6 @@ object highchartsReactOfficialStrings {
   @scala.inline
   def format: format = "format".asInstanceOf[format]
   @scala.inline
-  def formatSingle: formatSingle = "formatSingle".asInstanceOf[formatSingle]
-  @scala.inline
   def getMagnitude: getMagnitude = "getMagnitude".asInstanceOf[getMagnitude]
   @scala.inline
   def getOptions: getOptions = "getOptions".asInstanceOf[getOptions]
@@ -388,6 +391,8 @@ object highchartsReactOfficialStrings {
   def time_ : time_ = "time".asInstanceOf[time_]
   @scala.inline
   def uniqueKey: uniqueKey = "uniqueKey".asInstanceOf[uniqueKey]
+  @scala.inline
+  def useSerialIds: useSerialIds = "useSerialIds".asInstanceOf[useSerialIds]
   @scala.inline
   def wrap: wrap = "wrap".asInstanceOf[wrap]
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobileRn.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.carouselIndexNativeMod.CarouselProps
@@ -55,7 +55,7 @@ object Carousel {
       value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ typingsSlinky.antdMobileRn.carouselIndexNativeMod.Carousel) => Unit
     ): this.type = set("onScrollBeginDrag", js.Any.fromFunction3(value))
     @scala.inline
-    def pagination(value: /* props */ PaginationProps => TagMod[Any]): this.type = set("pagination", js.Any.fromFunction1(value))
+    def pagination(value: /* props */ PaginationProps => ReactElement): this.type = set("pagination", js.Any.fromFunction1(value))
     @scala.inline
     def selectedIndex(value: Double): this.type = set("selectedIndex", value.asInstanceOf[js.Any])
     @scala.inline

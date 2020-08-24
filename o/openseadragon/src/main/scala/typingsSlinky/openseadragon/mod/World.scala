@@ -17,6 +17,12 @@ class World protected () extends EventSource {
   def addItem(item: TiledImage): Unit = js.native
   def addItem(item: TiledImage, options: Index): Unit = js.native
   def addOnceHandler(eventName: String, handler: EventHandler[WorldEvent]): Unit = js.native
+  def addOnceHandler(
+    eventName: String,
+    handler: EventHandler[WorldEvent],
+    userData: js.UndefOr[scala.Nothing],
+    times: Double
+  ): Unit = js.native
   def addOnceHandler(eventName: String, handler: EventHandler[WorldEvent], userData: js.Object): Unit = js.native
   def addOnceHandler(eventName: String, handler: EventHandler[WorldEvent], userData: js.Object, times: Double): Unit = js.native
   def arrange(options: Columns): Unit = js.native
@@ -32,7 +38,7 @@ class World protected () extends EventSource {
   def raiseEvent(eventName: String, eventArgs: js.Object): Unit = js.native
   def removeAll(): Unit = js.native
   def removeAllHandlers(eventName: String): Unit = js.native
-  def removeHandler(eventName: String, handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def removeHandler(eventName: String, handler: EventHandler[WorldEvent]): Unit = js.native
   def removeItem(item: TiledImage): Unit = js.native
   def resetItems(): Unit = js.native
   def setAutoRefigureSizes(): Unit = js.native

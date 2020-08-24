@@ -28,29 +28,18 @@ object Alarm {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withScheduledTime(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledTime")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPeriodInMinutes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("periodInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScheduledTime(value: integer): Self = this.set("scheduledTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPeriodInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("periodInMinutes")(js.undefined)
-        ret
-    }
+    def setPeriodInMinutes(value: integer): Self = this.set("periodInMinutes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePeriodInMinutes: Self = this.set("periodInMinutes", js.undefined)
   }
   
 }

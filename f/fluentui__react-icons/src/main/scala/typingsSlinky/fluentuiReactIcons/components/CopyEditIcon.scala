@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CopyEditIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CopyEditIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CopyEditIcon")
   @js.native
   object component extends js.Object
   

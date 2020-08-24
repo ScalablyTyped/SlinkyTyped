@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CheckboxIndeterminateIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CheckboxIndeterminateIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CheckboxIndeterminateIcon")
   @js.native
   object component extends js.Object
   

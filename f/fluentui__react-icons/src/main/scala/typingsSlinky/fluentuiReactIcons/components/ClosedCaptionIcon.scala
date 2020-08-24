@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClosedCaptionIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ClosedCaptionIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ClosedCaptionIcon")
   @js.native
   object component extends js.Object
   

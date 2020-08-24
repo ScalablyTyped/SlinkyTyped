@@ -4,6 +4,8 @@ import typingsSlinky.bip174.interfacesMod.KeyValue
 import typingsSlinky.bip174.interfacesMod.PsbtGlobalUpdate
 import typingsSlinky.bip174.interfacesMod.PsbtInputUpdate
 import typingsSlinky.bip174.interfacesMod.PsbtOutputUpdate
+import typingsSlinky.bip174.interfacesMod.TransactionInput
+import typingsSlinky.bip174.interfacesMod.TransactionOutput
 import typingsSlinky.bitcoinjsLib.ecpairMod.Signer
 import typingsSlinky.bitcoinjsLib.ecpairMod.SignerAsync
 import typingsSlinky.bitcoinjsLib.transactionMod.Transaction
@@ -16,11 +18,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class Psbt () extends js.Object {
   def this(opts: PsbtOptsOptional) = this()
+  def this(opts: js.UndefOr[scala.Nothing], data: typingsSlinky.bip174.mod.Psbt) = this()
   def this(opts: PsbtOptsOptional, data: typingsSlinky.bip174.mod.Psbt) = this()
   var __CACHE: js.Any = js.native
   val data: typingsSlinky.bip174.mod.Psbt = js.native
   val inputCount: Double = js.native
+  var locktime: Double = js.native
   var opts: js.Any = js.native
+  val txInputs: js.Array[TransactionInput] = js.native
+  val txOutputs: js.Array[TransactionOutput] = js.native
+  var version: Double = js.native
   def addInput(inputData: PsbtInputExtended): this.type = js.native
   def addInputs(inputDatas: js.Array[PsbtInputExtended]): this.type = js.native
   def addOutput(outputData: PsbtOutputExtended): this.type = js.native

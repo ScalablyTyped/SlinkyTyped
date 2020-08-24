@@ -41,9 +41,11 @@ object ReactDataGrid {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^[js.Any]] {
+       with StBuildingComponent[tag.type, ^[T]] {
     @scala.inline
     def cellNavigationMode(value: none_ | loopOverRow | changeRow): this.type = set("cellNavigationMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnsVarargs(value: Column[T]*): this.type = set("columns", js.Array(value :_*))
     @scala.inline
     def columns(value: js.Array[Column[T]]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline

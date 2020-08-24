@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object dmsMod {
   type AccountQuotaList = js.Array[typingsSlinky.awsSdk.dmsMod.AccountQuota]
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.default_
+    - typingsSlinky.awsSdk.awsSdkStrings.default__
     - typingsSlinky.awsSdk.awsSdkStrings.mongodb_cr
     - typingsSlinky.awsSdk.awsSdkStrings.scram_sha_1
     - java.lang.String
@@ -33,7 +33,7 @@ package object dmsMod {
   type CompressionTypeValue = typingsSlinky.awsSdk.dmsMod._CompressionTypeValue | java.lang.String
   type ConnectionList = js.Array[typingsSlinky.awsSdk.dmsMod.Connection]
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.csv_
+    - typingsSlinky.awsSdk.awsSdkStrings.csv__
     - typingsSlinky.awsSdk.awsSdkStrings.parquet_
     - java.lang.String
   */
@@ -64,8 +64,11 @@ package object dmsMod {
   type EventCategoryGroupList = js.Array[typingsSlinky.awsSdk.dmsMod.EventCategoryGroup]
   type EventList = js.Array[typingsSlinky.awsSdk.dmsMod.Event]
   type EventSubscriptionsList = js.Array[typingsSlinky.awsSdk.dmsMod.EventSubscription]
+  type ExcludeTestList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
   type FilterList = js.Array[typingsSlinky.awsSdk.dmsMod.Filter]
   type FilterValueList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
+  type IncludeTestList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
+  type IndividualAssessmentNameList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
   type Integer = scala.Double
   type IntegerOptional = scala.Double
   type KeyList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
@@ -124,6 +127,8 @@ package object dmsMod {
   type ReplicationInstanceTaskLogsList = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationInstanceTaskLog]
   type ReplicationSubnetGroups = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationSubnetGroup]
   type ReplicationTaskAssessmentResultList = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationTaskAssessmentResult]
+  type ReplicationTaskAssessmentRunList = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationTaskAssessmentRun]
+  type ReplicationTaskIndividualAssessmentList = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationTaskIndividualAssessment]
   type ReplicationTaskList = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationTask]
   type SchemaList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
   type SecretString = java.lang.String

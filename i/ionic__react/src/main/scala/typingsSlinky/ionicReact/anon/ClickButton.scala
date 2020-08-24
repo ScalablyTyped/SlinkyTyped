@@ -5,6 +5,8 @@ import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.ionicReact.navContextMod.NavContextState
+import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.ContextType
 import typingsSlinky.react.mod.ErrorInfo
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.std.Pick
@@ -45,7 +47,7 @@ trait ClickButton extends js.Object {
       Unit
     ]
   ] = js.native
-  var context: NavContextState = js.native
+  var context: ContextType[Context[NavContextState]] = js.native
   var getSnapshotBeforeUpdate: js.UndefOr[js.Function2[/* prevProps */ ReadonlyProps, /* prevState */ js.Object, _]] = js.native
   val props: ReadonlyPropsReadonlychil = js.native
   var refs: StringDictionary[ReactInstance] = js.native

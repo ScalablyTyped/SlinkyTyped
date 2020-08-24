@@ -4,42 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/**
-  * An object containing the current Agent state
-  */
+/** An object containing the current Agent state. */
+@js.native
 trait AgentState extends js.Object {
-  /**
-    * A relative local state duration. To get the actual duration of the state relative
-    * to the current time, use agent.getStateDuration().
-    */
-  var duration: js.UndefOr[Double] = js.undefined
-  /**
-    * Indicates whether the agent is currently muted.
-    */
-  var muted: js.UndefOr[Boolean] = js.undefined
-  /**
-    * The name of the agent's current availability state.
-    */
-  var name: String
-  /**
-    * The agent's current availability state type, as per the AgentStateType enumeration.
-    */
-  var `type`: AgentStateType
+  /** The agent's current state ARN. */
+  val agentStateARN: String | Null = js.native
+  /** The name of the agent's current availability state. */
+  val name: String = js.native
+  /** Indicates when the state was set. */
+  val startTimestamp: js.Date = js.native
+  /** The agent's current availability state type, as per the `AgentStateType` enumeration. */
+  val `type`: AgentStateType = js.native
 }
 
 object AgentState {
   @scala.inline
-  def apply(
-    name: String,
-    `type`: AgentStateType,
-    duration: js.UndefOr[Double] = js.undefined,
-    muted: js.UndefOr[Boolean] = js.undefined
-  ): AgentState = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+  def apply(name: String, startTimestamp: js.Date, `type`: AgentStateType): AgentState = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], startTimestamp = startTimestamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentState]
   }
+  @scala.inline
+  implicit class AgentStateOps[Self <: AgentState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStartTimestamp(value: js.Date): Self = this.set("startTimestamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: AgentStateType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAgentStateARN(value: String): Self = this.set("agentStateARN", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAgentStateARNNull: Self = this.set("agentStateARN", null)
+  }
+  
 }
 

@@ -46,23 +46,16 @@ object Typeofsockets {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTcp(value: Typeoftcp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcp")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withTcpServer(value: TypeoftcpServer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpServer")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTcp(value: Typeoftcp): Self = this.set("tcp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUdp(value: Typeofudp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("udp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTcpServer(value: TypeoftcpServer): Self = this.set("tcpServer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUdp(value: Typeofudp): Self = this.set("udp", value.asInstanceOf[js.Any])
   }
   
 }

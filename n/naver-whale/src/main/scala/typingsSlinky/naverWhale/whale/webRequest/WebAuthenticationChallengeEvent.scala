@@ -24,6 +24,17 @@ trait WebAuthenticationChallengeEvent
       ], 
       Unit
     ],
+    filter: js.UndefOr[scala.Nothing],
+    opt_extraInfoSpec: js.Array[String]
+  ): Unit = js.native
+  def addListener(
+    callback: js.Function2[
+      /* details */ typingsSlinky.chrome.chrome.webRequest.WebAuthenticationChallengeDetails, 
+      /* callback */ js.UndefOr[
+        js.Function1[/* response */ typingsSlinky.chrome.chrome.webRequest.BlockingResponse, Unit]
+      ], 
+      Unit
+    ],
     filter: typingsSlinky.chrome.chrome.webRequest.RequestFilter
   ): Unit = js.native
   def addListener(

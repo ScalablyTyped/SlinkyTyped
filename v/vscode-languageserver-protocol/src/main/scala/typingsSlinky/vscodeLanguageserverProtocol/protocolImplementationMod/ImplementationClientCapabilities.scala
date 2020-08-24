@@ -1,23 +1,51 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolImplementationMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.anon.Implementation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImplementationClientCapabilities extends js.Object {
   /**
-    * The text document client capabilities
+    * Whether implementation supports dynamic registration. If this is set to `true`
+    * the client supports the new `ImplementationRegistrationOptions` return value
+    * for the corresponding server capability as well.
     */
-  var textDocument: js.UndefOr[Implementation] = js.undefined
+  var dynamicRegistration: js.UndefOr[Boolean] = js.native
+  /**
+    * The client supports additional metadata in the form of definition links.
+    *
+    * Since 3.14.0
+    */
+  var linkSupport: js.UndefOr[Boolean] = js.native
 }
 
 object ImplementationClientCapabilities {
   @scala.inline
-  def apply(textDocument: Implementation = null): ImplementationClientCapabilities = {
+  def apply(): ImplementationClientCapabilities = {
     val __obj = js.Dynamic.literal()
-    if (textDocument != null) __obj.updateDynamic("textDocument")(textDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImplementationClientCapabilities]
   }
+  @scala.inline
+  implicit class ImplementationClientCapabilitiesOps[Self <: ImplementationClientCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDynamicRegistration(value: Boolean): Self = this.set("dynamicRegistration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDynamicRegistration: Self = this.set("dynamicRegistration", js.undefined)
+    @scala.inline
+    def setLinkSupport(value: Boolean): Self = this.set("linkSupport", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLinkSupport: Self = this.set("linkSupport", js.undefined)
+  }
+  
 }
 

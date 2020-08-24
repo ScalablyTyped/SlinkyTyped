@@ -39,107 +39,48 @@ object ManagedType {
     __obj.asInstanceOf[ManagedType[T]]
   }
   @scala.inline
-  implicit class ManagedTypeOps[Self[t] <: ManagedType[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class ManagedTypeOps[Self <: ManagedType[_], T] (val x: Self with ManagedType[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActive(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Active")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutActive: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Active")(js.undefined)
-        ret
-    }
+    def setActive(value: T): Self = this.set("Active", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDeviceEditable(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteActive: Self = this.set("Active", js.undefined)
     @scala.inline
-    def withoutDeviceEditable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceEditable")(js.undefined)
-        ret
-    }
+    def setDeviceEditable(value: Boolean): Self = this.set("DeviceEditable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDevicePolicy(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DevicePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDeviceEditable: Self = this.set("DeviceEditable", js.undefined)
     @scala.inline
-    def withoutDevicePolicy: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DevicePolicy")(js.undefined)
-        ret
-    }
+    def setDevicePolicy(value: T): Self = this.set("DevicePolicy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEffective(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Effective")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDevicePolicy: Self = this.set("DevicePolicy", js.undefined)
     @scala.inline
-    def withoutEffective: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Effective")(js.undefined)
-        ret
-    }
+    def setEffective(value: String): Self = this.set("Effective", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSharedSetting(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEffective: Self = this.set("Effective", js.undefined)
     @scala.inline
-    def withoutSharedSetting: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedSetting")(js.undefined)
-        ret
-    }
+    def setSharedSetting(value: T): Self = this.set("SharedSetting", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUserEditable(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSharedSetting: Self = this.set("SharedSetting", js.undefined)
     @scala.inline
-    def withoutUserEditable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserEditable")(js.undefined)
-        ret
-    }
+    def setUserEditable(value: Boolean): Self = this.set("UserEditable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUserPolicy(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUserEditable: Self = this.set("UserEditable", js.undefined)
     @scala.inline
-    def withoutUserPolicy: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPolicy")(js.undefined)
-        ret
-    }
+    def setUserPolicy(value: T): Self = this.set("UserPolicy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUserSetting(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUserPolicy: Self = this.set("UserPolicy", js.undefined)
     @scala.inline
-    def withoutUserSetting: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSetting")(js.undefined)
-        ret
-    }
+    def setUserSetting(value: T): Self = this.set("UserSetting", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUserSetting: Self = this.set("UserSetting", js.undefined)
   }
   
 }

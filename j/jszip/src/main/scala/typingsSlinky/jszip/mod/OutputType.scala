@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.jszip.jszipStrings.base64
+  - typingsSlinky.jszip.jszipStrings.string
   - typingsSlinky.jszip.jszipStrings.text
   - typingsSlinky.jszip.jszipStrings.binarystring
   - typingsSlinky.jszip.jszipStrings.array

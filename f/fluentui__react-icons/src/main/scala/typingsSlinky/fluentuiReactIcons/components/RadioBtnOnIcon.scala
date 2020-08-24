@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RadioBtnOnIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RadioBtnOnIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RadioBtnOnIcon")
   @js.native
   object component extends js.Object
   

@@ -1,7 +1,7 @@
 package typingsSlinky.reactSvgPanZoomLoader.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSvgPanZoomLoader.mod.SvgLoaderSelectElementProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,11 +12,19 @@ object SvgLoaderSelectElement {
   @js.native
   object component extends js.Object
   
-  def withProps(p: SvgLoaderSelectElementProps): Default[tag.type, typingsSlinky.reactSvgPanZoomLoader.mod.SvgLoaderSelectElement] = new Default[tag.type, typingsSlinky.reactSvgPanZoomLoader.mod.SvgLoaderSelectElement](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(selector: String): Default[tag.type, typingsSlinky.reactSvgPanZoomLoader.mod.SvgLoaderSelectElement] = {
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def children(value: String): this.type = set("children", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: SvgLoaderSelectElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(selector: String): Builder = {
     val __props = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.reactSvgPanZoomLoader.mod.SvgLoaderSelectElement](js.Array(this.component, __props.asInstanceOf[SvgLoaderSelectElementProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[SvgLoaderSelectElementProps]))
   }
 }
 

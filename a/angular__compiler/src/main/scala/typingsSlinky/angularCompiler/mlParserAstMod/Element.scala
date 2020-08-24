@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.mlParserAstMod
 
-import typingsSlinky.angularCompiler.i18nAstMod.Message
+import typingsSlinky.angularCompiler.i18nAstMod.I18nMeta
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@angular/compiler/src/ml_parser/ast", "Element")
 @js.native
-class Element protected () extends Node {
+class Element protected () extends NodeWithI18n {
   def this(name: String, attrs: js.Array[Attribute], children: js.Array[Node], sourceSpan: ParseSourceSpan) = this()
   def this(
     name: String,
@@ -22,6 +22,14 @@ class Element protected () extends Node {
     attrs: js.Array[Attribute],
     children: js.Array[Node],
     sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
     startSourceSpan: Null,
     endSourceSpan: ParseSourceSpan
   ) = this()
@@ -38,9 +46,36 @@ class Element protected () extends Node {
     attrs: js.Array[Attribute],
     children: js.Array[Node],
     sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: I18nMeta
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
     endSourceSpan: Null,
-    i18n: Message
+    i18n: I18nMeta
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: ParseSourceSpan,
+    i18n: I18nMeta
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: Null,
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -49,7 +84,7 @@ class Element protected () extends Node {
     sourceSpan: ParseSourceSpan,
     startSourceSpan: Null,
     endSourceSpan: Null,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -58,16 +93,16 @@ class Element protected () extends Node {
     sourceSpan: ParseSourceSpan,
     startSourceSpan: Null,
     endSourceSpan: ParseSourceSpan,
-    i18n: Message
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
     attrs: js.Array[Attribute],
     children: js.Array[Node],
     sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+    startSourceSpan: ParseSourceSpan,
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -76,16 +111,7 @@ class Element protected () extends Node {
     sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan,
     endSourceSpan: Null,
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: ParseSourceSpan,
-    endSourceSpan: Null,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -94,26 +120,12 @@ class Element protected () extends Node {
     sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan,
     endSourceSpan: ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: ParseSourceSpan,
-    endSourceSpan: ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+    i18n: I18nMeta
   ) = this()
   var attrs: js.Array[Attribute] = js.native
   var children: js.Array[Node] = js.native
   var endSourceSpan: ParseSourceSpan | Null = js.native
-  var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
   var name: String = js.native
-  /* CompleteClass */
-  override var sourceSpan: ParseSourceSpan = js.native
   var startSourceSpan: ParseSourceSpan | Null = js.native
-  /* CompleteClass */
-  override def visit(visitor: Visitor, context: js.Any): js.Any = js.native
 }
 

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SharedVolume extends Volume {
-  var kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.SharedVolume
-  var name: String
+  var kind: typingsSlinky.pulumiCloud.pulumiCloudStrings.SharedVolume = js.native
+  var name: String = js.native
 }
 
 @JSImport("@pulumi/cloud/service", "SharedVolume")

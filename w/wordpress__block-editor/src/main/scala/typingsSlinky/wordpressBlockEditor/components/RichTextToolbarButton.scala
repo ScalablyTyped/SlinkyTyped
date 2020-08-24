@@ -2,7 +2,6 @@ package typingsSlinky.wordpressBlockEditor.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressBlockEditor.mod.RichTextToolbarButton.^
 import typingsSlinky.wordpressBlockEditor.richTextMod.RichTextToolbarButton.Props
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.access
 import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.alt
@@ -29,7 +28,7 @@ object RichTextToolbarButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

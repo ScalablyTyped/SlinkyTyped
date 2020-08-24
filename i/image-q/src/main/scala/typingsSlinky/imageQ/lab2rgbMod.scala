@@ -1,0 +1,13 @@
+package typingsSlinky.imageQ
+
+import typingsSlinky.imageQ.anon.B
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("image-q/dist/conversion/lab2rgb", JSImport.Namespace)
+@js.native
+object lab2rgbMod extends js.Object {
+  def lab2rgb(L: Double, a: Double, b: Double): B = js.native
+}
+

@@ -2,34 +2,47 @@ package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.anon.Coll
-import typingsSlinky.mongodb.anon.Uid
 import typingsSlinky.mongodb.mongodbStrings.rename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChangeEventRename[TSchema /* <: StringDictionary[js.Any] */]
   extends ChangeEventBase[TSchema]
      with ChangeEvent[TSchema] {
-  var operationType: rename
-  var to: Coll
+  var operationType: rename = js.native
+  var to: Coll = js.native
 }
 
 object ChangeEventRename {
   @scala.inline
-  def apply[TSchema](
+  def apply[/* <: org.scalablytyped.runtime.StringDictionary[js.Any] */ TSchema](
     _id: ResumeToken,
     clusterTime: typingsSlinky.bson.mod.Timestamp,
     ns: Coll,
     operationType: rename,
-    to: Coll,
-    lsid: Uid = null,
-    txnNumber: js.UndefOr[scala.Double] = js.undefined
+    to: Coll
   ): ChangeEventRename[TSchema] = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], clusterTime = clusterTime.asInstanceOf[js.Any], ns = ns.asInstanceOf[js.Any], operationType = operationType.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
-    if (lsid != null) __obj.updateDynamic("lsid")(lsid.asInstanceOf[js.Any])
-    if (!js.isUndefined(txnNumber)) __obj.updateDynamic("txnNumber")(txnNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeEventRename[TSchema]]
   }
+  @scala.inline
+  implicit class ChangeEventRenameOps[Self <: ChangeEventRename[_], /* <: org.scalablytyped.runtime.StringDictionary[js.Any] */ TSchema] (val x: Self with ChangeEventRename[TSchema]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOperationType(value: rename): Self = this.set("operationType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTo(value: Coll): Self = this.set("to", value.asInstanceOf[js.Any])
+  }
+  
 }
 

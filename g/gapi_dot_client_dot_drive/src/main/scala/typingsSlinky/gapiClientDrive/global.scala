@@ -4,6 +4,7 @@ import typingsSlinky.gapiClientDrive.gapi.client.drive.AboutResource
 import typingsSlinky.gapiClientDrive.gapi.client.drive.ChangesResource
 import typingsSlinky.gapiClientDrive.gapi.client.drive.ChannelsResource
 import typingsSlinky.gapiClientDrive.gapi.client.drive.CommentsResource
+import typingsSlinky.gapiClientDrive.gapi.client.drive.DrivesResource
 import typingsSlinky.gapiClientDrive.gapi.client.drive.FilesResource
 import typingsSlinky.gapiClientDrive.gapi.client.drive.PermissionsResource
 import typingsSlinky.gapiClientDrive.gapi.client.drive.RepliesResource
@@ -31,6 +32,7 @@ object global extends js.Object {
         val changes: ChangesResource = js.native
         val channels: ChannelsResource = js.native
         val comments: CommentsResource = js.native
+        val drives: DrivesResource = js.native
         val files: FilesResource = js.native
         val permissions: PermissionsResource = js.native
         val replies: RepliesResource = js.native

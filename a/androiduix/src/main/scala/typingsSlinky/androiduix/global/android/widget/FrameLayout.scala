@@ -13,6 +13,7 @@ class FrameLayout protected ()
   extends typingsSlinky.androiduix.android.widget.FrameLayout {
   def this(context: Context) = this()
   def this(context: Context, bindElement: HTMLElement) = this()
+  def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
   def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
 }
 

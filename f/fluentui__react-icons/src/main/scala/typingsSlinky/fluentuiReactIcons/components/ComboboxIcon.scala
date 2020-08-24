@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ComboboxIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ComboboxIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ComboboxIcon")
   @js.native
   object component extends js.Object
   

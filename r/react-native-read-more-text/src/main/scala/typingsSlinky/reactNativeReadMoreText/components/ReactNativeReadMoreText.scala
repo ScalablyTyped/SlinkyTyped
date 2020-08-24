@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeReadMoreText.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeReadMoreText.mod.ReadMoreProps
@@ -26,8 +26,8 @@ object ReactNativeReadMoreText {
   @scala.inline
   def apply(
     numberOfLines: Double,
-    renderRevealedFooter: js.Function0[Unit] => TagMod[Any],
-    renderTruncatedFooter: js.Function0[Unit] => TagMod[Any]
+    renderRevealedFooter: js.Function0[Unit] => ReactElement,
+    renderTruncatedFooter: js.Function0[Unit] => ReactElement
   ): Builder = {
     val __props = js.Dynamic.literal(numberOfLines = numberOfLines.asInstanceOf[js.Any], renderRevealedFooter = js.Any.fromFunction1(renderRevealedFooter), renderTruncatedFooter = js.Any.fromFunction1(renderTruncatedFooter))
     new Builder(js.Array(this.component, __props.asInstanceOf[ReadMoreProps]))

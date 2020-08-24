@@ -1,7 +1,7 @@
 package typingsSlinky.browserfs.browserfsMod
 
 import typingsSlinky.browserfs.browserfsStrings.process
-import typingsSlinky.node.NodeJS.Process
+import typingsSlinky.node.processMod.global.NodeJS.Process
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

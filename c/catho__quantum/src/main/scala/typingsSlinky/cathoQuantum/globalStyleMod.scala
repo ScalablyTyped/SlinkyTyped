@@ -13,7 +13,6 @@ object globalStyleMod extends js.Object {
   class default ()
     extends Component[js.Object, js.Object, js.Any]
   
-  val IconFont: ReactComponentClass[js.Object] = js.native
   val Typography: ReactComponentClass[js.Object] = js.native
   type GlobalStyle = ReactComponentClass[js.Object]
 }

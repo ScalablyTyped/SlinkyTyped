@@ -1,7 +1,7 @@
 
 # Scala.js typings for express-graphql
 
-Typings are for version 0.9.0
+Typings are for version 0.11.0
 
 ## Library description:
 Production ready GraphQL HTTP middleware.

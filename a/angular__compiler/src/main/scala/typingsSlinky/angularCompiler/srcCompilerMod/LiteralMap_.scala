@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 class LiteralMap_ protected () extends LiteralMap {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     keys: js.Array[LiteralMapKey],
     values: js.Array[_]
   ) = this()

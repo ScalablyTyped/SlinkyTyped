@@ -2,6 +2,7 @@ package typingsSlinky.vexflow.mod.Flow
 
 import typingsSlinky.vexflow.Vex.IRenderContext
 import typingsSlinky.vexflow.anon.Alignrests
+import typingsSlinky.vexflow.anon.MaxIterations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,9 @@ import scala.scalajs.js.annotation._
 @JSImport("vexflow", "Flow.Formatter")
 @js.native
 class Formatter ()
-  extends typingsSlinky.vexflow.Vex.Flow.Formatter
+  extends typingsSlinky.vexflow.Vex.Flow.Formatter {
+  def this(options: MaxIterations) = this()
+}
 
 /* static members */
 @JSImport("vexflow", "Flow.Formatter")
@@ -17,6 +20,11 @@ class Formatter ()
 object Formatter extends js.Object {
   var DEBUG: Boolean = js.native
   def AlignRestsToNotes(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note]): typingsSlinky.vexflow.Vex.Flow.Formatter = js.native
+  def AlignRestsToNotes(
+    notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
+    align_all_notes: js.UndefOr[scala.Nothing],
+    align_tuplets: Boolean
+  ): typingsSlinky.vexflow.Vex.Flow.Formatter = js.native
   def AlignRestsToNotes(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note], align_all_notes: Boolean): typingsSlinky.vexflow.Vex.Flow.Formatter = js.native
   def AlignRestsToNotes(
     notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
@@ -46,6 +54,24 @@ object Formatter extends js.Object {
     stave: typingsSlinky.vexflow.Vex.Flow.Stave,
     tabnotes: js.Array[typingsSlinky.vexflow.Vex.Flow.TabNote],
     notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note]
+  ): Unit = js.native
+  def FormatAndDrawTab(
+    ctx: IRenderContext,
+    tabstave: typingsSlinky.vexflow.Vex.Flow.TabStave,
+    stave: typingsSlinky.vexflow.Vex.Flow.Stave,
+    tabnotes: js.Array[typingsSlinky.vexflow.Vex.Flow.TabNote],
+    notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
+    autobeam: js.UndefOr[scala.Nothing],
+    params: Boolean
+  ): Unit = js.native
+  def FormatAndDrawTab(
+    ctx: IRenderContext,
+    tabstave: typingsSlinky.vexflow.Vex.Flow.TabStave,
+    stave: typingsSlinky.vexflow.Vex.Flow.Stave,
+    tabnotes: js.Array[typingsSlinky.vexflow.Vex.Flow.TabNote],
+    notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
+    autobeam: js.UndefOr[scala.Nothing],
+    params: Alignrests
   ): Unit = js.native
   def FormatAndDrawTab(
     ctx: IRenderContext,

@@ -21,6 +21,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -68,20 +69,19 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.colMod.ColProps
 import typingsSlinky.reactstrap.colMod.ColumnProps
-import typingsSlinky.reactstrap.colMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Col {
-  @JSImport("reactstrap/lib/Col", JSImport.Default)
+  @JSImport("reactstrap", "Col")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.div.tag.type, default[js.Any]] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.reactstrap.mod.Col[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -258,6 +258,8 @@ object Col {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -623,7 +625,7 @@ object Col {
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
-    def tag(value: String | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
@@ -639,11 +641,15 @@ object Col {
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     @scala.inline
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def widthsVarargs(value: String*): this.type = set("widths", js.Array(value :_*))
     @scala.inline
     def widths(value: js.Array[String]): this.type = set("widths", value.asInstanceOf[js.Any])
     @scala.inline

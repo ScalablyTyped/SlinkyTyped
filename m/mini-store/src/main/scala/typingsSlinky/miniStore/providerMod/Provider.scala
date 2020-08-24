@@ -1,0 +1,12 @@
+package typingsSlinky.miniStore.providerMod
+
+import typingsSlinky.react.mod.Component
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("mini-store/cjs/Provider", "Provider")
+@js.native
+class Provider ()
+  extends Component[ProviderProps, js.Object, js.Any]
+

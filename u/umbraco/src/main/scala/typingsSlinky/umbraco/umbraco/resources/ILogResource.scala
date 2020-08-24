@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   *
   *
   **/
+@js.native
 trait ILogResource extends js.Object {
   /**
     * @ngdoc method
@@ -33,7 +34,7 @@ trait ILogResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the log.
     *
     */
-  def getEntityLog(id: Double): IPromise[IResourcePromise]
+  def getEntityLog(id: Double): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.logResource#getLog
@@ -55,7 +56,7 @@ trait ILogResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the log.
     *
     */
-  def getLog(`type`: LogType, since: js.Date): IPromise[IResourcePromise]
+  def getLog(`type`: LogType, since: js.Date): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.logResource#getUserLog
@@ -77,7 +78,7 @@ trait ILogResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the log.
     *
     */
-  def getUserLog(`type`: LogType, since: js.Date): IPromise[IResourcePromise]
+  def getUserLog(`type`: LogType, since: js.Date): IPromise[IResourcePromise] = js.native
 }
 
 object ILogResource {
@@ -90,5 +91,24 @@ object ILogResource {
     val __obj = js.Dynamic.literal(getEntityLog = js.Any.fromFunction1(getEntityLog), getLog = js.Any.fromFunction2(getLog), getUserLog = js.Any.fromFunction2(getUserLog))
     __obj.asInstanceOf[ILogResource]
   }
+  @scala.inline
+  implicit class ILogResourceOps[Self <: ILogResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setGetEntityLog(value: Double => IPromise[IResourcePromise]): Self = this.set("getEntityLog", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetLog(value: (LogType, js.Date) => IPromise[IResourcePromise]): Self = this.set("getLog", js.Any.fromFunction2(value))
+    @scala.inline
+    def setGetUserLog(value: (LogType, js.Date) => IPromise[IResourcePromise]): Self = this.set("getUserLog", js.Any.fromFunction2(value))
+  }
+  
 }
 

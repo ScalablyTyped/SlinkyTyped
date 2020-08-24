@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Footer {
-  @JSImport("grommet", "Footer")
+  @JSImport("grommet/es6", "Footer")
   @js.native
   object component extends js.Object
   

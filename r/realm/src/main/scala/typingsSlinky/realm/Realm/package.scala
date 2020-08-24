@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object Realm {
   type CollectionChangeCallback[T] = js.Function2[
     /* collection */ typingsSlinky.realm.Realm.Collection[T], 
-    /* change */ typingsSlinky.realm.Realm.CollectionChangeSet, 
+    /* change */ typingsSlinky.realm.Realm.ObjectChanges, 
     scala.Unit
   ]
   /**

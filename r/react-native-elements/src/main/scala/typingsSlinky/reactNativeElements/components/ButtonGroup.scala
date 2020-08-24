@@ -31,6 +31,10 @@ object ButtonGroup {
     @scala.inline
     def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
     @scala.inline
+    def buttonContainerStyle(value: StyleProp[ViewStyle]): this.type = set("buttonContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonContainerStyleNull: this.type = set("buttonContainerStyle", null)
+    @scala.inline
     def buttonStyle(value: StyleProp[ViewStyle]): this.type = set("buttonStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def buttonStyleNull: this.type = set("buttonStyle", null)
@@ -40,6 +44,8 @@ object ButtonGroup {
     def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def disabledVarargs(value: Double*): this.type = set("disabled", js.Array(value :_*))
     @scala.inline
     def disabled(value: Boolean | js.Array[Double]): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,10 +67,6 @@ object ButtonGroup {
     @scala.inline
     def innerBorderStyle(value: InnerBorderStyleProperty): this.type = set("innerBorderStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def lastBorderStyle(value: StyleProp[TextStyle | ViewStyle]): this.type = set("lastBorderStyle", value.asInstanceOf[js.Any])
-    @scala.inline
-    def lastBorderStyleNull: this.type = set("lastBorderStyle", null)
-    @scala.inline
     def onHideUnderlay(value: () => Unit): this.type = set("onHideUnderlay", js.Any.fromFunction0(value))
     @scala.inline
     def onShowUnderlay(value: () => Unit): this.type = set("onShowUnderlay", js.Any.fromFunction0(value))
@@ -79,6 +81,8 @@ object ButtonGroup {
     @scala.inline
     def selectedIndexNull: this.type = set("selectedIndex", null)
     @scala.inline
+    def selectedIndexesVarargs(value: Double*): this.type = set("selectedIndexes", js.Array(value :_*))
+    @scala.inline
     def selectedIndexes(value: js.Array[Double]): this.type = set("selectedIndexes", value.asInstanceOf[js.Any])
     @scala.inline
     def selectedTextStyle(value: StyleProp[TextStyle]): this.type = set("selectedTextStyle", value.asInstanceOf[js.Any])
@@ -92,6 +96,8 @@ object ButtonGroup {
     def textStyleNull: this.type = set("textStyle", null)
     @scala.inline
     def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -1,6 +1,5 @@
 package typingsSlinky.rmcTooltip.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -31,7 +30,7 @@ class SharedBuilder_ITooltipProps_1631586751[R <: js.Object] (val args: js.Array
   @scala.inline
   def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
   @scala.inline
-  def overlay(value: TagMod[Any] | js.Function): this.type = set("overlay", value.asInstanceOf[js.Any])
+  def overlay(value: ReactElement | js.Function): this.type = set("overlay", value.asInstanceOf[js.Any])
   @scala.inline
   def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
   @scala.inline

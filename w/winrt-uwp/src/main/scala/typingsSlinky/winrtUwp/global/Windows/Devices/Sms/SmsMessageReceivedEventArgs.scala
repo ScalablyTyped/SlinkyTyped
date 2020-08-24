@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sms.SmsMessageReceivedEventArgs")
 @js.native
 abstract class SmsMessageReceivedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sms.SmsMessageReceivedEventArgs {
-  /** Retrieves an object that holds the binary representation of the message. This is of interest only to clients who want to pass binary messages on directly or do their own interpretation of the binary message contents. */
-  /* CompleteClass */
-  override var binaryMessage: typingsSlinky.winrtUwp.Windows.Devices.Sms.SmsBinaryMessage = js.native
-  /** Retrieves an object that holds the text representation of the message. If the message is not successfully decoded, an error is returned. */
-  /* CompleteClass */
-  override var textMessage: typingsSlinky.winrtUwp.Windows.Devices.Sms.SmsTextMessage = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sms.SmsMessageReceivedEventArgs
 

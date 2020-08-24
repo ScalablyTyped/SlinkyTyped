@@ -3,7 +3,6 @@ package typingsSlinky.sinonChai.mod.global.Chai
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.sinon.mod.SinonSpy
 import typingsSlinky.std.ErrorConstructor
-import typingsSlinky.std.global.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,7 +89,7 @@ trait Assertion extends js.Object {
     * Returns true if spy threw the provided exception object at least once.
     */
   def thrown(): Assertion = js.native
-  def thrown(obj: ErrorConstructor with Instantiable0[Error]): Assertion = js.native
+  def thrown(obj: ErrorConstructor with Instantiable0[js.Error]): Assertion = js.native
   def thrown(obj: String): Assertion = js.native
   def thrown(obj: js.Error): Assertion = js.native
 }

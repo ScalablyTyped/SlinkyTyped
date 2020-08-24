@@ -19,6 +19,8 @@ object Modal {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactElemental.mod.Modal] {
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def onHide(value: () => Unit): this.type = set("onHide", js.Any.fromFunction0(value))
     @scala.inline
     def persistent(value: Boolean): this.type = set("persistent", value.asInstanceOf[js.Any])

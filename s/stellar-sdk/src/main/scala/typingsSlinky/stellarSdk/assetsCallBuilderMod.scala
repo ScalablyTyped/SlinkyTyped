@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 object assetsCallBuilderMod extends js.Object {
   @js.native
   class AssetsCallBuilder protected () extends CallBuilder[CollectionPage[AssetRecord]] {
-    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any) = this()
+    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any) = this()
     def forCode(value: String): AssetsCallBuilder = js.native
     def forIssuer(value: String): AssetsCallBuilder = js.native
   }

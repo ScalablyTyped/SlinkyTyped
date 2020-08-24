@@ -7,31 +7,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ItemResponse extends js.Object {
   /**
     * The response received after the endpoint was accepted.
     */
   var EndpointItemResponse: js.UndefOr[
     typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointItemResponseMod.EndpointItemResponse
-  ] = js.undefined
+  ] = js.native
   /**
     * A multipart response object that contains a key and value for each event ID in the request. In each object, the event ID is the key, and an EventItemResponse object is the value.
     */
   var EventsItemResponse: js.UndefOr[
     StringDictionary[EventItemResponse] | (js.Iterable[js.Tuple2[String, EventItemResponse]])
-  ] = js.undefined
+  ] = js.native
 }
 
 object ItemResponse {
   @scala.inline
-  def apply(
-    EndpointItemResponse: EndpointItemResponse = null,
-    EventsItemResponse: StringDictionary[EventItemResponse] | (js.Iterable[js.Tuple2[String, EventItemResponse]]) = null
-  ): ItemResponse = {
+  def apply(): ItemResponse = {
     val __obj = js.Dynamic.literal()
-    if (EndpointItemResponse != null) __obj.updateDynamic("EndpointItemResponse")(EndpointItemResponse.asInstanceOf[js.Any])
-    if (EventsItemResponse != null) __obj.updateDynamic("EventsItemResponse")(EventsItemResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemResponse]
   }
+  @scala.inline
+  implicit class ItemResponseOps[Self <: ItemResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEndpointItemResponse(value: EndpointItemResponse): Self = this.set("EndpointItemResponse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEndpointItemResponse: Self = this.set("EndpointItemResponse", js.undefined)
+    @scala.inline
+    def setEventsItemResponseIterable(value: js.Iterable[js.Tuple2[String, EventItemResponse]]): Self = this.set("EventsItemResponse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEventsItemResponse(value: StringDictionary[EventItemResponse] | (js.Iterable[js.Tuple2[String, EventItemResponse]])): Self = this.set("EventsItemResponse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEventsItemResponse: Self = this.set("EventsItemResponse", js.undefined)
+  }
+  
 }
 

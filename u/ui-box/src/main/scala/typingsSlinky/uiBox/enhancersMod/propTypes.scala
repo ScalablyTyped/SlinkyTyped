@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ui-box/dist/enhancers", "propTypes")
+@JSImport("ui-box/dist/src/enhancers", "propTypes")
 @js.native
 object propTypes extends TopLevel[PropTypesMapping]
 

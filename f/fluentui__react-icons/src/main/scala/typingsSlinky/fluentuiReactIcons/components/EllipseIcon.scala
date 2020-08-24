@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EllipseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/EllipseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "EllipseIcon")
   @js.native
   object component extends js.Object
   

@@ -24,6 +24,8 @@ object Dots {
     @scala.inline
     def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
     @scala.inline
+    def thumbnailsVarargs(value: ReactElement*): this.type = set("thumbnails", js.Array(value :_*))
+    @scala.inline
     def thumbnails(value: js.Array[ReactElement]): this.type = set("thumbnails", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])

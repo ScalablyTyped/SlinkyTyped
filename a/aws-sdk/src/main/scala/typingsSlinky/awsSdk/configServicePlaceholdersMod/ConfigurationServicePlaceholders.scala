@@ -42,6 +42,7 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var cloudwatch: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.ClientConfiguration] = js.native
   var cloudwatchevents: js.UndefOr[typingsSlinky.awsSdk.cloudwatcheventsMod.ClientConfiguration] = js.native
   var cloudwatchlogs: js.UndefOr[typingsSlinky.awsSdk.cloudwatchlogsMod.ClientConfiguration] = js.native
+  var codeartifact: js.UndefOr[typingsSlinky.awsSdk.codeartifactMod.ClientConfiguration] = js.native
   var codebuild: js.UndefOr[typingsSlinky.awsSdk.codebuildMod.ClientConfiguration] = js.native
   var codecommit: js.UndefOr[typingsSlinky.awsSdk.codecommitMod.ClientConfiguration] = js.native
   var codedeploy: js.UndefOr[typingsSlinky.awsSdk.codedeployMod.ClientConfiguration] = js.native
@@ -106,6 +107,7 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var groundstation: js.UndefOr[typingsSlinky.awsSdk.groundstationMod.ClientConfiguration] = js.native
   var guardduty: js.UndefOr[typingsSlinky.awsSdk.guarddutyMod.ClientConfiguration] = js.native
   var health: js.UndefOr[typingsSlinky.awsSdk.healthMod.ClientConfiguration] = js.native
+  var honeycode: js.UndefOr[typingsSlinky.awsSdk.honeycodeMod.ClientConfiguration] = js.native
   var iam: js.UndefOr[typingsSlinky.awsSdk.iamMod.ClientConfiguration] = js.native
   var imagebuilder: js.UndefOr[typingsSlinky.awsSdk.imagebuilderMod.ClientConfiguration] = js.native
   var importexport: js.UndefOr[typingsSlinky.awsSdk.importexportMod.ClientConfiguration] = js.native
@@ -121,6 +123,7 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var iotsecuretunneling: js.UndefOr[typingsSlinky.awsSdk.iotsecuretunnelingMod.ClientConfiguration] = js.native
   var iotsitewise: js.UndefOr[typingsSlinky.awsSdk.iotsitewiseMod.ClientConfiguration] = js.native
   var iotthingsgraph: js.UndefOr[typingsSlinky.awsSdk.iotthingsgraphMod.ClientConfiguration] = js.native
+  var ivs: js.UndefOr[typingsSlinky.awsSdk.ivsMod.ClientConfiguration] = js.native
   var kafka: js.UndefOr[typingsSlinky.awsSdk.kafkaMod.ClientConfiguration] = js.native
   var kendra: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ClientConfiguration] = js.native
   var kinesis: js.UndefOr[typingsSlinky.awsSdk.kinesisMod.ClientConfiguration] = js.native

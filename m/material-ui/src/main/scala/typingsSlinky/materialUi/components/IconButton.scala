@@ -2,7 +2,6 @@ package typingsSlinky.materialUi.components
 
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -19,7 +18,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.IconButtonProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.cornersAndCenter
-import typingsSlinky.materialUi.iconButtonMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -74,14 +72,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IconButton {
-  @JSImport("material-ui/IconButton", JSImport.Default)
+  @JSImport("material-ui", "IconButton")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.IconButton] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -197,7 +195,7 @@ object IconButton {
     @scala.inline
     def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerElement(value: TagMod[Any] | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -208,6 +206,8 @@ object IconButton {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -453,7 +453,7 @@ object IconButton {
     @scala.inline
     def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: TagMod[Any] | String): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    def tooltip(value: ReactElement | String): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def tooltipPosition(value: cornersAndCenter): this.type = set("tooltipPosition", value.asInstanceOf[js.Any])
     @scala.inline

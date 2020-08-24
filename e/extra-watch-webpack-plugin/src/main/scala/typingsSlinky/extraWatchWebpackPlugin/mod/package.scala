@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type ExtraWatchWebpackPlugin = typingsSlinky.webpack.mod.Plugin
+  type ExtraWatchWebpackPlugin = typingsSlinky.std.Plugin
 }

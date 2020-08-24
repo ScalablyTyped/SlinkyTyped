@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SmartGlassRemoteIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SmartGlassRemoteIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SmartGlassRemoteIcon")
   @js.native
   object component extends js.Object
   

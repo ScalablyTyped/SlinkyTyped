@@ -16,6 +16,6 @@ package object interfaceMod {
     /* keys */ js.Array[typingsSlinky.react.mod.Key] | typingsSlinky.rcMenu.anon.Open, 
     scala.Unit
   ]
-  type RenderIconType = slinky.core.TagMod[scala.Any] | (js.Function1[/* props */ js.Any, slinky.core.TagMod[scala.Any]])
+  type RenderIconType = slinky.core.facade.ReactElement | (js.Function1[/* props */ js.Any, slinky.core.facade.ReactElement])
   type SelectEventHandler = js.Function1[/* info */ typingsSlinky.rcMenu.interfaceMod.SelectInfo, scala.Unit]
 }

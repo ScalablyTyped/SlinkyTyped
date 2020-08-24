@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChromeCloseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ChromeCloseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChromeCloseIcon")
   @js.native
   object component extends js.Object
   

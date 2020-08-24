@@ -3,6 +3,7 @@ package typingsSlinky.vuex.mod.default
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Record
+import typingsSlinky.vuex.anon.FnCall
 import typingsSlinky.vuex.helpersMod.ActionMethod
 import typingsSlinky.vuex.helpersMod.Computed
 import typingsSlinky.vuex.helpersMod.CustomVue
@@ -16,8 +17,10 @@ import typingsSlinky.vuex.helpersMod.MapperForStateWithNamespace
 import typingsSlinky.vuex.helpersMod.MapperWithNamespace
 import typingsSlinky.vuex.helpersMod.MutationMethod
 import typingsSlinky.vuex.helpersMod.NamespacedMappers
+import typingsSlinky.vuex.loggerMod.LoggerOption
 import typingsSlinky.vuex.mod.Commit
 import typingsSlinky.vuex.mod.Dispatch
+import typingsSlinky.vuex.mod.Plugin
 import typingsSlinky.vuex.mod.StoreOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,6 +33,8 @@ object ^ extends js.Object {
     /* options */ StoreOptions[/* import warning: RewrittenClass.unapply cls was tparam S */ js.Any], 
     typingsSlinky.vuex.mod.Store[js.Object]
   ] = js.native
+  @JSName("createLogger")
+  var createLogger_Original: FnCall = js.native
   @JSName("createNamespacedHelpers")
   var createNamespacedHelpers_Original: js.Function1[/* namespace */ String, NamespacedMappers] = js.native
   @JSName("install")
@@ -45,6 +50,8 @@ object ^ extends js.Object {
   var mapMutations_Original: Mapper[MutationMethod] with MapperWithNamespace[MutationMethod] with MapperForMutation with MapperForMutationWithNamespace = js.native
   @JSName("mapState")
   var mapState_Original: Mapper[Computed] with MapperWithNamespace[Computed] with MapperForState with MapperForStateWithNamespace = js.native
+  def createLogger[S](): Plugin[S] = js.native
+  def createLogger[S](option: LoggerOption[S]): Plugin[S] = js.native
   def createNamespacedHelpers(namespace: String): NamespacedMappers = js.native
   def install(Vue: /* import warning: importer.ImportType#apply Failed type conversion: typeof _Vue */ js.Any): Unit = js.native
   def mapActions[Map /* <: Record[

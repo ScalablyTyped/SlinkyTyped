@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery-knob"
-version := "1.2.13-dt-20200515Z-d50af7"
-scalaVersion := "2.13.2"
+version := "1.2.13-dt-20200515Z-33a364"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

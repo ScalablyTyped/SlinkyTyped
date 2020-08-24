@@ -2,7 +2,7 @@ package typingsSlinky.easyXapiSupertest.fsMod
 
 import typingsSlinky.easyXapiSupertest.NodeJS.ErrnoException
 import typingsSlinky.easyXapiSupertest.anon.Flag
-import typingsSlinky.easyXapiSupertest.anon.FlagString
+import typingsSlinky.easyXapiSupertest.anon.`1`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,13 +19,13 @@ object readFile extends js.Object {
   ): Unit = js.native
   def apply(
     filename: String,
-    options: FlagString,
-    callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
+    options: Flag,
+    callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
   ): Unit = js.native
   def apply(
     filename: String,
-    options: Flag,
-    callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
+    options: `1`,
+    callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
 }
 

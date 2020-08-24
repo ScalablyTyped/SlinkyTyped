@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RevToggleKeyIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RevToggleKeyIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RevToggleKeyIcon")
   @js.native
   object component extends js.Object
   

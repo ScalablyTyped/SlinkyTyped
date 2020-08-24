@@ -28,77 +28,34 @@ object PartialClassNameMapSpeedD {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFab(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fab")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutFab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fab")(js.undefined)
-        ret
-    }
+    def setFab(value: String): Self = this.set("fab", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFabClosed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fabClosed")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFab: Self = this.set("fab", js.undefined)
     @scala.inline
-    def withoutFabClosed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fabClosed")(js.undefined)
-        ret
-    }
+    def setFabClosed(value: String): Self = this.set("fabClosed", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStaticTooltip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFabClosed: Self = this.set("fabClosed", js.undefined)
     @scala.inline
-    def withoutStaticTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTooltip")(js.undefined)
-        ret
-    }
+    def setStaticTooltip(value: String): Self = this.set("staticTooltip", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStaticTooltipClosed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTooltipClosed")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStaticTooltip: Self = this.set("staticTooltip", js.undefined)
     @scala.inline
-    def withoutStaticTooltipClosed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTooltipClosed")(js.undefined)
-        ret
-    }
+    def setStaticTooltipClosed(value: String): Self = this.set("staticTooltipClosed", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStaticTooltipLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTooltipLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStaticTooltipClosed: Self = this.set("staticTooltipClosed", js.undefined)
     @scala.inline
-    def withoutStaticTooltipLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTooltipLabel")(js.undefined)
-        ret
-    }
+    def setStaticTooltipLabel(value: String): Self = this.set("staticTooltipLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTooltipPlacementLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStaticTooltipLabel: Self = this.set("staticTooltipLabel", js.undefined)
     @scala.inline
-    def withoutTooltipPlacementLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementLeft")(js.undefined)
-        ret
-    }
+    def setTooltipPlacementLeft(value: String): Self = this.set("tooltipPlacementLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipPlacementLeft: Self = this.set("tooltipPlacementLeft", js.undefined)
   }
   
 }

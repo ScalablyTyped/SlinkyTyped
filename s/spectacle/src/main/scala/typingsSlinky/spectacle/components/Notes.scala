@@ -1,6 +1,8 @@
 package typingsSlinky.spectacle.components
 
-import typingsSlinky.spectacle.mod.BaseProps
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.spectacle.anon.ChildrenReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,7 @@ object Notes {
   @js.native
   object component extends js.Object
   
-  def withProps(p: BaseProps): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Notes] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Notes](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Notes.type): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Notes] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Notes](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ChildrenReactNode): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Notes.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

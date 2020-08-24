@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "convert-layout"
-version := "0.5-dt-20200515Z-cc4115"
-scalaVersion := "2.13.2"
+version := "0.5-dt-20200515Z-1c16e9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -36,7 +36,11 @@ object ReactTagAutocomplete {
     @scala.inline
     def clearInputOnDelete(value: Boolean): this.type = set("clearInputOnDelete", value.asInstanceOf[js.Any])
     @scala.inline
+    def delimiterCharsVarargs(value: String*): this.type = set("delimiterChars", js.Array(value :_*))
+    @scala.inline
     def delimiterChars(value: js.Array[String]): this.type = set("delimiterChars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delimitersVarargs(value: Double*): this.type = set("delimiters", js.Array(value :_*))
     @scala.inline
     def delimiters(value: js.Array[Double]): this.type = set("delimiters", value.asInstanceOf[js.Any])
     @scala.inline
@@ -56,11 +60,15 @@ object ReactTagAutocomplete {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
+    def suggestionsVarargs(value: Tag*): this.type = set("suggestions", js.Array(value :_*))
+    @scala.inline
     def suggestions(value: js.Array[Tag]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     @scala.inline
     def suggestionsFilter(value: (/* suggestion */ Tag, /* query */ String) => Boolean): this.type = set("suggestionsFilter", js.Any.fromFunction2(value))
     @scala.inline
     def tagComponent(value: ReactComponentClass[TagComponentProps]): this.type = set("tagComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagsVarargs(value: Tag*): this.type = set("tags", js.Array(value :_*))
     @scala.inline
     def tags(value: js.Array[Tag]): this.type = set("tags", value.asInstanceOf[js.Any])
   }

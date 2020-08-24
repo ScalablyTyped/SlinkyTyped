@@ -7,10 +7,12 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.eventDispatcherMod.EventDispatcher
 import typingsSlinky.three.face3Mod.Face3
+import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.matrix3Mod.Matrix
 import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.meshMod.Mesh
 import typingsSlinky.three.sphereMod.Sphere
+import typingsSlinky.three.threeBooleans.`true`
 import typingsSlinky.three.vector2Mod.Vector2
 import typingsSlinky.three.vector3Mod.Vector3
 import typingsSlinky.three.vector4Mod.Vector4
@@ -28,11 +30,11 @@ class Geometry () extends EventDispatcher {
   /**
   	 * Bounding box.
   	 */
-  var boundingBox: Box3 = js.native
+  var boundingBox: Box3 | Null = js.native
   /**
   	 * Bounding sphere.
   	 */
-  var boundingSphere: Sphere = js.native
+  var boundingSphere: Sphere | Null = js.native
   /**
   	 * Array of vertex colors, matching number and order of vertices.
   	 * Used in ParticleSystem, Line and Ribbon.
@@ -68,7 +70,7 @@ class Geometry () extends EventDispatcher {
   	 * Unique number of this geometry instance
   	 */
   var id: Double = js.native
-  var isGeometry: Boolean = js.native
+  val isGeometry: `true` = js.native
   /**
   	 *
   	 */
@@ -125,7 +127,7 @@ class Geometry () extends EventDispatcher {
   /**
   	 * Bakes matrix transform directly into vertex coordinates.
   	 */
-  def applyMatrix(matrix: Matrix4): Geometry = js.native
+  def applyMatrix4(matrix: Matrix4): Geometry = js.native
   def center(): Geometry = js.native
   /**
   	 * Computes bounding box of the geometry, updating {@link Geometry.boundingBox} attribute.
@@ -163,9 +165,10 @@ class Geometry () extends EventDispatcher {
   def fromBufferGeometry(geometry: BufferGeometry): Geometry = js.native
   def lookAt(vector: Vector3): Unit = js.native
   def merge(geometry: Geometry): Unit = js.native
+  def merge(geometry: Geometry, matrix: js.UndefOr[scala.Nothing], materialIndexOffset: Double): Unit = js.native
   def merge(geometry: Geometry, matrix: Matrix): Unit = js.native
   def merge(geometry: Geometry, matrix: Matrix, materialIndexOffset: Double): Unit = js.native
-  def mergeMesh(mesh: Mesh): Unit = js.native
+  def mergeMesh(mesh: Mesh[Geometry | BufferGeometry, Material | js.Array[Material]]): Unit = js.native
   /**
   	 * Checks for duplicate vertices using hashmap.
   	 * Duplicated vertices are removed and faces' vertices are updated.

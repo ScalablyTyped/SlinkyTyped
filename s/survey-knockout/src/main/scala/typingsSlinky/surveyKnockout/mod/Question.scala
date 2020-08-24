@@ -9,8 +9,9 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.surveyKnockout.mod.ISurveyElement because Already inherited
-- typingsSlinky.surveyKnockout.mod.IElement because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name. Inlined visible, parent, renderWidth, width, rightIndent, startWithNewLine, getPanel, getLayoutType, isLayoutTypeSupported, removeElement, onAnyValueChanged, clearIncorrectValues, clearErrors, dispose
-- typingsSlinky.surveyKnockout.mod.IQuestion because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name. Inlined hasTitle, isEmpty, onSurveyValueChanged, updateValueFromSurvey, updateCommentFromSurvey, supportGoNextPageAutomatic, clearUnusedValues, getDisplayValue, getValueName, clearValue, clearValueIfInvisible, isAnswerCorrect, updateValueWithDefaults, getQuestionFromArray, value */ @JSImport("survey-knockout", "Question")
+- typingsSlinky.surveyKnockout.mod.IElement because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name. Inlined visible, parent, renderWidth, width, minWidth, maxWidth, rightIndent, startWithNewLine, getPanel, getLayoutType, isLayoutTypeSupported, removeElement, onAnyValueChanged, clearIncorrectValues, clearErrors, dispose
+- typingsSlinky.surveyKnockout.mod.ITitleOwner because var conflicts: name. Inlined no, requiredText, isRequireTextOnStart, isRequireTextBeforeTitle, isRequireTextAfterTitle, locTitle
+- typingsSlinky.surveyKnockout.mod.IQuestion because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name, survey. Inlined hasTitle, isEmpty, onSurveyValueChanged, updateValueFromSurvey, updateCommentFromSurvey, supportGoNextPageAutomatic, clearUnusedValues, getDisplayValue, getValueName, clearValue, clearValueIfInvisible, isAnswerCorrect, updateValueWithDefaults, getQuestionFromArray, value */ @JSImport("survey-knockout", "Question")
 @js.native
 class Question protected ()
   extends SurveyElement
@@ -32,6 +33,7 @@ class Question protected ()
   var commentText: String = js.native
   /**
     * The correct answer on the question. Set this value if you are doing a quiz.
+    * Please note, this property is hidden for question without input, for example html question.
     * @see SurveyModel.correctAnswers
     * @see SurveyModel.inCorrectAnswers
     */
@@ -58,10 +60,12 @@ class Question protected ()
   var customWidgetData: IsNeedRender = js.native
   /**
     * Set the default value to the question. It will be assign to the question on loading the survey from JSON or adding a question to the survey or on setting this property of the value is empty.
+    * Please note, this property is hidden for question without input, for example html question.
     */
   var defaultValue: js.Any = js.native
   /**
     * Question description. It renders under question title by using smaller font. Unlike the title, description can be empty.
+    * Please note, this property is hidden for questions without input, for example html question.
     * @see title
     */
   var description: String = js.native
@@ -75,6 +79,7 @@ class Question protected ()
   val displayValue: js.Any = js.native
   /**
     * An expression that returns true or false. If it returns false the Question becomes read only and an end-user will not able to answer on the qustion. The library runs the expression on survey start and on changing a question value. If the property is empty then readOnly property is used.
+    * Please note, this property is hidden for question without input, for example html question.
     * @see readOnly
     * @see isReadOnly
     */
@@ -93,9 +98,15 @@ class Question protected ()
   val hasDescriptionUnderTitle: Boolean = js.native
   /**
     * Returns false if the question doesn't have an input element, for example: QuestionHtmlModel
+    * @see hasSingleInput
     */
   val hasInput: Boolean = js.native
   var hasOther: Boolean = js.native
+  /**
+    * Returns false if the question doesn't have an input element or have multiple inputs: matrices or panel dynamic
+    * @see hasInput
+    */
+  val hasSingleInput: Boolean = js.native
   /**
     * Returns false if the question doesn't have a title property, for example: QuestionHtmlModel, or titleLocation property equals to "hidden"
     * @see titleLocation
@@ -135,6 +146,7 @@ class Question protected ()
   val isRequireTextOnStart: Boolean = js.native
   /**
     * Set this property to true, to make the question a required. If a user doesn't answer the question then a validation error will be generated.
+    * Please note, this property is hidden for question without input, for example html question.
     */
   var isRequired: Boolean = js.native
   val isRunningValidators: Boolean = js.native
@@ -145,6 +157,14 @@ class Question protected ()
   var locOwner: ILocalizableOwner = js.native
   val locRequiredErrorText: LocalizableString = js.native
   val locTitle: LocalizableString = js.native
+  /**
+    * Use it to set the specific maxWidth constraint to the question like css style (%, px, em etc).
+    */
+  var maxWidth: js.UndefOr[String] = js.native
+  /**
+    * Use it to set the specific minWidth constraint to the question like css style (%, px, em etc).
+    */
+  var minWidth: js.UndefOr[String] = js.native
   /**
     * The property returns the question number. If question is invisible then it returns empty string.
     * If visibleIndex is 1, then no is 2, or 'B' if survey.questionStartIndex is 'A'.
@@ -172,7 +192,6 @@ class Question protected ()
     * Returns the rendred question title.
     */
   val processedTitle: String = js.native
-  val questionTitlePattern: String = js.native
   /**
     * Returns questions count: 1 for the non-matrix questions and all inner visible questions that has input(s) widgets for question of matrix types.
     * @see getQuizQuestions
@@ -185,12 +204,14 @@ class Question protected ()
   val requireUpdateCommentValue: Boolean = js.native
   /**
     * The custom text that will be shown on required error. Use this property, if you do not want to show the default text.
+    * Please note, this property is hidden for question without input, for example html question.
     */
   var requiredErrorText: String = js.native
   /**
     * An expression that returns true or false. If it returns true the Question becomes required and an end-user has to answer it.
     * If it returns false the Question then an end-user may not answer it the Question maybe empty.
     * The library runs the expression on survey start and on changing a question value. If the property is empty then isRequired property is used.
+    * Please note, this property is hidden for question without input, for example html question.
     * @see isRequired
     */
   var requiredIf: String = js.native
@@ -214,17 +235,19 @@ class Question protected ()
   var title: String = js.native
   /**
     * Set this property different from "default" to set the specific question title location for this panel/page.
+    * Please note, this property is hidden for questions without input, for example html question.
     * @see SurveyModel.questionTitleLocation
     */
   var titleLocation: String = js.native
+  val titlePattern: String = js.native
   /**
     * Use it to choose how other question values will be rendered in title if referenced in {}.
+    * Please note, this property is hidden for question without input, for example html question.
     */
   var useDisplayValuesInTitle: Boolean = js.native
-  /* CompleteClass */
-  override var validatedValue: js.Any = js.native
   /**
     * The list of question validators.
+    * Please note, this property is hidden for question without input, for example html question.
     */
   var validators: js.Array[SurveyValidator] = js.native
   /**
@@ -238,6 +261,7 @@ class Question protected ()
     * Question name should be unique in the survey and valueName could be not unique. It allows to share data between several questions with the same valueName.
     * The library set the value automatically if the question.name property is not valid. For example, if it contains the period '.' symbol.
     * In this case if you set the question.name property to 'x.y' then the valueName becomes 'x y'.
+    * Please note, this property is hidden for questions without input, for example html question.
     * @see name
     */
   var valueName: String = js.native
@@ -319,6 +343,7 @@ class Question protected ()
   def getAllErrors(): js.Array[SurveyError] = js.native
   def getAllValues(): js.Any = js.native
   def getConditionJson(): js.Any = js.native
+  def getConditionJson(operator: js.UndefOr[scala.Nothing], path: String): js.Any = js.native
   def getConditionJson(operator: String): js.Any = js.native
   def getConditionJson(operator: String, path: String): js.Any = js.native
   /* protected */ def getCorrectAnswerCount(): Double = js.native
@@ -328,10 +353,6 @@ class Question protected ()
   /* protected */ def getCssRoot(cssClasses: js.Any): String = js.native
   /* protected */ def getCssTitle(cssClasses: js.Any): String = js.native
   /* protected */ def getCssType(): String = js.native
-  /* CompleteClass */
-  override def getDataFilteredProperties(): js.Any = js.native
-  /* CompleteClass */
-  override def getDataFilteredValues(): js.Any = js.native
   def getDefaultValue(): js.Any = js.native
   /**
     * Return the question value as a display text. For example, for dropdown, it would return the item text instead of item value.
@@ -341,17 +362,11 @@ class Question protected ()
   def getDisplayValue(keysAsText: Boolean): js.Any = js.native
   def getDisplayValue(keysAsText: Boolean, value: js.Any): js.Any = js.native
   /* protected */ def getDisplayValueCore(keyAsText: Boolean, value: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def getErrorCustomText(text: String, error: SurveyError): String = js.native
   /* protected */ def getFirstErrorInputElementId(): String = js.native
   /* protected */ def getFirstInputElementId(): String = js.native
   /* protected */ def getIsAnswered(): Boolean = js.native
   /* protected */ def getIsRunningValidators(): Boolean = js.native
   def getLayoutType(): String = js.native
-  /* CompleteClass */
-  override def getLocale(): String = js.native
-  /* CompleteClass */
-  override def getMarkdownHtml(text: String): String = js.native
   def getOthersMaxLength(): js.Any = js.native
   def getPanel(): IPanel = js.native
   /**
@@ -361,8 +376,6 @@ class Question protected ()
     */
   def getPlainData(): js.Any = js.native
   def getPlainData(options: IncludeEmpty): js.Any = js.native
-  /* CompleteClass */
-  override def getProcessedText(text: String): String = js.native
   /* protected */ def getProcessedTextValue(textValue: TextPreProcessorValue): Unit = js.native
   /* protected */ def getQuestionComment(): String = js.native
   def getQuestionFromArray(name: String, index: Double): IQuestion = js.native
@@ -379,10 +392,6 @@ class Question protected ()
   /* protected */ def getTitleLocationCore(): String = js.native
   /* InferMemberOverrides */
   override def getType(): String = js.native
-  /* CompleteClass */
-  override def getValidatorTitle(): String = js.native
-  /* CompleteClass */
-  override def getValidators(): js.Array[SurveyValidator] = js.native
   /* protected */ def getValueCore(): js.Any = js.native
   def getValueName(): String = js.native
   /**
@@ -390,6 +399,7 @@ class Question protected ()
     * @param fireCallback set it to true to show an error in UI.
     */
   def hasErrors(): Boolean = js.native
+  def hasErrors(fireCallback: js.UndefOr[scala.Nothing], rec: js.Any): Boolean = js.native
   def hasErrors(fireCallback: Boolean): Boolean = js.native
   def hasErrors(fireCallback: Boolean, rec: js.Any): Boolean = js.native
   /* protected */ def hasOtherChanged(): Unit = js.native
@@ -403,6 +413,7 @@ class Question protected ()
     */
   def isEmpty(): Boolean = js.native
   def isLayoutTypeSupported(layoutType: String): Boolean = js.native
+  def isReadOnlyRenderDiv(): Boolean = js.native
   /* protected */ def isTextValue(): Boolean = js.native
   /* InferMemberOverrides */
   override def locStrsChanged(): js.Any with Unit = js.native
@@ -435,8 +446,6 @@ class Question protected ()
     * @param error
     */
   def removeError(error: SurveyError): Unit = js.native
-  /* CompleteClass */
-  override def runCondition(values: HashTable[_], properties: HashTable[_]): js.Any = js.native
   /* protected */ def runValidators(): js.Array[SurveyError] = js.native
   /* protected */ def setCssContent(`val`: String): Unit = js.native
   /* protected */ def setCssError(`val`: String): Unit = js.native
@@ -453,6 +462,7 @@ class Question protected ()
   /* protected */ def setValueCore(newValue: js.Any): Unit = js.native
   def supportComment(): Boolean = js.native
   def supportGoNextPageAutomatic(): Boolean = js.native
+  def supportGoNextPageError(): Boolean = js.native
   def supportOther(): Boolean = js.native
   def surveyLoadCallback(): Unit = js.native
   def updateCommentFromSurvey(newValue: js.Any): js.Any = js.native

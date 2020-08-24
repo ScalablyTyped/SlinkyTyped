@@ -1,9 +1,10 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,7 +43,7 @@ trait IonLoading extends js.Object {
   /**
     * Optional text content to display in the loading indicator.
     */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String | IonicSafeString] = js.native
   /**
     * The mode determines which platform styles to use.
     */
@@ -66,16 +67,17 @@ trait IonLoading extends js.Object {
     * @param role The role of the element that is dismissing the loading. This can be useful in a button handler for determining which button was clicked to dismiss the loading. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
     */
   def dismiss(): js.Promise[Boolean] = js.native
+  def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   /**
     * Returns a promise that resolves when the loading did dismiss.
     */
-  def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+  def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
   /**
     * Returns a promise that resolves when the loading will dismiss.
     */
-  def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+  def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
   /**
     * Present the loading overlay after it has been created.
     */

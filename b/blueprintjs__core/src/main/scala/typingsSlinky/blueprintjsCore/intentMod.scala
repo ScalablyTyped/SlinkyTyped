@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@blueprintjs/core/lib/esm/common/intent", JSImport.Namespace)
 @js.native
 object intentMod extends js.Object {
-  /* Inlined {  NONE  :'none',   PRIMARY  :'primary',   SUCCESS  :'success',   WARNING  :'warning',   DANGER  :'danger'}[keyof {  NONE  :'none',   PRIMARY  :'primary',   SUCCESS  :'success',   WARNING  :'warning',   DANGER  :'danger'}] */
+  /* Inlined {  NONE :'none',   PRIMARY :'primary',   SUCCESS :'success',   WARNING :'warning',   DANGER :'danger'}[keyof {  NONE :'none',   PRIMARY :'primary',   SUCCESS :'success',   WARNING :'warning',   DANGER :'danger'}] */
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.warning
     - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.none
-    - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.danger
     - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.primary
+    - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.danger
+    - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.warning
     - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.success
   */
   trait Intent extends js.Object

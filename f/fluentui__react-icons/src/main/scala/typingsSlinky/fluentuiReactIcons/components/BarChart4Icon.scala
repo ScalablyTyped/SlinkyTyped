@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BarChart4Icon {
-  @JSImport("@fluentui/react-icons/lib/components/BarChart4Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BarChart4Icon")
   @js.native
   object component extends js.Object
   

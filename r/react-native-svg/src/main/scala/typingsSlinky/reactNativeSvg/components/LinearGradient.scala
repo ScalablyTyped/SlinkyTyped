@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeSvg.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSvg.mod.ColumnMajorTransformMatrix
+import typingsSlinky.reactNativeSvg.mod.LinearGradientCls
 import typingsSlinky.reactNativeSvg.mod.LinearGradientProps
 import typingsSlinky.reactNativeSvg.mod.NumberProp
 import typingsSlinky.reactNativeSvg.mod.Units
@@ -18,7 +19,7 @@ object LinearGradient {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.LinearGradient] {
+       with StBuildingComponent[tag.type, LinearGradientCls] {
     @scala.inline
     def gradientTransform(value: ColumnMajorTransformMatrix | String): this.type = set("gradientTransform", value.asInstanceOf[js.Any])
     @scala.inline

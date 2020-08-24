@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object phaser {
   type ArcadePhysicsCallback = js.Function2[
-    /* object1 */ typingsSlinky.phaser.Phaser.GameObjects.GameObject, 
-    /* object2 */ typingsSlinky.phaser.Phaser.GameObjects.GameObject, 
+    /* object1 */ typingsSlinky.phaser.Phaser.Types.Physics.Arcade.GameObjectWithBody, 
+    /* object2 */ typingsSlinky.phaser.Phaser.Types.Physics.Arcade.GameObjectWithBody, 
     scala.Unit
   ]
   type CameraRotateCallback = js.Function3[

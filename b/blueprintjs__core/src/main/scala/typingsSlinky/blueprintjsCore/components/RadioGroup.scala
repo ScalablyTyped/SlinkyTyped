@@ -32,6 +32,8 @@ object RadioGroup {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def optionsVarargs(value: IOptionProps*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: js.Array[IOptionProps]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def selectedValue(value: String | Double): this.type = set("selectedValue", value.asInstanceOf[js.Any])

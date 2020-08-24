@@ -1,6 +1,5 @@
 package typingsSlinky.blueprintjsCore.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -29,7 +28,7 @@ object FormGroup {
     @scala.inline
     def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
     @scala.inline
-    def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+    def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
     @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     @scala.inline
@@ -37,13 +36,13 @@ object FormGroup {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelFor(value: String): this.type = set("labelFor", value.asInstanceOf[js.Any])
     @scala.inline
     def labelInfoReactElement(value: ReactElement): this.type = set("labelInfo", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelInfo(value: TagMod[Any]): this.type = set("labelInfo", value.asInstanceOf[js.Any])
+    def labelInfo(value: ReactElement): this.type = set("labelInfo", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }

@@ -2,7 +2,6 @@ package typingsSlinky.reactMaterialUiFormValidator.components
 
 import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.`*`.tag
@@ -33,13 +32,15 @@ object SelectValidator {
     @scala.inline
     def dropDownMenuProps(value: DropDownMenuProps): this.type = set("dropDownMenuProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def errorMessagesVarargs(value: js.Any*): this.type = set("errorMessages", js.Array(value :_*))
+    @scala.inline
     def errorMessages(value: js.Array[_] | String): this.type = set("errorMessages", value.asInstanceOf[js.Any])
     @scala.inline
     def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
     def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,7 +48,7 @@ object SelectValidator {
     @scala.inline
     def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -55,7 +56,7 @@ object SelectValidator {
     @scala.inline
     def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -87,7 +88,7 @@ object SelectValidator {
     @scala.inline
     def selectedMenuItemStyle(value: CSSProperties): this.type = set("selectedMenuItemStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionRenderer(value: /* value */ js.Any => TagMod[Any]): this.type = set("selectionRenderer", js.Any.fromFunction1(value))
+    def selectionRenderer(value: /* value */ js.Any => ReactElement): this.type = set("selectionRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,6 +99,8 @@ object SelectValidator {
     def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def validatorListener(value: /* isValid */ Boolean => Unit): this.type = set("validatorListener", js.Any.fromFunction1(value))
+    @scala.inline
+    def validatorsVarargs(value: js.Any*): this.type = set("validators", js.Array(value :_*))
     @scala.inline
     def validators(value: js.Array[_]): this.type = set("validators", value.asInstanceOf[js.Any])
     @scala.inline

@@ -10,6 +10,7 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactWindow.anon.ColumnIndex
 import typingsSlinky.reactWindow.mod.CSSDirection
 import typingsSlinky.reactWindow.mod.FixedSizeGridProps
+import typingsSlinky.reactWindow.mod.GridChildComponentProps
 import typingsSlinky.reactWindow.mod.GridOnItemsRenderedProps
 import typingsSlinky.reactWindow.mod.GridOnScrollProps
 import typingsSlinky.reactWindow.mod.ReactElementType
@@ -93,6 +94,7 @@ object FixedSizeGrid {
   def withProps(p: FixedSizeGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
+    children: ReactComponentClass[GridChildComponentProps],
     columnCount: Double,
     columnWidth: Double,
     height: Double,
@@ -100,7 +102,7 @@ object FixedSizeGrid {
     rowHeight: Double,
     width: Double
   ): Builder = {
-    val __props = js.Dynamic.literal(columnCount = columnCount.asInstanceOf[js.Any], columnWidth = columnWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any], columnWidth = columnWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[FixedSizeGridProps]))
   }
 }

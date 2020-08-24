@@ -37,47 +37,24 @@ object ExpandableListPosition {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childPos")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFlatListPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatListPos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChildPos(value: Double): Self = this.set("childPos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetPackedPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPackedPosition")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setFlatListPos(value: Double): Self = this.set("flatListPos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGroupPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetPackedPosition(value: () => Double): Self = this.set("getPackedPosition", js.Any.fromFunction0(value))
     @scala.inline
-    def withRecycle(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycle")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGroupPos(value: Double): Self = this.set("groupPos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withResetState(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetState")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setRecycle(value: () => Unit): Self = this.set("recycle", js.Any.fromFunction0(value))
     @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setResetState(value: () => js.Any): Self = this.set("resetState", js.Any.fromFunction0(value))
+    @scala.inline
+    def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
   }
   
 }

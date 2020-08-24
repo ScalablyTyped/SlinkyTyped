@@ -18,6 +18,8 @@ object ReactHowler {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+    @scala.inline
     def format(value: js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
     @scala.inline
     def html5(value: Boolean): this.type = set("html5", value.asInstanceOf[js.Any])

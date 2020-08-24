@@ -1,0 +1,88 @@
+package typingsSlinky.tensorflowTfjsBackendWebgl
+
+import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
+import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.avg
+import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.max
+import typingsSlinky.tensorflowTfjsCore.convUtilMod.Conv2DInfo
+import typingsSlinky.tensorflowTfjsCore.convUtilMod.Conv3DInfo
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs-backend-webgl/dist/pool_gpu", JSImport.Namespace)
+@js.native
+object poolGpuMod extends js.Object {
+  @js.native
+  class Pool2DProgram protected () extends GPGPUProgram {
+    def this(convInfo: Conv2DInfo, poolType: avg, computePositions: Boolean) = this()
+    def this(convInfo: Conv2DInfo, poolType: max, computePositions: Boolean) = this()
+    def this(convInfo: Conv2DInfo, poolType: avg, computePositions: Boolean, flattenPositions: Boolean) = this()
+    def this(convInfo: Conv2DInfo, poolType: max, computePositions: Boolean, flattenPositions: Boolean) = this()
+    def this(
+      convInfo: Conv2DInfo,
+      poolType: avg,
+      computePositions: Boolean,
+      flattenPositions: js.UndefOr[scala.Nothing],
+      includeBatchInIndex: Boolean
+    ) = this()
+    def this(
+      convInfo: Conv2DInfo,
+      poolType: avg,
+      computePositions: Boolean,
+      flattenPositions: Boolean,
+      includeBatchInIndex: Boolean
+    ) = this()
+    def this(
+      convInfo: Conv2DInfo,
+      poolType: max,
+      computePositions: Boolean,
+      flattenPositions: js.UndefOr[scala.Nothing],
+      includeBatchInIndex: Boolean
+    ) = this()
+    def this(
+      convInfo: Conv2DInfo,
+      poolType: max,
+      computePositions: Boolean,
+      flattenPositions: Boolean,
+      includeBatchInIndex: Boolean
+    ) = this()
+  }
+  
+  @js.native
+  class Pool3DProgram protected () extends GPGPUProgram {
+    def this(convInfo: Conv3DInfo, poolType: avg, computePositions: Boolean) = this()
+    def this(convInfo: Conv3DInfo, poolType: max, computePositions: Boolean) = this()
+    def this(convInfo: Conv3DInfo, poolType: avg, computePositions: Boolean, flattenPositions: Boolean) = this()
+    def this(convInfo: Conv3DInfo, poolType: max, computePositions: Boolean, flattenPositions: Boolean) = this()
+    def this(
+      convInfo: Conv3DInfo,
+      poolType: avg,
+      computePositions: Boolean,
+      flattenPositions: js.UndefOr[scala.Nothing],
+      includeBatchInIndex: Boolean
+    ) = this()
+    def this(
+      convInfo: Conv3DInfo,
+      poolType: avg,
+      computePositions: Boolean,
+      flattenPositions: Boolean,
+      includeBatchInIndex: Boolean
+    ) = this()
+    def this(
+      convInfo: Conv3DInfo,
+      poolType: max,
+      computePositions: Boolean,
+      flattenPositions: js.UndefOr[scala.Nothing],
+      includeBatchInIndex: Boolean
+    ) = this()
+    def this(
+      convInfo: Conv3DInfo,
+      poolType: max,
+      computePositions: Boolean,
+      flattenPositions: Boolean,
+      includeBatchInIndex: Boolean
+    ) = this()
+  }
+  
+}
+

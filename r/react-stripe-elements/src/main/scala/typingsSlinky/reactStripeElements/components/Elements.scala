@@ -18,6 +18,8 @@ object Elements {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.Elements] {
     @scala.inline
+    def fontsVarargs(value: Font*): this.type = set("fonts", js.Array(value :_*))
+    @scala.inline
     def fonts(value: js.Array[Font]): this.type = set("fonts", value.asInstanceOf[js.Any])
     @scala.inline
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])

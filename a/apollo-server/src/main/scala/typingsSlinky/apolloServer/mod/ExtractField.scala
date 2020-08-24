@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServer.mod
 
-import typingsSlinky.graphqlTools.anon.From
+import typingsSlinky.graphqlToolsWrap.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

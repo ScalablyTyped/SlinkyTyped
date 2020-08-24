@@ -72,41 +72,22 @@ object TypeofinstanceID {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeleteID(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteID")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDeleteToken(value: (DeleteTokenParams, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteToken")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setDeleteID(value: js.Function0[Unit] => Unit): Self = this.set("deleteID", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetCreationTime(value: js.Function1[/* creationTime */ integer, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCreationTime")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDeleteToken(value: (DeleteTokenParams, js.Function0[Unit]) => Unit): Self = this.set("deleteToken", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetID(value: js.Function1[/* instanceId */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getID")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetCreationTime(value: js.Function1[/* creationTime */ integer, Unit] => Unit): Self = this.set("getCreationTime", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetToken(value: (TokenParams, js.Function1[/* token */ String, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getToken")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetID(value: js.Function1[/* instanceId */ String, Unit] => Unit): Self = this.set("getID", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnTokenRefresh(value: Event[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTokenRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetToken(value: (TokenParams, js.Function1[/* token */ String, Unit]) => Unit): Self = this.set("getToken", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnTokenRefresh(value: Event[js.Function0[Unit]]): Self = this.set("onTokenRefresh", value.asInstanceOf[js.Any])
   }
   
 }

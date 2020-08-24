@@ -7,46 +7,67 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CustomOriginConfig extends js.Object {
   /**
-    * The HTTP port the custom origin listens on.
+    * The HTTP port that CloudFront uses to connect to the origin. Specify the HTTP port that the origin listens on.
     */
   var HTTPPort: integer = js.native
   /**
-    * The HTTPS port the custom origin listens on.
+    * The HTTPS port that CloudFront uses to connect to the origin. Specify the HTTPS port that the origin listens on.
     */
   var HTTPSPort: integer = js.native
   /**
-    * You can create a custom keep-alive timeout. All timeout units are in seconds. The default keep-alive timeout is 5 seconds, but you can configure custom timeout lengths using the CloudFront API. The minimum timeout length is 1 second; the maximum is 60 seconds. If you need to increase the maximum time limit, contact the AWS Support Center.
+    * Specifies how long, in seconds, CloudFront persists its connection to the origin. The minimum timeout is 1 second, the maximum is 60 seconds, and the default (if you don’t specify otherwise) is 5 seconds. For more information, see Origin Keep-alive Timeout in the Amazon CloudFront Developer Guide.
     */
   var OriginKeepaliveTimeout: js.UndefOr[integer] = js.native
   /**
-    * The origin protocol policy to apply to your origin.
+    * Specifies the protocol (HTTP or HTTPS) that CloudFront uses to connect to the origin. Valid values are:    http-only – CloudFront always uses HTTP to connect to the origin.    match-viewer – CloudFront connects to the origin using the same protocol that the viewer used to connect to CloudFront.    https-only – CloudFront always uses HTTPS to connect to the origin.  
     */
   var OriginProtocolPolicy: typingsSlinky.awsSdk.cloudfrontMod.OriginProtocolPolicy = js.native
   /**
-    * You can create a custom origin read timeout. All timeout units are in seconds. The default origin read timeout is 30 seconds, but you can configure custom timeout lengths using the CloudFront API. The minimum timeout length is 4 seconds; the maximum is 60 seconds. If you need to increase the maximum time limit, contact the AWS Support Center.
+    * Specifies how long, in seconds, CloudFront waits for a response from the origin. This is also known as the origin response timeout. The minimum timeout is 1 second, the maximum is 60 seconds, and the default (if you don’t specify otherwise) is 30 seconds. For more information, see Origin Response Timeout in the Amazon CloudFront Developer Guide.
     */
   var OriginReadTimeout: js.UndefOr[integer] = js.native
   /**
-    * The SSL/TLS protocols that you want CloudFront to use when communicating with your origin over HTTPS.
+    * Specifies the minimum SSL/TLS protocol that CloudFront uses when connecting to your origin over HTTPS. Valid values include SSLv3, TLSv1, TLSv1.1, and TLSv1.2. For more information, see Minimum Origin SSL Protocol in the Amazon CloudFront Developer Guide.
     */
   var OriginSslProtocols: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.OriginSslProtocols] = js.native
 }
 
 object CustomOriginConfig {
   @scala.inline
-  def apply(
-    HTTPPort: integer,
-    HTTPSPort: integer,
-    OriginProtocolPolicy: OriginProtocolPolicy,
-    OriginKeepaliveTimeout: js.UndefOr[integer] = js.undefined,
-    OriginReadTimeout: js.UndefOr[integer] = js.undefined,
-    OriginSslProtocols: OriginSslProtocols = null
-  ): CustomOriginConfig = {
+  def apply(HTTPPort: integer, HTTPSPort: integer, OriginProtocolPolicy: OriginProtocolPolicy): CustomOriginConfig = {
     val __obj = js.Dynamic.literal(HTTPPort = HTTPPort.asInstanceOf[js.Any], HTTPSPort = HTTPSPort.asInstanceOf[js.Any], OriginProtocolPolicy = OriginProtocolPolicy.asInstanceOf[js.Any])
-    if (!js.isUndefined(OriginKeepaliveTimeout)) __obj.updateDynamic("OriginKeepaliveTimeout")(OriginKeepaliveTimeout.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(OriginReadTimeout)) __obj.updateDynamic("OriginReadTimeout")(OriginReadTimeout.get.asInstanceOf[js.Any])
-    if (OriginSslProtocols != null) __obj.updateDynamic("OriginSslProtocols")(OriginSslProtocols.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomOriginConfig]
   }
+  @scala.inline
+  implicit class CustomOriginConfigOps[Self <: CustomOriginConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHTTPPort(value: integer): Self = this.set("HTTPPort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHTTPSPort(value: integer): Self = this.set("HTTPSPort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOriginProtocolPolicy(value: OriginProtocolPolicy): Self = this.set("OriginProtocolPolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOriginKeepaliveTimeout(value: integer): Self = this.set("OriginKeepaliveTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginKeepaliveTimeout: Self = this.set("OriginKeepaliveTimeout", js.undefined)
+    @scala.inline
+    def setOriginReadTimeout(value: integer): Self = this.set("OriginReadTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginReadTimeout: Self = this.set("OriginReadTimeout", js.undefined)
+    @scala.inline
+    def setOriginSslProtocols(value: OriginSslProtocols): Self = this.set("OriginSslProtocols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginSslProtocols: Self = this.set("OriginSslProtocols", js.undefined)
+  }
+  
 }
 

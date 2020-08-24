@@ -67,7 +67,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +79,7 @@ object IonSelectPopover {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonSelectPopoverElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -203,6 +202,8 @@ object IonSelectPopover {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -555,6 +556,8 @@ object IonSelectPopover {
     def onWheel(value: SyntheticWheelEvent[HTMLIonSelectPopoverElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
     def onWheelCapture(value: js.Any): this.type = set("onWheelCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionsVarargs(value: SelectPopoverOption*): this.type = set("options", js.Array(value :_*))
     @scala.inline
     def options(value: js.Array[SelectPopoverOption]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline

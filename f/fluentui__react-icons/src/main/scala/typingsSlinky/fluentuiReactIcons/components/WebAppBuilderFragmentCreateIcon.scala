@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WebAppBuilderFragmentCreateIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WebAppBuilderFragmentCreateIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WebAppBuilderFragmentCreateIcon")
   @js.native
   object component extends js.Object
   

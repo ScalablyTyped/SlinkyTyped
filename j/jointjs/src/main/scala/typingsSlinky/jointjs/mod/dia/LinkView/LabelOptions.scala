@@ -27,65 +27,30 @@ object LabelOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbsoluteDistance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteDistance")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAbsoluteDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteDistance")(js.undefined)
-        ret
-    }
+    def setAbsoluteDistance(value: Boolean): Self = this.set("absoluteDistance", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAbsoluteOffset(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAbsoluteDistance: Self = this.set("absoluteDistance", js.undefined)
     @scala.inline
-    def withoutAbsoluteOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteOffset")(js.undefined)
-        ret
-    }
+    def setAbsoluteOffset(value: Boolean): Self = this.set("absoluteOffset", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEnsureLegibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ensureLegibility")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAbsoluteOffset: Self = this.set("absoluteOffset", js.undefined)
     @scala.inline
-    def withoutEnsureLegibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ensureLegibility")(js.undefined)
-        ret
-    }
+    def setEnsureLegibility(value: Boolean): Self = this.set("ensureLegibility", value.asInstanceOf[js.Any])
     @scala.inline
-    def withKeepGradient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEnsureLegibility: Self = this.set("ensureLegibility", js.undefined)
     @scala.inline
-    def withoutKeepGradient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepGradient")(js.undefined)
-        ret
-    }
+    def setKeepGradient(value: Boolean): Self = this.set("keepGradient", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReverseDistance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteKeepGradient: Self = this.set("keepGradient", js.undefined)
     @scala.inline
-    def withoutReverseDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseDistance")(js.undefined)
-        ret
-    }
+    def setReverseDistance(value: Boolean): Self = this.set("reverseDistance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReverseDistance: Self = this.set("reverseDistance", js.undefined)
   }
   
 }

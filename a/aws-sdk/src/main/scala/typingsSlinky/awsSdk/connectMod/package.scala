@@ -421,6 +421,13 @@ package object connectMod {
   type UserSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.UserSummary]
   type Value = scala.Double
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FROM_AGENT
+    - typingsSlinky.awsSdk.awsSdkStrings.TO_AGENT
+    - typingsSlinky.awsSdk.awsSdkStrings.ALL
+    - java.lang.String
+  */
+  type VoiceRecordingTrack = typingsSlinky.awsSdk.connectMod._VoiceRecordingTrack | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-08-08`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_
     - java.lang.String

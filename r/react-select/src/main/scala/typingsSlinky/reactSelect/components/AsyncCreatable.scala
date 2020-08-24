@@ -3,7 +3,6 @@ package typingsSlinky.reactSelect.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -25,7 +24,6 @@ import typingsSlinky.reactSelect.typesMod.GroupedOptionsType
 import typingsSlinky.reactSelect.typesMod.InputActionMeta
 import typingsSlinky.reactSelect.typesMod.MenuPlacement
 import typingsSlinky.reactSelect.typesMod.MenuPosition
-import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
@@ -40,9 +38,9 @@ object AsyncCreatable {
   object component extends js.Object
   
   @scala.inline
-  class Builder[OptionType <: OptionTypeBase] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */ OptionType] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[OptionType]] {
     @scala.inline
     def allowCreateWhileLoading(value: Boolean): this.type = set("allowCreateWhileLoading", value.asInstanceOf[js.Any])
     @scala.inline
@@ -82,7 +80,11 @@ object AsyncCreatable {
     @scala.inline
     def defaultMenuIsOpen(value: Boolean): this.type = set("defaultMenuIsOpen", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultOptionsVarargs(value: OptionType*): this.type = set("defaultOptions", js.Array(value :_*))
+    @scala.inline
     def defaultOptions(value: OptionsType[OptionType] | Boolean): this.type = set("defaultOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: OptionType*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: ValueType[OptionType]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,13 +100,13 @@ object AsyncCreatable {
     @scala.inline
     def filterOptionNull: this.type = set("filterOption", null)
     @scala.inline
-    def formatCreateLabel(value: /* inputValue */ String => TagMod[Any]): this.type = set("formatCreateLabel", js.Any.fromFunction1(value))
+    def formatCreateLabel(value: /* inputValue */ String => ReactElement): this.type = set("formatCreateLabel", js.Any.fromFunction1(value))
     @scala.inline
-    def formatGroupLabel(value: /* group */ GroupType[OptionType] => TagMod[Any]): this.type = set("formatGroupLabel", js.Any.fromFunction1(value))
+    def formatGroupLabel(value: /* group */ GroupType[OptionType] => ReactElement): this.type = set("formatGroupLabel", js.Any.fromFunction1(value))
     @scala.inline
-    def formatOptionLabel(value: (OptionType, /* labelMeta */ FormatOptionLabelMeta[OptionType]) => TagMod[Any]): this.type = set("formatOptionLabel", js.Any.fromFunction2(value))
+    def formatOptionLabel(value: (OptionType, /* labelMeta */ FormatOptionLabelMeta[OptionType]) => ReactElement): this.type = set("formatOptionLabel", js.Any.fromFunction2(value))
     @scala.inline
-    def getNewOptionData(value: (/* inputValue */ String, /* optionLabel */ TagMod[Any]) => OptionType): this.type = set("getNewOptionData", js.Any.fromFunction2(value))
+    def getNewOptionData(value: (/* inputValue */ String, /* optionLabel */ ReactElement) => OptionType): this.type = set("getNewOptionData", js.Any.fromFunction2(value))
     @scala.inline
     def getOptionLabel(value: OptionType => String): this.type = set("getOptionLabel", js.Any.fromFunction1(value))
     @scala.inline
@@ -188,13 +190,15 @@ object AsyncCreatable {
     @scala.inline
     def openMenuOnFocus(value: Boolean): this.type = set("openMenuOnFocus", value.asInstanceOf[js.Any])
     @scala.inline
+    def optionsVarargs(value: (GroupType[OptionType] | OptionType)*): this.type = set("options", js.Array(value :_*))
+    @scala.inline
     def options(value: GroupedOptionsType[OptionType] | OptionsType[OptionType]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def screenReaderStatus(value: /* obj */ Count => String): this.type = set("screenReaderStatus", js.Any.fromFunction1(value))
     @scala.inline
@@ -210,14 +214,16 @@ object AsyncCreatable {
     @scala.inline
     def theme(value: ThemeConfig): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: OptionType*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: ValueType[OptionType]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def valueNull: this.type = set("value", null)
   }
   
-  def withProps[OptionType <: OptionTypeBase](p: Props[OptionType]): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */ OptionType](p: Props[OptionType]): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[OptionType <: OptionTypeBase](
+  def apply[/* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */ OptionType](
     loadOptions: (String, js.Function1[/* options */ OptionsType[OptionType], Unit]) => js.Promise[_] | Unit
   ): Builder[OptionType] = {
     val __props = js.Dynamic.literal(loadOptions = js.Any.fromFunction2(loadOptions))

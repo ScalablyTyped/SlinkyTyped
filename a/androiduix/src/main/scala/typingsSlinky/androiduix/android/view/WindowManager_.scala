@@ -35,41 +35,22 @@ object WindowManager_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddWindow(value: Window => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addWindow")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetWindowsLayout(value: () => ViewGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWindowsLayout")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddWindow(value: Window => Unit): Self = this.set("addWindow", js.Any.fromFunction1(value))
     @scala.inline
-    def withMActiveWindow(value: Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActiveWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetWindowsLayout(value: () => ViewGroup): Self = this.set("getWindowsLayout", js.Any.fromFunction0(value))
     @scala.inline
-    def withMWindowsLayout(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mWindowsLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActiveWindow(value: Window): Self = this.set("mActiveWindow", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveWindow(value: Window => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWindow")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMWindowsLayout(value: js.Any): Self = this.set("mWindowsLayout", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUpdateWindowLayout(value: (Window, LayoutParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWindowLayout")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setRemoveWindow(value: Window => Unit): Self = this.set("removeWindow", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUpdateWindowLayout(value: (Window, LayoutParams) => Unit): Self = this.set("updateWindowLayout", js.Any.fromFunction2(value))
   }
   
 }

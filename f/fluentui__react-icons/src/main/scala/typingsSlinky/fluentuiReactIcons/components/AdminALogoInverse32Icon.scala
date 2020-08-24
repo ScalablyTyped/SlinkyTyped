@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AdminALogoInverse32Icon {
-  @JSImport("@fluentui/react-icons/lib/components/AdminALogoInverse32Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AdminALogoInverse32Icon")
   @js.native
   object component extends js.Object
   

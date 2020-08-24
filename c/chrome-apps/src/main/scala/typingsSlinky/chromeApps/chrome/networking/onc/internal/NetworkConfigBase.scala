@@ -54,150 +54,67 @@ trait NetworkConfigBase[M /* <: ManagedObject */, IF /* <: InterfaceType */, OF 
 
 object NetworkConfigBase {
   @scala.inline
-  def apply[M, IF, OF](): NetworkConfigBase[M, IF, OF] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, /* <: typingsSlinky.chromeApps.chrome.networking.onc.InterfaceType */ IF, /* <: typingsSlinky.chromeApps.chrome.networking.onc.internal.ObjectFunction */ OF](): NetworkConfigBase[M, IF, OF] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[NetworkConfigBase[M, IF, OF]]
   }
   @scala.inline
-  implicit class NetworkConfigBaseOps[Self[m, `if`, of] <: NetworkConfigBase[m, `if`, of], M, IF, OF] (val x: Self[M, IF, OF]) extends AnyVal {
+  implicit class NetworkConfigBaseOps[Self <: NetworkConfigBase[_, _, _], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, /* <: typingsSlinky.chromeApps.chrome.networking.onc.InterfaceType */ IF, /* <: typingsSlinky.chromeApps.chrome.networking.onc.internal.ObjectFunction */ OF] (val x: Self with (NetworkConfigBase[M, IF, OF])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, IF, OF] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, IF, OF]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, IF, OF]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, IF, OF]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCellular(value: CellularProperties[M] | CellularBase): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cellular")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutCellular: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cellular")(js.undefined)
-        ret
-    }
+    def setCellular(value: CellularProperties[M] | CellularBase): Self = this.set("Cellular", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEthernet(value: EthernetProperties[M] | Authentication): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ethernet")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCellular: Self = this.set("Cellular", js.undefined)
     @scala.inline
-    def withoutEthernet: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ethernet")(js.undefined)
-        ret
-    }
+    def setEthernet(value: EthernetProperties[M] | Authentication): Self = this.set("Ethernet", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGUID(value: String): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEthernet: Self = this.set("Ethernet", js.undefined)
     @scala.inline
-    def withoutGUID: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(js.undefined)
-        ret
-    }
+    def setGUID(value: String): Self = this.set("GUID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIPAddressConfigType(value: IPConfigType | ManagedIPConfigType): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddressConfigType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGUID: Self = this.set("GUID", js.undefined)
     @scala.inline
-    def withoutIPAddressConfigType: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddressConfigType")(js.undefined)
-        ret
-    }
+    def setIPAddressConfigType(value: IPConfigType | ManagedIPConfigType): Self = this.set("IPAddressConfigType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String | ManagedDOMString): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIPAddressConfigType: Self = this.set("IPAddressConfigType", js.undefined)
     @scala.inline
-    def withoutName: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
+    def setName(value: String | ManagedDOMString): Self = this.set("Name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNameServersConfigType(value: IPConfigType | ManagedIPConfigType): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServersConfigType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteName: Self = this.set("Name", js.undefined)
     @scala.inline
-    def withoutNameServersConfigType: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServersConfigType")(js.undefined)
-        ret
-    }
+    def setNameServersConfigType(value: IPConfigType | ManagedIPConfigType): Self = this.set("NameServersConfigType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPriority(value: integer | ManagedLong): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteNameServersConfigType: Self = this.set("NameServersConfigType", js.undefined)
     @scala.inline
-    def withoutPriority: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
-        ret
-    }
+    def setPriority(value: integer | ManagedLong): Self = this.set("Priority", value.asInstanceOf[js.Any])
     @scala.inline
-    def withType(value: NetworkType): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePriority: Self = this.set("Priority", js.undefined)
     @scala.inline
-    def withoutType: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
+    def setType(value: NetworkType): Self = this.set("Type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVPN(value: (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | Type): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VPN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteType: Self = this.set("Type", js.undefined)
     @scala.inline
-    def withoutVPN: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VPN")(js.undefined)
-        ret
-    }
+    def setVPN(value: (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | Type): Self = this.set("VPN", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWiFi(
+    def deleteVPN: Self = this.set("VPN", js.undefined)
+    @scala.inline
+    def setWiFi(
       value: (WiFiProperties[M, OF, Boolean | ManagedBoolean, String | ManagedDOMString, integer | ManagedLong]) | (WiFiPropertiesBase[unmanaged, String | ManagedDOMString])
-    ): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WiFi")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("WiFi", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutWiFi: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WiFi")(js.undefined)
-        ret
-    }
+    def deleteWiFi: Self = this.set("WiFi", js.undefined)
     @scala.inline
-    def withWiMAX(value: (WiMAXProperties[M, Boolean | ManagedBoolean]) | SignalStrength): Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WiMAX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWiMAX(value: (WiMAXProperties[M, Boolean | ManagedBoolean]) | SignalStrength): Self = this.set("WiMAX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutWiMAX: Self[M, IF, OF] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WiMAX")(js.undefined)
-        ret
-    }
+    def deleteWiMAX: Self = this.set("WiMAX", js.undefined)
   }
   
 }

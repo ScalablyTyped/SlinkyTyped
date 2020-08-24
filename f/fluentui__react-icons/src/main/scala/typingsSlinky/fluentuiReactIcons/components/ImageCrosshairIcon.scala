@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ImageCrosshairIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ImageCrosshairIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ImageCrosshairIcon")
   @js.native
   object component extends js.Object
   

@@ -27,65 +27,30 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHandleClass(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClass")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutHandleClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClass")(js.undefined)
-        ret
-    }
+    def setHandleClass(value: js.Any): Self = this.set("handleClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRedundancyRemoval(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redundancyRemoval")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHandleClass: Self = this.set("handleClass", js.undefined)
     @scala.inline
-    def withoutRedundancyRemoval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redundancyRemoval")(js.undefined)
-        ret
-    }
+    def setRedundancyRemoval(value: Boolean): Self = this.set("redundancyRemoval", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSnapRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRedundancyRemoval: Self = this.set("redundancyRemoval", js.undefined)
     @scala.inline
-    def withoutSnapRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapRadius")(js.undefined)
-        ret
-    }
+    def setSnapRadius(value: Double): Self = this.set("snapRadius", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStopPropagation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSnapRadius: Self = this.set("snapRadius", js.undefined)
     @scala.inline
-    def withoutStopPropagation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.undefined)
-        ret
-    }
+    def setStopPropagation(value: Boolean): Self = this.set("stopPropagation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVertexAdding(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexAdding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStopPropagation: Self = this.set("stopPropagation", js.undefined)
     @scala.inline
-    def withoutVertexAdding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexAdding")(js.undefined)
-        ret
-    }
+    def setVertexAdding(value: Boolean): Self = this.set("vertexAdding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVertexAdding: Self = this.set("vertexAdding", js.undefined)
   }
   
 }

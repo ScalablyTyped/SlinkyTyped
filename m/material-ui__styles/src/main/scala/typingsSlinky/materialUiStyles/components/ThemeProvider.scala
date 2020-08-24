@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ThemeProvider {
-  @JSImport("@material-ui/styles/ThemeProvider/ThemeProvider", JSImport.Default)
+  @JSImport("@material-ui/styles", "ThemeProvider")
   @js.native
   object component extends js.Object
   

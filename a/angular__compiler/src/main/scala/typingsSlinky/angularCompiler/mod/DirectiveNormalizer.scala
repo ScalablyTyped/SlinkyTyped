@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "DirectiveNormalizer")
 @js.native
 class DirectiveNormalizer protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.DirectiveNormalizer {
+  extends typingsSlinky.angularCompiler.compilerMod.DirectiveNormalizer {
   def this(
     _resourceLoader: typingsSlinky.angularCompiler.resourceLoaderMod.ResourceLoader,
     _urlResolver: typingsSlinky.angularCompiler.urlResolverMod.UrlResolver,

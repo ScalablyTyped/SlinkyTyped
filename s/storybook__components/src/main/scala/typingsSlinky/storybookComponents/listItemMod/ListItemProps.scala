@@ -1,7 +1,7 @@
 package typingsSlinky.storybookComponents.listItemMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,42 +10,82 @@ import scala.scalajs.js.annotation._
 trait ListItemProps extends js.Object {
   var LinkWrapper: js.UndefOr[ReactComponentClass[js.Object]] = js.native
   var active: js.UndefOr[Boolean] = js.native
-  var center: js.UndefOr[TagMod[Any]] = js.native
+  var center: js.UndefOr[ReactElement] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var href: js.UndefOr[String | js.Object] = js.native
-  var left: js.UndefOr[TagMod[Any]] = js.native
+  var left: js.UndefOr[ReactElement] = js.native
   var loading: js.UndefOr[Boolean] = js.native
   var onClick: js.UndefOr[js.Function0[Unit]] = js.native
-  var right: js.UndefOr[TagMod[Any]] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
+  var right: js.UndefOr[ReactElement] = js.native
+  var title: js.UndefOr[ReactElement] = js.native
 }
 
 object ListItemProps {
   @scala.inline
-  def apply(
-    LinkWrapper: ReactComponentClass[js.Object] = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    center: TagMod[Any] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    href: String | js.Object = null,
-    left: TagMod[Any] = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    onClick: () => Unit = null,
-    right: TagMod[Any] = null,
-    title: TagMod[Any] = null
-  ): ListItemProps = {
+  def apply(): ListItemProps = {
     val __obj = js.Dynamic.literal()
-    if (LinkWrapper != null) __obj.updateDynamic("LinkWrapper")(LinkWrapper.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemProps]
   }
+  @scala.inline
+  implicit class ListItemPropsOps[Self <: ListItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLinkWrapper(value: ReactComponentClass[js.Object]): Self = this.set("LinkWrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLinkWrapper: Self = this.set("LinkWrapper", js.undefined)
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setCenterReactElement(value: ReactElement): Self = this.set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCenter(value: ReactElement): Self = this.set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCenter: Self = this.set("center", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setHref(value: String | js.Object): Self = this.set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHref: Self = this.set("href", js.undefined)
+    @scala.inline
+    def setLeftReactElement(value: ReactElement): Self = this.set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLeft(value: ReactElement): Self = this.set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLeft: Self = this.set("left", js.undefined)
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    @scala.inline
+    def setOnClick(value: () => Unit): Self = this.set("onClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setRightReactElement(value: ReactElement): Self = this.set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRight(value: ReactElement): Self = this.set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRight: Self = this.set("right", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

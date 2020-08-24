@@ -1,0 +1,13 @@
+package typingsSlinky.reactGa.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-ga", "addTrackers")
+@js.native
+object addTrackers extends js.Object {
+  def apply(trackers: js.Array[Tracker]): Unit = js.native
+  def apply(trackingCode: String): Unit = js.native
+}
+

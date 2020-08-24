@@ -26,17 +26,16 @@ object LanguageDetectionResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIsReliable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReliable")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withLanguages(value: js.Array[DetectedLanguage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsReliable(value: Boolean): Self = this.set("isReliable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLanguagesVarargs(value: DetectedLanguage*): Self = this.set("languages", js.Array(value :_*))
+    @scala.inline
+    def setLanguages(value: js.Array[DetectedLanguage]): Self = this.set("languages", value.asInstanceOf[js.Any])
   }
   
 }

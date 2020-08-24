@@ -12,34 +12,27 @@ trait GenericRouterJSON[K /* <: RouterType */] extends js.Object {
 
 object GenericRouterJSON {
   @scala.inline
-  def apply[K](name: K): GenericRouterJSON[K] = {
+  def apply[/* <: typingsSlinky.jointjs.mod.routers.RouterType */ K](name: K): GenericRouterJSON[K] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenericRouterJSON[K]]
   }
   @scala.inline
-  implicit class GenericRouterJSONOps[Self[k] <: GenericRouterJSON[k], K] (val x: Self[K]) extends AnyVal {
+  implicit class GenericRouterJSONOps[Self <: GenericRouterJSON[_], /* <: typingsSlinky.jointjs.mod.routers.RouterType */ K] (val x: Self with GenericRouterJSON[K]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[K] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[K] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[K] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withName(value: K): Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withArgs(value: GenericRouterArguments[K]): Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: K): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutArgs: Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
+    def setArgs(value: GenericRouterArguments[K]): Self = this.set("args", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArgs: Self = this.set("args", js.undefined)
   }
   
 }

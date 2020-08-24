@@ -3,20 +3,19 @@ package typingsSlinky.fundamentalReact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.formRadioGroupMod.FormRadioGroupProps
-import typingsSlinky.fundamentalReact.formRadioGroupMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormRadioGroup {
-  @JSImport("fundamental-react/lib/Forms/FormRadioGroup", JSImport.Default)
+  @JSImport("fundamental-react", "FormRadioGroup")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.FormRadioGroup] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

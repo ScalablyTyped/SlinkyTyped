@@ -1,0 +1,17 @@
+package typingsSlinky.angularCommon
+
+import typingsSlinky.angularCommon.anon.IDRJPY
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/common/locales/jv", JSImport.Namespace)
+@js.native
+object localesJvMod extends js.Object {
+  val default: js.Array[
+    js.UndefOr[
+      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | IDRJPY
+    ]
+  ] = js.native
+}
+

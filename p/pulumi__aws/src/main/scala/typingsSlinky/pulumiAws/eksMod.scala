@@ -63,10 +63,10 @@ object eksMod extends js.Object {
     def this(name: String, args: NodeGroupArgs, opts: CustomResourceOptions) = this()
   }
   
-  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] with GetClusterResult = js.native
-  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] with GetClusterResult = js.native
-  def getClusterAuth(args: GetClusterAuthArgs): js.Promise[GetClusterAuthResult] with GetClusterAuthResult = js.native
-  def getClusterAuth(args: GetClusterAuthArgs, opts: InvokeOptions): js.Promise[GetClusterAuthResult] with GetClusterAuthResult = js.native
+  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
+  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
+  def getClusterAuth(args: GetClusterAuthArgs): js.Promise[GetClusterAuthResult] = js.native
+  def getClusterAuth(args: GetClusterAuthArgs, opts: InvokeOptions): js.Promise[GetClusterAuthResult] = js.native
   /* static members */
   @js.native
   object Cluster extends js.Object {
@@ -77,8 +77,10 @@ object eksMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.eksClusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.eksClusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.eksClusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.eksClusterMod.Cluster = js.native
     /**
@@ -98,8 +100,10 @@ object eksMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.fargateProfileMod.FargateProfile = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.fargateProfileMod.FargateProfile = js.native
     def get(name: String, id: Input[ID], state: FargateProfileState): typingsSlinky.pulumiAws.fargateProfileMod.FargateProfile = js.native
     def get(name: String, id: Input[ID], state: FargateProfileState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.fargateProfileMod.FargateProfile = js.native
     /**
@@ -119,8 +123,10 @@ object eksMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.nodeGroupMod.NodeGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.nodeGroupMod.NodeGroup = js.native
     def get(name: String, id: Input[ID], state: NodeGroupState): typingsSlinky.pulumiAws.nodeGroupMod.NodeGroup = js.native
     def get(name: String, id: Input[ID], state: NodeGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.nodeGroupMod.NodeGroup = js.native
     /**

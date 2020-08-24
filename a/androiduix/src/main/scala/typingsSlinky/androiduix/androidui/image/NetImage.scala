@@ -39,6 +39,7 @@ trait NetImage extends js.Object {
   /* protected */ def loadImage(): Unit = js.native
   def recycle(): Unit = js.native
   def removeLoadListener(): Unit = js.native
+  def removeLoadListener(onload: js.UndefOr[scala.Nothing], onerror: js.Function0[Unit]): Unit = js.native
   def removeLoadListener(onload: js.Function0[Unit]): Unit = js.native
   def removeLoadListener(onload: js.Function0[Unit], onerror: js.Function0[Unit]): Unit = js.native
 }

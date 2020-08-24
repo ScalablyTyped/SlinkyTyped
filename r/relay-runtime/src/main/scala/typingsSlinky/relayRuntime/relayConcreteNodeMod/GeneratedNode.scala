@@ -1,7 +1,5 @@
 package typingsSlinky.relayRuntime.relayConcreteNodeMod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.relayRuntime.anon.Connection
 import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationOperation
 import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationSelection
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderArgumentDefinition
@@ -37,12 +35,10 @@ object GeneratedNode {
     kind: String,
     name: String,
     selections: js.Array[ReaderSelection],
-    `type`: String,
-    metadata: js.UndefOr[Null | Connection] = js.undefined
+    `type`: String
   ): GeneratedNode = {
     val __obj = js.Dynamic.literal(argumentDefinitions = argumentDefinitions.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(metadata)) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneratedNode]
   }
   @scala.inline
@@ -51,14 +47,8 @@ object GeneratedNode {
     __obj.asInstanceOf[GeneratedNode]
   }
   @scala.inline
-  def NormalizationSplitOperation(
-    kind: String,
-    name: String,
-    selections: js.Array[NormalizationSelection],
-    metadata: js.UndefOr[Null | StringDictionary[js.Any]] = js.undefined
-  ): GeneratedNode = {
+  def NormalizationSplitOperation(kind: String, name: String, selections: js.Array[NormalizationSelection]): GeneratedNode = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (!js.isUndefined(metadata)) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneratedNode]
   }
 }

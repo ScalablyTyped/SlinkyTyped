@@ -29,6 +29,7 @@ trait MotionEvent extends js.Object {
   def getHistoricalEventTime(pointerIndex: Double, pos: Double): Double = js.native
   def getHistoricalEventTime(pos: Double): Double = js.native
   def getHistoricalTouchMajor(): Double = js.native
+  def getHistoricalTouchMajor(pointerIndex: js.UndefOr[scala.Nothing], pos: Double): Double = js.native
   def getHistoricalTouchMajor(pointerIndex: Double): Double = js.native
   def getHistoricalTouchMajor(pointerIndex: Double, pos: Double): Double = js.native
   def getHistoricalX(pointerIndex: Double, pos: Double): Double = js.native

@@ -2,7 +2,7 @@ package typingsSlinky.reactAutocomplete.mod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.HTMLProps
@@ -81,7 +81,7 @@ trait Props extends js.Object {
     * apply `props.ref` and all `props.on<event>` event handlers. Failing to do
     * this will cause `Autocomplete` to behave unexpectedly.
     */
-  var renderInput: js.UndefOr[js.Function1[/* props */ HTMLProps[HTMLInputElement], TagMod[Any]]] = js.native
+  var renderInput: js.UndefOr[js.Function1[/* props */ HTMLProps[HTMLInputElement], ReactElement]] = js.native
   /**
     * Arguments: `items: Array<Any>, value: String, styles: Object`
     *
@@ -93,10 +93,10 @@ trait Props extends js.Object {
     */
   var renderMenu: js.UndefOr[
     js.Function3[
-      /* items */ js.Array[TagMod[Any]], 
+      /* items */ js.Array[ReactElement], 
       /* value */ String, 
       /* styles */ CSSProperties, 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.native
   /**
@@ -147,7 +147,7 @@ trait Props extends js.Object {
     * an optional set of styles that can be applied to improve the look/feel
     * of the items in the dropdown menu.
     */
-  def renderItem(item: js.Any, isHighlighted: Boolean): TagMod[Any] = js.native
-  def renderItem(item: js.Any, isHighlighted: Boolean, styles: CSSProperties): TagMod[Any] = js.native
+  def renderItem(item: js.Any, isHighlighted: Boolean): ReactElement = js.native
+  def renderItem(item: js.Any, isHighlighted: Boolean, styles: CSSProperties): ReactElement = js.native
 }
 

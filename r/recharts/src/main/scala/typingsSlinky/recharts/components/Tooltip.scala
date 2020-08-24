@@ -1,7 +1,6 @@
 package typingsSlinky.recharts.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -40,7 +39,7 @@ object Tooltip {
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction1(value: TooltipProps => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    def contentFunction1(value: TooltipProps => ReactElement): this.type = set("content", js.Any.fromFunction1(value))
     @scala.inline
     def contentFunctionComponent(value: ReactComponentClass[_]): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
@@ -59,7 +58,7 @@ object Tooltip {
     def filterNull(value: Boolean): this.type = set("filterNull", value.asInstanceOf[js.Any])
     @scala.inline
     def formatter(
-      value: (/* value */ String | Double | (js.Array[String | Double]), /* name */ String, /* entry */ TooltipPayload, /* index */ Double) => TagMod[Any]
+      value: (/* value */ String | Double | (js.Array[String | Double]), /* name */ String, /* entry */ TooltipPayload, /* index */ Double) => ReactElement
     ): this.type = set("formatter", js.Any.fromFunction4(value))
     @scala.inline
     def isAnimationActive(value: Boolean): this.type = set("isAnimationActive", value.asInstanceOf[js.Any])
@@ -72,7 +71,7 @@ object Tooltip {
     @scala.inline
     def label(value: String | Double): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelFormatter(value: /* label */ String | Double => TagMod[Any]): this.type = set("labelFormatter", js.Any.fromFunction1(value))
+    def labelFormatter(value: /* label */ String | Double => ReactElement): this.type = set("labelFormatter", js.Any.fromFunction1(value))
     @scala.inline
     def labelStyle(value: js.Object): this.type = set("labelStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -81,6 +80,8 @@ object Tooltip {
     def onAnimationEnd(value: /* repeated */ js.Any => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
     def onAnimationStart(value: /* repeated */ js.Any => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def payloadVarargs(value: TooltipPayload*): this.type = set("payload", js.Array(value :_*))
     @scala.inline
     def payload(value: js.Array[TooltipPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "decamelize"
-version := "3.2.0-2d1e26"
-scalaVersion := "2.13.2"
+version := "4.0.0-4c7812"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

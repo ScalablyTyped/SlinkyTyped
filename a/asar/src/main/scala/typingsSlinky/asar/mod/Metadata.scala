@@ -1,0 +1,32 @@
+package typingsSlinky.asar.mod
+
+import org.scalablytyped.runtime.StringDictionary
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.asar.mod.DirectoryMetadata
+  - typingsSlinky.asar.mod.FileMetadata
+  - typingsSlinky.asar.mod.LinkMetadata
+*/
+trait Metadata extends js.Object
+
+object Metadata {
+  @scala.inline
+  def DirectoryMetadata(files: StringDictionary[EntryMetadata], unpacked: Boolean): Metadata = {
+    val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any], unpacked = unpacked.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Metadata]
+  }
+  @scala.inline
+  def FileMetadata(unpacked: Boolean): Metadata = {
+    val __obj = js.Dynamic.literal(unpacked = unpacked.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Metadata]
+  }
+  @scala.inline
+  def LinkMetadata(link: String): Metadata = {
+    val __obj = js.Dynamic.literal(link = link.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Metadata]
+  }
+}
+

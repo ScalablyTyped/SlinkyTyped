@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "metric-suffix"
-version := "0.0.3-dt-20200515Z-fd4b28"
-scalaVersion := "2.13.2"
+version := "0.0.3-dt-20200515Z-26b830"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

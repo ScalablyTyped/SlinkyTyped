@@ -35,6 +35,8 @@ object RangeSlider {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def marksVarargs(value: LabelValue*): this.type = set("marks", js.Array(value :_*))
+    @scala.inline
     def marks(value: js.Array[LabelValue]): this.type = set("marks", value.asInstanceOf[js.Any])
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])

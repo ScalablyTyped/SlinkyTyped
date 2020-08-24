@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NotExecutedIcon {
-  @JSImport("@fluentui/react-icons/lib/components/NotExecutedIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "NotExecutedIcon")
   @js.native
   object component extends js.Object
   

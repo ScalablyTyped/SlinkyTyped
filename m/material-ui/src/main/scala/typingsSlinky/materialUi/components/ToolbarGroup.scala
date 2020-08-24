@@ -5,21 +5,20 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Toolbar.ToolbarGroupProps
 import typingsSlinky.materialUi.materialUiStrings.left
 import typingsSlinky.materialUi.materialUiStrings.right
-import typingsSlinky.materialUi.toolbarGroupMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToolbarGroup {
-  @JSImport("material-ui/Toolbar/ToolbarGroup", JSImport.Default)
+  @JSImport("material-ui", "ToolbarGroup")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.ToolbarGroup] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

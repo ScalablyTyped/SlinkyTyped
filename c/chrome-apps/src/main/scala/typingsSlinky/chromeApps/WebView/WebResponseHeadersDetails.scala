@@ -40,23 +40,18 @@ object WebResponseHeadersDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withResponseHeaders(value: js.Array[HttpHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutResponseHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(js.undefined)
-        ret
-    }
+    def setResponseHeadersVarargs(value: HttpHeader*): Self = this.set("responseHeaders", js.Array(value :_*))
+    @scala.inline
+    def setResponseHeaders(value: js.Array[HttpHeader]): Self = this.set("responseHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResponseHeaders: Self = this.set("responseHeaders", js.undefined)
   }
   
 }

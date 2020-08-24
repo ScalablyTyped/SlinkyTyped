@@ -32,35 +32,20 @@ object ArrowScrollFocusResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetAmountToScroll(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAmountToScroll")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetSelectedPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedPosition")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetAmountToScroll(value: () => Double): Self = this.set("getAmountToScroll", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAmountToScroll(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAmountToScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetSelectedPosition(value: () => Double): Self = this.set("getSelectedPosition", js.Any.fromFunction0(value))
     @scala.inline
-    def withMSelectedPosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSelectedPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAmountToScroll(value: js.Any): Self = this.set("mAmountToScroll", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopulate(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMSelectedPosition(value: js.Any): Self = this.set("mSelectedPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPopulate(value: (Double, Double) => Unit): Self = this.set("populate", js.Any.fromFunction2(value))
   }
   
 }

@@ -5,7 +5,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderValue
 import typingsSlinky.antDesignReactNative.pickerMod.PickerProps
-import typingsSlinky.antDesignReactNative.pickerMod.default
 import typingsSlinky.antDesignReactNative.pickerPropsTypeMod.PickerData
 import typingsSlinky.antDesignReactNative.pickerStyleMod.PickerStyle
 import typingsSlinky.react.mod.CSSProperties
@@ -17,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Picker {
-  @JSImport("@ant-design/react-native/lib/picker", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Picker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Picker] {
     @scala.inline
     def WrapComponent(value: js.Any): this.type = set("WrapComponent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -97,6 +96,8 @@ object Picker {
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerType(value: String): this.type = set("triggerType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[String | Double]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

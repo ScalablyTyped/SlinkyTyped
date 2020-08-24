@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CalculatorPercentageIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CalculatorPercentageIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CalculatorPercentageIcon")
   @js.native
   object component extends js.Object
   

@@ -31,53 +31,26 @@ object Gate11Selectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDotbody(value: SVGImageAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".body")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDotbody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".body")(js.undefined)
-        ret
-    }
+    def setDotbody(value: SVGImageAttributes): Self = this.set(".body", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotinput(value: SVGCircleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".input")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotbody: Self = this.set(".body", js.undefined)
     @scala.inline
-    def withoutDotinput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".input")(js.undefined)
-        ret
-    }
+    def setDotinput(value: SVGCircleAttributes): Self = this.set(".input", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotoutput(value: SVGCircleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".output")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotinput: Self = this.set(".input", js.undefined)
     @scala.inline
-    def withoutDotoutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".output")(js.undefined)
-        ret
-    }
+    def setDotoutput(value: SVGCircleAttributes): Self = this.set(".output", value.asInstanceOf[js.Any])
     @scala.inline
-    def withImage(value: SVGImageAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotoutput: Self = this.set(".output", js.undefined)
     @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
+    def setImage(value: SVGImageAttributes): Self = this.set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImage: Self = this.set("image", js.undefined)
   }
   
 }

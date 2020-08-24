@@ -32,7 +32,14 @@ package object storagegatewayMod {
   type BandwidthType = java.lang.String
   type BandwidthUploadRateLimit = scala.Double
   type Boolean = scala.Boolean
+  type CacheStaleTimeoutInSeconds = scala.Double
   type CachediSCSIVolumes = js.Array[typingsSlinky.awsSdk.storagegatewayMod.CachediSCSIVolume]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ClientSpecified
+    - typingsSlinky.awsSdk.awsSdkStrings.CaseSensitive
+    - java.lang.String
+  */
+  type CaseSensitivity = typingsSlinky.awsSdk.storagegatewayMod._CaseSensitivity | java.lang.String
   type ChapCredentials = js.Array[typingsSlinky.awsSdk.storagegatewayMod.ChapInfo]
   type ChapSecret = java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.storagegatewayMod.ClientApiVersions
@@ -41,6 +48,7 @@ package object storagegatewayMod {
   type CreatedDate = js.Date
   type DayOfMonth = scala.Double
   type DayOfWeek = scala.Double
+  type DeprecationDate = java.lang.String
   type Description = java.lang.String
   type DeviceType = java.lang.String
   type DiskAllocationType = java.lang.String
@@ -55,11 +63,13 @@ package object storagegatewayMod {
   type DoubleObject = scala.Double
   type Ec2InstanceId = java.lang.String
   type Ec2InstanceRegion = java.lang.String
+  type EndpointType = java.lang.String
   type FileShareARN = java.lang.String
   type FileShareARNList = js.Array[typingsSlinky.awsSdk.storagegatewayMod.FileShareARN]
   type FileShareClientList = js.Array[typingsSlinky.awsSdk.storagegatewayMod.IPV4AddressCIDR]
   type FileShareId = java.lang.String
   type FileShareInfoList = js.Array[typingsSlinky.awsSdk.storagegatewayMod.FileShareInfo]
+  type FileShareName = java.lang.String
   type FileShareStatus = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NFS
@@ -141,6 +151,7 @@ package object storagegatewayMod {
   type SMBSecurityStrategy = typingsSlinky.awsSdk.storagegatewayMod._SMBSecurityStrategy | java.lang.String
   type SnapshotDescription = java.lang.String
   type SnapshotId = java.lang.String
+  type SoftwareUpdatesEndDate = java.lang.String
   type Squash = java.lang.String
   type StorageClass = java.lang.String
   type StorediSCSIVolumes = js.Array[typingsSlinky.awsSdk.storagegatewayMod.StorediSCSIVolume]

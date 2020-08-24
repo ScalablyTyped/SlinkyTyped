@@ -7,11 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Quart")
 @js.native
 class Quart ()
-  extends typingsSlinky.gsap.gsap.Ease {
-  /** Translates the tween's progress ratio into the corresponding ease ratio. */
-  /* CompleteClass */
-  override def getRatio(p: Double): Double = js.native
-}
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Quart")

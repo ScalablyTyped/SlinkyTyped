@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Image {
-  @JSImport("fundamental-react/lib/Image/Image", JSImport.Default)
+  @JSImport("fundamental-react", "Image")
   @js.native
   object component extends js.Object
   

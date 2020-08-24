@@ -57,47 +57,28 @@ object CpuInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArchName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFeatures(value: mmx | sse | sse2 | sse3 | ssse3 | sse4_1 | sse4_2 | avx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setArchName(value: String): Self = this.set("archName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withModelName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFeatures(value: mmx | sse | sse2 | sse3 | ssse3 | sse4_1 | sse4_2 | avx): Self = this.set("features", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNumOfProcessors(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numOfProcessors")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setModelName(value: String): Self = this.set("modelName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProcessors(value: js.Array[ProcessorInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processors")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNumOfProcessors(value: integer): Self = this.set("numOfProcessors", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTemperatures(value: js.Array[double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProcessorsVarargs(value: ProcessorInfo*): Self = this.set("processors", js.Array(value :_*))
     @scala.inline
-    def withoutTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temperatures")(js.undefined)
-        ret
-    }
+    def setProcessors(value: js.Array[ProcessorInfo]): Self = this.set("processors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemperaturesVarargs(value: double*): Self = this.set("temperatures", js.Array(value :_*))
+    @scala.inline
+    def setTemperatures(value: js.Array[double]): Self = this.set("temperatures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTemperatures: Self = this.set("temperatures", js.undefined)
   }
   
 }

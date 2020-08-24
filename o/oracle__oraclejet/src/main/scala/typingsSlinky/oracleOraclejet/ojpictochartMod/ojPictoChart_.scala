@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.LabelAndValue
-import typingsSlinky.oracleOraclejet.anon.`14`
+import typingsSlinky.oracleOraclejet.anon.`16`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojpictochartMod.ojPictoChart.ItemContext
@@ -115,7 +115,7 @@ trait ojPictoChart_[K, D] extends dvtBaseComponent[ojPictoChartSettablePropertie
   var rowHeight: Double | Null = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
-  var tooltip: `14`[K] = js.native
+  var tooltip: `16`[K] = js.native
   @JSName("translations")
   var translations_ojPictoChart_ : LabelAndValue = js.native
   def addEventListener(
@@ -330,7 +330,7 @@ trait ojPictoChart_[K, D] extends dvtBaseComponent[ojPictoChartSettablePropertie
   @JSName("getProperty")
   def getProperty_selectionMode(property: selectionMode): single | multiple | none = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `14`[K] = js.native
+  def getProperty_tooltip(property: tooltip): `16`[K] = js.native
   def setProperties(properties: ojPictoChartSettablePropertiesLenient[K, D]): Unit = js.native
   def setProperty(property: animationOnDataChange, value: auto): Unit = js.native
   def setProperty(property: animationOnDataChange, value: none): Unit = js.native
@@ -354,6 +354,8 @@ trait ojPictoChart_[K, D] extends dvtBaseComponent[ojPictoChartSettablePropertie
   def setProperty(property: selectionMode, value: multiple): Unit = js.native
   def setProperty(property: selectionMode, value: none): Unit = js.native
   def setProperty(property: selectionMode, value: single): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_animationDuration(property: animationDuration): Unit = js.native
   @JSName("setProperty")
   def setProperty_animationDuration(property: animationDuration, value: Double): Unit = js.native
   @JSName("setProperty")
@@ -387,7 +389,7 @@ trait ojPictoChart_[K, D] extends dvtBaseComponent[ojPictoChartSettablePropertie
   @JSName("setProperty")
   def setProperty_selection(property: selection, value: js.Array[K]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `14`[K]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `16`[K]): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
 }

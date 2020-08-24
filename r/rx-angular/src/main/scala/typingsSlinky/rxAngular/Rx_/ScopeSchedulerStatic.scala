@@ -1,7 +1,7 @@
 package typingsSlinky.rxAngular.Rx_
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.rxLite.Rx.SchedulerStatic
+import typingsSlinky.rx.Rx.SchedulerStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

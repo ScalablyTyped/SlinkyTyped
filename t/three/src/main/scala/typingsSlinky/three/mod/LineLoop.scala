@@ -6,25 +6,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("three", "LineLoop")
 @js.native
-class LineLoop ()
-  extends typingsSlinky.three.lineLoopMod.LineLoop {
-  def this(geometry: typingsSlinky.three.bufferGeometryMod.BufferGeometry) = this()
-  def this(geometry: typingsSlinky.three.geometryMod.Geometry) = this()
-  def this(
-    geometry: typingsSlinky.three.bufferGeometryMod.BufferGeometry,
-    material: js.Array[typingsSlinky.three.materialMod.Material]
-  ) = this()
-  def this(
-    geometry: typingsSlinky.three.bufferGeometryMod.BufferGeometry,
-    material: typingsSlinky.three.materialMod.Material
-  ) = this()
-  def this(
-    geometry: typingsSlinky.three.geometryMod.Geometry,
-    material: js.Array[typingsSlinky.three.materialMod.Material]
-  ) = this()
-  def this(
-    geometry: typingsSlinky.three.geometryMod.Geometry,
-    material: typingsSlinky.three.materialMod.Material
-  ) = this()
+class LineLoop[TGeometry /* <: typingsSlinky.three.geometryMod.Geometry | typingsSlinky.three.bufferGeometryMod.BufferGeometry */, TMaterial /* <: typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material] */] ()
+  extends typingsSlinky.three.lineLoopMod.LineLoop[TGeometry, TMaterial] {
+  def this(geometry: TGeometry) = this()
+  def this(geometry: TGeometry, material: TMaterial) = this()
+  def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial) = this()
 }
 

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "grid-template-parser"
-version := "0.3-dt-20190701Z-59f748"
-scalaVersion := "2.13.2"
+version := "0.3-dt-20190701Z-c6fdee"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

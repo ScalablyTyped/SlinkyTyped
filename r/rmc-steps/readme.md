@@ -1,7 +1,7 @@
 
 # Scala.js typings for rmc-steps
 
-Typings are for version 1.0.0
+Typings are for version 1.0.1
 
 ## Library description:
 steps ui component for react mobile

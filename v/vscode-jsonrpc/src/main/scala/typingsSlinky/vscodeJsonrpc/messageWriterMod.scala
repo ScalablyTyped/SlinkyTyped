@@ -1,10 +1,12 @@
 package typingsSlinky.vscodeJsonrpc
 
-import typingsSlinky.node.NodeJS.Process
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.childProcessMod.ChildProcess
 import typingsSlinky.node.netMod.Socket
+import typingsSlinky.node.processMod.global.NodeJS.Process
 import typingsSlinky.vscodeJsonrpc.eventsMod.Disposable
+import typingsSlinky.vscodeJsonrpc.eventsMod.Event
 import typingsSlinky.vscodeJsonrpc.messagesMod.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,29 +23,19 @@ object messageWriterMod extends js.Object {
     def dispose(): Unit = js.native
     /* protected */ def fireClose(): Unit = js.native
     /* protected */ def fireError(error: js.Any): Unit = js.native
+    /* protected */ def fireError(error: js.Any, message: js.UndefOr[scala.Nothing], count: Double): Unit = js.native
     /* protected */ def fireError(error: js.Any, message: Message): Unit = js.native
     /* protected */ def fireError(error: js.Any, message: Message, count: Double): Unit = js.native
-    def onClose(listener: js.Function1[/* e */ Unit, _]): Disposable = js.native
-    def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): Disposable = js.native
-    def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-    def onError(listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _]): Disposable = js.native
-    def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any
-    ): Disposable = js.native
-    def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any,
-      disposables: js.Array[Disposable]
-    ): Disposable = js.native
+    def onClose: Event[Unit] = js.native
+    def onError: Event[js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]]] = js.native
   }
   
   @js.native
   class IPCMessageWriter protected ()
     extends AbstractMessageWriter
        with MessageWriter {
-    def this(process: Process) = this()
     def this(process: ChildProcess) = this()
+    def this(process: Process) = this()
     var errorCount: js.Any = js.native
     var process: js.Any = js.native
     var queue: js.Any = js.native
@@ -51,34 +43,25 @@ object messageWriterMod extends js.Object {
     /* InferMemberOverrides */
     override def dispose(): Unit = js.native
     def doWriteMessage(msg: Message): Unit = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any
-    ): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any,
-      disposables: js.Array[Disposable]
-    ): Disposable = js.native
   }
   
   @js.native
   trait MessageWriter extends js.Object {
     def dispose(): Unit = js.native
     def onClose(listener: js.Function1[/* e */ Unit, _]): Disposable = js.native
+    def onClose(
+      listener: js.Function1[/* e */ Unit, _],
+      thisArgs: js.UndefOr[scala.Nothing],
+      disposables: js.Array[Disposable]
+    ): Disposable = js.native
     def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): Disposable = js.native
     def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
     def onError(listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _]): Disposable = js.native
+    def onError(
+      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
+      thisArgs: js.UndefOr[scala.Nothing],
+      disposables: js.Array[Disposable]
+    ): Disposable = js.native
     def onError(
       listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
       thisArgs: js.Any
@@ -96,7 +79,7 @@ object messageWriterMod extends js.Object {
     extends AbstractMessageWriter
        with MessageWriter {
     def this(socket: Socket) = this()
-    def this(socket: Socket, encoding: String) = this()
+    def this(socket: Socket, encoding: BufferEncoding) = this()
     var encoding: js.Any = js.native
     var errorCount: js.Any = js.native
     var handleError: js.Any = js.native
@@ -106,25 +89,6 @@ object messageWriterMod extends js.Object {
     /* InferMemberOverrides */
     override def dispose(): Unit = js.native
     def doWriteMessage(msg: Message): Unit = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any
-    ): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any,
-      disposables: js.Array[Disposable]
-    ): Disposable = js.native
   }
   
   @js.native
@@ -132,31 +96,12 @@ object messageWriterMod extends js.Object {
     extends AbstractMessageWriter
        with MessageWriter {
     def this(writable: WritableStream) = this()
-    def this(writable: WritableStream, encoding: String) = this()
+    def this(writable: WritableStream, encoding: BufferEncoding) = this()
     var encoding: js.Any = js.native
     var errorCount: js.Any = js.native
     var writable: js.Any = js.native
     /* InferMemberOverrides */
     override def dispose(): Unit = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _]): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any
-    ): Disposable = js.native
-    /* InferMemberOverrides */
-    override def onError(
-      listener: js.Function1[/* e */ js.Tuple3[js.Error, js.UndefOr[Message], js.UndefOr[Double]], _],
-      thisArgs: js.Any,
-      disposables: js.Array[Disposable]
-    ): Disposable = js.native
   }
   
   @js.native

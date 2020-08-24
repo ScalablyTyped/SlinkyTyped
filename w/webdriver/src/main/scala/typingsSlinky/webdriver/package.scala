@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object webdriver {
-  type HTTPRequestOptions = typingsSlinky.request.mod.CoreOptions
-  type HTTPResponse = typingsSlinky.request.mod.Response
+  type HTTPRequestOptions = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_got.Options */ js.Any
+  type HTTPResponse = typingsSlinky.got.mod.Response[typingsSlinky.node.Buffer | java.lang.String | js.Object]
 }

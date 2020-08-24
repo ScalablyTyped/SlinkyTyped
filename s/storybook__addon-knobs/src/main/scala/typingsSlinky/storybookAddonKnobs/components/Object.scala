@@ -17,7 +17,7 @@ object Object {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]]
+       with StBuildingComponent[tag.type, default[T]]
   
   def withProps[T](p: KnobControlProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline

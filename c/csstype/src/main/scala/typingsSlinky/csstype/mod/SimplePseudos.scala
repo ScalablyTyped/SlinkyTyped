@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.csstype.csstypeStrings.`Colon-khtml-any-link`
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link`
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-focusring`
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-full-screen`
@@ -47,6 +48,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.ColonColonbackdrop
   - typingsSlinky.csstype.csstypeStrings.ColonColonbefore
   - typingsSlinky.csstype.csstypeStrings.ColonColoncue
+  - typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region`
   - typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter`
   - typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-line`
   - typingsSlinky.csstype.csstypeStrings.`ColonColongrammar-error`
@@ -100,6 +102,8 @@ import scala.scalajs.js.annotation._
 trait SimplePseudos extends js.Object
 
 object SimplePseudos {
+  @scala.inline
+  def `Colon-khtml-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-khtml-any-link` = ":-khtml-any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-khtml-any-link`]
   @scala.inline
   def `Colon-moz-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link` = ":-moz-any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link`]
   @scala.inline
@@ -184,6 +188,8 @@ object SimplePseudos {
   def ColonColonbefore: typingsSlinky.csstype.csstypeStrings.ColonColonbefore = "::before".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonbefore]
   @scala.inline
   def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = "::cue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColoncue]
+  @scala.inline
+  def `ColonColoncue-region`: typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region` = "::cue-region".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region`]
   @scala.inline
   def `ColonColonfirst-letter`: typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter` = "::first-letter".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter`]
   @scala.inline

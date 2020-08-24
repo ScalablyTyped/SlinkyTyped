@@ -1,7 +1,8 @@
 package typingsSlinky.antd.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.ConsumerProps
 import scala.scalajs.js
@@ -13,15 +14,11 @@ object ConfigConsumer {
   @js.native
   object component extends js.Object
   
+  def withProps(p: ConsumerProps[ConfigConsumerProps]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def unstable_observedBits(value: Double): this.type = set("unstable_observedBits", value.asInstanceOf[js.Any])
+  def apply(children: ConfigConsumerProps => ReactElement): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ConsumerProps[ConfigConsumerProps]]))
   }
-  
-  def withProps(p: ConsumerProps[ConfigConsumerProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ConfigConsumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

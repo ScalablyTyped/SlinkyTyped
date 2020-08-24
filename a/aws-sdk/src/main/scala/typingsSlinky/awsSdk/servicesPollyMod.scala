@@ -17,7 +17,7 @@ object servicesPollyMod extends js.Object {
   @js.native
   object PollyCustomizations extends js.Object {
     var Presigner: Instantiable1[
-        js.UndefOr[/* options */ PresignerOptions], 
+        /* options */ js.UndefOr[PresignerOptions], 
         typingsSlinky.awsSdk.presignerMod.Presigner
       ] = js.native
   }

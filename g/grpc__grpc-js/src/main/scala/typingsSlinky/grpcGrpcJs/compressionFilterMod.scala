@@ -1,6 +1,5 @@
 package typingsSlinky.grpcGrpcJs
 
-import typingsSlinky.grpcGrpcJs.callStreamMod.Call
 import typingsSlinky.grpcGrpcJs.channelMod.Channel
 import typingsSlinky.grpcGrpcJs.filterMod.BaseFilter
 import typingsSlinky.grpcGrpcJs.filterMod.FilterFactory
@@ -21,8 +20,6 @@ object compressionFilterMod extends js.Object {
   class CompressionFilterFactory protected () extends FilterFactory[CompressionFilter] {
     def this(channel: Channel) = this()
     val channel: js.Any = js.native
-    /* CompleteClass */
-    override def createFilter(callStream: Call): CompressionFilter = js.native
   }
   
 }

@@ -24,6 +24,8 @@ object AutoCompleteTokensEditor {
     @scala.inline
     def column(value: ExcelColumn): this.type = set("column", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
   

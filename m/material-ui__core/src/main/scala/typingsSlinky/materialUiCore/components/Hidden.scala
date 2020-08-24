@@ -5,7 +5,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
 import typingsSlinky.materialUiCore.hiddenHiddenMod.HiddenProps
-import typingsSlinky.materialUiCore.hiddenMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.css
 import typingsSlinky.materialUiCore.materialUiCoreStrings.js_
 import typingsSlinky.materialUiCore.withStylesMod.ClassNameMap
@@ -17,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Hidden {
-  @JSImport("@material-ui/core/Hidden", JSImport.Default)
+  @JSImport("@material-ui/core", "Hidden")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,6 +48,8 @@ object Hidden {
     def mdDown(value: Boolean): this.type = set("mdDown", value.asInstanceOf[js.Any])
     @scala.inline
     def mdUp(value: Boolean): this.type = set("mdUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onlyVarargs(value: Breakpoint*): this.type = set("only", js.Array(value :_*))
     @scala.inline
     def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
     @scala.inline

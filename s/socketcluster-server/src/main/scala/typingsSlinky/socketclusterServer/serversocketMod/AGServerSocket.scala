@@ -1,6 +1,7 @@
 package typingsSlinky.socketclusterServer.serversocketMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.agSimpleBroker.mod.SimpleExchange
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.scErrors.mod.SocketProtocolErrorStatuses_
@@ -51,7 +52,7 @@ trait AGServerSocket
   var channelSubscriptionsCount: Double = js.native
   var cloneData: Boolean = js.native
   val errorStatuses: SocketProtocolErrorStatuses_ = js.native
-  var exchange: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker.SimpleExchange */ js.Any = js.native
+  var exchange: SimpleExchange = js.native
   var forwardedForAddress: js.UndefOr[String] = js.native
   var id: String = js.native
   val ignoreStatuses: SocketProtocolIgnoreStatuses_ = js.native
@@ -92,6 +93,7 @@ trait AGServerSocket
   def deauthenticateSelf(): Unit = js.native
   def decode(message: js.Any): js.Any = js.native
   def disconnect(): Unit = js.native
+  def disconnect(code: js.UndefOr[scala.Nothing], reason: String): Unit = js.native
   def disconnect(code: Double): Unit = js.native
   def disconnect(code: Double, reason: String): Unit = js.native
   def emitError(error: js.Error): Unit = js.native
@@ -179,6 +181,7 @@ trait AGServerSocket
   def isAuthTokenExpired(token: AuthToken): Boolean = js.native
   def isSubscribed(channel: String): Boolean = js.native
   def kickOut(): js.Any = js.native
+  def kickOut(channel: js.UndefOr[scala.Nothing], message: String): js.Any = js.native
   def kickOut(channel: String): js.Any = js.native
   def kickOut(channel: String, message: String): js.Any = js.native
   def killAllMiddlewares(): Unit = js.native

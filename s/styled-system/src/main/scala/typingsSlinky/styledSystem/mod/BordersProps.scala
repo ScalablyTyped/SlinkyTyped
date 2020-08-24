@@ -1,9 +1,21 @@
 package typingsSlinky.styledSystem.mod
 
-import typingsSlinky.csstype.mod.BorderProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait BordersProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends BorderProps[ThemeType, BorderProperty[TLengthStyledSystem]]
+@js.native
+trait BordersProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
+  extends BorderProps[
+      ThemeType, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ js.Any
+    ]
+
+object BordersProps {
+  @scala.inline
+  def apply[/* <: typingsSlinky.styledSystem.mod.Theme[typingsSlinky.styledSystem.mod.TLengthStyledSystem] */ ThemeType](): BordersProps[ThemeType] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[BordersProps[ThemeType]]
+  }
+}
 

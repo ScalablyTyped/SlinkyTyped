@@ -1,15 +1,30 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.KeyboardEvent
+import typingsSlinky.ionicCore.ionicCoreStrings.decimal
+import typingsSlinky.ionicCore.ionicCoreStrings.done
+import typingsSlinky.ionicCore.ionicCoreStrings.email
+import typingsSlinky.ionicCore.ionicCoreStrings.enter
+import typingsSlinky.ionicCore.ionicCoreStrings.go
 import typingsSlinky.ionicCore.ionicCoreStrings.hard
+import typingsSlinky.ionicCore.ionicCoreStrings.next
+import typingsSlinky.ionicCore.ionicCoreStrings.none
+import typingsSlinky.ionicCore.ionicCoreStrings.numeric
 import typingsSlinky.ionicCore.ionicCoreStrings.off
+import typingsSlinky.ionicCore.ionicCoreStrings.previous
+import typingsSlinky.ionicCore.ionicCoreStrings.search
+import typingsSlinky.ionicCore.ionicCoreStrings.send
 import typingsSlinky.ionicCore.ionicCoreStrings.soft
+import typingsSlinky.ionicCore.ionicCoreStrings.tel
+import typingsSlinky.ionicCore.ionicCoreStrings.text
+import typingsSlinky.ionicCore.ionicCoreStrings.url
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import typingsSlinky.ionicCore.textareaInterfaceMod.TextareaChangeEventDetail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,15 +76,27 @@ object textareaMod extends js.Object {
     var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     var emitStyle: js.Any = js.native
+    /**
+      * A hint to the browser for which enter key to display.
+      * Possible values: `"enter"`, `"done"`, `"go"`, `"next"`,
+      * `"previous"`, `"search"`, and `"send"`.
+      */
+    var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
     var focusChange: js.Any = js.native
     var getValue: js.Any = js.native
     var hasFocus: Boolean = js.native
     var hasValue: js.Any = js.native
     var inputId: js.Any = js.native
     /**
+      * A hint to the browser for which keyboard to display.
+      * Possible values: `"none"`, `"text"`, `"tel"`, `"url"`,
+      * `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+      */
+    var inputmode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+    /**
       * Emitted when the input loses focus.
       */
-    var ionBlur: EventEmitter[Unit] = js.native
+    var ionBlur: EventEmitter[FocusEvent] = js.native
     /**
       * Emitted when the input value has changed.
       */
@@ -77,9 +104,9 @@ object textareaMod extends js.Object {
     /**
       * Emitted when the input has focus.
       */
-    var ionFocus: EventEmitter[Unit] = js.native
+    var ionFocus: EventEmitter[FocusEvent] = js.native
     /**
-      * Emitted when a keyboard input ocurred.
+      * Emitted when a keyboard input occurred.
       */
     var ionInput: EventEmitter[KeyboardEvent] = js.native
     /**
@@ -99,7 +126,7 @@ object textareaMod extends js.Object {
       * The name of the control, which is submitted with the form data.
       */
     var name: String = js.native
-    var nativeInput: js.UndefOr[js.Any] = js.native
+    var nativeInput: js.Any = js.native
     var onBlur: js.Any = js.native
     var onFocus: js.Any = js.native
     var onInput: js.Any = js.native
@@ -125,6 +152,7 @@ object textareaMod extends js.Object {
       * If `true`, the element will have its spelling and grammar checked.
       */
     var spellcheck: Boolean = js.native
+    var textareaWrapper: js.Any = js.native
     /**
       * The value of the textarea.
       */

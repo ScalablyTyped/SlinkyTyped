@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -24,11 +23,15 @@ object UnstableAppNavBar {
     @scala.inline
     def appDisplayNameReactElement(value: ReactElement): this.type = set("appDisplayName", value.asInstanceOf[js.Any])
     @scala.inline
-    def appDisplayName(value: TagMod[Any]): this.type = set("appDisplayName", value.asInstanceOf[js.Any])
+    def appDisplayName(value: ReactElement): this.type = set("appDisplayName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mainNavVarargs(value: MainNavItemT*): this.type = set("mainNav", js.Array(value :_*))
     @scala.inline
     def mainNav(value: js.Array[MainNavItemT]): this.type = set("mainNav", value.asInstanceOf[js.Any])
     @scala.inline
     def userImgUrl(value: String): this.type = set("userImgUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def userNavVarargs(value: UserNavItemT*): this.type = set("userNav", js.Array(value :_*))
     @scala.inline
     def userNav(value: js.Array[UserNavItemT]): this.type = set("userNav", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,7 +39,7 @@ object UnstableAppNavBar {
     @scala.inline
     def usernameSubtitleReactElement(value: ReactElement): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def usernameSubtitle(value: TagMod[Any]): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
+    def usernameSubtitle(value: ReactElement): this.type = set("usernameSubtitle", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AppNavBarPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

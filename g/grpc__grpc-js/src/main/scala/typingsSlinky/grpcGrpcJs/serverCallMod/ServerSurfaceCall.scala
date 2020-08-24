@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  cancelled  :boolean,  readonly metadata  :@grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata, getPeer (): string, sendMetadata (responseMetadata : @grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata): void} & node.events.EventEmitter */
+/* Inlined {  cancelled :boolean,  readonly metadata :@grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata, getPeer (): string, sendMetadata (responseMetadata : @grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata): void} & node.events.EventEmitter */
 @js.native
 trait ServerSurfaceCall extends js.Object {
   var cancelled: Boolean = js.native

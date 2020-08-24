@@ -3,7 +3,7 @@ package typingsSlinky.rmcTabs
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.rmcTabs.anon.ActiveTab
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
@@ -30,7 +30,7 @@ object tabsBaseMod extends js.Object {
     /** compatible for different between react and preact in `setState`. */
     var nextCurrentTab: js.Any = js.native
     var prevCurrentTab: Double = js.native
-    var tabCache: NumberDictionary[TagMod[Any]] = js.native
+    var tabCache: NumberDictionary[ReactElement] = js.native
     @JSName("componentDidMount")
     def componentDidMount_MTabs(): Unit = js.native
     @JSName("componentDidUpdate")
@@ -53,6 +53,13 @@ object tabsBaseMod extends js.Object {
       tab: TabData,
       index: Double,
       subElements: js.Function2[/* defaultPrefix */ String, /* allPrefix */ String, StringDictionary[_]],
+      defaultPrefix: js.UndefOr[scala.Nothing],
+      allPrefix: String
+    ): js.Any = js.native
+    def getSubElement(
+      tab: TabData,
+      index: Double,
+      subElements: js.Function2[/* defaultPrefix */ String, /* allPrefix */ String, StringDictionary[_]],
       defaultPrefix: String
     ): js.Any = js.native
     def getSubElement(
@@ -65,12 +72,16 @@ object tabsBaseMod extends js.Object {
     def getSubElements(): js.Function2[
         /* defaultPrefix */ js.UndefOr[String], 
         /* allPrefix */ js.UndefOr[String], 
-        StringDictionary[TagMod[Any]]
+        StringDictionary[ReactElement]
       ] = js.native
     def getTabBarBaseProps(): ActiveTab[S, P] = js.native
     def getTabIndex(props: P): Double = js.native
     def goToTab(index: Double): Boolean = js.native
+    def goToTab(index: Double, force: js.UndefOr[scala.Nothing], newState: js.UndefOr[scala.Nothing], props: P): Boolean = js.native
+    def goToTab(index: Double, force: js.UndefOr[scala.Nothing], newState: js.Any): Boolean = js.native
+    def goToTab(index: Double, force: js.UndefOr[scala.Nothing], newState: js.Any, props: P): Boolean = js.native
     def goToTab(index: Double, force: Boolean): Boolean = js.native
+    def goToTab(index: Double, force: Boolean, newState: js.UndefOr[scala.Nothing], props: P): Boolean = js.native
     def goToTab(index: Double, force: Boolean, newState: js.Any): Boolean = js.native
     def goToTab(index: Double, force: Boolean, newState: js.Any, props: P): Boolean = js.native
     def isTabVertical(): Boolean = js.native

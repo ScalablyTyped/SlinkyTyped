@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RenewalCurrentIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RenewalCurrentIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RenewalCurrentIcon")
   @js.native
   object component extends js.Object
   

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "final-form-set-field-touched"
-version := "1.0-dt-20200321Z-10c2c6"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200601Z-a14f4c"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

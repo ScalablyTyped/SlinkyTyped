@@ -45,17 +45,14 @@ object Typeofenterprise {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeviceAttributes(value: TypeofdeviceAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAttributes")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPlatformKeys(value: TypeofplatformKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDeviceAttributes(value: TypeofdeviceAttributes): Self = this.set("deviceAttributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPlatformKeys(value: TypeofplatformKeys): Self = this.set("platformKeys", value.asInstanceOf[js.Any])
   }
   
 }

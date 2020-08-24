@@ -1,6 +1,5 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.anon.Error
 import typingsSlinky.exceljs.exceljsStrings.NumbersignDIVSlash0Exclamationmark
 import typingsSlinky.exceljs.exceljsStrings.NumbersignNAMEQuestionmark
 import typingsSlinky.exceljs.exceljsStrings.NumbersignNSlashA
@@ -16,15 +15,8 @@ trait _CellValue extends js.Object
 
 object _CellValue {
   @scala.inline
-  def CellSharedFormulaValue(
-    date1904: Boolean,
-    sharedFormula: String,
-    formula: String = null,
-    result: Double | String | js.Date | Error = null
-  ): _CellValue = {
+  def CellSharedFormulaValue(date1904: Boolean, sharedFormula: String): _CellValue = {
     val __obj = js.Dynamic.literal(date1904 = date1904.asInstanceOf[js.Any], sharedFormula = sharedFormula.asInstanceOf[js.Any])
-    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
     __obj.asInstanceOf[_CellValue]
   }
   @scala.inline
@@ -40,9 +32,8 @@ object _CellValue {
     __obj.asInstanceOf[_CellValue]
   }
   @scala.inline
-  def CellFormulaValue(date1904: Boolean, formula: String, result: Double | String | js.Date | Error = null): _CellValue = {
+  def CellFormulaValue(date1904: Boolean, formula: String): _CellValue = {
     val __obj = js.Dynamic.literal(date1904 = date1904.asInstanceOf[js.Any], formula = formula.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
     __obj.asInstanceOf[_CellValue]
   }
   @scala.inline

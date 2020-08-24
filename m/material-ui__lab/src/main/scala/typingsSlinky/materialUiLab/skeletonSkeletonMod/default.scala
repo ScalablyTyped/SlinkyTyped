@@ -5,6 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/**
+  *
+  * Demos:
+  *
+  * - [Skeleton](https://material-ui.com/components/skeleton/)
+  *
+  * API:
+  *
+  * - [Skeleton API](https://material-ui.com/api/skeleton/)
+  */
 @JSImport("@material-ui/lab/Skeleton/Skeleton", JSImport.Default)
 @js.native
 object default

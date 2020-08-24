@@ -8,22 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("StyleSheet")
 @js.native
 class StyleSheet ()
-  extends typingsSlinky.std.StyleSheet {
-  /* CompleteClass */
-  override var disabled: scala.Boolean = js.native
-  /* CompleteClass */
-  override val href: java.lang.String | Null = js.native
-  /* CompleteClass */
-  override val media: org.scalajs.dom.raw.MediaList = js.native
-  /* CompleteClass */
-  override val ownerNode: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.ProcessingInstruction | Null = js.native
-  /* CompleteClass */
-  override val parentStyleSheet: org.scalajs.dom.raw.CSSStyleSheet | Null = js.native
-  /* CompleteClass */
-  override val title: java.lang.String | Null = js.native
-  /* CompleteClass */
-  override val `type`: java.lang.String = js.native
-}
+  extends typingsSlinky.std.StyleSheet
 
 @JSGlobal("StyleSheet")
 @js.native

@@ -32,100 +32,49 @@ trait WiFiPropertiesBase[M /* <: ManagedObject */, S] extends js.Object {
 
 object WiFiPropertiesBase {
   @scala.inline
-  def apply[M, S](): WiFiPropertiesBase[M, S] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, S](): WiFiPropertiesBase[M, S] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[WiFiPropertiesBase[M, S]]
   }
   @scala.inline
-  implicit class WiFiPropertiesBaseOps[Self[m, s] <: WiFiPropertiesBase[m, s], M, S] (val x: Self[M, S]) extends AnyVal {
+  implicit class WiFiPropertiesBaseOps[Self <: WiFiPropertiesBase[_, _], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, S] (val x: Self with (WiFiPropertiesBase[M, S])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, S]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, S]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, S]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBSSID(value: String): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BSSID")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutBSSID: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BSSID")(js.undefined)
-        ret
-    }
+    def setBSSID(value: String): Self = this.set("BSSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFrequency(value: integer): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBSSID: Self = this.set("BSSID", js.undefined)
     @scala.inline
-    def withoutFrequency: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Frequency")(js.undefined)
-        ret
-    }
+    def setFrequency(value: integer): Self = this.set("Frequency", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHexSSID(value: S): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexSSID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFrequency: Self = this.set("Frequency", js.undefined)
     @scala.inline
-    def withoutHexSSID: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexSSID")(js.undefined)
-        ret
-    }
+    def setHexSSID(value: S): Self = this.set("HexSSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSSID(value: S): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHexSSID: Self = this.set("HexSSID", js.undefined)
     @scala.inline
-    def withoutSSID: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSID")(js.undefined)
-        ret
-    }
+    def setSSID(value: S): Self = this.set("SSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSecurity(value: S): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Security")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSSID: Self = this.set("SSID", js.undefined)
     @scala.inline
-    def withoutSecurity: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Security")(js.undefined)
-        ret
-    }
+    def setSecurity(value: S): Self = this.set("Security", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSignalStrength(value: integer): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalStrength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSecurity: Self = this.set("Security", js.undefined)
     @scala.inline
-    def withoutSignalStrength: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SignalStrength")(js.undefined)
-        ret
-    }
+    def setSignalStrength(value: integer): Self = this.set("SignalStrength", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTetheringState(value: String): Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TetheringState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSignalStrength: Self = this.set("SignalStrength", js.undefined)
     @scala.inline
-    def withoutTetheringState: Self[M, S] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TetheringState")(js.undefined)
-        ret
-    }
+    def setTetheringState(value: String): Self = this.set("TetheringState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTetheringState: Self = this.set("TetheringState", js.undefined)
   }
   
 }

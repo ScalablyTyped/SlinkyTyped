@@ -7,11 +7,19 @@ import scala.scalajs.js.annotation._
 package object apiGatewayProxyMod {
   type APIGatewayEvent = typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyEvent
   type APIGatewayProxyCallback = typingsSlinky.awsLambda.handlerMod.Callback[typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyResult]
+  type APIGatewayProxyCallbackV2 = typingsSlinky.awsLambda.handlerMod.Callback[
+    typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyResultV2[scala.Nothing]
+  ]
   type APIGatewayProxyEvent = typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyEventBase[typingsSlinky.awsLambda.apiGatewayMod.APIGatewayEventDefaultAuthorizerContext]
   type APIGatewayProxyHandler = typingsSlinky.awsLambda.handlerMod.Handler[
     typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyEvent, 
     typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyResult
   ]
+  type APIGatewayProxyHandlerV2[T] = typingsSlinky.awsLambda.handlerMod.Handler[
+    typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyEventV2, 
+    typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyResultV2[T]
+  ]
+  type APIGatewayProxyResultV2[T] = typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyStructuredResultV2 | java.lang.String | T
   type APIGatewayProxyWithCognitoAuthorizerEvent = typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyEventBase[typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyCognitoAuthorizer]
   type APIGatewayProxyWithCognitoAuthorizerHandler = typingsSlinky.awsLambda.handlerMod.Handler[
     typingsSlinky.awsLambda.apiGatewayProxyMod.APIGatewayProxyWithCognitoAuthorizerEvent, 

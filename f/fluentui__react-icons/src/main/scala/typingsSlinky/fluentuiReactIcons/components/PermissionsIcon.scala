@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PermissionsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PermissionsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PermissionsIcon")
   @js.native
   object component extends js.Object
   

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "NavDelegate")
 @js.native
 class NavDelegate protected ()
-  extends typingsSlinky.ionicAngular.distMod.NavDelegate {
+  extends typingsSlinky.ionicAngular.navDelegateMod.NavDelegate {
   def this(
     ref: ElementRef[_],
     resolver: ComponentFactoryResolver,

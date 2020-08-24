@@ -3,6 +3,9 @@ package typingsSlinky.vegaTypings
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Partial
 import typingsSlinky.std.PropertyKey
+import typingsSlinky.vegaTypings.anon.Ast
+import typingsSlinky.vegaTypings.anon.Background
+import typingsSlinky.vegaTypings.configMod.Config
 import typingsSlinky.vegaTypings.dataMod.Format
 import typingsSlinky.vegaTypings.dataflowMod.Changeset_
 import typingsSlinky.vegaTypings.rendererMod.RenderModule_
@@ -49,8 +52,43 @@ object mod extends js.Object {
   class Operator ()
     extends typingsSlinky.vegaTypings.runtimeMod.Operator {
     def this(init: js.Any) = this()
+    def this(init: js.UndefOr[scala.Nothing], update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _]) = this()
     def this(init: js.Any, update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _]) = this()
+    def this(init: js.UndefOr[scala.Nothing], update: js.UndefOr[scala.Nothing], params: js.Any) = this()
+    def this(
+      init: js.UndefOr[scala.Nothing],
+      update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _],
+      params: js.Any
+    ) = this()
+    def this(init: js.Any, update: js.UndefOr[scala.Nothing], params: js.Any) = this()
     def this(init: js.Any, update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _], params: js.Any) = this()
+    def this(
+      init: js.UndefOr[scala.Nothing],
+      update: js.UndefOr[scala.Nothing],
+      params: js.UndefOr[scala.Nothing],
+      react: Boolean
+    ) = this()
+    def this(init: js.UndefOr[scala.Nothing], update: js.UndefOr[scala.Nothing], params: js.Any, react: Boolean) = this()
+    def this(
+      init: js.UndefOr[scala.Nothing],
+      update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _],
+      params: js.UndefOr[scala.Nothing],
+      react: Boolean
+    ) = this()
+    def this(
+      init: js.UndefOr[scala.Nothing],
+      update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _],
+      params: js.Any,
+      react: Boolean
+    ) = this()
+    def this(init: js.Any, update: js.UndefOr[scala.Nothing], params: js.UndefOr[scala.Nothing], react: Boolean) = this()
+    def this(init: js.Any, update: js.UndefOr[scala.Nothing], params: js.Any, react: Boolean) = this()
+    def this(
+      init: js.Any,
+      update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _],
+      params: js.UndefOr[scala.Nothing],
+      react: Boolean
+    ) = this()
     def this(
       init: js.Any,
       update: js.Function2[/* obj */ js.Any, /* pulse */ js.Any, _],
@@ -69,6 +107,7 @@ object mod extends js.Object {
   class Transform ()
     extends typingsSlinky.vegaTypings.runtimeMod.Transform {
     def this(init: js.Any) = this()
+    def this(init: js.UndefOr[scala.Nothing], params: js.Any) = this()
     def this(init: js.Any, params: js.Any) = this()
   }
   
@@ -76,15 +115,18 @@ object mod extends js.Object {
   class View protected ()
     extends typingsSlinky.vegaTypings.runtimeMod.View {
     def this(runtime: Runtime) = this()
-    def this(runtime: Runtime, config: js.Any) = this()
+    def this(runtime: Runtime, opt: Background) = this()
   }
   
   val Debug: Double = js.native
+  @JSName("Error")
+  val Error_ : Double = js.native
   val Info: Double = js.native
   val None: Double = js.native
   val Warn: Double = js.native
   val version: String = js.native
   def accessor[R](fn: Fn[R]): AccessorFn[R] = js.native
+  def accessor[R](fn: Fn[R], fields: js.UndefOr[scala.Nothing], name: String): AccessorFn[R] = js.native
   def accessor[R](fn: Fn[R], fields: js.Array[String]): AccessorFn[R] = js.native
   def accessor[R](fn: Fn[R], fields: js.Array[String], name: String): AccessorFn[R] = js.native
   def accessorFields(fn: AccessorFn[_]): js.Array[String] = js.native
@@ -106,6 +148,7 @@ object mod extends js.Object {
   def debounce[F /* <: js.Function */](delay: Double, func: F): F = js.native
   def error(msg: String): js.Error = js.native
   def expressionFunction(name: String): js.Any = js.native
+  def expressionFunction(name: String, fn: js.UndefOr[scala.Nothing], visitor: js.Any): js.Any = js.native
   def expressionFunction(name: String, fn: js.Any): js.Any = js.native
   def expressionFunction(name: String, fn: js.Any, visitor: js.Any): js.Any = js.native
   def extend[T](target: T, source: Partial[T]*): T = js.native
@@ -146,6 +189,7 @@ object mod extends js.Object {
   def loader(opt: LoaderOptions): Loader_ = js.native
   def log(args: js.Any*): Unit = js.native
   def logger(): LoggerInterface = js.native
+  def logger(_underscore: js.UndefOr[scala.Nothing], method: String): LoggerInterface = js.native
   def logger(_underscore: Double): LoggerInterface = js.native
   def logger(_underscore: Double, method: String): LoggerInterface = js.native
   def merge(
@@ -170,9 +214,15 @@ object mod extends js.Object {
   def pad(str: String, len: Double): String = js.native
   def pad(str: String, len: Double, char: String): String = js.native
   @JSName("pad")
+  def pad_center(str: String, len: Double, char: js.UndefOr[scala.Nothing], align: center): String = js.native
+  @JSName("pad")
   def pad_center(str: String, len: Double, char: String, align: center): String = js.native
   @JSName("pad")
+  def pad_left(str: String, len: Double, char: js.UndefOr[scala.Nothing], align: left): String = js.native
+  @JSName("pad")
   def pad_left(str: String, len: Double, char: String, align: left): String = js.native
+  @JSName("pad")
+  def pad_right(str: String, len: Double, char: js.UndefOr[scala.Nothing], align: right): String = js.native
   @JSName("pad")
   def pad_right(str: String, len: Double, char: String, align: right): String = js.native
   def panLinear(domain: js.Array[Double], delta: Double): js.Array[Double] = js.native
@@ -180,8 +230,9 @@ object mod extends js.Object {
   def panPow(domain: js.Array[Double], delta: Double, exponent: Double): js.Array[Double] = js.native
   def panSymlog(domain: js.Array[Double], delta: Double, constant: Double): js.Array[Double] = js.native
   def parse(spec: Spec): Runtime = js.native
-  def parse(spec: Spec, config: js.Any): Runtime = js.native
-  def parse(spec: Spec, config: js.Any, opt: js.Object): Runtime = js.native
+  def parse(spec: Spec, config: js.UndefOr[scala.Nothing], opt: Ast): Runtime = js.native
+  def parse(spec: Spec, config: Config): Runtime = js.native
+  def parse(spec: Spec, config: Config, opt: Ast): Runtime = js.native
   def peek(array: js.Array[_]): js.Any = js.native
   def projection(`type`: String, projection: js.Any): typingsSlinky.vegaTypings.runtimeMod.View = js.native
   def quarter(date: Double): Double = js.native
@@ -197,6 +248,7 @@ object mod extends js.Object {
   def scheme(name: String): js.Any = js.native
   def scheme(name: String, scheme: js.Any): js.Any = js.native
   def schemeDiscretized(name: String): js.Any = js.native
+  def schemeDiscretized(name: String, scheme: js.UndefOr[scala.Nothing], interpolator: js.Any): js.Any = js.native
   def schemeDiscretized(name: String, scheme: js.Any): js.Any = js.native
   def schemeDiscretized(name: String, scheme: js.Any, interpolator: js.Any): js.Any = js.native
   def span(array: js.Array[Double]): Double = js.native
@@ -210,6 +262,7 @@ object mod extends js.Object {
   def toSet[T](array: js.Array[T]): StringDictionary[`true`] = js.native
   def toString(a: js.Any): String = js.native
   def truncate(a: String, length: Double): String = js.native
+  def truncate(a: String, length: Double, align: js.UndefOr[scala.Nothing], ellipsis: String): String = js.native
   @JSName("truncate")
   def truncate_center(a: String, length: Double, align: center): String = js.native
   @JSName("truncate")
@@ -227,7 +280,12 @@ object mod extends js.Object {
   def utcquarter(date: Double): Double = js.native
   def utcquarter(date: js.Date): Double = js.native
   def visitArray(
-    array: js.UndefOr[js.Array[_]],
+    array: js.UndefOr[scala.Nothing],
+    filter: js.Function1[/* any */ js.Any, js.UndefOr[Boolean]],
+    visitor: js.Function3[/* v */ js.Any, /* i */ Double, /* arr */ js.Array[_], Unit]
+  ): Unit = js.native
+  def visitArray(
+    array: js.Array[_],
     filter: js.Function1[/* any */ js.Any, js.UndefOr[Boolean]],
     visitor: js.Function3[/* v */ js.Any, /* i */ Double, /* arr */ js.Array[_], Unit]
   ): Unit = js.native

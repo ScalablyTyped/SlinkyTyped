@@ -70,7 +70,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,7 +82,7 @@ object IonDatetime {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonDatetimeElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -207,13 +206,21 @@ object IonDatetime {
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
+    def dayNamesVarargs(value: String*): this.type = set("dayNames", js.Array(value :_*))
+    @scala.inline
     def dayNames(value: js.Array[String] | String): this.type = set("dayNames", value.asInstanceOf[js.Any])
     @scala.inline
+    def dayShortNamesVarargs(value: String*): this.type = set("dayShortNames", js.Array(value :_*))
+    @scala.inline
     def dayShortNames(value: js.Array[String] | String): this.type = set("dayShortNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayValuesVarargs(value: Double*): this.type = set("dayValues", js.Array(value :_*))
     @scala.inline
     def dayValues(value: js.Array[Double] | Double | String): this.type = set("dayValues", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -223,11 +230,15 @@ object IonDatetime {
     @scala.inline
     def displayFormat(value: String): this.type = set("displayFormat", value.asInstanceOf[js.Any])
     @scala.inline
+    def displayTimezone(value: String): this.type = set("displayTimezone", value.asInstanceOf[js.Any])
+    @scala.inline
     def doneText(value: String): this.type = set("doneText", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hourValuesVarargs(value: Double*): this.type = set("hourValues", js.Array(value :_*))
     @scala.inline
     def hourValues(value: js.Array[Double] | Double | String): this.type = set("hourValues", value.asInstanceOf[js.Any])
     @scala.inline
@@ -255,13 +266,21 @@ object IonDatetime {
     @scala.inline
     def min(value: String): this.type = set("min", value.asInstanceOf[js.Any])
     @scala.inline
+    def minuteValuesVarargs(value: Double*): this.type = set("minuteValues", js.Array(value :_*))
+    @scala.inline
     def minuteValues(value: js.Array[Double] | Double | String): this.type = set("minuteValues", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: ios | md): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline
+    def monthNamesVarargs(value: String*): this.type = set("monthNames", js.Array(value :_*))
+    @scala.inline
     def monthNames(value: js.Array[String] | String): this.type = set("monthNames", value.asInstanceOf[js.Any])
     @scala.inline
+    def monthShortNamesVarargs(value: String*): this.type = set("monthShortNames", js.Array(value :_*))
+    @scala.inline
     def monthShortNames(value: js.Array[String] | String): this.type = set("monthShortNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def monthValuesVarargs(value: Double*): this.type = set("monthValues", js.Array(value :_*))
     @scala.inline
     def monthValues(value: js.Array[Double] | Double | String): this.type = set("monthValues", value.asInstanceOf[js.Any])
     @scala.inline
@@ -599,8 +618,6 @@ object IonDatetime {
     @scala.inline
     def pickerOptions(value: DatetimeOptions): this.type = set("pickerOptions", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholder(value: (String | Null) with String): this.type = set("placeholder", value.asInstanceOf[js.Any])
-    @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -641,10 +658,16 @@ object IonDatetime {
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     @scala.inline
+    def yearValuesVarargs(value: Double*): this.type = set("yearValues", js.Array(value :_*))
+    @scala.inline
     def yearValues(value: js.Array[Double] | Double | String): this.type = set("yearValues", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IonDatetimePickHTMLAttrib): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: IonDatetime.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(placeholder: (js.UndefOr[String | Null]) with js.UndefOr[String]): Builder = {
+    val __props = js.Dynamic.literal(placeholder = placeholder.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IonDatetimePickHTMLAttrib]))
+  }
 }
 

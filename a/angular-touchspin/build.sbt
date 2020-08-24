@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "angular-touchspin"
-version := "2.0.0-0fc94b"
-scalaVersion := "2.13.2"
+version := "2.0.0-6adf6d"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

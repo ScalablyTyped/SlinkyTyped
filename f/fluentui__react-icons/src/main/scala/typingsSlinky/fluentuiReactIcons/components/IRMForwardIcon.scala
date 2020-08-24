@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IRMForwardIcon {
-  @JSImport("@fluentui/react-icons/lib/components/IRMForwardIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "IRMForwardIcon")
   @js.native
   object component extends js.Object
   

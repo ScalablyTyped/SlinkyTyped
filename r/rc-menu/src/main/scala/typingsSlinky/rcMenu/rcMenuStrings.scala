@@ -512,9 +512,6 @@ object rcMenuStrings {
   sealed trait WebkitClipPath extends js.Object
   
   @js.native
-  sealed trait WebkitColorAdjust extends js.Object
-  
-  @js.native
   sealed trait WebkitColumnCount extends js.Object
   
   @js.native
@@ -656,6 +653,9 @@ object rcMenuStrings {
   sealed trait WebkitPerspectiveOrigin extends js.Object
   
   @js.native
+  sealed trait WebkitPrintColorAdjust extends js.Object
+  
+  @js.native
   sealed trait WebkitScrollSnapPointsX extends js.Object
   
   @js.native
@@ -716,6 +716,9 @@ object rcMenuStrings {
   sealed trait WebkitTextStrokeWidth extends js.Object
   
   @js.native
+  sealed trait WebkitTextUnderlinePosition extends js.Object
+  
+  @js.native
   sealed trait WebkitTouchCallout extends js.Object
   
   @js.native
@@ -750,9 +753,6 @@ object rcMenuStrings {
   
   @js.native
   sealed trait WebkitWritingMode extends js.Object
-  
-  @js.native
-  sealed trait WebkittextUnderlinePosition extends js.Object
   
   @js.native
   sealed trait additions extends js.Object
@@ -2786,8 +2786,6 @@ object rcMenuStrings {
   @scala.inline
   def WebkitClipPath: WebkitClipPath = "WebkitClipPath".asInstanceOf[WebkitClipPath]
   @scala.inline
-  def WebkitColorAdjust: WebkitColorAdjust = "WebkitColorAdjust".asInstanceOf[WebkitColorAdjust]
-  @scala.inline
   def WebkitColumnCount: WebkitColumnCount = "WebkitColumnCount".asInstanceOf[WebkitColumnCount]
   @scala.inline
   def WebkitColumnFill: WebkitColumnFill = "WebkitColumnFill".asInstanceOf[WebkitColumnFill]
@@ -2882,6 +2880,8 @@ object rcMenuStrings {
   @scala.inline
   def WebkitPerspectiveOrigin: WebkitPerspectiveOrigin = "WebkitPerspectiveOrigin".asInstanceOf[WebkitPerspectiveOrigin]
   @scala.inline
+  def WebkitPrintColorAdjust: WebkitPrintColorAdjust = "WebkitPrintColorAdjust".asInstanceOf[WebkitPrintColorAdjust]
+  @scala.inline
   def WebkitScrollSnapPointsX: WebkitScrollSnapPointsX = "WebkitScrollSnapPointsX".asInstanceOf[WebkitScrollSnapPointsX]
   @scala.inline
   def WebkitScrollSnapPointsY: WebkitScrollSnapPointsY = "WebkitScrollSnapPointsY".asInstanceOf[WebkitScrollSnapPointsY]
@@ -2922,6 +2922,8 @@ object rcMenuStrings {
   @scala.inline
   def WebkitTextStrokeWidth: WebkitTextStrokeWidth = "WebkitTextStrokeWidth".asInstanceOf[WebkitTextStrokeWidth]
   @scala.inline
+  def WebkitTextUnderlinePosition: WebkitTextUnderlinePosition = "WebkitTextUnderlinePosition".asInstanceOf[WebkitTextUnderlinePosition]
+  @scala.inline
   def WebkitTouchCallout: WebkitTouchCallout = "WebkitTouchCallout".asInstanceOf[WebkitTouchCallout]
   @scala.inline
   def WebkitTransform: WebkitTransform = "WebkitTransform".asInstanceOf[WebkitTransform]
@@ -2945,8 +2947,6 @@ object rcMenuStrings {
   def WebkitUserSelect: WebkitUserSelect = "WebkitUserSelect".asInstanceOf[WebkitUserSelect]
   @scala.inline
   def WebkitWritingMode: WebkitWritingMode = "WebkitWritingMode".asInstanceOf[WebkitWritingMode]
-  @scala.inline
-  def WebkittextUnderlinePosition: WebkittextUnderlinePosition = "WebkittextUnderlinePosition".asInstanceOf[WebkittextUnderlinePosition]
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
   @scala.inline

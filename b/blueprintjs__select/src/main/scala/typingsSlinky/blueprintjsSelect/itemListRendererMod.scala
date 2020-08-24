@@ -1,7 +1,6 @@
 package typingsSlinky.blueprintjsSelect
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import scala.scalajs.js
@@ -36,11 +35,11 @@ object itemListRendererMod extends js.Object {
       * The current query string.
       */
     var query: String = js.native
-    def itemsParentRef(): Unit = js.native
     /**
       * A ref handler that should be attached to the parent HTML element of the menu items.
       * This is required for the active item to scroll into view automatically.
       */
+    def itemsParentRef(): Unit = js.native
     def itemsParentRef(ref: HTMLElement): Unit = js.native
     /**
       * Call this function to render an item.
@@ -50,9 +49,13 @@ object itemListRendererMod extends js.Object {
     def renderItem(item: T, index: Double): ReactElement | Null = js.native
   }
   
-  def renderFilteredItems(props: IItemListRendererProps[_]): TagMod[Any] = js.native
-  def renderFilteredItems(props: IItemListRendererProps[_], noResults: TagMod[Any]): TagMod[Any] = js.native
-  def renderFilteredItems(props: IItemListRendererProps[_], noResults: TagMod[Any], initialContent: TagMod[Any]): TagMod[Any] = js.native
-  type ItemListRenderer[T] = js.Function1[/* itemListProps */ IItemListRendererProps[T], ReactElement]
+  def renderFilteredItems(props: IItemListRendererProps[_]): ReactElement = js.native
+  def renderFilteredItems(
+    props: IItemListRendererProps[_],
+    noResults: js.UndefOr[ReactElement],
+    initialContent: ReactElement
+  ): ReactElement = js.native
+  def renderFilteredItems(props: IItemListRendererProps[_], noResults: ReactElement): ReactElement = js.native
+  type ItemListRenderer[T] = js.Function1[/* itemListProps */ IItemListRendererProps[T], ReactElement | Null]
 }
 

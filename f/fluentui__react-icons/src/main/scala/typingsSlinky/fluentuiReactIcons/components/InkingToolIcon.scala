@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InkingToolIcon {
-  @JSImport("@fluentui/react-icons/lib/components/InkingToolIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "InkingToolIcon")
   @js.native
   object component extends js.Object
   

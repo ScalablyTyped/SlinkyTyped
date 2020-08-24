@@ -48,7 +48,7 @@ package object directoryserviceMod {
   type DesiredNumberOfDomainControllers = scala.Double
   type DirectoryDescriptions = js.Array[typingsSlinky.awsSdk.directoryserviceMod.DirectoryDescription]
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Enterprise
+    - typingsSlinky.awsSdk.awsSdkStrings.Enterprise_
     - typingsSlinky.awsSdk.awsSdkStrings.Standard_
     - java.lang.String
   */
@@ -203,7 +203,7 @@ package object directoryserviceMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Shared_
     - typingsSlinky.awsSdk.awsSdkStrings.PendingAcceptance
     - typingsSlinky.awsSdk.awsSdkStrings.Rejected_
-    - typingsSlinky.awsSdk.awsSdkStrings.Rejecting
+    - typingsSlinky.awsSdk.awsSdkStrings.Rejecting_
     - typingsSlinky.awsSdk.awsSdkStrings.RejectFailed
     - typingsSlinky.awsSdk.awsSdkStrings.Sharing
     - typingsSlinky.awsSdk.awsSdkStrings.ShareFailed

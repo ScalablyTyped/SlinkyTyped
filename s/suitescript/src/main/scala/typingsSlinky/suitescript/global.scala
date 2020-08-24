@@ -28,78 +28,8 @@ object global extends js.Object {
   Instantiable0[js.Any] {
     def this(name: String) = this()
     def this(name: String, join: String) = this()
+    def this(name: String, join: js.UndefOr[scala.Nothing], summary: String) = this()
     def this(name: String, join: String, summary: String) = this()
-    /**
-      * return the error code for this system or user-defined error.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjError
-      *
-      * @since 2008.2
-      * @return
-      */
-    /* CompleteClass */
-    override def getCode(): String = js.native
-    /**
-      * return the error description for this error.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjError
-      *
-      * @since 2008.2
-      * @return
-      */
-    /* CompleteClass */
-    override def getDetails(): String = js.native
-    /**
-      * return the error db ID for this error (if it was an unhandled unexpected error).
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjError
-      *
-      * @since 2008.2
-      * @return
-      */
-    /* CompleteClass */
-    override def getId(): String = js.native
-    /**
-      * return the internalid of the record if this error was thrown in an aftersubmit script.
-      * @return {int}
-      *
-      * @method
-      * @memberOf nlobjError
-      *
-      * @since 2008.2
-      * @return
-      */
-    /* CompleteClass */
-    override def getInternalId(): js.Any = js.native
-    /**
-      * return a stacktrace containing the location of the error.
-      * @return {string[]}
-      *
-      * @method
-      * @memberOf nlobjError
-      *
-      * @since 2008.2
-      */
-    /* CompleteClass */
-    override def getStackTrace(): Unit = js.native
-    /**
-      * return the userevent script name where this error was thrown.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjError
-      *
-      * @since 2008.2
-      * @return
-      */
-    /* CompleteClass */
-    override def getUserEvent(): String = js.native
   }
   
   /**
@@ -128,86 +58,14 @@ object global extends js.Object {
        with Instantiable2[/* name */ String, /* join */ String, typingsSlinky.suitescript.nlobjSearchColumn]
        with Instantiable3[
           /* name */ String, 
-          /* join */ String, 
+          js.UndefOr[/* join */ String], 
           /* summary */ String, 
           typingsSlinky.suitescript.nlobjSearchColumn
         ] {
     def this(name: String) = this()
     def this(name: String, join: String) = this()
+    def this(name: String, join: js.UndefOr[scala.Nothing], summary: String) = this()
     def this(name: String, join: String, summary: String) = this()
-    /**
-      * return formula for this search column.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjSearchColumn
-      *
-      * @since 2009.2
-      * @return
-      */
-    /* CompleteClass */
-    override def getFormula(): String = js.native
-    /**
-      * return the join id for this search column.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjSearchColumn
-      * @since 2008.1
-      * @return
-      */
-    /* CompleteClass */
-    override def getJoin(): String = js.native
-    /**
-      * return the label of this search column.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjSearchColumn
-      *
-      * @since 2009.1
-      * @return
-      */
-    /* CompleteClass */
-    override def getLabel(): String = js.native
-    /**
-      * return the name of this search column.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjSearchColumn
-      * @since 2008.1
-      * @return
-      */
-    /* CompleteClass */
-    override def getName(): String = js.native
-    /**
-      * return the summary type (avg,group,sum,count) of this search column.
-      * @return {string}
-      *
-      * @method
-      * @memberOf nlobjSearchColumn
-      * @since 2008.1
-      * @return
-      */
-    /* CompleteClass */
-    override def getSummary(): String = js.native
-    /* CompleteClass */
-    override def setLabel(label: String): typingsSlinky.suitescript.nlobjSearchColumn = js.native
-    /**
-      * return nlobjSearchColumn sorted in either ascending or descending order.
-      * @return {nlobjSearchColumn}
-      * @param {boolean} sort if not set, defaults to false, which returns column data in ascending order.
-      *
-      * @method
-      * @memberOf nlobjSearchColumn
-      *
-      * @since 2010.1
-      * @param order
-      * @return
-      */
-    /* CompleteClass */
-    override def setSort(order: js.Any): js.Function3[/* name */ String, /* join */ String, /* summary */ String, Unit] = js.native
   }
   
   /**
@@ -1248,7 +1106,32 @@ object global extends js.Object {
     * @return
     */
   def nlapiMergeRecord(id: js.Any, baseType: String, baseId: js.Any): js.Any = js.native
+  def nlapiMergeRecord(
+    id: js.Any,
+    baseType: String,
+    baseId: js.Any,
+    altType: js.UndefOr[scala.Nothing],
+    altId: js.UndefOr[scala.Nothing],
+    fields: js.Any
+  ): js.Any = js.native
+  def nlapiMergeRecord(id: js.Any, baseType: String, baseId: js.Any, altType: js.UndefOr[scala.Nothing], altId: js.Any): js.Any = js.native
+  def nlapiMergeRecord(
+    id: js.Any,
+    baseType: String,
+    baseId: js.Any,
+    altType: js.UndefOr[scala.Nothing],
+    altId: js.Any,
+    fields: js.Any
+  ): js.Any = js.native
   def nlapiMergeRecord(id: js.Any, baseType: String, baseId: js.Any, altType: String): js.Any = js.native
+  def nlapiMergeRecord(
+    id: js.Any,
+    baseType: String,
+    baseId: js.Any,
+    altType: String,
+    altId: js.UndefOr[scala.Nothing],
+    fields: js.Any
+  ): js.Any = js.native
   def nlapiMergeRecord(id: js.Any, baseType: String, baseId: js.Any, altType: String, altId: js.Any): js.Any = js.native
   def nlapiMergeRecord(id: js.Any, baseType: String, baseId: js.Any, altType: String, altId: js.Any, fields: js.Any): js.Any = js.native
   /**
@@ -1283,6 +1166,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiPrintRecord(`type`: String, id: js.Any): js.Any = js.native
+  def nlapiPrintRecord(`type`: String, id: js.Any, format: js.UndefOr[scala.Nothing], properties: js.Any): js.Any = js.native
   def nlapiPrintRecord(`type`: String, id: js.Any, format: String): js.Any = js.native
   def nlapiPrintRecord(`type`: String, id: js.Any, format: String, properties: js.Any): js.Any = js.native
   /**
@@ -1377,8 +1261,66 @@ object global extends js.Object {
     * @return
     */
   def nlapiRequestURL(url: String): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    method: js.Any
+  ): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    callback: js.Any
+  ): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.UndefOr[scala.Nothing],
+    headers: js.UndefOr[scala.Nothing],
+    callback: js.Any,
+    method: js.Any
+  ): js.Any = js.native
+  def nlapiRequestURL(url: String, postdata: js.UndefOr[scala.Nothing], headers: js.Any): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.UndefOr[scala.Nothing],
+    headers: js.Any,
+    callback: js.UndefOr[scala.Nothing],
+    method: js.Any
+  ): js.Any = js.native
+  def nlapiRequestURL(url: String, postdata: js.UndefOr[scala.Nothing], headers: js.Any, callback: js.Any): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.UndefOr[scala.Nothing],
+    headers: js.Any,
+    callback: js.Any,
+    method: js.Any
+  ): js.Any = js.native
   def nlapiRequestURL(url: String, postdata: js.Any): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.Any,
+    headers: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    method: js.Any
+  ): js.Any = js.native
+  def nlapiRequestURL(url: String, postdata: js.Any, headers: js.UndefOr[scala.Nothing], callback: js.Any): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.Any,
+    headers: js.UndefOr[scala.Nothing],
+    callback: js.Any,
+    method: js.Any
+  ): js.Any = js.native
   def nlapiRequestURL(url: String, postdata: js.Any, headers: js.Any): js.Any = js.native
+  def nlapiRequestURL(
+    url: String,
+    postdata: js.Any,
+    headers: js.Any,
+    callback: js.UndefOr[scala.Nothing],
+    method: js.Any
+  ): js.Any = js.native
   def nlapiRequestURL(url: String, postdata: js.Any, headers: js.Any, callback: js.Any): js.Any = js.native
   def nlapiRequestURL(url: String, postdata: js.Any, headers: js.Any, callback: js.Any, method: js.Any): js.Any = js.native
   /**
@@ -1398,6 +1340,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiResolveURL(`type`: String, subtype: String): String = js.native
+  def nlapiResolveURL(`type`: String, subtype: String, id: js.UndefOr[scala.Nothing], pagemode: String): String = js.native
   def nlapiResolveURL(`type`: String, subtype: String, id: String): String = js.native
   def nlapiResolveURL(`type`: String, subtype: String, id: String, pagemode: String): String = js.native
   /**
@@ -1674,6 +1617,14 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetCurrentLineItemMatrixValue(`type`: String, fldnam: String, column: js.Any, value: String): js.Any = js.native
+  def nlapiSetCurrentLineItemMatrixValue(
+    `type`: String,
+    fldnam: String,
+    column: js.Any,
+    value: String,
+    firefieldchanged: js.UndefOr[scala.Nothing],
+    synchronous: Boolean
+  ): js.Any = js.native
   def nlapiSetCurrentLineItemMatrixValue(`type`: String, fldnam: String, column: js.Any, value: String, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetCurrentLineItemMatrixValue(
     `type`: String,
@@ -1703,6 +1654,13 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetCurrentLineItemText(`type`: String, fldnam: String, txt: String): js.Any = js.native
+  def nlapiSetCurrentLineItemText(
+    `type`: String,
+    fldnam: String,
+    txt: String,
+    firefieldchanged: js.UndefOr[scala.Nothing],
+    synchronous: Boolean
+  ): js.Any = js.native
   def nlapiSetCurrentLineItemText(`type`: String, fldnam: String, txt: String, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetCurrentLineItemText(`type`: String, fldnam: String, txt: String, firefieldchanged: Boolean, synchronous: Boolean): js.Any = js.native
   /**
@@ -1725,9 +1683,23 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetCurrentLineItemValue(`type`: String, fldnam: String, value: String): Unit = js.native
+  def nlapiSetCurrentLineItemValue(
+    `type`: String,
+    fldnam: String,
+    value: String,
+    firefieldchanged: js.UndefOr[scala.Nothing],
+    synchronous: Boolean
+  ): Unit = js.native
   def nlapiSetCurrentLineItemValue(`type`: String, fldnam: String, value: String, firefieldchanged: Boolean): Unit = js.native
   def nlapiSetCurrentLineItemValue(`type`: String, fldnam: String, value: String, firefieldchanged: Boolean, synchronous: Boolean): Unit = js.native
   def nlapiSetCurrentLineItemValue(`type`: String, fldnam: String, value: Double): Unit = js.native
+  def nlapiSetCurrentLineItemValue(
+    `type`: String,
+    fldnam: String,
+    value: Double,
+    firefieldchanged: js.UndefOr[scala.Nothing],
+    synchronous: Boolean
+  ): Unit = js.native
   def nlapiSetCurrentLineItemValue(`type`: String, fldnam: String, value: Double, firefieldchanged: Boolean): Unit = js.native
   def nlapiSetCurrentLineItemValue(`type`: String, fldnam: String, value: Double, firefieldchanged: Boolean, synchronous: Boolean): Unit = js.native
   /**
@@ -1761,6 +1733,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetFieldText(fldnam: String, txt: String): js.Any = js.native
+  def nlapiSetFieldText(fldnam: String, txt: String, firefieldchanged: js.UndefOr[scala.Nothing], synchronous: Boolean): js.Any = js.native
   def nlapiSetFieldText(fldnam: String, txt: String, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetFieldText(fldnam: String, txt: String, firefieldchanged: Boolean, synchronous: Boolean): js.Any = js.native
   /**
@@ -1782,6 +1755,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetFieldTexts(fldnam: String, texts: js.Any): js.Any = js.native
+  def nlapiSetFieldTexts(fldnam: String, texts: js.Any, firefieldchanged: js.UndefOr[scala.Nothing], synchronous: Boolean): js.Any = js.native
   def nlapiSetFieldTexts(fldnam: String, texts: js.Any, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetFieldTexts(fldnam: String, texts: js.Any, firefieldchanged: Boolean, synchronous: Boolean): js.Any = js.native
   /**
@@ -1803,6 +1777,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetFieldValue(fldnam: String, value: String): js.Any = js.native
+  def nlapiSetFieldValue(fldnam: String, value: String, firefieldchanged: js.UndefOr[scala.Nothing], synchronous: Boolean): js.Any = js.native
   def nlapiSetFieldValue(fldnam: String, value: String, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetFieldValue(fldnam: String, value: String, firefieldchanged: Boolean, synchronous: Boolean): js.Any = js.native
   /**
@@ -1824,6 +1799,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetFieldValues(fldnam: String, values: js.Any): js.Any = js.native
+  def nlapiSetFieldValues(fldnam: String, values: js.Any, firefieldchanged: js.UndefOr[scala.Nothing], synchronous: Boolean): js.Any = js.native
   def nlapiSetFieldValues(fldnam: String, values: js.Any, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetFieldValues(fldnam: String, values: js.Any, firefieldchanged: Boolean, synchronous: Boolean): js.Any = js.native
   /**
@@ -1917,6 +1893,14 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetMatrixValue(`type`: String, fldnam: String, column: js.Any, value: String): js.Any = js.native
+  def nlapiSetMatrixValue(
+    `type`: String,
+    fldnam: String,
+    column: js.Any,
+    value: String,
+    firefieldchanged: js.UndefOr[scala.Nothing],
+    synchronous: Boolean
+  ): js.Any = js.native
   def nlapiSetMatrixValue(`type`: String, fldnam: String, column: js.Any, value: String, firefieldchanged: Boolean): js.Any = js.native
   def nlapiSetMatrixValue(
     `type`: String,
@@ -1945,10 +1929,39 @@ object global extends js.Object {
     * @return
     */
   def nlapiSetRedirectURL(`type`: String, identifier: String): Unit = js.native
+  def nlapiSetRedirectURL(
+    `type`: String,
+    identifier: String,
+    id: js.UndefOr[scala.Nothing],
+    editmode: js.UndefOr[scala.Nothing],
+    parameters: js.Any
+  ): Unit = js.native
+  def nlapiSetRedirectURL(`type`: String, identifier: String, id: js.UndefOr[scala.Nothing], editmode: Boolean): Unit = js.native
+  def nlapiSetRedirectURL(
+    `type`: String,
+    identifier: String,
+    id: js.UndefOr[scala.Nothing],
+    editmode: Boolean,
+    parameters: js.Any
+  ): Unit = js.native
   def nlapiSetRedirectURL(`type`: String, identifier: String, id: String): Unit = js.native
+  def nlapiSetRedirectURL(
+    `type`: String,
+    identifier: String,
+    id: String,
+    editmode: js.UndefOr[scala.Nothing],
+    parameters: js.Any
+  ): Unit = js.native
   def nlapiSetRedirectURL(`type`: String, identifier: String, id: String, editmode: Boolean): Unit = js.native
   def nlapiSetRedirectURL(`type`: String, identifier: String, id: String, editmode: Boolean, parameters: js.Any): Unit = js.native
   def nlapiSetRedirectURL(`type`: String, identifier: String, id: Double): Unit = js.native
+  def nlapiSetRedirectURL(
+    `type`: String,
+    identifier: String,
+    id: Double,
+    editmode: js.UndefOr[scala.Nothing],
+    parameters: js.Any
+  ): Unit = js.native
   def nlapiSetRedirectURL(`type`: String, identifier: String, id: Double, editmode: Boolean): Unit = js.native
   def nlapiSetRedirectURL(`type`: String, identifier: String, id: Double, editmode: Boolean, parameters: js.Any): Unit = js.native
   /**
@@ -2044,6 +2057,7 @@ object global extends js.Object {
     * @return
     */
   def nlapiSubmitRecord(record: js.Any): js.Any = js.native
+  def nlapiSubmitRecord(record: js.Any, doSourcing: js.UndefOr[scala.Nothing], ignoreMandatoryFields: Boolean): js.Any = js.native
   def nlapiSubmitRecord(record: js.Any, doSourcing: Boolean): js.Any = js.native
   def nlapiSubmitRecord(record: js.Any, doSourcing: Boolean, ignoreMandatoryFields: Boolean): js.Any = js.native
   /**

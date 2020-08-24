@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "ua-parser-js"
-version := "v0.7.10-dt-20200515Z-9e2656"
-scalaVersion := "2.13.2"
+version := "v0.7.10-dt-20200515Z-965650"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

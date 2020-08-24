@@ -5,7 +5,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.fixed
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.normal
 import typingsSlinky.antDesignReactNative.progressMod.ProgressProps
-import typingsSlinky.antDesignReactNative.progressMod.default
 import typingsSlinky.antDesignReactNative.progressStyleMod.ProgressStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -15,14 +14,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Progress {
-  @JSImport("@ant-design/react-native/lib/progress", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Progress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Progress] {
     @scala.inline
     def appearTransition(value: Boolean): this.type = set("appearTransition", value.asInstanceOf[js.Any])
     @scala.inline

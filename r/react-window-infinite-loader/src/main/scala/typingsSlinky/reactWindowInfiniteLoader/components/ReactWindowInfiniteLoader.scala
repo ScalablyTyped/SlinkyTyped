@@ -1,7 +1,9 @@
 package typingsSlinky.reactWindowInfiniteLoader.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactWindowInfiniteLoader.anon.OnItemsRendered
 import typingsSlinky.reactWindowInfiniteLoader.mod.InfiniteLoaderProps
 import typingsSlinky.reactWindowInfiniteLoader.mod.^
 import scala.scalajs.js
@@ -26,11 +28,12 @@ object ReactWindowInfiniteLoader {
   def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
+    children: OnItemsRendered => ReactElement,
     isItemLoaded: Double => Boolean,
     itemCount: Double,
     loadMoreItems: (Double, Double) => js.Promise[_] | Null
   ): Builder = {
-    val __props = js.Dynamic.literal(isItemLoaded = js.Any.fromFunction1(isItemLoaded), itemCount = itemCount.asInstanceOf[js.Any], loadMoreItems = js.Any.fromFunction2(loadMoreItems))
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), isItemLoaded = js.Any.fromFunction1(isItemLoaded), itemCount = itemCount.asInstanceOf[js.Any], loadMoreItems = js.Any.fromFunction2(loadMoreItems))
     new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
   }
 }

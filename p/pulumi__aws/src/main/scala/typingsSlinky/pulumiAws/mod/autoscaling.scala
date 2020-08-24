@@ -126,8 +126,8 @@ object autoscaling extends js.Object {
   var InstanceTerminateNotification: NotificationType = js.native
   var OneMinuteMetricsGranularity: MetricsGranularity = js.native
   var TestNotification: NotificationType = js.native
-  def getGroup(args: GetGroupArgs): js.Promise[GetGroupResult] with GetGroupResult = js.native
-  def getGroup(args: GetGroupArgs, opts: InvokeOptions): js.Promise[GetGroupResult] with GetGroupResult = js.native
+  def getGroup(args: GetGroupArgs): js.Promise[GetGroupResult] = js.native
+  def getGroup(args: GetGroupArgs, opts: InvokeOptions): js.Promise[GetGroupResult] = js.native
   /* static members */
   @js.native
   object Attachment extends js.Object {
@@ -138,8 +138,10 @@ object autoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.attachmentMod.Attachment = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.attachmentMod.Attachment = js.native
     def get(name: String, id: Input[ID], state: AttachmentState): typingsSlinky.pulumiAws.attachmentMod.Attachment = js.native
     def get(name: String, id: Input[ID], state: AttachmentState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.attachmentMod.Attachment = js.native
     /**
@@ -159,8 +161,10 @@ object autoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.groupMod.Group = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.groupMod.Group = js.native
     def get(name: String, id: Input[ID], state: GroupState): typingsSlinky.pulumiAws.groupMod.Group = js.native
     def get(name: String, id: Input[ID], state: GroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.groupMod.Group = js.native
     /**
@@ -180,8 +184,10 @@ object autoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.lifecycleHookMod.LifecycleHook = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.lifecycleHookMod.LifecycleHook = js.native
     def get(name: String, id: Input[ID], state: LifecycleHookState): typingsSlinky.pulumiAws.lifecycleHookMod.LifecycleHook = js.native
     def get(name: String, id: Input[ID], state: LifecycleHookState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.lifecycleHookMod.LifecycleHook = js.native
     /**
@@ -201,8 +207,10 @@ object autoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.notificationMod.Notification = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.notificationMod.Notification = js.native
     def get(name: String, id: Input[ID], state: NotificationState): typingsSlinky.pulumiAws.notificationMod.Notification = js.native
     def get(name: String, id: Input[ID], state: NotificationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.notificationMod.Notification = js.native
     /**
@@ -222,8 +230,10 @@ object autoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.autoscalingPolicyMod.Policy = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.autoscalingPolicyMod.Policy = js.native
     def get(name: String, id: Input[ID], state: PolicyState): typingsSlinky.pulumiAws.autoscalingPolicyMod.Policy = js.native
     def get(name: String, id: Input[ID], state: PolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.autoscalingPolicyMod.Policy = js.native
     /**
@@ -243,8 +253,10 @@ object autoscaling extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.scheduleMod.Schedule = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.scheduleMod.Schedule = js.native
     def get(name: String, id: Input[ID], state: ScheduleState): typingsSlinky.pulumiAws.scheduleMod.Schedule = js.native
     def get(name: String, id: Input[ID], state: ScheduleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.scheduleMod.Schedule = js.native
     /**

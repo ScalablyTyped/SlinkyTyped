@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs")
 @js.native
 abstract class MediaSourceOpenOperationCompletedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs {
-  /** Represents the error that occurred while asynchronously opening the MediaSource . */
-  /* CompleteClass */
-  override var error: typingsSlinky.winrtUwp.Windows.Media.Core.MediaSourceError = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs
 

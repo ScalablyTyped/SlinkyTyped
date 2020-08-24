@@ -11,7 +11,7 @@ package object mod {
   type AsyncLinter = js.Function4[
     /* content */ java.lang.String, 
     /* updateLintingCallback */ typingsSlinky.codemirror.mod.UpdateLintingCallback, 
-    /* options */ typingsSlinky.codemirror.mod.LintStateOptions, 
+    /* options */ typingsSlinky.codemirror.mod.LintStateOptions | js.Any, 
     /* codeMirror */ typingsSlinky.codemirror.mod.Editor, 
     scala.Unit
   ]
@@ -27,7 +27,7 @@ package object mod {
     */
   type Linter = js.Function3[
     /* content */ java.lang.String, 
-    /* options */ typingsSlinky.codemirror.mod.LintStateOptions, 
+    /* options */ typingsSlinky.codemirror.mod.LintStateOptions | js.Any, 
     /* codeMirror */ typingsSlinky.codemirror.mod.Editor, 
     js.Array[typingsSlinky.codemirror.mod.Annotation] | js.Thenable[js.Array[typingsSlinky.codemirror.mod.Annotation]]
   ]

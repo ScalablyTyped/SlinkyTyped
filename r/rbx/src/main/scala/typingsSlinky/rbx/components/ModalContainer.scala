@@ -8,6 +8,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.modalContainerMod.ModalContainerProps
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +30,7 @@ object ModalContainer {
     @scala.inline
     def asComponentClass(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
-    def as(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: ReactType[_]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
     def clipped(value: Boolean): this.type = set("clipped", value.asInstanceOf[js.Any])
     @scala.inline

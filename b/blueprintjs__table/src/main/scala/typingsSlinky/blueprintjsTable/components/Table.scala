@@ -32,7 +32,15 @@ object Table {
     @scala.inline
     def bodyContextMenuRenderer(value: /* context */ IMenuContext => ReactElement): this.type = set("bodyContextMenuRenderer", js.Any.fromFunction1(value))
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnWidthsVarargs(value: (js.UndefOr[Double | Null])*): this.type = set("columnWidths", js.Array(value :_*))
     @scala.inline
     def columnWidths(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("columnWidths", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,6 +71,8 @@ object Table {
     def forceRerenderOnSelectionChange(value: Boolean): this.type = set("forceRerenderOnSelectionChange", value.asInstanceOf[js.Any])
     @scala.inline
     def getCellClipboardData(value: (/* row */ Double, /* col */ Double) => _): this.type = set("getCellClipboardData", js.Any.fromFunction2(value))
+    @scala.inline
+    def loadingOptionsVarargs(value: TableLoadingOption*): this.type = set("loadingOptions", js.Array(value :_*))
     @scala.inline
     def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -102,15 +112,23 @@ object Table {
     @scala.inline
     def rowHeaderCellRenderer(value: /* rowIndex */ Double => ReactElement): this.type = set("rowHeaderCellRenderer", js.Any.fromFunction1(value))
     @scala.inline
+    def rowHeightsVarargs(value: (js.UndefOr[Double | Null])*): this.type = set("rowHeights", js.Array(value :_*))
+    @scala.inline
     def rowHeights(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("rowHeights", value.asInstanceOf[js.Any])
     @scala.inline
     def selectedRegionTransform(
       value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
     @scala.inline
+    def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
+    @scala.inline
     def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectionModesVarargs(value: RegionCardinality*): this.type = set("selectionModes", js.Array(value :_*))
+    @scala.inline
     def selectionModes(value: js.Array[RegionCardinality]): this.type = set("selectionModes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styledRegionGroupsVarargs(value: IStyledRegionGroup*): this.type = set("styledRegionGroups", js.Array(value :_*))
     @scala.inline
     def styledRegionGroups(value: js.Array[IStyledRegionGroup]): this.type = set("styledRegionGroups", value.asInstanceOf[js.Any])
   }

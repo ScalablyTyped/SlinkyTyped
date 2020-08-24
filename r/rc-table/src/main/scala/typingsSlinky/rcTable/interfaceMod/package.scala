@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object interfaceMod {
+  type CellEllipsisType = typingsSlinky.rcTable.anon.ShowTitle | scala.Boolean
   type ColumnsType[RecordType] = js.Array[
     typingsSlinky.rcTable.interfaceMod.ColumnGroupType[RecordType] | typingsSlinky.rcTable.interfaceMod.ColumnType[RecordType]
   ]
@@ -134,7 +135,7 @@ package object interfaceMod {
   type CustomizeScrollBody[RecordType] = js.Function2[
     /* data */ js.Array[RecordType], 
     /* info */ typingsSlinky.rcTable.anon.OnScroll, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type DataIndex = java.lang.String | scala.Double | (js.Array[java.lang.String | scala.Double])
   type DefaultRecordType = typingsSlinky.std.Record[java.lang.String, js.Any]
@@ -143,7 +144,7 @@ package object interfaceMod {
     /* index */ scala.Double, 
     /* indent */ scala.Double, 
     /* expanded */ scala.Boolean, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.rcTable.rcTableStrings.left
@@ -167,10 +168,10 @@ package object interfaceMod {
     typingsSlinky.rcTable.interfaceMod.Key
   ]
   type Key = typingsSlinky.react.mod.Key
-  type PanelRender[RecordType] = js.Function1[/* data */ js.Array[RecordType], slinky.core.TagMod[scala.Any]]
+  type PanelRender[RecordType] = js.Function1[/* data */ js.Array[RecordType], slinky.core.facade.ReactElement]
   type RenderExpandIcon[RecordType] = js.Function1[
     /* props */ typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps[RecordType], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type RowClassName[RecordType] = js.Function3[
     /* record */ RecordType, 

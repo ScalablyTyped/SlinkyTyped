@@ -150,6 +150,23 @@ trait Kafka extends Service {
   ): Request[GetBootstrapBrokersResponse, AWSError] = js.native
   /**
     * 
+    Gets the Apache Kafka versions to which you can update the MSK cluster.
+    
+    */
+  def getCompatibleKafkaVersions(): Request[GetCompatibleKafkaVersionsResponse, AWSError] = js.native
+  def getCompatibleKafkaVersions(callback: js.Function2[/* err */ AWSError, /* data */ GetCompatibleKafkaVersionsResponse, Unit]): Request[GetCompatibleKafkaVersionsResponse, AWSError] = js.native
+  /**
+    * 
+    Gets the Apache Kafka versions to which you can update the MSK cluster.
+    
+    */
+  def getCompatibleKafkaVersions(params: GetCompatibleKafkaVersionsRequest): Request[GetCompatibleKafkaVersionsResponse, AWSError] = js.native
+  def getCompatibleKafkaVersions(
+    params: GetCompatibleKafkaVersionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetCompatibleKafkaVersionsResponse, Unit]
+  ): Request[GetCompatibleKafkaVersionsResponse, AWSError] = js.native
+  /**
+    * 
     Returns a list of all the operations that have been performed on the specified MSK cluster.
     
     */
@@ -268,6 +285,19 @@ trait Kafka extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
   /**
+    * Reboots brokers.
+    */
+  def rebootBroker(): Request[RebootBrokerResponse, AWSError] = js.native
+  def rebootBroker(callback: js.Function2[/* err */ AWSError, /* data */ RebootBrokerResponse, Unit]): Request[RebootBrokerResponse, AWSError] = js.native
+  /**
+    * Reboots brokers.
+    */
+  def rebootBroker(params: RebootBrokerRequest): Request[RebootBrokerResponse, AWSError] = js.native
+  def rebootBroker(
+    params: RebootBrokerRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ RebootBrokerResponse, Unit]
+  ): Request[RebootBrokerResponse, AWSError] = js.native
+  /**
     * 
     Adds tags to the specified MSK resource.
     
@@ -349,6 +379,23 @@ trait Kafka extends Service {
     params: UpdateClusterConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateClusterConfigurationResponse, Unit]
   ): Request[UpdateClusterConfigurationResponse, AWSError] = js.native
+  /**
+    * 
+    Updates the Apache Kafka version for the cluster.
+    
+    */
+  def updateClusterKafkaVersion(): Request[UpdateClusterKafkaVersionResponse, AWSError] = js.native
+  def updateClusterKafkaVersion(callback: js.Function2[/* err */ AWSError, /* data */ UpdateClusterKafkaVersionResponse, Unit]): Request[UpdateClusterKafkaVersionResponse, AWSError] = js.native
+  /**
+    * 
+    Updates the Apache Kafka version for the cluster.
+    
+    */
+  def updateClusterKafkaVersion(params: UpdateClusterKafkaVersionRequest): Request[UpdateClusterKafkaVersionResponse, AWSError] = js.native
+  def updateClusterKafkaVersion(
+    params: UpdateClusterKafkaVersionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateClusterKafkaVersionResponse, Unit]
+  ): Request[UpdateClusterKafkaVersionResponse, AWSError] = js.native
   /**
     * 
     Updates the monitoring settings for the cluster. You can use this operation to specify which Apache Kafka metrics you want Amazon MSK to send to Amazon CloudWatch. You can also specify settings for open monitoring with Prometheus.

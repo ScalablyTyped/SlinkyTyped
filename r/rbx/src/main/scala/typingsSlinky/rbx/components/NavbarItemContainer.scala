@@ -52,6 +52,7 @@ import typingsSlinky.rbx.rbxStrings.top
 import typingsSlinky.rbx.rbxStrings.uppercase
 import typingsSlinky.rbx.rbxStrings.warning
 import typingsSlinky.rbx.rbxStrings.white
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -73,7 +74,7 @@ object NavbarItemContainer {
     @scala.inline
     def asComponentClass(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
-    def as(value: ReactComponentClass[_]): this.type = set("as", value.asInstanceOf[js.Any])
+    def as(value: ReactType[_]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
     def backgroundColor(
       value: primary | success | info | warning | danger | light | dark | white | black | link | `black-bis` | `black-ter` | `grey-darker` | `grey-dark` | grey | `grey-light` | `grey-lighter` | `white-ter` | `white-bis`

@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.Checked
+import typingsSlinky.primereact.anon.CheckedOriginalEvent
 import typingsSlinky.primereact.radioButtonMod.RadioButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -33,6 +33,8 @@ object RadioButton {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def onChange(value: /* e */ CheckedOriginalEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
@@ -47,10 +49,6 @@ object RadioButton {
   }
   
   def withProps(p: RadioButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(onChange: Checked => Unit): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonProps]))
-  }
+  implicit def make(companion: RadioButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

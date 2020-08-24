@@ -30,101 +30,44 @@ object TextOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnnotations(value: js.Array[TextAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(js.undefined)
-        ret
-    }
+    def setAnnotationsVarargs(value: TextAnnotation*): Self = this.set("annotations", js.Array(value :_*))
     @scala.inline
-    def withDisplayEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAnnotations(value: js.Array[TextAnnotation]): Self = this.set("annotations", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisplayEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayEmpty")(js.undefined)
-        ret
-    }
+    def deleteAnnotations: Self = this.set("annotations", js.undefined)
     @scala.inline
-    def withEol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplayEmpty(value: Boolean): Self = this.set("displayEmpty", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
-        ret
-    }
+    def deleteDisplayEmpty: Self = this.set("displayEmpty", js.undefined)
     @scala.inline
-    def withIncludeAnnotationIndices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAnnotationIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEol(value: String): Self = this.set("eol", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIncludeAnnotationIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAnnotationIndices")(js.undefined)
-        ret
-    }
+    def deleteEol: Self = this.set("eol", js.undefined)
     @scala.inline
-    def withLineHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIncludeAnnotationIndices(value: Boolean): Self = this.set("includeAnnotationIndices", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLineHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
-        ret
-    }
+    def deleteIncludeAnnotationIndices: Self = this.set("includeAnnotationIndices", js.undefined)
     @scala.inline
-    def withTextPath(value: String | StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPath")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLineHeight(value: Double | String): Self = this.set("lineHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTextPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPath")(js.undefined)
-        ret
-    }
+    def deleteLineHeight: Self = this.set("lineHeight", js.undefined)
     @scala.inline
-    def withTextVerticalAnchor(value: TextVerticalAnchor | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textVerticalAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTextPath(value: String | StringDictionary[js.Any]): Self = this.set("textPath", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutTextVerticalAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textVerticalAnchor")(js.undefined)
-        ret
-    }
+    def deleteTextPath: Self = this.set("textPath", js.undefined)
     @scala.inline
-    def withX(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTextVerticalAnchor(value: TextVerticalAnchor | Double | String): Self = this.set("textVerticalAnchor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
+    def deleteTextVerticalAnchor: Self = this.set("textVerticalAnchor", js.undefined)
+    @scala.inline
+    def setX(value: Double | String): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteX: Self = this.set("x", js.undefined)
   }
   
 }

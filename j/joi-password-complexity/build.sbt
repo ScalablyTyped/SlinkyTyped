@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "joi-password-complexity"
-version := "3.1-dt-20190820Z-e4ea60"
-scalaVersion := "2.13.2"
+version := "3.1-dt-20190820Z-c9ccb3"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

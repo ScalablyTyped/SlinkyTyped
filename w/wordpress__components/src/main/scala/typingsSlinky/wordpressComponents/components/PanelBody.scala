@@ -5,7 +5,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.iconMod.Icon.IconType
-import typingsSlinky.wordpressComponents.mod.PanelBody.^
 import typingsSlinky.wordpressComponents.panelBodyMod.PanelBody.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +18,7 @@ object PanelBody {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: js.Any): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

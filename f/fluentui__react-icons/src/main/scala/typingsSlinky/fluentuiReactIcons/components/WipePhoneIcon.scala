@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object WipePhoneIcon {
-  @JSImport("@fluentui/react-icons/lib/components/WipePhoneIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "WipePhoneIcon")
   @js.native
   object component extends js.Object
   

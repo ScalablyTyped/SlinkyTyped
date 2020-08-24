@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
-import typingsSlinky.winrtUwp.Windows.Storage.IStorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates a new instance of the NDStorageFileHelper class. */
 class NDStorageFileHelper ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.NDStorageFileHelper {
-  /**
-    * Gets transmitter settings from the URLs associated with a StorageFile object if the URLs contain PlayReady-ND metadata.
-    * @param file A storage file object that a media server has discovered.
-    * @return The transmitter settings found in the storage file.
-    */
-  /* CompleteClass */
-  override def getFileURLs(file: IStorageFile): IVector[String] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.NDStorageFileHelper
 

@@ -1,10 +1,10 @@
 package typingsSlinky.calidation.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.calidation.mod.Dictionary
-import typingsSlinky.calidation.mod.SimpleValidatorConfig
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.calidation.mod.CustomValidatorFunction
 import typingsSlinky.calidation.mod.ValidatorsProviderProps
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,15 +14,16 @@ object ValidatorsProvider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ValidatorsProviderProps): Default[tag.type, typingsSlinky.calidation.mod.ValidatorsProvider] = new Default[tag.type, typingsSlinky.calidation.mod.ValidatorsProvider](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(
-    validators: Dictionary[
-      js.Function1[/* config */ SimpleValidatorConfig, js.Function1[/* value */ _, String | Null]]
-    ]
-  ): Default[tag.type, typingsSlinky.calidation.mod.ValidatorsProvider] = {
+  class Builder[/* <: js.Object */ T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.calidation.mod.ValidatorsProvider[T]]
+  
+  def withProps[/* <: js.Object */ T](p: ValidatorsProviderProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[/* <: js.Object */ T](validators: Record[String, CustomValidatorFunction[T]]): Builder[T] = {
     val __props = js.Dynamic.literal(validators = validators.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.calidation.mod.ValidatorsProvider](js.Array(this.component, __props.asInstanceOf[ValidatorsProviderProps]))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ValidatorsProviderProps[T]]))
   }
 }
 

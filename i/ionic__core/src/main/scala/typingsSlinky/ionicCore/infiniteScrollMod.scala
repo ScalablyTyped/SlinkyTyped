@@ -3,8 +3,8 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.ionicCoreStrings.bottom
 import typingsSlinky.ionicCore.ionicCoreStrings.top
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ object infiniteScrollMod extends js.Object {
       * The value can be either `top` or `bottom`.
       */
     var position: top | bottom = js.native
-    var scrollEl: js.UndefOr[js.Any] = js.native
+    var scrollEl: js.Any = js.native
     var thrPc: js.Any = js.native
     var thrPx: js.Any = js.native
     /**

@@ -11,7 +11,7 @@ class BoundDirectivePropertyAst protected ()
   def this(
     directiveName: String,
     templateName: String,
-    value: typingsSlinky.angularCompiler.astMod.AST,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }

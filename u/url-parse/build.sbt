@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "url-parse"
-version := "1.4-dt-20200515Z-721e0c"
-scalaVersion := "2.13.2"
+version := "1.4-dt-20200515Z-3e5c52"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

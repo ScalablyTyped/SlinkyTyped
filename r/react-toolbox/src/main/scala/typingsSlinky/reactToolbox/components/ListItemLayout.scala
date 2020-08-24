@@ -1,28 +1,27 @@
 package typingsSlinky.reactToolbox.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactChild
-import typingsSlinky.reactToolbox.listListItemActionsMod.ListItemActionsTheme
-import typingsSlinky.reactToolbox.listListItemContentMod.ListItemContentTheme
-import typingsSlinky.reactToolbox.listListItemLayoutMod.ListItemLayoutProps
-import typingsSlinky.reactToolbox.listListItemLayoutMod.ListItemLayoutTheme
+import typingsSlinky.reactToolbox.listItemActionsMod.ListItemActionsTheme
+import typingsSlinky.reactToolbox.listItemContentMod.ListItemContentTheme
+import typingsSlinky.reactToolbox.listItemLayoutMod.ListItemLayoutProps
+import typingsSlinky.reactToolbox.listItemLayoutMod.ListItemLayoutTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListItemLayout {
-  @JSImport("react-toolbox/lib/list", "ListItemLayout")
+  @JSImport("react-toolbox/components/list", "ListItemLayout")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.libListMod.ListItemLayout] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.listMod.ListItemLayout] {
     @scala.inline
     def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
@@ -38,7 +37,9 @@ object ListItemLayout {
     @scala.inline
     def itemContent(value: ReactChild): this.type = set("itemContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def leftActions(value: js.Array[TagMod[Any]]): this.type = set("leftActions", value.asInstanceOf[js.Any])
+    def leftActionsVarargs(value: ReactElement*): this.type = set("leftActions", js.Array(value :_*))
+    @scala.inline
+    def leftActions(value: js.Array[ReactElement]): this.type = set("leftActions", value.asInstanceOf[js.Any])
     @scala.inline
     def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,7 +91,9 @@ object ListItemLayout {
     @scala.inline
     def onTouchStart(value: js.Function): this.type = set("onTouchStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def rightActions(value: js.Array[TagMod[Any]]): this.type = set("rightActions", value.asInstanceOf[js.Any])
+    def rightActionsVarargs(value: ReactElement*): this.type = set("rightActions", js.Array(value :_*))
+    @scala.inline
+    def rightActions(value: js.Array[ReactElement]): this.type = set("rightActions", value.asInstanceOf[js.Any])
     @scala.inline
     def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     @scala.inline

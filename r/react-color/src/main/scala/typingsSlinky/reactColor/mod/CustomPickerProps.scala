@@ -1,34 +1,61 @@
 package typingsSlinky.reactColor.mod
 
-import slinky.core.TagMod
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.reactColor.anon.PartialClassesany
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CustomPickerProps[A] extends ClassAttributes[A] {
-  var color: js.UndefOr[Color] = js.undefined
-  var onChange: ColorChangeHandler
-  var pointer: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var color: js.UndefOr[Color] = js.native
+  var onChange: ColorChangeHandler = js.native
+  var pointer: js.UndefOr[ReactElement] = js.native
+  var styles: js.UndefOr[PartialClassesany] = js.native
 }
 
 object CustomPickerProps {
   @scala.inline
-  def apply[A](
-    onChange: /* color */ ColorResult => Unit,
-    color: Color = null,
-    key: Key = null,
-    pointer: TagMod[Any] = null,
-    ref: js.UndefOr[Null | LegacyRef[A]] = js.undefined
-  ): CustomPickerProps[A] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (pointer != null) __obj.updateDynamic("pointer")(pointer.asInstanceOf[js.Any])
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+  def apply[A](onChange: (/* color */ ColorResult, /* event */ ChangeEvent[HTMLInputElement]) => Unit): CustomPickerProps[A] = {
+    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
     __obj.asInstanceOf[CustomPickerProps[A]]
   }
+  @scala.inline
+  implicit class CustomPickerPropsOps[Self <: CustomPickerProps[_], A] (val x: Self with CustomPickerProps[A]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnChange(value: (/* color */ ColorResult, /* event */ ChangeEvent[HTMLInputElement]) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    @scala.inline
+    def setPointerReactElement(value: ReactElement): Self = this.set("pointer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPointer(value: ReactElement): Self = this.set("pointer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePointer: Self = this.set("pointer", js.undefined)
+    @scala.inline
+    def setStyles(value: PartialClassesany): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyles: Self = this.set("styles", js.undefined)
+  }
+  
 }
 

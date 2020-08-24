@@ -35,41 +35,26 @@ object AcceptOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExtensions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
+    def setExtensionsVarargs(value: String*): Self = this.set("extensions", js.Array(value :_*))
     @scala.inline
-    def withMimeTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExtensions(value: js.Array[String]): Self = this.set("extensions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMimeTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(js.undefined)
-        ret
-    }
+    def deleteExtensions: Self = this.set("extensions", js.undefined)
+    @scala.inline
+    def setMimeTypesVarargs(value: String*): Self = this.set("mimeTypes", js.Array(value :_*))
+    @scala.inline
+    def setMimeTypes(value: js.Array[String]): Self = this.set("mimeTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMimeTypes: Self = this.set("mimeTypes", js.undefined)
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.semanticUiReact
 
-import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
-import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
+import typingsSlinky.semanticUiReact.commonjsMod.SemanticWIDTHS
+import typingsSlinky.semanticUiReact.commonjsMod.SemanticWIDTHSNUMBER
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,82 +10,114 @@ object semanticUiReactNumbers {
   @js.native
   sealed trait `1`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `10`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `11`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `12`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `13`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `14`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `15`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `16`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `2`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `3`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `4`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `5`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `6`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `7`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `8`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @js.native
   sealed trait `9`
     extends SemanticWIDTHS
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
        with SemanticWIDTHSNUMBER
+       with typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSNUMBER
   
   @scala.inline
   def `1`: `1` = 1.asInstanceOf[`1`]

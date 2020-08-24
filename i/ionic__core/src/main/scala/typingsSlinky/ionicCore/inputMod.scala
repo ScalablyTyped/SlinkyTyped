@@ -1,24 +1,32 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.ionicCore.inputInterfaceMod.InputChangeEventDetail
 import typingsSlinky.ionicCore.ionicCoreStrings.decimal
+import typingsSlinky.ionicCore.ionicCoreStrings.done
 import typingsSlinky.ionicCore.ionicCoreStrings.email
+import typingsSlinky.ionicCore.ionicCoreStrings.enter
+import typingsSlinky.ionicCore.ionicCoreStrings.go
+import typingsSlinky.ionicCore.ionicCoreStrings.next
 import typingsSlinky.ionicCore.ionicCoreStrings.none
 import typingsSlinky.ionicCore.ionicCoreStrings.numeric
 import typingsSlinky.ionicCore.ionicCoreStrings.off
 import typingsSlinky.ionicCore.ionicCoreStrings.on
+import typingsSlinky.ionicCore.ionicCoreStrings.previous
 import typingsSlinky.ionicCore.ionicCoreStrings.search
+import typingsSlinky.ionicCore.ionicCoreStrings.send
 import typingsSlinky.ionicCore.ionicCoreStrings.tel
 import typingsSlinky.ionicCore.ionicCoreStrings.text
 import typingsSlinky.ionicCore.ionicCoreStrings.url
+import typingsSlinky.ionicCore.mod.AutocompleteTypes
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.mod.TextFieldTypes
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +47,7 @@ object inputMod extends js.Object {
     /**
       * Indicates whether the value of the control can be automatically completed by the browser.
       */
-    var autocomplete: on | off = js.native
+    var autocomplete: AutocompleteTypes = js.native
     /**
       * Whether auto correction should be enabled when the user is entering/editing the text value.
       */
@@ -57,6 +65,7 @@ object inputMod extends js.Object {
       */
     var clearOnEdit: js.UndefOr[Boolean] = js.native
     var clearTextInput: js.Any = js.native
+    var clearTextOnEnter: js.Any = js.native
     /**
       * The color to use from your application's color palette.
       * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
@@ -74,6 +83,12 @@ object inputMod extends js.Object {
     var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     var emitStyle: js.Any = js.native
+    /**
+      * A hint to the browser for which enter key to display.
+      * Possible values: `"enter"`, `"done"`, `"go"`, `"next"`,
+      * `"previous"`, `"search"`, and `"send"`.
+      */
+    var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
     var focusChanged: js.Any = js.native
     var getValue: js.Any = js.native
     var hasFocus: Boolean = js.native
@@ -88,7 +103,7 @@ object inputMod extends js.Object {
     /**
       * Emitted when the input loses focus.
       */
-    var ionBlur: EventEmitter[Unit] = js.native
+    var ionBlur: EventEmitter[FocusEvent] = js.native
     /**
       * Emitted when the value has changed.
       */
@@ -96,21 +111,11 @@ object inputMod extends js.Object {
     /**
       * Emitted when the input has focus.
       */
-    var ionFocus: EventEmitter[Unit] = js.native
+    var ionFocus: EventEmitter[FocusEvent] = js.native
     /**
-      * Emitted when a keyboard input ocurred.
+      * Emitted when a keyboard input occurred.
       */
     var ionInput: EventEmitter[KeyboardEvent] = js.native
-    /**
-      * Emitted when the input has been created.
-      * @internal
-      */
-    var ionInputDidLoad: EventEmitter[Unit] = js.native
-    /**
-      * Emitted when the input has been removed.
-      * @internal
-      */
-    var ionInputDidUnload: EventEmitter[Unit] = js.native
     /**
       * Emitted when the styles change.
       * @internal
@@ -140,13 +145,13 @@ object inputMod extends js.Object {
       * The name of the control, which is submitted with the form data.
       */
     var name: String = js.native
-    var nativeInput: js.UndefOr[js.Any] = js.native
+    var nativeInput: js.Any = js.native
     var onBlur: js.Any = js.native
     var onFocus: js.Any = js.native
     var onInput: js.Any = js.native
     var onKeydown: js.Any = js.native
     /**
-      * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the title attribute to describe the pattern to help the user. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, or `"password"`, otherwise it is ignored.
+      * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the title attribute to describe the pattern to help the user. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, `"date"`, or `"password"`, otherwise it is ignored. When the type attribute is `"date"`, `pattern` will only be used in browsers that do not support the `"date"` input type natively. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date for more information.
       */
     var pattern: js.UndefOr[String] = js.native
     /**
@@ -175,6 +180,7 @@ object inputMod extends js.Object {
       * Possible values are: `"any"` or a positive floating point number.
       */
     var step: js.UndefOr[String] = js.native
+    var tabindex: js.Any = js.native
     /**
       * The type of control to display. The default type is text.
       */
@@ -182,7 +188,9 @@ object inputMod extends js.Object {
     /**
       * The value of the input.
       */
-    var value: js.UndefOr[String | Null] = js.native
+    var value: js.UndefOr[String | Double | Null] = js.native
+    @JSName("componentWillLoad")
+    def componentWillLoad_MInput(): Unit = js.native
     @JSName("connectedCallback")
     def connectedCallback_MInput(): Unit = js.native
     /* protected */ def debounceChanged(): Unit = js.native

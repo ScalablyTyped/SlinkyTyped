@@ -108,7 +108,7 @@ package object comprehendmedicalMod {
   */
   type JobStatus = typingsSlinky.awsSdk.comprehendmedicalMod._JobStatus | java.lang.String
   type KMSKey = java.lang.String
-  type LanguageCode = typingsSlinky.awsSdk.awsSdkStrings.en | java.lang.String
+  type LanguageCode = typingsSlinky.awsSdk.awsSdkStrings.en_ | java.lang.String
   type ManifestFilePath = java.lang.String
   type MaxResultsInteger = scala.Double
   type ModelVersion = java.lang.String
@@ -131,6 +131,7 @@ package object comprehendmedicalMod {
     - typingsSlinky.awsSdk.awsSdkStrings.TEST_VALUE
     - typingsSlinky.awsSdk.awsSdkStrings.TEST_UNITS
     - typingsSlinky.awsSdk.awsSdkStrings.DIRECTION
+    - typingsSlinky.awsSdk.awsSdkStrings.SYSTEM_ORGAN_SITE
     - java.lang.String
   */
   type RelationshipType = typingsSlinky.awsSdk.comprehendmedicalMod._RelationshipType | java.lang.String

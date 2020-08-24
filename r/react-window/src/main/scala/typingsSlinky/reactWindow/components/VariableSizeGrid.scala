@@ -9,6 +9,7 @@ import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactWindow.anon.ColumnIndex
 import typingsSlinky.reactWindow.mod.CSSDirection
+import typingsSlinky.reactWindow.mod.GridChildComponentProps
 import typingsSlinky.reactWindow.mod.GridOnItemsRenderedProps
 import typingsSlinky.reactWindow.mod.GridOnScrollProps
 import typingsSlinky.reactWindow.mod.ReactElementType
@@ -97,6 +98,7 @@ object VariableSizeGrid {
   def withProps(p: VariableSizeGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
+    children: ReactComponentClass[GridChildComponentProps],
     columnCount: Double,
     columnWidth: Double => Double,
     height: Double,
@@ -104,7 +106,7 @@ object VariableSizeGrid {
     rowHeight: Double => Double,
     width: Double
   ): Builder = {
-    val __props = js.Dynamic.literal(columnCount = columnCount.asInstanceOf[js.Any], columnWidth = js.Any.fromFunction1(columnWidth), height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = js.Any.fromFunction1(rowHeight), width = width.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any], columnWidth = js.Any.fromFunction1(columnWidth), height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = js.Any.fromFunction1(rowHeight), width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[VariableSizeGridProps]))
   }
 }

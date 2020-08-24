@@ -26,6 +26,11 @@ class Printer protected () extends js.Object {
   def this(url: String) = this()
   def this(url: String, options: PrinterOptions) = this()
   def execute(operation: PrinterOpertaion): Unit = js.native
+  def execute(
+    operation: PrinterOpertaion,
+    message: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Error, /* response */ FullResponse, Unit]
+  ): Unit = js.native
   def execute(operation: PrinterOpertaion, message: FullRequest): Unit = js.native
   def execute(
     operation: PrinterOpertaion,

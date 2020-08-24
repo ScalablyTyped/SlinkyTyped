@@ -9,41 +9,15 @@ import scala.scalajs.js.annotation._
 object global extends js.Object {
   @js.native
   class UnityIndicatorProperties ()
-    extends typingsSlinky.unityWebapi.UnityIndicatorProperties {
-    /* CompleteClass */
-    override var count: Double = js.native
-    /* CompleteClass */
-    override var iconURI: String = js.native
-    /* CompleteClass */
-    override var onIndicatorActivated: js.Function = js.native
-    /* CompleteClass */
-    override var time: js.Date = js.native
-  }
+    extends typingsSlinky.unityWebapi.UnityIndicatorProperties
   
   @js.native
   class UnitySettings ()
-    extends typingsSlinky.unityWebapi.UnitySettings {
-    /* CompleteClass */
-    override var iconUrl: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-    /* CompleteClass */
-    override var onInit: js.Function = js.native
-  }
+    extends typingsSlinky.unityWebapi.UnitySettings
   
   @js.native
   class UnityTrackMetadata ()
-    extends typingsSlinky.unityWebapi.UnityTrackMetadata {
-    // Optionals
-    /* CompleteClass */
-    override var album: String = js.native
-    /* CompleteClass */
-    override var artLocation: String = js.native
-    /* CompleteClass */
-    override var artist: String = js.native
-    /* CompleteClass */
-    override var title: String = js.native
-  }
+    extends typingsSlinky.unityWebapi.UnityTrackMetadata
   
   @js.native
   object UnityPlaybackState extends js.Object {

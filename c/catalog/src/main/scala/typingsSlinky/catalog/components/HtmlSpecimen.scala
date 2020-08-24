@@ -38,6 +38,8 @@ object HtmlSpecimen {
     @scala.inline
     def rawOptions(value: String): this.type = set("rawOptions", value.asInstanceOf[js.Any])
     @scala.inline
+    def responsiveVarargs(value: String*): this.type = set("responsive", js.Array(value :_*))
+    @scala.inline
     def responsive(value: Boolean | String | js.Array[String]): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline
     def showSource(value: Boolean): this.type = set("showSource", value.asInstanceOf[js.Any])
@@ -46,6 +48,10 @@ object HtmlSpecimen {
   }
   
   def withProps(p: SpecimenProps with HtmlSpecimenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: HtmlSpecimen.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: String): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SpecimenProps with HtmlSpecimenProps]))
+  }
 }
 

@@ -20,6 +20,12 @@ package object oauth2clientMod {
     /* response */ js.UndefOr[typingsSlinky.gaxios.commonMod.GaxiosResponse[scala.Unit] | scala.Null], 
     scala.Unit
   ]
+  type GetIapPublicKeysCallback = js.Function3[
+    /* err */ typingsSlinky.gaxios.mod.GaxiosError[js.Any] | scala.Null, 
+    /* pubkeys */ js.UndefOr[typingsSlinky.googleAuthLibrary.oauth2clientMod.PublicKeys], 
+    /* response */ js.UndefOr[typingsSlinky.gaxios.commonMod.GaxiosResponse[scala.Unit] | scala.Null], 
+    scala.Unit
+  ]
   type GetTokenCallback = js.Function3[
     /* err */ typingsSlinky.gaxios.mod.GaxiosError[js.Any] | scala.Null, 
     /* token */ js.UndefOr[typingsSlinky.googleAuthLibrary.credentialsMod.Credentials | scala.Null], 
@@ -27,6 +33,7 @@ package object oauth2clientMod {
     scala.Unit
   ]
   type Headers = org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  type PublicKeys = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type RefreshAccessTokenCallback = js.Function3[
     /* err */ typingsSlinky.gaxios.mod.GaxiosError[js.Any] | scala.Null, 
     /* credentials */ js.UndefOr[typingsSlinky.googleAuthLibrary.credentialsMod.Credentials | scala.Null], 

@@ -13,15 +13,15 @@ import scala.scalajs.js.annotation._
 object withTranslation extends js.Object {
   def apply(): js.Function1[
     /* component */ ReactComponentClass[WithTranslation_], 
-    ReactComponentClass[Omit[WithTranslation_, i18n | tReady]]
+    ReactComponentClass[(Omit[WithTranslation_, i18n | tReady]) with WithTranslationProps]
+  ] = js.native
+  def apply(ns: js.UndefOr[Namespace], options: WithRef): js.Function1[
+    /* component */ ReactComponentClass[WithTranslation_], 
+    ReactComponentClass[(Omit[WithTranslation_, i18n | tReady]) with WithTranslationProps]
   ] = js.native
   def apply(ns: Namespace): js.Function1[
     /* component */ ReactComponentClass[WithTranslation_], 
-    ReactComponentClass[Omit[WithTranslation_, i18n | tReady]]
-  ] = js.native
-  def apply(ns: Namespace, options: WithRef): js.Function1[
-    /* component */ ReactComponentClass[WithTranslation_], 
-    ReactComponentClass[Omit[WithTranslation_, i18n | tReady]]
+    ReactComponentClass[(Omit[WithTranslation_, i18n | tReady]) with WithTranslationProps]
   ] = js.native
 }
 

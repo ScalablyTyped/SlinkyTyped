@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "InvokeFunctionExpr")
 @js.native
 class InvokeFunctionExpr protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.InvokeFunctionExpr {
+  extends typingsSlinky.angularCompiler.compilerMod.InvokeFunctionExpr {
   def this(
     fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression]
@@ -16,6 +16,12 @@ class InvokeFunctionExpr protected ()
     fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type
+  ) = this()
+  def this(
+    fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
@@ -32,6 +38,34 @@ class InvokeFunctionExpr protected ()
   def this(
     fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    pure: Boolean
+  ) = this()
+  def this(
+    fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: Null,
+    pure: Boolean
+  ) = this()
+  def this(
+    fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    pure: Boolean
+  ) = this()
+  def this(
+    fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: Null,
+    sourceSpan: js.UndefOr[scala.Nothing],
+    pure: Boolean
+  ) = this()
+  def this(
+    fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: Null,
     sourceSpan: Null,
     pure: Boolean
@@ -41,6 +75,13 @@ class InvokeFunctionExpr protected ()
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    pure: Boolean
+  ) = this()
+  def this(
+    fn: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    sourceSpan: js.UndefOr[scala.Nothing],
     pure: Boolean
   ) = this()
   def this(

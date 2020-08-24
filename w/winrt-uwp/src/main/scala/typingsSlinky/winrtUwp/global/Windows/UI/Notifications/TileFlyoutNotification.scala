@@ -7,10 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Notifications.TileFlyoutNotification")
 @js.native
 abstract class TileFlyoutNotification ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Notifications.TileFlyoutNotification {
-  /* CompleteClass */
-  override var content: js.Any = js.native
-   /* unmapped type */ /* CompleteClass */
-  override var expirationTime: js.Any = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.Notifications.TileFlyoutNotification
 

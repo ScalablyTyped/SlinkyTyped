@@ -2,19 +2,33 @@ package typingsSlinky.ionicCore.componentsMod.global
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLTextAreaElement
+import typingsSlinky.ionicCore.ionicCoreStrings.decimal
+import typingsSlinky.ionicCore.ionicCoreStrings.done
+import typingsSlinky.ionicCore.ionicCoreStrings.email
+import typingsSlinky.ionicCore.ionicCoreStrings.enter
+import typingsSlinky.ionicCore.ionicCoreStrings.go
 import typingsSlinky.ionicCore.ionicCoreStrings.hard
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
+import typingsSlinky.ionicCore.ionicCoreStrings.next
+import typingsSlinky.ionicCore.ionicCoreStrings.none
+import typingsSlinky.ionicCore.ionicCoreStrings.numeric
 import typingsSlinky.ionicCore.ionicCoreStrings.off
+import typingsSlinky.ionicCore.ionicCoreStrings.previous
+import typingsSlinky.ionicCore.ionicCoreStrings.search
+import typingsSlinky.ionicCore.ionicCoreStrings.send
 import typingsSlinky.ionicCore.ionicCoreStrings.soft
+import typingsSlinky.ionicCore.ionicCoreStrings.tel
+import typingsSlinky.ionicCore.ionicCoreStrings.text
+import typingsSlinky.ionicCore.ionicCoreStrings.url
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.stencilCoreMod.HTMLStencilElement
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.HTMLStencilElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.ionicCore.componentsMod.Components.IonTextarea because var conflicts: autocapitalize, autofocus, spellcheck. Inlined autoGrow, clearOnEdit, color, cols, debounce, disabled, getInputElement, maxlength, minlength, mode, name, placeholder, readonly, required, rows, setFocus, value, wrap */ @js.native
+- typingsSlinky.ionicCore.componentsMod.Components.IonTextarea because var conflicts: autocapitalize, autofocus, spellcheck. Inlined autoGrow, clearOnEdit, color, cols, debounce, disabled, enterkeyhint, getInputElement, inputmode, maxlength, minlength, mode, name, placeholder, readonly, required, rows, setFocus, value, wrap */ @js.native
 trait HTMLIonTextareaElement extends HTMLStencilElement {
   /**
     * If `true`, the element height will increase based on the value.
@@ -40,6 +54,14 @@ trait HTMLIonTextareaElement extends HTMLStencilElement {
     * If `true`, the user cannot interact with the textarea.
     */
   var disabled: Boolean = js.native
+  /**
+    * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
+    */
+  var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  /**
+    * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+    */
+  var inputmode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
   /**
     * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters that the user can enter.
     */

@@ -3,7 +3,7 @@ package typingsSlinky.reactAutosuggest.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAutosuggest.mod.InputProps
@@ -29,7 +29,7 @@ object ReactAutosuggest {
     @scala.inline
     class Builder[T, T2] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^[js.Any, js.Any]] {
+         with StBuildingComponent[tag.type, ^[T, T2]] {
       @scala.inline
       def alwaysRenderSuggestions(value: Boolean): this.type = set("alwaysRenderSuggestions", value.asInstanceOf[js.Any])
       @scala.inline
@@ -49,11 +49,11 @@ object ReactAutosuggest {
       @scala.inline
       def onSuggestionsClearRequested(value: () => Unit): this.type = set("onSuggestionsClearRequested", js.Any.fromFunction0(value))
       @scala.inline
-      def renderInputComponent(value: /* inputProps */ InputProps[T] => TagMod[Any]): this.type = set("renderInputComponent", js.Any.fromFunction1(value))
+      def renderInputComponent(value: /* inputProps */ InputProps[T] => ReactElement): this.type = set("renderInputComponent", js.Any.fromFunction1(value))
       @scala.inline
-      def renderSectionTitle(value: /* section */ js.Any => TagMod[Any]): this.type = set("renderSectionTitle", js.Any.fromFunction1(value))
+      def renderSectionTitle(value: /* section */ js.Any => ReactElement): this.type = set("renderSectionTitle", js.Any.fromFunction1(value))
       @scala.inline
-      def renderSuggestionsContainer(value: /* params */ RenderSuggestionsContainerParams => TagMod[Any]): this.type = set("renderSuggestionsContainer", js.Any.fromFunction1(value))
+      def renderSuggestionsContainer(value: /* params */ RenderSuggestionsContainerParams => ReactElement): this.type = set("renderSuggestionsContainer", js.Any.fromFunction1(value))
       @scala.inline
       def shouldRenderSuggestions(value: /* value */ String => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction1(value))
       @scala.inline
@@ -67,7 +67,7 @@ object ReactAutosuggest {
       inputProps: InputProps[T],
       multiSection: `true`,
       onSuggestionsFetchRequested: /* request */ SuggestionsFetchRequestedParams => Unit,
-      renderSuggestion: (T, /* params */ RenderSuggestionParams) => TagMod[Any],
+      renderSuggestion: (T, /* params */ RenderSuggestionParams) => ReactElement,
       suggestions: js.Array[T2]
     ): Builder[T, T2] = {
         val __props = js.Dynamic.literal(getSuggestionValue = js.Any.fromFunction1(getSuggestionValue), inputProps = inputProps.asInstanceOf[js.Any], multiSection = multiSection.asInstanceOf[js.Any], onSuggestionsFetchRequested = js.Any.fromFunction1(onSuggestionsFetchRequested), renderSuggestion = js.Any.fromFunction2(renderSuggestion), suggestions = suggestions.asInstanceOf[js.Any])
@@ -83,7 +83,7 @@ object ReactAutosuggest {
     @scala.inline
     class Builder[T, T2] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, ^[js.Any, js.Any]] {
+         with StBuildingComponent[tag.type, ^[T, T2]] {
       @scala.inline
       def alwaysRenderSuggestions(value: Boolean): this.type = set("alwaysRenderSuggestions", value.asInstanceOf[js.Any])
       @scala.inline
@@ -103,9 +103,9 @@ object ReactAutosuggest {
       @scala.inline
       def onSuggestionsClearRequested(value: () => Unit): this.type = set("onSuggestionsClearRequested", js.Any.fromFunction0(value))
       @scala.inline
-      def renderInputComponent(value: /* inputProps */ InputProps[T] => TagMod[Any]): this.type = set("renderInputComponent", js.Any.fromFunction1(value))
+      def renderInputComponent(value: /* inputProps */ InputProps[T] => ReactElement): this.type = set("renderInputComponent", js.Any.fromFunction1(value))
       @scala.inline
-      def renderSuggestionsContainer(value: /* params */ RenderSuggestionsContainerParams => TagMod[Any]): this.type = set("renderSuggestionsContainer", js.Any.fromFunction1(value))
+      def renderSuggestionsContainer(value: /* params */ RenderSuggestionsContainerParams => ReactElement): this.type = set("renderSuggestionsContainer", js.Any.fromFunction1(value))
       @scala.inline
       def shouldRenderSuggestions(value: /* value */ String => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction1(value))
       @scala.inline
@@ -118,7 +118,7 @@ object ReactAutosuggest {
       getSuggestionValue: T => String,
       inputProps: InputProps[T],
       onSuggestionsFetchRequested: /* request */ SuggestionsFetchRequestedParams => Unit,
-      renderSuggestion: (T, /* params */ RenderSuggestionParams) => TagMod[Any],
+      renderSuggestion: (T, /* params */ RenderSuggestionParams) => ReactElement,
       suggestions: js.Array[T]
     ): Builder[T, T2] = {
         val __props = js.Dynamic.literal(getSuggestionValue = js.Any.fromFunction1(getSuggestionValue), inputProps = inputProps.asInstanceOf[js.Any], onSuggestionsFetchRequested = js.Any.fromFunction1(onSuggestionsFetchRequested), renderSuggestion = js.Any.fromFunction2(renderSuggestion), suggestions = suggestions.asInstanceOf[js.Any])

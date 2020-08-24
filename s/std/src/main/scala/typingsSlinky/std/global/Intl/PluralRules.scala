@@ -17,11 +17,12 @@ object PluralRules
       typingsSlinky.std.Intl.PluralRules
     ]
      with Instantiable2[
-      (/* locales */ js.Array[String]) | (/* locales */ String), 
+      js.UndefOr[(/* locales */ js.Array[String]) | (/* locales */ String)], 
       /* options */ PluralRulesOptions, 
       typingsSlinky.std.Intl.PluralRules
     ] {
   def apply(): typingsSlinky.std.Intl.PluralRules = js.native
+  def apply(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions): typingsSlinky.std.Intl.PluralRules = js.native
   def apply(locales: String): typingsSlinky.std.Intl.PluralRules = js.native
   def apply(locales: String, options: PluralRulesOptions): typingsSlinky.std.Intl.PluralRules = js.native
   def apply(locales: js.Array[String]): typingsSlinky.std.Intl.PluralRules = js.native

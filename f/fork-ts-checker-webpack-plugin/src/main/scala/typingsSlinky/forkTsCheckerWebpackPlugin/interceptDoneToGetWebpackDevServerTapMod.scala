@@ -1,0 +1,18 @@
+package typingsSlinky.forkTsCheckerWebpackPlugin
+
+import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginConfigurationMod.ForkTsCheckerWebpackPluginConfiguration
+import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStateMod.ForkTsCheckerWebpackPluginState
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("fork-ts-checker-webpack-plugin/lib/hooks/interceptDoneToGetWebpackDevServerTap", JSImport.Namespace)
+@js.native
+object interceptDoneToGetWebpackDevServerTapMod extends js.Object {
+  def interceptDoneToGetWebpackDevServerTap(
+    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Compiler */ js.Any,
+    configuration: ForkTsCheckerWebpackPluginConfiguration,
+    state: ForkTsCheckerWebpackPluginState
+  ): Unit = js.native
+}
+

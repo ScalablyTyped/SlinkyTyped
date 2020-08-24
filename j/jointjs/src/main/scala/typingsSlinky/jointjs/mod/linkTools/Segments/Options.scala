@@ -20,6 +20,7 @@ trait Options
   var segmentLengthThreshold: js.UndefOr[Double] = js.native
   var snapHandle: js.UndefOr[Boolean] = js.native
   var snapRadius: js.UndefOr[Double] = js.native
+  var stopPropagation: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
@@ -35,79 +36,40 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnchor(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnchor(
       value: (/* coords */ Point, /* view */ CellView, /* magnet */ SVGElement, /* type */ String, /* linkView */ LinkView, /* toolView */ ToolView) => AnchorJSON
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.Any.fromFunction6(value))
-        ret
-    }
+    ): Self = this.set("anchor", js.Any.fromFunction6(value))
     @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
+    def deleteAnchor: Self = this.set("anchor", js.undefined)
     @scala.inline
-    def withHandleClass(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClass")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHandleClass(value: js.Any): Self = this.set("handleClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHandleClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClass")(js.undefined)
-        ret
-    }
+    def deleteHandleClass: Self = this.set("handleClass", js.undefined)
     @scala.inline
-    def withRedundancyRemoval(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redundancyRemoval")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRedundancyRemoval(value: Boolean): Self = this.set("redundancyRemoval", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRedundancyRemoval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redundancyRemoval")(js.undefined)
-        ret
-    }
+    def deleteRedundancyRemoval: Self = this.set("redundancyRemoval", js.undefined)
     @scala.inline
-    def withSegmentLengthThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentLengthThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSegmentLengthThreshold(value: Double): Self = this.set("segmentLengthThreshold", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSegmentLengthThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentLengthThreshold")(js.undefined)
-        ret
-    }
+    def deleteSegmentLengthThreshold: Self = this.set("segmentLengthThreshold", js.undefined)
     @scala.inline
-    def withSnapHandle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapHandle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSnapHandle(value: Boolean): Self = this.set("snapHandle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSnapHandle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapHandle")(js.undefined)
-        ret
-    }
+    def deleteSnapHandle: Self = this.set("snapHandle", js.undefined)
     @scala.inline
-    def withSnapRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSnapRadius(value: Double): Self = this.set("snapRadius", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSnapRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapRadius")(js.undefined)
-        ret
-    }
+    def deleteSnapRadius: Self = this.set("snapRadius", js.undefined)
+    @scala.inline
+    def setStopPropagation(value: Boolean): Self = this.set("stopPropagation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStopPropagation: Self = this.set("stopPropagation", js.undefined)
   }
   
 }

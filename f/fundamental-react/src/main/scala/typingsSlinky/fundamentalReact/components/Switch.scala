@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Switch {
-  @JSImport("fundamental-react/lib/Switch/Switch", JSImport.Default)
+  @JSImport("fundamental-react", "Switch")
   @js.native
   object component extends js.Object
   

@@ -78,11 +78,15 @@ trait Values[T] extends js.Object {
   def range(from: T, to: T): AssertionChain[T] = js.native
   /** Asserts that the Promise reference value rejects with an exception when called */
   def reject(): AssertionChain[T] = js.native
+  def reject(`type`: js.UndefOr[scala.Nothing], message: String): AssertionChain[T] = js.native
+  def reject(`type`: js.UndefOr[scala.Nothing], message: js.RegExp): AssertionChain[T] = js.native
   def reject(`type`: js.Any): AssertionChain[T] = js.native
   def reject(`type`: js.Any, message: String): AssertionChain[T] = js.native
   def reject(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the Promise reference value rejects with an exception when called */
   def rejects(): AssertionChain[T] = js.native
+  def rejects(`type`: js.UndefOr[scala.Nothing], message: String): AssertionChain[T] = js.native
+  def rejects(`type`: js.UndefOr[scala.Nothing], message: js.RegExp): AssertionChain[T] = js.native
   def rejects(`type`: js.Any): AssertionChain[T] = js.native
   def rejects(`type`: js.Any, message: String): AssertionChain[T] = js.native
   def rejects(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
@@ -96,11 +100,15 @@ trait Values[T] extends js.Object {
   def startsWith(value: String): AssertionChain[T] = js.native
   /** Asserts that the function reference value throws an exception when called. */
   def `throw`(): AssertionChain[T] = js.native
+  def `throw`(`type`: js.UndefOr[scala.Nothing], message: String): AssertionChain[T] = js.native
+  def `throw`(`type`: js.UndefOr[scala.Nothing], message: js.RegExp): AssertionChain[T] = js.native
   def `throw`(`type`: js.Any): AssertionChain[T] = js.native
   def `throw`(`type`: js.Any, message: String): AssertionChain[T] = js.native
   def `throw`(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the function reference value throws an exception when called. */
   def throws(): AssertionChain[T] = js.native
+  def throws(`type`: js.UndefOr[scala.Nothing], message: String): AssertionChain[T] = js.native
+  def throws(`type`: js.UndefOr[scala.Nothing], message: js.RegExp): AssertionChain[T] = js.native
   def throws(`type`: js.Any): AssertionChain[T] = js.native
   def throws(`type`: js.Any, message: String): AssertionChain[T] = js.native
   def throws(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native

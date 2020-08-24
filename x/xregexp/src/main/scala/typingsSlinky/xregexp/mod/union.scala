@@ -27,6 +27,7 @@ object union extends js.Object {
     * // -> /manbearpig/i
     */
   def apply(patterns: js.Array[Pattern]): js.RegExp = js.native
+  def apply(patterns: js.Array[Pattern], flags: js.UndefOr[scala.Nothing], options: UnionOptions): js.RegExp = js.native
   def apply(patterns: js.Array[Pattern], flags: String): js.RegExp = js.native
   def apply(patterns: js.Array[Pattern], flags: String, options: UnionOptions): js.RegExp = js.native
   def apply(patterns: js.Array[Pattern], flags: Null, options: UnionOptions): js.RegExp = js.native

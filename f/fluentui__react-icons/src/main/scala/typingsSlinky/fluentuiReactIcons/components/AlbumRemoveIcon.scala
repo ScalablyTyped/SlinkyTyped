@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AlbumRemoveIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AlbumRemoveIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AlbumRemoveIcon")
   @js.native
   object component extends js.Object
   

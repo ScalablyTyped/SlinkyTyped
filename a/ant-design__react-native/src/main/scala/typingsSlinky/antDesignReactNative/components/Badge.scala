@@ -5,7 +5,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.large
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.small
 import typingsSlinky.antDesignReactNative.badgeMod.BadgeProps
-import typingsSlinky.antDesignReactNative.badgeMod.default
 import typingsSlinky.antDesignReactNative.badgeStyleMod.BadgeStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -15,14 +14,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Badge {
-  @JSImport("@ant-design/react-native/lib/badge", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Badge")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Badge] {
     @scala.inline
     def corner(value: Boolean): this.type = set("corner", value.asInstanceOf[js.Any])
     @scala.inline

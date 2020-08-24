@@ -1,43 +1,79 @@
 package typingsSlinky.baseui.cardMod
 
-import slinky.core.TagMod
+import org.scalajs.dom.raw.HTMLImageElement
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.Thumbnail
+import typingsSlinky.react.mod.DetailedHTMLProps
+import typingsSlinky.react.mod.ImgHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CardProps extends js.Object {
-  val action: js.UndefOr[TagMod[Any]] = js.undefined
-  val children: js.UndefOr[TagMod[Any]] = js.undefined
-  val hasThumbnail: js.UndefOr[js.Function1[/* props */ Thumbnail, Boolean]] = js.undefined
+  val action: js.UndefOr[ReactElement] = js.native
+  val children: js.UndefOr[ReactElement] = js.native
+  val hasThumbnail: js.UndefOr[js.Function1[/* props */ Thumbnail, Boolean]] = js.native
   val headerImage: js.UndefOr[
-    String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ImagePropsT */ js.Any)
-  ] = js.undefined
-  val overrides: js.UndefOr[CardOverrides] = js.undefined
-  val thumbnail: js.UndefOr[String] = js.undefined
-  val title: js.UndefOr[TagMod[Any]] = js.undefined
+    String | (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement])
+  ] = js.native
+  val overrides: js.UndefOr[CardOverrides] = js.native
+  val thumbnail: js.UndefOr[String] = js.native
+  val title: js.UndefOr[ReactElement] = js.native
 }
 
 object CardProps {
   @scala.inline
-  def apply(
-    action: TagMod[Any] = null,
-    children: TagMod[Any] = null,
-    hasThumbnail: /* props */ Thumbnail => Boolean = null,
-    headerImage: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ImagePropsT */ js.Any) = null,
-    overrides: CardOverrides = null,
-    thumbnail: String = null,
-    title: TagMod[Any] = null
-  ): CardProps = {
+  def apply(): CardProps = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (hasThumbnail != null) __obj.updateDynamic("hasThumbnail")(js.Any.fromFunction1(hasThumbnail))
-    if (headerImage != null) __obj.updateDynamic("headerImage")(headerImage.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardProps]
   }
+  @scala.inline
+  implicit class CardPropsOps[Self <: CardProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActionReactElement(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAction(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAction: Self = this.set("action", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setHasThumbnail(value: /* props */ Thumbnail => Boolean): Self = this.set("hasThumbnail", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteHasThumbnail: Self = this.set("hasThumbnail", js.undefined)
+    @scala.inline
+    def setHeaderImage(value: String | (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement])): Self = this.set("headerImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderImage: Self = this.set("headerImage", js.undefined)
+    @scala.inline
+    def setOverrides(value: CardOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverrides: Self = this.set("overrides", js.undefined)
+    @scala.inline
+    def setThumbnail(value: String): Self = this.set("thumbnail", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThumbnail: Self = this.set("thumbnail", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

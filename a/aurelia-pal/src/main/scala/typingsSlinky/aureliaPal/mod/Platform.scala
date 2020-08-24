@@ -16,7 +16,7 @@ trait Platform extends js.Object {
   /**
     * The runtime's XMLHttpRequest API.
     */
-  var XMLHttpRequest: Instantiable with Instantiable0[typingsSlinky.std.global.XMLHttpRequest] = js.native
+  var XMLHttpRequest: Instantiable with Instantiable0[org.scalajs.dom.raw.XMLHttpRequest] = js.native
   /**
     * The runtime environment's global.
     */

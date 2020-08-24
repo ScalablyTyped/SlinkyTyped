@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UneditableIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UneditableIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UneditableIcon")
   @js.native
   object component extends js.Object
   

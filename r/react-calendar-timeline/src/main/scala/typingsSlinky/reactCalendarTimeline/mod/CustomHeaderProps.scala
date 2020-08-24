@@ -1,6 +1,6 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait CustomHeaderProps[Data] extends js.Object {
   var headerData: js.UndefOr[Data] = js.native
   var height: js.UndefOr[Double] = js.native
   var unit: js.UndefOr[Unit] = js.native
-  def children(): TagMod[Any] = js.native
-  def children(props: CustomHeaderPropsChildrenFnProps[Data]): TagMod[Any] = js.native
+  def children(): ReactElement = js.native
+  def children(props: CustomHeaderPropsChildrenFnProps[Data]): ReactElement = js.native
 }
 

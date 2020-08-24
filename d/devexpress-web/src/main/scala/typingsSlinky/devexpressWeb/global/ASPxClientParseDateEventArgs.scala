@@ -16,20 +16,5 @@ class ASPxClientParseDateEventArgs protected ()
     * @param value A string containing the value entered into the date editor.
     */
   def this(value: String) = this()
-  /**
-    * Gets or sets the edit value of the date editor.
-    */
-  /* CompleteClass */
-  override var date: js.Date = js.native
-  /**
-    * Gets or sets a value specifying whether the event was handled.
-    */
-  /* CompleteClass */
-  override var handled: Boolean = js.native
-  /**
-    * Gets the value entered into the date editor by an end user.
-    */
-  /* CompleteClass */
-  override var value: String = js.native
 }
 

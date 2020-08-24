@@ -1,9 +1,7 @@
 package typingsSlinky.materialMenuSurface
 
 import org.scalajs.dom.raw.Element
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.materialBase.componentMod.MDCComponent
-import typingsSlinky.materialBase.foundationMod.default
 import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuDistance
 import typingsSlinky.materialMenuSurface.constantsMod.Corner
 import typingsSlinky.materialMenuSurface.foundationMod.MDCMenuSurfaceFoundation
@@ -15,14 +13,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object componentMod extends js.Object {
   @js.native
-  class MDCMenuSurface () extends MDCComponent[MDCMenuSurfaceFoundation, default[MDCMenuSurfaceFoundation]] {
+  class MDCMenuSurface () extends MDCComponent[MDCMenuSurfaceFoundation] {
     var anchorElement: Element | Null = js.native
-    var quickOpen: Boolean = js.native
-    var root_ : HTMLElement = js.native
     def close(): Unit = js.native
     def close(skipRestoreFocus: Boolean): Unit = js.native
     def isOpen(): Boolean = js.native
     def open(): Unit = js.native
+    def quickOpen_=(quickOpen: Boolean): Unit = js.native
     /** Sets the absolute x/y position to position based on. Requires the menu to be hoisted. */
     def setAbsolutePosition(x: Double, y: Double): Unit = js.native
     /**

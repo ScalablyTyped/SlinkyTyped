@@ -1,6 +1,7 @@
 package typingsSlinky.wordpressEditor.components
 
-import typingsSlinky.wordpressEditor.mod.PageTemplate.^
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.wordpressEditor.templateMod.PageTemplate.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ object PageTemplate {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props_483516479[^] = new SharedBuilder_Props_483516479[^](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PageTemplate.type): SharedBuilder_Props_483516479[^] = new SharedBuilder_Props_483516479[^](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PageTemplate.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

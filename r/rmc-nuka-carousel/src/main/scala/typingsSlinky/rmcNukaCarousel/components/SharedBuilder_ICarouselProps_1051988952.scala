@@ -31,6 +31,8 @@ class SharedBuilder_ICarouselProps_1051988952[R <: js.Object] (val args: js.Arra
   @scala.inline
   def data(value: () => Unit): this.type = set("data", js.Any.fromFunction0(value))
   @scala.inline
+  def decoratorsVarargs(value: js.Any*): this.type = set("decorators", js.Array(value :_*))
+  @scala.inline
   def decorators(value: js.Array[_]): this.type = set("decorators", value.asInstanceOf[js.Any])
   @scala.inline
   def dragging(value: Boolean): this.type = set("dragging", value.asInstanceOf[js.Any])

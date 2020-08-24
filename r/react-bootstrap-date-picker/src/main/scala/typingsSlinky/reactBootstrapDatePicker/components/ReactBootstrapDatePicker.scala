@@ -1,7 +1,6 @@
 package typingsSlinky.reactBootstrapDatePicker.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.`*`.tag
@@ -33,7 +32,7 @@ object ReactBootstrapDatePicker {
     @scala.inline
     def clearButtonElementReactElement(value: ReactElement): this.type = set("clearButtonElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def clearButtonElement(value: TagMod[Any]): this.type = set("clearButtonElement", value.asInstanceOf[js.Any])
+    def clearButtonElement(value: ReactElement): this.type = set("clearButtonElement", value.asInstanceOf[js.Any])
     @scala.inline
     def customControlFunctionComponent(value: ReactComponentClass[_]): this.type = set("customControl", value.asInstanceOf[js.Any])
     @scala.inline
@@ -42,6 +41,8 @@ object ReactBootstrapDatePicker {
     def customControl(value: ReactComponentClass[_]): this.type = set("customControl", value.asInstanceOf[js.Any])
     @scala.inline
     def dateFormat(value: String): this.type = set("dateFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayLabelsVarargs(value: String*): this.type = set("dayLabels", js.Array(value :_*))
     @scala.inline
     def dayLabels(value: js.Array[String]): this.type = set("dayLabels", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,11 +54,13 @@ object ReactBootstrapDatePicker {
     @scala.inline
     def minDate(value: String): this.type = set("minDate", value.asInstanceOf[js.Any])
     @scala.inline
+    def monthLabelsVarargs(value: String*): this.type = set("monthLabels", js.Array(value :_*))
+    @scala.inline
     def monthLabels(value: js.Array[String]): this.type = set("monthLabels", value.asInstanceOf[js.Any])
     @scala.inline
     def nextButtonElementReactElement(value: ReactElement): this.type = set("nextButtonElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextButtonElement(value: TagMod[Any]): this.type = set("nextButtonElement", value.asInstanceOf[js.Any])
+    def nextButtonElement(value: ReactElement): this.type = set("nextButtonElement", value.asInstanceOf[js.Any])
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[_] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
@@ -69,7 +72,7 @@ object ReactBootstrapDatePicker {
     @scala.inline
     def previousButtonElementReactElement(value: ReactElement): this.type = set("previousButtonElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def previousButtonElement(value: TagMod[Any]): this.type = set("previousButtonElement", value.asInstanceOf[js.Any])
+    def previousButtonElement(value: ReactElement): this.type = set("previousButtonElement", value.asInstanceOf[js.Any])
     @scala.inline
     def showClearButton(value: Boolean): this.type = set("showClearButton", value.asInstanceOf[js.Any])
     @scala.inline

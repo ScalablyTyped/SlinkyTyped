@@ -1,6 +1,6 @@
 package typingsSlinky.urqlCore.subscriptionMod
 
-import typingsSlinky.urqlCore.anon.ExecutionResultExecutionR
+import typingsSlinky.urqlCore.anon.ExecutionResultkeystringa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ trait SubscriptionExchangeOpts extends js.Object {
   var enableAllOperations: js.UndefOr[Boolean] = js.native
   @JSName("forwardSubscription")
   var forwardSubscription_Original: SubscriptionForwarder = js.native
-  def forwardSubscription(operation: SubscriptionOperation): ObservableLike[ExecutionResultExecutionR] = js.native
+  def forwardSubscription(operation: SubscriptionOperation): ObservableLike[ExecutionResultkeystringa] = js.native
 }
 

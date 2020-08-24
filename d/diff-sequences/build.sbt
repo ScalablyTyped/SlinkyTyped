@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "diff-sequences"
-version := "24.9.0-fda16d"
-scalaVersion := "2.13.2"
+version := "26.0.0-c707ff"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -22,7 +22,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined node.http.IncomingMessage & {  query  :{[key: string] : string | std.Array<string>},   cookies  :{[key: string] : string},   body  :any} */
+/* Inlined node.http.IncomingMessage & {  query :{[key: string] : string | std.Array<string>},   cookies :{[key: string] : string},   body :any} */
 @js.native
 trait NextApiRequest extends js.Object {
   var aborted: Boolean = js.native
@@ -52,6 +52,9 @@ trait NextApiRequest extends js.Object {
   var rawHeaders: js.Array[String] = js.native
   var rawTrailers: js.Array[String] = js.native
   var readable: Boolean = js.native
+  val readableEncoding: BufferEncoding | Null = js.native
+  val readableEnded: Boolean = js.native
+  val readableFlowing: Boolean | Null = js.native
   val readableHighWaterMark: Double = js.native
   val readableLength: Double = js.native
   val readableObjectMode: Boolean = js.native

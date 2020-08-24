@@ -18,6 +18,8 @@ trait Types[T] extends js.Object {
   def date(): AssertionChain[T] = js.native
   /** Asserts that the reference value is an error. */
   def error(): AssertionChain[T] = js.native
+  def error(`type`: js.UndefOr[scala.Nothing], message: String): AssertionChain[T] = js.native
+  def error(`type`: js.UndefOr[scala.Nothing], message: js.RegExp): AssertionChain[T] = js.native
   def error(`type`: js.Any): AssertionChain[T] = js.native
   def error(`type`: js.Any, message: String): AssertionChain[T] = js.native
   def error(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for vexdb
 
-Typings are for version 2.1.9
+Typings are for version 3.1.1
 
 ## Library description:
 A simple tool for accessing the VexDB

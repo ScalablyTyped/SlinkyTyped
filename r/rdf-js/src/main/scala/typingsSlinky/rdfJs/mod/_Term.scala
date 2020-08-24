@@ -1,0 +1,8 @@
+package typingsSlinky.rdfJs.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait _Term extends js.Object
+

@@ -3,6 +3,7 @@ package typingsSlinky.exceljs
 import typingsSlinky.exceljs.mod.BorderStyle
 import typingsSlinky.exceljs.mod.CellIsOperators
 import typingsSlinky.exceljs.mod.CfvoTypes
+import typingsSlinky.exceljs.mod.CommentEditAs
 import typingsSlinky.exceljs.mod.ContainsTextOperators
 import typingsSlinky.exceljs.mod.DataValidationOperator
 import typingsSlinky.exceljs.mod.FillPatterns
@@ -76,6 +77,9 @@ object exceljsStrings {
   
   @js.native
   sealed trait DEFLATE extends js.Object
+  
+  @js.native
+  sealed trait False extends js.Object
   
   @js.native
   sealed trait NA extends js.Object
@@ -291,7 +295,13 @@ object exceljsStrings {
   sealed trait TableStyleMedium9 extends js.Object
   
   @js.native
+  sealed trait True extends js.Object
+  
+  @js.native
   sealed trait aboveAverage extends js.Object
+  
+  @js.native
+  sealed trait absolute extends CommentEditAs
   
   @js.native
   sealed trait angle extends js.Object
@@ -330,6 +340,9 @@ object exceljsStrings {
   
   @js.native
   sealed trait bottomRight extends js.Object
+  
+  @js.native
+  sealed trait cache extends js.Object
   
   @js.native
   sealed trait cellIs extends js.Object
@@ -422,6 +435,9 @@ object exceljsStrings {
   sealed trait downThenOver extends js.Object
   
   @js.native
+  sealed trait emit extends js.Object
+  
+  @js.native
   sealed trait equal
     extends CellIsOperators
        with DataValidationOperator
@@ -466,6 +482,9 @@ object exceljsStrings {
   
   @js.native
   sealed trait iconSet extends js.Object
+  
+  @js.native
+  sealed trait ignore extends js.Object
   
   @js.native
   sealed trait image extends js.Object
@@ -587,6 +606,9 @@ object exceljsStrings {
   sealed trait num extends CfvoTypes
   
   @js.native
+  sealed trait oneCells extends CommentEditAs
+  
+  @js.native
   sealed trait overThenDown extends js.Object
   
   @js.native
@@ -689,6 +711,9 @@ object exceljsStrings {
   sealed trait topRight extends js.Object
   
   @js.native
+  sealed trait twoCells extends CommentEditAs
+  
+  @js.native
   sealed trait `var` extends js.Object
   
   @js.native
@@ -748,6 +773,8 @@ object exceljsStrings {
   def `5Rating`: `5Rating` = "5Rating".asInstanceOf[`5Rating`]
   @scala.inline
   def DEFLATE: DEFLATE = "DEFLATE".asInstanceOf[DEFLATE]
+  @scala.inline
+  def False: False = "False".asInstanceOf[False]
   @scala.inline
   def NA: NA = "NA".asInstanceOf[NA]
   @scala.inline
@@ -891,7 +918,11 @@ object exceljsStrings {
   @scala.inline
   def TableStyleMedium9: TableStyleMedium9 = "TableStyleMedium9".asInstanceOf[TableStyleMedium9]
   @scala.inline
+  def True: True = "True".asInstanceOf[True]
+  @scala.inline
   def aboveAverage: aboveAverage = "aboveAverage".asInstanceOf[aboveAverage]
+  @scala.inline
+  def absolute: absolute = "absolute".asInstanceOf[absolute]
   @scala.inline
   def angle: angle = "angle".asInstanceOf[angle]
   @scala.inline
@@ -916,6 +947,8 @@ object exceljsStrings {
   def bottomLeft: bottomLeft = "bottomLeft".asInstanceOf[bottomLeft]
   @scala.inline
   def bottomRight: bottomRight = "bottomRight".asInstanceOf[bottomRight]
+  @scala.inline
+  def cache: cache = "cache".asInstanceOf[cache]
   @scala.inline
   def cellIs: cellIs = "cellIs".asInstanceOf[cellIs]
   @scala.inline
@@ -977,6 +1010,8 @@ object exceljsStrings {
   @scala.inline
   def downThenOver: downThenOver = "downThenOver".asInstanceOf[downThenOver]
   @scala.inline
+  def emit: emit = "emit".asInstanceOf[emit]
+  @scala.inline
   def equal: equal = "equal".asInstanceOf[equal]
   @scala.inline
   def expression: expression = "expression".asInstanceOf[expression]
@@ -1004,6 +1039,8 @@ object exceljsStrings {
   def hidden: hidden = "hidden".asInstanceOf[hidden]
   @scala.inline
   def iconSet: iconSet = "iconSet".asInstanceOf[iconSet]
+  @scala.inline
+  def ignore: ignore = "ignore".asInstanceOf[ignore]
   @scala.inline
   def image: image = "image".asInstanceOf[image]
   @scala.inline
@@ -1083,6 +1120,8 @@ object exceljsStrings {
   @scala.inline
   def num: num = "num".asInstanceOf[num]
   @scala.inline
+  def oneCells: oneCells = "oneCells".asInstanceOf[oneCells]
+  @scala.inline
   def overThenDown: overThenDown = "overThenDown".asInstanceOf[overThenDown]
   @scala.inline
   def pageBreakPreview: pageBreakPreview = "pageBreakPreview".asInstanceOf[pageBreakPreview]
@@ -1150,6 +1189,8 @@ object exceljsStrings {
   def topLeft: topLeft = "topLeft".asInstanceOf[topLeft]
   @scala.inline
   def topRight: topRight = "topRight".asInstanceOf[topRight]
+  @scala.inline
+  def twoCells: twoCells = "twoCells".asInstanceOf[twoCells]
   @scala.inline
   def `var`: `var` = "var".asInstanceOf[`var`]
   @scala.inline

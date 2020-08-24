@@ -33,113 +33,54 @@ object ManhattanRouterArguments {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEndDirections(value: js.Array[OrthogonalDirection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDirections")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutEndDirections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDirections")(js.undefined)
-        ret
-    }
+    def setEndDirectionsVarargs(value: OrthogonalDirection*): Self = this.set("endDirections", js.Array(value :_*))
     @scala.inline
-    def withExcludeEnds(value: js.Array[LinkEnd]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeEnds")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEndDirections(value: js.Array[OrthogonalDirection]): Self = this.set("endDirections", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutExcludeEnds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeEnds")(js.undefined)
-        ret
-    }
+    def deleteEndDirections: Self = this.set("endDirections", js.undefined)
     @scala.inline
-    def withExcludeTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExcludeEndsVarargs(value: LinkEnd*): Self = this.set("excludeEnds", js.Array(value :_*))
     @scala.inline
-    def withoutExcludeTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeTypes")(js.undefined)
-        ret
-    }
+    def setExcludeEnds(value: js.Array[LinkEnd]): Self = this.set("excludeEnds", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxAllowedDirectionChange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAllowedDirectionChange")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExcludeEnds: Self = this.set("excludeEnds", js.undefined)
     @scala.inline
-    def withoutMaxAllowedDirectionChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAllowedDirectionChange")(js.undefined)
-        ret
-    }
+    def setExcludeTypesVarargs(value: String*): Self = this.set("excludeTypes", js.Array(value :_*))
     @scala.inline
-    def withMaximumLoops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumLoops")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExcludeTypes(value: js.Array[String]): Self = this.set("excludeTypes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMaximumLoops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumLoops")(js.undefined)
-        ret
-    }
+    def deleteExcludeTypes: Self = this.set("excludeTypes", js.undefined)
     @scala.inline
-    def withPadding(value: Sides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaxAllowedDirectionChange(value: Double): Self = this.set("maxAllowedDirectionChange", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
+    def deleteMaxAllowedDirectionChange: Self = this.set("maxAllowedDirectionChange", js.undefined)
     @scala.inline
-    def withPerpendicular(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perpendicular")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaximumLoops(value: Double): Self = this.set("maximumLoops", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPerpendicular: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perpendicular")(js.undefined)
-        ret
-    }
+    def deleteMaximumLoops: Self = this.set("maximumLoops", js.undefined)
     @scala.inline
-    def withStartDirections(value: js.Array[OrthogonalDirection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDirections")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPadding(value: Sides): Self = this.set("padding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutStartDirections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDirections")(js.undefined)
-        ret
-    }
+    def deletePadding: Self = this.set("padding", js.undefined)
     @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPerpendicular(value: Boolean): Self = this.set("perpendicular", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
+    def deletePerpendicular: Self = this.set("perpendicular", js.undefined)
+    @scala.inline
+    def setStartDirectionsVarargs(value: OrthogonalDirection*): Self = this.set("startDirections", js.Array(value :_*))
+    @scala.inline
+    def setStartDirections(value: js.Array[OrthogonalDirection]): Self = this.set("startDirections", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStartDirections: Self = this.set("startDirections", js.undefined)
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
   }
   
 }

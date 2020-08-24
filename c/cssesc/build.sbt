@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cssesc"
-version := "3.0-dt-20190213Z-d3e6f2"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20190213Z-ae32ef"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -29,29 +29,18 @@ object CHECKBOX {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCHECKBOX(value: checkbox_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CHECKBOX")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withNORMAL(value: normal_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NORMAL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCHECKBOX(value: checkbox_): Self = this.set("CHECKBOX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRADIO(value: radio_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RADIO")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNORMAL(value: normal_): Self = this.set("NORMAL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSEPARATOR(value: separator_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SEPARATOR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRADIO(value: radio_): Self = this.set("RADIO", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSEPARATOR(value: separator_): Self = this.set("SEPARATOR", value.asInstanceOf[js.Any])
   }
   
 }

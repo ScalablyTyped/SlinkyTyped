@@ -62,71 +62,32 @@ object HeaderViewListAdapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAreAllListInfosSelectable(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areAllListInfosSelectable")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetFilter(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAreAllListInfosSelectable(value: js.Any => js.Any): Self = this.set("areAllListInfosSelectable", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetFootersCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFootersCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetFilter(value: () => js.Any): Self = this.set("getFilter", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetHeadersCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeadersCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetFootersCount(value: () => Double): Self = this.set("getFootersCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAdapter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetHeadersCount(value: () => Double): Self = this.set("getHeadersCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withMAreAllFixedViewsSelectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAreAllFixedViewsSelectable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAdapter(value: js.Any): Self = this.set("mAdapter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFooterViewInfos(value: ArrayList[FixedViewInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFooterViewInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAreAllFixedViewsSelectable(value: Boolean): Self = this.set("mAreAllFixedViewsSelectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHeaderViewInfos(value: ArrayList[FixedViewInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHeaderViewInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFooterViewInfos(value: ArrayList[FixedViewInfo]): Self = this.set("mFooterViewInfos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIsFilterable(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIsFilterable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHeaderViewInfos(value: ArrayList[FixedViewInfo]): Self = this.set("mHeaderViewInfos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveFooter(value: View => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFooter")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMIsFilterable(value: js.Any): Self = this.set("mIsFilterable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveHeader(value: View => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeHeader")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemoveFooter(value: View => Boolean): Self = this.set("removeFooter", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRemoveHeader(value: View => Boolean): Self = this.set("removeHeader", js.Any.fromFunction1(value))
   }
   
 }

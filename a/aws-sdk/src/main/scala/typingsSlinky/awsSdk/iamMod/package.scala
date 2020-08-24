@@ -5,6 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object iamMod {
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SERVICE_LEVEL
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTION_LEVEL
+    - java.lang.String
+  */
+  type AccessAdvisorUsageGranularityType = typingsSlinky.awsSdk.iamMod._AccessAdvisorUsageGranularityType | java.lang.String
   type AccessDetails = js.Array[typingsSlinky.awsSdk.iamMod.AccessDetail]
   type ActionNameListType = js.Array[typingsSlinky.awsSdk.iamMod.ActionNameType]
   type ActionNameType = java.lang.String
@@ -112,6 +118,7 @@ package object iamMod {
   type ServicesLastAccessed = js.Array[typingsSlinky.awsSdk.iamMod.ServiceLastAccessed]
   type SimulationPolicyListType = js.Array[typingsSlinky.awsSdk.iamMod.policyDocumentType]
   type StatementListType = js.Array[typingsSlinky.awsSdk.iamMod.Statement]
+  type TrackedActionsLastAccessed = js.Array[typingsSlinky.awsSdk.iamMod.TrackedActionLastAccessed]
   type accessKeyIdType = java.lang.String
   type accessKeyMetadataListType = js.Array[typingsSlinky.awsSdk.iamMod.AccessKeyMetadata]
   type accessKeySecretType = java.lang.String

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery-cropper"
-version := "1.0-dt-20200331Z-67b084"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200331Z-3e5681"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,6 +1,7 @@
 package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -13,6 +14,7 @@ import typingsSlinky.baseui.baseuiStrings.moveUp
 import typingsSlinky.baseui.baseuiStrings.reset
 import typingsSlinky.baseui.menuMod.ItemsT
 import typingsSlinky.baseui.menuMod.RenderItemProps
+import typingsSlinky.baseui.menuMod.RenderProps
 import typingsSlinky.baseui.menuMod.StatefulContainerProps
 import typingsSlinky.baseui.menuMod.StatefulContainerState
 import typingsSlinky.react.mod.Ref
@@ -31,6 +33,8 @@ object StatefulContainer {
        with StBuildingComponent[tag.type, typingsSlinky.baseui.menuMod.StatefulContainer] {
     @scala.inline
     def addMenuToNesting(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("addMenuToNesting", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: /* args */ RenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def getChildMenu(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("getChildMenu", js.Any.fromFunction1(value))
     @scala.inline

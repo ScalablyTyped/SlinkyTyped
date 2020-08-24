@@ -36,6 +36,7 @@ class PreparedStatement () extends EventEmitter {
   def output(name: String, `type`: js.Function0[ISqlType]): PreparedStatement = js.native
   def output(name: String, `type`: ISqlType): PreparedStatement = js.native
   def prepare(): js.Promise[Unit] = js.native
+  def prepare(statement: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): PreparedStatement = js.native
   def prepare(statement: String): js.Promise[Unit] = js.native
   def prepare(statement: String, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): PreparedStatement = js.native
   @JSName("prepare")

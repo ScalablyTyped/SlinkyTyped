@@ -2,7 +2,6 @@ package typingsSlinky.lolex.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.DateConstructor
-import typingsSlinky.std.global.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +9,14 @@ import scala.scalajs.js.annotation._
 /**
   * Lolex clock for a Node environment.
   */
-/* Inlined lolex.lolex.LolexClock<lolex.lolex.NodeTimer> & {hrtime (prevTime ? : [number, number]): [number, number], queueMicrotask (callback : (): void): void, nextTick (callback : (): void): void, runMicrotasks (): void} */
+/* Inlined lolex.lolex.LolexClock<lolex.lolex.NodeTimer> & {hrtime (prevTime : [number, number] | undefined): [number, number], queueMicrotask (callback : (): void): void, nextTick (callback : (): void): void, runMicrotasks (): void} */
 @js.native
 trait NodeClock extends Clock {
   /**
     * Implements the Date object but using this clock to provide the correct time.
     */
   @JSName("Date")
-  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, Date]) = js.native
+  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, js.Date]) = js.native
   /**
     * Maximum number of timers that will be run when calling runAll().
     */

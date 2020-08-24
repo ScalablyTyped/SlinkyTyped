@@ -16,6 +16,12 @@ class EventStream[V] protected ()
   def this(
     desc: typingsSlinky.baconjs.describeMod.Desc,
     subscribe: Subscribe[V],
+    handler: js.UndefOr[scala.Nothing],
+    options: EventStreamOptions
+  ) = this()
+  def this(
+    desc: typingsSlinky.baconjs.describeMod.Desc,
+    subscribe: Subscribe[V],
     handler: EventSink[V],
     options: EventStreamOptions
   ) = this()

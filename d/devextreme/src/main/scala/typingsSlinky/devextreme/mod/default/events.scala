@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.default
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.mod.DevExpress.event
+import typingsSlinky.devextreme.mod.DevExpress.events.event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation._
 @JSImport("devextreme", "events")
 @js.native
 object events extends js.Object {
+  @js.native
+  class dxEvent ()
+    extends typingsSlinky.devextreme.mod.DevExpress.events.dxEvent
+  
+  def eventsHandler(event: typingsSlinky.devextreme.mod.DevExpress.events.dxEvent, extraParameters: js.Any): Boolean = js.native
   def off(element: js.Array[Element]): Unit = js.native
   def off(element: js.Array[Element], eventName: String): Unit = js.native
   def off(element: js.Array[Element], eventName: String, handler: js.Function): Unit = js.native

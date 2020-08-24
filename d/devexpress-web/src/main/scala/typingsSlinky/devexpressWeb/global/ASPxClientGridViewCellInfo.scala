@@ -10,21 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientGridViewCellInfo")
 @js.native
 class ASPxClientGridViewCellInfo ()
-  extends typingsSlinky.devexpressWeb.ASPxClientGridViewCellInfo {
-  /**
-    * Gets the data column that contains the cell currently being processed.
-    */
-  /* CompleteClass */
-  override var column: typingsSlinky.devexpressWeb.ASPxClientGridViewColumn = js.native
-  /**
-    * Gets the row's key.
-    */
-  /* CompleteClass */
-  override var key: js.Any = js.native
-  /**
-    * Gets the visible index of the row that contains the cell currently being processed.
-    */
-  /* CompleteClass */
-  override var rowVisibleIndex: Double = js.native
-}
+  extends typingsSlinky.devexpressWeb.ASPxClientGridViewCellInfo
 

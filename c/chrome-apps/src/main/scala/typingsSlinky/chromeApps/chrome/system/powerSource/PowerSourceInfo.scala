@@ -38,31 +38,20 @@ object PowerSourceInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withType(
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(
       value: (/* keyof / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof PowerSourceType * / any */ String) | PowerSourceType
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMaxPower(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPower")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMaxPower(value: double): Self = this.set("maxPower", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMaxPower: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPower")(js.undefined)
-        ret
-    }
+    def deleteMaxPower: Self = this.set("maxPower", js.undefined)
   }
   
 }

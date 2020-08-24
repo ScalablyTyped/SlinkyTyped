@@ -49,6 +49,7 @@ object mod extends js.Object {
   def getGraphQLConfig(): typingsSlinky.graphqlConfig.graphQLConfigMod.GraphQLConfig = js.native
   def getGraphQLConfig(rootDir: String): typingsSlinky.graphqlConfig.graphQLConfigMod.GraphQLConfig = js.native
   def getGraphQLProjectConfig(): typingsSlinky.graphqlConfig.graphQLProjectConfigMod.GraphQLProjectConfig = js.native
+  def getGraphQLProjectConfig(rootDir: js.UndefOr[scala.Nothing], projectName: String): typingsSlinky.graphqlConfig.graphQLProjectConfigMod.GraphQLProjectConfig = js.native
   def getGraphQLProjectConfig(rootDir: String): typingsSlinky.graphqlConfig.graphQLProjectConfigMod.GraphQLProjectConfig = js.native
   def getGraphQLProjectConfig(rootDir: String, projectName: String): typingsSlinky.graphqlConfig.graphQLProjectConfigMod.GraphQLProjectConfig = js.native
   def getSchemaExtensions(path: String): StringDictionary[String] = js.native

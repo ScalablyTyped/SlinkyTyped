@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait STATE_CHANGE_TYPE extends js.Object {
-  var expand: typingsSlinky.baseui.baseuiStrings.expand
+  var expand: typingsSlinky.baseui.baseuiStrings.expand = js.native
 }
 
 @JSImport("baseui/accordion", "STATE_CHANGE_TYPE")

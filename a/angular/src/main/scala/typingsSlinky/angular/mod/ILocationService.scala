@@ -11,10 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ILocationService extends js.Object {
   def absUrl(): String = js.native
-  def hash(): ILocationService = js.native
   /**
     * Changes the hash fragment and returns `$location`
     */
+  def hash(): ILocationService = js.native
   def hash(newHash: String): ILocationService = js.native
   /**
     * Returns the hash fragment
@@ -40,13 +40,13 @@ trait ILocationService extends js.Object {
     * Return search part (as object) of current url
     */
   def search(): js.Any = js.native
-  def search(search: String): ILocationService = js.native
   /**
     * Change search part when called with parameter and return $location.
     *
     * @param search New search params
     * @param paramValue If search is a string or a Number, then paramValue will override only a single search property. If paramValue is null, the property specified via the first argument will be deleted. If paramValue is an array, it will override the property of the search component of $location specified via the first argument. If paramValue is true, the property specified via the first argument will be added with no value nor trailing equal sign.
     */
+  def search(search: String): ILocationService = js.native
   def search(search: String, paramValue: String): ILocationService = js.native
   def search(search: String, paramValue: js.Array[String]): ILocationService = js.native
   def search(search: String, paramValue: Boolean): ILocationService = js.native

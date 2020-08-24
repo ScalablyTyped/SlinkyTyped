@@ -48,6 +48,7 @@ class Map_ protected () extends Evented {
   def fitWorld(): this.type = js.native
   def fitWorld(options: FitBoundsOptions): this.type = js.native
   def flyTo(latlng: LatLngExpression): this.type = js.native
+  def flyTo(latlng: LatLngExpression, zoom: js.UndefOr[scala.Nothing], options: ZoomPanOptions): this.type = js.native
   def flyTo(latlng: LatLngExpression, zoom: Double): this.type = js.native
   def flyTo(latlng: LatLngExpression, zoom: Double, options: ZoomPanOptions): this.type = js.native
   def flyToBounds(bounds: LatLngBoundsExpression): this.type = js.native
@@ -82,7 +83,7 @@ class Map_ protected () extends Evented {
     */
   def invalidateSize(): this.type = js.native
   def invalidateSize(options: Boolean): this.type = js.native
-  def invalidateSize(options: ZoomPanOptions): this.type = js.native
+  def invalidateSize(options: InvalidateSizeOptions): this.type = js.native
   def latLngToContainerPoint(latlng: LatLngExpression): Point_ = js.native
   def latLngToLayerPoint(latlng: LatLngExpression): Point_ = js.native
   def layerPointToContainerPoint(point: PointExpression): Point_ = js.native
@@ -132,9 +133,11 @@ class Map_ protected () extends Evented {
   def wrapLatLng(latlng: LatLngExpression): LatLng_ = js.native
   def wrapLatLngBounds(bounds: LatLngBounds_): LatLngBounds_ = js.native
   def zoomIn(): this.type = js.native
+  def zoomIn(delta: js.UndefOr[scala.Nothing], options: ZoomOptions): this.type = js.native
   def zoomIn(delta: Double): this.type = js.native
   def zoomIn(delta: Double, options: ZoomOptions): this.type = js.native
   def zoomOut(): this.type = js.native
+  def zoomOut(delta: js.UndefOr[scala.Nothing], options: ZoomOptions): this.type = js.native
   def zoomOut(delta: Double): this.type = js.native
   def zoomOut(delta: Double, options: ZoomOptions): this.type = js.native
 }

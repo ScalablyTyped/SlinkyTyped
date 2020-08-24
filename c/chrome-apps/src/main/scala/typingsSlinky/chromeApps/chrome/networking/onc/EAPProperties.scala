@@ -39,185 +39,74 @@ object EAPProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnonymousIdentity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnonymousIdentity")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAnonymousIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnonymousIdentity")(js.undefined)
-        ret
-    }
+    def setAnonymousIdentity(value: String): Self = this.set("AnonymousIdentity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClientCertPKCS11Id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertPKCS11Id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAnonymousIdentity: Self = this.set("AnonymousIdentity", js.undefined)
     @scala.inline
-    def withoutClientCertPKCS11Id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertPKCS11Id")(js.undefined)
-        ret
-    }
+    def setClientCertPKCS11Id(value: String): Self = this.set("ClientCertPKCS11Id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClientCertPattern(value: CertPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClientCertPKCS11Id: Self = this.set("ClientCertPKCS11Id", js.undefined)
     @scala.inline
-    def withoutClientCertPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertPattern")(js.undefined)
-        ret
-    }
+    def setClientCertPattern(value: CertPattern): Self = this.set("ClientCertPattern", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClientCertRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertRef")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClientCertPattern: Self = this.set("ClientCertPattern", js.undefined)
     @scala.inline
-    def withoutClientCertRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertRef")(js.undefined)
-        ret
-    }
+    def setClientCertRef(value: String): Self = this.set("ClientCertRef", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClientCertType(value: ClientCertType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClientCertRef: Self = this.set("ClientCertRef", js.undefined)
     @scala.inline
-    def withoutClientCertType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertType")(js.undefined)
-        ret
-    }
+    def setClientCertType(value: ClientCertType): Self = this.set("ClientCertType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIdentity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClientCertType: Self = this.set("ClientCertType", js.undefined)
     @scala.inline
-    def withoutIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(js.undefined)
-        ret
-    }
+    def setIdentity(value: String): Self = this.set("Identity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inner")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIdentity: Self = this.set("Identity", js.undefined)
     @scala.inline
-    def withoutInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inner")(js.undefined)
-        ret
-    }
+    def setInner(value: String): Self = this.set("Inner", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOuter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outer")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInner: Self = this.set("Inner", js.undefined)
     @scala.inline
-    def withoutOuter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outer")(js.undefined)
-        ret
-    }
+    def setOuter(value: String): Self = this.set("Outer", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOuter: Self = this.set("Outer", js.undefined)
     @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(js.undefined)
-        ret
-    }
+    def setPassword(value: String): Self = this.set("Password", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSaveCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SaveCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePassword: Self = this.set("Password", js.undefined)
     @scala.inline
-    def withoutSaveCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SaveCredentials")(js.undefined)
-        ret
-    }
+    def setSaveCredentials(value: Boolean): Self = this.set("SaveCredentials", value.asInstanceOf[js.Any])
     @scala.inline
-    def withServerCAPEMs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCAPEMs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSaveCredentials: Self = this.set("SaveCredentials", js.undefined)
     @scala.inline
-    def withoutServerCAPEMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCAPEMs")(js.undefined)
-        ret
-    }
+    def setServerCAPEMsVarargs(value: String*): Self = this.set("ServerCAPEMs", js.Array(value :_*))
     @scala.inline
-    def withServerCARefs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCARefs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServerCAPEMs(value: js.Array[String]): Self = this.set("ServerCAPEMs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutServerCARefs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCARefs")(js.undefined)
-        ret
-    }
+    def deleteServerCAPEMs: Self = this.set("ServerCAPEMs", js.undefined)
     @scala.inline
-    def withSubjectMatch(value: ManagedDOMString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServerCARefsVarargs(value: String*): Self = this.set("ServerCARefs", js.Array(value :_*))
     @scala.inline
-    def withoutSubjectMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectMatch")(js.undefined)
-        ret
-    }
+    def setServerCARefs(value: js.Array[String]): Self = this.set("ServerCARefs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUseProactiveKeyCaching(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseProactiveKeyCaching")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteServerCARefs: Self = this.set("ServerCARefs", js.undefined)
     @scala.inline
-    def withoutUseProactiveKeyCaching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseProactiveKeyCaching")(js.undefined)
-        ret
-    }
+    def setSubjectMatch(value: ManagedDOMString): Self = this.set("SubjectMatch", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUseSytemCAs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseSytemCAs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSubjectMatch: Self = this.set("SubjectMatch", js.undefined)
     @scala.inline
-    def withoutUseSytemCAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseSytemCAs")(js.undefined)
-        ret
-    }
+    def setUseProactiveKeyCaching(value: Boolean): Self = this.set("UseProactiveKeyCaching", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseProactiveKeyCaching: Self = this.set("UseProactiveKeyCaching", js.undefined)
+    @scala.inline
+    def setUseSytemCAs(value: Boolean): Self = this.set("UseSytemCAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseSytemCAs: Self = this.set("UseSytemCAs", js.undefined)
   }
   
 }

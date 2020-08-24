@@ -3,8 +3,8 @@ package typingsSlinky.geolib
 import typingsSlinky.geolib.anon.Altitude
 import typingsSlinky.geolib.anon.AltitudeLatitude
 import typingsSlinky.geolib.anon.Latitude
-import typingsSlinky.geolib.anon.LatitudeLongitude
 import typingsSlinky.geolib.anon.Longitude
+import typingsSlinky.geolib.constantsMod.unitObject
 import typingsSlinky.geolib.geolibBooleans.`false`
 import typingsSlinky.geolib.geolibStrings.E
 import typingsSlinky.geolib.geolibStrings.ENE
@@ -24,9 +24,12 @@ import typingsSlinky.geolib.geolibStrings.WNW
 import typingsSlinky.geolib.geolibStrings.WSW
 import typingsSlinky.geolib.getCompassDirectionMod.BearingFunction
 import typingsSlinky.geolib.getPathLengthMod.DistanceFn
+import typingsSlinky.geolib.typesMod.AltitudeKeys
 import typingsSlinky.geolib.typesMod.GeolibDistanceFn
 import typingsSlinky.geolib.typesMod.GeolibInputCoordinates
 import typingsSlinky.geolib.typesMod.GeolibInputCoordinatesWithTime
+import typingsSlinky.geolib.typesMod.LatitudeKeys
+import typingsSlinky.geolib.typesMod.LongitudeKeys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,6 +37,18 @@ import scala.scalajs.js.annotation._
 @JSImport("geolib", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  val MAXLAT: /* 90 */ Double = js.native
+  val MAXLON: /* 180 */ Double = js.native
+  val MINLAT: /* -90 */ Double = js.native
+  val MINLON: /* -180 */ Double = js.native
+  val altitudeKeys: js.Array[AltitudeKeys] = js.native
+  val areaConversion: unitObject = js.native
+  val distanceConversion: unitObject = js.native
+  val earthRadius: /* 6378137 */ Double = js.native
+  val latitudeKeys: js.Array[LatitudeKeys] = js.native
+  val longitudeKeys: js.Array[LongitudeKeys] = js.native
+  val sexagesimalPattern: js.RegExp = js.native
+  val timeConversion: unitObject = js.native
   def computeDestinationPoint(start: GeolibInputCoordinates, distance: Double, bearing: Double): Latitude = js.native
   def computeDestinationPoint(start: GeolibInputCoordinates, distance: Double, bearing: Double, radius: Double): Latitude = js.native
   def convertArea(squareMeters: Double): Double = js.native
@@ -52,8 +67,8 @@ object mod extends js.Object {
   def getCompassDirection(origin: GeolibInputCoordinates, dest: GeolibInputCoordinates): S | W | NNE | NE | ENE | E | ESE | SE | SSE | SSW | SW | WSW | WNW | NW | NNW | N = js.native
   def getCompassDirection(origin: GeolibInputCoordinates, dest: GeolibInputCoordinates, bearingFn: BearingFunction): S | W | NNE | NE | ENE | E | ESE | SE | SSE | SSW | SW | WSW | WNW | NW | NNW | N = js.native
   def getCoordinateKey[Keys](point: GeolibInputCoordinates, keysToLookup: js.Array[Keys]): js.UndefOr[Keys] = js.native
-  def getCoordinateKeys(point: GeolibInputCoordinates): AltitudeLatitude | LatitudeLongitude = js.native
-  def getCoordinateKeys(point: GeolibInputCoordinates, keysToLookup: Altitude): AltitudeLatitude | LatitudeLongitude = js.native
+  def getCoordinateKeys(point: GeolibInputCoordinates): AltitudeLatitude = js.native
+  def getCoordinateKeys(point: GeolibInputCoordinates, keysToLookup: Altitude): AltitudeLatitude = js.native
   def getDistance(from: GeolibInputCoordinates, to: GeolibInputCoordinates): Double = js.native
   def getDistance(from: GeolibInputCoordinates, to: GeolibInputCoordinates, accuracy: Double): Double = js.native
   def getDistanceFromLine(point: GeolibInputCoordinates, lineStart: GeolibInputCoordinates, lineEnd: GeolibInputCoordinates): Double = js.native
@@ -110,5 +125,6 @@ object mod extends js.Object {
   def toDecimal(value: js.Any): js.Any = js.native
   def toDeg(value: Double): Double = js.native
   def toRad(value: Double): Double = js.native
+  def wktToPolygon(wkt: String): js.Array[Longitude] = js.native
 }
 

@@ -4,20 +4,19 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.anon.Text
 import typingsSlinky.fundamentalReact.multiInputMod.MultiInputProps
-import typingsSlinky.fundamentalReact.multiInputMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MultiInput {
-  @JSImport("fundamental-react/lib/MultiInput/MultiInput", JSImport.Default)
+  @JSImport("fundamental-react", "MultiInput")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.MultiInput] {
     @scala.inline
     def buttonProps(value: js.Any): this.type = set("buttonProps", value.asInstanceOf[js.Any])
     @scala.inline

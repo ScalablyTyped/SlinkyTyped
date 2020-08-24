@@ -2,9 +2,9 @@ package typingsSlinky.officeUiFabricReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
 import typingsSlinky.officeUiFabricReact.calendarInlineExampleMod.ICalendarInlineExampleProps
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,6 +33,8 @@ object CalendarInlineExample {
     @scala.inline
     def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
     @scala.inline
+    def restrictedDatesVarargs(value: js.Date*): this.type = set("restrictedDates", js.Array(value :_*))
+    @scala.inline
     def restrictedDates(value: js.Array[js.Date]): this.type = set("restrictedDates", value.asInstanceOf[js.Any])
     @scala.inline
     def showMonthPickerAsOverlay(value: Boolean): this.type = set("showMonthPickerAsOverlay", value.asInstanceOf[js.Any])
@@ -42,6 +44,8 @@ object CalendarInlineExample {
     def showSixWeeksByDefault(value: Boolean): this.type = set("showSixWeeksByDefault", value.asInstanceOf[js.Any])
     @scala.inline
     def showWeekNumbers(value: Boolean): this.type = set("showWeekNumbers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def workWeekDaysVarargs(value: DayOfWeek*): this.type = set("workWeekDays", js.Array(value :_*))
     @scala.inline
     def workWeekDays(value: js.Array[DayOfWeek]): this.type = set("workWeekDays", value.asInstanceOf[js.Any])
   }

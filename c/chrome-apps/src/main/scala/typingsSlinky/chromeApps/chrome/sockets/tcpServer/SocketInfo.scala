@@ -45,59 +45,28 @@ object SocketInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPaused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPersistent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPaused(value: Boolean): Self = this.set("paused", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSocketId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPersistent(value: Boolean): Self = this.set("persistent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLocalAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSocketId(value: integer): Self = this.set("socketId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLocalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
-        ret
-    }
+    def setLocalAddress(value: String): Self = this.set("localAddress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLocalPort(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localPort")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLocalAddress: Self = this.set("localAddress", js.undefined)
     @scala.inline
-    def withoutLocalPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localPort")(js.undefined)
-        ret
-    }
+    def setLocalPort(value: integer): Self = this.set("localPort", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLocalPort: Self = this.set("localPort", js.undefined)
     @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
   }
   
 }

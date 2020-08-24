@@ -5,13 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type AddonHook = java.lang.String | (js.ThisFunction0[
+  type AddonHook = java.lang.String | typingsSlinky.rollup.mod.AddonHookFunction
+  type AddonHookFunction = js.ThisFunction0[
     /* this */ typingsSlinky.rollup.mod.PluginContext, 
     java.lang.String | js.Promise[java.lang.String]
-  ])
+  ]
   type EmitAsset = js.Function2[
     /* name */ java.lang.String, 
-    /* source */ js.UndefOr[java.lang.String | typingsSlinky.node.Buffer], 
+    /* source */ js.UndefOr[java.lang.String | js.typedarray.Uint8Array], 
     java.lang.String
   ]
   type EmitChunk = js.Function2[
@@ -20,16 +21,26 @@ package object mod {
     java.lang.String
   ]
   type EmitFile = js.Function1[/* emittedFile */ typingsSlinky.rollup.mod.EmittedFile, java.lang.String]
-  type ExternalOption = js.Array[java.lang.String] | typingsSlinky.rollup.mod.IsExternal
-  type GetManualChunk = js.Function1[/* id */ java.lang.String, js.UndefOr[java.lang.String | scala.Null]]
+  type ExternalOption = (js.Array[java.lang.String | js.RegExp]) | java.lang.String | js.RegExp | (js.Function3[
+    /* source */ java.lang.String, 
+    /* importer */ js.UndefOr[java.lang.String], 
+    /* isResolved */ scala.Boolean, 
+    js.UndefOr[scala.Boolean | scala.Null]
+  ])
+  type GetManualChunk = js.Function2[
+    /* id */ java.lang.String, 
+    /* api */ typingsSlinky.rollup.mod.GetManualChunkApi, 
+    js.UndefOr[java.lang.String | scala.Null]
+  ]
+  type GetModuleInfo = js.Function1[/* moduleId */ java.lang.String, typingsSlinky.rollup.mod.ModuleInfo]
   type GlobalsOption = org.scalablytyped.runtime.StringDictionary[java.lang.String] | (js.Function1[/* name */ java.lang.String, java.lang.String])
   type HasModuleSideEffects = js.Function2[/* id */ java.lang.String, /* external */ scala.Boolean, scala.Boolean]
   type InputOption = java.lang.String | js.Array[java.lang.String] | org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type IsExternal = js.Function3[
     /* source */ java.lang.String, 
-    /* importer */ java.lang.String, 
+    /* importer */ js.UndefOr[java.lang.String], 
     /* isResolved */ scala.Boolean, 
-    js.UndefOr[scala.Boolean | scala.Null]
+    scala.Boolean
   ]
   type IsPureModule = js.Function1[/* id */ java.lang.String, js.UndefOr[scala.Boolean | scala.Null]]
   type LoadHook = js.ThisFunction1[
@@ -51,7 +62,7 @@ package object mod {
     /* this */ typingsSlinky.rollup.mod.PluginContext, 
     /* code */ java.lang.String, 
     /* chunk */ typingsSlinky.rollup.mod.RenderedChunk, 
-    /* options */ typingsSlinky.rollup.mod.OutputOptions, 
+    /* options */ typingsSlinky.rollup.mod.NormalizedOutputOptions, 
     (js.Promise[typingsSlinky.rollup.anon.Code | scala.Null]) | typingsSlinky.rollup.anon.Code | java.lang.String | scala.Null
   ]
   type ResolveAssetUrlHook = js.ThisFunction1[
@@ -61,7 +72,7 @@ package object mod {
   ]
   type ResolveDynamicImportHook = js.ThisFunction2[
     /* this */ typingsSlinky.rollup.mod.PluginContext, 
-    /* specifier */ java.lang.String | typingsSlinky.estree.mod.Node, 
+    /* specifier */ java.lang.String | typingsSlinky.rollup.mod.AcornNode, 
     /* importer */ java.lang.String, 
     js.Promise[typingsSlinky.rollup.mod.ResolveIdResult] | typingsSlinky.rollup.mod.ResolveIdResult
   ]
@@ -97,27 +108,22 @@ package object mod {
     - typingsSlinky.rollup.mod.ExistingRawSourceMap
     - java.lang.String
     - scala.Null
-    - typingsSlinky.rollup.anon.Mappings
+    - typingsSlinky.rollup.anon.`0`
   */
   type SourceMapInput = typingsSlinky.rollup.mod._SourceMapInput | java.lang.String | scala.Null
   type SourceMapSegment = js.Array[scala.Double] | (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double]) | (js.Tuple5[scala.Double, scala.Double, scala.Double, scala.Double, scala.Double])
-  type TransformChunkHook = js.ThisFunction2[
-    /* this */ typingsSlinky.rollup.mod.PluginContext, 
-    /* code */ java.lang.String, 
-    /* options */ typingsSlinky.rollup.mod.OutputOptions, 
-    js.UndefOr[
-      (js.Promise[js.UndefOr[typingsSlinky.rollup.anon.Code | scala.Null]]) | typingsSlinky.rollup.anon.Code | scala.Null
-    ]
+  type SourcemapPathTransformOption = js.Function2[
+    /* relativeSourcePath */ java.lang.String, 
+    /* sourcemapPath */ java.lang.String, 
+    java.lang.String
   ]
   type TransformHook = js.ThisFunction2[
-    /* this */ typingsSlinky.rollup.mod.PluginContext, 
+    /* this */ typingsSlinky.rollup.mod.TransformPluginContext, 
     /* code */ java.lang.String, 
     /* id */ java.lang.String, 
     js.Promise[typingsSlinky.rollup.mod.TransformResult] | typingsSlinky.rollup.mod.TransformResult
   ]
-  type TransformResult = js.UndefOr[
-    java.lang.String | scala.Null | typingsSlinky.rollup.mod.TransformSourceDescription
-  ]
+  type TransformResult = js.UndefOr[java.lang.String | scala.Null | typingsSlinky.rollup.mod.SourceDescription]
   type WarningHandler = js.Function1[/* warning */ typingsSlinky.rollup.mod.RollupWarning, scala.Unit]
   type WarningHandlerWithDefault = js.Function2[
     /* warning */ typingsSlinky.rollup.mod.RollupWarning, 

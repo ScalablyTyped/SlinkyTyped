@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 object ledgerCallBuilderMod extends js.Object {
   @js.native
   class LedgerCallBuilder protected () extends CallBuilder[CollectionPage[LedgerRecord]] {
-    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any) = this()
+    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any) = this()
     def ledger(sequence: String): this.type = js.native
     def ledger(sequence: Double): this.type = js.native
   }

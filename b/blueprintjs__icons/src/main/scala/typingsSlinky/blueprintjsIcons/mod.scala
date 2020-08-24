@@ -524,6 +524,7 @@ object mod extends js.Object {
     val ANNOTATION: /* "annotation" */ String = js.native
     val APPLICATION: /* "application" */ String = js.native
     val APPLICATIONS: /* "applications" */ String = js.native
+    val APP_HEADER: /* "app-header" */ String = js.native
     val ARCHIVE: /* "archive" */ String = js.native
     val ARROWS_HORIZONTAL: /* "arrows-horizontal" */ String = js.native
     val ARROWS_VERTICAL: /* "arrows-vertical" */ String = js.native
@@ -537,6 +538,7 @@ object mod extends js.Object {
     val ARROW_UP: /* "arrow-up" */ String = js.native
     val ASTERISK: /* "asterisk" */ String = js.native
     val AUTOMATIC_UPDATES: /* "automatic-updates" */ String = js.native
+    val BACKLINK: /* "backlink" */ String = js.native
     val BADGE: /* "badge" */ String = js.native
     val BANK_ACCOUNT: /* "bank-account" */ String = js.native
     val BAN_CIRCLE: /* "ban-circle" */ String = js.native
@@ -628,6 +630,10 @@ object mod extends js.Object {
     val DRAG_HANDLE_HORIZONTAL: /* "drag-handle-horizontal" */ String = js.native
     val DRAG_HANDLE_VERTICAL: /* "drag-handle-vertical" */ String = js.native
     val DRAW: /* "draw" */ String = js.native
+    val DRAWER_LEFT: /* "drawer-left" */ String = js.native
+    val DRAWER_LEFT_FILLED: /* "drawer-left-filled" */ String = js.native
+    val DRAWER_RIGHT: /* "drawer-right" */ String = js.native
+    val DRAWER_RIGHT_FILLED: /* "drawer-right-filled" */ String = js.native
     val DRIVE_TIME: /* "drive-time" */ String = js.native
     val DUPLICATE: /* "duplicate" */ String = js.native
     val EDIT: /* "edit" */ String = js.native
@@ -680,6 +686,7 @@ object mod extends js.Object {
     val FULL_STACKED_CHART: /* "full-stacked-chart" */ String = js.native
     val FUNCTION: /* "function" */ String = js.native
     val GANTT_CHART: /* "gantt-chart" */ String = js.native
+    val GEOFENCE: /* "geofence" */ String = js.native
     val GEOLOCATION: /* "geolocation" */ String = js.native
     val GEOSEARCH: /* "geosearch" */ String = js.native
     val GIT_BRANCH: /* "git-branch" */ String = js.native
@@ -799,6 +806,8 @@ object mod extends js.Object {
     val MINUS: /* "minus" */ String = js.native
     val MOBILE_PHONE: /* "mobile-phone" */ String = js.native
     val MOBILE_VIDEO: /* "mobile-video" */ String = js.native
+    val MODAL: /* "modal" */ String = js.native
+    val MODAL_FILLED: /* "modal-filled" */ String = js.native
     val MOON: /* "moon" */ String = js.native
     val MORE: /* "more" */ String = js.native
     val MOUNTAIN: /* "mountain" */ String = js.native
@@ -885,6 +894,7 @@ object mod extends js.Object {
     val SEGMENTED_CONTROL: /* "segmented-control" */ String = js.native
     val SELECT: /* "select" */ String = js.native
     val SELECTION: /* "selection" */ String = js.native
+    val SEND_MESSAGE: /* "send-message" */ String = js.native
     val SEND_TO: /* "send-to" */ String = js.native
     val SEND_TO_GRAPH: /* "send-to-graph" */ String = js.native
     val SEND_TO_MAP: /* "send-to-map" */ String = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for protobufjs
 
-Typings are for version 6.9.0
+Typings are for version 6.10.1
 
 ## Library description:
 Protocol Buffers for JavaScript (& TypeScript).

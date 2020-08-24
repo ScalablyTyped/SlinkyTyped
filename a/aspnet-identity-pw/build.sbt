@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "aspnet-identity-pw"
-version := "1.0.0-dt-20200515Z-33c0a4"
-scalaVersion := "2.13.2"
+version := "1.0.0-dt-20200515Z-ebd7c7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

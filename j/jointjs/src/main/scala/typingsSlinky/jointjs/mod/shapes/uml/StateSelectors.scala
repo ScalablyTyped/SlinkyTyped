@@ -33,53 +33,26 @@ object StateSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withDotuml-state-body`(value: SVGRectAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-body")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def `withoutDotuml-state-body`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-body")(js.undefined)
-        ret
-    }
+    def `setDotuml-state-body`(value: SVGRectAttributes): Self = this.set(".uml-state-body", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotuml-state-events`(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-events")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotuml-state-body`: Self = this.set(".uml-state-body", js.undefined)
     @scala.inline
-    def `withoutDotuml-state-events`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-events")(js.undefined)
-        ret
-    }
+    def `setDotuml-state-events`(value: SVGTextAttributes): Self = this.set(".uml-state-events", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotuml-state-name`(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotuml-state-events`: Self = this.set(".uml-state-events", js.undefined)
     @scala.inline
-    def `withoutDotuml-state-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-name")(js.undefined)
-        ret
-    }
+    def `setDotuml-state-name`(value: SVGTextAttributes): Self = this.set(".uml-state-name", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotuml-state-separator`(value: SVGPathAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-separator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotuml-state-name`: Self = this.set(".uml-state-name", js.undefined)
     @scala.inline
-    def `withoutDotuml-state-separator`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".uml-state-separator")(js.undefined)
-        ret
-    }
+    def `setDotuml-state-separator`(value: SVGPathAttributes): Self = this.set(".uml-state-separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteDotuml-state-separator`: Self = this.set(".uml-state-separator", js.undefined)
   }
   
 }

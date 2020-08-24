@@ -24,7 +24,7 @@ object Accordion {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
     @scala.inline
     def align(value: top | center | bottom): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline

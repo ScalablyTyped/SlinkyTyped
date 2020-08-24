@@ -14,6 +14,6 @@ package object pluginsMod {
   type IllformedPlugin = (typingsSlinky.jimpCore.utilsMod.Omit[
     _, 
     typingsSlinky.jimpCore.jimpCoreStrings.`class` | typingsSlinky.jimpCore.jimpCoreStrings.constants
-  ]) with js.Object
+  ]) with typingsSlinky.jimpCore.anon.Class
   type JimpPlugin[T /* <: typingsSlinky.jimpCore.etcMod.Image */] = typingsSlinky.jimpCore.pluginsMod.ClassOrConstantPlugin[T] | typingsSlinky.jimpCore.pluginsMod.IllformedPlugin
 }

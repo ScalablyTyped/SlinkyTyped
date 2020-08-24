@@ -3,8 +3,10 @@ package typingsSlinky.inkSelectInput.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.inkSelectInput.mod.ItemOfSelectInput
-import typingsSlinky.inkSelectInput.mod.SelectInputProps
+import typingsSlinky.inkSelectInput.mod.IndicatorProps
+import typingsSlinky.inkSelectInput.mod.InkSelectInputProps
+import typingsSlinky.inkSelectInput.mod.Item
+import typingsSlinky.inkSelectInput.mod.ItemProps
 import typingsSlinky.inkSelectInput.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,20 +24,32 @@ object InkSelectInput {
     @scala.inline
     def focus(value: Boolean): this.type = set("focus", value.asInstanceOf[js.Any])
     @scala.inline
-    def indicatorComponent(value: ReactComponentClass[js.Object]): this.type = set("indicatorComponent", value.asInstanceOf[js.Any])
+    def indicatorComponentFunctionComponent(value: ReactComponentClass[IndicatorProps]): this.type = set("indicatorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorComponentComponentClass(value: ReactComponentClass[IndicatorProps]): this.type = set("indicatorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorComponent(value: ReactComponentClass[IndicatorProps]): this.type = set("indicatorComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def initialIndex(value: Double): this.type = set("initialIndex", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemComponent(value: ReactComponentClass[js.Object]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    def itemComponentFunctionComponent(value: ReactComponentClass[ItemProps]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def items(value: js.Array[ItemOfSelectInput]): this.type = set("items", value.asInstanceOf[js.Any])
+    def itemComponentComponentClass(value: ReactComponentClass[ItemProps]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponent(value: ReactComponentClass[ItemProps]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsVarargs(value: Item*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
+    def items(value: js.Array[Item]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def limit(value: Double): this.type = set("limit", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSelect(value: ItemOfSelectInput => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onHighlight(value: /* item */ Item => Unit): this.type = set("onHighlight", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: /* item */ Item => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: SelectInputProps[ItemOfSelectInput]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: InkSelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: InkSelectInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -4,7 +4,7 @@ import typingsSlinky.openfin.anon.FnCall
 import typingsSlinky.openfin.clientMod.RoutingInfo
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.notificationMod.NotificationOptions
-import typingsSlinky.openfin.shapesMod.ProviderIdentity
+import typingsSlinky.openfin.shapesIdentityMod.ProviderIdentity
 import typingsSlinky.openfin.transportMod.default
 import typingsSlinky.openfin.wireMod.ConnectConfig
 import typingsSlinky.std.Map

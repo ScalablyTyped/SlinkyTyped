@@ -1,23 +1,22 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.sliderMod.SliderProps
-import typingsSlinky.antDesignReactNative.sliderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Slider {
-  @JSImport("@ant-design/react-native/lib/slider", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Slider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Slider] {
     @scala.inline
     def defaultValue(value: Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -37,7 +36,7 @@ object Slider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def tipFormatter(value: /* value */ js.UndefOr[String] => TagMod[Any]): this.type = set("tipFormatter", js.Any.fromFunction1(value))
+    def tipFormatter(value: /* value */ js.UndefOr[String] => ReactElement): this.type = set("tipFormatter", js.Any.fromFunction1(value))
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }

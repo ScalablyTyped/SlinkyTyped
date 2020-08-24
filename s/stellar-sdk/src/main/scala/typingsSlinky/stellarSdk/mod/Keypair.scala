@@ -19,11 +19,9 @@ class Keypair protected ()
 @JSImport("stellar-sdk", "Keypair")
 @js.native
 object Keypair extends js.Object {
-  def fromBase58Seed(secretSeed: String): typingsSlinky.stellarBase.mod.Keypair = js.native
   def fromPublicKey(publicKey: String): typingsSlinky.stellarBase.mod.Keypair = js.native
   def fromRawEd25519Seed(secretSeed: Buffer): typingsSlinky.stellarBase.mod.Keypair = js.native
   def fromSecret(secretKey: String): typingsSlinky.stellarBase.mod.Keypair = js.native
-  def master(): typingsSlinky.stellarBase.mod.Keypair = js.native
   def master(networkPassphrase: String): typingsSlinky.stellarBase.mod.Keypair = js.native
   def random(): typingsSlinky.stellarBase.mod.Keypair = js.native
 }

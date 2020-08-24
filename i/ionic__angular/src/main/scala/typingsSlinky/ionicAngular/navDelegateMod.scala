@@ -1,5 +1,6 @@
 package typingsSlinky.ionicAngular
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.angularCore.mod.ComponentFactoryResolver
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.Injector
@@ -9,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@ionic/angular/dist/directives/navigation/nav-delegate", JSImport.Namespace)
+@JSImport("@ionic/angular/directives/navigation/nav-delegate", JSImport.Namespace)
 @js.native
 object navDelegateMod extends js.Object {
   @js.native
@@ -21,6 +22,7 @@ object navDelegateMod extends js.Object {
       angularDelegate: AngularDelegate,
       location: ViewContainerRef
     ) = this()
+    var el: HTMLElement = js.native
   }
   
 }

@@ -3,7 +3,6 @@ package typingsSlinky.reactMdl.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -65,7 +64,7 @@ object TableHeader {
     @scala.inline
     def capture(value: Boolean): this.type = set("capture", value.asInstanceOf[js.Any])
     @scala.inline
-    def cellFormatter(value: (/* value */ js.Any, /* row */ js.Any, /* index */ Double) => TagMod[Any]): this.type = set("cellFormatter", js.Any.fromFunction3(value))
+    def cellFormatter(value: (/* value */ js.Any, /* row */ js.Any, /* index */ Double) => ReactElement): this.type = set("cellFormatter", js.Any.fromFunction3(value))
     @scala.inline
     def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
     @scala.inline
@@ -108,6 +107,8 @@ object TableHeader {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -427,7 +428,7 @@ object TableHeader {
     @scala.inline
     def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: TagMod[Any]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    def tooltip(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

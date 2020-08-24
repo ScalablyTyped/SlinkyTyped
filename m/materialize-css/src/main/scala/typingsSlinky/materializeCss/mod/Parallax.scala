@@ -1,33 +1,15 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.M.ParallaxOptions
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialParallaxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("materialize-css", "Parallax")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<ParallaxOptions> * / any */ @JSImport("materialize-css", "Parallax")
 @js.native
-class Parallax ()
-  extends typingsSlinky.materializeCss.M.Component[ParallaxOptions] {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: ParallaxOptions = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-}
+class Parallax () extends js.Object
 
 /* static members */
 @JSImport("materialize-css", "Parallax")
@@ -40,8 +22,13 @@ object Parallax extends js.Object {
   /**
     * Init Parallaxs
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.Parallax] = js.native
-  def init(els: MElements, options: PartialParallaxOptions): js.Array[typingsSlinky.materializeCss.M.Parallax] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.Parallax] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: PartialParallaxOptions
+  ): js.Array[typingsSlinky.materializeCss.M.Parallax] = js.native
   /**
     * Init Parallax
     */

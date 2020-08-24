@@ -39,53 +39,26 @@ object DispatcherState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHandleUpEvent(value: typingsSlinky.androiduix.android.view.KeyEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleUpEvent")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withIsTracking(value: typingsSlinky.androiduix.android.view.KeyEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTracking")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setHandleUpEvent(value: typingsSlinky.androiduix.android.view.KeyEvent => Unit): Self = this.set("handleUpEvent", js.Any.fromFunction1(value))
     @scala.inline
-    def withMActiveLongPresses(value: SparseArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActiveLongPresses")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsTracking(value: typingsSlinky.androiduix.android.view.KeyEvent => Boolean): Self = this.set("isTracking", js.Any.fromFunction1(value))
     @scala.inline
-    def withMDownKeyCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDownKeyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActiveLongPresses(value: SparseArray[Double]): Self = this.set("mActiveLongPresses", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDownTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDownTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDownKeyCode(value: Double): Self = this.set("mDownKeyCode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPerformedLongPress(value: typingsSlinky.androiduix.android.view.KeyEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performedLongPress")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMDownTarget(value: js.Any): Self = this.set("mDownTarget", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReset(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setPerformedLongPress(value: typingsSlinky.androiduix.android.view.KeyEvent => Unit): Self = this.set("performedLongPress", js.Any.fromFunction1(value))
     @scala.inline
-    def withStartTracking(value: (typingsSlinky.androiduix.android.view.KeyEvent, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTracking")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setReset(value: js.Any => Unit): Self = this.set("reset", js.Any.fromFunction1(value))
+    @scala.inline
+    def setStartTracking(value: (typingsSlinky.androiduix.android.view.KeyEvent, js.Any) => Unit): Self = this.set("startTracking", js.Any.fromFunction2(value))
   }
   
 }

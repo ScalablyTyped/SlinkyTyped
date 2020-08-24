@@ -4,10 +4,9 @@ import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.Renderer2
-import typingsSlinky.angularCore.mod.SimpleChanges
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.IconDefinition
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.ThemeType
 import typingsSlinky.antDesignIconsAngular.iconServiceMod.IconService
+import typingsSlinky.antDesignIconsAngular.typesMod.IconDefinition
+import typingsSlinky.antDesignIconsAngular.typesMod.ThemeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,15 +37,6 @@ object iconDirectiveMod extends js.Object {
     /* protected */ def _parseIconType(`type`: String, theme: ThemeType): IconDefinition | String = js.native
     /* protected */ def _parseIconType(`type`: IconDefinition, theme: ThemeType): IconDefinition | String = js.native
     /* protected */ def _setSVGElement(svg: SVGElement): Unit = js.native
-    /**
-      * A callback method that is invoked immediately after the
-      * default change detector has checked data-bound properties
-      * if at least one has changed, and before the view and content
-      * children are checked.
-      * @param changes The changed properties.
-      */
-    /* CompleteClass */
-    override def ngOnChanges(changes: SimpleChanges): Unit = js.native
   }
   
 }

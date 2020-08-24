@@ -1,7 +1,7 @@
 
 # Scala.js typings for angular__router
 
-Typings are for version 8.2.14
+Typings are for version 10.0.7
 
 ## Library description:
 Angular - the routing library

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ScaleVolumeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ScaleVolumeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ScaleVolumeIcon")
   @js.native
   object component extends js.Object
   

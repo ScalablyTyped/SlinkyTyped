@@ -21,6 +21,8 @@ object NodeWidget {
     @scala.inline
     def baseClass(value: String): this.type = set("baseClass", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def extraProps(value: js.Any): this.type = set("extraProps", value.asInstanceOf[js.Any])

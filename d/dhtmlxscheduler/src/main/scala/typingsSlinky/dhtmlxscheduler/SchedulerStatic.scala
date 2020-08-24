@@ -312,6 +312,7 @@ trait SchedulerStatic extends js.Object {
     * @param to the end date of the period
     */
   def getEvents(): js.Any = js.native
+  def getEvents(from: js.UndefOr[scala.Nothing], to: js.Date): js.Any = js.native
   def getEvents(from: js.Date): js.Any = js.native
   def getEvents(from: js.Date, to: js.Date): js.Any = js.native
   /**
@@ -373,9 +374,11 @@ trait SchedulerStatic extends js.Object {
     * @param view the name of the initial view (by default, "week")
     */
   def init(container: String): Unit = js.native
+  def init(container: String, date: js.UndefOr[scala.Nothing], view: String): Unit = js.native
   def init(container: String, date: js.Date): Unit = js.native
   def init(container: String, date: js.Date, view: String): Unit = js.native
   def init(container: HTMLElement): Unit = js.native
+  def init(container: HTMLElement, date: js.UndefOr[scala.Nothing], view: String): Unit = js.native
   def init(container: HTMLElement, date: js.Date): Unit = js.native
   def init(container: HTMLElement, date: js.Date, view: String): Unit = js.native
   /**
@@ -410,6 +413,7 @@ trait SchedulerStatic extends js.Object {
     * @param callback the callback function
     */
   def load(url: String): Unit = js.native
+  def load(url: String, `type`: js.UndefOr[scala.Nothing], callback: SchedulerCallback): Unit = js.native
   def load(url: String, `type`: String): Unit = js.native
   def load(url: String, `type`: String, callback: SchedulerCallback): Unit = js.native
   /**
@@ -484,6 +488,7 @@ trait SchedulerStatic extends js.Object {
     * @param view the name of a view to display
     */
   def setCurrentView(): Unit = js.native
+  def setCurrentView(date: js.UndefOr[scala.Nothing], view: String): Unit = js.native
   def setCurrentView(date: js.Date): Unit = js.native
   def setCurrentView(date: js.Date, view: String): Unit = js.native
   /**
@@ -597,6 +602,7 @@ trait SchedulerStatic extends js.Object {
     * @param sections allows blocking date(s) just for specific items of specific views. BTW, the specified date(s) will be blocked just in the related view(s)
     */
   def unblockTime(days: js.Any): Unit = js.native
+  def unblockTime(days: js.Any, zones: js.UndefOr[scala.Nothing], sections: js.Any): Unit = js.native
   def unblockTime(days: js.Any, zones: js.Array[_]): Unit = js.native
   def unblockTime(days: js.Any, zones: js.Array[_], sections: js.Any): Unit = js.native
   /**
@@ -642,6 +648,7 @@ trait SchedulerStatic extends js.Object {
     * @param view the view name
     */
   def updateView(): Unit = js.native
+  def updateView(date: js.UndefOr[scala.Nothing], view: String): Unit = js.native
   def updateView(date: js.Date): Unit = js.native
   def updateView(date: js.Date, view: String): Unit = js.native
 }

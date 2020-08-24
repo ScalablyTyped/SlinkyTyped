@@ -3,15 +3,15 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libCardCardMod.CardProps
-import typingsSlinky.reactToolbox.libCardCardMod.CardTheme
-import typingsSlinky.reactToolbox.libCardMod.default
+import typingsSlinky.reactToolbox.cardCardMod.CardProps
+import typingsSlinky.reactToolbox.cardCardMod.CardTheme
+import typingsSlinky.reactToolbox.cardMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Card {
-  @JSImport("react-toolbox/lib/card", JSImport.Default)
+  @JSImport("react-toolbox/components/card", JSImport.Default)
   @js.native
   object component extends js.Object
   

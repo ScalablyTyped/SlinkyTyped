@@ -13,6 +13,7 @@ package object iotsitewiseMod {
     - typingsSlinky.awsSdk.awsSdkStrings.MAXIMUM
     - typingsSlinky.awsSdk.awsSdkStrings.MINIMUM
     - typingsSlinky.awsSdk.awsSdkStrings.SUM
+    - typingsSlinky.awsSdk.awsSdkStrings.STANDARD_DEVIATION
     - java.lang.String
   */
   type AggregateType = typingsSlinky.awsSdk.iotsitewiseMod._AggregateType | java.lang.String

@@ -15,10 +15,11 @@ object ambientLightProbeMod extends js.Object {
     def this(color: String) = this()
     def this(color: Double) = this()
     def this(color: Color) = this()
+    def this(color: js.UndefOr[scala.Nothing], intensity: Double) = this()
     def this(color: String, intensity: Double) = this()
     def this(color: Double, intensity: Double) = this()
     def this(color: Color, intensity: Double) = this()
-    var isAmbientLightProbe: `true` = js.native
+    val isAmbientLightProbe: `true` = js.native
   }
   
 }

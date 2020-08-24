@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "3d-bin-packing"
-version := "1.1.3-752a99"
-scalaVersion := "2.13.2"
+version := "1.1.3-2fab66"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

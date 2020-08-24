@@ -5,7 +5,6 @@ import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorRectanglePr
 import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorRectangleSt
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangle
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleProps
-import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,9 +25,6 @@ class ColorRectangleBase protected ()
   var _onMouseMove: js.Any = js.native
   var _root: js.Any = js.native
   var _updateColor: js.Any = js.native
-  /** Currently selected color. */
-  /* CompleteClass */
-  override var color: IColor = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MColorRectangleBase(prevProps: ReadonlyIColorRectanglePr, prevState: ReadonlyIColorRectangleSt): Unit = js.native
   @JSName("componentWillUnmount")

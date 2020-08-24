@@ -1,22 +1,23 @@
 package typingsSlinky.reactMove.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMove.animateMod.IAnimateProps
-import typingsSlinky.reactMove.animateMod.default
+import typingsSlinky.reactMove.mod.HashMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Animate {
-  @JSImport("react-move/Animate", JSImport.Default)
+  @JSImport("react-move", "Animate")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactMove.mod.Animate] {
     @scala.inline
     def enter(value: js.Any): this.type = set("enter", value.asInstanceOf[js.Any])
     @scala.inline
@@ -33,8 +34,8 @@ object Animate {
   
   def withProps(p: IAnimateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(start: js.Any): Builder = {
-    val __props = js.Dynamic.literal(start = start.asInstanceOf[js.Any])
+  def apply(children: HashMap => ReactElement, start: js.Any): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), start = start.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[IAnimateProps]))
   }
 }

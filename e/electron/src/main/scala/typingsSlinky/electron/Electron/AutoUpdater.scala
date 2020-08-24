@@ -6,6 +6,7 @@ import typingsSlinky.electron.electronStrings.`update-available`
 import typingsSlinky.electron.electronStrings.`update-downloaded`
 import typingsSlinky.electron.electronStrings.`update-not-available`
 import typingsSlinky.electron.electronStrings.error
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,18 +36,22 @@ trait AutoUpdater extends EventEmitter {
   @JSName("addListener")
   def addListener_updatenotavailable(event: `update-not-available`, listener: js.Function): this.type = js.native
   /**
-    * Asks the server whether there is an update. You must call setFeedURL before
+    * Asks the server whether there is an update. You must call `setFeedURL` before
     * using this API.
     */
   def checkForUpdates(): Unit = js.native
+  /**
+    * The current update feed URL.
+    */
   def getFeedURL(): String = js.native
   // Docs: http://electronjs.org/docs/api/auto-updater
   /**
-    * This event is emitted after a user calls quitAndInstall(). When this API is
-    * called, the before-quit event is not emitted before all windows are closed. As a
-    * result you should listen to this event if you wish to perform actions before the
-    * windows are closed while a process is quitting, as well as listening to
-    * before-quit.
+    * This event is emitted after a user calls `quitAndInstall()`.
+    *
+    * When this API is called, the `before-quit` event is not emitted before all
+    * windows are closed. As a result you should listen to this event if you wish to
+    * perform actions before the windows are closed while a process is quitting, as
+    * well as listening to `before-quit`.
     */
   @JSName("on")
   def on_beforequitforupdate(event: `before-quit-for-update`, listener: js.Function): this.type = js.native
@@ -67,10 +72,12 @@ trait AutoUpdater extends EventEmitter {
   @JSName("on")
   def on_updateavailable(event: `update-available`, listener: js.Function): this.type = js.native
   /**
-    * Emitted when an update has been downloaded. On Windows only releaseName is
-    * available. Note: It is not strictly necessary to handle this event. A
-    * successfully downloaded update will still be applied the next time the
-    * application starts.
+    * Emitted when an update has been downloaded.
+    *
+    * On Windows only `releaseName` is available.
+    *
+    * **Note:** It is not strictly necessary to handle this event. A successfully
+    * downloaded update will still be applied the next time the application starts.
     */
   @JSName("on")
   def on_updatedownloaded(
@@ -113,11 +120,14 @@ trait AutoUpdater extends EventEmitter {
   def once_updatenotavailable(event: `update-not-available`, listener: js.Function): this.type = js.native
   /**
     * Restarts the app and installs the update after it has been downloaded. It should
-    * only be called after update-downloaded has been emitted. Under the hood calling
-    * autoUpdater.quitAndInstall() will close all application windows first, and
-    * automatically call app.quit() after all windows have been closed. Note: It is
-    * not strictly necessary to call this function to apply an update, as a
-    * successfully downloaded update will always be applied the next time the
+    * only be called after `update-downloaded` has been emitted.
+    *
+    * Under the hood calling `autoUpdater.quitAndInstall()` will close all application
+    * windows first, and automatically call `app.quit()` after all windows have been
+    * closed.
+    *
+    * **Note:** It is not strictly necessary to call this function to apply an update,
+    * as a successfully downloaded update will always be applied the next time the
     * application starts.
     */
   def quitAndInstall(): Unit = js.native
@@ -144,7 +154,7 @@ trait AutoUpdater extends EventEmitter {
   @JSName("removeListener")
   def removeListener_updatenotavailable(event: `update-not-available`, listener: js.Function): this.type = js.native
   /**
-    * Sets the url and initialize the auto updater.
+    * Sets the `url` and initialize the auto updater.
     */
   def setFeedURL(options: FeedURLOptions): Unit = js.native
 }

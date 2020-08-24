@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TmplAstContent")
 @js.native
 class TmplAstContent protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TmplAstContent {
+  extends typingsSlinky.angularCompiler.compilerMod.TmplAstContent {
   def this(
     selector: String,
     attributes: js.Array[TextAttribute],

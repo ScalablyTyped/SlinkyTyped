@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs")
 @js.native
 abstract class PerceptionDepthFrameSourceRemovedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs {
-  /** Gets the depth frame source that was removed. */
-  /* CompleteClass */
-  override var frameSource: typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionDepthFrameSource = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs
 

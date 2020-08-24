@@ -61,8 +61,8 @@ package object mod {
     - typingsSlinky.jsonSchemaCompare.jsonSchemaCompareStrings.contentEncoding
     - typingsSlinky.jsonSchemaCompare.jsonSchemaCompareStrings.readOnly
     - typingsSlinky.jsonSchemaCompare.jsonSchemaCompareStrings.writeOnly
-    - java.lang.String with js.Object
+    - java.lang.String with typingsSlinky.jsonSchemaCompare.anon._empty
   */
-  type JSONSchemaKeys = typingsSlinky.jsonSchemaCompare.mod._JSONSchemaKeys | typingsSlinky.jsonSchemaCompare.mod.KnownKeys[typingsSlinky.jsonSchema.mod.JSONSchema4] | (java.lang.String with js.Object)
+  type JSONSchemaKeys = typingsSlinky.jsonSchemaCompare.mod._JSONSchemaKeys | typingsSlinky.jsonSchemaCompare.mod.KnownKeys[typingsSlinky.jsonSchema.mod.JSONSchema4] | (java.lang.String with typingsSlinky.jsonSchemaCompare.anon._empty)
   type KnownKeys[T] = js.Any
 }

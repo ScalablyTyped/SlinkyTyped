@@ -22,6 +22,9 @@ object babelParserStrings {
   sealed trait classProperties extends _ParserPlugin
   
   @js.native
+  sealed trait decimal extends _ParserPlugin
+  
+  @js.native
   sealed trait decorators extends _ParserPlugin
   
   @js.native
@@ -70,6 +73,9 @@ object babelParserStrings {
   sealed trait module extends js.Object
   
   @js.native
+  sealed trait moduleAttributes extends _ParserPlugin
+  
+  @js.native
   sealed trait nullishCoalescingOperator extends _ParserPlugin
   
   @js.native
@@ -92,6 +98,9 @@ object babelParserStrings {
   
   @js.native
   sealed trait placeholders extends _ParserPlugin
+  
+  @js.native
+  sealed trait privateIn extends _ParserPlugin
   
   @js.native
   sealed trait script extends js.Object
@@ -125,6 +134,8 @@ object babelParserStrings {
   @scala.inline
   def classProperties: classProperties = "classProperties".asInstanceOf[classProperties]
   @scala.inline
+  def decimal: decimal = "decimal".asInstanceOf[decimal]
+  @scala.inline
   def decorators: decorators = "decorators".asInstanceOf[decorators]
   @scala.inline
   def `decorators-legacy`: `decorators-legacy` = "decorators-legacy".asInstanceOf[`decorators-legacy`]
@@ -157,6 +168,8 @@ object babelParserStrings {
   @scala.inline
   def module: module = "module".asInstanceOf[module]
   @scala.inline
+  def moduleAttributes: moduleAttributes = "moduleAttributes".asInstanceOf[moduleAttributes]
+  @scala.inline
   def nullishCoalescingOperator: nullishCoalescingOperator = "nullishCoalescingOperator".asInstanceOf[nullishCoalescingOperator]
   @scala.inline
   def numericSeparator: numericSeparator = "numericSeparator".asInstanceOf[numericSeparator]
@@ -172,6 +185,8 @@ object babelParserStrings {
   def pipelineOperator: pipelineOperator = "pipelineOperator".asInstanceOf[pipelineOperator]
   @scala.inline
   def placeholders: placeholders = "placeholders".asInstanceOf[placeholders]
+  @scala.inline
+  def privateIn: privateIn = "privateIn".asInstanceOf[privateIn]
   @scala.inline
   def script: script = "script".asInstanceOf[script]
   @scala.inline

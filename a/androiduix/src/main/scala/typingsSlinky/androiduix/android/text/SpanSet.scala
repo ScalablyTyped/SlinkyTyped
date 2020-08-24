@@ -36,71 +36,44 @@ object SpanSet {
     __obj.asInstanceOf[SpanSet[E]]
   }
   @scala.inline
-  implicit class SpanSetOps[Self[e] <: SpanSet[e], E] (val x: Self[E]) extends AnyVal {
+  implicit class SpanSetOps[Self <: SpanSet[_], E] (val x: Self with SpanSet[E]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[E] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[E]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[E] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[E] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClassType(value: js.Any): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classType")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetNextTransition(value: (Double, Double) => Double): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNextTransition")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setClassType(value: js.Any): Self = this.set("classType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHasSpansIntersecting(value: (Double, Double) => Boolean): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSpansIntersecting")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetNextTransition(value: (Double, Double) => Double): Self = this.set("getNextTransition", js.Any.fromFunction2(value))
     @scala.inline
-    def withInit(value: (Spanned, Double, Double) => Unit): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setHasSpansIntersecting(value: (Double, Double) => Boolean): Self = this.set("hasSpansIntersecting", js.Any.fromFunction2(value))
     @scala.inline
-    def withNumberOfSpans(value: Double): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSpans")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInit(value: (Spanned, Double, Double) => Unit): Self = this.set("init", js.Any.fromFunction3(value))
     @scala.inline
-    def withRecycle(value: () => Unit): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recycle")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setNumberOfSpans(value: Double): Self = this.set("numberOfSpans", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSpanEnds(value: js.Array[Double]): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spanEnds")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRecycle(value: () => Unit): Self = this.set("recycle", js.Any.fromFunction0(value))
     @scala.inline
-    def withSpanFlags(value: js.Array[Double]): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spanFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSpanEndsVarargs(value: Double*): Self = this.set("spanEnds", js.Array(value :_*))
     @scala.inline
-    def withSpanStarts(value: js.Array[Double]): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spanStarts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSpanEnds(value: js.Array[Double]): Self = this.set("spanEnds", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSpans(value: js.Array[E]): Self[E] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spans")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSpanFlagsVarargs(value: Double*): Self = this.set("spanFlags", js.Array(value :_*))
+    @scala.inline
+    def setSpanFlags(value: js.Array[Double]): Self = this.set("spanFlags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSpanStartsVarargs(value: Double*): Self = this.set("spanStarts", js.Array(value :_*))
+    @scala.inline
+    def setSpanStarts(value: js.Array[Double]): Self = this.set("spanStarts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSpansVarargs(value: E*): Self = this.set("spans", js.Array(value :_*))
+    @scala.inline
+    def setSpans(value: js.Array[E]): Self = this.set("spans", value.asInstanceOf[js.Any])
   }
   
 }

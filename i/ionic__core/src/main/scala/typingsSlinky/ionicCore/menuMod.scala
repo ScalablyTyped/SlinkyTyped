@@ -3,8 +3,8 @@ package typingsSlinky.ionicCore
 import org.scalajs.dom.raw.CustomEvent
 import typingsSlinky.ionicCore.menuInterfaceMod.MenuChangeEventDetail
 import typingsSlinky.ionicCore.menuInterfaceMod.MenuI
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object menuMod extends js.Object {
        with MenuI {
     var _isActive: js.Any = js.native
     var afterAnimation: js.Any = js.native
-    var animation: js.UndefOr[js.Any] = js.native
+    var animation: js.Any = js.native
     var beforeAnimation: js.Any = js.native
     var blocker: js.Any = js.native
     var canStart: js.Any = js.native
@@ -28,7 +28,7 @@ object menuMod extends js.Object {
       */
     var contentId: js.UndefOr[String] = js.native
     var forceClosing: js.Any = js.native
-    var gesture: js.UndefOr[js.Any] = js.native
+    var gesture: js.Any = js.native
     /**
       * Emitted when the menu is closed.
       */
@@ -58,7 +58,6 @@ object menuMod extends js.Object {
       * If a drag/swipe happens over this value, the menu is not triggered.
       */
     var maxEdgeStart: Double = js.native
-    var mode: js.Any = js.native
     var onEnd: js.Any = js.native
     var onMove: js.Any = js.native
     var onStart: js.Any = js.native

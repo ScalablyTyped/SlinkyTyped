@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AzureDataExplorerIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AzureDataExplorerIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AzureDataExplorerIcon")
   @js.native
   object component extends js.Object
   

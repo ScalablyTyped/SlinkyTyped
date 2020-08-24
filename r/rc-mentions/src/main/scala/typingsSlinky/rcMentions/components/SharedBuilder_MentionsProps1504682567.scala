@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -70,6 +69,8 @@ import typingsSlinky.rcMentions.rcMentionsStrings.tree
 import typingsSlinky.rcMentions.rcMentionsStrings.url
 import typingsSlinky.rcMentions.rcMentionsStrings.vertical
 import typingsSlinky.rcMentions.rcMentionsStrings.yes
+import typingsSlinky.rcTextarea.anon.Height
+import typingsSlinky.rcTextarea.resizableTextAreaMod.AutoSizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -193,6 +194,8 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   @scala.inline
   def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
   @scala.inline
+  def autoSize(value: Boolean | AutoSizeType): this.type = set("autoSize", value.asInstanceOf[js.Any])
+  @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
@@ -259,7 +262,7 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   @scala.inline
   def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
   @scala.inline
-  def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+  def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
   @scala.inline
   def onAbort(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
   @scala.inline
@@ -381,11 +384,15 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onPointerUp(value: SyntheticPointerEvent[HTMLTextAreaElement] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
   @scala.inline
+  def onPressEnter(value: SyntheticKeyboardEvent[HTMLTextAreaElement] => Unit): this.type = set("onPressEnter", js.Any.fromFunction1(value))
+  @scala.inline
   def onProgress(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
   @scala.inline
   def onRateChange(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
   @scala.inline
   def onReset(value: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+  @scala.inline
+  def onResize(value: /* size */ Height => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
   @scala.inline
   def onScroll(value: SyntheticUIEvent[HTMLTextAreaElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
   @scala.inline
@@ -424,6 +431,8 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   @scala.inline
   def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
+  @scala.inline
+  def prefixVarargs(value: String*): this.type = set("prefix", js.Array(value :_*))
   @scala.inline
   def prefix(value: String | js.Array[String]): this.type = set("prefix", value.asInstanceOf[js.Any])
   @scala.inline

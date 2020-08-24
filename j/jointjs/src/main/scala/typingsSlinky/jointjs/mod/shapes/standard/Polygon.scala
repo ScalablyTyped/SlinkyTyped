@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Polygon () extends Element {
   def this(attributes: GenericAttributes[PolygonSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[PolygonSelectors], opt: Options) = this()
 }
 

@@ -25,6 +25,8 @@ object TabMenu {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def modelVarargs(value: MenuItem*): this.type = set("model", js.Array(value :_*))
+    @scala.inline
     def model(value: js.Array[MenuItem]): this.type = set("model", value.asInstanceOf[js.Any])
     @scala.inline
     def onTabChange(value: /* e */ Value => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))

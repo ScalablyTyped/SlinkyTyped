@@ -1,6 +1,5 @@
 package typingsSlinky.gestalt.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -28,11 +27,11 @@ object Modal {
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def headingReactElement(value: ReactElement): this.type = set("heading", value.asInstanceOf[js.Any])
     @scala.inline
-    def heading(value: String | TagMod[Any]): this.type = set("heading", value.asInstanceOf[js.Any])
+    def heading(value: String | ReactElement): this.type = set("heading", value.asInstanceOf[js.Any])
     @scala.inline
     def role(value: alertdialog | dialog): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline

@@ -26,7 +26,7 @@ object int32ArrayMod extends js.Object {
   @js.native
   object Int32Array
     extends TopLevel[
-          Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int32Array])
+          Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Int32Array])
         ]
   
 }

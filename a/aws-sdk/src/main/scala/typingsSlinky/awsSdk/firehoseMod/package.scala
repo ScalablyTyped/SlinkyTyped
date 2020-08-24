@@ -21,6 +21,12 @@ package object firehoseMod {
     - java.lang.String
   */
   type CompressionFormat = typingsSlinky.awsSdk.firehoseMod._CompressionFormat | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.GZIP
+    - java.lang.String
+  */
+  type ContentEncoding = typingsSlinky.awsSdk.firehoseMod._ContentEncoding | java.lang.String
   type CopyOptions = java.lang.String
   type Data = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.firehoseMod.Blob | java.lang.String
   type DataTableColumns = java.lang.String
@@ -111,6 +117,21 @@ package object firehoseMod {
   */
   type HECEndpointType = typingsSlinky.awsSdk.firehoseMod._HECEndpointType | java.lang.String
   type HECToken = java.lang.String
+  type HttpEndpointAccessKey = java.lang.String
+  type HttpEndpointAttributeName = java.lang.String
+  type HttpEndpointAttributeValue = java.lang.String
+  type HttpEndpointBufferingIntervalInSeconds = scala.Double
+  type HttpEndpointBufferingSizeInMBs = scala.Double
+  type HttpEndpointCommonAttributesList = js.Array[typingsSlinky.awsSdk.firehoseMod.HttpEndpointCommonAttribute]
+  type HttpEndpointName = java.lang.String
+  type HttpEndpointRetryDurationInSeconds = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FailedDataOnly
+    - typingsSlinky.awsSdk.awsSdkStrings.AllData
+    - java.lang.String
+  */
+  type HttpEndpointS3BackupMode = typingsSlinky.awsSdk.firehoseMod._HttpEndpointS3BackupMode | java.lang.String
+  type HttpEndpointUrl = java.lang.String
   type IntervalInSeconds = scala.Double
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AWS_OWNED_CMK

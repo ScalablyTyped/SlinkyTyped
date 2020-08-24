@@ -3,13 +3,13 @@ package typingsSlinky.ky.mod
 import org.scalajs.dom.experimental.Response
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FormData
-import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ResponsePromise extends Promise[Response] {
+trait ResponsePromise
+  extends js.Promise[Response] {
   def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def blob(): js.Promise[Blob] = js.native
   def formData(): js.Promise[FormData] = js.native

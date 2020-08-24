@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet", "Layer")
+@JSImport("grommet/es6", "Layer")
 @js.native
 class Layer protected ()
   extends Component[
@@ -26,7 +26,7 @@ class Layer protected ()
   ) = this()
 }
 
-@JSImport("grommet", "Layer")
+@JSImport("grommet/es6", "Layer")
 @js.native
 object Layer extends TopLevel[
       ReactComponentClass[

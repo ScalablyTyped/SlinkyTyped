@@ -1,7 +1,5 @@
 package typingsSlinky.sharepoint.global.SP.JsGrid
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.microsoftAjax.Sys.UI.DomEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,19 +18,5 @@ class Image protected ()
     optImgCssNames: String,
     bIsAnimated: Boolean
   ) = this()
-  /* CompleteClass */
-  override var bIsAnimated: Boolean = js.native
-  /* CompleteClass */
-  override var bIsClustered: Boolean = js.native
-  /* CompleteClass */
-  override var imgCssNames: String = js.native
-  /* CompleteClass */
-  override var imgSrc: String = js.native
-  /* CompleteClass */
-  override var optOuterCssNames: String = js.native
-  /** Renders the image with specified alternative text and on-click handler.
-    If bHideTooltip == false, then alternative text is also shown as the tooltip (title attribute). */
-  /* CompleteClass */
-  override def Render(altText: String, clickFn: js.Function1[/* eventInfo */ DomEvent, Unit], bHideTooltip: Boolean): HTMLElement = js.native
 }
 

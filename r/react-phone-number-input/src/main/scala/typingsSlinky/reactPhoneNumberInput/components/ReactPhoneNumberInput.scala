@@ -217,9 +217,13 @@ object ReactPhoneNumberInput {
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
+    def countriesVarargs(value: String*): this.type = set("countries", js.Array(value :_*))
+    @scala.inline
     def countries(value: js.Array[String]): this.type = set("countries", value.asInstanceOf[js.Any])
     @scala.inline
     def country(value: String): this.type = set("country", value.asInstanceOf[js.Any])
+    @scala.inline
+    def countryOptionsOrderVarargs(value: String*): this.type = set("countryOptionsOrder", js.Array(value :_*))
     @scala.inline
     def countryOptionsOrder(value: js.Array[String]): this.type = set("countryOptionsOrder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -240,6 +244,8 @@ object ReactPhoneNumberInput {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultCountry(value: String): this.type = set("defaultCountry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

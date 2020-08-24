@@ -4,25 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait KeycloakPromise[TSuccess, TError] extends js.Object {
+@js.native
+trait KeycloakPromise[TSuccess, TError]
+  extends js.Promise[TSuccess] {
   /**
   		 * Function to call if the promised action throws an error.
+  		 * 
+  		 * @deprecated Use `.catch()` instead.
   		 */
-  def error(callback: KeycloakPromiseCallback[TError]): KeycloakPromise[TSuccess, TError]
+  def error(callback: KeycloakPromiseCallback[TError]): KeycloakPromise[TSuccess, TError] = js.native
   /**
   		 * Function to call if the promised action succeeds.
+  		 * 
+  		 * @deprecated Use `.then()` instead.
   		 */
-  def success(callback: KeycloakPromiseCallback[TSuccess]): KeycloakPromise[TSuccess, TError]
-}
-
-object KeycloakPromise {
-  @scala.inline
-  def apply[TSuccess, TError](
-    error: KeycloakPromiseCallback[TError] => KeycloakPromise[TSuccess, TError],
-    success: KeycloakPromiseCallback[TSuccess] => KeycloakPromise[TSuccess, TError]
-  ): KeycloakPromise[TSuccess, TError] = {
-    val __obj = js.Dynamic.literal(error = js.Any.fromFunction1(error), success = js.Any.fromFunction1(success))
-    __obj.asInstanceOf[KeycloakPromise[TSuccess, TError]]
-  }
+  def success(callback: KeycloakPromiseCallback[TSuccess]): KeycloakPromise[TSuccess, TError] = js.native
 }
 

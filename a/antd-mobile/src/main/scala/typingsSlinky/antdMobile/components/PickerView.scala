@@ -3,25 +3,26 @@ package typingsSlinky.antdMobile.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.pickerPropsTypeMod.PickerData
-import typingsSlinky.antdMobile.pickerViewMod.default
 import typingsSlinky.antdMobile.pickerViewPickerViewMod.IPickerView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PickerView {
-  @JSImport("antd-mobile/lib/picker-view", JSImport.Default)
+  @JSImport("antd-mobile", "PickerView")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.PickerView] {
     @scala.inline
     def cascade(value: Boolean): this.type = set("cascade", value.asInstanceOf[js.Any])
     @scala.inline
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: (js.Array[PickerData] | PickerData)*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[js.Array[PickerData] | PickerData]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,6 +37,8 @@ object PickerView {
     def pickerPrefixCls(value: String): this.type = set("pickerPrefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }

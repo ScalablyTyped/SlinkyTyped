@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import typingsSlinky.react.mod.ChangeEventHandler
 import typingsSlinky.react.mod.KeyboardEventHandler
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 /* Inlined parent @blueprintjs/core.@blueprintjs/core.IProps */
 @js.native
 trait IQueryListRendererProps[T] extends js.Object {
-  var activeItem: js.UndefOr[T | ICreateNewItem] = js.native
+  var activeItem: T | ICreateNewItem | Null = js.native
   /** A space-delimited list of class names to pass along to a child element. */
   var className: js.UndefOr[String] = js.native
   var filteredItems: js.Array[T] = js.native
@@ -36,7 +36,7 @@ trait IQueryListRendererProps[T] extends js.Object {
     */
   var handleQueryChange: ChangeEventHandler[HTMLInputElement] = js.native
   /** Rendered elements returned from `itemListRenderer` prop. */
-  var itemList: TagMod[Any] = js.native
+  var itemList: ReactElement = js.native
   var query: String = js.native
   /**
     * Selection handler that should be invoked when a new item has been chosen,

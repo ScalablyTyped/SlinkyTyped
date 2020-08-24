@@ -14,7 +14,5 @@ class SenderApplication protected ()
     * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.SenderApplication
     */
   def this(platform: typingsSlinky.chrome.chrome.cast.SenderPlatform) = this()
-  /* CompleteClass */
-  override var platform: typingsSlinky.chrome.chrome.cast.SenderPlatform = js.native
 }
 

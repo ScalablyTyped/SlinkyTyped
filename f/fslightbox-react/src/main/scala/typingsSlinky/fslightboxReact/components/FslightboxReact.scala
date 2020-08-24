@@ -22,6 +22,8 @@ object FslightboxReact {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def customSourcesVarargs(value: ReactElement*): this.type = set("customSources", js.Array(value :_*))
+    @scala.inline
     def customSources(value: js.Array[ReactElement]): this.type = set("customSources", value.asInstanceOf[js.Any])
     @scala.inline
     def disableLocalStorage(value: Boolean): this.type = set("disableLocalStorage", value.asInstanceOf[js.Any])
@@ -48,13 +50,19 @@ object FslightboxReact {
     @scala.inline
     def sourceIndex(value: Double): this.type = set("sourceIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def sourcesVarargs(value: String*): this.type = set("sources", js.Array(value :_*))
+    @scala.inline
     def sources(value: js.Array[String]): this.type = set("sources", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: SourceType): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def typeNull: this.type = set("type", null)
     @scala.inline
+    def typesVarargs(value: SourceType*): this.type = set("types", js.Array(value :_*))
+    @scala.inline
     def types(value: js.Array[SourceType]): this.type = set("types", value.asInstanceOf[js.Any])
+    @scala.inline
+    def videosPostersVarargs(value: VideoPoster*): this.type = set("videosPosters", js.Array(value :_*))
     @scala.inline
     def videosPosters(value: js.Array[VideoPoster]): this.type = set("videosPosters", value.asInstanceOf[js.Any])
   }

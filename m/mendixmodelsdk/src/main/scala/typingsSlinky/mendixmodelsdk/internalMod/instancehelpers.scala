@@ -31,6 +31,12 @@ object instancehelpers extends js.Object {
     * Creates a new element for a SDK user.
     */
   def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](owner: IAbstractModel, constructor: IStructureConstructor[T]): T = js.native
+  def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](
+    owner: IAbstractModel,
+    constructor: IStructureConstructor[T],
+    parentPropName: js.UndefOr[scala.Nothing],
+    parentPropIsList: Boolean
+  ): T = js.native
   def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](owner: IAbstractModel, constructor: IStructureConstructor[T], parentPropName: String): T = js.native
   def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](
     owner: IAbstractModel,
@@ -41,6 +47,12 @@ object instancehelpers extends js.Object {
   def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](
     owner: typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement,
     constructor: IStructureConstructor[T]
+  ): T = js.native
+  def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](
+    owner: typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement,
+    constructor: IStructureConstructor[T],
+    parentPropName: js.UndefOr[scala.Nothing],
+    parentPropIsList: Boolean
   ): T = js.native
   def createElement[T /* <: typingsSlinky.mendixmodelsdk.elementsMod.Element */](
     owner: typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement,

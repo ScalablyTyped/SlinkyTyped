@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTooltip.anon.Left
@@ -65,7 +65,7 @@ object ReactTooltip {
     @scala.inline
     def eventOff(value: String): this.type = set("eventOff", value.asInstanceOf[js.Any])
     @scala.inline
-    def getContentFunction1(value: /* toolTipStr */ String => TagMod[Any]): this.type = set("getContent", js.Any.fromFunction1(value))
+    def getContentFunction1(value: /* toolTipStr */ String => ReactElement): this.type = set("getContent", js.Any.fromFunction1(value))
     @scala.inline
     def getContent(value: GetContent): this.type = set("getContent", value.asInstanceOf[js.Any])
     @scala.inline

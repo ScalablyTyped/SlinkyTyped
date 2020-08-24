@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
 class ActiveSelection ()
   extends typingsSlinky.fabric.fabricImplMod.ActiveSelection {
   def this(objects: js.Array[typingsSlinky.fabric.fabricImplMod.Object]) = this()
+  def this(objects: js.UndefOr[scala.Nothing], options: IObjectOptions) = this()
   def this(objects: js.Array[typingsSlinky.fabric.fabricImplMod.Object], options: IObjectOptions) = this()
 }
 

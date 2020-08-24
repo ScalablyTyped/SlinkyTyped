@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.groupedListTypesMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
@@ -77,9 +77,13 @@ trait IGroupedListProps extends ClassAttributes[GroupedListBase] {
   /** Optional Viewport, provided by the parent component. */
   var viewport: js.UndefOr[IViewport] = js.native
   /** Rendering callback to render the group items. */
-  def onRenderCell(): TagMod[Any] = js.native
-  def onRenderCell(nestingDepth: Double): TagMod[Any] = js.native
-  def onRenderCell(nestingDepth: Double, item: js.Any): TagMod[Any] = js.native
-  def onRenderCell(nestingDepth: Double, item: js.Any, index: Double): TagMod[Any] = js.native
+  def onRenderCell(): ReactElement = js.native
+  def onRenderCell(nestingDepth: js.UndefOr[scala.Nothing], item: js.UndefOr[scala.Nothing], index: Double): ReactElement = js.native
+  def onRenderCell(nestingDepth: js.UndefOr[scala.Nothing], item: js.Any): ReactElement = js.native
+  def onRenderCell(nestingDepth: js.UndefOr[scala.Nothing], item: js.Any, index: Double): ReactElement = js.native
+  def onRenderCell(nestingDepth: Double): ReactElement = js.native
+  def onRenderCell(nestingDepth: Double, item: js.UndefOr[scala.Nothing], index: Double): ReactElement = js.native
+  def onRenderCell(nestingDepth: Double, item: js.Any): ReactElement = js.native
+  def onRenderCell(nestingDepth: Double, item: js.Any, index: Double): ReactElement = js.native
 }
 

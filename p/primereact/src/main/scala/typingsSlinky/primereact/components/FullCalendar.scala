@@ -19,6 +19,8 @@ object FullCalendar {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def eventsVarargs(value: js.Any*): this.type = set("events", js.Array(value :_*))
+    @scala.inline
     def events(value: js.Array[_]): this.type = set("events", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])

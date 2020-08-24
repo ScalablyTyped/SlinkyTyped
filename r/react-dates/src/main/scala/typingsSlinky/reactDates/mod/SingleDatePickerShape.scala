@@ -64,7 +64,7 @@ trait SingleDatePickerShape extends js.Object {
   var renderMonthElement: js.UndefOr[js.Function1[/* props */ IsVisible, String | ReactElement]] = js.native
   // calendar presentation and interaction related props
   var renderMonthText: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
-  var reopenPickerOnClearDates: js.UndefOr[Boolean] = js.native
+  var reopenPickerOnClearDate: js.UndefOr[Boolean] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var screenReaderInputMessage: js.UndefOr[String] = js.native
   var showClearDate: js.UndefOr[Boolean] = js.native

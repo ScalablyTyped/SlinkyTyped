@@ -1,6 +1,6 @@
 package typingsSlinky.cswAasJs.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cswAasJs.realmRoleMod.RealmRoleProps
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RealmRole {
-  @JSImport("csw-aas-js/dist/components/authorization/RealmRole", JSImport.Default)
+  @JSImport("csw-aas-js", "RealmRole")
   @js.native
   object component extends js.Object
   
@@ -18,7 +18,7 @@ object RealmRole {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
-    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: RealmRoleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

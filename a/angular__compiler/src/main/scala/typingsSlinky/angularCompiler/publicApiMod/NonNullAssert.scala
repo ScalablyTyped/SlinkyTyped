@@ -10,6 +10,7 @@ class NonNullAssert protected ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.NonNullAssert {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     expression: typingsSlinky.angularCompiler.astMod.AST
   ) = this()
 }

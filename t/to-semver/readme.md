@@ -1,7 +1,7 @@
 
 # Scala.js typings for to-semver
 
-Typings are for version 2.0.0
+Typings are for version 3.0.0
 
 ## Library description:
 Get an array of valid, sorted, and cleaned semver versions from an array of strings

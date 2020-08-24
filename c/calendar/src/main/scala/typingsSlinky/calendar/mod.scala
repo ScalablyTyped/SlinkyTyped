@@ -14,6 +14,7 @@ object mod extends js.Object {
   class Calendar () extends js.Object {
     def this(firstWeekDay: Double) = this()
     def monthDates(year: Double, month: Double): js.Array[js.Date] = js.native
+    def monthDates(year: Double, month: Double, dayFormatter: js.UndefOr[scala.Nothing], weekFormatter: WeekFormatter): js.Array[js.Date] = js.native
     def monthDates(year: Double, month: Double, dayFormatter: DayFormatter): js.Array[js.Date] = js.native
     def monthDates(year: Double, month: Double, dayFormatter: DayFormatter, weekFormatter: WeekFormatter): js.Array[js.Date] = js.native
     def monthDays(year: Double, month: Double): js.Array[js.Date] = js.native

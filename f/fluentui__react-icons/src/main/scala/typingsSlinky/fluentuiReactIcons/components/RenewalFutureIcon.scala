@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RenewalFutureIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RenewalFutureIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RenewalFutureIcon")
   @js.native
   object component extends js.Object
   

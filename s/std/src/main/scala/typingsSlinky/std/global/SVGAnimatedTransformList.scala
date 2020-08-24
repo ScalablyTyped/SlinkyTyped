@@ -8,12 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SVGAnimatedTransformList")
 @js.native
 class SVGAnimatedTransformList ()
-  extends typingsSlinky.std.SVGAnimatedTransformList {
-  /* CompleteClass */
-  override val animVal: org.scalajs.dom.raw.SVGTransformList = js.native
-  /* CompleteClass */
-  override val baseVal: org.scalajs.dom.raw.SVGTransformList = js.native
-}
+  extends typingsSlinky.std.SVGAnimatedTransformList
 
 @JSGlobal("SVGAnimatedTransformList")
 @js.native

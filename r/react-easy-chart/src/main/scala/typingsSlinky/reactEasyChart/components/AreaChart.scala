@@ -52,6 +52,8 @@ object AreaChart {
       value: linear | `linear-closed` | step | `step-before` | `step-after` | basis | `basis-open` | `basis-closed` | bundle | cardinal | `cardinal-open` | `cardinal-closed` | monotone
     ): this.type = set("interpolate", value.asInstanceOf[js.Any])
     @scala.inline
+    def lineColorsVarargs(value: String*): this.type = set("lineColors", js.Array(value :_*))
+    @scala.inline
     def lineColors(value: js.Array[String]): this.type = set("lineColors", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: Bottom): this.type = set("margin", value.asInstanceOf[js.Any])
@@ -70,6 +72,8 @@ object AreaChart {
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
+    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
+    @scala.inline
     def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
     @scala.inline
     def xTicks(value: Double): this.type = set("xTicks", value.asInstanceOf[js.Any])
@@ -77,6 +81,8 @@ object AreaChart {
     def xType(value: time | text | linear): this.type = set("xType", value.asInstanceOf[js.Any])
     @scala.inline
     def yAxisOrientRight(value: Boolean): this.type = set("yAxisOrientRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yDomainRangeVarargs(value: (Double | String)*): this.type = set("yDomainRange", js.Array(value :_*))
     @scala.inline
     def yDomainRange(value: js.Array[Double | String]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
     @scala.inline

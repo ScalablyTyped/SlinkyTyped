@@ -11,6 +11,6 @@ package object mod {
     /* remainingTime */ scala.Double, 
     /* elapsedTime */ scala.Double, 
     /* isPlaying */ scala.Boolean, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
 }

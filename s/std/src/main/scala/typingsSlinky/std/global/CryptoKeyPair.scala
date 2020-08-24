@@ -8,12 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CryptoKeyPair")
 @js.native
 class CryptoKeyPair ()
-  extends typingsSlinky.std.CryptoKeyPair {
-  /* CompleteClass */
-  override var privateKey: org.scalajs.dom.crypto.CryptoKey = js.native
-  /* CompleteClass */
-  override var publicKey: org.scalajs.dom.crypto.CryptoKey = js.native
-}
+  extends typingsSlinky.std.CryptoKeyPair
 
 @JSGlobal("CryptoKeyPair")
 @js.native

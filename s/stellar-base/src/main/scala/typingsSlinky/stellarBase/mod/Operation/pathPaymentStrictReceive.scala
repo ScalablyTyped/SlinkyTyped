@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("stellar-base", "Operation.pathPaymentStrictReceive")
 @js.native
 object pathPaymentStrictReceive extends js.Object {
-  def apply(options: PathPaymentStrictReceive): typingsSlinky.stellarBase.mod.xdr.Operation[PathPaymentStrictReceive_] = js.native
+  def apply(options: PathPaymentStrictReceive): typingsSlinky.stellarBase.xdrMod.default.Operation[PathPaymentStrictReceive_] = js.native
 }
 

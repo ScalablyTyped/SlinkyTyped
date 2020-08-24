@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Devices.RedialRequestedEventArgs")
 @js.native
 abstract class RedialRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Devices.RedialRequestedEventArgs {
-  /** Indicates that the RedialRequested event has been handled. */
-  /* CompleteClass */
-  override def handled(): Unit = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Devices.RedialRequestedEventArgs
 

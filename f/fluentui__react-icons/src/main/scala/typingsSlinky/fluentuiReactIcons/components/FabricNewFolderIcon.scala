@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FabricNewFolderIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FabricNewFolderIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FabricNewFolderIcon")
   @js.native
   object component extends js.Object
   

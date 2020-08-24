@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "datatables_dot_net-select"
-version := "1.2-dt-20200515Z-082c86"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20200515Z-576241"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -10,9 +10,8 @@ class WebGLShadowMap protected ()
   extends typingsSlinky.three.webGLShadowMapMod.WebGLShadowMap {
   def this(
     _renderer: typingsSlinky.three.webGLRendererMod.WebGLRenderer,
-    _lights: js.Array[_],
-    _objects: js.Array[_],
-    capabilities: js.Any
+    _objects: typingsSlinky.three.webGLObjectsMod.WebGLObjects,
+    maxTextureSize: Double
   ) = this()
 }
 

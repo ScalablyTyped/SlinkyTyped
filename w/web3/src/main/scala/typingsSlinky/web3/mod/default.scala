@@ -1,12 +1,7 @@
 package typingsSlinky.web3.mod
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.node.netMod.Socket
-import typingsSlinky.web3Bzz.mod.Bzz
-import typingsSlinky.web3Core.mod.Extension
 import typingsSlinky.web3Core.mod.Providers
-import typingsSlinky.web3Eth.mod.Eth
-import typingsSlinky.web3Shh.mod.Shh
 import typingsSlinky.web3Utils.mod.Utils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,30 +12,6 @@ import scala.scalajs.js.annotation._
 class default () extends Web3 {
   def this(provider: typingsSlinky.web3Core.mod.provider) = this()
   def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
-  /* CompleteClass */
-  override var BatchRequest: Instantiable0[typingsSlinky.web3Core.mod.BatchRequest] = js.native
-  /* CompleteClass */
-  override var bzz: Bzz = js.native
-  /* CompleteClass */
-  override val currentProvider: typingsSlinky.web3Core.mod.provider = js.native
-  /* CompleteClass */
-  override var defaultAccount: String | Null = js.native
-  /* CompleteClass */
-  override var defaultBlock: String | Double = js.native
-  /* CompleteClass */
-  override var eth: Eth = js.native
-  /* CompleteClass */
-  override val givenProvider: js.Any = js.native
-  /* CompleteClass */
-  override var shh: Shh = js.native
-  /* CompleteClass */
-  override var utils: Utils = js.native
-  /* CompleteClass */
-  override var version: String = js.native
-  /* CompleteClass */
-  override def extend(extension: Extension): js.Any = js.native
-  /* CompleteClass */
-  override def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
 }
 
 /* static members */

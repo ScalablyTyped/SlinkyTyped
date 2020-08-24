@@ -3,28 +3,44 @@ package typingsSlinky.reactBootstrap.mediaHeadingMod
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.ReactType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaHeadingProps
   extends AllHTMLAttributes[MediaHeading]
      with ClassAttributes[MediaHeading] {
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var componentClass: js.UndefOr[ReactType[_]] = js.native
 }
 
 object MediaHeadingProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[MediaHeading] = null,
-    ClassAttributes: ClassAttributes[MediaHeading] = null,
-    componentClass: ReactComponentClass[_] = null
-  ): MediaHeadingProps = {
+  def apply(): MediaHeadingProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaHeadingProps]
   }
+  @scala.inline
+  implicit class MediaHeadingPropsOps[Self <: MediaHeadingProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = this.set("componentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComponentClassComponentClass(value: ReactComponentClass[_]): Self = this.set("componentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComponentClass(value: ReactType[_]): Self = this.set("componentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComponentClass: Self = this.set("componentClass", js.undefined)
+  }
+  
 }
 

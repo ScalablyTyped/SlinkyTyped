@@ -27,35 +27,22 @@ object MirrorModeInfoMixed {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMode(value: mixed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMirroringDestinationIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringDestinationIds")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMode(value: mixed): Self = this.set("mode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMirroringDestinationIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringDestinationIds")(js.undefined)
-        ret
-    }
+    def setMirroringDestinationIdsVarargs(value: String*): Self = this.set("mirroringDestinationIds", js.Array(value :_*))
     @scala.inline
-    def withMirroringSourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMirroringDestinationIds(value: js.Array[String]): Self = this.set("mirroringDestinationIds", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMirroringSourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirroringSourceId")(js.undefined)
-        ret
-    }
+    def deleteMirroringDestinationIds: Self = this.set("mirroringDestinationIds", js.undefined)
+    @scala.inline
+    def setMirroringSourceId(value: String): Self = this.set("mirroringSourceId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMirroringSourceId: Self = this.set("mirroringSourceId", js.undefined)
   }
   
 }

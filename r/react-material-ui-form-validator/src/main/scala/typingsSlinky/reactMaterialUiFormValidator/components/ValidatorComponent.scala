@@ -17,9 +17,13 @@ object ValidatorComponent {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMaterialUiFormValidator.mod.ValidatorComponent] {
     @scala.inline
+    def errorMessagesVarargs(value: js.Any*): this.type = set("errorMessages", js.Array(value :_*))
+    @scala.inline
     def errorMessages(value: js.Array[_] | String): this.type = set("errorMessages", value.asInstanceOf[js.Any])
     @scala.inline
     def validatorListener(value: /* isValid */ Boolean => Unit): this.type = set("validatorListener", js.Any.fromFunction1(value))
+    @scala.inline
+    def validatorsVarargs(value: js.Any*): this.type = set("validators", js.Array(value :_*))
     @scala.inline
     def validators(value: js.Array[_]): this.type = set("validators", value.asInstanceOf[js.Any])
     @scala.inline

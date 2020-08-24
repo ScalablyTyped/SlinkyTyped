@@ -1,0 +1,13 @@
+package typingsSlinky.superfine.mod
+
+import typingsSlinky.superfine.superfineStrings.datalist
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("superfine", "h")
+@js.native
+object h_datalist extends js.Object {
+  def apply(tagName: datalist, props: Props[datalist]): VNode[datalist] = js.native
+}
+

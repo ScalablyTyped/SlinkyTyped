@@ -5,13 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type DataFormatter = js.Function1[/* value */ typingsSlinky.nivoLine.mod.LineValue, java.lang.String | scala.Double]
-  type Layer = typingsSlinky.nivoLine.mod.LineLayerType | typingsSlinky.nivoLine.mod.LineCustomLayer
-  type LineCustomLayer = js.Function1[
-    /* props */ typingsSlinky.nivoLine.mod.LineCustomLayerProps, 
-    slinky.core.TagMod[scala.Any]
+  type AccessorFunc = js.Function1[/* datum */ typingsSlinky.nivoLine.anon.XFormatted, java.lang.String]
+  type CustomLayer = js.Function1[
+    /* props */ typingsSlinky.nivoLine.mod.CustomLayerProps, 
+    slinky.core.facade.ReactElement
   ]
-  type LineValue = java.lang.String | scala.Double | js.Date
-  type TooltipFormatter = js.Function1[/* value */ typingsSlinky.nivoLine.mod.LineValue, slinky.core.TagMod[scala.Any]]
-  type TooltipProp = slinky.core.ReactComponentClass[typingsSlinky.nivoLine.mod.LineTooltipProps]
+  type DatumValue = typingsSlinky.nivoCore.mod.DatumValue
+  type Layer = typingsSlinky.nivoLine.mod.LineLayerType | typingsSlinky.nivoLine.mod.CustomLayer
+  type PointMouseHandler = js.Function2[
+    /* point */ typingsSlinky.nivoLine.mod.Point, 
+    /* event */ slinky.web.SyntheticMouseEvent[org.scalajs.dom.raw.Element], 
+    scala.Unit
+  ]
+  type PointTooltip = slinky.core.ReactComponentClass[typingsSlinky.nivoLine.mod.PointTooltipProps]
+  type SliceTooltip = slinky.core.ReactComponentClass[typingsSlinky.nivoLine.mod.SliceTooltipProps]
 }

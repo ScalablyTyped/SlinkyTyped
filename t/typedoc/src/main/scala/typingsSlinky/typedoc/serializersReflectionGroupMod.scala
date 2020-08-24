@@ -1,7 +1,6 @@
 package typingsSlinky.typedoc
 
-import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.typedoc.abstractMod.ReflectionKind
+import typingsSlinky.typedoc.anon.PartialReflectionGroup
 import typingsSlinky.typedoc.reflectionGroupMod.ReflectionGroup
 import typingsSlinky.typedoc.serializationComponentsMod.SerializerComponent
 import scala.scalajs.js
@@ -13,8 +12,7 @@ import scala.scalajs.js.annotation._
 object serializersReflectionGroupMod extends js.Object {
   @js.native
   class ReflectionGroupSerializer () extends SerializerComponent[ReflectionGroup] {
-    @JSName("serializeGroupSymbol")
-    var serializeGroupSymbol_ReflectionGroupSerializer: Instantiable2[/* title */ String, /* kind */ ReflectionKind, ReflectionGroup] = js.native
+    def toObject(group: ReflectionGroup, obj: PartialReflectionGroup): typingsSlinky.typedoc.schemaMod.ReflectionGroup = js.native
   }
   
   /* static members */

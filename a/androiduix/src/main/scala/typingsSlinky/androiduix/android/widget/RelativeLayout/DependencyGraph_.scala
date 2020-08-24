@@ -39,47 +39,24 @@ object DependencyGraph_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdd(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAdd(value: View => Unit): Self = this.set("add", js.Any.fromFunction1(value))
     @scala.inline
-    def withFindRoots(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findRoots")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetSortedViews(value: (js.Array[View], js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortedViews")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setFindRoots(value: js.Any => js.Any): Self = this.set("findRoots", js.Any.fromFunction1(value))
     @scala.inline
-    def withMKeyNodes(value: SparseMap[String, Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mKeyNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetSortedViews(value: (js.Array[View], js.Array[Double]) => Unit): Self = this.set("getSortedViews", js.Any.fromFunction2(value))
     @scala.inline
-    def withMNodes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMKeyNodes(value: SparseMap[String, Node]): Self = this.set("mKeyNodes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRoots(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRoots")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNodes(value: js.Any): Self = this.set("mNodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMRoots(value: js.Any): Self = this.set("mRoots", value.asInstanceOf[js.Any])
   }
   
 }

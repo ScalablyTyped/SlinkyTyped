@@ -13,6 +13,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object cryptoSecretstreamXchacha20poly1305Pull extends js.Object {
   def apply(state_address: StateAddress, cipher: String): MessageTag = js.native
+  def apply(
+    state_address: StateAddress,
+    cipher: String,
+    ad: js.UndefOr[scala.Nothing],
+    outputFormat: Uint8ArrayOutputFormat
+  ): MessageTag = js.native
   def apply(state_address: StateAddress, cipher: String, ad: String): MessageTag = js.native
   def apply(state_address: StateAddress, cipher: String, ad: String, outputFormat: StringOutputFormat): StringMessageTag = js.native
   def apply(state_address: StateAddress, cipher: String, ad: String, outputFormat: Uint8ArrayOutputFormat): MessageTag = js.native
@@ -32,6 +38,12 @@ object cryptoSecretstreamXchacha20poly1305Pull extends js.Object {
     outputFormat: Uint8ArrayOutputFormat
   ): MessageTag = js.native
   def apply(state_address: StateAddress, cipher: js.typedarray.Uint8Array): MessageTag = js.native
+  def apply(
+    state_address: StateAddress,
+    cipher: js.typedarray.Uint8Array,
+    ad: js.UndefOr[scala.Nothing],
+    outputFormat: Uint8ArrayOutputFormat
+  ): MessageTag = js.native
   def apply(state_address: StateAddress, cipher: js.typedarray.Uint8Array, ad: String): MessageTag = js.native
   def apply(
     state_address: StateAddress,

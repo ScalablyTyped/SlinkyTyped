@@ -1,7 +1,7 @@
 package typingsSlinky.reactRouterNavigation.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
@@ -28,6 +28,12 @@ object Tab {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* props */ RouterProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: (js.Function1[/* props */ RouterProps, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def component(value: ReactComponentClass[RouterProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def exact(value: Boolean): this.type = set("exact", value.asInstanceOf[js.Any])
@@ -46,13 +52,13 @@ object Tab {
     @scala.inline
     def path(value: String): this.type = set("path", value.asInstanceOf[js.Any])
     @scala.inline
-    def render(value: /* props */ RouterProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: /* props */ RouterProps => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLabel(value: /* props */ TabSubViewProps => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    def renderLabel(value: /* props */ TabSubViewProps => ReactElement): this.type = set("renderLabel", js.Any.fromFunction1(value))
     @scala.inline
-    def renderTabBar(value: /* props */ TabSubViewProps => TagMod[Any]): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    def renderTabBar(value: /* props */ TabSubViewProps => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
     @scala.inline
-    def renderTabIcon(value: /* props */ TabSubViewProps => TagMod[Any]): this.type = set("renderTabIcon", js.Any.fromFunction1(value))
+    def renderTabIcon(value: /* props */ TabSubViewProps => ReactElement): this.type = set("renderTabIcon", js.Any.fromFunction1(value))
     @scala.inline
     def strict(value: Boolean): this.type = set("strict", value.asInstanceOf[js.Any])
     @scala.inline

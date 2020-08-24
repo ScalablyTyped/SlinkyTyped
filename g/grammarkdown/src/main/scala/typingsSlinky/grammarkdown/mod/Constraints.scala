@@ -17,6 +17,11 @@ class Constraints protected ()
   ) = this()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
+    elements: js.UndefOr[scala.Nothing],
+    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
     elements: js.Array[typingsSlinky.grammarkdown.nodesMod.Argument],
     closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
   ) = this()

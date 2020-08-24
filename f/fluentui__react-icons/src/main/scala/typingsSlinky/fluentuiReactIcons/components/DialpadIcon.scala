@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DialpadIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DialpadIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DialpadIcon")
   @js.native
   object component extends js.Object
   

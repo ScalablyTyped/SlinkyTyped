@@ -1,7 +1,7 @@
 
 # Scala.js typings for ui-box
 
-Typings are for version 3.3.0
+Typings are for version 4.0.0
 
 ## Library description:
 Blazing Fast React UI Primitive

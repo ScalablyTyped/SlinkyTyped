@@ -1,7 +1,6 @@
 package typingsSlinky.antDesignPro.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -13,7 +12,6 @@ import typingsSlinky.antDesignPro.antDesignProStrings.topLeft
 import typingsSlinky.antDesignPro.antDesignProStrings.topRight
 import typingsSlinky.antDesignPro.headerDropdownMod.HeaderDropdownProps
 import typingsSlinky.antDesignPro.headerDropdownMod.OverlayFunc
-import typingsSlinky.antDesignPro.headerDropdownMod.default
 import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
@@ -24,16 +22,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HeaderDropdown {
-  @JSImport("ant-design-pro/lib/HeaderDropdown", JSImport.Default)
+  @JSImport("ant-design-pro", "HeaderDropdown")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.HeaderDropdown] {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrow(value: Boolean): this.type = set("arrow", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,9 +53,9 @@ object HeaderDropdown {
     @scala.inline
     def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
-    def overlayFunction0(value: () => TagMod[Any]): this.type = set("overlay", js.Any.fromFunction0(value))
+    def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
     @scala.inline
-    def overlay(value: TagMod[Any] | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
+    def overlay(value: ReactElement | OverlayFunc): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,6 +66,8 @@ object HeaderDropdown {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
     @scala.inline
     def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline

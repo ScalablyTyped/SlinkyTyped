@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MaximumValueIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MaximumValueIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MaximumValueIcon")
   @js.native
   object component extends js.Object
   

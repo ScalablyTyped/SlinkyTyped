@@ -2,7 +2,7 @@ package typingsSlinky.baseui.modalMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.SharedStylePropsArgchildrAnimate
 import typingsSlinky.baseui.baseuiStrings.backdrop
 import typingsSlinky.baseui.baseuiStrings.closeButton
@@ -25,7 +25,7 @@ class Modal ()
   def didClose(): Unit = js.native
   def didOpen(): Unit = js.native
   def disableMountNodeScroll(): Unit = js.native
-  def getChildren(): TagMod[Any] = js.native
+  def getChildren(): ReactElement = js.native
   def getMountNode(): HTMLElement = js.native
   def getRef(component: String): Ref[_] = js.native
   def getSharedProps(): SharedStylePropsArgchildrAnimate = js.native
@@ -33,7 +33,7 @@ class Modal ()
   def onCloseClick(): Unit = js.native
   def onDocumentKeyPress(event: KeyboardEvent): Unit = js.native
   def removeDomEvents(): Unit = js.native
-  def renderModal(): TagMod[Any] = js.native
+  def renderModal(): ReactElement = js.native
   def resentMountNodeScroll(): Unit = js.native
   def restoreLastFocus(): Unit = js.native
   @JSName("triggerClose")

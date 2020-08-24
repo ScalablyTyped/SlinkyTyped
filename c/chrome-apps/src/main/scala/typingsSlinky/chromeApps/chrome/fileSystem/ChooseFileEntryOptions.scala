@@ -35,23 +35,16 @@ object ChooseFileEntryOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: openFile | openWritableFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAcceptsMultiple(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptsMultiple")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: openFile | openWritableFile): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAcceptsMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptsMultiple")(js.undefined)
-        ret
-    }
+    def setAcceptsMultiple(value: `false`): Self = this.set("acceptsMultiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAcceptsMultiple: Self = this.set("acceptsMultiple", js.undefined)
   }
   
 }

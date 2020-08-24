@@ -37,23 +37,16 @@ object FrameOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: none_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAlphaEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: none_): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAlphaEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaEnabled")(js.undefined)
-        ret
-    }
+    def setAlphaEnabled(value: Boolean): Self = this.set("alphaEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlphaEnabled: Self = this.set("alphaEnabled", js.undefined)
   }
   
 }

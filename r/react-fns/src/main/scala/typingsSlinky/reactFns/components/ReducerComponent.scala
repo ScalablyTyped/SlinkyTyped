@@ -15,10 +15,7 @@ object ReducerComponent {
   @scala.inline
   class Builder[P, S, A] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[
-          tag.type, 
-          typingsSlinky.reactFns.reducerComponentMod.ReducerComponent[js.Any, js.Any, js.Any]
-        ]
+       with StBuildingComponent[tag.type, typingsSlinky.reactFns.reducerComponentMod.ReducerComponent[P, S, A]]
   
   def apply[P, S, A](p: P): Builder[P, S, A] = new Builder[P, S, A](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P, S, A](companion: ReducerComponent.type): Builder[P, S, A] = new Builder[P, S, A](js.Array(this.component, js.Dictionary.empty))()

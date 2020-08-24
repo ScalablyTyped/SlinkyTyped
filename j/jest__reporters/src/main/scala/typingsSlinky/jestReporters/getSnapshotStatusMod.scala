@@ -1,6 +1,6 @@
 package typingsSlinky.jestReporters
 
-import typingsSlinky.jestReporters.anon.Added
+import typingsSlinky.jestTestResult.anon.Added
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

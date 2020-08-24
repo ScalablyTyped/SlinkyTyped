@@ -12,16 +12,17 @@ import scala.scalajs.js.annotation._
 
 @JSImport("fabric", "fabric.Canvas")
 @js.native
-class Canvas protected ()
+/**
+  * Constructor
+  * @param element <canvas> element to initialize instance on
+  * @param [options] Options object
+  */
+class Canvas ()
   extends typingsSlinky.fabric.fabricImplMod.Canvas {
   def this(element: String) = this()
-  /**
-    * Constructor
-    * @param element <canvas> element to initialize instance on
-    * @param [options] Options object
-    */
   def this(element: HTMLCanvasElement) = this()
   def this(element: String, options: ICanvasOptions) = this()
+  def this(element: Null, options: ICanvasOptions) = this()
   def this(element: HTMLCanvasElement, options: ICanvasOptions) = this()
 }
 

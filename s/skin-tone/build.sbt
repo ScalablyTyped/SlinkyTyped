@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "skin-tone"
-version := "2.0.0-3d10b9"
-scalaVersion := "2.13.2"
+version := "2.0.0-3f83b7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

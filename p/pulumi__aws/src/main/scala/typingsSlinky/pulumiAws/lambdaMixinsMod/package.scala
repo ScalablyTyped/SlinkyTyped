@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object lambdaMixinsMod {
   type BaseCallbackFunctionArgs = typingsSlinky.pulumiAws.utilsMod.Overwrite[
     typingsSlinky.pulumiAws.lambdaFunctionMod.FunctionArgs, 
-    typingsSlinky.pulumiAws.anon.CodePathOptions
+    typingsSlinky.pulumiAws.anon.Code
   ]
   type Callback[E, R] = js.Function3[
     /* event */ E, 

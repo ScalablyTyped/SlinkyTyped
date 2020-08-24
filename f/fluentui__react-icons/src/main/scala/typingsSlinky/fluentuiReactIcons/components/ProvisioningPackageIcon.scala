@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ProvisioningPackageIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ProvisioningPackageIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ProvisioningPackageIcon")
   @js.native
   object component extends js.Object
   

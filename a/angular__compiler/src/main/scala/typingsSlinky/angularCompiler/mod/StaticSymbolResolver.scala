@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "StaticSymbolResolver")
 @js.native
 class StaticSymbolResolver protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.StaticSymbolResolver {
+  extends typingsSlinky.angularCompiler.compilerMod.StaticSymbolResolver {
   def this(
     host: StaticSymbolResolverHost,
     staticSymbolCache: typingsSlinky.angularCompiler.staticSymbolMod.StaticSymbolCache,

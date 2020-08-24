@@ -24,11 +24,13 @@ trait Sharp extends Duplex {
     * Blur the image.
     * When used without parameters, performs a fast, mild blur of the output image.
     * When a sigma is provided, performs a slower, more accurate Gaussian blur.
+    * When a boolean sigma is provided, ether blur mild or disable blur
     * @param sigma a value between 0.3 and 1000 representing the sigma of the Gaussian mask, where sigma = 1 + radius / 2.
     * @throws {Error} Invalid parameters
     * @returns A sharp instance that can be used to chain operations
     */
   def blur(): Sharp = js.native
+  def blur(sigma: Boolean): Sharp = js.native
   def blur(sigma: Double): Sharp = js.native
   /**
     * Perform a bitwise boolean operation with operand image.
@@ -183,6 +185,7 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def linear(): Sharp = js.native
+  def linear(a: js.UndefOr[scala.Nothing], b: Double): Sharp = js.native
   def linear(a: Double): Sharp = js.native
   def linear(a: Double, b: Double): Sharp = js.native
   def linear(a: Null, b: Double): Sharp = js.native
@@ -304,10 +307,16 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def resize(options: ResizeOptions): Sharp = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], options: ResizeOptions): Sharp = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: Double): Sharp = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: Double, options: ResizeOptions): Sharp = js.native
+  def resize(width: js.UndefOr[scala.Nothing], height: Null, options: ResizeOptions): Sharp = js.native
   def resize(width: Double): Sharp = js.native
+  def resize(width: Double, height: js.UndefOr[scala.Nothing], options: ResizeOptions): Sharp = js.native
   def resize(width: Double, height: Double): Sharp = js.native
   def resize(width: Double, height: Double, options: ResizeOptions): Sharp = js.native
   def resize(width: Double, height: Null, options: ResizeOptions): Sharp = js.native
+  def resize(width: Null, height: js.UndefOr[scala.Nothing], options: ResizeOptions): Sharp = js.native
   def resize(width: Null, height: Double): Sharp = js.native
   def resize(width: Null, height: Double, options: ResizeOptions): Sharp = js.native
   def resize(width: Null, height: Null, options: ResizeOptions): Sharp = js.native
@@ -331,6 +340,7 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def rotate(): Sharp = js.native
+  def rotate(angle: js.UndefOr[scala.Nothing], options: RotateOptions): Sharp = js.native
   def rotate(angle: Double): Sharp = js.native
   def rotate(angle: Double, options: RotateOptions): Sharp = js.native
   /**
@@ -345,7 +355,11 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def sharpen(): Sharp = js.native
+  def sharpen(sigma: js.UndefOr[scala.Nothing], flat: js.UndefOr[scala.Nothing], jagged: Double): Sharp = js.native
+  def sharpen(sigma: js.UndefOr[scala.Nothing], flat: Double): Sharp = js.native
+  def sharpen(sigma: js.UndefOr[scala.Nothing], flat: Double, jagged: Double): Sharp = js.native
   def sharpen(sigma: Double): Sharp = js.native
+  def sharpen(sigma: Double, flat: js.UndefOr[scala.Nothing], jagged: Double): Sharp = js.native
   def sharpen(sigma: Double, flat: Double): Sharp = js.native
   def sharpen(sigma: Double, flat: Double, jagged: Double): Sharp = js.native
   /**
@@ -366,6 +380,7 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def threshold(): Sharp = js.native
+  def threshold(threshold: js.UndefOr[scala.Nothing], options: ThresholdOptions): Sharp = js.native
   def threshold(threshold: Double): Sharp = js.native
   def threshold(threshold: Double, options: ThresholdOptions): Sharp = js.native
   /**

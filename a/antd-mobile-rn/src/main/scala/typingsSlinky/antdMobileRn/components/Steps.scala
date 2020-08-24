@@ -1,5 +1,6 @@
 package typingsSlinky.antdMobileRn.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.horizontal
@@ -32,6 +33,10 @@ object Steps {
   }
   
   def withProps(p: StepsNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Steps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsNativeProps]))
+  }
 }
 

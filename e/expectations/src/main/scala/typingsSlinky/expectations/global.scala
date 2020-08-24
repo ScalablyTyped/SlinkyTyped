@@ -17,7 +17,26 @@ object global extends js.Object {
       extends typingsSlinky.expectations.Expectations.Expect {
       def this(value: js.Any) = this()
       def this(value: js.Any, assertions: IAssertions) = this()
+      def this(value: js.Any, assertions: js.UndefOr[scala.Nothing], expr: js.Any) = this()
       def this(value: js.Any, assertions: IAssertions, expr: js.Any) = this()
+      def this(
+        value: js.Any,
+        assertions: js.UndefOr[scala.Nothing],
+        expr: js.UndefOr[scala.Nothing],
+        parent: typingsSlinky.expectations.Expectations.Expect
+      ) = this()
+      def this(
+        value: js.Any,
+        assertions: js.UndefOr[scala.Nothing],
+        expr: js.Any,
+        parent: typingsSlinky.expectations.Expectations.Expect
+      ) = this()
+      def this(
+        value: js.Any,
+        assertions: IAssertions,
+        expr: js.UndefOr[scala.Nothing],
+        parent: typingsSlinky.expectations.Expectations.Expect
+      ) = this()
       def this(
         value: js.Any,
         assertions: IAssertions,

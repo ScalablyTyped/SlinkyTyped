@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MapDirectionsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MapDirectionsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MapDirectionsIcon")
   @js.native
   object component extends js.Object
   

@@ -3,6 +3,7 @@ package typingsSlinky.reactReduxI18n.components
 import slinky.core.ReactComponentClass
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactReduxI18n.mod.LocalizeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +33,7 @@ object Localize {
     @scala.inline
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     @scala.inline
-    def tag(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: LocalizeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

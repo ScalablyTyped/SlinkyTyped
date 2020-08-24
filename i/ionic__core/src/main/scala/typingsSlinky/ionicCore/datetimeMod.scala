@@ -4,8 +4,8 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonDatetimeElement
 import typingsSlinky.ionicCore.datetimeInterfaceMod.DatetimeChangeEventDetail
 import typingsSlinky.ionicCore.datetimeInterfaceMod.DatetimeOptions
 import typingsSlinky.ionicCore.mod.StyleEventDetail
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 object datetimeMod extends js.Object {
   @js.native
   class Datetime () extends ComponentInterface {
-    var buttonEl: js.UndefOr[js.Any] = js.native
+    var buttonEl: js.Any = js.native
     var calcMinMax: js.Any = js.native
     /**
       * The text to display on the picker's cancel button.
@@ -32,6 +32,7 @@ object datetimeMod extends js.Object {
     /**
       * Short abbreviated day of the week names. This can be used to provide
       * locale names for each day in the week. Defaults to English.
+      * Defaults to: `['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']`
       */
     var dayShortNames: js.UndefOr[js.Array[String] | String] = js.native
     /**
@@ -55,6 +56,13 @@ object datetimeMod extends js.Object {
       * more info. Defaults to `MMM D, YYYY`.
       */
     var displayFormat: String = js.native
+    /**
+      * The timezone to use for display purposes only. See
+      * [Date.prototype.toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString)
+      * for a list of supported timezones. If no value is provided, the
+      * component will default to displaying times in the user's local timezone.
+      */
+    var displayTimezone: js.UndefOr[String] = js.native
     /**
       * The text to display on the picker's "Done" button.
       */
@@ -171,7 +179,6 @@ object datetimeMod extends js.Object {
       */
     var readonly: Boolean = js.native
     var setFocus: js.Any = js.native
-    val text: js.Any = js.native
     var updateDatetimeValue: js.Any = js.native
     var validateColumn: js.Any = js.native
     var validateColumns: js.Any = js.native
@@ -196,6 +203,7 @@ object datetimeMod extends js.Object {
     def open(): js.Promise[Unit] = js.native
     @JSName("render")
     def render_MDatetime(): js.Any = js.native
+    /* private */ def text: js.Any = js.native
     /**
       * Update the datetime value when the value changes
       */

@@ -9,17 +9,5 @@ import scala.scalajs.js.annotation._
 class StronglyConnectedComponents protected ()
   extends typingsSlinky.jsGraphAlgorithms.JsGraphs.StronglyConnectedComponents {
   def this(G: typingsSlinky.jsGraphAlgorithms.JsGraphs.DiGraph) = this()
-  /* CompleteClass */
-  override var count: js.Any = js.native
-  /* CompleteClass */
-  override var id: js.Any = js.native
-  /* CompleteClass */
-  override var marked: js.Any = js.native
-  /* CompleteClass */
-  override def componentCount(): Double = js.native
-  /* CompleteClass */
-  override def componentId(v: Double): Double = js.native
-  /* CompleteClass */
-  override def dfs(G: typingsSlinky.jsGraphAlgorithms.JsGraphs.DiGraph, v: Double): Unit = js.native
 }
 

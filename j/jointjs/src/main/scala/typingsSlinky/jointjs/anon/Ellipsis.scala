@@ -10,6 +10,7 @@ trait Ellipsis extends js.Object {
   var ellipsis: js.UndefOr[Boolean | String] = js.native
   var eol: js.UndefOr[String] = js.native
   var hyphen: js.UndefOr[String | js.RegExp] = js.native
+  var maxLineCount: js.UndefOr[Double] = js.native
   var separator: js.UndefOr[String | js.Any] = js.native
   var svgDocument: js.UndefOr[SVGElement] = js.native
 }
@@ -27,71 +28,36 @@ object Ellipsis {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEllipsis(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsis")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutEllipsis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsis")(js.undefined)
-        ret
-    }
+    def setEllipsis(value: Boolean | String): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
     @scala.inline
-    def withoutEol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
-        ret
-    }
+    def setEol(value: String): Self = this.set("eol", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHyphenRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEol: Self = this.set("eol", js.undefined)
     @scala.inline
-    def withHyphen(value: String | js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHyphenRegExp(value: js.RegExp): Self = this.set("hyphen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHyphen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphen")(js.undefined)
-        ret
-    }
+    def setHyphen(value: String | js.RegExp): Self = this.set("hyphen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSeparator(value: String | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHyphen: Self = this.set("hyphen", js.undefined)
     @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
+    def setMaxLineCount(value: Double): Self = this.set("maxLineCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSvgDocument(value: SVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxLineCount: Self = this.set("maxLineCount", js.undefined)
     @scala.inline
-    def withoutSvgDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgDocument")(js.undefined)
-        ret
-    }
+    def setSeparator(value: String | js.Any): Self = this.set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSeparator: Self = this.set("separator", js.undefined)
+    @scala.inline
+    def setSvgDocument(value: SVGElement): Self = this.set("svgDocument", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSvgDocument: Self = this.set("svgDocument", js.undefined)
   }
   
 }

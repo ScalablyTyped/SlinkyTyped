@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.BarometerReadingChangedEventArgs")
 @js.native
 abstract class BarometerReadingChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.BarometerReadingChangedEventArgs {
-  /** Gets the most recent barometer reading. */
-  /* CompleteClass */
-  override var reading: typingsSlinky.winrtUwp.Windows.Devices.Sensors.BarometerReading = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.BarometerReadingChangedEventArgs
 

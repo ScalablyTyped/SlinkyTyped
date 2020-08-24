@@ -10,12 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
   def apply(
-    secret_nonce: String,
-    ciphertext: String,
+    secret_nonce: String | js.typedarray.Uint8Array | Null,
+    ciphertext: String | js.typedarray.Uint8Array,
     mac: js.typedarray.Uint8Array,
-    additional_data: String,
+    additional_data: String | js.typedarray.Uint8Array | Null,
     public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
+    key: js.typedarray.Uint8Array,
+    outputFormat: js.UndefOr[Uint8ArrayOutputFormat | Null]
   ): js.typedarray.Uint8Array = js.native
   def apply(
     secret_nonce: String,
@@ -30,23 +31,6 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: String,
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
     additional_data: Null,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -56,45 +40,11 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: String,
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
     additional_data: js.typedarray.Uint8Array,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
   def apply(
     secret_nonce: String,
     ciphertext: js.typedarray.Uint8Array,
@@ -108,23 +58,6 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: String,
     ciphertext: js.typedarray.Uint8Array,
     mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
     additional_data: Null,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -134,45 +67,11 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: String,
     ciphertext: js.typedarray.Uint8Array,
     mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
     additional_data: js.typedarray.Uint8Array,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
-  def apply(
-    secret_nonce: String,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
   def apply(
     secret_nonce: Null,
     ciphertext: String,
@@ -186,23 +85,6 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: Null,
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
     additional_data: Null,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -212,45 +94,11 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: Null,
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
     additional_data: js.typedarray.Uint8Array,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
   def apply(
     secret_nonce: Null,
     ciphertext: js.typedarray.Uint8Array,
@@ -264,23 +112,6 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: Null,
     ciphertext: js.typedarray.Uint8Array,
     mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
     additional_data: Null,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -290,45 +121,11 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: Null,
     ciphertext: js.typedarray.Uint8Array,
     mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
     additional_data: js.typedarray.Uint8Array,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
-  def apply(
-    secret_nonce: Null,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
   def apply(
     secret_nonce: js.typedarray.Uint8Array,
     ciphertext: String,
@@ -342,23 +139,6 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: js.typedarray.Uint8Array,
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
     additional_data: Null,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -368,50 +148,7 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: js.typedarray.Uint8Array,
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
     additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: StringOutputFormat
-  ): String = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: String,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: String,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: String,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
@@ -423,16 +160,8 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     additional_data: String,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
+    outputFormat: StringOutputFormat
+  ): String = js.native
   def apply(
     secret_nonce: js.typedarray.Uint8Array,
     ciphertext: js.typedarray.Uint8Array,
@@ -446,36 +175,10 @@ object cryptoAeadChacha20poly1305IetfDecryptDetached extends js.Object {
     secret_nonce: js.typedarray.Uint8Array,
     ciphertext: js.typedarray.Uint8Array,
     mac: js.typedarray.Uint8Array,
-    additional_data: Null,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array
-  ): js.typedarray.Uint8Array = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
     additional_data: js.typedarray.Uint8Array,
     public_nonce: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
-  def apply(
-    secret_nonce: js.typedarray.Uint8Array,
-    ciphertext: js.typedarray.Uint8Array,
-    mac: js.typedarray.Uint8Array,
-    additional_data: js.typedarray.Uint8Array,
-    public_nonce: js.typedarray.Uint8Array,
-    key: js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): js.typedarray.Uint8Array = js.native
 }
 

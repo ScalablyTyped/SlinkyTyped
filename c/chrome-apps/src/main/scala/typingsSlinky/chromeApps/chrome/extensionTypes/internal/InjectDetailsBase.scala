@@ -60,53 +60,26 @@ object InjectDetailsBase {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCssOrigin(value: CSSOrigin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssOrigin")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRunAt(value: RunAt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runAt")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCssOrigin(value: CSSOrigin): Self = this.set("cssOrigin", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAllFrames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRunAt(value: RunAt): Self = this.set("runAt", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAllFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allFrames")(js.undefined)
-        ret
-    }
+    def setAllFrames(value: Boolean): Self = this.set("allFrames", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFrameId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAllFrames: Self = this.set("allFrames", js.undefined)
     @scala.inline
-    def withoutFrameId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(js.undefined)
-        ret
-    }
+    def setFrameId(value: integer): Self = this.set("frameId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMatchAboutBlank(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchAboutBlank")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFrameId: Self = this.set("frameId", js.undefined)
     @scala.inline
-    def withoutMatchAboutBlank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchAboutBlank")(js.undefined)
-        ret
-    }
+    def setMatchAboutBlank(value: Boolean): Self = this.set("matchAboutBlank", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMatchAboutBlank: Self = this.set("matchAboutBlank", js.undefined)
   }
   
 }

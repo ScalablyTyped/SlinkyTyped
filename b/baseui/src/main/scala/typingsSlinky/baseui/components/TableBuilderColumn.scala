@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -18,11 +17,11 @@ object TableBuilderColumn {
   @scala.inline
   class Builder[RowT] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.baseui.tableSemanticMod.TableBuilderColumn[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.tableSemanticMod.TableBuilderColumn[RowT]] {
     @scala.inline
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def header(value: TagMod[Any]): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -35,10 +34,9 @@ object TableBuilderColumn {
   
   def withProps[RowT](p: TableBuilderColumnProps[RowT]): Builder[RowT] = new Builder[RowT](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[RowT](): Builder[RowT] = {
-    val __props = js.Dynamic.literal()
+  def apply[RowT](children: (js.Any | RowT, js.UndefOr[Double]) => ReactElement): Builder[RowT] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children))
     new Builder[RowT](js.Array(this.component, __props.asInstanceOf[TableBuilderColumnProps[RowT]]))
   }
-  implicit def make[RowT](companion: TableBuilderColumn.type): Builder[RowT] = new Builder[RowT](js.Array(this.component, js.Dictionary.empty))()
 }
 

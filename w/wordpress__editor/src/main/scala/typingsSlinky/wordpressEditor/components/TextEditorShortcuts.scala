@@ -1,7 +1,8 @@
 package typingsSlinky.wordpressEditor.components
 
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.wordpressEditor.textEditorShortcutsMod.TextEditorGlobalKeyboardShortcuts.Props
-import typingsSlinky.wordpressEditor.textEditorShortcutsMod.default.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ object TextEditorShortcuts {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props_122304882[^] = new SharedBuilder_Props_122304882[^](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: TextEditorShortcuts.type): SharedBuilder_Props_122304882[^] = new SharedBuilder_Props_122304882[^](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TextEditorShortcuts.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

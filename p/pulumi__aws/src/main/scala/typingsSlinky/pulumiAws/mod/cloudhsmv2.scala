@@ -45,8 +45,8 @@ object cloudhsmv2 extends js.Object {
     def this(name: String, args: HsmArgs, opts: CustomResourceOptions) = this()
   }
   
-  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] with GetClusterResult = js.native
-  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] with GetClusterResult = js.native
+  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
+  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
   /* static members */
   @js.native
   object Cluster extends js.Object {
@@ -57,8 +57,10 @@ object cloudhsmv2 extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.clusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.clusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.clusterMod.Cluster = js.native
     /**
@@ -78,8 +80,10 @@ object cloudhsmv2 extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.hsmMod.Hsm = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.hsmMod.Hsm = js.native
     def get(name: String, id: Input[ID], state: HsmState): typingsSlinky.pulumiAws.hsmMod.Hsm = js.native
     def get(name: String, id: Input[ID], state: HsmState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.hsmMod.Hsm = js.native
     /**

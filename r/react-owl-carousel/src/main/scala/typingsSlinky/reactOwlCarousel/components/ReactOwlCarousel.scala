@@ -284,6 +284,8 @@ object ReactOwlCarousel {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -440,6 +442,8 @@ object ReactOwlCarousel {
     @scala.inline
     def nav(value: Boolean): this.type = set("nav", value.asInstanceOf[js.Any])
     @scala.inline
+    def navClassVarargs(value: String*): this.type = set("navClass", js.Array(value :_*))
+    @scala.inline
     def navClass(value: js.Array[String]): this.type = set("navClass", value.asInstanceOf[js.Any])
     @scala.inline
     def navContainer(value: String | Boolean): this.type = set("navContainer", value.asInstanceOf[js.Any])
@@ -449,6 +453,8 @@ object ReactOwlCarousel {
     def navElement(value: String): this.type = set("navElement", value.asInstanceOf[js.Any])
     @scala.inline
     def navSpeed(value: Double | Boolean): this.type = set("navSpeed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navTextVarargs(value: String*): this.type = set("navText", js.Array(value :_*))
     @scala.inline
     def navText(value: js.Array[String]): this.type = set("navText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -476,8 +482,6 @@ object ReactOwlCarousel {
     @scala.inline
     def onCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: HandlerCallback with FormEventHandler[HTMLDivElement]): this.type = set("onChange", value.asInstanceOf[js.Any])
-    @scala.inline
     def onChanged(value: /* repeated */ js.Any => Unit): this.type = set("onChanged", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
@@ -495,8 +499,6 @@ object ReactOwlCarousel {
     def onCut(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
     @scala.inline
     def onDoubleClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
-    @scala.inline
-    def onDrag(value: HandlerCallback with DragEventHandler[HTMLDivElement]): this.type = set("onDrag", value.asInstanceOf[js.Any])
     @scala.inline
     def onDragEnd(value: DragEvent[HTMLDivElement] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -774,6 +776,8 @@ object ReactOwlCarousel {
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def video(value: Boolean): this.type = set("video", value.asInstanceOf[js.Any])
@@ -792,6 +796,13 @@ object ReactOwlCarousel {
   }
   
   def withProps(p: OwlCarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ReactOwlCarousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(
+    onChange: js.UndefOr[HandlerCallback] with js.UndefOr[FormEventHandler[HTMLDivElement]],
+    onDrag: js.UndefOr[HandlerCallback] with js.UndefOr[DragEventHandler[HTMLDivElement]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onChange = onChange.asInstanceOf[js.Any], onDrag = onDrag.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OwlCarouselProps]))
+  }
 }
 

@@ -33,6 +33,13 @@ object mapBrowserEventMod extends js.Object {
       `type`: String,
       map: typingsSlinky.ol.pluggableMapMod.default,
       browserEvent: Event,
+      opt_dragging: js.UndefOr[scala.Nothing],
+      opt_frameState: FrameState
+    ) = this()
+    def this(
+      `type`: String,
+      map: typingsSlinky.ol.pluggableMapMod.default,
+      browserEvent: Event,
       opt_dragging: Boolean,
       opt_frameState: FrameState
     ) = this()

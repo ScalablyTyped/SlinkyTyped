@@ -2,10 +2,10 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.BackgroundColorProperty
-import typingsSlinky.csstype.mod.ColorProperty
-import typingsSlinky.csstype.mod.TextAlignProperty
-import typingsSlinky.csstype.mod.VerticalAlignProperty
+import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.Property.TextAlign
+import typingsSlinky.csstype.mod.Property.VerticalAlign
 import typingsSlinky.mjmlReact.mod.BorderProps
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.HrefProps
@@ -28,7 +28,7 @@ object MjmlButton {
     @scala.inline
     def align(value: String): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def border(value: String): this.type = set("border", value.asInstanceOf[js.Any])
     @scala.inline
@@ -42,9 +42,9 @@ object MjmlButton {
     @scala.inline
     def borderTop(value: String): this.type = set("borderTop", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def containerBackgroundColor(value: BackgroundColor): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
     @scala.inline
@@ -78,13 +78,13 @@ object MjmlButton {
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
-    def textAlign(value: TextAlignProperty): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    def textAlign(value: TextAlign): this.type = set("textAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
     @scala.inline
     def textTransform(value: String): this.type = set("textTransform", value.asInstanceOf[js.Any])
     @scala.inline
-    def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    def verticalAlign(value: VerticalAlign[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }

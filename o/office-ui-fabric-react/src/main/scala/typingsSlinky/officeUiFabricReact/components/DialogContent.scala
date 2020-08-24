@@ -15,7 +15,6 @@ import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.IDialogContentSty
 import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.IDialogContentStyles
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -32,7 +31,7 @@ object DialogContent {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.dialogContentBaseMod.DialogContentBase] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -71,6 +70,8 @@ object DialogContent {
     def titleId(value: String): this.type = set("titleId", value.asInstanceOf[js.Any])
     @scala.inline
     def titleProps(value: HTMLAttributes[HTMLDivElement]): this.type = set("titleProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def topButtonsPropsVarargs(value: IButtonProps*): this.type = set("topButtonsProps", js.Array(value :_*))
     @scala.inline
     def topButtonsProps(value: js.Array[IButtonProps]): this.type = set("topButtonsProps", value.asInstanceOf[js.Any])
     @scala.inline

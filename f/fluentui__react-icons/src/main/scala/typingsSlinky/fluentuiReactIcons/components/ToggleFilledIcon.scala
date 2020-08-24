@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleFilledIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ToggleFilledIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ToggleFilledIcon")
   @js.native
   object component extends js.Object
   

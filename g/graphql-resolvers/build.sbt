@@ -1,16 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "graphql-resolvers"
-version := "0.2-dt-20190827Z-de9e4d"
-scalaVersion := "2.13.2"
+version := "0.3-dt-20200521Z-c953d8"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "apollo-link" % "1.2.13-f31c99",
-  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-19956e",
-  "org.scalablytyped.slinky" %%% "graphql-tools" % "4.0.8-8ca15c",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "zen-observable-ts" % "0.8.20-ba96e6")
+  "org.scalablytyped.slinky" %%% "graphql" % "15.3.0-079e56",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -15,7 +15,7 @@ object Base {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Base[js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Base[T]]
   
   def apply[T](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[T](companion: Base.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()

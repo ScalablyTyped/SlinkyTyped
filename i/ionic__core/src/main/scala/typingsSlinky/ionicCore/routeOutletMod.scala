@@ -1,19 +1,14 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.interfaceMod.NavOutlet
-import typingsSlinky.ionicCore.interfaceMod.RouteID
-import typingsSlinky.ionicCore.interfaceMod.RouteWrite
-import typingsSlinky.ionicCore.interfaceMod.RouterDirection
-import typingsSlinky.ionicCore.ionicCoreStrings.ios
-import typingsSlinky.ionicCore.ionicCoreStrings.md
-import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
+import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.navInterfaceMod.RouterOutletOptions
 import typingsSlinky.ionicCore.navInterfaceMod.SwipeGestureHandler
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +22,7 @@ object routeOutletMod extends js.Object {
        with NavOutlet {
     var activeComponent: js.Any = js.native
     var activeEl: js.Any = js.native
-    var ani: js.UndefOr[js.Any] = js.native
+    var ani: js.Any = js.native
     /**
       * If `true`, the router-outlet should animate the transition of components.
       */
@@ -41,7 +36,7 @@ object routeOutletMod extends js.Object {
     /** @internal */
     var delegate: js.UndefOr[FrameworkDelegate] = js.native
     var el: HTMLElement = js.native
-    var gesture: js.UndefOr[js.Any] = js.native
+    var gesture: js.Any = js.native
     /** @internal */
     var ionNavDidChange: EventEmitter[Unit] = js.native
     /** @internal */
@@ -52,14 +47,15 @@ object routeOutletMod extends js.Object {
     /**
       * The mode determines which platform styles to use.
       */
-    var mode: ios | md = js.native
+    var mode: Mode = js.native
     var setRoot: js.Any = js.native
     /** @internal */
     var swipeHandler: js.UndefOr[SwipeGestureHandler] = js.native
     var transition: js.Any = js.native
-    var waitPromise: js.UndefOr[js.Any] = js.native
+    var waitPromise: js.Any = js.native
     /** @internal */
     def commit(enteringEl: HTMLElement): js.Promise[Boolean] = js.native
+    def commit(enteringEl: HTMLElement, leavingEl: js.UndefOr[scala.Nothing], opts: RouterOutletOptions): js.Promise[Boolean] = js.native
     def commit(enteringEl: HTMLElement, leavingEl: HTMLElement): js.Promise[Boolean] = js.native
     def commit(enteringEl: HTMLElement, leavingEl: HTMLElement, opts: RouterOutletOptions): js.Promise[Boolean] = js.native
     @JSName("componentWillLoad")
@@ -68,12 +64,8 @@ object routeOutletMod extends js.Object {
     def connectedCallback_MRouterOutlet(): js.Promise[Unit] = js.native
     @JSName("disconnectedCallback")
     def disconnectedCallback_MRouterOutlet(): Unit = js.native
-    /* CompleteClass */
-    override def getRouteId(): js.Promise[js.UndefOr[RouteID]] = js.native
     @JSName("render")
     def render_MRouterOutlet(): js.Any = js.native
-    /* CompleteClass */
-    override def setRouteId(id: String, params: js.UndefOr[ComponentProps[Null]], direction: RouterDirection): js.Promise[RouteWrite] = js.native
     def swipeHandlerChanged(): Unit = js.native
   }
   

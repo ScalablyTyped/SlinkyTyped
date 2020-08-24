@@ -20,9 +20,13 @@ object TableHead {
     @scala.inline
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(value: MUIDataTableColumnDef*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[MUIDataTableColumnDef]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Any*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline

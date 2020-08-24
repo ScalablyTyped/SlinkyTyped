@@ -3,7 +3,6 @@ package typingsSlinky.wordpressComponents.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.anon.PartialProps
-import typingsSlinky.wordpressComponents.mod.ToolbarButton.^
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
 import typingsSlinky.wordpressComponents.toolbarButtonMod.ToolbarButton.Props
 import scala.scalajs.js
@@ -18,7 +17,7 @@ object ToolbarButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

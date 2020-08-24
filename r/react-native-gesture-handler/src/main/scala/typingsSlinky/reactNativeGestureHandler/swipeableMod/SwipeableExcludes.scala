@@ -6,29 +6,29 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Exclude<keyof react-native-gesture-handler.react-native-gesture-handler.PanGestureHandlerProperties, 'onGestureEvent' | 'onHandlerStateChange'> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityX
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.waitFor
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetX
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaY
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.hitSlop
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minPointers
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.avgTouches
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocity
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityY
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.id
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetY
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.shouldCancelWhenOutside
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaX
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetX
   - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetY
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetY
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaY
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetX
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityX
   - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaX
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDist
-  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxPointers
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocity
   - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.enabled
   - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.simultaneousHandlers
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDist
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minPointers
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.waitFor
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaY
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.hitSlop
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.avgTouches
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaX
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.shouldCancelWhenOutside
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetY
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetX
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetX
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxPointers
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityY
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetY
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.id
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetX
+  - typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaY
 */
 trait SwipeableExcludes extends js.Object
 

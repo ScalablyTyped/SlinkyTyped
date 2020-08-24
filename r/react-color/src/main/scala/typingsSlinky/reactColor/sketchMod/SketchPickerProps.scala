@@ -1,46 +1,63 @@
 package typingsSlinky.reactColor.sketchMod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactColor.mod.Color
+import typingsSlinky.reactColor.anon.PartialClassesSketchPicke
 import typingsSlinky.reactColor.mod.ColorPickerProps
 import typingsSlinky.reactColor.mod.ColorResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SketchPickerProps extends ColorPickerProps[SketchPicker] {
-  var disableAlpha: js.UndefOr[Boolean] = js.undefined
-  var onSwatchHover: js.UndefOr[js.Function2[/* color */ ColorResult, /* event */ MouseEvent, Unit]] = js.undefined
-  var presetColors: js.UndefOr[js.Array[String]] = js.undefined
-  var width: js.UndefOr[String] = js.undefined
+  var disableAlpha: js.UndefOr[Boolean] = js.native
+  var onSwatchHover: js.UndefOr[js.Function2[/* color */ ColorResult, /* event */ MouseEvent, Unit]] = js.native
+  var presetColors: js.UndefOr[js.Array[PresetColor]] = js.native
+  @JSName("styles")
+  var styles_SketchPickerProps: js.UndefOr[PartialClassesSketchPicke] = js.native
+  var width: js.UndefOr[String] = js.native
 }
 
 object SketchPickerProps {
   @scala.inline
-  def apply(
-    color: Color = null,
-    disableAlpha: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
-    onChange: /* color */ ColorResult => Unit = null,
-    onChangeComplete: /* color */ ColorResult => Unit = null,
-    onSwatchHover: (/* color */ ColorResult, /* event */ MouseEvent) => Unit = null,
-    presetColors: js.Array[String] = null,
-    ref: js.UndefOr[Null | LegacyRef[SketchPicker]] = js.undefined,
-    width: String = null
-  ): SketchPickerProps = {
+  def apply(): SketchPickerProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAlpha)) __obj.updateDynamic("disableAlpha")(disableAlpha.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChangeComplete != null) __obj.updateDynamic("onChangeComplete")(js.Any.fromFunction1(onChangeComplete))
-    if (onSwatchHover != null) __obj.updateDynamic("onSwatchHover")(js.Any.fromFunction2(onSwatchHover))
-    if (presetColors != null) __obj.updateDynamic("presetColors")(presetColors.asInstanceOf[js.Any])
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchPickerProps]
   }
+  @scala.inline
+  implicit class SketchPickerPropsOps[Self <: SketchPickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisableAlpha(value: Boolean): Self = this.set("disableAlpha", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableAlpha: Self = this.set("disableAlpha", js.undefined)
+    @scala.inline
+    def setOnSwatchHover(value: (/* color */ ColorResult, /* event */ MouseEvent) => Unit): Self = this.set("onSwatchHover", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSwatchHover: Self = this.set("onSwatchHover", js.undefined)
+    @scala.inline
+    def setPresetColorsVarargs(value: PresetColor*): Self = this.set("presetColors", js.Array(value :_*))
+    @scala.inline
+    def setPresetColors(value: js.Array[PresetColor]): Self = this.set("presetColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePresetColors: Self = this.set("presetColors", js.undefined)
+    @scala.inline
+    def setStyles(value: PartialClassesSketchPicke): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyles: Self = this.set("styles", js.undefined)
+    @scala.inline
+    def setWidth(value: String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

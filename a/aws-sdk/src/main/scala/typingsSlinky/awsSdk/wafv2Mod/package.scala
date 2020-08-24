@@ -279,8 +279,22 @@ package object wafv2Mod {
   type EntityId = java.lang.String
   type EntityName = java.lang.String
   type ExcludedRules = js.Array[typingsSlinky.awsSdk.wafv2Mod.ExcludedRule]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.MATCH
+    - typingsSlinky.awsSdk.awsSdkStrings.NO_MATCH
+    - java.lang.String
+  */
+  type FallbackBehavior = typingsSlinky.awsSdk.wafv2Mod._FallbackBehavior | java.lang.String
   type FieldToMatchData = java.lang.String
   type FirewallManagerRuleGroups = js.Array[typingsSlinky.awsSdk.wafv2Mod.FirewallManagerRuleGroup]
+  type ForwardedIPHeaderName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FIRST
+    - typingsSlinky.awsSdk.awsSdkStrings.LAST
+    - typingsSlinky.awsSdk.awsSdkStrings.ANY
+    - java.lang.String
+  */
+  type ForwardedIPPosition = typingsSlinky.awsSdk.wafv2Mod._ForwardedIPPosition | java.lang.String
   type HTTPHeaders = js.Array[typingsSlinky.awsSdk.wafv2Mod.HTTPHeader]
   type HTTPMethod = java.lang.String
   type HTTPVersion = java.lang.String
@@ -315,7 +329,12 @@ package object wafv2Mod {
     - java.lang.String
   */
   type PositionalConstraint = typingsSlinky.awsSdk.wafv2Mod._PositionalConstraint | java.lang.String
-  type RateBasedStatementAggregateKeyType = typingsSlinky.awsSdk.awsSdkStrings.IP | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.IP
+    - typingsSlinky.awsSdk.awsSdkStrings.FORWARDED_IP
+    - java.lang.String
+  */
+  type RateBasedStatementAggregateKeyType = typingsSlinky.awsSdk.wafv2Mod._RateBasedStatementAggregateKeyType | java.lang.String
   type RateLimit = scala.Double
   type RedactedFields = js.Array[typingsSlinky.awsSdk.wafv2Mod.FieldToMatch]
   type RegexPatternSetSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.RegexPatternSetSummary]

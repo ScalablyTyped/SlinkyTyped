@@ -2,8 +2,6 @@ package typingsSlinky.reactLeaflet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.leaflet.mod.TileLayer_.WMS
-import typingsSlinky.reactLeaflet.mod.WMSTileLayerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +13,11 @@ object WMSTileLayer {
   object component extends js.Object
   
   @scala.inline
-  class Builder[P <: WMSTileLayerProps, E <: WMS] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactLeaflet.mod.AttributionControlProps */ P, /* <: typingsSlinky.leaflet.mod.Control_.Attribution */ E] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.WMSTileLayer[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeaflet.mod.WMSTileLayer[P, E]]
   
-  def apply[P <: WMSTileLayerProps, E <: WMS](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[P <: WMSTileLayerProps, E <: WMS](companion: WMSTileLayer.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: typingsSlinky.reactLeaflet.mod.WMSTileLayerProps */ P, /* <: typingsSlinky.leaflet.mod.TileLayer_.WMS */ E](p: P): Builder[P, E] = new Builder[P, E](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: typingsSlinky.reactLeaflet.mod.WMSTileLayerProps */ P, /* <: typingsSlinky.leaflet.mod.TileLayer_.WMS */ E](companion: WMSTileLayer.type): Builder[P, E] = new Builder[P, E](js.Array(this.component, js.Dictionary.empty))()
 }
 

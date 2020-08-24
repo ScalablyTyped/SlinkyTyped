@@ -47,6 +47,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends ViewOptions[Graph] {
+  var afterRender: js.UndefOr[AfterRenderCallback] = js.native
   var allowLink: js.UndefOr[
     (js.Function2[/* linkView */ LinkView, /* paper */ typingsSlinky.jointjs.mod.dia.Paper, Boolean]) | Null
   ] = js.native
@@ -54,6 +55,7 @@ trait Options extends ViewOptions[Graph] {
   // rendering
   var async: js.UndefOr[Boolean] = js.native
   var background: js.UndefOr[BackgroundOptions] = js.native
+  var beforeRender: js.UndefOr[BeforeRenderCallback] = js.native
   // default views, models & attributes
   var cellViewNamespace: js.UndefOr[js.Any] = js.native
   var clickThreshold: js.UndefOr[Double] = js.native
@@ -106,9 +108,10 @@ trait Options extends ViewOptions[Graph] {
     ]
   ] = js.native
   var onViewUpdate: js.UndefOr[
-    js.Function4[
+    js.Function5[
       /* view */ View[_], 
       /* flag */ Double, 
+      /* priority */ Double, 
       /* opt */ StringDictionary[js.Any], 
       /* paper */ typingsSlinky.jointjs.mod.dia.Paper, 
       Unit
@@ -155,687 +158,270 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllowLink(value: (/* linkView */ LinkView, /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLink")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAllowLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLink")(js.undefined)
-        ret
-    }
+    def setAfterRender(
+      value: (/* stats */ UpdateStats, /* opt */ StringDictionary[js.Any], /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Unit
+    ): Self = this.set("afterRender", js.Any.fromFunction3(value))
     @scala.inline
-    def withAllowLinkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLink")(null)
-        ret
-    }
+    def deleteAfterRender: Self = this.set("afterRender", js.undefined)
     @scala.inline
-    def withAnchorNamespace(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAllowLink(value: (/* linkView */ LinkView, /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Boolean): Self = this.set("allowLink", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutAnchorNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorNamespace")(js.undefined)
-        ret
-    }
+    def deleteAllowLink: Self = this.set("allowLink", js.undefined)
     @scala.inline
-    def withAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAllowLinkNull: Self = this.set("allowLink", null)
     @scala.inline
-    def withoutAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
-        ret
-    }
+    def setAnchorNamespace(value: js.Any): Self = this.set("anchorNamespace", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBackground(value: BackgroundOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAnchorNamespace: Self = this.set("anchorNamespace", js.undefined)
     @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
+    def setAsync(value: Boolean): Self = this.set("async", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCellViewNamespace(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellViewNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAsync: Self = this.set("async", js.undefined)
     @scala.inline
-    def withoutCellViewNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellViewNamespace")(js.undefined)
-        ret
-    }
+    def setBackground(value: BackgroundOptions): Self = this.set("background", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClickThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBackground: Self = this.set("background", js.undefined)
     @scala.inline
-    def withoutClickThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThreshold")(js.undefined)
-        ret
-    }
+    def setBeforeRender(
+      value: (/* opt */ StringDictionary[js.Any], /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Unit
+    ): Self = this.set("beforeRender", js.Any.fromFunction2(value))
     @scala.inline
-    def withConnectionPointNamespace(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPointNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBeforeRender: Self = this.set("beforeRender", js.undefined)
     @scala.inline
-    def withoutConnectionPointNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPointNamespace")(js.undefined)
-        ret
-    }
+    def setCellViewNamespace(value: js.Any): Self = this.set("cellViewNamespace", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectionStrategy(
+    def deleteCellViewNamespace: Self = this.set("cellViewNamespace", js.undefined)
+    @scala.inline
+    def setClickThreshold(value: Double): Self = this.set("clickThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClickThreshold: Self = this.set("clickThreshold", js.undefined)
+    @scala.inline
+    def setConnectionPointNamespace(value: js.Any): Self = this.set("connectionPointNamespace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConnectionPointNamespace: Self = this.set("connectionPointNamespace", js.undefined)
+    @scala.inline
+    def setConnectionStrategy(
       value: (/* endDefinition */ Cell, /* endView */ CellView, /* endMagnet */ SVGElement, /* coords */ Point) => Element
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionStrategy")(js.Any.fromFunction4(value))
-        ret
-    }
+    ): Self = this.set("connectionStrategy", js.Any.fromFunction4(value))
     @scala.inline
-    def withoutConnectionStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionStrategy")(js.undefined)
-        ret
-    }
+    def deleteConnectionStrategy: Self = this.set("connectionStrategy", js.undefined)
     @scala.inline
-    def withDefaultAnchorFunction4(
+    def setDefaultAnchorFunction4(
       value: (/* endView */ CellView, /* endMagnet */ SVGElement, /* anchorReference */ typingsSlinky.jointjs.mod.g.Point | SVGElement, /* import warning: importer.ImportType#apply Failed type conversion: jointjs.jointjs.anchors.AnchorArgumentsMap[K] */ /* opt */ js.Any) => typingsSlinky.jointjs.mod.g.Point
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAnchor")(js.Any.fromFunction4(value))
-        ret
-    }
+    ): Self = this.set("defaultAnchor", js.Any.fromFunction4(value))
     @scala.inline
-    def withDefaultAnchor(value: AnchorJSON | Anchor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultAnchor(value: AnchorJSON | Anchor): Self = this.set("defaultAnchor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAnchor")(js.undefined)
-        ret
-    }
+    def deleteDefaultAnchor: Self = this.set("defaultAnchor", js.undefined)
     @scala.inline
-    def withDefaultConnectionPointFunction1(value: /* repeated */ js.Any => ConnectionPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnectionPoint")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDefaultConnectionPointFunction1(value: /* repeated */ js.Any => ConnectionPoint): Self = this.set("defaultConnectionPoint", js.Any.fromFunction1(value))
     @scala.inline
-    def withDefaultConnectionPointFunction4(
+    def setDefaultConnectionPointFunction4(
       value: (/* endPathSegmentLine */ Line, /* endView */ CellView, /* endMagnet */ SVGElement, /* import warning: importer.ImportType#apply Failed type conversion: jointjs.jointjs.connectionPoints.ConnectionPointArgumentsMap[K] */ /* opt */ js.Any) => typingsSlinky.jointjs.mod.g.Point
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnectionPoint")(js.Any.fromFunction4(value))
-        ret
-    }
+    ): Self = this.set("defaultConnectionPoint", js.Any.fromFunction4(value))
     @scala.inline
-    def withDefaultConnectionPoint(
+    def setDefaultConnectionPoint(
       value: ConnectionPointJSON | ConnectionPoint | (js.Function1[/* repeated */ js.Any, ConnectionPoint])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnectionPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("defaultConnectionPoint", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultConnectionPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnectionPoint")(js.undefined)
-        ret
-    }
+    def deleteDefaultConnectionPoint: Self = this.set("defaultConnectionPoint", js.undefined)
     @scala.inline
-    def withDefaultConnectorFunction4(
+    def setDefaultConnectorFunction4(
       value: (/* sourcePoint */ Point, /* targetPoint */ Point, /* routePoints */ js.Array[Point], /* args */ js.UndefOr[GenericConnectorArguments[ConnectorType]]) => String | Path
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnector")(js.Any.fromFunction4(value))
-        ret
-    }
+    ): Self = this.set("defaultConnector", js.Any.fromFunction4(value))
     @scala.inline
-    def withDefaultConnector(value: Connector | ConnectorJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultConnector(value: Connector | ConnectorJSON): Self = this.set("defaultConnector", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultConnector")(js.undefined)
-        ret
-    }
+    def deleteDefaultConnector: Self = this.set("defaultConnector", js.undefined)
     @scala.inline
-    def withDefaultLinkFunction2(value: (/* cellView */ CellView, /* magnet */ SVGElement) => Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLink")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setDefaultLinkFunction2(value: (/* cellView */ CellView, /* magnet */ SVGElement) => Link): Self = this.set("defaultLink", js.Any.fromFunction2(value))
     @scala.inline
-    def withDefaultLink(value: (js.Function2[/* cellView */ CellView, /* magnet */ SVGElement, Link]) | Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLink")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultLink(value: (js.Function2[/* cellView */ CellView, /* magnet */ SVGElement, Link]) | Link): Self = this.set("defaultLink", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLink")(js.undefined)
-        ret
-    }
+    def deleteDefaultLink: Self = this.set("defaultLink", js.undefined)
     @scala.inline
-    def withDefaultLinkAnchorFunction4(
+    def setDefaultLinkAnchorFunction4(
       value: (/* endView */ CellView, /* endMagnet */ SVGElement, /* anchorReference */ typingsSlinky.jointjs.mod.g.Point | SVGElement, /* import warning: importer.ImportType#apply Failed type conversion: jointjs.jointjs.anchors.AnchorArgumentsMap[K] */ /* opt */ js.Any) => typingsSlinky.jointjs.mod.g.Point
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLinkAnchor")(js.Any.fromFunction4(value))
-        ret
-    }
+    ): Self = this.set("defaultLinkAnchor", js.Any.fromFunction4(value))
     @scala.inline
-    def withDefaultLinkAnchor(value: AnchorJSON | Anchor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLinkAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultLinkAnchor(value: AnchorJSON | Anchor): Self = this.set("defaultLinkAnchor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultLinkAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLinkAnchor")(js.undefined)
-        ret
-    }
+    def deleteDefaultLinkAnchor: Self = this.set("defaultLinkAnchor", js.undefined)
     @scala.inline
-    def withDefaultRouterFunction3(
+    def setDefaultRouterFunction3(
       value: (/* vertices */ js.Array[Point], /* args */ js.UndefOr[GenericRouterArguments[RouterType]], /* linkView */ js.UndefOr[LinkView]) => js.Array[Point]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouter")(js.Any.fromFunction3(value))
-        ret
-    }
+    ): Self = this.set("defaultRouter", js.Any.fromFunction3(value))
     @scala.inline
-    def withDefaultRouter(value: Router | RouterJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultRouter(value: Router | RouterJSON): Self = this.set("defaultRouter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultRouter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouter")(js.undefined)
-        ret
-    }
+    def deleteDefaultRouter: Self = this.set("defaultRouter", js.undefined)
     @scala.inline
-    def withDrawGrid(value: Boolean | GridOptions | js.Array[GridOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDrawGridVarargs(value: GridOptions*): Self = this.set("drawGrid", js.Array(value :_*))
     @scala.inline
-    def withoutDrawGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawGrid")(js.undefined)
-        ret
-    }
+    def setDrawGrid(value: Boolean | GridOptions | js.Array[GridOptions]): Self = this.set("drawGrid", value.asInstanceOf[js.Any])
     @scala.inline
-    def withElementViewFunction1(value: /* element */ Element => Instantiable0[ElementView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteDrawGrid: Self = this.set("drawGrid", js.undefined)
     @scala.inline
-    def withElementView(
+    def setElementViewFunction1(value: /* element */ Element => Instantiable0[ElementView]): Self = this.set("elementView", js.Any.fromFunction1(value))
+    @scala.inline
+    def setElementView(
       value: Instantiable0[ElementView] | (js.Function1[/* element */ Element, Instantiable0[ElementView]])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("elementView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutElementView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementView")(js.undefined)
-        ret
-    }
+    def deleteElementView: Self = this.set("elementView", js.undefined)
     @scala.inline
-    def withEmbeddingMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEmbeddingMode(value: Boolean): Self = this.set("embeddingMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEmbeddingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddingMode")(js.undefined)
-        ret
-    }
+    def deleteEmbeddingMode: Self = this.set("embeddingMode", js.undefined)
     @scala.inline
-    def withFindParentBy(value: bbox | center | origin | corner | topRight | bottomLeft): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findParentBy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFindParentBy(value: bbox | center | origin | corner | topRight | bottomLeft): Self = this.set("findParentBy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFindParentBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findParentBy")(js.undefined)
-        ret
-    }
+    def deleteFindParentBy: Self = this.set("findParentBy", js.undefined)
     @scala.inline
-    def withFrozen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFrozen(value: Boolean): Self = this.set("frozen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFrozen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozen")(js.undefined)
-        ret
-    }
+    def deleteFrozen: Self = this.set("frozen", js.undefined)
     @scala.inline
-    def withGridSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGridSize(value: Double): Self = this.set("gridSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutGridSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridSize")(js.undefined)
-        ret
-    }
+    def deleteGridSize: Self = this.set("gridSize", js.undefined)
     @scala.inline
-    def withGuard(value: (/* evt */ Event, /* view */ CellView) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guard")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGuard(value: (/* evt */ Event, /* view */ CellView) => Boolean): Self = this.set("guard", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutGuard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guard")(js.undefined)
-        ret
-    }
+    def deleteGuard: Self = this.set("guard", js.undefined)
     @scala.inline
-    def withHeight(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHeight(value: Dimension): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
+    def deleteHeight: Self = this.set("height", js.undefined)
     @scala.inline
-    def withHeightNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(null)
-        ret
-    }
+    def setHeightNull: Self = this.set("height", null)
     @scala.inline
-    def withHighlighterNamespace(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlighterNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHighlighterNamespace(value: js.Any): Self = this.set("highlighterNamespace", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHighlighterNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlighterNamespace")(js.undefined)
-        ret
-    }
+    def deleteHighlighterNamespace: Self = this.set("highlighterNamespace", js.undefined)
     @scala.inline
-    def withHighlighting(value: StringDictionary[HighlighterJSON]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlighting")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHighlighting(value: StringDictionary[HighlighterJSON]): Self = this.set("highlighting", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHighlighting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlighting")(js.undefined)
-        ret
-    }
+    def deleteHighlighting: Self = this.set("highlighting", js.undefined)
     @scala.inline
-    def withInteractiveFunction2(value: (/* cellView */ CellView, /* event */ String) => Boolean | InteractivityOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setInteractiveFunction2(value: (/* cellView */ CellView, /* event */ String) => Boolean | InteractivityOptions): Self = this.set("interactive", js.Any.fromFunction2(value))
     @scala.inline
-    def withInteractive(
+    def setInteractive(
       value: (js.Function2[/* cellView */ CellView, /* event */ String, Boolean | InteractivityOptions]) | Boolean | InteractivityOptions
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("interactive", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInteractive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.undefined)
-        ret
-    }
+    def deleteInteractive: Self = this.set("interactive", js.undefined)
     @scala.inline
-    def withLinkAnchorNamespace(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkAnchorNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLinkAnchorNamespace(value: js.Any): Self = this.set("linkAnchorNamespace", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLinkAnchorNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkAnchorNamespace")(js.undefined)
-        ret
-    }
+    def deleteLinkAnchorNamespace: Self = this.set("linkAnchorNamespace", js.undefined)
     @scala.inline
-    def withLinkConnectionPoint(
+    def setLinkConnectionPoint(
       value: (/* linkView */ LinkView, /* view */ ElementView, /* magnet */ SVGElement, /* reference */ Point, /* end */ LinkEnd) => Point
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkConnectionPoint")(js.Any.fromFunction5(value))
-        ret
-    }
+    ): Self = this.set("linkConnectionPoint", js.Any.fromFunction5(value))
     @scala.inline
-    def withoutLinkConnectionPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkConnectionPoint")(js.undefined)
-        ret
-    }
+    def deleteLinkConnectionPoint: Self = this.set("linkConnectionPoint", js.undefined)
     @scala.inline
-    def withLinkPinning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkPinning")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLinkPinning(value: Boolean): Self = this.set("linkPinning", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLinkPinning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkPinning")(js.undefined)
-        ret
-    }
+    def deleteLinkPinning: Self = this.set("linkPinning", js.undefined)
     @scala.inline
-    def withLinkViewFunction1(value: /* link */ Link => Instantiable0[LinkView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLinkViewFunction1(value: /* link */ Link => Instantiable0[LinkView]): Self = this.set("linkView", js.Any.fromFunction1(value))
     @scala.inline
-    def withLinkView(value: Instantiable0[LinkView] | (js.Function1[/* link */ Link, Instantiable0[LinkView]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLinkView(value: Instantiable0[LinkView] | (js.Function1[/* link */ Link, Instantiable0[LinkView]])): Self = this.set("linkView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLinkView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkView")(js.undefined)
-        ret
-    }
+    def deleteLinkView: Self = this.set("linkView", js.undefined)
     @scala.inline
-    def withMagnetThreshold(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("magnetThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMagnetThreshold(value: Double | String): Self = this.set("magnetThreshold", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMagnetThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("magnetThreshold")(js.undefined)
-        ret
-    }
+    def deleteMagnetThreshold: Self = this.set("magnetThreshold", js.undefined)
     @scala.inline
-    def withMarkAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMarkAvailable(value: Boolean): Self = this.set("markAvailable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMarkAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markAvailable")(js.undefined)
-        ret
-    }
+    def deleteMarkAvailable: Self = this.set("markAvailable", js.undefined)
     @scala.inline
-    def withMoveThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMoveThreshold(value: Double): Self = this.set("moveThreshold", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMoveThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveThreshold")(js.undefined)
-        ret
-    }
+    def deleteMoveThreshold: Self = this.set("moveThreshold", js.undefined)
     @scala.inline
-    def withMultiLinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMultiLinks(value: Boolean): Self = this.set("multiLinks", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMultiLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiLinks")(js.undefined)
-        ret
-    }
+    def deleteMultiLinks: Self = this.set("multiLinks", js.undefined)
     @scala.inline
-    def withOnViewPostponed(
+    def setOnViewPostponed(
       value: (/* view */ View[_], /* flag */ Double, /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewPostponed")(js.Any.fromFunction3(value))
-        ret
-    }
+    ): Self = this.set("onViewPostponed", js.Any.fromFunction3(value))
     @scala.inline
-    def withoutOnViewPostponed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewPostponed")(js.undefined)
-        ret
-    }
+    def deleteOnViewPostponed: Self = this.set("onViewPostponed", js.undefined)
     @scala.inline
-    def withOnViewUpdate(
-      value: (/* view */ View[_], /* flag */ Double, /* opt */ StringDictionary[js.Any], /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewUpdate")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnViewUpdate(
+      value: (/* view */ View[_], /* flag */ Double, /* priority */ Double, /* opt */ StringDictionary[js.Any], /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Unit
+    ): Self = this.set("onViewUpdate", js.Any.fromFunction5(value))
     @scala.inline
-    def withoutOnViewUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewUpdate")(js.undefined)
-        ret
-    }
+    def deleteOnViewUpdate: Self = this.set("onViewUpdate", js.undefined)
     @scala.inline
-    def withOrigin(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOrigin(value: Point): Self = this.set("origin", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
+    def deleteOrigin: Self = this.set("origin", js.undefined)
     @scala.inline
-    def withPerpendicularLinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perpendicularLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPerpendicularLinks(value: Boolean): Self = this.set("perpendicularLinks", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPerpendicularLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perpendicularLinks")(js.undefined)
-        ret
-    }
+    def deletePerpendicularLinks: Self = this.set("perpendicularLinks", js.undefined)
     @scala.inline
-    def withPreventContextMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventContextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPreventContextMenu(value: Boolean): Self = this.set("preventContextMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPreventContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventContextMenu")(js.undefined)
-        ret
-    }
+    def deletePreventContextMenu: Self = this.set("preventContextMenu", js.undefined)
     @scala.inline
-    def withPreventDefaultBlankAction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefaultBlankAction")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPreventDefaultBlankAction(value: Boolean): Self = this.set("preventDefaultBlankAction", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPreventDefaultBlankAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefaultBlankAction")(js.undefined)
-        ret
-    }
+    def deletePreventDefaultBlankAction: Self = this.set("preventDefaultBlankAction", js.undefined)
     @scala.inline
-    def withRestrictTranslateFunction1(value: /* elementView */ ElementView => BBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictTranslate")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRestrictTranslateFunction1(value: /* elementView */ ElementView => BBox): Self = this.set("restrictTranslate", js.Any.fromFunction1(value))
     @scala.inline
-    def withRestrictTranslate(value: (js.Function1[/* elementView */ ElementView, BBox]) | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictTranslate")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRestrictTranslate(value: (js.Function1[/* elementView */ ElementView, BBox]) | Boolean): Self = this.set("restrictTranslate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRestrictTranslate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictTranslate")(js.undefined)
-        ret
-    }
+    def deleteRestrictTranslate: Self = this.set("restrictTranslate", js.undefined)
     @scala.inline
-    def withSnapLinks(value: Boolean | Radius): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSnapLinks(value: Boolean | Radius): Self = this.set("snapLinks", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSnapLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapLinks")(js.undefined)
-        ret
-    }
+    def deleteSnapLinks: Self = this.set("snapLinks", js.undefined)
     @scala.inline
-    def withSorting(value: sorting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSorting(value: sorting): Self = this.set("sorting", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(js.undefined)
-        ret
-    }
+    def deleteSorting: Self = this.set("sorting", js.undefined)
     @scala.inline
-    def withValidateConnection(
+    def setValidateConnection(
       value: (/* cellViewS */ CellView, /* magnetS */ SVGElement, /* cellViewT */ CellView, /* magnetT */ SVGElement, /* end */ LinkEnd, /* linkView */ LinkView) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateConnection")(js.Any.fromFunction6(value))
-        ret
-    }
+    ): Self = this.set("validateConnection", js.Any.fromFunction6(value))
     @scala.inline
-    def withoutValidateConnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateConnection")(js.undefined)
-        ret
-    }
+    def deleteValidateConnection: Self = this.set("validateConnection", js.undefined)
     @scala.inline
-    def withValidateEmbedding(value: (/* childView */ ElementView, /* parentView */ ElementView) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateEmbedding")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setValidateEmbedding(value: (/* childView */ ElementView, /* parentView */ ElementView) => Boolean): Self = this.set("validateEmbedding", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutValidateEmbedding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateEmbedding")(js.undefined)
-        ret
-    }
+    def deleteValidateEmbedding: Self = this.set("validateEmbedding", js.undefined)
     @scala.inline
-    def withValidateMagnet(value: (/* cellView */ CellView, /* magnet */ SVGElement, /* evt */ Event) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateMagnet")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setValidateMagnet(value: (/* cellView */ CellView, /* magnet */ SVGElement, /* evt */ Event) => Boolean): Self = this.set("validateMagnet", js.Any.fromFunction3(value))
     @scala.inline
-    def withoutValidateMagnet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateMagnet")(js.undefined)
-        ret
-    }
+    def deleteValidateMagnet: Self = this.set("validateMagnet", js.undefined)
     @scala.inline
-    def withViewport(
-      value: (/* view */ View[js.Any], /* isDetached */ Boolean, /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setViewport(
+      value: (/* view */ View[js.Any], /* isMounted */ Boolean, /* paper */ typingsSlinky.jointjs.mod.dia.Paper) => Boolean
+    ): Self = this.set("viewport", js.Any.fromFunction3(value))
     @scala.inline
-    def withoutViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.undefined)
-        ret
-    }
+    def deleteViewport: Self = this.set("viewport", js.undefined)
     @scala.inline
-    def withViewportNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(null)
-        ret
-    }
+    def setViewportNull: Self = this.set("viewport", null)
     @scala.inline
-    def withWidth(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWidth(value: Dimension): Self = this.set("width", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
+    def deleteWidth: Self = this.set("width", js.undefined)
     @scala.inline
-    def withWidthNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(null)
-        ret
-    }
+    def setWidthNull: Self = this.set("width", null)
   }
   
 }

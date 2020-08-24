@@ -183,8 +183,6 @@ trait Runner extends EventEmitter {
     * @see https://mochajs.org/api/Mocha.Runner.html#.Runner#grep
     */
   def grep(re: js.RegExp, invert: Boolean): this.type = js.native
-  /** @deprecated Use the overload that accepts `Mocha.Suite` instead. */
-  def grepTotal(suite: ISuite): Double = js.native
   /**
     * Returns the number of tests matching the grep search for the
     * given suite.

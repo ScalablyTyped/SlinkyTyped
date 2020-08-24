@@ -1,7 +1,7 @@
 
 # Scala.js typings for cordova-plugin-inappbrowser
 
-Typings are for version 3.2.0
+Typings are for version 4.0.0
 
 ## Library description:
 Cordova InAppBrowser Plugin

@@ -1,7 +1,9 @@
 package typingsSlinky.storybookRouter.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.storybookRouter.routerMod.MatchingData
 import typingsSlinky.storybookRouter.routerMod.QueryMatchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,8 +16,8 @@ object Match {
   
   def withProps(p: QueryMatchProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(path: String, startsWith: Boolean): Default[tag.type, js.Object] = {
-    val __props = js.Dynamic.literal(path = path.asInstanceOf[js.Any], startsWith = startsWith.asInstanceOf[js.Any])
+  def apply(children: MatchingData => ReactElement, path: String, startsWith: Boolean): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), path = path.asInstanceOf[js.Any], startsWith = startsWith.asInstanceOf[js.Any])
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[QueryMatchProps]))
   }
 }

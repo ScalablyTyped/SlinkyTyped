@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabThreeColumnIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TabThreeColumnIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TabThreeColumnIcon")
   @js.native
   object component extends js.Object
   

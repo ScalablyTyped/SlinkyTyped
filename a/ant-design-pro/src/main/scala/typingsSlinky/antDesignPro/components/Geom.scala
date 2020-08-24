@@ -22,6 +22,8 @@ object Geom {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline
+    def adjustVarargs(value: (DodgeBy | String)*): this.type = set("adjust", js.Array(value :_*))
+    @scala.inline
     def adjust(value: String | (js.Array[DodgeBy | String])): this.type = set("adjust", value.asInstanceOf[js.Any])
     @scala.inline
     def animate(value: js.Any): this.type = set("animate", value.asInstanceOf[js.Any])

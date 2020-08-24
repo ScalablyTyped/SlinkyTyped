@@ -13,14 +13,18 @@ package object mod {
   type BindParameters = (typingsSlinky.std.Record[
     java.lang.String, 
     js.UndefOr[
-      typingsSlinky.oracledb.mod.BindParameter | java.lang.String | scala.Double | js.Date | typingsSlinky.oracledb.mod.DBObject | typingsSlinky.node.Buffer | scala.Null
+      typingsSlinky.oracledb.mod.BindParameter | java.lang.String | scala.Double | js.Date | typingsSlinky.oracledb.mod.DBObjectIN[js.Any] | typingsSlinky.node.Buffer | scala.Null
     ]
   ]) | (js.Array[js.Any | typingsSlinky.oracledb.mod.BindParameter])
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - typingsSlinky.node.Buffer
-    - typingsSlinky.oracledb.mod.DBObject
-    - typingsSlinky.oracledb.anon.Correlation
-  */
-  type EnqueueMessage = typingsSlinky.oracledb.mod._EnqueueMessage | java.lang.String | typingsSlinky.node.Buffer
+  /**
+    * @see https://oracle.github.io/node-oracledb/doc/api.html#objects
+    * @since 4.0
+    */
+  type DBObjectIN[T] = typingsSlinky.oracledb.oracledbStrings.DBObject_IN with org.scalablytyped.runtime.TopLevel[T] with typingsSlinky.oracledb.mod.BaseDBObject[T]
+  /**
+    * @see https://oracle.github.io/node-oracledb/doc/api.html#objects
+    * @since 4.0
+    */
+  type DBObjectOUT[T] = typingsSlinky.oracledb.oracledbStrings.DBObject_OUT with org.scalablytyped.runtime.TopLevel[js.Any] with typingsSlinky.oracledb.mod.BaseDBObject[T]
+  type EnqueueMessage[T] = java.lang.String | typingsSlinky.node.Buffer | typingsSlinky.oracledb.mod.DBObjectIN[T] | typingsSlinky.oracledb.anon.Correlation[T]
 }

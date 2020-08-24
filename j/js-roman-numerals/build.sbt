@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "js-roman-numerals"
-version := "1.1-dt-20191105Z-44e4f5"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20191105Z-b9a10f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

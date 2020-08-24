@@ -30,23 +30,20 @@ object EditCookieParams {
     __obj.asInstanceOf[EditCookieParams[T, K]]
   }
   @scala.inline
-  implicit class EditCookieParamsOps[Self[t, k] <: EditCookieParams[t, k], T, K] (val x: Self[T, K]) extends AnyVal {
+  implicit class EditCookieParamsOps[Self <: EditCookieParams[_, _], T, K] (val x: Self with (EditCookieParams[T, K])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T, K] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, K]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, K]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, K]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFilter(value: T): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withModification(value: K): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modification")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFilter(value: T): Self = this.set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setModification(value: K): Self = this.set("modification", value.asInstanceOf[js.Any])
   }
   
 }

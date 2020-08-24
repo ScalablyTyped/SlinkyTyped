@@ -19,7 +19,7 @@ object RouterGuard {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRouterGuard.mod.RouterGuard[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterGuard.mod.RouterGuard[T]] {
     @scala.inline
     def history(value: History[LocationState]): this.type = set("history", value.asInstanceOf[js.Any])
     @scala.inline

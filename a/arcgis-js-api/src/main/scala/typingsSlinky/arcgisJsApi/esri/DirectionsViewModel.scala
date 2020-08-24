@@ -1,5 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,13 +69,13 @@ trait DirectionsViewModel
     */
   val serviceDescription: js.Any = js.native
   /**
-    * The current state of the view model.  **Possible Values:** disabled | ready
+    * The current state of the view model.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#state)
     *
     * @default disabled
     */
-  val state: String = js.native
+  val state: disabled | ready = js.native
   /**
     * The default stop symbols used to display locations between the origin and final destination.
     *

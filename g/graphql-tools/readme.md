@@ -1,7 +1,7 @@
 
 # Scala.js typings for graphql-tools
 
-Typings are for version 4.0.8
+Typings are for version 6.0.15
 
 ## Library description:
 Useful tools to create and manipulate GraphQL schemas.

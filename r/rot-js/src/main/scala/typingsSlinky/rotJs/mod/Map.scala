@@ -68,7 +68,7 @@ object Map extends js.Object {
           Instantiable3[
             /* width */ Double, 
             /* height */ Double, 
-            js.UndefOr[/* options */ PartialOptionsBorn], 
+            /* options */ js.UndefOr[PartialOptionsBorn], 
             typingsSlinky.rotJs.cellularMod.default
           ]
         ]
@@ -79,7 +79,7 @@ object Map extends js.Object {
           Instantiable3[
             /* width */ Double, 
             /* height */ Double, 
-            js.UndefOr[/* options */ PartialOptionsCorridorLength], 
+            /* options */ js.UndefOr[PartialOptionsCorridorLength], 
             typingsSlinky.rotJs.diggerMod.default
           ]
         ]
@@ -98,7 +98,7 @@ object Map extends js.Object {
           Instantiable3[
             /* width */ Double, 
             /* height */ Double, 
-            js.UndefOr[/* regularity */ Double], 
+            /* regularity */ js.UndefOr[Double], 
             typingsSlinky.rotJs.iceymazeMod.default
           ]
         ]

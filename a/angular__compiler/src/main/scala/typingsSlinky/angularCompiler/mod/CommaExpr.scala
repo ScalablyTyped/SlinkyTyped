@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "CommaExpr")
 @js.native
 class CommaExpr protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.CommaExpr {
+  extends typingsSlinky.angularCompiler.compilerMod.CommaExpr {
   def this(parts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression]) = this()
   def this(
     parts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],

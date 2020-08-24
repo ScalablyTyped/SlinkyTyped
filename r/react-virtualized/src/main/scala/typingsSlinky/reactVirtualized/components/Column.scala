@@ -1,6 +1,5 @@
 package typingsSlinky.reactVirtualized.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -28,7 +27,7 @@ object Column {
     @scala.inline
     def cellDataGetter(value: /* params */ TableCellDataGetterParams => js.Any): this.type = set("cellDataGetter", js.Any.fromFunction1(value))
     @scala.inline
-    def cellRenderer(value: /* props */ TableCellProps => TagMod[Any]): this.type = set("cellRenderer", js.Any.fromFunction1(value))
+    def cellRenderer(value: /* props */ TableCellProps => ReactElement): this.type = set("cellRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -44,7 +43,7 @@ object Column {
     @scala.inline
     def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def headerRenderer(value: /* props */ TableHeaderProps => TagMod[Any]): this.type = set("headerRenderer", js.Any.fromFunction1(value))
+    def headerRenderer(value: /* props */ TableHeaderProps => ReactElement): this.type = set("headerRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,7 +51,7 @@ object Column {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def maxWidth(value: Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
     @scala.inline

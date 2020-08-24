@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactLeafletSidebarv2.mod.Icon
 import typingsSlinky.reactLeafletSidebarv2.mod.Position
 import typingsSlinky.reactLeafletSidebarv2.mod.SidebarProps
+import typingsSlinky.reactLeafletSidebarv2.mod.TabType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +32,8 @@ object Sidebar {
   
   def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(collapsed: Boolean, id: String, position: Position, selected: String): Builder = {
-    val __props = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
+  def apply(children: TabType, collapsed: Boolean, id: String, position: Position, selected: String): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any], collapsed = collapsed.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[SidebarProps]))
   }
 }

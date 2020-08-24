@@ -7,7 +7,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
-import typingsSlinky.materialUi.popoverMod.default
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
 import scala.scalajs.js
@@ -15,14 +14,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Popover {
-  @JSImport("material-ui/Popover", JSImport.Default)
+  @JSImport("material-ui", "Popover")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.Popover] {
     @scala.inline
     def anchorElElement(value: Element): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     @scala.inline

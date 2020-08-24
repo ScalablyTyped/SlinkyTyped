@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonRefresher")
 @js.native
 class IonRefresher protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonRefresher {
+  extends typingsSlinky.ionicAngular.proxiesMod.IonRefresher {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
 }
 

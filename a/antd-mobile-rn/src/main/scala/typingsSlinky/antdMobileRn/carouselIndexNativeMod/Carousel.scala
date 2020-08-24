@@ -1,7 +1,6 @@
 package typingsSlinky.antdMobileRn.carouselIndexNativeMod
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -23,7 +22,7 @@ trait Carousel
   def componentDidMount_MCarousel(): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MCarousel(): Unit = js.native
-  def getChildrenCount(children: TagMod[Any]): Double = js.native
+  def getChildrenCount(children: ReactElement): Double = js.native
   def loopJump(): Unit = js.native
   def onChildLayout(e: LayoutChangeEvent): Unit = js.native
   def onLayout(e: LayoutChangeEvent): Unit = js.native
@@ -31,7 +30,7 @@ trait Carousel
   def onScrollEnd(e: SyntheticEvent[NodeHandle, NativeScrollEvent]): Unit = js.native
   def onScrollEndDrag(e: SyntheticEvent[NodeHandle, NativeScrollEvent]): Unit = js.native
   def paging(offsetY: Double): Unit = js.native
-  def renderContent(pages: TagMod[Any]): ReactElement = js.native
+  def renderContent(pages: ReactElement): ReactElement = js.native
   def renderDots(index: Double): js.UndefOr[js.Object | Null] = js.native
   def scrollNextPage(): Unit = js.native
   def updateIndex(offset: CarouselOffset): Unit = js.native

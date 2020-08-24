@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "unl-core"
-version := "1.0-dt-20200515Z-a6fc59"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-9bdd70"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

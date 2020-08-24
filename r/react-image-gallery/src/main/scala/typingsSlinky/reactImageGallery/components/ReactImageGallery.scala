@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLImageElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.MouseEventHandler
@@ -84,19 +84,19 @@ object ReactImageGallery {
     @scala.inline
     def preventDefaultTouchmoveEvent(value: Boolean): this.type = set("preventDefaultTouchmoveEvent", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderCustomControls(value: () => TagMod[Any]): this.type = set("renderCustomControls", js.Any.fromFunction0(value))
+    def renderCustomControls(value: () => ReactElement): this.type = set("renderCustomControls", js.Any.fromFunction0(value))
     @scala.inline
-    def renderFullscreenButton(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isFullscreen */ Boolean) => TagMod[Any]): this.type = set("renderFullscreenButton", js.Any.fromFunction2(value))
+    def renderFullscreenButton(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isFullscreen */ Boolean) => ReactElement): this.type = set("renderFullscreenButton", js.Any.fromFunction2(value))
     @scala.inline
-    def renderItem(value: /* item */ ReactImageGalleryItem => TagMod[Any]): this.type = set("renderItem", js.Any.fromFunction1(value))
+    def renderItem(value: /* item */ ReactImageGalleryItem => ReactElement): this.type = set("renderItem", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLeftNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => TagMod[Any]): this.type = set("renderLeftNav", js.Any.fromFunction2(value))
+    def renderLeftNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => ReactElement): this.type = set("renderLeftNav", js.Any.fromFunction2(value))
     @scala.inline
-    def renderPlayPauseButton(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isPlaying */ Boolean) => TagMod[Any]): this.type = set("renderPlayPauseButton", js.Any.fromFunction2(value))
+    def renderPlayPauseButton(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isPlaying */ Boolean) => ReactElement): this.type = set("renderPlayPauseButton", js.Any.fromFunction2(value))
     @scala.inline
-    def renderRightNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => TagMod[Any]): this.type = set("renderRightNav", js.Any.fromFunction2(value))
+    def renderRightNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => ReactElement): this.type = set("renderRightNav", js.Any.fromFunction2(value))
     @scala.inline
-    def renderThumbInner(value: /* item */ ReactImageGalleryItem => TagMod[Any]): this.type = set("renderThumbInner", js.Any.fromFunction1(value))
+    def renderThumbInner(value: /* item */ ReactImageGalleryItem => ReactElement): this.type = set("renderThumbInner", js.Any.fromFunction1(value))
     @scala.inline
     def showBullets(value: Boolean): this.type = set("showBullets", value.asInstanceOf[js.Any])
     @scala.inline

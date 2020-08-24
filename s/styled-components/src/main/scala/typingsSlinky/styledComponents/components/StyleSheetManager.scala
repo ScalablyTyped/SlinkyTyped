@@ -26,6 +26,8 @@ object StyleSheetManager {
     @scala.inline
     def sheet(value: ServerStyleSheet): this.type = set("sheet", value.asInstanceOf[js.Any])
     @scala.inline
+    def stylisPluginsVarargs(value: StylisPlugin*): this.type = set("stylisPlugins", js.Array(value :_*))
+    @scala.inline
     def stylisPlugins(value: js.Array[StylisPlugin]): this.type = set("stylisPlugins", value.asInstanceOf[js.Any])
     @scala.inline
     def target(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])

@@ -6,6 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ShowPageAction
+import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.TextTemplate
 import typingsSlinky.mendixmodelsdk.navigationMod.navigation.NavigationProfile
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
@@ -14,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/opening-pages relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide7/on-click-event relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.PageSettings")
 @js.native
@@ -40,20 +41,24 @@ class PageSettings protected () extends Element {
   def containerAsPageForSpecialization: PageForSpecialization = js.native
   def containerAsReferenceSelector: ReferenceSelector = js.native
   def containerAsShowPageAction: ShowPageAction = js.native
-  def formTitle(): js.Any = js.native
-  def formTitle(newValue: Text): js.Any = js.native
-  @JSName("formTitle")
-  def formTitle_Union: Text | Null = js.native
+  /**
+    * In version 8.12.0: deleted
+    */
+  def formTitle: Text | Null = js.native
+  def formTitle_=(newValue: Text | Null): Unit = js.native
   /**
     * In version 8.0.0: deleted
     */
   def location: FormLocation = js.native
-  def location(newValue: FormLocation): js.Any = js.native
-  def page(): js.Any = js.native
-  def page(newValue: IPage): js.Any = js.native
+  def location_=(newValue: FormLocation): Unit = js.native
+  def page: IPage | Null = js.native
   def pageQualifiedName: String | Null = js.native
-  @JSName("page")
-  def page_Union: IPage | Null = js.native
+  def page_=(newValue: IPage | Null): Unit = js.native
+  /**
+    * In version 8.12.0: introduced
+    */
+  def titleOverride: TextTemplate | Null = js.native
+  def titleOverride_=(newValue: TextTemplate | Null): Unit = js.native
 }
 
 /* static members */

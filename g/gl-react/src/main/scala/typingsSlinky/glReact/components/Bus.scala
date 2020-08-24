@@ -17,6 +17,8 @@ object Bus {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.glReact.mod.Bus] {
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def uniform(value: String): this.type = set("uniform", value.asInstanceOf[js.Any])
   }
   

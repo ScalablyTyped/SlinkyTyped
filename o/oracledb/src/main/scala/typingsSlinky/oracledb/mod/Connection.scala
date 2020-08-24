@@ -302,15 +302,18 @@ trait Connection extends js.Object {
     * @see https://oracle.github.io/node-oracledb/doc/api.html#objects
     * @since 4.0
     */
-  def getDbObjectClass(className: String): js.Promise[DBObjectClass] = js.native
-  def getDbObjectClass(className: String, callback: js.Function2[/* error */ DBError, /* dbObject */ DBObjectClass, Unit]): Unit = js.native
-  def getQueue(name: String): js.Promise[AdvancedQueue] = js.native
-  def getQueue(name: String, callback: js.Function2[/* error */ DBError, /* queue */ AdvancedQueue, Unit]): Unit = js.native
-  def getQueue(name: String, options: GetAdvancedQueueOptions): js.Promise[AdvancedQueue] = js.native
-  def getQueue(
+  def getDbObjectClass[T](className: String): js.Promise[DBObjectClass[T]] = js.native
+  def getDbObjectClass[T](
+    className: String,
+    callback: js.Function2[/* error */ DBError, /* dbObject */ DBObjectClass[T], Unit]
+  ): Unit = js.native
+  def getQueue[T](name: String): js.Promise[AdvancedQueue[T]] = js.native
+  def getQueue[T](name: String, callback: js.Function2[/* error */ DBError, /* queue */ AdvancedQueue[T], Unit]): Unit = js.native
+  def getQueue[T](name: String, options: GetAdvancedQueueOptions): js.Promise[AdvancedQueue[T]] = js.native
+  def getQueue[T](
     name: String,
     options: GetAdvancedQueueOptions,
-    callback: js.Function2[/* error */ DBError, /* queue */ AdvancedQueue, Unit]
+    callback: js.Function2[/* error */ DBError, /* queue */ AdvancedQueue[T], Unit]
   ): Unit = js.native
   /**
     * Returns a parent SodaDatabase object for use with Simple Oracle Document Access (SODA).
@@ -334,8 +337,11 @@ trait Connection extends js.Object {
     *
     * @since 2.2
     */
-  def getStatementInfo(sql: String): js.Promise[StatementInfo] = js.native
-  def getStatementInfo(sql: String, callback: js.Function2[/* error */ DBError, /* info */ StatementInfo, Unit]): Unit = js.native
+  def getStatementInfo(sql: String): js.Promise[StatementInfo[js.Object]] = js.native
+  def getStatementInfo(
+    sql: String,
+    callback: js.Function2[/* error */ DBError, /* info */ StatementInfo[js.Object], Unit]
+  ): Unit = js.native
   /**
     * This method checks that a connection is currently usable and the network to the database is valid.
     * This call can be useful for system health checks. A ping only confirms that a single connection
@@ -399,6 +405,40 @@ trait Connection extends js.Object {
     */
   def rollback(): js.Promise[Unit] = js.native
   def rollback(callback: js.Function1[/* error */ DBError, Unit]): Unit = js.native
+  /**
+    * Used to shut down a database instance. This is the flexible version of oracledb.shutdown(), allowing more control over behavior.
+    * 
+    * This method must be called twice. The first call blocks new connections. SQL statements such as await ALTER DATABASE CLOSE NORMAL
+    * and ALTER DATABASE DISMOUNT can then be used to close and unmount the database instance. Alternatively database administration can
+    * be performed. Finally, a second call connection.shutdown(oracledb.SHUTDOWN_MODE_FINAL) is required to fully close the database instance.
+    * 
+    * If the initial connection.shutdown() shutdownMode mode oracledb.SHUTDOWN_MODE_ABORT is used, then connection.shutdown() does not need to be called a second time.
+    * 
+    * @see https://oracle.github.io/node-oracledb/doc/api.html#startupshutdown
+    * @since 5.0
+    */
+  def shutdown(): js.Promise[Unit] = js.native
+  def shutdown(cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def shutdown(mode: Double): js.Promise[Unit] = js.native
+  def shutdown(mode: Double, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  /**
+    * Used to start up a database instance. This is the flexible version of oracledb.startup(), allowing more control over behavior.
+    * 
+    * The connection must be a standalone connection, not a pooled connection.
+    * 
+    * This function starts the database in an unmounted state. SQL statements such as ALTER DATABASE MOUNT and ALTER DATABASE OPEN
+    * can then be executed to completely open the database instance. Database recovery commands could also be executed at this time.
+    * 
+    * The connection used must have the privilege set to oracledb.SYSPRELIM, along with either oracledb.SYSDBA or oracledb.SYSOPER.
+    * For example oracledb.SYSDBA | oracledb.SYSPRELIM.
+    * 
+    * @see https://oracle.github.io/node-oracledb/doc/api.html#startupshutdown
+    * @since 5.0
+    */
+  def startup(): js.Promise[Unit] = js.native
+  def startup(cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def startup(opts: StartupOptions): js.Promise[Unit] = js.native
+  def startup(opts: StartupOptions, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   /**
     * Register a JavaScript callback method to be invoked when data is changed in the database by any committed transaction,
     * or when there are Advanced Queuing messages to be dequeued.

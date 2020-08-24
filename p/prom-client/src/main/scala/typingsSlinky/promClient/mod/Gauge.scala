@@ -33,9 +33,13 @@ class Gauge protected () extends _Metric_ {
   	 * @param timestamp Timestamp to associate the time series with
   	 */
   def dec(labels: labelValues): Unit = js.native
+  def dec(labels: labelValues, value: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
+  def dec(labels: labelValues, value: js.UndefOr[scala.Nothing], timestamp: js.Date): Unit = js.native
   def dec(labels: labelValues, value: Double): Unit = js.native
   def dec(labels: labelValues, value: Double, timestamp: Double): Unit = js.native
   def dec(labels: labelValues, value: Double, timestamp: js.Date): Unit = js.native
+  def dec(value: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
+  def dec(value: js.UndefOr[scala.Nothing], timestamp: js.Date): Unit = js.native
   def dec(value: Double): Unit = js.native
   def dec(value: Double, timestamp: Double): Unit = js.native
   def dec(value: Double, timestamp: js.Date): Unit = js.native
@@ -52,9 +56,13 @@ class Gauge protected () extends _Metric_ {
   	 * @param timestamp Timestamp to associate the time series with
   	 */
   def inc(labels: labelValues): Unit = js.native
+  def inc(labels: labelValues, value: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
+  def inc(labels: labelValues, value: js.UndefOr[scala.Nothing], timestamp: js.Date): Unit = js.native
   def inc(labels: labelValues, value: Double): Unit = js.native
   def inc(labels: labelValues, value: Double, timestamp: Double): Unit = js.native
   def inc(labels: labelValues, value: Double, timestamp: js.Date): Unit = js.native
+  def inc(value: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
+  def inc(value: js.UndefOr[scala.Nothing], timestamp: js.Date): Unit = js.native
   def inc(value: Double): Unit = js.native
   def inc(value: Double, timestamp: Double): Unit = js.native
   def inc(value: Double, timestamp: js.Date): Unit = js.native
@@ -116,6 +124,8 @@ object Gauge extends js.Object {
     		 * @param timestamp Timestamp to associate the time series with
     		 */
     def dec(): Unit = js.native
+    def dec(value: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
+    def dec(value: js.UndefOr[scala.Nothing], timestamp: js.Date): Unit = js.native
     def dec(value: Double): Unit = js.native
     def dec(value: Double, timestamp: Double): Unit = js.native
     def dec(value: Double, timestamp: js.Date): Unit = js.native
@@ -125,6 +135,8 @@ object Gauge extends js.Object {
     		 * @param timestamp Timestamp to associate the time series with
     		 */
     def inc(): Unit = js.native
+    def inc(value: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
+    def inc(value: js.UndefOr[scala.Nothing], timestamp: js.Date): Unit = js.native
     def inc(value: Double): Unit = js.native
     def inc(value: Double, timestamp: Double): Unit = js.native
     def inc(value: Double, timestamp: js.Date): Unit = js.native

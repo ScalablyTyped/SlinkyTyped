@@ -12,6 +12,10 @@ object Dist {
   object component extends js.Object
   
   def withProps(p: LatexProps): SharedBuilder_LatexProps_1360194442[default] = new SharedBuilder_LatexProps_1360194442[default](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Dist.type): SharedBuilder_LatexProps_1360194442[default] = new SharedBuilder_LatexProps_1360194442[default](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: String): SharedBuilder_LatexProps_1360194442[default] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new SharedBuilder_LatexProps_1360194442[default](js.Array(this.component, __props.asInstanceOf[LatexProps]))
+  }
 }
 

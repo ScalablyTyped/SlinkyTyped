@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -69,33 +68,33 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.stepButtonStepButtonMod.StepButtonIcon
-import typingsSlinky.materialUiCore.stepLabelMod.default
 import typingsSlinky.materialUiCore.stepLabelStepLabelMod.StepLabelProps
 import typingsSlinky.materialUiCore.stepperStepperMod.Orientation
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StepLabel {
-  @JSImport("@material-ui/core/StepLabel", JSImport.Default)
+  @JSImport("@material-ui/core", "StepLabel")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def StepIconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("StepIconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def StepIconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("StepIconComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def StepIconComponent(value: ReactComponentClass[_]): this.type = set("StepIconComponent", value.asInstanceOf[js.Any])
+    def StepIconComponent(value: ReactType[_]): this.type = set("StepIconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def StepIconProps(value: PartialStepIconProps): this.type = set("StepIconProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -226,6 +225,8 @@ object StepLabel {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -435,7 +436,7 @@ object StepLabel {
     @scala.inline
     def optionalReactElement(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
     @scala.inline
-    def optional(value: TagMod[Any]): this.type = set("optional", value.asInstanceOf[js.Any])
+    def optional(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
     @scala.inline
     def orientation(value: Orientation): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline

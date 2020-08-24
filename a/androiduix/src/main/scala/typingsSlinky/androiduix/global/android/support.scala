@@ -26,6 +26,7 @@ object support extends js.Object {
         extends typingsSlinky.androiduix.android.support.v4.view.ViewPager {
         def this(context: Context) = this()
         def this(context: Context, bindElement: HTMLElement) = this()
+        def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: js.Any) = this()
         def this(context: Context, bindElement: HTMLElement, defStyle: js.Any) = this()
       }
       
@@ -79,6 +80,7 @@ object support extends js.Object {
         extends typingsSlinky.androiduix.android.support.v4.widget.DrawerLayout {
         def this(context: Context) = this()
         def this(context: Context, bindElement: HTMLElement) = this()
+        def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
         def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
       }
       

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object IndentFirstLineIcon {
-  @JSImport("@fluentui/react-icons/lib/components/IndentFirstLineIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "IndentFirstLineIcon")
   @js.native
   object component extends js.Object
   

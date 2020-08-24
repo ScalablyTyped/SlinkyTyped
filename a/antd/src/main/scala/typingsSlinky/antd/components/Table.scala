@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -11,6 +10,8 @@ import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinProps
+import typingsSlinky.antd.tableInterfaceMod.ColumnGroupType
+import typingsSlinky.antd.tableInterfaceMod.ColumnType
 import typingsSlinky.antd.tableInterfaceMod.ColumnsType
 import typingsSlinky.antd.tableInterfaceMod.SortOrder
 import typingsSlinky.antd.tableInterfaceMod.SorterResult
@@ -20,7 +21,7 @@ import typingsSlinky.antd.tableInterfaceMod.TablePaginationConfig
 import typingsSlinky.antd.tableInterfaceMod.TableRowSelection
 import typingsSlinky.antd.tableTableMod.TableProps
 import typingsSlinky.rcTable.anon.X
-import typingsSlinky.rcTable.interfaceMod.ColumnType
+import typingsSlinky.rcTable.footerCellMod.SummaryCellProps
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
 import typingsSlinky.rcTable.interfaceMod.GetRowKey
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -28,6 +29,7 @@ import typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps
 import typingsSlinky.rcTable.interfaceMod.RowClassName
 import typingsSlinky.rcTable.interfaceMod.TableComponents
 import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.rcTable.rowMod.FooterRowProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Record
@@ -36,12 +38,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table {
-  @JSImport("antd/lib/table", JSImport.Default)
+  @JSImport("antd", "Table")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[RecordType <: js.Object] (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ RecordType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
@@ -51,13 +53,19 @@ object Table {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: ColumnsType[RecordType]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def components(value: TableComponents[RecordType]): this.type = set("components", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataSourceVarargs(value: RecordType*): this.type = set("dataSource", js.Array(value :_*))
+    @scala.inline
     def dataSource(value: js.Array[RecordType]): this.type = set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultExpandAllRows(value: Boolean): this.type = set("defaultExpandAllRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultExpandedRowKeysVarargs(value: Key*): this.type = set("defaultExpandedRowKeys", js.Array(value :_*))
     @scala.inline
     def defaultExpandedRowKeys(value: js.Array[Key]): this.type = set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,13 +73,7 @@ object Table {
     @scala.inline
     def dropdownPrefixCls(value: String): this.type = set("dropdownPrefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
-    @scala.inline
-    def emptyTextFunction0(value: () => TagMod[Any]): this.type = set("emptyText", js.Any.fromFunction0(value))
-    @scala.inline
-    def emptyText(value: TagMod[Any] | js.Function0[TagMod[Any]]): this.type = set("emptyText", value.asInstanceOf[js.Any])
-    @scala.inline
-    def expandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+    def expandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def expandIconColumnIndex(value: Double): this.type = set("expandIconColumnIndex", value.asInstanceOf[js.Any])
     @scala.inline
@@ -81,13 +83,15 @@ object Table {
     @scala.inline
     def expandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("expandedRowClassName", js.Any.fromFunction3(value))
     @scala.inline
+    def expandedRowKeysVarargs(value: Key*): this.type = set("expandedRowKeys", js.Array(value :_*))
+    @scala.inline
     def expandedRowKeys(value: js.Array[Key]): this.type = set("expandedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def expandedRowRender(
-      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any]
+      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => ReactElement
     ): this.type = set("expandedRowRender", js.Any.fromFunction4(value))
     @scala.inline
-    def footer(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("footer", js.Any.fromFunction1(value))
+    def footer(value: /* data */ js.Array[RecordType] => ReactElement): this.type = set("footer", js.Any.fromFunction1(value))
     @scala.inline
     def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
     @scala.inline
@@ -108,7 +112,7 @@ object Table {
     def onExpandedRowsChange(value: /* expandedKeys */ js.Array[Key] => Unit): this.type = set("onExpandedRowsChange", js.Any.fromFunction1(value))
     @scala.inline
     def onHeaderRow(
-      value: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]
+      value: (js.Array[typingsSlinky.rcTable.interfaceMod.ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]
     ): this.type = set("onHeaderRow", js.Any.fromFunction2(value))
     @scala.inline
     def onRow(value: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]): this.type = set("onRow", js.Any.fromFunction2(value))
@@ -135,23 +139,69 @@ object Table {
     @scala.inline
     def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
+    def sortDirectionsVarargs(value: SortOrder*): this.type = set("sortDirections", js.Array(value :_*))
+    @scala.inline
     def sortDirections(value: js.Array[SortOrder]): this.type = set("sortDirections", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def summary(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("summary", js.Any.fromFunction1(value))
+    def summary(value: /* data */ js.Array[RecordType] => ReactElement): this.type = set("summary", js.Any.fromFunction1(value))
     @scala.inline
     def tableLayout(value: TableLayout): this.type = set("tableLayout", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("title", js.Any.fromFunction1(value))
+    def title(value: /* data */ js.Array[RecordType] => ReactElement): this.type = set("title", js.Any.fromFunction1(value))
   }
   
-  def withProps[RecordType <: js.Object](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: js.Object */ RecordType](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[RecordType <: js.Object](): Builder[RecordType] = {
+  def apply[/* <: js.Object */ RecordType](): Builder[RecordType] = {
     val __props = js.Dynamic.literal()
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
   }
-  implicit def make[RecordType <: js.Object](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: js.Object */ RecordType](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
+  object Row {
+    @JSImport("antd", "Table.Summary.Row")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: /* props */ FooterRowProps): typingsSlinky.antd.components.Table.Row.Builder = new typingsSlinky.antd.components.Table.Row.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Row.type): typingsSlinky.antd.components.Table.Row.Builder = new typingsSlinky.antd.components.Table.Row.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Cell {
+    @JSImport("antd", "Table.Summary.Cell")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
+      @scala.inline
+      def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: /* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps): typingsSlinky.antd.components.Table.Cell.Builder = new typingsSlinky.antd.components.Table.Cell.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(index: Double): typingsSlinky.antd.components.Table.Cell.Builder = {
+        val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+        new typingsSlinky.antd.components.Table.Cell.Builder(js.Array(this.component, __props.asInstanceOf[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps]))
+    }
+  }
+  
 }
 

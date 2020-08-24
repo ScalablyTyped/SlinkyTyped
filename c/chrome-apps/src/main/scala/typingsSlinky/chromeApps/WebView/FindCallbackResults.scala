@@ -36,29 +36,18 @@ object FindCallbackResults {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActiveMatchOrdinal(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeMatchOrdinal")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCanceled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canceled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setActiveMatchOrdinal(value: integer): Self = this.set("activeMatchOrdinal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNumberOfMatches(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfMatches")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCanceled(value: Boolean): Self = this.set("canceled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelectionRect(value: SelectionRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNumberOfMatches(value: integer): Self = this.set("numberOfMatches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelectionRect(value: SelectionRect): Self = this.set("selectionRect", value.asInstanceOf[js.Any])
   }
   
 }

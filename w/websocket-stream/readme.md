@@ -1,7 +1,7 @@
 
 # Scala.js typings for websocket-stream
 
-Typings are for version 5.5.0
+Typings are for version 5.5.2
 
 ## Library description:
 Use websockets with the node streams API. Works in browser and node

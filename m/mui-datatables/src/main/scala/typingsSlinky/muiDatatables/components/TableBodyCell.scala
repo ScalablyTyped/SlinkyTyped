@@ -17,6 +17,8 @@ object TableBodyCell {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])

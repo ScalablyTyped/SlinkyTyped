@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type LibraryExportDefaultPlugin = typingsSlinky.webpack.mod.Plugin
+  type LibraryExportDefaultPlugin = typingsSlinky.std.Plugin
 }

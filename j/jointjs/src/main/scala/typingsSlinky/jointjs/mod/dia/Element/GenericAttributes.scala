@@ -2,6 +2,7 @@ package typingsSlinky.jointjs.mod.dia.Element
 
 import typingsSlinky.jointjs.anon.Groups
 import typingsSlinky.jointjs.mod.dia.MarkupJSON
+import typingsSlinky.jointjs.mod.dia.MarkupNodeJSON
 import typingsSlinky.jointjs.mod.dia.Point
 import typingsSlinky.jointjs.mod.dia.Size
 import scala.scalajs.js
@@ -25,71 +26,38 @@ object GenericAttributes {
     __obj.asInstanceOf[GenericAttributes[T]]
   }
   @scala.inline
-  implicit class GenericAttributesOps[Self[t] <: GenericAttributes[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class GenericAttributesOps[Self <: GenericAttributes[_], T] (val x: Self with GenericAttributes[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAngle(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAngle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
+    def setAngle(value: Double): Self = this.set("angle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMarkup(value: String | MarkupJSON): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAngle: Self = this.set("angle", js.undefined)
     @scala.inline
-    def withoutMarkup: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markup")(js.undefined)
-        ret
-    }
+    def setMarkupVarargs(value: MarkupNodeJSON*): Self = this.set("markup", js.Array(value :_*))
     @scala.inline
-    def withPorts(value: Groups): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMarkup(value: String | MarkupJSON): Self = this.set("markup", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPorts: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
-        ret
-    }
+    def deleteMarkup: Self = this.set("markup", js.undefined)
     @scala.inline
-    def withPosition(value: Point): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPorts(value: Groups): Self = this.set("ports", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPosition: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
+    def deletePorts: Self = this.set("ports", js.undefined)
     @scala.inline
-    def withSize(value: Size): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPosition(value: Point): Self = this.set("position", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
+    def deletePosition: Self = this.set("position", js.undefined)
+    @scala.inline
+    def setSize(value: Size): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
   }
   
 }

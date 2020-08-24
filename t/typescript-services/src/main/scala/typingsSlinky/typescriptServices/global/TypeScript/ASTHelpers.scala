@@ -15,6 +15,12 @@ object ASTHelpers extends js.Object {
   def getAstAtPosition(
     script: typingsSlinky.typescriptServices.TypeScript.AST,
     pos: Double,
+    useTrailingTriviaAsLimChar: js.UndefOr[scala.Nothing],
+    forceInclusive: Boolean
+  ): typingsSlinky.typescriptServices.TypeScript.AST = js.native
+  def getAstAtPosition(
+    script: typingsSlinky.typescriptServices.TypeScript.AST,
+    pos: Double,
     useTrailingTriviaAsLimChar: Boolean
   ): typingsSlinky.typescriptServices.TypeScript.AST = js.native
   def getAstAtPosition(

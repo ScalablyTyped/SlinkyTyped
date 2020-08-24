@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GlobeFavoriteIcon {
-  @JSImport("@fluentui/react-icons/lib/components/GlobeFavoriteIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "GlobeFavoriteIcon")
   @js.native
   object component extends js.Object
   

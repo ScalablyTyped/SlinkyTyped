@@ -1,12 +1,12 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antDesignReactNative.antDesignReactNativeBooleans.`false`
 import typingsSlinky.antDesignReactNative.listMod.ListProps
-import typingsSlinky.antDesignReactNative.listMod.default
 import typingsSlinky.antDesignReactNative.listStyleMod.ListStyle
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.std.Partial
@@ -15,26 +15,32 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object List {
-  @JSImport("@ant-design/react-native/lib/list", JSImport.Default)
+  @JSImport("@ant-design/react-native", "List")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.List] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: `false` | ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def renderFooterReactElement(value: ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderFooterFunction0(value: () => ReactComponentClass[_]): this.type = set("renderFooter", js.Any.fromFunction0(value))
+    def renderFooterFunction0(value: () => ReactType[_]): this.type = set("renderFooter", js.Any.fromFunction0(value))
     @scala.inline
-    def renderFooter(value: js.Function0[ReactComponentClass[_]] | String | ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
+    def renderFooter(value: js.Function0[ReactType[_]] | String | ReactElement): this.type = set("renderFooter", value.asInstanceOf[js.Any])
     @scala.inline
     def renderHeaderReactElement(value: ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderHeaderFunction0(value: () => ReactComponentClass[_]): this.type = set("renderHeader", js.Any.fromFunction0(value))
+    def renderHeaderFunction0(value: () => ReactType[_]): this.type = set("renderHeader", js.Any.fromFunction0(value))
     @scala.inline
-    def renderHeader(value: js.Function0[ReactComponentClass[_]] | String | ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
+    def renderHeader(value: js.Function0[ReactType[_]] | String | ReactElement): this.type = set("renderHeader", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

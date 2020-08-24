@@ -27,6 +27,8 @@ object Source {
     @scala.inline
     def attribution(value: String): this.type = set("attribution", value.asInstanceOf[js.Any])
     @scala.inline
+    def boundsVarargs(value: Double*): this.type = set("bounds", js.Array(value :_*))
+    @scala.inline
     def bounds(value: js.Array[Double]): this.type = set("bounds", value.asInstanceOf[js.Any])
     @scala.inline
     def buffer(value: Double): this.type = set("buffer", value.asInstanceOf[js.Any])
@@ -38,6 +40,8 @@ object Source {
     def clusterProperties(value: js.Object): this.type = set("clusterProperties", value.asInstanceOf[js.Any])
     @scala.inline
     def clusterRadius(value: Double): this.type = set("clusterRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def coordinatesVarargs(value: js.Array[Double]*): this.type = set("coordinates", js.Array(value :_*))
     @scala.inline
     def coordinates(value: js.Array[js.Array[Double]]): this.type = set("coordinates", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,11 +65,15 @@ object Source {
     @scala.inline
     def tileSize(value: Double): this.type = set("tileSize", value.asInstanceOf[js.Any])
     @scala.inline
+    def tilesVarargs(value: String*): this.type = set("tiles", js.Array(value :_*))
+    @scala.inline
     def tiles(value: js.Array[String]): this.type = set("tiles", value.asInstanceOf[js.Any])
     @scala.inline
     def tolerance(value: Double): this.type = set("tolerance", value.asInstanceOf[js.Any])
     @scala.inline
     def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def urlsVarargs(value: String*): this.type = set("urls", js.Array(value :_*))
     @scala.inline
     def urls(value: js.Array[String]): this.type = set("urls", value.asInstanceOf[js.Any])
   }

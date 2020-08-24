@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -20,7 +19,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.anon.Left
+import typingsSlinky.grommet.anon.Bottom
 import typingsSlinky.grommet.buttonMod.ButtonProps
 import typingsSlinky.grommet.dropButtonMod.DropButtonProps
 import typingsSlinky.grommet.dropMod.DropProps
@@ -101,7 +100,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DropButton {
-  @JSImport("grommet", "DropButton")
+  @JSImport("grommet/es6", "DropButton")
   @js.native
   object component extends js.Object
   
@@ -244,6 +243,8 @@ object DropButton {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -252,7 +253,7 @@ object DropButton {
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def dropAlign(value: Left): this.type = set("dropAlign", value.asInstanceOf[js.Any])
+    def dropAlign(value: Bottom): this.type = set("dropAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def dropProps(value: DropProps): this.type = set("dropProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -306,7 +307,7 @@ object DropButton {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
@@ -336,7 +337,7 @@ object DropButton {
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onClose(value: /* repeated */ js.Any => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* repeated */ js.Any => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLButtonElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -412,7 +413,7 @@ object DropButton {
     @scala.inline
     def onMouseUp(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpen(value: /* repeated */ js.Any => _): this.type = set("onOpen", js.Any.fromFunction1(value))
+    def onOpen(value: /* repeated */ js.Any => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
     @scala.inline
     def onPaste(value: SyntheticClipboardEvent[HTMLButtonElement] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
     @scala.inline
@@ -498,6 +499,8 @@ object DropButton {
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
+    def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])
+    @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: small | medium | large): this.type = set("size", value.asInstanceOf[js.Any])
@@ -525,6 +528,8 @@ object DropButton {
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

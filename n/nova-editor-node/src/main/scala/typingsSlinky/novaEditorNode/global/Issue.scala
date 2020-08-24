@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Issue")
 @js.native
 class Issue ()
-  extends typingsSlinky.novaEditorNode.Issue {
-  /* CompleteClass */
-  override var code: Double | String = js.native
-  /* CompleteClass */
-  override var severity: typingsSlinky.novaEditorNode.IssueSeverity = js.native
-  /* CompleteClass */
-  override var source: String | Null = js.native
-}
+  extends typingsSlinky.novaEditorNode.Issue
 

@@ -62,6 +62,8 @@ object DetailsHeaderBase {
     @scala.inline
     def columnReorderProps(value: IColumnReorderHeaderProps): this.type = set("columnReorderProps", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def componentRefFunction1(value: /* ref */ IDetailsHeader | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))

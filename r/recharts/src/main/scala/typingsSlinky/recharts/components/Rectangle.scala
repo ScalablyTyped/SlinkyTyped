@@ -172,6 +172,8 @@ object Rectangle {
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
     @scala.inline
+    def radiusVarargs(value: js.Any*): this.type = set("radius", js.Array(value :_*))
+    @scala.inline
     def radius(value: Double | js.Array[_]): this.type = set("radius", value.asInstanceOf[js.Any])
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])

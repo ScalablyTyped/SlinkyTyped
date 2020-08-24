@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TableBrandedRowIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TableBrandedRowIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TableBrandedRowIcon")
   @js.native
   object component extends js.Object
   

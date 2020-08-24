@@ -24,6 +24,7 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.reactCsv.commonPropTypesMod.AsyncClickHandler
 import typingsSlinky.reactCsv.commonPropTypesMod.Headers
+import typingsSlinky.reactCsv.commonPropTypesMod.LabelKeyObject
 import typingsSlinky.reactCsv.commonPropTypesMod.SyncClickHandler
 import typingsSlinky.reactCsv.reactCsvStrings.`additions text`
 import typingsSlinky.reactCsv.reactCsvStrings.`inline`
@@ -201,6 +202,8 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -212,6 +215,8 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   def enclosingCharacter(value: String): this.type = set("enclosingCharacter", value.asInstanceOf[js.Any])
   @scala.inline
   def filename(value: String): this.type = set("filename", value.asInstanceOf[js.Any])
+  @scala.inline
+  def headersVarargs(value: (LabelKeyObject | String)*): this.type = set("headers", js.Array(value :_*))
   @scala.inline
   def headers(value: Headers): this.type = set("headers", value.asInstanceOf[js.Any])
   @scala.inline

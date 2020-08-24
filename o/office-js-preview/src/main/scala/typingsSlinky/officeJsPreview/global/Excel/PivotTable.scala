@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.global.Excel
 
-import typingsSlinky.officeJsPreview.OfficeExtension.ClientRequestContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,15 +14,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.PivotTable")
 @js.native
 class PivotTable ()
-  extends typingsSlinky.officeJsPreview.Excel.PivotTable {
-  /** The request context associated with the object */
-  /* CompleteClass */
-  override var context: ClientRequestContext = js.native
-  /**
-    *  Returns a boolean value for whether the corresponding object is a null object. You must call `context.sync()` before reading the
-    * isNullObject property.
-    */
-  /* CompleteClass */
-  override var isNullObject: Boolean = js.native
-}
+  extends typingsSlinky.officeJsPreview.Excel.PivotTable
 

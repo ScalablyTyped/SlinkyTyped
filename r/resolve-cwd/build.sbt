@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "resolve-cwd"
-version := "3.0.0-d2547c"
-scalaVersion := "2.13.2"
+version := "3.0.0-e6dee0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

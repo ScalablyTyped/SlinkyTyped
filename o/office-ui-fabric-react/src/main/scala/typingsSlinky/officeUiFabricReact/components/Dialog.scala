@@ -16,7 +16,6 @@ import typingsSlinky.officeUiFabricReact.dialogTypesMod.IDialogStyleProps
 import typingsSlinky.officeUiFabricReact.dialogTypesMod.IDialogStyles
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSPixelUnitRule
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSRule
@@ -28,14 +27,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dialog {
-  @JSImport("office-ui-fabric-react/lib/Dialog", JSImport.Default)
+  @JSImport("office-ui-fabric-react", "Dialog")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.dialogBaseMod.DialogBase] {
     @scala.inline
     def ariaDescribedById(value: String): this.type = set("ariaDescribedById", value.asInstanceOf[js.Any])
     @scala.inline
@@ -104,6 +103,8 @@ object Dialog {
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def topButtonsPropsVarargs(value: IButtonProps*): this.type = set("topButtonsProps", js.Array(value :_*))
     @scala.inline
     def topButtonsProps(value: js.Array[IButtonProps]): this.type = set("topButtonsProps", value.asInstanceOf[js.Any])
     @scala.inline

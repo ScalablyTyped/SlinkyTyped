@@ -6,9 +6,11 @@ import typingsSlinky.grommet.anon.Color
 import typingsSlinky.grommet.anon.Height
 import typingsSlinky.grommet.anon.Label
 import typingsSlinky.grommet.anon.Value
+import typingsSlinky.grommet.anon.Vertical
 import typingsSlinky.grommet.chartMod.ChartProps
 import typingsSlinky.grommet.grommetStrings.area
 import typingsSlinky.grommet.grommetStrings.bar
+import typingsSlinky.grommet.grommetStrings.fill
 import typingsSlinky.grommet.grommetStrings.full
 import typingsSlinky.grommet.grommetStrings.hair
 import typingsSlinky.grommet.grommetStrings.large
@@ -22,6 +24,7 @@ import typingsSlinky.grommet.grommetStrings.xsmall
 import typingsSlinky.grommet.grommetStrings.xxsmall
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
+import typingsSlinky.grommet.utilsMod.EdgeSizeType
 import typingsSlinky.grommet.utilsMod.GapType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
@@ -30,7 +33,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Chart {
-  @JSImport("grommet", "Chart")
+  @JSImport("grommet/es6", "Chart")
   @js.native
   object component extends js.Object
   
@@ -43,7 +46,11 @@ object Chart {
     @scala.inline
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
+    def boundsVarargs(value: js.Array[Double]*): this.type = set("bounds", js.Array(value :_*))
+    @scala.inline
     def bounds(value: js.Array[js.Array[Double]]): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorVarargs(value: Value*): this.type = set("color", js.Array(value :_*))
     @scala.inline
     def color(value: String | Color | js.Array[Value]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,9 +68,11 @@ object Chart {
     @scala.inline
     def overflow(value: Boolean): this.type = set("overflow", value.asInstanceOf[js.Any])
     @scala.inline
+    def pad(value: EdgeSizeType | Vertical): this.type = set("pad", value.asInstanceOf[js.Any])
+    @scala.inline
     def round(value: Boolean): this.type = set("round", value.asInstanceOf[js.Any])
     @scala.inline
-    def size(value: xxsmall | xsmall | small | medium | large | xlarge | full | Height | String): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: xxsmall | xsmall | small | medium | large | xlarge | fill | full | Height | String): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def thickness(value: hair | xsmall | small | medium | large | xlarge | none | String): this.type = set("thickness", value.asInstanceOf[js.Any])
     @scala.inline

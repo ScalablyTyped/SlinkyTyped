@@ -26,23 +26,22 @@ object ClassAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttributes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMethods(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAttributesVarargs(value: String*): Self = this.set("attributes", js.Array(value :_*))
     @scala.inline
-    def withName(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAttributes(value: js.Array[String]): Self = this.set("attributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMethodsVarargs(value: String*): Self = this.set("methods", js.Array(value :_*))
+    @scala.inline
+    def setMethods(value: js.Array[String]): Self = this.set("methods", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNameVarargs(value: String*): Self = this.set("name", js.Array(value :_*))
+    @scala.inline
+    def setName(value: js.Array[String]): Self = this.set("name", value.asInstanceOf[js.Any])
   }
   
 }

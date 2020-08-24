@@ -21,6 +21,7 @@ class Image ()
   def this(element: String) = this()
   def this(element: HTMLImageElement) = this()
   def this(element: HTMLVideoElement) = this()
+  def this(element: js.UndefOr[scala.Nothing], options: IImageOptions) = this()
   def this(element: String, options: IImageOptions) = this()
   def this(element: HTMLImageElement, options: IImageOptions) = this()
   def this(element: HTMLVideoElement, options: IImageOptions) = this()
@@ -51,6 +52,7 @@ object Image extends js.Object {
     * @param [imgOptions] Options object
     */
   def fromURL(url: String): typingsSlinky.fabric.fabricImplMod.Image = js.native
+  def fromURL(url: String, callback: js.UndefOr[scala.Nothing], imgOptions: IImageOptions): typingsSlinky.fabric.fabricImplMod.Image = js.native
   def fromURL(url: String, callback: js.Function1[/* image */ this.type, Unit]): typingsSlinky.fabric.fabricImplMod.Image = js.native
   def fromURL(url: String, callback: js.Function1[/* image */ this.type, Unit], imgOptions: IImageOptions): typingsSlinky.fabric.fabricImplMod.Image = js.native
 }

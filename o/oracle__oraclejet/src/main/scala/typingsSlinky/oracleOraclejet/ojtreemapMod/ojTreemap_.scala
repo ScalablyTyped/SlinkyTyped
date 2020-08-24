@@ -5,8 +5,8 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.GroupLabelDisplay
 import typingsSlinky.oracleOraclejet.anon.LabelDataVisualization
-import typingsSlinky.oracleOraclejet.anon.`26`
-import typingsSlinky.oracleOraclejet.anon.`27`
+import typingsSlinky.oracleOraclejet.anon.`28`
+import typingsSlinky.oracleOraclejet.anon.`29`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojtreemapMod.ojTreemap.DataContext
@@ -107,7 +107,7 @@ trait ojTreemap_[K, D] extends dvtBaseComponent[ojTreemapSettableProperties[K, D
   var hoverBehaviorDelay: Double = js.native
   var isolatedNode: js.Any = js.native
   var layout: sliceAndDiceHorizontal | sliceAndDiceVertical | squarified = js.native
-  var nodeContent: `26`[K, D] = js.native
+  var nodeContent: `28`[K, D] = js.native
   var nodeDefaults: GroupLabelDisplay = js.native
   var nodeSeparators: bevels | gaps = js.native
   var onAnimationDurationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -144,7 +144,7 @@ trait ojTreemap_[K, D] extends dvtBaseComponent[ojTreemapSettableProperties[K, D
   var selectionMode: none | single | multiple = js.native
   var sizeLabel: String = js.native
   var sorting: on | off = js.native
-  var tooltip: `27`[K, D] = js.native
+  var tooltip: `29`[K, D] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
   var translations_ojTreemap_ : LabelDataVisualization = js.native
@@ -412,7 +412,7 @@ trait ojTreemap_[K, D] extends dvtBaseComponent[ojTreemapSettableProperties[K, D
   @JSName("getProperty")
   def getProperty_layout(property: layout): sliceAndDiceHorizontal | sliceAndDiceVertical | squarified = js.native
   @JSName("getProperty")
-  def getProperty_nodeContent(property: nodeContent): `26`[K, D] = js.native
+  def getProperty_nodeContent(property: nodeContent): `28`[K, D] = js.native
   @JSName("getProperty")
   def getProperty_nodeDefaults(property: nodeDefaults): GroupLabelDisplay = js.native
   @JSName("getProperty")
@@ -428,7 +428,7 @@ trait ojTreemap_[K, D] extends dvtBaseComponent[ojTreemapSettableProperties[K, D
   @JSName("getProperty")
   def getProperty_sorting(property: sorting): on | off = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `27`[K, D] = js.native
+  def getProperty_tooltip(property: tooltip): `29`[K, D] = js.native
   @JSName("getProperty")
   def getProperty_touchResponse(property: touchResponse): touchStart | auto = js.native
   def setProperties(properties: ojTreemapSettablePropertiesLenient[K, D]): Unit = js.native
@@ -480,7 +480,7 @@ trait ojTreemap_[K, D] extends dvtBaseComponent[ojTreemapSettableProperties[K, D
   @JSName("setProperty")
   def setProperty_isolatedNode(property: isolatedNode, value: js.Any): Unit = js.native
   @JSName("setProperty")
-  def setProperty_nodeContent(property: nodeContent, value: `26`[K, D]): Unit = js.native
+  def setProperty_nodeContent(property: nodeContent, value: `28`[K, D]): Unit = js.native
   @JSName("setProperty")
   def setProperty_nodeDefaults(property: nodeDefaults, value: GroupLabelDisplay): Unit = js.native
   @JSName("setProperty")
@@ -490,7 +490,7 @@ trait ojTreemap_[K, D] extends dvtBaseComponent[ojTreemapSettableProperties[K, D
   @JSName("setProperty")
   def setProperty_sizeLabel(property: sizeLabel, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `27`[K, D]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `29`[K, D]): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelDataVisualization): Unit = js.native
 }

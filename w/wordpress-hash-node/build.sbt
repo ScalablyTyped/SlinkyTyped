@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "wordpress-hash-node"
-version := "1.0-dt-20200306Z-a67afe"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200306Z-2f98d7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

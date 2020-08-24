@@ -45,65 +45,30 @@ object Adapter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCount")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetItem(value: Double => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetCount(value: () => Double): Self = this.set("getCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetItemId(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemId")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetItem(value: Double => js.Any): Self = this.set("getItem", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetItemViewType(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemViewType")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetItemId(value: Double => Double): Self = this.set("getItemId", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetView(value: (Double, View, ViewGroup) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setGetItemViewType(value: Double => Double): Self = this.set("getItemViewType", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetViewTypeCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewTypeCount")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetView(value: (Double, View, ViewGroup) => View): Self = this.set("getView", js.Any.fromFunction3(value))
     @scala.inline
-    def withHasStableIds(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasStableIds")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetViewTypeCount(value: () => Double): Self = this.set("getViewTypeCount", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsEmpty(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHasStableIds(value: () => Boolean): Self = this.set("hasStableIds", js.Any.fromFunction0(value))
     @scala.inline
-    def withRegisterDataSetObserver(value: DataSetObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerDataSetObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setIsEmpty(value: () => Boolean): Self = this.set("isEmpty", js.Any.fromFunction0(value))
     @scala.inline
-    def withUnregisterDataSetObserver(value: DataSetObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unregisterDataSetObserver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRegisterDataSetObserver(value: DataSetObserver => Unit): Self = this.set("registerDataSetObserver", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUnregisterDataSetObserver(value: DataSetObserver => Unit): Self = this.set("unregisterDataSetObserver", js.Any.fromFunction1(value))
   }
   
 }

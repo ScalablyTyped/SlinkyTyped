@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CubeShapeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CubeShapeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CubeShapeIcon")
   @js.native
   object component extends js.Object
   

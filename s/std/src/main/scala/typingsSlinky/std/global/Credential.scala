@@ -8,12 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Credential")
 @js.native
 class Credential ()
-  extends typingsSlinky.std.Credential {
-  /* CompleteClass */
-  override val id: java.lang.String = js.native
-  /* CompleteClass */
-  override val `type`: java.lang.String = js.native
-}
+  extends typingsSlinky.std.Credential
 
 @JSGlobal("Credential")
 @js.native

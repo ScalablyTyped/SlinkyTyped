@@ -1,7 +1,8 @@
 package typingsSlinky.sharedb
 
 import org.scalajs.dom.raw.WebSocket
-import typingsSlinky.sharedb.anon.ResultsArray
+import typingsSlinky.sharedb.anon.`0`
+import typingsSlinky.sharedb.sharedbMod.Types
 import typingsSlinky.ws.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,18 +22,19 @@ object clientMod extends js.Object {
     def createFetchQuery(
       collectionName: String,
       query: js.Any,
-      options: ResultsArray,
+      options: `0`,
       callback: js.Function2[/* err */ Error, /* results */ js.Array[_], Unit]
     ): Query = js.native
     def createSubscribeQuery(
       collectionName: String,
       query: js.Any,
-      options: ResultsArray,
+      options: `0`,
       callback: js.Function2[/* err */ Error, /* results */ js.Array[_], Unit]
     ): Query = js.native
     def get(collectionName: String, documentID: String): Doc = js.native
   }
   
+  val types: Types = js.native
   type AddNumOp = typingsSlinky.sharedb.sharedbMod.AddNumOp
   type Doc = typingsSlinky.sharedb.sharedbMod.Doc
   type Error = typingsSlinky.sharedb.sharedbMod.Error

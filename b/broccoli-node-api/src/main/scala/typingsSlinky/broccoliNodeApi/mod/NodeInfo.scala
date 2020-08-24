@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.setup
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.getCallbackObject
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.volatile
-  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.watched
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.trackInputChanges
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.persistentOutput
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.inputNodes
-  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.trackInputChanges
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.watched
   - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.sourceDirectory
 */
 trait NodeInfo extends js.Object

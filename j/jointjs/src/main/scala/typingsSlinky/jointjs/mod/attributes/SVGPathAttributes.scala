@@ -24,41 +24,22 @@ object SVGPathAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withD(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutD: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
-        ret
-    }
+    def setD(value: String): Self = this.set("d", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withPath-length`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path-length")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteD: Self = this.set("d", js.undefined)
     @scala.inline
-    def `withoutPath-length`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path-length")(js.undefined)
-        ret
-    }
+    def `setPath-length`(value: Double): Self = this.set("path-length", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPathLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathLength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deletePath-length`: Self = this.set("path-length", js.undefined)
     @scala.inline
-    def withoutPathLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathLength")(js.undefined)
-        ret
-    }
+    def setPathLength(value: Double): Self = this.set("pathLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePathLength: Self = this.set("pathLength", js.undefined)
   }
   
 }

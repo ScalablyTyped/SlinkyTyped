@@ -14,6 +14,7 @@ import typingsSlinky.three.meshStandardMaterialMod.MeshStandardMaterialParameter
 import typingsSlinky.three.meshToonMaterialMod.MeshToonMaterialParameters
 import typingsSlinky.three.pointsMaterialMod.PointsMaterialParameters
 import typingsSlinky.three.shaderMaterialMod.ShaderMaterialParameters
+import typingsSlinky.three.shadowMaterialMod.ShadowMaterialParameters
 import typingsSlinky.three.spriteMaterialMod.SpriteMaterialParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -99,12 +100,6 @@ object materialsMod extends js.Object {
   }
   
   @js.native
-  class MultiMaterial ()
-    extends typingsSlinky.three.pointsMaterialMod.MultiMaterial {
-    def this(materials: js.Array[typingsSlinky.three.materialMod.Material]) = this()
-  }
-  
-  @js.native
   class PointsMaterial ()
     extends typingsSlinky.three.pointsMaterialMod.PointsMaterial {
     def this(parameters: PointsMaterialParameters) = this()
@@ -125,7 +120,7 @@ object materialsMod extends js.Object {
   @js.native
   class ShadowMaterial ()
     extends typingsSlinky.three.shadowMaterialMod.ShadowMaterial {
-    def this(parameters: ShaderMaterialParameters) = this()
+    def this(parameters: ShadowMaterialParameters) = this()
   }
   
   @js.native

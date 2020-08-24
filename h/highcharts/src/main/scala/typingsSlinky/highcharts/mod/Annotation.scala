@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnnotationsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,32 +21,31 @@ class Annotation protected () extends js.Object {
     */
   def this(chart: Chart_, userOptions: AnnotationsOptions) = this()
   /**
-    * The chart that the annotation belongs to.
+    * The group svg element.
     */
-  var chart: Chart_ = js.native
+  var group: SVGElement = js.native
   /**
-    * The array of control points.
+    * The group svg element of the annotation's labels.
     */
-  var controlPoints: js.Array[js.Object] = js.native
-  /**
-    * The array of labels which belong to the annotation.
-    */
-  var labels: js.Array[js.Object] = js.native
+  var labelsGroup: SVGElement = js.native
   /**
     * The options for the annotations.
     */
   var options: AnnotationsOptions = js.native
   /**
-    * The array of points which defines the annotation.
+    * The group svg element of the annotation's shapes.
     */
-  var points: js.Array[Point] = js.native
-  /**
-    * The array of shapes which belong to the annotation.
-    */
-  var shapes: js.Array[js.Object] = js.native
+  var shapesGroup: SVGElement = js.native
   /**
     * The user options for the annotations.
     */
   var userOptions: AnnotationsOptions = js.native
+  /**
+    * Updates an annotation.
+    *
+    * @param userOptions
+    *        New user options for the annotation.
+    */
+  def update(userOptions: PartialAnnotationsOptions): Unit = js.native
 }
 

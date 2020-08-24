@@ -25,13 +25,13 @@ import scala.scalajs.js.annotation._
  // default label props
 class Link_ () extends Cell {
   def this(attributes: Attributes) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: Attributes, opt: Options) = this()
   var arrowHeadMarkup: String = js.native
   var doubleToolMarkup: js.UndefOr[String] = js.native
   var labelMarkup: js.UndefOr[String | MarkupJSON] = js.native
    // default label markup
   var labelProps: js.UndefOr[Label] = js.native
-  var markup: String = js.native
   var toolMarkup: String = js.native
   var vertexMarkup: String = js.native
   def appendLabel(label: Label): js.Array[Label] = js.native
@@ -44,6 +44,11 @@ class Link_ () extends Cell {
   def connector(connector: ConnectorJSON, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def connector(connector: Connector, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def connector(name: ConnectorType): this.type = js.native
+  def connector(
+    name: ConnectorType,
+    args: js.UndefOr[scala.Nothing],
+    opt: typingsSlinky.jointjs.mod.dia.Cell.Options
+  ): this.type = js.native
   def connector(name: ConnectorType, args: ConnectorArguments): this.type = js.native
   def connector(name: ConnectorType, args: ConnectorArguments, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def disconnect(): this.type = js.native
@@ -69,15 +74,18 @@ class Link_ () extends Cell {
   def labels(): js.Array[Label] = js.native
   def labels(labels: js.Array[Label]): this.type = js.native
   def removeLabel(): js.Array[Label] = js.native
+  def removeLabel(index: js.UndefOr[scala.Nothing], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): js.Array[Label] = js.native
   def removeLabel(index: Double): js.Array[Label] = js.native
   def removeLabel(index: Double, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): js.Array[Label] = js.native
   def removeVertex(): js.Array[Vertex] = js.native
+  def removeVertex(index: js.UndefOr[scala.Nothing], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): js.Array[Vertex] = js.native
   def removeVertex(index: Double): js.Array[Vertex] = js.native
   def removeVertex(index: Double, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): js.Array[Vertex] = js.native
   def reparent(): Element = js.native
   def reparent(opt: typingsSlinky.jointjs.mod.dia.Cell.Options): Element = js.native
   def router(): Router | RouterJSON | Null = js.native
   def router(name: RouterType): this.type = js.native
+  def router(name: RouterType, args: js.UndefOr[scala.Nothing], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def router(name: RouterType, args: RouterArguments): this.type = js.native
   def router(name: RouterType, args: RouterArguments, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def router(router: Router): this.type = js.native
@@ -85,16 +93,24 @@ class Link_ () extends Cell {
   def router(router: RouterJSON, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def router(router: Router, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def scale(sx: Double, sy: Double): this.type = js.native
+  def scale(
+    sx: Double,
+    sy: Double,
+    origin: js.UndefOr[scala.Nothing],
+    opt: typingsSlinky.jointjs.mod.dia.Cell.Options
+  ): this.type = js.native
   def scale(sx: Double, sy: Double, origin: Point): this.type = js.native
   def scale(sx: Double, sy: Double, origin: Point, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def source(): EndJSON = js.native
   def source(source: Cell): this.type = js.native
+  def source(source: Cell, args: js.UndefOr[scala.Nothing], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def source(source: Cell, args: EndCellArgs): this.type = js.native
   def source(source: Cell, args: EndCellArgs, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def source(source: EndJSON): this.type = js.native
   def source(source: EndJSON, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def target(): EndJSON = js.native
   def target(target: Cell): this.type = js.native
+  def target(target: Cell, args: js.UndefOr[scala.Nothing], opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def target(target: Cell, args: EndCellArgs): this.type = js.native
   def target(target: Cell, args: EndCellArgs, opt: typingsSlinky.jointjs.mod.dia.Cell.Options): this.type = js.native
   def target(target: EndJSON): this.type = js.native

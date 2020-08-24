@@ -4,13 +4,13 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCssThemr.mod.TReactCSSThemrTheme
 import typingsSlinky.reactCssThemr.mod.ThemeProviderProps
-import typingsSlinky.reactToolbox.libThemeProviderMod.default
+import typingsSlinky.reactToolbox.themeProviderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ThemeProvider {
-  @JSImport("react-toolbox/lib/ThemeProvider", JSImport.Default)
+  @JSImport("react-toolbox/components/ThemeProvider", JSImport.Default)
   @js.native
   object component extends js.Object
   

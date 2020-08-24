@@ -1,6 +1,6 @@
 package typingsSlinky.typedoc
 
-import org.scalablytyped.runtime.Instantiable3
+import typingsSlinky.typedoc.anon.PartialCommentTag
 import typingsSlinky.typedoc.modelsMod.CommentTag
 import typingsSlinky.typedoc.serializationComponentsMod.SerializerComponent
 import scala.scalajs.js
@@ -12,13 +12,7 @@ import scala.scalajs.js.annotation._
 object commentTagMod extends js.Object {
   @js.native
   class CommentTagSerializer () extends SerializerComponent[CommentTag] {
-    @JSName("serializeGroupSymbol")
-    var serializeGroupSymbol_CommentTagSerializer: Instantiable3[
-        /* tagName */ String, 
-        js.UndefOr[/* paramName */ String], 
-        js.UndefOr[/* text */ String], 
-        CommentTag
-      ] = js.native
+    def toObject(tag: CommentTag, obj: PartialCommentTag): typingsSlinky.typedoc.schemaMod.CommentTag = js.native
   }
   
   /* static members */

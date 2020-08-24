@@ -1,9 +1,7 @@
 package typingsSlinky.reactColor.githubMod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactColor.mod.Color
+import typingsSlinky.reactColor.anon.PartialClassesGithubPicke
 import typingsSlinky.reactColor.mod.ColorPickerProps
 import typingsSlinky.reactColor.mod.ColorResult
 import typingsSlinky.reactColor.reactColorStrings.`top-left`
@@ -13,37 +11,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GithubPickerProps extends ColorPickerProps[GithubPicker] {
-  var colors: js.UndefOr[js.Array[String]] = js.undefined
-  var onSwatchHover: js.UndefOr[js.Function2[/* color */ ColorResult, /* event */ MouseEvent, Unit]] = js.undefined
-  var triangle: js.UndefOr[hide | `top-left` | `top-right`] = js.undefined
-  var width: js.UndefOr[String] = js.undefined
+  var colors: js.UndefOr[js.Array[String]] = js.native
+  var onSwatchHover: js.UndefOr[js.Function2[/* color */ ColorResult, /* event */ MouseEvent, Unit]] = js.native
+  @JSName("styles")
+  var styles_GithubPickerProps: js.UndefOr[PartialClassesGithubPicke] = js.native
+  var triangle: js.UndefOr[hide | `top-left` | `top-right`] = js.native
+  var width: js.UndefOr[String] = js.native
 }
 
 object GithubPickerProps {
   @scala.inline
-  def apply(
-    color: Color = null,
-    colors: js.Array[String] = null,
-    key: Key = null,
-    onChange: /* color */ ColorResult => Unit = null,
-    onChangeComplete: /* color */ ColorResult => Unit = null,
-    onSwatchHover: (/* color */ ColorResult, /* event */ MouseEvent) => Unit = null,
-    ref: js.UndefOr[Null | LegacyRef[GithubPicker]] = js.undefined,
-    triangle: hide | `top-left` | `top-right` = null,
-    width: String = null
-  ): GithubPickerProps = {
+  def apply(): GithubPickerProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChangeComplete != null) __obj.updateDynamic("onChangeComplete")(js.Any.fromFunction1(onChangeComplete))
-    if (onSwatchHover != null) __obj.updateDynamic("onSwatchHover")(js.Any.fromFunction2(onSwatchHover))
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (triangle != null) __obj.updateDynamic("triangle")(triangle.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[GithubPickerProps]
   }
+  @scala.inline
+  implicit class GithubPickerPropsOps[Self <: GithubPickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
+    @scala.inline
+    def setColors(value: js.Array[String]): Self = this.set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColors: Self = this.set("colors", js.undefined)
+    @scala.inline
+    def setOnSwatchHover(value: (/* color */ ColorResult, /* event */ MouseEvent) => Unit): Self = this.set("onSwatchHover", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSwatchHover: Self = this.set("onSwatchHover", js.undefined)
+    @scala.inline
+    def setStyles(value: PartialClassesGithubPicke): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyles: Self = this.set("styles", js.undefined)
+    @scala.inline
+    def setTriangle(value: hide | `top-left` | `top-right`): Self = this.set("triangle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTriangle: Self = this.set("triangle", js.undefined)
+    @scala.inline
+    def setWidth(value: String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

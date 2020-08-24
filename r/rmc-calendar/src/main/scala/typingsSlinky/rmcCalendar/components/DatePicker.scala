@@ -4,7 +4,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.ExtraData
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
-import typingsSlinky.rmcCalendar.datePickerMod.default
 import typingsSlinky.rmcCalendar.datePickerPropsMod.PropsType
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.normal
 import typingsSlinky.rmcCalendar.rmcCalendarStrings.one
@@ -15,14 +14,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DatePicker {
-  @JSImport("rmc-calendar/lib/DatePicker", JSImport.Default)
+  @JSImport("rmc-calendar", "DatePicker")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.rmcCalendar.mod.DatePicker] {
     @scala.inline
     def defaultDate(value: js.Date): this.type = set("defaultDate", value.asInstanceOf[js.Any])
     @scala.inline

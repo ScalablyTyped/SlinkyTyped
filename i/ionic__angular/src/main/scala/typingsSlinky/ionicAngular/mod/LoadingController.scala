@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "LoadingController")
 @js.native
 class LoadingController ()
-  extends typingsSlinky.ionicAngular.distMod.LoadingController
+  extends typingsSlinky.ionicAngular.loadingControllerMod.LoadingController
 

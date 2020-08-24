@@ -1,6 +1,8 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
-import typingsSlinky.vscodeJsonrpc.mod.RequestType
+import typingsSlinky.vscodeJsonrpc.mod.ProgressType
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
+import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.workspaceSlashsymbol
 import typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,11 +11,15 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol/lib/protocol", "WorkspaceSymbolRequest")
 @js.native
 object WorkspaceSymbolRequest extends js.Object {
-  val `type`: RequestType[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify WorkspaceSymbolParams */ js.Any, 
+  val method: workspaceSlashsymbol = js.native
+  /** @deprecated Use WorkspaceSymbolRequest.type */
+  val resultType: ProgressType[js.Array[SymbolInformation]] = js.native
+  val `type`: ProtocolRequestType[
+    WorkspaceSymbolParams, 
     js.Array[SymbolInformation] | Null, 
+    js.Array[SymbolInformation], 
     Unit, 
-    Unit
+    WorkspaceSymbolRegistrationOptions
   ] = js.native
 }
 

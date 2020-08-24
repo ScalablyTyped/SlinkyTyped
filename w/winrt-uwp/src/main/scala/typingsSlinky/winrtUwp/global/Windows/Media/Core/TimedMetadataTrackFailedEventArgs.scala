@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.TimedMetadataTrackFailedEventArgs")
 @js.native
 abstract class TimedMetadataTrackFailedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.TimedMetadataTrackFailedEventArgs {
-  /** Gets an object representing the error that occurred with the timed metadata track. */
-  /* CompleteClass */
-  override var error: typingsSlinky.winrtUwp.Windows.Media.Core.TimedMetadataTrackError = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.TimedMetadataTrackFailedEventArgs
 

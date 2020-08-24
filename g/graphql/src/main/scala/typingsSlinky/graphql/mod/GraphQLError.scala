@@ -13,10 +13,10 @@ class GraphQLError protected ()
   extends typingsSlinky.graphql.errorMod.GraphQLError {
   def this(
     message: String,
-    nodes: js.UndefOr[ASTNode | js.Array[ASTNode]],
+    nodes: js.UndefOr[Maybe[js.Array[ASTNode] | ASTNode]],
     source: js.UndefOr[Maybe[typingsSlinky.graphql.sourceMod.Source]],
     positions: js.UndefOr[Maybe[js.Array[Double]]],
-    path: js.UndefOr[Maybe[js.Array[Double | String]]],
+    path: js.UndefOr[Maybe[js.Array[String | Double]]],
     originalError: js.UndefOr[Maybe[js.Error]],
     extensions: js.UndefOr[Maybe[StringDictionary[_]]]
   ) = this()

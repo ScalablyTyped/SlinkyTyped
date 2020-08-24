@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.InclinometerReadingChangedEventArgs")
 @js.native
 abstract class InclinometerReadingChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.InclinometerReadingChangedEventArgs {
-  /** Gets the current inclinometer reading. */
-  /* CompleteClass */
-  override var reading: typingsSlinky.winrtUwp.Windows.Devices.Sensors.InclinometerReading = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.InclinometerReadingChangedEventArgs
 

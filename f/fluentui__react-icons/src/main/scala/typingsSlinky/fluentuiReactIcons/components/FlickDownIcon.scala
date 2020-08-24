@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FlickDownIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FlickDownIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FlickDownIcon")
   @js.native
   object component extends js.Object
   

@@ -3,15 +3,16 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.popupMod.PopupDatePickerProps
-import typingsSlinky.antDesignReactNative.popupMod.default
+import typingsSlinky.antDesignReactNative.cascaderPopupMod.IPopupCascaderProps
+import typingsSlinky.antDesignReactNative.cascaderPopupMod.default
+import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderValue
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Popup {
-  @JSImport("@ant-design/react-native/lib/date-picker/datepicker/Popup", JSImport.Default)
+  @JSImport("@ant-design/react-native/lib/picker/cascader/Popup", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -30,8 +31,6 @@ object Popup {
     @scala.inline
     def content(value: ReactElement | String): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def date(value: js.Any): this.type = set("date", value.asInstanceOf[js.Any])
-    @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
@@ -44,7 +43,7 @@ object Popup {
     @scala.inline
     def okText(value: String | ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* date */ js.UndefOr[js.Any] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* date */ js.UndefOr[CascaderValue] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
     @scala.inline
@@ -79,11 +78,11 @@ object Popup {
     def wrapStyle(value: CSSProperties): this.type = set("wrapStyle", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopupDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: IPopupCascaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(datePicker: ReactElement): Builder = {
-    val __props = js.Dynamic.literal(datePicker = datePicker.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PopupDatePickerProps]))
+  def apply(cascader: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(cascader = cascader.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IPopupCascaderProps]))
   }
 }
 

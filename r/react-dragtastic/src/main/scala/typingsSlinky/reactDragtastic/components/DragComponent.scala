@@ -1,7 +1,9 @@
 package typingsSlinky.reactDragtastic.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactDragtastic.anon.StateisOverAcceptedboolea
 import typingsSlinky.reactDragtastic.mod.DragComponentProps
 import typingsSlinky.reactDragtastic.mod.Id
 import scala.scalajs.js
@@ -24,12 +26,18 @@ object DragComponent {
     @scala.inline
     def onDrag(value: () => Unit): this.type = set("onDrag", js.Any.fromFunction0(value))
     @scala.inline
+    def subscribeToVarargs(value: String*): this.type = set("subscribeTo", js.Array(value :_*))
+    @scala.inline
     def subscribeTo(value: js.Array[String]): this.type = set("subscribeTo", value.asInstanceOf[js.Any])
     @scala.inline
     def subscribeToNull: this.type = set("subscribeTo", null)
   }
   
   def withProps(p: DragComponentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DragComponent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: StateisOverAcceptedboolea => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DragComponentProps]))
+  }
 }
 

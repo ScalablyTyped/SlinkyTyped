@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HardDriveLockIcon {
-  @JSImport("@fluentui/react-icons/lib/components/HardDriveLockIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "HardDriveLockIcon")
   @js.native
   object component extends js.Object
   

@@ -10,41 +10,30 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
+@js.native
 trait MeshBatchUvs extends js.Object {
   /**
     * UV Buffer data
     * @member {Float32Array} PIXI.MeshBatchUvs#data
     * @readonly
     */
-  val data: js.typedarray.Float32Array
+  val data: js.typedarray.Float32Array = js.native
   /**
     * Buffer with normalized UV's
     * @member {PIXI.Buffer} PIXI.MeshBatchUvs#uvBuffer
     */
-  var uvBuffer: Buffer
+  var uvBuffer: Buffer = js.native
   /**
     * Material UV matrix
     * @member {PIXI.TextureMatrix} PIXI.MeshBatchUvs#uvMatrix
     */
-  var uvMatrix: TextureMatrix
+  var uvMatrix: TextureMatrix = js.native
   /**
     * updates
     *
-    * @param {boolean} forceUpdate - force the update
+    * @param {boolean} [forceUpdate] - force the update
     */
-  def update(forceUpdate: Boolean): Unit
-}
-
-object MeshBatchUvs {
-  @scala.inline
-  def apply(
-    data: js.typedarray.Float32Array,
-    update: Boolean => Unit,
-    uvBuffer: Buffer,
-    uvMatrix: TextureMatrix
-  ): MeshBatchUvs = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], update = js.Any.fromFunction1(update), uvBuffer = uvBuffer.asInstanceOf[js.Any], uvMatrix = uvMatrix.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MeshBatchUvs]
-  }
+  def update(): Unit = js.native
+  def update(forceUpdate: Boolean): Unit = js.native
 }
 

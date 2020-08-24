@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation._
 class URLSearchParams ()
   extends typingsSlinky.angularHttp.publicApiMod.URLSearchParams {
   def this(rawParams: String) = this()
+  def this(
+    rawParams: js.UndefOr[scala.Nothing],
+    queryEncoder: typingsSlinky.angularHttp.urlSearchParamsMod.QueryEncoder
+  ) = this()
   def this(rawParams: String, queryEncoder: typingsSlinky.angularHttp.urlSearchParamsMod.QueryEncoder) = this()
 }
 

@@ -20,7 +20,10 @@ object global extends js.Object {
     */
   val OS_IOS: Boolean = js.native
   /**
-    * The global Widget module.
+    * The current Widget context.
+    *
+    * Use `Widget.create*` rather than the `Alloy.create*` methods to create
+    * components relative to the widget context rather than the Alloy project.
     */
   val Widget: WidgetInterface = js.native
   /**

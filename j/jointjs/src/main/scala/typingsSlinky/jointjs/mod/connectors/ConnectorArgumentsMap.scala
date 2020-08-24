@@ -32,29 +32,18 @@ object ConnectorArgumentsMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withJumpover(value: JumpOverConnectorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jumpover")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withNormal(value: NormalConnectorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setJumpover(value: JumpOverConnectorArguments): Self = this.set("jumpover", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRounded(value: RoundedConnectorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNormal(value: NormalConnectorArguments): Self = this.set("normal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSmooth(value: SmoothConnectorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRounded(value: RoundedConnectorArguments): Self = this.set("rounded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSmooth(value: SmoothConnectorArguments): Self = this.set("smooth", value.asInstanceOf[js.Any])
   }
   
 }

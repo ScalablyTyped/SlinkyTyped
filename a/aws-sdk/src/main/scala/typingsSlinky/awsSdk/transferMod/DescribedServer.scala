@@ -11,19 +11,19 @@ trait DescribedServer extends js.Object {
     */
   var Arn: typingsSlinky.awsSdk.transferMod.Arn = js.native
   /**
-    * The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. Required when Protocols is set to FTPS.
+    * Specifies the ARN of the AWS Certificate Manager (ACM) certificate. Required when Protocols is set to FTPS.
     */
   var Certificate: js.UndefOr[typingsSlinky.awsSdk.transferMod.Certificate] = js.native
   /**
-    * The virtual private cloud (VPC) endpoint settings that you configured for your file transfer protocol-enabled server.
+    * Specifies the virtual private cloud (VPC) endpoint settings that you configured for your file transfer protocol-enabled server.
     */
   var EndpointDetails: js.UndefOr[typingsSlinky.awsSdk.transferMod.EndpointDetails] = js.native
   /**
-    * The type of endpoint that your file transfer protocol-enabled server is connected to. If your server is connected to a VPC endpoint, your server isn't accessible over the public internet.
+    * Defines the type of endpoint that your file transfer protocol-enabled server is connected to. If your server is connected to a VPC endpoint, your server isn't accessible over the public internet.
     */
   var EndpointType: js.UndefOr[typingsSlinky.awsSdk.transferMod.EndpointType] = js.native
   /**
-    * Contains the message-digest algorithm (MD5) hash of a file transfer protocol-enabled server's host key. This value is equivalent to the output of the ssh-keygen -l -E md5 -f my-new-server-key command.
+    * Specifies the Base64-encoded SHA256 fingerprint of the server's host key. This value is equivalent to the output of the ssh-keygen -l -f my-new-server-key command.
     */
   var HostKeyFingerprint: js.UndefOr[typingsSlinky.awsSdk.transferMod.HostKeyFingerprint] = js.native
   /**
@@ -31,66 +31,107 @@ trait DescribedServer extends js.Object {
     */
   var IdentityProviderDetails: js.UndefOr[typingsSlinky.awsSdk.transferMod.IdentityProviderDetails] = js.native
   /**
-    * Defines the mode of authentication method enabled for this service. A value of SERVICE_MANAGED means that you are using this file transfer protocol-enabled server to store and access user credentials within the service. A value of API_GATEWAY indicates that you have integrated an API Gateway endpoint that will be invoked for authenticating your user into the service.
+    * Specifies the mode of authentication method enabled for this service. A value of SERVICE_MANAGED means that you are using this file transfer protocol-enabled server to store and access user credentials within the service. A value of API_GATEWAY indicates that you have integrated an API Gateway endpoint that will be invoked for authenticating your user into the service.
     */
   var IdentityProviderType: js.UndefOr[typingsSlinky.awsSdk.transferMod.IdentityProviderType] = js.native
   /**
-    * An AWS Identity and Access Management (IAM) entity that allows a file transfer protocol-enabled server to turn on Amazon CloudWatch logging for Amazon S3 events. When set, user activity can be viewed in your CloudWatch logs.
+    * Specifies the AWS Identity and Access Management (IAM) role that allows a file transfer protocol-enabled server to turn on Amazon CloudWatch logging for Amazon S3 events. When set, user activity can be viewed in your CloudWatch logs.
     */
   var LoggingRole: js.UndefOr[Role] = js.native
   /**
-    * Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint. The available protocols are:   Secure Shell (SSH) File Transfer Protocol (SFTP): File transfer over SSH   File Transfer Protocol Secure (FTPS): File transfer with TLS encryption   File Transfer Protocol (FTP): Unencrypted file transfer  
+    * Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint. The available protocols are:    SFTP (Secure Shell (SSH) File Transfer Protocol): File transfer over SSH    FTPS (File Transfer Protocol Secure): File transfer with TLS encryption    FTP (File Transfer Protocol): Unencrypted file transfer  
     */
   var Protocols: js.UndefOr[typingsSlinky.awsSdk.transferMod.Protocols] = js.native
   /**
-    * Unique system-assigned identifier for a file transfer protocol-enabled server that you instantiate.
+    * Specifies the unique system-assigned identifier for a file transfer protocol-enabled server that you instantiate.
     */
   var ServerId: js.UndefOr[typingsSlinky.awsSdk.transferMod.ServerId] = js.native
   /**
-    * The condition of a file transfer protocol-enabled server for the server that was described. A value of ONLINE indicates that the server can accept jobs and transfer files. A State value of OFFLINE means that the server cannot perform file transfer operations. The states of STARTING and STOPPING indicate that the server is in an intermediate state, either not fully able to respond, or not fully offline. The values of START_FAILED or STOP_FAILED can indicate an error condition.
+    * Specifies the condition of a file transfer protocol-enabled server for the server that was described. A value of ONLINE indicates that the server can accept jobs and transfer files. A State value of OFFLINE means that the server cannot perform file transfer operations. The states of STARTING and STOPPING indicate that the server is in an intermediate state, either not fully able to respond, or not fully offline. The values of START_FAILED or STOP_FAILED can indicate an error condition.
     */
   var State: js.UndefOr[typingsSlinky.awsSdk.transferMod.State] = js.native
   /**
-    * Contains the key-value pairs that you can use to search for and group file transfer protocol-enabled servers that were assigned to the server that was described.
+    * Specifies the key-value pairs that you can use to search for and group file transfer protocol-enabled servers that were assigned to the server that was described.
     */
   var Tags: js.UndefOr[typingsSlinky.awsSdk.transferMod.Tags] = js.native
   /**
-    * The number of users that are assigned to a file transfer protocol-enabled server you specified with the ServerId.
+    * Specifies the number of users that are assigned to a file transfer protocol-enabled server you specified with the ServerId.
     */
   var UserCount: js.UndefOr[typingsSlinky.awsSdk.transferMod.UserCount] = js.native
 }
 
 object DescribedServer {
   @scala.inline
-  def apply(
-    Arn: Arn,
-    Certificate: Certificate = null,
-    EndpointDetails: EndpointDetails = null,
-    EndpointType: EndpointType = null,
-    HostKeyFingerprint: HostKeyFingerprint = null,
-    IdentityProviderDetails: IdentityProviderDetails = null,
-    IdentityProviderType: IdentityProviderType = null,
-    LoggingRole: Role = null,
-    Protocols: Protocols = null,
-    ServerId: ServerId = null,
-    State: State = null,
-    Tags: Tags = null,
-    UserCount: js.UndefOr[UserCount] = js.undefined
-  ): DescribedServer = {
+  def apply(Arn: Arn): DescribedServer = {
     val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any])
-    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
-    if (EndpointDetails != null) __obj.updateDynamic("EndpointDetails")(EndpointDetails.asInstanceOf[js.Any])
-    if (EndpointType != null) __obj.updateDynamic("EndpointType")(EndpointType.asInstanceOf[js.Any])
-    if (HostKeyFingerprint != null) __obj.updateDynamic("HostKeyFingerprint")(HostKeyFingerprint.asInstanceOf[js.Any])
-    if (IdentityProviderDetails != null) __obj.updateDynamic("IdentityProviderDetails")(IdentityProviderDetails.asInstanceOf[js.Any])
-    if (IdentityProviderType != null) __obj.updateDynamic("IdentityProviderType")(IdentityProviderType.asInstanceOf[js.Any])
-    if (LoggingRole != null) __obj.updateDynamic("LoggingRole")(LoggingRole.asInstanceOf[js.Any])
-    if (Protocols != null) __obj.updateDynamic("Protocols")(Protocols.asInstanceOf[js.Any])
-    if (ServerId != null) __obj.updateDynamic("ServerId")(ServerId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (!js.isUndefined(UserCount)) __obj.updateDynamic("UserCount")(UserCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribedServer]
   }
+  @scala.inline
+  implicit class DescribedServerOps[Self <: DescribedServer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setArn(value: Arn): Self = this.set("Arn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCertificate(value: Certificate): Self = this.set("Certificate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCertificate: Self = this.set("Certificate", js.undefined)
+    @scala.inline
+    def setEndpointDetails(value: EndpointDetails): Self = this.set("EndpointDetails", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEndpointDetails: Self = this.set("EndpointDetails", js.undefined)
+    @scala.inline
+    def setEndpointType(value: EndpointType): Self = this.set("EndpointType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEndpointType: Self = this.set("EndpointType", js.undefined)
+    @scala.inline
+    def setHostKeyFingerprint(value: HostKeyFingerprint): Self = this.set("HostKeyFingerprint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHostKeyFingerprint: Self = this.set("HostKeyFingerprint", js.undefined)
+    @scala.inline
+    def setIdentityProviderDetails(value: IdentityProviderDetails): Self = this.set("IdentityProviderDetails", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIdentityProviderDetails: Self = this.set("IdentityProviderDetails", js.undefined)
+    @scala.inline
+    def setIdentityProviderType(value: IdentityProviderType): Self = this.set("IdentityProviderType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIdentityProviderType: Self = this.set("IdentityProviderType", js.undefined)
+    @scala.inline
+    def setLoggingRole(value: Role): Self = this.set("LoggingRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoggingRole: Self = this.set("LoggingRole", js.undefined)
+    @scala.inline
+    def setProtocolsVarargs(value: Protocol*): Self = this.set("Protocols", js.Array(value :_*))
+    @scala.inline
+    def setProtocols(value: Protocols): Self = this.set("Protocols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProtocols: Self = this.set("Protocols", js.undefined)
+    @scala.inline
+    def setServerId(value: ServerId): Self = this.set("ServerId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteServerId: Self = this.set("ServerId", js.undefined)
+    @scala.inline
+    def setState(value: State): Self = this.set("State", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteState: Self = this.set("State", js.undefined)
+    @scala.inline
+    def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))
+    @scala.inline
+    def setTags(value: Tags): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
+    @scala.inline
+    def setUserCount(value: UserCount): Self = this.set("UserCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUserCount: Self = this.set("UserCount", js.undefined)
+  }
+  
 }
 

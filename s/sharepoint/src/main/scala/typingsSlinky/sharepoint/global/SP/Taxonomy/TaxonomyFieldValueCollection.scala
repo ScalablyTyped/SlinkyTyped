@@ -1,6 +1,5 @@
 package typingsSlinky.sharepoint.global.SP.Taxonomy
 
-import typingsSlinky.sharepoint.IEnumerator
 import typingsSlinky.sharepoint.SP.ClientContext
 import typingsSlinky.sharepoint.SP.Field
 import scala.scalajs.js
@@ -12,7 +11,5 @@ import scala.scalajs.js.annotation._
 class TaxonomyFieldValueCollection protected ()
   extends typingsSlinky.sharepoint.SP.Taxonomy.TaxonomyFieldValueCollection {
   def this(context: ClientContext, fieldValue: String, creatingField: Field) = this()
-  /* CompleteClass */
-  override def getEnumerator(): IEnumerator[typingsSlinky.sharepoint.SP.Taxonomy.TaxonomyFieldValue] = js.native
 }
 

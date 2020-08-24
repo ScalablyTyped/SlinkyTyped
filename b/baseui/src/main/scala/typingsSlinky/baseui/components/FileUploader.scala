@@ -28,6 +28,8 @@ object FileUploader {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def acceptVarargs(value: String*): this.type = set("accept", js.Array(value :_*))
+    @scala.inline
     def accept(value: String | js.Array[String]): this.type = set("accept", value.asInstanceOf[js.Any])
     @scala.inline
     def disableClick(value: Boolean): this.type = set("disableClick", value.asInstanceOf[js.Any])

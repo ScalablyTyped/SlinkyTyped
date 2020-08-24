@@ -1,39 +1,44 @@
 package typingsSlinky.reactColor.chromeMod
 
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactColor.mod.Color
+import typingsSlinky.reactColor.anon.PartialClassesChromePicke
 import typingsSlinky.reactColor.mod.ColorPickerProps
-import typingsSlinky.reactColor.mod.ColorResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChromePickerProps extends ColorPickerProps[ChromePicker] {
-  var disableAlpha: js.UndefOr[Boolean] = js.undefined
-  var styles: js.UndefOr[ChromePickerStyles] = js.undefined
+  var disableAlpha: js.UndefOr[Boolean] = js.native
+  @JSName("styles")
+  var styles_ChromePickerProps: js.UndefOr[PartialClassesChromePicke] = js.native
 }
 
 object ChromePickerProps {
   @scala.inline
-  def apply(
-    color: Color = null,
-    disableAlpha: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
-    onChange: /* color */ ColorResult => Unit = null,
-    onChangeComplete: /* color */ ColorResult => Unit = null,
-    ref: js.UndefOr[Null | LegacyRef[ChromePicker]] = js.undefined,
-    styles: ChromePickerStyles = null
-  ): ChromePickerProps = {
+  def apply(): ChromePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAlpha)) __obj.updateDynamic("disableAlpha")(disableAlpha.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChangeComplete != null) __obj.updateDynamic("onChangeComplete")(js.Any.fromFunction1(onChangeComplete))
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChromePickerProps]
   }
+  @scala.inline
+  implicit class ChromePickerPropsOps[Self <: ChromePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisableAlpha(value: Boolean): Self = this.set("disableAlpha", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableAlpha: Self = this.set("disableAlpha", js.undefined)
+    @scala.inline
+    def setStyles(value: PartialClassesChromePicke): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyles: Self = this.set("styles", js.undefined)
+  }
+  
 }
 

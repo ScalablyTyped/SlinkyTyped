@@ -20,6 +20,12 @@ trait TileGrid extends js.Object {
   def forEachTileCoordParentTileRange(
     tileCoord: TileCoord,
     callback: js.Function2[/* p0 */ Double, /* p1 */ typingsSlinky.ol.tileRangeMod.default, Boolean],
+    opt_tileRange: js.UndefOr[scala.Nothing],
+    opt_extent: Extent
+  ): Boolean = js.native
+  def forEachTileCoordParentTileRange(
+    tileCoord: TileCoord,
+    callback: js.Function2[/* p0 */ Double, /* p1 */ typingsSlinky.ol.tileRangeMod.default, Boolean],
     opt_tileRange: typingsSlinky.ol.tileRangeMod.default
   ): Boolean = js.native
   def forEachTileCoordParentTileRange(
@@ -37,6 +43,7 @@ trait TileGrid extends js.Object {
   def getResolutions(): js.Array[Double] = js.native
   def getTileCoordCenter(tileCoord: TileCoord): Coordinate = js.native
   def getTileCoordChildTileRange(tileCoord: TileCoord): typingsSlinky.ol.tileRangeMod.default = js.native
+  def getTileCoordChildTileRange(tileCoord: TileCoord, opt_tileRange: js.UndefOr[scala.Nothing], opt_extent: Extent): typingsSlinky.ol.tileRangeMod.default = js.native
   def getTileCoordChildTileRange(tileCoord: TileCoord, opt_tileRange: typingsSlinky.ol.tileRangeMod.default): typingsSlinky.ol.tileRangeMod.default = js.native
   def getTileCoordChildTileRange(tileCoord: TileCoord, opt_tileRange: typingsSlinky.ol.tileRangeMod.default, opt_extent: Extent): typingsSlinky.ol.tileRangeMod.default = js.native
   def getTileCoordExtent(tileCoord: TileCoord): Extent = js.native

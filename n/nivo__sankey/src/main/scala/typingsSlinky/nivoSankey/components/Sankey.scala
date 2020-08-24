@@ -1,7 +1,7 @@
 package typingsSlinky.nivoSankey.components
 
 import org.scalajs.dom.raw.Element
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -9,20 +9,17 @@ import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.CssMixBlendMode
+import typingsSlinky.nivoCore.mod.Dimensions
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
 import typingsSlinky.nivoSankey.anon.Links
 import typingsSlinky.nivoSankey.mod.AccessorFunc
-import typingsSlinky.nivoSankey.mod.Data
-import typingsSlinky.nivoSankey.mod.Dimensions
 import typingsSlinky.nivoSankey.mod.LabelFormatter
 import typingsSlinky.nivoSankey.mod.SankeyDataNode
 import typingsSlinky.nivoSankey.mod.SankeyLinkDatum
-import typingsSlinky.nivoSankey.mod.SankeyLinkProps
 import typingsSlinky.nivoSankey.mod.SankeyNodeDatum
-import typingsSlinky.nivoSankey.mod.SankeyNodeProps
-import typingsSlinky.nivoSankey.mod.SankeyProps
 import typingsSlinky.nivoSankey.mod.SankeySortFunction
+import typingsSlinky.nivoSankey.mod.SharedProps
 import typingsSlinky.nivoSankey.nivoSankeyStrings.ascending
 import typingsSlinky.nivoSankey.nivoSankeyStrings.auto
 import typingsSlinky.nivoSankey.nivoSankeyStrings.center
@@ -50,6 +47,10 @@ object Sankey {
        with StBuildingComponent[tag.type, typingsSlinky.nivoSankey.mod.Sankey] {
     @scala.inline
     def align(value: center | justify | start | end): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
     @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
@@ -79,6 +80,8 @@ object Sankey {
     @scala.inline
     def labelTextColor(value: InheritedColorProp[SankeyNodeDatum]): this.type = set("labelTextColor", value.asInstanceOf[js.Any])
     @scala.inline
+    def legendsVarargs(value: LegendProps*): this.type = set("legends", js.Array(value :_*))
+    @scala.inline
     def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
     @scala.inline
     def linkBlendMode(value: CssMixBlendMode): this.type = set("linkBlendMode", value.asInstanceOf[js.Any])
@@ -91,9 +94,13 @@ object Sankey {
     @scala.inline
     def linkOpacity(value: Double): this.type = set("linkOpacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def linkTooltip(value: SankeyLinkProps => TagMod[Any]): this.type = set("linkTooltip", js.Any.fromFunction1(value))
+    def linkTooltip(value: SankeyLinkDatum => ReactElement): this.type = set("linkTooltip", js.Any.fromFunction1(value))
     @scala.inline
     def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
     @scala.inline
     def nodeBorderColorFunction1(value: SankeyNodeDatum => String): this.type = set("nodeBorderColor", js.Any.fromFunction1(value))
     @scala.inline
@@ -113,7 +120,7 @@ object Sankey {
     @scala.inline
     def nodeThickness(value: Double): this.type = set("nodeThickness", value.asInstanceOf[js.Any])
     @scala.inline
-    def nodeTooltip(value: SankeyNodeProps => TagMod[Any]): this.type = set("nodeTooltip", js.Any.fromFunction1(value))
+    def nodeTooltip(value: SankeyNodeDatum => ReactElement): this.type = set("nodeTooltip", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(
       value: (/* data */ SankeyNodeDatum | SankeyLinkDatum, /* event */ SyntheticMouseEvent[Element]) => Unit
@@ -125,14 +132,14 @@ object Sankey {
     @scala.inline
     def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltipFormat(value: /* value */ Double => TagMod[Any]): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    def tooltipFormat(value: /* value */ Double => ReactElement): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: Data with SankeyProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: SharedProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(data: Links, height: Double, width: Double): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Data with SankeyProps with Dimensions]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[SharedProps with Dimensions]))
   }
 }
 

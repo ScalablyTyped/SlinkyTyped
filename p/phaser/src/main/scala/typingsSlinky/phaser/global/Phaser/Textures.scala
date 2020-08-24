@@ -150,6 +150,13 @@ object Textures extends js.Object {
       manager: typingsSlinky.phaser.Phaser.Textures.TextureManager,
       key: String,
       source: js.Array[HTMLCanvasElement | HTMLImageElement],
+      width: js.UndefOr[scala.Nothing],
+      height: Double
+    ) = this()
+    def this(
+      manager: typingsSlinky.phaser.Phaser.Textures.TextureManager,
+      key: String,
+      source: js.Array[HTMLCanvasElement | HTMLImageElement],
       width: Double,
       height: Double
     ) = this()
@@ -157,7 +164,21 @@ object Textures extends js.Object {
       manager: typingsSlinky.phaser.Phaser.Textures.TextureManager,
       key: String,
       source: HTMLCanvasElement,
+      width: js.UndefOr[scala.Nothing],
+      height: Double
+    ) = this()
+    def this(
+      manager: typingsSlinky.phaser.Phaser.Textures.TextureManager,
+      key: String,
+      source: HTMLCanvasElement,
       width: Double,
+      height: Double
+    ) = this()
+    def this(
+      manager: typingsSlinky.phaser.Phaser.Textures.TextureManager,
+      key: String,
+      source: HTMLImageElement,
+      width: js.UndefOr[scala.Nothing],
       height: Double
     ) = this()
     def this(
@@ -218,7 +239,19 @@ object Textures extends js.Object {
     def this(
       texture: typingsSlinky.phaser.Phaser.Textures.Texture,
       source: RenderTexture,
+      width: js.UndefOr[scala.Nothing],
+      height: integer
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: RenderTexture,
       width: integer,
+      height: integer
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLCanvasElement,
+      width: js.UndefOr[scala.Nothing],
       height: integer
     ) = this()
     def this(
@@ -230,7 +263,19 @@ object Textures extends js.Object {
     def this(
       texture: typingsSlinky.phaser.Phaser.Textures.Texture,
       source: HTMLImageElement,
+      width: js.UndefOr[scala.Nothing],
+      height: integer
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLImageElement,
       width: integer,
+      height: integer
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLVideoElement,
+      width: js.UndefOr[scala.Nothing],
       height: integer
     ) = this()
     def this(
@@ -242,14 +287,62 @@ object Textures extends js.Object {
     def this(
       texture: typingsSlinky.phaser.Phaser.Textures.Texture,
       source: WebGLTexture,
+      width: js.UndefOr[scala.Nothing],
+      height: integer
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: WebGLTexture,
       width: integer,
       height: integer
     ) = this()
     def this(
       texture: typingsSlinky.phaser.Phaser.Textures.Texture,
       source: RenderTexture,
+      width: js.UndefOr[scala.Nothing],
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: RenderTexture,
+      width: js.UndefOr[scala.Nothing],
+      height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: RenderTexture,
+      width: integer,
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: RenderTexture,
       width: integer,
       height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLCanvasElement,
+      width: js.UndefOr[scala.Nothing],
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLCanvasElement,
+      width: js.UndefOr[scala.Nothing],
+      height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLCanvasElement,
+      width: integer,
+      height: js.UndefOr[scala.Nothing],
       flipY: Boolean
     ) = this()
     def this(
@@ -262,6 +355,27 @@ object Textures extends js.Object {
     def this(
       texture: typingsSlinky.phaser.Phaser.Textures.Texture,
       source: HTMLImageElement,
+      width: js.UndefOr[scala.Nothing],
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLImageElement,
+      width: js.UndefOr[scala.Nothing],
+      height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLImageElement,
+      width: integer,
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLImageElement,
       width: integer,
       height: integer,
       flipY: Boolean
@@ -269,8 +383,50 @@ object Textures extends js.Object {
     def this(
       texture: typingsSlinky.phaser.Phaser.Textures.Texture,
       source: HTMLVideoElement,
+      width: js.UndefOr[scala.Nothing],
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLVideoElement,
+      width: js.UndefOr[scala.Nothing],
+      height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLVideoElement,
+      width: integer,
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: HTMLVideoElement,
       width: integer,
       height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: WebGLTexture,
+      width: js.UndefOr[scala.Nothing],
+      height: js.UndefOr[scala.Nothing],
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: WebGLTexture,
+      width: js.UndefOr[scala.Nothing],
+      height: integer,
+      flipY: Boolean
+    ) = this()
+    def this(
+      texture: typingsSlinky.phaser.Phaser.Textures.Texture,
+      source: WebGLTexture,
+      width: integer,
+      height: js.UndefOr[scala.Nothing],
       flipY: Boolean
     ) = this()
     def this(

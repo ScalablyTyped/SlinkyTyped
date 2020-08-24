@@ -17,10 +17,12 @@ object content extends js.Object {
     - typingsSlinky.arcgisJsApi.esri.MediaContent
     - typingsSlinky.arcgisJsApi.esri.FieldsContent
     - typingsSlinky.arcgisJsApi.esri.AttachmentsContent
+    - typingsSlinky.arcgisJsApi.esri.CustomContent
   */
   trait Content extends js.Object
   
   type AttachmentsContent = typingsSlinky.arcgisJsApi.esri.AttachmentsContent
+  type CustomContent = typingsSlinky.arcgisJsApi.esri.CustomContent
   type FieldsContent = typingsSlinky.arcgisJsApi.esri.FieldsContent
   type MediaContent = typingsSlinky.arcgisJsApi.esri.MediaContent
   type TextContent = typingsSlinky.arcgisJsApi.esri.TextContent

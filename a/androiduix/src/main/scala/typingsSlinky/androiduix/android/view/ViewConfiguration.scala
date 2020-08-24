@@ -78,173 +78,66 @@ object ViewConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDensity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("density")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetScaledDoubleTapSlop(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledDoubleTapSlop")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDensity(value: js.Any): Self = this.set("density", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGetScaledDoubleTapTouchSlop(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledDoubleTapTouchSlop")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledDoubleTapSlop(value: () => Double): Self = this.set("getScaledDoubleTapSlop", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledEdgeSlop(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledEdgeSlop")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledDoubleTapTouchSlop(value: () => Double): Self = this.set("getScaledDoubleTapTouchSlop", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledFadingEdgeLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledFadingEdgeLength")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledEdgeSlop(value: () => Double): Self = this.set("getScaledEdgeSlop", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledMaximumDrawingCacheSize(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledMaximumDrawingCacheSize")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledFadingEdgeLength(value: () => Double): Self = this.set("getScaledFadingEdgeLength", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledMaximumFlingVelocity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledMaximumFlingVelocity")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledMaximumDrawingCacheSize(value: () => Double): Self = this.set("getScaledMaximumDrawingCacheSize", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledMinimumFlingVelocity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledMinimumFlingVelocity")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledMaximumFlingVelocity(value: () => Double): Self = this.set("getScaledMaximumFlingVelocity", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledOverflingDistance(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledOverflingDistance")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledMinimumFlingVelocity(value: () => Double): Self = this.set("getScaledMinimumFlingVelocity", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledOverscrollDistance(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledOverscrollDistance")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledOverflingDistance(value: () => Double): Self = this.set("getScaledOverflingDistance", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledPagingTouchSlop(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledPagingTouchSlop")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledOverscrollDistance(value: () => Double): Self = this.set("getScaledOverscrollDistance", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledScrollBarSize(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledScrollBarSize")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledPagingTouchSlop(value: () => Double): Self = this.set("getScaledPagingTouchSlop", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledTouchSlop(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledTouchSlop")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledScrollBarSize(value: () => Double): Self = this.set("getScaledScrollBarSize", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetScaledWindowTouchSlop(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledWindowTouchSlop")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetScaledTouchSlop(value: () => Double): Self = this.set("getScaledTouchSlop", js.Any.fromFunction0(value))
     @scala.inline
-    def withMDoubleTapSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetScaledWindowTouchSlop(value: () => Double): Self = this.set("getScaledWindowTouchSlop", js.Any.fromFunction0(value))
     @scala.inline
-    def withMDoubleTapTouchSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapTouchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapSlop(value: Double): Self = this.set("mDoubleTapSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMEdgeSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mEdgeSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDoubleTapTouchSlop(value: Double): Self = this.set("mDoubleTapTouchSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFadingEdgeLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFadingEdgeLength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMEdgeSlop(value: Double): Self = this.set("mEdgeSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMaximumDrawingCacheSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMaximumDrawingCacheSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFadingEdgeLength(value: Double): Self = this.set("mFadingEdgeLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMaximumFlingVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMaximumFlingVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMaximumDrawingCacheSize(value: Double): Self = this.set("mMaximumDrawingCacheSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMinimumFlingVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMinimumFlingVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMaximumFlingVelocity(value: Double): Self = this.set("mMaximumFlingVelocity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOverflingDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOverflingDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMinimumFlingVelocity(value: Double): Self = this.set("mMinimumFlingVelocity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOverscrollDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOverscrollDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOverflingDistance(value: Double): Self = this.set("mOverflingDistance", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPagingTouchSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPagingTouchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOverscrollDistance(value: Double): Self = this.set("mOverscrollDistance", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScrollbarSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScrollbarSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPagingTouchSlop(value: Double): Self = this.set("mPagingTouchSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTouchSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScrollbarSize(value: Double): Self = this.set("mScrollbarSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMWindowTouchSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mWindowTouchSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTouchSlop(value: Double): Self = this.set("mTouchSlop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSizeAndDensity(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAndDensity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMWindowTouchSlop(value: Double): Self = this.set("mWindowTouchSlop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSizeAndDensity(value: js.Any): Self = this.set("sizeAndDensity", value.asInstanceOf[js.Any])
   }
   
 }

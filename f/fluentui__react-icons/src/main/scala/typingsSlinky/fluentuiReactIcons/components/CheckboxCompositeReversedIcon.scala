@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CheckboxCompositeReversedIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CheckboxCompositeReversedIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CheckboxCompositeReversedIcon")
   @js.native
   object component extends js.Object
   

@@ -30,7 +30,7 @@ package object utilsMod {
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.grommet.utilsMod.BoxSideType
-    - typingsSlinky.grommet.anon.Style
+    - typingsSlinky.grommet.anon.SizeStyle
     - js.Array[typingsSlinky.grommet.anon.SizeStyle]
   */
   type BorderType = typingsSlinky.grommet.utilsMod._BorderType | js.Array[typingsSlinky.grommet.anon.SizeStyle] | scala.Boolean
@@ -43,10 +43,10 @@ package object utilsMod {
     - java.lang.String
   */
   type BoxSizeType = typingsSlinky.grommet.utilsMod._BoxSizeType | java.lang.String
-  type ColorType = js.UndefOr[java.lang.String | typingsSlinky.grommet.anon.Light]
+  type ColorType = js.UndefOr[java.lang.String | typingsSlinky.grommet.anon.Dark]
   type DeepFreeze_ = js.Function1[/* obj */ js.Object, typingsSlinky.grommet.utilsMod.DeepReadonly[js.Object]]
   type DeepReadonly[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {readonly [ K in keyof T ]: T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias grommet.grommet/utils.DeepReadonly<T[K]> * / object : T[K]}
+  {readonly [ K in keyof T ]: T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias grommet.grommet/es6/utils.DeepReadonly<T[K]> * / object : T[K]}
     */ typingsSlinky.grommet.grommetStrings.DeepReadonly with org.scalablytyped.runtime.TopLevel[js.Any]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.none
@@ -77,7 +77,7 @@ package object utilsMod {
     - java.lang.String
   */
   type GapType = typingsSlinky.grommet.utilsMod._GapType | java.lang.String
-  type GraphColorsType = js.Array[java.lang.String] | typingsSlinky.grommet.anon.DarkArray
+  type GraphColorsType = js.Array[java.lang.String] | typingsSlinky.grommet.anon.`23`
   type GridAreaType = java.lang.String
   type KeyboardType = js.Function1[
     /* event */ slinky.web.SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLElement], 
@@ -86,7 +86,7 @@ package object utilsMod {
   type MarginType = typingsSlinky.grommet.utilsMod.EdgeType
   type NonUndefined[T] = T
   type NonUndefinedProps[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof T ]:? grommet.grommet/utils.NonUndefined<T[K]>}
+  {[ K in keyof T ]:? grommet.grommet/es6/utils.NonUndefined<T[K]>}
     */ typingsSlinky.grommet.grommetStrings.NonUndefinedProps with org.scalablytyped.runtime.TopLevel[T]
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   /* Rewritten from type alias, can be one of: 
@@ -100,7 +100,7 @@ package object utilsMod {
   */
   type OpacityType = typingsSlinky.grommet.utilsMod._OpacityType | java.lang.String | scala.Double
   type PadType = typingsSlinky.grommet.utilsMod.EdgeType
-  type PlaceHolderType = java.lang.String | slinky.core.facade.ReactElement | slinky.core.TagMod[scala.Any]
+  type PlaceHolderType = java.lang.String | slinky.core.facade.ReactElement
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.a
     - typingsSlinky.grommet.grommetStrings.abbr

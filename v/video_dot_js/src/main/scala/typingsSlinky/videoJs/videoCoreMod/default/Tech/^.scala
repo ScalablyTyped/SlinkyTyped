@@ -27,6 +27,7 @@ import scala.scalajs.js.annotation._
 class ^ ()
   extends typingsSlinky.videoJs.mod.videojs.Tech {
   def this(options: js.Any) = this()
+  def this(options: js.UndefOr[scala.Nothing], ready: ReadyCallback) = this()
   def this(options: js.Any, ready: ReadyCallback) = this()
 }
 
@@ -45,6 +46,10 @@ object ^
   */
 Instantiable0[typingsSlinky.videoJs.mod.videojs.Tech]) with (Instantiable1[/* options */ js.Any, typingsSlinky.videoJs.mod.videojs.Tech]) with (Instantiable2[
         /* options */ js.Any, 
+        /* ready */ ReadyCallback, 
+        typingsSlinky.videoJs.mod.videojs.Tech
+      ]) with (Instantiable2[
+        /* options */ js.UndefOr[scala.Nothing], 
         /* ready */ ReadyCallback, 
         typingsSlinky.videoJs.mod.videojs.Tech
       ])

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ApacheIvyLogo32Icon {
-  @JSImport("@fluentui/react-icons/lib/components/ApacheIvyLogo32Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ApacheIvyLogo32Icon")
   @js.native
   object component extends js.Object
   

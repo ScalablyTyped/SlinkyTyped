@@ -20,9 +20,13 @@ object PickListControls {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def listVarargs(value: js.Any*): this.type = set("list", js.Array(value :_*))
+    @scala.inline
     def list(value: js.Array[_]): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
     def onReorder(value: /* e */ Direction => Unit): this.type = set("onReorder", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectionVarargs(value: js.Any*): this.type = set("selection", js.Array(value :_*))
     @scala.inline
     def selection(value: js.Array[_]): this.type = set("selection", value.asInstanceOf[js.Any])
   }

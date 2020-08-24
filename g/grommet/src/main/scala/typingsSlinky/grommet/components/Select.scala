@@ -1,12 +1,11 @@
 package typingsSlinky.grommet.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.anon.Key
-import typingsSlinky.grommet.anon.Left
+import typingsSlinky.grommet.anon.Bottom
 import typingsSlinky.grommet.anon.Multiple
+import typingsSlinky.grommet.anon.Reduce
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -24,7 +23,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Select {
-  @JSImport("grommet", "Select")
+  @JSImport("grommet/es6", "Select")
   @js.native
   object component extends js.Object
   
@@ -37,7 +36,11 @@ object Select {
     @scala.inline
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: /* repeated */ js.Any => _): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
     def closeOnChange(value: Boolean): this.type = set("closeOnChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledVarargs(value: (Double | String | js.Object)*): this.type = set("disabled", js.Array(value :_*))
     @scala.inline
     def disabled(value: Boolean | (js.Array[Double | String | js.Object])): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +48,7 @@ object Select {
     @scala.inline
     def disabledKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("disabledKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def dropAlign(value: Left): this.type = set("dropAlign", value.asInstanceOf[js.Any])
+    def dropAlign(value: Bottom): this.type = set("dropAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def dropHeight(value: xsmall | small | medium | large | xlarge | String): this.type = set("dropHeight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,7 +66,7 @@ object Select {
     @scala.inline
     def iconFunction1(value: /* repeated */ js.Any => _): this.type = set("icon", js.Any.fromFunction1(value))
     @scala.inline
-    def icon(value: Boolean | (js.Function1[/* repeated */ js.Any, _]) | TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: Boolean | (js.Function1[/* repeated */ js.Any, _]) | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -101,21 +104,25 @@ object Select {
     @scala.inline
     def searchPlaceholder(value: String): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    @scala.inline
     def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: small | medium | large | xlarge | String): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: (String | js.Object)*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | ReactElement | js.Object | (js.Array[String | js.Object])): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def valueKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("valueKey", js.Any.fromFunction1(value))
     @scala.inline
-    def valueKey(value: String | Key | (js.Function1[/* repeated */ js.Any, _])): this.type = set("valueKey", value.asInstanceOf[js.Any])
+    def valueKey(value: String | Reduce | (js.Function1[/* repeated */ js.Any, _])): this.type = set("valueKey", value.asInstanceOf[js.Any])
     @scala.inline
     def valueLabelReactElement(value: ReactElement): this.type = set("valueLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def valueLabel(value: TagMod[Any]): this.type = set("valueLabel", value.asInstanceOf[js.Any])
+    def valueLabel(value: ReactElement): this.type = set("valueLabel", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PageLoading {
-  @JSImport("@ant-design/pro-layout/lib/PageLoading", JSImport.Default)
+  @JSImport("@ant-design/pro-layout", "PageLoading")
   @js.native
   object component extends js.Object
   

@@ -1,12 +1,12 @@
 package typingsSlinky.spectacle.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("spectacle", "ListItem")
 @js.native
-class ListItem ()
-  extends Component[ListProps, js.Object, js.Any]
+object ListItem extends TopLevel[ReactComponentClass[TypographyProps]]
 

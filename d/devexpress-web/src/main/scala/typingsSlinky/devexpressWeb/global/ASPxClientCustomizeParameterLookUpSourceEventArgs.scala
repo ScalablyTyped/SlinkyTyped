@@ -20,20 +20,5 @@ class ASPxClientCustomizeParameterLookUpSourceEventArgs protected ()
     parameter: typingsSlinky.devexpressWeb.ASPxDesignerElementParameterDescriptor,
     items: js.Array[typingsSlinky.devexpressWeb.ASPxDesignerElementEditorItem]
   ) = this()
-  /**
-    * Specifies the data source that provides look-up values for the parameter editor.
-    */
-  /* CompleteClass */
-  override var dataSource: js.Any = js.native
-  /**
-    * Provides access to the collection of look-up parameter values.
-    */
-  /* CompleteClass */
-  override var items: js.Array[typingsSlinky.devexpressWeb.ASPxDesignerElementEditorItem] = js.native
-  /**
-    * Provides access to an object that stores information about a parameter.
-    */
-  /* CompleteClass */
-  override var parameter: typingsSlinky.devexpressWeb.ASPxDesignerElementParameterDescriptor = js.native
 }
 

@@ -154,6 +154,8 @@ object Polygon {
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
+    def pointsVarargs(value: PolygonPoint*): this.type = set("points", js.Array(value :_*))
+    @scala.inline
     def points(value: js.Array[PolygonPoint]): this.type = set("points", value.asInstanceOf[js.Any])
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])

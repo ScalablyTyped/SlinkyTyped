@@ -1,8 +1,10 @@
 package typingsSlinky.baseui.components
 
 import org.scalajs.dom.raw.Event
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.anon.Dismiss
 import typingsSlinky.baseui.baseuiStrings.`inline`
 import typingsSlinky.baseui.baseuiStrings.info
 import typingsSlinky.baseui.baseuiStrings.negative
@@ -20,6 +22,12 @@ class SharedBuilder_ToastProps_508882891[R <: js.Object] (val args: js.Array[js.
      with StBuildingComponent[tag.type, R] {
   @scala.inline
   def autoHideDuration(value: Double): this.type = set("autoHideDuration", value.asInstanceOf[js.Any])
+  @scala.inline
+  def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+  @scala.inline
+  def childrenFunction1(value: /* args */ Dismiss => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+  @scala.inline
+  def children(value: (js.Function1[/* args */ Dismiss, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
   @scala.inline
   def closeable(value: Boolean): this.type = set("closeable", value.asInstanceOf[js.Any])
   @scala.inline

@@ -16,10 +16,5 @@ class ASPxClientFileManagerFileEventArgs protected ()
     * @param file An ASPxClientFileManagerFile object representing the file related to the event.
     */
   def this(file: typingsSlinky.devexpressWeb.ASPxClientFileManagerFile) = this()
-  /**
-    * Gets a file related to the event.
-    */
-  /* CompleteClass */
-  override var file: typingsSlinky.devexpressWeb.ASPxClientFileManagerFile = js.native
 }
 

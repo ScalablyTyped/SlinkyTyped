@@ -25,17 +25,14 @@ object DISPLAY {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDISPLAY(value: display_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DISPLAY")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSYSTEM(value: system_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SYSTEM")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDISPLAY(value: display_): Self = this.set("DISPLAY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSYSTEM(value: system_): Self = this.set("SYSTEM", value.asInstanceOf[js.Any])
   }
   
 }

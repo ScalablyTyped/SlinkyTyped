@@ -27,23 +27,16 @@ object OFFLINENOTNECESSARY {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOFFLINE_NOT_NECESSARY(value: OFFLINE_NOT_NECESSARY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OFFLINE_NOT_NECESSARY")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSAVE_FOR_OFFLINE(value: SAVE_FOR_OFFLINE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SAVE_FOR_OFFLINE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOFFLINE_NOT_NECESSARY(value: OFFLINE_NOT_NECESSARY): Self = this.set("OFFLINE_NOT_NECESSARY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSHARE(value: SHARE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SHARE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSAVE_FOR_OFFLINE(value: SAVE_FOR_OFFLINE): Self = this.set("SAVE_FOR_OFFLINE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSHARE(value: SHARE): Self = this.set("SHARE", value.asInstanceOf[js.Any])
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNavigationDrawer.components
 
 import org.scalablytyped.runtime.Instantiable0
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
@@ -56,8 +56,8 @@ object Drawer {
     onClose: () => Unit,
     onOpen: () => Unit,
     open: Boolean,
-    renderDrawerContent: /* props */ Progress => TagMod[Any],
-    renderSceneContent: /* props */ Progress => TagMod[Any],
+    renderDrawerContent: /* props */ Progress => ReactElement,
+    renderSceneContent: /* props */ Progress => ReactElement,
     statusBarAnimation: slide | none | fade,
     swipeEdgeWidth: Double,
     swipeVelocityThreshold: Double

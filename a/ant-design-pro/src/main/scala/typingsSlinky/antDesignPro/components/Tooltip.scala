@@ -39,6 +39,8 @@ object Tooltip {
     @scala.inline
     def `g2-tooltip-title`(value: CSSProperties): this.type = set("g2-tooltip-title", value.asInstanceOf[js.Any])
     @scala.inline
+    def hideMarkers(value: Boolean): this.type = set("hideMarkers", value.asInstanceOf[js.Any])
+    @scala.inline
     def htmlContent(value: (/* title */ js.UndefOr[String], /* items */ js.UndefOr[js.Array[_]]) => String): this.type = set("htmlContent", js.Any.fromFunction2(value))
     @scala.inline
     def inPlot(value: Boolean): this.type = set("inPlot", value.asInstanceOf[js.Any])

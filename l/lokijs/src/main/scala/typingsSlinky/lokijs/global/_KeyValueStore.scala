@@ -1,9 +1,5 @@
 package typingsSlinky.lokijs.global
 
-import typingsSlinky.lokijs.anon.Found
-import typingsSlinky.lokijs.lokijsNumbers.`-1`
-import typingsSlinky.lokijs.lokijsNumbers.`0`
-import typingsSlinky.lokijs.lokijsNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,20 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("_KeyValueStore")
 @js.native
 class _KeyValueStore ()
-  extends typingsSlinky.lokijs.KeyValueStore {
-  /* CompleteClass */
-  override var keys: js.Array[_] = js.native
-  /* CompleteClass */
-  override var values: js.Array[_] = js.native
-  /* CompleteClass */
-  override def bs(): js.Function2[/* array */ js.Array[_], /* item */ js.Any, Found] = js.native
-  /* CompleteClass */
-  override def get(key: js.Any): js.Array[_] = js.native
-  /* CompleteClass */
-  override def set(key: js.Any, value: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def setSort(fun: js.Function2[/* target */ js.Any, /* test */ js.Any, _]): Unit = js.native
-  /* CompleteClass */
-  override def sort(a: js.Any, b: js.Any): `-1` | `0` | `1` = js.native
-}
+  extends typingsSlinky.lokijs.KeyValueStore
 

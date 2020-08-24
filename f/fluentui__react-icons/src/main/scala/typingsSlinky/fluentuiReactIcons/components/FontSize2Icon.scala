@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FontSize2Icon {
-  @JSImport("@fluentui/react-icons/lib/components/FontSize2Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FontSize2Icon")
   @js.native
   object component extends js.Object
   

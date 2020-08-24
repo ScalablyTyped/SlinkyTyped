@@ -1,16 +1,17 @@
 package typingsSlinky.primereact.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Columns
 import typingsSlinky.primereact.anon.Data
+import typingsSlinky.primereact.anon.DataArray
 import typingsSlinky.primereact.anon.DataField
 import typingsSlinky.primereact.anon.DataIndex
 import typingsSlinky.primereact.anon.DataOriginalEvent
 import typingsSlinky.primereact.anon.Delta
 import typingsSlinky.primereact.anon.DragIndex
+import typingsSlinky.primereact.anon.Filters
 import typingsSlinky.primereact.anon.First
 import typingsSlinky.primereact.anon.MultiSortMeta
 import typingsSlinky.primereact.anon.Type
@@ -46,21 +47,29 @@ object DataTable {
     @scala.inline
     def currentPageReportTemplate(value: String): this.type = set("currentPageReportTemplate", value.asInstanceOf[js.Any])
     @scala.inline
+    def customRestoreState(value: () => _): this.type = set("customRestoreState", js.Any.fromFunction0(value))
+    @scala.inline
+    def customSaveState(value: /* state */ js.Any => Unit): this.type = set("customSaveState", js.Any.fromFunction1(value))
+    @scala.inline
     def dataKey(value: String): this.type = set("dataKey", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultSortOrder(value: Double): this.type = set("defaultSortOrder", value.asInstanceOf[js.Any])
     @scala.inline
     def editMode(value: String): this.type = set("editMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def emptyMessage(value: String): this.type = set("emptyMessage", value.asInstanceOf[js.Any])
+    def emptyMessage(value: js.Any): this.type = set("emptyMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def expandableRowGroups(value: Boolean): this.type = set("expandableRowGroups", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedRowsVarargs(value: js.Any*): this.type = set("expandedRows", js.Array(value :_*))
     @scala.inline
     def expandedRows(value: js.Array[_]): this.type = set("expandedRows", value.asInstanceOf[js.Any])
     @scala.inline
     def exportFilename(value: String): this.type = set("exportFilename", value.asInstanceOf[js.Any])
     @scala.inline
     def exportFunction(value: /* e */ DataField => _): this.type = set("exportFunction", js.Any.fromFunction1(value))
+    @scala.inline
+    def filterLocale(value: String): this.type = set("filterLocale", value.asInstanceOf[js.Any])
     @scala.inline
     def filters(value: js.Object): this.type = set("filters", value.asInstanceOf[js.Any])
     @scala.inline
@@ -73,6 +82,8 @@ object DataTable {
     def frozenFooterColumnGroup(value: js.Any): this.type = set("frozenFooterColumnGroup", value.asInstanceOf[js.Any])
     @scala.inline
     def frozenHeaderColumnGroup(value: js.Any): this.type = set("frozenHeaderColumnGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def frozenValueVarargs(value: js.Any*): this.type = set("frozenValue", js.Array(value :_*))
     @scala.inline
     def frozenValue(value: js.Array[_]): this.type = set("frozenValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -96,6 +107,8 @@ object DataTable {
     @scala.inline
     def metaKeySelection(value: Boolean): this.type = set("metaKeySelection", value.asInstanceOf[js.Any])
     @scala.inline
+    def multiSortMetaVarargs(value: js.Any*): this.type = set("multiSortMeta", js.Array(value :_*))
+    @scala.inline
     def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
     @scala.inline
     def onColReorder(value: /* e */ Columns => Unit): this.type = set("onColReorder", js.Any.fromFunction1(value))
@@ -106,7 +119,7 @@ object DataTable {
     @scala.inline
     def onContextMenuSelectionChange(value: /* e */ Value => Unit): this.type = set("onContextMenuSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onFilter(value: /* filters */ js.Array[_] => Unit): this.type = set("onFilter", js.Any.fromFunction1(value))
+    def onFilter(value: /* e */ Filters => Unit): this.type = set("onFilter", js.Any.fromFunction1(value))
     @scala.inline
     def onPage(value: /* e */ First => Unit): this.type = set("onPage", js.Any.fromFunction1(value))
     @scala.inline
@@ -128,13 +141,17 @@ object DataTable {
     @scala.inline
     def onRowSelect(value: /* e */ Type => Unit): this.type = set("onRowSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowToggle(value: /* e */ Data => Unit): this.type = set("onRowToggle", js.Any.fromFunction1(value))
+    def onRowToggle(value: /* e */ DataArray => Unit): this.type = set("onRowToggle", js.Any.fromFunction1(value))
     @scala.inline
     def onRowUnselect(value: /* e */ Type => Unit): this.type = set("onRowUnselect", js.Any.fromFunction1(value))
     @scala.inline
     def onSelectionChange(value: /* e */ Value => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
     def onSort(value: /* e */ MultiSortMeta => Unit): this.type = set("onSort", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStateRestore(value: /* state */ js.Any => Unit): this.type = set("onStateRestore", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStateSave(value: /* state */ js.Any => Unit): this.type = set("onStateSave", js.Any.fromFunction1(value))
     @scala.inline
     def onValueChange(value: /* value */ js.Array[_] => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -166,13 +183,17 @@ object DataTable {
     @scala.inline
     def rowExpansionTemplate(value: /* data */ js.Any => js.UndefOr[ReactElement]): this.type = set("rowExpansionTemplate", js.Any.fromFunction1(value))
     @scala.inline
-    def rowGroupFooterTemplate(value: (/* data */ js.Any, /* index */ Double) => js.UndefOr[TagMod[Any]]): this.type = set("rowGroupFooterTemplate", js.Any.fromFunction2(value))
+    def rowGroupFooterTemplate(value: (/* data */ js.Any, /* index */ Double) => js.UndefOr[ReactElement]): this.type = set("rowGroupFooterTemplate", js.Any.fromFunction2(value))
     @scala.inline
-    def rowGroupHeaderTemplate(value: (/* data */ js.Any, /* index */ Double) => js.UndefOr[TagMod[Any]]): this.type = set("rowGroupHeaderTemplate", js.Any.fromFunction2(value))
+    def rowGroupHeaderTemplate(value: (/* data */ js.Any, /* index */ Double) => js.UndefOr[ReactElement]): this.type = set("rowGroupHeaderTemplate", js.Any.fromFunction2(value))
     @scala.inline
     def rowGroupMode(value: String): this.type = set("rowGroupMode", value.asInstanceOf[js.Any])
     @scala.inline
+    def rowHover(value: Boolean): this.type = set("rowHover", value.asInstanceOf[js.Any])
+    @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     @scala.inline
     def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -183,6 +204,10 @@ object DataTable {
     def selection(value: js.Any): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionMode(value: String): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showReorderElement(value: /* e */ Data => Boolean): this.type = set("showReorderElement", js.Any.fromFunction1(value))
+    @scala.inline
+    def showSelectionElement(value: /* e */ Data => Boolean): this.type = set("showSelectionElement", js.Any.fromFunction1(value))
     @scala.inline
     def sortField(value: String): this.type = set("sortField", value.asInstanceOf[js.Any])
     @scala.inline
@@ -203,6 +228,8 @@ object DataTable {
     def tableStyle(value: js.Object): this.type = set("tableStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

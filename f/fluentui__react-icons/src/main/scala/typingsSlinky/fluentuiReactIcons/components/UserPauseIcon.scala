@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UserPauseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UserPauseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UserPauseIcon")
   @js.native
   object component extends js.Object
   

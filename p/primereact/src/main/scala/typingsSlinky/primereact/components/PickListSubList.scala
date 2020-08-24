@@ -25,6 +25,8 @@ object PickListSubList {
     @scala.inline
     def itemTemplate(value: /* item */ js.Any => js.UndefOr[ReactElement]): this.type = set("itemTemplate", js.Any.fromFunction1(value))
     @scala.inline
+    def listVarargs(value: js.Any*): this.type = set("list", js.Array(value :_*))
+    @scala.inline
     def list(value: js.Array[_]): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
     def listClassName(value: String): this.type = set("listClassName", value.asInstanceOf[js.Any])
@@ -34,6 +36,8 @@ object PickListSubList {
     def onItemClick(value: () => Unit): this.type = set("onItemClick", js.Any.fromFunction0(value))
     @scala.inline
     def onSelectionChange(value: /* e */ EventValue => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectionVarargs(value: js.Any*): this.type = set("selection", js.Array(value :_*))
     @scala.inline
     def selection(value: js.Array[_]): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline

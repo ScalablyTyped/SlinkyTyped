@@ -23,7 +23,6 @@ import typingsSlinky.materialUiCore.anon.PartialClassNameMapFormLa
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapInputL
 import typingsSlinky.materialUiCore.formLabelFormLabelMod.FormLabelBaseProps
 import typingsSlinky.materialUiCore.inputLabelInputLabelMod.InputLabelProps
-import typingsSlinky.materialUiCore.inputLabelMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -76,20 +75,21 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InputLabel {
-  @JSImport("@material-ui/core/InputLabel", JSImport.Default)
+  @JSImport("@material-ui/core", "InputLabel")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUiCore.mod.InputLabel] {
     @scala.inline
     def FormLabelClasses(value: PartialClassNameMapFormLa): this.type = set("FormLabelClasses", value.asInstanceOf[js.Any])
     @scala.inline
@@ -209,7 +209,7 @@ object InputLabel {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[FormLabelBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[FormLabelBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[FormLabelBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -220,6 +220,8 @@ object InputLabel {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

@@ -62,26 +62,31 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.tree
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.url
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.vertical
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.yes
+import typingsSlinky.fundamentalReact.iconMod.IconGlyph
+import typingsSlinky.fundamentalReact.listMod.ListFooterProps
+import typingsSlinky.fundamentalReact.listMod.ListHeaderProps
+import typingsSlinky.fundamentalReact.listMod.ListIconProps
+import typingsSlinky.fundamentalReact.listMod.ListItemProps
 import typingsSlinky.fundamentalReact.listMod.ListProps
+import typingsSlinky.fundamentalReact.listMod.ListTextProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.PropsWithChildren
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object List {
-  @JSImport("fundamental-react/lib/List/List", JSImport.Default)
+  @JSImport("fundamental-react", "List")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLAnchorElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -204,6 +209,8 @@ object List {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -436,5 +443,102 @@ object List {
   
   def withProps(p: PropsWithChildren[ListProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: List.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Footer {
+    @JSImport("fundamental-react", "List.Footer")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[ListFooterProps]): typingsSlinky.fundamentalReact.components.List.Footer.Builder = new typingsSlinky.fundamentalReact.components.List.Footer.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Footer.type): typingsSlinky.fundamentalReact.components.List.Footer.Builder = new typingsSlinky.fundamentalReact.components.List.Footer.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("fundamental-react", "List.Header")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[ListHeaderProps]): typingsSlinky.fundamentalReact.components.List.Header.Builder = new typingsSlinky.fundamentalReact.components.List.Header.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): typingsSlinky.fundamentalReact.components.List.Header.Builder = new typingsSlinky.fundamentalReact.components.List.Header.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Item {
+    @JSImport("fundamental-react", "List.Item")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def onClick(value: /* repeated */ js.Any => _): this.type = set("onClick", js.Any.fromFunction1(value))
+      @scala.inline
+      def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[ListItemProps]): typingsSlinky.fundamentalReact.components.List.Item.Builder = new typingsSlinky.fundamentalReact.components.List.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): typingsSlinky.fundamentalReact.components.List.Item.Builder = new typingsSlinky.fundamentalReact.components.List.Item.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Icon {
+    @JSImport("fundamental-react", "List.Icon")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[ListIconProps]): typingsSlinky.fundamentalReact.components.List.Icon.Builder = new typingsSlinky.fundamentalReact.components.List.Icon.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(glyph: IconGlyph): typingsSlinky.fundamentalReact.components.List.Icon.Builder = {
+        val __props = js.Dynamic.literal(glyph = glyph.asInstanceOf[js.Any])
+        new typingsSlinky.fundamentalReact.components.List.Icon.Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[ListIconProps]]))
+    }
+  }
+  
+  object Text {
+    @JSImport("fundamental-react", "List.Text")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noWrap(value: Boolean): this.type = set("noWrap", value.asInstanceOf[js.Any])
+      @scala.inline
+      def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[ListTextProps]): typingsSlinky.fundamentalReact.components.List.Text.Builder = new typingsSlinky.fundamentalReact.components.List.Text.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Text.type): typingsSlinky.fundamentalReact.components.List.Text.Builder = new typingsSlinky.fundamentalReact.components.List.Text.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

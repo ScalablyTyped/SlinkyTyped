@@ -2,6 +2,7 @@ package typingsSlinky.tabulatorTables
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.tabulatorTables.Tabulator.AddditionalExportOptions
+import typingsSlinky.tabulatorTables.Tabulator.CellComponent
 import typingsSlinky.tabulatorTables.Tabulator.ColumnComponent
 import typingsSlinky.tabulatorTables.Tabulator.ColumnDefinition
 import typingsSlinky.tabulatorTables.Tabulator.ColumnLayout
@@ -10,6 +11,7 @@ import typingsSlinky.tabulatorTables.Tabulator.DownloadOptions
 import typingsSlinky.tabulatorTables.Tabulator.DownloadType
 import typingsSlinky.tabulatorTables.Tabulator.Filter
 import typingsSlinky.tabulatorTables.Tabulator.FilterFunction
+import typingsSlinky.tabulatorTables.Tabulator.FilterParams
 import typingsSlinky.tabulatorTables.Tabulator.FilterType
 import typingsSlinky.tabulatorTables.Tabulator.GroupComponent
 import typingsSlinky.tabulatorTables.Tabulator.Options
@@ -20,6 +22,7 @@ import typingsSlinky.tabulatorTables.Tabulator.ScrollToColumnPosition
 import typingsSlinky.tabulatorTables.Tabulator.ScrollToRowPostition
 import typingsSlinky.tabulatorTables.Tabulator.SortDirection
 import typingsSlinky.tabulatorTables.Tabulator.Sorter
+import typingsSlinky.tabulatorTables.Tabulator.SorterFromTable
 import typingsSlinky.tabulatorTables.Tabulator.VisibleRowRangeLookup
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false`
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`true`
@@ -59,24 +62,46 @@ trait Tabulator_ extends js.Object {
   * 
     */
   def addColumn(definition: ColumnDefinition): js.Promise[Unit] = js.native
+  def addColumn(
+    definition: ColumnDefinition,
+    insertRightOfTarget: js.UndefOr[scala.Nothing],
+    positionTarget: ColumnLookup
+  ): js.Promise[Unit] = js.native
   def addColumn(definition: ColumnDefinition, insertRightOfTarget: Boolean): js.Promise[Unit] = js.native
   def addColumn(definition: ColumnDefinition, insertRightOfTarget: Boolean, positionTarget: ColumnLookup): js.Promise[Unit] = js.native
   /** The addData method returns a promise, this can be used to run any other commands that have to be run after the data has been loaded into the table. By running them in the promise you ensure they are only run after the table has loaded the data. */
   def addData(): js.Promise[RowComponent] = js.native
+  def addData(data: js.UndefOr[scala.Nothing], addToTop: js.UndefOr[scala.Nothing], positionTarget: RowLookup): js.Promise[RowComponent] = js.native
+  def addData(data: js.UndefOr[scala.Nothing], addToTop: Boolean): js.Promise[RowComponent] = js.native
+  def addData(data: js.UndefOr[scala.Nothing], addToTop: Boolean, positionTarget: RowLookup): js.Promise[RowComponent] = js.native
   def addData(data: js.Array[js.Object]): js.Promise[RowComponent] = js.native
+  def addData(data: js.Array[js.Object], addToTop: js.UndefOr[scala.Nothing], positionTarget: RowLookup): js.Promise[RowComponent] = js.native
   def addData(data: js.Array[js.Object], addToTop: Boolean): js.Promise[RowComponent] = js.native
   def addData(data: js.Array[js.Object], addToTop: Boolean, positionTarget: RowLookup): js.Promise[RowComponent] = js.native
   /** If you want to add another filter to the existing filters then you can call the addFilter function: */
   def addFilter(field: String, `type`: FilterType, value: js.Any): Unit = js.native
+  def addFilter(field: String, `type`: FilterType, value: js.Any, filterParams: FilterParams): Unit = js.native
   /** You can add a row to the table using the addRow function.
     The first argument should be a row data object. If you do not pass data for a column, it will be left empty. To create a blank row (ie for a user to fill in), pass an empty object to the function.
     The second argument is optional and determines whether the row is added to the top or bottom of the table. A value of true will add the row to the top of the table, a value of false will add the row to the bottom of the table. If the parameter is not set the row will be placed according to the addRowPos global option. */
   def addRow(): js.Promise[RowComponent] = js.native
+  def addRow(data: js.UndefOr[scala.Nothing], addToTop: js.UndefOr[scala.Nothing], positionTarget: RowLookup): js.Promise[RowComponent] = js.native
+  def addRow(data: js.UndefOr[scala.Nothing], addToTop: Boolean): js.Promise[RowComponent] = js.native
+  def addRow(data: js.UndefOr[scala.Nothing], addToTop: Boolean, positionTarget: RowLookup): js.Promise[RowComponent] = js.native
   def addRow(data: js.Object): js.Promise[RowComponent] = js.native
+  def addRow(data: js.Object, addToTop: js.UndefOr[scala.Nothing], positionTarget: RowLookup): js.Promise[RowComponent] = js.native
   def addRow(data: js.Object, addToTop: Boolean): js.Promise[RowComponent] = js.native
   def addRow(data: js.Object, addToTop: Boolean, positionTarget: RowLookup): js.Promise[RowComponent] = js.native
   /** Prevent actions from riggering an update of the Virtual DOM: */
   def blockRedraw(): Unit = js.native
+  /**Clear the edited flag on all cells in the table or some of them */
+  def clearCellEdited(): Unit = js.native
+  def clearCellEdited(clear: js.Array[CellComponent]): Unit = js.native
+  def clearCellEdited(clear: CellComponent): Unit = js.native
+  /** clear the invalid state on all cells in the table */
+  def clearCellValidation(): Unit = js.native
+  def clearCellValidation(clearType: js.Array[CellComponent]): Unit = js.native
+  def clearCellValidation(clearType: CellComponent): Unit = js.native
   /** You can remove all data from the table using clearData */
   def clearData(): Unit = js.native
   /** To remove all filters from the table, use the clearFilter function. */
@@ -122,7 +147,31 @@ trait Tabulator_ extends js.Object {
       _
     ],
     fileName: String,
+    params: js.UndefOr[scala.Nothing],
+    filter: RowRangeLookup
+  ): Unit = js.native
+  def download(
+    downloadType: js.Function4[
+      /* columns */ js.Array[ColumnDefinition], 
+      /* data */ js.Any, 
+      /* options */ js.Any, 
+      /* setFileContents */ js.Any, 
+      _
+    ],
+    fileName: String,
     params: DownloadOptions
+  ): Unit = js.native
+  def download(
+    downloadType: js.Function4[
+      /* columns */ js.Array[ColumnDefinition], 
+      /* data */ js.Any, 
+      /* options */ js.Any, 
+      /* setFileContents */ js.Any, 
+      _
+    ],
+    fileName: String,
+    params: DownloadOptions,
+    filter: RowRangeLookup
   ): Unit = js.native
   /** You have a choice of four file types to choose from:
     csv - Comma separated value file
@@ -136,62 +185,24 @@ trait Tabulator_ extends js.Object {
     If you want to create a custom file type from the table data then you can pass a function to the type argument, instead of a string value. At the end of this function you must call the setFileContents function, passing the formatted data and the mime type.
     */
   def download(downloadType: DownloadType, fileName: String): Unit = js.native
+  def download(
+    downloadType: DownloadType,
+    fileName: String,
+    params: js.UndefOr[scala.Nothing],
+    filter: RowRangeLookup
+  ): Unit = js.native
   def download(downloadType: DownloadType, fileName: String, params: DownloadOptions): Unit = js.native
+  def download(downloadType: DownloadType, fileName: String, params: DownloadOptions, filter: RowRangeLookup): Unit = js.native
   /** If you want to open the generated file in a new browser tab rather than downloading it straight away, you can use the downloadToTab function. This is particularly useful with the PDF downloader, as it allows you to preview the resulting PDF in a new browser ta */
   def downloadToTab(downloadType: DownloadType, fileName: String): Unit = js.native
   def downloadToTab(downloadType: DownloadType, fileName: String, params: DownloadOptions): Unit = js.native
-  @JSName("download")
-  def download_active(
-    downloadType: js.Function4[
-      /* columns */ js.Array[ColumnDefinition], 
-      /* data */ js.Any, 
-      /* options */ js.Any, 
-      /* setFileContents */ js.Any, 
-      _
-    ],
-    fileName: String,
-    params: DownloadOptions,
-    filter: active
-  ): Unit = js.native
-  @JSName("download")
-  def download_active(downloadType: DownloadType, fileName: String, params: DownloadOptions, filter: active): Unit = js.native
-  @JSName("download")
-  def download_all(
-    downloadType: js.Function4[
-      /* columns */ js.Array[ColumnDefinition], 
-      /* data */ js.Any, 
-      /* options */ js.Any, 
-      /* setFileContents */ js.Any, 
-      _
-    ],
-    fileName: String,
-    params: DownloadOptions,
-    filter: all
-  ): Unit = js.native
-  @JSName("download")
-  def download_all(downloadType: DownloadType, fileName: String, params: DownloadOptions, filter: all): Unit = js.native
-  @JSName("download")
-  def download_visible(
-    downloadType: js.Function4[
-      /* columns */ js.Array[ColumnDefinition], 
-      /* data */ js.Any, 
-      /* options */ js.Any, 
-      /* setFileContents */ js.Any, 
-      _
-    ],
-    fileName: String,
-    params: DownloadOptions,
-    filter: visible
-  ): Unit = js.native
-  @JSName("download")
-  def download_visible(downloadType: DownloadType, fileName: String, params: DownloadOptions, filter: visible): Unit = js.native
   /** A lot of the modules come with a range of default settings to make setting up your table easier, for example the sorters, formatters and editors that ship with Tabulator as standard.
     If you are using a lot of custom settings over and over again (for example a custom sorter). you can end up re-delcaring it several time for different tables. To make your life easier Tabulator allows you to extend the default setup of each module to make your custom options as easily accessible as the defaults.
     Using the extendModule function on the global Tabulator variable allows you to globally add these options to all tables.
     The function takes three arguments, the name of the module, the name of the property you want to extend, and an object containing the elements you want to add in your module. In the example below we extend the format module to add two new default formatters: */
   def extendModule(name: String, property: String, values: js.Object): Unit = js.native
-  /** Lookup the table object for any existing table using the element they were created on. */
-  def findTable(query: String): Tabulator = js.native
+  /** Lookup table objects for any existing table using the element they were created on. */
+  def findTable(query: String): js.Array[Tabulator] = js.native
   /** You can retrieve the current AJAX URL of the table with the getAjaxUrl function.
     * 
     * This will return a HTML encoded string of the table data.
@@ -210,13 +221,15 @@ trait Tabulator_ extends js.Object {
   /** To get an array of Column Components for the current table setup, call the getColumns function. This will only return actual data columns not column groups.
     ** To get a structured array of Column Components that includes column groups, pass a value of true as an argument.
     */
-  def getColumns(): js.Array[ColumnComponent | GroupComponent] = js.native
-  def getColumns(includeColumnGroups: Boolean): js.Array[ColumnComponent | GroupComponent] = js.native
+  def getColumns(): js.Array[ColumnComponent] = js.native
+  def getColumns(includeColumnGroups: Boolean): js.Array[ColumnComponent] = js.native
   /** You can retrieve the data stored in the table using the getData function. */
   def getData(): js.Array[_] = js.native
   def getData(activeOnly: VisibleRowRangeLookup): js.Array[_] = js.native
   def getDataCount(): Double = js.native
   def getDataCount(activeOnly: VisibleRowRangeLookup): Double = js.native
+  /**You can get a list of all editited cells in the table using the getEditedCells function. this will return an array of Cell Components for each cell that has been edited. */
+  def getEditedCells(): js.Array[CellComponent] = js.native
   /** You can retrieve an array of the current programtic filters using the getFilters function, this will not include any of the header filters: */
   def getFilters(includeHeaderFilters: Boolean): js.Array[Filter] = js.native
   /** get grouped table data in the same format as getData() */
@@ -234,9 +247,19 @@ trait Tabulator_ extends js.Object {
   def getHistoryUndoSize(): Double | `false` = js.native
   /** Returns a table built of all active rows in the table (matching filters and sorts) */
   def getHtml(): js.Any = js.native
+  def getHtml(
+    rowRangeLookup: js.UndefOr[scala.Nothing],
+    style: js.UndefOr[scala.Nothing],
+    config: AddditionalExportOptions
+  ): js.Any = js.native
+  def getHtml(rowRangeLookup: js.UndefOr[scala.Nothing], style: Boolean): js.Any = js.native
+  def getHtml(rowRangeLookup: js.UndefOr[scala.Nothing], style: Boolean, config: AddditionalExportOptions): js.Any = js.native
   def getHtml(rowRangeLookup: RowRangeLookup): js.Any = js.native
+  def getHtml(rowRangeLookup: RowRangeLookup, style: js.UndefOr[scala.Nothing], config: AddditionalExportOptions): js.Any = js.native
   def getHtml(rowRangeLookup: RowRangeLookup, style: Boolean): js.Any = js.native
   def getHtml(rowRangeLookup: RowRangeLookup, style: Boolean, config: AddditionalExportOptions): js.Any = js.native
+  /**The getInvalidCells method returns an array of Cell Components for all cells flagged as invalid after a user edit. */
+  def getInvalidCells(): js.Array[CellComponent] = js.native
   /** You can then access these at any point using the getLang function, which will return the language object for the currently active locale. */
   def getLang(): js.Any = js.native
   def getLang(locale: String): js.Any = js.native
@@ -270,7 +293,8 @@ trait Tabulator_ extends js.Object {
   /** To get the RowComponent's for the selected rows at any time you can use the getSelectedRows function.
     This will return an array of RowComponent's for the selected rows in the order in which they were selected. */
   def getSelectedRows(): js.Array[RowComponent] = js.native
-  def getSorters(): Unit = js.native
+  /** Retrieves the details of the currently sorted column. */
+  def getSorters(): js.Array[SorterFromTable] = js.native
   /** You can hide a visible column at any point using the hideColumn function.  */
   def hideColumn(): Unit = js.native
   def hideColumn(column: ColumnLookup): Unit = js.native
@@ -325,7 +349,15 @@ trait Tabulator_ extends js.Object {
   def previousPage(): js.Promise[Unit] = js.native
   /**You can use the print function to trigger a full page printing of the contents of the table without any other elements from the page */
   def print(): js.Any = js.native
+  def print(
+    rowRangeLookup: js.UndefOr[scala.Nothing],
+    style: js.UndefOr[scala.Nothing],
+    config: AddditionalExportOptions
+  ): js.Any = js.native
+  def print(rowRangeLookup: js.UndefOr[scala.Nothing], style: Boolean): js.Any = js.native
+  def print(rowRangeLookup: js.UndefOr[scala.Nothing], style: Boolean, config: AddditionalExportOptions): js.Any = js.native
   def print(rowRangeLookup: RowRangeLookup): js.Any = js.native
+  def print(rowRangeLookup: RowRangeLookup, style: js.UndefOr[scala.Nothing], config: AddditionalExportOptions): js.Any = js.native
   def print(rowRangeLookup: RowRangeLookup, style: Boolean): js.Any = js.native
   def print(rowRangeLookup: RowRangeLookup, style: Boolean, config: AddditionalExportOptions): js.Any = js.native
   /**manually trigger recalculation of column calculations */
@@ -339,13 +371,19 @@ trait Tabulator_ extends js.Object {
   def redraw(force: Boolean): Unit = js.native
   /** If you want to remove one filter from the current list of filters you can use the removeFilter function: */
   def removeFilter(field: String, `type`: FilterType, value: js.Any): Unit = js.native
+  def removeFilter(field: String, `type`: FilterType, value: js.Any, filterParams: FilterParams): Unit = js.native
   /** The replaceData function lets you silently replace all data in the table without updating scroll position, sort or filtering, and without triggering the ajax loading popup. This is great if you have a table you want to periodically update with new/updated information without alerting the user to a change.
     It takes the same arguments as the setData function, and behaves in the same way when loading data (ie, it can make ajax requests, parse JSON etc) */
   def replaceData(): js.Promise[Unit] = js.native
+  def replaceData(data: js.UndefOr[scala.Nothing], params: js.UndefOr[scala.Nothing], config: js.Any): js.Promise[Unit] = js.native
+  def replaceData(data: js.UndefOr[scala.Nothing], params: js.Any): js.Promise[Unit] = js.native
+  def replaceData(data: js.UndefOr[scala.Nothing], params: js.Any, config: js.Any): js.Promise[Unit] = js.native
   def replaceData(data: String): js.Promise[Unit] = js.native
+  def replaceData(data: String, params: js.UndefOr[scala.Nothing], config: js.Any): js.Promise[Unit] = js.native
   def replaceData(data: String, params: js.Any): js.Promise[Unit] = js.native
   def replaceData(data: String, params: js.Any, config: js.Any): js.Promise[Unit] = js.native
   def replaceData(data: js.Array[js.Object]): js.Promise[Unit] = js.native
+  def replaceData(data: js.Array[js.Object], params: js.UndefOr[scala.Nothing], config: js.Any): js.Promise[Unit] = js.native
   def replaceData(data: js.Array[js.Object], params: js.Any): js.Promise[Unit] = js.native
   def replaceData(data: js.Array[js.Object], params: js.Any, config: js.Any): js.Promise[Unit] = js.native
   /** This will restore automatic table redrawing and trigger an appropriate redraw if one was needed as a result of any actions that happened while the redraw was blocked. */
@@ -355,6 +393,7 @@ trait Tabulator_ extends js.Object {
     The third argument is optional, and is a boolean used to set if the table should scroll if the column is already visible, true to scroll, false to not, if omitted it will be set to the value of the scrollToColumnIfVisible option, which defaults to true
     */
   def scrollToColumn(column: ColumnLookup): js.Promise[Unit] = js.native
+  def scrollToColumn(column: ColumnLookup, position: js.UndefOr[scala.Nothing], ifVisible: Boolean): js.Promise[Unit] = js.native
   def scrollToColumn(column: ColumnLookup, position: ScrollToColumnPosition): js.Promise[Unit] = js.native
   def scrollToColumn(column: ColumnLookup, position: ScrollToColumnPosition, ifVisible: Boolean): js.Promise[Unit] = js.native
   /** If you want to trigger an animated scroll to a row then you can use the scrollToRow function.
@@ -362,6 +401,7 @@ trait Tabulator_ extends js.Object {
     The second argument is optional, and is used to set the position of the row, it should be a string with a value of either top, center, bottom or nearest, if omitted it will be set to the value of the scrollToRowPosition option which has a default value of top.
     The third argument is optional, and is a boolean used to set if the table should scroll if the row is already visible, true to scroll, false to not, if omitted it will be set to the value of the scrollToRowIfVisible option, which defaults to true */
   def scrollToRow(row: RowLookup): js.Promise[Unit] = js.native
+  def scrollToRow(row: RowLookup, position: js.UndefOr[scala.Nothing], ifVisible: Boolean): js.Promise[Unit] = js.native
   def scrollToRow(row: RowLookup, position: ScrollToRowPostition): js.Promise[Unit] = js.native
   def scrollToRow(row: RowLookup, position: ScrollToRowPostition, ifVisible: Boolean): js.Promise[Unit] = js.native
   /** The searchData function allows you to retreive an array of table row data that match any filters you pass in. it accepts the same arguments as the setFilter function. */
@@ -385,6 +425,7 @@ trait Tabulator_ extends js.Object {
   /** To replace the current column definitions for a table use the setColumns function. This function takes a column definition array as its only argument. */
   def setColumns(definitions: js.Array[ColumnDefinition]): Unit = js.native
   def setData(data: js.Any): js.Promise[Unit] = js.native
+  def setData(data: js.Any, params: js.UndefOr[scala.Nothing], config: js.Any): js.Promise[Unit] = js.native
   def setData(data: js.Any, params: js.Any): js.Promise[Unit] = js.native
   def setData(data: js.Any, params: js.Any, config: js.Any): js.Promise[Unit] = js.native
   /** By default Tabulator will only allow files with a .json extension to be loaded into the table.
@@ -396,27 +437,102 @@ trait Tabulator_ extends js.Object {
     If you want to perform a more complicated filter then you can pass a callback function to the setFilter method, you can also pass an optional second argument, an object with parameters to be passed to the filter function.
     */
   def setFilter(p1: String): Unit = js.native
+  def setFilter(
+    p1: String,
+    p2: js.UndefOr[scala.Nothing],
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
+  def setFilter(p1: String, p2: js.UndefOr[scala.Nothing], value: js.Any): Unit = js.native
+  def setFilter(p1: String, p2: js.UndefOr[scala.Nothing], value: js.Any, filterParams: FilterParams): Unit = js.native
   def setFilter(p1: String, p2: js.Object): Unit = js.native
+  def setFilter(p1: String, p2: js.Object, value: js.UndefOr[scala.Nothing], filterParams: FilterParams): Unit = js.native
   def setFilter(p1: String, p2: js.Object, value: js.Any): Unit = js.native
+  def setFilter(p1: String, p2: js.Object, value: js.Any, filterParams: FilterParams): Unit = js.native
   def setFilter(p1: String, p2: FilterType): Unit = js.native
+  def setFilter(p1: String, p2: FilterType, value: js.UndefOr[scala.Nothing], filterParams: FilterParams): Unit = js.native
   def setFilter(p1: String, p2: FilterType, value: js.Any): Unit = js.native
+  def setFilter(p1: String, p2: FilterType, value: js.Any, filterParams: FilterParams): Unit = js.native
   def setFilter(p1: js.Array[_ | Filter]): Unit = js.native
+  def setFilter(
+    p1: js.Array[_ | Filter],
+    p2: js.UndefOr[scala.Nothing],
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
+  def setFilter(p1: js.Array[_ | Filter], p2: js.UndefOr[scala.Nothing], value: js.Any): Unit = js.native
+  def setFilter(p1: js.Array[_ | Filter], p2: js.UndefOr[scala.Nothing], value: js.Any, filterParams: FilterParams): Unit = js.native
   def setFilter(p1: js.Array[_ | Filter], p2: js.Object): Unit = js.native
+  def setFilter(
+    p1: js.Array[_ | Filter],
+    p2: js.Object,
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
   def setFilter(p1: js.Array[_ | Filter], p2: js.Object, value: js.Any): Unit = js.native
+  def setFilter(p1: js.Array[_ | Filter], p2: js.Object, value: js.Any, filterParams: FilterParams): Unit = js.native
   def setFilter(p1: js.Array[_ | Filter], p2: FilterType): Unit = js.native
+  def setFilter(
+    p1: js.Array[_ | Filter],
+    p2: FilterType,
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
   def setFilter(p1: js.Array[_ | Filter], p2: FilterType, value: js.Any): Unit = js.native
+  def setFilter(p1: js.Array[_ | Filter], p2: FilterType, value: js.Any, filterParams: FilterParams): Unit = js.native
   def setFilter(p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean]): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: js.UndefOr[scala.Nothing],
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: js.UndefOr[scala.Nothing],
+    value: js.Any
+  ): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: js.UndefOr[scala.Nothing],
+    value: js.Any,
+    filterParams: FilterParams
+  ): Unit = js.native
   def setFilter(p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean], p2: js.Object): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: js.Object,
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
   def setFilter(
     p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
     p2: js.Object,
     value: js.Any
   ): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: js.Object,
+    value: js.Any,
+    filterParams: FilterParams
+  ): Unit = js.native
   def setFilter(p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean], p2: FilterType): Unit = js.native
   def setFilter(
     p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
     p2: FilterType,
+    value: js.UndefOr[scala.Nothing],
+    filterParams: FilterParams
+  ): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: FilterType,
     value: js.Any
+  ): Unit = js.native
+  def setFilter(
+    p1: js.Function2[/* data */ js.Any, /* filterParams */ js.Any, Boolean],
+    p2: FilterType,
+    value: js.Any,
+    filterParams: FilterParams
   ): Unit = js.native
   /** You can use the setGroupBy function to change the fields that rows are grouped by. This function has one argument and takes the same values as passed to the groupBy setup option. */
   def setGroupBy(groups: String): Unit = js.native
@@ -512,5 +628,10 @@ trait Tabulator_ extends js.Object {
     This function will return true if the update was successful or false if the requested row could not be found. If the new data matches the existing row data, no update will be performed.
     */
   def updateRow(row: RowLookup, data: js.Object): Boolean = js.native
+  /**You can validate the whole table in one go by calling the validate method on the table instance.
+    *
+    * This will return a value of true if every cell passes validation, if any cells fail, then it will return an array of Cell Components representing each cell that has failed validation.
+    */
+  def validate(): `true` | js.Array[CellComponent] = js.native
 }
 

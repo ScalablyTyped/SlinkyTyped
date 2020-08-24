@@ -1,0 +1,17 @@
+package typingsSlinky.bcoeV8Coverage
+
+import typingsSlinky.bcoeV8Coverage.anon.ReadonlyFunctionCov
+import typingsSlinky.bcoeV8Coverage.anon.ReadonlyRangeCov
+import typingsSlinky.bcoeV8Coverage.anon.ReadonlyScriptCov
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@bcoe/v8-coverage/dist/lib/compare", JSImport.Namespace)
+@js.native
+object compareMod extends js.Object {
+  def compareFunctionCovs(a: ReadonlyFunctionCov, b: ReadonlyFunctionCov): Double = js.native
+  def compareRangeCovs(a: ReadonlyRangeCov, b: ReadonlyRangeCov): Double = js.native
+  def compareScriptCovs(a: ReadonlyScriptCov, b: ReadonlyScriptCov): Double = js.native
+}
+

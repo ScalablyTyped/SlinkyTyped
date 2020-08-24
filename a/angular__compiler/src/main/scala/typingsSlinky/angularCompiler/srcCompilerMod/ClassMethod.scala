@@ -35,6 +35,13 @@ class ClassMethod protected ()
     name: String,
     params: js.Array[FnParam],
     body: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    body: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: Null,
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
   ) = this()
@@ -43,6 +50,13 @@ class ClassMethod protected ()
     params: js.Array[FnParam],
     body: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
+  ) = this()
+  def this(
+    name: Null,
+    params: js.Array[FnParam],
+    body: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
   ) = this()
   def this(

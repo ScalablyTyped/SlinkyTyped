@@ -8,7 +8,6 @@ import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCa
 import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCardActionsProps
 import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCardActionsStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCardActionsStyles
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.std.Number
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
@@ -26,7 +25,10 @@ object DocumentCardActions {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.documentCardActionsBaseMod.DocumentCardActionsBase
+        ] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

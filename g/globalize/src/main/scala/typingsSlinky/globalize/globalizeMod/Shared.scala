@@ -31,6 +31,23 @@ trait Shared extends js.Object {
   def dateParser(): js.Function1[/* value */ String, js.Date] = js.native
   def dateParser(options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions): js.Function1[/* value */ String, js.Date] = js.native
   /**
+    * .dateToPartsFormatter( options )
+    * @param {DateFormatterOptions} options see date/expand_pattern for more info.
+    * @returns {Function} Return a function that formats a date into parts tokens according to the given options. The default formatting is numeric year, month, and day (i.e., `{ skeleton: "yMd" }`).
+    */
+  def dateToPartsFormatter(): js.Function1[
+    /* value */ js.Date, 
+    js.Array[
+      typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
+    ]
+  ] = js.native
+  def dateToPartsFormatter(options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions): js.Function1[
+    /* value */ js.Date, 
+    js.Array[
+      typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
+    ]
+  ] = js.native
+  /**
     * Return a currency formatted according to the given options or locale's defaults.
     * @param {number} value The value to format.
     * @param {string} currency 3-letter currency code as defined by ISO 4217, eg. USD.
@@ -49,6 +66,16 @@ trait Shared extends js.Object {
     value: js.Date,
     options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions
   ): String = js.native
+  //Alias for .dateToPartsFormatter( [options] )( value ).
+  def formatDateToParts(value: js.Date): js.Array[
+    typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
+  ] = js.native
+  def formatDateToParts(
+    value: js.Date,
+    options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions
+  ): js.Array[
+    typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
+  ] = js.native
   /**
     * Formats a message (using ICU message format pattern) given its path and a set of variables into a user-readable string
     * @param path String or Array containing the path of the message content, eg. "greetings/bye", or [ "greetings", "bye" ].

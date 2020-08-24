@@ -14,6 +14,11 @@ class ReInviteUserAgentClient protected ()
   def this(dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog, delegate: OutgoingInviteRequestDelegate) = this()
   def this(
     dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog,
+    delegate: js.UndefOr[scala.Nothing],
+    options: RequestOptions
+  ) = this()
+  def this(
+    dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog,
     delegate: OutgoingInviteRequestDelegate,
     options: RequestOptions
   ) = this()

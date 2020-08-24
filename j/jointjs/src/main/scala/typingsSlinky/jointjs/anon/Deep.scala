@@ -25,29 +25,18 @@ object Deep {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDeep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(js.undefined)
-        ret
-    }
+    def setDeep(value: Boolean): Self = this.set("deep", value.asInstanceOf[js.Any])
     @scala.inline
-    def withParentRelative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentRelative")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDeep: Self = this.set("deep", js.undefined)
     @scala.inline
-    def withoutParentRelative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentRelative")(js.undefined)
-        ret
-    }
+    def setParentRelative(value: Boolean): Self = this.set("parentRelative", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParentRelative: Self = this.set("parentRelative", js.undefined)
   }
   
 }

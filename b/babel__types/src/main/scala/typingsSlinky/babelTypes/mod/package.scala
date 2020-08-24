@@ -42,6 +42,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.ConditionalExpression_
     - typingsSlinky.babelTypes.mod.ContinueStatement_
     - typingsSlinky.babelTypes.mod.DebuggerStatement_
+    - typingsSlinky.babelTypes.mod.DecimalLiteral_
     - typingsSlinky.babelTypes.mod.Declaration
     - typingsSlinky.babelTypes.mod.DeclareClass_
     - typingsSlinky.babelTypes.mod.DeclareExportAllDeclaration_
@@ -105,6 +106,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.IfStatement_
     - typingsSlinky.babelTypes.mod.Immutable
     - typingsSlinky.babelTypes.mod.Import_
+    - typingsSlinky.babelTypes.mod.ImportAttribute_
     - typingsSlinky.babelTypes.mod.ImportDeclaration_
     - typingsSlinky.babelTypes.mod.ImportDefaultSpecifier_
     - typingsSlinky.babelTypes.mod.ImportNamespaceSpecifier_
@@ -228,6 +230,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.TSMethodSignature_
     - typingsSlinky.babelTypes.mod.TSModuleBlock_
     - typingsSlinky.babelTypes.mod.TSModuleDeclaration_
+    - typingsSlinky.babelTypes.mod.TSNamedTupleMember_
     - typingsSlinky.babelTypes.mod.TSNamespaceExportDeclaration_
     - typingsSlinky.babelTypes.mod.TSNeverKeyword_
     - typingsSlinky.babelTypes.mod.TSNonNullExpression_

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DiffSideBySideIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DiffSideBySideIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DiffSideBySideIcon")
   @js.native
   object component extends js.Object
   

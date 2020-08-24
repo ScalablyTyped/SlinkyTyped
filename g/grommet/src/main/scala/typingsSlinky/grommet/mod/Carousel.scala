@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet", "Carousel")
+@JSImport("grommet/es6", "Carousel")
 @js.native
 class Carousel protected ()
   extends Component[
@@ -26,7 +26,7 @@ class Carousel protected ()
   ) = this()
 }
 
-@JSImport("grommet", "Carousel")
+@JSImport("grommet/es6", "Carousel")
 @js.native
 object Carousel extends TopLevel[
       ReactComponentClass[

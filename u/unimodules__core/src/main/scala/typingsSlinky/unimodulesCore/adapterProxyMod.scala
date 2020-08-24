@@ -8,7 +8,7 @@ import typingsSlinky.unimodulesCore.unimodulesCoreStrings.macos
 import typingsSlinky.unimodulesCore.unimodulesCoreStrings.web
 import typingsSlinky.unimodulesCore.unimodulesCoreStrings.windows
 import typingsSlinky.unimodulesReactNativeAdapter.eventEmitterMod.NativeModule
-import typingsSlinky.unimodulesReactNativeAdapter.nativeModulesProxyMod.ProxyNativeModule
+import typingsSlinky.unimodulesReactNativeAdapter.nativeModulesProxyTypesMod.ProxyNativeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

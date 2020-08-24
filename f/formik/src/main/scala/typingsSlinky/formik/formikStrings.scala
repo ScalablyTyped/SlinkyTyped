@@ -48,12 +48,6 @@ object formikStrings {
   sealed trait email extends js.Object
   
   @js.native
-  sealed trait error extends js.Object
-  
-  @js.native
-  sealed trait errors extends js.Object
-  
-  @js.native
   sealed trait execute extends js.Object
   
   @js.native
@@ -70,12 +64,6 @@ object formikStrings {
   
   @js.native
   sealed trait `inline` extends js.Object
-  
-  @js.native
-  sealed trait isSubmitting extends js.Object
-  
-  @js.native
-  sealed trait isValidating extends js.Object
   
   @js.native
   sealed trait link extends js.Object
@@ -135,13 +123,7 @@ object formikStrings {
   sealed trait spelling extends js.Object
   
   @js.native
-  sealed trait status extends js.Object
-  
-  @js.native
   sealed trait step extends js.Object
-  
-  @js.native
-  sealed trait submitCount extends js.Object
   
   @js.native
   sealed trait tel extends js.Object
@@ -153,16 +135,10 @@ object formikStrings {
   sealed trait time extends js.Object
   
   @js.native
-  sealed trait touched extends js.Object
-  
-  @js.native
   sealed trait tree extends js.Object
   
   @js.native
   sealed trait url extends js.Object
-  
-  @js.native
-  sealed trait values extends js.Object
   
   @js.native
   sealed trait vertical extends js.Object
@@ -199,10 +175,6 @@ object formikStrings {
   @scala.inline
   def email: email = "email".asInstanceOf[email]
   @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def errors: errors = "errors".asInstanceOf[errors]
-  @scala.inline
   def execute: execute = "execute".asInstanceOf[execute]
   @scala.inline
   def grammar: grammar = "grammar".asInstanceOf[grammar]
@@ -214,10 +186,6 @@ object formikStrings {
   def inherit: inherit = "inherit".asInstanceOf[inherit]
   @scala.inline
   def `inline`: `inline` = "inline".asInstanceOf[`inline`]
-  @scala.inline
-  def isSubmitting: isSubmitting = "isSubmitting".asInstanceOf[isSubmitting]
-  @scala.inline
-  def isValidating: isValidating = "isValidating".asInstanceOf[isValidating]
   @scala.inline
   def link: link = "link".asInstanceOf[link]
   @scala.inline
@@ -257,11 +225,7 @@ object formikStrings {
   @scala.inline
   def spelling: spelling = "spelling".asInstanceOf[spelling]
   @scala.inline
-  def status: status = "status".asInstanceOf[status]
-  @scala.inline
   def step: step = "step".asInstanceOf[step]
-  @scala.inline
-  def submitCount: submitCount = "submitCount".asInstanceOf[submitCount]
   @scala.inline
   def tel: tel = "tel".asInstanceOf[tel]
   @scala.inline
@@ -269,13 +233,9 @@ object formikStrings {
   @scala.inline
   def time: time = "time".asInstanceOf[time]
   @scala.inline
-  def touched: touched = "touched".asInstanceOf[touched]
-  @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
   @scala.inline
   def url: url = "url".asInstanceOf[url]
-  @scala.inline
-  def values: values = "values".asInstanceOf[values]
   @scala.inline
   def vertical: vertical = "vertical".asInstanceOf[vertical]
   @scala.inline

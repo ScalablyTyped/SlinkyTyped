@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FingerprintIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FingerprintIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FingerprintIcon")
   @js.native
   object component extends js.Object
   

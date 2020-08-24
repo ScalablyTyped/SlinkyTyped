@@ -1,12 +1,16 @@
 package typingsSlinky.arcgisJsApi
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.arcgisJsApi.esri.scaleRange
+import typingsSlinky.arcgisJsApi.esri.ScaleRangeResult
+import typingsSlinky.arcgisJsApi.esri.scaleRangeScaleRangeParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("esri/renderers/smartMapping/heuristics/scaleRange", JSImport.Namespace)
+@JSImport("esri/smartMapping/heuristics/scaleRange", JSImport.Namespace)
 @js.native
-object scaleRangeMod extends TopLevel[scaleRange]
+object scaleRangeMod
+  extends TopLevel[
+      js.Function1[/* params */ scaleRangeScaleRangeParams, js.Promise[ScaleRangeResult]]
+    ]
 

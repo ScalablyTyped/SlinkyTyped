@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeFirebase
 
-import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +9,8 @@ import scala.scalajs.js.annotation._
 object databaseMod extends js.Object {
   @js.native
   trait ThenableReference[T]
-    extends typingsSlinky.reactNativeFirebase.mod.RNFirebase.database.Reference
-       with Promise[T]
+    extends js.Promise[T]
+       with typingsSlinky.reactNativeFirebase.mod.RNFirebase.database.Reference
   
   type DataSnapshot = typingsSlinky.reactNativeFirebase.mod.RNFirebase.database.DataSnapshot
   type Database = typingsSlinky.reactNativeFirebase.mod.RNFirebase.database.Database

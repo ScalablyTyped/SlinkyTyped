@@ -36,6 +36,7 @@ trait ChartTitle extends js.Object {
   var VerticalAlignment: VerticalAlignments = js.native
   val Width: Double = js.native
   def Characters(): typingsSlinky.activexExcel.Excel.Characters = js.native
+  def Characters(Start: js.UndefOr[scala.Nothing], Length: Double): typingsSlinky.activexExcel.Excel.Characters = js.native
   def Characters(Start: Double): typingsSlinky.activexExcel.Excel.Characters = js.native
   def Characters(Start: Double, Length: Double): typingsSlinky.activexExcel.Excel.Characters = js.native
   def Delete(): js.Any = js.native

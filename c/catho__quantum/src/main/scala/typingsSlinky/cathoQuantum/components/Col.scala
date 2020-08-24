@@ -18,6 +18,8 @@ object Col {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.cathoQuantum.gridMod.Col] {
     @scala.inline
+    def hideVarargs(value: BreakpointsType*): this.type = set("hide", js.Array(value :_*))
+    @scala.inline
     def hide(value: BreakpointsType | js.Array[BreakpointsType]): this.type = set("hide", value.asInstanceOf[js.Any])
     @scala.inline
     def large(value: Double): this.type = set("large", value.asInstanceOf[js.Any])

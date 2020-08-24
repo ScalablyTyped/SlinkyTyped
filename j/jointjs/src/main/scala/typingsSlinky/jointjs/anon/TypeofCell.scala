@@ -15,9 +15,18 @@ import scala.scalajs.js.annotation._
 trait TypeofCell
   extends Instantiable0[Cell]
      with Instantiable1[/* attributes */ Attributes, Cell]
-     with Instantiable2[/* attributes */ Attributes, /* opt */ Options, Cell] {
+     with Instantiable2[js.UndefOr[/* attributes */ Attributes], /* opt */ Options, Cell] {
   def define(`type`: String): Constructor[Cell] = js.native
+  def define(
+    `type`: String,
+    defaults: js.UndefOr[scala.Nothing],
+    protoProps: js.UndefOr[scala.Nothing],
+    staticProps: js.Any
+  ): Constructor[Cell] = js.native
+  def define(`type`: String, defaults: js.UndefOr[scala.Nothing], protoProps: js.Any): Constructor[Cell] = js.native
+  def define(`type`: String, defaults: js.UndefOr[scala.Nothing], protoProps: js.Any, staticProps: js.Any): Constructor[Cell] = js.native
   def define(`type`: String, defaults: js.Any): Constructor[Cell] = js.native
+  def define(`type`: String, defaults: js.Any, protoProps: js.UndefOr[scala.Nothing], staticProps: js.Any): Constructor[Cell] = js.native
   def define(`type`: String, defaults: js.Any, protoProps: js.Any): Constructor[Cell] = js.native
   def define(`type`: String, defaults: js.Any, protoProps: js.Any, staticProps: js.Any): Constructor[Cell] = js.native
 }

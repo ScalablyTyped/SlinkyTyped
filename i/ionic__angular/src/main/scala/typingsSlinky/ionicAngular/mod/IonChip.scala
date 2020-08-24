@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonChip")
 @js.native
 class IonChip protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonChip {
+  extends typingsSlinky.ionicAngular.proxiesMod.IonChip {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CancelIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CancelIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CancelIcon")
   @js.native
   object component extends js.Object
   

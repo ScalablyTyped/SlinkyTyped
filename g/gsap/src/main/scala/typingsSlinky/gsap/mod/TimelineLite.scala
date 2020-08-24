@@ -20,6 +20,7 @@ object TimelineLite extends js.Object {
     * basis without affecting tweens/timelines that you create after the export.
     */
   def exportRoot(): typingsSlinky.gsap.gsap.TimelineLite = js.native
+  def exportRoot(vars: js.UndefOr[scala.Nothing], omitDelayedCalls: Boolean): typingsSlinky.gsap.gsap.TimelineLite = js.native
   def exportRoot(vars: js.Object): typingsSlinky.gsap.gsap.TimelineLite = js.native
   def exportRoot(vars: js.Object, omitDelayedCalls: Boolean): typingsSlinky.gsap.gsap.TimelineLite = js.native
 }

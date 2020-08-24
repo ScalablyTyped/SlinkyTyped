@@ -8,10 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AnimationTimeline")
 @js.native
 class AnimationTimeline ()
-  extends typingsSlinky.std.AnimationTimeline {
-  /* CompleteClass */
-  override val currentTime: Double | Null = js.native
-}
+  extends typingsSlinky.std.AnimationTimeline
 
 @JSGlobal("AnimationTimeline")
 @js.native

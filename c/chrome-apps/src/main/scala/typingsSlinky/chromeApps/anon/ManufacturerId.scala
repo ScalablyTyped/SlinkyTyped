@@ -33,29 +33,18 @@ object ManufacturerId {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withManufacturerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setManufacturerId(value: String): Self = this.set("manufacturerId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withYearOfManufacture(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearOfManufacture")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setProductId(value: String): Self = this.set("productId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutYearOfManufacture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearOfManufacture")(js.undefined)
-        ret
-    }
+    def setYearOfManufacture(value: String): Self = this.set("yearOfManufacture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteYearOfManufacture: Self = this.set("yearOfManufacture", js.undefined)
   }
   
 }

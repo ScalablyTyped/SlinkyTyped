@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ClockIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ClockIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ClockIcon")
   @js.native
   object component extends js.Object
   

@@ -52,6 +52,8 @@ object PieChart {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeChartsWrapper.mod.PieChart] {
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -69,6 +71,8 @@ object PieChart {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -102,9 +106,13 @@ object PieChart {
     @scala.inline
     def entryLabelTextSize(value: Double): this.type = set("entryLabelTextSize", value.asInstanceOf[js.Any])
     @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def highlightPerTapEnabled(value: Boolean): this.type = set("highlightPerTapEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightsVarargs(value: DataIndex*): this.type = set("highlights", js.Array(value :_*))
     @scala.inline
     def highlights(value: js.Array[DataIndex]): this.type = set("highlights", value.asInstanceOf[js.Any])
     @scala.inline

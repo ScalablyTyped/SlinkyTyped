@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TriangleShapeSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TriangleShapeSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TriangleShapeSolidIcon")
   @js.native
   object component extends js.Object
   

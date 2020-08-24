@@ -19,6 +19,7 @@ package object mod {
     js.Any
   ]
   type EggLoaderOptions = typingsSlinky.eggCore.mod.EggLoaderOptions
+  type EggLogger = typingsSlinky.eggLogger.mod.EggLogger
   type EggPluginItem = typingsSlinky.egg.mod.IEggPluginItem | scala.Boolean
   type IApplicationLocals = typingsSlinky.egg.mod.PlainObject[js.Any]
   type IContextLocals = typingsSlinky.egg.mod.PlainObject[js.Any]

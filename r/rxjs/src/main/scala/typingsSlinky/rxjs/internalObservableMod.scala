@@ -11,7 +11,6 @@ import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.typesMod.TeardownLogic
 import typingsSlinky.std.PromiseConstructor
 import typingsSlinky.std.PromiseConstructorLike
-import typingsSlinky.std.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -136,7 +135,7 @@ object internalObservableMod extends js.Object {
             /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
             Unit
           ], 
-          Promise[js.Object]
+          js.Promise[js.Object]
         ])
     ): js.Promise[T] = js.native
     def toPromise[T](PromiseCtor: PromiseConstructorLike): js.Promise[T] = js.native
@@ -177,12 +176,12 @@ object internalObservableMod extends js.Object {
       * @deprecated In favor of iif creation function: import { iif } from 'rxjs';
       */
     def `if`[T, F](condition: js.Function0[Boolean]): Observable[T | F] = js.native
-    def `if`[T, F](condition: js.Function0[Boolean], trueResult: SubscribableOrPromise[T]): Observable[T | F] = js.native
     def `if`[T, F](
       condition: js.Function0[Boolean],
-      trueResult: SubscribableOrPromise[T],
+      trueResult: js.UndefOr[SubscribableOrPromise[T]],
       falseResult: SubscribableOrPromise[F]
     ): Observable[T | F] = js.native
+    def `if`[T, F](condition: js.Function0[Boolean], trueResult: SubscribableOrPromise[T]): Observable[T | F] = js.native
     /**
       * @nocollapse
       * @deprecated In favor of throwError creation function: import { throwError } from 'rxjs';

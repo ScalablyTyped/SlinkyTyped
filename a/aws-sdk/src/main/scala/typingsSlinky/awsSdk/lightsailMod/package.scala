@@ -36,6 +36,12 @@ package object lightsailMod {
   type AutoSnapshotStatus = typingsSlinky.awsSdk.lightsailMod._AutoSnapshotStatus | java.lang.String
   type AvailabilityZoneList = js.Array[typingsSlinky.awsSdk.lightsailMod.AvailabilityZone]
   type Base64 = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`dont-cache`
+    - typingsSlinky.awsSdk.awsSdkStrings.cache
+    - java.lang.String
+  */
+  type BehaviorEnum = typingsSlinky.awsSdk.lightsailMod._BehaviorEnum | java.lang.String
   type BlueprintList = js.Array[typingsSlinky.awsSdk.lightsailMod.Blueprint]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.os_
@@ -44,6 +50,21 @@ package object lightsailMod {
   */
   type BlueprintType = typingsSlinky.awsSdk.lightsailMod._BlueprintType | java.lang.String
   type BundleList = js.Array[typingsSlinky.awsSdk.lightsailMod.Bundle]
+  type CacheBehaviorList = js.Array[typingsSlinky.awsSdk.lightsailMod.CacheBehaviorPerPath]
+  type CertificateName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_VALIDATION
+    - typingsSlinky.awsSdk.awsSdkStrings.ISSUED
+    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.EXPIRED
+    - typingsSlinky.awsSdk.awsSdkStrings.VALIDATION_TIMED_OUT
+    - typingsSlinky.awsSdk.awsSdkStrings.REVOKED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type CertificateStatus = typingsSlinky.awsSdk.lightsailMod._CertificateStatus | java.lang.String
+  type CertificateStatusList = js.Array[typingsSlinky.awsSdk.lightsailMod.CertificateStatus]
+  type CertificateSummaryList = js.Array[typingsSlinky.awsSdk.lightsailMod.CertificateSummary]
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.lightsailMod.ClientApiVersions
   type CloudFormationStackRecordList = js.Array[typingsSlinky.awsSdk.lightsailMod.CloudFormationStackRecord]
   type CloudFormationStackRecordSourceInfoList = js.Array[typingsSlinky.awsSdk.lightsailMod.CloudFormationStackRecordSourceInfo]
@@ -93,6 +114,18 @@ package object lightsailMod {
     - java.lang.String
   */
   type DiskState = typingsSlinky.awsSdk.lightsailMod._DiskState | java.lang.String
+  type DistributionBundleList = js.Array[typingsSlinky.awsSdk.lightsailMod.DistributionBundle]
+  type DistributionList = js.Array[typingsSlinky.awsSdk.lightsailMod.LightsailDistribution]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Requests_
+    - typingsSlinky.awsSdk.awsSdkStrings.BytesDownloaded
+    - typingsSlinky.awsSdk.awsSdkStrings.BytesUploaded
+    - typingsSlinky.awsSdk.awsSdkStrings.TotalErrorRate
+    - typingsSlinky.awsSdk.awsSdkStrings.Http4xxErrorRate
+    - typingsSlinky.awsSdk.awsSdkStrings.Http5xxErrorRate
+    - java.lang.String
+  */
+  type DistributionMetricName = typingsSlinky.awsSdk.lightsailMod._DistributionMetricName | java.lang.String
   type DomainEntryList = js.Array[typingsSlinky.awsSdk.lightsailMod.DomainEntry]
   type DomainEntryOptions = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type DomainEntryOptionsKeys = java.lang.String
@@ -100,6 +133,8 @@ package object lightsailMod {
   type DomainList = js.Array[typingsSlinky.awsSdk.lightsailMod.Domain]
   type DomainName = java.lang.String
   type DomainNameList = js.Array[typingsSlinky.awsSdk.lightsailMod.DomainName]
+  type DomainValidationRecordList = js.Array[typingsSlinky.awsSdk.lightsailMod.DomainValidationRecord]
+  type EligibleToRenew = java.lang.String
   type ExportSnapshotRecordList = js.Array[typingsSlinky.awsSdk.lightsailMod.ExportSnapshotRecord]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.InstanceSnapshot
@@ -107,7 +142,36 @@ package object lightsailMod {
     - java.lang.String
   */
   type ExportSnapshotRecordSourceType = typingsSlinky.awsSdk.lightsailMod._ExportSnapshotRecordSourceType | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.none__
+    - typingsSlinky.awsSdk.awsSdkStrings.`allow-list`
+    - typingsSlinky.awsSdk.awsSdkStrings.all__
+    - java.lang.String
+  */
+  type ForwardValues = typingsSlinky.awsSdk.lightsailMod._ForwardValues | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Accept_
+    - typingsSlinky.awsSdk.awsSdkStrings.`Accept-Charset`
+    - typingsSlinky.awsSdk.awsSdkStrings.`Accept-Datetime`
+    - typingsSlinky.awsSdk.awsSdkStrings.`Accept-Encoding`
+    - typingsSlinky.awsSdk.awsSdkStrings.`Accept-Language`
+    - typingsSlinky.awsSdk.awsSdkStrings.Authorization
+    - typingsSlinky.awsSdk.awsSdkStrings.`CloudFront-Forwarded-Proto`
+    - typingsSlinky.awsSdk.awsSdkStrings.`CloudFront-Is-Desktop-Viewer`
+    - typingsSlinky.awsSdk.awsSdkStrings.`CloudFront-Is-Mobile-Viewer`
+    - typingsSlinky.awsSdk.awsSdkStrings.`CloudFront-Is-SmartTV-Viewer`
+    - typingsSlinky.awsSdk.awsSdkStrings.`CloudFront-Is-Tablet-Viewer`
+    - typingsSlinky.awsSdk.awsSdkStrings.`CloudFront-Viewer-Country`
+    - typingsSlinky.awsSdk.awsSdkStrings.Host_
+    - typingsSlinky.awsSdk.awsSdkStrings.Origin
+    - typingsSlinky.awsSdk.awsSdkStrings.Referer
+    - java.lang.String
+  */
+  type HeaderEnum = typingsSlinky.awsSdk.lightsailMod._HeaderEnum | java.lang.String
+  type HeaderForwardList = js.Array[typingsSlinky.awsSdk.lightsailMod.HeaderEnum]
   type HostKeysList = js.Array[typingsSlinky.awsSdk.lightsailMod.HostKeyAttributes]
+  type InUseResourceCount = scala.Double
+  type IncludeCertificateDetails = scala.Boolean
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ssh_
     - typingsSlinky.awsSdk.awsSdkStrings.rdp
@@ -149,6 +213,8 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.StatusCheckFailed
     - typingsSlinky.awsSdk.awsSdkStrings.StatusCheckFailed_Instance
     - typingsSlinky.awsSdk.awsSdkStrings.StatusCheckFailed_System
+    - typingsSlinky.awsSdk.awsSdkStrings.BurstCapacityTime
+    - typingsSlinky.awsSdk.awsSdkStrings.BurstCapacityPercentage
     - java.lang.String
   */
   type InstanceMetricName = typingsSlinky.awsSdk.lightsailMod._InstanceMetricName | java.lang.String
@@ -172,6 +238,8 @@ package object lightsailMod {
   type IpAddress = java.lang.String
   type IpV6Address = java.lang.String
   type IsoDate = js.Date
+  type IssuerCA = java.lang.String
+  type KeyAlgorithm = java.lang.String
   type KeyPairList = js.Array[typingsSlinky.awsSdk.lightsailMod.KeyPair]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.HealthCheckPath
@@ -297,6 +365,8 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.FreeStorageSpace
     - typingsSlinky.awsSdk.awsSdkStrings.NetworkReceiveThroughput
     - typingsSlinky.awsSdk.awsSdkStrings.NetworkTransmitThroughput
+    - typingsSlinky.awsSdk.awsSdkStrings.BurstCapacityTime
+    - typingsSlinky.awsSdk.awsSdkStrings.BurstCapacityPercentage
     - java.lang.String
   */
   type MetricName = typingsSlinky.awsSdk.lightsailMod._MetricName | java.lang.String
@@ -418,9 +488,24 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.GetContactMethods
     - typingsSlinky.awsSdk.awsSdkStrings.SendContactMethodVerification
     - typingsSlinky.awsSdk.awsSdkStrings.DeleteContactMethod
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateDistribution
+    - typingsSlinky.awsSdk.awsSdkStrings.UpdateDistribution
+    - typingsSlinky.awsSdk.awsSdkStrings.DeleteDistribution
+    - typingsSlinky.awsSdk.awsSdkStrings.ResetDistributionCache
+    - typingsSlinky.awsSdk.awsSdkStrings.AttachCertificateToDistribution
+    - typingsSlinky.awsSdk.awsSdkStrings.DetachCertificateFromDistribution
+    - typingsSlinky.awsSdk.awsSdkStrings.UpdateDistributionBundle
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateCertificate
+    - typingsSlinky.awsSdk.awsSdkStrings.DeleteCertificate
     - java.lang.String
   */
   type OperationType = typingsSlinky.awsSdk.lightsailMod._OperationType | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`http-only`
+    - typingsSlinky.awsSdk.awsSdkStrings.`https-only`
+    - java.lang.String
+  */
+  type OriginProtocolPolicyEnum = typingsSlinky.awsSdk.lightsailMod._OriginProtocolPolicyEnum | java.lang.String
   type PendingMaintenanceActionList = js.Array[typingsSlinky.awsSdk.lightsailMod.PendingMaintenanceAction]
   type Port = scala.Double
   /* Rewritten from type alias, can be one of: 
@@ -495,6 +580,16 @@ package object lightsailMod {
   */
   type RelationalDatabasePasswordVersion = typingsSlinky.awsSdk.lightsailMod._RelationalDatabasePasswordVersion | java.lang.String
   type RelationalDatabaseSnapshotList = js.Array[typingsSlinky.awsSdk.lightsailMod.RelationalDatabaseSnapshot]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PendingAutoRenewal
+    - typingsSlinky.awsSdk.awsSdkStrings.PendingValidation
+    - typingsSlinky.awsSdk.awsSdkStrings.Success_
+    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
+    - java.lang.String
+  */
+  type RenewalStatus = typingsSlinky.awsSdk.lightsailMod._RenewalStatus | java.lang.String
+  type RenewalStatusReason = java.lang.String
+  type RequestFailureReason = java.lang.String
   type ResourceArn = java.lang.String
   type ResourceName = java.lang.String
   type ResourceNameList = js.Array[typingsSlinky.awsSdk.lightsailMod.ResourceName]
@@ -515,13 +610,18 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.CloudFormationStackRecord
     - typingsSlinky.awsSdk.awsSdkStrings.Alarm_
     - typingsSlinky.awsSdk.awsSdkStrings.ContactMethod
+    - typingsSlinky.awsSdk.awsSdkStrings.Distribution
+    - typingsSlinky.awsSdk.awsSdkStrings.Certificate_
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.lightsailMod._ResourceType | java.lang.String
+  type RevocationReason = java.lang.String
   type SensitiveString = java.lang.String
+  type SerialNumber = java.lang.String
   type StaticIpList = js.Array[typingsSlinky.awsSdk.lightsailMod.StaticIp]
   type StringList = js.Array[java.lang.String]
   type StringMax256 = java.lang.String
+  type SubjectAlternativeNameList = js.Array[typingsSlinky.awsSdk.lightsailMod.DomainName]
   type TagKey = java.lang.String
   type TagKeyList = js.Array[typingsSlinky.awsSdk.lightsailMod.TagKey]
   type TagList = js.Array[typingsSlinky.awsSdk.lightsailMod.Tag]
@@ -544,5 +644,6 @@ package object lightsailMod {
   type double = scala.Double
   type float = scala.Double
   type integer = scala.Double
+  type long = scala.Double
   type timestamp = js.Date
 }

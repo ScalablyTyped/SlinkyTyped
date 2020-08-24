@@ -1,6 +1,7 @@
 package typingsSlinky.raygun4js.mod
 
 import org.scalajs.dom.raw.XMLHttpRequest
+import typingsSlinky.raygun4js.anon.Duration
 import typingsSlinky.raygun4js.anon.Path
 import typingsSlinky.raygun4js.raygun4jsStrings.Clicks
 import typingsSlinky.raygun4js.raygun4jsStrings.Console
@@ -9,6 +10,7 @@ import typingsSlinky.raygun4js.raygun4jsStrings.XHR
 import typingsSlinky.raygun4js.raygun4jsStrings.all
 import typingsSlinky.raygun4js.raygun4jsStrings.breadcrumbsLevel
 import typingsSlinky.raygun4js.raygun4jsStrings.customData
+import typingsSlinky.raygun4js.raygun4jsStrings.customTiming
 import typingsSlinky.raygun4js.raygun4jsStrings.debug
 import typingsSlinky.raygun4js.raygun4jsStrings.error
 import typingsSlinky.raygun4js.raygun4jsStrings.info
@@ -76,6 +78,7 @@ trait RaygunStatic extends js.Object {
     * Configures the Raygun provider.
     */
   def init(apiKey: String): RaygunStatic = js.native
+  def init(apiKey: String, options: js.UndefOr[scala.Nothing], customdata: js.Any): RaygunStatic = js.native
   def init(apiKey: String, options: RaygunOptions): RaygunStatic = js.native
   def init(apiKey: String, options: RaygunOptions, customdata: js.Any): RaygunStatic = js.native
   /**
@@ -105,12 +108,14 @@ trait RaygunStatic extends js.Object {
     * Sends an error/exception to the Raygun Api.
     */
   def send(ex: js.Error): RaygunStatic = js.native
+  def send(ex: js.Error, customData: js.UndefOr[scala.Nothing], tags: js.Array[String]): RaygunStatic = js.native
   def send(ex: js.Error, customData: js.Any): RaygunStatic = js.native
   def send(ex: js.Error, customData: js.Any, tags: js.Array[String]): RaygunStatic = js.native
   /**
     * Pass "breadcrumbsLevel" alongside a valid breadcrumbs level to set the current level. Passing options other than "breadcrumbsLevel" will set xhr hosts to ignore being
     */
   def setBreadcrumbOption(): Unit = js.native
+  def setBreadcrumbOption(option: js.UndefOr[scala.Nothing], value: String): Unit = js.native
   def setBreadcrumbOption(option: String): Unit = js.native
   def setBreadcrumbOption(option: String, value: String): Unit = js.native
   def setBreadcrumbOption(option: breadcrumbsLevel, value: debug): Unit = js.native
@@ -122,11 +127,19 @@ trait RaygunStatic extends js.Object {
   @JSName("setBreadcrumbOption")
   def setBreadcrumbOption_breadcrumbsLevel(option: breadcrumbsLevel, value: String): Unit = js.native
   @JSName("setBreadcrumbOption")
+  def setBreadcrumbOption_debug(option: js.UndefOr[scala.Nothing], value: debug): Unit = js.native
+  @JSName("setBreadcrumbOption")
   def setBreadcrumbOption_debug(option: String, value: debug): Unit = js.native
+  @JSName("setBreadcrumbOption")
+  def setBreadcrumbOption_error(option: js.UndefOr[scala.Nothing], value: error): Unit = js.native
   @JSName("setBreadcrumbOption")
   def setBreadcrumbOption_error(option: String, value: error): Unit = js.native
   @JSName("setBreadcrumbOption")
+  def setBreadcrumbOption_info(option: js.UndefOr[scala.Nothing], value: info): Unit = js.native
+  @JSName("setBreadcrumbOption")
   def setBreadcrumbOption_info(option: String, value: info): Unit = js.native
+  @JSName("setBreadcrumbOption")
+  def setBreadcrumbOption_warning(option: js.UndefOr[scala.Nothing], value: warning): Unit = js.native
   @JSName("setBreadcrumbOption")
   def setBreadcrumbOption_warning(option: String, value: warning): Unit = js.native
   /**
@@ -140,9 +153,187 @@ trait RaygunStatic extends js.Object {
     * Provides additional information about the current user.
     */
   def setUser(user: String): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: String,
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: String,
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: js.UndefOr[scala.Nothing],
+    fullName: String,
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(user: String, isAnonymous: js.UndefOr[scala.Nothing], email: String): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: String,
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: String,
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: String,
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(user: String, isAnonymous: js.UndefOr[scala.Nothing], email: String, fullName: String): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: String,
+    fullName: String,
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: String,
+    fullName: String,
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: js.UndefOr[scala.Nothing],
+    email: String,
+    fullName: String,
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
   def setUser(user: String, isAnonymous: Boolean): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: js.UndefOr[scala.Nothing],
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: js.UndefOr[scala.Nothing],
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: js.UndefOr[scala.Nothing],
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(user: String, isAnonymous: Boolean, email: js.UndefOr[scala.Nothing], fullName: String): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: js.UndefOr[scala.Nothing],
+    fullName: String,
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: js.UndefOr[scala.Nothing],
+    fullName: String,
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: js.UndefOr[scala.Nothing],
+    fullName: String,
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
   def setUser(user: String, isAnonymous: Boolean, email: String): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: String,
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: String,
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String
+  ): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: String,
+    fullName: js.UndefOr[scala.Nothing],
+    firstName: String,
+    uuid: String
+  ): RaygunStatic = js.native
   def setUser(user: String, isAnonymous: Boolean, email: String, fullName: String): RaygunStatic = js.native
+  def setUser(
+    user: String,
+    isAnonymous: Boolean,
+    email: String,
+    fullName: String,
+    firstName: js.UndefOr[scala.Nothing],
+    uuid: String
+  ): RaygunStatic = js.native
   def setUser(user: String, isAnonymous: Boolean, email: String, fullName: String, firstName: String): RaygunStatic = js.native
   def setUser(
     user: String,
@@ -156,6 +347,8 @@ trait RaygunStatic extends js.Object {
     * Allows errors to be filtered by version in the Raygun Dashboard. Versions should be in the format `x.x.x`
     */
   def setVersion(version: String): RaygunStatic = js.native
+  @JSName("trackEvent")
+  def trackEvent_customTiming(`type`: customTiming, options: Duration): Unit = js.native
   /**
     * Track Single Page Application route events.
     */

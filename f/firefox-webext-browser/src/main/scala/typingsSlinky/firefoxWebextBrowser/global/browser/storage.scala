@@ -3,6 +3,7 @@ package typingsSlinky.firefoxWebextBrowser.global.browser
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
 import typingsSlinky.firefoxWebextBrowser.browser.storage.StorageArea
+import typingsSlinky.firefoxWebextBrowser.browser.storage.StorageAreaSync
 import typingsSlinky.firefoxWebextBrowser.browser.storage.StorageChange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,6 +35,6 @@ object storage extends js.Object {
   ] = js.native
   /* storage properties */
   /** Items in the `sync` storage area are synced by the browser. */
-  val sync: StorageArea = js.native
+  val sync: StorageAreaSync = js.native
 }
 

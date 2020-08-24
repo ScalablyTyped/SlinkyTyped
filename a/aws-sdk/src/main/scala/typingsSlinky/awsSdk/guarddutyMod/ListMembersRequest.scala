@@ -19,24 +19,43 @@ trait ListMembersRequest extends js.Object {
     */
   var NextToken: js.UndefOr[String] = js.native
   /**
-    * Specifies what member accounts the response includes based on their relationship status with the master account. The default value is "true". If set to "false" the response includes all existing member accounts (including members who haven't been invited yet or have been disassociated).
+    * Specifies whether to only return associated members or to return all members (including members who haven't been invited yet or have been disassociated).
     */
   var OnlyAssociated: js.UndefOr[String] = js.native
 }
 
 object ListMembersRequest {
   @scala.inline
-  def apply(
-    DetectorId: DetectorId,
-    MaxResults: js.UndefOr[MaxResults] = js.undefined,
-    NextToken: String = null,
-    OnlyAssociated: String = null
-  ): ListMembersRequest = {
+  def apply(DetectorId: DetectorId): ListMembersRequest = {
     val __obj = js.Dynamic.literal(DetectorId = DetectorId.asInstanceOf[js.Any])
-    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (OnlyAssociated != null) __obj.updateDynamic("OnlyAssociated")(OnlyAssociated.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListMembersRequest]
   }
+  @scala.inline
+  implicit class ListMembersRequestOps[Self <: ListMembersRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDetectorId(value: DetectorId): Self = this.set("DetectorId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMaxResults(value: MaxResults): Self = this.set("MaxResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxResults: Self = this.set("MaxResults", js.undefined)
+    @scala.inline
+    def setNextToken(value: String): Self = this.set("NextToken", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNextToken: Self = this.set("NextToken", js.undefined)
+    @scala.inline
+    def setOnlyAssociated(value: String): Self = this.set("OnlyAssociated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnlyAssociated: Self = this.set("OnlyAssociated", js.undefined)
+  }
+  
 }
 

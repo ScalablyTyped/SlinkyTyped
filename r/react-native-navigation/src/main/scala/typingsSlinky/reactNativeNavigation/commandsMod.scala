@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeNavigation
 import typingsSlinky.reactNativeNavigation.commandsObserverMod.CommandsObserver
 import typingsSlinky.reactNativeNavigation.layoutMod.Layout
 import typingsSlinky.reactNativeNavigation.layoutMod.LayoutRoot
+import typingsSlinky.reactNativeNavigation.layoutProcessorMod.LayoutProcessor
 import typingsSlinky.reactNativeNavigation.layoutTreeCrawlerMod.LayoutTreeCrawler
 import typingsSlinky.reactNativeNavigation.layoutTreeParserMod.LayoutTreeParser
 import typingsSlinky.reactNativeNavigation.nativeCommandsSenderMod.NativeCommandsSender
@@ -26,9 +27,11 @@ object commandsMod extends js.Object {
       layoutTreeCrawler: LayoutTreeCrawler,
       commandsObserver: CommandsObserver,
       uniqueIdProvider: UniqueIdProvider,
-      optionsProcessor: OptionsProcessor
+      optionsProcessor: OptionsProcessor,
+      layoutProcessor: LayoutProcessor
     ) = this()
     val commandsObserver: js.Any = js.native
+    val layoutProcessor: js.Any = js.native
     val layoutTreeCrawler: js.Any = js.native
     val layoutTreeParser: js.Any = js.native
     val nativeCommandsSender: js.Any = js.native

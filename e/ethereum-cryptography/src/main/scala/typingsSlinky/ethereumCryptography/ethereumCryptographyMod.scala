@@ -1,0 +1,13 @@
+package typingsSlinky.ethereumCryptography
+
+import typingsSlinky.node.Buffer
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("ethereum-cryptography/ripemd160", JSImport.Namespace)
+@js.native
+object ethereumCryptographyMod extends js.Object {
+  def ripemd160(msg: Buffer): Buffer = js.native
+}
+

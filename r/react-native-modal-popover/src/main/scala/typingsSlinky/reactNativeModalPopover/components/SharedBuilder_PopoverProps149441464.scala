@@ -48,6 +48,8 @@ class SharedBuilder_PopoverProps149441464[R <: js.Object] (val args: js.Array[js
   @scala.inline
   def popoverStyleNull: this.type = set("popoverStyle", null)
   @scala.inline
+  def supportedOrientationsVarargs(value: Orientation*): this.type = set("supportedOrientations", js.Array(value :_*))
+  @scala.inline
   def supportedOrientations(value: js.Array[Orientation]): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
   @scala.inline
   def useNativeDriver(value: Boolean): this.type = set("useNativeDriver", value.asInstanceOf[js.Any])

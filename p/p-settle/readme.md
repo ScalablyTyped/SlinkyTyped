@@ -1,7 +1,7 @@
 
 # Scala.js typings for p-settle
 
-Typings are for version 3.1.0
+Typings are for version 4.1.1
 
 ## Library description:
 Settle promises concurrently and get their fulfillment value or rejection reason

@@ -28,89 +28,38 @@ object InteractivityOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArrowheadMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowheadMove")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutArrowheadMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowheadMove")(js.undefined)
-        ret
-    }
+    def setArrowheadMove(value: Boolean): Self = this.set("arrowheadMove", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLabelMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMove")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteArrowheadMove: Self = this.set("arrowheadMove", js.undefined)
     @scala.inline
-    def withoutLabelMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMove")(js.undefined)
-        ret
-    }
+    def setLabelMove(value: Boolean): Self = this.set("labelMove", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLinkMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkMove")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLabelMove: Self = this.set("labelMove", js.undefined)
     @scala.inline
-    def withoutLinkMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkMove")(js.undefined)
-        ret
-    }
+    def setLinkMove(value: Boolean): Self = this.set("linkMove", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUseLinkTools(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLinkTools")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLinkMove: Self = this.set("linkMove", js.undefined)
     @scala.inline
-    def withoutUseLinkTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLinkTools")(js.undefined)
-        ret
-    }
+    def setUseLinkTools(value: Boolean): Self = this.set("useLinkTools", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVertexAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUseLinkTools: Self = this.set("useLinkTools", js.undefined)
     @scala.inline
-    def withoutVertexAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexAdd")(js.undefined)
-        ret
-    }
+    def setVertexAdd(value: Boolean): Self = this.set("vertexAdd", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVertexMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexMove")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteVertexAdd: Self = this.set("vertexAdd", js.undefined)
     @scala.inline
-    def withoutVertexMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexMove")(js.undefined)
-        ret
-    }
+    def setVertexMove(value: Boolean): Self = this.set("vertexMove", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVertexRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteVertexMove: Self = this.set("vertexMove", js.undefined)
     @scala.inline
-    def withoutVertexRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexRemove")(js.undefined)
-        ret
-    }
+    def setVertexRemove(value: Boolean): Self = this.set("vertexRemove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVertexRemove: Self = this.set("vertexRemove", js.undefined)
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeHtmlview.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.TextProperties
@@ -56,7 +56,7 @@ object ReactNativeHtmlview {
     def paragraphBreak(value: String): this.type = set("paragraphBreak", value.asInstanceOf[js.Any])
     @scala.inline
     def renderNode(
-      value: (/* node */ HTMLViewNode, /* index */ Double, /* siblings */ HTMLViewNode, /* parent */ HTMLViewNode, /* defaultRenderer */ js.Function2[/* node */ HTMLViewNode, /* parent */ HTMLViewNode, TagMod[Any]]) => TagMod[Any]
+      value: (/* node */ HTMLViewNode, /* index */ Double, /* siblings */ HTMLViewNode, /* parent */ HTMLViewNode, /* defaultRenderer */ js.Function2[/* node */ HTMLViewNode, /* parent */ HTMLViewNode, ReactElement]) => ReactElement
     ): this.type = set("renderNode", js.Any.fromFunction5(value))
     @scala.inline
     def rootComponentProps(value: ViewProperties): this.type = set("rootComponentProps", value.asInstanceOf[js.Any])

@@ -9,7 +9,6 @@ import typingsSlinky.apolloLinkError.mod.ErrorLink.ErrorHandler
 import typingsSlinky.apolloLinkHttpCommon.mod.ServerError
 import typingsSlinky.apolloLinkHttpCommon.mod.ServerParseError
 import typingsSlinky.graphql.executeMod.ExecutionResult
-import typingsSlinky.graphql.executeMod.ExecutionResultDataDefault
 import typingsSlinky.graphql.mod.GraphQLError
 import typingsSlinky.std.Record
 import typingsSlinky.zenObservableTs.zenObservableMod.Observable
@@ -33,7 +32,7 @@ object mod extends js.Object {
     var graphQLErrors: js.UndefOr[js.Array[GraphQLError]] = js.native
     var networkError: js.UndefOr[js.Error | ServerError | ServerParseError] = js.native
     var operation: Operation = js.native
-    var response: js.UndefOr[ExecutionResult[ExecutionResultDataDefault]] = js.native
+    var response: js.UndefOr[ExecutionResult[StringDictionary[_], StringDictionary[_]]] = js.native
     def forward(operation: Operation): Observable[FetchResult[StringDictionary[_], Record[String, _], Record[String, _]]] = js.native
   }
   

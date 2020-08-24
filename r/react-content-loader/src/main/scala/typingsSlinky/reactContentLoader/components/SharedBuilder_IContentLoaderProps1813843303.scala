@@ -214,8 +214,6 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   @scala.inline
   def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
   @scala.inline
-  def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
-  @scala.inline
   def ascent(value: Double | String): this.type = set("ascent", value.asInstanceOf[js.Any])
   @scala.inline
   def attributeName(value: String): this.type = set("attributeName", value.asInstanceOf[js.Any])
@@ -225,6 +223,10 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   def autoReverse(value: Booleanish): this.type = set("autoReverse", value.asInstanceOf[js.Any])
   @scala.inline
   def azimuth(value: Double | String): this.type = set("azimuth", value.asInstanceOf[js.Any])
+  @scala.inline
+  def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+  @scala.inline
+  def backgroundOpacity(value: Double): this.type = set("backgroundOpacity", value.asInstanceOf[js.Any])
   @scala.inline
   def baseFrequency(value: Double | String): this.type = set("baseFrequency", value.asInstanceOf[js.Any])
   @scala.inline
@@ -345,6 +347,10 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   def fontVariant(value: Double | String): this.type = set("fontVariant", value.asInstanceOf[js.Any])
   @scala.inline
   def fontWeight(value: Double | String): this.type = set("fontWeight", value.asInstanceOf[js.Any])
+  @scala.inline
+  def foregroundColor(value: String): this.type = set("foregroundColor", value.asInstanceOf[js.Any])
+  @scala.inline
+  def foregroundOpacity(value: Double): this.type = set("foregroundOpacity", value.asInstanceOf[js.Any])
   @scala.inline
   def format(value: Double | String): this.type = set("format", value.asInstanceOf[js.Any])
   @scala.inline
@@ -670,10 +676,6 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   @scala.inline
   def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
   @scala.inline
-  def primaryColor(value: String): this.type = set("primaryColor", value.asInstanceOf[js.Any])
-  @scala.inline
-  def primaryOpacity(value: Double): this.type = set("primaryOpacity", value.asInstanceOf[js.Any])
-  @scala.inline
   def primitiveUnits(value: Double | String): this.type = set("primitiveUnits", value.asInstanceOf[js.Any])
   @scala.inline
   def r(value: Double | String): this.type = set("r", value.asInstanceOf[js.Any])
@@ -709,10 +711,6 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   def ry(value: Double | String): this.type = set("ry", value.asInstanceOf[js.Any])
   @scala.inline
   def scale(value: Double | String): this.type = set("scale", value.asInstanceOf[js.Any])
-  @scala.inline
-  def secondaryColor(value: String): this.type = set("secondaryColor", value.asInstanceOf[js.Any])
-  @scala.inline
-  def secondaryOpacity(value: Double): this.type = set("secondaryOpacity", value.asInstanceOf[js.Any])
   @scala.inline
   def seed(value: Double | String): this.type = set("seed", value.asInstanceOf[js.Any])
   @scala.inline
@@ -790,6 +788,8 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   @scala.inline
   def textRendering(value: Double | String): this.type = set("textRendering", value.asInstanceOf[js.Any])
   @scala.inline
+  def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+  @scala.inline
   def to(value: Double | String): this.type = set("to", value.asInstanceOf[js.Any])
   @scala.inline
   def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
@@ -810,7 +810,7 @@ class SharedBuilder_IContentLoaderProps1813843303 (val args: js.Array[js.Any])
   @scala.inline
   def unicodeRange(value: Double | String): this.type = set("unicodeRange", value.asInstanceOf[js.Any])
   @scala.inline
-  def uniquekey(value: String): this.type = set("uniquekey", value.asInstanceOf[js.Any])
+  def uniqueKey(value: String): this.type = set("uniqueKey", value.asInstanceOf[js.Any])
   @scala.inline
   def unitsPerEm(value: Double | String): this.type = set("unitsPerEm", value.asInstanceOf[js.Any])
   @scala.inline

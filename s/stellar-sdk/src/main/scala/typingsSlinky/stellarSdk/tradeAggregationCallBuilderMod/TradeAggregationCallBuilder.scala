@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TradeAggregationCallBuilder protected () extends CallBuilder[CollectionPage[TradeAggregationRecord]] {
   def this(
-    serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any,
+    serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any,
     base: Asset,
     counter: Asset,
     start_time: Double,

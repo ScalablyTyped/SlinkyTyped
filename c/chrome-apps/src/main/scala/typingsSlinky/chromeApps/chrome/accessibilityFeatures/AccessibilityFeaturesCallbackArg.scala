@@ -33,29 +33,18 @@ object AccessibilityFeaturesCallbackArg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLevelOfControl(value: LevelOfControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelOfControl")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLevelOfControl(value: LevelOfControl): Self = this.set("levelOfControl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIncognitoSpecific(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incognitoSpecific")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIncognitoSpecific: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incognitoSpecific")(js.undefined)
-        ret
-    }
+    def setIncognitoSpecific(value: Boolean): Self = this.set("incognitoSpecific", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIncognitoSpecific: Self = this.set("incognitoSpecific", js.undefined)
   }
   
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet", "RoutedAnchor")
+@JSImport("grommet/es6", "RoutedAnchor")
 @js.native
 class RoutedAnchor protected ()
   extends Component[RoutedAnchorPropsOmitAnch, js.Object, js.Any] {
@@ -16,7 +16,7 @@ class RoutedAnchor protected ()
   def this(props: RoutedAnchorPropsOmitAnch, context: js.Any) = this()
 }
 
-@JSImport("grommet", "RoutedAnchor")
+@JSImport("grommet/es6", "RoutedAnchor")
 @js.native
 object RoutedAnchor extends TopLevel[ReactComponentClass[RoutedAnchorPropsOmitAnch]]
 

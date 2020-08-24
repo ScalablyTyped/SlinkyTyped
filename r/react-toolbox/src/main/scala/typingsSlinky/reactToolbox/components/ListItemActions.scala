@@ -2,9 +2,9 @@ package typingsSlinky.reactToolbox.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactToolbox.listListItemActionMod.ListItemActionTheme
-import typingsSlinky.reactToolbox.listListItemActionsMod.ListItemActionsProps
-import typingsSlinky.reactToolbox.listListItemActionsMod.ListItemActionsTheme
+import typingsSlinky.reactToolbox.listItemActionMod.ListItemActionTheme
+import typingsSlinky.reactToolbox.listItemActionsMod.ListItemActionsProps
+import typingsSlinky.reactToolbox.listItemActionsMod.ListItemActionsTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.left
 import typingsSlinky.reactToolbox.reactToolboxStrings.right
 import scala.scalajs.js
@@ -12,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListItemActions {
-  @JSImport("react-toolbox/lib/list", "ListItemActions")
+  @JSImport("react-toolbox/components/list", "ListItemActions")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.libListMod.ListItemActions] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.listMod.ListItemActions] {
     @scala.inline
     def theme(value: ListItemActionsTheme with ListItemActionTheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline

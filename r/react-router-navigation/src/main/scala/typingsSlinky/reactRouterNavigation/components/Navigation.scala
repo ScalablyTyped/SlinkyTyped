@@ -1,6 +1,6 @@
 package typingsSlinky.reactRouterNavigation.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
@@ -30,6 +30,10 @@ object Navigation {
     @scala.inline
     def cardStyleNull: this.type = set("cardStyle", null)
     @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def configureTransition(
       value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NavigationTransitionProps */ /* transitionProps */ js.Any, /* prevTransitionProps */ js.UndefOr[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NavigationTransitionProps */ js.Any
@@ -48,13 +52,13 @@ object Navigation {
     @scala.inline
     def onTransitionStart(value: /* repeated */ js.Any => Unit): this.type = set("onTransitionStart", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLeftButton(value: /* props */ CardSubViewProps => TagMod[Any]): this.type = set("renderLeftButton", js.Any.fromFunction1(value))
+    def renderLeftButton(value: /* props */ CardSubViewProps => ReactElement): this.type = set("renderLeftButton", js.Any.fromFunction1(value))
     @scala.inline
-    def renderNavBar(value: /* props */ CardSubViewProps => TagMod[Any]): this.type = set("renderNavBar", js.Any.fromFunction1(value))
+    def renderNavBar(value: /* props */ CardSubViewProps => ReactElement): this.type = set("renderNavBar", js.Any.fromFunction1(value))
     @scala.inline
-    def renderRightButton(value: /* props */ CardSubViewProps => TagMod[Any]): this.type = set("renderRightButton", js.Any.fromFunction1(value))
+    def renderRightButton(value: /* props */ CardSubViewProps => ReactElement): this.type = set("renderRightButton", js.Any.fromFunction1(value))
     @scala.inline
-    def renderTitle(value: /* props */ CardSubViewProps => TagMod[Any]): this.type = set("renderTitle", js.Any.fromFunction1(value))
+    def renderTitle(value: /* props */ CardSubViewProps => ReactElement): this.type = set("renderTitle", js.Any.fromFunction1(value))
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

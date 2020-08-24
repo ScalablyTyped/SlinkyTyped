@@ -27,7 +27,23 @@ class Tick protected () extends js.Object {
     */
   def this(axis: Axis, pos: Double) = this()
   def this(axis: Axis, pos: Double, `type`: String) = this()
+  def this(axis: Axis, pos: Double, `type`: js.UndefOr[scala.Nothing], noLabel: Boolean) = this()
   def this(axis: Axis, pos: Double, `type`: String, noLabel: Boolean) = this()
+  def this(
+    axis: Axis,
+    pos: Double,
+    `type`: js.UndefOr[scala.Nothing],
+    noLabel: js.UndefOr[scala.Nothing],
+    parameters: js.Object
+  ) = this()
+  def this(
+    axis: Axis,
+    pos: Double,
+    `type`: js.UndefOr[scala.Nothing],
+    noLabel: Boolean,
+    parameters: js.Object
+  ) = this()
+  def this(axis: Axis, pos: Double, `type`: String, noLabel: js.UndefOr[scala.Nothing], parameters: js.Object) = this()
   def this(axis: Axis, pos: Double, `type`: String, noLabel: Boolean, parameters: js.Object) = this()
   /**
     * The related axis of the tick.
@@ -46,7 +62,7 @@ class Tick protected () extends js.Object {
     */
   val isLast: js.UndefOr[Boolean] = js.native
   /**
-    * The rendered label of the tick.
+    * The rendered text label of the tick.
     */
   var label: js.UndefOr[SVGElement] = js.native
   /**

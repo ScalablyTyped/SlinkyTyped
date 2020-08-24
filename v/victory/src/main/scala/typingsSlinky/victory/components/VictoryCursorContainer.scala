@@ -43,7 +43,7 @@ object VictoryCursorContainer {
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def onCursorChange(value: (/* value */ CursorData, /* props */ VictoryCursorContainerProps) => Unit): this.type = set("onCursorChange", js.Any.fromFunction2(value))
+    def onCursorChange(value: (/* value */ CursorData, VictoryCursorContainerProps) => Unit): this.type = set("onCursorChange", js.Any.fromFunction2(value))
     @scala.inline
     def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

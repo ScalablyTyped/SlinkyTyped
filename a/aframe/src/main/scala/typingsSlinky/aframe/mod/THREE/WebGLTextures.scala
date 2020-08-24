@@ -1,5 +1,7 @@
 package typingsSlinky.aframe.mod.THREE
 
+import org.scalajs.dom.raw.WebGLRenderingContext
+import typingsSlinky.three.webGLUtilsMod.WebGLUtils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +11,13 @@ import scala.scalajs.js.annotation._
 class WebGLTextures protected ()
   extends typingsSlinky.three.mod.WebGLTextures {
   def this(
-    gl: js.Any,
-    extensions: js.Any,
-    state: js.Any,
-    properties: js.Any,
-    capabilities: js.Any,
-    paramThreeToGL: js.Function,
-    info: js.Any
+    gl: WebGLRenderingContext,
+    extensions: typingsSlinky.three.webGLExtensionsMod.WebGLExtensions,
+    state: typingsSlinky.three.webGLStateMod.WebGLState,
+    properties: typingsSlinky.three.webGLPropertiesMod.WebGLProperties,
+    capabilities: typingsSlinky.three.webGLCapabilitiesMod.WebGLCapabilities,
+    utils: WebGLUtils,
+    info: typingsSlinky.three.webGLInfoMod.WebGLInfo
   ) = this()
 }
 

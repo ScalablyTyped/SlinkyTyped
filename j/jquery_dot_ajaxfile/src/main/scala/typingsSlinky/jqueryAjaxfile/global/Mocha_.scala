@@ -4,7 +4,6 @@ import typingsSlinky.jqueryAjaxfile.Mocha
 import typingsSlinky.jqueryAjaxfile.Mocha.IRunner
 import typingsSlinky.jqueryAjaxfile.anon.Bail
 import typingsSlinky.jqueryAjaxfile.anon.Close
-import typingsSlinky.jqueryAjaxfile.anon.Failures
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,93 +24,55 @@ object Mocha_ extends js.Object {
     class Base protected ()
       extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
       def this(runner: IRunner) = this()
-      /* CompleteClass */
-      override var stats: Failures = js.native
     }
     
     @js.native
     class Doc ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class Dot ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class HTML ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class HTMLCov ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class JSON ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class JSONCov ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class JSONStream ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class Landing ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class List ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class Markdown ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class Min ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class Nyan ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class Progress protected ()
@@ -124,31 +85,21 @@ object Mocha_ extends js.Object {
         */
       def this(runner: IRunner) = this()
       def this(runner: IRunner, options: Close) = this()
-      /* CompleteClass */
-      override var stats: Failures = js.native
     }
     
     @js.native
     class Spec ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class TAP ()
-      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
-      /* CompleteClass */
-      override var stats: Failures = js.native
-    }
+      extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base
     
     @js.native
     class XUnit protected ()
       extends typingsSlinky.jqueryAjaxfile.Mocha.reporters.Base {
       def this(runner: IRunner) = this()
       def this(runner: IRunner, options: js.Any) = this()
-      /* CompleteClass */
-      override var stats: Failures = js.native
     }
     
   }

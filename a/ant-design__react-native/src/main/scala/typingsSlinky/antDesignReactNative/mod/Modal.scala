@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignReactNative.anon.AnimateAppear
 import typingsSlinky.antDesignReactNative.anon.AntLocale
 import typingsSlinky.antDesignReactNative.modalMod.default
@@ -21,8 +21,8 @@ class Modal () extends default
 @js.native
 object Modal extends js.Object {
   var alert: js.Function4[
-    /* title */ TagMod[Any], 
-    /* content */ TagMod[Any], 
+    /* title */ ReactElement, 
+    /* content */ ReactElement, 
     /* actions */ js.UndefOr[js.Array[Action[TextStyle]]], 
     /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
     Double
@@ -35,8 +35,8 @@ object Modal extends js.Object {
     Double
   ] = js.native
   var prompt: js.Function7[
-    /* title */ TagMod[Any], 
-    /* message */ TagMod[Any], 
+    /* title */ ReactElement, 
+    /* message */ ReactElement, 
     /* callbackOrActions */ CallbackOrActions[TextStyle], 
     /* type */ js.UndefOr[String], 
     /* defaultValue */ js.UndefOr[String], 

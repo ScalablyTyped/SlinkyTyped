@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "internal-slot"
-version := "1.0-dt-20200515Z-6cf559"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-c1e7bd"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

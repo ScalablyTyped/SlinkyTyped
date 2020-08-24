@@ -8,24 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs")
 @js.native
 abstract class AppointmentsProviderShowTimeFrameActivatedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs {
-  /** Gets the duration of the time frame to be shown. */
-  /* CompleteClass */
-  override var duration: Double = js.native
-  /** Gets the activation type. */
-  /* CompleteClass */
-  override var kind: typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ActivationKind = js.native
-  /** Gets the execution state of the app before it was activated. */
-  /* CompleteClass */
-  override var previousExecutionState: typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ApplicationExecutionState = js.native
-  /** Gets the splash screen object, which provides information about the transition from the splash screen to the activated app. */
-  /* CompleteClass */
-  override var splashScreen: typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.SplashScreen = js.native
-  /** Gets the starting date and time of the time frame to be shown. */
-  /* CompleteClass */
-  override var timeToShow: js.Date = js.native
-  /** Gets the action to be performed by the appointments provider. */
-  /* CompleteClass */
-  override var verb: String = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs
 

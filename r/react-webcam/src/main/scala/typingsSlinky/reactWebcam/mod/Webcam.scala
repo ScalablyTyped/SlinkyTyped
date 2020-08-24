@@ -1,21 +1,22 @@
 package typingsSlinky.reactWebcam.mod
 
 import org.scalajs.dom.experimental.mediastream.MediaStream
-import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Webcam
-  extends Component[WebcamProps with HTMLAttributes[HTMLVideoElement], WebcamState, js.Any] {
-  var canvas: HTMLCanvasElement = js.native
-  var ctx: CanvasRenderingContext2D | Null = js.native
-  var stream: MediaStream = js.native
+  extends Component[WebcamProps, WebcamState, js.Any] {
+  var canvas: js.Any = js.native
+  var ctx: js.Any = js.native
+  var handleUserMedia: js.Any = js.native
+  var requestUserMedia: js.Any = js.native
+  var stopAndCleanup: js.Any = js.native
+  var stream: MediaStream | Null = js.native
   var video: HTMLVideoElement | Null = js.native
   @JSName("componentDidMount")
   def componentDidMount_MWebcam(): Unit = js.native
@@ -24,9 +25,8 @@ trait Webcam
   @JSName("componentWillUnmount")
   def componentWillUnmount_MWebcam(): Unit = js.native
   def getCanvas(): HTMLCanvasElement | Null = js.native
+  def getCanvas(screenshotDimensions: ScreenshotDimensions): HTMLCanvasElement | Null = js.native
   def getScreenshot(): String | Null = js.native
-  def handleUserMedia(err: js.Any): Unit = js.native
-  def handleUserMedia(err: js.Any, stream: MediaStream): Unit = js.native
-  def requestUserMedia(): Unit = js.native
+  def getScreenshot(screenshotDimensions: ScreenshotDimensions): String | Null = js.native
 }
 

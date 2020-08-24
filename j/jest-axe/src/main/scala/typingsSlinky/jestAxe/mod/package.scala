@@ -11,7 +11,7 @@ package object mod {
   ]
   type JestAxe = js.Function2[
     /* html */ org.scalajs.dom.raw.Element | java.lang.String, 
-    /* options */ js.UndefOr[typingsSlinky.jestAxe.mod.AxeOptions], 
+    /* options */ js.UndefOr[typingsSlinky.axeCore.mod.RunOptions], 
     js.Promise[typingsSlinky.axeCore.mod.AxeResults]
   ]
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.reactNativeAutocompleteInput.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -12,6 +11,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.FlatListProps
@@ -32,6 +32,7 @@ import typingsSlinky.reactNative.mod.TextInputProperties
 import typingsSlinky.reactNative.mod.TextInputScrollEventData
 import typingsSlinky.reactNative.mod.TextInputSelectionChangeEventData
 import typingsSlinky.reactNative.mod.TextInputSubmitEditingEventData
+import typingsSlinky.reactNative.mod.TextInputTextInputEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNative.reactNativeStrings.URL
@@ -116,7 +117,9 @@ object ReactNativeAutocompleteInput {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
+    @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -135,6 +138,8 @@ object ReactNativeAutocompleteInput {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -172,6 +177,8 @@ object ReactNativeAutocompleteInput {
     @scala.inline
     def contextMenuHidden(value: Boolean): this.type = set("contextMenuHidden", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataDetectorTypesVarargs(value: DataDetectorTypes*): this.type = set("dataDetectorTypes", js.Array(value :_*))
+    @scala.inline
     def dataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): this.type = set("dataDetectorTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
@@ -183,6 +190,8 @@ object ReactNativeAutocompleteInput {
     def enablesReturnKeyAutomatically(value: Boolean): this.type = set("enablesReturnKeyAutomatically", value.asInstanceOf[js.Any])
     @scala.inline
     def flatListProps(value: Partial[FlatListProps[T]]): this.type = set("flatListProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -290,6 +299,8 @@ object ReactNativeAutocompleteInput {
     @scala.inline
     def onSubmitEditing(value: SyntheticEvent[NodeHandle, TextInputSubmitEditingEventData] => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
     @scala.inline
+    def onTextInput(value: SyntheticEvent[NodeHandle, TextInputTextInputEventData] => Unit): this.type = set("onTextInput", js.Any.fromFunction1(value))
+    @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
@@ -306,7 +317,7 @@ object ReactNativeAutocompleteInput {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholderTextColor(value: String): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
+    def placeholderTextColor(value: ColorValue): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
@@ -320,7 +331,7 @@ object ReactNativeAutocompleteInput {
       value: (/* sectionID */ String | Double, /* rowID */ String | Double, /* adjacentRowHighlighted */ js.UndefOr[Boolean]) => ReactElement
     ): this.type = set("renderSeparator", js.Any.fromFunction3(value))
     @scala.inline
-    def renderTextInput(value: /* props */ TextInputProperties => TagMod[Any]): this.type = set("renderTextInput", js.Any.fromFunction1(value))
+    def renderTextInput(value: /* props */ TextInputProperties => ReactElement): this.type = set("renderTextInput", js.Any.fromFunction1(value))
     @scala.inline
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
     @scala.inline
@@ -336,7 +347,7 @@ object ReactNativeAutocompleteInput {
     @scala.inline
     def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+    def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionState(value: DocumentSelectionState): this.type = set("selectionState", value.asInstanceOf[js.Any])
     @scala.inline
@@ -370,14 +381,14 @@ object ReactNativeAutocompleteInput {
     @scala.inline
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
     @scala.inline
-    def underlineColorAndroid(value: String): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
+    def underlineColorAndroid(value: ColorValue): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: AutocompleteProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](data: js.Array[T], renderItem: Index[T] => TagMod[Any]): Builder[T] = {
+  def apply[T](data: js.Array[T], renderItem: Index[T] => ReactElement): Builder[T] = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[AutocompleteProps[T]]))
   }

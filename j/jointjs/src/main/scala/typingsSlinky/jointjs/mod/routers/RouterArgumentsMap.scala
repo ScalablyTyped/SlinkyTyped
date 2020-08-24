@@ -34,35 +34,20 @@ object RouterArgumentsMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withManhattan(value: ManhattanRouterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manhattan")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMetro(value: ManhattanRouterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metro")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setManhattan(value: ManhattanRouterArguments): Self = this.set("manhattan", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNormal(value: NormalRouterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMetro(value: ManhattanRouterArguments): Self = this.set("metro", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOneSide(value: OneSideRouterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneSide")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNormal(value: NormalRouterArguments): Self = this.set("normal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOrthogonal(value: OrthogonalRouterArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orthogonal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOneSide(value: OneSideRouterArguments): Self = this.set("oneSide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOrthogonal(value: OrthogonalRouterArguments): Self = this.set("orthogonal", value.asInstanceOf[js.Any])
   }
   
 }

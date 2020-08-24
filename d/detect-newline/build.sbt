@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "detect-newline"
-version := "3.1.0-dd3aca"
-scalaVersion := "2.13.2"
+version := "3.1.0-5fa3db"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

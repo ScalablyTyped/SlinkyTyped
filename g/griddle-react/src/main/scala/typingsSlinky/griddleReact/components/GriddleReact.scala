@@ -33,11 +33,13 @@ object GriddleReact {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
     @scala.inline
     def components(value: GriddleComponents): this.type = set("components", value.asInstanceOf[js.Any])
     @scala.inline
     def core(value: GriddlePlugin): this.type = set("core", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: T*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[T]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,9 +53,13 @@ object GriddleReact {
     @scala.inline
     def pageProperties(value: GriddlePageProperties): this.type = set("pageProperties", value.asInstanceOf[js.Any])
     @scala.inline
+    def pluginsVarargs(value: GriddlePlugin*): this.type = set("plugins", js.Array(value :_*))
+    @scala.inline
     def plugins(value: js.Array[GriddlePlugin]): this.type = set("plugins", value.asInstanceOf[js.Any])
     @scala.inline
     def reducer(value: PropertyBag[Reducer]): this.type = set("reducer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reduxMiddlewareVarargs(value: (Middleware[js.Object, js.Any, Dispatch[AnyAction]])*): this.type = set("reduxMiddleware", js.Array(value :_*))
     @scala.inline
     def reduxMiddleware(value: js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]]): this.type = set("reduxMiddleware", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,6 +72,8 @@ object GriddleReact {
     def sortMethod(
       value: (/* data */ js.Array[_], /* column */ String, /* sortAscending */ js.UndefOr[Boolean]) => Double
     ): this.type = set("sortMethod", js.Any.fromFunction3(value))
+    @scala.inline
+    def sortPropertiesVarargs(value: GriddleSortKey*): this.type = set("sortProperties", js.Array(value :_*))
     @scala.inline
     def sortProperties(value: js.Array[GriddleSortKey]): this.type = set("sortProperties", value.asInstanceOf[js.Any])
     @scala.inline

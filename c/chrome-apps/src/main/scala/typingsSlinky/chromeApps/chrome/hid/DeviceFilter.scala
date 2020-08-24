@@ -31,53 +31,26 @@ object DeviceFilter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withProductId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
+    def setProductId(value: integer): Self = this.set("productId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUsage(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteProductId: Self = this.set("productId", js.undefined)
     @scala.inline
-    def withoutUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
-        ret
-    }
+    def setUsage(value: integer): Self = this.set("usage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUsagePage(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usagePage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUsage: Self = this.set("usage", js.undefined)
     @scala.inline
-    def withoutUsagePage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usagePage")(js.undefined)
-        ret
-    }
+    def setUsagePage(value: integer): Self = this.set("usagePage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVendorId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteUsagePage: Self = this.set("usagePage", js.undefined)
     @scala.inline
-    def withoutVendorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(js.undefined)
-        ret
-    }
+    def setVendorId(value: integer): Self = this.set("vendorId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVendorId: Self = this.set("vendorId", js.undefined)
   }
   
 }

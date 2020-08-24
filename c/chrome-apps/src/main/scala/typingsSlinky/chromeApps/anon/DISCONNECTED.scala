@@ -46,53 +46,26 @@ object DISCONNECTED {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCONNECTED(value: connected__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECTED")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDISCONNECTED(value: disconnected__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DISCONNECTED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCONNECTED(value: connected__): Self = this.set("CONNECTED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withERROR(value: error_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ERROR")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDISCONNECTED(value: disconnected__): Self = this.set("DISCONNECTED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLINK_CHANGED(value: linkChanged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LINK_CHANGED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setERROR(value: error_): Self = this.set("ERROR", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLINK_DOWN(value: linkDown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LINK_DOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLINK_CHANGED(value: linkChanged): Self = this.set("LINK_CHANGED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLINK_UP(value: linkUp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LINK_UP")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLINK_DOWN(value: linkDown): Self = this.set("LINK_DOWN", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRESUME(value: resume_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RESUME")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLINK_UP(value: linkUp): Self = this.set("LINK_UP", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSUSPEND(value: suspend_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SUSPEND")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRESUME(value: resume_): Self = this.set("RESUME", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSUSPEND(value: suspend_): Self = this.set("SUSPEND", value.asInstanceOf[js.Any])
   }
   
 }

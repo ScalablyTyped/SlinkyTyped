@@ -42,19 +42,16 @@ object LeadingMarginSpan_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDrawLeadingMargin(
-      value: (Canvas, Paint, Double, Double, Double, Double, Double, String, Double, Double, Boolean, Layout) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLeadingMargin")(js.Any.fromFunction12(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetLeadingMargin(value: Boolean => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLeadingMargin")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDrawLeadingMargin(
+      value: (Canvas, Paint, Double, Double, Double, Double, Double, String, Double, Double, Boolean, Layout) => Unit
+    ): Self = this.set("drawLeadingMargin", js.Any.fromFunction12(value))
+    @scala.inline
+    def setGetLeadingMargin(value: Boolean => Double): Self = this.set("getLeadingMargin", js.Any.fromFunction1(value))
   }
   
 }

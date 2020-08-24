@@ -26,11 +26,12 @@ object OnMultiChoiceClickListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnClick(value: (typingsSlinky.androiduix.android.content.DialogInterface, Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
+    @scala.inline
+    def setOnClick(value: (typingsSlinky.androiduix.android.content.DialogInterface, Double, Boolean) => Unit): Self = this.set("onClick", js.Any.fromFunction3(value))
   }
   
 }

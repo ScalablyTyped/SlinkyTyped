@@ -21,6 +21,11 @@ object mod extends js.Object {
     def this(info: typingsSlinky.appBuilderLib.packagerMod.Packager, buildVersion: String) = this()
     def this(
       info: typingsSlinky.appBuilderLib.packagerMod.Packager,
+      buildVersion: js.UndefOr[scala.Nothing],
+      platformSpecificOptions: PlatformSpecificBuildOptions
+    ) = this()
+    def this(
+      info: typingsSlinky.appBuilderLib.packagerMod.Packager,
       buildVersion: String,
       platformSpecificOptions: PlatformSpecificBuildOptions
     ) = this()
@@ -50,7 +55,11 @@ object mod extends js.Object {
   @js.native
   class Platform protected ()
     extends typingsSlinky.appBuilderLib.mod.Platform {
-    def this(name: String, buildConfigurationKey: String, nodeName: typingsSlinky.node.NodeJS.Platform) = this()
+    def this(
+      name: String,
+      buildConfigurationKey: String,
+      nodeName: typingsSlinky.node.processMod.global.NodeJS.Platform
+    ) = this()
   }
   
   @js.native
@@ -78,6 +87,11 @@ object mod extends js.Object {
   def build(rawOptions: CliOptions): js.Promise[js.Array[String]] = js.native
   def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
   def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform]): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  def createTargets(
+    platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform],
+    `type`: js.UndefOr[scala.Nothing],
+    arch: String
+  ): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
   def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
   def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
   def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: Null, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native

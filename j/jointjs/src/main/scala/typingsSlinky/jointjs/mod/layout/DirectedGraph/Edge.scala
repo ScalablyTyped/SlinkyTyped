@@ -30,77 +30,34 @@ object Edge {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLabeloffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labeloffset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHeight: Self = this.set("height", js.undefined)
     @scala.inline
-    def withoutLabeloffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labeloffset")(js.undefined)
-        ret
-    }
+    def setLabeloffset(value: Double): Self = this.set("labeloffset", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLabelpos(value: l_ | c_ | r): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelpos")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLabeloffset: Self = this.set("labeloffset", js.undefined)
     @scala.inline
-    def withoutLabelpos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelpos")(js.undefined)
-        ret
-    }
+    def setLabelpos(value: l_ | c_ | r): Self = this.set("labelpos", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMinLen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLabelpos: Self = this.set("labelpos", js.undefined)
     @scala.inline
-    def withoutMinLen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLen")(js.undefined)
-        ret
-    }
+    def setMinLen(value: Double): Self = this.set("minLen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinLen: Self = this.set("minLen", js.undefined)
     @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
+    def setWeight(value: Double): Self = this.set("weight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteWeight: Self = this.set("weight", js.undefined)
     @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
   
 }

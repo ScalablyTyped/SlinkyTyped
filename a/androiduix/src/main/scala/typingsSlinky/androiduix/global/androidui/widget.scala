@@ -17,6 +17,7 @@ object widget extends js.Object {
     extends typingsSlinky.androiduix.androidui.widget.HtmlBaseView {
     def this(context: Context) = this()
     def this(context: Context, bindElement: HTMLElement) = this()
+    def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
     def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   }
   
@@ -37,6 +38,7 @@ object widget extends js.Object {
     extends typingsSlinky.androiduix.androidui.widget.HtmlImageView {
     def this(context: Context) = this()
     def this(context: Context, bindElement: HTMLElement) = this()
+    def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
     def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   }
   
@@ -45,6 +47,7 @@ object widget extends js.Object {
     extends typingsSlinky.androiduix.androidui.widget.HtmlView {
     def this(context: Context) = this()
     def this(context: Context, bindElement: HTMLElement) = this()
+    def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
     def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   }
   
@@ -53,6 +56,7 @@ object widget extends js.Object {
     extends typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout {
     def this(context: Context) = this()
     def this(context: Context, bindElement: HTMLElement) = this()
+    def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
     def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   }
   
@@ -85,6 +89,7 @@ object widget extends js.Object {
       extends typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout.DefaultFooterView {
       def this(context: Context) = this()
       def this(context: Context, bindElement: HTMLElement) = this()
+      def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
       def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
     }
     
@@ -93,6 +98,7 @@ object widget extends js.Object {
       extends typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout.DefaultHeaderView {
       def this(context: Context) = this()
       def this(context: Context, bindElement: HTMLElement) = this()
+      def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
       def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
     }
     

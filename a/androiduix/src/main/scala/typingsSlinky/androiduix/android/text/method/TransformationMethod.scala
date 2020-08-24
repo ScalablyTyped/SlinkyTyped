@@ -28,17 +28,14 @@ object TransformationMethod {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetTransformation(value: (String, View) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransformation")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnFocusChanged(value: (View, String, Boolean, Double, Rect) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusChanged")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setGetTransformation(value: (String, View) => String): Self = this.set("getTransformation", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnFocusChanged(value: (View, String, Boolean, Double, Rect) => Unit): Self = this.set("onFocusChanged", js.Any.fromFunction5(value))
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.drawerMod
 
 import org.scalajs.dom.raw.KeyboardEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.SharedStylePropsArgchildr
 import typingsSlinky.baseui.baseuiStrings.backdrop
 import typingsSlinky.baseui.baseuiStrings.closeButton
@@ -22,14 +22,14 @@ class Drawer ()
   def didClose(): Unit = js.native
   def didOpen(): Unit = js.native
   def disableMountNodeScroll(): Unit = js.native
-  def getChildren(): TagMod[Any] = js.native
+  def getChildren(): ReactElement = js.native
   def getRef(component: String): Ref[_] = js.native
   def getSharedProps(): SharedStylePropsArgchildr = js.native
   def onBackdropClick(): Unit = js.native
   def onCloseClick(): Unit = js.native
   def onDocumentKeyPress(event: KeyboardEvent): Unit = js.native
   def removeDomEvents(): Unit = js.native
-  def renderDrawer(): TagMod[Any] = js.native
+  def renderDrawer(): ReactElement = js.native
   def resentMountNodeScroll(): Unit = js.native
   @JSName("triggerClose")
   def triggerClose_backdrop(source: backdrop): Unit = js.native

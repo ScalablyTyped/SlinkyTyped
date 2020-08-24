@@ -4,11 +4,8 @@ import typingsSlinky.ionicCore.anon.Tab
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabsElement
 import typingsSlinky.ionicCore.interfaceMod.NavOutlet
-import typingsSlinky.ionicCore.interfaceMod.RouteID
 import typingsSlinky.ionicCore.interfaceMod.RouteWrite
-import typingsSlinky.ionicCore.interfaceMod.RouterDirection
-import typingsSlinky.ionicCore.mod.ComponentProps
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,21 +29,18 @@ object tabsMod extends js.Object {
       * Emitted when the navigation is about to transition to a new component.
       */
     var ionTabsWillChange: EventEmitter[Tab] = js.native
-    var leavingTab: js.UndefOr[js.Any] = js.native
+    var leavingTab: js.Any = js.native
     var notifyRouter: js.Any = js.native
     var onTabClicked: js.Any = js.native
     var selectedTab: js.UndefOr[HTMLIonTabElement] = js.native
     var setActive: js.Any = js.native
     var shouldSwitch: js.Any = js.native
     var tabSwitch: js.Any = js.native
-    val tabs: js.Any = js.native
     var transitioning: js.Any = js.native
     /** @internal */
     var useRouter: Boolean = js.native
     def componentWillLoad(): js.Promise[Unit] = js.native
     def componentWillRender(): Unit = js.native
-    /* CompleteClass */
-    override def getRouteId(): js.Promise[js.UndefOr[RouteID]] = js.native
     /**
       * Get the currently selected tab.
       */
@@ -68,8 +62,7 @@ object tabsMod extends js.Object {
     def select(tab: HTMLIonTabElement): js.Promise[Boolean] = js.native
     /** @internal */
     def setRouteId(id: String): js.Promise[RouteWrite] = js.native
-    /* CompleteClass */
-    override def setRouteId(id: String, params: js.UndefOr[ComponentProps[Null]], direction: RouterDirection): js.Promise[RouteWrite] = js.native
+    /* private */ def tabs: js.Any = js.native
   }
   
 }

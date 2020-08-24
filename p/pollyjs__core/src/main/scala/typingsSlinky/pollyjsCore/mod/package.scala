@@ -5,6 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type AbortEventListener = js.Function2[
+    /* req */ typingsSlinky.pollyjsCore.mod.Request, 
+    /* event */ typingsSlinky.pollyjsCore.mod.ListenerEvent, 
+    scala.Unit | js.Promise[scala.Unit]
+  ]
+  type AbortRouteEvent = typingsSlinky.pollyjsCore.pollyjsCoreStrings.abort
   type ErrorEventListener = js.Function3[
     /* req */ typingsSlinky.pollyjsCore.mod.Request, 
     /* error */ js.Any, 

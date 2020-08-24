@@ -5,15 +5,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPlayer.anon.Loaded
 import typingsSlinky.reactPlayer.mod.Config
-import typingsSlinky.reactPlayer.mod.DailyMotionConfig
-import typingsSlinky.reactPlayer.mod.FacebookConfig
-import typingsSlinky.reactPlayer.mod.FileConfig
 import typingsSlinky.reactPlayer.mod.ReactPlayerProps
-import typingsSlinky.reactPlayer.mod.SoundCloudConfig
 import typingsSlinky.reactPlayer.mod.SourceProps
-import typingsSlinky.reactPlayer.mod.VimeoConfig
-import typingsSlinky.reactPlayer.mod.WistiaConfig
-import typingsSlinky.reactPlayer.mod.YouTubeConfig
 import typingsSlinky.reactPlayer.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,12 +25,6 @@ object ReactPlayer {
     def config(value: Config): this.type = set("config", value.asInstanceOf[js.Any])
     @scala.inline
     def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
-    @scala.inline
-    def dailymotionConfig(value: DailyMotionConfig): this.type = set("dailymotionConfig", value.asInstanceOf[js.Any])
-    @scala.inline
-    def facebookConfig(value: FacebookConfig): this.type = set("facebookConfig", value.asInstanceOf[js.Any])
-    @scala.inline
-    def fileConfig(value: FileConfig): this.type = set("fileConfig", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
@@ -69,7 +56,7 @@ object ReactPlayer {
     @scala.inline
     def onProgress(value: /* state */ Loaded => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
-    def onReady(value: () => Unit): this.type = set("onReady", js.Any.fromFunction0(value))
+    def onReady(value: /* player */ typingsSlinky.reactPlayer.mod.ReactPlayer => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
     @scala.inline
     def onSeek(value: /* seconds */ Double => Unit): this.type = set("onSeek", js.Any.fromFunction1(value))
     @scala.inline
@@ -85,25 +72,21 @@ object ReactPlayer {
     @scala.inline
     def progressInterval(value: Double): this.type = set("progressInterval", value.asInstanceOf[js.Any])
     @scala.inline
-    def soundcloudConfig(value: SoundCloudConfig): this.type = set("soundcloudConfig", value.asInstanceOf[js.Any])
+    def stopOnUnmount(value: Boolean): this.type = set("stopOnUnmount", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def urlVarargs(value: (SourceProps | String)*): this.type = set("url", js.Array(value :_*))
     @scala.inline
     def urlMediaStream(value: MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
     @scala.inline
     def url(value: String | (js.Array[SourceProps | String]) | MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
     @scala.inline
-    def vimeoConfig(value: VimeoConfig): this.type = set("vimeoConfig", value.asInstanceOf[js.Any])
-    @scala.inline
     def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
     @scala.inline
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
-    def wistiaConfig(value: WistiaConfig): this.type = set("wistiaConfig", value.asInstanceOf[js.Any])
-    @scala.inline
     def wrapper(value: js.Any): this.type = set("wrapper", value.asInstanceOf[js.Any])
-    @scala.inline
-    def youtubeConfig(value: YouTubeConfig): this.type = set("youtubeConfig", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ReactPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

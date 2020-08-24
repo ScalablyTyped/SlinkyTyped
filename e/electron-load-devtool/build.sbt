@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "electron-load-devtool"
-version := "1.2-dt-20200210Z-08b763"
-scalaVersion := "2.13.2"
+version := "1.2-dt-20200210Z-18a695"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

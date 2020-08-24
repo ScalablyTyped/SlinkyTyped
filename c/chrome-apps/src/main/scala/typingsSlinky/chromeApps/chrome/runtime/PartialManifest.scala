@@ -346,455 +346,176 @@ object PartialManifest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApp(value: Background): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withExternally_connectable(value: Accepttlschannelid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externally_connectable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setApp(value: Background): Self = this.set("app", value.asInstanceOf[js.Any])
     @scala.inline
-    def withManifest_version(value: `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest_version")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExternally_connectable(value: Accepttlschannelid): Self = this.set("externally_connectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setManifest_version(value: `2`): Self = this.set("manifest_version", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAction_handlers(value: js.Array[ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action_handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAction_handlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action_handlers")(js.undefined)
-        ret
-    }
+    def setAction_handlersVarargs(value: (ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]])*): Self = this.set("action_handlers", js.Array(value :_*))
     @scala.inline
-    def withAuthor(value: Email | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAction_handlers(value: js.Array[ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]]): Self = this.set("action_handlers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
+    def deleteAction_handlers: Self = this.set("action_handlers", js.undefined)
     @scala.inline
-    def withAutomation(value: AutomationOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAuthor(value: Email | js.Any): Self = this.set("author", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutomation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automation")(js.undefined)
-        ret
-    }
+    def deleteAuthor: Self = this.set("author", js.undefined)
     @scala.inline
-    def withBluetooth(value: Lowenergy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutomation(value: AutomationOptions | Boolean): Self = this.set("automation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutBluetooth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(js.undefined)
-        ret
-    }
+    def deleteAutomation: Self = this.set("automation", js.undefined)
     @scala.inline
-    def withCommands(value: StringDictionary[Global]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBluetooth(value: Lowenergy): Self = this.set("bluetooth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(js.undefined)
-        ret
-    }
+    def deleteBluetooth: Self = this.set("bluetooth", js.undefined)
     @scala.inline
-    def withCurrent_locale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current_locale")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCommands(value: StringDictionary[Global]): Self = this.set("commands", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutCurrent_locale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current_locale")(js.undefined)
-        ret
-    }
+    def deleteCommands: Self = this.set("commands", js.undefined)
     @scala.inline
-    def withDefault_locale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_locale")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCurrent_locale(value: String): Self = this.set("current_locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefault_locale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_locale")(js.undefined)
-        ret
-    }
+    def deleteCurrent_locale: Self = this.set("current_locale", js.undefined)
     @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefault_locale(value: String): Self = this.set("default_locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
+    def deleteDefault_locale: Self = this.set("default_locale", js.undefined)
     @scala.inline
-    def withDisplay_in_launcher(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display_in_launcher")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisplay_in_launcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display_in_launcher")(js.undefined)
-        ret
-    }
+    def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
-    def withDisplay_in_new_tab_page(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display_in_new_tab_page")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplay_in_launcher(value: Boolean): Self = this.set("display_in_launcher", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisplay_in_new_tab_page: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display_in_new_tab_page")(js.undefined)
-        ret
-    }
+    def deleteDisplay_in_launcher: Self = this.set("display_in_launcher", js.undefined)
     @scala.inline
-    def withEvent_rules(value: js.Array[Actions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event_rules")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplay_in_new_tab_page(value: Boolean): Self = this.set("display_in_new_tab_page", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEvent_rules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event_rules")(js.undefined)
-        ret
-    }
+    def deleteDisplay_in_new_tab_page: Self = this.set("display_in_new_tab_page", js.undefined)
     @scala.inline
-    def withFile_browser_handlers(value: js.Array[Defaulticon]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEvent_rulesVarargs(value: Actions*): Self = this.set("event_rules", js.Array(value :_*))
     @scala.inline
-    def withoutFile_browser_handlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_handlers")(js.undefined)
-        ret
-    }
+    def setEvent_rules(value: js.Array[Actions]): Self = this.set("event_rules", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFile_handlers(value: StringDictionary[Extensions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEvent_rules: Self = this.set("event_rules", js.undefined)
     @scala.inline
-    def withoutFile_handlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_handlers")(js.undefined)
-        ret
-    }
+    def setFile_browser_handlersVarargs(value: Defaulticon*): Self = this.set("file_browser_handlers", js.Array(value :_*))
     @scala.inline
-    def withFile_system_provider_capabilities(value: Configurable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_system_provider_capabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFile_browser_handlers(value: js.Array[Defaulticon]): Self = this.set("file_browser_handlers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFile_system_provider_capabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_system_provider_capabilities")(js.undefined)
-        ret
-    }
+    def deleteFile_browser_handlers: Self = this.set("file_browser_handlers", js.undefined)
     @scala.inline
-    def withIcons(value: ManifestIcons): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFile_handlers(value: StringDictionary[Extensions]): Self = this.set("file_handlers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
+    def deleteFile_handlers: Self = this.set("file_handlers", js.undefined)
     @scala.inline
-    def withImport(value: js.Array[Id]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFile_system_provider_capabilities(value: Configurable): Self = this.set("file_system_provider_capabilities", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutImport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(js.undefined)
-        ret
-    }
+    def deleteFile_system_provider_capabilities: Self = this.set("file_system_provider_capabilities", js.undefined)
     @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIcons(value: ManifestIcons): Self = this.set("icons", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
+    def deleteIcons: Self = this.set("icons", js.undefined)
     @scala.inline
-    def withMinimum_chrome_version(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_chrome_version")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setImportVarargs(value: Id*): Self = this.set("import", js.Array(value :_*))
     @scala.inline
-    def withoutMinimum_chrome_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_chrome_version")(js.undefined)
-        ret
-    }
+    def setImport(value: js.Array[Id]): Self = this.set("import", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNacl_modules(value: js.Array[Mimetype]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_modules")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteImport: Self = this.set("import", js.undefined)
     @scala.inline
-    def withoutNacl_modules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_modules")(js.undefined)
-        ret
-    }
+    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOauth2(value: Clientid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteKey: Self = this.set("key", js.undefined)
     @scala.inline
-    def withoutOauth2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(js.undefined)
-        ret
-    }
+    def setMinimum_chrome_version(value: String): Self = this.set("minimum_chrome_version", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOffline_enabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline_enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMinimum_chrome_version: Self = this.set("minimum_chrome_version", js.undefined)
     @scala.inline
-    def withoutOffline_enabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline_enabled")(js.undefined)
-        ret
-    }
+    def setNacl_modulesVarargs(value: Mimetype*): Self = this.set("nacl_modules", js.Array(value :_*))
     @scala.inline
-    def withOptional_permissions(value: js.Array[js.Array[UrlMatches] | OptionalPermission | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional_permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNacl_modules(value: js.Array[Mimetype]): Self = this.set("nacl_modules", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOptional_permissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional_permissions")(js.undefined)
-        ret
-    }
+    def deleteNacl_modules: Self = this.set("nacl_modules", js.undefined)
     @scala.inline
-    def withPermissions(value: js.Array[Permission | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOauth2(value: Clientid): Self = this.set("oauth2", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
+    def deleteOauth2: Self = this.set("oauth2", js.undefined)
     @scala.inline
-    def withPlatforms(value: js.Array[Naclarch]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOffline_enabled(value: Boolean): Self = this.set("offline_enabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPlatforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(js.undefined)
-        ret
-    }
+    def deleteOffline_enabled: Self = this.set("offline_enabled", js.undefined)
     @scala.inline
-    def withRequirements(value: `3D`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOptional_permissionsVarargs(value: (js.Array[UrlMatches] | OptionalPermission | String)*): Self = this.set("optional_permissions", js.Array(value :_*))
     @scala.inline
-    def withoutRequirements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
-        ret
-    }
+    def setOptional_permissions(value: js.Array[js.Array[UrlMatches] | OptionalPermission | String]): Self = this.set("optional_permissions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSandbox(value: Contentsecuritypolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOptional_permissions: Self = this.set("optional_permissions", js.undefined)
     @scala.inline
-    def withoutSandbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(js.undefined)
-        ret
-    }
+    def setPermissionsVarargs(value: (Permission | String)*): Self = this.set("permissions", js.Array(value :_*))
     @scala.inline
-    def withShort_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short_name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPermissions(value: js.Array[Permission | String]): Self = this.set("permissions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutShort_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short_name")(js.undefined)
-        ret
-    }
+    def deletePermissions: Self = this.set("permissions", js.undefined)
     @scala.inline
-    def withSignature(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPlatformsVarargs(value: Naclarch*): Self = this.set("platforms", js.Array(value :_*))
     @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
+    def setPlatforms(value: js.Array[Naclarch]): Self = this.set("platforms", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSockets(value: Tcp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sockets")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePlatforms: Self = this.set("platforms", js.undefined)
     @scala.inline
-    def withoutSockets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sockets")(js.undefined)
-        ret
-    }
+    def setRequirements(value: `3D`): Self = this.set("requirements", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStorage(value: Managedschema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRequirements: Self = this.set("requirements", js.undefined)
     @scala.inline
-    def withoutStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(js.undefined)
-        ret
-    }
+    def setSandbox(value: Contentsecuritypolicy): Self = this.set("sandbox", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUpdate_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSandbox: Self = this.set("sandbox", js.undefined)
     @scala.inline
-    def withoutUpdate_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_url")(js.undefined)
-        ret
-    }
+    def setShort_name(value: String): Self = this.set("short_name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUrl_handlers(value: StringDictionary[Matches]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url_handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteShort_name: Self = this.set("short_name", js.undefined)
     @scala.inline
-    def withoutUrl_handlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url_handlers")(js.undefined)
-        ret
-    }
+    def setSignature(value: js.Any): Self = this.set("signature", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUsb_printers(value: FiltersArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usb_printers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSignature: Self = this.set("signature", js.undefined)
     @scala.inline
-    def withoutUsb_printers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usb_printers")(js.undefined)
-        ret
-    }
+    def setSockets(value: Tcp): Self = this.set("sockets", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVersion_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version_name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSockets: Self = this.set("sockets", js.undefined)
     @scala.inline
-    def withoutVersion_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version_name")(js.undefined)
-        ret
-    }
+    def setStorage(value: Managedschema): Self = this.set("storage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWebview(value: Partitions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webview")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteStorage: Self = this.set("storage", js.undefined)
     @scala.inline
-    def withoutWebview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webview")(js.undefined)
-        ret
-    }
+    def setUpdate_url(value: String): Self = this.set("update_url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUpdate_url: Self = this.set("update_url", js.undefined)
+    @scala.inline
+    def setUrl_handlers(value: StringDictionary[Matches]): Self = this.set("url_handlers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUrl_handlers: Self = this.set("url_handlers", js.undefined)
+    @scala.inline
+    def setUsb_printers(value: FiltersArray): Self = this.set("usb_printers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUsb_printers: Self = this.set("usb_printers", js.undefined)
+    @scala.inline
+    def setVersion_name(value: String): Self = this.set("version_name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVersion_name: Self = this.set("version_name", js.undefined)
+    @scala.inline
+    def setWebview(value: Partitions): Self = this.set("webview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebview: Self = this.set("webview", js.undefined)
   }
   
 }

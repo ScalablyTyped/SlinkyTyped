@@ -222,6 +222,9 @@ object codemirrorStrings {
   sealed trait gotpointercapture extends js.Object
   
   @js.native
+  sealed trait gutter extends js.Object
+  
+  @js.native
   sealed trait gutterClick extends js.Object
   
   @js.native
@@ -274,6 +277,9 @@ object codemirrorStrings {
   
   @js.native
   sealed trait keyup extends DOMEvent
+  
+  @js.native
+  sealed trait lineNumberFormatter extends js.Object
   
   @js.native
   sealed trait lineNumbers extends js.Object
@@ -337,6 +343,12 @@ object codemirrorStrings {
   
   @js.native
   sealed trait mouseup extends js.Object
+  
+  @js.native
+  sealed trait onDragEvent extends js.Object
+  
+  @js.native
+  sealed trait onKeyEvent extends js.Object
   
   @js.native
   sealed trait optionChange extends js.Object
@@ -721,6 +733,8 @@ object codemirrorStrings {
   @scala.inline
   def gotpointercapture: gotpointercapture = "gotpointercapture".asInstanceOf[gotpointercapture]
   @scala.inline
+  def gutter: gutter = "gutter".asInstanceOf[gutter]
+  @scala.inline
   def gutterClick: gutterClick = "gutterClick".asInstanceOf[gutterClick]
   @scala.inline
   def gutterContextMenu: gutterContextMenu = "gutterContextMenu".asInstanceOf[gutterContextMenu]
@@ -756,6 +770,8 @@ object codemirrorStrings {
   def keypress: keypress = "keypress".asInstanceOf[keypress]
   @scala.inline
   def keyup: keyup = "keyup".asInstanceOf[keyup]
+  @scala.inline
+  def lineNumberFormatter: lineNumberFormatter = "lineNumberFormatter".asInstanceOf[lineNumberFormatter]
   @scala.inline
   def lineNumbers: lineNumbers = "lineNumbers".asInstanceOf[lineNumbers]
   @scala.inline
@@ -798,6 +814,10 @@ object codemirrorStrings {
   def mouseover: mouseover = "mouseover".asInstanceOf[mouseover]
   @scala.inline
   def mouseup: mouseup = "mouseup".asInstanceOf[mouseup]
+  @scala.inline
+  def onDragEvent: onDragEvent = "onDragEvent".asInstanceOf[onDragEvent]
+  @scala.inline
+  def onKeyEvent: onKeyEvent = "onKeyEvent".asInstanceOf[onKeyEvent]
   @scala.inline
   def optionChange: optionChange = "optionChange".asInstanceOf[optionChange]
   @scala.inline

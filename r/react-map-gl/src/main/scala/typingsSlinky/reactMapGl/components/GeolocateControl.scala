@@ -22,6 +22,8 @@ object GeolocateControl {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.GeolocateControl] {
     @scala.inline
+    def auto(value: Boolean): this.type = set("auto", value.asInstanceOf[js.Any])
+    @scala.inline
     def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])
     @scala.inline
     def captureDoubleClick(value: Boolean): this.type = set("captureDoubleClick", value.asInstanceOf[js.Any])

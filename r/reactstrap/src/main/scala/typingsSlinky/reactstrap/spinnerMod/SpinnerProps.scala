@@ -5,39 +5,57 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpinnerProps
   extends AllHTMLAttributes[HTMLElement]
      with ClassAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
-  var cssModule: js.UndefOr[CSSModule] = js.undefined
+  var cssModule: js.UndefOr[CSSModule] = js.native
   @JSName("size")
-  var size_SpinnerProps: js.UndefOr[js.Any] = js.undefined
-  var tag: js.UndefOr[String | ReactComponentClass[_]] = js.undefined
+  var size_SpinnerProps: js.UndefOr[js.Any] = js.native
+  var tag: js.UndefOr[String | ReactType[_]] = js.native
 }
 
 object SpinnerProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[HTMLElement] = null,
-    ClassAttributes: ClassAttributes[HTMLElement] = null,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    cssModule: CSSModule = null,
-    size: js.Any = null,
-    tag: String | ReactComponentClass[_] = null
-  ): SpinnerProps = {
+  def apply(): SpinnerProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpinnerProps]
   }
+  @scala.inline
+  implicit class SpinnerPropsOps[Self <: SpinnerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCssModule(value: CSSModule): Self = this.set("cssModule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCssModule: Self = this.set("cssModule", js.undefined)
+    @scala.inline
+    def setSize(value: js.Any): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setTagFunctionComponent(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTag: Self = this.set("tag", js.undefined)
+  }
+  
 }
 

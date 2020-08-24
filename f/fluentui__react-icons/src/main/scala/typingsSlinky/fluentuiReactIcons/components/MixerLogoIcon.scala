@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MixerLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MixerLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MixerLogoIcon")
   @js.native
   object component extends js.Object
   

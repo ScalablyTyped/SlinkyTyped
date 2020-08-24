@@ -4,10 +4,6 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.sharepoint.SP.JsGrid.IEditControl
 import typingsSlinky.sharepoint.SP.JsGrid.IEditControlGridContext
 import typingsSlinky.sharepoint.SP.JsGrid.IPropertyType
-import typingsSlinky.sharepoint.SP.JsGrid.IRecord
-import typingsSlinky.sharepoint.anon.BDelayInit
-import typingsSlinky.sharepoint.anon.BLimitToList
-import typingsSlinky.sharepoint.anon.DataValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,145 +19,29 @@ class PropertyType ()
 object PropertyType extends js.Object {
   @js.native
   class CheckBoxBoolean ()
-    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.CheckBoxBoolean {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ DataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetBool(dataValue: js.Any): Boolean = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.CheckBoxBoolean
   
   @js.native
   class DropDownBoolean ()
-    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.DropDownBoolean {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ DataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetBool(dataValue: js.Any): Boolean = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.DropDownBoolean
   
   @js.native
   class HyperLink ()
-    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.HyperLink {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override var bHyperlink: Boolean = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ DataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetAddress(dataValue: js.Any): java.lang.String = js.native
-    /** Returns string like this: '"http:// site.com, Site title"' */
-    /* CompleteClass */
-    override def GetCopyValue(record: IRecord, dataValue: js.Any, locValue: java.lang.String): java.lang.String = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.HyperLink
   
   @js.native
   class LookupTable protected ()
     extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.LookupTable {
     def this(items: js.Array[_], id: java.lang.String, bLimitToList: Boolean) = this()
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ DataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetImageSource(record: IRecord, dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetIsLimitedToList(): Boolean = js.native
-    /* CompleteClass */
-    override def GetItems(fnCallback: js.Any): Unit = js.native
-    /* CompleteClass */
-    override def GetSerializableLookupPropType(): BLimitToList = js.native
-    /* CompleteClass */
-    override def GetStyleId(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def LocalizedToData(localized: java.lang.String): js.Any = js.native
   }
   
   @js.native
   class MultiValuePropType ()
-    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.MultiValuePropType {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override var bMultiValue: Boolean = js.native
-    /* CompleteClass */
-    override var separator: java.lang.String = js.native
-    /* CompleteClass */
-    override var singleValuePropType: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ DataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def GetSerializableMultiValuePropType(): BDelayInit = js.native
-    /* CompleteClass */
-    override def InitSingleValuePropType(): Unit = js.native
-    /* CompleteClass */
-    override def LocStrArrayToLocStr(locStrArray: js.Array[java.lang.String]): java.lang.String = js.native
-    /* CompleteClass */
-    override def LocStrToLocStrArray(locStr: java.lang.String): js.Array[java.lang.String] = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.MultiValuePropType
   
   @js.native
   class String ()
-    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.String {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ DataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.JsGrid.PropertyType.String
   
   @js.native
   class Utils ()

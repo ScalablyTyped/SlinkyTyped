@@ -33,100 +33,51 @@ trait WiFiProperties[M /* <: ManagedObject */, OF /* <: ObjectFunction */, B, S,
 
 object WiFiProperties {
   @scala.inline
-  def apply[M, OF, B, S, L](): WiFiProperties[M, OF, B, S, L] = {
+  def apply[/* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, /* <: typingsSlinky.chromeApps.chrome.networking.onc.internal.ObjectFunction */ OF, B, S, L](): WiFiProperties[M, OF, B, S, L] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[WiFiProperties[M, OF, B, S, L]]
   }
   @scala.inline
-  implicit class WiFiPropertiesOps[Self[m, of, b, s, l] <: WiFiProperties[m, of, b, s, l], M, OF, B, S, L] (val x: Self[M, OF, B, S, L]) extends AnyVal {
+  implicit class WiFiPropertiesOps[Self <: WiFiProperties[_, _, _, _, _], /* <: typingsSlinky.chromeApps.chrome.networking.onc.ManagedObject */ M, /* <: typingsSlinky.chromeApps.chrome.networking.onc.internal.ObjectFunction */ OF, B, S, L] (val x: Self with (WiFiProperties[M, OF, B, S, L])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, OF, B, S, L] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, OF, B, S, L]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, OF, B, S, L]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, OF, B, S, L]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllowGatewayARPPolling(value: B): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowGatewayARPPolling")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAllowGatewayARPPolling: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowGatewayARPPolling")(js.undefined)
-        ret
-    }
+    def setAllowGatewayARPPolling(value: B): Self = this.set("AllowGatewayARPPolling", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAutoConnect(value: B): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAllowGatewayARPPolling: Self = this.set("AllowGatewayARPPolling", js.undefined)
     @scala.inline
-    def withoutAutoConnect: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoConnect")(js.undefined)
-        ret
-    }
+    def setAutoConnect(value: B): Self = this.set("AutoConnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEAP(value: EAPProperties): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EAP")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoConnect: Self = this.set("AutoConnect", js.undefined)
     @scala.inline
-    def withoutEAP: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EAP")(js.undefined)
-        ret
-    }
+    def setEAP(value: EAPProperties): Self = this.set("EAP", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFrequencyList(value: js.Array[integer]): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrequencyList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEAP: Self = this.set("EAP", js.undefined)
     @scala.inline
-    def withoutFrequencyList: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FrequencyList")(js.undefined)
-        ret
-    }
+    def setFrequencyListVarargs(value: integer*): Self = this.set("FrequencyList", js.Array(value :_*))
     @scala.inline
-    def withHiddenSSID(value: B): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HiddenSSID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFrequencyList(value: js.Array[integer]): Self = this.set("FrequencyList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHiddenSSID: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HiddenSSID")(js.undefined)
-        ret
-    }
+    def deleteFrequencyList: Self = this.set("FrequencyList", js.undefined)
     @scala.inline
-    def withPassphrase(value: String): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Passphrase")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHiddenSSID(value: B): Self = this.set("HiddenSSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPassphrase: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Passphrase")(js.undefined)
-        ret
-    }
+    def deleteHiddenSSID: Self = this.set("HiddenSSID", js.undefined)
     @scala.inline
-    def withRoamTreshold(value: L): Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoamTreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPassphrase(value: String): Self = this.set("Passphrase", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutRoamTreshold: Self[M, OF, B, S, L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoamTreshold")(js.undefined)
-        ret
-    }
+    def deletePassphrase: Self = this.set("Passphrase", js.undefined)
+    @scala.inline
+    def setRoamTreshold(value: L): Self = this.set("RoamTreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRoamTreshold: Self = this.set("RoamTreshold", js.undefined)
   }
   
 }

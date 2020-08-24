@@ -7,7 +7,21 @@ import scala.scalajs.js.annotation._
 package object fsxMod {
   type AWSAccountId = java.lang.String
   type ActiveDirectoryFullyQualifiedName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FILE_SYSTEM_UPDATE
+    - typingsSlinky.awsSdk.awsSdkStrings.STORAGE_OPTIMIZATION
+    - java.lang.String
+  */
+  type AdministrativeActionType = typingsSlinky.awsSdk.fsxMod._AdministrativeActionType | java.lang.String
+  type AdministrativeActions = js.Array[typingsSlinky.awsSdk.fsxMod.AdministrativeAction]
   type ArchivePath = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.NEW
+    - typingsSlinky.awsSdk.awsSdkStrings.NEW_CHANGED
+    - java.lang.String
+  */
+  type AutoImportPolicyType = typingsSlinky.awsSdk.fsxMod._AutoImportPolicyType | java.lang.String
   type AutomaticBackupRetentionDays = scala.Double
   type BackupId = java.lang.String
   type BackupIds = js.Array[typingsSlinky.awsSdk.fsxMod.BackupId]
@@ -31,6 +45,15 @@ package object fsxMod {
   type CreationTime = js.Date
   type DNSName = java.lang.String
   type DailyTime = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.MISCONFIGURED
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type DataRepositoryLifecycle = typingsSlinky.awsSdk.fsxMod._DataRepositoryLifecycle | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`file-system-id`
     - typingsSlinky.awsSdk.awsSdkStrings.`task-lifecycle`
@@ -91,6 +114,7 @@ package object fsxMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`file-system-id`
     - typingsSlinky.awsSdk.awsSdkStrings.`backup-type`
+    - typingsSlinky.awsSdk.awsSdkStrings.`file-system-type`
     - java.lang.String
   */
   type FilterName = typingsSlinky.awsSdk.fsxMod._FilterName | java.lang.String
@@ -120,10 +144,20 @@ package object fsxMod {
   type ProgressPercent = scala.Double
   type ReportFormat = typingsSlinky.awsSdk.awsSdkStrings.REPORT_CSV_20191124 | java.lang.String
   type ReportScope = typingsSlinky.awsSdk.awsSdkStrings.FAILED_FILES_ONLY | java.lang.String
+  type RequestTime = js.Date
   type ResourceARN = java.lang.String
   type SecurityGroupId = java.lang.String
   type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.fsxMod.SecurityGroupId]
   type StartTime = js.Date
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATED_OPTIMIZING
+    - java.lang.String
+  */
+  type Status = typingsSlinky.awsSdk.fsxMod._Status | java.lang.String
   type StorageCapacity = scala.Double
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SSD

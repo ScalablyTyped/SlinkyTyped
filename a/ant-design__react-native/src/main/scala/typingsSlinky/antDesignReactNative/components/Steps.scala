@@ -1,11 +1,11 @@
 package typingsSlinky.antDesignReactNative.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.horizontal
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.vertical
 import typingsSlinky.antDesignReactNative.stepsMod.StepsProps
-import typingsSlinky.antDesignReactNative.stepsMod.default
 import typingsSlinky.antDesignReactNative.stepsStyleMod.StepsStyle
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -13,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Steps {
-  @JSImport("@ant-design/react-native/lib/steps", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Steps")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Steps] {
     @scala.inline
     def current(value: Double): this.type = set("current", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,6 +34,10 @@ object Steps {
   }
   
   def withProps(p: StepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Steps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: js.Array[ReactElement]): Builder = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
+  }
 }
 

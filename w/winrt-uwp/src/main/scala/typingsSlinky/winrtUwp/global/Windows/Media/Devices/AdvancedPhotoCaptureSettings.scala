@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Initializes a new instance of the AdvancedPhotoCaptureSettings class. */
 class AdvancedPhotoCaptureSettings ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoCaptureSettings {
-  /** Gets or sets the advanced capture mode for which an AdvancedPhotoControl will be configured. */
-  /* CompleteClass */
-  override var mode: typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoMode = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoCaptureSettings
 

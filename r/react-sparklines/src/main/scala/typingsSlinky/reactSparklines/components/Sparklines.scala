@@ -18,6 +18,8 @@ object Sparklines {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.Sparklines] {
     @scala.inline
+    def dataVarargs(value: Double*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[Double]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])

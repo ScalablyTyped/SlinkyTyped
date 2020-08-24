@@ -2,8 +2,8 @@ package typingsSlinky.openfin
 
 import org.scalajs.dom.raw.Window
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.openfin.entityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.identityMod.Identity
+import typingsSlinky.openfin.utilEntityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.v2MainMod.Frame
 import typingsSlinky.openfin.viewViewMod.View
 import scala.scalajs.js

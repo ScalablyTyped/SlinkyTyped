@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.highchartsStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ class Point () extends js.Object {
     * For categorized axes this property holds the category name for the point.
     * For other axes it holds the X value.
     */
-  var category: Double | String = js.native
+  var category: String = js.native
   /**
     * The point's current color.
     */
@@ -38,9 +39,17 @@ class Point () extends js.Object {
     */
   var high: js.UndefOr[Double] = js.native
   /**
+    * Contains the point's index in the `Series.points` array.
+    */
+  val index: Double = js.native
+  /**
     * Range series only. The low or minimum value for each data point.
     */
   var low: js.UndefOr[Double] = js.native
+  /**
+    * Indicates if this is a mock point for an annotation.
+    */
+  var mock: js.UndefOr[Boolean] = js.native
   /**
     * The name of the point. The name can be given as the first position of the
     * point configuration array, or as a `name` property in the configuration:
@@ -58,7 +67,7 @@ class Point () extends js.Object {
   /**
     * The percentage for points in a stacked series or pies.
     */
-  var percentage: Double = js.native
+  var percentage: js.UndefOr[Double] = js.native
   /**
     * Heatmap series only. Padding between the points in the heatmap.
     */
@@ -84,7 +93,7 @@ class Point () extends js.Object {
     * The total of values in either a stack for stacked series, or a pie in a
     * pie series.
     */
-  var total: Double = js.native
+  var total: js.UndefOr[Double] = js.native
   /**
     * Heatmap series only. The value of the point, resulting in a color
     * controled by options as set in the colorAxis configuration.
@@ -135,7 +144,7 @@ class Point () extends js.Object {
     *
     * @return The zone item.
     */
-  def getZone(): PlotSeriesZonesOptions = js.native
+  def getZone(): SeriesZonesOptionsObject = js.native
   /**
     * Get the path definition for the halo, which is usually a shadow-like
     * circle around the currently hovered point.
@@ -145,14 +154,7 @@ class Point () extends js.Object {
     *
     * @return The path definition.
     */
-  def haloPath(size: Double): SVGElement = js.native
-  /**
-    * Utility to check if point has new shape type. Used in column series and
-    * all others that are based on column series.
-    *
-    * @return boolean|undefined
-    */
-  def hasNewShapeType(): Unit = js.native
+  def haloPath(size: Double): SVGPathArray = js.native
   /**
     * Initialize the point. Called internally based on the `series.data`
     * option.
@@ -215,6 +217,8 @@ class Point () extends js.Object {
     *        configuration.
     */
   def remove(): Unit = js.native
+  def remove(redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
+  def remove(redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
   def remove(redraw: Boolean): Unit = js.native
   def remove(redraw: Boolean, animation: Boolean): Unit = js.native
   def remove(redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
@@ -236,6 +240,7 @@ class Point () extends js.Object {
     * @fires Highcharts.Point#unselect
     */
   def select(): Unit = js.native
+  def select(selected: js.UndefOr[scala.Nothing], accumulate: Boolean): Unit = js.native
   def select(selected: Boolean): Unit = js.native
   def select(selected: Boolean, accumulate: Boolean): Unit = js.native
   /**
@@ -259,8 +264,9 @@ class Point () extends js.Object {
     * Set the point's state.
     *
     * @param state
-    *        The new state, can be one of `''` (an empty string), `hover`,
-    *        `select` or `inactive`.
+    *        The new state, can be one of `'hover'`, `'select'`, `'inactive'`,
+    *        or `''` (an empty string), `'normal'` or `undefined` to set to
+    *        normal state.
     *
     * @param move
     *        State for animation.
@@ -268,8 +274,11 @@ class Point () extends js.Object {
     * @fires Highcharts.Point#afterSetState
     */
   def setState(): Unit = js.native
-  def setState(state: String): Unit = js.native
-  def setState(state: String, move: Boolean): Unit = js.native
+  def setState(state: js.UndefOr[scala.Nothing], move: Boolean): Unit = js.native
+  def setState(state: _empty): Unit = js.native
+  def setState(state: _empty, move: Boolean): Unit = js.native
+  def setState(state: PointStateValue): Unit = js.native
+  def setState(state: PointStateValue, move: Boolean): Unit = js.native
   /**
     * Sonify a single point.
     *
@@ -310,6 +319,8 @@ class Point () extends js.Object {
     * @fires Highcharts.Point#update
     */
   def update(options: PointOptionsType): Unit = js.native
+  def update(options: PointOptionsType, redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
+  def update(options: PointOptionsType, redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
   def update(options: PointOptionsType, redraw: Boolean): Unit = js.native
   def update(options: PointOptionsType, redraw: Boolean, animation: Boolean): Unit = js.native
   def update(options: PointOptionsType, redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native

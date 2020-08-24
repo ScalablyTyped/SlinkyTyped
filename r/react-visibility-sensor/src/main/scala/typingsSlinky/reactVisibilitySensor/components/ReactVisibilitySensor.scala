@@ -1,8 +1,11 @@
 package typingsSlinky.reactVisibilitySensor.components
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactVisibilitySensor.mod.ChildFunction
+import typingsSlinky.reactVisibilitySensor.mod.ChildFunctionArg
 import typingsSlinky.reactVisibilitySensor.mod.Props
 import typingsSlinky.reactVisibilitySensor.mod.Shape
 import scala.scalajs.js
@@ -20,6 +23,12 @@ object ReactVisibilitySensor {
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* arg */ ChildFunctionArg => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: ReactElement | ChildFunction): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def containment(value: HTMLElement): this.type = set("containment", value.asInstanceOf[js.Any])
     @scala.inline

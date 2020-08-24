@@ -22,7 +22,6 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadSingleInputWithHocProps
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`additions text`
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.additions
@@ -76,9 +75,9 @@ object TypeaheadInputSingle {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: TypeaheadModel] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadInputSingle[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadInputSingle[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -201,6 +200,8 @@ object TypeaheadInputSingle {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -467,9 +468,9 @@ object TypeaheadInputSingle {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: TypeaheadModel](p: TypeaheadSingleInputWithHocProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](p: TypeaheadSingleInputWithHocProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: TypeaheadModel](
+  def apply[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](
     `aria-activedescendant`: String,
     `aria-autocomplete`: list | both,
     `aria-expanded`: Boolean,

@@ -12,7 +12,6 @@ import typingsSlinky.reactPdf.pageMod.Props
 import typingsSlinky.reactPdf.pageMod.RenderFunction
 import typingsSlinky.reactPdf.pageMod.TextItem
 import typingsSlinky.reactPdf.pageMod.TextLayerItemInternal
-import typingsSlinky.reactPdf.pageMod.default
 import typingsSlinky.reactPdf.reactPdfStrings.canvas
 import typingsSlinky.reactPdf.reactPdfStrings.none
 import typingsSlinky.reactPdf.reactPdfStrings.svg
@@ -21,14 +20,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Page {
-  @JSImport("react-pdf/dist/Page", JSImport.Default)
+  @JSImport("react-pdf", "Page")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactPdf.mod.Page] {
+    @scala.inline
+    def classNameVarargs(value: String*): this.type = set("className", js.Array(value :_*))
     @scala.inline
     def className(value: String | js.Array[String]): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

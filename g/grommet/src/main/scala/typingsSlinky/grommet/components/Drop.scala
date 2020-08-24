@@ -18,8 +18,8 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.grommet.anon.Bottom
 import typingsSlinky.grommet.anon.Horizontal
-import typingsSlinky.grommet.anon.Left
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.auto
 import typingsSlinky.grommet.grommetStrings.hidden
@@ -82,7 +82,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Drop {
-  @JSImport("grommet", "Drop")
+  @JSImport("grommet/es6", "Drop")
   @js.native
   object component extends js.Object
   
@@ -95,7 +95,7 @@ object Drop {
     @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def align(value: Left): this.type = set("align", value.asInstanceOf[js.Any])
+    def align(value: Bottom): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -212,6 +212,8 @@ object Drop {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

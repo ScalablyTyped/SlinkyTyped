@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -23,6 +22,7 @@ import typingsSlinky.grommet.anon.Delay
 import typingsSlinky.grommet.anon.Grow
 import typingsSlinky.grommet.anon.Horizontal
 import typingsSlinky.grommet.anon.Max
+import typingsSlinky.grommet.anon.SizeStyle
 import typingsSlinky.grommet.boxMod.BoxProps
 import typingsSlinky.grommet.grommetStrings.`column-reverse`
 import typingsSlinky.grommet.grommetStrings.`row-responsive`
@@ -44,6 +44,8 @@ import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.pulse
 import typingsSlinky.grommet.grommetStrings.reverse
+import typingsSlinky.grommet.grommetStrings.rotateLeft
+import typingsSlinky.grommet.grommetStrings.rotateRight
 import typingsSlinky.grommet.grommetStrings.row
 import typingsSlinky.grommet.grommetStrings.scroll
 import typingsSlinky.grommet.grommetStrings.shrink
@@ -82,7 +84,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -133,14 +134,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Sidebar {
-  @JSImport("grommet", "Sidebar")
+  @JSImport("grommet/es6", "Sidebar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.div.tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, HTMLDivElement] {
     @scala.inline
     def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -154,8 +155,12 @@ object Sidebar {
     @scala.inline
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
+    def animationVarargs(
+      value: (fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay)*
+    ): this.type = set("animation", js.Array(value :_*))
+    @scala.inline
     def animation(
-      value: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
+      value: fadeIn | fadeOut | jiggle | pulse | rotateLeft | rotateRight | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
           fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay
         ])
     ): this.type = set("animation", value.asInstanceOf[js.Any])
@@ -272,6 +277,8 @@ object Sidebar {
     @scala.inline
     def basis(value: BasisType): this.type = set("basis", value.asInstanceOf[js.Any])
     @scala.inline
+    def borderVarargs(value: SizeStyle*): this.type = set("border", js.Array(value :_*))
+    @scala.inline
     def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -287,6 +294,8 @@ object Sidebar {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -306,7 +315,7 @@ object Sidebar {
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def gap(value: GapType): this.type = set("gap", value.asInstanceOf[js.Any])
     @scala.inline
@@ -314,7 +323,7 @@ object Sidebar {
     @scala.inline
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def header(value: TagMod[Any]): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline

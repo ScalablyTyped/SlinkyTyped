@@ -18,7 +18,7 @@ object TableBuilder {
   @scala.inline
   class Builder[RowT] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.baseui.tableSemanticMod.TableBuilder[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.tableSemanticMod.TableBuilder[RowT]] {
     @scala.inline
     def horizontalScrollWidth(value: String): this.type = set("horizontalScrollWidth", value.asInstanceOf[js.Any])
     @scala.inline

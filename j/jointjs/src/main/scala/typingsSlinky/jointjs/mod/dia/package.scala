@@ -15,8 +15,11 @@ package object dia {
   type Link = typingsSlinky.jointjs.mod.dia.Link_
   type LinkView = typingsSlinky.jointjs.mod.dia.LinkView_
   type MarkupJSON = js.Array[typingsSlinky.jointjs.mod.dia.MarkupNodeJSON]
+  type Padding = scala.Double | typingsSlinky.jointjs.mod.dia.PaddingJSON
   type Paper = typingsSlinky.jointjs.mod.dia.Paper_
+  type Path = java.lang.String | (js.Array[java.lang.String | scala.Double])
   type Point = typingsSlinky.jointjs.mod.g.PlainPoint
+  type Sides = scala.Double | typingsSlinky.jointjs.mod.dia.SidesJSON
   type ToolView = typingsSlinky.jointjs.mod.dia.ToolView_
   type ToolsView = typingsSlinky.jointjs.mod.dia.ToolsView_
 }

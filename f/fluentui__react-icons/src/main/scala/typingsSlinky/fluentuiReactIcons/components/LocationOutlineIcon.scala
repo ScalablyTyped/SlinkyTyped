@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LocationOutlineIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LocationOutlineIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LocationOutlineIcon")
   @js.native
   object component extends js.Object
   

@@ -21,9 +21,11 @@ trait Stripe extends js.Object {
     * carry out 3DS or other next actions if they are required.
     */
   def confirmCardPayment(clientSecret: String): js.Promise[PaymentIntentResponse] = js.native
+  def confirmCardPayment(clientSecret: String, data: js.UndefOr[scala.Nothing], options: ConfirmCardPaymentOptions): js.Promise[PaymentIntentResponse] = js.native
   def confirmCardPayment(clientSecret: String, data: ConfirmCardPaymentData): js.Promise[PaymentIntentResponse] = js.native
   def confirmCardPayment(clientSecret: String, data: ConfirmCardPaymentData, options: ConfirmCardPaymentOptions): js.Promise[PaymentIntentResponse] = js.native
   def confirmCardSetup(clientSecret: String): js.Promise[SetupIntentResponse] = js.native
+  def confirmCardSetup(clientSecret: String, data: js.UndefOr[scala.Nothing], options: ConfirmCardSetupOptions): js.Promise[SetupIntentResponse] = js.native
   def confirmCardSetup(clientSecret: String, data: ConfirmCardSetupData): js.Promise[SetupIntentResponse] = js.native
   def confirmCardSetup(clientSecret: String, data: ConfirmCardSetupData, options: ConfirmCardSetupOptions): js.Promise[SetupIntentResponse] = js.native
   def confirmPaymentIntent(clientSecret: String): js.Promise[PaymentIntentResponse] = js.native
@@ -70,6 +72,7 @@ trait Stripe extends js.Object {
   // tslint:disable-next-line unified-signatures
   def redirectToCheckout(options: StripeServerCheckoutOptions): js.Promise[StripeRedirectResponse] = js.native
   def retrievePaymentIntent(clientSecret: String): js.Promise[PaymentIntentResponse] = js.native
+  def retrieveSetupIntent(clientSecret: String): js.Promise[SetupIntentResponse] = js.native
   def retrieveSource(options: RetrieveSourceOptions): js.Promise[SourceResponse] = js.native
 }
 

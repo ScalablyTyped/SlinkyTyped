@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -90,7 +89,7 @@ object List {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.List[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.List[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -218,6 +217,8 @@ object List {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -259,6 +260,8 @@ object List {
     def itemScope(value: Boolean): this.type = set("itemScope", value.asInstanceOf[js.Any])
     @scala.inline
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsVarargs(value: T*): this.type = set("items", js.Array(value :_*))
     @scala.inline
     def items(value: js.Array[T]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
@@ -515,7 +518,7 @@ object List {
     ): this.type = set("onRateChange", js.Any.fromFunction1(value))
     @scala.inline
     def onRenderCell(
-      value: (/* item */ js.UndefOr[T], /* index */ js.UndefOr[Double], /* isScrolling */ js.UndefOr[Boolean]) => TagMod[Any]
+      value: (/* item */ js.UndefOr[T], /* index */ js.UndefOr[Double], /* isScrolling */ js.UndefOr[Boolean]) => ReactElement
     ): this.type = set("onRenderCell", js.Any.fromFunction3(value))
     @scala.inline
     def onRenderPage(

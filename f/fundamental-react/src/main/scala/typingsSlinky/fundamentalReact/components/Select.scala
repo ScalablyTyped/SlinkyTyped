@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Select {
-  @JSImport("fundamental-react/lib/Select/Select", JSImport.Default)
+  @JSImport("fundamental-react", "Select")
   @js.native
   object component extends js.Object
   

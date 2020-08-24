@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs")
 @js.native
 abstract class SpatialLocatorPositionalTrackingDeactivatingEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs {
-  /* CompleteClass */
-  override var canceled: js.Any = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs
 

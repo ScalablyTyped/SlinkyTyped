@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 object tradesCallBuilderMod extends js.Object {
   @js.native
   class TradesCallBuilder protected () extends CallBuilder[CollectionPage[TradeRecord]] {
-    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify uri.URI */ js.Any) = this()
+    def this(serverUrl: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify URI */ js.Any) = this()
     def forAccount(accountId: String): this.type = js.native
     def forAssetPair(base: Asset, counter: Asset): this.type = js.native
     def forOffer(offerId: String): this.type = js.native

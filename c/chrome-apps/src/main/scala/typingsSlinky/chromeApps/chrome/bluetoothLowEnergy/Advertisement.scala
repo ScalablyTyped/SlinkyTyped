@@ -34,53 +34,30 @@ object Advertisement {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withServiceData(value: Uuid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withType(value: AdvertisementType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServiceData(value: Uuid): Self = this.set("serviceData", value.asInstanceOf[js.Any])
     @scala.inline
-    def withManufacturerData(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerData")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: AdvertisementType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutManufacturerData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerData")(js.undefined)
-        ret
-    }
+    def setManufacturerData(value: Data): Self = this.set("manufacturerData", value.asInstanceOf[js.Any])
     @scala.inline
-    def withServiceUuids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUuids")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteManufacturerData: Self = this.set("manufacturerData", js.undefined)
     @scala.inline
-    def withoutServiceUuids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUuids")(js.undefined)
-        ret
-    }
+    def setServiceUuidsVarargs(value: String*): Self = this.set("serviceUuids", js.Array(value :_*))
     @scala.inline
-    def withSolicitUuids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solicitUuids")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setServiceUuids(value: js.Array[String]): Self = this.set("serviceUuids", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSolicitUuids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solicitUuids")(js.undefined)
-        ret
-    }
+    def deleteServiceUuids: Self = this.set("serviceUuids", js.undefined)
+    @scala.inline
+    def setSolicitUuidsVarargs(value: String*): Self = this.set("solicitUuids", js.Array(value :_*))
+    @scala.inline
+    def setSolicitUuids(value: js.Array[String]): Self = this.set("solicitUuids", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSolicitUuids: Self = this.set("solicitUuids", js.undefined)
   }
   
 }

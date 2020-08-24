@@ -1,6 +1,6 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.active
@@ -14,29 +14,29 @@ import typingsSlinky.antd.antdStrings.round
 import typingsSlinky.antd.antdStrings.square
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.top
-import typingsSlinky.antd.progressMod.default
 import typingsSlinky.antd.progressProgressMod.ProgressGradient
 import typingsSlinky.antd.progressProgressMod.ProgressProps
 import typingsSlinky.antd.progressProgressMod.ProgressSize
 import typingsSlinky.antd.progressProgressMod.ProgressType
+import typingsSlinky.antd.progressProgressMod.SuccessProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Progress {
-  @JSImport("antd/lib/progress", JSImport.Default)
+  @JSImport("antd", "Progress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Progress] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any]): this.type = set("format", js.Any.fromFunction2(value))
+    def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => ReactElement): this.type = set("format", js.Any.fromFunction2(value))
     @scala.inline
     def gapDegree(value: Double): this.type = set("gapDegree", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,6 +61,8 @@ object Progress {
     def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def success(value: SuccessProps): this.type = set("success", value.asInstanceOf[js.Any])
     @scala.inline
     def successPercent(value: Double): this.type = set("successPercent", value.asInstanceOf[js.Any])
     @scala.inline

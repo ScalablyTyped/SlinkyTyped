@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation._
 
 @JSImport("aframe", "THREE.WebGLRenderLists")
 @js.native
-class WebGLRenderLists ()
-  extends typingsSlinky.three.mod.WebGLRenderLists
+class WebGLRenderLists protected ()
+  extends typingsSlinky.three.mod.WebGLRenderLists {
+  def this(properties: typingsSlinky.three.webGLPropertiesMod.WebGLProperties) = this()
+}
 

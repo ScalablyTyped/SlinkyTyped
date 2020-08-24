@@ -1,8 +1,27 @@
 package typingsSlinky.vscodeLanguageclient.clientMod
 
+import typingsSlinky.vscode.mod.CodeActionProvider
+import typingsSlinky.vscode.mod.CompletionItemProvider
+import typingsSlinky.vscode.mod.DeclarationProvider
+import typingsSlinky.vscode.mod.DefinitionProvider
 import typingsSlinky.vscode.mod.DiagnosticCollection
+import typingsSlinky.vscode.mod.DocumentColorProvider
+import typingsSlinky.vscode.mod.DocumentFormattingEditProvider
+import typingsSlinky.vscode.mod.DocumentHighlightProvider
+import typingsSlinky.vscode.mod.DocumentLinkProvider
+import typingsSlinky.vscode.mod.DocumentRangeFormattingEditProvider
+import typingsSlinky.vscode.mod.FoldingRangeProvider
+import typingsSlinky.vscode.mod.HoverProvider
+import typingsSlinky.vscode.mod.ImplementationProvider
+import typingsSlinky.vscode.mod.OnTypeFormattingEditProvider
 import typingsSlinky.vscode.mod.OutputChannel
-import typingsSlinky.vscodeJsonrpc.Thenable
+import typingsSlinky.vscode.mod.ProviderResult
+import typingsSlinky.vscode.mod.ReferenceProvider
+import typingsSlinky.vscode.mod.RenameProvider
+import typingsSlinky.vscode.mod.SelectionRangeProvider
+import typingsSlinky.vscode.mod.SignatureHelpProvider
+import typingsSlinky.vscode.mod.TypeDefinitionProvider
+import typingsSlinky.vscode.mod.WorkspaceSymbolProvider
 import typingsSlinky.vscodeJsonrpc.mod.GenericNotificationHandler
 import typingsSlinky.vscodeJsonrpc.mod.GenericRequestHandler
 import typingsSlinky.vscodeJsonrpc.mod.NotificationHandler
@@ -10,6 +29,32 @@ import typingsSlinky.vscodeJsonrpc.mod.NotificationHandler0
 import typingsSlinky.vscodeJsonrpc.mod.RequestHandler
 import typingsSlinky.vscodeJsonrpc.mod.RequestHandler0
 import typingsSlinky.vscodeLanguageclient.codeConverterMod.Converter
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashcodeAction
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashcompletion
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdeclaration
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdefinition
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdidChange
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdidClose
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdidOpen
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdidSave
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdocumentColor
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdocumentHighlight
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashdocumentLink
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashfoldingRange
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashformatting
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashhover
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashimplementation
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashonTypeFormatting
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashprepareCallHierarchy
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashrangeFormatting
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashreferences
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashrename
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashselectionRange
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashsignatureHelp
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashtypeDefinition
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashwillSave
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.textDocumentSlashwillSaveWaitUntil
+import typingsSlinky.vscodeLanguageclient.vscodeLanguageclientStrings.workspaceSlashsymbol
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.InitializeResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,14 +93,14 @@ abstract class BaseLanguageClient protected () extends js.Object {
   var _telemetryEmitter: js.Any = js.native
   var _trace: js.Any = js.native
   var _traceFormat: js.Any = js.native
+  var _traceOutputChannel: js.Any = js.native
   var _tracer: js.Any = js.native
   var cleanUp: js.Any = js.native
-  val clientOptions: LanguageClientOptions = js.native
-  val code2ProtocolConverter: Converter = js.native
+  var cleanUpChannel: js.Any = js.native
   var computeClientCapabilities: js.Any = js.native
   var createConnection: js.Any = js.native
   var data2String: js.Any = js.native
-  val diagnostics: js.UndefOr[DiagnosticCollection] = js.native
+  var doInitialize: js.Any = js.native
   var fillInitializeParams: js.Any = js.native
   var forceDocumentSync: js.Any = js.native
   var getPublicState: js.Any = js.native
@@ -68,35 +113,142 @@ abstract class BaseLanguageClient protected () extends js.Object {
   var hookFileEvents: js.Any = js.native
   var initialize: js.Any = js.native
   var initializeFeatures: js.Any = js.native
-  val initializeResult: js.UndefOr[InitializeResult] = js.native
   var isConnectionActive: js.Any = js.native
   var logObjectTrace: js.Any = js.native
   var logTrace: js.Any = js.native
   var notifyFileEvent: js.Any = js.native
-  val outputChannel: OutputChannel = js.native
-  val protocol2CodeConverter: typingsSlinky.vscodeLanguageclient.protocolConverterMod.Converter = js.native
   var refreshTrace: js.Any = js.native
   var resolveConnection: js.Any = js.native
   var setDiagnostics: js.Any = js.native
-  var state: js.Any = js.native
-  var trace: typingsSlinky.vscodeJsonrpc.mod.Trace = js.native
+  var showNotificationMessage: js.Any = js.native
+  def clientOptions: LanguageClientOptions = js.native
+  def code2ProtocolConverter: Converter = js.native
   def createDefaultErrorHandler(): ErrorHandler = js.native
-  /* protected */ def createMessageTransports(encoding: String): Thenable[MessageTransports] = js.native
+  /* protected */ def createMessageTransports(encoding: String): js.Promise[MessageTransports] = js.native
+  def diagnostics: js.UndefOr[DiagnosticCollection] = js.native
   def error(message: String): Unit = js.native
+  def error(message: String, data: js.UndefOr[scala.Nothing], showNotification: Boolean): Unit = js.native
   def error(message: String, data: js.Any): Unit = js.native
+  def error(message: String, data: js.Any, showNotification: Boolean): Unit = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentcodeAction(request: textDocumentSlashcodeAction): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[CodeActionProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentcompletion(request: textDocumentSlashcompletion): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[CompletionItemProvider[typingsSlinky.vscode.mod.CompletionItem]] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdeclaration(request: textDocumentSlashdeclaration): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DeclarationProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdefinition(request: textDocumentSlashdefinition): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DefinitionProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdidChange(request: textDocumentSlashdidChange): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with (NotificationFeature[js.Function1[/* textDocument */ typingsSlinky.vscode.mod.TextDocument, Unit]]) = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdidClose(request: textDocumentSlashdidClose): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with (NotificationFeature[js.Function1[/* textDocument */ typingsSlinky.vscode.mod.TextDocument, Unit]]) = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdidOpen(request: textDocumentSlashdidOpen): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with (NotificationFeature[js.Function1[/* textDocument */ typingsSlinky.vscode.mod.TextDocument, Unit]]) = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdidSave(request: textDocumentSlashdidSave): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with (NotificationFeature[js.Function1[/* textDocument */ typingsSlinky.vscode.mod.TextDocument, Unit]]) = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdocumentColor(request: textDocumentSlashdocumentColor): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DocumentColorProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdocumentHighlight(request: textDocumentSlashdocumentHighlight): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DocumentHighlightProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentdocumentLink(request: textDocumentSlashdocumentLink): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DocumentLinkProvider[typingsSlinky.vscode.mod.DocumentLink]] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentfoldingRange(request: textDocumentSlashfoldingRange): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[FoldingRangeProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentformatting(request: textDocumentSlashformatting): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DocumentFormattingEditProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumenthover(request: textDocumentSlashhover): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[HoverProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentimplementation(request: textDocumentSlashimplementation): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[ImplementationProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentonTypeFormatting(request: textDocumentSlashonTypeFormatting): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[OnTypeFormattingEditProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentprepareCallHierarchy(request: textDocumentSlashprepareCallHierarchy): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[TypeDefinitionProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentrangeFormatting(request: textDocumentSlashrangeFormatting): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[DocumentRangeFormattingEditProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentreferences(request: textDocumentSlashreferences): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[ReferenceProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentrename(request: textDocumentSlashrename): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[RenameProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentselectionRange(request: textDocumentSlashselectionRange): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[SelectionRangeProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentsignatureHelp(request: textDocumentSlashsignatureHelp): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[SignatureHelpProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumenttypeDefinition(request: textDocumentSlashtypeDefinition): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with TextDocumentProviderFeature[TypeDefinitionProvider] = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentwillSave(request: textDocumentSlashwillSave): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with (NotificationFeature[js.Function1[/* textDocument */ typingsSlinky.vscode.mod.TextDocument, Unit]]) = js.native
+  @JSName("getFeature")
+  def getFeature_textDocumentwillSaveWaitUntil(request: textDocumentSlashwillSaveWaitUntil): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with (NotificationFeature[
+    js.Function1[
+      /* textDocument */ typingsSlinky.vscode.mod.TextDocument, 
+      ProviderResult[js.Array[typingsSlinky.vscode.mod.TextEdit]]
+    ]
+  ]) = js.native
+  @JSName("getFeature")
+  def getFeature_workspacesymbol(request: workspaceSlashsymbol): (DynamicFeature[
+    typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+  ]) with WorkspaceProviderFeature[WorkspaceSymbolProvider[typingsSlinky.vscode.mod.SymbolInformation]] = js.native
   /* protected */ def handleConnectionClosed(): Unit = js.native
   def info(message: String): Unit = js.native
+  def info(message: String, data: js.UndefOr[scala.Nothing], showNotification: Boolean): Unit = js.native
   def info(message: String, data: js.Any): Unit = js.native
+  def info(message: String, data: js.Any, showNotification: Boolean): Unit = js.native
+  def initializeResult: js.UndefOr[InitializeResult[_]] = js.native
   def logFailedRequest(`type`: typingsSlinky.vscodeJsonrpc.messagesMod.MessageType, error: js.Any): Unit = js.native
   def needsStart(): Boolean = js.native
   def needsStop(): Boolean = js.native
-  def onDidChangeState(listener: js.Function1[/* e */ StateChangeEvent, _]): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
-  def onDidChangeState(listener: js.Function1[/* e */ StateChangeEvent, _], thisArgs: js.Any): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
-  def onDidChangeState(
-    listener: js.Function1[/* e */ StateChangeEvent, _],
-    thisArgs: js.Any,
-    disposables: js.Array[typingsSlinky.vscodeJsonrpc.eventsMod.Disposable]
-  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onDidChangeState: typingsSlinky.vscodeJsonrpc.eventsMod.Event[StateChangeEvent] = js.native
   def onNotification(method: String, handler: GenericNotificationHandler): Unit = js.native
   def onNotification[RO](
     `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.NotificationType0[RO],
@@ -106,6 +258,16 @@ abstract class BaseLanguageClient protected () extends js.Object {
     `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.NotificationType[P, RO],
     handler: NotificationHandler[P]
   ): Unit = js.native
+  def onProgress[P](
+    `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.ProgressType[P],
+    token: String,
+    handler: NotificationHandler[P]
+  ): typingsSlinky.vscode.mod.Disposable = js.native
+  def onProgress[P](
+    `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.ProgressType[P],
+    token: Double,
+    handler: NotificationHandler[P]
+  ): typingsSlinky.vscode.mod.Disposable = js.native
   def onReady(): js.Promise[Unit] = js.native
   def onRequest[R, E](method: String, handler: GenericRequestHandler[R, E]): Unit = js.native
   def onRequest[R, E, RO](
@@ -116,13 +278,9 @@ abstract class BaseLanguageClient protected () extends js.Object {
     `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType[P, R, E, RO],
     handler: RequestHandler[P, R, E]
   ): Unit = js.native
-  def onTelemetry(listener: js.Function1[/* e */ js.Any, _]): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
-  def onTelemetry(listener: js.Function1[/* e */ js.Any, _], thisArgs: js.Any): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
-  def onTelemetry(
-    listener: js.Function1[/* e */ js.Any, _],
-    thisArgs: js.Any,
-    disposables: js.Array[typingsSlinky.vscodeJsonrpc.eventsMod.Disposable]
-  ): typingsSlinky.vscodeJsonrpc.eventsMod.Disposable = js.native
+  def onTelemetry: typingsSlinky.vscodeJsonrpc.eventsMod.Event[_] = js.native
+  def outputChannel: OutputChannel = js.native
+  def protocol2CodeConverter: typingsSlinky.vscodeLanguageclient.protocolConverterMod.Converter = js.native
   /* protected */ def registerBuiltinFeatures(): Unit = js.native
   def registerFeature(feature: DynamicFeature[_]): Unit = js.native
   def registerFeature(feature: StaticFeature): Unit = js.native
@@ -132,24 +290,32 @@ abstract class BaseLanguageClient protected () extends js.Object {
   def sendNotification[RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.NotificationType0[RO]): Unit = js.native
   def sendNotification[P, RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.NotificationType[P, RO]): Unit = js.native
   def sendNotification[P, RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.NotificationType[P, RO], params: P): Unit = js.native
-  def sendRequest[R](method: String): Thenable[R] = js.native
-  def sendRequest[R](method: String, param: js.Any): Thenable[R] = js.native
-  def sendRequest[R](method: String, param: js.Any, token: typingsSlinky.vscode.mod.CancellationToken): Thenable[R] = js.native
-  def sendRequest[R](method: String, token: typingsSlinky.vscode.mod.CancellationToken): Thenable[R] = js.native
-  def sendRequest[R, E, RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType0[R, E, RO]): Thenable[R] = js.native
+  def sendProgress[P](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.ProgressType[P], token: String, value: P): Unit = js.native
+  def sendProgress[P](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.ProgressType[P], token: Double, value: P): Unit = js.native
+  def sendRequest[R](method: String): js.Promise[R] = js.native
+  def sendRequest[R](method: String, param: js.Any): js.Promise[R] = js.native
+  def sendRequest[R](method: String, param: js.Any, token: typingsSlinky.vscode.mod.CancellationToken): js.Promise[R] = js.native
+  def sendRequest[R](method: String, token: typingsSlinky.vscode.mod.CancellationToken): js.Promise[R] = js.native
+  def sendRequest[R, E, RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType0[R, E, RO]): js.Promise[R] = js.native
   def sendRequest[R, E, RO](
     `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType0[R, E, RO],
     token: typingsSlinky.vscode.mod.CancellationToken
-  ): Thenable[R] = js.native
-  def sendRequest[P, R, E, RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType[P, R, E, RO], params: P): Thenable[R] = js.native
+  ): js.Promise[R] = js.native
+  def sendRequest[P, R, E, RO](`type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType[P, R, E, RO], params: P): js.Promise[R] = js.native
   def sendRequest[P, R, E, RO](
     `type`: typingsSlinky.vscodeLanguageserverProtocol.mod.RequestType[P, R, E, RO],
     params: P,
     token: typingsSlinky.vscode.mod.CancellationToken
-  ): Thenable[R] = js.native
+  ): js.Promise[R] = js.native
   def start(): typingsSlinky.vscode.mod.Disposable = js.native
-  def stop(): Thenable[Unit] = js.native
+  /* private */ def state: js.Any = js.native
+  /* private */ def state_=(value: js.Any): Unit = js.native
+  def stop(): js.Promise[Unit] = js.native
+  def traceOutputChannel: OutputChannel = js.native
+  def trace_=(value: typingsSlinky.vscodeJsonrpc.mod.Trace): Unit = js.native
   def warn(message: String): Unit = js.native
+  def warn(message: String, data: js.UndefOr[scala.Nothing], showNotification: Boolean): Unit = js.native
   def warn(message: String, data: js.Any): Unit = js.native
+  def warn(message: String, data: js.Any, showNotification: Boolean): Unit = js.native
 }
 

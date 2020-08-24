@@ -50,6 +50,19 @@ object reprojTileMod extends js.Object {
       pixelRatio: Double,
       gutter: Double,
       getTileFunction: FunctionType,
+      opt_errorThreshold: js.UndefOr[scala.Nothing],
+      opt_renderEdges: Boolean
+    ) = this()
+    def this(
+      sourceProj: typingsSlinky.ol.projectionMod.default,
+      sourceTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
+      targetProj: typingsSlinky.ol.projectionMod.default,
+      targetTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
+      tileCoord: TileCoord,
+      wrappedTileCoord: TileCoord,
+      pixelRatio: Double,
+      gutter: Double,
+      getTileFunction: FunctionType,
       opt_errorThreshold: Double,
       opt_renderEdges: Boolean
     ) = this()

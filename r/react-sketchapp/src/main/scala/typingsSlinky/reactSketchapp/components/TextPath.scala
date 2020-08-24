@@ -52,6 +52,8 @@ object TextPath {
     @scala.inline
     def alignmentBaseline(value: AlignmentBaseline): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
     @scala.inline
+    def baselineShiftVarargs(value: NumberProp*): this.type = set("baselineShift", js.Array(value :_*))
+    @scala.inline
     def baselineShift(value: BaselineShift): this.type = set("baselineShift", value.asInstanceOf[js.Any])
     @scala.inline
     def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
@@ -125,6 +127,8 @@ object TextPath {
     def startOffset(value: StartOffset): this.type = set("startOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
     @scala.inline
     def strokeDasharray(value: NumberArrayProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
     @scala.inline

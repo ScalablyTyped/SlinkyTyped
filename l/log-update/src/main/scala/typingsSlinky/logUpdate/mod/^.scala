@@ -8,8 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("log-update", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  // TODO: Remove this for the next major release
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof logUpdate */ js.Any = js.native
   /**
   	Log to `stderr` by overwriting the previous output in the terminal.
   	@param text - The text to log to `stderr`.

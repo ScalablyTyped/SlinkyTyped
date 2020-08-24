@@ -1,7 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.WiFiDirect
 
 import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingKinds
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates a new WiFiDirectConnectionParameters object. */
 class WiFiDirectConnectionParameters ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters {
-  /** The group owner intent value used for group owner negotiation in a Wi-Fi Direct connect/pairing operation. */
-  /* CompleteClass */
-  override var groupOwnerIntent: Double = js.native
-  /** Gets a list of supported configuration methods, in order of preference. */
-  /* CompleteClass */
-  override var preferenceOrderedConfigurationMethods: IVector[typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod] = js.native
-  /** Gets or sets a value specifying a device's preferred pairing procedure. */
-  /* CompleteClass */
-  override var preferredPairingProcedure: typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters
 
 /* static members */
 @JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters")

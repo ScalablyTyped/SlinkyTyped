@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormRadioItem {
-  @JSImport("fundamental-react/lib/Forms/FormRadioItem", JSImport.Default)
+  @JSImport("fundamental-react", "FormRadioItem")
   @js.native
   object component extends js.Object
   

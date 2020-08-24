@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeJsonrpc.messageReaderMod
 
-import typingsSlinky.vscodeJsonrpc.eventsMod.Disposable
+import typingsSlinky.vscodeJsonrpc.eventsMod.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,18 +16,8 @@ abstract class AbstractMessageReader () extends js.Object {
   /* protected */ def fireClose(): Unit = js.native
   /* protected */ def fireError(error: js.Any): Unit = js.native
   /* protected */ def firePartialMessage(info: PartialMessageInfo): Unit = js.native
-  def onClose(listener: js.Function1[/* e */ Unit, _]): Disposable = js.native
-  def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any): Disposable = js.native
-  def onClose(listener: js.Function1[/* e */ Unit, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-  def onError(listener: js.Function1[/* e */ js.Error, _]): Disposable = js.native
-  def onError(listener: js.Function1[/* e */ js.Error, _], thisArgs: js.Any): Disposable = js.native
-  def onError(listener: js.Function1[/* e */ js.Error, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-  def onPartialMessage(listener: js.Function1[/* e */ PartialMessageInfo, _]): Disposable = js.native
-  def onPartialMessage(listener: js.Function1[/* e */ PartialMessageInfo, _], thisArgs: js.Any): Disposable = js.native
-  def onPartialMessage(
-    listener: js.Function1[/* e */ PartialMessageInfo, _],
-    thisArgs: js.Any,
-    disposables: js.Array[Disposable]
-  ): Disposable = js.native
+  def onClose: Event[Unit] = js.native
+  def onError: Event[js.Error] = js.native
+  def onPartialMessage: Event[PartialMessageInfo] = js.native
 }
 

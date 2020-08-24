@@ -100,13 +100,14 @@ object FileStatusChangedDetail {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFileEntry(value: FileEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileEntry")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withStatus(
+    def setFileEntry(value: FileEntry): Self = this.set("fileEntry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStatus(
       value: ToStringLiteral[
           CONFLICTING, 
           /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
@@ -115,13 +116,9 @@ object FileStatusChangedDetail {
             synced_ | pending_ | conflicting_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("status", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAction(
+    def setAction(
       value: ToStringLiteral[
           ADDED, 
           /* keyof chrome-apps.anon.ADDED */ typingsSlinky.chromeApps.chromeAppsStrings.ADDED | UPDATED | DELETED, 
@@ -130,19 +127,11 @@ object FileStatusChangedDetail {
             added_ | updated_ | deleted_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
+    def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
-    def withDirection(
+    def setDirection(
       value: ToStringLiteral[
           LOCALTOREMOTE, 
           /* keyof chrome-apps.anon.LOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
@@ -151,17 +140,9 @@ object FileStatusChangedDetail {
             local_to_remote_ | remote_to_local_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
+    def deleteDirection: Self = this.set("direction", js.undefined)
   }
   
 }

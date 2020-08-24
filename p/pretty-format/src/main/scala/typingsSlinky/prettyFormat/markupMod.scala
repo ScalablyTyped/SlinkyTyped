@@ -2,6 +2,8 @@ package typingsSlinky.prettyFormat
 
 import typingsSlinky.prettyFormat.typesMod.Config
 import typingsSlinky.prettyFormat.typesMod.Printer
+import typingsSlinky.prettyFormat.typesMod.Refs
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +16,7 @@ object markupMod extends js.Object {
     config: Config,
     indentation: String,
     depth: Double,
-    refs: js.Array[_],
+    refs: Refs,
     printer: Printer
   ): String = js.native
   def printComment(comment: String, config: Config): String = js.native
@@ -22,11 +24,11 @@ object markupMod extends js.Object {
   def printElementAsLeaf(`type`: String, config: Config): String = js.native
   def printProps(
     keys: js.Array[String],
-    props: js.Any,
+    props: Record[String, _],
     config: Config,
     indentation: String,
     depth: Double,
-    refs: js.Array[_],
+    refs: Refs,
     printer: Printer
   ): String = js.native
   def printText(text: String, config: Config): String = js.native

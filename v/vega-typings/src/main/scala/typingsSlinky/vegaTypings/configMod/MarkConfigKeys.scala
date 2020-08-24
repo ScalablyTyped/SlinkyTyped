@@ -6,19 +6,19 @@ import scala.scalajs.js.annotation._
 
 /* Inlined 'mark' | vega-typings.vega-typings/types/spec.Mark['type'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.image
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.trail
   - typingsSlinky.vegaTypings.vegaTypingsStrings.area
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.line
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.text
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.mark
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.rule
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.arc
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.shape
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.path
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.rect
-  - typingsSlinky.vegaTypings.vegaTypingsStrings.symbol
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.trail
   - typingsSlinky.vegaTypings.vegaTypingsStrings.group
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.path
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.image
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.text
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.shape
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.symbol
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.arc
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.rule
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.mark
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.rect
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.line
 */
 trait MarkConfigKeys extends js.Object
 

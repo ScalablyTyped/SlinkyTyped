@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreatePolicyRequest extends js.Object {
   /**
-    * The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see Service Control Policy Syntax in the AWS Organizations User Guide. 
+    * The policy text content to add to the new policy. The text that you supply must adhere to the rules of the policy type you specify in the Type parameter.
     */
   var Content: PolicyContent = js.native
   /**
@@ -19,7 +19,7 @@ trait CreatePolicyRequest extends js.Object {
     */
   var Name: PolicyName = js.native
   /**
-    * The type of policy to create.  In the current release, the only type of policy that you can create is a service control policy (SCP). 
+    * The type of policy to create. You can specify one of the following values:    AISERVICES_OPT_OUT_POLICY     BACKUP_POLICY     SERVICE_CONTROL_POLICY     TAG_POLICY   
     */
   var Type: PolicyType = js.native
 }
@@ -30,5 +30,26 @@ object CreatePolicyRequest {
     val __obj = js.Dynamic.literal(Content = Content.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePolicyRequest]
   }
+  @scala.inline
+  implicit class CreatePolicyRequestOps[Self <: CreatePolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContent(value: PolicyContent): Self = this.set("Content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: PolicyDescription): Self = this.set("Description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: PolicyName): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: PolicyType): Self = this.set("Type", value.asInstanceOf[js.Any])
+  }
+  
 }
 

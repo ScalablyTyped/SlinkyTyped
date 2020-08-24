@@ -1,8 +1,8 @@
 package typingsSlinky.reactAriaModal.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleId
 import typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleTe
 import scala.scalajs.js
@@ -22,7 +22,7 @@ class default ()
 @JSImport("react-aria-modal", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def renderTo(node: String): ReactComponentClass[_] = js.native
-  def renderTo(node: HTMLElement): ReactComponentClass[_] = js.native
+  def renderTo(node: String): ReactType[_] = js.native
+  def renderTo(node: HTMLElement): ReactType[_] = js.native
 }
 

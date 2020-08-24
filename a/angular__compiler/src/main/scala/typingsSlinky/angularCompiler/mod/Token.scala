@@ -7,9 +7,10 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "Token")
 @js.native
 class Token protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.Token {
+  extends typingsSlinky.angularCompiler.compilerMod.Token {
   def this(
     index: Double,
+    end: Double,
     `type`: typingsSlinky.angularCompiler.lexerMod.TokenType,
     numValue: Double,
     strValue: String

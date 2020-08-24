@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FabricTextHighlightIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FabricTextHighlightIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FabricTextHighlightIcon")
   @js.native
   object component extends js.Object
   

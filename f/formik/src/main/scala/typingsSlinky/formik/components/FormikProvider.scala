@@ -2,7 +2,7 @@ package typingsSlinky.formik.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.formik.typesMod.FormikContext
+import typingsSlinky.formik.typesMod.FormikContextType
 import typingsSlinky.react.mod.ProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,11 +13,11 @@ object FormikProvider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ProviderProps[FormikContext[js.Any]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ProviderProps[FormikContextType[js.Any]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(value: FormikContext[js.Any]): Default[tag.type, js.Object] = {
+  def apply(value: FormikContextType[js.Any]): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ProviderProps[FormikContext[js.Any]]]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ProviderProps[FormikContextType[js.Any]]]))
   }
 }
 

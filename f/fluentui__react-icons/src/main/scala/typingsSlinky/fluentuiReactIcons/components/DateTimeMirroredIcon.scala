@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DateTimeMirroredIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DateTimeMirroredIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DateTimeMirroredIcon")
   @js.native
   object component extends js.Object
   

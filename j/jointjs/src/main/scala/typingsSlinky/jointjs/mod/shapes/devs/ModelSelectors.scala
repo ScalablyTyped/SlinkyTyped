@@ -28,29 +28,18 @@ object ModelSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDotbody(value: SVGRectAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".body")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDotbody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".body")(js.undefined)
-        ret
-    }
+    def setDotbody(value: SVGRectAttributes): Self = this.set(".body", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotlabel(value: SVGTextAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".label")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotbody: Self = this.set(".body", js.undefined)
     @scala.inline
-    def withoutDotlabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".label")(js.undefined)
-        ret
-    }
+    def setDotlabel(value: SVGTextAttributes): Self = this.set(".label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDotlabel: Self = this.set(".label", js.undefined)
   }
   
 }

@@ -1,7 +1,9 @@
 package typingsSlinky.reactCalendarTimeline.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactCalendarTimeline.mod.CustomMarkerChildrenProps
 import typingsSlinky.reactCalendarTimeline.mod.TodayMarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +18,8 @@ object TodayMarker {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.TodayMarker] {
+    @scala.inline
+    def children(value: /* props */ CustomMarkerChildrenProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def interval(value: Double): this.type = set("interval", value.asInstanceOf[js.Any])
   }

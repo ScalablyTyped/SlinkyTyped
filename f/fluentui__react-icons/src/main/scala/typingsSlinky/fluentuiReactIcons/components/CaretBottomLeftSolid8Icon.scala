@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CaretBottomLeftSolid8Icon {
-  @JSImport("@fluentui/react-icons/lib/components/CaretBottomLeftSolid8Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CaretBottomLeftSolid8Icon")
   @js.native
   object component extends js.Object
   

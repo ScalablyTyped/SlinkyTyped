@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object QuickNoteIcon {
-  @JSImport("@fluentui/react-icons/lib/components/QuickNoteIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "QuickNoteIcon")
   @js.native
   object component extends js.Object
   

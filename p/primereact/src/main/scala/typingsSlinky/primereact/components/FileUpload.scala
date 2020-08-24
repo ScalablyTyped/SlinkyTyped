@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.components
 
-import org.scalajs.dom.raw.File
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.primereact.anon.File
 import typingsSlinky.primereact.anon.Files
 import typingsSlinky.primereact.anon.FilesAny
 import typingsSlinky.primereact.anon.FilesOriginalEvent
@@ -61,11 +61,13 @@ object FileUpload {
     @scala.inline
     def onProgress(value: /* e */ Progress => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
+    def onRemove(value: /* e */ File => Unit): this.type = set("onRemove", js.Any.fromFunction1(value))
+    @scala.inline
     def onSelect(value: /* e */ FilesOriginalEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def onUpload(value: /* e */ Files => Unit): this.type = set("onUpload", js.Any.fromFunction1(value))
     @scala.inline
-    def onValidationFail(value: /* file */ File => Unit): this.type = set("onValidationFail", js.Any.fromFunction1(value))
+    def onValidationFail(value: /* file */ org.scalajs.dom.raw.File => Unit): this.type = set("onValidationFail", js.Any.fromFunction1(value))
     @scala.inline
     def previewWidth(value: Double): this.type = set("previewWidth", value.asInstanceOf[js.Any])
     @scala.inline

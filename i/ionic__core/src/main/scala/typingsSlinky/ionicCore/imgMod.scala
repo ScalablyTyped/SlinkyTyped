@@ -1,8 +1,8 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object imgMod extends js.Object {
       */
     var alt: js.UndefOr[String] = js.native
     var el: HTMLElement = js.native
-    var io: js.UndefOr[js.Any] = js.native
+    var io: js.Any = js.native
     /** Emitted when the img fails to load */
     var ionError: EventEmitter[Unit] = js.native
     /** Emitted when the image has finished loading */

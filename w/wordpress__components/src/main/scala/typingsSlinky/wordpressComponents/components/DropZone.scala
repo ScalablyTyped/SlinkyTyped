@@ -7,7 +7,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.wordpressComponents.dropZoneMod.DropZone.HoverPosition
 import typingsSlinky.wordpressComponents.dropZoneMod.DropZone.Props
-import typingsSlinky.wordpressComponents.mod.DropZone.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,7 @@ object DropZone {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

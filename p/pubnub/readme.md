@@ -1,7 +1,7 @@
 
 # Scala.js typings for pubnub
 
-Typings are for version 4.27
+Typings are for version 4.28
 
 ## Library description:
 Publish & Subscribe Real-time Messaging with PubNub

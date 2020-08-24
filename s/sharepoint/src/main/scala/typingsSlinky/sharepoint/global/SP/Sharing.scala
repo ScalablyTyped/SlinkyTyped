@@ -14,65 +14,11 @@ object Sharing extends js.Object {
   
   @js.native
   class UserRoleAssignment ()
-    extends typingsSlinky.sharepoint.SP.Sharing.UserRoleAssignment {
-    /* CompleteClass */
-    override def customFromJson(obj: js.Any): Boolean = js.native
-    /* CompleteClass */
-    override def customWriteToXml(
-      writer: typingsSlinky.sharepoint.SP.XmlWriter,
-      serializationContext: typingsSlinky.sharepoint.SP.SerializationContext
-    ): Boolean = js.native
-    /* CompleteClass */
-    override def fromJson(obj: js.Any): Unit = js.native
-    /* CompleteClass */
-    override def get_role(): Role = js.native
-    /* CompleteClass */
-    override def get_typeId(): String = js.native
-    /* CompleteClass */
-    override def get_userId(): String = js.native
-    /* CompleteClass */
-    override def set_role(value: Role): Unit = js.native
-    /* CompleteClass */
-    override def set_userId(value: String): Unit = js.native
-    /* CompleteClass */
-    override def writeToXml(
-      writer: typingsSlinky.sharepoint.SP.XmlWriter,
-      serializationContext: typingsSlinky.sharepoint.SP.SerializationContext
-    ): Unit = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.Sharing.UserRoleAssignment
   
   @js.native
   class UserSharingResult ()
-    extends typingsSlinky.sharepoint.SP.Sharing.UserSharingResult {
-    /* CompleteClass */
-    override def customFromJson(obj: js.Any): Boolean = js.native
-    /* CompleteClass */
-    override def customWriteToXml(
-      writer: typingsSlinky.sharepoint.SP.XmlWriter,
-      serializationContext: typingsSlinky.sharepoint.SP.SerializationContext
-    ): Boolean = js.native
-    /* CompleteClass */
-    override def fromJson(obj: js.Any): Unit = js.native
-    /* CompleteClass */
-    override def get_allowedRoles(): js.Array[Role] = js.native
-    /* CompleteClass */
-    override def get_currentRole(): Role = js.native
-    /* CompleteClass */
-    override def get_isUserKnown(): Boolean = js.native
-    /* CompleteClass */
-    override def get_message(): String = js.native
-    /* CompleteClass */
-    override def get_status(): Boolean = js.native
-    /* CompleteClass */
-    override def get_typeId(): String = js.native
-    /* CompleteClass */
-    override def get_user(): String = js.native
-    /* CompleteClass */
-    override def writeToXml(
-      writer: typingsSlinky.sharepoint.SP.XmlWriter,
-      serializationContext: typingsSlinky.sharepoint.SP.SerializationContext
-    ): Unit = js.native
-  }
+    extends typingsSlinky.sharepoint.SP.Sharing.UserSharingResult
   
   /* static members */
   @js.native

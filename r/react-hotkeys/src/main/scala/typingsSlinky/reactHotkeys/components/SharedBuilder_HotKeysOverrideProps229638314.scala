@@ -195,11 +195,15 @@ class SharedBuilder_HotKeysOverrideProps229638314[R <: js.Object] (val args: js.
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+  @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
   @scala.inline
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+  @scala.inline
+  def exceptVarargs(value: String*): this.type = set("except", js.Array(value :_*))
   @scala.inline
   def except(value: ListOfKeys): this.type = set("except", value.asInstanceOf[js.Any])
   @scala.inline
@@ -382,6 +386,8 @@ class SharedBuilder_HotKeysOverrideProps229638314[R <: js.Object] (val args: js.
   def onWaiting(value: SyntheticEvent[Event, typingsSlinky.reactHotkeys.mod.HotKeys] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
   @scala.inline
   def onWheel(value: SyntheticWheelEvent[typingsSlinky.reactHotkeys.mod.HotKeys] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+  @scala.inline
+  def onlyVarargs(value: String*): this.type = set("only", js.Array(value :_*))
   @scala.inline
   def only(value: ListOfKeys): this.type = set("only", value.asInstanceOf[js.Any])
   @scala.inline

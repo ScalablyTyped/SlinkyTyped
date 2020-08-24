@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -46,11 +45,13 @@ object Pie {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Pie] {
     @scala.inline
+    def activeIndexVarargs(value: Double*): this.type = set("activeIndex", js.Array(value :_*))
+    @scala.inline
     def activeIndex(value: Double | js.Array[Double]): this.type = set("activeIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def activeShapeReactElement(value: ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     @scala.inline
-    def activeShapeFunction1(value: _ => TagMod[Any]): this.type = set("activeShape", js.Any.fromFunction1(value))
+    def activeShapeFunction1(value: _ => ReactElement): this.type = set("activeShape", js.Any.fromFunction1(value))
     @scala.inline
     def activeShape(value: js.Object | ContentRenderer[_] | ReactElement): this.type = set("activeShape", value.asInstanceOf[js.Any])
     @scala.inline
@@ -95,6 +96,8 @@ object Pie {
     def cx(value: Double | String): this.type = set("cx", value.asInstanceOf[js.Any])
     @scala.inline
     def cy(value: Double | String): this.type = set("cy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: js.Object*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -158,13 +161,13 @@ object Pie {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelFunction1(value: PieLabelRenderProps => TagMod[Any]): this.type = set("label", js.Any.fromFunction1(value))
+    def labelFunction1(value: PieLabelRenderProps => ReactElement): this.type = set("label", js.Any.fromFunction1(value))
     @scala.inline
     def label(value: OffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelLineReactElement(value: ReactElement): this.type = set("labelLine", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelLineFunction1(value: LineProps with js.Any => TagMod[Any]): this.type = set("labelLine", js.Any.fromFunction1(value))
+    def labelLineFunction1(value: LineProps with js.Any => ReactElement): this.type = set("labelLine", js.Any.fromFunction1(value))
     @scala.inline
     def labelLine(value: js.Object | (ContentRenderer[LineProps with js.Any]) | ReactElement | Boolean): this.type = set("labelLine", value.asInstanceOf[js.Any])
     @scala.inline
@@ -231,6 +234,8 @@ object Pie {
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sectorsVarargs(value: js.Object*): this.type = set("sectors", js.Array(value :_*))
     @scala.inline
     def sectors(value: js.Array[js.Object]): this.type = set("sectors", value.asInstanceOf[js.Any])
     @scala.inline

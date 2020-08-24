@@ -4,6 +4,7 @@ import typingsSlinky.ionicCore.animationInterfaceMod.AnimationDirection
 import typingsSlinky.ionicCore.animationInterfaceMod.AnimationFill
 import typingsSlinky.ionicCore.animationInterfaceMod.AnimationPlayTo
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
+import typingsSlinky.ionicCore.mod.AutocompleteTypes
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.mod.PredefinedColors
 import typingsSlinky.ionicCore.mod.Side
@@ -11,9 +12,11 @@ import typingsSlinky.ionicCore.mod.TextFieldTypes
 import typingsSlinky.ionicCore.navInterfaceMod.NavDirection
 import typingsSlinky.ionicCore.platformMod.Platforms
 import typingsSlinky.ionicCore.rangeInterfaceMod._KnobName
+import typingsSlinky.ionicCore.refresherUtilsMod.RefresherAnimationType
 import typingsSlinky.ionicCore.segmentSegmentInterfaceMod.SegmentButtonLayout
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ListenTargetOptions
 import typingsSlinky.ionicCore.tabBarInterfaceMod.TabButtonLayout
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.CellType
 import scala.scalajs.js
@@ -46,6 +49,30 @@ object ionicCoreStrings {
   sealed trait actionSheetLeave extends js.Object
   
   @js.native
+  sealed trait `additional-name` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-level1` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-level2` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-level3` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-level4` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-line1` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-line2` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `address-line3` extends AutocompleteTypes
+  
+  @js.native
   sealed trait `after-edge` extends js.Object
   
   @js.native
@@ -67,6 +94,9 @@ object ionicCoreStrings {
   sealed trait `alternate-reverse` extends AnimationDirection
   
   @js.native
+  sealed trait always extends js.Object
+  
+  @js.native
   sealed trait android extends Platforms
   
   @js.native
@@ -84,6 +114,9 @@ object ionicCoreStrings {
        with RouterDirection
   
   @js.native
+  sealed trait backButtonDefaultHref extends js.Object
+  
+  @js.native
   sealed trait backButtonIcon extends js.Object
   
   @js.native
@@ -96,6 +129,18 @@ object ionicCoreStrings {
   sealed trait baseline extends js.Object
   
   @js.native
+  sealed trait bday extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `bday-day` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `bday-month` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `bday-year` extends AutocompleteTypes
+  
+  @js.native
   sealed trait `before-edge` extends js.Object
   
   @js.native
@@ -103,6 +148,9 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait block extends js.Object
+  
+  @js.native
+  sealed trait body extends ListenTargetOptions
   
   @js.native
   sealed trait both extends AnimationFill
@@ -129,6 +177,36 @@ object ionicCoreStrings {
   sealed trait capacitor extends Platforms
   
   @js.native
+  sealed trait `cc-additional-name` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-csc` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-exp` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-exp-month` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-exp-year` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-family-name` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-given-name` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-name` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-number` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `cc-type` extends AutocompleteTypes
+  
+  @js.native
   sealed trait center extends js.Object
   
   @js.native
@@ -153,7 +231,16 @@ object ionicCoreStrings {
   sealed trait cordova extends Platforms
   
   @js.native
+  sealed trait country extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `country-name` extends AutocompleteTypes
+  
+  @js.native
   sealed trait crescent extends SpinnerTypes
+  
+  @js.native
+  sealed trait `current-password` extends AutocompleteTypes
   
   @js.native
   sealed trait danger extends PredefinedColors
@@ -163,6 +250,9 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait date extends TextFieldTypes
+  
+  @js.native
+  sealed trait `datetime-local` extends TextFieldTypes
   
   @js.native
   sealed trait decimal extends js.Object
@@ -180,6 +270,12 @@ object ionicCoreStrings {
   sealed trait determinate extends js.Object
   
   @js.native
+  sealed trait document extends ListenTargetOptions
+  
+  @js.native
+  sealed trait done extends js.Object
+  
+  @js.native
   sealed trait dots extends SpinnerTypes
   
   @js.native
@@ -189,12 +285,17 @@ object ionicCoreStrings {
   sealed trait electron extends Platforms
   
   @js.native
-  sealed trait email extends TextFieldTypes
+  sealed trait email
+    extends AutocompleteTypes
+       with TextFieldTypes
   
   @js.native
   sealed trait end
     extends AnimationPlayTo
        with Side
+  
+  @js.native
+  sealed trait enter extends js.Object
   
   @js.native
   sealed trait error extends js.Object
@@ -206,10 +307,19 @@ object ionicCoreStrings {
   sealed trait experimentalTransitionShadow extends js.Object
   
   @js.native
+  sealed trait `false` extends js.Object
+  
+  @js.native
+  sealed trait `family-name` extends AutocompleteTypes
+  
+  @js.native
   sealed trait fixed extends js.Object
   
   @js.native
   sealed trait floating extends js.Object
+  
+  @js.native
+  sealed trait focus extends js.Object
   
   @js.native
   sealed trait footer extends CellType
@@ -224,6 +334,12 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait full extends js.Object
+  
+  @js.native
+  sealed trait `given-name` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait go extends js.Object
   
   @js.native
   sealed trait hanging extends js.Object
@@ -245,6 +361,12 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait high extends js.Object
+  
+  @js.native
+  sealed trait `honorific-prefix` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `honorific-suffix` extends AutocompleteTypes
   
   @js.native
   sealed trait hybrid extends Platforms
@@ -281,6 +403,9 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait ideographic extends js.Object
+  
+  @js.native
+  sealed trait impp extends AutocompleteTypes
   
   @js.native
   sealed trait indeterminate extends js.Object
@@ -330,6 +455,9 @@ object ionicCoreStrings {
        with TabButtonLayout
   
   @js.native
+  sealed trait language extends AutocompleteTypes
+  
+  @js.native
   sealed trait large extends js.Object
   
   @js.native
@@ -339,7 +467,7 @@ object ionicCoreStrings {
   sealed trait light extends PredefinedColors
   
   @js.native
-  sealed trait linearRGB extends js.Object
+  sealed trait `linear-rGB` extends js.Object
   
   @js.native
   sealed trait lines extends SpinnerTypes
@@ -399,7 +527,25 @@ object ionicCoreStrings {
   sealed trait mode extends js.Object
   
   @js.native
+  sealed trait month extends TextFieldTypes
+  
+  @js.native
+  sealed trait name extends AutocompleteTypes
+  
+  @js.native
   sealed trait navAnimation extends js.Object
+  
+  @js.native
+  sealed trait never extends js.Object
+  
+  @js.native
+  sealed trait `new-password` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait next extends js.Object
+  
+  @js.native
+  sealed trait nickname extends AutocompleteTypes
   
   @js.native
   sealed trait no extends js.Object
@@ -420,13 +566,25 @@ object ionicCoreStrings {
   sealed trait numeric extends js.Object
   
   @js.native
-  sealed trait off extends js.Object
+  sealed trait off extends AutocompleteTypes
   
   @js.native
-  sealed trait on extends js.Object
+  sealed trait on extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `one-time-code` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait organization extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `organization-title` extends AutocompleteTypes
   
   @js.native
   sealed trait outline extends js.Object
+  
+  @js.native
+  sealed trait parent extends ListenTargetOptions
   
   @js.native
   sealed trait password extends TextFieldTypes
@@ -436,6 +594,9 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait phablet extends Platforms
+  
+  @js.native
+  sealed trait photo extends AutocompleteTypes
   
   @js.native
   sealed trait pickerEnter extends js.Object
@@ -451,6 +612,12 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait popoverLeave extends js.Object
+  
+  @js.native
+  sealed trait `postal-code` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait previous extends js.Object
   
   @js.native
   sealed trait primary extends PredefinedColors
@@ -486,7 +653,13 @@ object ionicCoreStrings {
   sealed trait round extends js.Object
   
   @js.native
-  sealed trait sRGB extends js.Object
+  sealed trait `s-rGB` extends js.Object
+  
+  @js.native
+  sealed trait sanitizerEnabled extends js.Object
+  
+  @js.native
+  sealed trait scale extends RefresherAnimationType
   
   @js.native
   sealed trait scrollAssist extends js.Object
@@ -502,6 +675,12 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait selected extends js.Object
+  
+  @js.native
+  sealed trait send extends js.Object
+  
+  @js.native
+  sealed trait sex extends AutocompleteTypes
   
   @js.native
   sealed trait small extends js.Object
@@ -530,6 +709,9 @@ object ionicCoreStrings {
   sealed trait statusTap extends js.Object
   
   @js.native
+  sealed trait `street-address` extends AutocompleteTypes
+  
+  @js.native
   sealed trait submit extends js.Object
   
   @js.native
@@ -551,7 +733,24 @@ object ionicCoreStrings {
   sealed trait tablet extends Platforms
   
   @js.native
-  sealed trait tel extends TextFieldTypes
+  sealed trait tel
+    extends AutocompleteTypes
+       with TextFieldTypes
+  
+  @js.native
+  sealed trait `tel-area-code` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `tel-country-code` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `tel-extension` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `tel-local` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `tel-national` extends AutocompleteTypes
   
   @js.native
   sealed trait terminal extends js.Object
@@ -569,6 +768,9 @@ object ionicCoreStrings {
   sealed trait `text-before-edge` extends js.Object
   
   @js.native
+  sealed trait textarea extends js.Object
+  
+  @js.native
   sealed trait time extends TextFieldTypes
   
   @js.native
@@ -581,13 +783,36 @@ object ionicCoreStrings {
   sealed trait top extends js.Object
   
   @js.native
+  sealed trait `transaction-amount` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait `transaction-currency` extends AutocompleteTypes
+  
+  @js.native
+  sealed trait translate extends RefresherAnimationType
+  
+  @js.native
+  sealed trait `true` extends js.Object
+  
+  @js.native
   sealed trait unbounded extends js.Object
   
   @js.native
-  sealed trait url extends TextFieldTypes
+  sealed trait url
+    extends AutocompleteTypes
+       with TextFieldTypes
+  
+  @js.native
+  sealed trait username extends AutocompleteTypes
   
   @js.native
   sealed trait warning extends PredefinedColors
+  
+  @js.native
+  sealed trait week extends TextFieldTypes
+  
+  @js.native
+  sealed trait window extends ListenTargetOptions
   
   @js.native
   sealed trait x extends js.Object
@@ -615,6 +840,22 @@ object ionicCoreStrings {
   @scala.inline
   def actionSheetLeave: actionSheetLeave = "actionSheetLeave".asInstanceOf[actionSheetLeave]
   @scala.inline
+  def `additional-name`: `additional-name` = "additional-name".asInstanceOf[`additional-name`]
+  @scala.inline
+  def `address-level1`: `address-level1` = "address-level1".asInstanceOf[`address-level1`]
+  @scala.inline
+  def `address-level2`: `address-level2` = "address-level2".asInstanceOf[`address-level2`]
+  @scala.inline
+  def `address-level3`: `address-level3` = "address-level3".asInstanceOf[`address-level3`]
+  @scala.inline
+  def `address-level4`: `address-level4` = "address-level4".asInstanceOf[`address-level4`]
+  @scala.inline
+  def `address-line1`: `address-line1` = "address-line1".asInstanceOf[`address-line1`]
+  @scala.inline
+  def `address-line2`: `address-line2` = "address-line2".asInstanceOf[`address-line2`]
+  @scala.inline
+  def `address-line3`: `address-line3` = "address-line3".asInstanceOf[`address-line3`]
+  @scala.inline
   def `after-edge`: `after-edge` = "after-edge".asInstanceOf[`after-edge`]
   @scala.inline
   def alert: alert = "alert".asInstanceOf[alert]
@@ -629,6 +870,8 @@ object ionicCoreStrings {
   @scala.inline
   def `alternate-reverse`: `alternate-reverse` = "alternate-reverse".asInstanceOf[`alternate-reverse`]
   @scala.inline
+  def always: always = "always".asInstanceOf[always]
+  @scala.inline
   def android: android = "android".asInstanceOf[android]
   @scala.inline
   def animated: animated = "animated".asInstanceOf[animated]
@@ -639,6 +882,8 @@ object ionicCoreStrings {
   @scala.inline
   def back: back = "back".asInstanceOf[back]
   @scala.inline
+  def backButtonDefaultHref: backButtonDefaultHref = "backButtonDefaultHref".asInstanceOf[backButtonDefaultHref]
+  @scala.inline
   def backButtonIcon: backButtonIcon = "backButtonIcon".asInstanceOf[backButtonIcon]
   @scala.inline
   def backButtonText: backButtonText = "backButtonText".asInstanceOf[backButtonText]
@@ -647,11 +892,21 @@ object ionicCoreStrings {
   @scala.inline
   def baseline: baseline = "baseline".asInstanceOf[baseline]
   @scala.inline
+  def bday: bday = "bday".asInstanceOf[bday]
+  @scala.inline
+  def `bday-day`: `bday-day` = "bday-day".asInstanceOf[`bday-day`]
+  @scala.inline
+  def `bday-month`: `bday-month` = "bday-month".asInstanceOf[`bday-month`]
+  @scala.inline
+  def `bday-year`: `bday-year` = "bday-year".asInstanceOf[`bday-year`]
+  @scala.inline
   def `before-edge`: `before-edge` = "before-edge".asInstanceOf[`before-edge`]
   @scala.inline
   def bevel: bevel = "bevel".asInstanceOf[bevel]
   @scala.inline
   def block: block = "block".asInstanceOf[block]
+  @scala.inline
+  def body: body = "body".asInstanceOf[body]
   @scala.inline
   def both: both = "both".asInstanceOf[both]
   @scala.inline
@@ -669,6 +924,26 @@ object ionicCoreStrings {
   @scala.inline
   def capacitor: capacitor = "capacitor".asInstanceOf[capacitor]
   @scala.inline
+  def `cc-additional-name`: `cc-additional-name` = "cc-additional-name".asInstanceOf[`cc-additional-name`]
+  @scala.inline
+  def `cc-csc`: `cc-csc` = "cc-csc".asInstanceOf[`cc-csc`]
+  @scala.inline
+  def `cc-exp`: `cc-exp` = "cc-exp".asInstanceOf[`cc-exp`]
+  @scala.inline
+  def `cc-exp-month`: `cc-exp-month` = "cc-exp-month".asInstanceOf[`cc-exp-month`]
+  @scala.inline
+  def `cc-exp-year`: `cc-exp-year` = "cc-exp-year".asInstanceOf[`cc-exp-year`]
+  @scala.inline
+  def `cc-family-name`: `cc-family-name` = "cc-family-name".asInstanceOf[`cc-family-name`]
+  @scala.inline
+  def `cc-given-name`: `cc-given-name` = "cc-given-name".asInstanceOf[`cc-given-name`]
+  @scala.inline
+  def `cc-name`: `cc-name` = "cc-name".asInstanceOf[`cc-name`]
+  @scala.inline
+  def `cc-number`: `cc-number` = "cc-number".asInstanceOf[`cc-number`]
+  @scala.inline
+  def `cc-type`: `cc-type` = "cc-type".asInstanceOf[`cc-type`]
+  @scala.inline
   def center: center = "center".asInstanceOf[center]
   @scala.inline
   def central: central = "central".asInstanceOf[central]
@@ -685,13 +960,21 @@ object ionicCoreStrings {
   @scala.inline
   def cordova: cordova = "cordova".asInstanceOf[cordova]
   @scala.inline
+  def country: country = "country".asInstanceOf[country]
+  @scala.inline
+  def `country-name`: `country-name` = "country-name".asInstanceOf[`country-name`]
+  @scala.inline
   def crescent: crescent = "crescent".asInstanceOf[crescent]
+  @scala.inline
+  def `current-password`: `current-password` = "current-password".asInstanceOf[`current-password`]
   @scala.inline
   def danger: danger = "danger".asInstanceOf[danger]
   @scala.inline
   def dark: dark = "dark".asInstanceOf[dark]
   @scala.inline
   def date: date = "date".asInstanceOf[date]
+  @scala.inline
+  def `datetime-local`: `datetime-local` = "datetime-local".asInstanceOf[`datetime-local`]
   @scala.inline
   def decimal: decimal = "decimal".asInstanceOf[decimal]
   @scala.inline
@@ -703,6 +986,10 @@ object ionicCoreStrings {
   @scala.inline
   def determinate: determinate = "determinate".asInstanceOf[determinate]
   @scala.inline
+  def document: document = "document".asInstanceOf[document]
+  @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  @scala.inline
   def dots: dots = "dots".asInstanceOf[dots]
   @scala.inline
   def eager: eager = "eager".asInstanceOf[eager]
@@ -713,15 +1000,23 @@ object ionicCoreStrings {
   @scala.inline
   def end: end = "end".asInstanceOf[end]
   @scala.inline
+  def enter: enter = "enter".asInstanceOf[enter]
+  @scala.inline
   def error: error = "error".asInstanceOf[error]
   @scala.inline
   def evenodd: evenodd = "evenodd".asInstanceOf[evenodd]
   @scala.inline
   def experimentalTransitionShadow: experimentalTransitionShadow = "experimentalTransitionShadow".asInstanceOf[experimentalTransitionShadow]
   @scala.inline
+  def `false`: `false` = "false".asInstanceOf[`false`]
+  @scala.inline
+  def `family-name`: `family-name` = "family-name".asInstanceOf[`family-name`]
+  @scala.inline
   def fixed: fixed = "fixed".asInstanceOf[fixed]
   @scala.inline
   def floating: floating = "floating".asInstanceOf[floating]
+  @scala.inline
+  def focus: focus = "focus".asInstanceOf[focus]
   @scala.inline
   def footer: footer = "footer".asInstanceOf[footer]
   @scala.inline
@@ -730,6 +1025,10 @@ object ionicCoreStrings {
   def forwards: forwards = "forwards".asInstanceOf[forwards]
   @scala.inline
   def full: full = "full".asInstanceOf[full]
+  @scala.inline
+  def `given-name`: `given-name` = "given-name".asInstanceOf[`given-name`]
+  @scala.inline
+  def go: go = "go".asInstanceOf[go]
   @scala.inline
   def hanging: hanging = "hanging".asInstanceOf[hanging]
   @scala.inline
@@ -745,6 +1044,10 @@ object ionicCoreStrings {
   @scala.inline
   def high: high = "high".asInstanceOf[high]
   @scala.inline
+  def `honorific-prefix`: `honorific-prefix` = "honorific-prefix".asInstanceOf[`honorific-prefix`]
+  @scala.inline
+  def `honorific-suffix`: `honorific-suffix` = "honorific-suffix".asInstanceOf[`honorific-suffix`]
+  @scala.inline
   def hybrid: hybrid = "hybrid".asInstanceOf[hybrid]
   @scala.inline
   def `icon-bottom`: `icon-bottom` = "icon-bottom".asInstanceOf[`icon-bottom`]
@@ -758,6 +1061,8 @@ object ionicCoreStrings {
   def `icon-top`: `icon-top` = "icon-top".asInstanceOf[`icon-top`]
   @scala.inline
   def ideographic: ideographic = "ideographic".asInstanceOf[ideographic]
+  @scala.inline
+  def impp: impp = "impp".asInstanceOf[impp]
   @scala.inline
   def indeterminate: indeterminate = "indeterminate".asInstanceOf[indeterminate]
   @scala.inline
@@ -787,13 +1092,15 @@ object ionicCoreStrings {
   @scala.inline
   def `label-hide`: `label-hide` = "label-hide".asInstanceOf[`label-hide`]
   @scala.inline
+  def language: language = "language".asInstanceOf[language]
+  @scala.inline
   def large: large = "large".asInstanceOf[large]
   @scala.inline
   def `lazy`: `lazy` = "lazy".asInstanceOf[`lazy`]
   @scala.inline
   def light: light = "light".asInstanceOf[light]
   @scala.inline
-  def linearRGB: linearRGB = "linearRGB".asInstanceOf[linearRGB]
+  def `linear-rGB`: `linear-rGB` = "linear-rGB".asInstanceOf[`linear-rGB`]
   @scala.inline
   def lines: lines = "lines".asInstanceOf[lines]
   @scala.inline
@@ -833,7 +1140,19 @@ object ionicCoreStrings {
   @scala.inline
   def mode: mode = "mode".asInstanceOf[mode]
   @scala.inline
+  def month: month = "month".asInstanceOf[month]
+  @scala.inline
+  def name: name = "name".asInstanceOf[name]
+  @scala.inline
   def navAnimation: navAnimation = "navAnimation".asInstanceOf[navAnimation]
+  @scala.inline
+  def never: never = "never".asInstanceOf[never]
+  @scala.inline
+  def `new-password`: `new-password` = "new-password".asInstanceOf[`new-password`]
+  @scala.inline
+  def next: next = "next".asInstanceOf[next]
+  @scala.inline
+  def nickname: nickname = "nickname".asInstanceOf[nickname]
   @scala.inline
   def no: no = "no".asInstanceOf[no]
   @scala.inline
@@ -851,13 +1170,23 @@ object ionicCoreStrings {
   @scala.inline
   def on: on = "on".asInstanceOf[on]
   @scala.inline
+  def `one-time-code`: `one-time-code` = "one-time-code".asInstanceOf[`one-time-code`]
+  @scala.inline
+  def organization: organization = "organization".asInstanceOf[organization]
+  @scala.inline
+  def `organization-title`: `organization-title` = "organization-title".asInstanceOf[`organization-title`]
+  @scala.inline
   def outline: outline = "outline".asInstanceOf[outline]
+  @scala.inline
+  def parent: parent = "parent".asInstanceOf[parent]
   @scala.inline
   def password: password = "password".asInstanceOf[password]
   @scala.inline
   def persistConfig: persistConfig = "persistConfig".asInstanceOf[persistConfig]
   @scala.inline
   def phablet: phablet = "phablet".asInstanceOf[phablet]
+  @scala.inline
+  def photo: photo = "photo".asInstanceOf[photo]
   @scala.inline
   def pickerEnter: pickerEnter = "pickerEnter".asInstanceOf[pickerEnter]
   @scala.inline
@@ -868,6 +1197,10 @@ object ionicCoreStrings {
   def popoverEnter: popoverEnter = "popoverEnter".asInstanceOf[popoverEnter]
   @scala.inline
   def popoverLeave: popoverLeave = "popoverLeave".asInstanceOf[popoverLeave]
+  @scala.inline
+  def `postal-code`: `postal-code` = "postal-code".asInstanceOf[`postal-code`]
+  @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
   @scala.inline
   def primary: primary = "primary".asInstanceOf[primary]
   @scala.inline
@@ -891,7 +1224,11 @@ object ionicCoreStrings {
   @scala.inline
   def round: round = "round".asInstanceOf[round]
   @scala.inline
-  def sRGB: sRGB = "sRGB".asInstanceOf[sRGB]
+  def `s-rGB`: `s-rGB` = "s-rGB".asInstanceOf[`s-rGB`]
+  @scala.inline
+  def sanitizerEnabled: sanitizerEnabled = "sanitizerEnabled".asInstanceOf[sanitizerEnabled]
+  @scala.inline
+  def scale: scale = "scale".asInstanceOf[scale]
   @scala.inline
   def scrollAssist: scrollAssist = "scrollAssist".asInstanceOf[scrollAssist]
   @scala.inline
@@ -902,6 +1239,10 @@ object ionicCoreStrings {
   def secondary: secondary = "secondary".asInstanceOf[secondary]
   @scala.inline
   def selected: selected = "selected".asInstanceOf[selected]
+  @scala.inline
+  def send: send = "send".asInstanceOf[send]
+  @scala.inline
+  def sex: sex = "sex".asInstanceOf[sex]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline
@@ -919,6 +1260,8 @@ object ionicCoreStrings {
   @scala.inline
   def statusTap: statusTap = "statusTap".asInstanceOf[statusTap]
   @scala.inline
+  def `street-address`: `street-address` = "street-address".asInstanceOf[`street-address`]
+  @scala.inline
   def submit: submit = "submit".asInstanceOf[submit]
   @scala.inline
   def success: success = "success".asInstanceOf[success]
@@ -935,6 +1278,16 @@ object ionicCoreStrings {
   @scala.inline
   def tel: tel = "tel".asInstanceOf[tel]
   @scala.inline
+  def `tel-area-code`: `tel-area-code` = "tel-area-code".asInstanceOf[`tel-area-code`]
+  @scala.inline
+  def `tel-country-code`: `tel-country-code` = "tel-country-code".asInstanceOf[`tel-country-code`]
+  @scala.inline
+  def `tel-extension`: `tel-extension` = "tel-extension".asInstanceOf[`tel-extension`]
+  @scala.inline
+  def `tel-local`: `tel-local` = "tel-local".asInstanceOf[`tel-local`]
+  @scala.inline
+  def `tel-national`: `tel-national` = "tel-national".asInstanceOf[`tel-national`]
+  @scala.inline
   def terminal: terminal = "terminal".asInstanceOf[terminal]
   @scala.inline
   def tertiary: tertiary = "tertiary".asInstanceOf[tertiary]
@@ -945,6 +1298,8 @@ object ionicCoreStrings {
   @scala.inline
   def `text-before-edge`: `text-before-edge` = "text-before-edge".asInstanceOf[`text-before-edge`]
   @scala.inline
+  def textarea: textarea = "textarea".asInstanceOf[textarea]
+  @scala.inline
   def time: time = "time".asInstanceOf[time]
   @scala.inline
   def toastEnter: toastEnter = "toastEnter".asInstanceOf[toastEnter]
@@ -953,11 +1308,25 @@ object ionicCoreStrings {
   @scala.inline
   def top: top = "top".asInstanceOf[top]
   @scala.inline
+  def `transaction-amount`: `transaction-amount` = "transaction-amount".asInstanceOf[`transaction-amount`]
+  @scala.inline
+  def `transaction-currency`: `transaction-currency` = "transaction-currency".asInstanceOf[`transaction-currency`]
+  @scala.inline
+  def translate: translate = "translate".asInstanceOf[translate]
+  @scala.inline
+  def `true`: `true` = "true".asInstanceOf[`true`]
+  @scala.inline
   def unbounded: unbounded = "unbounded".asInstanceOf[unbounded]
   @scala.inline
   def url: url = "url".asInstanceOf[url]
   @scala.inline
+  def username: username = "username".asInstanceOf[username]
+  @scala.inline
   def warning: warning = "warning".asInstanceOf[warning]
+  @scala.inline
+  def week: week = "week".asInstanceOf[week]
+  @scala.inline
+  def window: window = "window".asInstanceOf[window]
   @scala.inline
   def x: x = "x".asInstanceOf[x]
   @scala.inline

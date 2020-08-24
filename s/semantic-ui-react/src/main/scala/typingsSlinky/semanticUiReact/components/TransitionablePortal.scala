@@ -5,7 +5,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.portalPortalMod.PortalProps
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionEventData
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionProps
-import typingsSlinky.semanticUiReact.transitionablePortalMod.default
 import typingsSlinky.semanticUiReact.transitionablePortalTransitionablePortalMod.TransitionablePortalProps
 import typingsSlinky.semanticUiReact.transitionablePortalTransitionablePortalMod.TransitionablePortalState
 import scala.scalajs.js
@@ -13,14 +12,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TransitionablePortal {
-  @JSImport("semantic-ui-react/dist/commonjs/addons/TransitionablePortal", JSImport.Default)
+  @JSImport("semantic-ui-react", "TransitionablePortal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.TransitionablePortal] {
     @scala.inline
     def onClose(value: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
     @scala.inline

@@ -20,6 +20,8 @@ object NestedForm {
     @scala.inline
     def errorBefore(value: Boolean): this.type = set("errorBefore", value.asInstanceOf[js.Any])
     @scala.inline
+    def fieldVarargs(value: (js.Array[ReactText] | ReactText | String)*): this.type = set("field", js.Array(value :_*))
+    @scala.inline
     def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
     @scala.inline
     def isForm(value: Boolean): this.type = set("isForm", value.asInstanceOf[js.Any])

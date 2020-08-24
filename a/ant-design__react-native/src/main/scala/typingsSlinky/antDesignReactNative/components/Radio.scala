@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.anon.Target
-import typingsSlinky.antDesignReactNative.radioMod.default
 import typingsSlinky.antDesignReactNative.radioRadioMod.RadioNativeProps
 import typingsSlinky.antDesignReactNative.radioStyleMod.RadioStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -14,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Radio {
-  @JSImport("@ant-design/react-native/lib/radio", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Radio")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Radio] {
     @scala.inline
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     @scala.inline

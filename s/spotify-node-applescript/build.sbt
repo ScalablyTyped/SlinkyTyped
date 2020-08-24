@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "spotify-node-applescript"
-version := "1.1-dt-20191023Z-f5c919"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20191023Z-6f336d"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

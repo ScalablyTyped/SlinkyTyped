@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "node-xmpp-client"
-version := "3.1-dt-20200515Z-cd71b4"
-scalaVersion := "2.13.2"
+version := "3.1-dt-20200522Z-ba6192"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

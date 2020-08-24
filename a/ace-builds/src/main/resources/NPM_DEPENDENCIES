@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "ace-builds" : "1.4.12"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "ace-builds" : "1.4.12"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

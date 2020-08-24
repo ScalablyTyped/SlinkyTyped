@@ -13,6 +13,10 @@ object PickerItem {
   object component extends js.Object
   
   def withProps(p: PickerItemProps): Default[tag.type, typingsSlinky.protonNative.mod.PickerItem] = new Default[tag.type, typingsSlinky.protonNative.mod.PickerItem](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PickerItem.type): Default[tag.type, typingsSlinky.protonNative.mod.PickerItem] = new Default[tag.type, typingsSlinky.protonNative.mod.PickerItem](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: String): Default[tag.type, typingsSlinky.protonNative.mod.PickerItem] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.protonNative.mod.PickerItem](js.Array(this.component, __props.asInstanceOf[PickerItemProps]))
+  }
 }
 

@@ -7,10 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("DataMask011")
 @js.native
 class DataMask011 ()
-  extends typingsSlinky.jsqrcode.DataMask011 {
-  /* CompleteClass */
-  override def isMasked(i: Double, j: Double): Boolean = js.native
-  /* CompleteClass */
-  override def unmaskBitMatrix(bits: js.Array[Double], dimension: Double): Unit = js.native
-}
+  extends typingsSlinky.jsqrcode.DataMask011
 

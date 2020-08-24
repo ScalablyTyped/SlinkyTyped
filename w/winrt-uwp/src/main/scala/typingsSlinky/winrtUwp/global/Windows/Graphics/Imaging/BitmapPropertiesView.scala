@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Graphics.Imaging
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Imaging.BitmapPropertiesView")
 @js.native
 abstract class BitmapPropertiesView ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Imaging.BitmapPropertiesView {
-  /**
-    * Asynchronously retrieves one or more bitmap properties.
-    * @param propertiesToRetrieve A collection of strings representing the property keys or queries that are being requested. Valid strings include Windows properties and Windows Imaging Component metadata queries.
-    * @return Object that manages the asynchronous retrieval of the bitmap properties.
-    */
-  /* CompleteClass */
-  override def getPropertiesAsync(propertiesToRetrieve: IIterable[String]): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Graphics.Imaging.BitmapPropertySet] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Imaging.BitmapPropertiesView
 

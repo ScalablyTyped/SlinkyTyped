@@ -1,9 +1,11 @@
 package typingsSlinky.reactVirtualized.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCacheInterface
+import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerChildProps
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerProps
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.MeasuredCellParent
 import scala.scalajs.js
@@ -19,6 +21,12 @@ object CellMeasurer {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.CellMeasurer] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* props */ CellMeasurerChildProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: (js.Function1[/* props */ CellMeasurerChildProps, ReactElement]) | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def columnIndex(value: Double): this.type = set("columnIndex", value.asInstanceOf[js.Any])
     @scala.inline

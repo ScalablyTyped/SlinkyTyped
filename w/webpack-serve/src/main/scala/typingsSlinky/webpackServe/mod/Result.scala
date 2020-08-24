@@ -1,7 +1,6 @@
 package typingsSlinky.webpackServe.mod
 
 import typingsSlinky.webpackServe.anon.Compiler
-import typingsSlinky.webpackServe.anon.CompilerStats
 import typingsSlinky.webpackServe.anon.Stats
 import typingsSlinky.webpackServe.webpackServeStrings.`build-finished`
 import typingsSlinky.webpackServe.webpackServeStrings.`build-started`
@@ -24,9 +23,9 @@ trait Result extends js.Object {
   @JSName("on")
   def on_buildstarted(`type`: `build-started`, callback: js.Function1[/* args */ Compiler, Unit]): Unit = js.native
   @JSName("on")
-  def on_compilererror(`type`: `compiler-error`, callback: js.Function1[/* args */ CompilerStats, Unit]): Unit = js.native
+  def on_compilererror(`type`: `compiler-error`, callback: js.Function1[/* args */ Stats, Unit]): Unit = js.native
   @JSName("on")
-  def on_compilerwarning(`type`: `compiler-warning`, callback: js.Function1[/* args */ CompilerStats, Unit]): Unit = js.native
+  def on_compilerwarning(`type`: `compiler-warning`, callback: js.Function1[/* args */ Stats, Unit]): Unit = js.native
   @JSName("on")
   def on_listening(
     `type`: listening,

@@ -800,6 +800,8 @@ object ZoomableGroup {
     @scala.inline
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
     @scala.inline
+    def translateExtent(value: js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]): this.type = set("translateExtent", value.asInstanceOf[js.Any])
+    @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def u1(value: Double | String): this.type = set("u1", value.asInstanceOf[js.Any])

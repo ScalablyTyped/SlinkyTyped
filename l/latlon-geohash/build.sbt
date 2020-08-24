@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "latlon-geohash"
-version := "2.0-dt-20200515Z-e0ea34"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20200515Z-ab35be"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

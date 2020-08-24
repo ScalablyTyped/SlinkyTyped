@@ -26,6 +26,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.javascriptactionsMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.jsonstructuresMod.StructureVersionInfo because Inheritance from two classes. Inlined 
+- typingsSlinky.mendixmodelsdk.kafkaMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.mappingsMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.menusMod.StructureVersionInfo because Inheritance from two classes. Inlined 
 - typingsSlinky.mendixmodelsdk.messagedefinitionsMod.StructureVersionInfo because Inheritance from two classes. Inlined 

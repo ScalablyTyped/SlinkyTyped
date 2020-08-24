@@ -1,39 +1,60 @@
 package typingsSlinky.wouter.anon
 
-import slinky.core.TagMod
-import typingsSlinky.wouter.mod.DefaultParams
-import typingsSlinky.wouter.mod.LocationHook
-import typingsSlinky.wouter.mod.LocationHookOptions
-import typingsSlinky.wouter.mod.LocationTuple
-import typingsSlinky.wouter.mod.Match
-import typingsSlinky.wouter.mod.MatcherFn
-import typingsSlinky.wouter.mod.Path
+import slinky.core.facade.ReactElement
+import typingsSlinky.wouter.matcherMod.DefaultParams
+import typingsSlinky.wouter.matcherMod.Match
+import typingsSlinky.wouter.matcherMod.MatcherFn
+import typingsSlinky.wouter.wouterUseLocationMod.BaseLocationHook
+import typingsSlinky.wouter.wouterUseLocationMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<wouter.wouter.RouterProps> & {  children  :react.react.ReactNode} */
+/* Inlined std.Partial<wouter.wouter.RouterProps> & {  children :react.react.ReactNode} */
+@js.native
 trait PartialRouterPropschildre extends js.Object {
-  var base: js.UndefOr[Path] = js.undefined
-  var children: TagMod[Any]
-  var hook: js.UndefOr[LocationHook] = js.undefined
-  var matcher: js.UndefOr[MatcherFn] = js.undefined
+  var base: js.UndefOr[Path] = js.native
+  var children: ReactElement = js.native
+  var hook: js.UndefOr[BaseLocationHook] = js.native
+  var matcher: js.UndefOr[MatcherFn] = js.native
 }
 
 object PartialRouterPropschildre {
   @scala.inline
-  def apply(
-    base: Path = null,
-    children: TagMod[Any] = null,
-    hook: /* options */ js.UndefOr[LocationHookOptions] => LocationTuple = null,
-    matcher: (/* pattern */ Path, /* path */ Path) => Match[DefaultParams] = null
-  ): PartialRouterPropschildre = {
+  def apply(): PartialRouterPropschildre = {
     val __obj = js.Dynamic.literal()
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (hook != null) __obj.updateDynamic("hook")(js.Any.fromFunction1(hook))
-    if (matcher != null) __obj.updateDynamic("matcher")(js.Any.fromFunction2(matcher))
     __obj.asInstanceOf[PartialRouterPropschildre]
   }
+  @scala.inline
+  implicit class PartialRouterPropschildreOps[Self <: PartialRouterPropschildre] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBase(value: Path): Self = this.set("base", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBase: Self = this.set("base", js.undefined)
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setHook(
+      value: /* repeated */ js.Any => js.Tuple2[Path, js.Function2[/* path */ Path, /* repeated */ js.Any, js.Any]]
+    ): Self = this.set("hook", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteHook: Self = this.set("hook", js.undefined)
+    @scala.inline
+    def setMatcher(value: (/* pattern */ Path, /* path */ Path) => Match[DefaultParams]): Self = this.set("matcher", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteMatcher: Self = this.set("matcher", js.undefined)
+  }
+  
 }
 

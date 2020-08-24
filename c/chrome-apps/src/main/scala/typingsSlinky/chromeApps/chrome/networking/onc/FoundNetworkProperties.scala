@@ -31,47 +31,24 @@ object FoundNetworkProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNetworkId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNetworkId(value: String): Self = this.set("NetworkId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTechnology(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Technology")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStatus(value: String): Self = this.set("Status", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLongName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LongName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTechnology(value: String): Self = this.set("Technology", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLongName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LongName")(js.undefined)
-        ret
-    }
+    def setLongName(value: String): Self = this.set("LongName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withShortName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLongName: Self = this.set("LongName", js.undefined)
     @scala.inline
-    def withoutShortName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortName")(js.undefined)
-        ret
-    }
+    def setShortName(value: String): Self = this.set("ShortName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShortName: Self = this.set("ShortName", js.undefined)
   }
   
 }

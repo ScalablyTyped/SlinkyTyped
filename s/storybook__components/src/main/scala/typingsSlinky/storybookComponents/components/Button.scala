@@ -2,7 +2,6 @@ package typingsSlinky.storybookComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.storybookComponents.buttonButtonMod.ButtonProps
 import scala.scalajs.js
@@ -17,7 +16,7 @@ object Button {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def containsIcon(value: Boolean): this.type = set("containsIcon", value.asInstanceOf[js.Any])
     @scala.inline

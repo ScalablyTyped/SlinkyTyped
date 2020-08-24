@@ -139,7 +139,11 @@ object PolarGrid {
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
+    def polarAnglesVarargs(value: Double*): this.type = set("polarAngles", js.Array(value :_*))
+    @scala.inline
     def polarAngles(value: js.Array[Double]): this.type = set("polarAngles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def polarRadiusVarargs(value: Double*): this.type = set("polarRadius", js.Array(value :_*))
     @scala.inline
     def polarRadius(value: js.Array[Double]): this.type = set("polarRadius", value.asInstanceOf[js.Any])
     @scala.inline

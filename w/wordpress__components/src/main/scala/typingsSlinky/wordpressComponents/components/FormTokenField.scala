@@ -6,7 +6,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.formTokenFieldMod.FormTokenField.Props
 import typingsSlinky.wordpressComponents.formTokenFieldMod.FormTokenField.Value
-import typingsSlinky.wordpressComponents.mod.FormTokenField.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ object FormTokenField {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,9 +38,13 @@ object FormTokenField {
     @scala.inline
     def saveTransform(value: /* token */ String => String): this.type = set("saveTransform", js.Any.fromFunction1(value))
     @scala.inline
+    def suggestionsVarargs(value: String*): this.type = set("suggestions", js.Array(value :_*))
+    @scala.inline
     def suggestions(value: js.Array[String]): this.type = set("suggestions", value.asInstanceOf[js.Any])
     @scala.inline
     def tokenizeOnSpace(value: Boolean): this.type = set("tokenizeOnSpace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: Value*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[Value]): this.type = set("value", value.asInstanceOf[js.Any])
   }

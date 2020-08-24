@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 class ShadowLink ()
   extends typingsSlinky.jointjs.mod.dia.Link {
   def this(attributes: GenericAttributes[ShadowLinkSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: Options) = this()
   def this(attributes: GenericAttributes[ShadowLinkSelectors], opt: Options) = this()
 }
 

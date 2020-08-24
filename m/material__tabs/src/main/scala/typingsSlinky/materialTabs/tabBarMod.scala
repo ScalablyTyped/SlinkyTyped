@@ -1,8 +1,8 @@
 package typingsSlinky.materialTabs
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.materialBase.componentMod.default
 import typingsSlinky.materialTabs.tabBarAdapterMod.MDCTabBarAdapter
-import typingsSlinky.materialTabs.tabBarFoundationMod.default
 import typingsSlinky.materialTabs.tabMod.MDCTab
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,8 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object tabBarMod extends js.Object {
   @js.native
-  class MDCTabBar ()
-    extends typingsSlinky.materialBase.componentMod.default[MDCTabBarAdapter, default] {
+  class MDCTabBar () extends default[MDCTabBarAdapter] {
     var activeTab: MDCTab = js.native
     var activeTabIndex: Double = js.native
     val tabs: js.Array[MDCTab] = js.native
@@ -23,7 +22,8 @@ object tabBarMod extends js.Object {
   }
   
   @js.native
-  class MDCTabBarFoundation () extends default
+  class MDCTabBarFoundation ()
+    extends typingsSlinky.materialTabs.tabBarFoundationMod.default
   
   /* static members */
   @js.native

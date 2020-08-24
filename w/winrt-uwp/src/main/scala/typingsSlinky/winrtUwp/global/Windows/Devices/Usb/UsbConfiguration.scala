@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices.Usb
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,15 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Usb.UsbConfiguration")
 @js.native
 abstract class UsbConfiguration ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbConfiguration {
-  /** Gets the object that contains the first 9 bytes of the descriptor associated with the USB configuration. */
-  /* CompleteClass */
-  override var configurationDescriptor: typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbConfigurationDescriptor = js.native
-  /** Gets an array of objects that represent the full set of descriptors associated with a USB configuration. */
-  /* CompleteClass */
-  override var descriptors: IVectorView[typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbDescriptor] = js.native
-  /** Gets an array of USB interfaces available in the USB configuration. */
-  /* CompleteClass */
-  override var usbInterfaces: IVectorView[typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbInterface] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Usb.UsbConfiguration
 

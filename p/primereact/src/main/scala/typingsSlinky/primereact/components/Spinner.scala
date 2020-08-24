@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.`0`
+import typingsSlinky.primereact.anon.OriginalEventTargetValue
 import typingsSlinky.primereact.spinnerMod.SpinnerProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -48,7 +48,7 @@ object Spinner {
     @scala.inline
     def onBlur(value: /* e */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ `0` => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ OriginalEventTargetValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
     @scala.inline

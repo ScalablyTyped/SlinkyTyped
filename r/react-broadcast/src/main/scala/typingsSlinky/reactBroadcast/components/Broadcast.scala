@@ -16,7 +16,7 @@ object Broadcast {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Broadcast_[js.Any]] {
+       with StBuildingComponent[tag.type, Broadcast_[T]] {
     @scala.inline
     def compareValues(value: (T, T) => Boolean): this.type = set("compareValues", js.Any.fromFunction2(value))
   }

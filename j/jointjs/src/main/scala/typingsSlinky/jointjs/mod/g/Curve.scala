@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jointjs", "g.Curve")
 @js.native
-class Curve protected () extends PathObjectUnit {
+class Curve protected () extends _PathObjectUnit {
   def this(curve: Curve) = this()
   def this(p1: String, p2: String, p3: String, p4: String) = this()
   def this(p1: String, p2: String, p3: String, p4: PlainPoint) = this()
@@ -80,6 +80,7 @@ class Curve protected () extends PathObjectUnit {
   def toPolyline(): Polyline = js.native
   def toPolyline(opt: SubdivisionsOpt): Polyline = js.native
   def translate(): this.type = js.native
+  def translate(tx: js.UndefOr[scala.Nothing], ty: Double): this.type = js.native
   def translate(tx: Double): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: PlainPoint): this.type = js.native

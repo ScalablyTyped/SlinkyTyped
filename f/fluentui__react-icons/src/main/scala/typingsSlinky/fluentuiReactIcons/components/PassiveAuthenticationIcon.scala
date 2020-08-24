@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PassiveAuthenticationIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PassiveAuthenticationIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PassiveAuthenticationIcon")
   @js.native
   object component extends js.Object
   

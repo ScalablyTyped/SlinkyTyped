@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("tableau.TableauException")
 @js.native
 class TableauException ()
-  extends typingsSlinky.tableau.tableau.TableauException {
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override var tableauSoftwareErrorCode: typingsSlinky.tableau.tableau.ErrorCode = js.native
-}
+  extends typingsSlinky.tableau.tableau.TableauException
 

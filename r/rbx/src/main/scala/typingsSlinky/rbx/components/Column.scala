@@ -1,6 +1,5 @@
 package typingsSlinky.rbx.components
 
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.anon.Desktop
@@ -64,18 +63,18 @@ typingsSlinky.react.mod.ComponentProps[TAsComponent],
 typingsSlinky.std.Exclude[
   / * keyof react.react.ComponentProps<TAsComponent> * / java.lang.String, 
   typingsSlinky.rbx.rbxStrings.hidden | typingsSlinky.rbx.rbxStrings.overlay | typingsSlinky.rbx.rbxStrings.size | typingsSlinky.rbx.rbxStrings.italic | typingsSlinky.rbx.rbxStrings.relative | typingsSlinky.rbx.rbxStrings.tooltip | typingsSlinky.rbx.rbxStrings.touch | typingsSlinky.rbx.rbxStrings.as | typingsSlinky.rbx.rbxStrings.mobile | typingsSlinky.rbx.rbxStrings.tablet | typingsSlinky.rbx.rbxStrings.desktop | typingsSlinky.rbx.rbxStrings.widescreen | typingsSlinky.rbx.rbxStrings.fullhd | typingsSlinky.rbx.rbxStrings.className | typingsSlinky.rbx.rbxStrings.badge | typingsSlinky.rbx.rbxStrings.badgeColor | typingsSlinky.rbx.rbxStrings.badgeOutlined | typingsSlinky.rbx.rbxStrings.badgeRounded | typingsSlinky.rbx.rbxStrings.badgeSize | typingsSlinky.rbx.rbxStrings.clearfix | typingsSlinky.rbx.rbxStrings.pull | typingsSlinky.rbx.rbxStrings.marginless | typingsSlinky.rbx.rbxStrings.paddingless | typingsSlinky.rbx.rbxStrings.radiusless | typingsSlinky.rbx.rbxStrings.shadowless | typingsSlinky.rbx.rbxStrings.unselectable | typingsSlinky.rbx.rbxStrings.clipped | typingsSlinky.rbx.rbxStrings.responsive | typingsSlinky.rbx.rbxStrings.textAlign | typingsSlinky.rbx.rbxStrings.textSize | typingsSlinky.rbx.rbxStrings.tooltipActive | typingsSlinky.rbx.rbxStrings.tooltipColor | typingsSlinky.rbx.rbxStrings.tooltipMultiline | typingsSlinky.rbx.rbxStrings.tooltipPosition | typingsSlinky.rbx.rbxStrings.tooltipResponsive | typingsSlinky.rbx.rbxStrings.backgroundColor | typingsSlinky.rbx.rbxStrings.textColor | typingsSlinky.rbx.rbxStrings.textTransform | typingsSlinky.rbx.rbxStrings.textWeight | typingsSlinky.rbx.rbxStrings.invisible | typingsSlinky.rbx.rbxStrings.srOnly | typingsSlinky.rbx.rbxStrings.narrow | typingsSlinky.rbx.rbxStrings.offset
-]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
+]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object Column {
   @JSImport("rbx", "Column")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[TAsComponent <: ReactElement] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object]
   
-  def apply[TAsComponent <: ReactElement](
+  def apply[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent](
     p: Desktop[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ColumnBreakpointOptions with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
@@ -84,6 +83,6 @@ object Column {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[TAsComponent <: ReactElement](companion: Column.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent](companion: Column.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
 }
 

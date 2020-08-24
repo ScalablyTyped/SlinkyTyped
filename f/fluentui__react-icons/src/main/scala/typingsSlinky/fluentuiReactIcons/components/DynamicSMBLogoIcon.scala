@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DynamicSMBLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DynamicSMBLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DynamicSMBLogoIcon")
   @js.native
   object component extends js.Object
   

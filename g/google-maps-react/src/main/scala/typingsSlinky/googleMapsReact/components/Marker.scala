@@ -48,11 +48,11 @@ object Marker {
     def mapCenter(value: LatLng | LatLngLiteral): this.type = set("mapCenter", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(
-      value: (/* props */ js.UndefOr[IMarkerProps], /* marker */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* props */ js.UndefOr[IMarkerProps], /* marker */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker], /* event */ js.Any) => js.Any
     ): this.type = set("onClick", js.Any.fromFunction3(value))
     @scala.inline
     def onMouseover(
-      value: (/* props */ js.UndefOr[IMarkerProps], /* marker */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker], /* event */ js.UndefOr[js.Any]) => js.Any
+      value: (/* props */ js.UndefOr[IMarkerProps], /* marker */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker], /* event */ js.Any) => js.Any
     ): this.type = set("onMouseover", js.Any.fromFunction3(value))
     @scala.inline
     def opacity(value: Double): this.type = set("opacity", value.asInstanceOf[js.Any])

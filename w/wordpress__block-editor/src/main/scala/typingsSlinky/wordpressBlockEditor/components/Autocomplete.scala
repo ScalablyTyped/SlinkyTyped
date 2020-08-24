@@ -1,16 +1,18 @@
 package typingsSlinky.wordpressBlockEditor.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete.Completer
 import typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete.Props
+import typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete.RenderProps
 import typingsSlinky.wordpressRichText.mod.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Autocomplete {
-  @JSImport("@wordpress/block-editor/components/autocomplete", JSImport.Default)
+  @JSImport("@wordpress/block-editor", "Autocomplete")
   @js.native
   object component extends js.Object
   
@@ -28,8 +30,8 @@ object Autocomplete {
   
   def withProps[T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](completers: js.Array[Completer[T]]): Builder[T] = {
-    val __props = js.Dynamic.literal(completers = completers.asInstanceOf[js.Any])
+  def apply[T](children: RenderProps => ReactElement | Null, completers: js.Array[Completer[T]]): Builder[T] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), completers = completers.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
   }
 }

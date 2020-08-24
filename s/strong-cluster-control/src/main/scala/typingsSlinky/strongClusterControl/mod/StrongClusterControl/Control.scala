@@ -1,6 +1,6 @@
 package typingsSlinky.strongClusterControl.mod.StrongClusterControl
 
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.strongClusterControl.strongClusterControlStrings.error
 import typingsSlinky.strongClusterControl.strongClusterControlStrings.resize
 import typingsSlinky.strongClusterControl.strongClusterControlStrings.restart
@@ -66,6 +66,7 @@ trait Control extends EventEmitter {
     */
   def start(): this.type = js.native
   def start(callback: js.Function0[_]): this.type = js.native
+  def start(options: js.UndefOr[scala.Nothing], callback: js.Function0[_]): this.type = js.native
   def start(options: StartOptions): this.type = js.native
   def start(options: StartOptions, callback: js.Function0[_]): this.type = js.native
   /**

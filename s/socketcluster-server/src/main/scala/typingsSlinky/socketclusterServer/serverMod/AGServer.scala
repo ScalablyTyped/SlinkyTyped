@@ -1,6 +1,7 @@
 package typingsSlinky.socketclusterServer.serverMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.agSimpleBroker.mod.SimpleExchange
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.jsonwebtoken.mod.Secret
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
@@ -46,13 +47,13 @@ trait AGServer
   var ackTimeout: Double = js.native
   var allowClientPublish: Boolean = js.native
   var auth: SCAuthEngine = js.native
-  var brokerEngine: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker */ js.Any = js.native
+  var brokerEngine: typingsSlinky.agSimpleBroker.mod.^ = js.native
   var clients: StringDictionary[typingsSlinky.socketclusterServer.serversocketMod.^] = js.native
   var clientsCount: Double = js.native
   var codec: CodecEngine = js.native
   var defaultSignatureOptions: Algorithm = js.native
   var defaultVerificationOptions: Algorithms = js.native
-  var exchange: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker.SimpleExchange */ js.Any = js.native
+  var exchange: SimpleExchange = js.native
   var handshakeTimeout: Double = js.native
   var httpServer: Server = js.native
   var isReady: Boolean = js.native

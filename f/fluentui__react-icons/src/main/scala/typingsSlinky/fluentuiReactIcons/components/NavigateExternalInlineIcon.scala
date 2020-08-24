@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NavigateExternalInlineIcon {
-  @JSImport("@fluentui/react-icons/lib/components/NavigateExternalInlineIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "NavigateExternalInlineIcon")
   @js.native
   object component extends js.Object
   

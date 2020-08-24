@@ -2,6 +2,7 @@ package typingsSlinky.jointjs.mod.dia
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.jointjs.anon.CellModel
 import typingsSlinky.jointjs.anon.SearchBy
 import typingsSlinky.jointjs.anon.Strict
@@ -17,8 +18,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("jointjs", "dia.Graph")
 @js.native
-class Graph_ () extends Model {
+class Graph_ ()
+  extends Model[js.Any, ModelSetOptions] {
   def this(attributes: js.Any) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: CellModel) = this()
   def this(attributes: js.Any, opt: CellModel) = this()
   def addCell(cell: js.Array[Cell]): this.type = js.native
   def addCell(cell: js.Array[Cell], opt: StringDictionary[js.Any]): this.type = js.native
@@ -112,6 +115,7 @@ class Graph_ () extends Model {
   def toGraphLib(opt: StringDictionary[js.Any]): js.Any = js.native
   def toJSON(): js.Any = js.native
   def translate(tx: Double): this.type = js.native
+  def translate(tx: Double, ty: js.UndefOr[scala.Nothing], opt: TranslateOptions): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: Double, ty: Double, opt: TranslateOptions): this.type = js.native
 }

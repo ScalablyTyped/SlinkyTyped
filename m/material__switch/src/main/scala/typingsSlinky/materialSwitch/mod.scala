@@ -2,8 +2,8 @@ package typingsSlinky.materialSwitch
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.materialSwitch.adapterMod.MDCSwitchAdapter
+import typingsSlinky.materialSwitch.anon.ARIACHECKEDATTR
 import typingsSlinky.materialSwitch.anon.CHECKED
-import typingsSlinky.materialSwitch.anon.NATIVECONTROLSELECTOR
 import typingsSlinky.materialSwitch.anon.PartialMDCSwitchAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,11 +32,11 @@ object mod extends js.Object {
   @js.native
   object MDCSwitchFoundation extends js.Object {
     /** The CSS classes used by the switch. */
-    val cssClasses: CHECKED = js.native
+    def cssClasses: CHECKED = js.native
     /** The default Adapter for the switch. */
-    val defaultAdapter: MDCSwitchAdapter = js.native
+    def defaultAdapter: MDCSwitchAdapter = js.native
     /** The string constants used by the switch. */
-    val strings: NATIVECONTROLSELECTOR = js.native
+    def strings: ARIACHECKEDATTR = js.native
   }
   
   /** CSS classes used by the switch. */
@@ -51,6 +51,8 @@ object mod extends js.Object {
   /** String constants used by the switch. */
   @js.native
   object strings extends js.Object {
+    /** Aria attribute for checked or unchecked state of switch */
+    var ARIA_CHECKED_ATTR: String = js.native
     /** A CSS selector used to locate the native HTML control for the switch.  */
     var NATIVE_CONTROL_SELECTOR: String = js.native
     /** A CSS selector used to locate the ripple surface element for the switch. */

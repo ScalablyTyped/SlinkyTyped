@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FrontCameraIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FrontCameraIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FrontCameraIcon")
   @js.native
   object component extends js.Object
   

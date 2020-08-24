@@ -27,7 +27,7 @@ object mod extends js.Object {
   def attrsEqual(a: typingsSlinky.ltx.elementMod.Element, b: typingsSlinky.ltx.elementMod.Element): Boolean = js.native
   def childrenEqual(a: typingsSlinky.ltx.elementMod.Element, b: typingsSlinky.ltx.elementMod.Element): Boolean = js.native
   def clone[T /* <: typingsSlinky.ltx.elementMod.Element */](el: T): T = js.native
-  def createElement(name: String): typingsSlinky.ltx.elementMod.Element = js.native
+  def createElement(name: String, attrs: js.UndefOr[scala.Nothing], children: Node*): typingsSlinky.ltx.elementMod.Element = js.native
   def createElement(name: String, attrs: String, children: Node*): typingsSlinky.ltx.elementMod.Element = js.native
   def createElement(name: String, attrs: StringDictionary[js.Any], children: Node*): typingsSlinky.ltx.elementMod.Element = js.native
   def equal(a: typingsSlinky.ltx.elementMod.Element, b: typingsSlinky.ltx.elementMod.Element): Boolean = js.native
@@ -41,6 +41,7 @@ object mod extends js.Object {
   def parse(data: String, options: typingsSlinky.ltx.parserMod.Parser): typingsSlinky.ltx.elementMod.Element = js.native
   def parse(data: String, options: ParserOptions): typingsSlinky.ltx.elementMod.Element = js.native
   def stringify(el: typingsSlinky.ltx.elementMod.Element): String = js.native
+  def stringify(el: typingsSlinky.ltx.elementMod.Element, indent: js.UndefOr[scala.Nothing], level: Double): String = js.native
   def stringify(el: typingsSlinky.ltx.elementMod.Element, indent: Double): String = js.native
   def stringify(el: typingsSlinky.ltx.elementMod.Element, indent: Double, level: Double): String = js.native
   def tag(literals: js.Array[String], substitutions: String*): typingsSlinky.ltx.elementMod.Element = js.native

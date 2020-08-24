@@ -6,7 +6,7 @@ import typingsSlinky.autocannon.autocannonStrings.reqError
 import typingsSlinky.autocannon.autocannonStrings.response
 import typingsSlinky.autocannon.autocannonStrings.start
 import typingsSlinky.autocannon.autocannonStrings.tick
-import typingsSlinky.node.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -19,6 +19,7 @@ package object directconnectMod {
   type AwsDeviceV2 = java.lang.String
   type BGPAuthKey = java.lang.String
   type BGPPeerId = java.lang.String
+  type BGPPeerIdList = js.Array[typingsSlinky.awsSdk.directconnectMod.BGPPeerId]
   type BGPPeerList = js.Array[typingsSlinky.awsSdk.directconnectMod.BGPPeer]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.verifying__
@@ -104,6 +105,8 @@ package object directconnectMod {
     - java.lang.String
   */
   type DirectConnectGatewayState = typingsSlinky.awsSdk.directconnectMod._DirectConnectGatewayState | java.lang.String
+  type EndTime = js.Date
+  type FailureTestHistoryStatus = java.lang.String
   type GatewayIdToAssociate = java.lang.String
   type GatewayIdentifier = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -169,11 +172,14 @@ package object directconnectMod {
   type ResourceTagList = js.Array[typingsSlinky.awsSdk.directconnectMod.ResourceTag]
   type RouteFilterPrefixList = js.Array[typingsSlinky.awsSdk.directconnectMod.RouteFilterPrefix]
   type RouterConfig = java.lang.String
+  type StartTime = js.Date
   type StateChangeError = java.lang.String
   type TagKey = java.lang.String
   type TagKeyList = js.Array[typingsSlinky.awsSdk.directconnectMod.TagKey]
   type TagList = js.Array[typingsSlinky.awsSdk.directconnectMod.Tag]
   type TagValue = java.lang.String
+  type TestDuration = scala.Double
+  type TestId = java.lang.String
   type VLAN = scala.Double
   type VirtualGatewayId = java.lang.String
   type VirtualGatewayList = js.Array[typingsSlinky.awsSdk.directconnectMod.VirtualGateway]
@@ -196,6 +202,7 @@ package object directconnectMod {
     - java.lang.String
   */
   type VirtualInterfaceState = typingsSlinky.awsSdk.directconnectMod._VirtualInterfaceState | java.lang.String
+  type VirtualInterfaceTestHistoryList = js.Array[typingsSlinky.awsSdk.directconnectMod.VirtualInterfaceTestHistory]
   type VirtualInterfaceType = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2012-10-25`

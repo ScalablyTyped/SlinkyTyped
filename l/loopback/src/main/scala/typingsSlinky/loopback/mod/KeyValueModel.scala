@@ -48,6 +48,11 @@ object KeyValueModel extends js.Object {
     * @param {() => void} callback
     */
   def get(key: String): js.Thenable[_] = js.native
+  def get(
+    key: String,
+    option: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
+  ): js.Thenable[_] = js.native
   def get(key: String, option: js.Any): js.Thenable[_] = js.native
   def get(key: String, option: js.Any, callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]): js.Thenable[_] = js.native
   /**
@@ -125,6 +130,12 @@ object KeyValueModel extends js.Object {
     * @param {() => void} callback
     */
   def set(key: String, value: js.Any): js.Thenable[_] = js.native
+  def set(
+    key: String,
+    value: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.Error, Unit]
+  ): js.Thenable[_] = js.native
   def set(key: String, value: js.Any, options: js.Any): js.Thenable[_] = js.native
   def set(key: String, value: js.Any, options: js.Any, callback: js.Function1[/* err */ js.Error, Unit]): js.Thenable[_] = js.native
   def set(key: String, value: js.Any, options: Double): js.Thenable[_] = js.native
@@ -142,6 +153,7 @@ object KeyValueModel extends js.Object {
     * @param {() => void} callback
     */
   def ttl(key: String): js.Thenable[_] = js.native
+  def ttl(key: String, options: js.UndefOr[scala.Nothing], cb: js.Function1[/* error */ js.Error, Unit]): js.Thenable[_] = js.native
   def ttl(key: String, options: js.Any): js.Thenable[_] = js.native
   def ttl(key: String, options: js.Any, cb: js.Function1[/* error */ js.Error, Unit]): js.Thenable[_] = js.native
 }

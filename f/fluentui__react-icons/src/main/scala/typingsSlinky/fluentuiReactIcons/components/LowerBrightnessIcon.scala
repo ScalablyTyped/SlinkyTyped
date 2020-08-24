@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LowerBrightnessIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LowerBrightnessIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LowerBrightnessIcon")
   @js.native
   object component extends js.Object
   

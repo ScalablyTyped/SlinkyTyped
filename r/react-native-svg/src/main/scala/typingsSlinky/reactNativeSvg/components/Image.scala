@@ -4,6 +4,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
+import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNativeSvg.mod.FillRule
@@ -25,7 +26,7 @@ object Image {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Image] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
     @scala.inline
@@ -41,7 +42,11 @@ object Image {
     @scala.inline
     def height(value: NumberProp): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
+    def hrefVarargs(value: ImageURISource*): this.type = set("href", js.Array(value :_*))
+    @scala.inline
     def href(value: ImageSourcePropType): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def mask(value: String): this.type = set("mask", value.asInstanceOf[js.Any])
     @scala.inline
@@ -86,6 +91,8 @@ object Image {
     def width(value: NumberProp): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
     def x(value: NumberProp): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xlinkHrefVarargs(value: ImageURISource*): this.type = set("xlinkHref", js.Array(value :_*))
     @scala.inline
     def xlinkHref(value: ImageSourcePropType): this.type = set("xlinkHref", value.asInstanceOf[js.Any])
     @scala.inline

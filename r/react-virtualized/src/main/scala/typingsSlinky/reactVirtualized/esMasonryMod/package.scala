@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object esMasonryMod {
   type CellRenderer = js.Function1[
     /* props */ typingsSlinky.reactVirtualized.esMasonryMod.MasonryCellProps, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type OnCellsRenderedCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.IndexRange, scala.Unit]
   type OnScrollCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.anon.ClientHeight, scala.Unit]

@@ -1,15 +1,13 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
-import typingsSlinky.ionicCore.ionicCoreStrings.ios
-import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,8 +19,6 @@ object popoverMod extends js.Object {
   class Popover ()
     extends ComponentInterface
        with OverlayInterface {
-    @JSName("animation")
-    var animation_Popover: js.UndefOr[Animation] = js.native
     /**
       * If `true`, the popover will be dismissed when the backdrop is clicked.
       */
@@ -48,8 +44,7 @@ object popoverMod extends js.Object {
       * The event to pass to the popover animation.
       */
     var event: js.Any = js.native
-    @JSName("mode")
-    var mode_Popover: ios | md = js.native
+    var lastFocus: js.UndefOr[HTMLElement] = js.native
     var onBackdropTap: js.Any = js.native
     var onDismiss: js.Any = js.native
     var onLifecycle: js.Any = js.native
@@ -63,15 +58,17 @@ object popoverMod extends js.Object {
       * [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
       */
     var translucent: Boolean = js.native
-    var usersElement: js.UndefOr[js.Any] = js.native
+    var usersElement: js.Any = js.native
+    @JSName("connectedCallback")
+    def connectedCallback_MPopover(): Unit = js.native
     /**
       * Returns a promise that resolves when the popover did dismiss.
       */
-    def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     /**
       * Returns a promise that resolves when the popover will dismiss.
       */
-    def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+    def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
     @JSName("render")
     def render_MPopover(): js.Any = js.native
   }

@@ -13,6 +13,10 @@ object RadioButtonsItem {
   object component extends js.Object
   
   def withProps(p: RadioButtonsItemProps): Default[tag.type, typingsSlinky.protonNative.mod.RadioButtonsItem] = new Default[tag.type, typingsSlinky.protonNative.mod.RadioButtonsItem](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: RadioButtonsItem.type): Default[tag.type, typingsSlinky.protonNative.mod.RadioButtonsItem] = new Default[tag.type, typingsSlinky.protonNative.mod.RadioButtonsItem](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: String): Default[tag.type, typingsSlinky.protonNative.mod.RadioButtonsItem] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.protonNative.mod.RadioButtonsItem](js.Array(this.component, __props.asInstanceOf[RadioButtonsItemProps]))
+  }
 }
 

@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -27,8 +26,7 @@ import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.reset
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.submit
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
-import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
-import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
+import typingsSlinky.blueprintjsCore.refsMod.IRef
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnchorHTMLAttributes
@@ -218,6 +216,8 @@ object AnchorButton {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -228,9 +228,9 @@ object AnchorButton {
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def elementRefFunction1(value: /* ref */ HTMLElement | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
+    def elementRefFunction1(value: /* ref */ _ | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
     @scala.inline
-    def elementRef(value: IRefCallback[HTMLElement] | IRefObject[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    def elementRef(value: IRef[_]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     @scala.inline
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
@@ -482,7 +482,7 @@ object AnchorButton {
     @scala.inline
     def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

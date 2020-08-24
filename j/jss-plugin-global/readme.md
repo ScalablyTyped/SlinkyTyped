@@ -1,7 +1,7 @@
 
 # Scala.js typings for jss-plugin-global
 
-Typings are for version 10.0.4
+Typings are for version 10.3.0
 
 ## Library description:
 Global styles for JSS

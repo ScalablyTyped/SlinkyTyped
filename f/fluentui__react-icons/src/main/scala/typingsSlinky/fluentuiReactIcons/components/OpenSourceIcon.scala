@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OpenSourceIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OpenSourceIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OpenSourceIcon")
   @js.native
   object component extends js.Object
   

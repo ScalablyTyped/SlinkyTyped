@@ -9,6 +9,7 @@ import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.typesMod.Prefer
 import typingsSlinky.react.mod.ComponentPropsWithoutRef
 import typingsSlinky.react.mod.PropsWithoutRef
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation._
 @JSImport("rbx", "forwardRefAs")
 @js.native
 object forwardRefAs extends js.Object {
-  def apply[TOwnProps, TDefaultComponent /* <: ReactComponentClass[_] */](
+  def apply[TOwnProps, TDefaultComponent /* <: ReactType[_] */](
     factory: ReactComponentClass[HTMLElement | SVGElement | ReactComponentClass[js.Object]],
     defaultProps: Partial[
       Prefer[

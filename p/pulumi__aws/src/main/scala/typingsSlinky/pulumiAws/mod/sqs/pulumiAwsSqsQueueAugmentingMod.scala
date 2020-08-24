@@ -18,6 +18,12 @@ object pulumiAwsSqsQueueAugmentingMod extends js.Object {
       * with options to control the behavior of the subscription.
       */
     def onEvent(name: String, handler: QueueEventHandler): typingsSlinky.pulumiAws.sqsMixinsMod.QueueEventSubscription = js.native
+    def onEvent(
+      name: String,
+      handler: QueueEventHandler,
+      args: js.UndefOr[scala.Nothing],
+      opts: ComponentResourceOptions
+    ): typingsSlinky.pulumiAws.sqsMixinsMod.QueueEventSubscription = js.native
     def onEvent(name: String, handler: QueueEventHandler, args: QueueEventSubscriptionArgs): typingsSlinky.pulumiAws.sqsMixinsMod.QueueEventSubscription = js.native
     def onEvent(
       name: String,

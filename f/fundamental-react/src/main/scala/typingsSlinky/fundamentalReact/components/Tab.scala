@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tab {
-  @JSImport("fundamental-react/lib/Tabs/Tab", JSImport.Default)
+  @JSImport("fundamental-react", "Tab")
   @js.native
   object component extends js.Object
   

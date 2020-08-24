@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CheckListCheckIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CheckListCheckIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CheckListCheckIcon")
   @js.native
   object component extends js.Object
   

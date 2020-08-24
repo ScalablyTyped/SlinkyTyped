@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Devices
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,21 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Devices.AdvancedPhotoControl")
 @js.native
 abstract class AdvancedPhotoControl ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoControl {
-  /** Gets the current advanced capture mode of the AdvancedPhotoControl . */
-  /* CompleteClass */
-  override var mode: typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoMode = js.native
-  /** Gets a value indicating whether the AdvancedPhotoControl is supported on the current capture device. */
-  /* CompleteClass */
-  override var supported: Boolean = js.native
-  /** Gets a list of the advanced capture modes supported by the current capture device. */
-  /* CompleteClass */
-  override var supportedModes: IVectorView[typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoMode] = js.native
-  /**
-    * Configures the AdvancedPhotoControl object with the specified settings.
-    * @param settings The object defining the configuration settings.
-    */
-  /* CompleteClass */
-  override def configure(settings: typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoCaptureSettings): Unit = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Devices.AdvancedPhotoControl
 

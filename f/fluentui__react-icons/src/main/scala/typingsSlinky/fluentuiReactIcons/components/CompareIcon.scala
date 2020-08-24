@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CompareIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CompareIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CompareIcon")
   @js.native
   object component extends js.Object
   

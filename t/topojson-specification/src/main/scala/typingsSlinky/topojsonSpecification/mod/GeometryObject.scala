@@ -1,6 +1,5 @@
 package typingsSlinky.topojsonSpecification.mod
 
-import typingsSlinky.geojson.mod.BBox
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,117 +18,72 @@ trait GeometryObject[P /* <: Properties */] extends js.Object
 
 object GeometryObject {
   @scala.inline
-  def Polygon[P](
+  def Polygon[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     arcs: js.Array[ArcIndexes],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Polygon,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Polygon
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def MultiPoint[P](
+  def MultiPoint[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     coordinates: js.Array[Positions],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPoint,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPoint
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def NullObject[P](`type`: Null, bbox: BBox = null, id: Double | String = null, properties: js.Object = null): GeometryObject[P] = {
+  def NullObject[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](`type`: Null): GeometryObject[P] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def Point[P](
+  def Point[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     coordinates: Positions,
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Point,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Point
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def MultiLineString[P](
+  def MultiLineString[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     arcs: js.Array[ArcIndexes],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiLineString,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiLineString
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def MultiPolygon[P](
+  def MultiPolygon[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     arcs: js.Array[js.Array[ArcIndexes]],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPolygon,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPolygon
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def LineString[P](
+  def LineString[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     arcs: ArcIndexes,
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.LineString,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.LineString
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
   @scala.inline
-  def GeometryCollection[P](
+  def GeometryCollection[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
     geometries: js.Array[GeometryObject[P]],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.GeometryCollection,
-    bbox: BBox = null,
-    id: Double | String = null,
-    properties: P = null
+    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.GeometryCollection
   ): GeometryObject[P] = {
     val __obj = js.Dynamic.literal(geometries = geometries.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
 }

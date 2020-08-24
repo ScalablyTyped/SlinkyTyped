@@ -17,6 +17,8 @@ package object builders {
     - typingsSlinky.prettier.mod.doc.builders.Line_
     - typingsSlinky.prettier.mod.doc.builders.LineSuffix_
     - typingsSlinky.prettier.mod.doc.builders.LineSuffixBoundary_
+    - typingsSlinky.prettier.mod.doc.builders.Trim_
+    - typingsSlinky.prettier.mod.doc.builders.Cursor_
   */
   type Doc = typingsSlinky.prettier.mod.doc.builders._Doc | java.lang.String
 }

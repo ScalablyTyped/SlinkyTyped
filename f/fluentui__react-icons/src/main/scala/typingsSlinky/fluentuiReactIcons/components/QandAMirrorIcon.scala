@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object QandAMirrorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/QandAMirrorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "QandAMirrorIcon")
   @js.native
   object component extends js.Object
   

@@ -143,7 +143,7 @@ trait IgniteUIStatic extends js.Object {
   var regional: js.UndefOr[js.Any] = js.native
   var util: js.UndefOr[js.Any] = js.native
   def formatter(
-    `val`: String,
+    `val`: Double | String | js.Date,
     `type`: String,
     format: String,
     notTemplate: js.UndefOr[Boolean],
@@ -151,31 +151,7 @@ trait IgniteUIStatic extends js.Object {
     dateOffset: js.UndefOr[js.Any],
     displayStyle: js.UndefOr[String],
     labelText: js.UndefOr[String],
-    tabIndex: js.UndefOr[Double | String],
-    reg: js.UndefOr[js.Any]
-  ): String = js.native
-  def formatter(
-    `val`: Double,
-    `type`: String,
-    format: String,
-    notTemplate: js.UndefOr[Boolean],
-    enableUTCDates: js.UndefOr[Boolean],
-    dateOffset: js.UndefOr[js.Any],
-    displayStyle: js.UndefOr[String],
-    labelText: js.UndefOr[String],
-    tabIndex: js.UndefOr[Double | String],
-    reg: js.UndefOr[js.Any]
-  ): String = js.native
-  def formatter(
-    `val`: js.Date,
-    `type`: String,
-    format: String,
-    notTemplate: js.UndefOr[Boolean],
-    enableUTCDates: js.UndefOr[Boolean],
-    dateOffset: js.UndefOr[js.Any],
-    displayStyle: js.UndefOr[String],
-    labelText: js.UndefOr[String],
-    tabIndex: js.UndefOr[Double | String],
+    tabIndex: js.UndefOr[String | Double],
     reg: js.UndefOr[js.Any]
   ): String = js.native
   def loader(): IgLoader = js.native

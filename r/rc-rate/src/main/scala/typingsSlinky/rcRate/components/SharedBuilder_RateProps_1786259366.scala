@@ -1,7 +1,6 @@
 package typingsSlinky.rcRate.components
 
 import org.scalajs.dom.raw.HTMLUListElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.ul.tag
@@ -23,11 +22,9 @@ class SharedBuilder_RateProps_1786259366[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
   @scala.inline
-  def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+  def character(value: /* props */ StarProps => ReactElement): this.type = set("character", js.Any.fromFunction1(value))
   @scala.inline
-  def character(value: TagMod[Any]): this.type = set("character", value.asInstanceOf[js.Any])
-  @scala.inline
-  def characterRender(value: (/* origin */ ReactElement, /* props */ StarProps) => TagMod[Any]): this.type = set("characterRender", js.Any.fromFunction2(value))
+  def characterRender(value: (/* origin */ ReactElement, /* props */ StarProps) => ReactElement): this.type = set("characterRender", js.Any.fromFunction2(value))
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline

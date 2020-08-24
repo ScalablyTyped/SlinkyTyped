@@ -56,6 +56,8 @@ object BubbleChart {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeChartsWrapper.mod.BubbleChart] {
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -73,6 +75,8 @@ object BubbleChart {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -112,7 +116,9 @@ object BubbleChart {
     @scala.inline
     def extraOffsets(value: Offsets): this.type = set("extraOffsets", value.asInstanceOf[js.Any])
     @scala.inline
-    def gridBackgroundColor(value: Double): this.type = set("gridBackgroundColor", value.asInstanceOf[js.Any])
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridBackgroundColor(value: Color): this.type = set("gridBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def group(value: String): this.type = set("group", value.asInstanceOf[js.Any])
     @scala.inline
@@ -121,6 +127,8 @@ object BubbleChart {
     def highlightPerDragEnabled(value: Boolean): this.type = set("highlightPerDragEnabled", value.asInstanceOf[js.Any])
     @scala.inline
     def highlightPerTapEnabled(value: Boolean): this.type = set("highlightPerTapEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightsVarargs(value: DataIndex*): this.type = set("highlights", js.Array(value :_*))
     @scala.inline
     def highlights(value: js.Array[DataIndex]): this.type = set("highlights", value.asInstanceOf[js.Any])
     @scala.inline

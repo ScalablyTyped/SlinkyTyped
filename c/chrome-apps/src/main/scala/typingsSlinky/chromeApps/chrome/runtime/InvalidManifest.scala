@@ -10,7 +10,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InvalidManifest
   extends PartialManifest
-     with Manifest
+     with Manifest {
+  /** Not for packaged apps */
+  var browser_action: js.UndefOr[scala.Nothing] = js.native
+  /**
+    * Not for packaged apps
+    * Only for extensions and legacy packaged apps
+    */
+  var chrome_url_overrides: js.UndefOr[scala.Nothing] = js.native
+  /**
+    * Not for packaged apps
+    * Only for extensions and legacy packaged apps
+    */
+  var content_security_policy: js.UndefOr[scala.Nothing] = js.native
+  /** Not for packaged apps */
+  var options_page: js.UndefOr[scala.Nothing] = js.native
+  //
+  // Never types - should never exist
+  // Are declared to prevent use since many
+  // legacy app are using them. Will result
+  // in errors. Many examples and code bases
+  // have these included.
+  //
+  /** Not for packaged apps */
+  var options_ui: js.UndefOr[scala.Nothing] = js.native
+}
 
 object InvalidManifest {
   @scala.inline

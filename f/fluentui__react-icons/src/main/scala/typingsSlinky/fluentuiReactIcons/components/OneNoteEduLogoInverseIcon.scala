@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OneNoteEduLogoInverseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OneNoteEduLogoInverseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OneNoteEduLogoInverseIcon")
   @js.native
   object component extends js.Object
   

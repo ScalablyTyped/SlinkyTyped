@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ChromeRestoreIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ChromeRestoreIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ChromeRestoreIcon")
   @js.native
   object component extends js.Object
   

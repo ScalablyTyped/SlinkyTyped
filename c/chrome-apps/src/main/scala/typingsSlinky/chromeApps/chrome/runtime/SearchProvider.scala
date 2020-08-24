@@ -37,179 +37,70 @@ object SearchProvider {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSearch_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search_url")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAlternate_urls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternate_urls")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSearch_url(value: String): Self = this.set("search_url", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAlternate_urls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternate_urls")(js.undefined)
-        ret
-    }
+    def setAlternate_urlsVarargs(value: String*): Self = this.set("alternate_urls", js.Array(value :_*))
     @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAlternate_urls(value: js.Array[String]): Self = this.set("alternate_urls", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
+    def deleteAlternate_urls: Self = this.set("alternate_urls", js.undefined)
     @scala.inline
-    def withFavicon_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favicon_url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEncoding(value: String): Self = this.set("encoding", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFavicon_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favicon_url")(js.undefined)
-        ret
-    }
+    def deleteEncoding: Self = this.set("encoding", js.undefined)
     @scala.inline
-    def withImage_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image_url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFavicon_url(value: String): Self = this.set("favicon_url", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutImage_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image_url")(js.undefined)
-        ret
-    }
+    def deleteFavicon_url: Self = this.set("favicon_url", js.undefined)
     @scala.inline
-    def withImage_url_post_params(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image_url_post_params")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setImage_url(value: String): Self = this.set("image_url", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutImage_url_post_params: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image_url_post_params")(js.undefined)
-        ret
-    }
+    def deleteImage_url: Self = this.set("image_url", js.undefined)
     @scala.inline
-    def withInstant_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instant_url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setImage_url_post_params(value: String): Self = this.set("image_url_post_params", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInstant_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instant_url")(js.undefined)
-        ret
-    }
+    def deleteImage_url_post_params: Self = this.set("image_url_post_params", js.undefined)
     @scala.inline
-    def withInstant_url_post_params(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instant_url_post_params")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInstant_url(value: String): Self = this.set("instant_url", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInstant_url_post_params: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instant_url_post_params")(js.undefined)
-        ret
-    }
+    def deleteInstant_url: Self = this.set("instant_url", js.undefined)
     @scala.inline
-    def withIs_default(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_default")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInstant_url_post_params(value: String): Self = this.set("instant_url_post_params", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutIs_default: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_default")(js.undefined)
-        ret
-    }
+    def deleteInstant_url_post_params: Self = this.set("instant_url_post_params", js.undefined)
     @scala.inline
-    def withKeyword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIs_default(value: Boolean): Self = this.set("is_default", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutKeyword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(js.undefined)
-        ret
-    }
+    def deleteIs_default: Self = this.set("is_default", js.undefined)
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKeyword(value: String): Self = this.set("keyword", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
+    def deleteKeyword: Self = this.set("keyword", js.undefined)
     @scala.inline
-    def withPrepopulated_id(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepopulated_id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPrepopulated_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepopulated_id")(js.undefined)
-        ret
-    }
+    def deleteName: Self = this.set("name", js.undefined)
     @scala.inline
-    def withSearch_url_post_params(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search_url_post_params")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPrepopulated_id(value: integer): Self = this.set("prepopulated_id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSearch_url_post_params: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search_url_post_params")(js.undefined)
-        ret
-    }
+    def deletePrepopulated_id: Self = this.set("prepopulated_id", js.undefined)
     @scala.inline
-    def withSuggest_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_url")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSearch_url_post_params(value: String): Self = this.set("search_url_post_params", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSuggest_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_url")(js.undefined)
-        ret
-    }
+    def deleteSearch_url_post_params: Self = this.set("search_url_post_params", js.undefined)
     @scala.inline
-    def withSuggest_url_post_params(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_url_post_params")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSuggest_url(value: String): Self = this.set("suggest_url", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSuggest_url_post_params: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_url_post_params")(js.undefined)
-        ret
-    }
+    def deleteSuggest_url: Self = this.set("suggest_url", js.undefined)
+    @scala.inline
+    def setSuggest_url_post_params(value: String): Self = this.set("suggest_url_post_params", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuggest_url_post_params: Self = this.set("suggest_url_post_params", js.undefined)
   }
   
 }

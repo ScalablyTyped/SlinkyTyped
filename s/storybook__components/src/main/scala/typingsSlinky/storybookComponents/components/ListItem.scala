@@ -1,7 +1,6 @@
 package typingsSlinky.storybookComponents.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -26,7 +25,7 @@ object ListItem {
     @scala.inline
     def centerReactElement(value: ReactElement): this.type = set("center", value.asInstanceOf[js.Any])
     @scala.inline
-    def center(value: TagMod[Any]): this.type = set("center", value.asInstanceOf[js.Any])
+    def center(value: ReactElement): this.type = set("center", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +33,7 @@ object ListItem {
     @scala.inline
     def leftReactElement(value: ReactElement): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline
-    def left(value: TagMod[Any]): this.type = set("left", value.asInstanceOf[js.Any])
+    def left(value: ReactElement): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
     @scala.inline
@@ -42,11 +41,11 @@ object ListItem {
     @scala.inline
     def rightReactElement(value: ReactElement): this.type = set("right", value.asInstanceOf[js.Any])
     @scala.inline
-    def right(value: TagMod[Any]): this.type = set("right", value.asInstanceOf[js.Any])
+    def right(value: ReactElement): this.type = set("right", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

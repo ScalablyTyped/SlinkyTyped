@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -71,6 +72,8 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.anon.Hide
 import typingsSlinky.reactstrap.mod.CSSModule
+import typingsSlinky.reactstrap.tooltipMod.TooltipChildren
+import typingsSlinky.reactstrap.tooltipMod.TooltipChildrenRenderProps
 import typingsSlinky.reactstrap.tooltipMod.UncontrolledTooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -84,7 +87,7 @@ object UncontrolledTooltip {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.UncontrolledTooltip[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.UncontrolledTooltip[T]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -194,6 +197,12 @@ object UncontrolledTooltip {
     @scala.inline
     def autohide(value: Boolean): this.type = set("autohide", value.asInstanceOf[js.Any])
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* props */ TooltipChildrenRenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: TooltipChildren): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
@@ -215,6 +224,8 @@ object UncontrolledTooltip {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

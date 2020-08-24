@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AzureKeyVaultIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AzureKeyVaultIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AzureKeyVaultIcon")
   @js.native
   object component extends js.Object
   

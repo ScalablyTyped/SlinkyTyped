@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Ellipse () extends Element {
   def this(attributes: GenericAttributes[EllipseSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
   def this(attributes: GenericAttributes[EllipseSelectors], opt: StringDictionary[js.Any]) = this()
 }
 

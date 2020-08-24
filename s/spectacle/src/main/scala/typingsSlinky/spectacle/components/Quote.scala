@@ -1,6 +1,6 @@
 package typingsSlinky.spectacle.components
 
-import typingsSlinky.spectacle.mod.BaseProps
+import typingsSlinky.spectacle.mod.TypographyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ object Quote {
   @js.native
   object component extends js.Object
   
-  def withProps(p: BaseProps): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Quote.type): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: TypographyProps): SharedBuilder_TypographyProps_1522227064 = new SharedBuilder_TypographyProps_1522227064(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Quote.type): SharedBuilder_TypographyProps_1522227064 = new SharedBuilder_TypographyProps_1522227064(js.Array(this.component, js.Dictionary.empty))()
 }
 

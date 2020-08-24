@@ -10,17 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChangeTableCellPreferredWidthCommand")
 @js.native
 class ChangeTableCellPreferredWidthCommand ()
-  extends typingsSlinky.devexpressWeb.ChangeTableCellPreferredWidthCommand {
-  /**
-    * Executes the ChangeTableCellPreferredWidthCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
-    * @param preferredWidth A TableWidthUnit object specifying preferred width of the selected table rows.
-    */
-  /* CompleteClass */
-  override def execute(preferredWidth: typingsSlinky.devexpressWeb.TableWidthUnit): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.CommandState[typingsSlinky.devexpressWeb.TableWidthUnit] = js.native
-}
+  extends typingsSlinky.devexpressWeb.ChangeTableCellPreferredWidthCommand
 

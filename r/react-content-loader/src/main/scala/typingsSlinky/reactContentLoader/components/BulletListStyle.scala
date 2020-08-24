@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BulletListStyle {
-  @JSImport("react-content-loader/dist/stylized/BulletListStyle", JSImport.Default)
+  @JSImport("react-content-loader/dist/web/presets/BulletListStyle", JSImport.Default)
   @js.native
   object component extends js.Object
   

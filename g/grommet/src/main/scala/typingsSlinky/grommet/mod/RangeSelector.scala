@@ -13,7 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("grommet", "RangeSelector")
+@JSImport("grommet/es6", "RangeSelector")
 @js.native
 class RangeSelector protected ()
   extends Component[
@@ -28,7 +28,7 @@ class RangeSelector protected ()
   ) = this()
 }
 
-@JSImport("grommet", "RangeSelector")
+@JSImport("grommet/es6", "RangeSelector")
 @js.native
 object RangeSelector extends TopLevel[
       ReactComponentClass[

@@ -124,11 +124,18 @@ trait ObservableStatic extends js.Object {
     resultSelector: js.Function3[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, TResult]
   ): Observable[TResult] = js.native
   def combineLatest[T, T2, T3, T4, T5](
-    first: Observable[T] | IPromise[T],
-    second: Observable[T2] | IPromise[T2],
-    third: Observable[T3] | IPromise[T3],
-    fourth: Observable[T4] | IPromise[T4],
-    fifth: Observable[T5] | IPromise[T5]
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
   ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
@@ -137,6 +144,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: IPromise[T2],
@@ -144,6 +165,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: IPromise[T2],
@@ -151,6 +186,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: IPromise[T2],
@@ -158,6 +207,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -165,6 +228,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -172,6 +249,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -179,6 +270,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -186,6 +291,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -193,6 +312,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -200,6 +333,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -207,6 +354,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -214,6 +375,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -221,6 +396,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -228,6 +417,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -235,6 +438,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def combineLatest[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def combineLatest[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -243,11 +460,259 @@ trait ObservableStatic extends js.Object {
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
   def combineLatest[T, T2, T3, T4, T5, TResult](
-    first: Observable[T] | IPromise[T],
-    second: Observable[T2] | IPromise[T2],
-    third: Observable[T3] | IPromise[T3],
-    fourth: Observable[T4] | IPromise[T4],
-    fifth: Observable[T5] | IPromise[T5],
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def combineLatest[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
     resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
   ): Observable[TResult] = js.native
   def concat[T](sources: (IPromise[T] | Observable[T])*): Observable[T] = js.native
@@ -265,7 +730,21 @@ trait ObservableStatic extends js.Object {
     * @param [scheduler] Optional scheduler to use for scheduling.  If not provided, defaults to Scheduler.currentThread.
     */
   def from[T](array: js.Array[T]): Observable[T] = js.native
+  def from[T](
+    array: js.Array[T],
+    mapFn: js.UndefOr[scala.Nothing],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[T] = js.native
+  def from[T](array: js.Array[T], mapFn: js.UndefOr[scala.Nothing], thisArg: js.Any): Observable[T] = js.native
+  def from[T](array: js.Array[T], mapFn: js.UndefOr[scala.Nothing], thisArg: js.Any, scheduler: IScheduler): Observable[T] = js.native
   def from[T](array: js.Array[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T]): Observable[T] = js.native
+  def from[T](
+    array: js.Array[T],
+    mapFn: js.Function2[/* value */ T, /* index */ Double, T],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[T] = js.native
   def from[T](array: js.Array[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T], thisArg: js.Any): Observable[T] = js.native
   def from[T](
     array: js.Array[T],
@@ -281,7 +760,21 @@ trait ObservableStatic extends js.Object {
     * @param [scheduler] Optional scheduler to use for scheduling.  If not provided, defaults to Scheduler.currentThread.
     */
   def from[T](array: Dictindex[T]): Observable[T] = js.native
+  def from[T](
+    array: Dictindex[T],
+    mapFn: js.UndefOr[scala.Nothing],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[T] = js.native
+  def from[T](array: Dictindex[T], mapFn: js.UndefOr[scala.Nothing], thisArg: js.Any): Observable[T] = js.native
+  def from[T](array: Dictindex[T], mapFn: js.UndefOr[scala.Nothing], thisArg: js.Any, scheduler: IScheduler): Observable[T] = js.native
   def from[T](array: Dictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T]): Observable[T] = js.native
+  def from[T](
+    array: Dictindex[T],
+    mapFn: js.Function2[/* value */ T, /* index */ Double, T],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[T] = js.native
   def from[T](array: Dictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T], thisArg: js.Any): Observable[T] = js.native
   def from[T](
     array: Dictindex[T],
@@ -297,7 +790,21 @@ trait ObservableStatic extends js.Object {
     * @param [scheduler] Optional scheduler to use for scheduling.  If not provided, defaults to Scheduler.currentThread.
     */
   def from[T](iterable: js.Any): Observable[T] = js.native
+  def from[T](
+    iterable: js.Any,
+    mapFn: js.UndefOr[scala.Nothing],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[T] = js.native
+  def from[T](iterable: js.Any, mapFn: js.UndefOr[scala.Nothing], thisArg: js.Any): Observable[T] = js.native
+  def from[T](iterable: js.Any, mapFn: js.UndefOr[scala.Nothing], thisArg: js.Any, scheduler: IScheduler): Observable[T] = js.native
   def from[T](iterable: js.Any, mapFn: js.Function2[/* value */ js.Any, /* index */ Double, T]): Observable[T] = js.native
+  def from[T](
+    iterable: js.Any,
+    mapFn: js.Function2[/* value */ js.Any, /* index */ Double, T],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[T] = js.native
   def from[T](iterable: js.Any, mapFn: js.Function2[/* value */ js.Any, /* index */ Double, T], thisArg: js.Any): Observable[T] = js.native
   def from[T](
     iterable: js.Any,
@@ -530,6 +1037,13 @@ trait ObservableStatic extends js.Object {
   def from_TTResult[T, TResult](
     array: js.Array[T],
     mapFn: js.Function2[/* value */ T, /* index */ Double, TResult],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[TResult] = js.native
+  @JSName("from")
+  def from_TTResult[T, TResult](
+    array: js.Array[T],
+    mapFn: js.Function2[/* value */ T, /* index */ Double, TResult],
     thisArg: js.Any
   ): Observable[TResult] = js.native
   @JSName("from")
@@ -548,6 +1062,13 @@ trait ObservableStatic extends js.Object {
     */
   @JSName("from")
   def from_TTResult[T, TResult](array: Dictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, TResult]): Observable[TResult] = js.native
+  @JSName("from")
+  def from_TTResult[T, TResult](
+    array: Dictindex[T],
+    mapFn: js.Function2[/* value */ T, /* index */ Double, TResult],
+    thisArg: js.UndefOr[scala.Nothing],
+    scheduler: IScheduler
+  ): Observable[TResult] = js.native
   @JSName("from")
   def from_TTResult[T, TResult](
     array: Dictindex[T],
@@ -597,6 +1118,7 @@ trait ObservableStatic extends js.Object {
     * @returns The observable sequence whose elements are pulled from the given arguments.
     */
   def of[T](values: T*): Observable[T] = js.native
+  def ofWithScheduler[T](scheduler: js.UndefOr[scala.Nothing], values: T*): Observable[T] = js.native
   /**
     *  This method creates a new Observable instance with a variable number of arguments, regardless of number or type of the arguments.
     * @example
@@ -605,13 +1127,13 @@ trait ObservableStatic extends js.Object {
     * @param [scheduler] A scheduler to use for scheduling the arguments.
     * @returns The observable sequence whose elements are pulled from the given arguments.
     */
-  def ofWithScheduler[T](): Observable[T] = js.native
   def ofWithScheduler[T](scheduler: IScheduler, values: T*): Observable[T] = js.native
   def pairs[T](obj: StringDictionary[T]): Observable[js.Tuple2[String, T]] = js.native
   def pairs[T](obj: StringDictionary[T], scheduler: IScheduler): Observable[js.Tuple2[String, T]] = js.native
   def range(start: Double, count: Double): Observable[Double] = js.native
   def range(start: Double, count: Double, scheduler: IScheduler): Observable[Double] = js.native
   def repeat[T](value: T): Observable[T] = js.native
+  def repeat[T](value: T, repeatCount: js.UndefOr[scala.Nothing], scheduler: IScheduler): Observable[T] = js.native
   def repeat[T](value: T, repeatCount: Double): Observable[T] = js.native
   def repeat[T](value: T, repeatCount: Double, scheduler: IScheduler): Observable[T] = js.native
   def `return`[T](value: T): Observable[T] = js.native
@@ -732,11 +1254,18 @@ trait ObservableStatic extends js.Object {
     resultSelector: js.Function3[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, TResult]
   ): Observable[TResult] = js.native
   def withLatestFrom[T, T2, T3, T4, T5](
-    first: Observable[T] | IPromise[T],
-    second: Observable[T2] | IPromise[T2],
-    third: Observable[T3] | IPromise[T3],
-    fourth: Observable[T4] | IPromise[T4],
-    fifth: Observable[T5] | IPromise[T5]
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
   ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
@@ -745,6 +1274,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: IPromise[T2],
@@ -752,6 +1295,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: IPromise[T2],
@@ -759,6 +1316,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: IPromise[T2],
@@ -766,6 +1337,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -773,6 +1358,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -780,6 +1379,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -787,6 +1400,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: IPromise[T],
     second: Observable[T2],
@@ -794,6 +1421,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -801,6 +1442,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -808,6 +1463,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -815,6 +1484,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: IPromise[T2],
@@ -822,6 +1505,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -829,6 +1526,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -836,6 +1547,20 @@ trait ObservableStatic extends js.Object {
     fourth: Observable[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -843,6 +1568,20 @@ trait ObservableStatic extends js.Object {
     fourth: IPromise[T4],
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5]
+  ): Observable[js.Tuple5[T, T2, T3, T4, T5]] = js.native
   def withLatestFrom[T, T2, T3, T4, TResult](
     first: Observable[T],
     second: Observable[T2],
@@ -851,11 +1590,259 @@ trait ObservableStatic extends js.Object {
     resultSelector: js.Function4[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, TResult]
   ): Observable[TResult] = js.native
   def withLatestFrom[T, T2, T3, T4, T5, TResult](
-    first: Observable[T] | IPromise[T],
-    second: Observable[T2] | IPromise[T2],
-    third: Observable[T3] | IPromise[T3],
-    fourth: Observable[T4] | IPromise[T4],
-    fifth: Observable[T5] | IPromise[T5],
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: IPromise[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: IPromise[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: IPromise[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: IPromise[T4],
+    fifth: Observable[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: IPromise[T5],
+    resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def withLatestFrom[T, T2, T3, T4, T5, TResult](
+    first: Observable[T],
+    second: Observable[T2],
+    third: Observable[T3],
+    fourth: Observable[T4],
+    fifth: Observable[T5],
     resultSelector: js.Function5[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, TResult]
   ): Observable[TResult] = js.native
   def zip[T1, T2](first: IPromise[T1], sources: js.Array[Observable[T2] | IPromise[T2]]): Observable[js.Tuple2[T1, T2]] = js.native
@@ -966,104 +1953,279 @@ trait ObservableStatic extends js.Object {
   ): Observable[TResult] = js.native
   def zip[T1, T2, T3, T4](source1: Observable[T1], source2: Observable[T2], source3: Observable[T3], source4: IPromise[T4]): Observable[js.Tuple4[T1, T2, T3, T4]] = js.native
   def zip[T1, T2, T3, T4](source1: Observable[T1], source2: Observable[T2], source3: Observable[T3], source4: Observable[T4]): Observable[js.Tuple4[T1, T2, T3, T4]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
   def zip[T1, T2, T3, T4, T5](
-    source1: Observable[T1] | IPromise[T1],
-    source2: Observable[T2] | IPromise[T2],
-    source3: Observable[T3] | IPromise[T3],
-    source4: Observable[T4] | IPromise[T4],
-    source5: Observable[T5] | IPromise[T5]
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
   ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
     source1: IPromise[T1],
     source2: IPromise[T2],
     source3: IPromise[T3],
-    source4: IPromise[T4],
+    source4: Observable[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
   ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
+  def zip[T1, T2, T3, T4, T5](
     source1: IPromise[T1],
     source2: IPromise[T2],
     source3: IPromise[T3],
     source4: Observable[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
     source1: IPromise[T1],
-    source2: IPromise[T2],
-    source3: Observable[T3],
-    source4: IPromise[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: IPromise[T1],
-    source2: IPromise[T2],
-    source3: Observable[T3],
-    source4: Observable[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: IPromise[T1],
-    source2: Observable[T2],
-    source3: IPromise[T3],
-    source4: IPromise[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: IPromise[T1],
-    source2: Observable[T2],
-    source3: IPromise[T3],
-    source4: Observable[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: IPromise[T1],
-    source2: Observable[T2],
-    source3: Observable[T3],
-    source4: IPromise[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: IPromise[T1],
-    source2: Observable[T2],
-    source3: Observable[T3],
-    source4: Observable[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: Observable[T1],
-    source2: IPromise[T2],
-    source3: IPromise[T3],
-    source4: IPromise[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
-  def zip[T1, T2, T3, T4, TResult](
-    source1: Observable[T1],
     source2: IPromise[T2],
     source3: IPromise[T3],
     source4: Observable[T4],
-    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
-  ): Observable[TResult] = js.native
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
-    source1: Observable[T1],
+    source1: IPromise[T1],
     source2: IPromise[T2],
     source3: Observable[T3],
     source4: IPromise[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
-    source1: Observable[T1],
+    source1: IPromise[T1],
     source2: IPromise[T2],
     source3: Observable[T3],
     source4: Observable[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
-    source1: Observable[T1],
+    source1: IPromise[T1],
     source2: Observable[T2],
     source3: IPromise[T3],
     source4: IPromise[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
     source1: Observable[T1],
     source2: Observable[T2],
@@ -1071,6 +2233,20 @@ trait ObservableStatic extends js.Object {
     source4: Observable[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
     source1: Observable[T1],
     source2: Observable[T2],
@@ -1078,19 +2254,295 @@ trait ObservableStatic extends js.Object {
     source4: IPromise[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
   ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   def zip[T1, T2, T3, T4, TResult](
     source1: Observable[T1],
     source2: Observable[T2],
     source3: Observable[T3],
     source4: Observable[T4],
     resultSelector: js.Function4[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5]
+  ): Observable[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
   ): Observable[TResult] = js.native
   def zip[T1, T2, T3, T4, T5, TResult](
-    source1: Observable[T1] | IPromise[T1],
-    source2: Observable[T2] | IPromise[T2],
-    source3: Observable[T3] | IPromise[T3],
-    source4: Observable[T4] | IPromise[T4],
-    source5: Observable[T5] | IPromise[T5],
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: IPromise[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: IPromise[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: IPromise[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: IPromise[T4],
+    source5: Observable[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: IPromise[T5],
+    resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
+  ): Observable[TResult] = js.native
+  def zip[T1, T2, T3, T4, T5, TResult](
+    source1: Observable[T1],
+    source2: Observable[T2],
+    source3: Observable[T3],
+    source4: Observable[T4],
+    source5: Observable[T5],
     resultSelector: js.Function5[/* item1 */ T1, /* item2 */ T2, /* item3 */ T3, /* item4 */ T4, /* item5 */ T5, TResult]
   ): Observable[TResult] = js.native
   def zipArray[T](sources: (Observable[T] | IPromise[T])*): Observable[js.Array[T]] = js.native

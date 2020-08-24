@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "dragscroll"
-version := "0.0-dt-20190307Z-53cff3"
-scalaVersion := "2.13.2"
+version := "0.0-dt-20190307Z-9282c0"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

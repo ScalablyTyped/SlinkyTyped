@@ -50,6 +50,8 @@ object ModalBase {
     @scala.inline
     def elementToFocusOnDismiss(value: HTMLElement): this.type = set("elementToFocusOnDismiss", value.asInstanceOf[js.Any])
     @scala.inline
+    def enableAriaHiddenSiblings(value: Boolean): this.type = set("enableAriaHiddenSiblings", value.asInstanceOf[js.Any])
+    @scala.inline
     def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
     @scala.inline
     def firstFocusableSelector(value: String | js.Function0[String]): this.type = set("firstFocusableSelector", value.asInstanceOf[js.Any])

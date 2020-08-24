@@ -19,14 +19,14 @@ class Memo[T /* <: MemoType */] protected () extends js.Object {
   def this(`type`: Hash | Return, value: Buffer) = this()
   var `type`: T = js.native
   var value: MemoValue | Buffer | String | Null = js.native
-  def toXDRObject(): typingsSlinky.stellarBase.mod.xdr.Memo = js.native
+  def toXDRObject(): typingsSlinky.stellarBase.xdrMod.default.Memo = js.native
 }
 
 /* static members */
 @JSImport("stellar-base", "Memo")
 @js.native
 object Memo extends js.Object {
-  def fromXDRObject(memo: typingsSlinky.stellarBase.mod.xdr.Memo): Memo[MemoType] = js.native
+  def fromXDRObject(memo: typingsSlinky.stellarBase.xdrMod.default.Memo): Memo[MemoType] = js.native
   def hash(hash: String): Memo[Hash] = js.native
   def id(id: String): Memo[ID] = js.native
   def none(): Memo[None] = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.rmcCalendar.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -23,11 +22,11 @@ object Header {
     @scala.inline
     def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def closeIcon(value: TagMod[Any]): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline

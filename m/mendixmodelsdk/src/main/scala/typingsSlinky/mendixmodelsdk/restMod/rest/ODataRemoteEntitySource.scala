@@ -2,7 +2,7 @@ package typingsSlinky.mendixmodelsdk.restMod.rest
 
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Entity
-import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.RemoteEntitySource
+import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.QueryBasedRemoteEntitySource
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
@@ -21,9 +21,10 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntitySource because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IRemoteEntitySource because Already inherited
-- typingsSlinky.mendixmodelsdk.restMod.rest.IODataRemoteEntitySource because var conflicts: containerAsEntity, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/rest", "rest.ODataRemoteEntitySource")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IQueryBasedRemoteEntitySource because Already inherited
+- typingsSlinky.mendixmodelsdk.restMod.rest.IODataRemoteEntitySource because var conflicts: containerAsEntity, id, isLoaded, model, structureTypeName, unit. Inlined key */ @JSImport("mendixmodelsdk/dist/gen/rest", "rest.ODataRemoteEntitySource")
 @js.native
-class ODataRemoteEntitySource protected () extends RemoteEntitySource {
+class ODataRemoteEntitySource protected () extends QueryBasedRemoteEntitySource {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -32,20 +33,37 @@ class ODataRemoteEntitySource protected () extends RemoteEntitySource {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  /**
+    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * In version 8.11.0: introduced
+    */
+  @JSName("key")
+  val key_FODataRemoteEntitySource: IODataKey | Null = js.native
   @JSName("model")
   var model_FODataRemoteEntitySource: IModel = js.native
   @JSName("containerAsEntity")
   def containerAsEntity_MODataRemoteEntitySource: Entity = js.native
+  /**
+    * In version 8.11.0: introduced
+    */
+  def entitySet: String = js.native
+  def entitySet_=(newValue: String): Unit = js.native
+  /**
+    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * In version 8.11.0: introduced
+    */
+  def key: ODataKey | Null = js.native
+  def key_=(newValue: ODataKey | Null): Unit = js.native
   def remoteName: String = js.native
-  def remoteName(newValue: String): js.Any = js.native
-  def sourceDocument(): js.Any = js.native
-  def sourceDocument(newValue: IConsumedODataService): js.Any = js.native
-  def sourceDocumentQualifiedName: String | Null = js.native
+  def remoteName_=(newValue: String): Unit = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
-  @JSName("sourceDocument")
-  def sourceDocument_Union: IConsumedODataService | Null = js.native
+  def sourceDocument: IConsumedODataService | Null = js.native
+  def sourceDocumentQualifiedName: String | Null = js.native
+  def sourceDocument_=(newValue: IConsumedODataService | Null): Unit = js.native
 }
 
 /* static members */

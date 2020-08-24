@@ -1441,7 +1441,6 @@ trait JQuery_[TElement]
     */
   def appendTo(target: Selector | (TypeOrArray[Element | DocumentFragment]) | htmlString): this.type = js.native
   def appendTo(target: JQuery[HTMLElement]): this.type = js.native
-  def attr(attributeName: String): this.type = js.native
   /**
     * Set one or more attributes for the set of matched elements.
     * @param attributeName The name of the attribute to set.
@@ -1515,6 +1514,7 @@ trait JQuery_[TElement]
   </html>
   ```
     */
+  def attr(attributeName: String): this.type = js.native
   def attr(attributeName: String, value_function: String): this.type = js.native
   def attr(
     attributeName: String,
@@ -2353,6 +2353,7 @@ trait JQuery_[TElement]
   def click_click[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, click]): this.type = js.native
   @JSName("click")
   def click_false(handler: `false`): this.type = js.native
+  def clone(withDataAndEvents: js.UndefOr[scala.Nothing], deepWithDataAndEvents: Boolean): this.type = js.native
   def clone(withDataAndEvents: Boolean): this.type = js.native
   def clone(withDataAndEvents: Boolean, deepWithDataAndEvents: Boolean): this.type = js.native
   def closest(selector_selection_element: JQuery[HTMLElement]): this.type = js.native
@@ -2906,6 +2907,77 @@ trait JQuery_[TElement]
   /**
     * Return the value at the named data store for the first element in the jQuery collection, as set by data(name, value) or by an HTML5 data-* attribute.
     * @param key Name of the data stored.
+    * @see \`{@link https://api.jquery.com/data/ }\`
+    * @since 1.2.3
+    * @example ​ ````Get the data named &quot;blah&quot; stored at for an element.
+  ```html
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>data demo</title>
+    <style>
+    div {
+    margin: 5px;
+    background: yellow;
+    }
+    button {
+    margin: 5px;
+    font-size: 14px;
+    }
+    p {
+    margin: 5px;
+    color: blue;
+    }
+    span {
+    color: red;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+  ​
+  <div>A div</div>
+  <button>Get "blah" from the div</button>
+  <button>Set "blah" to "hello"</button>
+  <button>Set "blah" to 86</button>
+  <button>Remove "blah" from the div</button>
+  <p>The "blah" value of this div is <span>?</span></p>
+  ​
+  <script>
+  $( "button" ).click(function() {
+    var value;
+  ​
+    switch ( $( "button" ).index( this ) ) {
+    case 0 :
+    value = $( "div" ).data( "blah" );
+    break;
+    case 1 :
+    $( "div" ).data( "blah", "hello" );
+    value = "Stored!";
+    break;
+    case 2 :
+    $( "div" ).data( "blah", 86 );
+    value = "Stored!";
+    break;
+    case 3 :
+    $( "div" ).removeData( "blah" );
+    value = "Removed!";
+    break;
+    }
+  ​
+    $( "span" ).text( "" + value );
+  });
+  </script>
+  ​
+  </body>
+  </html>
+  ```
+    */
+  def data(key: String): js.Any = js.native
+  /**
+    * Return the value at the named data store for the first element in the jQuery collection, as set by data(name, value) or by an HTML5 data-* attribute.
+    * @param key Name of the data stored.
     * @param value `undefined` is not recognized as a data value. Calls such as `.data( "name", undefined )`
     *              will return the jQuery object that it was called on, allowing for chaining.
     * @see \`{@link https://api.jquery.com/data/ }\`
@@ -2914,7 +2986,19 @@ trait JQuery_[TElement]
   // `unified-signatures` is disabled so that behavior when passing `undefined` to `value` can be documented. Unifying the signatures
   // results in potential confusion for users from an unexpected parameter.
   // tslint:disable-next-line:unified-signatures
-  def data(key: String): js.Any = js.native
+  def data(key: String, value: js.UndefOr[scala.Nothing]): js.Any = js.native
+  def data(key: String, value: String): this.type = js.native
+  def data(key: String, value: js.Object): this.type = js.native
+  def data(key: String, value: js.Symbol): this.type = js.native
+  def data(key: String, value: Boolean): this.type = js.native
+  def data(key: String, value: Double): this.type = js.native
+  /**
+    * Store arbitrary data associated with the matched elements.
+    * @param obj An object of key-value pairs of data to update.
+    * @see \`{@link https://api.jquery.com/data/ }\`
+    * @since 1.4.3
+    */
+  def data(obj: PlainObject[_]): this.type = js.native
   /**
     * Store arbitrary data associated with the matched elements.
     * @param key A string naming the piece of data to set.
@@ -2957,18 +3041,6 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def data(key: String, value: String): this.type = js.native
-  def data(key: String, value: js.Object): this.type = js.native
-  def data(key: String, value: js.Symbol): this.type = js.native
-  def data(key: String, value: Boolean): this.type = js.native
-  def data(key: String, value: Double): this.type = js.native
-  /**
-    * Store arbitrary data associated with the matched elements.
-    * @param obj An object of key-value pairs of data to update.
-    * @see \`{@link https://api.jquery.com/data/ }\`
-    * @since 1.4.3
-    */
-  def data(obj: PlainObject[_]): this.type = js.native
   @JSName("data")
   def data_This(key: String): this.type = js.native
   /**
@@ -3679,6 +3751,39 @@ trait JQuery_[TElement]
   ```
     */
   def eq(index: Double): this.type = js.native
+  /**
+    * Reduce the set of matched elements to the even ones in the set, numbered from zero.
+    * @see \`{@link https://api.jquery.com/even/ }\`
+    * @since 3.5
+    * @example ​ ````Highlight the even items in a list.
+  ```html
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>even demo</title>
+    <style>
+    .highlight {
+    background-color: yellow;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+  <ul>
+    <li>Look:</li>
+    <li>This is some text in a list.</li>
+    <li>This is a note about it.</li>
+    <li>This is another note about it.</li>
+  </ul>
+  <script>
+  $( "ul li" ).even().addClass( "highlight" );
+  </script>
+  </body>
+  </html>
+  ```
+    */
+  def even(): this.type = js.native
   /**
     * Merge the contents of an object onto the jQuery prototype to provide new jQuery instance methods.
     * @param obj An object to merge onto the jQuery prototype.
@@ -8367,6 +8472,7 @@ trait JQuery_[TElement]
   ```
     */
   def nextUntil(): this.type = js.native
+  def nextUntil(selector_element: js.UndefOr[scala.Nothing], filter: Selector): this.type = js.native
   def nextUntil(selector_element: JQuery[HTMLElement]): this.type = js.native
   def nextUntil(selector_element: Selector): this.type = js.native
   def nextUntil(selector_element: Selector, filter: Selector): this.type = js.native
@@ -8450,6 +8556,39 @@ trait JQuery_[TElement]
     */
   def not(selector_function_selection: Selector): this.type = js.native
   def not(selector_function_selection: TypeOrArray[Element]): this.type = js.native
+  /**
+    * Reduce the set of matched elements to the odd ones in the set, numbered from zero.
+    * @see \`{@link https://api.jquery.com/odd/ }\`
+    * @since 3.5
+    * @example ​ ````Highlight the odd items in a list.
+  ```html
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>odd demo</title>
+    <style>
+    .highlight {
+    background-color: yellow;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+  <ul>
+    <li>Look:</li>
+    <li>This is some text in a list.</li>
+    <li>This is a note about it.</li>
+    <li>This is another note about it.</li>
+  </ul>
+  <script>
+  $( "ul li" ).odd().addClass( "highlight" );
+  </script>
+  </body>
+  </html>
+  ```
+    */
+  def odd(): this.type = js.native
   /**
     * Remove an event handler.
     * @param event A jQuery.Event object.
@@ -8904,6 +9043,18 @@ trait JQuery_[TElement]
   ```
     */
   def on(events: String, selector_data: js.Any, handler: js.Function1[/* event */ JQueryEventObject, Unit]): this.type = js.native
+  def on(
+    events: String,
+    selector: js.UndefOr[scala.Nothing],
+    data: js.Any,
+    handler: js.Function1[/* event */ JQueryEventObject, Unit]
+  ): this.type = js.native
+  def on(
+    events: String,
+    selector: Null,
+    data: js.Any,
+    handler: js.Function1[/* event */ JQueryEventObject, Unit]
+  ): this.type = js.native
   /**
     * Attach an event handler function for one or more events to the selected elements.
     * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
@@ -8917,7 +9068,7 @@ trait JQuery_[TElement]
     */
   def on(
     events: String,
-    selector: js.UndefOr[Null | Selector],
+    selector: Selector,
     data: js.Any,
     handler: js.Function1[/* event */ JQueryEventObject, Unit]
   ): this.type = js.native
@@ -9149,6 +9300,11 @@ trait JQuery_[TElement]
     * @since 1.7
     */
   def on[TData](events: TypeEventHandlers[TElement, TData, TElement, TElement], data: TData): this.type = js.native
+  def on[TData](
+    events: TypeEventHandlers[TElement, TData, TElement, TElement],
+    selector: js.UndefOr[scala.Nothing],
+    data: TData
+  ): this.type = js.native
   /**
     * Attach an event handler function for one or more events to the selected elements.
     * @param events An object in which the string keys represent one or more space-separated event types and optional
@@ -9159,11 +9315,7 @@ trait JQuery_[TElement]
     * @see \`{@link https://api.jquery.com/on/ }\`
     * @since 1.7
     */
-  def on[TData](
-    events: TypeEventHandlers[TElement, TData, TElement, TElement],
-    selector: js.UndefOr[Null],
-    data: TData
-  ): this.type = js.native
+  def on[TData](events: TypeEventHandlers[TElement, TData, TElement, TElement], selector: Null, data: TData): this.type = js.native
   /**
     * Attach an event handler function for one or more events to the selected elements.
     * @param events An object in which the string keys represent one or more space-separated event types and optional
@@ -9191,6 +9343,12 @@ trait JQuery_[TElement]
   ```
     */
   def on[TType /* <: String */, TData](events: TType, data: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, TType]): this.type = js.native
+  def on[TType /* <: String */, TData](
+    events: TType,
+    selector: js.UndefOr[scala.Nothing],
+    data: TData,
+    handler: TypeEventHandler[TElement, TData, TElement, TElement, TType]
+  ): this.type = js.native
   /**
     * Attach an event handler function for one or more events to the selected elements.
     * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
@@ -9203,7 +9361,7 @@ trait JQuery_[TElement]
     */
   def on[TType /* <: String */, TData](
     events: TType,
-    selector: js.UndefOr[Null],
+    selector: Null,
     data: TData,
     handler: TypeEventHandler[TElement, TData, TElement, TElement, TType]
   ): this.type = js.native
@@ -9361,6 +9519,11 @@ trait JQuery_[TElement]
     * @since 1.7
     */
   def one[TData](events: TypeEventHandlers[TElement, TData, TElement, TElement], data: TData): this.type = js.native
+  def one[TData](
+    events: TypeEventHandlers[TElement, TData, TElement, TElement],
+    selector: js.UndefOr[scala.Nothing],
+    data: TData
+  ): this.type = js.native
   /**
     * Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
     * @param events An object in which the string keys represent one or more space-separated event types and optional
@@ -9371,11 +9534,7 @@ trait JQuery_[TElement]
     * @see \`{@link https://api.jquery.com/one/ }\`
     * @since 1.7
     */
-  def one[TData](
-    events: TypeEventHandlers[TElement, TData, TElement, TElement],
-    selector: js.UndefOr[Null],
-    data: TData
-  ): this.type = js.native
+  def one[TData](events: TypeEventHandlers[TElement, TData, TElement, TElement], selector: Null, data: TData): this.type = js.native
   /**
     * Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
     * @param events An object in which the string keys represent one or more space-separated event types and optional
@@ -9396,6 +9555,12 @@ trait JQuery_[TElement]
     * @since 1.7
     */
   def one[TType /* <: String */, TData](events: TType, data: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, TType]): this.type = js.native
+  def one[TType /* <: String */, TData](
+    events: TType,
+    selector: js.UndefOr[scala.Nothing],
+    data: TData,
+    handler: TypeEventHandler[TElement, TData, TElement, TElement, TType]
+  ): this.type = js.native
   /**
     * Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
     * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
@@ -9408,7 +9573,7 @@ trait JQuery_[TElement]
     */
   def one[TType /* <: String */, TData](
     events: TType,
-    selector: js.UndefOr[Null],
+    selector: Null,
     data: TData,
     handler: TypeEventHandler[TElement, TData, TElement, TElement, TType]
   ): this.type = js.native
@@ -9883,6 +10048,7 @@ trait JQuery_[TElement]
   ```
     */
   def parentsUntil(): this.type = js.native
+  def parentsUntil(selector_element: js.UndefOr[scala.Nothing], filter: Selector): this.type = js.native
   def parentsUntil(selector_element: JQuery[HTMLElement]): this.type = js.native
   def parentsUntil(selector_element: Selector): this.type = js.native
   def parentsUntil(selector_element: Selector, filter: Selector): this.type = js.native
@@ -10242,6 +10408,7 @@ trait JQuery_[TElement]
   ```
     */
   def prevUntil(): this.type = js.native
+  def prevUntil(selector_element: js.UndefOr[scala.Nothing], filter: Selector): this.type = js.native
   def prevUntil(selector_element: JQuery[HTMLElement]): this.type = js.native
   def prevUntil(selector_element: Selector): this.type = js.native
   def prevUntil(selector_element: Selector, filter: Selector): this.type = js.native
@@ -12552,6 +12719,7 @@ trait JQuery_[TElement]
   ```
     */
   def stop(): this.type = js.native
+  def stop(clearQueue: js.UndefOr[scala.Nothing], jumpToEnd: Boolean): this.type = js.native
   def stop(clearQueue: Boolean): this.type = js.native
   def stop(clearQueue: Boolean, jumpToEnd: Boolean): this.type = js.native
   /**
@@ -12563,6 +12731,7 @@ trait JQuery_[TElement]
     * @since 1.7
     */
   def stop(queue: String): this.type = js.native
+  def stop(queue: String, clearQueue: js.UndefOr[scala.Nothing], jumpToEnd: Boolean): this.type = js.native
   def stop(queue: String, clearQueue: Boolean): this.type = js.native
   def stop(queue: String, clearQueue: Boolean, jumpToEnd: Boolean): this.type = js.native
   /**

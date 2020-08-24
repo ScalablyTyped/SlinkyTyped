@@ -42,41 +42,24 @@ object ChooseEntryOptionsBase {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccepts(value: js.Array[AcceptOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAccepts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(js.undefined)
-        ret
-    }
+    def setAcceptsVarargs(value: AcceptOptions*): Self = this.set("accepts", js.Array(value :_*))
     @scala.inline
-    def withAcceptsAllTypes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptsAllTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAccepts(value: js.Array[AcceptOptions]): Self = this.set("accepts", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAcceptsAllTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptsAllTypes")(js.undefined)
-        ret
-    }
+    def deleteAccepts: Self = this.set("accepts", js.undefined)
     @scala.inline
-    def withSuggestedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAcceptsAllTypes(value: Boolean): Self = this.set("acceptsAllTypes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSuggestedName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedName")(js.undefined)
-        ret
-    }
+    def deleteAcceptsAllTypes: Self = this.set("acceptsAllTypes", js.undefined)
+    @scala.inline
+    def setSuggestedName(value: String): Self = this.set("suggestedName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuggestedName: Self = this.set("suggestedName", js.undefined)
   }
   
 }

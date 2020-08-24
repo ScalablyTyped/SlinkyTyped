@@ -1,8 +1,8 @@
 package typingsSlinky.antDesignIconsAngular
 
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.IconDefinition
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.ThemeType
+import typingsSlinky.antDesignIconsAngular.typesMod.IconDefinition
+import typingsSlinky.antDesignIconsAngular.typesMod.ThemeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

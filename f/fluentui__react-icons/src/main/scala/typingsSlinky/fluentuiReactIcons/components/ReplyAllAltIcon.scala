@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ReplyAllAltIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ReplyAllAltIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ReplyAllAltIcon")
   @js.native
   object component extends js.Object
   

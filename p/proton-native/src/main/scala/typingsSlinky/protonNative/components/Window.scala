@@ -1,5 +1,6 @@
 package typingsSlinky.protonNative.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.anon.W
@@ -20,6 +21,8 @@ object Window {
        with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.Window] {
     @scala.inline
     def borderless(value: Boolean): this.type = set("borderless", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def closed(value: Boolean): this.type = set("closed", value.asInstanceOf[js.Any])
     @scala.inline

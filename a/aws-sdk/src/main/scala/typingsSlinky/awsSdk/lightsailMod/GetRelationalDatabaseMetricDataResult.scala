@@ -7,22 +7,43 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetRelationalDatabaseMetricDataResult extends js.Object {
   /**
-    * An object describing the result of your get relational database metric data request.
+    * An array of objects that describe the metric data returned.
     */
   var metricData: js.UndefOr[MetricDatapointList] = js.native
   /**
-    * The name of the metric.
+    * The name of the metric returned.
     */
   var metricName: js.UndefOr[RelationalDatabaseMetricName] = js.native
 }
 
 object GetRelationalDatabaseMetricDataResult {
   @scala.inline
-  def apply(metricData: MetricDatapointList = null, metricName: RelationalDatabaseMetricName = null): GetRelationalDatabaseMetricDataResult = {
+  def apply(): GetRelationalDatabaseMetricDataResult = {
     val __obj = js.Dynamic.literal()
-    if (metricData != null) __obj.updateDynamic("metricData")(metricData.asInstanceOf[js.Any])
-    if (metricName != null) __obj.updateDynamic("metricName")(metricName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRelationalDatabaseMetricDataResult]
   }
+  @scala.inline
+  implicit class GetRelationalDatabaseMetricDataResultOps[Self <: GetRelationalDatabaseMetricDataResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setMetricDataVarargs(value: MetricDatapoint*): Self = this.set("metricData", js.Array(value :_*))
+    @scala.inline
+    def setMetricData(value: MetricDatapointList): Self = this.set("metricData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMetricData: Self = this.set("metricData", js.undefined)
+    @scala.inline
+    def setMetricName(value: RelationalDatabaseMetricName): Self = this.set("metricName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMetricName: Self = this.set("metricName", js.undefined)
+  }
+  
 }
 

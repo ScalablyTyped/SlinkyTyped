@@ -3,9 +3,9 @@ package typingsSlinky.reactToolbox.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libNavigationMod.default
-import typingsSlinky.reactToolbox.libNavigationNavigationMod.NavigationProps
-import typingsSlinky.reactToolbox.libNavigationNavigationMod.NavigationTheme
+import typingsSlinky.reactToolbox.navigationMod.default
+import typingsSlinky.reactToolbox.navigationNavigationMod.NavigationProps
+import typingsSlinky.reactToolbox.navigationNavigationMod.NavigationTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.horizontal
 import typingsSlinky.reactToolbox.reactToolboxStrings.vertical
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Navigation {
-  @JSImport("react-toolbox/lib/navigation", JSImport.Default)
+  @JSImport("react-toolbox/components/navigation", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -21,6 +21,8 @@ object Navigation {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionsVarargs(value: js.Any*): this.type = set("actions", js.Array(value :_*))
     @scala.inline
     def actions(value: js.Array[_]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -69,6 +71,8 @@ object Navigation {
     def onTouchMove(value: js.Function): this.type = set("onTouchMove", value.asInstanceOf[js.Any])
     @scala.inline
     def onTouchStart(value: js.Function): this.type = set("onTouchStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def routesVarargs(value: js.Any*): this.type = set("routes", js.Array(value :_*))
     @scala.inline
     def routes(value: js.Array[_]): this.type = set("routes", value.asInstanceOf[js.Any])
     @scala.inline

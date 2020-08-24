@@ -1,7 +1,7 @@
 package typingsSlinky.crittersWebpackPlugin.mod
 
 import typingsSlinky.crittersWebpackPlugin.mod.Critters.CrittersOptions
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

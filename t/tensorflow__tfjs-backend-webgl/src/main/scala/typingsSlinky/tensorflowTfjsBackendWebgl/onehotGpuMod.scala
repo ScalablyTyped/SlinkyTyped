@@ -1,0 +1,19 @@
+package typingsSlinky.tensorflowTfjsBackendWebgl
+
+import org.scalajs.dom.raw.WebGLUniformLocation
+import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs-backend-webgl/dist/onehot_gpu", JSImport.Namespace)
+@js.native
+object onehotGpuMod extends js.Object {
+  @js.native
+  class OneHotProgram protected () extends GPGPUProgram {
+    def this(numIndices: Double, depth: Double, onValue: Double, offValue: Double) = this()
+    var seedLoc: WebGLUniformLocation = js.native
+  }
+  
+}
+

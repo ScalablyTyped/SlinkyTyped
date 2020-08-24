@@ -14,6 +14,12 @@ object requestSession extends js.Object {
   def apply(
     successCallback: js.Function1[/* session */ typingsSlinky.chrome.chrome.cast.Session, Unit],
     errorCallback: js.Function1[/* error */ typingsSlinky.chrome.chrome.cast.Error, Unit],
+    sessionRequest: js.UndefOr[scala.Nothing],
+    label: String
+  ): Unit = js.native
+  def apply(
+    successCallback: js.Function1[/* session */ typingsSlinky.chrome.chrome.cast.Session, Unit],
+    errorCallback: js.Function1[/* error */ typingsSlinky.chrome.chrome.cast.Error, Unit],
     sessionRequest: typingsSlinky.chrome.chrome.cast.SessionRequest
   ): Unit = js.native
   def apply(

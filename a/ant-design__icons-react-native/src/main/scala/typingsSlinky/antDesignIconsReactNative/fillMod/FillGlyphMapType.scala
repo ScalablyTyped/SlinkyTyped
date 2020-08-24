@@ -24,6 +24,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.bell
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.book
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`box-plot`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.bug
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.build
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.bulb
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.calculator
@@ -99,6 +100,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`folder-add`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`folder-open`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.folder
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`format-painter`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.forward
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.frown
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.fund
@@ -106,6 +108,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gift
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.github
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gitlab
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.gold
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.golden
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`google-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`google-plus-circle`
@@ -123,13 +126,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`info-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.instagram
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.insurance
-  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.interation
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.interaction
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.layout
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`left-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`left-square`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.like
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.linkedin
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.lock
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`mac-command`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.mail
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`medicine-box`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`medium-circle`
@@ -167,6 +171,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.rest
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`right-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`right-square`
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.robot
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.rocket
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`safety-certificate`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.save
@@ -175,6 +180,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.setting
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.shop
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.shopping
+  - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.signal
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`sketch-circle`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`sketch-square`
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.skin

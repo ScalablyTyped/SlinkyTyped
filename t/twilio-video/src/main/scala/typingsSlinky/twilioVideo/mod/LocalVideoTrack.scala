@@ -1,6 +1,7 @@
 package typingsSlinky.twilioVideo.mod
 
 import org.scalajs.dom.experimental.mediastream.MediaStreamTrack
+import org.scalajs.dom.experimental.mediastream.MediaTrackConstraints
 import org.scalajs.dom.raw.HTMLMediaElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.twilioVideo.mod.Track.ID
@@ -32,6 +33,8 @@ class LocalVideoTrack protected ()
   def disable(): LocalVideoTrack = js.native
   def enable(): LocalVideoTrack = js.native
   def enable(enabled: Boolean): LocalVideoTrack = js.native
+  def restart(): js.Promise[Unit] = js.native
+  def restart(constraints: MediaTrackConstraints): js.Promise[Unit] = js.native
   def stop(): LocalVideoTrack = js.native
 }
 

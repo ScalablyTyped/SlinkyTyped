@@ -5,8 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type AccessibilityAnnouncementFormatter = js.Function3[
+    /* updatedSeries */ js.Array[typingsSlinky.highcharts.mod.Series], 
+    /* addedSeries */ js.UndefOr[typingsSlinky.highcharts.mod.Series], 
+    /* addedPoint */ js.UndefOr[typingsSlinky.highcharts.mod.Point], 
+    typingsSlinky.highcharts.highchartsBooleans.`false` | java.lang.String
+  ]
   type AnimationStepCallbackFunction = js.ThisFunction0[/* this */ typingsSlinky.highcharts.mod.SVGElement, scala.Unit]
+  type AnnotationControlPointPositionerFunction = js.ThisFunction1[
+    /* this */ typingsSlinky.highcharts.mod.AnnotationControlPoint, 
+    /* target */ typingsSlinky.highcharts.mod.AnnotationControllable, 
+    typingsSlinky.highcharts.mod.PositionObject
+  ]
   type AxisEventCallbackFunction = js.ThisFunction0[/* this */ typingsSlinky.highcharts.mod.Axis, scala.Unit]
+  type AxisLabelsFormatterCallbackFunction = js.ThisFunction1[
+    /* this */ typingsSlinky.highcharts.mod.AxisLabelsFormatterContextObject[scala.Double], 
+    /* that */ typingsSlinky.highcharts.mod.AxisLabelsFormatterContextObject[java.lang.String], 
+    java.lang.String
+  ]
   type AxisPointBreakEventCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Axis, 
     /* evt */ typingsSlinky.highcharts.mod.AxisPointBreakEventObject, 
@@ -17,7 +33,10 @@ package object mod {
     /* evt */ typingsSlinky.highcharts.mod.AxisSetExtremesEventObject, 
     scala.Unit
   ]
-  type AxisTickPositionerCallbackFunction = js.ThisFunction0[/* this */ typingsSlinky.highcharts.mod.Axis, js.Array[scala.Double]]
+  type AxisTickPositionerCallbackFunction = js.ThisFunction0[
+    /* this */ typingsSlinky.highcharts.mod.Axis, 
+    typingsSlinky.highcharts.mod.AxisTickPositionsArray
+  ]
   type ChartAddSeriesCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Chart_, 
     /* event */ typingsSlinky.highcharts.mod.ChartAddSeriesEventObject, 
@@ -63,8 +82,9 @@ package object mod {
     * Callback function that returns the correspondig Date object to a match.
     */
   type DataDateFormatCallbackFunction = js.Function1[/* match */ js.Array[scala.Double], scala.Double]
-  type DataLabelsFormatterCallbackFunction = js.ThisFunction0[
-    /* this */ typingsSlinky.highcharts.mod.DataLabelsFormatterContextObject, 
+  type DataLabelsFormatterCallbackFunction = js.ThisFunction1[
+    /* this */ typingsSlinky.highcharts.mod.PointLabelObject, 
+    /* options */ typingsSlinky.highcharts.mod.DataLabelsOptions, 
     js.UndefOr[scala.Double | java.lang.String | scala.Null]
   ]
   type DataParseDateCallbackFunction = js.Function1[/* dateValue */ java.lang.String, scala.Double]
@@ -114,6 +134,18 @@ package object mod {
   type FormatterCallbackFunction[T] = js.ThisFunction0[/* this */ T, java.lang.String]
   type HTMLAttributes = typingsSlinky.highcharts.mod.Dictionary[scala.Boolean | scala.Double | java.lang.String | js.Function]
   type HTMLDOMElement = org.scalajs.dom.raw.HTMLElement
+  type MarkerClusterDrillCallbackFunction = js.ThisFunction1[
+    /* this */ typingsSlinky.highcharts.mod.Point, 
+    /* event */ typingsSlinky.highcharts.mod.PointClickEventObject, 
+    scala.Unit
+  ]
+  type NumberFormatterCallbackFunction = js.Function4[
+    /* number */ scala.Double, 
+    /* decimals */ scala.Double, 
+    /* decimalPoint */ js.UndefOr[java.lang.String], 
+    /* thousandsSep */ js.UndefOr[java.lang.String], 
+    java.lang.String
+  ]
   type ObjectEachCallbackFunction[T] = js.ThisFunction3[
     /* this */ T, 
     /* value */ js.Any, 
@@ -193,7 +225,18 @@ package object mod {
   type RelativeSize = scala.Double | java.lang.String
   type ResponsiveCallbackFunction = js.ThisFunction0[/* this */ typingsSlinky.highcharts.mod.Chart_, scala.Boolean]
   type SVGDOMElement = org.scalajs.dom.raw.SVGElement
-  type SVGPathArray = js.Array[scala.Double | typingsSlinky.highcharts.mod.SVGPathCommand]
+  type SVGPathArray = js.Array[
+    js.Tuple8[
+      typingsSlinky.highcharts.mod.SVGPathCommand, 
+      js.UndefOr[scala.Double], 
+      js.UndefOr[scala.Double], 
+      js.UndefOr[scala.Double], 
+      js.UndefOr[scala.Double], 
+      js.UndefOr[scala.Double], 
+      js.UndefOr[scala.Double], 
+      js.UndefOr[scala.Double]
+    ]
+  ]
   type ScreenReaderClickCallbackFunction = js.Function1[/* evt */ org.scalajs.dom.raw.MouseEvent, scala.Unit]
   type ScreenReaderFormatterCallbackFunction[T] = js.Function1[/* context */ T, java.lang.String]
   type SeriesAfterAnimateCallbackFunction = js.ThisFunction1[
@@ -239,15 +282,15 @@ package object mod {
     scala.Unit
   ]
   type SeriesNetworkgraphDataLabelsFormatterCallbackFunction = js.ThisFunction0[
-    /* this */ typingsSlinky.highcharts.mod.DataLabelsFormatterContextObject | typingsSlinky.highcharts.mod.SeriesNetworkgraphDataLabelsFormatterContextObject, 
+    /* this */ typingsSlinky.highcharts.mod.PointLabelObject | typingsSlinky.highcharts.mod.SeriesNetworkgraphDataLabelsFormatterContextObject, 
     java.lang.String
   ]
   type SeriesPackedBubbleDataLabelsFormatterCallbackFunction = js.ThisFunction0[
-    /* this */ typingsSlinky.highcharts.mod.DataLabelsFormatterContextObject | typingsSlinky.highcharts.mod.SeriesPackedBubbleDataLabelsFormatterContextObject, 
+    /* this */ typingsSlinky.highcharts.mod.SeriesPackedBubbleDataLabelsFormatterContextObject, 
     java.lang.String
   ]
   type SeriesSankeyDataLabelsFormatterCallbackFunction = js.ThisFunction0[
-    /* this */ typingsSlinky.highcharts.mod.DataLabelsFormatterContextObject | typingsSlinky.highcharts.mod.SeriesSankeyDataLabelsFormatterContextObject, 
+    /* this */ typingsSlinky.highcharts.mod.PointLabelObject | typingsSlinky.highcharts.mod.SeriesSankeyDataLabelsFormatterContextObject, 
     js.UndefOr[java.lang.String]
   ]
   type SeriesShowCallbackFunction = js.ThisFunction1[
@@ -257,9 +300,10 @@ package object mod {
   ]
   type TimeFormatCallbackFunction = js.Function1[/* timestamp */ scala.Double, java.lang.String]
   type TimelineDataLabelsFormatterCallbackFunction = js.ThisFunction0[
-    /* this */ typingsSlinky.highcharts.mod.DataLabelsFormatterContextObject | typingsSlinky.highcharts.mod.TimelineDataLabelsFormatterContextObject, 
+    /* this */ typingsSlinky.highcharts.mod.PointLabelObject | typingsSlinky.highcharts.mod.TimelineDataLabelsFormatterContextObject, 
     js.UndefOr[scala.Double | java.lang.String | scala.Null]
   ]
+  type TimezoneOffsetCallbackFunction = js.Function1[/* timestamp */ scala.Double, scala.Double]
   type TooltipFormatterCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.TooltipFormatterContextObject, 
     /* tooltip */ typingsSlinky.highcharts.mod.Tooltip, 
@@ -267,10 +311,11 @@ package object mod {
       typingsSlinky.highcharts.highchartsBooleans.`false` | java.lang.String | (js.Array[js.UndefOr[java.lang.String | scala.Null]]) | scala.Null
     ]
   ]
-  type TooltipPositionerCallbackFunction = js.Function3[
+  type TooltipPositionerCallbackFunction = js.ThisFunction3[
+    /* this */ typingsSlinky.highcharts.mod.Tooltip, 
     /* labelWidth */ scala.Double, 
     /* labelHeight */ scala.Double, 
-    /* point */ typingsSlinky.highcharts.mod.TooltipPositionerPointObject, 
+    /* point */ typingsSlinky.highcharts.mod.Point | typingsSlinky.highcharts.mod.TooltipPositionerPointObject, 
     typingsSlinky.highcharts.mod.PositionObject
   ]
   type WrapProceedFunction = js.Function3[

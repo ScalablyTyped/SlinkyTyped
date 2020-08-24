@@ -13,7 +13,11 @@ import scala.scalajs.js.annotation._
   */
 class ^ () extends ByteBuffer {
   def this(capacity: Double) = this()
+  def this(capacity: js.UndefOr[scala.Nothing], littleEndian: Boolean) = this()
   def this(capacity: Double, littleEndian: Boolean) = this()
+  def this(capacity: js.UndefOr[scala.Nothing], littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean) = this()
+  def this(capacity: js.UndefOr[scala.Nothing], littleEndian: Boolean, noAssert: Boolean) = this()
+  def this(capacity: Double, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean) = this()
   def this(capacity: Double, littleEndian: Boolean, noAssert: Boolean) = this()
 }
 
@@ -64,7 +68,11 @@ object ^ extends js.Object {
     * Allocates a new ByteBuffer backed by a buffer of the specified capacity.
     */
   def allocate(): ByteBuffer = js.native
+  def allocate(capacity: js.UndefOr[scala.Nothing], littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
+  def allocate(capacity: js.UndefOr[scala.Nothing], littleEndian: Boolean): ByteBuffer = js.native
+  def allocate(capacity: js.UndefOr[scala.Nothing], littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   def allocate(capacity: Double): ByteBuffer = js.native
+  def allocate(capacity: Double, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
   def allocate(capacity: Double, littleEndian: Boolean): ByteBuffer = js.native
   def allocate(capacity: Double, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
@@ -101,14 +109,45 @@ object ^ extends js.Object {
     */
   def concat(
     buffers: js.Array[
-      js.typedarray.ArrayBuffer | Buffer | ByteBuffer | String | js.typedarray.Uint8Array
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
     ]
   ): ByteBuffer = js.native
   def concat(
     buffers: js.Array[
       ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
     ],
+    encoding: js.UndefOr[scala.Nothing],
+    litteEndian: js.UndefOr[scala.Nothing],
+    noAssert: Boolean
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
+    encoding: js.UndefOr[scala.Nothing],
+    litteEndian: Boolean
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
+    encoding: js.UndefOr[scala.Nothing],
+    litteEndian: Boolean,
+    noAssert: Boolean
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
     encoding: String
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
+    encoding: String,
+    litteEndian: js.UndefOr[scala.Nothing],
+    noAssert: Boolean
   ): ByteBuffer = js.native
   def concat(
     buffers: js.Array[
@@ -136,6 +175,14 @@ object ^ extends js.Object {
       ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
     ],
     encoding: Boolean,
+    litteEndian: js.UndefOr[scala.Nothing],
+    noAssert: Boolean
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
+    encoding: Boolean,
     litteEndian: Boolean
   ): ByteBuffer = js.native
   def concat(
@@ -150,43 +197,41 @@ object ^ extends js.Object {
     * Decodes a base64 encoded string to a ByteBuffer.
     */
   def fromBase64(str: String): ByteBuffer = js.native
+  def fromBase64(str: String, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
   def fromBase64(str: String, littleEndian: Boolean): ByteBuffer = js.native
   def fromBase64(str: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Decodes a binary encoded string, that is using only characters 0x00-0xFF as bytes, to a ByteBuffer.
     */
   def fromBinary(str: String): ByteBuffer = js.native
+  def fromBinary(str: String, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
   def fromBinary(str: String, littleEndian: Boolean): ByteBuffer = js.native
   def fromBinary(str: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Decodes a hex encoded string with marked offsets to a ByteBuffer.
     */
   def fromDebug(str: String): ByteBuffer = js.native
+  def fromDebug(str: String, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
   def fromDebug(str: String, littleEndian: Boolean): ByteBuffer = js.native
   def fromDebug(str: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Decodes a hex encoded string to a ByteBuffer.
     */
   def fromHex(str: String): ByteBuffer = js.native
+  def fromHex(str: String, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
   def fromHex(str: String, littleEndian: Boolean): ByteBuffer = js.native
   def fromHex(str: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Decodes an UTF8 encoded string to a ByteBuffer.
     */
   def fromUTF8(str: String): ByteBuffer = js.native
+  def fromUTF8(str: String, littleEndian: js.UndefOr[scala.Nothing], noAssert: Boolean): ByteBuffer = js.native
   def fromUTF8(str: String, littleEndian: Boolean): ByteBuffer = js.native
   def fromUTF8(str: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Gets the backing buffer type.
     */
   def isByteBuffer(bb: js.Any): Boolean = js.native
-  def wrap(buffer: String): ByteBuffer = js.native
-  def wrap(buffer: String, enc: String): ByteBuffer = js.native
-  def wrap(buffer: String, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: String, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: String, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: String, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: String, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Wraps a buffer or a string. Sets the allocated ByteBuffer's ByteBuffer#offset to 0 and its ByteBuffer#limit to the length of the wrapped data.
     * @param buffer Anything that can be wrapped
@@ -194,34 +239,12 @@ object ^ extends js.Object {
     * @param littleEndian Whether to use little or big endian byte order. Defaults to ByteBuffer.DEFAULT_ENDIAN.
     * @param noAssert Whether to skip assertions of offsets and values. Defaults to ByteBuffer.DEFAULT_NOASSERT.
     */
-  def wrap(buffer: ByteBuffer): ByteBuffer = js.native
-  def wrap(buffer: ByteBuffer, enc: String): ByteBuffer = js.native
-  def wrap(buffer: ByteBuffer, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ByteBuffer, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ByteBuffer, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ByteBuffer, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ByteBuffer, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Buffer): ByteBuffer = js.native
-  def wrap(buffer: Buffer, enc: String): ByteBuffer = js.native
-  def wrap(buffer: Buffer, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Buffer, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Buffer, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Buffer, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Buffer, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer, enc: String): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.ArrayBuffer, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array, enc: String): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: js.typedarray.Uint8Array, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
+  def wrap(
+    buffer: ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String,
+    enc: js.UndefOr[String | Boolean],
+    littleEndian: js.UndefOr[Boolean],
+    noAssert: js.UndefOr[Boolean]
+  ): ByteBuffer = js.native
   /**
     * Decodes a zigzag encoded signed 32bit integer.
     */

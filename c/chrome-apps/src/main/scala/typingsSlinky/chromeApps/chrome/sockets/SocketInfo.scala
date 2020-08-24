@@ -42,101 +42,42 @@ object SocketInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withPaused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConnected(value: Boolean): Self = this.set("connected", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPersistent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPaused(value: Boolean): Self = this.set("paused", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSocketId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPersistent(value: Boolean): Self = this.set("persistent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBufferSize(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferSize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSocketId(value: integer): Self = this.set("socketId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutBufferSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferSize")(js.undefined)
-        ret
-    }
+    def setBufferSize(value: integer): Self = this.set("bufferSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLocalAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBufferSize: Self = this.set("bufferSize", js.undefined)
     @scala.inline
-    def withoutLocalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
-        ret
-    }
+    def setLocalAddress(value: String): Self = this.set("localAddress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLocalPort(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localPort")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLocalAddress: Self = this.set("localAddress", js.undefined)
     @scala.inline
-    def withoutLocalPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localPort")(js.undefined)
-        ret
-    }
+    def setLocalPort(value: integer): Self = this.set("localPort", value.asInstanceOf[js.Any])
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLocalPort: Self = this.set("localPort", js.undefined)
     @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPeerAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteName: Self = this.set("name", js.undefined)
     @scala.inline
-    def withoutPeerAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerAddress")(js.undefined)
-        ret
-    }
+    def setPeerAddress(value: String): Self = this.set("peerAddress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPeerPort(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerPort")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePeerAddress: Self = this.set("peerAddress", js.undefined)
     @scala.inline
-    def withoutPeerPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerPort")(js.undefined)
-        ret
-    }
+    def setPeerPort(value: integer): Self = this.set("peerPort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePeerPort: Self = this.set("peerPort", js.undefined)
   }
   
 }

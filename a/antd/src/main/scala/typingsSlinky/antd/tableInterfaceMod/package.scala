@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object tableInterfaceMod {
-  type ColumnTitle[RecordType] = slinky.core.TagMod[scala.Any] | (js.Function1[
+  type ColumnTitle[RecordType] = slinky.core.facade.ReactElement | (js.Function1[
     /* props */ typingsSlinky.antd.tableInterfaceMod.ColumnTitleProps[RecordType], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ])
   type ColumnsType[RecordType] = js.Array[
     typingsSlinky.antd.tableInterfaceMod.ColumnGroupType[RecordType] | typingsSlinky.antd.tableInterfaceMod.ColumnType[RecordType]

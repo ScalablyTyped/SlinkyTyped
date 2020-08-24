@@ -6,6 +6,7 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.anon.Breakpoints
+import typingsSlinky.cathoQuantum.anon.Spacing
 import typingsSlinky.cathoQuantum.buttonMod.ButtonProps
 import typingsSlinky.cathoQuantum.buttonMod.default
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
@@ -22,6 +23,7 @@ import typingsSlinky.cathoQuantum.cathoQuantumStrings.success
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.warning
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.xlarge
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.xsmall
+import typingsSlinky.cathoQuantum.iconButtonMod.IconButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,6 +43,12 @@ object Button {
     def $as(value: ReactElement | String): this.type = set("$as", value.asInstanceOf[js.Any])
     @scala.inline
     def center(value: Boolean): this.type = set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,5 +73,26 @@ object Button {
   
   def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Icon {
+    @JSImport("@catho/quantum/Button", "default.Icon")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      @scala.inline
+      def size(value: xsmall | small | medium | large | xlarge): this.type = set("size", value.asInstanceOf[js.Any])
+      @scala.inline
+      def skin(value: neutral | primary | secondary | success | warning | error): this.type = set("skin", value.asInstanceOf[js.Any])
+      @scala.inline
+      def theme(value: Spacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: IconButtonProps): typingsSlinky.cathoQuantum.components.Button.Icon.Builder = new typingsSlinky.cathoQuantum.components.Button.Icon.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Icon.type): typingsSlinky.cathoQuantum.components.Button.Icon.Builder = new typingsSlinky.cathoQuantum.components.Button.Icon.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

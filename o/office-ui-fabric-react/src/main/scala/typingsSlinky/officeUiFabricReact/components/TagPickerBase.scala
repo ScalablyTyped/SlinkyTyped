@@ -49,6 +49,8 @@ object TagPickerBase {
       value: (/* input */ String, /* ValidationState */ ValidationState) => ISuggestionModel[ITag] | ITag
     ): this.type = set("createGenericItem", js.Any.fromFunction2(value))
     @scala.inline
+    def defaultSelectedItemsVarargs(value: ITag*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+    @scala.inline
     def defaultSelectedItems(value: js.Array[ITag]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -108,6 +110,8 @@ object TagPickerBase {
     def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
     @scala.inline
     def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedItemsVarargs(value: ITag*): this.type = set("selectedItems", js.Array(value :_*))
     @scala.inline
     def selectedItems(value: js.Array[ITag]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
     @scala.inline

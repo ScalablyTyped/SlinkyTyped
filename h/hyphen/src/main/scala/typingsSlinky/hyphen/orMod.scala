@@ -1,8 +1,8 @@
 package typingsSlinky.hyphen
 
-import typingsSlinky.hyphen.commonMod.HyphenationFunctionAsync
-import typingsSlinky.hyphen.commonMod.HyphenationFunctionSync
-import typingsSlinky.hyphen.commonMod.PatternsDefinition
+import typingsSlinky.hyphen.mod.HyphenationFunctionAsync
+import typingsSlinky.hyphen.mod.HyphenationFunctionSync
+import typingsSlinky.hyphen.mod.PatternsDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

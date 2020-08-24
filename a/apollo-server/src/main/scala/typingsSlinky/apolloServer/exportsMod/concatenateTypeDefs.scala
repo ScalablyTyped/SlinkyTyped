@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServer.exportsMod
 
-import typingsSlinky.graphqlTools.interfacesMod.ITypedef
+import typingsSlinky.graphqlToolsUtils.interfacesMod.ITypedef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

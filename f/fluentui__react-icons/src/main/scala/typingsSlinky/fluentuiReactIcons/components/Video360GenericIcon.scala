@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Video360GenericIcon {
-  @JSImport("@fluentui/react-icons/lib/components/Video360GenericIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Video360GenericIcon")
   @js.native
   object component extends js.Object
   

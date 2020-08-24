@@ -13,15 +13,43 @@ trait DescribeProductAsAdminInput extends js.Object {
   /**
     * The product identifier.
     */
-  var Id: typingsSlinky.awsSdk.servicecatalogMod.Id = js.native
+  var Id: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.Id] = js.native
+  /**
+    * The product name.
+    */
+  var Name: js.UndefOr[ProductViewName] = js.native
 }
 
 object DescribeProductAsAdminInput {
   @scala.inline
-  def apply(Id: Id, AcceptLanguage: AcceptLanguage = null): DescribeProductAsAdminInput = {
-    val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
+  def apply(): DescribeProductAsAdminInput = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[DescribeProductAsAdminInput]
   }
+  @scala.inline
+  implicit class DescribeProductAsAdminInputOps[Self <: DescribeProductAsAdminInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAcceptLanguage(value: AcceptLanguage): Self = this.set("AcceptLanguage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAcceptLanguage: Self = this.set("AcceptLanguage", js.undefined)
+    @scala.inline
+    def setId(value: Id): Self = this.set("Id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("Id", js.undefined)
+    @scala.inline
+    def setName(value: ProductViewName): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("Name", js.undefined)
+  }
+  
 }
 

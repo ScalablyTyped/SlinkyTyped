@@ -15,7 +15,6 @@ import typingsSlinky.pixiJs.PIXI.systems.StateSystem
 import typingsSlinky.pixiJs.PIXI.systems.StencilSystem
 import typingsSlinky.pixiJs.PIXI.systems.TextureGCSystem
 import typingsSlinky.pixiJs.PIXI.systems.TextureSystem
-import typingsSlinky.pixiJs.anon.Accessibility
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,20 +95,6 @@ trait Renderer extends AbstractRenderer {
     * @readonly
     */
   val mask: MaskSystem = js.native
-  /**
-    * Collection of installed plugins. These are included by default in PIXI, but can be excluded
-    * by creating a custom build. Consult the README for more information about creating custom
-    * builds and excluding plugins.
-    * @name PIXI.Renderer#plugins
-    * @type {object}
-    * @readonly
-    * @property {PIXI.accessibility.AccessibilityManager} accessibility Support tabbing interactive elements.
-    * @property {PIXI.Extract} extract Extract image data from renderer.
-    * @property {PIXI.interaction.InteractionManager} interaction Handles mouse, touch and pointer events.
-    * @property {PIXI.Prepare} prepare Pre-render display objects.
-    */
-  @JSName("plugins")
-  val plugins_Renderer: Accessibility = js.native
   /**
     * Projection system instance
     * @member {PIXI.systems.ProjectionSystem} projection
@@ -198,8 +183,76 @@ trait Renderer extends AbstractRenderer {
     * @param {boolean} [skipUpdateTransform=false] - Should we skip the update transform pass?
     */
   def render(displayObject: DisplayObject): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: js.UndefOr[scala.Nothing],
+    clear: js.UndefOr[scala.Nothing],
+    transform: js.UndefOr[scala.Nothing],
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: js.UndefOr[scala.Nothing],
+    clear: js.UndefOr[scala.Nothing],
+    transform: Matrix
+  ): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: js.UndefOr[scala.Nothing],
+    clear: js.UndefOr[scala.Nothing],
+    transform: Matrix,
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
+  def render(displayObject: DisplayObject, renderTexture: js.UndefOr[scala.Nothing], clear: Boolean): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: js.UndefOr[scala.Nothing],
+    clear: Boolean,
+    transform: js.UndefOr[scala.Nothing],
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: js.UndefOr[scala.Nothing],
+    clear: Boolean,
+    transform: Matrix
+  ): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: js.UndefOr[scala.Nothing],
+    clear: Boolean,
+    transform: Matrix,
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
   def render(displayObject: DisplayObject, renderTexture: RenderTexture): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: RenderTexture,
+    clear: js.UndefOr[scala.Nothing],
+    transform: js.UndefOr[scala.Nothing],
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: RenderTexture,
+    clear: js.UndefOr[scala.Nothing],
+    transform: Matrix
+  ): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: RenderTexture,
+    clear: js.UndefOr[scala.Nothing],
+    transform: Matrix,
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
   def render(displayObject: DisplayObject, renderTexture: RenderTexture, clear: Boolean): Unit = js.native
+  def render(
+    displayObject: DisplayObject,
+    renderTexture: RenderTexture,
+    clear: Boolean,
+    transform: js.UndefOr[scala.Nothing],
+    skipUpdateTransform: Boolean
+  ): Unit = js.native
   def render(displayObject: DisplayObject, renderTexture: RenderTexture, clear: Boolean, transform: Matrix): Unit = js.native
   def render(
     displayObject: DisplayObject,

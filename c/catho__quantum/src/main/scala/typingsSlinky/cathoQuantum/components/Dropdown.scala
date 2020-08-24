@@ -1,12 +1,12 @@
 package typingsSlinky.cathoQuantum.components
 
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.dropdownMod.DropdownProps
 import typingsSlinky.cathoQuantum.dropdownMod.ItemPropType
 import typingsSlinky.cathoQuantum.dropdownMod.default
+import typingsSlinky.downshift.mod.ControllerStateAndHelpers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,12 +33,14 @@ object Dropdown {
     @scala.inline
     def ignoreSpecialChars(value: Boolean): this.type = set("ignoreSpecialChars", value.asInstanceOf[js.Any])
     @scala.inline
+    def itemsVarargs(value: ItemPropType*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
     def items(value: js.Array[ItemPropType]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(
-      value: (/* selectedItem */ js.UndefOr[ReactElement | Null], /* stateAndHelpers */ js.UndefOr[js.Any]) => Unit
+      value: (/* selectedItem */ ItemPropType | Null, /* stateAndHelpers */ ControllerStateAndHelpers[ItemPropType]) => Unit
     ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])

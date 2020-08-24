@@ -35,41 +35,22 @@ object OnGestureListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnDown(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDown")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnFling(value: (MotionEvent, MotionEvent, Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFling")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnDown(value: MotionEvent => Boolean): Self = this.set("onDown", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnLongPress(value: MotionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnFling(value: (MotionEvent, MotionEvent, Double, Double) => Boolean): Self = this.set("onFling", js.Any.fromFunction4(value))
     @scala.inline
-    def withOnScroll(value: (MotionEvent, MotionEvent, Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnLongPress(value: MotionEvent => Unit): Self = this.set("onLongPress", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnShowPress(value: MotionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowPress")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnScroll(value: (MotionEvent, MotionEvent, Double, Double) => Boolean): Self = this.set("onScroll", js.Any.fromFunction4(value))
     @scala.inline
-    def withOnSingleTapUp(value: MotionEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSingleTapUp")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnShowPress(value: MotionEvent => Unit): Self = this.set("onShowPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnSingleTapUp(value: MotionEvent => Boolean): Self = this.set("onSingleTapUp", js.Any.fromFunction1(value))
   }
   
 }

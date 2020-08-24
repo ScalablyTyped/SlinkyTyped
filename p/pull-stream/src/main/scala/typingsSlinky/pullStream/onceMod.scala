@@ -14,5 +14,6 @@ object onceMod extends js.Object {
   def apply[T](): Source[T] = js.native
   def apply[T](value: T): Source[T] = js.native
   def apply[T](value: T, onAbort: js.Function1[/* err */ js.UndefOr[js.Error | Null], _]): Source[T] = js.native
+  def apply[T](value: js.UndefOr[scala.Nothing], onAbort: js.Function1[/* err */ js.UndefOr[js.Error | Null], _]): Source[T] = js.native
 }
 

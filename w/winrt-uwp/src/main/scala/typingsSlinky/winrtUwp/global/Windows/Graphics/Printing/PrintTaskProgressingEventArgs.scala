@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Printing.PrintTaskProgressingEventArgs")
 @js.native
 abstract class PrintTaskProgressingEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskProgressingEventArgs {
-  /** Gets the page count for a print task. */
-  /* CompleteClass */
-  override var documentPageCount: Double = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskProgressingEventArgs
 

@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Button {
-  @JSImport("react-native-share/Button", JSImport.Default)
+  @JSImport("react-native-share", "Button")
   @js.native
   object component extends js.Object
   

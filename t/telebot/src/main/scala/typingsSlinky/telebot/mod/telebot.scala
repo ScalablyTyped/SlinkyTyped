@@ -8,7 +8,6 @@ import typingsSlinky.telebot.anon.ChatId
 import typingsSlinky.telebot.anon.Currency
 import typingsSlinky.telebot.anon.Duration
 import typingsSlinky.telebot.anon.ErrorMessage
-import typingsSlinky.telebot.anon.ErrorMessageString
 import typingsSlinky.telebot.anon.FileName
 import typingsSlinky.telebot.anon.FoursquareId
 import typingsSlinky.telebot.anon.Height
@@ -17,10 +16,11 @@ import typingsSlinky.telebot.anon.InlineMsgId
 import typingsSlinky.telebot.anon.Limit
 import typingsSlinky.telebot.anon.MessageId
 import typingsSlinky.telebot.anon.Notification
-import typingsSlinky.telebot.anon.NotificationBoolean
 import typingsSlinky.telebot.anon.NotificationReplyMarkup
 import typingsSlinky.telebot.anon.ReplyMarkup
 import typingsSlinky.telebot.anon.ReplyToMessage
+import typingsSlinky.telebot.anon.`0`
+import typingsSlinky.telebot.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait telebot extends js.Object {
   def answerList(id: String): AnswerList = js.native
   def answerList(id: String, opt: js.Any): AnswerList = js.native
   def answerPreCheckoutQuery(pre_checkout_query_id: String, ok: Boolean): Boolean = js.native
-  def answerPreCheckoutQuery(pre_checkout_query_id: String, ok: Boolean, opt: ErrorMessageString): Boolean = js.native
+  def answerPreCheckoutQuery(pre_checkout_query_id: String, ok: Boolean, opt: `1`): Boolean = js.native
   def answerQuery(param: js.Any*): Boolean = js.native
   def answerShippingQuery(shipping_query_id: String, ok: Boolean): Boolean = js.native
   def answerShippingQuery(shipping_query_id: String, ok: Boolean, opt: ErrorMessage): Boolean = js.native
@@ -55,13 +55,13 @@ trait telebot extends js.Object {
   def event(types: js.Array[String], data: js.Any): js.Promise[_] = js.native
   def event(types: js.Array[String], data: js.Any, self: js.Any): js.Promise[_] = js.native
   def forwardMessage(chat_id: String, from_chat_id: String, message_id: Double): js.Any = js.native
-  def forwardMessage(chat_id: String, from_chat_id: String, message_id: Double, opt: NotificationBoolean): js.Any = js.native
+  def forwardMessage(chat_id: String, from_chat_id: String, message_id: Double, opt: `0`): js.Any = js.native
   def forwardMessage(chat_id: String, from_chat_id: Double, message_id: Double): js.Any = js.native
-  def forwardMessage(chat_id: String, from_chat_id: Double, message_id: Double, opt: NotificationBoolean): js.Any = js.native
+  def forwardMessage(chat_id: String, from_chat_id: Double, message_id: Double, opt: `0`): js.Any = js.native
   def forwardMessage(chat_id: Double, from_chat_id: String, message_id: Double): js.Any = js.native
-  def forwardMessage(chat_id: Double, from_chat_id: String, message_id: Double, opt: NotificationBoolean): js.Any = js.native
+  def forwardMessage(chat_id: Double, from_chat_id: String, message_id: Double, opt: `0`): js.Any = js.native
   def forwardMessage(chat_id: Double, from_chat_id: Double, message_id: Double): js.Any = js.native
-  def forwardMessage(chat_id: Double, from_chat_id: Double, message_id: Double, opt: NotificationBoolean): js.Any = js.native
+  def forwardMessage(chat_id: Double, from_chat_id: Double, message_id: Double, opt: `0`): js.Any = js.native
   def getChat(chat_id: String): js.Any = js.native
   def getChat(chat_id: Double): js.Any = js.native
   def getChatAdministrators(chat_id: String): js.Array[_] | js.Any = js.native
@@ -125,9 +125,23 @@ trait telebot extends js.Object {
   def sendAudio(chat_id: Double, file: ReadableStream): js.Any = js.native
   def sendAudio(chat_id: Double, file: ReadableStream, opt: Duration): js.Any = js.native
   def sendContact(chat_id: String, number: String, firstName: String): js.Any = js.native
+  def sendContact(
+    chat_id: String,
+    number: String,
+    firstName: String,
+    lastName: js.UndefOr[scala.Nothing],
+    opt: NotificationReplyMarkup
+  ): js.Any = js.native
   def sendContact(chat_id: String, number: String, firstName: String, lastName: String): js.Any = js.native
   def sendContact(chat_id: String, number: String, firstName: String, lastName: String, opt: NotificationReplyMarkup): js.Any = js.native
   def sendContact(chat_id: Double, number: String, firstName: String): js.Any = js.native
+  def sendContact(
+    chat_id: Double,
+    number: String,
+    firstName: String,
+    lastName: js.UndefOr[scala.Nothing],
+    opt: NotificationReplyMarkup
+  ): js.Any = js.native
   def sendContact(chat_id: Double, number: String, firstName: String, lastName: String): js.Any = js.native
   def sendContact(chat_id: Double, number: String, firstName: String, lastName: String, opt: NotificationReplyMarkup): js.Any = js.native
   def sendDocument(chat_id: String, file: String): js.Any = js.native
@@ -259,7 +273,26 @@ trait telebot extends js.Object {
   def setGameScore(user_id: Double, score: Double): Boolean | js.Error | js.Any = js.native
   def setGameScore(user_id: Double, score: Double, opt: ChatId): Boolean | js.Error | js.Any = js.native
   def setWebhook(url: String): Boolean = js.native
+  def setWebhook(
+    url: String,
+    certificate: js.UndefOr[scala.Nothing],
+    allowed_updates: js.UndefOr[scala.Nothing],
+    max_connections: Double
+  ): Boolean = js.native
+  def setWebhook(url: String, certificate: js.UndefOr[scala.Nothing], allowed_updates: js.Array[String]): Boolean = js.native
+  def setWebhook(
+    url: String,
+    certificate: js.UndefOr[scala.Nothing],
+    allowed_updates: js.Array[String],
+    max_connections: Double
+  ): Boolean = js.native
   def setWebhook(url: String, certificate: js.Any): Boolean = js.native
+  def setWebhook(
+    url: String,
+    certificate: js.Any,
+    allowed_updates: js.UndefOr[scala.Nothing],
+    max_connections: Double
+  ): Boolean = js.native
   def setWebhook(url: String, certificate: js.Any, allowed_updates: js.Array[String]): Boolean = js.native
   def setWebhook(url: String, certificate: js.Any, allowed_updates: js.Array[String], max_connections: Double): Boolean = js.native
   def start(args: js.Any*): Unit = js.native

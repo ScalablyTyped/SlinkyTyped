@@ -6,9 +6,9 @@ import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.Renderer2
 import typingsSlinky.angularCore.mod.RendererFactory2
 import typingsSlinky.angularPlatformBrowser.mod.DomSanitizer
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.IconDefinition
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.Manifest
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.ThemeType
+import typingsSlinky.antDesignIconsAngular.typesMod.IconDefinition
+import typingsSlinky.antDesignIconsAngular.typesMod.Manifest
+import typingsSlinky.antDesignIconsAngular.typesMod.ThemeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

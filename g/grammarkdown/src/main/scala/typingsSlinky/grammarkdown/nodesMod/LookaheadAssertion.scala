@@ -24,6 +24,18 @@ class LookaheadAssertion protected ()
   def this(
     openBracketToken: Token[OpenBracketToken],
     lookaheadKeyword: Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: SymbolSet
+  ) = this()
+  def this(
+    openBracketToken: Token[OpenBracketToken],
+    lookaheadKeyword: Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: SymbolSpan
+  ) = this()
+  def this(
+    openBracketToken: Token[OpenBracketToken],
+    lookaheadKeyword: Token[LookaheadKeyword],
     operatorToken: Token[LookaheadOperatorKind],
     lookahead: SymbolSet
   ) = this()
@@ -32,6 +44,34 @@ class LookaheadAssertion protected ()
     lookaheadKeyword: Token[LookaheadKeyword],
     operatorToken: Token[LookaheadOperatorKind],
     lookahead: SymbolSpan
+  ) = this()
+  def this(
+    openBracketToken: Token[OpenBracketToken],
+    lookaheadKeyword: Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: js.UndefOr[scala.Nothing],
+    closeBracketToken: Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: Token[OpenBracketToken],
+    lookaheadKeyword: Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: SymbolSet,
+    closeBracketToken: Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: Token[OpenBracketToken],
+    lookaheadKeyword: Token[LookaheadKeyword],
+    operatorToken: js.UndefOr[scala.Nothing],
+    lookahead: SymbolSpan,
+    closeBracketToken: Token[CloseBracketToken]
+  ) = this()
+  def this(
+    openBracketToken: Token[OpenBracketToken],
+    lookaheadKeyword: Token[LookaheadKeyword],
+    operatorToken: Token[LookaheadOperatorKind],
+    lookahead: js.UndefOr[scala.Nothing],
+    closeBracketToken: Token[CloseBracketToken]
   ) = this()
   def this(
     openBracketToken: Token[OpenBracketToken],

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MiniExpandIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MiniExpandIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MiniExpandIcon")
   @js.native
   object component extends js.Object
   

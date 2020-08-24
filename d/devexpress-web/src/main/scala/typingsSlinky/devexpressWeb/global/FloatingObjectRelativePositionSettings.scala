@@ -10,26 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FloatingObjectRelativePositionSettings")
 @js.native
 class FloatingObjectRelativePositionSettings ()
-  extends typingsSlinky.devexpressWeb.FloatingObjectRelativePositionSettings {
-  /**
-    * Gets or sets a value specifying to what element the horizontal position of a floating object is relative.
-    */
-  /* CompleteClass */
-  override var horizontalPositionType: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionType = js.native
-  /**
-    * Gets or sets the horizontal distance between the edge of a floating object and the element specified by the FloatingObjectRelativePositionSettings.horizontalRelativePosition property
-    */
-  /* CompleteClass */
-  override var horizontalRelativePosition: Double = js.native
-  /**
-    * Gets or sets a value specifying to what element the vertical position of a floating object is relative.
-    */
-  /* CompleteClass */
-  override var verticalPositionType: typingsSlinky.devexpressWeb.FloatingObjectVerticalPositionType = js.native
-  /**
-    * Gets or sets the horizontal distance between the edge of a floating object and the element specified by the FloatingObjectRelativePositionSettings.verticalRelativePosition property
-    */
-  /* CompleteClass */
-  override var verticalRelativePosition: Double = js.native
-}
+  extends typingsSlinky.devexpressWeb.FloatingObjectRelativePositionSettings
 

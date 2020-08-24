@@ -1,47 +1,19 @@
 package typingsSlinky.semanticUiReact.revealRevealMod
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.`move down`
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.`move right`
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.`move up`
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.`rotate left`
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.`small fade`
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.fade
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.move
-import typingsSlinky.semanticUiReact.semanticUiReactStrings.rotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RevealProps
   extends StrictRevealProps
      with /* key */ StringDictionary[js.Any]
 
 object RevealProps {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    animated: fade | (`small fade`) | move | (`move right`) | (`move up`) | (`move down`) | rotate | (`rotate left`) = null,
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    instant: js.UndefOr[Boolean] = js.undefined
-  ): RevealProps = {
+  def apply(): RevealProps = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (animated != null) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(instant)) __obj.updateDynamic("instant")(instant.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevealProps]
   }
 }

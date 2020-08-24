@@ -1,10 +1,12 @@
 package typingsSlinky.angularCore.mod
 
+import typingsSlinky.angularCore.angularCoreNumbers.`128`
 import typingsSlinky.angularCore.angularCoreNumbers.`16`
 import typingsSlinky.angularCore.angularCoreNumbers.`1`
 import typingsSlinky.angularCore.angularCoreNumbers.`2`
 import typingsSlinky.angularCore.angularCoreNumbers.`32`
 import typingsSlinky.angularCore.angularCoreNumbers.`4`
+import typingsSlinky.angularCore.angularCoreNumbers.`64`
 import typingsSlinky.angularCore.angularCoreNumbers.`8`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,27 +22,44 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.angularCore.angularCoreNumbers.`8`
   - typingsSlinky.angularCore.angularCoreNumbers.`16`
   - typingsSlinky.angularCore.angularCoreNumbers.`32`
+  - typingsSlinky.angularCore.angularCoreNumbers.`64`
+  - typingsSlinky.angularCore.angularCoreNumbers.`128`
 */
 trait TNodeFlags extends js.Object
 
 object TNodeFlags {
-  /** This bit is set if the node has any "class" inputs */
+  /** Bit #5 - This bit is set if the node has any "class" inputs */
   @scala.inline
-  def hasClassInput: `8` = 8.asInstanceOf[`8`]
-  /** This bit is set if any directive on this node has content queries */
+  def hasClassInput: `16` = 16.asInstanceOf[`16`]
+  /** Bit #4 - This bit is set if any directive on this node has content queries */
   @scala.inline
-  def hasContentQuery: `4` = 4.asInstanceOf[`4`]
-  /** This bit is set if the node has any "style" inputs */
+  def hasContentQuery: `8` = 8.asInstanceOf[`8`]
+  /**
+    * Bit #8 - This bit is set if the node has directives with host bindings.
+    *
+    * This flags allows us to guard host-binding logic and invoke it only on nodes
+    * that actually have directives with host bindings.
+    */
   @scala.inline
-  def hasStyleInput: `16` = 16.asInstanceOf[`16`]
-  /** This bit is set if the node is a component */
+  def hasHostBindings: `128` = 128.asInstanceOf[`128`]
+  /** Bit #6 - This bit is set if the node has any "style" inputs */
   @scala.inline
-  def isComponent: `1` = 1.asInstanceOf[`1`]
-  /** This bit is set if the node has been detached by i18n */
+  def hasStyleInput: `32` = 32.asInstanceOf[`32`]
+  /**
+    * Bit #2 - This bit is set if the node is a host for a component.
+    *
+    * Setting this bit implies that the `isDirectiveHost` bit is set as well.
+    * */
   @scala.inline
-  def isDetached: `32` = 32.asInstanceOf[`32`]
-  /** This bit is set if the node has been projected */
+  def isComponentHost: `2` = 2.asInstanceOf[`2`]
+  /** Bit #7 This bit is set if the node has been detached by i18n */
   @scala.inline
-  def isProjected: `2` = 2.asInstanceOf[`2`]
+  def isDetached: `64` = 64.asInstanceOf[`64`]
+  /** Bit #1 - This bit is set if the node is a host for any directive (including a component) */
+  @scala.inline
+  def isDirectiveHost: `1` = 1.asInstanceOf[`1`]
+  /** Bit #3 - This bit is set if the node has been projected */
+  @scala.inline
+  def isProjected: `4` = 4.asInstanceOf[`4`]
 }
 

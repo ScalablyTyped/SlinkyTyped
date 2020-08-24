@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class F ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.F] {
   def this(d1: Double) = this()
+  def this(d1: js.UndefOr[scala.Nothing], d2: Double) = this()
   def this(d1: Double, d2: Double) = this()
 }
 

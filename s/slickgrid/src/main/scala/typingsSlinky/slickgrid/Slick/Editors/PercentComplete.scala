@@ -6,11 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PercentComplete[T /* <: SlickData */] extends Editor[T]
 
 object PercentComplete {
   @scala.inline
-  def apply[T](
+  def apply[/* <: typingsSlinky.slickgrid.Slick.SlickData */ T](
     applyValue: (T, String) => Unit,
     destroy: () => Unit,
     focus: () => Unit,

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "parse-color"
-version := "1.0-dt-20190430Z-5e727a"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190430Z-97c310"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

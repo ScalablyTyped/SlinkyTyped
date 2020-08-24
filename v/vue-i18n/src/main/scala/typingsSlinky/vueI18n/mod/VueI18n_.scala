@@ -28,6 +28,7 @@ trait VueI18n_ extends js.Object {
   var warnHtmlInMessage: typingsSlinky.vueI18n.mod.VueI18n.WarnHtmlInMessageLevel = js.native
   def d(value: Double): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(
     value: Double,
@@ -36,6 +37,7 @@ trait VueI18n_ extends js.Object {
   ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: js.Date, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(value: js.Date, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(
     value: js.Date,
@@ -77,6 +79,7 @@ trait VueI18n_ extends js.Object {
   ): String | Unit = js.native
   def n(value: Double): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
   def n(value: Double, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
+  def n(value: Double, key: js.UndefOr[scala.Nothing], locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
   def n(value: Double, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
   def n(
     value: Double,
@@ -106,6 +109,11 @@ trait VueI18n_ extends js.Object {
   ): typingsSlinky.vueI18n.mod.VueI18n.TranslateResult = js.native
   def t(key: typingsSlinky.vueI18n.mod.VueI18n.Path, values: typingsSlinky.vueI18n.mod.VueI18n.Values): typingsSlinky.vueI18n.mod.VueI18n.TranslateResult = js.native
   def tc(key: typingsSlinky.vueI18n.mod.VueI18n.Path): String = js.native
+  def tc(
+    key: typingsSlinky.vueI18n.mod.VueI18n.Path,
+    choice: js.UndefOr[scala.Nothing],
+    values: typingsSlinky.vueI18n.mod.VueI18n.Values
+  ): String = js.native
   def tc(key: typingsSlinky.vueI18n.mod.VueI18n.Path, choice: typingsSlinky.vueI18n.mod.VueI18n.Choice): String = js.native
   def tc(
     key: typingsSlinky.vueI18n.mod.VueI18n.Path,

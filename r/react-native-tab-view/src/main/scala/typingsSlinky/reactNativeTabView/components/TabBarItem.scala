@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeTabView.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -9,23 +9,21 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeTabView.anon.Focused
 import typingsSlinky.reactNativeTabView.tabBarItemMod.Props
-import typingsSlinky.reactNativeTabView.tabBarItemMod.default
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
-import typingsSlinky.reactNativeTabView.typesMod.Route
 import typingsSlinky.reactNativeTabView.typesMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabBarItem {
-  @JSImport("react-native-tab-view/lib/typescript/src/TabBarItem", JSImport.Default)
+  @JSImport("react-native-tab-view", "TabBarItem")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: Route] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeTabView.mod.TabBarItem[T]] {
     @scala.inline
     def activeColor(value: String): this.type = set("activeColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -41,20 +39,20 @@ object TabBarItem {
     @scala.inline
     def pressOpacity(value: Double): this.type = set("pressOpacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderBadge(value: /* scene */ Scene[T] => TagMod[Any]): this.type = set("renderBadge", js.Any.fromFunction1(value))
+    def renderBadge(value: /* scene */ Scene[T] => ReactElement): this.type = set("renderBadge", js.Any.fromFunction1(value))
     @scala.inline
-    def renderIcon(value: /* scene */ Focused[T] => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
+    def renderIcon(value: /* scene */ Focused[T] => ReactElement): this.type = set("renderIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLabel(value: /* scene */ Focused[T] => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    def renderLabel(value: /* scene */ Focused[T] => ReactElement): this.type = set("renderLabel", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def styleNull: this.type = set("style", null)
   }
   
-  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: Route](
+  def apply[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](
     getAccessibilityLabel: Scene[T] => js.UndefOr[String],
     getAccessible: Scene[T] => js.UndefOr[Boolean],
     getLabelText: Scene[T] => js.UndefOr[String],

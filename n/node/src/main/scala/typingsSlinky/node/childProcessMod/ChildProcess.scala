@@ -1,12 +1,12 @@
 package typingsSlinky.node.childProcessMod
 
-import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.disconnect
 import typingsSlinky.node.nodeStrings.error
 import typingsSlinky.node.nodeStrings.exit
 import typingsSlinky.node.nodeStrings.message
+import typingsSlinky.node.processMod.global.NodeJS.Signals
 import typingsSlinky.node.streamMod.Pipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
@@ -122,10 +122,34 @@ trait ChildProcess extends EventEmitter {
   def ref(): Unit = js.native
   def send(message: Serializable): Boolean = js.native
   def send(message: Serializable, callback: js.Function1[/* error */ js.Error | Null, Unit]): Boolean = js.native
+  def send(
+    message: Serializable,
+    sendHandle: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* error */ js.Error | Null, Unit]
+  ): Boolean = js.native
+  def send(
+    message: Serializable,
+    sendHandle: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* error */ js.Error | Null, Unit]
+  ): Boolean = js.native
+  def send(message: Serializable, sendHandle: js.UndefOr[scala.Nothing], options: MessageOptions): Boolean = js.native
+  def send(
+    message: Serializable,
+    sendHandle: js.UndefOr[scala.Nothing],
+    options: MessageOptions,
+    callback: js.Function1[/* error */ js.Error | Null, Unit]
+  ): Boolean = js.native
   def send(message: Serializable, sendHandle: SendHandle): Boolean = js.native
   def send(
     message: Serializable,
     sendHandle: SendHandle,
+    callback: js.Function1[/* error */ js.Error | Null, Unit]
+  ): Boolean = js.native
+  def send(
+    message: Serializable,
+    sendHandle: SendHandle,
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* error */ js.Error | Null, Unit]
   ): Boolean = js.native
   def send(message: Serializable, sendHandle: SendHandle, options: MessageOptions): Boolean = js.native

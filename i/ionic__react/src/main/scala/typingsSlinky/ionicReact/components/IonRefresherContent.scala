@@ -17,6 +17,7 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRefresherContentElement
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicReact.anon.IonRefresherContentPickHT
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
@@ -67,7 +68,6 @@ import typingsSlinky.ionicReact.ionicReactStrings.yes
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +80,7 @@ object IonRefresherContent {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonRefresherContentElement] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -203,6 +203,8 @@ object IonRefresherContent {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -558,11 +560,11 @@ object IonRefresherContent {
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline
-    def pullingIcon(value: String): this.type = set("pullingIcon", value.asInstanceOf[js.Any])
+    def pullingIcon(value: SpinnerTypes | String): this.type = set("pullingIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def pullingIconNull: this.type = set("pullingIcon", null)
     @scala.inline
-    def pullingText(value: String): this.type = set("pullingText", value.asInstanceOf[js.Any])
+    def pullingText(value: String | IonicSafeString): this.type = set("pullingText", value.asInstanceOf[js.Any])
     @scala.inline
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     @scala.inline
@@ -570,7 +572,7 @@ object IonRefresherContent {
     @scala.inline
     def refreshingSpinnerNull: this.type = set("refreshingSpinner", null)
     @scala.inline
-    def refreshingText(value: String): this.type = set("refreshingText", value.asInstanceOf[js.Any])
+    def refreshingText(value: String | IonicSafeString): this.type = set("refreshingText", value.asInstanceOf[js.Any])
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
     @scala.inline

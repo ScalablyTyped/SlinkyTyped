@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Divider {
-  @JSImport("semantic-ui-react/dist/commonjs/elements/Divider", JSImport.Default)
+  @JSImport("semantic-ui-react", "Divider")
   @js.native
   object component extends js.Object
   

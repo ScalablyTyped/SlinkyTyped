@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UnpublishContentIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UnpublishContentIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UnpublishContentIcon")
   @js.native
   object component extends js.Object
   

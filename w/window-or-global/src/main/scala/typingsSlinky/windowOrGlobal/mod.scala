@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation._
 
 @JSImport("window-or-global", JSImport.Namespace)
 @js.native
-object mod extends TopLevel[Window | Global]
+object mod
+  extends TopLevel[(Window with (/* globalThis */ js.Any)) | Global]
 

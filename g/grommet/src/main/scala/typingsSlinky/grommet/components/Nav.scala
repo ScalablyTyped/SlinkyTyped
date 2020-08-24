@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Nav {
-  @JSImport("grommet", "Nav")
+  @JSImport("grommet/es6", "Nav")
   @js.native
   object component extends js.Object
   

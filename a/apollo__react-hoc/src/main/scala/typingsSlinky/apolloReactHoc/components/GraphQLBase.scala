@@ -17,7 +17,7 @@ object GraphQLBase {
     extends AnyVal
        with StBuildingComponent[
           tag.type, 
-          typingsSlinky.apolloReactHoc.hocUtilsMod.GraphQLBase[js.Any, js.Any, js.Any]
+          typingsSlinky.apolloReactHoc.hocUtilsMod.GraphQLBase[TProps, TChildProps, TState]
         ]
   
   def apply[TProps, TChildProps, TState](p: TProps): Builder[TProps, TChildProps, TState] = new Builder[TProps, TChildProps, TState](js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -11,6 +11,7 @@ class LiteralMap_ protected ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.LiteralMap_ {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     keys: js.Array[LiteralMapKey],
     values: js.Array[_]
   ) = this()

@@ -19,17 +19,9 @@ object _Doc {
     __obj.asInstanceOf[_Doc]
   }
   @scala.inline
-  def Line_(
-    `type`: typingsSlinky.prettier.prettierStrings.line,
-    hard: js.UndefOr[Boolean] = js.undefined,
-    literal: js.UndefOr[Boolean] = js.undefined,
-    soft: js.UndefOr[Boolean] = js.undefined
-  ): _Doc = {
+  def Line_(`type`: typingsSlinky.prettier.prettierStrings.line): _Doc = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(hard)) __obj.updateDynamic("hard")(hard.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(literal)) __obj.updateDynamic("literal")(literal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(soft)) __obj.updateDynamic("soft")(soft.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Doc]
   }
   @scala.inline
@@ -50,8 +42,20 @@ object _Doc {
     __obj.asInstanceOf[_Doc]
   }
   @scala.inline
+  def Trim_(`type`: typingsSlinky.prettier.prettierStrings.trim): _Doc = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[_Doc]
+  }
+  @scala.inline
   def Fill_(parts: js.Array[Doc], `type`: typingsSlinky.prettier.prettierStrings.fill): _Doc = {
     val __obj = js.Dynamic.literal(parts = parts.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[_Doc]
+  }
+  @scala.inline
+  def Cursor_(placeholder: js.Symbol, `type`: typingsSlinky.prettier.prettierStrings.cursor): _Doc = {
+    val __obj = js.Dynamic.literal(placeholder = placeholder.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Doc]
   }

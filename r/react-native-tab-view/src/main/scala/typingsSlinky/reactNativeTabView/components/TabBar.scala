@@ -1,32 +1,31 @@
 package typingsSlinky.reactNativeTabView.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeTabView.anon.Color
-import typingsSlinky.reactNativeTabView.tabBarMod.Props
-import typingsSlinky.reactNativeTabView.tabBarMod.default
+import typingsSlinky.reactNativeTabView.anon.Key
+import typingsSlinky.reactNativeTabView.tabBarItemMod.Props
 import typingsSlinky.reactNativeTabView.typesMod.Event
 import typingsSlinky.reactNativeTabView.typesMod.Layout
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
-import typingsSlinky.reactNativeTabView.typesMod.Route
 import typingsSlinky.reactNativeTabView.typesMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabBar {
-  @JSImport("react-native-tab-view/lib/typescript/src/TabBar", JSImport.Default)
+  @JSImport("react-native-tab-view", "TabBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: Route] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeTabView.mod.TabBar[T]] {
     @scala.inline
     def activeColor(value: String): this.type = set("activeColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,11 +57,13 @@ object TabBar {
     @scala.inline
     def pressOpacity(value: Double): this.type = set("pressOpacity", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderBadge(value: /* scene */ Scene[T] => TagMod[Any]): this.type = set("renderBadge", js.Any.fromFunction1(value))
+    def renderBadge(value: /* scene */ Scene[T] => ReactElement): this.type = set("renderBadge", js.Any.fromFunction1(value))
     @scala.inline
-    def renderIcon(value: /* scene */ Scene[T] with Color => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
+    def renderIcon(value: /* scene */ Scene[T] with Color => ReactElement): this.type = set("renderIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLabel(value: /* scene */ Scene[T] with Color => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    def renderLabel(value: /* scene */ Scene[T] with Color => ReactElement): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTabBarItem(value: /* props */ Props[T] with Key => ReactElement): this.type = set("renderTabBarItem", js.Any.fromFunction1(value))
     @scala.inline
     def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -75,9 +76,9 @@ object TabBar {
     def tabStyleNull: this.type = set("tabStyle", null)
   }
   
-  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](p: typingsSlinky.reactNativeTabView.tabBarMod.Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: Route](
+  def apply[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](
     getAccessibilityLabel: Scene[T] => js.UndefOr[String],
     getAccessible: Scene[T] => js.UndefOr[Boolean],
     getLabelText: Scene[T] => js.UndefOr[String],
@@ -86,10 +87,10 @@ object TabBar {
     layout: Layout,
     navigationState: NavigationState[T],
     position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Node<number> */ js.Any,
-    renderIndicator: typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props[T] => TagMod[Any]
+    renderIndicator: typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props[T] => ReactElement
   ): Builder[T] = {
     val __props = js.Dynamic.literal(getAccessibilityLabel = js.Any.fromFunction1(getAccessibilityLabel), getAccessible = js.Any.fromFunction1(getAccessible), getLabelText = js.Any.fromFunction1(getLabelText), getTestID = js.Any.fromFunction1(getTestID), jumpTo = js.Any.fromFunction1(jumpTo), layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], renderIndicator = js.Any.fromFunction1(renderIndicator))
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactNativeTabView.tabBarMod.Props[T]]))
   }
 }
 

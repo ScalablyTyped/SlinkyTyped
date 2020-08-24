@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormSet {
-  @JSImport("fundamental-react/lib/Forms/FormSet", JSImport.Default)
+  @JSImport("fundamental-react", "FormSet")
   @js.native
   object component extends js.Object
   

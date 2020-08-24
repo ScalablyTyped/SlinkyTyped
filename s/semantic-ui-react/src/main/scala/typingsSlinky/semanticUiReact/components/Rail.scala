@@ -19,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Rail {
-  @JSImport("semantic-ui-react/dist/commonjs/elements/Rail", JSImport.Default)
+  @JSImport("semantic-ui-react", "Rail")
   @js.native
   object component extends js.Object
   

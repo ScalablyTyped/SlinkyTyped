@@ -6,19 +6,22 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type CSSInterpolation = js.UndefOr[scala.Double | java.lang.String | typingsSlinky.styledSystemCss.mod.CSSObject]
-  /**
-    * Omit exists in TypeScript >= v3.5, we're putting this here so typings can be
-    * used with earlier versions of TypeScript.
-    */
+  type CssFunctionReturnType = js.Function1[
+    /* props */ js.UndefOr[
+      typingsSlinky.styledSystemCss.mod.Theme | typingsSlinky.styledSystemCss.anon.Theme
+    ], 
+    typingsSlinky.styledSystemCss.mod.CSSObject
+  ]
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type ResponsiveStyleValue[T] = T | (js.Array[T | scala.Null])
-  type StandardCSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String]
+  type StandardCSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String, java.lang.String with js.Object]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.styledSystemCss.mod.SystemCssProperties
     - typingsSlinky.styledSystemCss.mod.CSSPseudoSelectorProps
     - typingsSlinky.styledSystemCss.mod.CSSSelectorObject
     - typingsSlinky.styledSystemCss.mod.VariantProperty
     - typingsSlinky.styledSystemCss.mod.UseThemeFunction
+    - typingsSlinky.styledSystemCss.mod.EmotionLabel
     - scala.Null
   */
   type SystemStyleObject = typingsSlinky.styledSystemCss.mod._SystemStyleObject | scala.Null

@@ -5,8 +5,8 @@ import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.rangeInterfaceMod.RangeChangeEventDetail
 import typingsSlinky.ionicCore.rangeInterfaceMod.RangeValue
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
-import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ object rangeMod extends js.Object {
     var el: HTMLIonRangeElement = js.native
     var emitStyle: js.Any = js.native
     var ensureValueInBounds: js.Any = js.native
-    var gesture: js.UndefOr[js.Any] = js.native
+    var gesture: js.Any = js.native
     var getValue: js.Any = js.native
     var handleKeyboard: js.Any = js.native
     var hasFocus: js.Any = js.native
@@ -84,11 +84,9 @@ object rangeMod extends js.Object {
       */
     var pin: Boolean = js.native
     var pressedKnob: js.Any = js.native
-    var rangeSlider: js.UndefOr[js.Any] = js.native
+    var rangeSlider: js.Any = js.native
     var ratioA: js.Any = js.native
     var ratioB: js.Any = js.native
-    val ratioLower: js.Any = js.native
-    val ratioUpper: js.Any = js.native
     var rect: js.Any = js.native
     var setFocus: js.Any = js.native
     /**
@@ -108,8 +106,6 @@ object rangeMod extends js.Object {
     var update: js.Any = js.native
     var updateRatio: js.Any = js.native
     var updateValue: js.Any = js.native
-    val valA: js.Any = js.native
-    val valB: js.Any = js.native
     /**
       * the value of the range.
       */
@@ -124,8 +120,12 @@ object rangeMod extends js.Object {
     def disconnectedCallback_MRange(): Unit = js.native
     /* protected */ def maxChanged(): Unit = js.native
     /* protected */ def minChanged(): Unit = js.native
+    /* private */ def ratioLower: js.Any = js.native
+    /* private */ def ratioUpper: js.Any = js.native
     @JSName("render")
     def render_MRange(): js.Any = js.native
+    /* private */ def valA: js.Any = js.native
+    /* private */ def valB: js.Any = js.native
     /* protected */ def valueChanged(value: RangeValue): Unit = js.native
   }
   

@@ -1,32 +1,55 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import typingsSlinky.monacoEditor.monacoEditorStrings.always
+import typingsSlinky.monacoEditor.monacoEditorStrings.multiline
+import typingsSlinky.monacoEditor.monacoEditorStrings.never
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IEditorFindOptions extends js.Object {
-  var addExtraSpaceOnTop: js.UndefOr[Boolean] = js.undefined
+  var addExtraSpaceOnTop: js.UndefOr[Boolean] = js.native
   /**
-    * Controls if Find in Selection flag is turned on when multiple lines of text are selected in the editor.
+    * Controls if Find in Selection flag is turned on in the editor.
     */
-  var autoFindInSelection: Boolean
+  var autoFindInSelection: js.UndefOr[never | always | multiline] = js.native
   /**
     * Controls if we seed search string in the Find Widget with editor selection.
     */
-  var seedSearchStringFromSelection: js.UndefOr[Boolean] = js.undefined
+  var seedSearchStringFromSelection: js.UndefOr[Boolean] = js.native
 }
 
 object IEditorFindOptions {
   @scala.inline
-  def apply(
-    autoFindInSelection: Boolean,
-    addExtraSpaceOnTop: js.UndefOr[Boolean] = js.undefined,
-    seedSearchStringFromSelection: js.UndefOr[Boolean] = js.undefined
-  ): IEditorFindOptions = {
-    val __obj = js.Dynamic.literal(autoFindInSelection = autoFindInSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(addExtraSpaceOnTop)) __obj.updateDynamic("addExtraSpaceOnTop")(addExtraSpaceOnTop.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(seedSearchStringFromSelection)) __obj.updateDynamic("seedSearchStringFromSelection")(seedSearchStringFromSelection.get.asInstanceOf[js.Any])
+  def apply(): IEditorFindOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[IEditorFindOptions]
   }
+  @scala.inline
+  implicit class IEditorFindOptionsOps[Self <: IEditorFindOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddExtraSpaceOnTop(value: Boolean): Self = this.set("addExtraSpaceOnTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAddExtraSpaceOnTop: Self = this.set("addExtraSpaceOnTop", js.undefined)
+    @scala.inline
+    def setAutoFindInSelection(value: never | always | multiline): Self = this.set("autoFindInSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoFindInSelection: Self = this.set("autoFindInSelection", js.undefined)
+    @scala.inline
+    def setSeedSearchStringFromSelection(value: Boolean): Self = this.set("seedSearchStringFromSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSeedSearchStringFromSelection: Self = this.set("seedSearchStringFromSelection", js.undefined)
+  }
+  
 }
 

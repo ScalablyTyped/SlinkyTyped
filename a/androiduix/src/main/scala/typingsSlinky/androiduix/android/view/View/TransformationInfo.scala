@@ -55,101 +55,42 @@ object TransformationInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mAlpha")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMInverseMatrix(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInverseMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMAlpha(value: Double): Self = this.set("mAlpha", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInverseMatrixDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInverseMatrixDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInverseMatrix(value: js.Any): Self = this.set("mInverseMatrix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMatrix(value: Matrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInverseMatrixDirty(value: Boolean): Self = this.set("mInverseMatrixDirty", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMatrixDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMatrixDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMatrix(value: Matrix): Self = this.set("mMatrix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMatrixIsIdentity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMatrixIsIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMatrixDirty(value: Boolean): Self = this.set("mMatrixDirty", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPivotX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPivotX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMatrixIsIdentity(value: Boolean): Self = this.set("mMatrixIsIdentity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPivotY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPivotY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPivotX(value: Double): Self = this.set("mPivotX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrevHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrevHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPivotY(value: Double): Self = this.set("mPivotY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPrevWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPrevWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPrevHeight(value: Double): Self = this.set("mPrevHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPrevWidth(value: Double): Self = this.set("mPrevWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScaleX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRotation(value: Double): Self = this.set("mRotation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScaleY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScaleX(value: Double): Self = this.set("mScaleX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTransitionAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTransitionAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScaleY(value: Double): Self = this.set("mScaleY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTranslationX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTranslationX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTransitionAlpha(value: Double): Self = this.set("mTransitionAlpha", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTranslationY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTranslationY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTranslationX(value: Double): Self = this.set("mTranslationX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMTranslationY(value: Double): Self = this.set("mTranslationY", value.asInstanceOf[js.Any])
   }
   
 }

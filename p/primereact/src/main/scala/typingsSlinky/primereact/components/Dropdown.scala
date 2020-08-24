@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.components
 
 import org.scalajs.dom.raw.Event
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.Value
+import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.dropdownMod.DropdownProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -45,13 +45,17 @@ object Dropdown {
     @scala.inline
     def filterInputAutoFocus(value: Boolean): this.type = set("filterInputAutoFocus", value.asInstanceOf[js.Any])
     @scala.inline
+    def filterLocale(value: String): this.type = set("filterLocale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterMatchMode(value: String): this.type = set("filterMatchMode", value.asInstanceOf[js.Any])
+    @scala.inline
     def filterPlaceholder(value: String): this.type = set("filterPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemTemplate(value: /* option */ js.Any => TagMod[Any]): this.type = set("itemTemplate", js.Any.fromFunction1(value))
+    def itemTemplate(value: /* option */ js.Any => ReactElement): this.type = set("itemTemplate", js.Any.fromFunction1(value))
     @scala.inline
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
     @scala.inline
@@ -59,13 +63,21 @@ object Dropdown {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onBlur(value: /* e */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onContextMenu(value: /* event */ Event => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* e */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseDown(value: /* event */ Event => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     @scala.inline
     def optionLabel(value: String): this.type = set("optionLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionValue(value: String): this.type = set("optionValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionsVarargs(value: js.Any*): this.type = set("options", js.Array(value :_*))
     @scala.inline
     def options(value: js.Array[_]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline

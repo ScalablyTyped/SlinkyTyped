@@ -1,6 +1,5 @@
 package typingsSlinky.wixStyleReact.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -8,20 +7,19 @@ import typingsSlinky.wixStyleReact.loaderMod.LoaderColor
 import typingsSlinky.wixStyleReact.loaderMod.LoaderProps
 import typingsSlinky.wixStyleReact.loaderMod.LoaderSize
 import typingsSlinky.wixStyleReact.loaderMod.LoaderStatus
-import typingsSlinky.wixStyleReact.loaderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Loader {
-  @JSImport("wix-style-react/Loader", JSImport.Default)
+  @JSImport("wix-style-react", "Loader")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.wixStyleReact.mod.Loader] {
     @scala.inline
     def color(value: LoaderColor): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +37,7 @@ object Loader {
     @scala.inline
     def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: LoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

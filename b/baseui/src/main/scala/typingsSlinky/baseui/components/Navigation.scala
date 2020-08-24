@@ -22,6 +22,8 @@ object Navigation {
     @scala.inline
     def activePredicate(value: (/* item */ js.Any, /* activeItemId */ String) => Boolean): this.type = set("activePredicate", js.Any.fromFunction2(value))
     @scala.inline
+    def itemsVarargs(value: Item*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
     def items(value: js.Array[Item]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def mapItem(value: /* item */ Item => Item): this.type = set("mapItem", js.Any.fromFunction1(value))

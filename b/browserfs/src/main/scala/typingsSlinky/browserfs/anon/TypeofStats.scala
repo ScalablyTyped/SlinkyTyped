@@ -20,24 +20,24 @@ trait TypeofStats
      with Instantiable4[
       /* itemType */ FileType, 
       /* size */ Double, 
-      /* mode */ Double, 
+      js.UndefOr[/* mode */ Double], 
       /* atime */ js.Date, 
       default
     ]
      with Instantiable5[
       /* itemType */ FileType, 
       /* size */ Double, 
-      /* mode */ Double, 
-      /* atime */ js.Date, 
+      js.UndefOr[/* mode */ Double], 
+      js.UndefOr[/* atime */ js.Date], 
       /* mtime */ js.Date, 
       default
     ]
      with Instantiable6[
       /* itemType */ FileType, 
       /* size */ Double, 
-      /* mode */ Double, 
-      /* atime */ js.Date, 
-      /* mtime */ js.Date, 
+      js.UndefOr[/* mode */ Double], 
+      js.UndefOr[/* atime */ js.Date], 
+      js.UndefOr[/* mtime */ js.Date], 
       /* ctime */ js.Date, 
       default
     ] {

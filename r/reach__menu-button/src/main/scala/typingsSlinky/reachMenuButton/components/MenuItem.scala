@@ -70,7 +70,8 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.react.mod.KeyboardEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -84,7 +85,7 @@ object MenuItem {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLDivElement] {
     @scala.inline
     def _ref(value: /* node */ HTMLElement => Unit): this.type = set("_ref", js.Any.fromFunction1(value))
     @scala.inline
@@ -264,6 +265,8 @@ object MenuItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -396,8 +399,6 @@ object MenuItem {
     @scala.inline
     def onChange(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement | HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
-    @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
     def onCompositionStart(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
@@ -444,8 +445,6 @@ object MenuItem {
     @scala.inline
     def onInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyDown(value: /* e */ SyntheticKeyboardEvent[HTMLDivElement | HTMLElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
-    @scala.inline
     def onKeyPress(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyUp(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
@@ -463,8 +462,6 @@ object MenuItem {
     def onMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
-    @scala.inline
-    def onMouseMove(value: /* e */ SyntheticMouseEvent[HTMLDivElement | HTMLElement] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseOut(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
     @scala.inline
@@ -507,12 +504,6 @@ object MenuItem {
     def onSeeked(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
     def onSeeking(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
-    @scala.inline
-    def onSelectFunction1(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
-    @scala.inline
-    def onSelectFunction0(value: () => Unit): this.type = set("onSelect", js.Any.fromFunction0(value))
-    @scala.inline
-    def onSelect(value: js.Function0[Unit] | ReactEventHandler[HTMLDivElement]): this.type = set("onSelect", value.asInstanceOf[js.Any])
     @scala.inline
     def onStalled(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
@@ -642,6 +633,8 @@ object MenuItem {
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -654,6 +647,15 @@ object MenuItem {
   }
   
   def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(
+    onClick: (js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLDivElement]],
+    onKeyDown: (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLElement], Unit]]) with js.UndefOr[KeyboardEventHandler[HTMLDivElement]],
+    onMouseMove: (js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLDivElement]],
+    onSelect: js.UndefOr[js.Function0[Unit]] with js.UndefOr[ReactEventHandler[HTMLDivElement]]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onClick = onClick.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any], onMouseMove = onMouseMove.asInstanceOf[js.Any], onSelect = onSelect.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MenuItemProps]))
+  }
 }
 

@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -74,9 +73,14 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.tree
 import typingsSlinky.materialUiLab.materialUiLabStrings.url
 import typingsSlinky.materialUiLab.materialUiLabStrings.vertical
 import typingsSlinky.materialUiLab.materialUiLabStrings.yes
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteChangeDetails
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteChangeReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteCloseReason
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteFreeSoloValueMapping
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteHighlightChangeReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteInputChangeReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.FilterOptionsState
+import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.Value
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -102,10 +106,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent @material-ui/lab.@material-ui/lab/useAutocomplete.UseAutocompleteCommonProps<T> */
+/* Inlined parent @material-ui/lab.@material-ui/lab/useAutocomplete.UseAutocompleteProps<T, Multiple, DisableClearable, FreeSolo> */
 /* Inlined parent @material-ui/core.@material-ui/core.StandardProps<react.react.HTMLAttributes<std.HTMLDivElement>, @material-ui/lab.@material-ui/lab/Autocomplete/Autocomplete.AutocompleteClassKey, 'defaultValue' | 'onChange' | 'children'> */
 @js.native
-trait AutocompleteProps[T] extends js.Object {
+trait AutocompleteProps[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */] extends js.Object {
   /**
     * Props applied to the [`Chip`](/api/chip/) element.
     */
@@ -207,6 +211,13 @@ trait AutocompleteProps[T] extends js.Object {
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapAutoco] = js.native
   /**
+    * If `true`, the input's text will be cleared on blur if no value is selected.
+    *
+    * Set to `true` if you want to help the user enter a new value.
+    * Set to `false` if you want to help the user resume his search.
+    */
+  var clearOnBlur: js.UndefOr[Boolean] = js.native
+  /**
     * If `true`, clear all values when the user presses escape and the popup is closed.
     */
   var clearOnEscape: js.UndefOr[Boolean] = js.native
@@ -219,7 +230,7 @@ trait AutocompleteProps[T] extends js.Object {
   /**
     * The icon to display in place of the default close icon.
     */
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.native
+  var closeIcon: js.UndefOr[ReactElement] = js.native
   /**
     * Override the default text for the *close popup* icon button.
     *
@@ -242,11 +253,15 @@ trait AutocompleteProps[T] extends js.Object {
     */
   var debug: js.UndefOr[Boolean] = js.native
   var defaultChecked: js.UndefOr[Boolean] = js.native
+  /**
+    * The default input value. Use when the component is not controlled.
+    */
+  var defaultValue: js.UndefOr[Value[T, Multiple, DisableClearable, FreeSolo]] = js.native
   var dir: js.UndefOr[String] = js.native
   /**
     * If `true`, the input can't be cleared.
     */
-  var disableClearable: js.UndefOr[Boolean] = js.native
+  var disableClearable: js.UndefOr[DisableClearable] = js.native
   /**
     * If `true`, the popup won't close when a value is selected.
     */
@@ -264,6 +279,10 @@ trait AutocompleteProps[T] extends js.Object {
     * If `true`, the input will be disabled.
     */
   var disabled: js.UndefOr[Boolean] = js.native
+  /**
+    * If `true`, will allow focus on disabled items.
+    */
+  var disabledItemsFocusable: js.UndefOr[Boolean] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
   /**
     * A filter function that determines the options that are eligible.
@@ -286,29 +305,55 @@ trait AutocompleteProps[T] extends js.Object {
   /**
     * If `true`, the Autocomplete is free solo, meaning that the user input is not bound to provided options.
     */
-  var freeSolo: js.UndefOr[Boolean] = js.native
+  var freeSolo: js.UndefOr[FreeSolo] = js.native
+  /**
+    * If `true`, the input will take up the full width of its container.
+    */
+  var fullWidth: js.UndefOr[Boolean] = js.native
+  /**
+    * The label to display when the tags are truncated (`limitTags`).
+    *
+    * @param {number} more The number of truncated tags.
+    * @returns {ReactNode}
+    */
+  var getLimitTagsText: js.UndefOr[js.Function1[/* more */ Double, ReactElement]] = js.native
   /**
     * Used to determine the disabled state for a given option.
+    *
+    * @param {T} option The option to test.
+    * @returns {boolean}
     */
   var getOptionDisabled: js.UndefOr[js.Function1[/* option */ T, Boolean]] = js.native
   /**
     * Used to determine the string value for a given option.
     * It's used to fill the input (and the list box options if `renderOption` is not provided).
+    *
+    * @param {T} option
+    * @returns {string}
     */
   var getOptionLabel: js.UndefOr[js.Function1[/* option */ T, String]] = js.native
   /**
-    * Used to determine if an option is selected.
+    * Used to determine if an option is selected, considering the current value.
     * Uses strict equality by default.
+    *
+    * @param {T} option The option to test.
+    * @param {T} value The value to test against.
+    * @returns {boolean}
     */
   var getOptionSelected: js.UndefOr[js.Function2[/* option */ T, /* value */ T, Boolean]] = js.native
   /**
     * If provided, the options will be grouped under the returned string.
     * The groupBy value is also used as the text for group headings when `renderGroup` is not provided.
     *
-    * @param {T} options The option to group.
+    * @param {T} options The options to group.
     * @returns {string}
     */
   var groupBy: js.UndefOr[js.Function1[/* option */ T, String]] = js.native
+  /**
+    * If `true`, the component handles the "Home" and "End" keys when the popup is open.
+    * It should move focus to the first option and last option, respectively.
+    */
+  var handleHomeEndKeys: js.UndefOr[Boolean] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   /**
     * This prop is used to help implement the accessibility logic.
@@ -334,6 +379,11 @@ trait AutocompleteProps[T] extends js.Object {
   var itemType: js.UndefOr[String] = js.native
   var lang: js.UndefOr[String] = js.native
   /**
+    * The maximum number of tags that will be visible when not focused.
+    * Set `-1` to disable the limit.
+    */
+  var limitTags: js.UndefOr[Double] = js.native
+  /**
     * If `true`, the component is in a loading state.
     */
   var loading: js.UndefOr[Boolean] = js.native
@@ -342,13 +392,17 @@ trait AutocompleteProps[T] extends js.Object {
     *
     * For localization purposes, you can use the provided [translations](/guides/localization/).
     */
-  var loadingText: js.UndefOr[TagMod[Any]] = js.native
+  var loadingText: js.UndefOr[ReactElement] = js.native
+  /**
+    * If `true`, `value` must be an array and the menu will support multiple selections.
+    */
+  var multiple: js.UndefOr[Multiple] = js.native
   /**
     * Text to display when there are no options.
     *
     * For localization purposes, you can use the provided [translations](/guides/localization/).
     */
-  var noOptionsText: js.UndefOr[TagMod[Any]] = js.native
+  var noOptionsText: js.UndefOr[ReactElement] = js.native
   var onAbort: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
   var onAnimationIteration: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
@@ -358,6 +412,22 @@ trait AutocompleteProps[T] extends js.Object {
   var onBlur: js.UndefOr[FocusEventHandler[HTMLDivElement]] = js.native
   var onCanPlay: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onCanPlayThrough: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  /**
+    * Callback fired when the value changes.
+    *
+    * @param {object} event The event source of the callback.
+    * @param {T|T[]} value The new value of the component.
+    * @param {string} reason One of "create-option", "select-option", "remove-option", "blur" or "clear".
+    */
+  var onChange: js.UndefOr[
+    js.Function4[
+      /* event */ ChangeEvent[js.Object], 
+      /* value */ Value[T, Multiple, DisableClearable, FreeSolo], 
+      /* reason */ AutocompleteChangeReason, 
+      /* details */ js.UndefOr[AutocompleteChangeDetails[T]], 
+      Unit
+    ]
+  ] = js.native
   var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   /**
     * Callback fired when the popup requests to be closed.
@@ -390,6 +460,21 @@ trait AutocompleteProps[T] extends js.Object {
   var onEnded: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onError: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onFocus: js.UndefOr[FocusEventHandler[HTMLDivElement]] = js.native
+  /**
+    * Callback fired when the highlight option changes.
+    *
+    * @param {object} event The event source of the callback.
+    * @param {T} option The highlighted option.
+    * @param {string} reason Can be: `"keyboard"`, `"auto"`, `"mouse"`.
+    */
+  var onHighlightChange: js.UndefOr[
+    js.Function3[
+      /* event */ ChangeEvent[js.Object], 
+      /* option */ T | Null, 
+      /* reason */ AutocompleteHighlightChangeReason, 
+      Unit
+    ]
+  ] = js.native
   var onInput: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.native
   /**
     * Callback fired when the input value changes.
@@ -481,7 +566,7 @@ trait AutocompleteProps[T] extends js.Object {
   /**
     * The icon to display in place of the default popup icon.
     */
-  var popupIcon: js.UndefOr[TagMod[Any]] = js.native
+  var popupIcon: js.UndefOr[ReactElement] = js.native
   var prefix: js.UndefOr[String] = js.native
   var property: js.UndefOr[String] = js.native
   var radioGroup: js.UndefOr[String] = js.native
@@ -491,7 +576,7 @@ trait AutocompleteProps[T] extends js.Object {
     * @param {any} option The group to render.
     * @returns {ReactNode}
     */
-  var renderGroup: js.UndefOr[js.Function1[/* params */ RenderGroupParams, TagMod[Any]]] = js.native
+  var renderGroup: js.UndefOr[js.Function1[/* params */ AutocompleteRenderGroupParams, ReactElement]] = js.native
   /**
     * Render the option, use `getOptionLabel` by default.
     *
@@ -499,7 +584,9 @@ trait AutocompleteProps[T] extends js.Object {
     * @param {object} state The state of the component.
     * @returns {ReactNode}
     */
-  var renderOption: js.UndefOr[js.Function2[/* option */ T, /* state */ RenderOptionState, TagMod[Any]]] = js.native
+  var renderOption: js.UndefOr[
+    js.Function2[/* option */ T, /* state */ AutocompleteRenderOptionState, ReactElement]
+  ] = js.native
   /**
     * Render the selected value.
     *
@@ -508,7 +595,7 @@ trait AutocompleteProps[T] extends js.Object {
     * @returns {ReactNode}
     */
   var renderTags: js.UndefOr[
-    js.Function2[/* value */ js.Array[T], /* getTagProps */ GetTagProps, TagMod[Any]]
+    js.Function2[/* value */ js.Array[T], /* getTagProps */ AutocompleteGetTagProps, ReactElement]
   ] = js.native
   var resource: js.UndefOr[String] = js.native
   var results: js.UndefOr[Double] = js.native
@@ -533,6 +620,13 @@ trait AutocompleteProps[T] extends js.Object {
   var translate: js.UndefOr[yes | no] = js.native
   var typeof: js.UndefOr[String] = js.native
   var unselectable: js.UndefOr[on | off] = js.native
+  /**
+    * The value of the autocomplete.
+    *
+    * The value must have reference equality with the option in order to be selected.
+    * You can customize the equality behavior with the `getOptionSelected` prop.
+    */
+  var value: js.UndefOr[Value[T, Multiple, DisableClearable, FreeSolo]] = js.native
   var vocab: js.UndefOr[String] = js.native
   /**
     * Render the input.
@@ -540,2717 +634,984 @@ trait AutocompleteProps[T] extends js.Object {
     * @param {object} params
     * @returns {ReactNode}
     */
-  def renderInput(params: RenderInputParams): TagMod[Any] = js.native
+  def renderInput(params: AutocompleteRenderInputParams): ReactElement = js.native
 }
 
 object AutocompleteProps {
   @scala.inline
-  def apply[T](options: js.Array[T], renderInput: RenderInputParams => TagMod[Any]): AutocompleteProps[T] = {
+  def apply[T, /* <: js.UndefOr[scala.Boolean] */ Multiple, /* <: js.UndefOr[scala.Boolean] */ DisableClearable, /* <: js.UndefOr[scala.Boolean] */ FreeSolo](options: js.Array[T], renderInput: AutocompleteRenderInputParams => ReactElement): AutocompleteProps[T, Multiple, DisableClearable, FreeSolo] = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any], renderInput = js.Any.fromFunction1(renderInput))
-    __obj.asInstanceOf[AutocompleteProps[T]]
+    __obj.asInstanceOf[AutocompleteProps[T, Multiple, DisableClearable, FreeSolo]]
   }
   @scala.inline
-  implicit class AutocompletePropsOps[Self[t] <: AutocompleteProps[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class AutocompletePropsOps[Self <: AutocompleteProps[_, _, _, _], T, /* <: js.UndefOr[scala.Boolean] */ Multiple, /* <: js.UndefOr[scala.Boolean] */ DisableClearable, /* <: js.UndefOr[scala.Boolean] */ FreeSolo] (val x: Self with (AutocompleteProps[T, Multiple, DisableClearable, FreeSolo])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOptions(value: js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withRenderInput(value: RenderInputParams => TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderInput")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOptionsVarargs(value: T*): Self = this.set("options", js.Array(value :_*))
     @scala.inline
-    def withChipProps(value: js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChipProps")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOptions(value: js.Array[T]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutChipProps: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChipProps")(js.undefined)
-        ret
-    }
+    def setRenderInput(value: AutocompleteRenderInputParams => ReactElement): Self = this.set("renderInput", js.Any.fromFunction1(value))
     @scala.inline
-    def withListboxComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListboxComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setChipProps(value: js.Object): Self = this.set("ChipProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def withListboxComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListboxComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteChipProps: Self = this.set("ChipProps", js.undefined)
     @scala.inline
-    def withListboxComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListboxComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setListboxComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self = this.set("ListboxComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutListboxComponent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListboxComponent")(js.undefined)
-        ret
-    }
+    def setListboxComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self = this.set("ListboxComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withListboxProps(value: js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListboxProps")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setListboxComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self = this.set("ListboxComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutListboxProps: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListboxProps")(js.undefined)
-        ret
-    }
+    def deleteListboxComponent: Self = this.set("ListboxComponent", js.undefined)
     @scala.inline
-    def withPaperComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setListboxProps(value: js.Object): Self = this.set("ListboxProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPaperComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteListboxProps: Self = this.set("ListboxProps", js.undefined)
     @scala.inline
-    def withPaperComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPaperComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self = this.set("PaperComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPaperComponent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperComponent")(js.undefined)
-        ret
-    }
+    def setPaperComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self = this.set("PaperComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopperComponentFunctionComponent(value: ReactComponentClass[PopperProps]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PopperComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPaperComponent(value: ReactComponentClass[HTMLAttributes[HTMLElement]]): Self = this.set("PaperComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopperComponentComponentClass(value: ReactComponentClass[PopperProps]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PopperComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePaperComponent: Self = this.set("PaperComponent", js.undefined)
     @scala.inline
-    def withPopperComponent(value: ReactComponentClass[PopperProps]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PopperComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPopperComponentFunctionComponent(value: ReactComponentClass[PopperProps]): Self = this.set("PopperComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutPopperComponent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PopperComponent")(js.undefined)
-        ret
-    }
+    def setPopperComponentComponentClass(value: ReactComponentClass[PopperProps]): Self = this.set("PopperComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withAbout(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPopperComponent(value: ReactComponentClass[PopperProps]): Self = this.set("PopperComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAbout: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(js.undefined)
-        ret
-    }
+    def deletePopperComponent: Self = this.set("PopperComponent", js.undefined)
     @scala.inline
-    def withAccessKey(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAbout(value: String): Self = this.set("about", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAccessKey: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(js.undefined)
-        ret
-    }
+    def deleteAbout: Self = this.set("about", js.undefined)
     @scala.inline
-    def `withAria-activedescendant`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAccessKey(value: String): Self = this.set("accessKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-activedescendant`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(js.undefined)
-        ret
-    }
+    def deleteAccessKey: Self = this.set("accessKey", js.undefined)
     @scala.inline
-    def `withAria-atomic`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-activedescendant`(value: String): Self = this.set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-atomic`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(js.undefined)
-        ret
-    }
+    def `deleteAria-activedescendant`: Self = this.set("aria-activedescendant", js.undefined)
     @scala.inline
-    def `withAria-autocomplete`(value: none | `inline` | list | both): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-atomic`(value: Boolean): Self = this.set("aria-atomic", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-autocomplete`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(js.undefined)
-        ret
-    }
+    def `deleteAria-atomic`: Self = this.set("aria-atomic", js.undefined)
     @scala.inline
-    def `withAria-busy`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-autocomplete`(value: none | `inline` | list | both): Self = this.set("aria-autocomplete", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-busy`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(js.undefined)
-        ret
-    }
+    def `deleteAria-autocomplete`: Self = this.set("aria-autocomplete", js.undefined)
     @scala.inline
-    def `withAria-checked`(value: Boolean | mixed): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-busy`(value: Boolean): Self = this.set("aria-busy", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-checked`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(js.undefined)
-        ret
-    }
+    def `deleteAria-busy`: Self = this.set("aria-busy", js.undefined)
     @scala.inline
-    def `withAria-colcount`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-checked`(value: Boolean | mixed): Self = this.set("aria-checked", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-colcount`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(js.undefined)
-        ret
-    }
+    def `deleteAria-checked`: Self = this.set("aria-checked", js.undefined)
     @scala.inline
-    def `withAria-colindex`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-colcount`(value: Double): Self = this.set("aria-colcount", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-colindex`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(js.undefined)
-        ret
-    }
+    def `deleteAria-colcount`: Self = this.set("aria-colcount", js.undefined)
     @scala.inline
-    def `withAria-colspan`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-colindex`(value: Double): Self = this.set("aria-colindex", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-colspan`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(js.undefined)
-        ret
-    }
+    def `deleteAria-colindex`: Self = this.set("aria-colindex", js.undefined)
     @scala.inline
-    def `withAria-controls`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-colspan`(value: Double): Self = this.set("aria-colspan", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-controls`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(js.undefined)
-        ret
-    }
+    def `deleteAria-colspan`: Self = this.set("aria-colspan", js.undefined)
     @scala.inline
-    def `withAria-current`(value: Boolean | page | step | location | date | time): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-controls`(value: String): Self = this.set("aria-controls", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-current`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(js.undefined)
-        ret
-    }
+    def `deleteAria-controls`: Self = this.set("aria-controls", js.undefined)
     @scala.inline
-    def `withAria-describedby`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-current`(value: Boolean | page | step | location | date | time): Self = this.set("aria-current", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-describedby`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(js.undefined)
-        ret
-    }
+    def `deleteAria-current`: Self = this.set("aria-current", js.undefined)
     @scala.inline
-    def `withAria-details`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-describedby`(value: String): Self = this.set("aria-describedby", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-details`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(js.undefined)
-        ret
-    }
+    def `deleteAria-describedby`: Self = this.set("aria-describedby", js.undefined)
     @scala.inline
-    def `withAria-disabled`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-details`(value: String): Self = this.set("aria-details", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-disabled`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(js.undefined)
-        ret
-    }
+    def `deleteAria-details`: Self = this.set("aria-details", js.undefined)
     @scala.inline
-    def `withAria-dropeffect`(value: none | copy | execute | link | move | popup): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-disabled`(value: Boolean): Self = this.set("aria-disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-dropeffect`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(js.undefined)
-        ret
-    }
+    def `deleteAria-disabled`: Self = this.set("aria-disabled", js.undefined)
     @scala.inline
-    def `withAria-errormessage`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-dropeffect`(value: none | copy | execute | link | move | popup): Self = this.set("aria-dropeffect", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-errormessage`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(js.undefined)
-        ret
-    }
+    def `deleteAria-dropeffect`: Self = this.set("aria-dropeffect", js.undefined)
     @scala.inline
-    def `withAria-expanded`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-errormessage`(value: String): Self = this.set("aria-errormessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-expanded`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(js.undefined)
-        ret
-    }
+    def `deleteAria-errormessage`: Self = this.set("aria-errormessage", js.undefined)
     @scala.inline
-    def `withAria-flowto`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-expanded`(value: Boolean): Self = this.set("aria-expanded", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-flowto`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(js.undefined)
-        ret
-    }
+    def `deleteAria-expanded`: Self = this.set("aria-expanded", js.undefined)
     @scala.inline
-    def `withAria-grabbed`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-flowto`(value: String): Self = this.set("aria-flowto", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-grabbed`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(js.undefined)
-        ret
-    }
+    def `deleteAria-flowto`: Self = this.set("aria-flowto", js.undefined)
     @scala.inline
-    def `withAria-haspopup`(value: Boolean | menu | listbox | tree | grid | dialog): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-grabbed`(value: Boolean): Self = this.set("aria-grabbed", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-haspopup`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(js.undefined)
-        ret
-    }
+    def `deleteAria-grabbed`: Self = this.set("aria-grabbed", js.undefined)
     @scala.inline
-    def `withAria-hidden`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-haspopup`(value: Boolean | menu | listbox | tree | grid | dialog): Self = this.set("aria-haspopup", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-hidden`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(js.undefined)
-        ret
-    }
+    def `deleteAria-haspopup`: Self = this.set("aria-haspopup", js.undefined)
     @scala.inline
-    def `withAria-invalid`(value: Boolean | grammar | spelling): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-hidden`(value: Boolean): Self = this.set("aria-hidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-invalid`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(js.undefined)
-        ret
-    }
+    def `deleteAria-hidden`: Self = this.set("aria-hidden", js.undefined)
     @scala.inline
-    def `withAria-keyshortcuts`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-invalid`(value: Boolean | grammar | spelling): Self = this.set("aria-invalid", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-keyshortcuts`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(js.undefined)
-        ret
-    }
+    def `deleteAria-invalid`: Self = this.set("aria-invalid", js.undefined)
     @scala.inline
-    def `withAria-label`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-keyshortcuts`(value: String): Self = this.set("aria-keyshortcuts", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-label`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
-        ret
-    }
+    def `deleteAria-keyshortcuts`: Self = this.set("aria-keyshortcuts", js.undefined)
     @scala.inline
-    def `withAria-labelledby`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-label`(value: String): Self = this.set("aria-label", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-labelledby`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
-        ret
-    }
+    def `deleteAria-label`: Self = this.set("aria-label", js.undefined)
     @scala.inline
-    def `withAria-level`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-labelledby`(value: String): Self = this.set("aria-labelledby", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-level`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(js.undefined)
-        ret
-    }
+    def `deleteAria-labelledby`: Self = this.set("aria-labelledby", js.undefined)
     @scala.inline
-    def `withAria-live`(value: off | assertive | polite): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-level`(value: Double): Self = this.set("aria-level", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-live`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(js.undefined)
-        ret
-    }
+    def `deleteAria-level`: Self = this.set("aria-level", js.undefined)
     @scala.inline
-    def `withAria-modal`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-live`(value: off | assertive | polite): Self = this.set("aria-live", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-modal`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(js.undefined)
-        ret
-    }
+    def `deleteAria-live`: Self = this.set("aria-live", js.undefined)
     @scala.inline
-    def `withAria-multiline`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-modal`(value: Boolean): Self = this.set("aria-modal", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-multiline`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(js.undefined)
-        ret
-    }
+    def `deleteAria-modal`: Self = this.set("aria-modal", js.undefined)
     @scala.inline
-    def `withAria-multiselectable`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-multiline`(value: Boolean): Self = this.set("aria-multiline", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-multiselectable`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(js.undefined)
-        ret
-    }
+    def `deleteAria-multiline`: Self = this.set("aria-multiline", js.undefined)
     @scala.inline
-    def `withAria-orientation`(value: horizontal | vertical): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-multiselectable`(value: Boolean): Self = this.set("aria-multiselectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-orientation`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(js.undefined)
-        ret
-    }
+    def `deleteAria-multiselectable`: Self = this.set("aria-multiselectable", js.undefined)
     @scala.inline
-    def `withAria-owns`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-orientation`(value: horizontal | vertical): Self = this.set("aria-orientation", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-owns`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(js.undefined)
-        ret
-    }
+    def `deleteAria-orientation`: Self = this.set("aria-orientation", js.undefined)
     @scala.inline
-    def `withAria-placeholder`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-owns`(value: String): Self = this.set("aria-owns", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-placeholder`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(js.undefined)
-        ret
-    }
+    def `deleteAria-owns`: Self = this.set("aria-owns", js.undefined)
     @scala.inline
-    def `withAria-posinset`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-placeholder`(value: String): Self = this.set("aria-placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-posinset`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(js.undefined)
-        ret
-    }
+    def `deleteAria-placeholder`: Self = this.set("aria-placeholder", js.undefined)
     @scala.inline
-    def `withAria-pressed`(value: Boolean | mixed): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-posinset`(value: Double): Self = this.set("aria-posinset", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-pressed`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(js.undefined)
-        ret
-    }
+    def `deleteAria-posinset`: Self = this.set("aria-posinset", js.undefined)
     @scala.inline
-    def `withAria-readonly`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-pressed`(value: Boolean | mixed): Self = this.set("aria-pressed", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-readonly`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(js.undefined)
-        ret
-    }
+    def `deleteAria-pressed`: Self = this.set("aria-pressed", js.undefined)
     @scala.inline
-    def `withAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-readonly`(value: Boolean): Self = this.set("aria-readonly", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-relevant`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(js.undefined)
-        ret
-    }
+    def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     @scala.inline
-    def `withAria-required`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-required`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(js.undefined)
-        ret
-    }
+    def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
     @scala.inline
-    def `withAria-roledescription`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-required`(value: Boolean): Self = this.set("aria-required", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-roledescription`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(js.undefined)
-        ret
-    }
+    def `deleteAria-required`: Self = this.set("aria-required", js.undefined)
     @scala.inline
-    def `withAria-rowcount`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-roledescription`(value: String): Self = this.set("aria-roledescription", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-rowcount`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(js.undefined)
-        ret
-    }
+    def `deleteAria-roledescription`: Self = this.set("aria-roledescription", js.undefined)
     @scala.inline
-    def `withAria-rowindex`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-rowcount`(value: Double): Self = this.set("aria-rowcount", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-rowindex`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(js.undefined)
-        ret
-    }
+    def `deleteAria-rowcount`: Self = this.set("aria-rowcount", js.undefined)
     @scala.inline
-    def `withAria-rowspan`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-rowindex`(value: Double): Self = this.set("aria-rowindex", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-rowspan`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(js.undefined)
-        ret
-    }
+    def `deleteAria-rowindex`: Self = this.set("aria-rowindex", js.undefined)
     @scala.inline
-    def `withAria-selected`(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-rowspan`(value: Double): Self = this.set("aria-rowspan", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-selected`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(js.undefined)
-        ret
-    }
+    def `deleteAria-rowspan`: Self = this.set("aria-rowspan", js.undefined)
     @scala.inline
-    def `withAria-setsize`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-selected`(value: Boolean): Self = this.set("aria-selected", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-setsize`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(js.undefined)
-        ret
-    }
+    def `deleteAria-selected`: Self = this.set("aria-selected", js.undefined)
     @scala.inline
-    def `withAria-sort`(value: none | ascending | descending | other): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-setsize`(value: Double): Self = this.set("aria-setsize", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-sort`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(js.undefined)
-        ret
-    }
+    def `deleteAria-setsize`: Self = this.set("aria-setsize", js.undefined)
     @scala.inline
-    def `withAria-valuemax`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-sort`(value: none | ascending | descending | other): Self = this.set("aria-sort", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-valuemax`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(js.undefined)
-        ret
-    }
+    def `deleteAria-sort`: Self = this.set("aria-sort", js.undefined)
     @scala.inline
-    def `withAria-valuemin`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-valuemax`(value: Double): Self = this.set("aria-valuemax", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-valuemin`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(js.undefined)
-        ret
-    }
+    def `deleteAria-valuemax`: Self = this.set("aria-valuemax", js.undefined)
     @scala.inline
-    def `withAria-valuenow`(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-valuemin`(value: Double): Self = this.set("aria-valuemin", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-valuenow`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(js.undefined)
-        ret
-    }
+    def `deleteAria-valuemin`: Self = this.set("aria-valuemin", js.undefined)
     @scala.inline
-    def `withAria-valuetext`(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-valuenow`(value: Double): Self = this.set("aria-valuenow", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withoutAria-valuetext`: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(js.undefined)
-        ret
-    }
+    def `deleteAria-valuenow`: Self = this.set("aria-valuenow", js.undefined)
     @scala.inline
-    def withAutoCapitalize(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `setAria-valuetext`(value: String): Self = this.set("aria-valuetext", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutoCapitalize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(js.undefined)
-        ret
-    }
+    def `deleteAria-valuetext`: Self = this.set("aria-valuetext", js.undefined)
     @scala.inline
-    def withAutoComplete(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoCapitalize(value: String): Self = this.set("autoCapitalize", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutoComplete: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(js.undefined)
-        ret
-    }
+    def deleteAutoCapitalize: Self = this.set("autoCapitalize", js.undefined)
     @scala.inline
-    def withAutoCorrect(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoComplete(value: Boolean): Self = this.set("autoComplete", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutoCorrect: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(js.undefined)
-        ret
-    }
+    def deleteAutoComplete: Self = this.set("autoComplete", js.undefined)
     @scala.inline
-    def withAutoHighlight(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoCorrect(value: String): Self = this.set("autoCorrect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutoHighlight: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHighlight")(js.undefined)
-        ret
-    }
+    def deleteAutoCorrect: Self = this.set("autoCorrect", js.undefined)
     @scala.inline
-    def withAutoSave(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoHighlight(value: Boolean): Self = this.set("autoHighlight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutoSave: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(js.undefined)
-        ret
-    }
+    def deleteAutoHighlight: Self = this.set("autoHighlight", js.undefined)
     @scala.inline
-    def withAutoSelect(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoSave(value: String): Self = this.set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutAutoSelect: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSelect")(js.undefined)
-        ret
-    }
+    def deleteAutoSave: Self = this.set("autoSave", js.undefined)
     @scala.inline
-    def withBlurOnSelect(value: touch | mouse | `true` | `false`): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurOnSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoSelect(value: Boolean): Self = this.set("autoSelect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutBlurOnSelect: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurOnSelect")(js.undefined)
-        ret
-    }
+    def deleteAutoSelect: Self = this.set("autoSelect", js.undefined)
     @scala.inline
-    def withClassName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBlurOnSelect(value: touch | mouse | `true` | `false`): Self = this.set("blurOnSelect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutClassName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
+    def deleteBlurOnSelect: Self = this.set("blurOnSelect", js.undefined)
     @scala.inline
-    def withClasses(value: PartialClassNameMapAutoco): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutClasses: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
+    def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def withClearOnEscape(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnEscape")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClasses(value: PartialClassNameMapAutoco): Self = this.set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutClearOnEscape: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnEscape")(js.undefined)
-        ret
-    }
+    def deleteClasses: Self = this.set("classes", js.undefined)
     @scala.inline
-    def withClearText(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClearOnBlur(value: Boolean): Self = this.set("clearOnBlur", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutClearText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearText")(js.undefined)
-        ret
-    }
+    def deleteClearOnBlur: Self = this.set("clearOnBlur", js.undefined)
     @scala.inline
-    def withCloseIconReactElement(value: ReactElement): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setClearOnEscape(value: Boolean): Self = this.set("clearOnEscape", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCloseIcon(value: TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClearOnEscape: Self = this.set("clearOnEscape", js.undefined)
     @scala.inline
-    def withoutCloseIcon: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(js.undefined)
-        ret
-    }
+    def setClearText(value: String): Self = this.set("clearText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCloseText(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClearText: Self = this.set("clearText", js.undefined)
     @scala.inline
-    def withoutCloseText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeText")(js.undefined)
-        ret
-    }
+    def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withColor(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutColor: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
+    def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
-    def withComponentName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentName")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCloseText(value: String): Self = this.set("closeText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutComponentName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentName")(js.undefined)
-        ret
-    }
+    def deleteCloseText: Self = this.set("closeText", js.undefined)
     @scala.inline
-    def withContentEditable(value: Booleanish | inherit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutContentEditable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(js.undefined)
-        ret
-    }
+    def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline
-    def withContextMenu(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setComponentName(value: String): Self = this.set("componentName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutContextMenu: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
-        ret
-    }
+    def deleteComponentName: Self = this.set("componentName", js.undefined)
     @scala.inline
-    def withDangerouslySetInnerHTML(value: Html): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setContentEditable(value: Booleanish | inherit): Self = this.set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDangerouslySetInnerHTML: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(js.undefined)
-        ret
-    }
+    def deleteContentEditable: Self = this.set("contentEditable", js.undefined)
     @scala.inline
-    def withDatatype(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setContextMenu(value: String): Self = this.set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDatatype: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
-        ret
-    }
+    def deleteContextMenu: Self = this.set("contextMenu", js.undefined)
     @scala.inline
-    def withDebug(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDangerouslySetInnerHTML(value: Html): Self = this.set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDebug: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
+    def deleteDangerouslySetInnerHTML: Self = this.set("dangerouslySetInnerHTML", js.undefined)
     @scala.inline
-    def withDefaultChecked(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDatatype(value: String): Self = this.set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDefaultChecked: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(js.undefined)
-        ret
-    }
+    def deleteDatatype: Self = this.set("datatype", js.undefined)
     @scala.inline
-    def withDir(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDebug(value: Boolean): Self = this.set("debug", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDir: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
+    def deleteDebug: Self = this.set("debug", js.undefined)
     @scala.inline
-    def withDisableClearable(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableClearable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultChecked(value: Boolean): Self = this.set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisableClearable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableClearable")(js.undefined)
-        ret
-    }
+    def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     @scala.inline
-    def withDisableCloseOnSelect(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCloseOnSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDefaultValueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): Self = this.set("defaultValue", js.Array(value :_*))
     @scala.inline
-    def withoutDisableCloseOnSelect: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCloseOnSelect")(js.undefined)
-        ret
-    }
+    def setDefaultValue(value: Value[T, Multiple, DisableClearable, FreeSolo]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDisableListWrap(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableListWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
     @scala.inline
-    def withoutDisableListWrap: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableListWrap")(js.undefined)
-        ret
-    }
+    def setDefaultValueNull: Self = this.set("defaultValue", null)
     @scala.inline
-    def withDisablePortal(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePortal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDir(value: String): Self = this.set("dir", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisablePortal: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePortal")(js.undefined)
-        ret
-    }
+    def deleteDir: Self = this.set("dir", js.undefined)
     @scala.inline
-    def withDisabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisableClearable(value: DisableClearable): Self = this.set("disableClearable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
+    def deleteDisableClearable: Self = this.set("disableClearable", js.undefined)
     @scala.inline
-    def withDraggable(value: Booleanish): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisableCloseOnSelect(value: Boolean): Self = this.set("disableCloseOnSelect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDraggable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
+    def deleteDisableCloseOnSelect: Self = this.set("disableCloseOnSelect", js.undefined)
     @scala.inline
-    def withFilterOptions(value: (/* options */ js.Array[T], /* state */ FilterOptionsState[T]) => js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOptions")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setDisableListWrap(value: Boolean): Self = this.set("disableListWrap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFilterOptions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOptions")(js.undefined)
-        ret
-    }
+    def deleteDisableListWrap: Self = this.set("disableListWrap", js.undefined)
     @scala.inline
-    def withFilterSelectedOptions(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSelectedOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisablePortal(value: Boolean): Self = this.set("disablePortal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFilterSelectedOptions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSelectedOptions")(js.undefined)
-        ret
-    }
+    def deleteDisablePortal: Self = this.set("disablePortal", js.undefined)
     @scala.inline
-    def withForcePopupIcon(value: `true` | `false` | auto): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forcePopupIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutForcePopupIcon: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forcePopupIcon")(js.undefined)
-        ret
-    }
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def withFreeSolo(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSolo")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisabledItemsFocusable(value: Boolean): Self = this.set("disabledItemsFocusable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutFreeSolo: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSolo")(js.undefined)
-        ret
-    }
+    def deleteDisabledItemsFocusable: Self = this.set("disabledItemsFocusable", js.undefined)
     @scala.inline
-    def withGetOptionDisabled(value: /* option */ T => Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionDisabled")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setDraggable(value: Booleanish): Self = this.set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutGetOptionDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionDisabled")(js.undefined)
-        ret
-    }
+    def deleteDraggable: Self = this.set("draggable", js.undefined)
     @scala.inline
-    def withGetOptionLabel(value: /* option */ T => String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setFilterOptions(value: (/* options */ js.Array[T], /* state */ FilterOptionsState[T]) => js.Array[T]): Self = this.set("filterOptions", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutGetOptionLabel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.undefined)
-        ret
-    }
+    def deleteFilterOptions: Self = this.set("filterOptions", js.undefined)
     @scala.inline
-    def withGetOptionSelected(value: (/* option */ T, /* value */ T) => Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionSelected")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setFilterSelectedOptions(value: Boolean): Self = this.set("filterSelectedOptions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutGetOptionSelected: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionSelected")(js.undefined)
-        ret
-    }
+    def deleteFilterSelectedOptions: Self = this.set("filterSelectedOptions", js.undefined)
     @scala.inline
-    def withGroupBy(value: /* option */ T => String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setForcePopupIcon(value: `true` | `false` | auto): Self = this.set("forcePopupIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutGroupBy: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(js.undefined)
-        ret
-    }
+    def deleteForcePopupIcon: Self = this.set("forcePopupIcon", js.undefined)
     @scala.inline
-    def withHidden(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFreeSolo(value: FreeSolo): Self = this.set("freeSolo", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutHidden: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
+    def deleteFreeSolo: Self = this.set("freeSolo", js.undefined)
     @scala.inline
-    def withId(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFullWidth(value: Boolean): Self = this.set("fullWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutId: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
+    def deleteFullWidth: Self = this.set("fullWidth", js.undefined)
     @scala.inline
-    def withIncludeInputInList(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInputInList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetLimitTagsText(value: /* more */ Double => ReactElement): Self = this.set("getLimitTagsText", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutIncludeInputInList: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInputInList")(js.undefined)
-        ret
-    }
+    def deleteGetLimitTagsText: Self = this.set("getLimitTagsText", js.undefined)
     @scala.inline
-    def withInlist(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetOptionDisabled(value: /* option */ T => Boolean): Self = this.set("getOptionDisabled", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutInlist: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(js.undefined)
-        ret
-    }
+    def deleteGetOptionDisabled: Self = this.set("getOptionDisabled", js.undefined)
     @scala.inline
-    def withInnerRefRefObject(value: ReactRef[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetOptionLabel(value: /* option */ T => String): Self = this.set("getOptionLabel", js.Any.fromFunction1(value))
     @scala.inline
-    def withInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteGetOptionLabel: Self = this.set("getOptionLabel", js.undefined)
     @scala.inline
-    def withInnerRef(value: Ref[_] | ReactRef[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetOptionSelected(value: (/* option */ T, /* value */ T) => Boolean): Self = this.set("getOptionSelected", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutInnerRef: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
-        ret
-    }
+    def deleteGetOptionSelected: Self = this.set("getOptionSelected", js.undefined)
     @scala.inline
-    def withInnerRefNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(null)
-        ret
-    }
+    def setGroupBy(value: /* option */ T => String): Self = this.set("groupBy", js.Any.fromFunction1(value))
     @scala.inline
-    def withInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGroupBy: Self = this.set("groupBy", js.undefined)
     @scala.inline
-    def withoutInputMode: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(js.undefined)
-        ret
-    }
+    def setHandleHomeEndKeys(value: Boolean): Self = this.set("handleHomeEndKeys", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInputValue(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHandleHomeEndKeys: Self = this.set("handleHomeEndKeys", js.undefined)
     @scala.inline
-    def withoutInputValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(js.undefined)
-        ret
-    }
+    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIs(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHidden: Self = this.set("hidden", js.undefined)
     @scala.inline
-    def withoutIs: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
-        ret
-    }
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withItemID(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteId: Self = this.set("id", js.undefined)
     @scala.inline
-    def withoutItemID: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(js.undefined)
-        ret
-    }
+    def setIncludeInputInList(value: Boolean): Self = this.set("includeInputInList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withItemProp(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIncludeInputInList: Self = this.set("includeInputInList", js.undefined)
     @scala.inline
-    def withoutItemProp: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(js.undefined)
-        ret
-    }
+    def setInlist(value: js.Any): Self = this.set("inlist", value.asInstanceOf[js.Any])
     @scala.inline
-    def withItemRef(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInlist: Self = this.set("inlist", js.undefined)
     @scala.inline
-    def withoutItemRef: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(js.undefined)
-        ret
-    }
+    def setInnerRefRefObject(value: ReactRef[_]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
     @scala.inline
-    def withItemScope(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutItemScope: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(js.undefined)
-        ret
-    }
+    def setInnerRef(value: Ref[_] | ReactRef[_]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
     @scala.inline
-    def withItemType(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInnerRef: Self = this.set("innerRef", js.undefined)
     @scala.inline
-    def withoutItemType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(js.undefined)
-        ret
-    }
+    def setInnerRefNull: Self = this.set("innerRef", null)
     @scala.inline
-    def withLang(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLang: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
+    def deleteInputMode: Self = this.set("inputMode", js.undefined)
     @scala.inline
-    def withLoading(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInputValue(value: String): Self = this.set("inputValue", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutLoading: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
+    def deleteInputValue: Self = this.set("inputValue", js.undefined)
     @scala.inline
-    def withLoadingTextReactElement(value: ReactElement): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIs(value: String): Self = this.set("is", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoadingText(value: TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIs: Self = this.set("is", js.undefined)
     @scala.inline
-    def withoutLoadingText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingText")(js.undefined)
-        ret
-    }
+    def setItemID(value: String): Self = this.set("itemID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNoOptionsTextReactElement(value: ReactElement): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptionsText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteItemID: Self = this.set("itemID", js.undefined)
     @scala.inline
-    def withNoOptionsText(value: TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptionsText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setItemProp(value: String): Self = this.set("itemProp", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutNoOptionsText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptionsText")(js.undefined)
-        ret
-    }
+    def deleteItemProp: Self = this.set("itemProp", js.undefined)
     @scala.inline
-    def withOnAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setItemRef(value: String): Self = this.set("itemRef", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnAbort: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.undefined)
-        ret
-    }
+    def deleteItemRef: Self = this.set("itemRef", js.undefined)
     @scala.inline
-    def withOnAnimationEnd(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setItemScope(value: Boolean): Self = this.set("itemScope", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnAnimationEnd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(js.undefined)
-        ret
-    }
+    def deleteItemScope: Self = this.set("itemScope", js.undefined)
     @scala.inline
-    def withOnAnimationIteration(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationIteration")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setItemType(value: String): Self = this.set("itemType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnAnimationIteration: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationIteration")(js.undefined)
-        ret
-    }
+    def deleteItemType: Self = this.set("itemType", js.undefined)
     @scala.inline
-    def withOnAnimationStart(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLang(value: String): Self = this.set("lang", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnAnimationStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(js.undefined)
-        ret
-    }
+    def deleteLang: Self = this.set("lang", js.undefined)
     @scala.inline
-    def withOnAuxClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuxClick")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLimitTags(value: Double): Self = this.set("limitTags", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnAuxClick: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuxClick")(js.undefined)
-        ret
-    }
+    def deleteLimitTags: Self = this.set("limitTags", js.undefined)
     @scala.inline
-    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnBeforeInput: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.undefined)
-        ret
-    }
+    def deleteLoading: Self = this.set("loading", js.undefined)
     @scala.inline
-    def withOnBlur(value: SyntheticFocusEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLoadingTextReactElement(value: ReactElement): Self = this.set("loadingText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnBlur: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
+    def setLoadingText(value: ReactElement): Self = this.set("loadingText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnCanPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteLoadingText: Self = this.set("loadingText", js.undefined)
     @scala.inline
-    def withoutOnCanPlay: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.undefined)
-        ret
-    }
+    def setMultiple(value: Multiple): Self = this.set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
     @scala.inline
-    def withoutOnCanPlayThrough: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.undefined)
-        ret
-    }
+    def setNoOptionsTextReactElement(value: ReactElement): Self = this.set("noOptionsText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setNoOptionsText(value: ReactElement): Self = this.set("noOptionsText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOnClick: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
+    def deleteNoOptionsText: Self = this.set("noOptionsText", js.undefined)
     @scala.inline
-    def withOnClose(value: (/* event */ ChangeEvent[js.Object], /* reason */ AutocompleteCloseReason) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnClose: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
+    def deleteOnAbort: Self = this.set("onAbort", js.undefined)
     @scala.inline
-    def withOnCompositionEnd(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionEnd")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnAnimationEnd(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self = this.set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnCompositionEnd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionEnd")(js.undefined)
-        ret
-    }
+    def deleteOnAnimationEnd: Self = this.set("onAnimationEnd", js.undefined)
     @scala.inline
-    def withOnCompositionStart(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionStart")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnAnimationIteration(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self = this.set("onAnimationIteration", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnCompositionStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionStart")(js.undefined)
-        ret
-    }
+    def deleteOnAnimationIteration: Self = this.set("onAnimationIteration", js.undefined)
     @scala.inline
-    def withOnCompositionUpdate(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnAnimationStart(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self = this.set("onAnimationStart", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnCompositionUpdate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionUpdate")(js.undefined)
-        ret
-    }
+    def deleteOnAnimationStart: Self = this.set("onAnimationStart", js.undefined)
     @scala.inline
-    def withOnContextMenu(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnAuxClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onAuxClick", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnContextMenu: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.undefined)
-        ret
-    }
+    def deleteOnAuxClick: Self = this.set("onAuxClick", js.undefined)
     @scala.inline
-    def withOnCopy(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = this.set("onBeforeInput", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnCopy: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(js.undefined)
-        ret
-    }
+    def deleteOnBeforeInput: Self = this.set("onBeforeInput", js.undefined)
     @scala.inline
-    def withOnCut(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnBlur(value: SyntheticFocusEvent[HTMLDivElement] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnCut: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(js.undefined)
-        ret
-    }
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
     @scala.inline
-    def withOnDoubleClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCanPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDoubleClick: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.undefined)
-        ret
-    }
+    def deleteOnCanPlay: Self = this.set("onCanPlay", js.undefined)
     @scala.inline
-    def withOnDrag(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDrag: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
-        ret
-    }
+    def deleteOnCanPlayThrough: Self = this.set("onCanPlayThrough", js.undefined)
     @scala.inline
-    def withOnDragEnd(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnChange(
+      value: (/* event */ ChangeEvent[js.Object], /* value */ Value[T, Multiple, DisableClearable, FreeSolo], /* reason */ AutocompleteChangeReason, /* details */ js.UndefOr[AutocompleteChangeDetails[T]]) => Unit
+    ): Self = this.set("onChange", js.Any.fromFunction4(value))
     @scala.inline
-    def withoutOnDragEnd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
-        ret
-    }
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
     @scala.inline
-    def withOnDragEnter(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDragEnter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.undefined)
-        ret
-    }
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
     @scala.inline
-    def withOnDragExit(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnClose(value: (/* event */ ChangeEvent[js.Object], /* reason */ AutocompleteCloseReason) => Unit): Self = this.set("onClose", js.Any.fromFunction2(value))
     @scala.inline
-    def withoutOnDragExit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(js.undefined)
-        ret
-    }
+    def deleteOnClose: Self = this.set("onClose", js.undefined)
     @scala.inline
-    def withOnDragLeave(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCompositionEnd(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self = this.set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDragLeave: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(js.undefined)
-        ret
-    }
+    def deleteOnCompositionEnd: Self = this.set("onCompositionEnd", js.undefined)
     @scala.inline
-    def withOnDragOver(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCompositionStart(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self = this.set("onCompositionStart", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDragOver: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.undefined)
-        ret
-    }
+    def deleteOnCompositionStart: Self = this.set("onCompositionStart", js.undefined)
     @scala.inline
-    def withOnDragStart(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCompositionUpdate(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self = this.set("onCompositionUpdate", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDragStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
+    def deleteOnCompositionUpdate: Self = this.set("onCompositionUpdate", js.undefined)
     @scala.inline
-    def withOnDrop(value: DragEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnContextMenu(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDrop: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.undefined)
-        ret
-    }
+    def deleteOnContextMenu: Self = this.set("onContextMenu", js.undefined)
     @scala.inline
-    def withOnDurationChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCopy(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self = this.set("onCopy", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnDurationChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.undefined)
-        ret
-    }
+    def deleteOnCopy: Self = this.set("onCopy", js.undefined)
     @scala.inline
-    def withOnEmptied(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnCut(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self = this.set("onCut", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnEmptied: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.undefined)
-        ret
-    }
+    def deleteOnCut: Self = this.set("onCut", js.undefined)
     @scala.inline
-    def withOnEncrypted(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDoubleClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onDoubleClick", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnEncrypted: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.undefined)
-        ret
-    }
+    def deleteOnDoubleClick: Self = this.set("onDoubleClick", js.undefined)
     @scala.inline
-    def withOnEnded(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDrag(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDrag", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnEnded: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.undefined)
-        ret
-    }
+    def deleteOnDrag: Self = this.set("onDrag", js.undefined)
     @scala.inline
-    def withOnError(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDragEnd(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDragEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnError: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
+    def deleteOnDragEnd: Self = this.set("onDragEnd", js.undefined)
     @scala.inline
-    def withOnFocus(value: SyntheticFocusEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDragEnter(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDragEnter", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnFocus: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
+    def deleteOnDragEnter: Self = this.set("onDragEnter", js.undefined)
     @scala.inline
-    def withOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnDragExit(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDragExit", js.Any.fromFunction1(value))
     @scala.inline
-    def withoutOnInput: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.undefined)
-        ret
-    }
+    def deleteOnDragExit: Self = this.set("onDragExit", js.undefined)
+    @scala.inline
+    def setOnDragLeave(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDragLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragLeave: Self = this.set("onDragLeave", js.undefined)
+    @scala.inline
+    def setOnDragOver(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDragOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragOver: Self = this.set("onDragOver", js.undefined)
+    @scala.inline
+    def setOnDragStart(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDragStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragStart: Self = this.set("onDragStart", js.undefined)
+    @scala.inline
+    def setOnDrop(value: DragEvent[HTMLDivElement] => Unit): Self = this.set("onDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDrop: Self = this.set("onDrop", js.undefined)
+    @scala.inline
+    def setOnDurationChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onDurationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDurationChange: Self = this.set("onDurationChange", js.undefined)
+    @scala.inline
+    def setOnEmptied(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onEmptied", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnEmptied: Self = this.set("onEmptied", js.undefined)
+    @scala.inline
+    def setOnEncrypted(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onEncrypted", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnEncrypted: Self = this.set("onEncrypted", js.undefined)
+    @scala.inline
+    def setOnEnded(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onEnded", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnEnded: Self = this.set("onEnded", js.undefined)
+    @scala.inline
+    def setOnError(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnError: Self = this.set("onError", js.undefined)
+    @scala.inline
+    def setOnFocus(value: SyntheticFocusEvent[HTMLDivElement] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    @scala.inline
+    def setOnHighlightChange(
+      value: (/* event */ ChangeEvent[js.Object], /* option */ T | Null, /* reason */ AutocompleteHighlightChangeReason) => Unit
+    ): Self = this.set("onHighlightChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnHighlightChange: Self = this.set("onHighlightChange", js.undefined)
+    @scala.inline
+    def setOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = this.set("onInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnInput: Self = this.set("onInput", js.undefined)
     @scala.inline
-    def withOnInputChange(
+    def setOnInputChange(
       value: (/* event */ ChangeEvent[js.Object], /* value */ String, /* reason */ AutocompleteInputChangeReason) => Unit
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInputChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInvalid: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyDown(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyDown: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyPress(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyPress: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyUp(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyUp: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadStart(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadedData(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadedData: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadedMetadata(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadedMetadata: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseDown(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseDown: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseMove(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseMove: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseOut(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseOut: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseOver(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseOver: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseUp(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseUp: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpen(value: /* event */ ChangeEvent[js.Object] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnOpen: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPaste(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPaste: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPause(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPause: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlay: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlaying(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlaying: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerCancel(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerCancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerCancel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerDown(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerDown: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerEnter(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerEnter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerLeave(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerLeave: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerMove(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerMove: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerOut(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOut")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerOut: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerOver(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerOver: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointerUp(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPointerUp: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnProgress(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnProgress: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRateChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRateChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReset(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReset: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: SyntheticUIEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeeked(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSeeked: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeeking(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSeeking: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStalled(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStalled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSubmit(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSubmit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSuspend(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSuspend: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTimeUpdate(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTimeUpdate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchCancel(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchCancel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchEnd(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchEnd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchMove(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchMove: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTouchStart(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTouchStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTransitionEnd(value: SyntheticTransitionEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTransitionEnd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnVolumeChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnVolumeChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWaiting(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnWaiting: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWheel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnWheel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWheel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenOnFocus(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenOnFocus: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenText(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupIconReactElement(value: ReactElement): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPopupIcon(value: TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupIcon: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperty(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperty: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadioGroup(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radioGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadioGroup: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radioGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderGroup(value: /* params */ RenderGroupParams => TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderGroup")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderGroup: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderOption(value: (/* option */ T, /* state */ RenderOptionState) => TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOption")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderOption: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderTags(value: (/* value */ js.Array[T], /* getTagProps */ GetTagProps) => TagMod[Any]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTags")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderTags: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurity(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurity: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectOnFocus(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectOnFocus: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: small | medium): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlot(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlot: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpellCheck(value: Booleanish): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpellCheck: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressContentEditableWarning(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressContentEditableWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressContentEditableWarning: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressContentEditableWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressHydrationWarning(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHydrationWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressHydrationWarning: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHydrationWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: yes | no): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeof(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeof")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeof: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeof")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnselectable(value: on | off): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnselectable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocab(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vocab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocab: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vocab")(js.undefined)
-        ret
-    }
+    ): Self = this.set("onInputChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnInputChange: Self = this.set("onInputChange", js.undefined)
+    @scala.inline
+    def setOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = this.set("onInvalid", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnInvalid: Self = this.set("onInvalid", js.undefined)
+    @scala.inline
+    def setOnKeyDown(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyDown: Self = this.set("onKeyDown", js.undefined)
+    @scala.inline
+    def setOnKeyPress(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self = this.set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyPress: Self = this.set("onKeyPress", js.undefined)
+    @scala.inline
+    def setOnKeyUp(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self = this.set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyUp: Self = this.set("onKeyUp", js.undefined)
+    @scala.inline
+    def setOnLoad(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLoad: Self = this.set("onLoad", js.undefined)
+    @scala.inline
+    def setOnLoadStart(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onLoadStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLoadStart: Self = this.set("onLoadStart", js.undefined)
+    @scala.inline
+    def setOnLoadedData(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onLoadedData", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLoadedData: Self = this.set("onLoadedData", js.undefined)
+    @scala.inline
+    def setOnLoadedMetadata(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onLoadedMetadata", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLoadedMetadata: Self = this.set("onLoadedMetadata", js.undefined)
+    @scala.inline
+    def setOnMouseDown(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseDown: Self = this.set("onMouseDown", js.undefined)
+    @scala.inline
+    def setOnMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseEnter: Self = this.set("onMouseEnter", js.undefined)
+    @scala.inline
+    def setOnMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseLeave: Self = this.set("onMouseLeave", js.undefined)
+    @scala.inline
+    def setOnMouseMove(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseMove: Self = this.set("onMouseMove", js.undefined)
+    @scala.inline
+    def setOnMouseOut(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseOut: Self = this.set("onMouseOut", js.undefined)
+    @scala.inline
+    def setOnMouseOver(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseOver: Self = this.set("onMouseOver", js.undefined)
+    @scala.inline
+    def setOnMouseUp(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseUp: Self = this.set("onMouseUp", js.undefined)
+    @scala.inline
+    def setOnOpen(value: /* event */ ChangeEvent[js.Object] => Unit): Self = this.set("onOpen", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnOpen: Self = this.set("onOpen", js.undefined)
+    @scala.inline
+    def setOnPaste(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self = this.set("onPaste", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPaste: Self = this.set("onPaste", js.undefined)
+    @scala.inline
+    def setOnPause(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onPause", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPause: Self = this.set("onPause", js.undefined)
+    @scala.inline
+    def setOnPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPlay: Self = this.set("onPlay", js.undefined)
+    @scala.inline
+    def setOnPlaying(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onPlaying", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPlaying: Self = this.set("onPlaying", js.undefined)
+    @scala.inline
+    def setOnPointerCancel(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerCancel: Self = this.set("onPointerCancel", js.undefined)
+    @scala.inline
+    def setOnPointerDown(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerDown: Self = this.set("onPointerDown", js.undefined)
+    @scala.inline
+    def setOnPointerEnter(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerEnter: Self = this.set("onPointerEnter", js.undefined)
+    @scala.inline
+    def setOnPointerLeave(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerLeave: Self = this.set("onPointerLeave", js.undefined)
+    @scala.inline
+    def setOnPointerMove(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerMove: Self = this.set("onPointerMove", js.undefined)
+    @scala.inline
+    def setOnPointerOut(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerOut: Self = this.set("onPointerOut", js.undefined)
+    @scala.inline
+    def setOnPointerOver(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerOver: Self = this.set("onPointerOver", js.undefined)
+    @scala.inline
+    def setOnPointerUp(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = this.set("onPointerUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPointerUp: Self = this.set("onPointerUp", js.undefined)
+    @scala.inline
+    def setOnProgress(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onProgress", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnProgress: Self = this.set("onProgress", js.undefined)
+    @scala.inline
+    def setOnRateChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onRateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnRateChange: Self = this.set("onRateChange", js.undefined)
+    @scala.inline
+    def setOnReset(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = this.set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnReset: Self = this.set("onReset", js.undefined)
+    @scala.inline
+    def setOnScroll(value: SyntheticUIEvent[HTMLDivElement] => Unit): Self = this.set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnScroll: Self = this.set("onScroll", js.undefined)
+    @scala.inline
+    def setOnSeeked(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onSeeked", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSeeked: Self = this.set("onSeeked", js.undefined)
+    @scala.inline
+    def setOnSeeking(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onSeeking", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSeeking: Self = this.set("onSeeking", js.undefined)
+    @scala.inline
+    def setOnSelect(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSelect: Self = this.set("onSelect", js.undefined)
+    @scala.inline
+    def setOnStalled(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onStalled", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnStalled: Self = this.set("onStalled", js.undefined)
+    @scala.inline
+    def setOnSubmit(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = this.set("onSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSubmit: Self = this.set("onSubmit", js.undefined)
+    @scala.inline
+    def setOnSuspend(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onSuspend", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSuspend: Self = this.set("onSuspend", js.undefined)
+    @scala.inline
+    def setOnTimeUpdate(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onTimeUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTimeUpdate: Self = this.set("onTimeUpdate", js.undefined)
+    @scala.inline
+    def setOnTouchCancel(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self = this.set("onTouchCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTouchCancel: Self = this.set("onTouchCancel", js.undefined)
+    @scala.inline
+    def setOnTouchEnd(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self = this.set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTouchEnd: Self = this.set("onTouchEnd", js.undefined)
+    @scala.inline
+    def setOnTouchMove(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self = this.set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTouchMove: Self = this.set("onTouchMove", js.undefined)
+    @scala.inline
+    def setOnTouchStart(value: SyntheticTouchEvent[HTMLDivElement] => Unit): Self = this.set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTouchStart: Self = this.set("onTouchStart", js.undefined)
+    @scala.inline
+    def setOnTransitionEnd(value: SyntheticTransitionEvent[HTMLDivElement] => Unit): Self = this.set("onTransitionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTransitionEnd: Self = this.set("onTransitionEnd", js.undefined)
+    @scala.inline
+    def setOnVolumeChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onVolumeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnVolumeChange: Self = this.set("onVolumeChange", js.undefined)
+    @scala.inline
+    def setOnWaiting(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = this.set("onWaiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnWaiting: Self = this.set("onWaiting", js.undefined)
+    @scala.inline
+    def setOnWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): Self = this.set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnWheel: Self = this.set("onWheel", js.undefined)
+    @scala.inline
+    def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setOpenOnFocus(value: Boolean): Self = this.set("openOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenOnFocus: Self = this.set("openOnFocus", js.undefined)
+    @scala.inline
+    def setOpenText(value: String): Self = this.set("openText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenText: Self = this.set("openText", js.undefined)
+    @scala.inline
+    def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    @scala.inline
+    def setPopupIconReactElement(value: ReactElement): Self = this.set("popupIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPopupIcon(value: ReactElement): Self = this.set("popupIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopupIcon: Self = this.set("popupIcon", js.undefined)
+    @scala.inline
+    def setPrefix(value: String): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefix: Self = this.set("prefix", js.undefined)
+    @scala.inline
+    def setProperty(value: String): Self = this.set("property", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProperty: Self = this.set("property", js.undefined)
+    @scala.inline
+    def setRadioGroup(value: String): Self = this.set("radioGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRadioGroup: Self = this.set("radioGroup", js.undefined)
+    @scala.inline
+    def setRenderGroup(value: /* params */ AutocompleteRenderGroupParams => ReactElement): Self = this.set("renderGroup", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRenderGroup: Self = this.set("renderGroup", js.undefined)
+    @scala.inline
+    def setRenderOption(value: (/* option */ T, /* state */ AutocompleteRenderOptionState) => ReactElement): Self = this.set("renderOption", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteRenderOption: Self = this.set("renderOption", js.undefined)
+    @scala.inline
+    def setRenderTags(value: (/* value */ js.Array[T], /* getTagProps */ AutocompleteGetTagProps) => ReactElement): Self = this.set("renderTags", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteRenderTags: Self = this.set("renderTags", js.undefined)
+    @scala.inline
+    def setResource(value: String): Self = this.set("resource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResource: Self = this.set("resource", js.undefined)
+    @scala.inline
+    def setResults(value: Double): Self = this.set("results", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResults: Self = this.set("results", js.undefined)
+    @scala.inline
+    def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
+    @scala.inline
+    def setSecurity(value: String): Self = this.set("security", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecurity: Self = this.set("security", js.undefined)
+    @scala.inline
+    def setSelectOnFocus(value: Boolean): Self = this.set("selectOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectOnFocus: Self = this.set("selectOnFocus", js.undefined)
+    @scala.inline
+    def setSize(value: small | medium): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSlot(value: String): Self = this.set("slot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSlot: Self = this.set("slot", js.undefined)
+    @scala.inline
+    def setSpellCheck(value: Booleanish): Self = this.set("spellCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpellCheck: Self = this.set("spellCheck", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSuppressContentEditableWarning(value: Boolean): Self = this.set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuppressContentEditableWarning: Self = this.set("suppressContentEditableWarning", js.undefined)
+    @scala.inline
+    def setSuppressHydrationWarning(value: Boolean): Self = this.set("suppressHydrationWarning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuppressHydrationWarning: Self = this.set("suppressHydrationWarning", js.undefined)
+    @scala.inline
+    def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setTranslate(value: yes | no): Self = this.set("translate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTranslate: Self = this.set("translate", js.undefined)
+    @scala.inline
+    def setTypeof(value: String): Self = this.set("typeof", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTypeof: Self = this.set("typeof", js.undefined)
+    @scala.inline
+    def setUnselectable(value: on | off): Self = this.set("unselectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnselectable: Self = this.set("unselectable", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: (T | AutocompleteFreeSoloValueMapping[FreeSolo])*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
+    def setValue(value: Value[T, Multiple, DisableClearable, FreeSolo]): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
+    @scala.inline
+    def setVocab(value: String): Self = this.set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVocab: Self = this.set("vocab", js.undefined)
   }
   
 }

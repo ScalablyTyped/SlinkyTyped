@@ -1,7 +1,7 @@
 package typingsSlinky.reactNavigation.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactNavigation.anon.`0`
+import typingsSlinky.reactNavigation.anon.`4`
 import typingsSlinky.reactNavigation.reactNavigationStrings.isFocused
 import typingsSlinky.reactNavigation.reactNavigationStrings.navigation
 import scala.scalajs.js
@@ -21,7 +21,7 @@ object withNavigationFocus extends js.Object {
     (Omit[
       P, 
       /* keyof react-navigation.react-navigation.NavigationFocusInjectedProps<react-navigation.react-navigation.NavigationParams> */ isFocused | navigation
-    ]) with (`0`[T, P])
+    ]) with (`4`[T, P])
   ] = js.native
 }
 

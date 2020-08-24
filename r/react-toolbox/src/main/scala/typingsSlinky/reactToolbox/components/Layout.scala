@@ -1,23 +1,30 @@
 package typingsSlinky.reactToolbox.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToolbox.libLayoutLayoutMod.LayoutProps
-import typingsSlinky.reactToolbox.libLayoutLayoutMod.LayoutTheme
+import typingsSlinky.reactToolbox.layoutLayoutMod.LayoutProps
+import typingsSlinky.reactToolbox.layoutLayoutMod.LayoutTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Layout {
-  @JSImport("react-toolbox", "Layout")
+  @JSImport("react-toolbox/components/layout", "Layout")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.Layout] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.layoutMod.Layout] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
+    def children(value: ReactElement | js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

@@ -3,7 +3,6 @@ package typingsSlinky.materialUiLab.components
 import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
@@ -20,15 +19,13 @@ import typingsSlinky.materialUiLab.speedDialSpeedDialMod.SpeedDialClassKey
 import typingsSlinky.materialUiLab.speedDialSpeedDialMod.SpeedDialProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactTransitionGroup.anon.Appear
-import typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SpeedDial {
-  @JSImport("@material-ui/lab/SpeedDial/SpeedDial", JSImport.Default)
+  @JSImport("@material-ui/lab", "SpeedDial")
   @js.native
   object component extends js.Object
   
@@ -39,13 +36,27 @@ object SpeedDial {
     @scala.inline
     def FabProps(value: PartialFabProps): this.type = set("FabProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponentFunctionComponent(
+      value: ReactComponentClass[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+        ]
+    ): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def TransitionComponentComponentClass(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponentComponentClass(
+      value: ReactComponentClass[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+        ]
+    ): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def TransitionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
+    def TransitionComponent(
+      value: ReactComponentClass[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ _
+        ]
+    ): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def TransitionProps(value: typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps): this.type = set("TransitionProps", value.asInstanceOf[js.Any])
+    def TransitionProps(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps */ js.Any
+    ): this.type = set("TransitionProps", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +68,7 @@ object SpeedDial {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     @scala.inline
@@ -73,11 +84,13 @@ object SpeedDial {
     @scala.inline
     def openIconReactElement(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def openIcon(value: TagMod[Any]): this.type = set("openIcon", value.asInstanceOf[js.Any])
+    def openIcon(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def transitionDuration(value: Double | Appear): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
+    def transitionDuration(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionProps * / any['timeout'] */ js.Any
+    ): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SpeedDialProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

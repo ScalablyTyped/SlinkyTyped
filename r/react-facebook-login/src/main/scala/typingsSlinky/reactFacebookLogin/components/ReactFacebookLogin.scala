@@ -3,7 +3,6 @@ package typingsSlinky.reactFacebookLogin.components
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.StBuildingComponent
@@ -47,7 +46,7 @@ object ReactFacebookLogin {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,7 +89,7 @@ object ReactFacebookLogin {
   
   def withProps(p: ReactFacebookLoginProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(appId: String, callback: ReactFacebookLoginInfo => Unit): Builder = {
+  def apply(appId: String, callback: ReactFacebookFailureResponse | ReactFacebookLoginInfo => Unit): Builder = {
     val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], callback = js.Any.fromFunction1(callback))
     new Builder(js.Array(this.component, __props.asInstanceOf[ReactFacebookLoginProps]))
   }

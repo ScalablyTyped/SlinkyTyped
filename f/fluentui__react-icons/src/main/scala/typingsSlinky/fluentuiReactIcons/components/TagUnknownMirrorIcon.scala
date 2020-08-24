@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TagUnknownMirrorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TagUnknownMirrorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TagUnknownMirrorIcon")
   @js.native
   object component extends js.Object
   

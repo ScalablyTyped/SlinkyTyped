@@ -1,7 +1,7 @@
 package typingsSlinky.apolloServerExpress.mod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
-import typingsSlinky.graphqlTools.anon.Field
+import typingsSlinky.graphqlToolsDelegate.anon.Field
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

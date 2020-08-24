@@ -59,107 +59,44 @@ object Toast_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetDuration(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDuration")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCancel(value: () => Unit): Self = this.set("cancel", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetGravity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGravity")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetDuration(value: () => Double): Self = this.set("getDuration", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetView(value: () => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetGravity(value: () => Double): Self = this.set("getGravity", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetXOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getXOffset")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetView(value: () => View): Self = this.set("getView", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetYOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYOffset")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetXOffset(value: () => Double): Self = this.set("getXOffset", js.Any.fromFunction0(value))
     @scala.inline
-    def withMContext(value: Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mContext")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetYOffset(value: () => Double): Self = this.set("getYOffset", js.Any.fromFunction0(value))
     @scala.inline
-    def withMDelayHide(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDelayHide")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMContext(value: Context): Self = this.set("mContext", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDelayHide(value: js.Any): Self = this.set("mDelayHide", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHandler(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDuration(value: Double): Self = this.set("mDuration", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNextView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNextView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHandler(value: js.Any): Self = this.set("mHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTN(value: TN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNextView(value: View): Self = this.set("mNextView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetDuration(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDuration")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMTN(value: TN): Self = this.set("mTN", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetGravity(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGravity")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setSetDuration(value: Double => Unit): Self = this.set("setDuration", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setText")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetGravity(value: (Double, Double, Double) => Unit): Self = this.set("setGravity", js.Any.fromFunction3(value))
     @scala.inline
-    def withSetView(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetText(value: String => Unit): Self = this.set("setText", js.Any.fromFunction1(value))
     @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSetView(value: View => Unit): Self = this.set("setView", js.Any.fromFunction1(value))
+    @scala.inline
+    def setShow(value: () => Unit): Self = this.set("show", js.Any.fromFunction0(value))
   }
   
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PartyLeaderIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PartyLeaderIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PartyLeaderIcon")
   @js.native
   object component extends js.Object
   

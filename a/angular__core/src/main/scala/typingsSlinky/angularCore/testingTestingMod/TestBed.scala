@@ -5,6 +5,7 @@ import typingsSlinky.angularCore.anon.Deps
 import typingsSlinky.angularCore.anon.Providers
 import typingsSlinky.angularCore.anon.UseFactory
 import typingsSlinky.angularCore.anon.UseValue
+import typingsSlinky.angularCore.mod.AbstractType
 import typingsSlinky.angularCore.mod.Component
 import typingsSlinky.angularCore.mod.Directive
 import typingsSlinky.angularCore.mod.InjectFlags
@@ -27,20 +28,18 @@ trait TestBed extends js.Object {
   def createComponent[T](component: Type[T]): ComponentFixture[T] = js.native
   def execute(tokens: js.Array[_], fn: js.Function): js.Any = js.native
   def execute(tokens: js.Array[_], fn: js.Function, context: js.Any): js.Any = js.native
-  /**
-    * deprecated from v8.0.0 use Type<T> or InjectionToken<T>
-    * This does not use the deprecated jsdoc tag on purpose
-    * because it renders all overloads as deprecated in TSLint
-    * due to https://github.com/palantir/tslint/issues/4522.
-    */
+  /** @deprecated from v9.0.0 use TestBed.inject */
   def get(token: js.Any): js.Any = js.native
   def get(token: js.Any, notFoundValue: js.Any): js.Any = js.native
   def get[T](token: InjectionToken[T]): js.Any = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T): js.Any = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T, flags: InjectFlags): js.Any = js.native
+  def get[T](token: InjectionToken[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): js.Any = js.native
+  /** @deprecated from v9.0.0 use TestBed.inject */
   def get[T](token: Type[T]): js.Any = js.native
   def get[T](token: Type[T], notFoundValue: T): js.Any = js.native
   def get[T](token: Type[T], notFoundValue: T, flags: InjectFlags): js.Any = js.native
+  def get[T](token: Type[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): js.Any = js.native
   def initTestEnvironment(ngModule: js.Array[Type[_]], platform: PlatformRef): Unit = js.native
   def initTestEnvironment(ngModule: js.Array[Type[_]], platform: PlatformRef, aotSummaries: js.Function0[js.Array[_]]): Unit = js.native
   /**
@@ -56,6 +55,27 @@ trait TestBed extends js.Object {
     */
   def initTestEnvironment(ngModule: Type[_], platform: PlatformRef): Unit = js.native
   def initTestEnvironment(ngModule: Type[_], platform: PlatformRef, aotSummaries: js.Function0[js.Array[_]]): Unit = js.native
+  def inject[T](token: AbstractType[T]): T | Null = js.native
+  def inject[T](token: AbstractType[T], notFoundValue: T): T = js.native
+  def inject[T](token: AbstractType[T], notFoundValue: T, flags: InjectFlags): T = js.native
+  def inject[T](token: AbstractType[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T = js.native
+  def inject[T](token: AbstractType[T], notFoundValue: Null, flags: InjectFlags): T | Null = js.native
+  def inject[T](token: InjectionToken[T]): T | Null = js.native
+  def inject[T](token: InjectionToken[T], notFoundValue: T): T = js.native
+  def inject[T](token: InjectionToken[T], notFoundValue: T, flags: InjectFlags): T = js.native
+  def inject[T](token: InjectionToken[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T = js.native
+  def inject[T](token: InjectionToken[T], notFoundValue: Null, flags: InjectFlags): T | Null = js.native
+  def inject[T](token: Type[T]): T | Null = js.native
+  def inject[T](token: Type[T], notFoundValue: T): T = js.native
+  def inject[T](token: Type[T], notFoundValue: T, flags: InjectFlags): T = js.native
+  def inject[T](token: Type[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T = js.native
+  def inject[T](token: Type[T], notFoundValue: Null, flags: InjectFlags): T | Null = js.native
+  @JSName("inject")
+  def inject_T_T[T](token: AbstractType[T]): T = js.native
+  @JSName("inject")
+  def inject_T_T[T](token: InjectionToken[T]): T = js.native
+  @JSName("inject")
+  def inject_T_T[T](token: Type[T]): T = js.native
   def overrideComponent(component: Type[_], `override`: MetadataOverride[Component]): Unit = js.native
   def overrideDirective(directive: Type[_], `override`: MetadataOverride[Directive]): Unit = js.native
   def overrideModule(ngModule: Type[_], `override`: MetadataOverride[NgModule]): Unit = js.native

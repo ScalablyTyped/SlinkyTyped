@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VerticalDistributeCenterIcon {
-  @JSImport("@fluentui/react-icons/lib/components/VerticalDistributeCenterIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "VerticalDistributeCenterIcon")
   @js.native
   object component extends js.Object
   

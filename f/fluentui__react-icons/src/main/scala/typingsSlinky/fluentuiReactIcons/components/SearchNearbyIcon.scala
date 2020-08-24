@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SearchNearbyIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SearchNearbyIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SearchNearbyIcon")
   @js.native
   object component extends js.Object
   

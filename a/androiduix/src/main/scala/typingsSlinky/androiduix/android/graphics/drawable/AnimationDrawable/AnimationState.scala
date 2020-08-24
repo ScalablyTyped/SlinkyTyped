@@ -80,23 +80,16 @@ object AnimationState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddFrame(value: (Drawable, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFrame")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMDurations(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDurations")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddFrame(value: (Drawable, Double) => Unit): Self = this.set("addFrame", js.Any.fromFunction2(value))
     @scala.inline
-    def withMOneShot(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOneShot")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDurations(value: js.Any): Self = this.set("mDurations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMOneShot(value: js.Any): Self = this.set("mOneShot", value.asInstanceOf[js.Any])
   }
   
 }

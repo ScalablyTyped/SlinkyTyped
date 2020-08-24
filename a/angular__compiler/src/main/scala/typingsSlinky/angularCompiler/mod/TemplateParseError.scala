@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TemplateParseError")
 @js.native
 class TemplateParseError protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TemplateParseError {
+  extends typingsSlinky.angularCompiler.compilerMod.TemplateParseError {
   def this(
     message: String,
     span: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,

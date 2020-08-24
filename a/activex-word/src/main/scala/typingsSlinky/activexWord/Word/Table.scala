@@ -56,6 +56,7 @@ trait Table extends js.Object {
   ): Unit = js.native
   def Cell(Row: Double, Column: Double): typingsSlinky.activexWord.Word.Cell = js.native
   def ConvertToText(): typingsSlinky.activexWord.Word.Range = js.native
+  def ConvertToText(Separator: js.UndefOr[scala.Nothing], NestedTables: js.Any): typingsSlinky.activexWord.Word.Range = js.native
   def ConvertToText(Separator: js.Any): typingsSlinky.activexWord.Word.Range = js.native
   def ConvertToText(Separator: js.Any, NestedTables: js.Any): typingsSlinky.activexWord.Word.Range = js.native
   def ConvertToTextOld(): typingsSlinky.activexWord.Word.Range = js.native

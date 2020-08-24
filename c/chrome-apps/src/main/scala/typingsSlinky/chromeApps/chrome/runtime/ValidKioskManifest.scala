@@ -54,47 +54,24 @@ object ValidKioskManifest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withKiosk_enabled(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk_enabled")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withKiosk(value: Alwaysupdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKiosk_enabled(value: `true`): Self = this.set("kiosk_enabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutKiosk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk")(js.undefined)
-        ret
-    }
+    def setKiosk(value: Alwaysupdate): Self = this.set("kiosk", value.asInstanceOf[js.Any])
     @scala.inline
-    def withKiosk_only(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk_only")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteKiosk: Self = this.set("kiosk", js.undefined)
     @scala.inline
-    def withoutKiosk_only: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk_only")(js.undefined)
-        ret
-    }
+    def setKiosk_only(value: Boolean): Self = this.set("kiosk_only", value.asInstanceOf[js.Any])
     @scala.inline
-    def withKiosk_secondary_apps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk_secondary_apps")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteKiosk_only: Self = this.set("kiosk_only", js.undefined)
     @scala.inline
-    def withoutKiosk_secondary_apps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk_secondary_apps")(js.undefined)
-        ret
-    }
+    def setKiosk_secondary_apps(value: js.Any): Self = this.set("kiosk_secondary_apps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKiosk_secondary_apps: Self = this.set("kiosk_secondary_apps", js.undefined)
   }
   
 }

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "tweezer_dot_js"
-version := "1.4-dt-20200518Z-6e31b7"
-scalaVersion := "2.13.2"
+version := "1.4-dt-20200518Z-c7fb0f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

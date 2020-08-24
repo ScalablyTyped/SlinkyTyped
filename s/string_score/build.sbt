@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "string_score"
-version := "0.1.22-dt-20200515Z-bc8b54"
-scalaVersion := "2.13.2"
+version := "0.1.22-dt-20200515Z-d1ba00"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

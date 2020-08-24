@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MarketIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MarketIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MarketIcon")
   @js.native
   object component extends js.Object
   

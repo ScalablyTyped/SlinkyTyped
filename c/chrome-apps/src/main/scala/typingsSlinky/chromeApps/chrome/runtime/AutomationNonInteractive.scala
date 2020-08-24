@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AutomationNonInteractive extends AutomationOptions {
+trait AutomationNonInteractive extends _AutomationOptions {
   var desktop: js.UndefOr[`false`] = js.native
   var interact: `false` = js.native
   /** Patterns for matching, use chrome url pattern */
@@ -26,35 +26,22 @@ object AutomationNonInteractive {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInteract(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interact")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDesktop(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInteract(value: `false`): Self = this.set("interact", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDesktop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(js.undefined)
-        ret
-    }
+    def setDesktop(value: `false`): Self = this.set("desktop", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMatches(value: js.Array[String | UrlMatches]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDesktop: Self = this.set("desktop", js.undefined)
     @scala.inline
-    def withoutMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.undefined)
-        ret
-    }
+    def setMatchesVarargs(value: (String | UrlMatches)*): Self = this.set("matches", js.Array(value :_*))
+    @scala.inline
+    def setMatches(value: js.Array[String | UrlMatches]): Self = this.set("matches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMatches: Self = this.set("matches", js.undefined)
   }
   
 }

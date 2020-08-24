@@ -31,7 +31,7 @@ object StackedAreaChart {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChart[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChart[T]] {
     @scala.inline
     def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,6 +40,8 @@ object StackedAreaChart {
     def contentInset(value: Bottom): this.type = set("contentInset", value.asInstanceOf[js.Any])
     @scala.inline
     def curve(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("curve", js.Any.fromFunction1(value))
+    @scala.inline
+    def extrasVarargs(value: js.Any*): this.type = set("extras", js.Array(value :_*))
     @scala.inline
     def extras(value: js.Array[_]): this.type = set("extras", value.asInstanceOf[js.Any])
     @scala.inline

@@ -76,125 +76,54 @@ object ArrayAdapter {
     __obj.asInstanceOf[ArrayAdapter[T]]
   }
   @scala.inline
-  implicit class ArrayAdapterOps[Self[t] <: ArrayAdapter[t], T] (val x: Self[T]) extends AnyVal {
+  implicit class ArrayAdapterOps[Self <: ArrayAdapter[_], T] (val x: Self with ArrayAdapter[T]) extends AnyVal {
     @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdd(value: T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAddAll(value: List[T] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAll")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAdd(value: T => Unit): Self = this.set("add", js.Any.fromFunction1(value))
     @scala.inline
-    def withClear(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setAddAll(value: List[T] => Unit): Self = this.set("addAll", js.Any.fromFunction1(value))
     @scala.inline
-    def withCreateViewFromResource(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createViewFromResource")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetContext(value: () => Context): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContext")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCreateViewFromResource(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("createViewFromResource", js.Any.fromFunction4(value))
     @scala.inline
-    def withGetPosition(value: T => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetContext(value: () => Context): Self = this.set("getContext", js.Any.fromFunction0(value))
     @scala.inline
-    def withInit(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setGetPosition(value: T => Double): Self = this.set("getPosition", js.Any.fromFunction1(value))
     @scala.inline
-    def withInsert(value: (T, Double) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setInit(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("init", js.Any.fromFunction4(value))
     @scala.inline
-    def withMContext(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mContext")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInsert(value: (T, Double) => Unit): Self = this.set("insert", js.Any.fromFunction2(value))
     @scala.inline
-    def withMDropDownResource(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDropDownResource")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMContext(value: js.Any): Self = this.set("mContext", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMFieldId(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFieldId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDropDownResource(value: js.Any): Self = this.set("mDropDownResource", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInflater(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInflater")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFieldId(value: js.Any): Self = this.set("mFieldId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNotifyOnChange(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNotifyOnChange")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInflater(value: js.Any): Self = this.set("mInflater", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMObjects(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNotifyOnChange(value: js.Any): Self = this.set("mNotifyOnChange", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMResource(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mResource")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMObjects(value: js.Any): Self = this.set("mObjects", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemove(value: T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMResource(value: js.Any): Self = this.set("mResource", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetDropDownViewResource(value: String => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDropDownViewResource")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemove(value: T => Unit): Self = this.set("remove", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetNotifyOnChange(value: Boolean => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNotifyOnChange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetDropDownViewResource(value: String => Unit): Self = this.set("setDropDownViewResource", js.Any.fromFunction1(value))
     @scala.inline
-    def withSort(value: Comparator[T] => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetNotifyOnChange(value: Boolean => Unit): Self = this.set("setNotifyOnChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSort(value: Comparator[T] => Unit): Self = this.set("sort", js.Any.fromFunction1(value))
   }
   
 }

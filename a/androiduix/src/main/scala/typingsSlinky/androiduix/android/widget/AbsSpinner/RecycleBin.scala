@@ -33,35 +33,20 @@ object RecycleBin {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_AbsSpinner_this(value: typingsSlinky.androiduix.android.widget.AbsSpinner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_AbsSpinner_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_AbsSpinner_this(value: typingsSlinky.androiduix.android.widget.AbsSpinner): Self = this.set("_AbsSpinner_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGet(value: Double => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
     @scala.inline
-    def withMScrapHeap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScrapHeap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGet(value: Double => View): Self = this.set("get", js.Any.fromFunction1(value))
     @scala.inline
-    def withPut(value: (Double, View) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMScrapHeap(value: js.Any): Self = this.set("mScrapHeap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPut(value: (Double, View) => Unit): Self = this.set("put", js.Any.fromFunction2(value))
   }
   
 }

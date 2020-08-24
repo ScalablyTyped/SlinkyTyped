@@ -59,6 +59,11 @@ trait Ajv extends js.Object {
     * @return {PromiseLike<ValidateFunction>} validating function
     */
   def compileAsync(schema: js.Object): js.Thenable[ValidateFunction] = js.native
+  def compileAsync(
+    schema: js.Object,
+    meta: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* err */ js.Error, /* validate */ ValidateFunction, _]
+  ): js.Thenable[ValidateFunction] = js.native
   def compileAsync(schema: js.Object, meta: Boolean): js.Thenable[ValidateFunction] = js.native
   def compileAsync(
     schema: js.Object,
@@ -66,6 +71,11 @@ trait Ajv extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* validate */ ValidateFunction, _]
   ): js.Thenable[ValidateFunction] = js.native
   def compileAsync(schema: Boolean): js.Thenable[ValidateFunction] = js.native
+  def compileAsync(
+    schema: Boolean,
+    meta: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* err */ js.Error, /* validate */ ValidateFunction, _]
+  ): js.Thenable[ValidateFunction] = js.native
   def compileAsync(schema: Boolean, meta: Boolean): js.Thenable[ValidateFunction] = js.native
   def compileAsync(
     schema: Boolean,
@@ -79,6 +89,7 @@ trait Ajv extends js.Object {
     * @return {string} human readable string with all errors descriptions
     */
   def errorsText(): String = js.native
+  def errorsText(errors: js.UndefOr[scala.Nothing], options: ErrorsTextOptions): String = js.native
   def errorsText(errors: js.Array[ErrorObject]): String = js.native
   def errorsText(errors: js.Array[ErrorObject], options: ErrorsTextOptions): String = js.native
   def errorsText(errors: Null, options: ErrorsTextOptions): String = js.native

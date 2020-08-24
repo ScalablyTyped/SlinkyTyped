@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.Checked
+import typingsSlinky.primereact.anon.CheckedOriginalEvent
 import typingsSlinky.primereact.checkboxCheckboxMod.CheckboxProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -34,6 +34,8 @@ object Checkbox {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def onChange(value: /* e */ CheckedOriginalEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
     def onContextMenu(value: /* event */ Event => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseDown(value: /* event */ Event => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
@@ -52,10 +54,6 @@ object Checkbox {
   }
   
   def withProps(p: CheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(onChange: Checked => Unit): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[CheckboxProps]))
-  }
+  implicit def make(companion: Checkbox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

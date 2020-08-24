@@ -45,10 +45,9 @@ object IDLRootType {
     members: js.Array[DictionaryMemberType],
     name: String,
     partial: Boolean,
-    `type`: dictionary,
-    inheritance: String = null
+    `type`: dictionary
   ): IDLRootType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any], inheritance = inheritance.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
@@ -94,10 +93,9 @@ object IDLRootType {
     members: js.Array[IDLInterfaceMemberType],
     name: String,
     partial: Boolean,
-    `type`: interface | (`callback interface`),
-    inheritance: String = null
+    `type`: interface | (`callback interface`)
   ): IDLRootType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any], inheritance = inheritance.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }

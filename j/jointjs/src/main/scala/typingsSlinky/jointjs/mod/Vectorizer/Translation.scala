@@ -23,17 +23,14 @@ object Translation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tx")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withTy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ty")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTx(value: Double): Self = this.set("tx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTy(value: Double): Self = this.set("ty", value.asInstanceOf[js.Any])
   }
   
 }

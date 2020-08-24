@@ -98,7 +98,26 @@ object node extends js.Object {
   def decodeBmp(contents: js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
   def decodeGif(contents: js.typedarray.Uint8Array): Tensor4D = js.native
   def decodeImage(content: js.typedarray.Uint8Array): Tensor3D | Tensor4D = js.native
+  def decodeImage(
+    content: js.typedarray.Uint8Array,
+    channels: js.UndefOr[scala.Nothing],
+    dtype: js.UndefOr[scala.Nothing],
+    expandAnimations: Boolean
+  ): Tensor3D | Tensor4D = js.native
+  def decodeImage(content: js.typedarray.Uint8Array, channels: js.UndefOr[scala.Nothing], dtype: String): Tensor3D | Tensor4D = js.native
+  def decodeImage(
+    content: js.typedarray.Uint8Array,
+    channels: js.UndefOr[scala.Nothing],
+    dtype: String,
+    expandAnimations: Boolean
+  ): Tensor3D | Tensor4D = js.native
   def decodeImage(content: js.typedarray.Uint8Array, channels: Double): Tensor3D | Tensor4D = js.native
+  def decodeImage(
+    content: js.typedarray.Uint8Array,
+    channels: Double,
+    dtype: js.UndefOr[scala.Nothing],
+    expandAnimations: Boolean
+  ): Tensor3D | Tensor4D = js.native
   def decodeImage(content: js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D | Tensor4D = js.native
   def decodeImage(content: js.typedarray.Uint8Array, channels: Double, dtype: String, expandAnimations: Boolean): Tensor3D | Tensor4D = js.native
   def decodeJpeg(
@@ -111,42 +130,17 @@ object node extends js.Object {
     dctMethod: js.UndefOr[String]
   ): Tensor3D = js.native
   def decodePng(contents: js.typedarray.Uint8Array): Tensor3D = js.native
+  def decodePng(contents: js.typedarray.Uint8Array, channels: js.UndefOr[scala.Nothing], dtype: String): Tensor3D = js.native
   def decodePng(contents: js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
   def decodePng(contents: js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D = js.native
   def encodeJpeg(
     image: Tensor3D,
-    format: js.UndefOr[grayscale | rgb],
+    format: js.UndefOr[_empty | grayscale | rgb],
     quality: js.UndefOr[Double],
     progressive: js.UndefOr[Boolean],
     optimizeSize: js.UndefOr[Boolean],
     chromaDownsampling: js.UndefOr[Boolean],
-    densityUnit: js.UndefOr[cm | in],
-    xDensity: js.UndefOr[Double],
-    yDensity: js.UndefOr[Double],
-    xmpMetadata: js.UndefOr[String]
-  ): js.Promise[js.typedarray.Uint8Array] = js.native
-  @JSName("encodeJpeg")
-  def encodeJpeg_cm(
-    image: Tensor3D,
-    format: js.UndefOr[_empty],
-    quality: js.UndefOr[Double],
-    progressive: js.UndefOr[Boolean],
-    optimizeSize: js.UndefOr[Boolean],
-    chromaDownsampling: js.UndefOr[Boolean],
-    densityUnit: js.UndefOr[cm],
-    xDensity: js.UndefOr[Double],
-    yDensity: js.UndefOr[Double],
-    xmpMetadata: js.UndefOr[String]
-  ): js.Promise[js.typedarray.Uint8Array] = js.native
-  @JSName("encodeJpeg")
-  def encodeJpeg_in(
-    image: Tensor3D,
-    format: js.UndefOr[_empty],
-    quality: js.UndefOr[Double],
-    progressive: js.UndefOr[Boolean],
-    optimizeSize: js.UndefOr[Boolean],
-    chromaDownsampling: js.UndefOr[Boolean],
-    densityUnit: js.UndefOr[in],
+    densityUnit: js.UndefOr[in | cm],
     xDensity: js.UndefOr[Double],
     yDensity: js.UndefOr[Double],
     xmpMetadata: js.UndefOr[String]
@@ -156,13 +150,24 @@ object node extends js.Object {
   def getMetaGraphsFromSavedModel(path: String): js.Promise[js.Array[MetaGraph]] = js.native
   def getNumOfSavedModels(): Double = js.native
   def loadSavedModel(path: String): js.Promise[TFSavedModel] = js.native
+  def loadSavedModel(path: String, tags: js.UndefOr[scala.Nothing], signature: String): js.Promise[TFSavedModel] = js.native
   def loadSavedModel(path: String, tags: js.Array[String]): js.Promise[TFSavedModel] = js.native
   def loadSavedModel(path: String, tags: js.Array[String], signature: String): js.Promise[TFSavedModel] = js.native
   def summaryFileWriter(logdir: String): SummaryFileWriter_ = js.native
+  def summaryFileWriter(
+    logdir: String,
+    maxQueue: js.UndefOr[scala.Nothing],
+    flushMillis: js.UndefOr[scala.Nothing],
+    filenameSuffix: String
+  ): SummaryFileWriter_ = js.native
+  def summaryFileWriter(logdir: String, maxQueue: js.UndefOr[scala.Nothing], flushMillis: Double): SummaryFileWriter_ = js.native
+  def summaryFileWriter(logdir: String, maxQueue: js.UndefOr[scala.Nothing], flushMillis: Double, filenameSuffix: String): SummaryFileWriter_ = js.native
   def summaryFileWriter(logdir: String, maxQueue: Double): SummaryFileWriter_ = js.native
+  def summaryFileWriter(logdir: String, maxQueue: Double, flushMillis: js.UndefOr[scala.Nothing], filenameSuffix: String): SummaryFileWriter_ = js.native
   def summaryFileWriter(logdir: String, maxQueue: Double, flushMillis: Double): SummaryFileWriter_ = js.native
   def summaryFileWriter(logdir: String, maxQueue: Double, flushMillis: Double, filenameSuffix: String): SummaryFileWriter_ = js.native
   def tensorBoard(): TensorBoardCallback = js.native
+  def tensorBoard(logdir: js.UndefOr[scala.Nothing], args: TensorBoardCallbackArgs): TensorBoardCallback = js.native
   def tensorBoard(logdir: String): TensorBoardCallback = js.native
   def tensorBoard(logdir: String, args: TensorBoardCallbackArgs): TensorBoardCallback = js.native
 }

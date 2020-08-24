@@ -2,12 +2,12 @@ package typingsSlinky.hapiHapi.mod
 
 import typingsSlinky.hapiCatbox.mod.Policy
 import typingsSlinky.hapiHapi.anon.Apply
-import typingsSlinky.hapiHapi.anon.ApplyBoolean
 import typingsSlinky.hapiHapi.anon.ApplyExtend
 import typingsSlinky.hapiHapi.anon.EventLoopDelay
 import typingsSlinky.hapiHapi.anon.Extend
 import typingsSlinky.hapiHapi.anon.Timeout
 import typingsSlinky.hapiHapi.anon.Validate
+import typingsSlinky.hapiHapi.anon.`0`
 import typingsSlinky.hapiHapi.hapiHapiStrings.handler
 import typingsSlinky.hapiHapi.hapiHapiStrings.request
 import typingsSlinky.hapiHapi.hapiHapiStrings.socket
@@ -258,7 +258,7 @@ class Server_ () extends js.Object {
     `type`: typingsSlinky.hapiHapi.hapiHapiStrings.server,
     property: DecorateName,
     method: js.Function1[/* existing */ js.Function1[/* repeated */ js.Any, _], DecorationMethod[this.type]],
-    options: ApplyBoolean
+    options: `0`
   ): Unit = js.native
   @JSName("decorate")
   def decorate_server(
@@ -281,7 +281,7 @@ class Server_ () extends js.Object {
       /* existing */ js.Function1[/* repeated */ js.Any, _], 
       DecorationMethod[ResponseToolkit]
     ],
-    options: ApplyBoolean
+    options: `0`
   ): Unit = js.native
   @JSName("decorate")
   def decorate_toolkit(`type`: toolkit, property: DecorateName, method: DecorationMethod[ResponseToolkit]): Unit = js.native
@@ -447,6 +447,7 @@ class Server_ () extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-serverlogtags-data-timestamp)
     */
   def log(tags: String): Unit = js.native
+  def log(tags: String, data: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
   def log(tags: String, data: String): Unit = js.native
   def log(tags: String, data: String, timestamp: Double): Unit = js.native
   def log(tags: String, data: js.Function0[_]): Unit = js.native
@@ -454,6 +455,7 @@ class Server_ () extends js.Object {
   def log(tags: String, data: js.Object): Unit = js.native
   def log(tags: String, data: js.Object, timestamp: Double): Unit = js.native
   def log(tags: js.Array[String]): Unit = js.native
+  def log(tags: js.Array[String], data: js.UndefOr[scala.Nothing], timestamp: Double): Unit = js.native
   def log(tags: js.Array[String], data: String): Unit = js.native
   def log(tags: js.Array[String], data: String, timestamp: Double): Unit = js.native
   def log(tags: js.Array[String], data: js.Function0[_]): Unit = js.native

@@ -15,7 +15,7 @@ object Mutation {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Mutation] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def invalidatesTypes(value: Boolean): this.type = set("invalidatesTypes", value.asInstanceOf[js.Any])
   }

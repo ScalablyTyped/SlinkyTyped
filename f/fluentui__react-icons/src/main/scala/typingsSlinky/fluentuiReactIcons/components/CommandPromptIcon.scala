@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CommandPromptIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CommandPromptIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CommandPromptIcon")
   @js.native
   object component extends js.Object
   

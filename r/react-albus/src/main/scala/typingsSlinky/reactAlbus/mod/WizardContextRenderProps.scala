@@ -1,6 +1,6 @@
 package typingsSlinky.reactAlbus.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,12 @@ trait WizardContextRenderProps extends js.Object
 
 object WizardContextRenderProps {
   @scala.inline
-  def Render(render: /* wizard */ WizardContext => TagMod[Any] = null): WizardContextRenderProps = {
+  def Render(): WizardContextRenderProps = {
     val __obj = js.Dynamic.literal()
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
     __obj.asInstanceOf[WizardContextRenderProps]
   }
   @scala.inline
-  def Children(children: WizardContext => TagMod[Any]): WizardContextRenderProps = {
+  def Children(children: WizardContext => ReactElement): WizardContextRenderProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[WizardContextRenderProps]
   }

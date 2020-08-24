@@ -8,10 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BarProp")
 @js.native
 class BarProp ()
-  extends typingsSlinky.std.BarProp {
-  /* CompleteClass */
-  override val visible: scala.Boolean = js.native
-}
+  extends typingsSlinky.std.BarProp
 
 @JSGlobal("BarProp")
 @js.native

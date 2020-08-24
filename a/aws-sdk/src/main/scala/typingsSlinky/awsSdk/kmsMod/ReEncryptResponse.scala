@@ -15,7 +15,7 @@ trait ReEncryptResponse extends js.Object {
     */
   var DestinationEncryptionAlgorithm: js.UndefOr[EncryptionAlgorithmSpec] = js.native
   /**
-    * Unique identifier of the CMK used to reencrypt the data.
+    * The Amazon Resource Name (key ARN) of the CMK that was used to reencrypt the data.
     */
   var KeyId: js.UndefOr[KeyIdType] = js.native
   /**
@@ -30,20 +30,44 @@ trait ReEncryptResponse extends js.Object {
 
 object ReEncryptResponse {
   @scala.inline
-  def apply(
-    CiphertextBlob: CiphertextType = null,
-    DestinationEncryptionAlgorithm: EncryptionAlgorithmSpec = null,
-    KeyId: KeyIdType = null,
-    SourceEncryptionAlgorithm: EncryptionAlgorithmSpec = null,
-    SourceKeyId: KeyIdType = null
-  ): ReEncryptResponse = {
+  def apply(): ReEncryptResponse = {
     val __obj = js.Dynamic.literal()
-    if (CiphertextBlob != null) __obj.updateDynamic("CiphertextBlob")(CiphertextBlob.asInstanceOf[js.Any])
-    if (DestinationEncryptionAlgorithm != null) __obj.updateDynamic("DestinationEncryptionAlgorithm")(DestinationEncryptionAlgorithm.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (SourceEncryptionAlgorithm != null) __obj.updateDynamic("SourceEncryptionAlgorithm")(SourceEncryptionAlgorithm.asInstanceOf[js.Any])
-    if (SourceKeyId != null) __obj.updateDynamic("SourceKeyId")(SourceKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReEncryptResponse]
   }
+  @scala.inline
+  implicit class ReEncryptResponseOps[Self <: ReEncryptResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCiphertextBlob(value: CiphertextType): Self = this.set("CiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCiphertextBlob: Self = this.set("CiphertextBlob", js.undefined)
+    @scala.inline
+    def setDestinationEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = this.set("DestinationEncryptionAlgorithm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDestinationEncryptionAlgorithm: Self = this.set("DestinationEncryptionAlgorithm", js.undefined)
+    @scala.inline
+    def setKeyId(value: KeyIdType): Self = this.set("KeyId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyId: Self = this.set("KeyId", js.undefined)
+    @scala.inline
+    def setSourceEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = this.set("SourceEncryptionAlgorithm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSourceEncryptionAlgorithm: Self = this.set("SourceEncryptionAlgorithm", js.undefined)
+    @scala.inline
+    def setSourceKeyId(value: KeyIdType): Self = this.set("SourceKeyId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSourceKeyId: Self = this.set("SourceKeyId", js.undefined)
+  }
+  
 }
 

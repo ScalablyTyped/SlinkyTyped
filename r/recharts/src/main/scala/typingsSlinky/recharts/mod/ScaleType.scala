@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.recharts.rechartsStrings.ordinal
   - typingsSlinky.recharts.rechartsStrings.quantile
   - typingsSlinky.recharts.rechartsStrings.quantize
-  - typingsSlinky.recharts.rechartsStrings.utcTime
+  - typingsSlinky.recharts.rechartsStrings.utc
   - typingsSlinky.recharts.rechartsStrings.sequential
   - typingsSlinky.recharts.rechartsStrings.threshold
 */
@@ -53,6 +53,6 @@ object ScaleType {
   @scala.inline
   def time: typingsSlinky.recharts.rechartsStrings.time = "time".asInstanceOf[typingsSlinky.recharts.rechartsStrings.time]
   @scala.inline
-  def utcTime: typingsSlinky.recharts.rechartsStrings.utcTime = "utcTime".asInstanceOf[typingsSlinky.recharts.rechartsStrings.utcTime]
+  def utc: typingsSlinky.recharts.rechartsStrings.utc = "utc".asInstanceOf[typingsSlinky.recharts.rechartsStrings.utc]
 }
 

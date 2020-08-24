@@ -8,12 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSGraphicsTrust")
 @js.native
 class MSGraphicsTrust ()
-  extends typingsSlinky.std.MSGraphicsTrust {
-  /* CompleteClass */
-  override val constrictionActive: scala.Boolean = js.native
-  /* CompleteClass */
-  override val status: java.lang.String = js.native
-}
+  extends typingsSlinky.std.MSGraphicsTrust
 
 @JSGlobal("MSGraphicsTrust")
 @js.native

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FrigidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FrigidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FrigidIcon")
   @js.native
   object component extends js.Object
   

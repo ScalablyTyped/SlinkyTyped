@@ -60,95 +60,44 @@ object AttachInfo_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMHandler(value: Handler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHandler")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMHasWindowFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHasWindowFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHandler(value: Handler): Self = this.set("mHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMInvalidateChildLocation(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mInvalidateChildLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHasWindowFocus(value: Boolean): Self = this.set("mHasWindowFocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMKeyDispatchState(value: DispatcherState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mKeyDispatchState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInvalidateChildLocationVarargs(value: Double*): Self = this.set("mInvalidateChildLocation", js.Array(value :_*))
     @scala.inline
-    def withMPoint(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMInvalidateChildLocation(value: js.Array[Double]): Self = this.set("mInvalidateChildLocation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRootView(value: typingsSlinky.androiduix.android.view.View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRootView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMKeyDispatchState(value: DispatcherState): Self = this.set("mKeyDispatchState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScrollContainers(value: Set[typingsSlinky.androiduix.android.view.View]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScrollContainers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPoint(value: Point): Self = this.set("mPoint", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTmpInvalRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTmpInvalRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRootView(value: typingsSlinky.androiduix.android.view.View): Self = this.set("mRootView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTmpMatrix(value: Matrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTmpMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScrollContainers(value: Set[typingsSlinky.androiduix.android.view.View]): Self = this.set("mScrollContainers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTmpTransformLocation(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTmpTransformLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTmpInvalRect(value: Rect): Self = this.set("mTmpInvalRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTmpTransformRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTmpTransformRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTmpMatrix(value: Matrix): Self = this.set("mTmpMatrix", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTmpTransformation(value: Transformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTmpTransformation")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTmpTransformLocationVarargs(value: Double*): Self = this.set("mTmpTransformLocation", js.Array(value :_*))
     @scala.inline
-    def withMViewRequestingLayout(value: typingsSlinky.androiduix.android.view.View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewRequestingLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTmpTransformLocation(value: js.Array[Double]): Self = this.set("mTmpTransformLocation", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMViewRootImpl(value: ViewRootImpl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mViewRootImpl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTmpTransformRect(value: Rect): Self = this.set("mTmpTransformRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMWindowVisibility(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mWindowVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTmpTransformation(value: Transformation): Self = this.set("mTmpTransformation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMViewRequestingLayout(value: typingsSlinky.androiduix.android.view.View): Self = this.set("mViewRequestingLayout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMViewRootImpl(value: ViewRootImpl): Self = this.set("mViewRootImpl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMWindowVisibility(value: Double): Self = this.set("mWindowVisibility", value.asInstanceOf[js.Any])
   }
   
 }

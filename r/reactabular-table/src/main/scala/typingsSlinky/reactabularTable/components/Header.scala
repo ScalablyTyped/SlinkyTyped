@@ -21,6 +21,8 @@ object Header {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def headerRowsVarargs(value: Column*): this.type = set("headerRows", js.Array(value :_*))
+    @scala.inline
     def headerRows(value: js.Array[Column]): this.type = set("headerRows", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: PartialCSSStyleDeclaratio): this.type = set("style", value.asInstanceOf[js.Any])

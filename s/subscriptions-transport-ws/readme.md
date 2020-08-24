@@ -1,7 +1,7 @@
 
 # Scala.js typings for subscriptions-transport-ws
 
-Typings are for version 0.9.16
+Typings are for version 0.9.17
 
 ## Library description:
 A websocket transport for GraphQL subscriptions

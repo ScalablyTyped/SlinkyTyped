@@ -2,7 +2,7 @@ package typingsSlinky.allKeys.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Set
-import typingsSlinky.typeFest.mod.LiteralUnion
+import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

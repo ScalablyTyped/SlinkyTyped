@@ -26,6 +26,8 @@ object AirbnbRating {
     @scala.inline
     def onFinishRating(value: /* value */ Double => Unit): this.type = set("onFinishRating", js.Any.fromFunction1(value))
     @scala.inline
+    def reviewsVarargs(value: String*): this.type = set("reviews", js.Array(value :_*))
+    @scala.inline
     def reviews(value: js.Array[String]): this.type = set("reviews", value.asInstanceOf[js.Any])
     @scala.inline
     def showRating(value: Boolean): this.type = set("showRating", value.asInstanceOf[js.Any])

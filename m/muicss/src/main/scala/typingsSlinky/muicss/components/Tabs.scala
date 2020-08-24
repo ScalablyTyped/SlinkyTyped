@@ -18,7 +18,6 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muicss.reactMod.TabsProps
-import typingsSlinky.muicss.tabsMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -73,14 +72,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tabs {
-  @JSImport("muicss/lib/react/tabs", JSImport.Default)
+  @JSImport("muicss/react", "Tabs")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.muicss.reactMod.Tabs] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -203,6 +202,8 @@ object Tabs {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultSelectedIndex(value: Double): this.type = set("defaultSelectedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

@@ -36,17 +36,16 @@ object VerificationResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDebug_errors(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug_errors")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withTrusted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trusted")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDebug_errorsVarargs(value: String*): Self = this.set("debug_errors", js.Array(value :_*))
+    @scala.inline
+    def setDebug_errors(value: js.Array[String]): Self = this.set("debug_errors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTrusted(value: Boolean): Self = this.set("trusted", value.asInstanceOf[js.Any])
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.antDesignReactNative
 
+import typingsSlinky.antDesignReactNative.mod.Carousel
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,12 +12,15 @@ object carouselDemoBasicMod extends js.Object {
   @js.native
   trait BasicCarouselExample
     extends Component[js.Any, js.Any, js.Any] {
+    var carousel: Null | Carousel = js.native
     def onHorizontalSelectedIndexChange(index: Double): Unit = js.native
     def onVerticalSelectedIndexChange(index: Double): Unit = js.native
   }
   
   @js.native
-  class default () extends BasicCarouselExample
+  class default protected () extends BasicCarouselExample {
+    def this(props: js.Any) = this()
+  }
   
 }
 

@@ -1,7 +1,9 @@
 package typingsSlinky.reactVirtualized.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactVirtualized.esInfiniteLoaderMod.InfiniteLoaderChildProps
 import typingsSlinky.reactVirtualized.esInfiniteLoaderMod.InfiniteLoaderProps
 import typingsSlinky.reactVirtualized.mod.Index
 import typingsSlinky.reactVirtualized.mod.IndexRange
@@ -28,8 +30,12 @@ object InfiniteLoader {
   
   def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(isRowLoaded: Index => Boolean, loadMoreRows: IndexRange => js.Promise[_]): Builder = {
-    val __props = js.Dynamic.literal(isRowLoaded = js.Any.fromFunction1(isRowLoaded), loadMoreRows = js.Any.fromFunction1(loadMoreRows))
+  def apply(
+    children: InfiniteLoaderChildProps => ReactElement,
+    isRowLoaded: Index => Boolean,
+    loadMoreRows: IndexRange => js.Promise[_]
+  ): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), isRowLoaded = js.Any.fromFunction1(isRowLoaded), loadMoreRows = js.Any.fromFunction1(loadMoreRows))
     new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
   }
 }

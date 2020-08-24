@@ -9,6 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def compare(s: String, hash: String): Unit = js.native
+  def compare(
+    s: String,
+    hash: String,
+    callback: js.UndefOr[scala.Nothing],
+    progressCallback: js.Function1[/* percent */ Double, Unit]
+  ): Unit = js.native
   def compare(s: String, hash: String, callback: js.Function2[/* err */ js.Error, /* success */ Boolean, Unit]): Unit = js.native
   def compare(
     s: String,
@@ -30,6 +36,12 @@ object mod extends js.Object {
   def getRounds(hash: String): Double = js.native
   def getSalt(hash: String): String = js.native
   def hash(s: String, salt: String): Unit = js.native
+  def hash(
+    s: String,
+    salt: String,
+    callback: js.UndefOr[scala.Nothing],
+    progressCallback: js.Function1[/* percent */ Double, Unit]
+  ): Unit = js.native
   def hash(s: String, salt: String, callback: js.Function2[/* err */ js.Error, /* hash */ String, Unit]): Unit = js.native
   def hash(
     s: String,
@@ -38,6 +50,12 @@ object mod extends js.Object {
     progressCallback: js.Function1[/* percent */ Double, Unit]
   ): Unit = js.native
   def hash(s: String, salt: Double): Unit = js.native
+  def hash(
+    s: String,
+    salt: Double,
+    callback: js.UndefOr[scala.Nothing],
+    progressCallback: js.Function1[/* percent */ Double, Unit]
+  ): Unit = js.native
   def hash(s: String, salt: Double, callback: js.Function2[/* err */ js.Error, /* hash */ String, Unit]): Unit = js.native
   def hash(
     s: String,

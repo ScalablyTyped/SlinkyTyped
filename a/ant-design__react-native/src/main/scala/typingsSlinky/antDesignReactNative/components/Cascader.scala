@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.cascaderMod.default
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderDataItem
+import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderOneValue
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderProps
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderValue
 import typingsSlinky.reactNative.mod.StyleProp
@@ -23,6 +24,8 @@ object Cascader {
        with StBuildingComponent[tag.type, default] {
     @scala.inline
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: CascaderOneValue*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,6 +48,8 @@ object Cascader {
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def styleNull: this.type = set("style", null)
+    @scala.inline
+    def valueVarargs(value: CascaderOneValue*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
   }

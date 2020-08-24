@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PlayReverseResumeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/PlayReverseResumeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "PlayReverseResumeIcon")
   @js.native
   object component extends js.Object
   

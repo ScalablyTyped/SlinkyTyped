@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "radix64"
-version := "1.1-dt-20181127Z-982e21"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20181127Z-c1c674"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

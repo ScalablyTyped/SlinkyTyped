@@ -23,6 +23,7 @@ class ZipFile () extends js.Object {
   def addReadStream(input: ReadableStream, metadataPath: String, options: PartialReadStreamOptions): Unit = js.native
   def dateToDosDateTime(jsDate: js.Date): DosDateTime = js.native
   def end(): Unit = js.native
+  def end(options: js.UndefOr[scala.Nothing], finalSizeCallback: js.Function0[Unit]): Unit = js.native
   def end(options: EndOptions): Unit = js.native
   def end(options: EndOptions, finalSizeCallback: js.Function0[Unit]): Unit = js.native
 }

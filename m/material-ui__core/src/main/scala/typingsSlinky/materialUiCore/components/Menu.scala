@@ -75,7 +75,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.menuMenuMod.MenuProps
-import typingsSlinky.materialUiCore.menuMod.default
 import typingsSlinky.materialUiCore.modalMod.ModalManager
 import typingsSlinky.materialUiCore.popoverPopoverMod.PopoverActions
 import typingsSlinky.materialUiCore.popoverPopoverMod.PopoverOrigin
@@ -87,26 +86,27 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactInstance
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Menu {
-  @JSImport("@material-ui/core/Menu", JSImport.Default)
+  @JSImport("@material-ui/core", "Menu")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def BackdropComponentComponentClass(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def BackdropComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
+    def BackdropComponent(value: ReactType[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def BackdropProps(value: PartialBackdropProps): this.type = set("BackdropProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -137,6 +137,8 @@ object Menu {
     def anchorElHTMLElement(value: HTMLElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     @scala.inline
     def anchorEl(value: HTMLElement | (js.Function1[/* element */ HTMLElement, HTMLElement])): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def anchorElNull: this.type = set("anchorEl", null)
     @scala.inline
     def anchorOrigin(value: PopoverOrigin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -262,6 +264,8 @@ object Menu {
     @scala.inline
     def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
     @scala.inline
+    def containerNull: this.type = set("container", null)
+    @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
@@ -271,6 +275,8 @@ object Menu {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -295,6 +301,8 @@ object Menu {
     def elevation(value: Double): this.type = set("elevation", value.asInstanceOf[js.Any])
     @scala.inline
     def getContentAnchorEl(value: /* element */ HTMLElement => HTMLElement): this.type = set("getContentAnchorEl", js.Any.fromFunction1(value))
+    @scala.inline
+    def getContentAnchorElNull: this.type = set("getContentAnchorEl", null)
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline

@@ -28,6 +28,8 @@ object ReactCalendarHeatmap {
     @scala.inline
     def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
+    def monthLabelsVarargs(value: String*): this.type = set("monthLabels", js.Array(value :_*))
+    @scala.inline
     def monthLabels(value: js.Array[String]): this.type = set("monthLabels", value.asInstanceOf[js.Any])
     @scala.inline
     def numDays(value: Double): this.type = set("numDays", value.asInstanceOf[js.Any])
@@ -53,6 +55,8 @@ object ReactCalendarHeatmap {
     def tooltipDataAttrs(value: js.Object): this.type = set("tooltipDataAttrs", value.asInstanceOf[js.Any])
     @scala.inline
     def transformDayElement(value: (/* rect */ js.Any, /* value */ js.Any, /* index */ Double) => _): this.type = set("transformDayElement", js.Any.fromFunction3(value))
+    @scala.inline
+    def weekdayLabelsVarargs(value: String*): this.type = set("weekdayLabels", js.Array(value :_*))
     @scala.inline
     def weekdayLabels(value: js.Array[String]): this.type = set("weekdayLabels", value.asInstanceOf[js.Any])
   }

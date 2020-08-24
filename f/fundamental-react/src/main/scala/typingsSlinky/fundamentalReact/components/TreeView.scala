@@ -64,7 +64,6 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.url
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.vertical
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.yes
 import typingsSlinky.fundamentalReact.treeViewMod.TreeViewProps
-import typingsSlinky.fundamentalReact.treeViewMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -74,14 +73,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeView {
-  @JSImport("fundamental-react/lib/TreeView/TreeView", JSImport.Default)
+  @JSImport("fundamental-react", "TreeView")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.fundamentalReact.mod.TreeView] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -202,6 +201,8 @@ object TreeView {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

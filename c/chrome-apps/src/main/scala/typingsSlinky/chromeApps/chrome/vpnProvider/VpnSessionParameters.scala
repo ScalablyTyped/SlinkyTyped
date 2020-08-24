@@ -81,71 +81,40 @@ object VpnSessionParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDnsServers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsServers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
     @scala.inline
-    def withExclusionList(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDnsServersVarargs(value: String*): Self = this.set("dnsServers", js.Array(value :_*))
     @scala.inline
-    def withInclusionList(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inclusionList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDnsServers(value: js.Array[String]): Self = this.set("dnsServers", value.asInstanceOf[js.Any])
     @scala.inline
-    def withReconnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExclusionListVarargs(value: String*): Self = this.set("exclusionList", js.Array(value :_*))
     @scala.inline
-    def withBroadcastAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcastAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setExclusionList(value: js.Array[String]): Self = this.set("exclusionList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutBroadcastAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcastAddress")(js.undefined)
-        ret
-    }
+    def setInclusionListVarargs(value: String*): Self = this.set("inclusionList", js.Array(value :_*))
     @scala.inline
-    def withDomainSearch(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInclusionList(value: js.Array[String]): Self = this.set("inclusionList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutDomainSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainSearch")(js.undefined)
-        ret
-    }
+    def setReconnect(value: Boolean): Self = this.set("reconnect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMtu(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mtu")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBroadcastAddress(value: String): Self = this.set("broadcastAddress", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutMtu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mtu")(js.undefined)
-        ret
-    }
+    def deleteBroadcastAddress: Self = this.set("broadcastAddress", js.undefined)
+    @scala.inline
+    def setDomainSearchVarargs(value: String*): Self = this.set("domainSearch", js.Array(value :_*))
+    @scala.inline
+    def setDomainSearch(value: js.Array[String]): Self = this.set("domainSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDomainSearch: Self = this.set("domainSearch", js.undefined)
+    @scala.inline
+    def setMtu(value: String): Self = this.set("mtu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMtu: Self = this.set("mtu", js.undefined)
   }
   
 }

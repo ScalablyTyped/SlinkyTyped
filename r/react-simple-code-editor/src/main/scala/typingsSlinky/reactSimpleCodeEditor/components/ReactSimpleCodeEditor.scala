@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -23,6 +23,9 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.FocusEventHandler
+import typingsSlinky.react.mod.KeyboardEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.reactSimpleCodeEditor.anon.DetailedHTMLPropsHTMLAttr
 import typingsSlinky.reactSimpleCodeEditor.mod.default
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`additions text`
@@ -206,6 +209,8 @@ object ReactSimpleCodeEditor {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -260,15 +265,11 @@ object ReactSimpleCodeEditor {
     @scala.inline
     def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
     @scala.inline
-    def onBlur(value: SyntheticFocusEvent[HTMLDivElement | HTMLTextAreaElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
-    @scala.inline
     def onCanPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
     def onCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
-    @scala.inline
-    def onClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement | HTMLTextAreaElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -310,17 +311,11 @@ object ReactSimpleCodeEditor {
     @scala.inline
     def onError(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: SyntheticFocusEvent[HTMLDivElement | HTMLTextAreaElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
-    @scala.inline
     def onInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
     def onInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyDown(value: /* e */ SyntheticKeyboardEvent[HTMLDivElement | HTMLTextAreaElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
-    @scala.inline
     def onKeyPress(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
-    @scala.inline
-    def onKeyUp(value: /* e */ SyntheticKeyboardEvent[HTMLDivElement | HTMLTextAreaElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
     def onLoad(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
@@ -457,8 +452,17 @@ object ReactSimpleCodeEditor {
   
   def withProps(p: DetailedHTMLPropsHTMLAttr): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(highlight: String => String | TagMod[Any], onValueChange: String => Unit, value: String): Builder = {
-    val __props = js.Dynamic.literal(highlight = js.Any.fromFunction1(highlight), onValueChange = js.Any.fromFunction1(onValueChange), value = value.asInstanceOf[js.Any])
+  def apply(
+    highlight: String => String | ReactElement,
+    onBlur: js.UndefOr[FocusEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLTextAreaElement], Unit]]),
+    onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLTextAreaElement], Unit]]),
+    onFocus: js.UndefOr[FocusEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLTextAreaElement], Unit]]),
+    onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLTextAreaElement], Unit]]),
+    onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] with (js.UndefOr[js.Function1[/* e */ SyntheticKeyboardEvent[HTMLTextAreaElement], Unit]]),
+    onValueChange: String => Unit,
+    value: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(highlight = js.Any.fromFunction1(highlight), onBlur = onBlur.asInstanceOf[js.Any], onClick = onClick.asInstanceOf[js.Any], onFocus = onFocus.asInstanceOf[js.Any], onKeyDown = onKeyDown.asInstanceOf[js.Any], onKeyUp = onKeyUp.asInstanceOf[js.Any], onValueChange = js.Any.fromFunction1(onValueChange), value = value.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[DetailedHTMLPropsHTMLAttr]))
   }
 }

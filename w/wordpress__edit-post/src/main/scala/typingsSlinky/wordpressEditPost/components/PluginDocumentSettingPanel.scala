@@ -4,13 +4,14 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
+import typingsSlinky.wordpressEditPost.anon.OmitPropsname
 import typingsSlinky.wordpressEditPost.pluginDocumentSettingPanelMod.PluginDocumentSettingPanel.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PluginDocumentSettingPanel {
-  @JSImport("@wordpress/edit-post/components/sidebar/plugin-document-setting-panel", JSImport.Default)
+  @JSImport("@wordpress/edit-post", "PluginDocumentSettingPanel")
   @js.native
   object component extends js.Object
   
@@ -32,5 +33,14 @@ object PluginDocumentSettingPanel {
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: PluginDocumentSettingPanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Slot {
+    @JSImport("@wordpress/edit-post", "PluginDocumentSettingPanel.Slot")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: OmitPropsname): SharedBuilder_OmitPropsname_1548854944 = new SharedBuilder_OmitPropsname_1548854944(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Slot.type): SharedBuilder_OmitPropsname_1548854944 = new SharedBuilder_OmitPropsname_1548854944(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

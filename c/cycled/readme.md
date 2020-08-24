@@ -1,7 +1,7 @@
 
 # Scala.js typings for cycled
 
-Typings are for version 1.1.0
+Typings are for version 1.2.0
 
 ## Library description:
 Cycle through the items of an array

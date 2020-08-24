@@ -141,6 +141,7 @@ object v4 extends js.Object {
       */
     def filter(vFilters: typingsSlinky.openui5.sap.ui.model.Filter): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
     def filter(vFilters: typingsSlinky.openui5.sap.ui.model.Filter, sFilterType: TypeofFilterType): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def getContexts(iStart: Double, iLength: js.UndefOr[scala.Nothing], iMaximumPrefetchSize: Double): js.Array[Context] = js.native
     def getContexts(iStart: Double, iLength: Double, iMaximumPrefetchSize: Double): js.Array[Context] = js.native
     /**
       * Returns <code>true</code> if the binding has pending changes, meaning updates via two-waybinding
@@ -159,6 +160,37 @@ object v4 extends js.Object {
   
   @js.native
   trait ODataMetaModel extends MetaModel {
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      aSorters: js.UndefOr[scala.Nothing],
+      aFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): ListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      aSorters: js.Array[Sorter],
+      aFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): ListBinding = js.native
+    def bindList(sPath: String, oContext: js.UndefOr[scala.Nothing], aSorters: Sorter): ListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      aSorters: Sorter,
+      aFilters: js.Array[typingsSlinky.openui5.sap.ui.model.Filter]
+    ): ListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      aSorters: Sorter,
+      aFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): ListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: typingsSlinky.openui5.sap.ui.model.Context,
+      aSorters: js.UndefOr[scala.Nothing],
+      aFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): ListBinding = js.native
     def bindList(
       sPath: String,
       oContext: typingsSlinky.openui5.sap.ui.model.Context,
@@ -345,8 +377,108 @@ object v4 extends js.Object {
   trait ODataModel extends Model {
     def bindContext(sPath: String, oContext: Context): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataContextBinding = js.native
     def bindContext(sPath: String, oContext: Context, mParameters: js.Any): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataContextBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter,
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: js.Array[Sorter],
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: js.Array[Sorter],
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter,
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(sPath: String, oContext: js.UndefOr[scala.Nothing], vSorters: Sorter): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: Sorter,
+      vFilters: js.UndefOr[scala.Nothing],
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: Sorter,
+      vFilters: js.Array[typingsSlinky.openui5.sap.ui.model.Filter]
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: Sorter,
+      vFilters: js.Array[typingsSlinky.openui5.sap.ui.model.Filter],
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: Sorter,
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: js.UndefOr[scala.Nothing],
+      vSorters: Sorter,
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter,
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
     def bindList(sPath: String, oContext: Context): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: js.UndefOr[scala.Nothing],
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: js.Array[typingsSlinky.openui5.sap.ui.model.Filter]
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: js.Array[typingsSlinky.openui5.sap.ui.model.Filter],
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: js.UndefOr[scala.Nothing],
+      vFilters: typingsSlinky.openui5.sap.ui.model.Filter,
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
     def bindList(sPath: String, oContext: Context, vSorters: js.Array[Sorter]): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: js.Array[Sorter],
+      vFilters: js.UndefOr[scala.Nothing],
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
     def bindList(
       sPath: String,
       oContext: Context,
@@ -374,6 +506,13 @@ object v4 extends js.Object {
       mParameters: js.Any
     ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
     def bindList(sPath: String, oContext: Context, vSorters: Sorter): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
+    def bindList(
+      sPath: String,
+      oContext: Context,
+      vSorters: Sorter,
+      vFilters: js.UndefOr[scala.Nothing],
+      mParameters: js.Any
+    ): typingsSlinky.openui5.sap.ui.model.odata.v4.ODataListBinding = js.native
     def bindList(
       sPath: String,
       oContext: Context,

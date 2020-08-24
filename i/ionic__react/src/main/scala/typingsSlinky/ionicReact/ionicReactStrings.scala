@@ -1,6 +1,7 @@
 package typingsSlinky.ionicReact
 
-import typingsSlinky.ionicReact.hrefpropsMod.RouterDirection
+import typingsSlinky.ionicReact.routeActionMod.RouteAction
+import typingsSlinky.ionicReact.routerDirectionMod.RouterDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +24,9 @@ object ionicReactStrings {
   
   @js.native
   sealed trait all extends js.Object
+  
+  @js.native
+  sealed trait always extends js.Object
   
   @js.native
   sealed trait android extends js.Object
@@ -193,6 +197,9 @@ object ionicReactStrings {
   sealed trait dl extends js.Object
   
   @js.native
+  sealed trait done extends js.Object
+  
+  @js.native
   sealed trait dt extends js.Object
   
   @js.native
@@ -212,6 +219,9 @@ object ionicReactStrings {
   
   @js.native
   sealed trait end extends js.Object
+  
+  @js.native
+  sealed trait enter extends js.Object
   
   @js.native
   sealed trait execute extends js.Object
@@ -307,6 +317,9 @@ object ionicReactStrings {
   sealed trait floating extends js.Object
   
   @js.native
+  sealed trait focus extends js.Object
+  
+  @js.native
   sealed trait font extends js.Object
   
   @js.native
@@ -338,6 +351,9 @@ object ionicReactStrings {
   
   @js.native
   sealed trait g extends js.Object
+  
+  @js.native
+  sealed trait go extends js.Object
   
   @js.native
   sealed trait grammar extends js.Object
@@ -517,6 +533,12 @@ object ionicReactStrings {
   sealed trait nav extends js.Object
   
   @js.native
+  sealed trait never extends js.Object
+  
+  @js.native
+  sealed trait next extends js.Object
+  
+  @js.native
   sealed trait no extends js.Object
   
   @js.native
@@ -592,7 +614,7 @@ object ionicReactStrings {
   sealed trait polyline extends js.Object
   
   @js.native
-  sealed trait pop extends js.Object
+  sealed trait pop extends RouteAction
   
   @js.native
   sealed trait popup extends js.Object
@@ -601,10 +623,13 @@ object ionicReactStrings {
   sealed trait pre extends js.Object
   
   @js.native
+  sealed trait previous extends js.Object
+  
+  @js.native
   sealed trait progress extends js.Object
   
   @js.native
-  sealed trait push extends js.Object
+  sealed trait push extends RouteAction
   
   @js.native
   sealed trait pwa extends js.Object
@@ -622,7 +647,7 @@ object ionicReactStrings {
   sealed trait removals extends js.Object
   
   @js.native
-  sealed trait replace extends js.Object
+  sealed trait replace extends RouteAction
   
   @js.native
   sealed trait reset extends js.Object
@@ -665,6 +690,9 @@ object ionicReactStrings {
   
   @js.native
   sealed trait selected extends js.Object
+  
+  @js.native
+  sealed trait send extends js.Object
   
   @js.native
   sealed trait slot extends js.Object
@@ -829,6 +857,8 @@ object ionicReactStrings {
   @scala.inline
   def all: all = "all".asInstanceOf[all]
   @scala.inline
+  def always: always = "always".asInstanceOf[always]
+  @scala.inline
   def android: android = "android".asInstanceOf[android]
   @scala.inline
   def applet: applet = "applet".asInstanceOf[applet]
@@ -941,6 +971,8 @@ object ionicReactStrings {
   @scala.inline
   def dl: dl = "dl".asInstanceOf[dl]
   @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  @scala.inline
   def dt: dt = "dt".asInstanceOf[dt]
   @scala.inline
   def electron: electron = "electron".asInstanceOf[electron]
@@ -954,6 +986,8 @@ object ionicReactStrings {
   def embed: embed = "embed".asInstanceOf[embed]
   @scala.inline
   def end: end = "end".asInstanceOf[end]
+  @scala.inline
+  def enter: enter = "enter".asInstanceOf[enter]
   @scala.inline
   def execute: execute = "execute".asInstanceOf[execute]
   @scala.inline
@@ -1017,6 +1051,8 @@ object ionicReactStrings {
   @scala.inline
   def floating: floating = "floating".asInstanceOf[floating]
   @scala.inline
+  def focus: focus = "focus".asInstanceOf[focus]
+  @scala.inline
   def font: font = "font".asInstanceOf[font]
   @scala.inline
   def footer: footer = "footer".asInstanceOf[footer]
@@ -1038,6 +1074,8 @@ object ionicReactStrings {
   def fullscreenerror: fullscreenerror = "fullscreenerror".asInstanceOf[fullscreenerror]
   @scala.inline
   def g: g = "g".asInstanceOf[g]
+  @scala.inline
+  def go: go = "go".asInstanceOf[go]
   @scala.inline
   def grammar: grammar = "grammar".asInstanceOf[grammar]
   @scala.inline
@@ -1157,6 +1195,10 @@ object ionicReactStrings {
   @scala.inline
   def nav: nav = "nav".asInstanceOf[nav]
   @scala.inline
+  def never: never = "never".asInstanceOf[never]
+  @scala.inline
+  def next: next = "next".asInstanceOf[next]
+  @scala.inline
   def no: no = "no".asInstanceOf[no]
   @scala.inline
   def none: none = "none".asInstanceOf[none]
@@ -1213,6 +1255,8 @@ object ionicReactStrings {
   @scala.inline
   def pre: pre = "pre".asInstanceOf[pre]
   @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
+  @scala.inline
   def progress: progress = "progress".asInstanceOf[progress]
   @scala.inline
   def push: push = "push".asInstanceOf[push]
@@ -1256,6 +1300,8 @@ object ionicReactStrings {
   def select: select = "select".asInstanceOf[select]
   @scala.inline
   def selected: selected = "selected".asInstanceOf[selected]
+  @scala.inline
+  def send: send = "send".asInstanceOf[send]
   @scala.inline
   def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline

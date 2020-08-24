@@ -1,6 +1,5 @@
 package typingsSlinky.reactVirtualized.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -31,7 +30,7 @@ object Collection {
     @scala.inline
     def autoHeight(value: Boolean): this.type = set("autoHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def cellGroupRenderer(value: /* params */ CollectionCellGroupRendererParams => js.Array[TagMod[Any]]): this.type = set("cellGroupRenderer", js.Any.fromFunction1(value))
+    def cellGroupRenderer(value: /* params */ CollectionCellGroupRendererParams => js.Array[ReactElement]): this.type = set("cellGroupRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -64,7 +63,7 @@ object Collection {
   @scala.inline
   def apply(
     cellCount: Double,
-    cellRenderer: /* params */ CollectionCellRendererParams => TagMod[Any],
+    cellRenderer: /* params */ CollectionCellRendererParams => ReactElement,
     cellSizeAndPositionGetter: /* params */ Index => CollectionCellSizeAndPosition,
     height: Double,
     width: Double

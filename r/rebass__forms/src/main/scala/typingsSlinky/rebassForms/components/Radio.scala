@@ -19,20 +19,6 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.AlignSelfProperty
-import typingsSlinky.csstype.mod.DisplayProperty
-import typingsSlinky.csstype.mod.FlexProperty
-import typingsSlinky.csstype.mod.GlobalsNumber
-import typingsSlinky.csstype.mod.HeightProperty
-import typingsSlinky.csstype.mod.MaxHeightProperty
-import typingsSlinky.csstype.mod.MaxWidthProperty
-import typingsSlinky.csstype.mod.MinHeightProperty
-import typingsSlinky.csstype.mod.MinWidthProperty
-import typingsSlinky.csstype.mod.OverflowProperty
-import typingsSlinky.csstype.mod.OverflowXProperty
-import typingsSlinky.csstype.mod.OverflowYProperty
-import typingsSlinky.csstype.mod.VerticalAlignProperty
-import typingsSlinky.csstype.mod.WidthProperty
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -92,7 +78,6 @@ import typingsSlinky.styledComponents.styledComponentsMod.CSSObject
 import typingsSlinky.styledComponents.styledComponentsMod.FlattenSimpleInterpolation
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.ResponsiveValue
-import typingsSlinky.styledSystem.mod.TLengthStyledSystem
 import typingsSlinky.styledSystem.mod.ThemeValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -106,7 +91,7 @@ object Radio {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.rebassForms.mod.Radio] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -114,7 +99,14 @@ object Radio {
     @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def alignSelf(value: ResponsiveValue[AlignSelfProperty, RequiredTheme]): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    def alignSelfVarargs(value: (js.Any | Null)*): this.type = set("alignSelf", js.Array(value :_*))
+    @scala.inline
+    def alignSelf(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
     def alignSelfNull: this.type = set("alignSelf", null)
     @scala.inline
@@ -232,9 +224,13 @@ object Radio {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
+    def backgroundColorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("backgroundColor", js.Array(value :_*))
+    @scala.inline
     def backgroundColor(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def backgroundColorNull: this.type = set("backgroundColor", null)
+    @scala.inline
+    def bgVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("bg", js.Array(value :_*))
     @scala.inline
     def bg(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("bg", value.asInstanceOf[js.Any])
     @scala.inline
@@ -245,6 +241,8 @@ object Radio {
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorVarargs(value: ((ThemeValue[colors, RequiredTheme, js.Any]) | Null)*): this.type = set("color", js.Array(value :_*))
     @scala.inline
     def color(value: ResponsiveValue[ThemeValue[colors, RequiredTheme, _], RequiredTheme]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
@@ -264,21 +262,39 @@ object Radio {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def display(value: ResponsiveValue[DisplayProperty, RequiredTheme]): this.type = set("display", value.asInstanceOf[js.Any])
+    def displayVarargs(value: (js.Any | Null)*): this.type = set("display", js.Array(value :_*))
+    @scala.inline
+    def display(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("display", value.asInstanceOf[js.Any])
     @scala.inline
     def displayNull: this.type = set("display", null)
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def flex(value: ResponsiveValue[FlexProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("flex", value.asInstanceOf[js.Any])
+    def flexVarargs(value: (js.Any | Null)*): this.type = set("flex", js.Array(value :_*))
+    @scala.inline
+    def flex(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("flex", value.asInstanceOf[js.Any])
     @scala.inline
     def flexNull: this.type = set("flex", null)
+    @scala.inline
+    def fontSizeVarargs(value: ((ThemeValue[fontSizes, RequiredTheme, js.Any]) | Null)*): this.type = set("fontSize", js.Array(value :_*))
     @scala.inline
     def fontSize(value: ResponsiveValue[ThemeValue[fontSizes, RequiredTheme, _], RequiredTheme]): this.type = set("fontSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -296,7 +312,14 @@ object Radio {
     @scala.inline
     def formTarget(value: String): this.type = set("formTarget", value.asInstanceOf[js.Any])
     @scala.inline
-    def height(value: ResponsiveValue[HeightProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("height", value.asInstanceOf[js.Any])
+    def heightVarargs(value: (js.Any | Null)*): this.type = set("height", js.Array(value :_*))
+    @scala.inline
+    def height(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
     def heightNull: this.type = set("height", null)
     @scala.inline
@@ -324,33 +347,49 @@ object Radio {
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
+    def mVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("m", js.Array(value :_*))
+    @scala.inline
     def m(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("m", value.asInstanceOf[js.Any])
     @scala.inline
     def mNull: this.type = set("m", null)
+    @scala.inline
+    def marginVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("margin", js.Array(value :_*))
     @scala.inline
     def margin(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
     def marginNull: this.type = set("margin", null)
     @scala.inline
+    def marginBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginBottom", js.Array(value :_*))
+    @scala.inline
     def marginBottom(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginBottom", value.asInstanceOf[js.Any])
     @scala.inline
     def marginBottomNull: this.type = set("marginBottom", null)
+    @scala.inline
+    def marginLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginLeft", js.Array(value :_*))
     @scala.inline
     def marginLeft(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def marginLeftNull: this.type = set("marginLeft", null)
     @scala.inline
+    def marginRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginRight", js.Array(value :_*))
+    @scala.inline
     def marginRight(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginRight", value.asInstanceOf[js.Any])
     @scala.inline
     def marginRightNull: this.type = set("marginRight", null)
+    @scala.inline
+    def marginTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginTop", js.Array(value :_*))
     @scala.inline
     def marginTop(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginTop", value.asInstanceOf[js.Any])
     @scala.inline
     def marginTopNull: this.type = set("marginTop", null)
     @scala.inline
+    def marginXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginX", js.Array(value :_*))
+    @scala.inline
     def marginX(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginX", value.asInstanceOf[js.Any])
     @scala.inline
     def marginXNull: this.type = set("marginX", null)
+    @scala.inline
+    def marginYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("marginY", js.Array(value :_*))
     @scala.inline
     def marginY(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("marginY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -358,15 +397,31 @@ object Radio {
     @scala.inline
     def max(value: Double | String): this.type = set("max", value.asInstanceOf[js.Any])
     @scala.inline
-    def maxHeight(value: ResponsiveValue[MaxHeightProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    def maxHeightVarargs(value: (js.Any | Null)*): this.type = set("maxHeight", js.Array(value :_*))
+    @scala.inline
+    def maxHeight(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("maxHeight", value.asInstanceOf[js.Any])
     @scala.inline
     def maxHeightNull: this.type = set("maxHeight", null)
     @scala.inline
     def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def maxWidth(value: ResponsiveValue[MaxWidthProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    def maxWidthVarargs(value: (js.Any | Null)*): this.type = set("maxWidth", js.Array(value :_*))
+    @scala.inline
+    def maxWidth(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("maxWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def maxWidthNull: this.type = set("maxWidth", null)
+    @scala.inline
+    def mbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mb", js.Array(value :_*))
     @scala.inline
     def mb(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mb", value.asInstanceOf[js.Any])
     @scala.inline
@@ -374,23 +429,43 @@ object Radio {
     @scala.inline
     def min(value: Double | String): this.type = set("min", value.asInstanceOf[js.Any])
     @scala.inline
-    def minHeight(value: ResponsiveValue[MinHeightProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    def minHeightVarargs(value: (js.Any | Null)*): this.type = set("minHeight", js.Array(value :_*))
+    @scala.inline
+    def minHeight(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("minHeight", value.asInstanceOf[js.Any])
     @scala.inline
     def minHeightNull: this.type = set("minHeight", null)
     @scala.inline
     def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def minWidth(value: ResponsiveValue[MinWidthProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    def minWidthVarargs(value: (js.Any | Null)*): this.type = set("minWidth", js.Array(value :_*))
+    @scala.inline
+    def minWidth(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("minWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def minWidthNull: this.type = set("minWidth", null)
+    @scala.inline
+    def mlVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("ml", js.Array(value :_*))
     @scala.inline
     def ml(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("ml", value.asInstanceOf[js.Any])
     @scala.inline
     def mlNull: this.type = set("ml", null)
     @scala.inline
+    def mrVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mr", js.Array(value :_*))
+    @scala.inline
     def mr(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mr", value.asInstanceOf[js.Any])
     @scala.inline
     def mrNull: this.type = set("mr", null)
+    @scala.inline
+    def mtVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mt", js.Array(value :_*))
     @scala.inline
     def mt(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mt", value.asInstanceOf[js.Any])
     @scala.inline
@@ -398,9 +473,13 @@ object Radio {
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
+    def mxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("mx", js.Array(value :_*))
+    @scala.inline
     def mx(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("mx", value.asInstanceOf[js.Any])
     @scala.inline
     def mxNull: this.type = set("mx", null)
+    @scala.inline
+    def myVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("my", js.Array(value :_*))
     @scala.inline
     def my(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("my", value.asInstanceOf[js.Any])
     @scala.inline
@@ -566,53 +645,104 @@ object Radio {
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLInputElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
-    def opacity(value: ResponsiveValue[GlobalsNumber, RequiredTheme]): this.type = set("opacity", value.asInstanceOf[js.Any])
+    def opacityVarargs(value: (js.Any | Null)*): this.type = set("opacity", js.Array(value :_*))
+    @scala.inline
+    def opacity(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("opacity", value.asInstanceOf[js.Any])
     @scala.inline
     def opacityNull: this.type = set("opacity", null)
     @scala.inline
-    def order(value: ResponsiveValue[GlobalsNumber, RequiredTheme]): this.type = set("order", value.asInstanceOf[js.Any])
+    def orderVarargs(value: (js.Any | Null)*): this.type = set("order", js.Array(value :_*))
+    @scala.inline
+    def order(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("order", value.asInstanceOf[js.Any])
     @scala.inline
     def orderNull: this.type = set("order", null)
     @scala.inline
-    def overflow(value: ResponsiveValue[OverflowProperty, RequiredTheme]): this.type = set("overflow", value.asInstanceOf[js.Any])
+    def overflowVarargs(value: (js.Any | Null)*): this.type = set("overflow", js.Array(value :_*))
+    @scala.inline
+    def overflow(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("overflow", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowNull: this.type = set("overflow", null)
     @scala.inline
-    def overflowX(value: ResponsiveValue[OverflowXProperty, RequiredTheme]): this.type = set("overflowX", value.asInstanceOf[js.Any])
+    def overflowXVarargs(value: (js.Any | Null)*): this.type = set("overflowX", js.Array(value :_*))
+    @scala.inline
+    def overflowX(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("overflowX", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowXNull: this.type = set("overflowX", null)
     @scala.inline
-    def overflowY(value: ResponsiveValue[OverflowYProperty, RequiredTheme]): this.type = set("overflowY", value.asInstanceOf[js.Any])
+    def overflowYVarargs(value: (js.Any | Null)*): this.type = set("overflowY", js.Array(value :_*))
+    @scala.inline
+    def overflowY(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("overflowY", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowYNull: this.type = set("overflowY", null)
+    @scala.inline
+    def pVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("p", js.Array(value :_*))
     @scala.inline
     def p(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("p", value.asInstanceOf[js.Any])
     @scala.inline
     def pNull: this.type = set("p", null)
     @scala.inline
+    def paddingVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("padding", js.Array(value :_*))
+    @scala.inline
     def padding(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingNull: this.type = set("padding", null)
+    @scala.inline
+    def paddingBottomVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingBottom", js.Array(value :_*))
     @scala.inline
     def paddingBottom(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingBottomNull: this.type = set("paddingBottom", null)
     @scala.inline
+    def paddingLeftVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingLeft", js.Array(value :_*))
+    @scala.inline
     def paddingLeft(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingLeftNull: this.type = set("paddingLeft", null)
+    @scala.inline
+    def paddingRightVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingRight", js.Array(value :_*))
     @scala.inline
     def paddingRight(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingRight", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingRightNull: this.type = set("paddingRight", null)
     @scala.inline
+    def paddingTopVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingTop", js.Array(value :_*))
+    @scala.inline
     def paddingTop(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingTop", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingTopNull: this.type = set("paddingTop", null)
     @scala.inline
+    def paddingXVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingX", js.Array(value :_*))
+    @scala.inline
     def paddingX(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingX", value.asInstanceOf[js.Any])
     @scala.inline
     def paddingXNull: this.type = set("paddingX", null)
+    @scala.inline
+    def paddingYVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("paddingY", js.Array(value :_*))
     @scala.inline
     def paddingY(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("paddingY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -620,15 +750,21 @@ object Radio {
     @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
     @scala.inline
+    def pbVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pb", js.Array(value :_*))
+    @scala.inline
     def pb(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pb", value.asInstanceOf[js.Any])
     @scala.inline
     def pbNull: this.type = set("pb", null)
+    @scala.inline
+    def plVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pl", js.Array(value :_*))
     @scala.inline
     def pl(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pl", value.asInstanceOf[js.Any])
     @scala.inline
     def plNull: this.type = set("pl", null)
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pr", js.Array(value :_*))
     @scala.inline
     def pr(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pr", value.asInstanceOf[js.Any])
     @scala.inline
@@ -638,13 +774,19 @@ object Radio {
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline
+    def ptVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("pt", js.Array(value :_*))
+    @scala.inline
     def pt(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("pt", value.asInstanceOf[js.Any])
     @scala.inline
     def ptNull: this.type = set("pt", null)
     @scala.inline
+    def pxVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("px", js.Array(value :_*))
+    @scala.inline
     def px(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("px", value.asInstanceOf[js.Any])
     @scala.inline
     def pxNull: this.type = set("px", null)
+    @scala.inline
+    def pyVarargs(value: ((ThemeValue[space, RequiredTheme, js.Any]) | Null)*): this.type = set("py", js.Array(value :_*))
     @scala.inline
     def py(value: ResponsiveValue[ThemeValue[space, RequiredTheme, _], RequiredTheme]): this.type = set("py", value.asInstanceOf[js.Any])
     @scala.inline
@@ -664,7 +806,14 @@ object Radio {
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
-    def size(value: ResponsiveValue[HeightProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("size", value.asInstanceOf[js.Any])
+    def sizeVarargs(value: (js.Any | Null)*): this.type = set("size", js.Array(value :_*))
+    @scala.inline
+    def size(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def sizeNull: this.type = set("size", null)
     @scala.inline
@@ -700,19 +849,37 @@ object Radio {
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def variantVarargs(value: (String | Null)*): this.type = set("variant", js.Array(value :_*))
     @scala.inline
     def variant(value: ResponsiveValue[String, RequiredTheme]): this.type = set("variant", value.asInstanceOf[js.Any])
     @scala.inline
     def variantNull: this.type = set("variant", null)
     @scala.inline
-    def verticalAlign(value: ResponsiveValue[VerticalAlignProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    def verticalAlignVarargs(value: (js.Any | Null)*): this.type = set("verticalAlign", js.Array(value :_*))
+    @scala.inline
+    def verticalAlign(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def verticalAlignNull: this.type = set("verticalAlign", null)
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     @scala.inline
-    def width(value: ResponsiveValue[WidthProperty[TLengthStyledSystem], RequiredTheme]): this.type = set("width", value.asInstanceOf[js.Any])
+    def widthVarargs(value: (js.Any | Null)*): this.type = set("width", js.Array(value :_*))
+    @scala.inline
+    def width(
+      value: ResponsiveValue[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          RequiredTheme
+        ]
+    ): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
     def widthNull: this.type = set("width", null)
   }

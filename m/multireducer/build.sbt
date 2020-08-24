@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "multireducer"
-version := "3.1-dt-20200128Z-79454b"
-scalaVersion := "2.13.2"
+version := "3.1-dt-20200128Z-3012a8"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,6 +1,7 @@
 package typingsSlinky.ddTrace
 
 import typingsSlinky.ddTrace.ddTraceStrings._dd1DotsrDoteausr
+import typingsSlinky.ddTrace.ddTraceStrings._ddDotmeasured
 import typingsSlinky.ddTrace.ddTraceStrings.error
 import typingsSlinky.ddTrace.ddTraceStrings.httpDotmethod
 import typingsSlinky.ddTrace.ddTraceStrings.httpDotrequestDotheaders
@@ -32,6 +33,7 @@ object tagsMod extends js.Object {
   var HTTP_URL: httpDoturl = js.native
   var MANUAL_DROP: manualDotdrop = js.native
   var MANUAL_KEEP: manualDotkeep = js.native
+  var MEASURED: _ddDotmeasured = js.native
   var RESOURCE_NAME: resourceDotname = js.native
   var SAMPLING_PRIORITY: samplingDotpriority = js.native
   var SERVICE_NAME: serviceDotname = js.native

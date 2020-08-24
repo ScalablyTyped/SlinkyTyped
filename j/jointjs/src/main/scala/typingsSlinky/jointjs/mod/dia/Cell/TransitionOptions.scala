@@ -27,53 +27,26 @@ object TransitionOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
+    def setDelay(value: Double): Self = this.set("delay", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDelay: Self = this.set("delay", js.undefined)
     @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
+    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTimingFunction(value: /* time */ Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteDuration: Self = this.set("duration", js.undefined)
     @scala.inline
-    def withoutTimingFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(js.undefined)
-        ret
-    }
+    def setTimingFunction(value: /* time */ Double => Double): Self = this.set("timingFunction", js.Any.fromFunction1(value))
     @scala.inline
-    def withValueFunction(value: (_, _) => js.Function1[/* time */ Double, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFunction")(js.Any.fromFunction2(value))
-        ret
-    }
+    def deleteTimingFunction: Self = this.set("timingFunction", js.undefined)
     @scala.inline
-    def withoutValueFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFunction")(js.undefined)
-        ret
-    }
+    def setValueFunction(value: (_, _) => js.Function1[/* time */ Double, _]): Self = this.set("valueFunction", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteValueFunction: Self = this.set("valueFunction", js.undefined)
   }
   
 }

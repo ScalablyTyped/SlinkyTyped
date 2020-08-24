@@ -26,29 +26,20 @@ object DocumentScanOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMaxImages(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImages")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutMaxImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImages")(js.undefined)
-        ret
-    }
+    def setMaxImages(value: integer): Self = this.set("maxImages", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMimeTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteMaxImages: Self = this.set("maxImages", js.undefined)
     @scala.inline
-    def withoutMimeTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(js.undefined)
-        ret
-    }
+    def setMimeTypesVarargs(value: String*): Self = this.set("mimeTypes", js.Array(value :_*))
+    @scala.inline
+    def setMimeTypes(value: js.Array[String]): Self = this.set("mimeTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMimeTypes: Self = this.set("mimeTypes", js.undefined)
   }
   
 }

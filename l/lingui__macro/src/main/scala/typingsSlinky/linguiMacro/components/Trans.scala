@@ -1,26 +1,26 @@
 package typingsSlinky.linguiMacro.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.linguiMacro.transMod.TransPropsWithoutI18n
-import typingsSlinky.linguiMacro.transMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Trans {
-  @JSImport("@lingui/macro/Trans", JSImport.Default)
+  @JSImport("@lingui/macro", "Trans")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.linguiMacro.mod.Trans] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentsVarargs(value: ReactElement*): this.type = set("components", js.Array(value :_*))
     @scala.inline
     def components(value: js.Array[ReactElement]): this.type = set("components", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +34,7 @@ object Trans {
     @scala.inline
     def renderReactElement(value: ReactElement): this.type = set("render", value.asInstanceOf[js.Any])
     @scala.inline
-    def render(value: TagMod[Any]): this.type = set("render", value.asInstanceOf[js.Any])
+    def render(value: ReactElement): this.type = set("render", value.asInstanceOf[js.Any])
     @scala.inline
     def values(value: js.Object): this.type = set("values", value.asInstanceOf[js.Any])
   }

@@ -1,6 +1,6 @@
 package typingsSlinky.dayzed.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.dayzed.dayzedNumbers.`0`
@@ -28,6 +28,8 @@ object Dayzed {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
+    def children(value: /* renderProps */ RenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
     def date(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
     @scala.inline
     def firstDayOfWeek(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
@@ -42,7 +44,9 @@ object Dayzed {
     @scala.inline
     def onOffsetChanged(value: /* offset */ Double => Unit): this.type = set("onOffsetChanged", js.Any.fromFunction1(value))
     @scala.inline
-    def render(value: /* renderProps */ RenderProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: /* renderProps */ RenderProps => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectedVarargs(value: js.Date*): this.type = set("selected", js.Array(value :_*))
     @scala.inline
     def selectedDate(value: js.Date): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline

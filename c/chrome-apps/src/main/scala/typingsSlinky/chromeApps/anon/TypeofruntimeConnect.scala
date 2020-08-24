@@ -195,6 +195,12 @@ trait TypeofruntimeConnect extends js.Object {
   def sendMessage(
     extensionId: String,
     message: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    responseCallback: js.Function1[/* response */ js.Any, Unit]
+  ): Unit = js.native
+  def sendMessage(
+    extensionId: String,
+    message: js.Any,
     options: Null,
     responseCallback: js.Function1[/* response */ js.Any, Unit]
   ): Unit = js.native
@@ -214,6 +220,11 @@ trait TypeofruntimeConnect extends js.Object {
     * Parameter response: The JSON response object sent by the handler of the message. If an error occurs while connecting to the extension, the callback will be called with no arguments and runtime.lastError will be set to the error message.
     */
   def sendMessage(message: js.Any): Unit = js.native
+  def sendMessage(
+    message: js.Any,
+    options: js.UndefOr[scala.Nothing],
+    responseCallback: js.Function1[/* response */ js.Any, Unit]
+  ): Unit = js.native
   def sendMessage(message: js.Any, options: Null, responseCallback: js.Function1[/* response */ js.Any, Unit]): Unit = js.native
   def sendMessage(message: js.Any, options: MessageOptions): Unit = js.native
   def sendMessage(

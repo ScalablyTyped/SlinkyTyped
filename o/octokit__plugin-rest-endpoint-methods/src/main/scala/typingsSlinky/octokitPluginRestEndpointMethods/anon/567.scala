@@ -1,17 +1,48 @@
 package typingsSlinky.octokitPluginRestEndpointMethods.anon
 
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.AnyResponse
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.TeamsRemoveProjectParams
+import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
+import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
+import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
+import typingsSlinky.octokitTypes.endpointsMod.ActionsGetWorkflowRunEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActionsGetWorkflowRunResponseData
+import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
+import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
+import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait `567` extends js.Object {
-  var endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointInterface */ js.Any = js.native
-  def apply(): js.Promise[AnyResponse] = js.native
+  var parameters: RequestParameters with (Omit[ActionsGetWorkflowRunEndpoint, baseUrl | headers | mediaType]) = js.native
+  var response: OctokitResponse[ActionsGetWorkflowRunResponseData] = js.native
+}
+
+object `567` {
+  @scala.inline
   def apply(
-    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with TeamsRemoveProjectParams
-  ): js.Promise[AnyResponse] = js.native
+    parameters: RequestParameters with (Omit[ActionsGetWorkflowRunEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ActionsGetWorkflowRunResponseData]
+  ): `567` = {
+    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`567`]
+  }
+  @scala.inline
+  implicit class `567Ops`[Self <: `567`] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setParameters(value: RequestParameters with (Omit[ActionsGetWorkflowRunEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setResponse(value: OctokitResponse[ActionsGetWorkflowRunResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+  }
+  
 }
 

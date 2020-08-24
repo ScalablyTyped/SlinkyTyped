@@ -1,8 +1,6 @@
 package typingsSlinky.materializeCss.global.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.M.PushpinOptions
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialPushpinOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,28 +9,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("M.Pushpin")
 @js.native
 class Pushpin ()
-  extends typingsSlinky.materializeCss.M.Pushpin {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: PushpinOptions = js.native
-  /**
-    * Original offsetTop of element
-    */
-  /* CompleteClass */
-  override var originalOffset: Double = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-}
+  extends typingsSlinky.materializeCss.M.Pushpin
 
 /* static members */
 @JSGlobal("M.Pushpin")
@@ -45,8 +22,13 @@ object Pushpin extends js.Object {
   /**
     * Init Pushpins
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.Pushpin] = js.native
-  def init(els: MElements, options: PartialPushpinOptions): js.Array[typingsSlinky.materializeCss.M.Pushpin] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.Pushpin] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: PartialPushpinOptions
+  ): js.Array[typingsSlinky.materializeCss.M.Pushpin] = js.native
   /**
     * Init Pushpin
     */

@@ -10,6 +10,7 @@ class Quote protected ()
   extends typingsSlinky.angularCompiler.astMod.Quote {
   def this(
     span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
     prefix: String,
     uninterpretedExpression: String,
     location: js.Any

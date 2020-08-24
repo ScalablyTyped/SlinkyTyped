@@ -1,7 +1,7 @@
 package typingsSlinky.shelljs.mod
 
 import typingsSlinky.node.childProcessMod.ChildProcess
-import typingsSlinky.shelljs.anon.ExecOptionsasyncfalse
+import typingsSlinky.shelljs.anon.ExecOptionsasyncfalseunde
 import typingsSlinky.shelljs.anon.ExecOptionsasynctrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -164,7 +164,7 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     * @return Returns an object containing the return code and output as string,
     *         or if `{async: true}` or a `callback` was passed, a `ChildProcess`.
     */
-  def exec(command: String, options: ExecOptionsasyncfalse): ShellString = js.native
+  def exec(command: String, options: ExecOptionsasyncfalseunde): ShellString = js.native
   /**
     * Executes the given command asynchronously.
     *

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "use-set-interval"
-version := "1.0-dt-20190208Z-3516d5"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190208Z-8f2531"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

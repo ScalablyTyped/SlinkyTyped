@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SortIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SortIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SortIcon")
   @js.native
   object component extends js.Object
   

@@ -40,101 +40,42 @@ object LinkSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDotconnection(value: SVGPathAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".connection")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutDotconnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".connection")(js.undefined)
-        ret
-    }
+    def setDotconnection(value: SVGPathAttributes): Self = this.set(".connection", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotconnection-wrap`(value: SVGPathAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".connection-wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotconnection: Self = this.set(".connection", js.undefined)
     @scala.inline
-    def `withoutDotconnection-wrap`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".connection-wrap")(js.undefined)
-        ret
-    }
+    def `setDotconnection-wrap`(value: SVGPathAttributes): Self = this.set(".connection-wrap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withDotlabels(value: SVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".labels")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotconnection-wrap`: Self = this.set(".connection-wrap", js.undefined)
     @scala.inline
-    def withoutDotlabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".labels")(js.undefined)
-        ret
-    }
+    def setDotlabels(value: SVGAttributes): Self = this.set(".labels", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotlink-tools`(value: SVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".link-tools")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDotlabels: Self = this.set(".labels", js.undefined)
     @scala.inline
-    def `withoutDotlink-tools`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".link-tools")(js.undefined)
-        ret
-    }
+    def `setDotlink-tools`(value: SVGAttributes): Self = this.set(".link-tools", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotmarker-arrowheads`(value: SVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-arrowheads")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotlink-tools`: Self = this.set(".link-tools", js.undefined)
     @scala.inline
-    def `withoutDotmarker-arrowheads`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-arrowheads")(js.undefined)
-        ret
-    }
+    def `setDotmarker-arrowheads`(value: SVGAttributes): Self = this.set(".marker-arrowheads", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotmarker-source`(value: SVGPathAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-source")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotmarker-arrowheads`: Self = this.set(".marker-arrowheads", js.undefined)
     @scala.inline
-    def `withoutDotmarker-source`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-source")(js.undefined)
-        ret
-    }
+    def `setDotmarker-source`(value: SVGPathAttributes): Self = this.set(".marker-source", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotmarker-target`(value: SVGPathAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-target")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotmarker-source`: Self = this.set(".marker-source", js.undefined)
     @scala.inline
-    def `withoutDotmarker-target`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-target")(js.undefined)
-        ret
-    }
+    def `setDotmarker-target`(value: SVGPathAttributes): Self = this.set(".marker-target", value.asInstanceOf[js.Any])
     @scala.inline
-    def `withDotmarker-vertices`(value: SVGAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-vertices")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def `deleteDotmarker-target`: Self = this.set(".marker-target", js.undefined)
     @scala.inline
-    def `withoutDotmarker-vertices`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".marker-vertices")(js.undefined)
-        ret
-    }
+    def `setDotmarker-vertices`(value: SVGAttributes): Self = this.set(".marker-vertices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteDotmarker-vertices`: Self = this.set(".marker-vertices", js.undefined)
   }
   
 }

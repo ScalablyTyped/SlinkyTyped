@@ -68,8 +68,10 @@ object emrMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.emrClusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.emrClusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.emrClusterMod.Cluster = js.native
     def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.emrClusterMod.Cluster = js.native
     /**
@@ -89,8 +91,10 @@ object emrMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.instanceGroupMod.InstanceGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.instanceGroupMod.InstanceGroup = js.native
     def get(name: String, id: Input[ID], state: InstanceGroupState): typingsSlinky.pulumiAws.instanceGroupMod.InstanceGroup = js.native
     def get(name: String, id: Input[ID], state: InstanceGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.instanceGroupMod.InstanceGroup = js.native
     /**
@@ -110,8 +114,10 @@ object emrMod extends js.Object {
       * @param name The _unique_ name of the resulting resource.
       * @param id The _unique_ provider ID of the resource to lookup.
       * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
       */
     def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.securityConfigurationMod.SecurityConfiguration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityConfigurationMod.SecurityConfiguration = js.native
     def get(name: String, id: Input[ID], state: SecurityConfigurationState): typingsSlinky.pulumiAws.securityConfigurationMod.SecurityConfiguration = js.native
     def get(name: String, id: Input[ID], state: SecurityConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityConfigurationMod.SecurityConfiguration = js.native
     /**

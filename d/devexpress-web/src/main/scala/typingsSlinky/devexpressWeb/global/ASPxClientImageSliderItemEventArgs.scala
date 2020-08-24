@@ -16,10 +16,5 @@ class ASPxClientImageSliderItemEventArgs protected ()
     * @param item An ASPxClientImageSliderItem object that is the item related to the generated event.
     */
   def this(item: typingsSlinky.devexpressWeb.ASPxClientImageSliderItem) = this()
-  /**
-    * Gets an item object related to the event.
-    */
-  /* CompleteClass */
-  override var item: typingsSlinky.devexpressWeb.ASPxClientImageSliderItem = js.native
 }
 

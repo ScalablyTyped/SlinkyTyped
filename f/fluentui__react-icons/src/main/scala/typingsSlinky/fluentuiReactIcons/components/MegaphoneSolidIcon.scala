@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MegaphoneSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MegaphoneSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MegaphoneSolidIcon")
   @js.native
   object component extends js.Object
   

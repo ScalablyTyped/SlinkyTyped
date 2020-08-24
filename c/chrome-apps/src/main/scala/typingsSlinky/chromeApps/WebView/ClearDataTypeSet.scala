@@ -46,113 +46,46 @@ object ClearDataTypeSet {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAppcache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appcache")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAppcache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appcache")(js.undefined)
-        ret
-    }
+    def setAppcache(value: Boolean): Self = this.set("appcache", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAppcache: Self = this.set("appcache", js.undefined)
     @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
+    def setCache(value: Boolean): Self = this.set("cache", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCache: Self = this.set("cache", js.undefined)
     @scala.inline
-    def withoutCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(js.undefined)
-        ret
-    }
+    def setCookies(value: Boolean): Self = this.set("cookies", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFileSystems(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystems")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteCookies: Self = this.set("cookies", js.undefined)
     @scala.inline
-    def withoutFileSystems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystems")(js.undefined)
-        ret
-    }
+    def setFileSystems(value: Boolean): Self = this.set("fileSystems", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIndexedDB(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexedDB")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFileSystems: Self = this.set("fileSystems", js.undefined)
     @scala.inline
-    def withoutIndexedDB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexedDB")(js.undefined)
-        ret
-    }
+    def setIndexedDB(value: Boolean): Self = this.set("indexedDB", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLocalStorage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteIndexedDB: Self = this.set("indexedDB", js.undefined)
     @scala.inline
-    def withoutLocalStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localStorage")(js.undefined)
-        ret
-    }
+    def setLocalStorage(value: Boolean): Self = this.set("localStorage", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPersistentCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLocalStorage: Self = this.set("localStorage", js.undefined)
     @scala.inline
-    def withoutPersistentCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentCookies")(js.undefined)
-        ret
-    }
+    def setPersistentCookies(value: Boolean): Self = this.set("persistentCookies", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSessionCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePersistentCookies: Self = this.set("persistentCookies", js.undefined)
     @scala.inline
-    def withoutSessionCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCookies")(js.undefined)
-        ret
-    }
+    def setSessionCookies(value: Boolean): Self = this.set("sessionCookies", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWebSQL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webSQL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSessionCookies: Self = this.set("sessionCookies", js.undefined)
     @scala.inline
-    def withoutWebSQL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webSQL")(js.undefined)
-        ret
-    }
+    def setWebSQL(value: Boolean): Self = this.set("webSQL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebSQL: Self = this.set("webSQL", js.undefined)
   }
   
 }

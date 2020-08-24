@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Keyboard {
-  @JSImport("grommet", "Keyboard")
+  @JSImport("grommet/es6", "Keyboard")
   @js.native
   object component extends js.Object
   

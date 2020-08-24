@@ -85,19 +85,16 @@ object TypeofstorageEjectDevice {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEjectDeviceResultCode(value: FAILURE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EjectDeviceResultCode")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withStorageUnitType(value: FIXED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageUnitType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEjectDeviceResultCode(value: FAILURE): Self = this.set("EjectDeviceResultCode", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEjectDevice(
+    def setStorageUnitType(value: FIXED): Self = this.set("StorageUnitType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEjectDevice(
       value: (String, js.Function1[
           /* result */ ToStringLiteral[
             /* import warning: importer.ImportType#apply Failed type conversion: typeof EjectDeviceResultCode */ js.Any, 
@@ -109,35 +106,15 @@ object TypeofstorageEjectDevice {
           ], 
           Unit
         ]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ejectDevice")(js.Any.fromFunction2(value))
-        ret
-    }
+    ): Self = this.set("ejectDevice", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetAvailableCapacity(value: (String, js.Function1[/* info */ StorageCapacityInfo, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableCapacity")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetAvailableCapacity(value: (String, js.Function1[/* info */ StorageCapacityInfo, Unit]) => Unit): Self = this.set("getAvailableCapacity", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetInfo(value: js.Function1[/* info */ js.Array[StorageUnitInfo], Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInfo")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetInfo(value: js.Function1[/* info */ js.Array[StorageUnitInfo], Unit] => Unit): Self = this.set("getInfo", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnAttached(value: Event[js.Function1[/* info */ StorageUnitInfo, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAttached")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnAttached(value: Event[js.Function1[/* info */ StorageUnitInfo, Unit]]): Self = this.set("onAttached", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnDetached(value: Event[js.Function1[/* id */ String, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDetached")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnDetached(value: Event[js.Function1[/* id */ String, Unit]]): Self = this.set("onDetached", value.asInstanceOf[js.Any])
   }
   
 }

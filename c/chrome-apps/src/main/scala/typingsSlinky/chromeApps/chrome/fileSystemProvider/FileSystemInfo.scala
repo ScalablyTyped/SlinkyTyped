@@ -58,53 +58,30 @@ object FileSystemInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withFileSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpenedFiles(value: js.Array[OpenedFileInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFileSystemId(value: String): Self = this.set("fileSystemId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOpenedFilesLimit(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedFilesLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpenedFilesVarargs(value: OpenedFileInfo*): Self = this.set("openedFiles", js.Array(value :_*))
     @scala.inline
-    def withWatchers(value: js.Array[FileWatchersInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchers")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpenedFiles(value: js.Array[OpenedFileInfo]): Self = this.set("openedFiles", value.asInstanceOf[js.Any])
     @scala.inline
-    def withWritable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOpenedFilesLimit(value: integer): Self = this.set("openedFilesLimit", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSupportsNotifyTag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNotifyTag")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setWatchersVarargs(value: FileWatchersInfo*): Self = this.set("watchers", js.Array(value :_*))
     @scala.inline
-    def withoutSupportsNotifyTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNotifyTag")(js.undefined)
-        ret
-    }
+    def setWatchers(value: js.Array[FileWatchersInfo]): Self = this.set("watchers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWritable(value: Boolean): Self = this.set("writable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSupportsNotifyTag(value: Boolean): Self = this.set("supportsNotifyTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSupportsNotifyTag: Self = this.set("supportsNotifyTag", js.undefined)
   }
   
 }

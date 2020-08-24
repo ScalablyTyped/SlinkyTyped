@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EditStyleIcon {
-  @JSImport("@fluentui/react-icons/lib/components/EditStyleIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "EditStyleIcon")
   @js.native
   object component extends js.Object
   

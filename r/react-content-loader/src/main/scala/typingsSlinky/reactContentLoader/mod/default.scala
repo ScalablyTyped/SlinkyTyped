@@ -1,13 +1,12 @@
 package typingsSlinky.reactContentLoader.mod
 
-import slinky.core.facade.ReactElement
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-content-loader", JSImport.Default)
 @js.native
-object default extends js.Object {
-  def apply(props: IContentLoaderProps): ReactElement = js.native
-}
+object default extends TopLevel[ReactComponentClass[IContentLoaderProps]]
 

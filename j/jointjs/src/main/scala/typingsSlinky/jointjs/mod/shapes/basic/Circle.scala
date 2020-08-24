@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Circle () extends Element {
   def this(attributes: GenericAttributes[CircleSelectors]) = this()
+  def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
   def this(attributes: GenericAttributes[CircleSelectors], opt: StringDictionary[js.Any]) = this()
 }
 

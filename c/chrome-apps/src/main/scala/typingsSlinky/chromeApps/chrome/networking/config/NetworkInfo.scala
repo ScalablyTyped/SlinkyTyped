@@ -52,71 +52,32 @@ object NetworkInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: ToStringLiteral[WIFI, WI_FI, Exclude[WI_FI, WiFi]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBSSID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BSSID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setType(value: ToStringLiteral[WIFI, WI_FI, Exclude[WI_FI, WiFi]]): Self = this.set("Type", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutBSSID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BSSID")(js.undefined)
-        ret
-    }
+    def setBSSID(value: String): Self = this.set("BSSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGUID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteBSSID: Self = this.set("BSSID", js.undefined)
     @scala.inline
-    def withoutGUID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GUID")(js.undefined)
-        ret
-    }
+    def setGUID(value: String): Self = this.set("GUID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHexSSID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexSSID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGUID: Self = this.set("GUID", js.undefined)
     @scala.inline
-    def withoutHexSSID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexSSID")(js.undefined)
-        ret
-    }
+    def setHexSSID(value: String): Self = this.set("HexSSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSSID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHexSSID: Self = this.set("HexSSID", js.undefined)
     @scala.inline
-    def withoutSSID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSID")(js.undefined)
-        ret
-    }
+    def setSSID(value: String): Self = this.set("SSID", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSecurity(value: None | `WEP-PSK` | `WPA-PSK` | `WPA-EAP`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Security")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSSID: Self = this.set("SSID", js.undefined)
     @scala.inline
-    def withoutSecurity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Security")(js.undefined)
-        ret
-    }
+    def setSecurity(value: None | `WEP-PSK` | `WPA-PSK` | `WPA-EAP`): Self = this.set("Security", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecurity: Self = this.set("Security", js.undefined)
   }
   
 }

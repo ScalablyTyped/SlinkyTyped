@@ -20,6 +20,8 @@ object utilsMod extends js.Object {
   @JSName("_heap_init")
   def heapInit(): js.typedarray.Uint8Array = js.native
   @JSName("_heap_init")
+  def heapInit(heap: js.UndefOr[scala.Nothing], heapSize: Double): js.typedarray.Uint8Array = js.native
+  @JSName("_heap_init")
   def heapInit(heap: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   @JSName("_heap_init")
   def heapInit(heap: js.typedarray.Uint8Array, heapSize: Double): js.typedarray.Uint8Array = js.native

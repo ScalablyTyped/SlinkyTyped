@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LockShareIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LockShareIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LockShareIcon")
   @js.native
   object component extends js.Object
   

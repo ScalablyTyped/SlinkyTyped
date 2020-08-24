@@ -12,7 +12,7 @@ import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.anon.BaseEncodingOptionsflagst
 import typingsSlinky.node.anon.EncodingBufferEncoding
-import typingsSlinky.node.anon.EncodingNull
+import typingsSlinky.node.anon.`3`
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.urlMod.Url
@@ -35,12 +35,12 @@ object mod extends js.Object {
     def readFileSync(path: Double, options: BufferEncoding): String = js.native
     def readFileSync(path: Double, options: BaseEncodingOptionsflagst): String | Buffer = js.native
     def readFileSync(path: Double, options: EncodingBufferEncoding): String = js.native
-    def readFileSync(path: Double, options: EncodingNull): Buffer = js.native
+    def readFileSync(path: Double, options: `3`): Buffer = js.native
     def readFileSync(path: PathLike): String | Buffer = js.native
     def readFileSync(path: PathLike, options: BufferEncoding): String = js.native
     def readFileSync(path: PathLike, options: BaseEncodingOptionsflagst): String | Buffer = js.native
     def readFileSync(path: PathLike, options: EncodingBufferEncoding): String = js.native
-    def readFileSync(path: PathLike, options: EncodingNull): Buffer = js.native
+    def readFileSync(path: PathLike, options: `3`): Buffer = js.native
     @JSName("readFileSync")
     def readFileSync_Buffer(path: Double): Buffer = js.native
     @JSName("readFileSync")

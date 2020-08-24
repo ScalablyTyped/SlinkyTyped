@@ -32,8 +32,16 @@ object anon extends js.Object {
     var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
     def addToRepeatedField(msg: Message, fieldNumber: Double, value: js.Any): Unit = js.native
     def addToRepeatedField(msg: Message, fieldNumber: Double, value: js.Any, index: Double): Unit = js.native
-    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: js.UndefOr[T], ctor: Instantiable[T]): T = js.native
-    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: js.UndefOr[T], ctor: Instantiable[T], index: Double): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: T, ctor: Instantiable[T]): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: T, ctor: Instantiable[T], index: Double): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: js.UndefOr[scala.Nothing], ctor: Instantiable[T]): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](
+      msg: Message,
+      fieldNumber: Double,
+      value: js.UndefOr[scala.Nothing],
+      ctor: Instantiable[T],
+      index: Double
+    ): T = js.native
     def bytesAsB64(bytes: js.typedarray.Uint8Array): String = js.native
     def bytesAsU8(str: String): js.typedarray.Uint8Array = js.native
     def bytesListAsB64(bytesList: js.Array[js.typedarray.Uint8Array]): js.Array[String] = js.native
@@ -69,6 +77,14 @@ object anon extends js.Object {
       data: MessageArray,
       messageId: String,
       suggestedPivot: Double,
+      repeatedFields: js.UndefOr[scala.Nothing],
+      oneofFields: js.Array[js.Array[Double]]
+    ): Unit = js.native
+    def initialize(
+      msg: Message,
+      data: MessageArray,
+      messageId: String,
+      suggestedPivot: Double,
       repeatedFields: js.Array[Double]
     ): Unit = js.native
     def initialize(
@@ -80,6 +96,14 @@ object anon extends js.Object {
       oneofFields: js.Array[js.Array[Double]]
     ): Unit = js.native
     def initialize(msg: Message, data: MessageArray, messageId: Double, suggestedPivot: Double): Unit = js.native
+    def initialize(
+      msg: Message,
+      data: MessageArray,
+      messageId: Double,
+      suggestedPivot: Double,
+      repeatedFields: js.UndefOr[scala.Nothing],
+      oneofFields: js.Array[js.Array[Double]]
+    ): Unit = js.native
     def initialize(
       msg: Message,
       data: MessageArray,
@@ -109,6 +133,12 @@ object anon extends js.Object {
     def setWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: T): Unit = js.native
     def setWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: Map[_, _]): Unit = js.native
     def toMap(field: js.Array[_], mapKeyGetterFn: js.Function1[/* field */ js.Any, String]): Unit = js.native
+    def toMap(
+      field: js.Array[_],
+      mapKeyGetterFn: js.Function1[/* field */ js.Any, String],
+      toObjectFn: js.UndefOr[scala.Nothing],
+      includeInstance: Boolean
+    ): Unit = js.native
     def toMap(
       field: js.Array[_],
       mapKeyGetterFn: js.Function1[/* field */ js.Any, String],
@@ -151,8 +181,16 @@ object anon extends js.Object {
     var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
     def addToRepeatedField(msg: Message, fieldNumber: Double, value: js.Any): Unit = js.native
     def addToRepeatedField(msg: Message, fieldNumber: Double, value: js.Any, index: Double): Unit = js.native
-    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: js.UndefOr[T], ctor: Instantiable[T]): T = js.native
-    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: js.UndefOr[T], ctor: Instantiable[T], index: Double): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: T, ctor: Instantiable[T]): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: T, ctor: Instantiable[T], index: Double): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: js.UndefOr[scala.Nothing], ctor: Instantiable[T]): T = js.native
+    def addToRepeatedWrapperField[T /* <: Message */](
+      msg: Message,
+      fieldNumber: Double,
+      value: js.UndefOr[scala.Nothing],
+      ctor: Instantiable[T],
+      index: Double
+    ): T = js.native
     def bytesAsB64(bytes: js.typedarray.Uint8Array): String = js.native
     def bytesAsU8(str: String): js.typedarray.Uint8Array = js.native
     def bytesListAsB64(bytesList: js.Array[js.typedarray.Uint8Array]): js.Array[String] = js.native
@@ -188,6 +226,14 @@ object anon extends js.Object {
       data: MessageArray,
       messageId: String,
       suggestedPivot: Double,
+      repeatedFields: js.UndefOr[scala.Nothing],
+      oneofFields: js.Array[js.Array[Double]]
+    ): Unit = js.native
+    def initialize(
+      msg: Message,
+      data: MessageArray,
+      messageId: String,
+      suggestedPivot: Double,
       repeatedFields: js.Array[Double]
     ): Unit = js.native
     def initialize(
@@ -199,6 +245,14 @@ object anon extends js.Object {
       oneofFields: js.Array[js.Array[Double]]
     ): Unit = js.native
     def initialize(msg: Message, data: MessageArray, messageId: Double, suggestedPivot: Double): Unit = js.native
+    def initialize(
+      msg: Message,
+      data: MessageArray,
+      messageId: Double,
+      suggestedPivot: Double,
+      repeatedFields: js.UndefOr[scala.Nothing],
+      oneofFields: js.Array[js.Array[Double]]
+    ): Unit = js.native
     def initialize(
       msg: Message,
       data: MessageArray,
@@ -228,6 +282,12 @@ object anon extends js.Object {
     def setWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: T): Unit = js.native
     def setWrapperField[T /* <: Message */](msg: Message, fieldNumber: Double, value: Map[_, _]): Unit = js.native
     def toMap(field: js.Array[_], mapKeyGetterFn: js.Function1[/* field */ js.Any, String]): Unit = js.native
+    def toMap(
+      field: js.Array[_],
+      mapKeyGetterFn: js.Function1[/* field */ js.Any, String],
+      toObjectFn: js.UndefOr[scala.Nothing],
+      includeInstance: Boolean
+    ): Unit = js.native
     def toMap(
       field: js.Array[_],
       mapKeyGetterFn: js.Function1[/* field */ js.Any, String],

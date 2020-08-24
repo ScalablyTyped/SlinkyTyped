@@ -1,6 +1,5 @@
 package typingsSlinky.muiDatatables.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -17,13 +16,13 @@ object Popover {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Any with js.Object] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def action(value: /* args */ js.Any => _): this.type = set("action", js.Any.fromFunction1(value))
     @scala.inline
     def anchorElReactElement(value: ReactElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     @scala.inline
-    def anchorEl(value: TagMod[Any]): this.type = set("anchorEl", value.asInstanceOf[js.Any])
+    def anchorEl(value: ReactElement): this.type = set("anchorEl", value.asInstanceOf[js.Any])
     @scala.inline
     def anchorOrigin(value: js.Any): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,6 +33,8 @@ object Popover {
     def onExited(value: /* args */ js.Any => _): this.type = set("onExited", js.Any.fromFunction1(value))
     @scala.inline
     def option(value: Boolean): this.type = set("option", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ref(value: js.Any): this.type = set("ref", value.asInstanceOf[js.Any])
     @scala.inline
     def transformOrigin(value: js.Any): this.type = set("transformOrigin", value.asInstanceOf[js.Any])
   }

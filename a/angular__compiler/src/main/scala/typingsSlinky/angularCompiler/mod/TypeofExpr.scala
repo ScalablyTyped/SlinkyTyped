@@ -7,11 +7,16 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "TypeofExpr")
 @js.native
 class TypeofExpr protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.TypeofExpr {
+  extends typingsSlinky.angularCompiler.compilerMod.TypeofExpr {
   def this(expr: typingsSlinky.angularCompiler.outputAstMod.Expression) = this()
   def this(
     expr: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type
+  ) = this()
+  def this(
+    expr: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     expr: typingsSlinky.angularCompiler.outputAstMod.Expression,

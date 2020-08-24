@@ -3,7 +3,7 @@ package typingsSlinky.puppeteer.mod
 import org.scalajs.dom.raw.Element
 import typingsSlinky.node.Buffer
 import typingsSlinky.puppeteer.anon.Delay
-import typingsSlinky.puppeteer.anon.`0`
+import typingsSlinky.puppeteer.anon.DelayNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -103,7 +103,7 @@ trait ElementHandle[E /* <: Element */]
     * @param options The typing options.
     */
   def `type`(text: String): js.Promise[Unit] = js.native
-  def `type`(text: String, options: `0`): js.Promise[Unit] = js.native
+  def `type`(text: String, options: DelayNumber): js.Promise[Unit] = js.native
   /**
     * This method expects elementHandle to point to an input element.
     * @param filePaths Sets the value of the file input these paths. If some of the filePaths are relative paths, then they are resolved relative to current working directory.

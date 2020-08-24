@@ -17,35 +17,6 @@ object Common extends js.Object {
       * @param bb Blue value
       **/
     def this(rr: Double, gg: Double, bb: Double) = this()
-    /**
-      * Blue
-      **/
-    /* CompleteClass */
-    override var b: Double = js.native
-    /**
-      * RGB color as hex.
-      * @type uint
-      **/
-    /* CompleteClass */
-    override var color: Double = js.native
-    /**
-      * Green
-      **/
-    /* CompleteClass */
-    override var g: Double = js.native
-    /**
-      * Red
-      **/
-    /* CompleteClass */
-    override var r: Double = js.native
-    /**
-      * Sets the Color to new RGB values.
-      * @param rr Red value
-      * @param gg Green value
-      * @param bb Blue value
-      **/
-    /* CompleteClass */
-    override def Set(rr: Double, gg: Double, bb: Double): Unit = js.native
   }
   
   @js.native
@@ -59,90 +30,7 @@ object Common extends js.Object {
       * Empty constructor
       **/
     class b2Mat22 ()
-      extends typingsSlinky.box2d.Box2D.Common.Math.b2Mat22 {
-      /**
-        * Column 1
-        **/
-      /* CompleteClass */
-      override var col1: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Column 2
-        **/
-      /* CompleteClass */
-      override var col2: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Sets all internal matrix values to absolute values.
-        **/
-      /* CompleteClass */
-      override def Abs(): Unit = js.native
-      /**
-        * Adds the two 2x2 matricies together and stores the result in this matrix.
-        * @param m 2x2 matrix to add.
-        **/
-      /* CompleteClass */
-      override def AddM(m: typingsSlinky.box2d.Box2D.Common.Math.b2Mat22): Unit = js.native
-      /**
-        * Creates a copy of the matrix.
-        * @return Copy of this 2x2 matrix.
-        **/
-      /* CompleteClass */
-      override def Copy(): typingsSlinky.box2d.Box2D.Common.Math.b2Mat22 = js.native
-      /**
-        * Gets the rotation matrix angle.
-        * R(theta) = [ cos(theta)  -sin(theta) ]
-        *            [ sin(theta)   cos(theta) ]
-        * @return The rotation matrix angle (theta).
-        **/
-      /* CompleteClass */
-      override def GetAngle(): Double = js.native
-      /**
-        * Compute the inverse of this matrix, such that inv(A) A = identity.
-        * @param out Inverse matrix.
-        * @return Inverse matrix.
-        **/
-      /* CompleteClass */
-      override def GetInverse(out: typingsSlinky.box2d.Box2D.Common.Math.b2Mat22): typingsSlinky.box2d.Box2D.Common.Math.b2Mat22 = js.native
-      /**
-        * Sets the 2x2 rotation matrix from the given angle.
-        * R(theta) = [ cos(theta)  -sin(theta) ]
-        *            [ sin(theta)   cos(theta) ]
-        * @param angle Matrix angle (theta).
-        **/
-      /* CompleteClass */
-      override def Set(angle: Double): Unit = js.native
-      /**
-        * Sets the 2x2 matrix to identity.
-        **/
-      /* CompleteClass */
-      override def SetIdentity(): Unit = js.native
-      /**
-        * Sets the 2x2 matrix from a 2x2 matrix.
-        * @param m 2x2 matrix values.
-        **/
-      /* CompleteClass */
-      override def SetM(m: typingsSlinky.box2d.Box2D.Common.Math.b2Mat22): Unit = js.native
-      /**
-        * Sets the 2x2 matrix from 2 column vectors.
-        * @param c1 Column 1 vector.
-        * @param c2 Column 2 vector.
-        **/
-      /* CompleteClass */
-      override def SetVV(c1: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2, c2: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2): Unit = js.native
-      /**
-        * Sets the 2x2 matrix to all zeros.
-        **/
-      /* CompleteClass */
-      override def SetZero(): Unit = js.native
-      /**
-        * TODO, has something to do with the determinant
-        * @param out Solved vector
-        * @param bX
-        * @param bY
-        * @return Solved vector
-        **/
-      /* CompleteClass */
-      override def Solve(out: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2, bX: Double, bY: Double): typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-    }
+      extends typingsSlinky.box2d.Box2D.Common.Math.b2Mat22
     
     @js.native
     class b2Mat33 protected ()
@@ -158,80 +46,6 @@ object Common extends js.Object {
         c2: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3,
         c3: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3
       ) = this()
-      /**
-        * Column 1
-        **/
-      /* CompleteClass */
-      override var col1: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3 = js.native
-      /**
-        * Column 2
-        **/
-      /* CompleteClass */
-      override var col2: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3 = js.native
-      /**
-        * Column 3
-        **/
-      /* CompleteClass */
-      override var col3: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3 = js.native
-      /**
-        * Adds the two 3x3 matricies together and stores the result in this matrix.
-        * @param m 3x3 matrix to add.
-        **/
-      /* CompleteClass */
-      override def AddM(m: typingsSlinky.box2d.Box2D.Common.Math.b2Mat33): Unit = js.native
-      /**
-        * Creates a copy of the matrix.
-        * @return Copy of this 3x3 matrix.
-        **/
-      /* CompleteClass */
-      override def Copy(): typingsSlinky.box2d.Box2D.Common.Math.b2Mat33 = js.native
-      /**
-        * Sets the 3x3 matrix to identity.
-        **/
-      /* CompleteClass */
-      override def SetIdentity(): Unit = js.native
-      /**
-        * Sets the 3x3 matrix from a 3x3 matrix.
-        * @param m 3x3 matrix values.
-        **/
-      /* CompleteClass */
-      override def SetM(m: typingsSlinky.box2d.Box2D.Common.Math.b2Mat33): Unit = js.native
-      /**
-        * Sets the 3x3 matrix from 3 column vectors.
-        * @param c1 Column 1 vector.
-        * @param c2 Column 2 vector.
-        * @param c3 Column 2 vector.
-        **/
-      /* CompleteClass */
-      override def SetVVV(
-        c1: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3,
-        c2: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3,
-        c3: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3
-      ): Unit = js.native
-      /**
-        * Sets the 3x3 matrix to all zeros.
-        **/
-      /* CompleteClass */
-      override def SetZero(): Unit = js.native
-      /**
-        * TODO, has something to do with the determinant
-        * @param out Solved vector
-        * @param bX
-        * @param bY
-        * @return Solved vector
-        **/
-      /* CompleteClass */
-      override def Solve22(out: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2, bX: Double, bY: Double): typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * TODO, has something to do with the determinant
-        * @param out Solved vector
-        * @param bX
-        * @param bY
-        * @param bZ
-        * @return Solved vector
-        **/
-      /* CompleteClass */
-      override def Solve33(out: typingsSlinky.box2d.Box2D.Common.Math.b2Vec3, bX: Double, bY: Double, bZ: Double): typingsSlinky.box2d.Box2D.Common.Math.b2Vec3 = js.native
     }
     
     @js.native
@@ -240,62 +54,7 @@ object Common extends js.Object {
     
     @js.native
     class b2Sweep ()
-      extends typingsSlinky.box2d.Box2D.Common.Math.b2Sweep {
-      /**
-        * World angle.
-        **/
-      /* CompleteClass */
-      override var a: Double = js.native
-      /**
-        * World angle.
-        **/
-      /* CompleteClass */
-      override var a0: Double = js.native
-      /**
-        * Center world position.
-        **/
-      /* CompleteClass */
-      override var c: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Center world position.
-        **/
-      /* CompleteClass */
-      override var c0: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Local center of mass position.
-        **/
-      /* CompleteClass */
-      override var localCenter: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Time interval = [t0,1], where t0 is in [0,1].
-        **/
-      /* CompleteClass */
-      override var t0: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Advance the sweep forward, yielding a new initial state.
-        * @t The new initial time.
-        **/
-      /* CompleteClass */
-      override def Advance(t: Double): Unit = js.native
-      /**
-        * Creates a copy of the sweep.
-        **/
-      /* CompleteClass */
-      override def Copy(): typingsSlinky.box2d.Box2D.Common.Math.b2Sweep = js.native
-      /**
-        * Get the interpolated transform at a specific time.
-        * @param xf Transform at specified time, this is an out parameter.
-        * @param alpha Is a factor in [0,1], where 0 indicates t0.
-        **/
-      /* CompleteClass */
-      override def GetTransform(xf: typingsSlinky.box2d.Box2D.Common.Math.b2Transform, alpha: Double): Unit = js.native
-      /**
-        * Sets the sweep from a sweep.
-        * @param other Sweep values to copy from.
-        **/
-      /* CompleteClass */
-      override def Set(other: typingsSlinky.box2d.Box2D.Common.Math.b2Sweep): Unit = js.native
-    }
+      extends typingsSlinky.box2d.Box2D.Common.Math.b2Sweep
     
     @js.native
     class b2Transform protected ()
@@ -309,43 +68,6 @@ object Common extends js.Object {
         pos: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2,
         r: typingsSlinky.box2d.Box2D.Common.Math.b2Mat22
       ) = this()
-      /**
-        * Transform rotation.
-        **/
-      /* CompleteClass */
-      override var R: typingsSlinky.box2d.Box2D.Common.Math.b2Mat22 = js.native
-      /**
-        * Transform position.
-        **/
-      /* CompleteClass */
-      override var position: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 = js.native
-      /**
-        * Calculate the angle that the rotation matrix represents.
-        * @return Rotation matrix angle.
-        **/
-      /* CompleteClass */
-      override def GetAngle(): Double = js.native
-      /**
-        * Initialize using a position vector and rotation matrix.
-        * @param pos Position
-        * @param r Rotation
-        **/
-      /* CompleteClass */
-      override def Initialize(
-        pos: typingsSlinky.box2d.Box2D.Common.Math.b2Vec2,
-        r: typingsSlinky.box2d.Box2D.Common.Math.b2Mat22
-      ): Unit = js.native
-      /**
-        * Sets the transfrom from a transfrom.
-        * @param x Transform to copy values from.
-        **/
-      /* CompleteClass */
-      override def Set(x: typingsSlinky.box2d.Box2D.Common.Math.b2Transform): Unit = js.native
-      /**
-        * Set this to the identity transform.
-        **/
-      /* CompleteClass */
-      override def SetIdentity(): Unit = js.native
     }
     
     @js.native
@@ -357,6 +79,7 @@ object Common extends js.Object {
     class b2Vec2 ()
       extends typingsSlinky.box2d.Box2D.Common.Math.b2Vec2 {
       def this(x: Double) = this()
+      def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
       def this(x: Double, y: Double) = this()
     }
     
@@ -370,7 +93,11 @@ object Common extends js.Object {
     class b2Vec3 ()
       extends typingsSlinky.box2d.Box2D.Common.Math.b2Vec3 {
       def this(x: Double) = this()
+      def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
       def this(x: Double, y: Double) = this()
+      def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+      def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+      def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
       def this(x: Double, y: Double, z: Double) = this()
     }
     

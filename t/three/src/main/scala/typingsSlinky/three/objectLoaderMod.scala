@@ -21,7 +21,30 @@ object objectLoaderMod extends js.Object {
   class ObjectLoader () extends Loader {
     def this(manager: LoadingManager) = this()
     def load(url: String): Unit = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ js.Error | ErrorEvent, Unit]
+    ): Unit = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function1[/* event */ ProgressEvent, Unit]
+    ): Unit = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function1[/* event */ ProgressEvent, Unit],
+      onError: js.Function1[/* event */ js.Error | ErrorEvent, Unit]
+    ): Unit = js.native
     def load(url: String, onLoad: js.Function1[/* object */ Object3D, Unit]): Unit = js.native
+    def load(
+      url: String,
+      onLoad: js.Function1[/* object */ Object3D, Unit],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ js.Error | ErrorEvent, Unit]
+    ): Unit = js.native
     def load(
       url: String,
       onLoad: js.Function1[/* object */ Object3D, Unit],

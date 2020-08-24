@@ -36,17 +36,16 @@ object WebRequestHeadersDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRequestHeaders(value: js.Array[HttpHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(js.undefined)
-        ret
-    }
+    def setRequestHeadersVarargs(value: HttpHeader*): Self = this.set("requestHeaders", js.Array(value :_*))
+    @scala.inline
+    def setRequestHeaders(value: js.Array[HttpHeader]): Self = this.set("requestHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequestHeaders: Self = this.set("requestHeaders", js.undefined)
   }
   
 }

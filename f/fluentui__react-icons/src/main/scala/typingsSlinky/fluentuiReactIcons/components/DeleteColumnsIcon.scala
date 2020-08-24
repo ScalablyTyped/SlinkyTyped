@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DeleteColumnsIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DeleteColumnsIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DeleteColumnsIcon")
   @js.native
   object component extends js.Object
   

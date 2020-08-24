@@ -1,8 +1,6 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.M.ModalOptions
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialModalOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,34 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "Modal")
 @js.native
 class Modal ()
-  extends typingsSlinky.materializeCss.M.Modal {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /**
-    * ID of the modal element
-    */
-  /* CompleteClass */
-  override var id: String = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: ModalOptions = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
-}
+  extends typingsSlinky.materializeCss.M.Modal
 
 /* static members */
 @JSImport("materialize-css", "Modal")
@@ -51,8 +22,13 @@ object Modal extends js.Object {
   /**
     * Init Modals
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.Modal] = js.native
-  def init(els: MElements, options: PartialModalOptions): js.Array[typingsSlinky.materializeCss.M.Modal] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.Modal] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: PartialModalOptions
+  ): js.Array[typingsSlinky.materializeCss.M.Modal] = js.native
   /**
     * Init Modal
     */

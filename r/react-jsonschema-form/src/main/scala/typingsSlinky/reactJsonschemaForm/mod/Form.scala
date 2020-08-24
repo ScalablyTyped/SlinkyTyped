@@ -17,19 +17,28 @@ trait Form[T]
   def onChange(formData: T, newErrorSchema: ErrorSchema): Unit = js.native
   def submit(): Unit = js.native
   def validate(formData: T): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
-  def validate(formData: T, schema: JSONSchema6): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
   def validate(
     formData: T,
-    schema: JSONSchema6,
-    additionalMetaSchemas: js.UndefOr[scala.Nothing],
-    customFormats: StringDictionary[String | js.RegExp | (js.Function1[/* data */ String, Boolean])]
+    schema: js.UndefOr[scala.Nothing],
+    additionalMetaSchemas: js.UndefOr[js.Array[js.Object]]
   ): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
-  def validate(formData: T, schema: JSONSchema6, additionalMetaSchemas: js.Array[js.Object]): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
+  def validate(
+    formData: T,
+    schema: js.UndefOr[scala.Nothing],
+    additionalMetaSchemas: js.UndefOr[js.Array[js.Object]],
+    customFormats: js.UndefOr[
+      StringDictionary[(js.Function1[/* data */ String, Boolean]) | js.RegExp | String]
+    ]
+  ): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
+  def validate(formData: T, schema: JSONSchema6): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
+  def validate(formData: T, schema: JSONSchema6, additionalMetaSchemas: js.UndefOr[js.Array[js.Object]]): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
   def validate(
     formData: T,
     schema: JSONSchema6,
-    additionalMetaSchemas: js.Array[js.Object],
-    customFormats: StringDictionary[String | js.RegExp | (js.Function1[/* data */ String, Boolean])]
+    additionalMetaSchemas: js.UndefOr[js.Array[js.Object]],
+    customFormats: js.UndefOr[
+      StringDictionary[(js.Function1[/* data */ String, Boolean]) | js.RegExp | String]
+    ]
   ): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
 }
 

@@ -31,7 +31,30 @@ trait BoringLayout_
   /* InferMemberOverrides */
   override def draw(canvas: Canvas): Unit = js.native
   /* InferMemberOverrides */
+  override def draw(
+    canvas: Canvas,
+    highlight: js.UndefOr[scala.Nothing],
+    highlightPaint: js.UndefOr[scala.Nothing],
+    cursorOffsetVertical: Double
+  ): Unit = js.native
+  /* InferMemberOverrides */
+  override def draw(canvas: Canvas, highlight: js.UndefOr[scala.Nothing], highlightPaint: Paint): Unit = js.native
+  /* InferMemberOverrides */
+  override def draw(
+    canvas: Canvas,
+    highlight: js.UndefOr[scala.Nothing],
+    highlightPaint: Paint,
+    cursorOffsetVertical: Double
+  ): Unit = js.native
+  /* InferMemberOverrides */
   override def draw(canvas: Canvas, highlight: Path): Unit = js.native
+  /* InferMemberOverrides */
+  override def draw(
+    canvas: Canvas,
+    highlight: Path,
+    highlightPaint: js.UndefOr[scala.Nothing],
+    cursorOffsetVertical: Double
+  ): Unit = js.native
   /* InferMemberOverrides */
   override def draw(canvas: Canvas, highlight: Path, highlightPaint: Paint): Unit = js.native
   /* InferMemberOverrides */
@@ -114,10 +137,6 @@ trait BoringLayout_
   /* InferMemberOverrides */
   override def getLineTop(line: Double): Double = js.native
   /* InferMemberOverrides */
-  /* private */ override def getLineVisibleEnd(line: js.Any): js.Any = js.native
-  /* InferMemberOverrides */
-  /* private */ override def getLineVisibleEnd(line: js.Any, start: js.Any): js.Any = js.native
-  /* InferMemberOverrides */
   /* private */ override def getLineVisibleEnd(line: js.Any, start: js.Any, end: js.Any): js.Any = js.native
   /* InferMemberOverrides */
   override def getLineWidth(line: Double): Double = js.native
@@ -195,6 +214,18 @@ trait BoringLayout_
     spacingadd: Double,
     metrics: Metrics,
     includepad: Boolean
+  ): BoringLayout = js.native
+  def replaceOrMake(
+    source: String,
+    paint: TextPaint,
+    outerwidth: Double,
+    align: Alignment,
+    spacingmult: Double,
+    spacingadd: Double,
+    metrics: Metrics,
+    includepad: Boolean,
+    ellipsize: js.UndefOr[scala.Nothing],
+    ellipsizedWidth: Double
   ): BoringLayout = js.native
   def replaceOrMake(
     source: String,

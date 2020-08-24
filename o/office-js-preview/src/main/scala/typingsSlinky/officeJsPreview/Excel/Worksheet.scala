@@ -99,6 +99,14 @@ trait Worksheet extends ClientObject {
   var name: String = js.native
   /**
     *
+    * Returns a collection of sheet views that are present in the worksheet.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  val namedSheetViews: NamedSheetViewCollection = js.native
+  /**
+    *
     * Collection of names scoped to the current worksheet.
     *
     * [Api set: ExcelApi 1.4]
@@ -331,6 +339,7 @@ trait Worksheet extends ClientObject {
     * @returns The newly created worksheet.
     */
   def copy(): Worksheet = js.native
+  def copy(positionType: js.UndefOr[scala.Nothing], relativeTo: Worksheet): Worksheet = js.native
   def copy(positionType: WorksheetPositionType): Worksheet = js.native
   def copy(positionType: WorksheetPositionType, relativeTo: Worksheet): Worksheet = js.native
   @JSName("copy")

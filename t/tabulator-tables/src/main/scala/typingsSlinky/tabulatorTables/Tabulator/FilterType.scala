@@ -14,6 +14,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tabulatorTables.tabulatorTablesStrings.GreaterthansignEqualssign
   - typingsSlinky.tabulatorTables.tabulatorTablesStrings.in
   - typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex
+  - typingsSlinky.tabulatorTables.tabulatorTablesStrings.starts
+  - typingsSlinky.tabulatorTables.tabulatorTablesStrings.ends
 */
 trait FilterType extends js.Object
 
@@ -31,10 +33,14 @@ object FilterType {
   @scala.inline
   def LessthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign]
   @scala.inline
+  def ends: typingsSlinky.tabulatorTables.tabulatorTablesStrings.ends = "ends".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.ends]
+  @scala.inline
   def in: typingsSlinky.tabulatorTables.tabulatorTablesStrings.in = "in".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.in]
   @scala.inline
   def like: typingsSlinky.tabulatorTables.tabulatorTablesStrings.like = "like".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.like]
   @scala.inline
   def regex: typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex = "regex".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex]
+  @scala.inline
+  def starts: typingsSlinky.tabulatorTables.tabulatorTablesStrings.starts = "starts".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.starts]
 }
 

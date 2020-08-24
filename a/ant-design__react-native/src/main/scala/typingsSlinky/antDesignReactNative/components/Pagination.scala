@@ -7,7 +7,6 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.button
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.number
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.pointer
 import typingsSlinky.antDesignReactNative.paginationMod.PaginationNativeProps
-import typingsSlinky.antDesignReactNative.paginationMod.default
 import typingsSlinky.antDesignReactNative.paginationStyleMod.PaginationStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -17,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pagination {
-  @JSImport("@ant-design/react-native/lib/pagination", JSImport.Default)
+  @JSImport("@ant-design/react-native", "Pagination")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.Pagination] {
     @scala.inline
     def indicatorStyle(value: StyleProp[ViewStyle]): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
     @scala.inline

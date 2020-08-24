@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.reactCsv.commonPropTypesMod.AsyncClickHandler
 import typingsSlinky.reactCsv.commonPropTypesMod.Headers
+import typingsSlinky.reactCsv.commonPropTypesMod.LabelKeyObject
 import typingsSlinky.reactCsv.commonPropTypesMod.SyncClickHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +22,8 @@ class SharedBuilder_DownloadPropTypes1077784257[R <: js.Object] (val args: js.Ar
   def enclosingCharacter(value: String): this.type = set("enclosingCharacter", value.asInstanceOf[js.Any])
   @scala.inline
   def filename(value: String): this.type = set("filename", value.asInstanceOf[js.Any])
+  @scala.inline
+  def headersVarargs(value: (LabelKeyObject | String)*): this.type = set("headers", js.Array(value :_*))
   @scala.inline
   def headers(value: Headers): this.type = set("headers", value.asInstanceOf[js.Any])
   @scala.inline

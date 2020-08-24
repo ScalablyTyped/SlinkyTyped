@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -80,13 +79,14 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Alert {
-  @JSImport("@material-ui/lab/Alert/Alert", JSImport.Default)
+  @JSImport("@material-ui/lab", "Alert")
   @js.native
   object component extends js.Object
   
@@ -101,7 +101,7 @@ object Alert {
     @scala.inline
     def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -217,7 +217,7 @@ object Alert {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[PaperProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[PaperProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[PaperProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -228,6 +228,8 @@ object Alert {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -241,7 +243,7 @@ object Alert {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any] | `false`): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement | `false`): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconMapping(value: PartialRecordColorReactNo): this.type = set("iconMapping", value.asInstanceOf[js.Any])
     @scala.inline

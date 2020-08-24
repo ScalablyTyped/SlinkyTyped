@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.nivoLine.nivoLineStrings.markers
   - typingsSlinky.nivoLine.nivoLineStrings.axes
   - typingsSlinky.nivoLine.nivoLineStrings.areas
+  - typingsSlinky.nivoLine.nivoLineStrings.crosshair
   - typingsSlinky.nivoLine.nivoLineStrings.lines
   - typingsSlinky.nivoLine.nivoLineStrings.slices
   - typingsSlinky.nivoLine.nivoLineStrings.points
@@ -22,6 +23,8 @@ object LineLayerType {
   def areas: typingsSlinky.nivoLine.nivoLineStrings.areas = "areas".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.areas]
   @scala.inline
   def axes: typingsSlinky.nivoLine.nivoLineStrings.axes = "axes".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.axes]
+  @scala.inline
+  def crosshair: typingsSlinky.nivoLine.nivoLineStrings.crosshair = "crosshair".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.crosshair]
   @scala.inline
   def grid: typingsSlinky.nivoLine.nivoLineStrings.grid = "grid".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.grid]
   @scala.inline

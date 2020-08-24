@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "strip-color"
-version := "0.1-dt-20181231Z-4bd87a"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20181231Z-08ecc9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

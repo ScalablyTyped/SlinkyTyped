@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "bootstrap-touchspin"
-version := "0.0-unknown-dt-20200515Z-2c292e"
-scalaVersion := "2.13.2"
+version := "0.0-unknown-dt-20200515Z-65c4f3"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

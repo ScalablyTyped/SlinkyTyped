@@ -28,23 +28,16 @@ object SpanWatcher {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnSpanAdded(value: (Spannable, js.Any, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpanAdded")(js.Any.fromFunction4(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnSpanChanged(value: (Spannable, js.Any, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpanChanged")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setOnSpanAdded(value: (Spannable, js.Any, Double, Double) => Unit): Self = this.set("onSpanAdded", js.Any.fromFunction4(value))
     @scala.inline
-    def withOnSpanRemoved(value: (Spannable, js.Any, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpanRemoved")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setOnSpanChanged(value: (Spannable, js.Any, Double, Double, Double, Double) => Unit): Self = this.set("onSpanChanged", js.Any.fromFunction6(value))
+    @scala.inline
+    def setOnSpanRemoved(value: (Spannable, js.Any, Double, Double) => Unit): Self = this.set("onSpanRemoved", js.Any.fromFunction4(value))
   }
   
 }

@@ -21,5 +21,6 @@ object ^ extends js.Object {
   var System: typingsSlinky.openfin.systemSystemMod.default = js.native
   var View: typingsSlinky.openfin.viewViewMod.default = js.native
   var Window: typingsSlinky.openfin.windowWindowMod.default = js.native
+  var me: (typingsSlinky.openfin.viewViewMod.View | org.scalajs.dom.raw.Window | typingsSlinky.openfin.v2MainMod.Frame | js.Object) with (/* import warning: importer.ImportType#apply Failed type conversion: openfin.openfin/_v2/transport/transport.default['me'] */ js.Any) = js.native
 }
 

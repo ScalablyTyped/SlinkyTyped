@@ -1,6 +1,6 @@
 package typingsSlinky.terminalKit.screenBufferHDMod
 
-import typingsSlinky.terminalKit.anon.ShrinkWidth
+import typingsSlinky.terminalKit.anon.`0`
 import typingsSlinky.terminalKit.screenBufferMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object ^ extends js.Object {
   ): Unit = js.native
   def loadImage(
     url: String,
-    options: ShrinkWidth,
+    options: `0`,
     callback: js.Function2[/* error */ js.Any, /* image */ ScreenBufferHD, Unit]
   ): Unit = js.native
 }

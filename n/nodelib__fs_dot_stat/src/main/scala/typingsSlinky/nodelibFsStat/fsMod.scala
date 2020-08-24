@@ -25,7 +25,7 @@ object fsMod extends js.Object {
   }
   
   val FILE_SYSTEM_ADAPTER: FileSystemAdapter = js.native
-  def getFileSystemAdapter(): FileSystemAdapter = js.native
-  def getFileSystemAdapter(fsMethods: PartialFileSystemAdapter): FileSystemAdapter = js.native
+  def createFileSystemAdapter(): FileSystemAdapter = js.native
+  def createFileSystemAdapter(fsMethods: PartialFileSystemAdapter): FileSystemAdapter = js.native
 }
 

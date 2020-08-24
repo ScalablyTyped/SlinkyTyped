@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GrantedRequest
   extends Request[ParamsDictionary, js.Any, js.Any, Query] {
-  var kauth: typingsSlinky.keycloakConnect.anon.Grant = js.native
+  var kauth: js.UndefOr[typingsSlinky.keycloakConnect.anon.Grant] = js.native
 }
 

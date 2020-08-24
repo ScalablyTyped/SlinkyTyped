@@ -6,7 +6,11 @@ import scala.scalajs.js.annotation._
 
 @JSImport("kdbxweb", "Credentials")
 @js.native
-class Credentials protected () extends js.Object {
+class Credentials () extends js.Object {
+  def this(password: ProtectedValue) = this()
+  def this(password: Null, keyFile: String) = this()
+  def this(password: Null, keyFile: js.typedarray.ArrayBuffer) = this()
+  def this(password: Null, keyFile: js.typedarray.Uint8Array) = this()
   def this(password: ProtectedValue, keyFile: String) = this()
   def this(password: ProtectedValue, keyFile: js.typedarray.ArrayBuffer) = this()
   def this(password: ProtectedValue, keyFile: js.typedarray.Uint8Array) = this()

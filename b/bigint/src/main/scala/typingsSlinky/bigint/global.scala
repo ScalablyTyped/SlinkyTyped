@@ -54,6 +54,7 @@ object global extends js.Object {
     @JSName("halve_")
     def halve(x: typingsSlinky.bigint.BigInt.BigInt): Unit = js.native
     def int2bigInt(t: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
+    def int2bigInt(t: Double, n: js.UndefOr[scala.Nothing], m: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def int2bigInt(t: Double, n: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def int2bigInt(t: Double, n: Double, m: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def inverseMod(x: typingsSlinky.bigint.BigInt.BigInt, n: typingsSlinky.bigint.BigInt.BigInt): typingsSlinky.bigint.BigInt.BigInt = js.native
@@ -119,9 +120,11 @@ object global extends js.Object {
     @JSName("squareMod_")
     def squareMod(x: typingsSlinky.bigint.BigInt.BigInt, n: typingsSlinky.bigint.BigInt.BigInt): Unit = js.native
     def str2bigInt(s: String, b: String): typingsSlinky.bigint.BigInt.BigInt = js.native
+    def str2bigInt(s: String, b: String, n: js.UndefOr[scala.Nothing], m: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def str2bigInt(s: String, b: String, n: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def str2bigInt(s: String, b: String, n: Double, m: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def str2bigInt(s: String, b: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
+    def str2bigInt(s: String, b: Double, n: js.UndefOr[scala.Nothing], m: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def str2bigInt(s: String, b: Double, n: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def str2bigInt(s: String, b: Double, n: Double, m: Double): typingsSlinky.bigint.BigInt.BigInt = js.native
     def sub(x: typingsSlinky.bigint.BigInt.BigInt, y: typingsSlinky.bigint.BigInt.BigInt): typingsSlinky.bigint.BigInt.BigInt = js.native

@@ -2,7 +2,6 @@ package typingsSlinky.reactApollo
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.apolloClient.mod.default
 import typingsSlinky.apolloReactCommon.apolloConsumerMod.ApolloConsumerProps
@@ -40,8 +39,8 @@ object mod extends js.Object {
   val ApolloConsumer: ReactComponentClass[ApolloConsumerProps] = js.native
   val ApolloProvider: ReactComponentClass[ApolloProviderProps[js.Any]] = js.native
   def getApolloContext(): Context[ApolloContextValue] = js.native
-  def getDataFromTree(tree: TagMod[Any]): js.Promise[String] = js.native
-  def getDataFromTree(tree: TagMod[Any], context: StringDictionary[js.Any]): js.Promise[String] = js.native
+  def getDataFromTree(tree: ReactElement): js.Promise[String] = js.native
+  def getDataFromTree(tree: ReactElement, context: StringDictionary[js.Any]): js.Promise[String] = js.native
   def getMarkupFromTree(hasTreeContextRenderFunction: GetMarkupFromTreeOptions): js.Promise[String] = js.native
   def graphql[TProps /* <: TGraphQLVariables | js.Object */, TData, TGraphQLVariables, TChildProps](document: DocumentNode): js.Function1[
     /* WrappedComponent */ ReactComponentClass[TProps with TChildProps], 

@@ -23,6 +23,8 @@ object Checkbox {
     @scala.inline
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: String): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])

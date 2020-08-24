@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimelineProgressIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TimelineProgressIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TimelineProgressIcon")
   @js.native
   object component extends js.Object
   

@@ -37,7 +37,6 @@ object paramsMod extends js.Object {
   }
   
   @js.native
-  /** @internalapi */
   class ParamTypes ()
     extends typingsSlinky.uirouterCore.paramTypesMod.ParamTypes
   
@@ -47,7 +46,6 @@ object paramsMod extends js.Object {
     def this(params: Obj) = this()
   }
   
-  /** @internalapi */
   @js.native
   object DefType extends js.Object {
     /* 2 */ val CONFIG: typingsSlinky.uirouterCore.paramMod.DefType.CONFIG with Double = js.native
@@ -72,6 +70,11 @@ object paramsMod extends js.Object {
       * @returns any Param objects whose values were different between values1 and values2
       */
     def changed(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param]): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
+    def changed(
+      params: js.Array[typingsSlinky.uirouterCore.paramMod.Param],
+      values1: js.UndefOr[scala.Nothing],
+      values2: RawParams
+    ): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
     def changed(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param], values1: RawParams): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
     def changed(
       params: js.Array[typingsSlinky.uirouterCore.paramMod.Param],
@@ -88,6 +91,11 @@ object paramsMod extends js.Object {
       * @returns true if the param values in values1 and values2 are equal
       */
     def equals(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param]): Boolean = js.native
+    def equals(
+      params: js.Array[typingsSlinky.uirouterCore.paramMod.Param],
+      values1: js.UndefOr[scala.Nothing],
+      values2: js.Object
+    ): Boolean = js.native
     def equals(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param], values1: js.Object): Boolean = js.native
     def equals(
       params: js.Array[typingsSlinky.uirouterCore.paramMod.Param],

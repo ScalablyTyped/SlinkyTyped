@@ -14,11 +14,11 @@ object ThemeProvider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ThemeProviderProps[DefaultTheme]): Default[tag.type, typingsSlinky.theming.mod.ThemeProvider] = new Default[tag.type, typingsSlinky.theming.mod.ThemeProvider](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ThemeProviderProps[DefaultTheme]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(theme: NonNullable[DefaultTheme] | (js.Function1[DefaultTheme, NonNullable[DefaultTheme]])): Default[tag.type, typingsSlinky.theming.mod.ThemeProvider] = {
+  def apply(theme: NonNullable[DefaultTheme] | (js.Function1[DefaultTheme, NonNullable[DefaultTheme]])): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.theming.mod.ThemeProvider](js.Array(this.component, __props.asInstanceOf[ThemeProviderProps[DefaultTheme]]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ThemeProviderProps[DefaultTheme]]))
   }
 }
 

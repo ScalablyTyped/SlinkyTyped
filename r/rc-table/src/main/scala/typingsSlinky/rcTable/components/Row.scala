@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Row {
-  @JSImport("rc-table/lib/Footer/Row", JSImport.Default)
+  @JSImport("rc-table", "Summary.Row")
   @js.native
   object component extends js.Object
   

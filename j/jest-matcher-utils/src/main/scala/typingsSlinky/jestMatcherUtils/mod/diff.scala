@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object diff extends js.Object {
   def apply(a: js.Any, b: js.Any): String | Null = js.native
-  def apply(a: js.Any, b: js.Any, options: typingsSlinky.jestDiff.mod.DiffOptions): String | Null = js.native
+  def apply(a: js.Any, b: js.Any, options: typingsSlinky.jestDiff.typesMod.DiffOptions): String | Null = js.native
 }
 

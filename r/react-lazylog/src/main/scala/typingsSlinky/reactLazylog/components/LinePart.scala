@@ -1,6 +1,6 @@
 package typingsSlinky.reactLazylog.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -21,7 +21,7 @@ object LinePart {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def format(value: /* text */ String => TagMod[Any]): this.type = set("format", js.Any.fromFunction1(value))
+    def format(value: /* text */ String => ReactElement): this.type = set("format", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }

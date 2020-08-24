@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TaskManagerIcon {
-  @JSImport("@fluentui/react-icons/lib/components/TaskManagerIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "TaskManagerIcon")
   @js.native
   object component extends js.Object
   

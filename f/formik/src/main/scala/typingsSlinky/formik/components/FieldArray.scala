@@ -1,7 +1,7 @@
 package typingsSlinky.formik.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.formik.fieldArrayMod.FieldArrayConfig
@@ -18,7 +18,9 @@ object FieldArray {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.formik.mod.FieldArray] {
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def children(value: /* props */ FieldArrayRenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[FieldArrayRenderProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
@@ -26,7 +28,7 @@ object FieldArray {
     @scala.inline
     def component(value: String | (ReactComponentClass[FieldArrayRenderProps | Unit])): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def render(value: /* props */ FieldArrayRenderProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: /* props */ FieldArrayRenderProps => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
     @scala.inline
     def validateOnChange(value: Boolean): this.type = set("validateOnChange", value.asInstanceOf[js.Any])
   }

@@ -43,6 +43,7 @@ object WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#loadfile
     */
   def loadFile(fileURL: String): js.Promise[Unit] = js.native
+  def loadFile(fileURL: String, preferredSize: js.UndefOr[scala.Nothing], fullscreen: Boolean): js.Promise[Unit] = js.native
   def loadFile(fileURL: String, preferredSize: typingsSlinky.scriptableIos.Size): js.Promise[Unit] = js.native
   def loadFile(fileURL: String, preferredSize: typingsSlinky.scriptableIos.Size, fullscreen: Boolean): js.Promise[Unit] = js.native
   /**
@@ -54,7 +55,21 @@ object WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#loadhtml
     */
   def loadHTML(html: String): js.Promise[Unit] = js.native
+  def loadHTML(
+    html: String,
+    baseURL: js.UndefOr[scala.Nothing],
+    preferredSize: js.UndefOr[scala.Nothing],
+    fullscreen: Boolean
+  ): js.Promise[Unit] = js.native
+  def loadHTML(html: String, baseURL: js.UndefOr[scala.Nothing], preferredSize: typingsSlinky.scriptableIos.Size): js.Promise[Unit] = js.native
+  def loadHTML(
+    html: String,
+    baseURL: js.UndefOr[scala.Nothing],
+    preferredSize: typingsSlinky.scriptableIos.Size,
+    fullscreen: Boolean
+  ): js.Promise[Unit] = js.native
   def loadHTML(html: String, baseURL: String): js.Promise[Unit] = js.native
+  def loadHTML(html: String, baseURL: String, preferredSize: js.UndefOr[scala.Nothing], fullscreen: Boolean): js.Promise[Unit] = js.native
   def loadHTML(html: String, baseURL: String, preferredSize: typingsSlinky.scriptableIos.Size): js.Promise[Unit] = js.native
   def loadHTML(
     html: String,
@@ -72,6 +87,7 @@ object WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#loadurl
     */
   def loadURL(url: String): js.Promise[Unit] = js.native
+  def loadURL(url: String, preferredSize: js.UndefOr[scala.Nothing], fullscreen: Boolean): js.Promise[Unit] = js.native
   def loadURL(url: String, preferredSize: typingsSlinky.scriptableIos.Size): js.Promise[Unit] = js.native
   def loadURL(url: String, preferredSize: typingsSlinky.scriptableIos.Size, fullscreen: Boolean): js.Promise[Unit] = js.native
 }

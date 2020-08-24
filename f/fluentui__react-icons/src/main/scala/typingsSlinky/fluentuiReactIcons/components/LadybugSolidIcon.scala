@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LadybugSolidIcon {
-  @JSImport("@fluentui/react-icons/lib/components/LadybugSolidIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "LadybugSolidIcon")
   @js.native
   object component extends js.Object
   

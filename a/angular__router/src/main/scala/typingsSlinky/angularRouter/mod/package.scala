@@ -11,8 +11,8 @@ package object mod {
   /**
     * Error handler that is invoked when a navigation error occurs.
     *
-    * If the handler returns a value, the navigation promise is resolved with this value.
-    * If the handler throws an exception, the navigation promise is rejected with
+    * If the handler returns a value, the navigation Promise is resolved with this value.
+    * If the handler throws an exception, the navigation Promise is rejected with
     * the exception.
     *
     * @publicApi
@@ -47,6 +47,6 @@ package object mod {
     /* segments */ js.Array[typingsSlinky.angularRouter.mod.UrlSegment], 
     /* group */ typingsSlinky.angularRouter.mod.UrlSegmentGroup, 
     /* route */ typingsSlinky.angularRouter.mod.Route, 
-    typingsSlinky.angularRouter.mod.UrlMatchResult
+    typingsSlinky.angularRouter.mod.UrlMatchResult | scala.Null
   ]
 }

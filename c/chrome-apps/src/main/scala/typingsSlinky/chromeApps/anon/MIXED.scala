@@ -27,23 +27,16 @@ object MIXED {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMIXED(value: mixed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MIXED")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withNORMAL(value: normal_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NORMAL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIXED(value: mixed): Self = this.set("MIXED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOFF(value: off): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OFF")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNORMAL(value: normal_): Self = this.set("NORMAL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOFF(value: off): Self = this.set("OFF", value.asInstanceOf[js.Any])
   }
   
 }

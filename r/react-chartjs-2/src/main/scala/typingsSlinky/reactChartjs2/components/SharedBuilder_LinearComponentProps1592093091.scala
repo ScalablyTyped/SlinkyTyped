@@ -30,6 +30,8 @@ class SharedBuilder_LinearComponentProps1592093091[R <: js.Object] (val args: js
   @scala.inline
   def options(value: ChartOptions): this.type = set("options", value.asInstanceOf[js.Any])
   @scala.inline
+  def pluginsVarargs(value: js.Object*): this.type = set("plugins", js.Array(value :_*))
+  @scala.inline
   def plugins(value: js.Array[js.Object]): this.type = set("plugins", value.asInstanceOf[js.Any])
   @scala.inline
   def redraw(value: Boolean): this.type = set("redraw", value.asInstanceOf[js.Any])

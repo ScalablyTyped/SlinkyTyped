@@ -13,35 +13,54 @@ import scala.scalajs.js.annotation._
 	- being canceled
 	- there's not enough memory or there are already too many child processes
 	*/
+@js.native
 trait ExecaReturnValue[StdoutErrorType] extends ExecaReturnBase[StdoutErrorType] {
   /**
   		The output of the process with `stdout` and `stderr` interleaved.
+  		This is `undefined` if either:
+  		- the `all` option is `false` (default value)
+  		- `execa.sync()` was used
   		*/
-  var all: StdoutErrorType
+  var all: js.UndefOr[StdoutErrorType] = js.native
   /**
   		Whether the process was canceled.
   		*/
-  var isCanceled: Boolean
+  var isCanceled: Boolean = js.native
 }
 
 object ExecaReturnValue {
   @scala.inline
   def apply[StdoutErrorType](
-    all: StdoutErrorType,
     command: String,
     exitCode: Double,
-    exitCodeName: String,
     failed: Boolean,
     isCanceled: Boolean,
     killed: Boolean,
     stderr: StdoutErrorType,
     stdout: StdoutErrorType,
-    timedOut: Boolean,
-    signal: String = null
+    timedOut: Boolean
   ): ExecaReturnValue[StdoutErrorType] = {
-    val __obj = js.Dynamic.literal(all = all.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any], exitCode = exitCode.asInstanceOf[js.Any], exitCodeName = exitCodeName.asInstanceOf[js.Any], failed = failed.asInstanceOf[js.Any], isCanceled = isCanceled.asInstanceOf[js.Any], killed = killed.asInstanceOf[js.Any], stderr = stderr.asInstanceOf[js.Any], stdout = stdout.asInstanceOf[js.Any], timedOut = timedOut.asInstanceOf[js.Any])
-    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any], exitCode = exitCode.asInstanceOf[js.Any], failed = failed.asInstanceOf[js.Any], isCanceled = isCanceled.asInstanceOf[js.Any], killed = killed.asInstanceOf[js.Any], stderr = stderr.asInstanceOf[js.Any], stdout = stdout.asInstanceOf[js.Any], timedOut = timedOut.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecaReturnValue[StdoutErrorType]]
   }
+  @scala.inline
+  implicit class ExecaReturnValueOps[Self <: ExecaReturnValue[_], StdoutErrorType] (val x: Self with ExecaReturnValue[StdoutErrorType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIsCanceled(value: Boolean): Self = this.set("isCanceled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAll(value: StdoutErrorType): Self = this.set("all", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAll: Self = this.set("all", js.undefined)
+  }
+  
 }
 

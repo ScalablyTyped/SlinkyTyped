@@ -13,11 +13,11 @@ package object mod {
   ]
   type LocationProviderRenderFn = js.Function1[
     /* context */ typingsSlinky.reachRouter.mod.LocationContext, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type MatchRenderFn[TParams] = js.Function1[
     /* props */ typingsSlinky.reachRouter.mod.MatchRenderProps[TParams], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type RouteComponentProps[TParams] = typingsSlinky.std.Partial[TParams] with typingsSlinky.reachRouter.anon.Default

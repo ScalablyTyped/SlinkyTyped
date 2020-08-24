@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MultiSelectIcon {
-  @JSImport("@fluentui/react-icons/lib/components/MultiSelectIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "MultiSelectIcon")
   @js.native
   object component extends js.Object
   

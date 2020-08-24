@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class BorelTanner ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.BorelTanner] {
   def this(mu: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], n: Double) = this()
   def this(mu: Double, n: Double) = this()
 }
 

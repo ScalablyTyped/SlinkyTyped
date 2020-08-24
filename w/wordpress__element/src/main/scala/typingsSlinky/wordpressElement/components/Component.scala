@@ -15,7 +15,7 @@ object Component {
   @scala.inline
   class Builder[P, S, SS] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.wordpressElement.mod.Component[js.Any, js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.wordpressElement.mod.Component[P, S, SS]]
   
   def apply[P, S, SS](p: P): Builder[P, S, SS] = new Builder[P, S, SS](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P, S, SS](companion: Component.type): Builder[P, S, SS] = new Builder[P, S, SS](js.Array(this.component, js.Dictionary.empty))()

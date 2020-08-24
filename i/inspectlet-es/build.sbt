@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "inspectlet-es"
-version := "1.0-dt-20190731Z-a67288"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20190731Z-f4329e"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

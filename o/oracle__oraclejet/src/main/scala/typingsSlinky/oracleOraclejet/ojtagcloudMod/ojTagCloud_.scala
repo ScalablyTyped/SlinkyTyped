@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.HoverBehaviorDelay
 import typingsSlinky.oracleOraclejet.anon.LabelAndValue
-import typingsSlinky.oracleOraclejet.anon.`24`
+import typingsSlinky.oracleOraclejet.anon.`26`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojtagcloudMod.ojTagCloud.ItemContext
@@ -81,7 +81,7 @@ trait ojTagCloud_[K, D] extends dvtBaseComponent[ojTagCloudSettableProperties[K,
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
   var styleDefaults: HoverBehaviorDelay = js.native
-  var tooltip: `24`[K] = js.native
+  var tooltip: `26`[K] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
   var translations_ojTagCloud_ : LabelAndValue = js.native
@@ -223,7 +223,7 @@ trait ojTagCloud_[K, D] extends dvtBaseComponent[ojTagCloudSettableProperties[K,
   @JSName("getProperty")
   def getProperty_styleDefaults(property: styleDefaults): HoverBehaviorDelay = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `24`[K] = js.native
+  def getProperty_tooltip(property: tooltip): `26`[K] = js.native
   @JSName("getProperty")
   def getProperty_touchResponse(property: touchResponse): touchStart | auto = js.native
   def setProperties(properties: ojTagCloudSettablePropertiesLenient[K, D]): Unit = js.native
@@ -257,7 +257,7 @@ trait ojTagCloud_[K, D] extends dvtBaseComponent[ojTagCloudSettableProperties[K,
   @JSName("setProperty")
   def setProperty_styleDefaults(property: styleDefaults, value: HoverBehaviorDelay): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `24`[K]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `26`[K]): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AddFavoriteFillIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AddFavoriteFillIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AddFavoriteFillIcon")
   @js.native
   object component extends js.Object
   

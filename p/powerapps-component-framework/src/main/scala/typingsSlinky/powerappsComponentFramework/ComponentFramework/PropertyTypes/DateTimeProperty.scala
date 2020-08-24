@@ -1,8 +1,6 @@
 package typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyTypes
 
 import typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.FieldPropertyMetadata.DateTimeMetadata
-import typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.FieldPropertyMetadata.Metadata
-import typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.SecurityValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,31 +8,41 @@ import scala.scalajs.js.annotation._
 /**
   * Property Interface for context.parameters.[property_key], when property manifest type starts from DateTime
   */
+@js.native
 trait DateTimeProperty extends Property {
-  var attributes: js.UndefOr[DateTimeMetadata] = js.undefined
+  @JSName("attributes")
+  var attributes_DateTimeProperty: js.UndefOr[DateTimeMetadata] = js.native
   @JSName("raw")
-  var raw_DateTimeProperty: js.Date | Null
+  var raw_DateTimeProperty: js.Date | Null = js.native
 }
 
 object DateTimeProperty {
   @scala.inline
-  def apply(
-    error: Boolean,
-    errorMessage: String,
-    `type`: String,
-    attribute: Metadata = null,
-    attributes: DateTimeMetadata = null,
-    formatted: String = null,
-    raw: js.Date = null,
-    security: SecurityValues = null
-  ): DateTimeProperty = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], errorMessage = errorMessage.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any])
+  def apply(error: Boolean, errorMessage: String, `type`: String): DateTimeProperty = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], errorMessage = errorMessage.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (formatted != null) __obj.updateDynamic("formatted")(formatted.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateTimeProperty]
   }
+  @scala.inline
+  implicit class DateTimePropertyOps[Self <: DateTimeProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAttributes(value: DateTimeMetadata): Self = this.set("attributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAttributes: Self = this.set("attributes", js.undefined)
+    @scala.inline
+    def setRaw(value: js.Date): Self = this.set("raw", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRawNull: Self = this.set("raw", null)
+  }
+  
 }
 

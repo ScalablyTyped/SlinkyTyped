@@ -3,6 +3,7 @@ package typingsSlinky.reactBootstrap.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactBootstrap.mediaBodyMod.MediaBodyProps
 import typingsSlinky.reactBootstrap.mediaBodyMod.^
 import scala.scalajs.js
@@ -23,7 +24,7 @@ object MediaBody {
     @scala.inline
     def componentClassComponentClass(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def componentClass(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    def componentClass(value: ReactType[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MediaBodyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

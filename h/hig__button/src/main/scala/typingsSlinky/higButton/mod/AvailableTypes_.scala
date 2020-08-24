@@ -6,11 +6,11 @@ import scala.scalajs.js.annotation._
 
 /* Inlined @hig/button.@hig/button.Types[keyof @hig/button.@hig/button.Types] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.higButton.higButtonStrings.solid
-  - typingsSlinky.higButton.higButtonStrings.outline
-  - typingsSlinky.higButton.higButtonStrings.secondary
   - typingsSlinky.higButton.higButtonStrings.primary
+  - typingsSlinky.higButton.higButtonStrings.solid
   - typingsSlinky.higButton.higButtonStrings.flat
+  - typingsSlinky.higButton.higButtonStrings.secondary
+  - typingsSlinky.higButton.higButtonStrings.outline
 */
 trait AvailableTypes_ extends js.Object
 

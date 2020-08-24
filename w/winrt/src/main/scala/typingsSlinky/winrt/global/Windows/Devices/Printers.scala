@@ -15,48 +15,23 @@ object Printers extends js.Object {
     
     @js.native
     class PrintNotificationEventDetails ()
-      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintNotificationEventDetails {
-      /* CompleteClass */
-      override var eventData: String = js.native
-      /* CompleteClass */
-      override var printerName: String = js.native
-    }
+      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintNotificationEventDetails
     
     @js.native
     class PrintTaskConfiguration ()
-      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfiguration {
-      /* CompleteClass */
-      override var onsaverequested: js.Any = js.native
-      /* CompleteClass */
-      override var printerExtensionContext: js.Any = js.native
-    }
+      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfiguration
     
     @js.native
     class PrintTaskConfigurationSaveRequest ()
-      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest {
-      /* CompleteClass */
-      override var deadline: js.Date = js.native
-      /* CompleteClass */
-      override def cancel(): Unit = js.native
-      /* CompleteClass */
-      override def getDeferral(): typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral = js.native
-      /* CompleteClass */
-      override def save(printerExtensionContext: js.Any): Unit = js.native
-    }
+      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest
     
     @js.native
     class PrintTaskConfigurationSaveRequestedDeferral ()
-      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral {
-      /* CompleteClass */
-      override def complete(): Unit = js.native
-    }
+      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral
     
     @js.native
     class PrintTaskConfigurationSaveRequestedEventArgs ()
-      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs {
-      /* CompleteClass */
-      override var request: typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest = js.native
-    }
+      extends typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs
     
     /* static members */
     @js.native

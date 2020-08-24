@@ -2,6 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.anon.ReadonlyArrayReactNode
 import typingsSlinky.baseui.phoneInputMod.Country
 import typingsSlinky.baseui.phoneInputMod.CountrySelectDropdownProps
 import scala.scalajs.js
@@ -17,6 +18,8 @@ object CountrySelectDropdown {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def children(value: ReadonlyArrayReactNode): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def country(value: Country): this.type = set("country", value.asInstanceOf[js.Any])
     @scala.inline

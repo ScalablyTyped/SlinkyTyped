@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "setasap"
-version := "2.0-dt-20181107Z-1e8ba1"
-scalaVersion := "2.13.2"
+version := "2.0-dt-20181107Z-9c57a9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

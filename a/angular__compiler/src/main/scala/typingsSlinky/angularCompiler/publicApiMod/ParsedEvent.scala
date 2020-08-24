@@ -13,7 +13,7 @@ class ParsedEvent protected ()
     name: String,
     targetOrPhase: String,
     `type`: ParsedEventType,
-    handler: typingsSlinky.angularCompiler.astMod.AST,
+    handler: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     handlerSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

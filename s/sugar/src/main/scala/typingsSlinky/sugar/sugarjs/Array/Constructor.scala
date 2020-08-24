@@ -18,11 +18,12 @@ trait Constructor
       Chainable[js.Object, typingsSlinky.sugar.Array[js.Object]]
     ]
      with Instantiable2[
-      (/* obj */ ArrayLike[js.Object]) | (/* obj */ Double), 
+      js.UndefOr[(/* obj */ ArrayLike[js.Object]) | (/* obj */ Double)], 
       /* clone */ Boolean, 
       Chainable[js.Object, typingsSlinky.sugar.Array[js.Object]]
     ] {
   def apply[T](): Chainable[T, typingsSlinky.sugar.Array[T]] = js.native
+  def apply[T](obj: js.UndefOr[scala.Nothing], clone: Boolean): Chainable[T, typingsSlinky.sugar.Array[T]] = js.native
   def apply[T](obj: Double): Chainable[T, typingsSlinky.sugar.Array[T]] = js.native
   def apply[T](obj: Double, clone: Boolean): Chainable[T, typingsSlinky.sugar.Array[T]] = js.native
   def apply[T](obj: ArrayLike[T]): Chainable[T, typingsSlinky.sugar.Array[T]] = js.native
@@ -51,6 +52,7 @@ trait Constructor
   def count[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): Double = js.native
   def count[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): Double = js.native
   def create[T](): typingsSlinky.sugar.Array[T] = js.native
+  def create[T](obj: js.UndefOr[scala.Nothing], clone: Boolean): typingsSlinky.sugar.Array[T] = js.native
   def create[T](obj: Double): typingsSlinky.sugar.Array[T] = js.native
   def create[T](obj: Double, clone: Boolean): typingsSlinky.sugar.Array[T] = js.native
   def create[T](obj: ArrayLike[T]): typingsSlinky.sugar.Array[T] = js.native
@@ -59,8 +61,13 @@ trait Constructor
   def every[T](instance: typingsSlinky.sugar.Array[T], search: T, context: js.Any): Boolean = js.native
   def every[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): Boolean = js.native
   def every[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): Boolean = js.native
-  def everyFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def everyFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def everyFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def everyFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def exclude[T](instance: typingsSlinky.sugar.Array[T], search: T): typingsSlinky.sugar.Array[T] = js.native
   def exclude[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): typingsSlinky.sugar.Array[T] = js.native
@@ -68,29 +75,49 @@ trait Constructor
   def filter[T](instance: typingsSlinky.sugar.Array[T], search: T, context: js.Any): typingsSlinky.sugar.Array[T] = js.native
   def filter[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): typingsSlinky.sugar.Array[T] = js.native
   def filter[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): typingsSlinky.sugar.Array[T] = js.native
-  def filterFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def filterFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def filterFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def filterFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def find[T](instance: typingsSlinky.sugar.Array[T], search: T): T = js.native
   def find[T](instance: typingsSlinky.sugar.Array[T], search: T, context: js.Any): T = js.native
   def find[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): T = js.native
   def find[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): T = js.native
-  def findFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def findFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def findFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def findFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def findIndex[T](instance: typingsSlinky.sugar.Array[T], search: T): Double = js.native
   def findIndex[T](instance: typingsSlinky.sugar.Array[T], search: T, context: js.Any): Double = js.native
   def findIndex[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): Double = js.native
   def findIndex[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): Double = js.native
-  def findIndexFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def findIndexFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def findIndexFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def findIndexFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def first[T](instance: typingsSlinky.sugar.Array[T]): T = js.native
   def first[T](instance: typingsSlinky.sugar.Array[T], num: Double): T = js.native
   def flatten[T](instance: typingsSlinky.sugar.Array[T]): typingsSlinky.sugar.Array[T] = js.native
   def flatten[T](instance: typingsSlinky.sugar.Array[T], limit: Double): typingsSlinky.sugar.Array[T] = js.native
-  def forEachFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def forEachFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def forEachFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def forEachFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def from[T](instance: typingsSlinky.sugar.Array[T], index: Double): typingsSlinky.sugar.Array[T] = js.native
   def getOption[T](name: String): T = js.native
@@ -120,6 +147,8 @@ trait Constructor
   def last[T](instance: typingsSlinky.sugar.Array[T]): T = js.native
   def last[T](instance: typingsSlinky.sugar.Array[T], num: Double): T = js.native
   def least[T, U](instance: typingsSlinky.sugar.Array[T]): typingsSlinky.sugar.Array[T] = js.native
+  def least[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: String): typingsSlinky.sugar.Array[T] = js.native
+  def least[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: mapFn[T, U]): typingsSlinky.sugar.Array[T] = js.native
   def least[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean): typingsSlinky.sugar.Array[T] = js.native
   def least[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: String): typingsSlinky.sugar.Array[T] = js.native
   def least[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: mapFn[T, U]): typingsSlinky.sugar.Array[T] = js.native
@@ -129,10 +158,17 @@ trait Constructor
   def map[T, U](instance: typingsSlinky.sugar.Array[T], map: String, context: js.Any): typingsSlinky.sugar.Array[U] = js.native
   def map[T, U](instance: typingsSlinky.sugar.Array[T], map: mapFn[T, U]): typingsSlinky.sugar.Array[U] = js.native
   def map[T, U](instance: typingsSlinky.sugar.Array[T], map: mapFn[T, U], context: js.Any): typingsSlinky.sugar.Array[U] = js.native
-  def mapFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def mapFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def mapFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def mapFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def max[T, U](instance: typingsSlinky.sugar.Array[T]): T = js.native
+  def max[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: String): T = js.native
+  def max[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: mapFn[T, U]): T = js.native
   def max[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean): T = js.native
   def max[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: String): T = js.native
   def max[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: mapFn[T, U]): T = js.native
@@ -142,12 +178,16 @@ trait Constructor
   def median[T, U](instance: typingsSlinky.sugar.Array[T], map: String): Double = js.native
   def median[T, U](instance: typingsSlinky.sugar.Array[T], map: mapFn[T, U]): Double = js.native
   def min[T, U](instance: typingsSlinky.sugar.Array[T]): T = js.native
+  def min[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: String): T = js.native
+  def min[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: mapFn[T, U]): T = js.native
   def min[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean): T = js.native
   def min[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: String): T = js.native
   def min[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: mapFn[T, U]): T = js.native
   def min[T, U](instance: typingsSlinky.sugar.Array[T], map: String): T = js.native
   def min[T, U](instance: typingsSlinky.sugar.Array[T], map: mapFn[T, U]): T = js.native
   def most[T, U](instance: typingsSlinky.sugar.Array[T]): typingsSlinky.sugar.Array[T] = js.native
+  def most[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: String): typingsSlinky.sugar.Array[T] = js.native
+  def most[T, U](instance: typingsSlinky.sugar.Array[T], all: js.UndefOr[scala.Nothing], map: mapFn[T, U]): typingsSlinky.sugar.Array[T] = js.native
   def most[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean): typingsSlinky.sugar.Array[T] = js.native
   def most[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: String): typingsSlinky.sugar.Array[T] = js.native
   def most[T, U](instance: typingsSlinky.sugar.Array[T], all: Boolean, map: mapFn[T, U]): typingsSlinky.sugar.Array[T] = js.native
@@ -157,17 +197,28 @@ trait Constructor
   def none[T](instance: typingsSlinky.sugar.Array[T], search: T, context: js.Any): Boolean = js.native
   def none[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): Boolean = js.native
   def none[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): Boolean = js.native
-  def reduceFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def reduceFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def reduceFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def reduceFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
-  def reduceRightFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def reduceRightFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def reduceRightFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def reduceRightFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def remove[T](instance: typingsSlinky.sugar.Array[T], search: T): typingsSlinky.sugar.Array[T] = js.native
   def remove[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): typingsSlinky.sugar.Array[T] = js.native
   def removeAt[T](instance: typingsSlinky.sugar.Array[T], start: Double): typingsSlinky.sugar.Array[T] = js.native
   def removeAt[T](instance: typingsSlinky.sugar.Array[T], start: Double, end: Double): typingsSlinky.sugar.Array[T] = js.native
   def sample[T](instance: typingsSlinky.sugar.Array[T]): T = js.native
+  def sample[T](instance: typingsSlinky.sugar.Array[T], num: js.UndefOr[scala.Nothing], remove: Boolean): T = js.native
   def sample[T](instance: typingsSlinky.sugar.Array[T], num: Double): T = js.native
   def sample[T](instance: typingsSlinky.sugar.Array[T], num: Double, remove: Boolean): T = js.native
   def setOption(name: String, value: js.Any): Unit = js.native
@@ -177,10 +228,16 @@ trait Constructor
   def some[T](instance: typingsSlinky.sugar.Array[T], search: T, context: js.Any): Boolean = js.native
   def some[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T]): Boolean = js.native
   def some[T](instance: typingsSlinky.sugar.Array[T], search: searchFn[T], context: js.Any): Boolean = js.native
-  def someFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double): T = js.native
   def someFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, args: js.Any*): T = js.native
+  def someFromIndex[T](
+    instance: typingsSlinky.sugar.Array[T],
+    startIndex: Double,
+    loop: js.UndefOr[scala.Nothing],
+    args: js.Any*
+  ): T = js.native
   def someFromIndex[T](instance: typingsSlinky.sugar.Array[T], startIndex: Double, loop: Boolean, args: js.Any*): T = js.native
   def sortBy[T, U](instance: typingsSlinky.sugar.Array[T]): typingsSlinky.sugar.Array[T] = js.native
+  def sortBy[T, U](instance: typingsSlinky.sugar.Array[T], map: js.UndefOr[scala.Nothing], desc: Boolean): typingsSlinky.sugar.Array[T] = js.native
   def sortBy[T, U](instance: typingsSlinky.sugar.Array[T], map: String): typingsSlinky.sugar.Array[T] = js.native
   def sortBy[T, U](instance: typingsSlinky.sugar.Array[T], map: String, desc: Boolean): typingsSlinky.sugar.Array[T] = js.native
   def sortBy[T, U](instance: typingsSlinky.sugar.Array[T], map: sortMapFn[T, U]): typingsSlinky.sugar.Array[T] = js.native

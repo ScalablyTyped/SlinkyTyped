@@ -3,7 +3,7 @@ package typingsSlinky.rbx.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rbx.anon.AsElementType
 import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
-import typingsSlinky.rbx.anon.`7`
+import typingsSlinky.rbx.anon.`6`
 import typingsSlinky.rbx.buttonButtonMod.ButtonModifierProps
 import typingsSlinky.rbx.buttonGroupMod.ButtonGroupProps
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
@@ -73,7 +73,7 @@ object Button extends js.Object {
   ]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ButtonModifierProps with (Pick[
+    props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ButtonModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

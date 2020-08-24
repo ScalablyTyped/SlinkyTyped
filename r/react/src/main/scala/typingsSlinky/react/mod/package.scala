@@ -17,13 +17,13 @@ package object mod {
     * a single argument, which is useful for many top-level API defs.
     * See https://github.com/Microsoft/TypeScript/issues/7234 for more info.
     */
-  type ClassType[P, T /* <: slinky.core.ReactComponentClass[P] */, C /* <: slinky.core.ReactComponentClass[P] */] = C with (org.scalablytyped.runtime.Instantiable2[/* props */ P, js.UndefOr[/* context */ js.Any], T])
+  type ClassType[P, T /* <: slinky.core.ReactComponentClass[P] */, C /* <: slinky.core.ReactComponentClass[P] */] = C with (org.scalablytyped.runtime.Instantiable2[/* props */ P, /* context */ js.UndefOr[js.Any], T])
   type ClassicElement[P] = typingsSlinky.react.mod.CElement[P, slinky.core.ReactComponentClass[P]]
   type ClassicFactory[P] = typingsSlinky.react.mod.CFactory[P, slinky.core.ReactComponentClass[P]]
   type ClipboardEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticClipboardEvent[T]]
   type ComponentFactory[P, T /* <: slinky.core.ReactComponentClass[P] */] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.ClassAttributes[T] with P], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     typingsSlinky.react.mod.CElement[P, T]
   ]
   /**
@@ -40,7 +40,7 @@ package object mod {
   type ContextType[C /* <: typingsSlinky.react.mod.Context[_] */] = js.Any
   type DOMFactory[P /* <: typingsSlinky.react.mod.DOMAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */] = js.Function2[
     /* props */ js.UndefOr[(typingsSlinky.react.mod.ClassAttributes[T] with P) | scala.Null], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     slinky.core.facade.ReactElement
   ]
   // Any prop that has a default prop becomes optional, but its type is unchanged
@@ -90,7 +90,7 @@ package object mod {
     * @todo In Flow, this works a little different with forwarded refs and the `AbstractComponent` that
     *       `React.forwardRef()` returns.
     */
-  type ElementRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any */] = js.UndefOr[js.Any | typingsSlinky.std.InstanceType[C]]
+  type ElementRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any */] = js.Any
   //
   // React Elements
   // ----------------------------------------------------------------------
@@ -106,7 +106,7 @@ package object mod {
   // ----------------------------------------------------------------------
   type Factory[P] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.Attributes with P], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     slinky.core.facade.ReactElement
   ]
   type FocusEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticFocusEvent[T]]
@@ -117,7 +117,7 @@ package object mod {
   ]
   type FunctionComponentFactory[P] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.Attributes with P], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     typingsSlinky.react.mod.FunctionComponentElement[P]
   ]
   type GetDerivedStateFromError[P, S] = /**
@@ -184,7 +184,7 @@ package object mod {
   ]
   type PropsWithChildren[P] = P with typingsSlinky.react.anon.Children
   /** Ensures that the props do not include string ref, which cannot be forwarded */
-  type PropsWithRef[P] = P | (typingsSlinky.react.mod.PropsWithoutRef[P] with typingsSlinky.react.anon.RefExclude)
+  type PropsWithRef[P] = P | (typingsSlinky.react.mod.PropsWithoutRef[P] with typingsSlinky.react.anon.`0`)
   /** Ensures that the props do not include ref at all */
   type PropsWithoutRef[P] = P | (typingsSlinky.std.Pick[
     P, 
@@ -274,7 +274,7 @@ package object mod {
     *
     * target - a reference to the element from which the event was originally dispatched.
     * This might be a child element to the element on which the event listener is registered.
-    * If you thought this should be `EventTarget & T`, see https://github.com/DefinitelyTyped/DefinitelyTyped/pull/12239
+    * If you thought this should be `EventTarget & T`, see https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11508#issuecomment-256045682
     */
   type SyntheticEvent[T, E] = slinky.core.SyntheticEvent[org.scalajs.dom.raw.EventTarget with T, E]
   type TouchEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticTouchEvent[T]]

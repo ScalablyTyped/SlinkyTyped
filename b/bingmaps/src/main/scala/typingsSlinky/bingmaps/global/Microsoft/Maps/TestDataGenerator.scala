@@ -30,6 +30,7 @@ object TestDataGenerator extends js.Object {
     * @returns One or more random Locations.
     */
   def getLocations(): typingsSlinky.bingmaps.Microsoft.Maps.Location | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Location] = js.native
+  def getLocations(num: js.UndefOr[scala.Nothing], bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect): typingsSlinky.bingmaps.Microsoft.Maps.Location | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Location] = js.native
   def getLocations(num: Double): typingsSlinky.bingmaps.Microsoft.Maps.Location | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Location] = js.native
   def getLocations(num: Double, bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect): typingsSlinky.bingmaps.Microsoft.Maps.Location | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Location] = js.native
   /**
@@ -60,9 +61,159 @@ object TestDataGenerator extends js.Object {
     * @returns One or more random Polylines.
     */
   def getPolylines(): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: js.UndefOr[scala.Nothing],
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: js.UndefOr[scala.Nothing],
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: js.UndefOr[scala.Nothing],
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(num: js.UndefOr[scala.Nothing], bounds: js.UndefOr[scala.Nothing], size: Double): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: js.UndefOr[scala.Nothing],
+    size: Double,
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: js.UndefOr[scala.Nothing],
+    size: Double,
+    scaleFactor: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: js.UndefOr[scala.Nothing],
+    size: Double,
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(num: js.UndefOr[scala.Nothing], bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: Double,
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: Double,
+    scaleFactor: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: Double,
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
   def getPolylines(num: Double): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: js.UndefOr[scala.Nothing],
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: js.UndefOr[scala.Nothing],
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: js.UndefOr[scala.Nothing],
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(num: Double, bounds: js.UndefOr[scala.Nothing], size: Double): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: js.UndefOr[scala.Nothing],
+    size: Double,
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(num: Double, bounds: js.UndefOr[scala.Nothing], size: Double, scaleFactor: Double): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: js.UndefOr[scala.Nothing],
+    size: Double,
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
   def getPolylines(num: Double, bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: js.UndefOr[scala.Nothing],
+    scaleFactor: Double,
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
   def getPolylines(num: Double, bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect, size: Double): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
+  def getPolylines(
+    num: Double,
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    size: Double,
+    scaleFactor: js.UndefOr[scala.Nothing],
+    options: IPolylineOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Polyline | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Polyline] = js.native
   def getPolylines(
     num: Double,
     bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
@@ -84,7 +235,15 @@ object TestDataGenerator extends js.Object {
     * @returns One or more random Pushpins.
     */
   def getPushpins(): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
+  def getPushpins(num: js.UndefOr[scala.Nothing], bounds: js.UndefOr[scala.Nothing], options: IPushpinOptions): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
+  def getPushpins(num: js.UndefOr[scala.Nothing], bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
+  def getPushpins(
+    num: js.UndefOr[scala.Nothing],
+    bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect,
+    options: IPushpinOptions
+  ): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
   def getPushpins(num: Double): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
+  def getPushpins(num: Double, bounds: js.UndefOr[scala.Nothing], options: IPushpinOptions): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
   def getPushpins(num: Double, bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
   def getPushpins(num: Double, bounds: typingsSlinky.bingmaps.Microsoft.Maps.LocationRect, options: IPushpinOptions): typingsSlinky.bingmaps.Microsoft.Maps.Pushpin | js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin] = js.native
 }

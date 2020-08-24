@@ -1,7 +1,7 @@
 package typingsSlinky.rcPicker.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 
 object PickerPanel {
   object PickerPanelBaseProps {
-    @JSImport("rc-picker/lib/PickerPanel", JSImport.Default)
+    @JSImport("rc-picker", "PickerPanel")
     @js.native
     object component extends js.Object
     
@@ -37,7 +37,7 @@ object PickerPanel {
       @scala.inline
       def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (DateType, DateType) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+      def dateRender(value: (DateType, DateType) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
       @scala.inline
       def defaultPickerValue(value: DateType): this.type = set("defaultPickerValue", value.asInstanceOf[js.Any])
       @scala.inline
@@ -51,7 +51,7 @@ object PickerPanel {
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
-      def monthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+      def monthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
       @scala.inline
       def onChange(value: DateType => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
       @scala.inline
@@ -69,7 +69,7 @@ object PickerPanel {
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
       @scala.inline
-      def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
       @scala.inline
       def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
       @scala.inline
@@ -89,7 +89,7 @@ object PickerPanel {
   }
   
   object PickerPanelDateProps {
-    @JSImport("rc-picker/lib/PickerPanel", JSImport.Default)
+    @JSImport("rc-picker", "PickerPanel")
     @js.native
     object component extends js.Object
     
@@ -102,7 +102,7 @@ object PickerPanel {
       @scala.inline
       def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (DateType, DateType) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+      def dateRender(value: (DateType, DateType) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
       @scala.inline
       def defaultPickerValue(value: DateType): this.type = set("defaultPickerValue", value.asInstanceOf[js.Any])
       @scala.inline
@@ -118,7 +118,7 @@ object PickerPanel {
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
-      def monthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+      def monthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
       @scala.inline
       def onChange(value: DateType => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
       @scala.inline
@@ -138,7 +138,9 @@ object PickerPanel {
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
       @scala.inline
-      def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      @scala.inline
+      def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
       @scala.inline
       def showTime(value: Boolean | SharedTimeProps[DateType]): this.type = set("showTime", value.asInstanceOf[js.Any])
       @scala.inline
@@ -162,7 +164,7 @@ object PickerPanel {
   }
   
   object PickerPanelTimeProps {
-    @JSImport("rc-picker/lib/PickerPanel", JSImport.Default)
+    @JSImport("rc-picker", "PickerPanel")
     @js.native
     object component extends js.Object
     
@@ -175,7 +177,7 @@ object PickerPanel {
       @scala.inline
       def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (DateType, DateType) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+      def dateRender(value: (DateType, DateType) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
       @scala.inline
       def defaultPickerValue(value: DateType): this.type = set("defaultPickerValue", value.asInstanceOf[js.Any])
       @scala.inline
@@ -203,7 +205,7 @@ object PickerPanel {
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
-      def monthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+      def monthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
       @scala.inline
       def onChange(value: DateType => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
       @scala.inline
@@ -221,13 +223,15 @@ object PickerPanel {
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
       @scala.inline
-      def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
       @scala.inline
       def secondStep(value: Double): this.type = set("secondStep", value.asInstanceOf[js.Any])
       @scala.inline
       def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
       @scala.inline
       def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+      @scala.inline
+      def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
       @scala.inline
       def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
       @scala.inline

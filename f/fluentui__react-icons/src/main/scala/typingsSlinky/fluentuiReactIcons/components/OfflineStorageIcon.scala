@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OfflineStorageIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OfflineStorageIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OfflineStorageIcon")
   @js.native
   object component extends js.Object
   

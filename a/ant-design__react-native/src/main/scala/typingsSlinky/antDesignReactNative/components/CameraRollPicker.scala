@@ -35,9 +35,13 @@ object CameraRollPicker {
     @scala.inline
     def groupTypes(value: CameraRollGroupType): this.type = set("groupTypes", value.asInstanceOf[js.Any])
     @scala.inline
+    def mimeTypesVarargs(value: String*): this.type = set("mimeTypes", js.Array(value :_*))
+    @scala.inline
     def mimeTypes(value: js.Array[String]): this.type = set("mimeTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def selectSingleItem(value: Boolean): this.type = set("selectSingleItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedVarargs(value: js.Any*): this.type = set("selected", js.Array(value :_*))
     @scala.inline
     def selected(value: js.Array[_]): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline

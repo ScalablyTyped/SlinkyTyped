@@ -1,10 +1,12 @@
 package typingsSlinky.semanticUiReact.components
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.events
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.repaint
-import typingsSlinky.semanticUiReact.visibilityMod.default
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityEventData
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityOnPassed
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityProps
@@ -13,24 +15,32 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Visibility {
-  @JSImport("semantic-ui-react/dist/commonjs/behaviors/Visibility", JSImport.Default)
+  @JSImport("semantic-ui-react", "Visibility")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Visibility] {
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
-    def context(value: js.Object): this.type = set("context", value.asInstanceOf[js.Any])
+    def contextDocument(value: Document): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextHTMLElement(value: HTMLElement): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextWindow(value: Window): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def context(value: Document | Window | HTMLElement): this.type = set("context", value.asInstanceOf[js.Any])
     @scala.inline
     def continuous(value: Boolean): this.type = set("continuous", value.asInstanceOf[js.Any])
     @scala.inline
     def fireOnMount(value: Boolean): this.type = set("fireOnMount", value.asInstanceOf[js.Any])
     @scala.inline
-    def offset(value: Double | String | (js.Array[Double | String])): this.type = set("offset", value.asInstanceOf[js.Any])
+    def offsetVarargs(value: String*): this.type = set("offset", js.Array(value :_*))
+    @scala.inline
+    def offset(value: Double | String | js.Array[String]): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def onBottomPassed(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomPassed", js.Any.fromFunction2(value))
     @scala.inline

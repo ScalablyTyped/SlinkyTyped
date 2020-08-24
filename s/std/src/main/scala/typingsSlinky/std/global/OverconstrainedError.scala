@@ -8,14 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OverconstrainedError")
 @js.native
 class OverconstrainedError ()
-  extends typingsSlinky.std.OverconstrainedError {
-  /* CompleteClass */
-  override var constraint: java.lang.String = js.native
-  /* CompleteClass */
-  override var message: java.lang.String = js.native
-  /* CompleteClass */
-  override var name: java.lang.String = js.native
-}
+  extends typingsSlinky.std.OverconstrainedError
 
 @JSGlobal("OverconstrainedError")
 @js.native

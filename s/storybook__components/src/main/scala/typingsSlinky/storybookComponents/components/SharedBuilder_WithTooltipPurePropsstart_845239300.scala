@@ -1,6 +1,5 @@
 package typingsSlinky.storybookComponents.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -38,9 +37,9 @@ class SharedBuilder_WithTooltipPurePropsstart_845239300 (val args: js.Array[js.A
   @scala.inline
   def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
   @scala.inline
-  def tooltipFunction1(value: /* p */ WithHideFn => TagMod[Any]): this.type = set("tooltip", js.Any.fromFunction1(value))
+  def tooltipFunction1(value: /* p */ WithHideFn => ReactElement): this.type = set("tooltip", js.Any.fromFunction1(value))
   @scala.inline
-  def tooltip(value: TagMod[Any] | (js.Function1[/* p */ WithHideFn, TagMod[Any]])): this.type = set("tooltip", value.asInstanceOf[js.Any])
+  def tooltip(value: ReactElement | (js.Function1[/* p */ WithHideFn, ReactElement])): this.type = set("tooltip", value.asInstanceOf[js.Any])
   @scala.inline
   def tooltipShown(value: Boolean): this.type = set("tooltipShown", value.asInstanceOf[js.Any])
   @scala.inline

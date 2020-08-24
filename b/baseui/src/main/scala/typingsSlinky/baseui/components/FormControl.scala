@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -22,23 +21,23 @@ object FormControl {
     @scala.inline
     def captionReactElement(value: ReactElement): this.type = set("caption", value.asInstanceOf[js.Any])
     @scala.inline
-    def caption(value: TagMod[Any]): this.type = set("caption", value.asInstanceOf[js.Any])
+    def caption(value: ReactElement): this.type = set("caption", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def error(value: Boolean | TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    def error(value: Boolean | ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def overrides(value: FormControlOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def positiveReactElement(value: ReactElement): this.type = set("positive", value.asInstanceOf[js.Any])
     @scala.inline
-    def positive(value: TagMod[Any]): this.type = set("positive", value.asInstanceOf[js.Any])
+    def positive(value: ReactElement): this.type = set("positive", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FormControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

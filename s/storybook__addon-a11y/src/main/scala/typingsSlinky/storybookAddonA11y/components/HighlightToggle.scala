@@ -1,33 +1,20 @@
 package typingsSlinky.storybookAddonA11y.components
 
-import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.storybookAddonA11y.anon.TypeofHighlightToggle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for typingsSlinky.std.stdStrings.Pick with ((typingsSlinky.std.stdStrings.Pick with js.Any with typingsSlinky.propTypes.propTypesStrings.InferPropsInner with typingsSlinky.std.stdStrings.Partial) | js.Any | (typingsSlinky.propTypes.propTypesStrings.InferPropsInner with typingsSlinky.std.stdStrings.Pick with js.Any with typingsSlinky.std.stdStrings.Partial)) with typingsSlinky.std.stdStrings.Partial with js.Any because: IArray(Couldn't find props for typingsSlinky.std.stdStrings.Pick with js.Any with typingsSlinky.propTypes.propTypesStrings.InferPropsInner with typingsSlinky.std.stdStrings.Partial because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.), Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for typingsSlinky.propTypes.propTypesStrings.InferPropsInner with typingsSlinky.std.stdStrings.Pick with js.Any with typingsSlinky.std.stdStrings.Partial because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)), IArray(Could't extract props from js.Any because couldn't resolve ClassTree.), Couldn't find props for typingsSlinky.std.stdStrings.Pick with js.Any with typingsSlinky.propTypes.propTypesStrings.InferPropsInner with typingsSlinky.std.stdStrings.Partial because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.), Couldn't find props for typingsSlinky.propTypes.propTypesStrings.InferPropsInner with typingsSlinky.std.stdStrings.Pick with js.Any with typingsSlinky.std.stdStrings.Partial because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.) */
 object HighlightToggle {
   @JSImport("@storybook/addon-a11y/dist/components/Report/HighlightToggle", JSImport.Default)
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def displayName(value: String): this.type = set("displayName", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: ReactComponentClass[LibraryManagedAttributes[TypeofHighlightToggle, js.Any]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(DollarDollartypeof: js.Symbol): Builder = {
-    val __props = js.Dynamic.literal()
-    __props.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[ReactComponentClass[LibraryManagedAttributes[TypeofHighlightToggle, js.Any]]]))
-  }
+  def apply(p: LibraryManagedAttributes[TypeofHighlightToggle, js.Any]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: HighlightToggle.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

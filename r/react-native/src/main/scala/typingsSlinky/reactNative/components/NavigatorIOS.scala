@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.NavigatorIOSProps
 import typingsSlinky.reactNative.mod.Route
 import typingsSlinky.reactNative.mod.StyleProp
@@ -20,7 +21,7 @@ object NavigatorIOS {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.NavigatorIOS] {
     @scala.inline
-    def barTintColor(value: String): this.type = set("barTintColor", value.asInstanceOf[js.Any])
+    def barTintColor(value: ColorValue): this.type = set("barTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def interactivePopGestureEnabled(value: Boolean): this.type = set("interactivePopGestureEnabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,9 +37,9 @@ object NavigatorIOS {
     @scala.inline
     def styleNull: this.type = set("style", null)
     @scala.inline
-    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    def tintColor(value: ColorValue): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def titleTextColor(value: String): this.type = set("titleTextColor", value.asInstanceOf[js.Any])
+    def titleTextColor(value: ColorValue): this.type = set("titleTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def translucent(value: Boolean): this.type = set("translucent", value.asInstanceOf[js.Any])
   }

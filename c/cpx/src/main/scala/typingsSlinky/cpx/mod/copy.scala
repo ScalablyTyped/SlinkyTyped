@@ -9,6 +9,12 @@ import scala.scalajs.js.annotation._
 object copy extends js.Object {
   def apply(source: String, dest: String): Unit = js.native
   def apply(source: String, dest: String, callback: js.Function1[/* error */ js.Error | Null, Unit]): Unit = js.native
+  def apply(
+    source: String,
+    dest: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* error */ js.Error | Null, Unit]
+  ): Unit = js.native
   def apply(source: String, dest: String, options: AsyncOptions): Unit = js.native
   def apply(
     source: String,

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class Normal ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.Normal] {
   def this(mu: Double) = this()
+  def this(mu: js.UndefOr[scala.Nothing], sigma: Double) = this()
   def this(mu: Double, sigma: Double) = this()
 }
 

@@ -2,15 +2,15 @@ package typingsSlinky.reactToolbox.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactToolbox.libOverlayMod.default
-import typingsSlinky.reactToolbox.libOverlayOverlayMod.OverlayProps
-import typingsSlinky.reactToolbox.libOverlayOverlayMod.OverlayTheme
+import typingsSlinky.reactToolbox.overlayMod.default
+import typingsSlinky.reactToolbox.overlayOverlayMod.OverlayProps
+import typingsSlinky.reactToolbox.overlayOverlayMod.OverlayTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Overlay {
-  @JSImport("react-toolbox/lib/overlay", JSImport.Default)
+  @JSImport("react-toolbox/components/overlay", JSImport.Default)
   @js.native
   object component extends js.Object
   

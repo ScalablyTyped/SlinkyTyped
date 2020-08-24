@@ -15,8 +15,9 @@ object rejectFactoryMod extends js.Object {
   class Rejection protected () extends js.Object {
     def this(`type`: Double) = this()
     def this(`type`: Double, message: String) = this()
+    def this(`type`: Double, message: js.UndefOr[scala.Nothing], detail: js.Any) = this()
     def this(`type`: Double, message: String, detail: js.Any) = this()
-    /** @hidden */
+    /** @internal */
     @JSName("$id")
     var $id: Double = js.native
     /**
@@ -156,6 +157,7 @@ object rejectFactoryMod extends js.Object {
     def redirected(detail: js.Any): Rejection = js.native
     /** Returns a Rejection due to transition superseded */
     def superseded(): Rejection = js.native
+    def superseded(detail: js.UndefOr[scala.Nothing], options: js.Any): Rejection = js.native
     def superseded(detail: js.Any): Rejection = js.native
     def superseded(detail: js.Any, options: js.Any): Rejection = js.native
   }

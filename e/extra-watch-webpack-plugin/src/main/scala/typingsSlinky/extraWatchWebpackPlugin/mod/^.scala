@@ -1,7 +1,7 @@
 package typingsSlinky.extraWatchWebpackPlugin.mod
 
 import typingsSlinky.extraWatchWebpackPlugin.anon.Cwd
-import typingsSlinky.webpack.mod.Plugin
+import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

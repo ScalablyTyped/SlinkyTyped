@@ -1,6 +1,5 @@
 package typingsSlinky.gestalt.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -24,7 +23,7 @@ object Card {
     @scala.inline
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def image(value: TagMod[Any]): this.type = set("image", value.asInstanceOf[js.Any])
+    def image(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def onMouseEnter(value: /* args */ EventSyntheticEvent => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline

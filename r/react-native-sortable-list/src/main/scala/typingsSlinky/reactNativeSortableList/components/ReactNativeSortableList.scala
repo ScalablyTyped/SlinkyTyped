@@ -25,7 +25,7 @@ object ReactNativeSortableList {
   @scala.inline
   class Builder[T, K] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any, js.Any]] {
+       with StBuildingComponent[tag.type, default[T, K]] {
     @scala.inline
     def autoscrollAreaSize(value: Double): this.type = set("autoscrollAreaSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,6 +50,8 @@ object ReactNativeSortableList {
     def onPressRow(value: K => Unit): this.type = set("onPressRow", js.Any.fromFunction1(value))
     @scala.inline
     def onReleaseRow(value: (K, /* currentOrder */ js.Array[K]) => Unit): this.type = set("onReleaseRow", js.Any.fromFunction2(value))
+    @scala.inline
+    def orderVarargs(value: K*): this.type = set("order", js.Array(value :_*))
     @scala.inline
     def order(value: js.Array[K]): this.type = set("order", value.asInstanceOf[js.Any])
     @scala.inline

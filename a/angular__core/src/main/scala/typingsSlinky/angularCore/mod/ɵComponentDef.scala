@@ -8,17 +8,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ɵComponentDef[T] extends ɵDirectiveDef[T] {
   /**
-    * The number of nodes, local refs, and pipes in this component template.
-    *
-    * Used to calculate the length of the component's LView array, so we
-    * can pre-fill the array and set the binding start index.
+    * Used to store the result of `noSideEffects` function so that it is not removed by closure
+    * compiler. The property should never be read.
     */
-  val consts: Double = js.native
+  @JSName("_")
+  val _underscore: js.UndefOr[scala.Nothing] = js.native
+  /** Constants associated with the component's view. */
+  val consts: TConstants | Null = js.native
   /**
     * Defines arbitrary developer-defined data to be stored on a renderer instance.
     * This is useful for renderers that delegate to other renderers.
     */
   val data: StringDictionary[js.Any] = js.native
+  /**
+    * The number of nodes, local refs, and pipes in this component template.
+    *
+    * Used to calculate the length of the component's LView array, so we
+    * can pre-fill the array and set the binding start index.
+    */
+  val decls: Double = js.native
   /**
     * Registry of directives and components that may be found in this view.
     *

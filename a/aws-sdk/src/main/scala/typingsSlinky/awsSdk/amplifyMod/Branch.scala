@@ -7,43 +7,43 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Branch extends js.Object {
   /**
-    *  Id of the active job for a branch, part of an Amplify App. 
+    *  The ID of the active job for a branch of an Amplify app. 
     */
   var activeJobId: ActiveJobId = js.native
   /**
-    *  List of custom resources that are linked to this branch. 
+    *  A list of custom resources that are linked to this branch. 
     */
   var associatedResources: js.UndefOr[AssociatedResources] = js.native
   /**
-    *  ARN for a Backend Environment, part of an Amplify App. 
+    *  The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app. 
     */
   var backendEnvironmentArn: js.UndefOr[BackendEnvironmentArn] = js.native
   /**
-    *  Basic Authorization credentials for a branch, part of an Amplify App. 
+    *  The basic authorization credentials for a branch of an Amplify app. 
     */
   var basicAuthCredentials: js.UndefOr[BasicAuthCredentials] = js.native
   /**
-    *  ARN for a branch, part of an Amplify App. 
+    *  The Amazon Resource Name (ARN) for a branch that is part of an Amplify app. 
     */
   var branchArn: BranchArn = js.native
   /**
-    *  Name for a branch, part of an Amplify App. 
+    *  The name for the branch that is part of an Amplify app. 
     */
   var branchName: BranchName = js.native
   /**
-    *  BuildSpec content for branch for Amplify App. 
+    *  The build specification (build spec) content for the branch of an Amplify app. 
     */
   var buildSpec: js.UndefOr[BuildSpec] = js.native
   /**
-    *  Creation date and time for a branch, part of an Amplify App. 
+    *  The creation date and time for a branch that is part of an Amplify app. 
     */
   var createTime: js.Date = js.native
   /**
-    *  Custom domains for a branch, part of an Amplify App. 
+    *  The custom domains for a branch of an Amplify app. 
     */
   var customDomains: CustomDomains = js.native
   /**
-    *  Description for a branch, part of an Amplify App. 
+    *  The description for the branch that is part of an Amplify app. 
     */
   var description: Description = js.native
   /**
@@ -51,35 +51,35 @@ trait Branch extends js.Object {
     */
   var destinationBranch: js.UndefOr[BranchName] = js.native
   /**
-    *  Display name for a branch, will use as the default domain prefix. 
+    *  The display name for the branch. This is used as the default domain prefix. 
     */
   var displayName: DisplayName = js.native
   /**
-    *  Enables auto-building on push for a branch, part of an Amplify App. 
+    *  Enables auto-building on push for a branch of an Amplify app. 
     */
   var enableAutoBuild: EnableAutoBuild = js.native
   /**
-    *  Enables Basic Authorization for a branch, part of an Amplify App. 
+    *  Enables basic authorization for a branch of an Amplify app. 
     */
   var enableBasicAuth: EnableBasicAuth = js.native
   /**
-    *  Enables notifications for a branch, part of an Amplify App. 
+    *  Enables notifications for a branch that is part of an Amplify app. 
     */
   var enableNotification: EnableNotification = js.native
   /**
-    *  Enables Pull Request Preview for this branch. 
+    *  Enables pull request preview for the branch. 
     */
   var enablePullRequestPreview: EnablePullRequestPreview = js.native
   /**
-    *  Environment Variables specific to a branch, part of an Amplify App. 
+    *  The environment variables specific to a branch of an Amplify app. 
     */
   var environmentVariables: EnvironmentVariables = js.native
   /**
-    *  Framework for a branch, part of an Amplify App. 
+    *  The framework for a branch of an Amplify app. 
     */
   var framework: Framework = js.native
   /**
-    *  The Amplify Environment name for the pull request. 
+    *  The Amplify environment name for the pull request. 
     */
   var pullRequestEnvironmentName: js.UndefOr[PullRequestEnvironmentName] = js.native
   /**
@@ -87,27 +87,27 @@ trait Branch extends js.Object {
     */
   var sourceBranch: js.UndefOr[BranchName] = js.native
   /**
-    *  Stage for a branch, part of an Amplify App. 
+    *  The current stage for the branch that is part of an Amplify app. 
     */
   var stage: Stage = js.native
   /**
-    *  Tag for branch for Amplify App. 
+    *  The tag for the branch of an Amplify app. 
     */
   var tags: js.UndefOr[TagMap] = js.native
   /**
-    *  Thumbnail URL for the branch. 
+    *  The thumbnail URL for the branch of an Amplify app. 
     */
   var thumbnailUrl: js.UndefOr[ThumbnailUrl] = js.native
   /**
-    *  Total number of Jobs part of an Amplify App. 
+    *  The total number of jobs that are part of an Amplify app. 
     */
   var totalNumberOfJobs: TotalNumberOfJobs = js.native
   /**
-    *  The content TTL for the website in seconds. 
+    *  The content Time to Live (TTL) for the website in seconds. 
     */
   var ttl: TTL = js.native
   /**
-    *  Last updated date and time for a branch, part of an Amplify App. 
+    *  The last updated date and time for a branch that is part of an Amplify app. 
     */
   var updateTime: js.Date = js.native
 }
@@ -131,28 +131,97 @@ object Branch {
     stage: Stage,
     totalNumberOfJobs: TotalNumberOfJobs,
     ttl: TTL,
-    updateTime: js.Date,
-    associatedResources: AssociatedResources = null,
-    backendEnvironmentArn: BackendEnvironmentArn = null,
-    basicAuthCredentials: BasicAuthCredentials = null,
-    buildSpec: BuildSpec = null,
-    destinationBranch: BranchName = null,
-    pullRequestEnvironmentName: PullRequestEnvironmentName = null,
-    sourceBranch: BranchName = null,
-    tags: TagMap = null,
-    thumbnailUrl: ThumbnailUrl = null
+    updateTime: js.Date
   ): Branch = {
     val __obj = js.Dynamic.literal(activeJobId = activeJobId.asInstanceOf[js.Any], branchArn = branchArn.asInstanceOf[js.Any], branchName = branchName.asInstanceOf[js.Any], createTime = createTime.asInstanceOf[js.Any], customDomains = customDomains.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], enableAutoBuild = enableAutoBuild.asInstanceOf[js.Any], enableBasicAuth = enableBasicAuth.asInstanceOf[js.Any], enableNotification = enableNotification.asInstanceOf[js.Any], enablePullRequestPreview = enablePullRequestPreview.asInstanceOf[js.Any], environmentVariables = environmentVariables.asInstanceOf[js.Any], framework = framework.asInstanceOf[js.Any], stage = stage.asInstanceOf[js.Any], totalNumberOfJobs = totalNumberOfJobs.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any], updateTime = updateTime.asInstanceOf[js.Any])
-    if (associatedResources != null) __obj.updateDynamic("associatedResources")(associatedResources.asInstanceOf[js.Any])
-    if (backendEnvironmentArn != null) __obj.updateDynamic("backendEnvironmentArn")(backendEnvironmentArn.asInstanceOf[js.Any])
-    if (basicAuthCredentials != null) __obj.updateDynamic("basicAuthCredentials")(basicAuthCredentials.asInstanceOf[js.Any])
-    if (buildSpec != null) __obj.updateDynamic("buildSpec")(buildSpec.asInstanceOf[js.Any])
-    if (destinationBranch != null) __obj.updateDynamic("destinationBranch")(destinationBranch.asInstanceOf[js.Any])
-    if (pullRequestEnvironmentName != null) __obj.updateDynamic("pullRequestEnvironmentName")(pullRequestEnvironmentName.asInstanceOf[js.Any])
-    if (sourceBranch != null) __obj.updateDynamic("sourceBranch")(sourceBranch.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (thumbnailUrl != null) __obj.updateDynamic("thumbnailUrl")(thumbnailUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Branch]
   }
+  @scala.inline
+  implicit class BranchOps[Self <: Branch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActiveJobId(value: ActiveJobId): Self = this.set("activeJobId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBranchArn(value: BranchArn): Self = this.set("branchArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBranchName(value: BranchName): Self = this.set("branchName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCreateTime(value: js.Date): Self = this.set("createTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCustomDomainsVarargs(value: CustomDomain*): Self = this.set("customDomains", js.Array(value :_*))
+    @scala.inline
+    def setCustomDomains(value: CustomDomains): Self = this.set("customDomains", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: Description): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDisplayName(value: DisplayName): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnableAutoBuild(value: EnableAutoBuild): Self = this.set("enableAutoBuild", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnableBasicAuth(value: EnableBasicAuth): Self = this.set("enableBasicAuth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnableNotification(value: EnableNotification): Self = this.set("enableNotification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnablePullRequestPreview(value: EnablePullRequestPreview): Self = this.set("enablePullRequestPreview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnvironmentVariables(value: EnvironmentVariables): Self = this.set("environmentVariables", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFramework(value: Framework): Self = this.set("framework", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStage(value: Stage): Self = this.set("stage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTotalNumberOfJobs(value: TotalNumberOfJobs): Self = this.set("totalNumberOfJobs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTtl(value: TTL): Self = this.set("ttl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUpdateTime(value: js.Date): Self = this.set("updateTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAssociatedResourcesVarargs(value: AssociatedResource*): Self = this.set("associatedResources", js.Array(value :_*))
+    @scala.inline
+    def setAssociatedResources(value: AssociatedResources): Self = this.set("associatedResources", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAssociatedResources: Self = this.set("associatedResources", js.undefined)
+    @scala.inline
+    def setBackendEnvironmentArn(value: BackendEnvironmentArn): Self = this.set("backendEnvironmentArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackendEnvironmentArn: Self = this.set("backendEnvironmentArn", js.undefined)
+    @scala.inline
+    def setBasicAuthCredentials(value: BasicAuthCredentials): Self = this.set("basicAuthCredentials", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBasicAuthCredentials: Self = this.set("basicAuthCredentials", js.undefined)
+    @scala.inline
+    def setBuildSpec(value: BuildSpec): Self = this.set("buildSpec", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBuildSpec: Self = this.set("buildSpec", js.undefined)
+    @scala.inline
+    def setDestinationBranch(value: BranchName): Self = this.set("destinationBranch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDestinationBranch: Self = this.set("destinationBranch", js.undefined)
+    @scala.inline
+    def setPullRequestEnvironmentName(value: PullRequestEnvironmentName): Self = this.set("pullRequestEnvironmentName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePullRequestEnvironmentName: Self = this.set("pullRequestEnvironmentName", js.undefined)
+    @scala.inline
+    def setSourceBranch(value: BranchName): Self = this.set("sourceBranch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSourceBranch: Self = this.set("sourceBranch", js.undefined)
+    @scala.inline
+    def setTags(value: TagMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
+    @scala.inline
+    def setThumbnailUrl(value: ThumbnailUrl): Self = this.set("thumbnailUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThumbnailUrl: Self = this.set("thumbnailUrl", js.undefined)
+  }
+  
 }
 

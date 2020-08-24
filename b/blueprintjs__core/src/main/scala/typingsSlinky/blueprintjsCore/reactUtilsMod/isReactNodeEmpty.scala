@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsCore.reactUtilsMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object isReactNodeEmpty extends js.Object {
   def apply(): Boolean = js.native
-  def apply(node: TagMod[Any]): Boolean = js.native
-  def apply(node: TagMod[Any], skipArray: Boolean): Boolean = js.native
+  def apply(node: js.UndefOr[ReactElement], skipArray: Boolean): Boolean = js.native
+  def apply(node: ReactElement): Boolean = js.native
 }
 

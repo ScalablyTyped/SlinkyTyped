@@ -32,17 +32,14 @@ object OnItemSelectedListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnItemSelected(value: (typingsSlinky.androiduix.android.widget.AdapterView[_], View, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelected")(js.Any.fromFunction4(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnNothingSelected(value: typingsSlinky.androiduix.android.widget.AdapterView[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNothingSelected")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnItemSelected(value: (typingsSlinky.androiduix.android.widget.AdapterView[_], View, Double, Double) => Unit): Self = this.set("onItemSelected", js.Any.fromFunction4(value))
+    @scala.inline
+    def setOnNothingSelected(value: typingsSlinky.androiduix.android.widget.AdapterView[_] => Unit): Self = this.set("onNothingSelected", js.Any.fromFunction1(value))
   }
   
 }

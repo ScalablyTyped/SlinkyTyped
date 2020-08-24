@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseStorageTypes.mod
 
-import typingsSlinky.firebaseUtil.subscribeMod.Observer
+import typingsSlinky.firebaseStorageTypes.anon.PartialObserverUploadTask
 import typingsSlinky.firebaseUtil.subscribeMod.Unsubscribe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,31 @@ trait UploadTask extends js.Object {
   def cancel(): Boolean = js.native
   def `catch`(onRejected: js.Function1[/* a */ js.Error, _]): js.Promise[_] = js.native
   def on(event: TaskEvent): js.Function = js.native
+  def on(
+    event: TaskEvent,
+    nextOrObserver: js.UndefOr[scala.Nothing],
+    error: js.UndefOr[scala.Nothing],
+    complete: Unsubscribe
+  ): js.Function = js.native
+  def on(
+    event: TaskEvent,
+    nextOrObserver: js.UndefOr[scala.Nothing],
+    error: js.Function1[/* a */ js.Error, _]
+  ): js.Function = js.native
+  def on(
+    event: TaskEvent,
+    nextOrObserver: js.UndefOr[scala.Nothing],
+    error: js.Function1[/* a */ js.Error, _],
+    complete: Unsubscribe
+  ): js.Function = js.native
+  def on(event: TaskEvent, nextOrObserver: js.UndefOr[scala.Nothing], error: Null, complete: Unsubscribe): js.Function = js.native
   def on(event: TaskEvent, nextOrObserver: js.Function1[/* a */ UploadTaskSnapshot, _]): js.Function = js.native
+  def on(
+    event: TaskEvent,
+    nextOrObserver: js.Function1[/* a */ UploadTaskSnapshot, _],
+    error: js.UndefOr[scala.Nothing],
+    complete: Unsubscribe
+  ): js.Function = js.native
   def on(
     event: TaskEvent,
     nextOrObserver: js.Function1[/* a */ UploadTaskSnapshot, _],
@@ -30,6 +54,7 @@ trait UploadTask extends js.Object {
     error: Null,
     complete: Unsubscribe
   ): js.Function = js.native
+  def on(event: TaskEvent, nextOrObserver: Null, error: js.UndefOr[scala.Nothing], complete: Unsubscribe): js.Function = js.native
   def on(event: TaskEvent, nextOrObserver: Null, error: js.Function1[/* a */ js.Error, _]): js.Function = js.native
   def on(
     event: TaskEvent,
@@ -38,22 +63,29 @@ trait UploadTask extends js.Object {
     complete: Unsubscribe
   ): js.Function = js.native
   def on(event: TaskEvent, nextOrObserver: Null, error: Null, complete: Unsubscribe): js.Function = js.native
-  def on(event: TaskEvent, nextOrObserver: Observer[UploadTaskSnapshot]): js.Function = js.native
+  def on(event: TaskEvent, nextOrObserver: PartialObserverUploadTask): js.Function = js.native
   def on(
     event: TaskEvent,
-    nextOrObserver: Observer[UploadTaskSnapshot],
+    nextOrObserver: PartialObserverUploadTask,
+    error: js.UndefOr[scala.Nothing],
+    complete: Unsubscribe
+  ): js.Function = js.native
+  def on(
+    event: TaskEvent,
+    nextOrObserver: PartialObserverUploadTask,
     error: js.Function1[/* a */ js.Error, _]
   ): js.Function = js.native
   def on(
     event: TaskEvent,
-    nextOrObserver: Observer[UploadTaskSnapshot],
+    nextOrObserver: PartialObserverUploadTask,
     error: js.Function1[/* a */ js.Error, _],
     complete: Unsubscribe
   ): js.Function = js.native
-  def on(event: TaskEvent, nextOrObserver: Observer[UploadTaskSnapshot], error: Null, complete: Unsubscribe): js.Function = js.native
+  def on(event: TaskEvent, nextOrObserver: PartialObserverUploadTask, error: Null, complete: Unsubscribe): js.Function = js.native
   def pause(): Boolean = js.native
   def resume(): Boolean = js.native
   def `then`(): js.Promise[_] = js.native
+  def `then`(onFulfilled: js.UndefOr[scala.Nothing], onRejected: js.Function1[/* a */ js.Error, _]): js.Promise[_] = js.native
   def `then`(onFulfilled: js.Function1[/* a */ UploadTaskSnapshot, _]): js.Promise[_] = js.native
   def `then`(
     onFulfilled: js.Function1[/* a */ UploadTaskSnapshot, _],

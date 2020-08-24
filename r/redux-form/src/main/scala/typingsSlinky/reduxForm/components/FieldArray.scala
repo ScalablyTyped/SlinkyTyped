@@ -16,7 +16,7 @@ object FieldArray {
   @scala.inline
   class Builder[P, FieldValue] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reduxForm.mod.FieldArray[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reduxForm.mod.FieldArray[P, FieldValue]]
   
   def apply[P, FieldValue](p: BaseFieldArrayProps[P, FieldValue]): Builder[P, FieldValue] = new Builder[P, FieldValue](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P, FieldValue](companion: FieldArray.type): Builder[P, FieldValue] = new Builder[P, FieldValue](js.Array(this.component, js.Dictionary.empty))()

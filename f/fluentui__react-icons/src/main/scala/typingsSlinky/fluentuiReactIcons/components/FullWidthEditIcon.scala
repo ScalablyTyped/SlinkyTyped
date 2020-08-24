@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FullWidthEditIcon {
-  @JSImport("@fluentui/react-icons/lib/components/FullWidthEditIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "FullWidthEditIcon")
   @js.native
   object component extends js.Object
   

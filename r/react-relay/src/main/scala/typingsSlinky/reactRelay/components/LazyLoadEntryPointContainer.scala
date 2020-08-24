@@ -18,14 +18,14 @@ object LazyLoadEntryPointContainer {
   object component extends js.Object
   
   @scala.inline
-  class Builder[TEntryPointParams <: js.Object, TPreloadedQueries <: js.Object, TPreloadedEntryPoints <: js.Object, TRuntimeProps <: js.Object, TExtraProps] (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ TEntryPointParams, /* <: js.Object */ TPreloadedQueries, /* <: js.Object */ TPreloadedEntryPoints, /* <: js.Object */ TRuntimeProps, TExtraProps] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def environmentProvider(value: IEnvironmentProvider[EnvironmentProviderOptions]): this.type = set("environmentProvider", value.asInstanceOf[js.Any])
   }
   
-  def withProps[TEntryPointParams <: js.Object, TPreloadedQueries <: js.Object, TPreloadedEntryPoints <: js.Object, TRuntimeProps <: js.Object, TExtraProps](
+  def withProps[/* <: js.Object */ TEntryPointParams, /* <: js.Object */ TPreloadedQueries, /* <: js.Object */ TPreloadedEntryPoints, /* <: js.Object */ TRuntimeProps, TExtraProps](
     p: EntryPointContainerProps[
       // tslint:disable-next-line no-unnecessary-generics
   TEntryPointParams, 
@@ -40,7 +40,7 @@ object LazyLoadEntryPointContainer {
     ]
   ): Builder[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = new Builder[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[TEntryPointParams <: js.Object, TPreloadedQueries <: js.Object, TPreloadedEntryPoints <: js.Object, TRuntimeProps <: js.Object, TExtraProps](
+  def apply[/* <: js.Object */ TEntryPointParams, /* <: js.Object */ TPreloadedQueries, /* <: js.Object */ TPreloadedEntryPoints, /* <: js.Object */ TRuntimeProps, TExtraProps](
     entryPoint: EntryPoint[
       // tslint:disable-next-line no-unnecessary-generics
   TEntryPointParams, 

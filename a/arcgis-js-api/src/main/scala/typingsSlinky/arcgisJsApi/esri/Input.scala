@@ -1,16 +1,20 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-area`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-box`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Input extends Accessor {
+trait Input
+  extends Accessor
+     with JSONSupport {
   /**
-    * Gamepad input specific configuration settings.
+    * The type of form element input displayed.
     *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-input-Input.html#gamepad)
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-inputs-Input.html#type)
     */
-  val gamepad: GamepadSettings = js.native
+  val `type`: `text-area` | `text-box` = js.native
 }
 

@@ -16,12 +16,12 @@ class EditTracksInfoRequest ()
   extends typingsSlinky.chrome.chrome.cast.media.EditTracksInfoRequest {
   def this(activeTrackIds: js.Array[Double]) = this()
   def this(
+    activeTrackIds: js.UndefOr[scala.Nothing],
+    textTrackStyle: typingsSlinky.chrome.chrome.cast.media.TextTrackStyle
+  ) = this()
+  def this(
     activeTrackIds: js.Array[Double],
     textTrackStyle: typingsSlinky.chrome.chrome.cast.media.TextTrackStyle
   ) = this()
-  /* CompleteClass */
-  override var activeTrackIds: js.Array[Double] = js.native
-  /* CompleteClass */
-  override var textTrackStyle: typingsSlinky.chrome.chrome.cast.media.TextTrackStyle = js.native
 }
 

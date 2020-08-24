@@ -19,6 +19,8 @@ object TableFilter {
     @scala.inline
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
+    def filterListVarargs(value: js.Array[String]*): this.type = set("filterList", js.Array(value :_*))
+    @scala.inline
     def filterList(value: js.Array[js.Array[String]]): this.type = set("filterList", value.asInstanceOf[js.Any])
     @scala.inline
     def onFilterRest(value: /* args */ js.Any => _): this.type = set("onFilterRest", js.Any.fromFunction1(value))

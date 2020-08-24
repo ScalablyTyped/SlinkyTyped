@@ -1,7 +1,7 @@
 
 # Scala.js typings for quick-lru
 
-Typings are for version 4.0.1
+Typings are for version 5.1.1
 
 ## Library description:
 Simple "Least Recently Used" (LRU) cache

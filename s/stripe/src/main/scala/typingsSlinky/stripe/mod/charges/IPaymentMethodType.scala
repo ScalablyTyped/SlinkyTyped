@@ -6,20 +6,20 @@ import scala.scalajs.js.annotation._
 
 /* Inlined stripe.stripe.charges.IPaymentMethodDetails['type'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.stripe.stripeStrings.p24
+  - typingsSlinky.stripe.stripeStrings.bancontact
   - typingsSlinky.stripe.stripeStrings.sofort
   - typingsSlinky.stripe.stripeStrings.alipay
-  - typingsSlinky.stripe.stripeStrings.stripe_account
   - typingsSlinky.stripe.stripeStrings.giropay
-  - typingsSlinky.stripe.stripeStrings.bancontact
-  - typingsSlinky.stripe.stripeStrings.ideal
-  - typingsSlinky.stripe.stripeStrings.card_present
-  - typingsSlinky.stripe.stripeStrings.wechat
   - typingsSlinky.stripe.stripeStrings.eps
-  - typingsSlinky.stripe.stripeStrings.klarna
   - typingsSlinky.stripe.stripeStrings.ach_debit
+  - typingsSlinky.stripe.stripeStrings.klarna
+  - typingsSlinky.stripe.stripeStrings.wechat
+  - typingsSlinky.stripe.stripeStrings.ideal
+  - typingsSlinky.stripe.stripeStrings.p24
+  - typingsSlinky.stripe.stripeStrings.card_present
   - typingsSlinky.stripe.stripeStrings.ach_credit_transfer
   - typingsSlinky.stripe.stripeStrings.card
+  - typingsSlinky.stripe.stripeStrings.stripe_account
 */
 trait IPaymentMethodType extends js.Object
 

@@ -13,7 +13,7 @@ package object queriesMod {
   ]
   type AllByRole = js.Function3[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
-    /* role */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
+    /* role */ typingsSlinky.testingLibraryDom.matchesMod.ByRoleMatcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queriesMod.ByRoleOptions], 
     js.Array[org.scalajs.dom.raw.HTMLElement]
   ]
@@ -27,42 +27,42 @@ package object queriesMod {
     /* container */ org.scalajs.dom.raw.HTMLElement, 
     /* id */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.matchesMod.MatcherOptions], 
-    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions], 
+    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions], 
     js.Promise[js.Array[org.scalajs.dom.raw.HTMLElement]]
   ]
   type FindAllByRole_ = js.Function4[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
-    /* role */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
+    /* role */ typingsSlinky.testingLibraryDom.matchesMod.ByRoleMatcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queriesMod.ByRoleOptions], 
-    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions], 
+    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions], 
     js.Promise[js.Array[org.scalajs.dom.raw.HTMLElement]]
   ]
   type FindAllByText_ = js.Function4[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
     /* id */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queryHelpersMod.SelectorMatcherOptions], 
-    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions], 
+    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions], 
     js.Promise[js.Array[org.scalajs.dom.raw.HTMLElement]]
   ]
   type FindByBoundAttribute = js.Function4[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
     /* id */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.matchesMod.MatcherOptions], 
-    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions], 
+    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions], 
     js.Promise[org.scalajs.dom.raw.HTMLElement]
   ]
   type FindByRole_ = js.Function4[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
-    /* role */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
+    /* role */ typingsSlinky.testingLibraryDom.matchesMod.ByRoleMatcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queriesMod.ByRoleOptions], 
-    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions], 
+    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions], 
     js.Promise[org.scalajs.dom.raw.HTMLElement]
   ]
   type FindByText_ = js.Function4[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
     /* id */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queryHelpersMod.SelectorMatcherOptions], 
-    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions], 
+    /* waitForElementOptions */ js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions], 
     js.Promise[org.scalajs.dom.raw.HTMLElement]
   ]
   type GetByBoundAttribute = js.Function3[
@@ -73,7 +73,7 @@ package object queriesMod {
   ]
   type GetByRole_ = js.Function3[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
-    /* role */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
+    /* role */ typingsSlinky.testingLibraryDom.matchesMod.ByRoleMatcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queriesMod.ByRoleOptions], 
     org.scalajs.dom.raw.HTMLElement
   ]
@@ -91,7 +91,7 @@ package object queriesMod {
   ]
   type QueryByRole_ = js.Function3[
     /* container */ org.scalajs.dom.raw.HTMLElement, 
-    /* role */ typingsSlinky.testingLibraryDom.matchesMod.Matcher, 
+    /* role */ typingsSlinky.testingLibraryDom.matchesMod.ByRoleMatcher, 
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.queriesMod.ByRoleOptions], 
     org.scalajs.dom.raw.HTMLElement | scala.Null
   ]

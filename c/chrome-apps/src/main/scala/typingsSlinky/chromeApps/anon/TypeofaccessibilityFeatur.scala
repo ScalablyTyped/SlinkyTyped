@@ -94,83 +94,36 @@ object TypeofaccessibilityFeatur {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnimationPolicy(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationPolicy")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAutoclick(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoclick")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAnimationPolicy(value: AccessibilityFeaturesSetting): Self = this.set("animationPolicy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCaretHighlight(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caretHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAutoclick(value: AccessibilityFeaturesSetting): Self = this.set("autoclick", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCursorHighlight(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCaretHighlight(value: AccessibilityFeaturesSetting): Self = this.set("caretHighlight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFocusHighlight(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCursorHighlight(value: AccessibilityFeaturesSetting): Self = this.set("cursorHighlight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHighContrast(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highContrast")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFocusHighlight(value: AccessibilityFeaturesSetting): Self = this.set("focusHighlight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLargeCursor(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHighContrast(value: AccessibilityFeaturesSetting): Self = this.set("highContrast", value.asInstanceOf[js.Any])
     @scala.inline
-    def withScreenMagnifier(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenMagnifier")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLargeCursor(value: AccessibilityFeaturesSetting): Self = this.set("largeCursor", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelectToSpeak(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectToSpeak")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setScreenMagnifier(value: AccessibilityFeaturesSetting): Self = this.set("screenMagnifier", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSpokenFeedback(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spokenFeedback")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSelectToSpeak(value: AccessibilityFeaturesSetting): Self = this.set("selectToSpeak", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStickyKeys(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSpokenFeedback(value: AccessibilityFeaturesSetting): Self = this.set("spokenFeedback", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSwitchAccess(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switchAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStickyKeys(value: AccessibilityFeaturesSetting): Self = this.set("stickyKeys", value.asInstanceOf[js.Any])
     @scala.inline
-    def withVirtualKeyboard(value: AccessibilityFeaturesSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualKeyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSwitchAccess(value: AccessibilityFeaturesSetting): Self = this.set("switchAccess", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVirtualKeyboard(value: AccessibilityFeaturesSetting): Self = this.set("virtualKeyboard", value.asInstanceOf[js.Any])
   }
   
 }

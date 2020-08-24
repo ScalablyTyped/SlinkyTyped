@@ -1,13 +1,14 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.ionicCoreStrings.bottom
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.ionicCoreStrings.middle
 import typingsSlinky.ionicCore.ionicCoreStrings.top
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail
+import typingsSlinky.ionicCore.sanitizationMod.IonicSafeString
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastButton
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,10 +24,6 @@ trait IonToast extends js.Object {
     * An array of buttons for the toast.
     */
   var buttons: js.UndefOr[js.Array[ToastButton | String]] = js.native
-  /**
-    * @deprecated Use `buttons` instead. Text to display in the close button.
-    */
-  var closeButtonText: js.UndefOr[String] = js.native
   /**
     * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
     */
@@ -58,7 +55,7 @@ trait IonToast extends js.Object {
   /**
     * Message to be shown in the toast.
     */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String | IonicSafeString] = js.native
   /**
     * The mode determines which platform styles to use.
     */
@@ -69,10 +66,6 @@ trait IonToast extends js.Object {
     */
   var position: top | bottom | middle = js.native
   /**
-    * @deprecated Use `buttons` instead. If `true`, the close button will be displayed.
-    */
-  var showCloseButton: Boolean = js.native
-  /**
     * If `true`, the toast will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
     */
   var translucent: Boolean = js.native
@@ -82,16 +75,17 @@ trait IonToast extends js.Object {
     * @param role The role of the element that is dismissing the toast. This can be useful in a button handler for determining which button was clicked to dismiss the toast. Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
     */
   def dismiss(): js.Promise[Boolean] = js.native
+  def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   /**
     * Returns a promise that resolves when the toast did dismiss.
     */
-  def onDidDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+  def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
   /**
     * Returns a promise that resolves when the toast will dismiss.
     */
-  def onWillDismiss(): js.Promise[OverlayEventDetail[_]] = js.native
+  def onWillDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
   /**
     * Present the toast overlay after it has been created.
     */

@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Provider {
-  @JSImport("csw-aas-js/dist/components/context/AuthContext", "Provider")
+  @JSImport("csw-aas-js/dist/components/context/AuthContext", "AuthContext.Provider")
   @js.native
   object component extends js.Object
   

@@ -1,6 +1,5 @@
 package typingsSlinky.antDesignReactNative.imagePickerMod
 
-import slinky.core.TagMod
 import typingsSlinky.antDesignReactNative.cameraRollPickerMod.CameraRollPickerProps
 import typingsSlinky.antDesignReactNative.imagePickerPropsTypeMod.ImagePickerPropTypes
 import typingsSlinky.antDesignReactNative.imageRollMod.ImageRollTexts
@@ -9,38 +8,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles because var conflicts: styles. Inlined  */ trait ImagePickerProps
+- typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles because var conflicts: styles. Inlined  */ @js.native
+trait ImagePickerProps
   extends ImagePickerPropTypes
      with ImageRollTexts {
-  var cameraPickerProps: js.UndefOr[CameraRollPickerProps] = js.undefined
+  var cameraPickerProps: js.UndefOr[CameraRollPickerProps] = js.native
 }
 
 object ImagePickerProps {
   @scala.inline
-  def apply(
-    cameraPickerProps: CameraRollPickerProps = null,
-    cancelText: TagMod[Any] = null,
-    files: js.Array[js.Object] = null,
-    onAddImageClick: () => Unit = null,
-    onChange: (/* files */ js.Array[js.Object], /* operationType */ String, /* index */ js.UndefOr[Double]) => Unit = null,
-    onFail: /* msg */ String => Unit = null,
-    onImageClick: (/* index */ js.UndefOr[Double], /* files */ js.UndefOr[js.Array[js.Object]]) => Unit = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    styles: js.Object = null,
-    title: TagMod[Any] = null
-  ): ImagePickerProps = {
+  def apply(): ImagePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (cameraPickerProps != null) __obj.updateDynamic("cameraPickerProps")(cameraPickerProps.asInstanceOf[js.Any])
-    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (onAddImageClick != null) __obj.updateDynamic("onAddImageClick")(js.Any.fromFunction0(onAddImageClick))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onFail != null) __obj.updateDynamic("onFail")(js.Any.fromFunction1(onFail))
-    if (onImageClick != null) __obj.updateDynamic("onImageClick")(js.Any.fromFunction2(onImageClick))
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePickerProps]
   }
+  @scala.inline
+  implicit class ImagePickerPropsOps[Self <: ImagePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCameraPickerProps(value: CameraRollPickerProps): Self = this.set("cameraPickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCameraPickerProps: Self = this.set("cameraPickerProps", js.undefined)
+  }
+  
 }
 

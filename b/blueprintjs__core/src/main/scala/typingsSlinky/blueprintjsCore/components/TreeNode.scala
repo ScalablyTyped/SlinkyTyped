@@ -22,7 +22,9 @@ object TreeNode {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.TreeNode[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.TreeNode[T]] {
+    @scala.inline
+    def childNodesVarargs(value: ITreeNode[T]*): this.type = set("childNodes", js.Array(value :_*))
     @scala.inline
     def childNodes(value: js.Array[ITreeNode[T]]): this.type = set("childNodes", value.asInstanceOf[js.Any])
     @scala.inline

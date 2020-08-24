@@ -47,71 +47,32 @@ object FlingRunnable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_AbsListView_this(value: typingsSlinky.androiduix.android.widget.AbsListView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_AbsListView_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withEdgeReached(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeReached")(js.Any.fromFunction1(value))
-        ret
-    }
+    def set_AbsListView_this(value: typingsSlinky.androiduix.android.widget.AbsListView): Self = this.set("_AbsListView_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEndFling(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endFling")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setEdgeReached(value: js.Any => js.Any): Self = this.set("edgeReached", js.Any.fromFunction1(value))
     @scala.inline
-    def withFlywheelTouch(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flywheelTouch")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setEndFling(value: () => Unit): Self = this.set("endFling", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCheckFlywheel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckFlywheel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFlywheelTouch(value: () => Unit): Self = this.set("flywheelTouch", js.Any.fromFunction0(value))
     @scala.inline
-    def withMLastFlingY(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLastFlingY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckFlywheel(value: js.Any): Self = this.set("mCheckFlywheel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScroller(value: OverScroller): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScroller")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLastFlingY(value: js.Any): Self = this.set("mLastFlingY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStart(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMScroller(value: OverScroller): Self = this.set("mScroller", value.asInstanceOf[js.Any])
     @scala.inline
-    def withStartOverfling(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startOverfling")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setStart(value: Double => Unit): Self = this.set("start", js.Any.fromFunction1(value))
     @scala.inline
-    def withStartScroll(value: (Double, Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startScroll")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setStartOverfling(value: Double => Unit): Self = this.set("startOverfling", js.Any.fromFunction1(value))
     @scala.inline
-    def withStartSpringback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startSpringback")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setStartScroll(value: (Double, Double, Boolean) => Unit): Self = this.set("startScroll", js.Any.fromFunction3(value))
+    @scala.inline
+    def setStartSpringback(value: () => Unit): Self = this.set("startSpringback", js.Any.fromFunction0(value))
   }
   
 }

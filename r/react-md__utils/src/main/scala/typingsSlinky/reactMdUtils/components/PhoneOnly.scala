@@ -1,0 +1,16 @@
+package typingsSlinky.reactMdUtils.components
+
+import typingsSlinky.reactMdUtils.mediaOnlyMod.MediaOnlyProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object PhoneOnly {
+  @JSImport("@react-md/utils", "PhoneOnly")
+  @js.native
+  object component extends js.Object
+  
+  def withProps(p: MediaOnlyProps): SharedBuilder_MediaOnlyProps_420184836 = new SharedBuilder_MediaOnlyProps_420184836(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PhoneOnly.type): SharedBuilder_MediaOnlyProps_420184836 = new SharedBuilder_MediaOnlyProps_420184836(js.Array(this.component, js.Dictionary.empty))()
+}
+

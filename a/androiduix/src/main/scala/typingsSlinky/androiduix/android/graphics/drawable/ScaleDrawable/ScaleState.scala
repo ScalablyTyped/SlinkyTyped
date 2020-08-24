@@ -41,53 +41,26 @@ object ScaleState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCanConstantState(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canConstantState")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withMCanConstantState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCanConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCanConstantState(value: () => Boolean): Self = this.set("canConstantState", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCheckedConstantState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCheckedConstantState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCanConstantState(value: js.Any): Self = this.set("mCanConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDrawable(value: Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDrawable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCheckedConstantState(value: js.Any): Self = this.set("mCheckedConstantState", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mGravity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDrawable(value: Drawable): Self = this.set("mDrawable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScaleHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScaleHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMGravity(value: Double): Self = this.set("mGravity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMScaleWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mScaleWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScaleHeight(value: Double): Self = this.set("mScaleHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMUseIntrinsicSizeAsMin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mUseIntrinsicSizeAsMin")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMScaleWidth(value: Double): Self = this.set("mScaleWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMUseIntrinsicSizeAsMin(value: Boolean): Self = this.set("mUseIntrinsicSizeAsMin", value.asInstanceOf[js.Any])
   }
   
 }

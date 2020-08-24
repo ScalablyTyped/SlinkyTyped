@@ -34,29 +34,18 @@ object OPENASPINNEDTAB {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOPEN_AS_PINNED_TAB(value: OPEN_AS_PINNED_TAB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_AS_PINNED_TAB")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOPEN_AS_REGULAR_TAB(value: OPEN_AS_REGULAR_TAB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_AS_REGULAR_TAB")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPEN_AS_PINNED_TAB(value: OPEN_AS_PINNED_TAB): Self = this.set("OPEN_AS_PINNED_TAB", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOPEN_AS_WINDOW(value: OPEN_AS_WINDOW): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_AS_WINDOW")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPEN_AS_REGULAR_TAB(value: OPEN_AS_REGULAR_TAB): Self = this.set("OPEN_AS_REGULAR_TAB", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOPEN_FULL_SCREEN(value: OPEN_FULL_SCREEN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OPEN_FULL_SCREEN")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOPEN_AS_WINDOW(value: OPEN_AS_WINDOW): Self = this.set("OPEN_AS_WINDOW", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOPEN_FULL_SCREEN(value: OPEN_FULL_SCREEN): Self = this.set("OPEN_FULL_SCREEN", value.asInstanceOf[js.Any])
   }
   
 }

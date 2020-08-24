@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DropboxLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DropboxLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DropboxLogoIcon")
   @js.native
   object component extends js.Object
   

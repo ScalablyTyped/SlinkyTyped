@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -21,7 +20,6 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.dark
 import typingsSlinky.antdMobile.antdMobileStrings.light
-import typingsSlinky.antdMobile.navBarMod.default
 import typingsSlinky.antdMobile.navBarPropsTypeMod.NavBarProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -77,14 +75,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NavBar {
-  @JSImport("antd-mobile/lib/nav-bar", JSImport.Default)
+  @JSImport("antd-mobile", "NavBar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.NavBar] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -262,6 +260,8 @@ object NavBar {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -308,7 +308,7 @@ object NavBar {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -342,7 +342,7 @@ object NavBar {
     @scala.inline
     def leftContentReactElement(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def leftContent(value: TagMod[Any]): this.type = set("leftContent", value.asInstanceOf[js.Any])
+    def leftContent(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
     @scala.inline
     def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
@@ -578,7 +578,7 @@ object NavBar {
     @scala.inline
     def rightContentReactElement(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def rightContent(value: TagMod[Any]): this.type = set("rightContent", value.asInstanceOf[js.Any])
+    def rightContent(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
@@ -647,6 +647,8 @@ object NavBar {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

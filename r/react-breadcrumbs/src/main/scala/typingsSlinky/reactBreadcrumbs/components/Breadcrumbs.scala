@@ -1,7 +1,6 @@
 package typingsSlinky.reactBreadcrumbs.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -27,9 +26,9 @@ object Breadcrumbs {
     @scala.inline
     def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def separator(value: TagMod[Any]): this.type = set("separator", value.asInstanceOf[js.Any])
+    def separator(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCrumbs(value: /* crumbs */ Crumbs => TagMod[Any]): this.type = set("setCrumbs", js.Any.fromFunction1(value))
+    def setCrumbs(value: /* crumbs */ Crumbs => ReactElement): this.type = set("setCrumbs", js.Any.fromFunction1(value))
     @scala.inline
     def wrapperFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
     @scala.inline

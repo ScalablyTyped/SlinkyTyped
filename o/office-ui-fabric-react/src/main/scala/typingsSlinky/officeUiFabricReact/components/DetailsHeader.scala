@@ -21,7 +21,6 @@ import typingsSlinky.officeUiFabricReact.detailsRowCheckTypesMod.IDetailsCheckbo
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -41,7 +40,7 @@ object DetailsHeader {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.detailsHeaderBaseMod.DetailsHeaderBase] {
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,6 +61,8 @@ object DetailsHeader {
     def columnReorderOptions(value: IColumnReorderOptions): this.type = set("columnReorderOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def columnReorderProps(value: IColumnReorderHeaderProps): this.type = set("columnReorderProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
     @scala.inline
     def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline

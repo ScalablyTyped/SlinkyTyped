@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiStyles
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.jss.mod.GenerateId
@@ -34,7 +33,6 @@ import typingsSlinky.materialUiStyles.withThemeWithThemeMod.WithThemeCreatorOpti
 import typingsSlinky.materialUiTypes.mod.ConsistentWith
 import typingsSlinky.materialUiTypes.mod.Omit
 import typingsSlinky.materialUiTypes.mod.PropInjector
-import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.Context
@@ -53,14 +51,8 @@ object mod extends js.Object {
     def this(options: js.Object) = this()
   }
   
-  @js.native
-  class StylesProvider protected ()
-    extends Component[StylesProviderProps, js.Object, js.Any] {
-    def this(props: StylesProviderProps) = this()
-    def this(props: StylesProviderProps, context: js.Any) = this()
-  }
-  
   val StylesContext: Context[StylesOptions] = js.native
+  val StylesProvider: ReactComponentClass[StylesProviderProps] = js.native
   def ThemeProvider[T](props: ThemeProviderProps[T]): ReactElement = js.native
   def createGenerateClassName(): GenerateId = js.native
   def createGenerateClassName(options: GenerateClassNameOptions): GenerateId = js.native
@@ -112,8 +104,5 @@ object mod extends js.Object {
   ] = js.native
   def withThemeCreator[Theme](): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
   def withThemeCreator[Theme](option: WithThemeCreatorOption[Theme]): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
-  @js.native
-  object StylesProvider extends TopLevel[ReactComponentClass[StylesProviderProps]]
-  
 }
 

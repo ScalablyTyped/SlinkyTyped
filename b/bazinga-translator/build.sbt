@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "bazinga-translator"
-version := "3.0-dt-20200306Z-f7bb86"
-scalaVersion := "2.13.2"
+version := "3.0-dt-20200306Z-688cb9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

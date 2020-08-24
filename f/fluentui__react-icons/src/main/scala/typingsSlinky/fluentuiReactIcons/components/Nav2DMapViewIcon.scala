@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Nav2DMapViewIcon {
-  @JSImport("@fluentui/react-icons/lib/components/Nav2DMapViewIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "Nav2DMapViewIcon")
   @js.native
   object component extends js.Object
   

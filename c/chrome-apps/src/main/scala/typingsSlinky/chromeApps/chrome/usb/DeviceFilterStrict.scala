@@ -32,59 +32,28 @@ object DeviceFilterStrict {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withVendorId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withInterfaceClass(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceClass")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setVendorId(value: integer): Self = this.set("vendorId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutInterfaceClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceClass")(js.undefined)
-        ret
-    }
+    def setInterfaceClass(value: integer): Self = this.set("interfaceClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaceProtocol(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInterfaceClass: Self = this.set("interfaceClass", js.undefined)
     @scala.inline
-    def withoutInterfaceProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceProtocol")(js.undefined)
-        ret
-    }
+    def setInterfaceProtocol(value: integer): Self = this.set("interfaceProtocol", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInterfaceSubclass(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceSubclass")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInterfaceProtocol: Self = this.set("interfaceProtocol", js.undefined)
     @scala.inline
-    def withoutInterfaceSubclass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceSubclass")(js.undefined)
-        ret
-    }
+    def setInterfaceSubclass(value: integer): Self = this.set("interfaceSubclass", value.asInstanceOf[js.Any])
     @scala.inline
-    def withProductId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInterfaceSubclass: Self = this.set("interfaceSubclass", js.undefined)
     @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
+    def setProductId(value: integer): Self = this.set("productId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProductId: Self = this.set("productId", js.undefined)
   }
   
 }

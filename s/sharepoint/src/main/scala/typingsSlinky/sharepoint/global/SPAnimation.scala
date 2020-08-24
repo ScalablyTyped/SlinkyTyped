@@ -1,7 +1,6 @@
 package typingsSlinky.sharepoint.global
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.sharepoint.SPAnimation.Attribute
 import typingsSlinky.sharepoint.SPAnimation.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,7 +43,23 @@ object SPAnimation extends js.Object {
       delay: Double,
       element: js.Array[HTMLElement],
       finalState: typingsSlinky.sharepoint.SPAnimation.State,
+      finishFunc: js.UndefOr[scala.Nothing],
+      data: js.Any
+    ) = this()
+    def this(
+      animationID: ID,
+      delay: Double,
+      element: js.Array[HTMLElement],
+      finalState: typingsSlinky.sharepoint.SPAnimation.State,
       finishFunc: js.Function1[/* data */ js.Any, Unit],
+      data: js.Any
+    ) = this()
+    def this(
+      animationID: ID,
+      delay: Double,
+      element: HTMLElement,
+      finalState: typingsSlinky.sharepoint.SPAnimation.State,
+      finishFunc: js.UndefOr[scala.Nothing],
       data: js.Any
     ) = this()
     def this(
@@ -55,8 +70,6 @@ object SPAnimation extends js.Object {
       finishFunc: js.Function1[/* data */ js.Any, Unit],
       data: js.Any
     ) = this()
-    /* CompleteClass */
-    override def RunAnimation(): Unit = js.native
   }
   
   @js.native
@@ -65,14 +78,7 @@ object SPAnimation extends js.Object {
   
   @js.native
   class State ()
-    extends typingsSlinky.sharepoint.SPAnimation.State {
-    /* CompleteClass */
-    override def GetAttribute(attributeId: Attribute): Double = js.native
-    /* CompleteClass */
-    override def GetDataIndex(attributeId: Attribute): Double = js.native
-    /* CompleteClass */
-    override def SetAttribute(attributeId: Attribute, value: Double): Unit = js.native
-  }
+    extends typingsSlinky.sharepoint.SPAnimation.State
   
   @js.native
   object Attribute extends js.Object {

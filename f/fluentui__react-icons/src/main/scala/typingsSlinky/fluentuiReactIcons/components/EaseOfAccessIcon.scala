@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object EaseOfAccessIcon {
-  @JSImport("@fluentui/react-icons/lib/components/EaseOfAccessIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "EaseOfAccessIcon")
   @js.native
   object component extends js.Object
   

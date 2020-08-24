@@ -34,6 +34,16 @@ trait IAngularStatic extends js.Object {
     */
   var resumeBootstrap: js.UndefOr[js.Function1[/* extraModules */ js.UndefOr[js.Array[String]], IInjectorService]] = js.native
   var version: CodeName = js.native
+  /**
+    * Restores the pre-1.8 behavior of jqLite that turns XHTML-like strings like
+    * `<div /><span />` to `<div></div><span></span>` instead of `<div><span></span></div>`.
+    * The new behavior is a security fix so if you use this method, please try to adjust
+    * to the change & remove the call as soon as possible.
+    * Note that this only patches jqLite. If you use jQuery 3.5.0 or newer, please read
+    * [jQuery 3.5 upgrade guide](https://jquery.com/upgrade-guide/3.5/) for more details
+    * about the workarounds.
+    */
+  def UNSAFE_restoreLegacyJqLiteXHTMLReplacement(): Unit = js.native
   def bind(context: js.Any, fn: Function, args: js.Any*): Function = js.native
   /**
     * Use this function to manually start up angular application.
@@ -46,6 +56,7 @@ trait IAngularStatic extends js.Object {
     *     - `strictDi`: disable automatic function annotation for the application. This is meant to assist in finding bugs which break minified code.
     */
   def bootstrap(element: String): IInjectorService = js.native
+  def bootstrap(element: String, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
   def bootstrap(element: String, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
   def bootstrap(
     element: String,
@@ -53,6 +64,7 @@ trait IAngularStatic extends js.Object {
     config: IAngularBootstrapConfig
   ): IInjectorService = js.native
   def bootstrap(element: JQuery): IInjectorService = js.native
+  def bootstrap(element: JQuery, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
   def bootstrap(element: JQuery, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
   def bootstrap(
     element: JQuery,
@@ -60,6 +72,7 @@ trait IAngularStatic extends js.Object {
     config: IAngularBootstrapConfig
   ): IInjectorService = js.native
   def bootstrap(element: Document): IInjectorService = js.native
+  def bootstrap(element: Document, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
   def bootstrap(element: Document, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
   def bootstrap(
     element: Document,
@@ -67,6 +80,7 @@ trait IAngularStatic extends js.Object {
     config: IAngularBootstrapConfig
   ): IInjectorService = js.native
   def bootstrap(element: Element): IInjectorService = js.native
+  def bootstrap(element: Element, modules: js.UndefOr[scala.Nothing], config: IAngularBootstrapConfig): IInjectorService = js.native
   def bootstrap(element: Element, modules: js.Array[String | Function | js.Array[_]]): IInjectorService = js.native
   def bootstrap(
     element: Element,
@@ -171,6 +185,7 @@ trait IAngularStatic extends js.Object {
   def identity[T](): T = js.native
   def identity[T](arg: T): T = js.native
   def injector(): IInjectorService = js.native
+  def injector(modules: js.UndefOr[scala.Nothing], strictDi: Boolean): IInjectorService = js.native
   def injector(modules: js.Array[_]): IInjectorService = js.native
   def injector(modules: js.Array[_], strictDi: Boolean): IInjectorService = js.native
   def isArray(value: js.Any): /* is std.Array<any> */ Boolean = js.native
@@ -203,6 +218,7 @@ trait IAngularStatic extends js.Object {
     * @param configFn Optional configuration function for the module.
     */
   def module(name: String): IModule = js.native
+  def module(name: String, requires: js.UndefOr[scala.Nothing], configFn: Injectable[Function]): IModule = js.native
   def module(name: String, requires: js.Array[String]): IModule = js.native
   def module(name: String, requires: js.Array[String], configFn: Injectable[Function]): IModule = js.native
   def noop(args: js.Any*): Unit = js.native

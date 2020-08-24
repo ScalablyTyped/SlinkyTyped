@@ -6,24 +6,24 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapCollap
 import typingsSlinky.materialUiCore.collapseCollapseMod.CollapseProps
-import typingsSlinky.materialUiCore.collapseMod.default
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.materialUiCoreStrings.auto
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Collapse {
-  @JSImport("@material-ui/core/Collapse", JSImport.Default)
+  @JSImport("@material-ui/core", "Collapse")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def addEndListener(value: js.Any): this.type = set("addEndListener", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +39,7 @@ object Collapse {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def enter(value: Boolean): this.type = set("enter", value.asInstanceOf[js.Any])
     @scala.inline

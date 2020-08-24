@@ -23,6 +23,8 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.storybookComponents.anon.PropsWithChildrenPickText
 import typingsSlinky.storybookComponents.inputMod.Alignments
 import typingsSlinky.storybookComponents.inputMod.Sizes
@@ -85,7 +87,7 @@ object Textarea {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Any with js.Object] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -266,6 +268,8 @@ object Textarea {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -827,6 +831,10 @@ object Textarea {
   }
   
   def withProps(p: PropsWithChildrenPickText): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Textarea.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(ref: js.UndefOr[Ref[_]] with js.UndefOr[LegacyRef[HTMLTextAreaElement]]): Builder = {
+    val __props = js.Dynamic.literal(ref = ref.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildrenPickText]))
+  }
 }
 

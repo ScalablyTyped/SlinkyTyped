@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "replace-ext"
-version := "0.0.1-dt-20200515Z-b0f286"
-scalaVersion := "2.13.2"
+version := "0.0.1-dt-20200515Z-99b4d5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -14,6 +14,7 @@ object duplexMod extends js.Object {
   class DuplexMock () extends default {
     def this(source: ArrayLike[_]) = this()
     def this(source: js.Iterable[_]) = this()
+    def this(source: js.UndefOr[scala.Nothing], options: DuplexOptions) = this()
     def this(source: ArrayLike[_], options: DuplexOptions) = this()
     def this(source: js.Iterable[_], options: DuplexOptions) = this()
   }

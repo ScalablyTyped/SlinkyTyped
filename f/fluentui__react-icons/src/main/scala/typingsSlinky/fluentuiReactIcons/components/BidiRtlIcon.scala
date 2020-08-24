@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BidiRtlIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BidiRtlIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BidiRtlIcon")
   @js.native
   object component extends js.Object
   

@@ -2,9 +2,9 @@ package typingsSlinky.wordpressComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressComponents.mod.TreeSelect.^
 import typingsSlinky.wordpressComponents.treeSelectMod.TreeSelect.Props
 import typingsSlinky.wordpressComponents.treeSelectMod.TreeSelect.Tree
+import typingsSlinky.wordpressComponents.treeSelectMod.TreeSelect.TreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,11 +17,13 @@ object TreeSelect {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, ^] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def noOptionLabel(value: String): this.type = set("noOptionLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def selectedId(value: String): this.type = set("selectedId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def treeVarargs(value: TreeNode*): this.type = set("tree", js.Array(value :_*))
     @scala.inline
     def tree(value: Tree): this.type = set("tree", value.asInstanceOf[js.Any])
   }

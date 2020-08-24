@@ -5,7 +5,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.paginationItemMod.PaginationItemProps
-import typingsSlinky.semanticUiReact.paginationItemMod.default
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.ellipsisItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.firstItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.lastItem
@@ -17,14 +16,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PaginationItem {
-  @JSImport("semantic-ui-react/dist/commonjs/addons/Pagination/PaginationItem", JSImport.Default)
+  @JSImport("semantic-ui-react", "PaginationItem")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.PaginationItem] {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline

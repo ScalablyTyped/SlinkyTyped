@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "MessageBundle")
 @js.native
 class MessageBundle protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.MessageBundle {
+  extends typingsSlinky.angularCompiler.compilerMod.MessageBundle {
   def this(
     _htmlParser: typingsSlinky.angularCompiler.htmlParserMod.HtmlParser,
     _implicitTags: js.Array[String],

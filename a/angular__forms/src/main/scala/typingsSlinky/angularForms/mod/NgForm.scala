@@ -20,26 +20,9 @@ class NgForm protected ()
   var _setUpdateStrategy: js.Any = js.native
   /**
     * @description
-    * The internal `FormGroup` instance.
-    */
-  @JSName("control")
-  val control_NgForm: FormGroup = js.native
-  /**
-    * @description
-    * Returns a map of the controls in this group.
-    */
-  val controls: StringDictionary[AbstractControl] = js.native
-  /**
-    * @description
     * The `FormGroup` instance created for this form.
     */
   var form: FormGroup = js.native
-  /**
-    * @description
-    * The directive instance.
-    */
-  @JSName("formDirective")
-  val formDirective_NgForm: Form = js.native
   /**
     * @description
     * Event emitter for the "ngSubmit" event
@@ -57,24 +40,9 @@ class NgForm protected ()
   var options: UpdateOn = js.native
   /**
     * @description
-    * Returns an array representing the path to this group. Because this directive
-    * always lives at the top level of a form, it is always an empty array.
-    */
-  @JSName("path")
-  val path_NgForm: js.Array[String] = js.native
-  /**
-    * @description
     * Returns whether the form submission has been triggered.
     */
   val submitted: Boolean = js.native
-  /**
-    * @description
-    * Add a control to this form.
-    *
-    * @param dir The control directive to add to the form.
-    */
-  /* CompleteClass */
-  override def addControl(dir: NgControl): Unit = js.native
   /**
     * @description
     * Method that sets up the control directive in this group, re-calculates its value
@@ -85,14 +53,6 @@ class NgForm protected ()
   def addControl(dir: NgModel): Unit = js.native
   /**
     * @description
-    * Add a group of controls to this form.
-    *
-    * @param dir: The control group directive to add.
-    */
-  /* CompleteClass */
-  override def addFormGroup(dir: AbstractFormGroupDirective): Unit = js.native
-  /**
-    * @description
     * Adds a new `NgModelGroup` directive instance to the form.
     *
     * @param dir The `NgModelGroup` directive instance.
@@ -100,12 +60,9 @@ class NgForm protected ()
   def addFormGroup(dir: NgModelGroup): Unit = js.native
   /**
     * @description
-    * The control directive from which to get the `FormControl`.
-    *
-    * @param dir: The control directive.
+    * Returns a map of the controls in this group.
     */
-  /* CompleteClass */
-  override def getControl(dir: NgControl): FormControl = js.native
+  def controls: StringDictionary[AbstractControl] = js.native
   /**
     * @description
     * Retrieves the `FormControl` instance from the provided `NgModel` directive.
@@ -115,27 +72,11 @@ class NgForm protected ()
   def getControl(dir: NgModel): FormControl = js.native
   /**
     * @description
-    * The `FormGroup` associated with a particular `AbstractFormGroupDirective`.
-    *
-    * @param dir: The form group directive from which to get the `FormGroup`.
-    */
-  /* CompleteClass */
-  override def getFormGroup(dir: AbstractFormGroupDirective): FormGroup = js.native
-  /**
-    * @description
     * Retrieves the `FormGroup` for a provided `NgModelGroup` directive instance
     *
     * @param dir The `NgModelGroup` directive instance.
     */
   def getFormGroup(dir: NgModelGroup): FormGroup = js.native
-  /**
-    * A callback method that is invoked immediately after
-    * Angular has completed initialization of a component's view.
-    * It is invoked only once when the view is instantiated.
-    *
-    */
-  /* CompleteClass */
-  override def ngAfterViewInit(): Unit = js.native
   /**
     * @description
     * Method called when the "reset" event is triggered on the form.
@@ -151,27 +92,11 @@ class NgForm protected ()
   def onSubmit($event: Event): Boolean = js.native
   /**
     * @description
-    * Remove a control from this form.
-    *
-    * @param dir: The control directive to remove from the form.
-    */
-  /* CompleteClass */
-  override def removeControl(dir: NgControl): Unit = js.native
-  /**
-    * @description
     * Removes the `NgModel` instance from the internal list of directives
     *
     * @param dir The `NgModel` directive instance.
     */
   def removeControl(dir: NgModel): Unit = js.native
-  /**
-    * @description
-    * Remove a group of controls to this form.
-    *
-    * @param dir: The control group directive to remove.
-    */
-  /* CompleteClass */
-  override def removeFormGroup(dir: AbstractFormGroupDirective): Unit = js.native
   /**
     * @description
     * Removes the `NgModelGroup` directive instance from the form.
@@ -194,14 +119,5 @@ class NgForm protected ()
     * @param value The new value
     */
   def setValue(value: StringDictionary[js.Any]): Unit = js.native
-  /**
-    * @description
-    * Update the model for a particular control with a new value.
-    *
-    * @param dir: The control directive to update.
-    * @param value: The new value for the control.
-    */
-  /* CompleteClass */
-  override def updateModel(dir: NgControl, value: js.Any): Unit = js.native
 }
 

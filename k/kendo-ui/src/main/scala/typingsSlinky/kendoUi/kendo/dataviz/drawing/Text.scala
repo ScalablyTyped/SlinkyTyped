@@ -17,6 +17,7 @@ trait Text
   def position(): Point = js.native
   def position(value: Point): Unit = js.native
   def stroke(color: String): typingsSlinky.kendoUi.kendo.drawing.Text = js.native
+  def stroke(color: String, width: js.UndefOr[scala.Nothing], opacity: Double): typingsSlinky.kendoUi.kendo.drawing.Text = js.native
   def stroke(color: String, width: Double): typingsSlinky.kendoUi.kendo.drawing.Text = js.native
   def stroke(color: String, width: Double, opacity: Double): typingsSlinky.kendoUi.kendo.drawing.Text = js.native
 }

@@ -36,6 +36,12 @@ trait SCBrokerClient extends EventEmitter {
   var state: connected | connecting | disconnected = js.native
   def add(keyChain: KeyChain, value: js.Any): Unit = js.native
   def add(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def add(
+    keyChain: KeyChain,
+    value: js.Any,
+    getValue: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def add(keyChain: KeyChain, value: js.Any, getValue: Boolean): Unit = js.native
   def add(
     keyChain: KeyChain,
@@ -45,6 +51,12 @@ trait SCBrokerClient extends EventEmitter {
   ): Unit = js.native
   def concat(keyChain: KeyChain, value: js.Any): Unit = js.native
   def concat(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def concat(
+    keyChain: KeyChain,
+    value: js.Any,
+    getValue: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def concat(keyChain: KeyChain, value: js.Any, getValue: Boolean): Unit = js.native
   def concat(
     keyChain: KeyChain,
@@ -57,6 +69,11 @@ trait SCBrokerClient extends EventEmitter {
   def exec(query: js.Function1[/* datamap */ FlexiMap, Unit]): Unit = js.native
   def exec(
     query: js.Function1[/* datamap */ FlexiMap, Unit],
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]
+  ): Unit = js.native
+  def exec(
+    query: js.Function1[/* datamap */ FlexiMap, Unit],
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]
   ): Unit = js.native
   def exec(query: js.Function1[/* datamap */ FlexiMap, Unit], options: QueryOptions): Unit = js.native
@@ -112,6 +129,11 @@ trait SCBrokerClient extends EventEmitter {
     query: js.Function1[/* datamap */ FlexiMap, Unit],
     callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]
   ): Unit = js.native
+  def query(
+    query: js.Function1[/* datamap */ FlexiMap, Unit],
+    data: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]
+  ): Unit = js.native
   def query(query: js.Function1[/* datamap */ FlexiMap, Unit], data: js.Any): Unit = js.native
   def query(
     query: js.Function1[/* datamap */ FlexiMap, Unit],
@@ -120,6 +142,11 @@ trait SCBrokerClient extends EventEmitter {
   ): Unit = js.native
   def remove(keyChain: KeyChain): Unit = js.native
   def remove(keyChain: KeyChain, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def remove(
+    keyChain: KeyChain,
+    getValue: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def remove(keyChain: KeyChain, getValue: Boolean): Unit = js.native
   def remove(
     keyChain: KeyChain,
@@ -134,11 +161,39 @@ trait SCBrokerClient extends EventEmitter {
     fromIndex: Double,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Unit = js.native
+  def removeRange(
+    keyChain: KeyChain,
+    fromIndex: Double,
+    toIndex: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def removeRange(
+    keyChain: KeyChain,
+    fromIndex: Double,
+    toIndex: js.UndefOr[scala.Nothing],
+    getValue: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def removeRange(keyChain: KeyChain, fromIndex: Double, toIndex: js.UndefOr[scala.Nothing], getValue: Boolean): Unit = js.native
+  def removeRange(
+    keyChain: KeyChain,
+    fromIndex: Double,
+    toIndex: js.UndefOr[scala.Nothing],
+    getValue: Boolean,
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def removeRange(keyChain: KeyChain, fromIndex: Double, toIndex: Double): Unit = js.native
   def removeRange(
     keyChain: KeyChain,
     fromIndex: Double,
     toIndex: Double,
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def removeRange(
+    keyChain: KeyChain,
+    fromIndex: Double,
+    toIndex: Double,
+    getValue: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Unit = js.native
   def removeRange(keyChain: KeyChain, fromIndex: Double, toIndex: Double, getValue: Boolean): Unit = js.native
@@ -152,6 +207,12 @@ trait SCBrokerClient extends EventEmitter {
   def send(data: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def set(keyChain: KeyChain, value: js.Any): Unit = js.native
   def set(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def set(
+    keyChain: KeyChain,
+    value: js.Any,
+    getValue: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def set(keyChain: KeyChain, value: js.Any, getValue: Boolean): Unit = js.native
   def set(
     keyChain: KeyChain,
@@ -161,6 +222,11 @@ trait SCBrokerClient extends EventEmitter {
   ): Unit = js.native
   def splice(keyChain: KeyChain): Unit = js.native
   def splice(keyChain: KeyChain, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def splice(
+    keyChain: KeyChain,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def splice(keyChain: KeyChain, options: SpliceOptions): Unit = js.native
   def splice(
     keyChain: KeyChain,

@@ -2,10 +2,12 @@ package typingsSlinky.reactVirtualized.components
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Window
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualized.anon.Height
 import typingsSlinky.reactVirtualized.anon.ScrollLeft
+import typingsSlinky.reactVirtualized.esWindowScrollerMod.WindowScrollerChildProps
 import typingsSlinky.reactVirtualized.esWindowScrollerMod.WindowScrollerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,6 +39,10 @@ object WindowScroller {
   }
   
   def withProps(p: WindowScrollerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: WindowScroller.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: WindowScrollerChildProps => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[WindowScrollerProps]))
+  }
 }
 

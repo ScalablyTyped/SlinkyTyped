@@ -38,6 +38,8 @@ object ModalView {
     @scala.inline
     def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
     @scala.inline
+    def onRequestClose(value: () => Boolean): this.type = set("onRequestClose", js.Any.fromFunction0(value))
+    @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def wrapStyle(value: StyleProp[ViewStyle]): this.type = set("wrapStyle", value.asInstanceOf[js.Any])

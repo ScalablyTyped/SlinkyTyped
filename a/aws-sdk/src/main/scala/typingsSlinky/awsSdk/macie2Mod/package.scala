@@ -38,6 +38,7 @@ package object macie2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.AES256
     - typingsSlinky.awsSdk.awsSdkStrings.awsColonkms
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
     - java.lang.String
   */
   type EncryptionType = typingsSlinky.awsSdk.macie2Mod._EncryptionType | java.lang.String
@@ -124,7 +125,7 @@ package object macie2Mod {
   type KeyValuePairList = js.Array[typingsSlinky.awsSdk.macie2Mod.KeyValuePair]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.jobType
-    - typingsSlinky.awsSdk.awsSdkStrings.jobStatus
+    - typingsSlinky.awsSdk.awsSdkStrings.jobStatus_
     - typingsSlinky.awsSdk.awsSdkStrings.createdAt_
     - typingsSlinky.awsSdk.awsSdkStrings.name__
     - java.lang.String
@@ -132,7 +133,7 @@ package object macie2Mod {
   type ListJobsFilterKey = typingsSlinky.awsSdk.macie2Mod._ListJobsFilterKey | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.createdAt_
-    - typingsSlinky.awsSdk.awsSdkStrings.jobStatus
+    - typingsSlinky.awsSdk.awsSdkStrings.jobStatus_
     - typingsSlinky.awsSdk.awsSdkStrings.name__
     - typingsSlinky.awsSdk.awsSdkStrings.jobType
     - java.lang.String
@@ -160,6 +161,8 @@ package object macie2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.Resigned
     - typingsSlinky.awsSdk.awsSdkStrings.EmailVerificationInProgress
     - typingsSlinky.awsSdk.awsSdkStrings.EmailVerificationFailed
+    - typingsSlinky.awsSdk.awsSdkStrings.RegionDisabled
+    - typingsSlinky.awsSdk.awsSdkStrings.AccountSuspended
     - java.lang.String
   */
   type RelationshipStatus = typingsSlinky.awsSdk.macie2Mod._RelationshipStatus | java.lang.String
@@ -209,10 +212,30 @@ package object macie2Mod {
   type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.macie2Mod.string]
   type TagTarget = typingsSlinky.awsSdk.awsSdkStrings.S3_OBJECT | java.lang.String
   type Unit = typingsSlinky.awsSdk.awsSdkStrings.TERABYTES | java.lang.String
-  type UsageStatisticsFilterKey = typingsSlinky.awsSdk.awsSdkStrings.accountId_ | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.GT
+    - typingsSlinky.awsSdk.awsSdkStrings.GTE
+    - typingsSlinky.awsSdk.awsSdkStrings.LT
+    - typingsSlinky.awsSdk.awsSdkStrings.LTE
+    - typingsSlinky.awsSdk.awsSdkStrings.EQ
+    - typingsSlinky.awsSdk.awsSdkStrings.NE
+    - typingsSlinky.awsSdk.awsSdkStrings.CONTAINS
+    - java.lang.String
+  */
+  type UsageStatisticsFilterComparator = typingsSlinky.awsSdk.macie2Mod._UsageStatisticsFilterComparator | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.accountId_
+    - typingsSlinky.awsSdk.awsSdkStrings.serviceLimit
+    - typingsSlinky.awsSdk.awsSdkStrings.freeTrialStartDate
+    - typingsSlinky.awsSdk.awsSdkStrings.total_
+    - java.lang.String
+  */
+  type UsageStatisticsFilterKey = typingsSlinky.awsSdk.macie2Mod._UsageStatisticsFilterKey | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.accountId_
     - typingsSlinky.awsSdk.awsSdkStrings.total_
+    - typingsSlinky.awsSdk.awsSdkStrings.serviceLimitValue
+    - typingsSlinky.awsSdk.awsSdkStrings.freeTrialStartDate
     - java.lang.String
   */
   type UsageStatisticsSortKey = typingsSlinky.awsSdk.macie2Mod._UsageStatisticsSortKey | java.lang.String

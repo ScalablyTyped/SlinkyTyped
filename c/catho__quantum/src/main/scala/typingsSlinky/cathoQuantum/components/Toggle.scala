@@ -1,10 +1,12 @@
 package typingsSlinky.cathoQuantum.components
 
-import slinky.web.html.`*`.tag
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.toggleMod.ToggleProps
 import typingsSlinky.cathoQuantum.toggleMod.default
+import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +24,8 @@ object Toggle {
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def theme(value: BaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
   }

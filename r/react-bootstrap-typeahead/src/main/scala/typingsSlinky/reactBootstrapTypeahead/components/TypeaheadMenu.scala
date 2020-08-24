@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTypeahead.components
 
 import org.scalajs.dom.raw.HTMLUListElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
@@ -9,7 +9,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadLabelKey
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
-import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,9 +20,9 @@ object TypeaheadMenu {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: TypeaheadModel] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenu[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenu[T]] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,7 +45,7 @@ object TypeaheadMenu {
     def newSelectionPrefix(value: String): this.type = set("newSelectionPrefix", value.asInstanceOf[js.Any])
     @scala.inline
     def renderMenuItemChildren(
-      value: (/* option */ TypeaheadResult[T], /* props */ TypeaheadMenuProps[T], /* index */ Double) => TagMod[Any]
+      value: (/* option */ TypeaheadResult[T], /* props */ TypeaheadMenuProps[T], /* index */ Double) => ReactElement
     ): this.type = set("renderMenuItemChildren", js.Any.fromFunction3(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -54,9 +53,9 @@ object TypeaheadMenu {
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: TypeaheadModel](p: TypeaheadMenuProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](p: TypeaheadMenuProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T <: TypeaheadModel](id: String, options: js.Array[T]): Builder[T] = {
+  def apply[/* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */ T](id: String, options: js.Array[T]): Builder[T] = {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[TypeaheadMenuProps[T]]))
   }

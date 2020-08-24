@@ -15,7 +15,7 @@ trait MenuItem
   var menuItem: js.Any = js.native
   def onKeyDown(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def renderItem(hasSiderCollapsed: SiderContextProps): ReactElement = js.native
-  def renderItemChildren(): js.UndefOr[js.Object | Null] = js.native
+  def renderItemChildren(inlineCollapsed: Boolean): js.UndefOr[js.Object | Null] = js.native
   def saveMenuItem(menuItem: this.type): Unit = js.native
 }
 

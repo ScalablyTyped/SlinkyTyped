@@ -53,7 +53,6 @@ object mod extends js.Object {
       * Equivalent to `request.send` with the GET method: `request.send("GET", data, callback)`.
       */
     def get[RequestData, ResponseData](data: RequestData, callback: js.Function2[/* error */ js.Any, /* d */ ResponseData, Unit]): this.type = js.native
-    def header(name: String): this.type = js.native
     /**
       * Sets the request header with the specified name to the specified value and returns this request instance.
       * If value is null, removes the request header with the specified name instead.
@@ -63,6 +62,7 @@ object mod extends js.Object {
       * Therefore, you cannot pass a callback to the request constructor if you wish to specify a header;
       * use `request.get` or similar instead.
       */
+    def header(name: String): this.type = js.native
     def header(name: String, value: String): this.type = js.native
     /**
       * Returns the current value of the request header with the specified name.
@@ -70,7 +70,6 @@ object mod extends js.Object {
       */
     @JSName("header")
     def header_String(name: String): String = js.native
-    def mimeType(): this.type = js.native
     /**
       * Sets the request mime type to the specified value and returns this request instance.
       * If type is null, clears the current mime type (if any) instead.
@@ -81,6 +80,7 @@ object mod extends js.Object {
       * Therefore, you cannot pass a callback to the request constructor if you wish to override the mime type;
       * use `request.get` or similar instead.
       */
+    def mimeType(): this.type = js.native
     def mimeType(value: String): this.type = js.native
     /**
       * Returns the current mime type, which defaults to null.
@@ -88,9 +88,9 @@ object mod extends js.Object {
     @JSName("mimeType")
     def mimeType_Union(): String | Null = js.native
     /**
-      * Removes the current event listener for the specified type, if any.
+      * Returns the currently-assigned listener for the specified type, if any.
       */
-    def on(`type`: String): this.type = js.native
+    def on(`type`: String): js.UndefOr[js.ThisFunction1[/* this */ this.type, /* data */ js.Any, Unit]] = js.native
     /**
       * Sets the event listener for the specified type,
       * and returns this request instance.
@@ -102,10 +102,9 @@ object mod extends js.Object {
       */
     def on(`type`: String, listener: js.ThisFunction1[/* this */ this.type, /* data */ js.Any, Unit]): this.type = js.native
     /**
-      * Returns the currently-assigned listener for the specified type, if any.
+      * Removes the current event listener for the specified type, if any.
       */
-    @JSName("on")
-    def on_Union(`type`: String): js.UndefOr[js.ThisFunction1[/* this */ this.type, /* data */ js.Any, Unit]] = js.native
+    def on(`type`: String, listener: Null): this.type = js.native
     /**
       * Returns the currently-assigned listener for the "beforesend" type, if any.
       */
@@ -172,10 +171,10 @@ object mod extends js.Object {
       `type`: progress,
       listener: js.ThisFunction1[/* this */ this.type, /* progressEvent */ ProgressEvent, Unit]
     ): this.type = js.native
-    def password(): this.type = js.native
     /**
       * Sets the password for authentication to the specified string and returns this request instance.
       */
+    def password(): this.type = js.native
     def password(value: String): this.type = js.native
     /**
       * Returns the current password, which defaults to null.
@@ -256,10 +255,10 @@ object mod extends js.Object {
       * Sets the timeout attribute of the request to the specified number of milliseconds and returns this request instance.
       */
     def timeout(value: Double): this.type = js.native
-    def user(): this.type = js.native
     /**
       * Sets the user name for authentication to the specified string and returns this request instance.
       */
+    def user(): this.type = js.native
     def user(value: String): this.type = js.native
     /**
       * Returns the current user name, which defaults to null.

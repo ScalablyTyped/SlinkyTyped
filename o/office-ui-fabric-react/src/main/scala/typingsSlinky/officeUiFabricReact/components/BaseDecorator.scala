@@ -13,11 +13,11 @@ object BaseDecorator {
   object component extends js.Object
   
   @scala.inline
-  class Builder[TProps, TState] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps[js.Any] */ TProps, TState] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[
           tag.type, 
-          typingsSlinky.officeUiFabricReact.baseDecoratorMod.BaseDecorator[js.Any, js.Any]
+          typingsSlinky.officeUiFabricReact.baseDecoratorMod.BaseDecorator[TProps, TState]
         ]
   
   def apply[TProps, TState](p: TProps): Builder[TProps, TState] = new Builder[TProps, TState](js.Array(this.component, p.asInstanceOf[js.Any]))

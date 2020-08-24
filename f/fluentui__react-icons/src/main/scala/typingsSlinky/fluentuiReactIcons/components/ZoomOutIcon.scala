@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ZoomOutIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ZoomOutIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ZoomOutIcon")
   @js.native
   object component extends js.Object
   

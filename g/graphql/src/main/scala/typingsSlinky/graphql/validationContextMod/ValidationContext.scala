@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.definitionMod.GraphQLArgument
 import typingsSlinky.graphql.definitionMod.GraphQLCompositeType
+import typingsSlinky.graphql.definitionMod.GraphQLEnumValue
 import typingsSlinky.graphql.definitionMod.GraphQLField
 import typingsSlinky.graphql.definitionMod.GraphQLInputType
 import typingsSlinky.graphql.definitionMod.GraphQLOutputType
@@ -19,7 +20,6 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/validation/ValidationContext", "ValidationContext")
 @js.native
 class ValidationContext protected () extends ASTValidationContext {
-  def this(schema: GraphQLSchema, ast: DocumentNode, typeInfo: TypeInfo) = this()
   def this(
     schema: GraphQLSchema,
     ast: DocumentNode,
@@ -28,6 +28,7 @@ class ValidationContext protected () extends ASTValidationContext {
   ) = this()
   def getArgument(): Maybe[GraphQLArgument] = js.native
   def getDirective(): Maybe[GraphQLDirective] = js.native
+  def getEnumValue(): Maybe[GraphQLEnumValue] = js.native
   def getFieldDef(): Maybe[GraphQLField[_, _, StringDictionary[_]]] = js.native
   def getInputType(): Maybe[GraphQLInputType] = js.native
   def getParentInputType(): Maybe[GraphQLInputType] = js.native

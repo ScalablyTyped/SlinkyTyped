@@ -6,21 +6,20 @@ import typingsSlinky.materialUi.MaterialUI.RefreshIndicatorProps
 import typingsSlinky.materialUi.materialUiStrings.hide
 import typingsSlinky.materialUi.materialUiStrings.loading
 import typingsSlinky.materialUi.materialUiStrings.ready
-import typingsSlinky.materialUi.refreshIndicatorMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RefreshIndicator {
-  @JSImport("material-ui/RefreshIndicator", JSImport.Default)
+  @JSImport("material-ui", "RefreshIndicator")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.RefreshIndicator] {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline

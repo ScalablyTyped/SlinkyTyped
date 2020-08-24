@@ -30,29 +30,18 @@ object ProcessorUsage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIdle(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withKernel(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIdle(value: double): Self = this.set("idle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTotal(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKernel(value: double): Self = this.set("kernel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUser(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTotal(value: double): Self = this.set("total", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUser(value: double): Self = this.set("user", value.asInstanceOf[js.Any])
   }
   
 }

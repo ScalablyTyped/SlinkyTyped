@@ -51,6 +51,8 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  @scala.inline
   def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -69,6 +71,8 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
   @scala.inline
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+  @scala.inline
   def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -83,6 +87,8 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
   @scala.inline
+  def colorVarargs(value: Double*): this.type = set("color", js.Array(value :_*))
+  @scala.inline
   def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
   @scala.inline
   def delayLongPress(value: Double): this.type = set("delayLongPress", value.asInstanceOf[js.Any])
@@ -93,11 +99,15 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   @scala.inline
+  def fillVarargs(value: Double*): this.type = set("fill", js.Array(value :_*))
+  @scala.inline
   def fill(value: Color): this.type = set("fill", value.asInstanceOf[js.Any])
   @scala.inline
   def fillOpacity(value: NumberProp): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
   @scala.inline
   def fillRule(value: FillRule): this.type = set("fillRule", value.asInstanceOf[js.Any])
+  @scala.inline
+  def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
   @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline
@@ -179,6 +189,8 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def opacity(value: NumberProp): this.type = set("opacity", value.asInstanceOf[js.Any])
   @scala.inline
+  def originVarargs(value: NumberProp*): this.type = set("origin", js.Array(value :_*))
+  @scala.inline
   def origin(value: NumberArray): this.type = set("origin", value.asInstanceOf[js.Any])
   @scala.inline
   def originX(value: NumberProp): this.type = set("originX", value.asInstanceOf[js.Any])
@@ -199,6 +211,8 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def rotation(value: NumberProp): this.type = set("rotation", value.asInstanceOf[js.Any])
   @scala.inline
+  def scaleVarargs(value: NumberProp*): this.type = set("scale", js.Array(value :_*))
+  @scala.inline
   def scale(value: NumberArray): this.type = set("scale", value.asInstanceOf[js.Any])
   @scala.inline
   def scaleX(value: NumberProp): this.type = set("scaleX", value.asInstanceOf[js.Any])
@@ -207,13 +221,19 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def shouldRasterizeIOS(value: Boolean): this.type = set("shouldRasterizeIOS", value.asInstanceOf[js.Any])
   @scala.inline
+  def skewVarargs(value: NumberProp*): this.type = set("skew", js.Array(value :_*))
+  @scala.inline
   def skew(value: NumberArray): this.type = set("skew", value.asInstanceOf[js.Any])
   @scala.inline
   def skewX(value: NumberProp): this.type = set("skewX", value.asInstanceOf[js.Any])
   @scala.inline
   def skewY(value: NumberProp): this.type = set("skewY", value.asInstanceOf[js.Any])
   @scala.inline
+  def strokeVarargs(value: Double*): this.type = set("stroke", js.Array(value :_*))
+  @scala.inline
   def stroke(value: Color): this.type = set("stroke", value.asInstanceOf[js.Any])
+  @scala.inline
+  def strokeDasharrayVarargs(value: NumberProp*): this.type = set("strokeDasharray", js.Array(value :_*))
   @scala.inline
   def strokeDasharray(value: js.Array[NumberProp] | NumberProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
   @scala.inline
@@ -238,6 +258,8 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
   def transform(value: ColumnMajorTransformMatrix | String | TransformObject): this.type = set("transform", value.asInstanceOf[js.Any])
+  @scala.inline
+  def translateVarargs(value: NumberProp*): this.type = set("translate", js.Array(value :_*))
   @scala.inline
   def translate(value: NumberArray): this.type = set("translate", value.asInstanceOf[js.Any])
   @scala.inline
@@ -267,7 +289,11 @@ class SharedBuilder_UriProps_1855196895[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def width(value: NumberProp): this.type = set("width", value.asInstanceOf[js.Any])
   @scala.inline
+  def xVarargs(value: NumberProp*): this.type = set("x", js.Array(value :_*))
+  @scala.inline
   def x(value: NumberArray): this.type = set("x", value.asInstanceOf[js.Any])
+  @scala.inline
+  def yVarargs(value: NumberProp*): this.type = set("y", js.Array(value :_*))
   @scala.inline
   def y(value: NumberArray): this.type = set("y", value.asInstanceOf[js.Any])
 }

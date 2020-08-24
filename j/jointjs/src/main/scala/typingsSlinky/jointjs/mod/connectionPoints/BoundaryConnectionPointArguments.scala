@@ -26,65 +26,32 @@ object BoundaryConnectionPointArguments {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExtrapolate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrapolate")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutExtrapolate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrapolate")(js.undefined)
-        ret
-    }
+    def setExtrapolate(value: Boolean): Self = this.set("extrapolate", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInsideout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideout")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteExtrapolate: Self = this.set("extrapolate", js.undefined)
     @scala.inline
-    def withoutInsideout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insideout")(js.undefined)
-        ret
-    }
+    def setInsideout(value: Boolean): Self = this.set("insideout", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInsideout: Self = this.set("insideout", js.undefined)
     @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
+    def setPrecision(value: Double): Self = this.set("precision", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSelector(value: (js.Array[String | Double]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePrecision: Self = this.set("precision", js.undefined)
     @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
+    def setSelectorVarargs(value: (String | Double)*): Self = this.set("selector", js.Array(value :_*))
     @scala.inline
-    def withSticky(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sticky")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSelector(value: (js.Array[String | Double]) | String): Self = this.set("selector", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutSticky: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sticky")(js.undefined)
-        ret
-    }
+    def deleteSelector: Self = this.set("selector", js.undefined)
+    @scala.inline
+    def setSticky(value: Boolean): Self = this.set("sticky", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSticky: Self = this.set("sticky", js.undefined)
   }
   
 }

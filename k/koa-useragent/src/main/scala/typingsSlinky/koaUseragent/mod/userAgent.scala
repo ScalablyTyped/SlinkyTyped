@@ -1,13 +1,14 @@
 package typingsSlinky.koaUseragent.mod
 
-import typingsSlinky.koa.mod.Context
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.koa.mod.DefaultContext
+import typingsSlinky.koa.mod.DefaultState
+import typingsSlinky.koa.mod.Middleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("koa-useragent", "userAgent")
 @js.native
-object userAgent extends js.Object {
-  def apply(ctx: Context, next: js.Function0[js.Promise[Unit]]): js.Promise[Unit] = js.native
-}
+object userAgent extends TopLevel[Middleware[DefaultState, DefaultContext]]
 

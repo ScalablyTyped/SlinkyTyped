@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BucketColorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BucketColorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BucketColorIcon")
   @js.native
   object component extends js.Object
   

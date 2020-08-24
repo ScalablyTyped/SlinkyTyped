@@ -25,7 +25,7 @@ trait CreateConfigurationProfileRequest extends js.Object {
   /**
     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
     */
-  var RetrievalRoleArn: Arn = js.native
+  var RetrievalRoleArn: js.UndefOr[RoleArn] = js.native
   /**
     * Metadata to assign to the configuration profile. Tags help organize and categorize your AppConfig resources. Each tag consists of a key and an optional value, both of which you define.
     */
@@ -38,20 +38,46 @@ trait CreateConfigurationProfileRequest extends js.Object {
 
 object CreateConfigurationProfileRequest {
   @scala.inline
-  def apply(
-    ApplicationId: Id,
-    LocationUri: Uri,
-    Name: Name,
-    RetrievalRoleArn: Arn,
-    Description: Description = null,
-    Tags: TagMap = null,
-    Validators: ValidatorList = null
-  ): CreateConfigurationProfileRequest = {
-    val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], LocationUri = LocationUri.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], RetrievalRoleArn = RetrievalRoleArn.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (Validators != null) __obj.updateDynamic("Validators")(Validators.asInstanceOf[js.Any])
+  def apply(ApplicationId: Id, LocationUri: Uri, Name: Name): CreateConfigurationProfileRequest = {
+    val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], LocationUri = LocationUri.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateConfigurationProfileRequest]
   }
+  @scala.inline
+  implicit class CreateConfigurationProfileRequestOps[Self <: CreateConfigurationProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setApplicationId(value: Id): Self = this.set("ApplicationId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocationUri(value: Uri): Self = this.set("LocationUri", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: Name): Self = this.set("Name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: Description): Self = this.set("Description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
+    @scala.inline
+    def setRetrievalRoleArn(value: RoleArn): Self = this.set("RetrievalRoleArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRetrievalRoleArn: Self = this.set("RetrievalRoleArn", js.undefined)
+    @scala.inline
+    def setTags(value: TagMap): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
+    @scala.inline
+    def setValidatorsVarargs(value: Validator*): Self = this.set("Validators", js.Array(value :_*))
+    @scala.inline
+    def setValidators(value: ValidatorList): Self = this.set("Validators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidators: Self = this.set("Validators", js.undefined)
+  }
+  
 }
 

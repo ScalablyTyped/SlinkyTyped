@@ -37,6 +37,8 @@ class SharedBuilder_PlatformTouchableProps1790487014[R <: js.Object] (val args: 
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  @scala.inline
   def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -54,6 +56,8 @@ class SharedBuilder_PlatformTouchableProps1790487014[R <: js.Object] (val args: 
   def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+  @scala.inline
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
   @scala.inline
   def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   @scala.inline
@@ -74,6 +78,8 @@ class SharedBuilder_PlatformTouchableProps1790487014[R <: js.Object] (val args: 
   def delayPressOut(value: Double): this.type = set("delayPressOut", value.asInstanceOf[js.Any])
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+  @scala.inline
+  def disabledNull: this.type = set("disabled", null)
   @scala.inline
   def foreground(value: BackgroundPropType): this.type = set("foreground", value.asInstanceOf[js.Any])
   @scala.inline
@@ -116,6 +122,10 @@ class SharedBuilder_PlatformTouchableProps1790487014[R <: js.Object] (val args: 
   def styleNull: this.type = set("style", null)
   @scala.inline
   def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
+  @scala.inline
+  def touchSoundDisabled(value: Boolean): this.type = set("touchSoundDisabled", value.asInstanceOf[js.Any])
+  @scala.inline
+  def touchSoundDisabledNull: this.type = set("touchSoundDisabled", null)
   @scala.inline
   def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
   @scala.inline

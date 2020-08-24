@@ -11,8 +11,8 @@ import typingsSlinky.autobahn.mod.ISubscribeOptions
 import typingsSlinky.autobahn.mod.ISubscription
 import typingsSlinky.autobahn.mod.RegisterEndpoint
 import typingsSlinky.autobahn.mod.Session
-import typingsSlinky.rxLite.Rx.IObserver
-import typingsSlinky.rxLiteAggregates.Rx.Observable
+import typingsSlinky.rx.Rx.IObserver
+import typingsSlinky.rx.Rx.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,6 +30,11 @@ trait IObservableWampStatic extends js.Object {
     Observable[TResult]
   ] = js.native
   def fromConnection(options: IConnectionOptions): Observable[Session] = js.native
+  def fromConnection(
+    options: IConnectionOptions,
+    keepReconnecting: js.UndefOr[scala.Nothing],
+    factory: js.Function1[/* options */ js.UndefOr[IConnectionOptions], Connection]
+  ): Observable[Session] = js.native
   def fromConnection(options: IConnectionOptions, keepReconnecting: Boolean): Observable[Session] = js.native
   def fromConnection(
     options: IConnectionOptions,
@@ -44,7 +49,29 @@ trait IObservableWampStatic extends js.Object {
     openObserver: IObserver[ISubscription]
   ): IPubSubSubject = js.native
   def publishAsObservable(session: Session, topic: String): Observable[IPublication] = js.native
+  def publishAsObservable(
+    session: Session,
+    topic: String,
+    args: js.UndefOr[scala.Nothing],
+    kwargs: js.UndefOr[scala.Nothing],
+    options: IPublishOptions
+  ): Observable[IPublication] = js.native
+  def publishAsObservable(session: Session, topic: String, args: js.UndefOr[scala.Nothing], kwargs: js.Any): Observable[IPublication] = js.native
+  def publishAsObservable(
+    session: Session,
+    topic: String,
+    args: js.UndefOr[scala.Nothing],
+    kwargs: js.Any,
+    options: IPublishOptions
+  ): Observable[IPublication] = js.native
   def publishAsObservable(session: Session, topic: String, args: js.Array[_]): Observable[IPublication] = js.native
+  def publishAsObservable(
+    session: Session,
+    topic: String,
+    args: js.Array[_],
+    kwargs: js.UndefOr[scala.Nothing],
+    options: IPublishOptions
+  ): Observable[IPublication] = js.native
   def publishAsObservable(session: Session, topic: String, args: js.Array[_], kwargs: js.Any): Observable[IPublication] = js.native
   def publishAsObservable(session: Session, topic: String, args: js.Array[_], kwargs: js.Any, options: IPublishOptions): Observable[IPublication] = js.native
   def registerAsObservable(
@@ -60,6 +87,12 @@ trait IObservableWampStatic extends js.Object {
     options: IRegisterOptions
   ): Observable[IRegistration] = js.native
   def subscribeAsObservable(sessionOrObservable: Session, topic: String): Observable[IWampEvent] = js.native
+  def subscribeAsObservable(
+    sessionOrObservable: Session,
+    topic: String,
+    options: js.UndefOr[scala.Nothing],
+    openObserver: IObserver[ISubscription]
+  ): Observable[IWampEvent] = js.native
   def subscribeAsObservable(sessionOrObservable: Session, topic: String, options: ISubscribeOptions): Observable[IWampEvent] = js.native
   def subscribeAsObservable(
     sessionOrObservable: Session,
@@ -68,6 +101,12 @@ trait IObservableWampStatic extends js.Object {
     openObserver: IObserver[ISubscription]
   ): Observable[IWampEvent] = js.native
   def subscribeAsObservable(sessionOrObservable: Observable[Session], topic: String): Observable[IWampEvent] = js.native
+  def subscribeAsObservable(
+    sessionOrObservable: Observable[Session],
+    topic: String,
+    options: js.UndefOr[scala.Nothing],
+    openObserver: IObserver[ISubscription]
+  ): Observable[IWampEvent] = js.native
   def subscribeAsObservable(sessionOrObservable: Observable[Session], topic: String, options: ISubscribeOptions): Observable[IWampEvent] = js.native
   def subscribeAsObservable(
     sessionOrObservable: Observable[Session],

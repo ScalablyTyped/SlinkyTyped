@@ -11,8 +11,8 @@ package object validateMod {
   type JSONSchema7 = typingsSlinky.jsonSchema.mod.JSONSchema7
   type PostFormatter = js.Function2[
     /* formattedError */ java.lang.String, 
-    /* error */ typingsSlinky.schemaUtils.anon.ErrorObjectchildrenArrayE, 
+    /* error */ typingsSlinky.schemaUtils.validateMod.SchemaUtilErrorObject, 
     java.lang.String
   ]
-  type Schema = typingsSlinky.jsonSchema.mod.JSONSchema4 | typingsSlinky.jsonSchema.mod.JSONSchema6 | typingsSlinky.jsonSchema.mod.JSONSchema7
+  type Schema = (typingsSlinky.jsonSchema.mod.JSONSchema4 with typingsSlinky.schemaUtils.validateMod.Extend) | (typingsSlinky.jsonSchema.mod.JSONSchema6 with typingsSlinky.schemaUtils.validateMod.Extend) | (typingsSlinky.jsonSchema.mod.JSONSchema7 with typingsSlinky.schemaUtils.validateMod.Extend)
 }

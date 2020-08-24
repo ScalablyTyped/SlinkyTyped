@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VisioDiagramSyncIcon {
-  @JSImport("@fluentui/react-icons/lib/components/VisioDiagramSyncIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "VisioDiagramSyncIcon")
   @js.native
   object component extends js.Object
   

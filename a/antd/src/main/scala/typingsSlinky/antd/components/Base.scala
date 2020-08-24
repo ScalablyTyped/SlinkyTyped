@@ -7,6 +7,7 @@ import typingsSlinky.antd.baseMod.CopyConfig
 import typingsSlinky.antd.baseMod.EditConfig
 import typingsSlinky.antd.baseMod.EllipsisConfig
 import typingsSlinky.antd.baseMod.InternalBlockProps
+import typingsSlinky.antd.baseMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +21,7 @@ object Base {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
+       with StBuildingComponent[tag.type, default] {
     @scala.inline
     def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,6 +40,8 @@ object Base {
     def ellipsis(value: Boolean | EllipsisConfig): this.type = set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
     @scala.inline
     def mark(value: Boolean): this.type = set("mark", value.asInstanceOf[js.Any])
     @scala.inline

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def apply(arrayBuffer: js.typedarray.ArrayBuffer): Buffer = js.native
+  def apply(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
   def apply(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): Buffer = js.native
   def apply(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
   def apply(data: js.Array[_]): Buffer = js.native

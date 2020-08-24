@@ -59,6 +59,8 @@ object GroupHeaderBase {
     @scala.inline
     def groupedListId(value: String): this.type = set("groupedListId", value.asInstanceOf[js.Any])
     @scala.inline
+    def groupsVarargs(value: IGroup*): this.type = set("groups", js.Array(value :_*))
+    @scala.inline
     def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
     @scala.inline
     def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])

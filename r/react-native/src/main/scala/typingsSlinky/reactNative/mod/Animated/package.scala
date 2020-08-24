@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object Animated {
   type AnimatedComponent[T /* <: slinky.core.ReactComponentClass[_] */] = slinky.core.ReactComponentClass[
-    typingsSlinky.reactNative.mod.Animated.AnimatedProps[typingsSlinky.react.mod.ComponentPropsWithRef[T]]
+    typingsSlinky.reactNative.mod.Animated.ComponentProps[T] | typingsSlinky.reactNative.mod.Animated.AnimatedProps[typingsSlinky.react.mod.ComponentPropsWithRef[T]]
   ]
-  type AnimatedProps[T] = typingsSlinky.reactNative.reactNativeStrings.AnimatedProps with org.scalablytyped.runtime.TopLevel[T] with (js.Object | typingsSlinky.reactNative.anon.RefRef)
+  type AnimatedProps[T] = typingsSlinky.reactNative.reactNativeStrings.AnimatedProps with org.scalablytyped.runtime.TopLevel[T] with (js.Object | typingsSlinky.reactNative.anon.`2`)
   type AnimatedValue = typingsSlinky.reactNative.mod.Animated.Value
   type AnimatedValueXY = typingsSlinky.reactNative.mod.Animated.ValueXY
   type ComponentProps[T] = js.Any

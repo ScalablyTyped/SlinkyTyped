@@ -43,257 +43,94 @@ object PartialClassNameMapAutoco {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClearIndicator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIndicator")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutClearIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIndicator")(js.undefined)
-        ret
-    }
+    def setClearIndicator(value: String): Self = this.set("clearIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClearIndicatorDirty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIndicatorDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClearIndicator: Self = this.set("clearIndicator", js.undefined)
     @scala.inline
-    def withoutClearIndicatorDirty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIndicatorDirty")(js.undefined)
-        ret
-    }
+    def setClearIndicatorDirty(value: String): Self = this.set("clearIndicatorDirty", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEndAdornment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAdornment")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteClearIndicatorDirty: Self = this.set("clearIndicatorDirty", js.undefined)
     @scala.inline
-    def withoutEndAdornment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAdornment")(js.undefined)
-        ret
-    }
+    def setEndAdornment(value: String): Self = this.set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFocused(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteEndAdornment: Self = this.set("endAdornment", js.undefined)
     @scala.inline
-    def withoutFocused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(js.undefined)
-        ret
-    }
+    def setFocused(value: String): Self = this.set("focused", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGroupLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFocused: Self = this.set("focused", js.undefined)
     @scala.inline
-    def withoutGroupLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupLabel")(js.undefined)
-        ret
-    }
+    def setGroupLabel(value: String): Self = this.set("groupLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def withGroupUl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupUl")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGroupLabel: Self = this.set("groupLabel", js.undefined)
     @scala.inline
-    def withoutGroupUl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupUl")(js.undefined)
-        ret
-    }
+    def setGroupUl(value: String): Self = this.set("groupUl", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteGroupUl: Self = this.set("groupUl", js.undefined)
     @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
+    def setInput(value: String): Self = this.set("input", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInputFocused(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFocused")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInput: Self = this.set("input", js.undefined)
     @scala.inline
-    def withoutInputFocused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFocused")(js.undefined)
-        ret
-    }
+    def setInputFocused(value: String): Self = this.set("inputFocused", value.asInstanceOf[js.Any])
     @scala.inline
-    def withInputRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInputFocused: Self = this.set("inputFocused", js.undefined)
     @scala.inline
-    def withoutInputRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRoot")(js.undefined)
-        ret
-    }
+    def setInputRoot(value: String): Self = this.set("inputRoot", value.asInstanceOf[js.Any])
     @scala.inline
-    def withListbox(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listbox")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInputRoot: Self = this.set("inputRoot", js.undefined)
     @scala.inline
-    def withoutListbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listbox")(js.undefined)
-        ret
-    }
+    def setListbox(value: String): Self = this.set("listbox", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLoading(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteListbox: Self = this.set("listbox", js.undefined)
     @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
+    def setLoading(value: String): Self = this.set("loading", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNoOptions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteLoading: Self = this.set("loading", js.undefined)
     @scala.inline
-    def withoutNoOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptions")(js.undefined)
-        ret
-    }
+    def setNoOptions(value: String): Self = this.set("noOptions", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteNoOptions: Self = this.set("noOptions", js.undefined)
     @scala.inline
-    def withoutOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(js.undefined)
-        ret
-    }
+    def setOption(value: String): Self = this.set("option", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPaper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOption: Self = this.set("option", js.undefined)
     @scala.inline
-    def withoutPaper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(js.undefined)
-        ret
-    }
+    def setPaper(value: String): Self = this.set("paper", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popper")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePaper: Self = this.set("paper", js.undefined)
     @scala.inline
-    def withoutPopper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popper")(js.undefined)
-        ret
-    }
+    def setPopper(value: String): Self = this.set("popper", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopperDisablePortal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popperDisablePortal")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePopper: Self = this.set("popper", js.undefined)
     @scala.inline
-    def withoutPopperDisablePortal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popperDisablePortal")(js.undefined)
-        ret
-    }
+    def setPopperDisablePortal(value: String): Self = this.set("popperDisablePortal", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopupIndicator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePopperDisablePortal: Self = this.set("popperDisablePortal", js.undefined)
     @scala.inline
-    def withoutPopupIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIndicator")(js.undefined)
-        ret
-    }
+    def setPopupIndicator(value: String): Self = this.set("popupIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPopupIndicatorOpen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIndicatorOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePopupIndicator: Self = this.set("popupIndicator", js.undefined)
     @scala.inline
-    def withoutPopupIndicatorOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupIndicatorOpen")(js.undefined)
-        ret
-    }
+    def setPopupIndicatorOpen(value: String): Self = this.set("popupIndicatorOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deletePopupIndicatorOpen: Self = this.set("popupIndicatorOpen", js.undefined)
     @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
+    def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRoot: Self = this.set("root", js.undefined)
     @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
+    def setTag(value: String): Self = this.set("tag", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTagSizeSmall(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagSizeSmall")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteTag: Self = this.set("tag", js.undefined)
     @scala.inline
-    def withoutTagSizeSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagSizeSmall")(js.undefined)
-        ret
-    }
+    def setTagSizeSmall(value: String): Self = this.set("tagSizeSmall", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTagSizeSmall: Self = this.set("tagSizeSmall", js.undefined)
   }
   
 }

@@ -18,21 +18,20 @@ import typingsSlinky.antdMobile.antdMobileStrings.row
 import typingsSlinky.antdMobile.antdMobileStrings.start
 import typingsSlinky.antdMobile.antdMobileStrings.stretch
 import typingsSlinky.antdMobile.flexFlexMod.FlexProps
-import typingsSlinky.antdMobile.flexMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Flex {
-  @JSImport("antd-mobile/lib/flex", JSImport.Default)
+  @JSImport("antd-mobile", "Flex")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Flex] {
     @scala.inline
     def align(value: start | center | end | baseline | stretch): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline

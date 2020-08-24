@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AnchorLockIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AnchorLockIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AnchorLockIcon")
   @js.native
   object component extends js.Object
   

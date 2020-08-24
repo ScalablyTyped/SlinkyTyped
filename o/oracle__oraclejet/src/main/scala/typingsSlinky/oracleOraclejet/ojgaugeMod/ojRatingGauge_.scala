@@ -3,7 +3,7 @@ package typingsSlinky.oracleOraclejet.ojgaugeMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.anon.Source
-import typingsSlinky.oracleOraclejet.anon.`9`
+import typingsSlinky.oracleOraclejet.anon.`11`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojRatingGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0.5`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`1`
@@ -76,7 +76,7 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   var selectedState: Source = js.native
   var step: `0.5` | `1` = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: `9` = js.native
+  var tooltip: `11` = js.native
   val transientValue: Double | Null = js.native
   var unselectedState: Source = js.native
   var value: Double | Null = js.native
@@ -227,7 +227,7 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_thresholds(property: thresholds): js.Array[Threshold] = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): `9` = js.native
+  def getProperty_tooltip(property: tooltip): `11` = js.native
   @JSName("getProperty")
   def getProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue): Double | Null = js.native
   @JSName("getProperty")
@@ -262,7 +262,7 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_thresholds(property: thresholds, value: js.Array[Threshold]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: `9`): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `11`): Unit = js.native
   @JSName("setProperty")
   def setProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue): Unit = js.native
   @JSName("setProperty")

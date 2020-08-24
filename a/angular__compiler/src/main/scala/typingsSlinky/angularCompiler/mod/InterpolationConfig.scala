@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "InterpolationConfig")
 @js.native
 class InterpolationConfig protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.InterpolationConfig {
+  extends typingsSlinky.angularCompiler.compilerMod.InterpolationConfig {
   def this(start: String, end: String) = this()
 }
 

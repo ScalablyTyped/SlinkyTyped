@@ -1,8 +1,8 @@
 package typingsSlinky.reactNativeElements.mod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
-import typingsSlinky.reactNativeElements.anon.bottomnumberleftnumberrig
+import slinky.core.facade.ReactElement
+import typingsSlinky.reactNativeElements.anon.bottomnumberundefinedleft
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,22 +14,15 @@ object withBadge extends js.Object {
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
   ] = js.native
-  def apply(/**
-    * Text value to be displayed by badge
-    */
-  value: js.Function0[TagMod[Any]]): js.Function1[
-    /* WrappedComponent */ ReactComponentClass[js.Object], 
-    ReactComponentClass[js.Object]
-  ] = js.native
   def apply(
     /**
     * Text value to be displayed by badge
     */
-  value: js.Function0[TagMod[Any]],
+  value: js.UndefOr[ReactElement],
     /**
     * Options to configure the badge
     */
-  options: bottomnumberleftnumberrig
+  options: bottomnumberundefinedleft
   ): js.Function1[
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
@@ -37,7 +30,7 @@ object withBadge extends js.Object {
   def apply(/**
     * Text value to be displayed by badge
     */
-  value: TagMod[Any]): js.Function1[
+  value: js.Function0[ReactElement]): js.Function1[
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
   ] = js.native
@@ -45,12 +38,19 @@ object withBadge extends js.Object {
     /**
     * Text value to be displayed by badge
     */
-  value: TagMod[Any],
+  value: js.Function0[ReactElement],
     /**
     * Options to configure the badge
     */
-  options: bottomnumberleftnumberrig
+  options: bottomnumberundefinedleft
   ): js.Function1[
+    /* WrappedComponent */ ReactComponentClass[js.Object], 
+    ReactComponentClass[js.Object]
+  ] = js.native
+  def apply(/**
+    * Text value to be displayed by badge
+    */
+  value: ReactElement): js.Function1[
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
   ] = js.native

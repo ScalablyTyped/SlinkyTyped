@@ -28,23 +28,16 @@ object OnScaleGestureListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnScale(value: typingsSlinky.androiduix.android.view.ScaleGestureDetector => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScale")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnScaleBegin(value: typingsSlinky.androiduix.android.view.ScaleGestureDetector => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScaleBegin")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnScale(value: typingsSlinky.androiduix.android.view.ScaleGestureDetector => Boolean): Self = this.set("onScale", js.Any.fromFunction1(value))
     @scala.inline
-    def withOnScaleEnd(value: typingsSlinky.androiduix.android.view.ScaleGestureDetector => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScaleEnd")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnScaleBegin(value: typingsSlinky.androiduix.android.view.ScaleGestureDetector => Boolean): Self = this.set("onScaleBegin", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnScaleEnd(value: typingsSlinky.androiduix.android.view.ScaleGestureDetector => Unit): Self = this.set("onScaleEnd", js.Any.fromFunction1(value))
   }
   
 }

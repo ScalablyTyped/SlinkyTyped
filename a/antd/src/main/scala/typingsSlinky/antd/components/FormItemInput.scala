@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -24,13 +23,13 @@ object FormItemInput {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def hasFeedback(value: Boolean): this.type = set("hasFeedback", value.asInstanceOf[js.Any])
     @scala.inline
     def helpReactElement(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
-    def help(value: TagMod[Any]): this.type = set("help", value.asInstanceOf[js.Any])
+    def help(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
     def validateStatus(value: ValidateStatus): this.type = set("validateStatus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +38,7 @@ object FormItemInput {
   
   def withProps(p: FormItemInputProps with FormItemInputMiscProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(errors: js.Array[TagMod[Any]], onDomErrorVisibleChange: Boolean => Unit, prefixCls: String): Builder = {
+  def apply(errors: js.Array[ReactElement], onDomErrorVisibleChange: Boolean => Unit, prefixCls: String): Builder = {
     val __props = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], onDomErrorVisibleChange = js.Any.fromFunction1(onDomErrorVisibleChange), prefixCls = prefixCls.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[FormItemInputProps with FormItemInputMiscProps]))
   }

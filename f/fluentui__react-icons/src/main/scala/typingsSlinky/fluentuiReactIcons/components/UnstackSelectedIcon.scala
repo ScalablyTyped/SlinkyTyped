@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object UnstackSelectedIcon {
-  @JSImport("@fluentui/react-icons/lib/components/UnstackSelectedIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "UnstackSelectedIcon")
   @js.native
   object component extends js.Object
   

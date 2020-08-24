@@ -1,7 +1,6 @@
 package typingsSlinky.antDesignProLayout.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
@@ -9,19 +8,34 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.anon.Id
 import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
+import typingsSlinky.antDesignProLayout.anon.Pathname
 import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.lg
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.md
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.mix
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
-import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
-import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.topmenu
-import typingsSlinky.antDesignProLayout.basicLayoutMod.BasicLayoutProps
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.side
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sm
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.top
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.xl
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.xs
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.xxl
 import typingsSlinky.antDesignProLayout.defaultSettingsMod.ContentWidth
 import typingsSlinky.antDesignProLayout.getPageTitleMod.GetPageTitleProps
 import typingsSlinky.antDesignProLayout.headerMod.HeaderViewProps
-import typingsSlinky.antDesignProLayout.localesMod.localeType
+import typingsSlinky.antDesignProLayout.localesMod.LocaleType
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.SiderMenuProps
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.MessageDescriptor
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
+import typingsSlinky.antd.breadcrumbBreadcrumbMod.Route
+import typingsSlinky.antd.menuContextMod.MenuTheme
+import typingsSlinky.history.mod.History
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationState
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactRouter.mod.StaticContext
+import typingsSlinky.reactRouter.mod.`match`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,23 +45,21 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
   @scala.inline
-  def breadcrumbRender(
-    value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AntdBreadcrumbProps * / any['routes'] */ /* routers */ js.Any => /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AntdBreadcrumbProps * / any['routes'] */ js.Any
-  ): this.type = set("breadcrumbRender", js.Any.fromFunction1(value))
+  def breadcrumbRender(value: /* routers */ js.UndefOr[js.Array[Route]] => js.UndefOr[js.Array[Route]]): this.type = set("breadcrumbRender", js.Any.fromFunction1(value))
   @scala.inline
-  def breakpoint(
-    value: (/* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SiderProps * / any['breakpoint'] */ js.Any) | `false`
-  ): this.type = set("breakpoint", value.asInstanceOf[js.Any])
+  def breakpoint(value: xs | sm | md | lg | xl | xxl | `false`): this.type = set("breakpoint", value.asInstanceOf[js.Any])
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
   def collapsed(value: Boolean): this.type = set("collapsed", value.asInstanceOf[js.Any])
   @scala.inline
-  def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => TagMod[Any]): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
+  def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => ReactElement): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
   @scala.inline
-  def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
+  def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], ReactElement]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
   @scala.inline
   def colorWeak(value: Boolean): this.type = set("colorWeak", value.asInstanceOf[js.Any])
+  @scala.inline
+  def computedMatch(value: `match`[typingsSlinky.antDesignProLayout.typingsMod.Route]): this.type = set("computedMatch", value.asInstanceOf[js.Any])
   @scala.inline
   def contentStyle(value: CSSProperties): this.type = set("contentStyle", value.asInstanceOf[js.Any])
   @scala.inline
@@ -61,11 +73,11 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   @scala.inline
   def fixedHeader(value: Boolean): this.type = set("fixedHeader", value.asInstanceOf[js.Any])
   @scala.inline
-  def footerRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any]) => TagMod[Any]): this.type = set("footerRender", js.Any.fromFunction2(value))
+  def footerRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("footerRender", js.Any.fromFunction2(value))
   @scala.inline
   def footerRender(
     value: WithFalse[
-      js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
+      js.Function2[/* props */ HeaderViewProps, /* defaultDom */ ReactElement, ReactElement]
     ]
   ): this.type = set("footerRender", value.asInstanceOf[js.Any])
   @scala.inline
@@ -73,15 +85,23 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   @scala.inline
   def hasSiderMenu(value: Boolean): this.type = set("hasSiderMenu", value.asInstanceOf[js.Any])
   @scala.inline
-  def headerRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any]) => TagMod[Any]): this.type = set("headerRender", js.Any.fromFunction2(value))
+  def headerContentRenderFunction1(value: HeaderViewProps => ReactElement): this.type = set("headerContentRender", js.Any.fromFunction1(value))
   @scala.inline
-  def headerRender(
-    value: WithFalse[
-      js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
-    ]
-  ): this.type = set("headerRender", value.asInstanceOf[js.Any])
+  def headerContentRender(value: WithFalse[js.Function1[HeaderViewProps, ReactElement]]): this.type = set("headerContentRender", value.asInstanceOf[js.Any])
+  @scala.inline
+  def headerHeight(value: Double): this.type = set("headerHeight", value.asInstanceOf[js.Any])
+  @scala.inline
+  def headerRenderFunction2(value: (HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("headerRender", js.Any.fromFunction2(value))
+  @scala.inline
+  def headerRender(value: WithFalse[js.Function2[HeaderViewProps, /* defaultDom */ ReactElement, ReactElement]]): this.type = set("headerRender", value.asInstanceOf[js.Any])
+  @scala.inline
+  def headerTitleRenderFunction2(value: (HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("headerTitleRender", js.Any.fromFunction2(value))
+  @scala.inline
+  def headerTitleRender(value: WithFalse[js.Function2[HeaderViewProps, /* defaultDom */ ReactElement, ReactElement]]): this.type = set("headerTitleRender", value.asInstanceOf[js.Any])
   @scala.inline
   def hide(value: Boolean): this.type = set("hide", value.asInstanceOf[js.Any])
+  @scala.inline
+  def history(value: History[LocationState]): this.type = set("history", value.asInstanceOf[js.Any])
   @scala.inline
   def iconfontUrl(value: String): this.type = set("iconfontUrl", value.asInstanceOf[js.Any])
   @scala.inline
@@ -90,67 +110,83 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   def isMobile(value: Boolean): this.type = set("isMobile", value.asInstanceOf[js.Any])
   @scala.inline
   def itemRender(
-    value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AntdBreadcrumbProps * / any['itemRender'] */ js.Any
-  ): this.type = set("itemRender", value.asInstanceOf[js.Any])
+    value: (/* route */ Route, /* params */ js.Any, /* routes */ js.Array[Route], /* paths */ js.Array[String]) => ReactElement
+  ): this.type = set("itemRender", js.Any.fromFunction4(value))
   @scala.inline
-  def layout(value: sidemenu | topmenu): this.type = set("layout", value.asInstanceOf[js.Any])
+  def layout(value: side | top | mix): this.type = set("layout", value.asInstanceOf[js.Any])
   @scala.inline
-  def links(value: js.Array[TagMod[Any]]): this.type = set("links", value.asInstanceOf[js.Any])
+  def linksVarargs(value: ReactElement*): this.type = set("links", js.Array(value :_*))
+  @scala.inline
+  def links(value: js.Array[ReactElement]): this.type = set("links", value.asInstanceOf[js.Any])
   @scala.inline
   def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
   @scala.inline
-  def locale(value: localeType): this.type = set("locale", value.asInstanceOf[js.Any])
+  def locale(value: LocaleType): this.type = set("locale", value.asInstanceOf[js.Any])
+  @scala.inline
+  def location(value: Location[LocationState] | Pathname): this.type = set("location", value.asInstanceOf[js.Any])
   @scala.inline
   def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
   @scala.inline
-  def logoFunction0(value: () => TagMod[Any]): this.type = set("logo", js.Any.fromFunction0(value))
+  def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
   @scala.inline
-  def logo(value: TagMod[Any] | WithFalse[js.Function0[TagMod[Any]]]): this.type = set("logo", value.asInstanceOf[js.Any])
+  def `match`(value: typingsSlinky.reactRouter.mod.`match`[js.Object]): this.type = set("match", value.asInstanceOf[js.Any])
   @scala.inline
   def menu(value: DefaultOpenAll): this.type = set("menu", value.asInstanceOf[js.Any])
   @scala.inline
+  def menuContentRenderFunction2(value: (SiderMenuProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuContentRender", js.Any.fromFunction2(value))
+  @scala.inline
+  def menuContentRender(value: WithFalse[js.Function2[SiderMenuProps, /* defaultDom */ ReactElement, ReactElement]]): this.type = set("menuContentRender", value.asInstanceOf[js.Any])
+  @scala.inline
+  def menuDataVarargs(value: MenuDataItem*): this.type = set("menuData", js.Array(value :_*))
+  @scala.inline
+  def menuData(value: js.Array[MenuDataItem]): this.type = set("menuData", value.asInstanceOf[js.Any])
+  @scala.inline
   def menuDataRender(value: /* menuData */ js.Array[MenuDataItem] => js.Array[MenuDataItem]): this.type = set("menuDataRender", js.Any.fromFunction1(value))
   @scala.inline
+  def menuExtraRenderFunction1(value: SiderMenuProps => ReactElement): this.type = set("menuExtraRender", js.Any.fromFunction1(value))
+  @scala.inline
+  def menuExtraRender(value: WithFalse[js.Function1[SiderMenuProps, ReactElement]]): this.type = set("menuExtraRender", value.asInstanceOf[js.Any])
+  @scala.inline
   def menuHeaderRenderFunction3(
-    value: (/* logo */ TagMod[Any], /* title */ TagMod[Any], /* props */ js.UndefOr[BasicLayoutProps]) => TagMod[Any]
+    value: (/* logo */ ReactElement, /* title */ ReactElement, /* props */ js.UndefOr[SiderMenuProps]) => ReactElement
   ): this.type = set("menuHeaderRender", js.Any.fromFunction3(value))
   @scala.inline
   def menuHeaderRender(
     value: WithFalse[
       js.Function3[
-        /* logo */ TagMod[Any], 
-        /* title */ TagMod[Any], 
-        /* props */ js.UndefOr[BasicLayoutProps], 
-        TagMod[Any]
+        /* logo */ ReactElement, 
+        /* title */ ReactElement, 
+        /* props */ js.UndefOr[SiderMenuProps], 
+        ReactElement
       ]
     ]
   ): this.type = set("menuHeaderRender", value.asInstanceOf[js.Any])
   @scala.inline
-  def menuItemRenderFunction2(value: (/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any]) => TagMod[Any]): this.type = set("menuItemRender", js.Any.fromFunction2(value))
+  def menuItemRenderFunction2(value: (/* item */ MenuDataItemisUrlboolean, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuItemRender", js.Any.fromFunction2(value))
   @scala.inline
   def menuItemRender(
     value: WithFalse[
-      js.Function2[/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any], TagMod[Any]]
+      js.Function2[/* item */ MenuDataItemisUrlboolean, /* defaultDom */ ReactElement, ReactElement]
     ]
   ): this.type = set("menuItemRender", value.asInstanceOf[js.Any])
   @scala.inline
-  def menuRenderFunction2(value: (/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any]) => TagMod[Any]): this.type = set("menuRender", js.Any.fromFunction2(value))
+  def menuRenderFunction2(value: (HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("menuRender", js.Any.fromFunction2(value))
   @scala.inline
-  def menuRender(
-    value: WithFalse[
-      js.Function2[/* props */ HeaderViewProps, /* defaultDom */ TagMod[Any], TagMod[Any]]
-    ]
-  ): this.type = set("menuRender", value.asInstanceOf[js.Any])
+  def menuRender(value: WithFalse[js.Function2[HeaderViewProps, /* defaultDom */ ReactElement, ReactElement]]): this.type = set("menuRender", value.asInstanceOf[js.Any])
   @scala.inline
-  def navTheme(
-    value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark
-  ): this.type = set("navTheme", value.asInstanceOf[js.Any])
+  def navTheme(value: MenuTheme | realDark): this.type = set("navTheme", value.asInstanceOf[js.Any])
   @scala.inline
   def onCollapse(value: /* collapsed */ Boolean => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
   @scala.inline
   def onMenuHeaderClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMenuHeaderClick", js.Any.fromFunction1(value))
   @scala.inline
   def onOpenChange(value: /* openKeys */ WithFalse[js.Array[String]] => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+  @scala.inline
+  def onPageChange(
+    value: /* location */ js.UndefOr[
+      (/* import warning: importer.ImportType#apply Failed type conversion: react-router.react-router.RouteComponentProps<{}, react-router.react-router.StaticContext, history.history.LocationState>['location'] */ js.Any) | Pathname
+    ] => Unit
+  ): this.type = set("onPageChange", js.Any.fromFunction1(value))
   @scala.inline
   def pageTitleRenderFunction3(
     value: (/* props */ GetPageTitleProps, /* defaultPageTitle */ js.UndefOr[String], /* info */ js.UndefOr[Id]) => String
@@ -167,15 +203,23 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
     ]
   ): this.type = set("pageTitleRender", value.asInstanceOf[js.Any])
   @scala.inline
+  def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+  @scala.inline
   def primaryColor(value: String): this.type = set("primaryColor", value.asInstanceOf[js.Any])
   @scala.inline
-  def rightContentRenderFunction1(value: BasicLayoutProps => TagMod[Any]): this.type = set("rightContentRender", js.Any.fromFunction1(value))
+  def pure(value: Boolean): this.type = set("pure", value.asInstanceOf[js.Any])
   @scala.inline
-  def rightContentRender(value: WithFalse[js.Function1[BasicLayoutProps, TagMod[Any]]]): this.type = set("rightContentRender", value.asInstanceOf[js.Any])
+  def rightContentRenderFunction1(value: HeaderViewProps => ReactElement): this.type = set("rightContentRender", js.Any.fromFunction1(value))
   @scala.inline
-  def siderMenuStyle(value: CSSProperties): this.type = set("siderMenuStyle", value.asInstanceOf[js.Any])
+  def rightContentRender(value: WithFalse[js.Function1[HeaderViewProps, ReactElement]]): this.type = set("rightContentRender", value.asInstanceOf[js.Any])
+  @scala.inline
+  def route(value: typingsSlinky.antDesignProLayout.typingsMod.Route): this.type = set("route", value.asInstanceOf[js.Any])
   @scala.inline
   def siderWidth(value: Double): this.type = set("siderWidth", value.asInstanceOf[js.Any])
+  @scala.inline
+  def splitMenus(value: Boolean): this.type = set("splitMenus", value.asInstanceOf[js.Any])
+  @scala.inline
+  def staticContext(value: StaticContext): this.type = set("staticContext", value.asInstanceOf[js.Any])
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline

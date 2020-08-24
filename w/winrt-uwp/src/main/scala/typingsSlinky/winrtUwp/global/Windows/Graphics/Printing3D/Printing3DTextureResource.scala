@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Graphics.Printing3D
 
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStreamWithContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates an instance of the Printing3DTextureResource class. */
 class Printing3DTextureResource ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DTextureResource {
-  /** Gets or sets the name of the texture resource. */
-  /* CompleteClass */
-  override var name: String = js.native
-  /** Gets or sets the image stream of the texture resource. */
-  /* CompleteClass */
-  override var textureData: IRandomAccessStreamWithContentType = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DTextureResource
 

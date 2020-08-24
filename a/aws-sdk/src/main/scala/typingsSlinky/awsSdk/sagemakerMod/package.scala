@@ -234,6 +234,8 @@ package object sagemakerMod {
   type Cidr = java.lang.String
   type Cidrs = js.Array[typingsSlinky.awsSdk.sagemakerMod.Cidr]
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.sagemakerMod.ClientApiVersions
+  type ClientId = java.lang.String
+  type ClientSecret = java.lang.String
   type CodeRepositoryArn = java.lang.String
   type CodeRepositoryContains = java.lang.String
   type CodeRepositoryNameContains = java.lang.String
@@ -252,7 +254,6 @@ package object sagemakerMod {
   */
   type CodeRepositorySortOrder = typingsSlinky.awsSdk.sagemakerMod._CodeRepositorySortOrder | java.lang.String
   type CodeRepositorySummaryList = js.Array[typingsSlinky.awsSdk.sagemakerMod.CodeRepositorySummary]
-  type CognitoClientId = java.lang.String
   type CognitoUserGroup = java.lang.String
   type CognitoUserPool = java.lang.String
   type CollectionConfigurations = js.Array[typingsSlinky.awsSdk.sagemakerMod.CollectionConfiguration]
@@ -270,6 +271,7 @@ package object sagemakerMod {
   */
   type CompilationJobStatus = typingsSlinky.awsSdk.sagemakerMod._CompilationJobStatus | java.lang.String
   type CompilationJobSummaries = js.Array[typingsSlinky.awsSdk.sagemakerMod.CompilationJobSummary]
+  type CompilerOptions = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.None_
     - typingsSlinky.awsSdk.awsSdkStrings.Gzip_
@@ -285,6 +287,7 @@ package object sagemakerMod {
   type ContainerEntrypoint = js.Array[typingsSlinky.awsSdk.sagemakerMod.ContainerEntrypointString]
   type ContainerEntrypointString = java.lang.String
   type ContainerHostname = java.lang.String
+  type ContainerImage = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SingleModel
     - typingsSlinky.awsSdk.awsSdkStrings.MultiModel
@@ -458,10 +461,18 @@ package object sagemakerMod {
   type Framework = typingsSlinky.awsSdk.sagemakerMod._Framework | java.lang.String
   type GenerateCandidateDefinitionsOnly = scala.Boolean
   type GitConfigUrl = java.lang.String
+  type Group = java.lang.String
+  type Groups = js.Array[typingsSlinky.awsSdk.sagemakerMod.Group]
   type HookParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.sagemakerMod.ConfigValue]
   type HumanLoopActivationConditions = java.lang.String
   type HumanTaskUiArn = java.lang.String
   type HumanTaskUiName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Active_
+    - typingsSlinky.awsSdk.awsSdkStrings.Deleting_
+    - java.lang.String
+  */
+  type HumanTaskUiStatus = typingsSlinky.awsSdk.sagemakerMod._HumanTaskUiStatus | java.lang.String
   type HumanTaskUiSummaries = js.Array[typingsSlinky.awsSdk.sagemakerMod.HumanTaskUiSummary]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Auto_
@@ -514,7 +525,7 @@ package object sagemakerMod {
   */
   type HyperParameterTuningJobWarmStartType = typingsSlinky.awsSdk.sagemakerMod._HyperParameterTuningJobWarmStartType | java.lang.String
   type HyperParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.sagemakerMod.ParameterValue]
-  type Image = java.lang.String
+  type ImageArn = java.lang.String
   type ImageDigest = java.lang.String
   type ImageUri = java.lang.String
   type InputDataConfig = js.Array[typingsSlinky.awsSdk.sagemakerMod.Channel]
@@ -562,6 +573,8 @@ package object sagemakerMod {
   */
   type InstanceType = typingsSlinky.awsSdk.sagemakerMod._InstanceType | java.lang.String
   type IntegerParameterRanges = js.Array[typingsSlinky.awsSdk.sagemakerMod.IntegerParameterRange]
+  type InvocationsMaxRetries = scala.Double
+  type InvocationsTimeoutInSeconds = scala.Double
   type JobReferenceCode = java.lang.String
   type JobReferenceCodeContains = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -581,6 +594,7 @@ package object sagemakerMod {
   type LabelingJobForWorkteamSummaryList = js.Array[typingsSlinky.awsSdk.sagemakerMod.LabelingJobForWorkteamSummary]
   type LabelingJobName = java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Initializing_
     - typingsSlinky.awsSdk.awsSdkStrings.InProgress_
     - typingsSlinky.awsSdk.awsSdkStrings.Completed_
     - typingsSlinky.awsSdk.awsSdkStrings.Failed_
@@ -602,6 +616,12 @@ package object sagemakerMod {
   type ListLabelingJobsForWorkteamSortByOptions = typingsSlinky.awsSdk.awsSdkStrings.CreationTime | java.lang.String
   type ListTagsMaxResults = scala.Double
   type ListTrialComponentKey256 = js.Array[typingsSlinky.awsSdk.sagemakerMod.TrialComponentKey256]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Name_
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateDate
+    - java.lang.String
+  */
+  type ListWorkforcesSortByOptions = typingsSlinky.awsSdk.sagemakerMod._ListWorkforcesSortByOptions | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Name_
     - typingsSlinky.awsSdk.awsSdkStrings.CreateDate
@@ -761,6 +781,7 @@ package object sagemakerMod {
   */
   type ObjectiveStatus = typingsSlinky.awsSdk.sagemakerMod._ObjectiveStatus | java.lang.String
   type ObjectiveStatusCounter = scala.Double
+  type OidcEndpoint = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Equals_
     - typingsSlinky.awsSdk.awsSdkStrings.NotEquals
@@ -1046,7 +1067,6 @@ package object sagemakerMod {
   */
   type S3DataType = typingsSlinky.awsSdk.sagemakerMod._S3DataType | java.lang.String
   type S3Uri = java.lang.String
-  type SageMakerImageArn = java.lang.String
   type SamplingPercentage = scala.Double
   type ScheduleExpression = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -1155,6 +1175,7 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.ml_c5
     - typingsSlinky.awsSdk.awsSdkStrings.ml_p2
     - typingsSlinky.awsSdk.awsSdkStrings.ml_p3
+    - typingsSlinky.awsSdk.awsSdkStrings.ml_g4dn
     - typingsSlinky.awsSdk.awsSdkStrings.ml_inf1
     - typingsSlinky.awsSdk.awsSdkStrings.jetson_tx1
     - typingsSlinky.awsSdk.awsSdkStrings.jetson_tx2
@@ -1171,10 +1192,34 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.qcs603
     - typingsSlinky.awsSdk.awsSdkStrings.sitara_am57x
     - typingsSlinky.awsSdk.awsSdkStrings.amba_cv22
+    - typingsSlinky.awsSdk.awsSdkStrings.x86_win32
+    - typingsSlinky.awsSdk.awsSdkStrings.x86_win64
     - java.lang.String
   */
   type TargetDevice = typingsSlinky.awsSdk.sagemakerMod._TargetDevice | java.lang.String
   type TargetObjectiveMetricValue = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INTEL_GRAPHICS
+    - typingsSlinky.awsSdk.awsSdkStrings.MALI
+    - typingsSlinky.awsSdk.awsSdkStrings.NVIDIA
+    - java.lang.String
+  */
+  type TargetPlatformAccelerator = typingsSlinky.awsSdk.sagemakerMod._TargetPlatformAccelerator | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.X86_64
+    - typingsSlinky.awsSdk.awsSdkStrings.X86
+    - typingsSlinky.awsSdk.awsSdkStrings.ARM64
+    - typingsSlinky.awsSdk.awsSdkStrings.ARM_EABI
+    - typingsSlinky.awsSdk.awsSdkStrings.ARM_EABIHF
+    - java.lang.String
+  */
+  type TargetPlatformArch = typingsSlinky.awsSdk.sagemakerMod._TargetPlatformArch | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ANDROID
+    - typingsSlinky.awsSdk.awsSdkStrings.LINUX
+    - java.lang.String
+  */
+  type TargetPlatformOs = typingsSlinky.awsSdk.sagemakerMod._TargetPlatformOs | java.lang.String
   type TaskAvailabilityLifetimeInSeconds = scala.Double
   type TaskCount = scala.Double
   type TaskDescription = java.lang.String
@@ -1369,6 +1414,7 @@ package object sagemakerMod {
   type VpcSecurityGroupIds = js.Array[typingsSlinky.awsSdk.sagemakerMod.SecurityGroupId]
   type WorkforceArn = java.lang.String
   type WorkforceName = java.lang.String
+  type Workforces = js.Array[typingsSlinky.awsSdk.sagemakerMod.Workforce]
   type WorkteamArn = java.lang.String
   type WorkteamName = java.lang.String
   type Workteams = js.Array[typingsSlinky.awsSdk.sagemakerMod.Workteam]

@@ -6,7 +6,6 @@ import typingsSlinky.openjscad.CSG.IRectangleOptions
 import typingsSlinky.openjscad.CSG.Path2D
 import typingsSlinky.openjscad.CSG.Polygon
 import typingsSlinky.openjscad.CSG.Vector2D
-import typingsSlinky.openjscad.CSG.fuzzyFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +13,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CAG")
 @js.native
 class CAG ()
-  extends typingsSlinky.openjscad.CAG {
-  /* CompleteClass */
-  override def center(cAxes: js.Array[String]): typingsSlinky.openjscad.CxG = js.native
-}
+  extends typingsSlinky.openjscad.CAG
 
 /* static members */
 @JSGlobal("CAG")
@@ -33,26 +29,11 @@ object CAG extends js.Object {
   class Vertex protected ()
     extends typingsSlinky.openjscad.CAG.Vertex {
     def this(pos: Vector2D) = this()
-    /* CompleteClass */
-    override var pos: Vector2D = js.native
-    /* CompleteClass */
-    override var tag: Double = js.native
-    /* CompleteClass */
-    override def getTag(): Double = js.native
   }
   
   @js.native
   class fuzzyCAGFactory ()
-    extends typingsSlinky.openjscad.CAG.fuzzyCAGFactory {
-    /* CompleteClass */
-    override var vertexfactory: fuzzyFactory = js.native
-    /* CompleteClass */
-    override def getCAG(sourcecag: typingsSlinky.openjscad.CAG): typingsSlinky.openjscad.CAG = js.native
-    /* CompleteClass */
-    override def getSide(sourceside: typingsSlinky.openjscad.CAG.Side): typingsSlinky.openjscad.CAG.Side = js.native
-    /* CompleteClass */
-    override def getVertex(sourcevertex: typingsSlinky.openjscad.CAG.Vertex): typingsSlinky.openjscad.CAG.Vertex = js.native
-  }
+    extends typingsSlinky.openjscad.CAG.fuzzyCAGFactory
   
   def PathsToDxf(paths: js.Array[Path2D]): Blob = js.native
   def circle(options: ICircleOptions): typingsSlinky.openjscad.CAG = js.native

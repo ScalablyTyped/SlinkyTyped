@@ -1,7 +1,6 @@
 package typingsSlinky.rcMenu.subMenuMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -13,6 +12,7 @@ import typingsSlinky.rcMenu.interfaceMod.OpenEventHandler
 import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.menuItemMod.MenuItem
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -20,7 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-menu/lib/SubMenu", "SubMenu")
+@JSImport("rc-menu/es/SubMenu", "SubMenu")
 @js.native
 class SubMenu protected ()
   extends Component[SubMenuProps, js.Object, js.Any] {
@@ -62,7 +62,7 @@ class SubMenu protected ()
   def getActiveClassName(): String = js.native
   def getBaseProps(): SubPopupMenuProps = js.native
   def getDisabledClassName(): String = js.native
-  def getMotion(mode: MenuMode, visible: Boolean): js.Any = js.native
+  def getMotion(mode: MenuMode, visible: Boolean): MotionType = js.native
   def getOpenClassName(): String = js.native
   def getPrefixCls(): String = js.native
   def getSelectedClassName(): String = js.native
@@ -73,7 +73,7 @@ class SubMenu protected ()
   def onSubMenuClick(info: MenuInfo): Unit = js.native
   def onTitleClick(e: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   def onTitleClick(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderChildren(children: TagMod[Any]): ReactElement = js.native
+  def renderChildren(children: ReactElement): ReactElement = js.native
   def saveMenuInstance(c: MenuItem): Unit = js.native
   def saveSubMenuTitle(subMenuTitle: HTMLElement): Unit = js.native
   def triggerOpenChange(open: Boolean): Unit = js.native
@@ -81,7 +81,7 @@ class SubMenu protected ()
 }
 
 /* static members */
-@JSImport("rc-menu/lib/SubMenu", "SubMenu")
+@JSImport("rc-menu/es/SubMenu", "SubMenu")
 @js.native
 object SubMenu extends js.Object {
   var defaultProps: Mode = js.native

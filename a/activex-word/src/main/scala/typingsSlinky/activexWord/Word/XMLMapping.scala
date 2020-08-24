@@ -22,6 +22,11 @@ trait XMLMapping extends js.Object {
     * @param Office.CustomXMLPart [Source=0]
     */
   def SetMapping(XPath: String): Boolean = js.native
+  def SetMapping(
+    XPath: String,
+    PrefixMapping: js.UndefOr[scala.Nothing],
+    Source: typingsSlinky.activexOffice.Office.CustomXMLPart
+  ): Boolean = js.native
   def SetMapping(XPath: String, PrefixMapping: String): Boolean = js.native
   def SetMapping(XPath: String, PrefixMapping: String, Source: typingsSlinky.activexOffice.Office.CustomXMLPart): Boolean = js.native
   def SetMappingByNode(Node: typingsSlinky.activexOffice.Office.CustomXMLNode): Boolean = js.native

@@ -1,7 +1,6 @@
 package typingsSlinky.angularCompiler.publicApiMod
 
-import typingsSlinky.angularCompiler.i18nAstMod.Message
-import typingsSlinky.angularCompiler.i18nAstMod.Node
+import typingsSlinky.angularCompiler.i18nAstMod.I18nMeta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,15 +24,15 @@ class Attribute protected ()
     name: String,
     value: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    i18n: Message
+    valueSpan: js.UndefOr[scala.Nothing],
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
     value: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    i18n: Node
+    i18n: I18nMeta
   ) = this()
 }
 

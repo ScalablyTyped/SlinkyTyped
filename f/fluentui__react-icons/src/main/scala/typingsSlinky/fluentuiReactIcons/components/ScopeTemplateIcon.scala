@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ScopeTemplateIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ScopeTemplateIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ScopeTemplateIcon")
   @js.native
   object component extends js.Object
   

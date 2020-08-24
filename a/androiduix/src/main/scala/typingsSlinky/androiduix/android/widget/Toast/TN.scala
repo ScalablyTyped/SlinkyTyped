@@ -55,89 +55,38 @@ object TN {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHandleHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleHide")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withHandleShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleShow")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHandleHide(value: () => Unit): Self = this.set("handleHide", js.Any.fromFunction0(value))
     @scala.inline
-    def withHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setHandleShow(value: () => Unit): Self = this.set("handleShow", js.Any.fromFunction0(value))
     @scala.inline
-    def withMGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mGravity")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHide(value: () => Unit): Self = this.set("hide", js.Any.fromFunction0(value))
     @scala.inline
-    def withMHandler(value: Handler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMGravity(value: Double): Self = this.set("mGravity", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHide(value: Runnable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHide")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHandler(value: Handler): Self = this.set("mHandler", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMNextView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mNextView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHide(value: Runnable): Self = this.set("mHide", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMShow(value: Runnable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mShow")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMNextView(value: View): Self = this.set("mNextView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMShow(value: Runnable): Self = this.set("mShow", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMWM(value: WindowManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mWM")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMView(value: View): Self = this.set("mView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMWindow(value: Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMWM(value: WindowManager): Self = this.set("mWM", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mX")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMWindow(value: Window): Self = this.set("mWindow", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMX(value: Double): Self = this.set("mX", value.asInstanceOf[js.Any])
     @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setMY(value: Double): Self = this.set("mY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShow(value: () => Unit): Self = this.set("show", js.Any.fromFunction0(value))
   }
   
 }

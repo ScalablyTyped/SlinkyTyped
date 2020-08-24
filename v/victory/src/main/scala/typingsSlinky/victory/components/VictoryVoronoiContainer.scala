@@ -38,9 +38,9 @@ object VictoryVoronoiContainer {
     @scala.inline
     def labels(value: (/* point */ js.Any, /* index */ Double, /* points */ js.Array[_]) => String): this.type = set("labels", js.Any.fromFunction3(value))
     @scala.inline
-    def onActivated(value: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit): this.type = set("onActivated", js.Any.fromFunction2(value))
+    def onActivated(value: (/* points */ js.Array[_], VictoryVoronoiContainerProps) => Unit): this.type = set("onActivated", js.Any.fromFunction2(value))
     @scala.inline
-    def onDeactivated(value: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit): this.type = set("onDeactivated", js.Any.fromFunction2(value))
+    def onDeactivated(value: (/* points */ js.Array[_], VictoryVoronoiContainerProps) => Unit): this.type = set("onDeactivated", js.Any.fromFunction2(value))
     @scala.inline
     def radius(value: Double): this.type = set("radius", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,6 +49,8 @@ object VictoryVoronoiContainer {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def voronoiBlacklistVarargs(value: String*): this.type = set("voronoiBlacklist", js.Array(value :_*))
     @scala.inline
     def voronoiBlacklist(value: js.Array[String]): this.type = set("voronoiBlacklist", value.asInstanceOf[js.Any])
     @scala.inline

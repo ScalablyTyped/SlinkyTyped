@@ -17,7 +17,7 @@ package object navInterfaceMod {
   ]
   type TransitionRejectFn = js.Function2[
     /* rejectReason */ js.Any, 
-    /* transition */ js.UndefOr[typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation], 
+    /* transition */ js.UndefOr[typingsSlinky.ionicCore.animationInterfaceMod.Animation], 
     scala.Unit
   ]
   type TransitionResolveFn = js.Function5[

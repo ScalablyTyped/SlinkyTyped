@@ -48,12 +48,14 @@ object mod extends js.Object {
   class DateTimePicker ()
     extends typingsSlinky.blueprintjsDatetime.dateTimePickerMod.DateTimePicker {
     def this(props: IDateTimePickerProps) = this()
+    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
     def this(props: IDateTimePickerProps, context: js.Any) = this()
   }
   
   @js.native
   trait IDatePickerLocaleUtils extends js.Object {
     def formatDate(date: js.Date): String = js.native
+    def formatDate(date: js.Date, format: js.UndefOr[scala.Nothing], locale: String): String = js.native
     def formatDate(date: js.Date, format: String): String = js.native
     def formatDate(date: js.Date, format: String, locale: String): String = js.native
     def formatDate(date: js.Date, format: js.Array[String]): String = js.native
@@ -71,6 +73,7 @@ object mod extends js.Object {
     def getMonths(): js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
     def getMonths(locale: String): js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
     def parseDate(str: String): js.Date = js.native
+    def parseDate(str: String, format: js.UndefOr[scala.Nothing], locale: String): js.Date = js.native
     def parseDate(str: String, format: String): js.Date = js.native
     def parseDate(str: String, format: String, locale: String): js.Date = js.native
   }
@@ -79,6 +82,7 @@ object mod extends js.Object {
   class TimePicker ()
     extends typingsSlinky.blueprintjsDatetime.timePickerMod.TimePicker {
     def this(props: ITimePickerProps) = this()
+    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
     def this(props: ITimePickerProps, context: js.Any) = this()
   }
   
@@ -223,6 +227,17 @@ object mod extends js.Object {
     var MILLISECOND: millisecond = js.native
     var MINUTE: minute = js.native
     var SECOND: second = js.native
+  }
+  
+  @js.native
+  object TimeUnit extends js.Object {
+    /* "hour12" */ val HOUR_12: typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit.HOUR_12 with String = js.native
+    /* "hour24" */ val HOUR_24: typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit.HOUR_24 with String = js.native
+    /* "minute" */ val MINUTE: typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit.MINUTE with String = js.native
+    /* "ms" */ val MS: typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit.MS with String = js.native
+    /* "second" */ val SECOND: typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit.SECOND with String = js.native
+    @JSBracketAccess
+    def apply(value: String): js.UndefOr[typingsSlinky.blueprintjsDatetime.timeUnitMod.TimeUnit with String] = js.native
   }
   
 }

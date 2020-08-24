@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BranchFork2Icon {
-  @JSImport("@fluentui/react-icons/lib/components/BranchFork2Icon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BranchFork2Icon")
   @js.native
   object component extends js.Object
   

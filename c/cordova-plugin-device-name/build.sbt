@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "cordova-plugin-device-name"
-version := "v1.1.0-dt-20200515Z-1b05f4"
-scalaVersion := "2.13.2"
+version := "v1.1.0-dt-20200515Z-8f205a"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

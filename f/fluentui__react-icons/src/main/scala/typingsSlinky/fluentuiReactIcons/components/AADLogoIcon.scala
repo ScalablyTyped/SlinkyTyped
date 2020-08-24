@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AADLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/AADLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "AADLogoIcon")
   @js.native
   object component extends js.Object
   

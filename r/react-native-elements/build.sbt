@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "react-native-elements"
-version := "1.2.7-3f2c1a"
-scalaVersion := "2.13.2"
+version := "2.1.0-c119eb"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200515Z-a82205",
-  "org.scalablytyped.slinky" %%% "react-native-ratings" % "6.5.0-62c766",
-  "org.scalablytyped.slinky" %%% "react-native-vector-icons" % "6.4-dt-20200515Z-0ced9d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.63-dt-20200723Z-e061f4",
+  "org.scalablytyped.slinky" %%% "react-native-ratings" % "7.2.0-062fcf",
+  "org.scalablytyped.slinky" %%% "react-native-vector-icons" % "6.4-dt-20200515Z-cef5c3",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FacebookStyle {
-  @JSImport("react-content-loader/dist/stylized/FacebookStyle", JSImport.Default)
+  @JSImport("react-content-loader/dist/web/presets/FacebookStyle", JSImport.Default)
   @js.native
   object component extends js.Object
   

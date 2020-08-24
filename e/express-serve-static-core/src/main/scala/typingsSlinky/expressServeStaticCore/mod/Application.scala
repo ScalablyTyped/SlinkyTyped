@@ -13,6 +13,7 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.qs.mod.ParsedQs
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +48,7 @@ trait Application
   @JSName("head")
   var head_Original: IRouterMatcher[this.type, head] = js.native
   var length: Int = js.native
-  var locals: js.Any = js.native
+  var locals: Record[String, _] = js.native
   @JSName("lock")
   var lock_Original: IRouterMatcher[this.type, _] = js.native
   @JSName("m-search")
@@ -227,7 +228,7 @@ trait Application
     fn: js.Function3[
       /* path */ String, 
       /* options */ js.Object, 
-      /* callback */ js.Function2[/* e */ js.Any, /* rendered */ String, Unit], 
+      /* callback */ js.Function2[/* e */ js.Any, /* rendered */ js.UndefOr[String], Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -428,6 +429,11 @@ trait Application
     */
   def render(name: String): Unit = js.native
   def render(name: String, callback: js.Function2[/* err */ js.Error, /* html */ String, Unit]): Unit = js.native
+  def render(
+    name: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* err */ js.Error, /* html */ String, Unit]
+  ): Unit = js.native
   def render(name: String, options: js.Object): Unit = js.native
   def render(
     name: String,

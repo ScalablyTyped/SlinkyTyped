@@ -12,12 +12,12 @@ import typingsSlinky.monacoEditor.mod.editor.IColorizerOptions
 import typingsSlinky.monacoEditor.mod.editor.IDiffEditorConstructionOptions
 import typingsSlinky.monacoEditor.mod.editor.IDiffNavigator
 import typingsSlinky.monacoEditor.mod.editor.IDiffNavigatorOptions
-import typingsSlinky.monacoEditor.mod.editor.IEditorConstructionOptions
 import typingsSlinky.monacoEditor.mod.editor.IEditorOverrideServices
 import typingsSlinky.monacoEditor.mod.editor.IMarker
 import typingsSlinky.monacoEditor.mod.editor.IMarkerData
 import typingsSlinky.monacoEditor.mod.editor.IStandaloneCodeEditor
 import typingsSlinky.monacoEditor.mod.editor.IStandaloneDiffEditor
+import typingsSlinky.monacoEditor.mod.editor.IStandaloneEditorConstructionOptions
 import typingsSlinky.monacoEditor.mod.editor.IStandaloneThemeData
 import typingsSlinky.monacoEditor.mod.editor.ITextModel
 import typingsSlinky.monacoEditor.mod.editor.IWebWorkerOptions
@@ -29,19 +29,26 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Typeofeditor extends js.Object {
   var BareFontInfo: Instantiable0[typingsSlinky.monacoEditor.mod.editor.BareFontInfo] = js.native
+  var ConfigurationChangedEvent: Instantiable0[typingsSlinky.monacoEditor.mod.editor.ConfigurationChangedEvent] = js.native
+  val EditorOptions: AcceptSuggestionOnCommitCharacter = js.native
   val EditorType: ICodeEditor = js.native
   var FindMatch: Instantiable0[typingsSlinky.monacoEditor.mod.editor.FindMatch] = js.native
   var FontInfo: Instantiable0[typingsSlinky.monacoEditor.mod.editor.FontInfo] = js.native
-  var InternalEditorOptions: Instantiable0[typingsSlinky.monacoEditor.mod.editor.InternalEditorOptions] = js.native
   var TextModelResolvedOptions: Instantiable0[typingsSlinky.monacoEditor.mod.editor.TextModelResolvedOptions] = js.native
   def colorize(text: String, languageId: String, options: IColorizerOptions): js.Promise[String] = js.native
   def colorizeElement(domNode: HTMLElement, options: IColorizerElementOptions): js.Promise[Unit] = js.native
   def colorizeModelLine(model: ITextModel, lineNumber: Double): String = js.native
   def colorizeModelLine(model: ITextModel, lineNumber: Double, tabSize: Double): String = js.native
   def create(domElement: HTMLElement): IStandaloneCodeEditor = js.native
-  def create(domElement: HTMLElement, options: IEditorConstructionOptions): IStandaloneCodeEditor = js.native
-  def create(domElement: HTMLElement, options: IEditorConstructionOptions, `override`: IEditorOverrideServices): IStandaloneCodeEditor = js.native
+  def create(domElement: HTMLElement, options: js.UndefOr[scala.Nothing], `override`: IEditorOverrideServices): IStandaloneCodeEditor = js.native
+  def create(domElement: HTMLElement, options: IStandaloneEditorConstructionOptions): IStandaloneCodeEditor = js.native
+  def create(
+    domElement: HTMLElement,
+    options: IStandaloneEditorConstructionOptions,
+    `override`: IEditorOverrideServices
+  ): IStandaloneCodeEditor = js.native
   def createDiffEditor(domElement: HTMLElement): IStandaloneDiffEditor = js.native
+  def createDiffEditor(domElement: HTMLElement, options: js.UndefOr[scala.Nothing], `override`: IEditorOverrideServices): IStandaloneDiffEditor = js.native
   def createDiffEditor(domElement: HTMLElement, options: IDiffEditorConstructionOptions): IStandaloneDiffEditor = js.native
   def createDiffEditor(
     domElement: HTMLElement,
@@ -51,6 +58,7 @@ trait Typeofeditor extends js.Object {
   def createDiffNavigator(diffEditor: IStandaloneDiffEditor): IDiffNavigator = js.native
   def createDiffNavigator(diffEditor: IStandaloneDiffEditor, opts: IDiffNavigatorOptions): IDiffNavigator = js.native
   def createModel(value: String): ITextModel = js.native
+  def createModel(value: String, language: js.UndefOr[scala.Nothing], uri: Uri): ITextModel = js.native
   def createModel(value: String, language: String): ITextModel = js.native
   def createModel(value: String, language: String, uri: Uri): ITextModel = js.native
   def createWebWorker[T](opts: IWebWorkerOptions): MonacoWebWorker[T] = js.native

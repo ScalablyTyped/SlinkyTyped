@@ -1,6 +1,6 @@
 package typingsSlinky.reactToastr
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactToastr.anon.ClassName
 import scala.scalajs.js
@@ -14,14 +14,14 @@ object mod extends js.Object {
   class ToastContainer ()
     extends Component[ClassName, js.Object, js.Any] {
     def clear(): Unit = js.native
-    def error(message: TagMod[Any], title: TagMod[Any]): Unit = js.native
-    def error(message: TagMod[Any], title: TagMod[Any], optionsOverride: js.Object): Unit = js.native
-    def info(message: TagMod[Any], title: TagMod[Any]): Unit = js.native
-    def info(message: TagMod[Any], title: TagMod[Any], optionsOverride: js.Object): Unit = js.native
-    def success(message: TagMod[Any], title: TagMod[Any]): Unit = js.native
-    def success(message: TagMod[Any], title: TagMod[Any], optionsOverride: js.Object): Unit = js.native
-    def warning(message: TagMod[Any], title: TagMod[Any]): Unit = js.native
-    def warning(message: TagMod[Any], title: TagMod[Any], optionsOverride: js.Object): Unit = js.native
+    def error(message: ReactElement, title: ReactElement): Unit = js.native
+    def error(message: ReactElement, title: ReactElement, optionsOverride: js.Object): Unit = js.native
+    def info(message: ReactElement, title: ReactElement): Unit = js.native
+    def info(message: ReactElement, title: ReactElement, optionsOverride: js.Object): Unit = js.native
+    def success(message: ReactElement, title: ReactElement): Unit = js.native
+    def success(message: ReactElement, title: ReactElement, optionsOverride: js.Object): Unit = js.native
+    def warning(message: ReactElement, title: ReactElement): Unit = js.native
+    def warning(message: ReactElement, title: ReactElement, optionsOverride: js.Object): Unit = js.native
   }
   
   val ToastMessageAnimated: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any = js.native

@@ -75,7 +75,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LocalizationEditor {
-  @JSImport("fundamental-react/lib/LocalizationEditor/LocalizationEditor", JSImport.Default)
+  @JSImport("fundamental-react", "LocalizationEditor")
   @js.native
   object component extends js.Object
   
@@ -205,6 +205,8 @@ object LocalizationEditor {
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline

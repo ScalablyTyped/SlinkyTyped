@@ -68,7 +68,6 @@ import typingsSlinky.antdMobile.antdMobileStrings.xs
 import typingsSlinky.antdMobile.antdMobileStrings.xxs
 import typingsSlinky.antdMobile.antdMobileStrings.yes
 import typingsSlinky.antdMobile.iconMod.IconProps
-import typingsSlinky.antdMobile.iconMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -78,14 +77,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Icon {
-  @JSImport("antd-mobile/lib/icon", JSImport.Default)
+  @JSImport("antd-mobile", "Icon")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Icon] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -262,6 +261,8 @@ object Icon {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -628,6 +629,8 @@ object Icon {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

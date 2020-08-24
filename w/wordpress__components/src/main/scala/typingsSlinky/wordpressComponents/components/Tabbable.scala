@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressComponents.components
 
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.wordpressComponents.tabbableMod.TabbableContainer.Props
-import typingsSlinky.wordpressComponents.tabbableMod.default.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ object Tabbable {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Props): SharedBuilder_Props1526208399[^] = new SharedBuilder_Props1526208399[^](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Tabbable.type): SharedBuilder_Props1526208399[^] = new SharedBuilder_Props1526208399[^](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Props): SharedBuilder_Props651459230[HTMLDivElement] = new SharedBuilder_Props651459230[HTMLDivElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tabbable.type): SharedBuilder_Props651459230[HTMLDivElement] = new SharedBuilder_Props651459230[HTMLDivElement](js.Array(this.component, js.Dictionary.empty))()
 }
 

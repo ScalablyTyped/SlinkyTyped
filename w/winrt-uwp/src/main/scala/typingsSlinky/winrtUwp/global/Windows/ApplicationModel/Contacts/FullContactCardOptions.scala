@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 
-import typingsSlinky.winrtUwp.Windows.UI.ViewManagement.ViewSizePreference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Initializes a new instance of the FullContactCardOptions class. */
 class FullContactCardOptions ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.FullContactCardOptions {
-  /** Gets or sets a value that describes the desired view size for the full contact card. */
-  /* CompleteClass */
-  override var desiredRemainingView: ViewSizePreference = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.FullContactCardOptions
 

@@ -2,7 +2,7 @@ package typingsSlinky.antDesignColors
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.antDesignColors.anon.Arraystringprimarystring
+import typingsSlinky.antDesignColors.anon.Arraystringprimarystringu
 import typingsSlinky.std.FlatArray
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.anon.CopyWithin
@@ -10,11 +10,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@ant-design/colors/lib", JSImport.Namespace)
+@JSImport("@ant-design/colors", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  val presetDarkPalettes: PalettesProps = js.native
   val presetPalettes: PalettesProps = js.native
-  def generate(color: String): js.Array[String] = js.native
   @js.native
   object blue extends /* n */ NumberDictionary[String] {
     /** Iterator */
@@ -73,6 +73,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -347,6 +348,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -456,6 +458,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -730,6 +733,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -839,6 +843,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -1113,6 +1118,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -1222,6 +1228,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -1496,6 +1503,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -1605,6 +1613,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -1879,6 +1888,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -1988,6 +1998,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -2262,6 +2273,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -2371,6 +2383,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -2645,6 +2658,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -2754,6 +2768,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -3028,6 +3043,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -3137,6 +3153,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -3411,6 +3428,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -3523,6 +3541,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -3797,6 +3816,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -3906,6 +3926,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -4180,6 +4201,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -4289,6 +4311,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -4563,6 +4586,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -4672,6 +4696,7 @@ object mod extends js.Object {
       * length+end.
       */
     def fill(value: String): this.type = js.native
+    def fill(value: String, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
     def fill(value: String, start: Double): this.type = js.native
     def fill(value: String, start: Double, end: Double): this.type = js.native
     /**
@@ -4946,6 +4971,7 @@ object mod extends js.Object {
       * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
       */
     def slice(): js.Array[String] = js.native
+    def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[String] = js.native
     def slice(start: Double): js.Array[String] = js.native
     def slice(start: Double, end: Double): js.Array[String] = js.native
     /**
@@ -4997,6 +5023,6 @@ object mod extends js.Object {
     def values(): IterableIterator[String] = js.native
   }
   
-  type PalettesProps = StringDictionary[Arraystringprimarystring]
+  type PalettesProps = StringDictionary[Arraystringprimarystringu]
 }
 

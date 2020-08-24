@@ -1,8 +1,6 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.M.FloatingActionButtonOptions
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialFloatingActionButt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,29 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "FloatingActionButton")
 @js.native
 class FloatingActionButton ()
-  extends typingsSlinky.materializeCss.M.FloatingActionButton {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: FloatingActionButtonOptions = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
-}
+  extends typingsSlinky.materializeCss.M.FloatingActionButton
 
 /* static members */
 @JSImport("materialize-css", "FloatingActionButton")
@@ -46,8 +22,13 @@ object FloatingActionButton extends js.Object {
   /**
     * Init FloatingActionButtons
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.FloatingActionButton] = js.native
-  def init(els: MElements, options: PartialFloatingActionButt): js.Array[typingsSlinky.materializeCss.M.FloatingActionButton] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.FloatingActionButton] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: PartialFloatingActionButt
+  ): js.Array[typingsSlinky.materializeCss.M.FloatingActionButton] = js.native
   /**
     * Init FloatingActionButton
     */

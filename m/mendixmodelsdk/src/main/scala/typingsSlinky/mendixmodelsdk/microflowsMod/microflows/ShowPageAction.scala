@@ -26,10 +26,17 @@ class ShowPageAction protected () extends MicroflowAction {
   ) = this()
   @JSName("model")
   var model_FShowPageAction: IModel = js.native
+  /**
+    * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
+    *
+    * In version 8.11.0: introduced
+    */
+  def numberOfPagesToClose: String = js.native
+  def numberOfPagesToClose_=(newValue: String): Unit = js.native
   def pageSettings: PageSettings = js.native
-  def pageSettings(newValue: PageSettings): js.Any = js.native
+  def pageSettings_=(newValue: PageSettings): Unit = js.native
   def passedObjectVariableName: String = js.native
-  def passedObjectVariableName(newValue: String): js.Any = js.native
+  def passedObjectVariableName_=(newValue: String): Unit = js.native
 }
 
 /* static members */

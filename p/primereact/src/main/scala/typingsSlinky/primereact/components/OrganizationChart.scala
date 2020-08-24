@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Node
@@ -27,7 +27,7 @@ object OrganizationChart {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def nodeTemplate(value: /* node */ OrganizationChartNodeData => TagMod[Any]): this.type = set("nodeTemplate", js.Any.fromFunction1(value))
+    def nodeTemplate(value: /* node */ OrganizationChartNodeData => ReactElement): this.type = set("nodeTemplate", js.Any.fromFunction1(value))
     @scala.inline
     def onNodeSelect(value: /* e */ Node => Unit): this.type = set("onNodeSelect", js.Any.fromFunction1(value))
     @scala.inline
@@ -40,6 +40,8 @@ object OrganizationChart {
     def selectionMode(value: String): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: OrganizationChartNodeData*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: js.Array[OrganizationChartNodeData]): this.type = set("value", value.asInstanceOf[js.Any])
   }

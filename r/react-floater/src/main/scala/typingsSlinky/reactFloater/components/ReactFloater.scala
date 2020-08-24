@@ -1,7 +1,6 @@
 package typingsSlinky.reactFloater.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -55,7 +54,7 @@ object ReactFloater {
       @scala.inline
       def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       @scala.inline
-      def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+      def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       @scala.inline
       def getPopper(value: (/* popper */ Data, /* origin */ floater | wrapper) => Unit): this.type = set("getPopper", js.Any.fromFunction2(value))
       @scala.inline
@@ -85,14 +84,14 @@ object ReactFloater {
       @scala.inline
       def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       @scala.inline
-      def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+      def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       @scala.inline
       def wrapperOptions(value: Offset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.reactFloater.mod.PropsWithComponent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply(component: RenderProps => TagMod[Any]): Builder = {
+    def apply(component: RenderProps => ReactElement): Builder = {
         val __props = js.Dynamic.literal(component = js.Any.fromFunction1(component))
         new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactFloater.mod.PropsWithComponent]))
     }
@@ -114,7 +113,7 @@ object ReactFloater {
         value: (/* action */ Action, /* props */ PropsWithComponent | typingsSlinky.reactFloater.mod.PropsWithContent) => Unit
       ): this.type = set("callback", js.Any.fromFunction2(value))
       @scala.inline
-      def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+      def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
       @scala.inline
       def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
       @scala.inline
@@ -130,7 +129,7 @@ object ReactFloater {
       @scala.inline
       def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       @scala.inline
-      def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+      def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
       @scala.inline
       def getPopper(value: (/* popper */ Data, /* origin */ floater | wrapper) => Unit): this.type = set("getPopper", js.Any.fromFunction2(value))
       @scala.inline
@@ -160,7 +159,7 @@ object ReactFloater {
       @scala.inline
       def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       @scala.inline
-      def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+      def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
       @scala.inline
       def wrapperOptions(value: Offset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
     }

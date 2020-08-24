@@ -27,23 +27,16 @@ object CHANGED {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCHANGED(value: changed_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CHANGED")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withCREATED(value: created): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CREATED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCHANGED(value: changed_): Self = this.set("CHANGED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withREMOVED(value: removed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("REMOVED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCREATED(value: created): Self = this.set("CREATED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setREMOVED(value: removed): Self = this.set("REMOVED", value.asInstanceOf[js.Any])
   }
   
 }

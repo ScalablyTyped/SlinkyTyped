@@ -15,13 +15,13 @@ package object mod {
     /* set */ typingsSlinky.reactRte.mod.SetControlState, 
     /* get */ typingsSlinky.reactRte.mod.GetControlState, 
     /* state */ typingsSlinky.draftJs.mod.EditorState, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type CustomBlockFn = js.Function1[
     /* element */ org.scalajs.dom.raw.Element, 
     js.UndefOr[scala.Null | typingsSlinky.reactRte.mod.CustomBlockObject]
   ]
-  type CustomControl = slinky.core.TagMod[scala.Any] | typingsSlinky.reactRte.mod.CustControlFunc
+  type CustomControl = slinky.core.facade.ReactElement | typingsSlinky.reactRte.mod.CustControlFunc
   type CustomInlineFn = js.Function2[
     /* element */ org.scalajs.dom.raw.Element, 
     /* inlineCreators */ typingsSlinky.reactRte.mod.InlineCreators, 

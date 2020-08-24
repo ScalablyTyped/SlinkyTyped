@@ -15,24 +15,24 @@ import scala.scalajs.js.annotation._
   */
 /* Inlined loglevel.loglevel.LogLevelNumbers | 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'silent' | keyof loglevel.loglevel.LogLevel */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.loglevel.loglevelNumbers.`4`
   - typingsSlinky.loglevel.loglevelNumbers.`3`
+  - typingsSlinky.loglevel.loglevelNumbers.`2`
+  - typingsSlinky.loglevel.loglevelNumbers.`4`
   - typingsSlinky.loglevel.loglevelNumbers.`0`
   - typingsSlinky.loglevel.loglevelNumbers.`5`
   - typingsSlinky.loglevel.loglevelNumbers.`1`
-  - typingsSlinky.loglevel.loglevelNumbers.`2`
   - typingsSlinky.loglevel.loglevelStrings.DEBUG
-  - typingsSlinky.loglevel.loglevelStrings.error_
-  - typingsSlinky.loglevel.loglevelStrings.INFO
-  - typingsSlinky.loglevel.loglevelStrings.TRACE
   - typingsSlinky.loglevel.loglevelStrings.info_
+  - typingsSlinky.loglevel.loglevelStrings.INFO
   - typingsSlinky.loglevel.loglevelStrings.warn_
-  - typingsSlinky.loglevel.loglevelStrings.trace_
+  - typingsSlinky.loglevel.loglevelStrings.TRACE
+  - typingsSlinky.loglevel.loglevelStrings.SILENT
+  - typingsSlinky.loglevel.loglevelStrings.silent_
+  - typingsSlinky.loglevel.loglevelStrings.WARN
   - typingsSlinky.loglevel.loglevelStrings.debug_
   - typingsSlinky.loglevel.loglevelStrings.ERROR
-  - typingsSlinky.loglevel.loglevelStrings.SILENT
-  - typingsSlinky.loglevel.loglevelStrings.WARN
-  - typingsSlinky.loglevel.loglevelStrings.silent_
+  - typingsSlinky.loglevel.loglevelStrings.error_
+  - typingsSlinky.loglevel.loglevelStrings.trace_
 */
 trait LogLevelDesc extends js.Object
 

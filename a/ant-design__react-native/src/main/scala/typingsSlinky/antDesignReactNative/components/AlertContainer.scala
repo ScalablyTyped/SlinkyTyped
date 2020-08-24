@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.alertContainerMod.AlertContainerProps
@@ -21,13 +21,13 @@ object AlertContainer {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
     def onBackHandler(value: () => Boolean): this.type = set("onBackHandler", js.Any.fromFunction0(value))
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AlertContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

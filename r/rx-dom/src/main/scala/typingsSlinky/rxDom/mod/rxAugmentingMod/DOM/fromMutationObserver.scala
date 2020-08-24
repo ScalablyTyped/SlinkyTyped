@@ -2,7 +2,7 @@ package typingsSlinky.rxDom.mod.rxAugmentingMod.DOM
 
 import org.scalajs.dom.raw.MutationObserverInit
 import org.scalajs.dom.raw.Node
-import typingsSlinky.rxLiteAggregates.Rx.Observable
+import typingsSlinky.rx.Rx.Observable
 import typingsSlinky.std.MutationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

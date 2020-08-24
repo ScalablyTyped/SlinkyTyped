@@ -19,7 +19,11 @@ object GuideLayer {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def horizontalGuidesVarargs(value: Double*): this.type = set("horizontalGuides", js.Array(value :_*))
+    @scala.inline
     def horizontalGuides(value: js.Array[Double]): this.type = set("horizontalGuides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalGuidesVarargs(value: Double*): this.type = set("verticalGuides", js.Array(value :_*))
     @scala.inline
     def verticalGuides(value: js.Array[Double]): this.type = set("verticalGuides", value.asInstanceOf[js.Any])
   }

@@ -226,329 +226,118 @@ object DropdownPopup {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_Spinner_this(value: typingsSlinky.androiduix.android.widget.Spinner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_Spinner_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBuildDropDown(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildDropDown")(js.Any.fromFunction0(value))
-        ret
-    }
+    def set_Spinner_this(value: typingsSlinky.androiduix.android.widget.Spinner): Self = this.set("_Spinner_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withClearListSelection(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearListSelection")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setBuildDropDown(value: () => js.Any): Self = this.set("buildDropDown", js.Any.fromFunction0(value))
     @scala.inline
-    def withComputeContentWidth(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeContentWidth")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setClearListSelection(value: () => Unit): Self = this.set("clearListSelection", js.Any.fromFunction0(value))
     @scala.inline
-    def withCreateDragToOpenListener(value: View => OnTouchListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDragToOpenListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setComputeContentWidth(value: () => Unit): Self = this.set("computeContentWidth", js.Any.fromFunction0(value))
     @scala.inline
-    def withDismiss(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismiss")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setCreateDragToOpenListener(value: View => OnTouchListener): Self = this.set("createDragToOpenListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetAnchorView(value: () => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnchorView")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setDismiss(value: () => Unit): Self = this.set("dismiss", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetBackground(value: () => Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBackground")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetAnchorView(value: () => View): Self = this.set("getAnchorView", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetEnterAnimation(value: () => Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEnterAnimation")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetBackground(value: () => Drawable): Self = this.set("getBackground", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetExitAnimation(value: () => Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExitAnimation")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetEnterAnimation(value: () => Animation): Self = this.set("getEnterAnimation", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeight")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetExitAnimation(value: () => Animation): Self = this.set("getExitAnimation", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetHorizontalOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHorizontalOffset")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetHeight(value: () => Double): Self = this.set("getHeight", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetInputMethodMode(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputMethodMode")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetHorizontalOffset(value: () => Double): Self = this.set("getHorizontalOffset", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetListView(value: () => ListView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getListView")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetInputMethodMode(value: () => Double): Self = this.set("getInputMethodMode", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetPromptPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPromptPosition")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetListView(value: () => ListView): Self = this.set("getListView", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetSelectedItem(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedItem")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetPromptPosition(value: () => Double): Self = this.set("getPromptPosition", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetSelectedItemId(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedItemId")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetSelectedItem(value: () => js.Any): Self = this.set("getSelectedItem", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetSelectedItemPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedItemPosition")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetSelectedItemId(value: () => Double): Self = this.set("getSelectedItemId", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetSelectedView(value: () => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedView")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetSelectedItemPosition(value: () => Double): Self = this.set("getSelectedItemPosition", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetVerticalOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVerticalOffset")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetSelectedView(value: () => View): Self = this.set("getSelectedView", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWidth")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetVerticalOffset(value: () => Double): Self = this.set("getVerticalOffset", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsDropDownAlwaysVisible(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDropDownAlwaysVisible")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetWidth(value: () => Double): Self = this.set("getWidth", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsInputMethodNotNeeded(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInputMethodNotNeeded")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsDropDownAlwaysVisible(value: () => Boolean): Self = this.set("isDropDownAlwaysVisible", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsModal(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isModal")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsInputMethodNotNeeded(value: () => Boolean): Self = this.set("isInputMethodNotNeeded", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsShowing(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isShowing")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsModal(value: () => Boolean): Self = this.set("isModal", js.Any.fromFunction0(value))
     @scala.inline
-    def withMHintText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHintText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsShowing(value: () => Boolean): Self = this.set("isShowing", js.Any.fromFunction0(value))
     @scala.inline
-    def withOnKeyDown(value: (Double, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMHintText(value: js.Any): Self = this.set("mHintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOnKeyPreIme(value: (Double, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPreIme")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnKeyDown(value: (Double, KeyEvent) => Boolean): Self = this.set("onKeyDown", js.Any.fromFunction2(value))
     @scala.inline
-    def withOnKeyUp(value: (Double, KeyEvent) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnKeyPreIme(value: (Double, KeyEvent) => Boolean): Self = this.set("onKeyPreIme", js.Any.fromFunction2(value))
     @scala.inline
-    def withPerformItemClick(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performItemClick")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnKeyUp(value: (Double, KeyEvent) => Boolean): Self = this.set("onKeyUp", js.Any.fromFunction2(value))
     @scala.inline
-    def withPostShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postShow")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setPerformItemClick(value: Double => Boolean): Self = this.set("performItemClick", js.Any.fromFunction1(value))
     @scala.inline
-    def withRemovePromptView(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePromptView")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setPostShow(value: () => Unit): Self = this.set("postShow", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetAdapter(value: ListAdapter => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAdapter")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setRemovePromptView(value: () => js.Any): Self = this.set("removePromptView", js.Any.fromFunction0(value))
     @scala.inline
-    def withSetAnchorView(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnchorView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetAdapter(value: ListAdapter => Unit): Self = this.set("setAdapter", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetBackgroundDrawable(value: Drawable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackgroundDrawable")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetAnchorView(value: View => Unit): Self = this.set("setAnchorView", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetContentWidth(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContentWidth")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetBackgroundDrawable(value: Drawable => Unit): Self = this.set("setBackgroundDrawable", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetDropDownAlwaysVisible(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDropDownAlwaysVisible")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetContentWidth(value: Double => Unit): Self = this.set("setContentWidth", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetDropDownGravity(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDropDownGravity")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetDropDownAlwaysVisible(value: Boolean => Unit): Self = this.set("setDropDownAlwaysVisible", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetForceIgnoreOutsideTouch(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setForceIgnoreOutsideTouch")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetDropDownGravity(value: Double => Unit): Self = this.set("setDropDownGravity", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetHeight(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeight")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetForceIgnoreOutsideTouch(value: Boolean => Unit): Self = this.set("setForceIgnoreOutsideTouch", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetHorizontalOffset(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHorizontalOffset")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetHeight(value: Double => Unit): Self = this.set("setHeight", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetInputMethodMode(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setInputMethodMode")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetHorizontalOffset(value: Double => Unit): Self = this.set("setHorizontalOffset", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetListItemExpandMax(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setListItemExpandMax")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetInputMethodMode(value: Double => Unit): Self = this.set("setInputMethodMode", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetModal(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setModal")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetListItemExpandMax(value: Double => Unit): Self = this.set("setListItemExpandMax", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetOnDismissListener(value: OnDismissListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnDismissListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetModal(value: Boolean => Unit): Self = this.set("setModal", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetOnItemClickListener(value: OnItemClickListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnItemClickListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetOnDismissListener(value: OnDismissListener => Unit): Self = this.set("setOnDismissListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetOnItemSelectedListener(value: OnItemSelectedListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnItemSelectedListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetOnItemClickListener(value: OnItemClickListener => Unit): Self = this.set("setOnItemClickListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetPromptPosition(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPromptPosition")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetOnItemSelectedListener(value: OnItemSelectedListener => Unit): Self = this.set("setOnItemSelectedListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetPromptView(value: View => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPromptView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetPromptPosition(value: Double => Unit): Self = this.set("setPromptPosition", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetSelection(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelection")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetPromptView(value: View => Unit): Self = this.set("setPromptView", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetVerticalOffset(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVerticalOffset")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetSelection(value: Double => Unit): Self = this.set("setSelection", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetWidth(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setWidth")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetVerticalOffset(value: Double => Unit): Self = this.set("setVerticalOffset", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetWindowAnimation(value: (Animation, Animation) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setWindowAnimation")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetWidth(value: Double => Unit): Self = this.set("setWidth", js.Any.fromFunction1(value))
     @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSetWindowAnimation(value: (Animation, Animation) => Unit): Self = this.set("setWindowAnimation", js.Any.fromFunction2(value))
+    @scala.inline
+    def setShow(value: () => Unit): Self = this.set("show", js.Any.fromFunction0(value))
   }
   
 }

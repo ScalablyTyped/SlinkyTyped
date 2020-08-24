@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel
 
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,23 +16,7 @@ object LockScreen extends js.Object {
   /** Represents a lock screen badge for an app. */
   @js.native
   abstract class LockScreenBadge ()
-    extends typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenBadge {
-    /** Gets the name. */
-    /* CompleteClass */
-    override var automationName: String = js.native
-    /** Gets the glyph to display. */
-    /* CompleteClass */
-    override var glyph: IRandomAccessStream = js.native
-    /** Gets the logo to display with the badge. */
-    /* CompleteClass */
-    override var logo: IRandomAccessStream = js.native
-    /** Gets the number to display with the badge. */
-    /* CompleteClass */
-    override var number: Double = js.native
-    /** Launches the app corresponding to the badge. */
-    /* CompleteClass */
-    override def launchApp(): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenBadge
   
   /** Provides access to the same data that the default lock screen has access to, such as wallpaper, badges, and so on. */
   @js.native
@@ -43,26 +26,12 @@ object LockScreen extends js.Object {
   /** Represents an unlock deferral. */
   @js.native
   abstract class LockScreenUnlockingDeferral ()
-    extends typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral {
-    /** Notifies the system that your deferral is complete. If your deferral takes too long to complete, your lock screen app will be terminated by the system and potentially removed as the user’s default lock app. */
-    /* CompleteClass */
-    override def complete(): Unit = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral
   
   /** Represents the lock screen unlocking events. */
   @js.native
   abstract class LockScreenUnlockingEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs {
-    /** Gets the deadline by which the lock screen app must unlock the device. If your unlocking deferral takes too long, your lock screen app will be terminated by the system and potentially removed as the user’s default lock app. */
-    /* CompleteClass */
-    override var deadline: js.Date = js.native
-    /**
-      * Gets a LockScreenUnlockingDeferral , which defers the unlocking of the device.
-      * @return An unlock deferral.
-      */
-    /* CompleteClass */
-    override def getDeferral(): typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs
   
   /* static members */
   @js.native

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "relaxed-json"
-version := "1.0-dt-20200515Z-b3c563"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-49d4d9"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -1,7 +1,6 @@
 package typingsSlinky.antDesignPro.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -10,35 +9,34 @@ import typingsSlinky.antDesignPro.antDesignProStrings.`403`
 import typingsSlinky.antDesignPro.antDesignProStrings.`404`
 import typingsSlinky.antDesignPro.antDesignProStrings.`500`
 import typingsSlinky.antDesignPro.exceptionMod.ExceptionProps
-import typingsSlinky.antDesignPro.exceptionMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Exception {
-  @JSImport("ant-design-pro/lib/Exception", JSImport.Default)
+  @JSImport("ant-design-pro", "Exception")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.Exception] {
     @scala.inline
     def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
-    def actions(value: TagMod[Any]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def backTextReactElement(value: ReactElement): this.type = set("backText", value.asInstanceOf[js.Any])
     @scala.inline
-    def backText(value: TagMod[Any]): this.type = set("backText", value.asInstanceOf[js.Any])
+    def backText(value: ReactElement): this.type = set("backText", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def descReactElement(value: ReactElement): this.type = set("desc", value.asInstanceOf[js.Any])
     @scala.inline
-    def desc(value: TagMod[Any]): this.type = set("desc", value.asInstanceOf[js.Any])
+    def desc(value: ReactElement): this.type = set("desc", value.asInstanceOf[js.Any])
     @scala.inline
     def img(value: String): this.type = set("img", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,7 +52,7 @@ object Exception {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: `403` | `404` | `500`): this.type = set("type", value.asInstanceOf[js.Any])
   }

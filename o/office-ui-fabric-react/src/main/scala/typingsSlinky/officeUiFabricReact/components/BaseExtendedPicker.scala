@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.baseExtendedPickerTypesMod.IBaseExtendedPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +13,11 @@ object BaseExtendedPicker {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T, P <: IBaseExtendedPickerProps[T]] (val args: js.Array[js.Any])
+  class Builder[T, /* <: typingsSlinky.officeUiFabricReact.baseExtendedPickerTypesMod.IBaseExtendedPickerProps[T] */ P] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.BaseExtendedPicker[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.BaseExtendedPicker[T, P]]
   
-  def apply[T, P <: IBaseExtendedPickerProps[T]](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T, P <: IBaseExtendedPickerProps[T]](companion: BaseExtendedPicker.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
+  def apply[T, /* <: typingsSlinky.officeUiFabricReact.baseExtendedPickerTypesMod.IBaseExtendedPickerProps[T] */ P](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T, /* <: typingsSlinky.officeUiFabricReact.baseExtendedPickerTypesMod.IBaseExtendedPickerProps[T] */ P](companion: BaseExtendedPicker.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
 }
 

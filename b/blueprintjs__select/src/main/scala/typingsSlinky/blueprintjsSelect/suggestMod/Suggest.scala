@@ -13,7 +13,6 @@ class Suggest[T] ()
   extends Component[ISuggestProps[T], ISuggestState[T], js.Any] {
   var TypedQueryList: js.Any = js.native
   var getInitialSelectedItem: js.Any = js.native
-  var getInputRefHandler: js.Any = js.native
   var getTargetKeyDownHandler: js.Any = js.native
   var getTargetKeyUpHandler: js.Any = js.native
   var handleInputFocus: js.Any = js.native
@@ -21,7 +20,7 @@ class Suggest[T] ()
   var handlePopoverInteraction: js.Any = js.native
   var handlePopoverOpened: js.Any = js.native
   var handlePopoverOpening: js.Any = js.native
-  var input: js.Any = js.native
+  var inputEl: js.Any = js.native
   var maybeResetActiveItemToSelectedItem: js.Any = js.native
   var queryList: js.Any = js.native
   var refHandlers: js.Any = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.rxDom.mod.rxAugmentingMod.DOM
 
-import typingsSlinky.rxCore.Rx.Observer
-import typingsSlinky.rxLiteAggregates.Rx.Observable
+import typingsSlinky.rx.Rx.Observable
+import typingsSlinky.rx.Rx.Observer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

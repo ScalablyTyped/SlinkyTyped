@@ -23,6 +23,8 @@ object EmoticonRating {
     @scala.inline
     def overrides(value: RatingOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   

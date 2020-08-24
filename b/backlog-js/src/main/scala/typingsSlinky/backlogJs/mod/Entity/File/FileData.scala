@@ -1,6 +1,5 @@
 package typingsSlinky.backlogJs.mod.Entity.File
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.node.streamMod.PassThrough
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,9 +18,8 @@ object FileData {
     __obj.asInstanceOf[FileData]
   }
   @scala.inline
-  def BrowserFileData(body: js.Any, url: String, blob: () => js.Promise[Blob] = null): FileData = {
+  def BrowserFileData(body: js.Any, url: String): FileData = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (blob != null) __obj.updateDynamic("blob")(js.Any.fromFunction0(blob))
     __obj.asInstanceOf[FileData]
   }
 }

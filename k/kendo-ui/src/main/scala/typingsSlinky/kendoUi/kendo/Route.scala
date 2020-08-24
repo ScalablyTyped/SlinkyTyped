@@ -4,10 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Route extends Class {
-  var route: js.RegExp
-  def callback(url: String): Unit
-  def worksWith(url: String): Unit
+  var route: js.RegExp = js.native
+  def callback(url: String): Unit = js.native
+  def worksWith(url: String): Unit = js.native
 }
 
 object Route {
@@ -16,5 +17,24 @@ object Route {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction1(callback), route = route.asInstanceOf[js.Any], worksWith = js.Any.fromFunction1(worksWith))
     __obj.asInstanceOf[Route]
   }
+  @scala.inline
+  implicit class RouteOps[Self <: Route] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallback(value: String => Unit): Self = this.set("callback", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRoute(value: js.RegExp): Self = this.set("route", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWorksWith(value: String => Unit): Self = this.set("worksWith", js.Any.fromFunction1(value))
+  }
+  
 }
 

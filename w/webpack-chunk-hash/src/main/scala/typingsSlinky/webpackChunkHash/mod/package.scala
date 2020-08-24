@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type WebpackChunkHash = typingsSlinky.webpack.mod.Plugin
+  type WebpackChunkHash = typingsSlinky.std.Plugin
 }

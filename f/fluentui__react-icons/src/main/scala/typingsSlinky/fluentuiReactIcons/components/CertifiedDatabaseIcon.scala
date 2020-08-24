@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CertifiedDatabaseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CertifiedDatabaseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CertifiedDatabaseIcon")
   @js.native
   object component extends js.Object
   

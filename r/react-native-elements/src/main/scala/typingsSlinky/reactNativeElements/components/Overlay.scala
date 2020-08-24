@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeElements.components
 
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -33,21 +34,19 @@ object Overlay {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Overlay] {
     @scala.inline
+    def ModalComponent(value: ReactComponentClass[js.Object]): this.type = set("ModalComponent", value.asInstanceOf[js.Any])
+    @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
     def animationType(value: none | slide | fade): this.type = set("animationType", value.asInstanceOf[js.Any])
     @scala.inline
-    def borderRadius(value: Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
+    def backdropStyle(value: StyleProp[ViewStyle]): this.type = set("backdropStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
-    @scala.inline
-    def containerStyleNull: this.type = set("containerStyle", null)
+    def backdropStyleNull: this.type = set("backdropStyle", null)
     @scala.inline
     def fullScreen(value: Boolean): this.type = set("fullScreen", value.asInstanceOf[js.Any])
     @scala.inline
     def hardwareAccelerated(value: Boolean): this.type = set("hardwareAccelerated", value.asInstanceOf[js.Any])
-    @scala.inline
-    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
     def onBackdropPress(value: () => Unit): this.type = set("onBackdropPress", js.Any.fromFunction0(value))
     @scala.inline
@@ -59,13 +58,15 @@ object Overlay {
     @scala.inline
     def onShow(value: SyntheticEvent[NodeHandle, _] => Unit): this.type = set("onShow", js.Any.fromFunction1(value))
     @scala.inline
-    def overlayBackgroundColor(value: String): this.type = set("overlayBackgroundColor", value.asInstanceOf[js.Any])
-    @scala.inline
     def overlayStyle(value: StyleProp[ViewStyle]): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def overlayStyleNull: this.type = set("overlayStyle", null)
     @scala.inline
     def presentationStyle(value: fullScreen | pageSheet | formSheet | overFullScreen): this.type = set("presentationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def statusBarTranslucent(value: Boolean): this.type = set("statusBarTranslucent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def supportedOrientationsVarargs(value: (portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`)*): this.type = set("supportedOrientations", js.Array(value :_*))
     @scala.inline
     def supportedOrientations(
       value: js.Array[
@@ -76,10 +77,6 @@ object Overlay {
     def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
-    @scala.inline
-    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
-    @scala.inline
-    def windowBackgroundColor(value: String): this.type = set("windowBackgroundColor", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

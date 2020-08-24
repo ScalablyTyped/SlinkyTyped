@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Input.EdgeGestureEventArgs")
 @js.native
 class EdgeGestureEventArgs ()
-  extends typingsSlinky.winrt.Windows.UI.Input.EdgeGestureEventArgs {
-  /* CompleteClass */
-  override var kind: typingsSlinky.winrt.Windows.UI.Input.EdgeGestureKind = js.native
-}
+  extends typingsSlinky.winrt.Windows.UI.Input.EdgeGestureEventArgs
 

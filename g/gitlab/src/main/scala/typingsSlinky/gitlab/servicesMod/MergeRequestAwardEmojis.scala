@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("gitlab/dist/types/core/services", "MergeRequestAwardEmojis")
 @js.native
-class MergeRequestAwardEmojis ()
+class MergeRequestAwardEmojis protected ()
   extends typingsSlinky.gitlab.mergeRequestAwardEmojisMod.MergeRequestAwardEmojis {
   def this(options: BaseServiceOptions) = this()
 }

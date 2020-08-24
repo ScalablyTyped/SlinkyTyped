@@ -1,8 +1,9 @@
 package typingsSlinky.primereact.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.anon.Value
+import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.selectButtonMod.SelectButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -29,11 +30,17 @@ object SelectButton {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def itemTemplate(value: /* option */ js.Any => ReactElement): this.type = set("itemTemplate", js.Any.fromFunction1(value))
+    @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def optionLabel(value: String): this.type = set("optionLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionValue(value: String): this.type = set("optionValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionsVarargs(value: js.Any*): this.type = set("options", js.Array(value :_*))
     @scala.inline
     def options(value: js.Array[_]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline

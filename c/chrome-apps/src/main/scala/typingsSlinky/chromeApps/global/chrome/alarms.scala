@@ -37,6 +37,7 @@ object alarms extends js.Object {
     * @example function(boolean wasCleared) {...};
     */
   def clear(callback: js.Function1[/* wasCleared */ Boolean, Unit]): Unit = js.native
+  def clear(name: js.UndefOr[scala.Nothing], callback: js.Function1[/* wasCleared */ Boolean, Unit]): Unit = js.native
   def clear(name: String): Unit = js.native
   def clear(name: String, callback: js.Function1[/* wasCleared */ Boolean, Unit]): Unit = js.native
   /**

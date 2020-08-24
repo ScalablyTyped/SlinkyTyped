@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/merge_serialization.MergeLayerSerialization['class_name'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dot
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Concatenate
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Add
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Minimum
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Multiply
+  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dot
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Maximum
   - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Average
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Multiply
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Minimum
-  - typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Add
 */
 trait MergeLayerClassName extends js.Object
 

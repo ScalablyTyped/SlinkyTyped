@@ -1,8 +1,6 @@
 package typingsSlinky.materializeCss.global.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.M.TooltipOptions
-import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialTooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,34 +9,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("M.Tooltip")
 @js.native
 class Tooltip ()
-  extends typingsSlinky.materializeCss.M.Tooltip {
-  /**
-    * The DOM element the plugin was initialized with
-    */
-  /* CompleteClass */
-  override var el: Element = js.native
-  /**
-    * If tooltip is hovered.
-    */
-  /* CompleteClass */
-  override var isHovered: Boolean = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /**
-    * The options the instance was initialized with
-    */
-  /* CompleteClass */
-  override var options: TooltipOptions = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /**
-    * Destroy plugin instance and teardown
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
-}
+  extends typingsSlinky.materializeCss.M.Tooltip
 
 /* static members */
 @JSGlobal("M.Tooltip")
@@ -51,8 +22,13 @@ object Tooltip extends js.Object {
   /**
     * Init Tooltips
     */
-  def init(els: MElements): js.Array[typingsSlinky.materializeCss.M.Tooltip] = js.native
-  def init(els: MElements, options: PartialTooltipOptions): js.Array[typingsSlinky.materializeCss.M.Tooltip] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any
+  ): js.Array[typingsSlinky.materializeCss.M.Tooltip] = js.native
+  def init(
+    els: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MElements */ js.Any,
+    options: PartialTooltipOptions
+  ): js.Array[typingsSlinky.materializeCss.M.Tooltip] = js.native
   /**
     * Init Tooltip
     */

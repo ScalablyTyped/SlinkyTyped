@@ -2,7 +2,6 @@ package typingsSlinky.dmgBuilder
 
 import typingsSlinky.appBuilderLib.macPackagerMod.default
 import typingsSlinky.appBuilderLib.mod.PlatformPackager
-import typingsSlinky.tempFile.mod.TmpDir
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +20,5 @@ object dmgUtilMod extends js.Object {
   def detach(name: String): js.Promise[Unit] = js.native
   def getDmgTemplatePath(): String = js.native
   def getDmgVendorPath(): String = js.native
-  def transformBackgroundFileIfNeed(file: String, tmpDir: TmpDir): js.Promise[String] = js.native
 }
 

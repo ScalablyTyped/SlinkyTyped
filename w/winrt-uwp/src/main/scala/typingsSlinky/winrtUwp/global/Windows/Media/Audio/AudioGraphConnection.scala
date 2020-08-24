@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Audio
 
-import typingsSlinky.winrtUwp.Windows.Media.Audio.IAudioNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Audio.AudioGraphConnection")
 @js.native
 abstract class AudioGraphConnection ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Audio.AudioGraphConnection {
-  /** Gets the destination node for the connection. */
-  /* CompleteClass */
-  override var destination: IAudioNode = js.native
-  /** Gets the gain associated with the audio graph connection. */
-  /* CompleteClass */
-  override var gain: Double = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Audio.AudioGraphConnection
 

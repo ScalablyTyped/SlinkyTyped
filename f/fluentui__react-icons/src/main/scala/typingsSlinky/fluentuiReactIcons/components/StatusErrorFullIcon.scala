@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StatusErrorFullIcon {
-  @JSImport("@fluentui/react-icons/lib/components/StatusErrorFullIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "StatusErrorFullIcon")
   @js.native
   object component extends js.Object
   

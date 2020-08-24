@@ -10,6 +10,8 @@ import typingsSlinky.reactBeautifulDnd.mod.DraggableStateSnapshot
 import typingsSlinky.reactBeautifulDnd.mod.DroppableId
 import typingsSlinky.reactBeautifulDnd.mod.DroppableMode
 import typingsSlinky.reactBeautifulDnd.mod.DroppableProps
+import typingsSlinky.reactBeautifulDnd.mod.DroppableProvided
+import typingsSlinky.reactBeautifulDnd.mod.DroppableStateSnapshot
 import typingsSlinky.reactBeautifulDnd.mod.TypeId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,8 +48,8 @@ object Droppable {
   
   def withProps(p: DroppableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(droppableId: DroppableId): Builder = {
-    val __props = js.Dynamic.literal(droppableId = droppableId.asInstanceOf[js.Any])
+  def apply(children: (DroppableProvided, DroppableStateSnapshot) => ReactElement, droppableId: DroppableId): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), droppableId = droppableId.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[DroppableProps]))
   }
 }

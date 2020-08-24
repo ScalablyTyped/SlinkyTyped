@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ReadingModeIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ReadingModeIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ReadingModeIcon")
   @js.native
   object component extends js.Object
   

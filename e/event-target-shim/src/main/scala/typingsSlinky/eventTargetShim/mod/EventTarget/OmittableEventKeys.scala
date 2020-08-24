@@ -6,27 +6,27 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Exclude<keyof event-target-shim.event-target-shim.Event, 'type'> */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.BUBBLING_PHASE
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.currentTarget
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.NONE
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.initEvent
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.cancelBubble
   - typingsSlinky.eventTargetShim.eventTargetShimStrings.target
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.composed
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.composedPath
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.preventDefault
   - typingsSlinky.eventTargetShim.eventTargetShimStrings.eventPhase
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.cancelable
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.isTrusted
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.returnValue
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.AT_TARGET
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.bubbles
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.stopPropagation
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.stopImmediatePropagation
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.composed
   - typingsSlinky.eventTargetShim.eventTargetShimStrings.CAPTURING_PHASE
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.srcElement
-  - typingsSlinky.eventTargetShim.eventTargetShimStrings.defaultPrevented
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.stopImmediatePropagation
   - typingsSlinky.eventTargetShim.eventTargetShimStrings.timeStamp
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.stopPropagation
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.defaultPrevented
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.AT_TARGET
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.NONE
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.cancelable
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.returnValue
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.isTrusted
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.bubbles
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.initEvent
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.srcElement
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.preventDefault
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.cancelBubble
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.composedPath
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.currentTarget
+  - typingsSlinky.eventTargetShim.eventTargetShimStrings.BUBBLING_PHASE
 */
 trait OmittableEventKeys extends js.Object
 

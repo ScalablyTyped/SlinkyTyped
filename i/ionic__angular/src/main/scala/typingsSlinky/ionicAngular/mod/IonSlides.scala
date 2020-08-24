@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/angular", "IonSlides")
 @js.native
 class IonSlides protected ()
-  extends typingsSlinky.ionicAngular.distMod.IonSlides {
+  extends typingsSlinky.ionicAngular.proxiesMod.IonSlides {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
 }
 

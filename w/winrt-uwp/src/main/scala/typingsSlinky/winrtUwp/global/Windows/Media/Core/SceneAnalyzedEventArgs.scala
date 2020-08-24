@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.SceneAnalyzedEventArgs")
 @js.native
 abstract class SceneAnalyzedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.SceneAnalyzedEventArgs {
-  /** Gets the result frame from the scene analysis operation. */
-  /* CompleteClass */
-  override var resultFrame: typingsSlinky.winrtUwp.Windows.Media.Core.SceneAnalysisEffectFrame = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.SceneAnalyzedEventArgs
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class AnticipateOvershootInterpolator ()
   extends typingsSlinky.androiduix.android.view.animation.AnticipateOvershootInterpolator {
   def this(tension: Double) = this()
+  def this(tension: js.UndefOr[scala.Nothing], extraTension: Double) = this()
   def this(tension: Double, extraTension: Double) = this()
 }
 

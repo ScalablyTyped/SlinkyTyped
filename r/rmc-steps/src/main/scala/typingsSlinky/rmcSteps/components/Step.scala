@@ -1,24 +1,22 @@
 package typingsSlinky.rmcSteps.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcSteps.stepMod.IStepProps
-import typingsSlinky.rmcSteps.stepMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Step {
-  @JSImport("rmc-steps/lib/Step", JSImport.Default)
+  @JSImport("rmc-steps/lib", "Step")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.rmcSteps.mod.Step] {
     @scala.inline
     def adjustMarginRight(value: Double | String): this.type = set("adjustMarginRight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -28,7 +26,7 @@ object Step {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconPrefix(value: String): this.type = set("iconPrefix", value.asInstanceOf[js.Any])
     @scala.inline

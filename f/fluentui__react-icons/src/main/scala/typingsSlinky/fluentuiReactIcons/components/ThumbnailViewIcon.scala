@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ThumbnailViewIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ThumbnailViewIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ThumbnailViewIcon")
   @js.native
   object component extends js.Object
   

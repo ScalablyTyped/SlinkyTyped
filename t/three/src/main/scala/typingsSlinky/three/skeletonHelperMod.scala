@@ -1,8 +1,12 @@
 package typingsSlinky.three
 
 import typingsSlinky.three.boneMod.Bone
+import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.lineSegmentsMod.LineSegments
+import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.object3DMod.Object3D
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +15,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object skeletonHelperMod extends js.Object {
   @js.native
-  class SkeletonHelper protected () extends LineSegments {
-    def this(bone: Object3D) = this()
+  class SkeletonHelper protected ()
+    extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
+    def this(`object`: Object3D) = this()
     var bones: js.Array[Bone] = js.native
+    val isSkeletonHelper: `true` = js.native
     var root: Object3D = js.native
     def getBoneList(`object`: Object3D): js.Array[Bone] = js.native
     def update(): Unit = js.native

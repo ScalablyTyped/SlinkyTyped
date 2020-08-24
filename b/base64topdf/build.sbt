@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "base64topdf"
-version := "1.1-dt-20180222Z-72b4c9"
-scalaVersion := "2.13.2"
+version := "1.1-dt-20180222Z-afe7ff"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

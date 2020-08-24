@@ -4,12 +4,11 @@ import org.scalajs.dom.raw.CustomEvent
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import typingsSlinky.ionicCore.mod.Mode
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicReact.anon.ActionSheetOptionsReactOv
 import typingsSlinky.ionicReact.ionActionSheetMod.ActionSheetButton
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,19 +21,21 @@ object IonActionSheet {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, HTMLIonActionSheetElement] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
     def backdropDismiss(value: Boolean): this.type = set("backdropDismiss", value.asInstanceOf[js.Any])
     @scala.inline
+    def buttonsVarargs(value: (ActionSheetButton | String)*): this.type = set("buttons", js.Array(value :_*))
+    @scala.inline
     def buttons(value: js.Array[ActionSheetButton | String]): this.type = set("buttons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClassVarargs(value: String*): this.type = set("cssClass", js.Array(value :_*))
     @scala.inline
     def cssClass(value: String | js.Array[String]): this.type = set("cssClass", value.asInstanceOf[js.Any])
     @scala.inline
-    def enterAnimation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): this.type = set("enterAnimation", js.Any.fromFunction3(value))
+    def enterAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("enterAnimation", js.Any.fromFunction2(value))
     @scala.inline
     def forwardedRef(value: ReactRef[HTMLIonActionSheetElement]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     @scala.inline
@@ -44,9 +45,7 @@ object IonActionSheet {
     @scala.inline
     def keyboardClose(value: Boolean): this.type = set("keyboardClose", value.asInstanceOf[js.Any])
     @scala.inline
-    def leaveAnimation(
-      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
-    ): this.type = set("leaveAnimation", js.Any.fromFunction3(value))
+    def leaveAnimation(value: (/* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => Animation): this.type = set("leaveAnimation", js.Any.fromFunction2(value))
     @scala.inline
     def mode(value: Mode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline

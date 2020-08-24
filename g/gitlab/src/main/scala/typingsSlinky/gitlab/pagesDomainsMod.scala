@@ -1,6 +1,6 @@
 package typingsSlinky.gitlab
 
-import typingsSlinky.gitlab.anon.projectIdstringnumberPagi
+import typingsSlinky.gitlab.anon.projectIdstringnumberunde
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
@@ -15,7 +15,7 @@ object pagesDomainsMod extends js.Object {
   @js.native
   class PagesDomains () extends BaseService {
     def all(): js.Promise[GetResponse] = js.native
-    def all(hasProjectIdOptions: projectIdstringnumberPagi): js.Promise[GetResponse] = js.native
+    def all(hasProjectIdOptions: projectIdstringnumberunde): js.Promise[GetResponse] = js.native
     def create(projectId: String, domain: String): js.Promise[js.Object] = js.native
     def create(projectId: String, domain: String, options: BaseRequestOptions): js.Promise[js.Object] = js.native
     def create(projectId: Double, domain: String): js.Promise[js.Object] = js.native

@@ -25,7 +25,7 @@ trait TypeofHandlebars extends js.Object {
   val AST: TypeofAST = js.native
   var Exception: Instantiable2[
     /* message */ String, 
-    js.UndefOr[/* node */ Node], 
+    /* node */ js.UndefOr[Node], 
     typingsSlinky.handlebars.Handlebars.Exception
   ] = js.native
   var SafeString: Instantiable1[/* str */ String, typingsSlinky.handlebars.Handlebars.SafeString] = js.native

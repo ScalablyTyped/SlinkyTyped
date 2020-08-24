@@ -49,7 +49,12 @@ object NotificationChange {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChangeType(
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChangeType(
       value: ToStringLiteral[
           DELETED, 
           /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
@@ -58,17 +63,9 @@ object NotificationChange {
             CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("changeType", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEntryPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPath")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEntryPath(value: String): Self = this.set("entryPath", value.asInstanceOf[js.Any])
   }
   
 }

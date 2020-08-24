@@ -1,29 +1,20 @@
 package typingsSlinky.sipJs.mod
 
-import typingsSlinky.sipJs.libSubscriptionMod.SubscriptionOptions
+import typingsSlinky.sipJs.subscriptionOptionsMod.SubscriptionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("sip.js", "Subscription")
 @js.native
-class Subscription protected ()
-  extends typingsSlinky.sipJs.libSubscriptionMod.Subscription {
+abstract class Subscription protected ()
+  extends typingsSlinky.sipJs.apiMod.Subscription {
   /**
     * Constructor.
-    * @param ua User agent.
-    * @param target Subscription target.
-    * @param event Subscription event.
-    * @param options Options bucket.
+    * @param userAgent - User agent. See {@link UserAgent} for details.
+    * @internal
     */
-  def this(ua: typingsSlinky.sipJs.uAMod.UA, target: String, event: String) = this()
-  def this(ua: typingsSlinky.sipJs.uAMod.UA, target: typingsSlinky.sipJs.coreMod.URI, event: String) = this()
-  def this(ua: typingsSlinky.sipJs.uAMod.UA, target: String, event: String, options: SubscriptionOptions) = this()
-  def this(
-    ua: typingsSlinky.sipJs.uAMod.UA,
-    target: typingsSlinky.sipJs.coreMod.URI,
-    event: String,
-    options: SubscriptionOptions
-  ) = this()
+  protected def this(userAgent: typingsSlinky.sipJs.userAgentMod.UserAgent) = this()
+  protected def this(userAgent: typingsSlinky.sipJs.userAgentMod.UserAgent, options: SubscriptionOptions) = this()
 }
 

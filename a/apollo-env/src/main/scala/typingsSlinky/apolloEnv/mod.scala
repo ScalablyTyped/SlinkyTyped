@@ -21,6 +21,7 @@ object mod extends js.Object {
   class Body ()
     extends typingsSlinky.apolloEnv.fetchMod.Body {
     def this(body: js.Any) = this()
+    def this(body: js.UndefOr[scala.Nothing], opts: Size) = this()
     def this(body: js.Any, opts: Size) = this()
   }
   
@@ -41,7 +42,7 @@ object mod extends js.Object {
   class Response ()
     extends typingsSlinky.apolloEnv.fetchMod.Response {
     def this(body: BodyInit) = this()
-    def this(body: BodyInit, init: ResponseInit) = this()
+    def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   }
   
   @js.native

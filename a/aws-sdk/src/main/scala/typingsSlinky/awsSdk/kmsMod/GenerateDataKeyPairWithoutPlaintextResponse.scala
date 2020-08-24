@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GenerateDataKeyPairWithoutPlaintextResponse extends js.Object {
   /**
-    * Specifies the CMK that encrypted the private key in the data key pair. You must specify a symmetric CMK. You cannot use an asymmetric CMK. To get the type of your CMK, use the DescribeKey operation. To specify a CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. When using an alias name, prefix it with "alias/". For example:   Key ID: 1234abcd-12ab-34cd-56ef-1234567890ab    Key ARN: arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab    Alias name: alias/ExampleAlias    Alias ARN: arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias    To get the key ID and key ARN for a CMK, use ListKeys or DescribeKey. To get the alias name and alias ARN, use ListAliases.
+    * The Amazon Resource Name (key ARN) of the CMK that encrypted the private key.
     */
   var KeyId: js.UndefOr[KeyIdType] = js.native
   /**
@@ -26,18 +26,42 @@ trait GenerateDataKeyPairWithoutPlaintextResponse extends js.Object {
 
 object GenerateDataKeyPairWithoutPlaintextResponse {
   @scala.inline
-  def apply(
-    KeyId: KeyIdType = null,
-    KeyPairSpec: DataKeyPairSpec = null,
-    PrivateKeyCiphertextBlob: CiphertextType = null,
-    PublicKey: PublicKeyType = null
-  ): GenerateDataKeyPairWithoutPlaintextResponse = {
+  def apply(): GenerateDataKeyPairWithoutPlaintextResponse = {
     val __obj = js.Dynamic.literal()
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (KeyPairSpec != null) __obj.updateDynamic("KeyPairSpec")(KeyPairSpec.asInstanceOf[js.Any])
-    if (PrivateKeyCiphertextBlob != null) __obj.updateDynamic("PrivateKeyCiphertextBlob")(PrivateKeyCiphertextBlob.asInstanceOf[js.Any])
-    if (PublicKey != null) __obj.updateDynamic("PublicKey")(PublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateDataKeyPairWithoutPlaintextResponse]
   }
+  @scala.inline
+  implicit class GenerateDataKeyPairWithoutPlaintextResponseOps[Self <: GenerateDataKeyPairWithoutPlaintextResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setKeyId(value: KeyIdType): Self = this.set("KeyId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyId: Self = this.set("KeyId", js.undefined)
+    @scala.inline
+    def setKeyPairSpec(value: DataKeyPairSpec): Self = this.set("KeyPairSpec", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyPairSpec: Self = this.set("KeyPairSpec", js.undefined)
+    @scala.inline
+    def setPrivateKeyCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = this.set("PrivateKeyCiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrivateKeyCiphertextBlob(value: CiphertextType): Self = this.set("PrivateKeyCiphertextBlob", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrivateKeyCiphertextBlob: Self = this.set("PrivateKeyCiphertextBlob", js.undefined)
+    @scala.inline
+    def setPublicKeyUint8Array(value: js.typedarray.Uint8Array): Self = this.set("PublicKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPublicKey(value: PublicKeyType): Self = this.set("PublicKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePublicKey: Self = this.set("PublicKey", js.undefined)
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.reactLazyload.components
 
 import org.scalajs.dom.raw.Element
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -25,6 +24,8 @@ object ReactLazyload {
     @scala.inline
     def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
+    def offsetVarargs(value: Double*): this.type = set("offset", js.Array(value :_*))
+    @scala.inline
     def offset(value: Double | js.Array[Double]): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def once(value: Boolean): this.type = set("once", value.asInstanceOf[js.Any])
@@ -33,7 +34,7 @@ object ReactLazyload {
     @scala.inline
     def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def preventLoading(value: Boolean): this.type = set("preventLoading", value.asInstanceOf[js.Any])
     @scala.inline

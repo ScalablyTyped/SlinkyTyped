@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -267,7 +266,7 @@ object Shimmer {
     @scala.inline
     def customElementsGroupReactElement(value: ReactElement): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
     @scala.inline
-    def customElementsGroup(value: TagMod[Any]): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
+    def customElementsGroup(value: ReactElement): this.type = set("customElementsGroup", value.asInstanceOf[js.Any])
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
@@ -280,6 +279,8 @@ object Shimmer {
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -607,6 +608,8 @@ object Shimmer {
     @scala.inline
     def shimmerColors(value: IShimmerColors): this.type = set("shimmerColors", value.asInstanceOf[js.Any])
     @scala.inline
+    def shimmerElementsVarargs(value: IShimmerElement*): this.type = set("shimmerElements", js.Array(value :_*))
+    @scala.inline
     def shimmerElements(value: js.Array[IShimmerElement]): this.type = set("shimmerElements", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
@@ -660,6 +663,8 @@ object Shimmer {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

@@ -15,6 +15,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
@@ -26,6 +27,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNative.mod.ViewabilityConfig
+import typingsSlinky.reactNative.mod.ViewabilityConfigCallbackPair
 import typingsSlinky.reactNative.mod.ViewabilityConfigCallbackPairs
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
@@ -69,7 +71,7 @@ object ReactNativeDraggableFlatlist {
   @scala.inline
   class Builder[Item] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[Item]] {
     @scala.inline
     def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -107,6 +109,8 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def ListHeaderComponentNull: this.type = set("ListHeaderComponent", null)
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -124,6 +128,8 @@ object ReactNativeDraggableFlatlist {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -159,6 +165,8 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def contentOffset(value: PointPropType): this.type = set("contentOffset", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataVarargs(value: Item*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
     def data(value: js.Array[Item]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def dataNull: this.type = set("data", null)
@@ -175,11 +183,13 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def disableVirtualization(value: Boolean): this.type = set("disableVirtualization", value.asInstanceOf[js.Any])
     @scala.inline
-    def endFillColor(value: String): this.type = set("endFillColor", value.asInstanceOf[js.Any])
+    def endFillColor(value: ColorValue): this.type = set("endFillColor", value.asInstanceOf[js.Any])
     @scala.inline
     def extraData(value: js.Any): this.type = set("extraData", value.asInstanceOf[js.Any])
     @scala.inline
     def fadingEdgeLength(value: Double): this.type = set("fadingEdgeLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     @scala.inline
     def getItem(value: (/* data */ js.Any, /* index */ Double) => Item): this.type = set("getItem", js.Any.fromFunction2(value))
     @scala.inline
@@ -365,9 +375,13 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def snapToInterval(value: Double): this.type = set("snapToInterval", value.asInstanceOf[js.Any])
     @scala.inline
+    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
+    @scala.inline
     def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
     @scala.inline
     def snapToStart(value: Boolean): this.type = set("snapToStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
     @scala.inline
     def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
     @scala.inline
@@ -390,6 +404,8 @@ object ReactNativeDraggableFlatlist {
     def updateCellsBatchingPeriod(value: Double): this.type = set("updateCellsBatchingPeriod", value.asInstanceOf[js.Any])
     @scala.inline
     def viewabilityConfig(value: ViewabilityConfig): this.type = set("viewabilityConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
     @scala.inline
     def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
     @scala.inline

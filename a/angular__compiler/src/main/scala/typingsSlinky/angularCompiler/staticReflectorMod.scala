@@ -26,8 +26,35 @@ object staticReflectorMod extends js.Object {
     def this(
       summaryResolver: SummaryResolver[StaticSymbol],
       symbolResolver: StaticSymbolResolver,
+      knownMetadataClasses: js.UndefOr[scala.Nothing],
+      knownMetadataFunctions: js.Array[FilePath]
+    ) = this()
+    def this(
+      summaryResolver: SummaryResolver[StaticSymbol],
+      symbolResolver: StaticSymbolResolver,
       knownMetadataClasses: js.Array[Ctor],
       knownMetadataFunctions: js.Array[FilePath]
+    ) = this()
+    def this(
+      summaryResolver: SummaryResolver[StaticSymbol],
+      symbolResolver: StaticSymbolResolver,
+      knownMetadataClasses: js.UndefOr[scala.Nothing],
+      knownMetadataFunctions: js.UndefOr[scala.Nothing],
+      errorRecorder: js.Function2[/* error */ js.Any, /* fileName */ js.UndefOr[String], Unit]
+    ) = this()
+    def this(
+      summaryResolver: SummaryResolver[StaticSymbol],
+      symbolResolver: StaticSymbolResolver,
+      knownMetadataClasses: js.UndefOr[scala.Nothing],
+      knownMetadataFunctions: js.Array[FilePath],
+      errorRecorder: js.Function2[/* error */ js.Any, /* fileName */ js.UndefOr[String], Unit]
+    ) = this()
+    def this(
+      summaryResolver: SummaryResolver[StaticSymbol],
+      symbolResolver: StaticSymbolResolver,
+      knownMetadataClasses: js.Array[Ctor],
+      knownMetadataFunctions: js.UndefOr[scala.Nothing],
+      errorRecorder: js.Function2[/* error */ js.Any, /* fileName */ js.UndefOr[String], Unit]
     ) = this()
     def this(
       summaryResolver: SummaryResolver[StaticSymbol],
@@ -47,7 +74,7 @@ object staticReflectorMod extends js.Object {
     var annotationForParentClassWithSummaryKind: js.Any = js.native
     var conversionMap: js.Any = js.native
     var error: js.Any = js.native
-    var errorRecorder: js.UndefOr[js.Any] = js.native
+    var errorRecorder: js.Any = js.native
     var findParentType: js.Any = js.native
     var getTypeMetadata: js.Any = js.native
     var initializeConversionMap: js.Any = js.native
@@ -80,6 +107,11 @@ object staticReflectorMod extends js.Object {
       */
     def getStaticSymbol(declarationFile: String, name: String): StaticSymbol = js.native
     def getStaticSymbol(declarationFile: String, name: String, members: js.Array[String]): StaticSymbol = js.native
+    /**
+      * Invalidate the specified `symbols` on program change.
+      * @param symbols
+      */
+    def invalidateSymbols(symbols: js.Array[StaticSymbol]): Unit = js.native
     def parameters(`type`: StaticSymbol): js.Array[_] = js.native
     def propMetadata(`type`: StaticSymbol): StringDictionary[js.Array[_]] = js.native
     def resolveExternalReference(ref: ExternalReference, containingFile: String): StaticSymbol = js.native

@@ -85,131 +85,52 @@ object ABOUTPAGE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withABOUT_PAGE(value: about_page_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ABOUT_PAGE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAPP_LAUNCHER(value: app_launcher_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("APP_LAUNCHER")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setABOUT_PAGE(value: about_page_): Self = this.set("ABOUT_PAGE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBACKGROUND(value: background_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BACKGROUND")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAPP_LAUNCHER(value: app_launcher_): Self = this.set("APP_LAUNCHER", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCHROME_INTERNAL(value: chrome_internal_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CHROME_INTERNAL")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBACKGROUND(value: background_): Self = this.set("BACKGROUND", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCOMMAND_LINE(value: command_line_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMAND_LINE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCHROME_INTERNAL(value: chrome_internal_): Self = this.set("CHROME_INTERNAL", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCONTEXT_MENU(value: context_menu_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONTEXT_MENU")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCOMMAND_LINE(value: command_line_): Self = this.set("COMMAND_LINE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEPHEMERAL_APP(value: ephemeral_app_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EPHEMERAL_APP")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCONTEXT_MENU(value: context_menu_): Self = this.set("CONTEXT_MENU", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEXTENSIONS_PAGE(value: extensions_page_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EXTENSIONS_PAGE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEPHEMERAL_APP(value: ephemeral_app_): Self = this.set("EPHEMERAL_APP", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFILE_HANDLER(value: file_handler_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FILE_HANDLER")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEXTENSIONS_PAGE(value: extensions_page_): Self = this.set("EXTENSIONS_PAGE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withINSTALLED_NOTIFICATION(value: installed_notification_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INSTALLED_NOTIFICATION")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFILE_HANDLER(value: file_handler_): Self = this.set("FILE_HANDLER", value.asInstanceOf[js.Any])
     @scala.inline
-    def withKEYBOARD(value: keyboard_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KEYBOARD")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINSTALLED_NOTIFICATION(value: installed_notification_): Self = this.set("INSTALLED_NOTIFICATION", value.asInstanceOf[js.Any])
     @scala.inline
-    def withKIOSK(value: kiosk_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KIOSK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKEYBOARD(value: keyboard_): Self = this.set("KEYBOARD", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLOAD_AND_LAUNCH(value: load_and_launch_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LOAD_AND_LAUNCH")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setKIOSK(value: kiosk_): Self = this.set("KIOSK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMANAGEMENT_API(value: management_api_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MANAGEMENT_API")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLOAD_AND_LAUNCH(value: load_and_launch_): Self = this.set("LOAD_AND_LAUNCH", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNEW_TAB_PAGE(value: new_tab_page_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NEW_TAB_PAGE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMANAGEMENT_API(value: management_api_): Self = this.set("MANAGEMENT_API", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRELOAD(value: reload_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RELOAD")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNEW_TAB_PAGE(value: new_tab_page_): Self = this.set("NEW_TAB_PAGE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRESTART(value: restart_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RESTART")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRELOAD(value: reload_): Self = this.set("RELOAD", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSYSTEM_TRAY(value: system_tray_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SYSTEM_TRAY")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRESTART(value: restart_): Self = this.set("RESTART", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTEST(value: test_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TEST")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSYSTEM_TRAY(value: system_tray_): Self = this.set("SYSTEM_TRAY", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUNTRACKED(value: untracked_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UNTRACKED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTEST(value: test_): Self = this.set("TEST", value.asInstanceOf[js.Any])
     @scala.inline
-    def withURL_HANDLER(value: url_handler_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL_HANDLER")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setUNTRACKED(value: untracked_): Self = this.set("UNTRACKED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setURL_HANDLER(value: url_handler_): Self = this.set("URL_HANDLER", value.asInstanceOf[js.Any])
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.aframe.mod.global.AFRAME.THREE
 
+import typingsSlinky.three.colorMod.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +10,11 @@ import scala.scalajs.js.annotation._
 class SpotLight protected ()
   extends typingsSlinky.three.mod.SpotLight {
   def this(
-    color: js.UndefOr[typingsSlinky.three.colorMod.Color],
+    color: js.UndefOr[Color | String | Double],
     intensity: js.UndefOr[Double],
     distance: js.UndefOr[Double],
     angle: js.UndefOr[Double],
-    exponent: js.UndefOr[Double],
+    penumbra: js.UndefOr[Double],
     decay: js.UndefOr[Double]
   ) = this()
 }

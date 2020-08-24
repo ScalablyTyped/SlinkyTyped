@@ -11,8 +11,5 @@ class RemoteSystemStatusTypeFilter protected ()
   extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter {
   /** Initializes an instance of the RemoteSystemStatusTypeFilter class. */
   def this(remoteSystemStatusType: typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemStatusType) = this()
-  /** The status type that the containing RemoteSystemStatusTypeFilter object targets. */
-  /* CompleteClass */
-  override var remoteSystemStatusType: typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemStatusType = js.native
 }
 

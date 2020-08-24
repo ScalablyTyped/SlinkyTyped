@@ -26,9 +26,15 @@ object Facet {
     @scala.inline
     def eachView(value: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit): this.type = set("eachView", js.Any.fromFunction2(value))
     @scala.inline
+    def fieldsVarargs(value: js.Any*): this.type = set("fields", js.Array(value :_*))
+    @scala.inline
     def fields(value: String | js.Array[_]): this.type = set("fields", value.asInstanceOf[js.Any])
     @scala.inline
+    def marginVarargs(value: Double*): this.type = set("margin", js.Array(value :_*))
+    @scala.inline
     def margin(value: Double | js.Array[Double]): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingVarargs(value: Double*): this.type = set("padding", js.Array(value :_*))
     @scala.inline
     def padding(value: Double | js.Array[Double]): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline

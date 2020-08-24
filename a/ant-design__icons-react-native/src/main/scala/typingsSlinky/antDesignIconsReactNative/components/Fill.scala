@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Fill {
-  @JSImport("@ant-design/icons-react-native/lib/fill", JSImport.Default)
+  @JSImport("@ant-design/icons-react-native/es/fill", JSImport.Default)
   @js.native
   object component extends js.Object
   

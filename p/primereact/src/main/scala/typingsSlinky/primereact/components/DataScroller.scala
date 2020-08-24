@@ -45,6 +45,8 @@ object DataScroller {
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
   

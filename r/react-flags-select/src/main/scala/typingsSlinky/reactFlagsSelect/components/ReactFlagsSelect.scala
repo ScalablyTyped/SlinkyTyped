@@ -24,6 +24,8 @@ object ReactFlagsSelect {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def countriesVarargs(value: String*): this.type = set("countries", js.Array(value :_*))
+    @scala.inline
     def countries(value: js.Array[String]): this.type = set("countries", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultCountry(value: String): this.type = set("defaultCountry", value.asInstanceOf[js.Any])

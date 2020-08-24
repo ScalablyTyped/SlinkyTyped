@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactWidgets.dateTimePickerMod.DateTimePickerMessages
 import typingsSlinky.reactWidgets.dateTimePickerMod.DateTimePickerProps
 import typingsSlinky.reactWidgets.dateTimePickerMod.Open
@@ -46,6 +47,8 @@ object DateTimePicker {
     def defaultOpen(value: Open): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValue(value: js.Date): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledVarargs(value: js.Any*): this.type = set("disabled", js.Array(value :_*))
     @scala.inline
     def disabled(value: Boolean | js.Array[_]): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -93,6 +96,8 @@ object DateTimePicker {
     @scala.inline
     def open(value: Open): this.type = set("open", value.asInstanceOf[js.Any])
     @scala.inline
+    def parseVarargs(value: String*): this.type = set("parse", js.Array(value :_*))
+    @scala.inline
     def parseFunction1(value: /* str */ String => js.Date): this.type = set("parse", js.Any.fromFunction1(value))
     @scala.inline
     def parse(value: (js.Function1[/* str */ String, js.Date]) | js.Array[String] | String): this.type = set("parse", value.asInstanceOf[js.Any])
@@ -103,7 +108,9 @@ object DateTimePicker {
     @scala.inline
     def popupTransitionComponentClass(value: ReactComponentClass[_]): this.type = set("popupTransition", value.asInstanceOf[js.Any])
     @scala.inline
-    def popupTransition(value: ReactComponentClass[_] | String): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    def popupTransition(value: ReactType[_] | String): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnlyVarargs(value: js.Any*): this.type = set("readOnly", js.Array(value :_*))
     @scala.inline
     def readOnly(value: Boolean | js.Array[_]): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
@@ -115,7 +122,7 @@ object DateTimePicker {
     @scala.inline
     def timeComponentComponentClass(value: ReactComponentClass[_]): this.type = set("timeComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def timeComponent(value: ReactComponentClass[_] | String): this.type = set("timeComponent", value.asInstanceOf[js.Any])
+    def timeComponent(value: ReactType[_] | String): this.type = set("timeComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def timeFormat(value: String): this.type = set("timeFormat", value.asInstanceOf[js.Any])
     @scala.inline

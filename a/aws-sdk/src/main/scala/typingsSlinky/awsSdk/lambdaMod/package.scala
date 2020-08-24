@@ -33,6 +33,8 @@ package object lambdaMod {
   */
   type EventSourcePosition = typingsSlinky.awsSdk.lambdaMod._EventSourcePosition | java.lang.String
   type EventSourceToken = java.lang.String
+  type FileSystemArn = java.lang.String
+  type FileSystemConfigList = js.Array[typingsSlinky.awsSdk.lambdaMod.FileSystemConfig]
   type FunctionArn = java.lang.String
   type FunctionEventInvokeConfigList = js.Array[typingsSlinky.awsSdk.lambdaMod.FunctionEventInvokeConfig]
   type FunctionList = js.Array[typingsSlinky.awsSdk.lambdaMod.FunctionConfiguration]
@@ -79,6 +81,7 @@ package object lambdaMod {
   type LayersList = js.Array[typingsSlinky.awsSdk.lambdaMod.LayersListItem]
   type LayersReferenceList = js.Array[typingsSlinky.awsSdk.lambdaMod.Layer]
   type LicenseInfo = java.lang.String
+  type LocalMountPath = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.None_
     - typingsSlinky.awsSdk.awsSdkStrings.Tail

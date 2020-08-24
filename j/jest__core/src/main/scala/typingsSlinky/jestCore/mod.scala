@@ -1,12 +1,13 @@
 package typingsSlinky.jestCore
 
-import typingsSlinky.jestCore.anon.ArgumentsPartialallboolea
 import typingsSlinky.jestCore.anon.IsWatchMode
 import typingsSlinky.jestCore.searchSourceMod.default
 import typingsSlinky.jestCore.testSchedulerMod.TestSchedulerContext
 import typingsSlinky.jestCore.testSchedulerMod.TestSchedulerOptions
 import typingsSlinky.jestRuntime.mod.Context
+import typingsSlinky.jestTypes.configMod.Argv
 import typingsSlinky.jestTypes.configMod.GlobalConfig
+import typingsSlinky.jestTypes.configMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,6 +33,6 @@ object mod extends js.Object {
   }
   
   def getVersion(): String = js.native
-  def runCLI(argv: ArgumentsPartialallboolea, projects: js.Array[String]): js.Promise[typingsSlinky.jestCore.anon.GlobalConfig] = js.native
+  def runCLI(argv: Argv, projects: js.Array[Path]): js.Promise[typingsSlinky.jestCore.anon.GlobalConfig] = js.native
 }
 

@@ -1,0 +1,44 @@
+package typingsSlinky.typedoc.mod.TypeScript
+
+import typingsSlinky.typescript.mod.Decorator
+import typingsSlinky.typescript.mod.IndexSignatureDeclaration
+import typingsSlinky.typescript.mod.Modifier
+import typingsSlinky.typescript.mod.ParameterDeclaration
+import typingsSlinky.typescript.mod.TypeNode
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typedoc", "TypeScript.updateIndexSignature")
+@js.native
+object updateIndexSignature extends js.Object {
+  def apply(
+    node: IndexSignatureDeclaration,
+    decorators: js.UndefOr[scala.Nothing],
+    modifiers: js.UndefOr[scala.Nothing],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode
+  ): IndexSignatureDeclaration = js.native
+  def apply(
+    node: IndexSignatureDeclaration,
+    decorators: js.UndefOr[scala.Nothing],
+    modifiers: js.Array[Modifier],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode
+  ): IndexSignatureDeclaration = js.native
+  def apply(
+    node: IndexSignatureDeclaration,
+    decorators: js.Array[Decorator],
+    modifiers: js.UndefOr[scala.Nothing],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode
+  ): IndexSignatureDeclaration = js.native
+  def apply(
+    node: IndexSignatureDeclaration,
+    decorators: js.Array[Decorator],
+    modifiers: js.Array[Modifier],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode
+  ): IndexSignatureDeclaration = js.native
+}
+

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SkypeCheckIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SkypeCheckIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SkypeCheckIcon")
   @js.native
   object component extends js.Object
   

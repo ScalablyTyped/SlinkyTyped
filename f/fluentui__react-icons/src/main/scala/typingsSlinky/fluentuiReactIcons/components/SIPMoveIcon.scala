@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SIPMoveIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SIPMoveIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SIPMoveIcon")
   @js.native
   object component extends js.Object
   

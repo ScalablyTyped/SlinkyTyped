@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationMaterialBottomTabs.materialBottomTabViewMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -18,6 +18,6 @@ trait MaterialBottomTabView
   def _getInactiveColor(): js.UndefOr[String] = js.native
   def _getactiveColor(): js.UndefOr[String] = js.native
   def _isVisible(): js.UndefOr[Boolean] = js.native
-  def _renderIcon(hasRouteFocusedColor: Color): TagMod[Any] = js.native
+  def _renderIcon(hasRouteFocusedColor: Color): ReactElement = js.native
 }
 

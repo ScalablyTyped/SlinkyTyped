@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "CompileStylesheetMetadata")
 @js.native
 class CompileStylesheetMetadata ()
-  extends typingsSlinky.angularCompiler.publicApiMod.CompileStylesheetMetadata {
+  extends typingsSlinky.angularCompiler.compilerMod.CompileStylesheetMetadata {
   def this(hasModuleUrlStylesStyleUrls: ModuleUrl) = this()
 }
 

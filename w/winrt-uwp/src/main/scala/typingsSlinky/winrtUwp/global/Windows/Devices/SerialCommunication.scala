@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.Devices
 
-import typingsSlinky.winrtUwp.Windows.Devices.SerialCommunication.SerialError
-import typingsSlinky.winrtUwp.Windows.Devices.SerialCommunication.SerialPinChange
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,20 +12,12 @@ object SerialCommunication extends js.Object {
   /** Represents the object that is passed as a parameter to the event handler that is invoked when error occurs on the serial port. */
   @js.native
   abstract class ErrorReceivedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.SerialCommunication.ErrorReceivedEventArgs {
-    /** Gets the character type received that caused the event on the serial port. */
-    /* CompleteClass */
-    override var error: SerialError = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Devices.SerialCommunication.ErrorReceivedEventArgs
   
   /** Represents the object that is passed as a parameter to the event handler that is invoked when the state of a signal line changes on the serial port. */
   @js.native
   abstract class PinChangedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.SerialCommunication.PinChangedEventArgs {
-    /** Gets the type of signal change that caused the event on the serial port. */
-    /* CompleteClass */
-    override var pinChange: SerialPinChange = js.native
-  }
+    extends typingsSlinky.winrtUwp.Windows.Devices.SerialCommunication.PinChangedEventArgs
   
   /** Represents a serial port. The object provides methods and properties that an app can use to find the port (in the system). */
   @js.native

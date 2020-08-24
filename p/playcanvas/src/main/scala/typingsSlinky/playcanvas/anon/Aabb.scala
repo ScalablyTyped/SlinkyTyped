@@ -5,35 +5,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Aabb extends js.Object {
-  var aabb: js.UndefOr[BoundingBox] = js.undefined
-  var defaultWeight: js.UndefOr[Double] = js.undefined
-  var deltaNormals: js.UndefOr[js.Array[Double]] = js.undefined
-  var deltaPositions: js.Array[Double]
-  var deltaTangents: js.UndefOr[js.Array[Double]] = js.undefined
-  var indices: js.UndefOr[js.Array[Double]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
+  var aabb: js.UndefOr[BoundingBox] = js.native
+  var defaultWeight: js.UndefOr[Double] = js.native
+  var deltaNormals: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
+  var deltaNormalsType: Double = js.native
+  var deltaPositions: js.typedarray.ArrayBuffer = js.native
+  var deltaPositionsType: Double = js.native
+  var name: js.UndefOr[String] = js.native
 }
 
 object Aabb {
   @scala.inline
-  def apply(
-    deltaPositions: js.Array[Double],
-    aabb: BoundingBox = null,
-    defaultWeight: js.UndefOr[Double] = js.undefined,
-    deltaNormals: js.Array[Double] = null,
-    deltaTangents: js.Array[Double] = null,
-    indices: js.Array[Double] = null,
-    name: String = null
-  ): Aabb = {
-    val __obj = js.Dynamic.literal(deltaPositions = deltaPositions.asInstanceOf[js.Any])
-    if (aabb != null) __obj.updateDynamic("aabb")(aabb.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultWeight)) __obj.updateDynamic("defaultWeight")(defaultWeight.get.asInstanceOf[js.Any])
-    if (deltaNormals != null) __obj.updateDynamic("deltaNormals")(deltaNormals.asInstanceOf[js.Any])
-    if (deltaTangents != null) __obj.updateDynamic("deltaTangents")(deltaTangents.asInstanceOf[js.Any])
-    if (indices != null) __obj.updateDynamic("indices")(indices.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+  def apply(deltaNormalsType: Double, deltaPositions: js.typedarray.ArrayBuffer, deltaPositionsType: Double): Aabb = {
+    val __obj = js.Dynamic.literal(deltaNormalsType = deltaNormalsType.asInstanceOf[js.Any], deltaPositions = deltaPositions.asInstanceOf[js.Any], deltaPositionsType = deltaPositionsType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Aabb]
   }
+  @scala.inline
+  implicit class AabbOps[Self <: Aabb] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDeltaNormalsType(value: Double): Self = this.set("deltaNormalsType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeltaPositions(value: js.typedarray.ArrayBuffer): Self = this.set("deltaPositions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeltaPositionsType(value: Double): Self = this.set("deltaPositionsType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAabb(value: BoundingBox): Self = this.set("aabb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAabb: Self = this.set("aabb", js.undefined)
+    @scala.inline
+    def setDefaultWeight(value: Double): Self = this.set("defaultWeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultWeight: Self = this.set("defaultWeight", js.undefined)
+    @scala.inline
+    def setDeltaNormals(value: js.typedarray.ArrayBuffer): Self = this.set("deltaNormals", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeltaNormals: Self = this.set("deltaNormals", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+  }
+  
 }
 

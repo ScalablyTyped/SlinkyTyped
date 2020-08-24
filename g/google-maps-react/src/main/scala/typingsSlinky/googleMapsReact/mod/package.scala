@@ -14,13 +14,13 @@ package object mod {
   type mapEventHandler = js.Function3[
     /* mapProps */ js.UndefOr[typingsSlinky.googleMapsReact.mod.IMapProps], 
     /* map */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[org.scalajs.dom.raw.Element]], 
-    /* event */ js.UndefOr[js.Any], 
+    /* event */ js.Any, 
     js.Any
   ]
   type markerEventHandler = js.Function3[
     /* props */ js.UndefOr[typingsSlinky.googleMapsReact.mod.IMarkerProps], 
     /* marker */ js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker], 
-    /* event */ js.UndefOr[js.Any], 
+    /* event */ js.Any, 
     js.Any
   ]
 }

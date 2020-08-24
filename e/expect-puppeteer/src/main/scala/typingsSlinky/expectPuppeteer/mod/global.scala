@@ -25,8 +25,10 @@ object global extends js.Object {
       def toFill(selector: String, value: String, options: ExpectTimingActions): js.Promise[Unit] = js.native
       def toFillForm(selector: String, value: StringDictionary[js.Any]): js.Promise[Unit] = js.native
       def toFillForm(selector: String, value: StringDictionary[js.Any], options: ExpectTimingActions): js.Promise[Unit] = js.native
-      def toMatch(selector: String): js.Promise[Unit] = js.native
-      def toMatch(selector: String, options: ExpectTimingActions): js.Promise[Unit] = js.native
+      def toMatch(matcher: String): js.Promise[Unit] = js.native
+      def toMatch(matcher: String, options: ExpectTimingActions): js.Promise[Unit] = js.native
+      def toMatch(matcher: js.RegExp): js.Promise[Unit] = js.native
+      def toMatch(matcher: js.RegExp, options: ExpectTimingActions): js.Promise[Unit] = js.native
       def toMatchElement(selector: String): js.Promise[ElementHandle[Element]] = js.native
       def toMatchElement(selector: String, options: ExpectToClickOptions): js.Promise[ElementHandle[Element]] = js.native
       def toSelect(selector: String, valueOrText: String): js.Promise[Unit] = js.native

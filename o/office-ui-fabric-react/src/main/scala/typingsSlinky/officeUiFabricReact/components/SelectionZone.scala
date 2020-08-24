@@ -25,6 +25,8 @@ object SelectionZone {
     @scala.inline
     def disableAutoSelectOnInputElements(value: Boolean): this.type = set("disableAutoSelectOnInputElements", value.asInstanceOf[js.Any])
     @scala.inline
+    def enableTouchInvocationTarget(value: Boolean): this.type = set("enableTouchInvocationTarget", value.asInstanceOf[js.Any])
+    @scala.inline
     def enterModalOnTouch(value: Boolean): this.type = set("enterModalOnTouch", value.asInstanceOf[js.Any])
     @scala.inline
     def isSelectedOnFocus(value: Boolean): this.type = set("isSelectedOnFocus", value.asInstanceOf[js.Any])

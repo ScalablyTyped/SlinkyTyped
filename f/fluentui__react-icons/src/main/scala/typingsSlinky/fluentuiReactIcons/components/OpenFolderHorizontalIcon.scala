@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OpenFolderHorizontalIcon {
-  @JSImport("@fluentui/react-icons/lib/components/OpenFolderHorizontalIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "OpenFolderHorizontalIcon")
   @js.native
   object component extends js.Object
   

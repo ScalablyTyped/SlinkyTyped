@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SeparatorIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SeparatorIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SeparatorIcon")
   @js.native
   object component extends js.Object
   

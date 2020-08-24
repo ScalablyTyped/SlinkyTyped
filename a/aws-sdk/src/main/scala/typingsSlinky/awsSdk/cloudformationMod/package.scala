@@ -311,6 +311,19 @@ package object cloudformationMod {
   type StackEvents = js.Array[typingsSlinky.awsSdk.cloudformationMod.StackEvent]
   type StackId = java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+    - typingsSlinky.awsSdk.awsSdkStrings.INOPERABLE
+    - java.lang.String
+  */
+  type StackInstanceDetailedStatus = typingsSlinky.awsSdk.cloudformationMod._StackInstanceDetailedStatus | java.lang.String
+  type StackInstanceFilterName = typingsSlinky.awsSdk.awsSdkStrings.DETAILED_STATUS | java.lang.String
+  type StackInstanceFilterValues = java.lang.String
+  type StackInstanceFilters = js.Array[typingsSlinky.awsSdk.cloudformationMod.StackInstanceFilter]
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CURRENT
     - typingsSlinky.awsSdk.awsSdkStrings.OUTDATED
     - typingsSlinky.awsSdk.awsSdkStrings.INOPERABLE

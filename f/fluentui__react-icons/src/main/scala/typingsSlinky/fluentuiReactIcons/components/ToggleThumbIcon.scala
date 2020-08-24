@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleThumbIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ToggleThumbIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ToggleThumbIcon")
   @js.native
   object component extends js.Object
   

@@ -1,7 +1,6 @@
 package typingsSlinky.vscodeLanguageclient.clientMod
 
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.ClientCapabilities
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentSelector
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.InitializeParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.ServerCapabilities
 import scala.scalajs.js
@@ -32,7 +31,10 @@ trait StaticFeature extends js.Object {
     * @param documentSelector the document selector pass to the client's constructor.
     *  May be `undefined` if the client was created without a selector.
     */
-  def initialize(capabilities: ServerCapabilities): Unit = js.native
-  def initialize(capabilities: ServerCapabilities, documentSelector: DocumentSelector): Unit = js.native
+  def initialize(capabilities: ServerCapabilities[_]): Unit = js.native
+  def initialize(
+    capabilities: ServerCapabilities[_],
+    documentSelector: typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentSelector
+  ): Unit = js.native
 }
 

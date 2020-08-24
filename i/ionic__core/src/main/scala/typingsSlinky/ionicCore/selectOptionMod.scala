@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
+import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,15 +12,11 @@ object selectOptionMod extends js.Object {
   @js.native
   class SelectOption () extends ComponentInterface {
     /**
-      * If `true`, the user cannot interact with the select option.
+      * If `true`, the user cannot interact with the select option. This property does not apply when `interface="action-sheet"` as `ion-action-sheet` does not allow for disabled buttons.
       */
     var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     var inputId: js.Any = js.native
-    /**
-      * If `true`, the element is selected.
-      */
-    var selected: Boolean = js.native
     /**
       * The text value of the option.
       */

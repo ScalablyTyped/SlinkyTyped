@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NumberSymbolIcon {
-  @JSImport("@fluentui/react-icons/lib/components/NumberSymbolIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "NumberSymbolIcon")
   @js.native
   object component extends js.Object
   

@@ -40,7 +40,7 @@ trait Chart extends ClientObject {
   /**
     *
     * Specifies a ChartCategoryLabelLevel enumeration constant referring to
-    the level of where the category labels are being sourced from. 
+    the level of where the category labels are being sourced from.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -246,13 +246,35 @@ trait Chart extends ClientObject {
     * @param fittingMode (Optional) The method used to scale the chart to the specified to the specified dimensions (if both height and width are set).
     */
   def getImage(): ClientResult[String] = js.native
+  def getImage(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], fittingMode: ImageFittingMode): ClientResult[String] = js.native
+  def getImage(width: js.UndefOr[scala.Nothing], height: Double): ClientResult[String] = js.native
+  def getImage(width: js.UndefOr[scala.Nothing], height: Double, fittingMode: ImageFittingMode): ClientResult[String] = js.native
   def getImage(width: Double): ClientResult[String] = js.native
+  def getImage(width: Double, height: js.UndefOr[scala.Nothing], fittingMode: ImageFittingMode): ClientResult[String] = js.native
   def getImage(width: Double, height: Double): ClientResult[String] = js.native
   def getImage(width: Double, height: Double, fittingMode: ImageFittingMode): ClientResult[String] = js.native
   @JSName("getImage")
+  def getImage_Fill(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], fittingMode: Fill): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_Fill(width: js.UndefOr[scala.Nothing], height: Double, fittingMode: Fill): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_Fill(width: Double, height: js.UndefOr[scala.Nothing], fittingMode: Fill): ClientResult[String] = js.native
+  @JSName("getImage")
   def getImage_Fill(width: Double, height: Double, fittingMode: Fill): ClientResult[String] = js.native
   @JSName("getImage")
+  def getImage_Fit(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], fittingMode: Fit): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_Fit(width: js.UndefOr[scala.Nothing], height: Double, fittingMode: Fit): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_Fit(width: Double, height: js.UndefOr[scala.Nothing], fittingMode: Fit): ClientResult[String] = js.native
+  @JSName("getImage")
   def getImage_Fit(width: Double, height: Double, fittingMode: Fit): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_FitAndCenter(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], fittingMode: FitAndCenter): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_FitAndCenter(width: js.UndefOr[scala.Nothing], height: Double, fittingMode: FitAndCenter): ClientResult[String] = js.native
+  @JSName("getImage")
+  def getImage_FitAndCenter(width: Double, height: js.UndefOr[scala.Nothing], fittingMode: FitAndCenter): ClientResult[String] = js.native
   @JSName("getImage")
   def getImage_FitAndCenter(width: Double, height: Double, fittingMode: FitAndCenter): ClientResult[String] = js.native
   /**

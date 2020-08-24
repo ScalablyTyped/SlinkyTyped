@@ -21,6 +21,8 @@ object Text {
     @scala.inline
     def align(value: H): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
+    def children(value: String): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
     @scala.inline
     def expand(value: H): this.type = set("expand", value.asInstanceOf[js.Any])

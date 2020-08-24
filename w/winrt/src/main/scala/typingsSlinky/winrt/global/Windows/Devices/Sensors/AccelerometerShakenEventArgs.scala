@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.AccelerometerShakenEventArgs")
 @js.native
 class AccelerometerShakenEventArgs ()
-  extends typingsSlinky.winrt.Windows.Devices.Sensors.AccelerometerShakenEventArgs {
-  /* CompleteClass */
-  override var timestamp: js.Date = js.native
-}
+  extends typingsSlinky.winrt.Windows.Devices.Sensors.AccelerometerShakenEventArgs
 

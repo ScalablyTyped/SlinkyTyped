@@ -1,5 +1,6 @@
 package typingsSlinky.aframe.mod.THREE
 
+import typingsSlinky.three.colorMod.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Fog protected ()
   extends typingsSlinky.three.mod.Fog {
-  def this(hex: Double) = this()
+  def this(color: Color) = this()
 }
 

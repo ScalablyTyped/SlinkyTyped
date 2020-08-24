@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "CompileNgModuleMetadata")
 @js.native
 class CompileNgModuleMetadata protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.CompileNgModuleMetadata {
+  extends typingsSlinky.angularCompiler.compilerMod.CompileNgModuleMetadata {
   def this(hasTypeProvidersDeclaredDirectivesExportedDirectivesDeclaredPipesExportedPipesEntryComponentsBootstrapComponentsImportedModulesExportedModulesSchemasTransitiveModuleId: BootstrapComponents) = this()
 }
 

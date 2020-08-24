@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("@ionic/angular/dist/directives/proxies", "IonImg")
+@JSImport("@ionic/angular/directives/proxies", "IonImg")
 @js.native
 class IonImg protected ()
   extends typingsSlinky.ionicCore.componentsMod.Components.IonImg {

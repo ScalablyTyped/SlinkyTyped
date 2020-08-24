@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SaveAndCloseIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SaveAndCloseIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SaveAndCloseIcon")
   @js.native
   object component extends js.Object
   

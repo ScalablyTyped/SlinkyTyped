@@ -23,59 +23,32 @@ object ManualProxySettings {
     __obj.asInstanceOf[ManualProxySettings[M, P]]
   }
   @scala.inline
-  implicit class ManualProxySettingsOps[Self[m, p] <: ManualProxySettings[m, p], M, P] (val x: Self[M, P]) extends AnyVal {
+  implicit class ManualProxySettingsOps[Self <: ManualProxySettings[_, _], M, P] (val x: Self with (ManualProxySettings[M, P])) extends AnyVal {
     @scala.inline
-    def duplicate: Self[M, P] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[M, P]]
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[M, P]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[M, P]) with Other]
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFTPProxy(value: P): Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FTPProxy")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutFTPProxy: Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FTPProxy")(js.undefined)
-        ret
-    }
+    def setFTPProxy(value: P): Self = this.set("FTPProxy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withHTTPProxy(value: P): Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteFTPProxy: Self = this.set("FTPProxy", js.undefined)
     @scala.inline
-    def withoutHTTPProxy: Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPProxy")(js.undefined)
-        ret
-    }
+    def setHTTPProxy(value: P): Self = this.set("HTTPProxy", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSOCKS(value: P): Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SOCKS")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteHTTPProxy: Self = this.set("HTTPProxy", js.undefined)
     @scala.inline
-    def withoutSOCKS: Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SOCKS")(js.undefined)
-        ret
-    }
+    def setSOCKS(value: P): Self = this.set("SOCKS", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSecureHTTPProxy(value: P): Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecureHTTPProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSOCKS: Self = this.set("SOCKS", js.undefined)
     @scala.inline
-    def withoutSecureHTTPProxy: Self[M, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecureHTTPProxy")(js.undefined)
-        ret
-    }
+    def setSecureHTTPProxy(value: P): Self = this.set("SecureHTTPProxy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecureHTTPProxy: Self = this.set("SecureHTTPProxy", js.undefined)
   }
   
 }

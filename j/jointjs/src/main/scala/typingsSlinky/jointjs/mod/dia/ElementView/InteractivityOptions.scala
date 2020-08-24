@@ -23,29 +23,18 @@ object InteractivityOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddLinkFromMagnet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLinkFromMagnet")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutAddLinkFromMagnet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLinkFromMagnet")(js.undefined)
-        ret
-    }
+    def setAddLinkFromMagnet(value: Boolean): Self = this.set("addLinkFromMagnet", value.asInstanceOf[js.Any])
     @scala.inline
-    def withElementMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementMove")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAddLinkFromMagnet: Self = this.set("addLinkFromMagnet", js.undefined)
     @scala.inline
-    def withoutElementMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementMove")(js.undefined)
-        ret
-    }
+    def setElementMove(value: Boolean): Self = this.set("elementMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteElementMove: Self = this.set("elementMove", js.undefined)
   }
   
 }

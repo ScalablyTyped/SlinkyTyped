@@ -1,5 +1,8 @@
 package typingsSlinky.wouter.preactMod
 
+import typingsSlinky.wouter.preactMatcherMod.DefaultParams
+import typingsSlinky.wouter.preactMatcherMod.Match
+import typingsSlinky.wouter.useLocationMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

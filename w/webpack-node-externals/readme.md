@@ -1,7 +1,7 @@
 
 # Scala.js typings for webpack-node-externals
 
-Typings are for version 1.7
+Typings are for version 2.5
 
 ## Library description:
 Easily exclude node_modules in Webpack bundle

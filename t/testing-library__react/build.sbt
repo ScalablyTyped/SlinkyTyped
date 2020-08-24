@@ -1,17 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "testing-library__react"
-version := "10.0-dt-20200515Z-ce99c3"
-scalaVersion := "2.13.2"
+version := "10.4.7-aa09de"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "pretty-format" % "24.9.0-c27bd9",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "testing-library__dom" % "7.0-dt-20200423Z-d96853")
+  "org.scalablytyped.slinky" %%% "aria-query" % "4.2-dt-20200628Z-400560",
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
+  "org.scalablytyped.slinky" %%% "pretty-format" % "26.2.0-89f324",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
+  "org.scalablytyped.slinky" %%% "testing-library__dom" % "7.21.7-bc0635")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -57,19 +57,16 @@ object SinkInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setId(value: integer): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def withState(
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setState(
       value: ToStringLiteral[
           CONNECTED, 
           /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
@@ -78,11 +75,7 @@ object SinkInfo {
             Connected_ | Connecting_ | Disconnected_
           ]
         ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("state", value.asInstanceOf[js.Any])
   }
   
 }

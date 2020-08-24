@@ -1,8 +1,10 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.actionSheetInterfaceMod.ActionSheetOptions
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertOptions
 import typingsSlinky.ionicCore.animationInterfaceMod.Animation
+import typingsSlinky.ionicCore.animationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
@@ -22,7 +24,6 @@ import typingsSlinky.ionicCore.ionicCoreStrings.hybrid
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.ipad
 import typingsSlinky.ionicCore.ionicCoreStrings.iphone
-import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.ionicCoreStrings.mobile
 import typingsSlinky.ionicCore.ionicCoreStrings.mobileweb
 import typingsSlinky.ionicCore.ionicCoreStrings.phablet
@@ -31,12 +32,13 @@ import typingsSlinky.ionicCore.ionicCoreStrings.tablet
 import typingsSlinky.ionicCore.loadingInterfaceMod.LoadingOptions
 import typingsSlinky.ionicCore.menuInterfaceMod.MenuI
 import typingsSlinky.ionicCore.mod.ComponentRef
+import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.modalInterfaceMod.ModalOptions
-import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.AnimationBuilder
 import typingsSlinky.ionicCore.pickerInterfaceMod.PickerOptions
 import typingsSlinky.ionicCore.platformMod.IsPlatformSignature
 import typingsSlinky.ionicCore.popoverInterfaceMod.PopoverOptions
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastOptions
+import typingsSlinky.ionicCore.transitionMod.TransitionOptions
 import typingsSlinky.ionicCore.utilsConfigMod.IonicConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,6 +47,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/core/dist/types", JSImport.Namespace)
 @js.native
 object typesMod extends js.Object {
+  @js.native
+  class IonicSafeString protected ()
+    extends typingsSlinky.ionicCore.sanitizationMod.IonicSafeString {
+    def this(value: String) = this()
+  }
+  
   val LIFECYCLE_DID_ENTER: /* "ionViewDidEnter" */ String = js.native
   val LIFECYCLE_DID_LEAVE: /* "ionViewDidLeave" */ String = js.native
   val LIFECYCLE_WILL_ENTER: /* "ionViewWillEnter" */ String = js.native
@@ -52,17 +60,34 @@ object typesMod extends js.Object {
   val LIFECYCLE_WILL_UNLOAD: /* "ionViewWillUnload" */ String = js.native
   val isPlatform: IsPlatformSignature = js.native
   def createAnimation(): Animation = js.native
+  def createAnimation(animationId: String): Animation = js.native
   def createGesture(config: GestureConfig): Gesture = js.native
-  def getMode(): ios | md = js.native
+  def getMode(): Mode = js.native
+  def getPlatforms(): js.Array[
+    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
+  ] = js.native
   def getPlatforms(win: js.Any): js.Array[
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
+  def getTimeGivenProgression(
+    p0: js.Array[Double],
+    p1: js.Array[Double],
+    p2: js.Array[Double],
+    p3: js.Array[Double],
+    progression: Double
+  ): js.Array[Double] = js.native
+  def iosTransitionAnimation(navEl: HTMLElement, opts: TransitionOptions): Animation = js.native
+  def mdTransitionAnimation(_underscore: HTMLElement, opts: TransitionOptions): Animation = js.native
   def setupConfig(config: IonicConfig): js.Any = js.native
   @js.native
   object actionSheetController extends js.Object {
     def create(options: ActionSheetOptions): js.Promise[HTMLIonActionSheetElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonActionSheetElement]] = js.native
@@ -72,7 +97,11 @@ object typesMod extends js.Object {
   object alertController extends js.Object {
     def create(options: AlertOptions): js.Promise[HTMLIonAlertElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonAlertElement]] = js.native
@@ -82,7 +111,11 @@ object typesMod extends js.Object {
   object loadingController extends js.Object {
     def create(options: LoadingOptions): js.Promise[HTMLIonLoadingElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonLoadingElement]] = js.native
@@ -111,7 +144,6 @@ object typesMod extends js.Object {
     def isOpen(menu: String): js.Promise[Boolean] = js.native
     def open(): js.Promise[Boolean] = js.native
     def open(menu: String): js.Promise[Boolean] = js.native
-    def registerAnimation(name: String, animation: js.Function1[/* menu */ MenuI, Animation]): Unit = js.native
     def registerAnimation(name: String, animation: AnimationBuilder): Unit = js.native
     def swipeGesture(shouldEnable: Boolean): js.Promise[js.UndefOr[HTMLIonMenuElement]] = js.native
     def swipeGesture(shouldEnable: Boolean, menu: String): js.Promise[js.UndefOr[HTMLIonMenuElement]] = js.native
@@ -123,7 +155,11 @@ object typesMod extends js.Object {
   object modalController extends js.Object {
     def create(options: ModalOptions[ComponentRef]): js.Promise[HTMLIonModalElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonModalElement]] = js.native
@@ -133,7 +169,11 @@ object typesMod extends js.Object {
   object pickerController extends js.Object {
     def create(options: PickerOptions): js.Promise[HTMLIonPickerElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonPickerElement]] = js.native
@@ -143,7 +183,11 @@ object typesMod extends js.Object {
   object popoverController extends js.Object {
     def create(options: PopoverOptions[ComponentRef]): js.Promise[HTMLIonPopoverElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonPopoverElement]] = js.native
@@ -153,7 +197,11 @@ object typesMod extends js.Object {
   object toastController extends js.Object {
     def create(options: ToastOptions): js.Promise[HTMLIonToastElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String): js.Promise[Boolean] = js.native
+    def dismiss(data: js.UndefOr[scala.Nothing], role: String, id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
+    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonToastElement]] = js.native

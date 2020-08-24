@@ -39,6 +39,8 @@ object GMap {
     @scala.inline
     def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
+    def overlaysVarargs(value: js.Any*): this.type = set("overlays", js.Array(value :_*))
+    @scala.inline
     def overlays(value: js.Array[_]): this.type = set("overlays", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])

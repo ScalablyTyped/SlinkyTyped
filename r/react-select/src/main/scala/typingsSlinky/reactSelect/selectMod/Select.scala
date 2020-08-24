@@ -3,7 +3,7 @@ package typingsSlinky.reactSelect.selectMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.TouchEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -91,7 +91,7 @@ trait Select[OptionType /* <: OptionTypeBase */]
   def focusValue_next(direction: next): Unit = js.native
   @JSName("focusValue")
   def focusValue_previous(direction: previous): Unit = js.native
-  def formatOptionLabel(data: OptionType, context: FormatOptionLabelContext): TagMod[Any] = js.native
+  def formatOptionLabel(data: OptionType, context: FormatOptionLabelContext): ReactElement = js.native
   def getActiveDescendentId(): js.Any = js.native
   // ==============================
   // Getters
@@ -157,14 +157,14 @@ trait Select[OptionType /* <: OptionTypeBase */]
   def openMenu_last(focusOption: last): Unit = js.native
   def popValue(): Unit = js.native
   def removeValue(removedValue: OptionType): Unit = js.native
-  def renderClearIndicator(): TagMod[Any] = js.native
-  def renderDropdownIndicator(): TagMod[Any] = js.native
-  def renderFormField(): TagMod[Any] = js.native
-  def renderIndicatorSeparator(): TagMod[Any] = js.native
-  def renderInput(): TagMod[Any] = js.native
-  def renderLiveRegion(): TagMod[Any] = js.native
-  def renderLoadingIndicator(): TagMod[Any] = js.native
-  def renderMenu(): TagMod[Any] = js.native
+  def renderClearIndicator(): ReactElement = js.native
+  def renderDropdownIndicator(): ReactElement = js.native
+  def renderFormField(): ReactElement = js.native
+  def renderIndicatorSeparator(): ReactElement = js.native
+  def renderInput(): ReactElement = js.native
+  def renderLiveRegion(): ReactElement = js.native
+  def renderLoadingIndicator(): ReactElement = js.native
+  def renderMenu(): ReactElement = js.native
   def renderPlaceholderOrValue(): PlaceholderOrValue[OptionType] | Null = js.native
   def selectOption(newValue: OptionType): Unit = js.native
   def setValue(newValue: ValueType[OptionType], action: ActionTypes): Unit = js.native

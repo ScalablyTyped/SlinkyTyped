@@ -28,11 +28,29 @@ object reflectionsMod extends js.Object {
   }
   
   @js.native
+  class ReferenceReflection protected ()
+    extends typingsSlinky.typedoc.reflectionsReferenceMod.ReferenceReflection {
+    def this(
+      name: String,
+      state: /* import warning: importer.ImportType#apply Failed type conversion: typedoc.typedoc/dist/lib/models/reflections/reference.ReferenceReflection['_state'] */ js.Any
+    ) = this()
+    def this(
+      name: String,
+      state: /* import warning: importer.ImportType#apply Failed type conversion: typedoc.typedoc/dist/lib/models/reflections/reference.ReferenceReflection['_state'] */ js.Any,
+      parent: typingsSlinky.typedoc.abstractMod.Reflection
+    ) = this()
+  }
+  
+  @js.native
   abstract class Reflection protected ()
     extends typingsSlinky.typedoc.abstractMod.Reflection {
     def this(name: String, kind: ReflectionKind) = this()
     def this(name: String, kind: ReflectionKind, parent: typingsSlinky.typedoc.abstractMod.Reflection) = this()
   }
+  
+  @js.native
+  class ReflectionFlags ()
+    extends typingsSlinky.typedoc.abstractMod.ReflectionFlags
   
   @js.native
   class SignatureReflection ()
@@ -61,6 +79,7 @@ object reflectionsMod extends js.Object {
     /* 1 */ val Private: typingsSlinky.typedoc.abstractMod.ReflectionFlag.Private with Double = js.native
     /* 2 */ val Protected: typingsSlinky.typedoc.abstractMod.ReflectionFlag.Protected with Double = js.native
     /* 4 */ val Public: typingsSlinky.typedoc.abstractMod.ReflectionFlag.Public with Double = js.native
+    /* 16384 */ val Readonly: typingsSlinky.typedoc.abstractMod.ReflectionFlag.Readonly with Double = js.native
     /* 512 */ val Rest: typingsSlinky.typedoc.abstractMod.ReflectionFlag.Rest with Double = js.native
     /* 8 */ val Static: typingsSlinky.typedoc.abstractMod.ReflectionFlag.Static with Double = js.native
     @JSBracketAccess
@@ -79,7 +98,6 @@ object reflectionsMod extends js.Object {
     /* 4 */ val Enum: typingsSlinky.typedoc.abstractMod.ReflectionKind.Enum with Double = js.native
     /* 16 */ val EnumMember: typingsSlinky.typedoc.abstractMod.ReflectionKind.EnumMember with Double = js.native
     /* 8388608 */ val Event: typingsSlinky.typedoc.abstractMod.ReflectionKind.Event with Double = js.native
-    /* 1 */ val ExternalModule: typingsSlinky.typedoc.abstractMod.ReflectionKind.ExternalModule with Double = js.native
     /* 64 */ val Function: typingsSlinky.typedoc.abstractMod.ReflectionKind.Function with Double = js.native
     /* 2112 */ val FunctionOrMethod: typingsSlinky.typedoc.abstractMod.ReflectionKind.FunctionOrMethod with Double = js.native
     /* 524288 */ val GetSignature: typingsSlinky.typedoc.abstractMod.ReflectionKind.GetSignature with Double = js.native
@@ -87,10 +105,12 @@ object reflectionsMod extends js.Object {
     /* 8192 */ val IndexSignature: typingsSlinky.typedoc.abstractMod.ReflectionKind.IndexSignature with Double = js.native
     /* 256 */ val Interface: typingsSlinky.typedoc.abstractMod.ReflectionKind.Interface with Double = js.native
     /* 2048 */ val Method: typingsSlinky.typedoc.abstractMod.ReflectionKind.Method with Double = js.native
-    /* 2 */ val Module: typingsSlinky.typedoc.abstractMod.ReflectionKind.Module with Double = js.native
+    /* 1 */ val Module: typingsSlinky.typedoc.abstractMod.ReflectionKind.Module with Double = js.native
+    /* 2 */ val Namespace: typingsSlinky.typedoc.abstractMod.ReflectionKind.Namespace with Double = js.native
     /* 2097152 */ val ObjectLiteral: typingsSlinky.typedoc.abstractMod.ReflectionKind.ObjectLiteral with Double = js.native
     /* 32768 */ val Parameter: typingsSlinky.typedoc.abstractMod.ReflectionKind.Parameter with Double = js.native
     /* 1024 */ val Property: typingsSlinky.typedoc.abstractMod.ReflectionKind.Property with Double = js.native
+    /* 16777216 */ val Reference: typingsSlinky.typedoc.abstractMod.ReflectionKind.Reference with Double = js.native
     /* 1048576 */ val SetSignature: typingsSlinky.typedoc.abstractMod.ReflectionKind.SetSignature with Double = js.native
     /* 3 */ val SomeModule: typingsSlinky.typedoc.abstractMod.ReflectionKind.SomeModule with Double = js.native
     /* 1601536 */ val SomeSignature: typingsSlinky.typedoc.abstractMod.ReflectionKind.SomeSignature with Double = js.native

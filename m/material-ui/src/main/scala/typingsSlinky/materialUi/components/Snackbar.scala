@@ -1,30 +1,28 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.SnackbarProps
-import typingsSlinky.materialUi.snackbarMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Snackbar {
-  @JSImport("material-ui/Snackbar", JSImport.Default)
+  @JSImport("material-ui", "Snackbar")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.Snackbar] {
     @scala.inline
     def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def autoHideDuration(value: Double): this.type = set("autoHideDuration", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +32,7 @@ object Snackbar {
     @scala.inline
     def contentStyle(value: CSSProperties): this.type = set("contentStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def onActionClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onActionClick", js.Any.fromFunction1(value))
     @scala.inline

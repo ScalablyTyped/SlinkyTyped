@@ -13,6 +13,9 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait aim extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait alert
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -87,6 +90,9 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait `appstore-add` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait `area-chart` extends OutlineGlyphMapType
   
   @js.native
@@ -108,6 +114,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait audio
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `audio-muted` extends OutlineGlyphMapType
   
   @js.native
   sealed trait audit extends OutlineGlyphMapType
@@ -189,12 +198,20 @@ object antDesignIconsReactNativeStrings {
   sealed trait `border-verticle` extends OutlineGlyphMapType
   
   @js.native
+  sealed trait `borderless-table` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait `box-plot`
     extends FillGlyphMapType
        with OutlineGlyphMapType
   
   @js.native
   sealed trait branches extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait bug
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait build
@@ -273,7 +290,12 @@ object antDesignIconsReactNativeStrings {
   sealed trait ci extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `ci-circle` extends FillGlyphMapType
+  sealed trait `ci-circle`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait clear extends OutlineGlyphMapType
   
   @js.native
   sealed trait `clock-circle`
@@ -342,15 +364,24 @@ object antDesignIconsReactNativeStrings {
   sealed trait coffee extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `colum-height` extends OutlineGlyphMapType
+  sealed trait `column-height` extends OutlineGlyphMapType
   
   @js.native
   sealed trait `column-width` extends OutlineGlyphMapType
   
   @js.native
+  sealed trait comment extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait compass
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait compress extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `console-sql` extends OutlineGlyphMapType
   
   @js.native
   sealed trait contacts
@@ -376,7 +407,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait copyright extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `copyright-circle` extends FillGlyphMapType
+  sealed trait `copyright-circle`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait `credit-card`
@@ -412,6 +445,15 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait `delete-column` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `delete-row` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `delivered-procedure` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait `deployment-unit` extends OutlineGlyphMapType
   
   @js.native
@@ -424,6 +466,9 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait dingding extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait dingtalk extends OutlineGlyphMapType
   
   @js.native
   sealed trait `dingtalk-circle` extends FillGlyphMapType
@@ -443,7 +488,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait dollar extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `dollar-circle` extends FillGlyphMapType
+  sealed trait `dollar-circle`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait `dot-chart` extends OutlineGlyphMapType
@@ -513,7 +560,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait euro extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `euro-circle` extends FillGlyphMapType
+  sealed trait `euro-circle`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait exception extends OutlineGlyphMapType
@@ -525,6 +574,12 @@ object antDesignIconsReactNativeStrings {
   sealed trait `exclamation-circle`
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait expand extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `expand-alt` extends OutlineGlyphMapType
   
   @js.native
   sealed trait experiment
@@ -563,6 +618,18 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait `field-binary` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `field-number` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `field-string` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `field-time` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait file
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -584,6 +651,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait `file-exclamation`
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `file-gif` extends OutlineGlyphMapType
   
   @js.native
   sealed trait `file-image`
@@ -668,6 +738,9 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait `folder-view` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait `font-colors` extends OutlineGlyphMapType
   
   @js.native
@@ -678,6 +751,11 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait form extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `format-painter`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait forward
@@ -696,9 +774,18 @@ object antDesignIconsReactNativeStrings {
   sealed trait `fullscreen-exit` extends OutlineGlyphMapType
   
   @js.native
+  sealed trait function extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait fund
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `fund-projection-screen` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `fund-view` extends OutlineGlyphMapType
   
   @js.native
   sealed trait `funnel-plot`
@@ -707,6 +794,9 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait gateway extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait gif extends OutlineGlyphMapType
   
   @js.native
   sealed trait gift
@@ -727,7 +817,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait global extends OutlineGlyphMapType
   
   @js.native
-  sealed trait gold extends OutlineGlyphMapType
+  sealed trait gold
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait golden extends FillGlyphMapType
@@ -751,6 +843,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait `google-square` extends FillGlyphMapType
   
   @js.native
+  sealed trait group extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait hdd
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -767,6 +862,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait highlight
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait history extends OutlineGlyphMapType
   
   @js.native
   sealed trait home
@@ -812,6 +910,18 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait `insert-row-above` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `insert-row-below` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `insert-row-left` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `insert-row-right` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait instagram
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -822,7 +932,7 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
-  sealed trait interation
+  sealed trait interaction
     extends FillGlyphMapType
        with OutlineGlyphMapType
   
@@ -896,6 +1006,11 @@ object antDesignIconsReactNativeStrings {
   sealed trait logout extends OutlineGlyphMapType
   
   @js.native
+  sealed trait `mac-command`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
+  
+  @js.native
   sealed trait mail
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -935,6 +1050,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait `menu-unfold` extends OutlineGlyphMapType
   
   @js.native
+  sealed trait `merge-cells` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait message
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -966,7 +1084,16 @@ object antDesignIconsReactNativeStrings {
   sealed trait monitor extends OutlineGlyphMapType
   
   @js.native
-  sealed trait mr extends OutlineGlyphMapType
+  sealed trait more extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `node-collapse` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `node-expand` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `node-index` extends OutlineGlyphMapType
   
   @js.native
   sealed trait notification
@@ -977,10 +1104,16 @@ object antDesignIconsReactNativeStrings {
   sealed trait number extends OutlineGlyphMapType
   
   @js.native
+  sealed trait `one-to-one` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait `ordered-list` extends OutlineGlyphMapType
   
   @js.native
   sealed trait `paper-clip` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait partition extends OutlineGlyphMapType
   
   @js.native
   sealed trait pause extends OutlineGlyphMapType
@@ -1049,7 +1182,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait pound extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `pound-circle` extends FillGlyphMapType
+  sealed trait `pound-circle`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait poweroff extends OutlineGlyphMapType
@@ -1073,6 +1208,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait `property-safety`
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `pull-request` extends OutlineGlyphMapType
   
   @js.native
   sealed trait pushpin
@@ -1148,9 +1286,6 @@ object antDesignIconsReactNativeStrings {
   sealed trait reload extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `reload-time` extends OutlineGlyphMapType
-  
-  @js.native
   sealed trait rest
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -1175,7 +1310,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait rise extends OutlineGlyphMapType
   
   @js.native
-  sealed trait robot extends OutlineGlyphMapType
+  sealed trait robot
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait rocket
@@ -1184,6 +1321,12 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait rollback extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `rotate-left` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `rotate-right` extends OutlineGlyphMapType
   
   @js.native
   sealed trait safety extends OutlineGlyphMapType
@@ -1221,6 +1364,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait select extends OutlineGlyphMapType
   
   @js.native
+  sealed trait send extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait setting
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -1246,6 +1392,12 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait shrink extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait signal extends FillGlyphMapType
+  
+  @js.native
+  sealed trait sisternode extends OutlineGlyphMapType
   
   @js.native
   sealed trait sketch extends OutlineGlyphMapType
@@ -1310,6 +1462,9 @@ object antDesignIconsReactNativeStrings {
        with OutlineGlyphMapType
   
   @js.native
+  sealed trait `split-cells` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait star
     extends FillGlyphMapType
        with OutlineGlyphMapType
@@ -1334,6 +1489,9 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait strikethrough extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait subnode extends OutlineGlyphMapType
   
   @js.native
   sealed trait swap extends OutlineGlyphMapType
@@ -1401,10 +1559,15 @@ object antDesignIconsReactNativeStrings {
   sealed trait trademark extends OutlineGlyphMapType
   
   @js.native
-  sealed trait `trademark-circle` extends FillGlyphMapType
+  sealed trait `trademark-circle`
+    extends FillGlyphMapType
+       with OutlineGlyphMapType
   
   @js.native
   sealed trait transaction extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait translation extends OutlineGlyphMapType
   
   @js.native
   sealed trait trophy
@@ -1425,6 +1588,9 @@ object antDesignIconsReactNativeStrings {
   
   @js.native
   sealed trait undo extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait ungroup extends OutlineGlyphMapType
   
   @js.native
   sealed trait unlock
@@ -1465,10 +1631,16 @@ object antDesignIconsReactNativeStrings {
   sealed trait `user-delete` extends OutlineGlyphMapType
   
   @js.native
+  sealed trait `user-switch` extends OutlineGlyphMapType
+  
+  @js.native
   sealed trait `usergroup-add` extends OutlineGlyphMapType
   
   @js.native
   sealed trait `usergroup-delete` extends OutlineGlyphMapType
+  
+  @js.native
+  sealed trait verified extends OutlineGlyphMapType
   
   @js.native
   sealed trait `vertical-align-bottom` extends OutlineGlyphMapType
@@ -1489,6 +1661,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait `video-camera`
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `video-camera-add` extends OutlineGlyphMapType
   
   @js.native
   sealed trait wallet
@@ -1517,6 +1692,9 @@ object antDesignIconsReactNativeStrings {
   sealed trait `weibo-square`
     extends FillGlyphMapType
        with OutlineGlyphMapType
+  
+  @js.native
+  sealed trait `whats-app` extends OutlineGlyphMapType
   
   @js.native
   sealed trait wifi extends OutlineGlyphMapType
@@ -1562,6 +1740,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `account-book`: `account-book` = "account-book".asInstanceOf[`account-book`]
   @scala.inline
+  def aim: aim = "aim".asInstanceOf[aim]
+  @scala.inline
   def alert: alert = "alert".asInstanceOf[alert]
   @scala.inline
   def alibaba: alibaba = "alibaba".asInstanceOf[alibaba]
@@ -1602,6 +1782,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def appstore: appstore = "appstore".asInstanceOf[appstore]
   @scala.inline
+  def `appstore-add`: `appstore-add` = "appstore-add".asInstanceOf[`appstore-add`]
+  @scala.inline
   def `area-chart`: `area-chart` = "area-chart".asInstanceOf[`area-chart`]
   @scala.inline
   def `arrow-down`: `arrow-down` = "arrow-down".asInstanceOf[`arrow-down`]
@@ -1615,6 +1797,8 @@ object antDesignIconsReactNativeStrings {
   def `arrows-alt`: `arrows-alt` = "arrows-alt".asInstanceOf[`arrows-alt`]
   @scala.inline
   def audio: audio = "audio".asInstanceOf[audio]
+  @scala.inline
+  def `audio-muted`: `audio-muted` = "audio-muted".asInstanceOf[`audio-muted`]
   @scala.inline
   def audit: audit = "audit".asInstanceOf[audit]
   @scala.inline
@@ -1662,9 +1846,13 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `border-verticle`: `border-verticle` = "border-verticle".asInstanceOf[`border-verticle`]
   @scala.inline
+  def `borderless-table`: `borderless-table` = "borderless-table".asInstanceOf[`borderless-table`]
+  @scala.inline
   def `box-plot`: `box-plot` = "box-plot".asInstanceOf[`box-plot`]
   @scala.inline
   def branches: branches = "branches".asInstanceOf[branches]
+  @scala.inline
+  def bug: bug = "bug".asInstanceOf[bug]
   @scala.inline
   def build: build = "build".asInstanceOf[build]
   @scala.inline
@@ -1699,6 +1887,8 @@ object antDesignIconsReactNativeStrings {
   def ci: ci = "ci".asInstanceOf[ci]
   @scala.inline
   def `ci-circle`: `ci-circle` = "ci-circle".asInstanceOf[`ci-circle`]
+  @scala.inline
+  def clear: clear = "clear".asInstanceOf[clear]
   @scala.inline
   def `clock-circle`: `clock-circle` = "clock-circle".asInstanceOf[`clock-circle`]
   @scala.inline
@@ -1736,11 +1926,17 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def coffee: coffee = "coffee".asInstanceOf[coffee]
   @scala.inline
-  def `colum-height`: `colum-height` = "colum-height".asInstanceOf[`colum-height`]
+  def `column-height`: `column-height` = "column-height".asInstanceOf[`column-height`]
   @scala.inline
   def `column-width`: `column-width` = "column-width".asInstanceOf[`column-width`]
   @scala.inline
+  def comment: comment = "comment".asInstanceOf[comment]
+  @scala.inline
   def compass: compass = "compass".asInstanceOf[compass]
+  @scala.inline
+  def compress: compress = "compress".asInstanceOf[compress]
+  @scala.inline
+  def `console-sql`: `console-sql` = "console-sql".asInstanceOf[`console-sql`]
   @scala.inline
   def contacts: contacts = "contacts".asInstanceOf[contacts]
   @scala.inline
@@ -1768,6 +1964,12 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def delete: delete = "delete".asInstanceOf[delete]
   @scala.inline
+  def `delete-column`: `delete-column` = "delete-column".asInstanceOf[`delete-column`]
+  @scala.inline
+  def `delete-row`: `delete-row` = "delete-row".asInstanceOf[`delete-row`]
+  @scala.inline
+  def `delivered-procedure`: `delivered-procedure` = "delivered-procedure".asInstanceOf[`delivered-procedure`]
+  @scala.inline
   def `deployment-unit`: `deployment-unit` = "deployment-unit".asInstanceOf[`deployment-unit`]
   @scala.inline
   def desktop: desktop = "desktop".asInstanceOf[desktop]
@@ -1775,6 +1977,8 @@ object antDesignIconsReactNativeStrings {
   def diff: diff = "diff".asInstanceOf[diff]
   @scala.inline
   def dingding: dingding = "dingding".asInstanceOf[dingding]
+  @scala.inline
+  def dingtalk: dingtalk = "dingtalk".asInstanceOf[dingtalk]
   @scala.inline
   def `dingtalk-circle`: `dingtalk-circle` = "dingtalk-circle".asInstanceOf[`dingtalk-circle`]
   @scala.inline
@@ -1834,6 +2038,10 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `exclamation-circle`: `exclamation-circle` = "exclamation-circle".asInstanceOf[`exclamation-circle`]
   @scala.inline
+  def expand: expand = "expand".asInstanceOf[expand]
+  @scala.inline
+  def `expand-alt`: `expand-alt` = "expand-alt".asInstanceOf[`expand-alt`]
+  @scala.inline
   def experiment: experiment = "experiment".asInstanceOf[experiment]
   @scala.inline
   def export: export = "export".asInstanceOf[export]
@@ -1850,6 +2058,14 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `fast-forward`: `fast-forward` = "fast-forward".asInstanceOf[`fast-forward`]
   @scala.inline
+  def `field-binary`: `field-binary` = "field-binary".asInstanceOf[`field-binary`]
+  @scala.inline
+  def `field-number`: `field-number` = "field-number".asInstanceOf[`field-number`]
+  @scala.inline
+  def `field-string`: `field-string` = "field-string".asInstanceOf[`field-string`]
+  @scala.inline
+  def `field-time`: `field-time` = "field-time".asInstanceOf[`field-time`]
+  @scala.inline
   def file: file = "file".asInstanceOf[file]
   @scala.inline
   def `file-add`: `file-add` = "file-add".asInstanceOf[`file-add`]
@@ -1859,6 +2075,8 @@ object antDesignIconsReactNativeStrings {
   def `file-excel`: `file-excel` = "file-excel".asInstanceOf[`file-excel`]
   @scala.inline
   def `file-exclamation`: `file-exclamation` = "file-exclamation".asInstanceOf[`file-exclamation`]
+  @scala.inline
+  def `file-gif`: `file-gif` = "file-gif".asInstanceOf[`file-gif`]
   @scala.inline
   def `file-image`: `file-image` = "file-image".asInstanceOf[`file-image`]
   @scala.inline
@@ -1896,6 +2114,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `folder-open`: `folder-open` = "folder-open".asInstanceOf[`folder-open`]
   @scala.inline
+  def `folder-view`: `folder-view` = "folder-view".asInstanceOf[`folder-view`]
+  @scala.inline
   def `font-colors`: `font-colors` = "font-colors".asInstanceOf[`font-colors`]
   @scala.inline
   def `font-size`: `font-size` = "font-size".asInstanceOf[`font-size`]
@@ -1903,6 +2123,8 @@ object antDesignIconsReactNativeStrings {
   def fork: fork = "fork".asInstanceOf[fork]
   @scala.inline
   def form: form = "form".asInstanceOf[form]
+  @scala.inline
+  def `format-painter`: `format-painter` = "format-painter".asInstanceOf[`format-painter`]
   @scala.inline
   def forward: forward = "forward".asInstanceOf[forward]
   @scala.inline
@@ -1912,11 +2134,19 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `fullscreen-exit`: `fullscreen-exit` = "fullscreen-exit".asInstanceOf[`fullscreen-exit`]
   @scala.inline
+  def function: function = "function".asInstanceOf[function]
+  @scala.inline
   def fund: fund = "fund".asInstanceOf[fund]
+  @scala.inline
+  def `fund-projection-screen`: `fund-projection-screen` = "fund-projection-screen".asInstanceOf[`fund-projection-screen`]
+  @scala.inline
+  def `fund-view`: `fund-view` = "fund-view".asInstanceOf[`fund-view`]
   @scala.inline
   def `funnel-plot`: `funnel-plot` = "funnel-plot".asInstanceOf[`funnel-plot`]
   @scala.inline
   def gateway: gateway = "gateway".asInstanceOf[gateway]
+  @scala.inline
+  def gif: gif = "gif".asInstanceOf[gif]
   @scala.inline
   def gift: gift = "gift".asInstanceOf[gift]
   @scala.inline
@@ -1942,6 +2172,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `google-square`: `google-square` = "google-square".asInstanceOf[`google-square`]
   @scala.inline
+  def group: group = "group".asInstanceOf[group]
+  @scala.inline
   def hdd: hdd = "hdd".asInstanceOf[hdd]
   @scala.inline
   def heart: heart = "heart".asInstanceOf[heart]
@@ -1949,6 +2181,8 @@ object antDesignIconsReactNativeStrings {
   def `heat-map`: `heat-map` = "heat-map".asInstanceOf[`heat-map`]
   @scala.inline
   def highlight: highlight = "highlight".asInstanceOf[highlight]
+  @scala.inline
+  def history: history = "history".asInstanceOf[history]
   @scala.inline
   def home: home = "home".asInstanceOf[home]
   @scala.inline
@@ -1972,11 +2206,19 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `info-circle`: `info-circle` = "info-circle".asInstanceOf[`info-circle`]
   @scala.inline
+  def `insert-row-above`: `insert-row-above` = "insert-row-above".asInstanceOf[`insert-row-above`]
+  @scala.inline
+  def `insert-row-below`: `insert-row-below` = "insert-row-below".asInstanceOf[`insert-row-below`]
+  @scala.inline
+  def `insert-row-left`: `insert-row-left` = "insert-row-left".asInstanceOf[`insert-row-left`]
+  @scala.inline
+  def `insert-row-right`: `insert-row-right` = "insert-row-right".asInstanceOf[`insert-row-right`]
+  @scala.inline
   def instagram: instagram = "instagram".asInstanceOf[instagram]
   @scala.inline
   def insurance: insurance = "insurance".asInstanceOf[insurance]
   @scala.inline
-  def interation: interation = "interation".asInstanceOf[interation]
+  def interaction: interaction = "interaction".asInstanceOf[interaction]
   @scala.inline
   def `issues-close`: `issues-close` = "issues-close".asInstanceOf[`issues-close`]
   @scala.inline
@@ -2016,6 +2258,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def logout: logout = "logout".asInstanceOf[logout]
   @scala.inline
+  def `mac-command`: `mac-command` = "mac-command".asInstanceOf[`mac-command`]
+  @scala.inline
   def mail: mail = "mail".asInstanceOf[mail]
   @scala.inline
   def man: man = "man".asInstanceOf[man]
@@ -2038,6 +2282,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `menu-unfold`: `menu-unfold` = "menu-unfold".asInstanceOf[`menu-unfold`]
   @scala.inline
+  def `merge-cells`: `merge-cells` = "merge-cells".asInstanceOf[`merge-cells`]
+  @scala.inline
   def message: message = "message".asInstanceOf[message]
   @scala.inline
   def minus: minus = "minus".asInstanceOf[minus]
@@ -2052,15 +2298,25 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def monitor: monitor = "monitor".asInstanceOf[monitor]
   @scala.inline
-  def mr: mr = "mr".asInstanceOf[mr]
+  def more: more = "more".asInstanceOf[more]
+  @scala.inline
+  def `node-collapse`: `node-collapse` = "node-collapse".asInstanceOf[`node-collapse`]
+  @scala.inline
+  def `node-expand`: `node-expand` = "node-expand".asInstanceOf[`node-expand`]
+  @scala.inline
+  def `node-index`: `node-index` = "node-index".asInstanceOf[`node-index`]
   @scala.inline
   def notification: notification = "notification".asInstanceOf[notification]
   @scala.inline
   def number: number = "number".asInstanceOf[number]
   @scala.inline
+  def `one-to-one`: `one-to-one` = "one-to-one".asInstanceOf[`one-to-one`]
+  @scala.inline
   def `ordered-list`: `ordered-list` = "ordered-list".asInstanceOf[`ordered-list`]
   @scala.inline
   def `paper-clip`: `paper-clip` = "paper-clip".asInstanceOf[`paper-clip`]
+  @scala.inline
+  def partition: partition = "partition".asInstanceOf[partition]
   @scala.inline
   def pause: pause = "pause".asInstanceOf[pause]
   @scala.inline
@@ -2106,6 +2362,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `property-safety`: `property-safety` = "property-safety".asInstanceOf[`property-safety`]
   @scala.inline
+  def `pull-request`: `pull-request` = "pull-request".asInstanceOf[`pull-request`]
+  @scala.inline
   def pushpin: pushpin = "pushpin".asInstanceOf[pushpin]
   @scala.inline
   def qq: qq = "qq".asInstanceOf[qq]
@@ -2148,8 +2406,6 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def reload: reload = "reload".asInstanceOf[reload]
   @scala.inline
-  def `reload-time`: `reload-time` = "reload-time".asInstanceOf[`reload-time`]
-  @scala.inline
   def rest: rest = "rest".asInstanceOf[rest]
   @scala.inline
   def retweet: retweet = "retweet".asInstanceOf[retweet]
@@ -2167,6 +2423,10 @@ object antDesignIconsReactNativeStrings {
   def rocket: rocket = "rocket".asInstanceOf[rocket]
   @scala.inline
   def rollback: rollback = "rollback".asInstanceOf[rollback]
+  @scala.inline
+  def `rotate-left`: `rotate-left` = "rotate-left".asInstanceOf[`rotate-left`]
+  @scala.inline
+  def `rotate-right`: `rotate-right` = "rotate-right".asInstanceOf[`rotate-right`]
   @scala.inline
   def safety: safety = "safety".asInstanceOf[safety]
   @scala.inline
@@ -2186,6 +2446,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def select: select = "select".asInstanceOf[select]
   @scala.inline
+  def send: send = "send".asInstanceOf[send]
+  @scala.inline
   def setting: setting = "setting".asInstanceOf[setting]
   @scala.inline
   def shake: shake = "shake".asInstanceOf[shake]
@@ -2199,6 +2461,10 @@ object antDesignIconsReactNativeStrings {
   def `shopping-cart`: `shopping-cart` = "shopping-cart".asInstanceOf[`shopping-cart`]
   @scala.inline
   def shrink: shrink = "shrink".asInstanceOf[shrink]
+  @scala.inline
+  def signal: signal = "signal".asInstanceOf[signal]
+  @scala.inline
+  def sisternode: sisternode = "sisternode".asInstanceOf[sisternode]
   @scala.inline
   def sketch: sketch = "sketch".asInstanceOf[sketch]
   @scala.inline
@@ -2232,6 +2498,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def sound: sound = "sound".asInstanceOf[sound]
   @scala.inline
+  def `split-cells`: `split-cells` = "split-cells".asInstanceOf[`split-cells`]
+  @scala.inline
   def star: star = "star".asInstanceOf[star]
   @scala.inline
   def `step-backward`: `step-backward` = "step-backward".asInstanceOf[`step-backward`]
@@ -2243,6 +2511,8 @@ object antDesignIconsReactNativeStrings {
   def stop: stop = "stop".asInstanceOf[stop]
   @scala.inline
   def strikethrough: strikethrough = "strikethrough".asInstanceOf[strikethrough]
+  @scala.inline
+  def subnode: subnode = "subnode".asInstanceOf[subnode]
   @scala.inline
   def swap: swap = "swap".asInstanceOf[swap]
   @scala.inline
@@ -2282,6 +2552,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def transaction: transaction = "transaction".asInstanceOf[transaction]
   @scala.inline
+  def translation: translation = "translation".asInstanceOf[translation]
+  @scala.inline
   def trophy: trophy = "trophy".asInstanceOf[trophy]
   @scala.inline
   def twitter: twitter = "twitter".asInstanceOf[twitter]
@@ -2293,6 +2565,8 @@ object antDesignIconsReactNativeStrings {
   def underline: underline = "underline".asInstanceOf[underline]
   @scala.inline
   def undo: undo = "undo".asInstanceOf[undo]
+  @scala.inline
+  def ungroup: ungroup = "ungroup".asInstanceOf[ungroup]
   @scala.inline
   def unlock: unlock = "unlock".asInstanceOf[unlock]
   @scala.inline
@@ -2314,9 +2588,13 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `user-delete`: `user-delete` = "user-delete".asInstanceOf[`user-delete`]
   @scala.inline
+  def `user-switch`: `user-switch` = "user-switch".asInstanceOf[`user-switch`]
+  @scala.inline
   def `usergroup-add`: `usergroup-add` = "usergroup-add".asInstanceOf[`usergroup-add`]
   @scala.inline
   def `usergroup-delete`: `usergroup-delete` = "usergroup-delete".asInstanceOf[`usergroup-delete`]
+  @scala.inline
+  def verified: verified = "verified".asInstanceOf[verified]
   @scala.inline
   def `vertical-align-bottom`: `vertical-align-bottom` = "vertical-align-bottom".asInstanceOf[`vertical-align-bottom`]
   @scala.inline
@@ -2330,6 +2608,8 @@ object antDesignIconsReactNativeStrings {
   @scala.inline
   def `video-camera`: `video-camera` = "video-camera".asInstanceOf[`video-camera`]
   @scala.inline
+  def `video-camera-add`: `video-camera-add` = "video-camera-add".asInstanceOf[`video-camera-add`]
+  @scala.inline
   def wallet: wallet = "wallet".asInstanceOf[wallet]
   @scala.inline
   def warning: warning = "warning".asInstanceOf[warning]
@@ -2341,6 +2621,8 @@ object antDesignIconsReactNativeStrings {
   def `weibo-circle`: `weibo-circle` = "weibo-circle".asInstanceOf[`weibo-circle`]
   @scala.inline
   def `weibo-square`: `weibo-square` = "weibo-square".asInstanceOf[`weibo-square`]
+  @scala.inline
+  def `whats-app`: `whats-app` = "whats-app".asInstanceOf[`whats-app`]
   @scala.inline
   def wifi: wifi = "wifi".asInstanceOf[wifi]
   @scala.inline

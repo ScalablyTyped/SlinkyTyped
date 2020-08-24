@@ -21,6 +21,7 @@ import typingsSlinky.vscodeLanguageserverTypes.mod.CompletionItem
 import typingsSlinky.vscodeLanguageserverTypes.mod.DeclarationLink
 import typingsSlinky.vscodeLanguageserverTypes.mod.DefinitionLink
 import typingsSlinky.vscodeLanguageserverTypes.mod.Diagnostic
+import typingsSlinky.vscodeLanguageserverTypes.mod.DiagnosticTag
 import typingsSlinky.vscodeLanguageserverTypes.mod.DocumentHighlight
 import typingsSlinky.vscodeLanguageserverTypes.mod.DocumentLink
 import typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol
@@ -29,9 +30,12 @@ import typingsSlinky.vscodeLanguageserverTypes.mod.Hover
 import typingsSlinky.vscodeLanguageserverTypes.mod.ParameterInformation
 import typingsSlinky.vscodeLanguageserverTypes.mod.Position
 import typingsSlinky.vscodeLanguageserverTypes.mod.Range
+import typingsSlinky.vscodeLanguageserverTypes.mod.SelectionRange
 import typingsSlinky.vscodeLanguageserverTypes.mod.SignatureHelp
 import typingsSlinky.vscodeLanguageserverTypes.mod.SignatureInformation
 import typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation
+import typingsSlinky.vscodeLanguageserverTypes.mod.SymbolKind
+import typingsSlinky.vscodeLanguageserverTypes.mod.SymbolTag
 import typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit
 import typingsSlinky.vscodeLanguageserverTypes.mod.WorkspaceEdit
 import scala.scalajs.js
@@ -81,12 +85,16 @@ object protocolConverterMod extends js.Object {
     def asCommands_Array(items: js.Array[Command]): js.Array[typingsSlinky.vscode.mod.Command] = js.native
     def asCompletionItem(item: CompletionItem): default = js.native
     def asCompletionResult(): js.UndefOr[scala.Nothing] = js.native
-    def asCompletionResult(result: js.Array[CompletionItem]): js.UndefOr[js.Array[typingsSlinky.vscode.mod.CompletionItem] | CompletionList] = js.native
-    def asCompletionResult(result: typingsSlinky.vscodeLanguageserverTypes.mod.CompletionList): js.UndefOr[js.Array[typingsSlinky.vscode.mod.CompletionItem] | CompletionList] = js.native
+    def asCompletionResult(result: js.Array[CompletionItem]): js.UndefOr[
+        js.Array[typingsSlinky.vscode.mod.CompletionItem] | CompletionList[typingsSlinky.vscode.mod.CompletionItem]
+      ] = js.native
+    def asCompletionResult(result: typingsSlinky.vscodeLanguageserverTypes.mod.CompletionList): js.UndefOr[
+        js.Array[typingsSlinky.vscode.mod.CompletionItem] | CompletionList[typingsSlinky.vscode.mod.CompletionItem]
+      ] = js.native
     @JSName("asCompletionResult")
     def asCompletionResult_Array(result: js.Array[CompletionItem]): js.Array[typingsSlinky.vscode.mod.CompletionItem] = js.native
     @JSName("asCompletionResult")
-    def asCompletionResult_CompletionList(result: typingsSlinky.vscodeLanguageserverTypes.mod.CompletionList): CompletionList = js.native
+    def asCompletionResult_CompletionList(result: typingsSlinky.vscodeLanguageserverTypes.mod.CompletionList): CompletionList[typingsSlinky.vscode.mod.CompletionItem] = js.native
     def asDeclarationResult(): js.UndefOr[scala.Nothing] = js.native
     def asDeclarationResult(item: js.Array[DeclarationLink]): js.UndefOr[Declaration] = js.native
     def asDeclarationResult(item: typingsSlinky.vscodeLanguageserverTypes.mod.Declaration): Location | js.Array[Location] = js.native
@@ -102,6 +110,7 @@ object protocolConverterMod extends js.Object {
     def asDiagnostic(diagnostic: Diagnostic): typingsSlinky.vscode.mod.Diagnostic = js.native
     def asDiagnosticSeverity(): DiagnosticSeverity = js.native
     def asDiagnosticSeverity(value: Double): DiagnosticSeverity = js.native
+    def asDiagnosticTag(tag: DiagnosticTag): js.UndefOr[typingsSlinky.vscode.mod.DiagnosticTag] = js.native
     def asDiagnostics(diagnostics: js.Array[Diagnostic]): js.Array[typingsSlinky.vscode.mod.Diagnostic] = js.native
     def asDocumentHighlight(item: DocumentHighlight): typingsSlinky.vscode.mod.DocumentHighlight = js.native
     def asDocumentHighlightKind(item: Double): DocumentHighlightKind = js.native
@@ -144,10 +153,16 @@ object protocolConverterMod extends js.Object {
     def asRange(value: Range): typingsSlinky.vscode.mod.Range = js.native
     @JSName("asRange")
     def asRange_Union(value: Range): js.UndefOr[typingsSlinky.vscode.mod.Range] = js.native
+    def asRanges(values: js.Array[Range]): js.Array[typingsSlinky.vscode.mod.Range] = js.native
     def asReferences(): js.UndefOr[js.Array[Location]] = js.native
     def asReferences(values: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.Location]): js.UndefOr[js.Array[Location]] = js.native
     @JSName("asReferences")
     def asReferences_Array(values: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.Location]): js.Array[Location] = js.native
+    def asSelectionRange(selectionRange: SelectionRange): typingsSlinky.vscode.mod.SelectionRange = js.native
+    def asSelectionRanges(): js.UndefOr[scala.Nothing] = js.native
+    def asSelectionRanges(selectionRanges: js.Array[SelectionRange]): js.UndefOr[js.Array[typingsSlinky.vscode.mod.SelectionRange]] = js.native
+    @JSName("asSelectionRanges")
+    def asSelectionRanges_Array(selectionRanges: js.Array[SelectionRange]): js.Array[typingsSlinky.vscode.mod.SelectionRange] = js.native
     def asSignatureHelp(): js.UndefOr[scala.Nothing] = js.native
     def asSignatureHelp(item: SignatureHelp): js.UndefOr[typingsSlinky.vscode.mod.SignatureHelp] = js.native
     @JSName("asSignatureHelp")
@@ -157,6 +172,7 @@ object protocolConverterMod extends js.Object {
     def asSymbolInformation(item: SymbolInformation): typingsSlinky.vscode.mod.SymbolInformation = js.native
     def asSymbolInformation(item: SymbolInformation, uri: Uri): typingsSlinky.vscode.mod.SymbolInformation = js.native
     def asSymbolInformations(): js.UndefOr[scala.Nothing] = js.native
+    def asSymbolInformations(values: js.UndefOr[scala.Nothing], uri: Uri): js.UndefOr[scala.Nothing] = js.native
     def asSymbolInformations(values: js.Array[SymbolInformation]): js.UndefOr[js.Array[typingsSlinky.vscode.mod.SymbolInformation]] = js.native
     def asSymbolInformations(values: js.Array[SymbolInformation], uri: Uri): js.UndefOr[js.Array[typingsSlinky.vscode.mod.SymbolInformation]] = js.native
     def asSymbolInformations(values: Null, uri: Uri): js.UndefOr[scala.Nothing] = js.native
@@ -164,6 +180,12 @@ object protocolConverterMod extends js.Object {
     def asSymbolInformations_Array(values: js.Array[SymbolInformation]): js.Array[typingsSlinky.vscode.mod.SymbolInformation] = js.native
     @JSName("asSymbolInformations")
     def asSymbolInformations_Array(values: js.Array[SymbolInformation], uri: Uri): js.Array[typingsSlinky.vscode.mod.SymbolInformation] = js.native
+    def asSymbolKind(item: SymbolKind): typingsSlinky.vscode.mod.SymbolKind = js.native
+    def asSymbolTag(item: SymbolTag): typingsSlinky.vscode.mod.SymbolTag = js.native
+    def asSymbolTags(): js.UndefOr[scala.Nothing] = js.native
+    def asSymbolTags(items: js.Array[SymbolTag]): js.UndefOr[js.Array[typingsSlinky.vscode.mod.SymbolTag]] = js.native
+    @JSName("asSymbolTags")
+    def asSymbolTags_Array(items: js.Array[SymbolTag]): js.Array[typingsSlinky.vscode.mod.SymbolTag] = js.native
     def asTextEdit(): js.UndefOr[scala.Nothing] = js.native
     def asTextEdit(edit: TextEdit): js.UndefOr[typingsSlinky.vscode.mod.TextEdit] = js.native
     @JSName("asTextEdit")

@@ -25,17 +25,14 @@ object SHOWADDDIALOG {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSHOW_ADD_DIALOG(value: showAddDialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SHOW_ADD_DIALOG")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withSHOW_CONFIGURE_DIALOG(value: showConfigureDialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SHOW_CONFIGURE_DIALOG")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSHOW_ADD_DIALOG(value: showAddDialog): Self = this.set("SHOW_ADD_DIALOG", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSHOW_CONFIGURE_DIALOG(value: showConfigureDialog): Self = this.set("SHOW_CONFIGURE_DIALOG", value.asInstanceOf[js.Any])
   }
   
 }

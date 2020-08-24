@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.pyramid3dMod
 
-import typingsSlinky.highcharts.anon.TypeofHighcharts
+import typingsSlinky.highcharts.anon.TypeofHighchartsAddEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("highcharts/modules/pyramid3d", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(highcharts: TypeofHighcharts): Unit = js.native
+  def apply(highcharts: TypeofHighchartsAddEvent): Unit = js.native
 }
 

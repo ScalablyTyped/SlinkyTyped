@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BreadcrumbIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BreadcrumbIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BreadcrumbIcon")
   @js.native
   object component extends js.Object
   

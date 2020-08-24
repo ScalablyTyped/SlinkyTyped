@@ -1,7 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.Body
+import typingsSlinky.firefoxWebextBrowser.anon.AllowHttpErrors
 import typingsSlinky.firefoxWebextBrowser.anon.CanResume
 import typingsSlinky.firefoxWebextBrowser.anon.Size
 import typingsSlinky.firefoxWebextBrowser.browser.downloads.DownloadItem
@@ -53,7 +53,7 @@ object downloads extends js.Object {
     * strings are not guaranteed to remain backwards compatible between releases. You must not parse it.
     * @param options What to download and how.
     */
-  def download(options: Body): js.Promise[Double] = js.native
+  def download(options: AllowHttpErrors): js.Promise[Double] = js.native
   /**
     * Initiate dragging the file to another application.
     * @deprecated Unsupported on Firefox at this time.

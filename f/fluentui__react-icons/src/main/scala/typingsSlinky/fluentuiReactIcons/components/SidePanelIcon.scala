@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SidePanelIcon {
-  @JSImport("@fluentui/react-icons/lib/components/SidePanelIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "SidePanelIcon")
   @js.native
   object component extends js.Object
   

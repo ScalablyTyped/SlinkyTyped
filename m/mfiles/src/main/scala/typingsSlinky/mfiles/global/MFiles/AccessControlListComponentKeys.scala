@@ -1,7 +1,6 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IAccessControlListComponentKey
 import typingsSlinky.mfiles.IAccessControlListComponentKeys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,14 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.AccessControlListComponentKeys")
 @js.native
-class AccessControlListComponentKeys () extends IAccessControlListComponentKeys {
-  /* CompleteClass */
-  override val Count: Double = js.native
-  /* CompleteClass */
-  override def Clone(): IAccessControlListComponentKeys = js.native
-  /* CompleteClass */
-  override def Item(Index: Double): IAccessControlListComponentKey = js.native
-}
+class AccessControlListComponentKeys () extends IAccessControlListComponentKeys
 
 @JSGlobal("MFiles.AccessControlListComponentKeys")
 @js.native

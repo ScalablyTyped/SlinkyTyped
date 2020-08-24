@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object M {
   type AutocompleteData = org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Null]
-  type CharacterCounter = typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]]
-  type Parallax = typingsSlinky.materializeCss.M.Component[typingsSlinky.materializeCss.M.ParallaxOptions]
-  type Range = typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]]
-  type ScrollSpy = typingsSlinky.materializeCss.M.Component[typingsSlinky.materializeCss.M.ScrollSpyOptions]
+  type CharacterCounter = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<undefined> */ js.Any
+  type Parallax = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<ParallaxOptions> */ js.Any
+  type Range = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<undefined> */ js.Any
+  type ScrollSpy = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<ScrollSpyOptions> */ js.Any
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.webpackAssetsManifest.mod
 
+import typingsSlinky.std.Plugin
 import typingsSlinky.std.ProxyHandler
-import typingsSlinky.webpack.mod.Plugin
 import typingsSlinky.webpackAssetsManifest.anon.AfterOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

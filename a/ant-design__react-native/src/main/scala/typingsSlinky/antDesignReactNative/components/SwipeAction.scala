@@ -4,20 +4,19 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.swipeActionMod.SwipeActionProps
 import typingsSlinky.antDesignReactNative.swipeActionMod.SwipeoutButtonProps
-import typingsSlinky.antDesignReactNative.swipeActionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SwipeAction {
-  @JSImport("@ant-design/react-native/lib/swipe-action", JSImport.Default)
+  @JSImport("@ant-design/react-native", "SwipeAction")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.SwipeAction] {
     @scala.inline
     def autoClose(value: Boolean): this.type = set("autoClose", value.asInstanceOf[js.Any])
     @scala.inline
@@ -29,6 +28,8 @@ object SwipeAction {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def leftVarargs(value: SwipeoutButtonProps*): this.type = set("left", js.Array(value :_*))
+    @scala.inline
     def left(value: js.Array[SwipeoutButtonProps]): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline
     def onClose(value: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit): this.type = set("onClose", js.Any.fromFunction3(value))
@@ -38,6 +39,8 @@ object SwipeAction {
     def openLeft(value: Boolean): this.type = set("openLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def openRight(value: Boolean): this.type = set("openRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightVarargs(value: SwipeoutButtonProps*): this.type = set("right", js.Array(value :_*))
     @scala.inline
     def right(value: js.Array[SwipeoutButtonProps]): this.type = set("right", value.asInstanceOf[js.Any])
     @scala.inline

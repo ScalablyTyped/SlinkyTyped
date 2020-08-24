@@ -13,6 +13,7 @@ package object rekognitionMod {
   */
   type Attribute = typingsSlinky.awsSdk.rekognitionMod._Attribute | java.lang.String
   type Attributes = js.Array[typingsSlinky.awsSdk.rekognitionMod.Attribute]
+  type AudioMetadataList = js.Array[typingsSlinky.awsSdk.rekognitionMod.AudioMetadata]
   type Boolean = scala.Boolean
   type BoundingBoxHeight = scala.Double
   type BoundingBoxWidth = scala.Double
@@ -230,6 +231,16 @@ package object rekognitionMod {
   type S3ObjectName = java.lang.String
   type S3ObjectVersion = java.lang.String
   type SNSTopicArn = java.lang.String
+  type SegmentConfidence = scala.Double
+  type SegmentDetections = js.Array[typingsSlinky.awsSdk.rekognitionMod.SegmentDetection]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TECHNICAL_CUE
+    - typingsSlinky.awsSdk.awsSdkStrings.SHOT
+    - java.lang.String
+  */
+  type SegmentType = typingsSlinky.awsSdk.rekognitionMod._SegmentType | java.lang.String
+  type SegmentTypes = js.Array[typingsSlinky.awsSdk.rekognitionMod.SegmentType]
+  type SegmentTypesInfo = js.Array[typingsSlinky.awsSdk.rekognitionMod.SegmentTypeInfo]
   type StatusMessage = java.lang.String
   type StreamProcessorArn = java.lang.String
   type StreamProcessorList = js.Array[typingsSlinky.awsSdk.rekognitionMod.StreamProcessor]
@@ -244,6 +255,13 @@ package object rekognitionMod {
   */
   type StreamProcessorStatus = typingsSlinky.awsSdk.rekognitionMod._StreamProcessorStatus | java.lang.String
   type String = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ColorBars
+    - typingsSlinky.awsSdk.awsSdkStrings.EndCredits
+    - typingsSlinky.awsSdk.awsSdkStrings.BlackFrames
+    - java.lang.String
+  */
+  type TechnicalCueType = typingsSlinky.awsSdk.rekognitionMod._TechnicalCueType | java.lang.String
   type TextDetectionList = js.Array[typingsSlinky.awsSdk.rekognitionMod.TextDetection]
   type TextDetectionResults = js.Array[typingsSlinky.awsSdk.rekognitionMod.TextDetectionResult]
   /* Rewritten from type alias, can be one of: 
@@ -252,6 +270,7 @@ package object rekognitionMod {
     - java.lang.String
   */
   type TextTypes = typingsSlinky.awsSdk.rekognitionMod._TextTypes | java.lang.String
+  type Timecode = java.lang.String
   type Timestamp = scala.Double
   type UInteger = scala.Double
   type ULong = scala.Double
@@ -267,6 +286,7 @@ package object rekognitionMod {
     - java.lang.String
   */
   type VideoJobStatus = typingsSlinky.awsSdk.rekognitionMod._VideoJobStatus | java.lang.String
+  type VideoMetadataList = js.Array[typingsSlinky.awsSdk.rekognitionMod.VideoMetadata]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2016-06-27`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

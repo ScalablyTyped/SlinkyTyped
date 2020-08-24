@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.datepickerMod
 
 import org.scalajs.dom.raw.KeyboardEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.Date
 import typingsSlinky.baseui.anon.DateDate
 import typingsSlinky.baseui.anon.EventEvent
@@ -30,10 +30,10 @@ class Calendar ()
   def onDayMouseLeave(data: EventEvent): Unit = js.native
   def onDayMouseOver(data: EventEvent): Unit = js.native
   def onKeyDown(event: KeyboardEvent): Unit = js.native
-  def renderCalendarHeader(date: js.Date, order: Double): TagMod[Any] = js.native
-  def renderMonths(): js.Array[TagMod[Any]] = js.native
-  def renderQuickSelect(): TagMod[Any] = js.native
-  def renderTimeSelect(value: js.Date, onChange: js.Function1[/* args */ js.Any, _]): TagMod[Any] = js.native
+  def renderCalendarHeader(date: js.Date, order: Double): ReactElement = js.native
+  def renderMonths(): js.Array[ReactElement] = js.native
+  def renderQuickSelect(): ReactElement = js.native
+  def renderTimeSelect(value: js.Date, onChange: js.Function1[/* args */ js.Any, _]): ReactElement = js.native
   def setHighlightedDate(date: js.Date): Unit = js.native
 }
 

@@ -8,6 +8,7 @@ import typingsSlinky.mongodb.mod.DefaultSchema
 import typingsSlinky.mongodb.mod.SessionOptions
 import typingsSlinky.mongoose.mod.Collection
 import typingsSlinky.mongoose.mod.ConnectionOptions
+import typingsSlinky.mongoose.mod.ConnectionUseDbOptions
 import typingsSlinky.mongoose.mod.Connection_
 import typingsSlinky.mongoose.mod.Document
 import typingsSlinky.mongoose.mod.Model_
@@ -17,7 +18,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined mongoose.mongoose.Connection & {  then  :std.Promise<mongoose.mongoose.Connection>['then'],   catch  :std.Promise<mongoose.mongoose.Connection>['catch']} */
+/* Inlined mongoose.mongoose.Connection & {  then :std.Promise<mongoose.mongoose.Connection>['then'],   catch :std.Promise<mongoose.mongoose.Connection>['catch']} */
 @js.native
 trait ConnectionthenPromiseConn extends js.Object {
   @JSName("catch")
@@ -56,6 +57,7 @@ trait ConnectionthenPromiseConn extends js.Object {
   /** Closes the connection */
   def close(): js.Promise[Unit] = js.native
   def close(callback: js.Function1[/* err */ js.Any, Unit]): js.Promise[Unit] = js.native
+  def close(force: js.UndefOr[scala.Nothing], callback: js.Function1[/* err */ js.Any, Unit]): js.Promise[Unit] = js.native
   def close(force: Boolean): js.Promise[Unit] = js.native
   def close(force: Boolean, callback: js.Function1[/* err */ js.Any, Unit]): js.Promise[Unit] = js.native
   /**
@@ -118,12 +120,15 @@ trait ConnectionthenPromiseConn extends js.Object {
     * @returns The compiled model
     */
   def model[T /* <: Document */](name: String): Model_[T, js.Object] = js.native
+  def model[T /* <: Document */](name: String, schema: js.UndefOr[scala.Nothing], collection: String): Model_[T, js.Object] = js.native
   def model[T /* <: Document */](name: String, schema: Schema[_]): Model_[T, js.Object] = js.native
   def model[T /* <: Document */](name: String, schema: Schema[_], collection: String): Model_[T, js.Object] = js.native
   /** Returns an array of model names created on this connection. */
   def modelNames(): js.Array[String] = js.native
   @JSName("model")
   def model_T_DocumentU_Model_TObject_U[T /* <: Document */, U /* <: Model_[T, js.Object] */](name: String): U = js.native
+  @JSName("model")
+  def model_T_DocumentU_Model_TObject_U[T /* <: Document */, U /* <: Model_[T, js.Object] */](name: String, schema: js.UndefOr[scala.Nothing], collection: String): U = js.native
   @JSName("model")
   def model_T_DocumentU_Model_TObject_U[T /* <: Document */, U /* <: Model_[T, js.Object] */](name: String, schema: Schema[_]): U = js.native
   @JSName("model")
@@ -166,9 +171,17 @@ trait ConnectionthenPromiseConn extends js.Object {
   def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def setMaxListeners(n: Double): this.type = js.native
   def startSession(): js.Promise[ClientSession] = js.native
+  def startSession(
+    options: js.UndefOr[scala.Nothing],
+    cb: js.Function2[/* err */ js.Any, /* session */ ClientSession, Unit]
+  ): js.Promise[ClientSession] = js.native
   def startSession(options: SessionOptions): js.Promise[ClientSession] = js.native
   def startSession(options: SessionOptions, cb: js.Function2[/* err */ js.Any, /* session */ ClientSession, Unit]): js.Promise[ClientSession] = js.native
   def `then`[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
+  def `then`[TResult1, TResult2](
+    onfulfilled: js.UndefOr[scala.Nothing],
+    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
+  ): js.Promise[TResult1 | TResult2] = js.native
   def `then`[TResult1, TResult2](onfulfilled: js.Function1[/* value */ Connection_, TResult1 | js.Thenable[TResult1]]): js.Promise[TResult1 | TResult2] = js.native
   def `then`[TResult1, TResult2](
     onfulfilled: js.Function1[/* value */ Connection_, TResult1 | js.Thenable[TResult1]],
@@ -178,8 +191,10 @@ trait ConnectionthenPromiseConn extends js.Object {
   /**
     * Switches to a different database using the same connection pool.
     * @param name The database name
+    * @param options Additional options
     * @returns New Connection Object
     */
   def useDb(name: String): Connection_ = js.native
+  def useDb(name: String, options: ConnectionUseDbOptions): Connection_ = js.native
 }
 

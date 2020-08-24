@@ -56,107 +56,44 @@ object PackedIntVector {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdjustValuesBelow(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustValuesBelow")(js.Any.fromFunction3(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDeleteAt(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAt")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setAdjustValuesBelow(value: (Double, Double, Double) => Unit): Self = this.set("adjustValuesBelow", js.Any.fromFunction3(value))
     @scala.inline
-    def withGetValue(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setDeleteAt(value: (Double, Double) => Unit): Self = this.set("deleteAt", js.Any.fromFunction2(value))
     @scala.inline
-    def withGrowBuffer(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growBuffer")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetValue(value: (Double, Double) => Double): Self = this.set("getValue", js.Any.fromFunction2(value))
     @scala.inline
-    def withInsertAt(value: (Double, js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAt")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGrowBuffer(value: () => js.Any): Self = this.set("growBuffer", js.Any.fromFunction0(value))
     @scala.inline
-    def withMColumns(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInsertAt(value: (Double, js.Array[Double]) => Unit): Self = this.set("insertAt", js.Any.fromFunction2(value))
     @scala.inline
-    def withMRowGapLength(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRowGapLength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMColumns(value: js.Any): Self = this.set("mColumns", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRowGapStart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRowGapStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRowGapLength(value: js.Any): Self = this.set("mRowGapLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMRows(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mRows")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRowGapStart(value: js.Any): Self = this.set("mRowGapStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMValueGap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mValueGap")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMRows(value: js.Any): Self = this.set("mRows", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mValues")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMValueGap(value: js.Any): Self = this.set("mValueGap", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMoveRowGapTo(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveRowGapTo")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMValues(value: js.Any): Self = this.set("mValues", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMoveValueGapTo(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveValueGapTo")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMoveRowGapTo(value: js.Any => js.Any): Self = this.set("moveRowGapTo", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetValue(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setMoveValueGapTo(value: (js.Any, js.Any) => js.Any): Self = this.set("moveValueGapTo", js.Any.fromFunction2(value))
     @scala.inline
-    def withSetValueInternal(value: (js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setValueInternal")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setSetValue(value: (Double, Double, Double) => Unit): Self = this.set("setValue", js.Any.fromFunction3(value))
     @scala.inline
-    def withSize(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSetValueInternal(value: (js.Any, js.Any, js.Any) => js.Any): Self = this.set("setValueInternal", js.Any.fromFunction3(value))
     @scala.inline
-    def withWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setSize(value: () => Double): Self = this.set("size", js.Any.fromFunction0(value))
+    @scala.inline
+    def setWidth(value: () => Double): Self = this.set("width", js.Any.fromFunction0(value))
   }
   
 }

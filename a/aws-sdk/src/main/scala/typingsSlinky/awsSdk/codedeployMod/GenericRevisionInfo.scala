@@ -30,20 +30,44 @@ trait GenericRevisionInfo extends js.Object {
 
 object GenericRevisionInfo {
   @scala.inline
-  def apply(
-    deploymentGroups: DeploymentGroupsList = null,
-    description: Description = null,
-    firstUsedTime: js.Date = null,
-    lastUsedTime: js.Date = null,
-    registerTime: js.Date = null
-  ): GenericRevisionInfo = {
+  def apply(): GenericRevisionInfo = {
     val __obj = js.Dynamic.literal()
-    if (deploymentGroups != null) __obj.updateDynamic("deploymentGroups")(deploymentGroups.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (firstUsedTime != null) __obj.updateDynamic("firstUsedTime")(firstUsedTime.asInstanceOf[js.Any])
-    if (lastUsedTime != null) __obj.updateDynamic("lastUsedTime")(lastUsedTime.asInstanceOf[js.Any])
-    if (registerTime != null) __obj.updateDynamic("registerTime")(registerTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenericRevisionInfo]
   }
+  @scala.inline
+  implicit class GenericRevisionInfoOps[Self <: GenericRevisionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDeploymentGroupsVarargs(value: DeploymentGroupName*): Self = this.set("deploymentGroups", js.Array(value :_*))
+    @scala.inline
+    def setDeploymentGroups(value: DeploymentGroupsList): Self = this.set("deploymentGroups", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeploymentGroups: Self = this.set("deploymentGroups", js.undefined)
+    @scala.inline
+    def setDescription(value: Description): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setFirstUsedTime(value: js.Date): Self = this.set("firstUsedTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFirstUsedTime: Self = this.set("firstUsedTime", js.undefined)
+    @scala.inline
+    def setLastUsedTime(value: js.Date): Self = this.set("lastUsedTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLastUsedTime: Self = this.set("lastUsedTime", js.undefined)
+    @scala.inline
+    def setRegisterTime(value: js.Date): Self = this.set("registerTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRegisterTime: Self = this.set("registerTime", js.undefined)
+  }
+  
 }
 

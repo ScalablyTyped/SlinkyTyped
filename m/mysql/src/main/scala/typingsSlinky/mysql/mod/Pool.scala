@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Pool extends EscapeFunctions {
-  var config: PoolConfig = js.native
+  var config: PoolActualConfig = js.native
   @JSName("query")
   var query_Original: QueryFunction = js.native
   def acquireConnection(
@@ -70,6 +70,8 @@ trait Pool extends EscapeFunctions {
   def query(options: String, values: js.Any, callback: queryCallback): Query = js.native
   def query(options: QueryOptions): Query = js.native
   def query(options: QueryOptions, callback: queryCallback): Query = js.native
+  def query(options: QueryOptions, values: js.Any): Query = js.native
+  def query(options: QueryOptions, values: js.Any, callback: queryCallback): Query = js.native
   def query(query: Query): Query = js.native
   def releaseConnection(connection: PoolConnection): Unit = js.native
 }

@@ -10,26 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Bookmark")
 @js.native
 class Bookmark ()
-  extends typingsSlinky.devexpressWeb.Bookmark {
-  /**
-    * Gets the text buffer interval occupied by the current bookmark element.
-    */
-  /* CompleteClass */
-  override val interval: typingsSlinky.devexpressWeb.Interval = js.native
-  /**
-    * Gets the bookmark's length.
-    */
-  /* CompleteClass */
-  override val length: Double = js.native
-  /**
-    * Gets the name of a bookmark in the document.
-    */
-  /* CompleteClass */
-  override val name: String = js.native
-  /**
-    * Gets the bookmark's start position in a document.
-    */
-  /* CompleteClass */
-  override val start: Double = js.native
-}
+  extends typingsSlinky.devexpressWeb.Bookmark
 

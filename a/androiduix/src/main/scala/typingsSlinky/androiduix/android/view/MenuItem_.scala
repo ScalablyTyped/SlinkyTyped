@@ -83,179 +83,68 @@ object MenuItem_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetActionView(value: () => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActionView")(js.Any.fromFunction0(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withGetGroupId(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroupId")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetActionView(value: () => View): Self = this.set("getActionView", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetIcon(value: () => Drawable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIcon")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetGroupId(value: () => Double): Self = this.set("getGroupId", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetIntent(value: () => Intent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIntent")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetIcon(value: () => Drawable): Self = this.set("getIcon", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetItemId(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemId")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetIntent(value: () => Intent): Self = this.set("getIntent", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetOrder(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrder")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetItemId(value: () => Double): Self = this.set("getItemId", js.Any.fromFunction0(value))
     @scala.inline
-    def withGetTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetOrder(value: () => Double): Self = this.set("getOrder", js.Any.fromFunction0(value))
     @scala.inline
-    def withInvoke(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoke")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setGetTitle(value: () => String): Self = this.set("getTitle", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setInvoke(value: () => Boolean): Self = this.set("invoke", js.Any.fromFunction0(value))
     @scala.inline
-    def withIsVisible(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
-        ret
-    }
+    def setIsEnabled(value: () => Boolean): Self = this.set("isEnabled", js.Any.fromFunction0(value))
     @scala.inline
-    def withMActionView(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mActionView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsVisible(value: () => Boolean): Self = this.set("isVisible", js.Any.fromFunction0(value))
     @scala.inline
-    def withMCategoryOrder(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCategoryOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMActionView(value: js.Any): Self = this.set("mActionView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMClickListener(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mClickListener")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCategoryOrder(value: js.Any): Self = this.set("mCategoryOrder", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMEnable(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mEnable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMClickListener(value: js.Any): Self = this.set("mClickListener", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMGroup(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMEnable(value: js.Any): Self = this.set("mEnable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIconDrawable(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIconDrawable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMGroup(value: js.Any): Self = this.set("mGroup", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMId(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mId")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIconDrawable(value: js.Any): Self = this.set("mIconDrawable", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMIntent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mIntent")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMId(value: js.Any): Self = this.set("mId", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMenu(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMIntent(value: js.Any): Self = this.set("mIntent", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOrdering(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOrdering")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMenu(value: js.Any): Self = this.set("mMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTitle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOrdering(value: js.Any): Self = this.set("mOrdering", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMVisible(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTitle(value: js.Any): Self = this.set("mTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetActionView(value: View => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setActionView")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMVisible(value: js.Any): Self = this.set("mVisible", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetEnabled(value: Boolean => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetActionView(value: View => MenuItem): Self = this.set("setActionView", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetIcon(value: Drawable => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIcon")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetEnabled(value: Boolean => MenuItem): Self = this.set("setEnabled", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetIntent(value: Intent => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIntent")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetIcon(value: Drawable => MenuItem): Self = this.set("setIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetOnMenuItemClickListener(value: OnMenuItemClickListener => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnMenuItemClickListener")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetIntent(value: Intent => MenuItem): Self = this.set("setIntent", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetTitle(value: String => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetOnMenuItemClickListener(value: OnMenuItemClickListener => MenuItem): Self = this.set("setOnMenuItemClickListener", js.Any.fromFunction1(value))
     @scala.inline
-    def withSetVisible(value: Boolean => MenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisible")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSetTitle(value: String => MenuItem): Self = this.set("setTitle", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetVisible(value: Boolean => MenuItem): Self = this.set("setVisible", js.Any.fromFunction1(value))
   }
   
 }

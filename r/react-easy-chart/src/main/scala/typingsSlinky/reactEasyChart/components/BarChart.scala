@@ -43,6 +43,8 @@ object BarChart {
     @scala.inline
     def interpolate(value: String): this.type = set("interpolate", value.asInstanceOf[js.Any])
     @scala.inline
+    def lineDataVarargs(value: LineData*): this.type = set("lineData", js.Array(value :_*))
+    @scala.inline
     def lineData(value: js.Array[LineData]): this.type = set("lineData", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: Bottom): this.type = set("margin", value.asInstanceOf[js.Any])
@@ -57,6 +59,8 @@ object BarChart {
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
     @scala.inline
+    def xDomainRangeVarargs(value: (js.Date | Double | String)*): this.type = set("xDomainRange", js.Array(value :_*))
+    @scala.inline
     def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
     @scala.inline
     def xTickNumber(value: Double): this.type = set("xTickNumber", value.asInstanceOf[js.Any])
@@ -66,6 +70,8 @@ object BarChart {
     def y2Type(value: time | text | linear): this.type = set("y2Type", value.asInstanceOf[js.Any])
     @scala.inline
     def yAxisOrientRight(value: Boolean): this.type = set("yAxisOrientRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yDomainRangeVarargs(value: Double*): this.type = set("yDomainRange", js.Array(value :_*))
     @scala.inline
     def yDomainRange(value: js.Array[Double]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
     @scala.inline

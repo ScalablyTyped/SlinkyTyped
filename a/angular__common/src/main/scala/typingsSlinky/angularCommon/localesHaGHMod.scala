@@ -1,6 +1,6 @@
 package typingsSlinky.angularCommon
 
-import typingsSlinky.angularCommon.anon.GHSJPY
+import typingsSlinky.angularCommon.anon.GHSNGN
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object localesHaGHMod extends js.Object {
   val default: js.Array[
     js.UndefOr[
-      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | GHSJPY
+      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | GHSNGN
     ]
   ] = js.native
 }

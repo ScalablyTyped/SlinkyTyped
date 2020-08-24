@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "CompilerConfig")
 @js.native
 class CompilerConfig ()
-  extends typingsSlinky.angularCompiler.publicApiMod.CompilerConfig {
+  extends typingsSlinky.angularCompiler.compilerMod.CompilerConfig {
   def this(hasDefaultEncapsulationUseJitJitDevModeMissingTranslationPreserveWhitespacesStrictInjectionParameters: DefaultEncapsulation) = this()
 }
 

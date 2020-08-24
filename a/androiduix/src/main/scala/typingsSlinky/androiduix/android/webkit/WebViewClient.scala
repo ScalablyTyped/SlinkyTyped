@@ -23,17 +23,14 @@ object WebViewClient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnPageFinished(value: (WebView, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageFinished")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withOnReceivedTitle(value: (WebView, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReceivedTitle")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setOnPageFinished(value: (WebView, String) => Unit): Self = this.set("onPageFinished", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnReceivedTitle(value: (WebView, String) => Unit): Self = this.set("onReceivedTitle", js.Any.fromFunction2(value))
   }
   
 }

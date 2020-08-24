@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "isstream"
-version := "0.1-dt-20200515Z-d6c5cf"
-scalaVersion := "2.13.2"
+version := "0.1-dt-20200515Z-fc493f"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

@@ -5,18 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Context = org.scalablytyped.runtime.StringDictionary[js.Any]
-  type ErrorHandler[C /* <: typingsSlinky.universalRouter.mod.Context */, R] = js.Function2[
-    /* error */ typingsSlinky.universalRouter.anon.Errorstatusnumber, 
-    /* context */ C with (typingsSlinky.universalRouter.mod.RouteContext[C, R]), 
-    typingsSlinky.universalRouter.mod.Result[R]
+  type ErrorHandler[R] = js.Function2[
+    /* error */ typingsSlinky.universalRouter.mod.RouteError, 
+    /* context */ typingsSlinky.universalRouter.mod.ResolveContext, 
+    typingsSlinky.universalRouter.mod.RouteResult[R]
   ]
-  type QueryParams = org.scalablytyped.runtime.StringDictionary[java.lang.String | js.Array[java.lang.String]]
-  type ResolveRoute[C /* <: typingsSlinky.universalRouter.mod.Context */, R] = js.Function2[
-    /* context */ C with (typingsSlinky.universalRouter.mod.RouteContext[C, R]), 
-    /* params */ typingsSlinky.universalRouter.mod.QueryParams, 
-    typingsSlinky.universalRouter.mod.Result[R]
+  type ResolveRoute[R, C /* <: typingsSlinky.universalRouter.mod.RouterContext */] = js.Function2[
+    /* context */ typingsSlinky.universalRouter.mod.RouteContext[R, C], 
+    /* params */ typingsSlinky.universalRouter.mod.RouteParams, 
+    typingsSlinky.universalRouter.mod.RouteResult[R]
   ]
-  type Result[T] = T | (js.Promise[T | scala.Unit]) | scala.Unit
-  type Routes[C /* <: typingsSlinky.universalRouter.mod.Context */, R] = js.Array[typingsSlinky.universalRouter.mod.Route[C, R]]
+  type RouteParams = org.scalablytyped.runtime.StringDictionary[java.lang.String | js.Array[java.lang.String]]
+  type RouteResult[T] = js.UndefOr[T | scala.Null | (js.Promise[js.UndefOr[T | scala.Null]])]
+  type RouterContext = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type Routes[R, C /* <: typingsSlinky.universalRouter.mod.RouterContext */] = js.Array[typingsSlinky.universalRouter.mod.Route[R, C]]
 }

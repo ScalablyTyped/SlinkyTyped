@@ -1,5 +1,6 @@
 package typingsSlinky.ensureError.mod
 
+import typingsSlinky.ensureError.anon.ErrorWithStackError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +25,6 @@ object ^ extends js.Object {
   //=> [NonError: 10]
   ```
   */
-  def apply[T](input: T): IfAny[T, js.Error, NonError | T] = js.native
+  def apply[T](input: T): IfAny[T, ErrorWithStackError, NonError | ErrorWithStack[T]] = js.native
 }
 

@@ -38,6 +38,7 @@ trait Int8ArrayConstructor
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
   def from(arrayLike: js.Iterable[Double]): js.typedarray.Int8Array = js.native
+  def from(arrayLike: js.Iterable[Double], mapfn: js.UndefOr[scala.Nothing], thisArg: js.Any): js.typedarray.Int8Array = js.native
   def from(arrayLike: js.Iterable[Double], mapfn: js.Function2[/* v */ Double, /* k */ Double, Double]): js.typedarray.Int8Array = js.native
   def from(
     arrayLike: js.Iterable[Double],

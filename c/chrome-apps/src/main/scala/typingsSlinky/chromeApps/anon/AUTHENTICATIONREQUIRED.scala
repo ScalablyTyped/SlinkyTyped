@@ -37,35 +37,20 @@ object AUTHENTICATIONREQUIRED {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAUTHENTICATION_REQUIRED(value: authentication_required_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AUTHENTICATION_REQUIRED")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDISABLED(value: disabled__): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DISABLED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setAUTHENTICATION_REQUIRED(value: authentication_required_): Self = this.set("AUTHENTICATION_REQUIRED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withINITIALIZING(value: initializing_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("INITIALIZING")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDISABLED(value: disabled__): Self = this.set("DISABLED", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRUNNING(value: running_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RUNNING")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setINITIALIZING(value: initializing_): Self = this.set("INITIALIZING", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTEMPORARY_UNAVAILABLE(value: temporary_unavailable_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TEMPORARY_UNAVAILABLE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRUNNING(value: running_): Self = this.set("RUNNING", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTEMPORARY_UNAVAILABLE(value: temporary_unavailable_): Self = this.set("TEMPORARY_UNAVAILABLE", value.asInstanceOf[js.Any])
   }
   
 }

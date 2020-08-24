@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs")
 @js.native
 class DataRequestedEventArgs ()
-  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs {
-  /* CompleteClass */
-  override var request: typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataRequest = js.native
-}
+  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs
 

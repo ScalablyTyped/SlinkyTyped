@@ -17,13 +17,15 @@ object Grid {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.Grid[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.Grid[T]] {
     @scala.inline
     def belowChart(value: Boolean): this.type = set("belowChart", value.asInstanceOf[js.Any])
     @scala.inline
     def direction(value: GridDirection): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
     def svg(value: PartialLineProps): this.type = set("svg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ticksVarargs(value: T*): this.type = set("ticks", js.Array(value :_*))
     @scala.inline
     def ticks(value: js.Array[T]): this.type = set("ticks", value.asInstanceOf[js.Any])
     @scala.inline

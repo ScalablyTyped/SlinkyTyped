@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "filesize-parser"
-version := "1.5-dt-20191024Z-c5f894"
-scalaVersion := "2.13.2"
+version := "1.5-dt-20191024Z-f72c39"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

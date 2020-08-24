@@ -26,23 +26,16 @@ object SelectionResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withEntry(value: FileEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSuccess(value: Boolean): Self = this.set("success", value.asInstanceOf[js.Any])
     @scala.inline
-    def withEntryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(null)
-        ret
-    }
+    def setEntry(value: FileEntry): Self = this.set("entry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEntryNull: Self = this.set("entry", null)
   }
   
 }

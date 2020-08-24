@@ -2,13 +2,14 @@ package typingsSlinky.wordpressEditPost.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.wordpressEditPost.anon.OmitPropsname
 import typingsSlinky.wordpressEditPost.pluginPrePublishPanelMod.PluginPrePublishPanel.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PluginPrePublishPanel {
-  @JSImport("@wordpress/edit-post/components/sidebar/plugin-pre-publish-panel", JSImport.Default)
+  @JSImport("@wordpress/edit-post", "PluginPrePublishPanel")
   @js.native
   object component extends js.Object
   
@@ -26,5 +27,14 @@ object PluginPrePublishPanel {
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: PluginPrePublishPanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Slot {
+    @JSImport("@wordpress/edit-post", "PluginPrePublishPanel.Slot")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: OmitPropsname): SharedBuilder_OmitPropsname_1548854944 = new SharedBuilder_OmitPropsname_1548854944(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Slot.type): SharedBuilder_OmitPropsname_1548854944 = new SharedBuilder_OmitPropsname_1548854944(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

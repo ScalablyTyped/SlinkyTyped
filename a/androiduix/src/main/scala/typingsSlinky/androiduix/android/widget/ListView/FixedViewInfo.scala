@@ -31,29 +31,18 @@ object FixedViewInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_ListView_this(value: typingsSlinky.androiduix.android.widget.ListView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_ListView_this")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_ListView_this(value: typingsSlinky.androiduix.android.widget.ListView): Self = this.set("_ListView_this", value.asInstanceOf[js.Any])
     @scala.inline
-    def withIsSelectable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectable")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def withView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsSelectable(value: Boolean): Self = this.set("isSelectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setView(value: View): Self = this.set("view", value.asInstanceOf[js.Any])
   }
   
 }

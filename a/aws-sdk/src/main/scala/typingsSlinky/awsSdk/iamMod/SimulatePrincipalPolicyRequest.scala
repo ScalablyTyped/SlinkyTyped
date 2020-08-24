@@ -27,7 +27,7 @@ trait SimulatePrincipalPolicyRequest extends js.Object {
     */
   var MaxItems: js.UndefOr[maxItemsType] = js.native
   /**
-    * The IAM permissions boundary policy to simulate. The permissions boundary sets the maximum permissions that the entity can have. You can input only one permissions boundary when you pass a policy to this operation. An IAM entity can only have one permissions boundary in effect at a time. For example, if a permissions boundary is attached to an entity and you pass in a different permissions boundary policy using this parameter, then the new permission boundary policy is used for the simulation. For more information about permissions boundaries, see Permissions Boundaries for IAM Entities in the IAM User Guide. The policy input is specified as a string containing the complete, valid JSON text of a permissions boundary policy. The regex pattern used to validate this parameter is a string of characters consisting of the following:   Any printable ASCII character ranging from the space character (\\u0020) through the end of the ASCII character range   The printable characters in the Basic Latin and Latin-1 Supplement character set (through \\u00FF)   The special characters tab (\\u0009), line feed (\\u000A), and carriage return (\\u000D)  
+    * The IAM permissions boundary policy to simulate. The permissions boundary sets the maximum permissions that the entity can have. You can input only one permissions boundary when you pass a policy to this operation. An IAM entity can only have one permissions boundary in effect at a time. For example, if a permissions boundary is attached to an entity and you pass in a different permissions boundary policy using this parameter, then the new permissions boundary policy is used for the simulation. For more information about permissions boundaries, see Permissions Boundaries for IAM Entities in the IAM User Guide. The policy input is specified as a string containing the complete, valid JSON text of a permissions boundary policy. The regex pattern used to validate this parameter is a string of characters consisting of the following:   Any printable ASCII character ranging from the space character (\\u0020) through the end of the ASCII character range   The printable characters in the Basic Latin and Latin-1 Supplement character set (through \\u00FF)   The special characters tab (\\u0009), line feed (\\u000A), and carriage return (\\u000D)  
     */
   var PermissionsBoundaryPolicyInputList: js.UndefOr[SimulationPolicyListType] = js.native
   /**
@@ -58,32 +58,76 @@ trait SimulatePrincipalPolicyRequest extends js.Object {
 
 object SimulatePrincipalPolicyRequest {
   @scala.inline
-  def apply(
-    ActionNames: ActionNameListType,
-    PolicySourceArn: arnType,
-    CallerArn: ResourceNameType = null,
-    ContextEntries: ContextEntryListType = null,
-    Marker: markerType = null,
-    MaxItems: js.UndefOr[maxItemsType] = js.undefined,
-    PermissionsBoundaryPolicyInputList: SimulationPolicyListType = null,
-    PolicyInputList: SimulationPolicyListType = null,
-    ResourceArns: ResourceNameListType = null,
-    ResourceHandlingOption: ResourceHandlingOptionType = null,
-    ResourceOwner: ResourceNameType = null,
-    ResourcePolicy: policyDocumentType = null
-  ): SimulatePrincipalPolicyRequest = {
+  def apply(ActionNames: ActionNameListType, PolicySourceArn: arnType): SimulatePrincipalPolicyRequest = {
     val __obj = js.Dynamic.literal(ActionNames = ActionNames.asInstanceOf[js.Any], PolicySourceArn = PolicySourceArn.asInstanceOf[js.Any])
-    if (CallerArn != null) __obj.updateDynamic("CallerArn")(CallerArn.asInstanceOf[js.Any])
-    if (ContextEntries != null) __obj.updateDynamic("ContextEntries")(ContextEntries.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (!js.isUndefined(MaxItems)) __obj.updateDynamic("MaxItems")(MaxItems.get.asInstanceOf[js.Any])
-    if (PermissionsBoundaryPolicyInputList != null) __obj.updateDynamic("PermissionsBoundaryPolicyInputList")(PermissionsBoundaryPolicyInputList.asInstanceOf[js.Any])
-    if (PolicyInputList != null) __obj.updateDynamic("PolicyInputList")(PolicyInputList.asInstanceOf[js.Any])
-    if (ResourceArns != null) __obj.updateDynamic("ResourceArns")(ResourceArns.asInstanceOf[js.Any])
-    if (ResourceHandlingOption != null) __obj.updateDynamic("ResourceHandlingOption")(ResourceHandlingOption.asInstanceOf[js.Any])
-    if (ResourceOwner != null) __obj.updateDynamic("ResourceOwner")(ResourceOwner.asInstanceOf[js.Any])
-    if (ResourcePolicy != null) __obj.updateDynamic("ResourcePolicy")(ResourcePolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimulatePrincipalPolicyRequest]
   }
+  @scala.inline
+  implicit class SimulatePrincipalPolicyRequestOps[Self <: SimulatePrincipalPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActionNamesVarargs(value: ActionNameType*): Self = this.set("ActionNames", js.Array(value :_*))
+    @scala.inline
+    def setActionNames(value: ActionNameListType): Self = this.set("ActionNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPolicySourceArn(value: arnType): Self = this.set("PolicySourceArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCallerArn(value: ResourceNameType): Self = this.set("CallerArn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCallerArn: Self = this.set("CallerArn", js.undefined)
+    @scala.inline
+    def setContextEntriesVarargs(value: ContextEntry*): Self = this.set("ContextEntries", js.Array(value :_*))
+    @scala.inline
+    def setContextEntries(value: ContextEntryListType): Self = this.set("ContextEntries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContextEntries: Self = this.set("ContextEntries", js.undefined)
+    @scala.inline
+    def setMarker(value: markerType): Self = this.set("Marker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarker: Self = this.set("Marker", js.undefined)
+    @scala.inline
+    def setMaxItems(value: maxItemsType): Self = this.set("MaxItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxItems: Self = this.set("MaxItems", js.undefined)
+    @scala.inline
+    def setPermissionsBoundaryPolicyInputListVarargs(value: policyDocumentType*): Self = this.set("PermissionsBoundaryPolicyInputList", js.Array(value :_*))
+    @scala.inline
+    def setPermissionsBoundaryPolicyInputList(value: SimulationPolicyListType): Self = this.set("PermissionsBoundaryPolicyInputList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePermissionsBoundaryPolicyInputList: Self = this.set("PermissionsBoundaryPolicyInputList", js.undefined)
+    @scala.inline
+    def setPolicyInputListVarargs(value: policyDocumentType*): Self = this.set("PolicyInputList", js.Array(value :_*))
+    @scala.inline
+    def setPolicyInputList(value: SimulationPolicyListType): Self = this.set("PolicyInputList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePolicyInputList: Self = this.set("PolicyInputList", js.undefined)
+    @scala.inline
+    def setResourceArnsVarargs(value: ResourceNameType*): Self = this.set("ResourceArns", js.Array(value :_*))
+    @scala.inline
+    def setResourceArns(value: ResourceNameListType): Self = this.set("ResourceArns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceArns: Self = this.set("ResourceArns", js.undefined)
+    @scala.inline
+    def setResourceHandlingOption(value: ResourceHandlingOptionType): Self = this.set("ResourceHandlingOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceHandlingOption: Self = this.set("ResourceHandlingOption", js.undefined)
+    @scala.inline
+    def setResourceOwner(value: ResourceNameType): Self = this.set("ResourceOwner", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceOwner: Self = this.set("ResourceOwner", js.undefined)
+    @scala.inline
+    def setResourcePolicy(value: policyDocumentType): Self = this.set("ResourcePolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourcePolicy: Self = this.set("ResourcePolicy", js.undefined)
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.nivoRadar.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
@@ -40,6 +40,8 @@ object Radar {
     @scala.inline
     def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    @scala.inline
     def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
     @scala.inline
     def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
@@ -56,11 +58,11 @@ object Radar {
     @scala.inline
     def dotColor(value: InheritedColorProp[_]): this.type = set("dotColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def dotLabelFunction1(value: /* repeated */ js.Any => TagMod[Any]): this.type = set("dotLabel", js.Any.fromFunction1(value))
+    def dotLabelFunction1(value: /* repeated */ js.Any => ReactElement): this.type = set("dotLabel", js.Any.fromFunction1(value))
     @scala.inline
     def dotLabel(value: String | CustomDotLabel): this.type = set("dotLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def dotLabelFormatFunction1(value: /* repeated */ js.Any => TagMod[Any]): this.type = set("dotLabelFormat", js.Any.fromFunction1(value))
+    def dotLabelFormatFunction1(value: /* repeated */ js.Any => ReactElement): this.type = set("dotLabelFormat", js.Any.fromFunction1(value))
     @scala.inline
     def dotLabelFormat(value: String | CustomFormatter): this.type = set("dotLabelFormat", value.asInstanceOf[js.Any])
     @scala.inline
@@ -68,7 +70,7 @@ object Radar {
     @scala.inline
     def dotSize(value: Double): this.type = set("dotSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def dotSymbol(value: /* repeated */ js.Any => TagMod[Any]): this.type = set("dotSymbol", js.Any.fromFunction1(value))
+    def dotSymbol(value: /* repeated */ js.Any => ReactElement): this.type = set("dotSymbol", js.Any.fromFunction1(value))
     @scala.inline
     def enableDotLabel(value: Boolean): this.type = set("enableDotLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -94,7 +96,7 @@ object Radar {
     @scala.inline
     def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltipFormatFunction1(value: /* repeated */ js.Any => TagMod[Any]): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    def tooltipFormatFunction1(value: /* repeated */ js.Any => ReactElement): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
     @scala.inline
     def tooltipFormat(value: String | CustomFormatter): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
   }

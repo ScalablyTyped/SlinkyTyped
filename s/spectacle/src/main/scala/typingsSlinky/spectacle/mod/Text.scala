@@ -1,12 +1,12 @@
 package typingsSlinky.spectacle.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("spectacle", "Text")
 @js.native
-class Text ()
-  extends Component[TextProps, js.Object, js.Any]
+object Text extends TopLevel[ReactComponentClass[TypographyProps]]
 

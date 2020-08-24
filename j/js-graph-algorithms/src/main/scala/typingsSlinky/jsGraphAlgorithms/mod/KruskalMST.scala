@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation._
 class KruskalMST protected ()
   extends typingsSlinky.jsGraphAlgorithms.JsGraphs.KruskalMST {
   def this(G: typingsSlinky.jsGraphAlgorithms.JsGraphs.WeightedGraph) = this()
-  /* CompleteClass */
-  override var mst: js.Array[typingsSlinky.jsGraphAlgorithms.JsGraphs.Edge] = js.native
 }
 

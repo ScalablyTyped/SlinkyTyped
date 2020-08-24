@@ -14,11 +14,11 @@ object StoryRouter {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Links): Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter] = new Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Links): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(links: js.Object, routerProps: MemoryRouterProps, story: StoryApi[_]): Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter] = {
+  def apply(links: js.Object, routerProps: MemoryRouterProps, story: StoryApi[_]): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(links = links.asInstanceOf[js.Any], routerProps = routerProps.asInstanceOf[js.Any], story = story.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter](js.Array(this.component, __props.asInstanceOf[Links]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Links]))
   }
 }
 

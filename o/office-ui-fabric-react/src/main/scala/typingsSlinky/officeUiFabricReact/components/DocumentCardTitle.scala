@@ -7,7 +7,6 @@ import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCard
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleProps
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleStyles
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -24,7 +23,10 @@ object DocumentCardTitle {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.documentCardTitleBaseMod.DocumentCardTitleBase
+        ] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

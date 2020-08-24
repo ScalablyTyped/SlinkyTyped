@@ -1,7 +1,7 @@
 package typingsSlinky.pgPromise.pgSubsetMod
 
-import typingsSlinky.node.NodeJS.Socket
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.node.processMod.global.NodeJS.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

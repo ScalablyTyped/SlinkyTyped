@@ -18,14 +18,14 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DateRangeType
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
+import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendar
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCallbacks
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarProps
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarStrings
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DateRangeType
-import typingsSlinky.officeUiFabricReact.dateValuesMod.DayOfWeek
-import typingsSlinky.officeUiFabricReact.dateValuesMod.FirstWeekOfYear
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -223,6 +223,8 @@ object Calendar {
     def dateTimeFormatter(value: ICalendarFormatDateCallbacks): this.type = set("dateTimeFormatter", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -442,6 +444,8 @@ object Calendar {
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
     @scala.inline
+    def restrictedDatesVarargs(value: js.Date*): this.type = set("restrictedDates", js.Array(value :_*))
+    @scala.inline
     def restrictedDates(value: js.Array[js.Date]): this.type = set("restrictedDates", value.asInstanceOf[js.Any])
     @scala.inline
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
@@ -493,6 +497,8 @@ object Calendar {
     def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def workWeekDaysVarargs(value: DayOfWeek*): this.type = set("workWeekDays", js.Array(value :_*))
     @scala.inline
     def workWeekDays(value: js.Array[DayOfWeek]): this.type = set("workWeekDays", value.asInstanceOf[js.Any])
     @scala.inline

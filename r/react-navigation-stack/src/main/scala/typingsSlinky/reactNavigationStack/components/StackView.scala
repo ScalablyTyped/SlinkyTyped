@@ -2,46 +2,42 @@ package typingsSlinky.reactNavigationStack.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNavigation.mod.NavigationParams
-import typingsSlinky.reactNavigation.mod.NavigationRoute
+import typingsSlinky.reactNavigation.mod.NavigationState
 import typingsSlinky.reactNavigationStack.stackViewMod.Props
-import typingsSlinky.reactNavigationStack.stackViewMod.default
-import typingsSlinky.reactNavigationStack.typesMod.NavigationStackConfig
-import typingsSlinky.reactNavigationStack.typesMod.NavigationStackProp
-import typingsSlinky.reactNavigationStack.typesMod.SceneDescriptorMap
+import typingsSlinky.reactNavigationStack.vendorTypesMod.StackCardMode
+import typingsSlinky.reactNavigationStack.vendorTypesMod.StackDescriptorMap
+import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderMode
+import typingsSlinky.reactNavigationStack.vendorTypesMod.StackNavigationHelpers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object StackView {
-  @JSImport("react-navigation-stack/lib/typescript/views/StackView/StackView", JSImport.Default)
+  @JSImport("react-navigation-stack", "StackView")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNavigationStack.mod.StackView] {
     @scala.inline
-    def onGestureBegin(value: () => Unit): this.type = set("onGestureBegin", js.Any.fromFunction0(value))
+    def headerMode(value: StackHeaderMode): this.type = set("headerMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def onGestureCanceled(value: () => Unit): this.type = set("onGestureCanceled", js.Any.fromFunction0(value))
+    def keyboardHandlingEnabled(value: Boolean): this.type = set("keyboardHandlingEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def onGestureEnd(value: () => Unit): this.type = set("onGestureEnd", js.Any.fromFunction0(value))
-    @scala.inline
-    def onTransitionStart(value: () => Unit): this.type = set("onTransitionStart", js.Any.fromFunction0(value))
-    @scala.inline
-    def screenProps(value: js.Any): this.type = set("screenProps", value.asInstanceOf[js.Any])
+    def mode(value: StackCardMode): this.type = set("mode", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
-    descriptors: SceneDescriptorMap,
-    navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams],
-    navigationConfig: NavigationStackConfig
+    descriptors: StackDescriptorMap,
+    navigation: StackNavigationHelpers,
+    screenProps: js.Any,
+    state: NavigationState
   ): Builder = {
-    val __props = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], navigationConfig = navigationConfig.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], screenProps = screenProps.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }

@@ -8,10 +8,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.SAME
   - typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.VALID
   - typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NUMBER
+  - typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.EXPLICIT
 */
 trait PadType extends js.Object
 
 object PadType {
+  @scala.inline
+  def EXPLICIT: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.EXPLICIT = "EXPLICIT".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.EXPLICIT]
   @scala.inline
   def NUMBER: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NUMBER = "NUMBER".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NUMBER]
   @scala.inline

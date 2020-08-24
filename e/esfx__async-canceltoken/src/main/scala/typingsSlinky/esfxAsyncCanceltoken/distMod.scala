@@ -1,7 +1,6 @@
 package typingsSlinky.esfxAsyncCanceltoken
 
 import typingsSlinky.esfxCancelable.distMod.CancelSignal
-import typingsSlinky.esfxCancelable.distMod.CancelSubscription
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.esfxCancelable.distMod.CancelableSource
 import typingsSlinky.esfxDisposable.distMod.Disposable
@@ -46,16 +45,6 @@ object distMod extends js.Object {
       * Gets a value indicating whether the token can be signaled.
       */
     val canBeSignaled: Boolean = js.native
-    /**
-      * Gets a value indicating whether cancellation was signaled.
-      */
-    /* CompleteClass */
-    override val signaled: Boolean = js.native
-    /**
-      * Subscribes to notifications for when the object becomes signaled.
-      */
-    /* CompleteClass */
-    override def subscribe(onSignaled: js.Function0[Unit]): CancelSubscription = js.native
     /**
       * Throws a CancelError if the token was signaled.
       */

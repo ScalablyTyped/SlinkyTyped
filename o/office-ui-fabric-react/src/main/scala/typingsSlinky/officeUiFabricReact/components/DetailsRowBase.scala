@@ -1,7 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
@@ -54,6 +53,8 @@ object DetailsRowBase {
     @scala.inline
     def collapseAllVisibility(value: CollapseAllVisibility): this.type = set("collapseAllVisibility", value.asInstanceOf[js.Any])
     @scala.inline
+    def columnsVarargs(value: IColumn*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
     def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
@@ -69,6 +70,8 @@ object DetailsRowBase {
     def dragDropHelper(value: IDragDropHelper): this.type = set("dragDropHelper", value.asInstanceOf[js.Any])
     @scala.inline
     def enableUpdateAnimations(value: Boolean): this.type = set("enableUpdateAnimations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventsToRegisterVarargs(value: EventName*): this.type = set("eventsToRegister", js.Array(value :_*))
     @scala.inline
     def eventsToRegister(value: js.Array[EventName]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
     @scala.inline
@@ -95,7 +98,7 @@ object DetailsRowBase {
     ): this.type = set("onRenderDetailsCheckbox", js.Any.fromFunction2(value))
     @scala.inline
     def onRenderItemColumn(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any]
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => ReactElement
     ): this.type = set("onRenderItemColumn", js.Any.fromFunction3(value))
     @scala.inline
     def onWillUnmount(

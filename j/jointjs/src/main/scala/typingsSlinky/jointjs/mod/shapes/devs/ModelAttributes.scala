@@ -24,29 +24,22 @@ object ModelAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInPorts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inPorts")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutInPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inPorts")(js.undefined)
-        ret
-    }
+    def setInPortsVarargs(value: String*): Self = this.set("inPorts", js.Array(value :_*))
     @scala.inline
-    def withOutPorts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outPorts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setInPorts(value: js.Array[String]): Self = this.set("inPorts", value.asInstanceOf[js.Any])
     @scala.inline
-    def withoutOutPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outPorts")(js.undefined)
-        ret
-    }
+    def deleteInPorts: Self = this.set("inPorts", js.undefined)
+    @scala.inline
+    def setOutPortsVarargs(value: String*): Self = this.set("outPorts", js.Array(value :_*))
+    @scala.inline
+    def setOutPorts(value: js.Array[String]): Self = this.set("outPorts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutPorts: Self = this.set("outPorts", js.undefined)
   }
   
 }

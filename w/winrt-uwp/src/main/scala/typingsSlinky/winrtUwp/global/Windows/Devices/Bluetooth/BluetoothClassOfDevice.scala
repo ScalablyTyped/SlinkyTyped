@@ -8,20 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Bluetooth.BluetoothClassOfDevice")
 @js.native
 abstract class BluetoothClassOfDevice ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothClassOfDevice {
-  /** Gets the Major Class code of the Bluetooth device. */
-  /* CompleteClass */
-  override var majorClass: typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothMajorClass = js.native
-  /** Gets the Minor Class code of the device. */
-  /* CompleteClass */
-  override var minorClass: typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothMinorClass = js.native
-  /** Gets the Bluetooth Class Of Device information, represented as an integer value. */
-  /* CompleteClass */
-  override var rawValue: Double = js.native
-  /** Gets the service capabilities of the device. */
-  /* CompleteClass */
-  override var serviceCapabilities: typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothServiceCapabilities = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.Devices.Bluetooth.BluetoothClassOfDevice
 
 /* static members */
 @JSGlobal("Windows.Devices.Bluetooth.BluetoothClassOfDevice")

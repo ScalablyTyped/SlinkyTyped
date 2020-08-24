@@ -19,6 +19,8 @@ object TruncatedFormat {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.TruncatedFormat] {
     @scala.inline
+    def children(value: String): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def detectTruncation(value: Boolean): this.type = set("detectTruncation", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "tiny-warning"
-version := "1.0.3-5bebc1"
-scalaVersion := "2.13.2"
+version := "1.0.3-b3dc53"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

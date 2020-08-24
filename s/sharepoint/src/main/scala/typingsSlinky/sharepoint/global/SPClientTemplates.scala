@@ -2,22 +2,17 @@ package typingsSlinky.sharepoint.global
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.sharepoint.SP.ClientContext
-import typingsSlinky.sharepoint.SPClientForms.ClientValidation.ValidatorSet
 import typingsSlinky.sharepoint.SPClientTemplates.ChoiceFormatType
 import typingsSlinky.sharepoint.SPClientTemplates.ClientControlMode
 import typingsSlinky.sharepoint.SPClientTemplates.ClientLookupValue
 import typingsSlinky.sharepoint.SPClientTemplates.ClientUrlValue
 import typingsSlinky.sharepoint.SPClientTemplates.ClientUserValue
-import typingsSlinky.sharepoint.SPClientTemplates.FieldSchemaInForm
 import typingsSlinky.sharepoint.SPClientTemplates.FileSystemObjectType
 import typingsSlinky.sharepoint.SPClientTemplates.RenderContext
 import typingsSlinky.sharepoint.SPClientTemplates.RenderContextForm
 import typingsSlinky.sharepoint.SPClientTemplates.RichTextMode
 import typingsSlinky.sharepoint.SPClientTemplates.TemplateOverridesOptions
 import typingsSlinky.sharepoint.SPClientTemplates.Templates
-import typingsSlinky.sharepoint.anon.AllowScriptableWebParts
-import typingsSlinky.sharepoint.anon.BaseType
-import typingsSlinky.sharepoint.anon.ExternalListItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,36 +22,7 @@ import scala.scalajs.js.annotation._
 object SPClientTemplates extends js.Object {
   @js.native
   class ClientFormContext ()
-    extends typingsSlinky.sharepoint.SPClientTemplates.ClientFormContext {
-    /* CompleteClass */
-    override var controlMode: Double = js.native
-    /* CompleteClass */
-    override var fieldName: String = js.native
-    /* CompleteClass */
-    override var fieldSchema: FieldSchemaInForm = js.native
-    /* CompleteClass */
-    override var fieldValue: js.Any = js.native
-    /* CompleteClass */
-    override var itemAttributes: ExternalListItem = js.native
-    /* CompleteClass */
-    override var listAttributes: BaseType = js.native
-    /* CompleteClass */
-    override var webAttributes: AllowScriptableWebParts = js.native
-    /* CompleteClass */
-    override def registerClientValidator(fieldname: String, validator: ValidatorSet): Unit = js.native
-    /* CompleteClass */
-    override def registerFocusCallback(fieldname: String, callback: js.Function0[Unit]): Unit = js.native
-    /* CompleteClass */
-    override def registerGetValueCallback(fieldname: String, callback: js.Function0[_]): Unit = js.native
-    /* CompleteClass */
-    override def registerHasValueChangedCallback(fieldname: String, callback: js.Function1[/* eventArg */ js.UndefOr[js.Any], Unit]): Unit = js.native
-    /* CompleteClass */
-    override def registerInitCallback(fieldname: String, callback: js.Function0[Unit]): Unit = js.native
-    /* CompleteClass */
-    override def registerValidationErrorCallback(fieldname: String, callback: js.Function1[/* error */ js.Any, Unit]): Unit = js.native
-    /* CompleteClass */
-    override def updateControlValue(fieldname: String, value: js.Any): Unit = js.native
-  }
+    extends typingsSlinky.sharepoint.SPClientTemplates.ClientFormContext
   
   @js.native
   class TemplateManager ()

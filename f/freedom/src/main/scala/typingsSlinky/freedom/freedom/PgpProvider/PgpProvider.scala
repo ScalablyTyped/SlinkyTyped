@@ -16,6 +16,7 @@ trait PgpProvider extends js.Object {
   // Standard freedom crypto API
   def setup(passphrase: String, userid: String): js.Promise[Unit] = js.native
   def signEncrypt(data: js.typedarray.ArrayBuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def signEncrypt(data: js.typedarray.ArrayBuffer, encryptKey: js.UndefOr[scala.Nothing], sign: Boolean): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def signEncrypt(data: js.typedarray.ArrayBuffer, encryptKey: String): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def signEncrypt(data: js.typedarray.ArrayBuffer, encryptKey: String, sign: Boolean): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def verifyDecrypt(data: js.typedarray.ArrayBuffer): js.Promise[VerifyDecryptResult] = js.native

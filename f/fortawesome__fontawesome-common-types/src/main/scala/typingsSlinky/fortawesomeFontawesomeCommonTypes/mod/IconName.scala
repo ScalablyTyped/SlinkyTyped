@@ -103,6 +103,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`d-and-d-beyond`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.dailymotion
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.dashcube
+  - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.deezer
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.delicious
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.deploydog
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.deskpro
@@ -125,6 +126,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.earlybirds
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.ebay
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.edge
+  - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`edge-legacy`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.elementor
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.ello
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.ember
@@ -185,6 +187,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`goodreads-g`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.google
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-drive`
+  - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-pay`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-play`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-plus`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-plus-g`
@@ -327,6 +330,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rev
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rocketchat
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rockrms
+  - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rust
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.safari
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.salesforce
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.sass
@@ -384,6 +388,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.themeco
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.themeisle
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`think-peaks`
+  - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.tiktok
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`trade-federation`
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.trello
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.tripadvisor
@@ -399,6 +404,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.umbraco
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.uniregistry
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.unity
+  - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.unsplash
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.untappd
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.ups
   - typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.usb
@@ -3503,6 +3509,8 @@ object IconName {
   @scala.inline
   def `deer-rudolph`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`deer-rudolph` = "deer-rudolph".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`deer-rudolph`]
   @scala.inline
+  def deezer: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.deezer = "deezer".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.deezer]
+  @scala.inline
   def delicious: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.delicious = "delicious".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.delicious]
   @scala.inline
   def democrat: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.democrat = "democrat".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.democrat]
@@ -3680,6 +3688,8 @@ object IconName {
   def `eclipse-alt`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`eclipse-alt` = "eclipse-alt".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`eclipse-alt`]
   @scala.inline
   def edge: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.edge = "edge".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.edge]
+  @scala.inline
+  def `edge-legacy`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`edge-legacy` = "edge-legacy".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`edge-legacy`]
   @scala.inline
   def edit: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.edit = "edit".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.edit]
   @scala.inline
@@ -4166,6 +4176,8 @@ object IconName {
   def google: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.google = "google".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.google]
   @scala.inline
   def `google-drive`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-drive` = "google-drive".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-drive`]
+  @scala.inline
+  def `google-pay`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-pay` = "google-pay".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-pay`]
   @scala.inline
   def `google-play`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-play` = "google-play".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`google-play`]
   @scala.inline
@@ -5565,6 +5577,8 @@ object IconName {
   @scala.inline
   def `rupee-sign`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`rupee-sign` = "rupee-sign".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`rupee-sign`]
   @scala.inline
+  def rust: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rust = "rust".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rust]
+  @scala.inline
   def rv: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rv = "rv".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.rv]
   @scala.inline
   def sack: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.sack = "sack".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.sack]
@@ -6297,6 +6311,8 @@ object IconName {
   @scala.inline
   def `ticket-alt`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`ticket-alt` = "ticket-alt".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`ticket-alt`]
   @scala.inline
+  def tiktok: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.tiktok = "tiktok".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.tiktok]
+  @scala.inline
   def tilde: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.tilde = "tilde".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.tilde]
   @scala.inline
   def times: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.times = "times".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.times]
@@ -6520,6 +6536,8 @@ object IconName {
   def unlock: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.unlock = "unlock".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.unlock]
   @scala.inline
   def `unlock-alt`: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`unlock-alt` = "unlock-alt".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.`unlock-alt`]
+  @scala.inline
+  def unsplash: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.unsplash = "unsplash".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.unsplash]
   @scala.inline
   def untappd: typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.untappd = "untappd".asInstanceOf[typingsSlinky.fortawesomeFontawesomeCommonTypes.fortawesomeFontawesomeCommonTypesStrings.untappd]
   @scala.inline

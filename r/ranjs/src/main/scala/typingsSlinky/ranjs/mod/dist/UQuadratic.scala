@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class UQuadratic ()
   extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.UQuadratic] {
   def this(a: Double) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: Double) = this()
   def this(a: Double, b: Double) = this()
 }
 

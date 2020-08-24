@@ -98,9 +98,11 @@ trait Object_[T /* <: Attributes */] extends js.Object {
     */ typingsSlinky.parse.parseStrings.Object with TopLevel[T]) | Partial[T]
   ): js.Promise[this.type] = js.native
   def save[K /* <: Extract[/* keyof T */ String, String] */](
-    attrs: (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    attrs: js.UndefOr[
+      (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: T[key]}
-    */ typingsSlinky.parse.parseStrings.Object with TopLevel[T]) | Partial[T],
+    */ typingsSlinky.parse.parseStrings.Object with TopLevel[T]) | Partial[T]
+    ],
     options: SaveOptions
   ): js.Promise[this.type] = js.native
   def save[K /* <: Extract[/* keyof T */ String, String] */](attrs: Null, options: SaveOptions): js.Promise[this.type] = js.native

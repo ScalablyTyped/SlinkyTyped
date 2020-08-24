@@ -1,6 +1,6 @@
 package typingsSlinky.reactVirtualized.esCollectionMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactVirtualized.anon.Align
 import typingsSlinky.reactVirtualized.anon.Arialabel
@@ -18,7 +18,7 @@ class Collection ()
   extends Component[CollectionProps, js.Object, js.Any] {
   /** CellLayoutManager interface */
   def calculateSizeAndPositionData(): Unit = js.native
-  def cellRenderers(params: isScrollingbooleanSizeInf): js.Array[TagMod[Any]] = js.native
+  def cellRenderers(params: isScrollingbooleanSizeInf): js.Array[ReactElement] = js.native
   /**
     * Returns the most recently rendered set of cell indices.
     */

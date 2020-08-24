@@ -1,7 +1,9 @@
 package typingsSlinky.reactCalendarTimeline.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactCalendarTimeline.mod.CustomMarkerChildrenProps
 import typingsSlinky.reactCalendarTimeline.mod.MarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,11 +14,19 @@ object CustomMarker {
   @js.native
   object component extends js.Object
   
-  def withProps(p: MarkerProps): Default[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomMarker] = new Default[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomMarker](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(date: js.Date | Double): Default[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomMarker] = {
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomMarker] {
+    @scala.inline
+    def children(value: /* props */ CustomMarkerChildrenProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+  }
+  
+  def withProps(p: MarkerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(date: js.Date | Double): Builder = {
     val __props = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomMarker](js.Array(this.component, __props.asInstanceOf[MarkerProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[MarkerProps]))
   }
 }
 

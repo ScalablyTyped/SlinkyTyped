@@ -3,21 +3,20 @@ package typingsSlinky.antdMobile.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.tagMod.TagProps
-import typingsSlinky.antdMobile.tagMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tag {
-  @JSImport("antd-mobile/lib/tag", JSImport.Default)
+  @JSImport("antd-mobile", "Tag")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Tag] {
     @scala.inline
     def afterClose(value: () => Unit): this.type = set("afterClose", js.Any.fromFunction0(value))
     @scala.inline

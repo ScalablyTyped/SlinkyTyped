@@ -2,6 +2,7 @@ package typingsSlinky.tanemSvgInjector
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.NonNullable
 import typingsSlinky.tanemSvgInjector.typesMod.BeforeEach
 import typingsSlinky.tanemSvgInjector.typesMod.Errback
 import typingsSlinky.tanemSvgInjector.typesMod.EvalScripts
@@ -13,18 +14,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object injectElementMod extends js.Object {
   def default(
-    el: Element,
+    el: NonNullable[ElementType],
     evalScripts: EvalScripts,
     renumerateIRIElements: Boolean,
     beforeEach: BeforeEach,
     callback: Errback
   ): Unit = js.native
-  def default(
-    el: HTMLElement,
-    evalScripts: EvalScripts,
-    renumerateIRIElements: Boolean,
-    beforeEach: BeforeEach,
-    callback: Errback
-  ): Unit = js.native
+  type ElementType = Element | HTMLElement | Null
 }
 

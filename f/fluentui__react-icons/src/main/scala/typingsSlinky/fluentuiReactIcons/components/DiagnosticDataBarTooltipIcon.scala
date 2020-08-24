@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DiagnosticDataBarTooltipIcon {
-  @JSImport("@fluentui/react-icons/lib/components/DiagnosticDataBarTooltipIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "DiagnosticDataBarTooltipIcon")
   @js.native
   object component extends js.Object
   

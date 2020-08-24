@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ProtectedDocumentIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ProtectedDocumentIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ProtectedDocumentIcon")
   @js.native
   object component extends js.Object
   

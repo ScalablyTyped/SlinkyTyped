@@ -1,6 +1,5 @@
 package typingsSlinky.reactInfiniteScrollComponent.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -24,7 +23,7 @@ object ReactInfiniteScrollComponent {
     @scala.inline
     def endMessageReactElement(value: ReactElement): this.type = set("endMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def endMessage(value: TagMod[Any]): this.type = set("endMessage", value.asInstanceOf[js.Any])
+    def endMessage(value: ReactElement): this.type = set("endMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def hasChildren(value: Boolean): this.type = set("hasChildren", value.asInstanceOf[js.Any])
     @scala.inline
@@ -32,7 +31,7 @@ object ReactInfiniteScrollComponent {
     @scala.inline
     def initialScrollY(value: Double): this.type = set("initialScrollY", value.asInstanceOf[js.Any])
     @scala.inline
-    def loader(value: TagMod[Any]): this.type = set("loader", value.asInstanceOf[js.Any])
+    def loader(value: ReactElement): this.type = set("loader", value.asInstanceOf[js.Any])
     @scala.inline
     def onScroll(value: () => Unit): this.type = set("onScroll", js.Any.fromFunction0(value))
     @scala.inline
@@ -40,7 +39,7 @@ object ReactInfiniteScrollComponent {
     @scala.inline
     def pullDownToRefreshContentReactElement(value: ReactElement): this.type = set("pullDownToRefreshContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def pullDownToRefreshContent(value: TagMod[Any]): this.type = set("pullDownToRefreshContent", value.asInstanceOf[js.Any])
+    def pullDownToRefreshContent(value: ReactElement): this.type = set("pullDownToRefreshContent", value.asInstanceOf[js.Any])
     @scala.inline
     def pullDownToRefreshThreshold(value: Double): this.type = set("pullDownToRefreshThreshold", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,13 +47,13 @@ object ReactInfiniteScrollComponent {
     @scala.inline
     def releaseToRefreshContentReactElement(value: ReactElement): this.type = set("releaseToRefreshContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def releaseToRefreshContent(value: TagMod[Any]): this.type = set("releaseToRefreshContent", value.asInstanceOf[js.Any])
+    def releaseToRefreshContent(value: ReactElement): this.type = set("releaseToRefreshContent", value.asInstanceOf[js.Any])
     @scala.inline
     def scrollThreshold(value: Double | String): this.type = set("scrollThreshold", value.asInstanceOf[js.Any])
     @scala.inline
     def scrollableTargetReactElement(value: ReactElement): this.type = set("scrollableTarget", value.asInstanceOf[js.Any])
     @scala.inline
-    def scrollableTarget(value: TagMod[Any] | String): this.type = set("scrollableTarget", value.asInstanceOf[js.Any])
+    def scrollableTarget(value: ReactElement | String): this.type = set("scrollableTarget", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }

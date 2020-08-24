@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.components
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLTableElement
@@ -18,26 +17,25 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.table.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.anon.Align
-import typingsSlinky.grommet.anon.Body
-import typingsSlinky.grommet.anon.Datum
 import typingsSlinky.grommet.anon.Direction
 import typingsSlinky.grommet.anon.Expand
+import typingsSlinky.grommet.anon.SizeStyle
+import typingsSlinky.grommet.dataTableMod.ColumnConfig
 import typingsSlinky.grommet.dataTableMod.DataTableProps
-import typingsSlinky.grommet.grommetStrings.bottom
+import typingsSlinky.grommet.dataTableMod.KeyPress
+import typingsSlinky.grommet.dataTableMod.MouseClick
+import typingsSlinky.grommet.dataTableMod.Sections
 import typingsSlinky.grommet.grommetStrings.large
-import typingsSlinky.grommet.grommetStrings.left
 import typingsSlinky.grommet.grommetStrings.medium
-import typingsSlinky.grommet.grommetStrings.right
 import typingsSlinky.grommet.grommetStrings.small
-import typingsSlinky.grommet.grommetStrings.top
 import typingsSlinky.grommet.grommetStrings.xlarge
-import typingsSlinky.grommet.grommetStrings.xsmall
-import typingsSlinky.grommet.grommetStrings.xxsmall
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
+import typingsSlinky.grommet.utilsMod.BackgroundType
+import typingsSlinky.grommet.utilsMod.BorderType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
+import typingsSlinky.grommet.utilsMod.PadType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -94,14 +92,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DataTable {
-  @JSImport("grommet", "DataTable")
+  @JSImport("grommet/es6", "DataTable")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[TRowType] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.DataTable] {
+       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.DataTable[TRowType]] {
     @scala.inline
     def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -213,11 +211,13 @@ object DataTable {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
-    def background(value: String | Body): this.type = set("background", value.asInstanceOf[js.Any])
+    def background(
+      value: BackgroundType | (Sections[BackgroundType | js.Array[String], BackgroundType, BackgroundType])
+    ): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
-    def border(
-      value: Boolean | top | left | bottom | right | typingsSlinky.grommet.grommetStrings.horizontal | typingsSlinky.grommet.grommetStrings.vertical | typingsSlinky.grommet.grommetStrings.all | typingsSlinky.grommet.anon.Footer
-    ): this.type = set("border", value.asInstanceOf[js.Any])
+    def borderVarargs(value: SizeStyle*): this.type = set("border", js.Array(value :_*))
+    @scala.inline
+    def border(value: BorderType | (Sections[BorderType, BorderType, BorderType])): this.type = set("border", value.asInstanceOf[js.Any])
     @scala.inline
     def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
     @scala.inline
@@ -227,7 +227,9 @@ object DataTable {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def columns(value: js.Array[Align]): this.type = set("columns", value.asInstanceOf[js.Any])
+    def columnsVarargs(value: ColumnConfig[TRowType]*): this.type = set("columns", js.Array(value :_*))
+    @scala.inline
+    def columns(value: js.Array[ColumnConfig[TRowType]]): this.type = set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -235,11 +237,15 @@ object DataTable {
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
-    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
+    def dataVarargs(value: TRowType*): this.type = set("data", js.Array(value :_*))
+    @scala.inline
+    def data(value: js.Array[TRowType]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -297,7 +303,7 @@ object DataTable {
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onClickRow(value: (/* event */ Datum) | (/* event */ SyntheticMouseEvent[Element]) => Unit): this.type = set("onClickRow", js.Any.fromFunction1(value))
+    def onClickRow(value: /* event */ MouseClick[TRowType] | KeyPress[TRowType] => Unit): this.type = set("onClickRow", js.Any.fromFunction1(value))
     @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLTableElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -359,7 +365,7 @@ object DataTable {
     @scala.inline
     def onLoadedMetadata(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
     @scala.inline
-    def onMore(value: /* repeated */ js.Any => _): this.type = set("onMore", js.Any.fromFunction1(value))
+    def onMore(value: () => Unit): this.type = set("onMore", js.Any.fromFunction0(value))
     @scala.inline
     def onMouseDown(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     @scala.inline
@@ -441,9 +447,7 @@ object DataTable {
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLTableElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
-    def pad(
-      value: typingsSlinky.grommet.grommetStrings.none | xxsmall | xsmall | small | medium | large | xlarge | typingsSlinky.grommet.anon.Header | String
-    ): this.type = set("pad", value.asInstanceOf[js.Any])
+    def pad(value: PadType | (Sections[PadType, PadType, PadType])): this.type = set("pad", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -498,11 +502,18 @@ object DataTable {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps(
-    p: DataTableProps with (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement])
-  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DataTable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps[TRowType](
+    p: DataTableProps[TRowType] with (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement])
+  ): Builder[TRowType] = new Builder[TRowType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[TRowType](): Builder[TRowType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[TRowType](js.Array(this.component, __props.asInstanceOf[DataTableProps[TRowType] with (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement])]))
+  }
+  implicit def make[TRowType](companion: DataTable.type): Builder[TRowType] = new Builder[TRowType](js.Array(this.component, js.Dictionary.empty))()
 }
 

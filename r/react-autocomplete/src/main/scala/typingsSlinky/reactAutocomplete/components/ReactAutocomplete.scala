@@ -2,7 +2,7 @@ package typingsSlinky.reactAutocomplete.components
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -42,10 +42,10 @@ object ReactAutocomplete {
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderInput(value: /* props */ HTMLProps[HTMLInputElement] => TagMod[Any]): this.type = set("renderInput", js.Any.fromFunction1(value))
+    def renderInput(value: /* props */ HTMLProps[HTMLInputElement] => ReactElement): this.type = set("renderInput", js.Any.fromFunction1(value))
     @scala.inline
     def renderMenu(
-      value: (/* items */ js.Array[TagMod[Any]], /* value */ String, /* styles */ CSSProperties) => TagMod[Any]
+      value: (/* items */ js.Array[ReactElement], /* value */ String, /* styles */ CSSProperties) => ReactElement
     ): this.type = set("renderMenu", js.Any.fromFunction3(value))
     @scala.inline
     def selectOnBlur(value: Boolean): this.type = set("selectOnBlur", value.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object ReactAutocomplete {
   def apply(
     getItemValue: js.Any => String,
     items: js.Array[_],
-    renderItem: (js.Any, Boolean, js.UndefOr[CSSProperties]) => TagMod[Any],
+    renderItem: (js.Any, Boolean, js.UndefOr[CSSProperties]) => ReactElement,
     value: js.Any
   ): Builder = {
     val __props = js.Dynamic.literal(getItemValue = js.Any.fromFunction1(getItemValue), items = items.asInstanceOf[js.Any], renderItem = js.Any.fromFunction3(renderItem), value = value.asInstanceOf[js.Any])

@@ -38,6 +38,8 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   extends AnyVal
      with StBuildingComponent[tag.type, R] {
   @scala.inline
+  def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+  @scala.inline
   def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -56,6 +58,8 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   @scala.inline
   def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
   @scala.inline
+  def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+  @scala.inline
   def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
   @scala.inline
   def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -72,6 +76,8 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   @scala.inline
   def end(value: X): this.type = set("end", value.asInstanceOf[js.Any])
   @scala.inline
+  def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+  @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline
   def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])
@@ -79,6 +85,8 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   def importantForAccessibility(value: auto | yes | no | `no-hide-descendants`): this.type = set("importantForAccessibility", value.asInstanceOf[js.Any])
   @scala.inline
   def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
+  @scala.inline
+  def locationsVarargs(value: Double*): this.type = set("locations", js.Array(value :_*))
   @scala.inline
   def locations(value: js.Array[Double]): this.type = set("locations", value.asInstanceOf[js.Any])
   @scala.inline

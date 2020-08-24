@@ -35,6 +35,9 @@ package object eventbridgeMod {
   */
   type EventSourceState = typingsSlinky.awsSdk.eventbridgeMod._EventSourceState | java.lang.String
   type EventTime = js.Date
+  type HeaderKey = java.lang.String
+  type HeaderParametersMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.eventbridgeMod.HeaderValue]
+  type HeaderValue = java.lang.String
   type InputTransformerPathKey = java.lang.String
   type Integer = scala.Double
   /* Rewritten from type alias, can be one of: 
@@ -52,12 +55,17 @@ package object eventbridgeMod {
   type PartnerEventSourceAccountList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PartnerEventSourceAccount]
   type PartnerEventSourceList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PartnerEventSource]
   type PartnerEventSourceNamePrefix = java.lang.String
+  type PathParameter = java.lang.String
+  type PathParameterList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PathParameter]
   type Principal = java.lang.String
   type PutEventsRequestEntryList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PutEventsRequestEntry]
   type PutEventsResultEntryList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PutEventsResultEntry]
   type PutPartnerEventsRequestEntryList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PutPartnerEventsRequestEntry]
   type PutPartnerEventsResultEntryList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PutPartnerEventsResultEntry]
   type PutTargetsResultEntryList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.PutTargetsResultEntry]
+  type QueryStringKey = java.lang.String
+  type QueryStringParametersMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.eventbridgeMod.QueryStringValue]
+  type QueryStringValue = java.lang.String
   type RemoveTargetsResultEntryList = js.Array[typingsSlinky.awsSdk.eventbridgeMod.RemoveTargetsResultEntry]
   type RoleArn = java.lang.String
   type RuleArn = java.lang.String

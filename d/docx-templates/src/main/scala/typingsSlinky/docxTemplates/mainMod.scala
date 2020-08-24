@@ -2,8 +2,12 @@ package typingsSlinky.docxTemplates
 
 import typingsSlinky.docxTemplates.docxTemplatesStrings.JS
 import typingsSlinky.docxTemplates.docxTemplatesStrings.XML
+import typingsSlinky.docxTemplates.typesMod.CommandSummary
 import typingsSlinky.docxTemplates.typesMod.Node
+import typingsSlinky.docxTemplates.typesMod.NonTextNode
 import typingsSlinky.docxTemplates.typesMod.UserOptions
+import typingsSlinky.jszip.mod.JSZip
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +20,7 @@ object mainMod extends js.Object {
     *
     * example:
     * ```js
-    * createReport({
+    * const report = await createReport({
     *   template,
     *   data: query => graphqlServer.execute(query),
     *   additionalJsContext: {
@@ -46,5 +50,10 @@ object mainMod extends js.Object {
     */
   @JSName("default")
   def default_XML(options: UserOptions, _probe: XML): js.Promise[String] = js.native
+  def getMainDoc(contentTypes: NonTextNode): String = js.native
+  def listCommands(template: Buffer): js.Promise[js.Array[CommandSummary]] = js.native
+  def listCommands(template: Buffer, delimiter: String): js.Promise[js.Array[CommandSummary]] = js.native
+  def listCommands(template: Buffer, delimiter: js.Tuple2[String, String]): js.Promise[js.Array[CommandSummary]] = js.native
+  def readContentTypes(zip: JSZip): js.Promise[NonTextNode] = js.native
 }
 

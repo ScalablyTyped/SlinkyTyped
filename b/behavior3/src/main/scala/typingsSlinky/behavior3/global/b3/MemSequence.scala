@@ -1,6 +1,6 @@
 package typingsSlinky.behavior3.global.b3
 
-import typingsSlinky.behavior3.anon.ChildrenArray
+import typingsSlinky.behavior3.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,79 +19,6 @@ import scala.scalajs.js.annotation._
   */
 class MemSequence ()
   extends typingsSlinky.behavior3.b3.MemSequence {
-  def this(hasChildren: ChildrenArray) = this()
-  /**
-    * Wrapper for close method.
-    */
-  /* CompleteClass */
-  override def _close(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Wrapper for enter method.
-    */
-  /* CompleteClass */
-  override def _enter(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * This is the main method to propagate the tick signal to this node. This
-    * method calls all callbacks: `enter`, `open`, `tick`, `close`, and
-    * `exit`. It only opens a node if it is not already open. In the same
-    * way, this method only close a node if the node  returned a status
-    * different of `RUNNING`.
-    *
-    */
-  /* CompleteClass */
-  override def _execute(tick: typingsSlinky.behavior3.b3.Tick): Double = js.native
-  /**
-    * Wrapper for exit method.
-    */
-  /* CompleteClass */
-  override def _exit(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Wrapper for open method.
-    */
-  /* CompleteClass */
-  override def _open(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Wrapper for tick method.
-    */
-  /* CompleteClass */
-  override def _tick(tick: typingsSlinky.behavior3.b3.Tick): Double = js.native
-  /**
-    * Close method, override this to use. This method is called after the tick
-    * callback, and only if the tick return a state different from
-    * `RUNNING`.
-    *
-    */
-  /* CompleteClass */
-  override def close(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Enter method, override this to use. It is called every time a node is
-    * asked to execute, before the tick itself.
-    */
-  /* CompleteClass */
-  override def enter(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Exit method, override this to use. Called every time in the end of the
-    * execution.
-    *
-    */
-  /* CompleteClass */
-  override def exit(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Open method, override this to use. It is called only before the tick
-    * callback and only if the not isn't closed.
-    *
-    * Note: a node will be closed if it returned `RUNNING` in the tick.
-    *
-    */
-  /* CompleteClass */
-  override def open(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
-  /**
-    * Tick method, override this to use. This method must contain the real
-    * execution of node (perform a task, call children, etc.). It is called
-    * every time a node is asked to execute.
-    *
-    */
-  /* CompleteClass */
-  override def tick(tick: typingsSlinky.behavior3.b3.Tick): Unit = js.native
+  def this(hasChildren: `0`) = this()
 }
 

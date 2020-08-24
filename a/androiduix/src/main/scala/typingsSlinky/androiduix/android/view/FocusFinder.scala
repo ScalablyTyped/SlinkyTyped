@@ -67,137 +67,54 @@ object FocusFinder {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with__findNextFocus(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__findNextFocus")(js.Any.fromFunction5(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def with_findNextFocus(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_findNextFocus")(js.Any.fromFunction4(value))
-        ret
-    }
+    def set__findNextFocus(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("__findNextFocus", js.Any.fromFunction5(value))
     @scala.inline
-    def withBeamBeats(value: (Double, Rect, Rect, Rect) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beamBeats")(js.Any.fromFunction4(value))
-        ret
-    }
+    def set_findNextFocus(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("_findNextFocus", js.Any.fromFunction4(value))
     @scala.inline
-    def withBeamsOverlap(value: (Double, Rect, Rect) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beamsOverlap")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setBeamBeats(value: (Double, Rect, Rect, Rect) => Boolean): Self = this.set("beamBeats", js.Any.fromFunction4(value))
     @scala.inline
-    def withFindNearestTouchable(value: (ViewGroup, Double, Double, Double, js.Array[Double]) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findNearestTouchable")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setBeamsOverlap(value: (Double, Rect, Rect) => Boolean): Self = this.set("beamsOverlap", js.Any.fromFunction3(value))
     @scala.inline
-    def withFindNextFocus(value: (ViewGroup, View, Double) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findNextFocus")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setFindNearestTouchable(value: (ViewGroup, Double, Double, Double, js.Array[Double]) => View): Self = this.set("findNearestTouchable", js.Any.fromFunction5(value))
     @scala.inline
-    def withFindNextFocusFromRect(value: (ViewGroup, Rect, Double) => View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findNextFocusFromRect")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setFindNextFocus(value: (ViewGroup, View, Double) => View): Self = this.set("findNextFocus", js.Any.fromFunction3(value))
     @scala.inline
-    def withFindNextFocusInAbsoluteDirection(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findNextFocusInAbsoluteDirection")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setFindNextFocusFromRect(value: (ViewGroup, Rect, Double) => View): Self = this.set("findNextFocusFromRect", js.Any.fromFunction3(value))
     @scala.inline
-    def withFindNextFocusInRelativeDirection(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findNextFocusInRelativeDirection")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setFindNextFocusInAbsoluteDirection(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("findNextFocusInAbsoluteDirection", js.Any.fromFunction5(value))
     @scala.inline
-    def withFindNextUserSpecifiedFocus(value: (js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findNextUserSpecifiedFocus")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setFindNextFocusInRelativeDirection(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("findNextFocusInRelativeDirection", js.Any.fromFunction5(value))
     @scala.inline
-    def withGetWeightedDistanceFor(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWeightedDistanceFor")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setFindNextUserSpecifiedFocus(value: (js.Any, js.Any, js.Any) => js.Any): Self = this.set("findNextUserSpecifiedFocus", js.Any.fromFunction3(value))
     @scala.inline
-    def withIsBetterCandidate(value: (Double, Rect, Rect, Rect) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBetterCandidate")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setGetWeightedDistanceFor(value: (Double, Double) => Double): Self = this.set("getWeightedDistanceFor", js.Any.fromFunction2(value))
     @scala.inline
-    def withIsCandidate(value: (Rect, Rect, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCandidate")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setIsBetterCandidate(value: (Double, Rect, Rect, Rect) => Boolean): Self = this.set("isBetterCandidate", js.Any.fromFunction4(value))
     @scala.inline
-    def withIsToDirectionOf(value: (Double, Rect, Rect) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isToDirectionOf")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setIsCandidate(value: (Rect, Rect, Double) => Boolean): Self = this.set("isCandidate", js.Any.fromFunction3(value))
     @scala.inline
-    def withIsTouchCandidate(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTouchCandidate")(js.Any.fromFunction4(value))
-        ret
-    }
+    def setIsToDirectionOf(value: (Double, Rect, Rect) => Boolean): Self = this.set("isToDirectionOf", js.Any.fromFunction3(value))
     @scala.inline
-    def withMBestCandidateRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mBestCandidateRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsTouchCandidate(value: (js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("isTouchCandidate", js.Any.fromFunction4(value))
     @scala.inline
-    def withMFocusedRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mFocusedRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMBestCandidateRect(value: Rect): Self = this.set("mBestCandidateRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMOtherRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mOtherRect")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMFocusedRect(value: Rect): Self = this.set("mFocusedRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSequentialFocusComparator(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSequentialFocusComparator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMOtherRect(value: Rect): Self = this.set("mOtherRect", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTempList(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTempList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMSequentialFocusComparator(value: js.Any): Self = this.set("mSequentialFocusComparator", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetFocusBottomRight(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocusBottomRight")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setMTempList(value: js.Any): Self = this.set("mTempList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withSetFocusTopLeft(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocusTopLeft")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setSetFocusBottomRight(value: (js.Any, js.Any) => js.Any): Self = this.set("setFocusBottomRight", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSetFocusTopLeft(value: (js.Any, js.Any) => js.Any): Self = this.set("setFocusTopLeft", js.Any.fromFunction2(value))
   }
   
 }

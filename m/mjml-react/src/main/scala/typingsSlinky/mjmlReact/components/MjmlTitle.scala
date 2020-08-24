@@ -11,6 +11,10 @@ object MjmlTitle {
   object component extends js.Object
   
   def withProps(p: Children): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle] = new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MjmlTitle.type): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle] = new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: String): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle] = {
+    val __props = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, __props.asInstanceOf[Children]))
+  }
 }
 

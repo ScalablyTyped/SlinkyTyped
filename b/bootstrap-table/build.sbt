@@ -1,7 +1,7 @@
 organization := "org.scalablytyped.slinky"
 name := "bootstrap-table"
-version := "1.16.0-32b617"
-scalaVersion := "2.13.2"
+version := "1.17.1-ae9263"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",

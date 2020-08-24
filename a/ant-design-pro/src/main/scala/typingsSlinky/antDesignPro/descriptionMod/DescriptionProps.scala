@@ -1,33 +1,50 @@
 package typingsSlinky.antDesignPro.descriptionMod
 
-import slinky.core.TagMod
-import typingsSlinky.react.mod.CSSProperties
+import slinky.core.facade.ReactElement
+import typingsSlinky.antd.gridColMod.ColProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ColProps * / any */ trait DescriptionProps extends js.Object {
-  var column: js.UndefOr[Double] = js.undefined
-  var key: js.UndefOr[String | Double] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var term: js.UndefOr[TagMod[Any]] = js.undefined
+@js.native
+trait DescriptionProps extends ColProps {
+  var column: js.UndefOr[Double] = js.native
+  var key: js.UndefOr[String | Double] = js.native
+  var term: js.UndefOr[ReactElement] = js.native
 }
 
 object DescriptionProps {
   @scala.inline
-  def apply(
-    column: js.UndefOr[Double] = js.undefined,
-    key: String | Double = null,
-    style: CSSProperties = null,
-    term: TagMod[Any] = null
-  ): DescriptionProps = {
+  def apply(): DescriptionProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (term != null) __obj.updateDynamic("term")(term.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescriptionProps]
   }
+  @scala.inline
+  implicit class DescriptionPropsOps[Self <: DescriptionProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColumn(value: Double): Self = this.set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColumn: Self = this.set("column", js.undefined)
+    @scala.inline
+    def setKey(value: String | Double): Self = this.set("key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
+    @scala.inline
+    def setTermReactElement(value: ReactElement): Self = this.set("term", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTerm(value: ReactElement): Self = this.set("term", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTerm: Self = this.set("term", js.undefined)
+  }
+  
 }
 

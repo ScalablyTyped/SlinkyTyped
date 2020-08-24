@@ -27,23 +27,16 @@ object NOUPDATE {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNO_UPDATE(value: no_update_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NO_UPDATE")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withTHROTTLED(value: throttled_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("THROTTLED")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNO_UPDATE(value: no_update_): Self = this.set("NO_UPDATE", value.asInstanceOf[js.Any])
     @scala.inline
-    def withUPDATE_AVAILABLE(value: update_available_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UPDATE_AVAILABLE")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTHROTTLED(value: throttled_): Self = this.set("THROTTLED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUPDATE_AVAILABLE(value: update_available_): Self = this.set("UPDATE_AVAILABLE", value.asInstanceOf[js.Any])
   }
   
 }

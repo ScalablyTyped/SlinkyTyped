@@ -1,7 +1,5 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Calls
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader")
 @js.native
 abstract class PhoneCallHistoryEntryReader ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader {
-  /**
-    * Returns a list of the PhoneCallHistoryEntry objects.
-    * @return An asynchronous operation that returns an IVectorView upon successful completion.
-    */
-  /* CompleteClass */
-  override def readBatchAsync(): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader
 

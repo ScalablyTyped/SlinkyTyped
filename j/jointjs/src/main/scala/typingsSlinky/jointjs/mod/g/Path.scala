@@ -8,11 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
  // getter
 class Path () extends js.Object {
-  def this(objects: PathObjectUnit) = this()
   def this(pathData: String) = this()
   def this(polyline: Polyline) = this()
+  def this(segments: PathObjectUnit | PathSegmentUnit) = this()
   def this(segments: js.Array[PathObjectUnit | PathSegmentUnit]) = this()
-  def this(segments: PathSegmentUnit) = this()
    // getter
   var end: Point | Null = js.native
   var segments: js.Array[Segment] = js.native
@@ -56,6 +55,7 @@ class Path () extends js.Object {
   def pointAtLength(length: Double, opt: SegmentSubdivisionsOpt): Point | Null = js.native
   /* private */ def pointAtT(t: PathT): Point | Null = js.native
   /* private */ def prepareSegment(segment: Segment): Segment = js.native
+  /* private */ def prepareSegment(segment: Segment, previousSegment: js.UndefOr[scala.Nothing], nextSegment: Segment): Segment = js.native
   /* private */ def prepareSegment(segment: Segment, previousSegment: Null, nextSegment: Segment): Segment = js.native
   /* private */ def prepareSegment(segment: Segment, previousSegment: Segment): Segment = js.native
   /* private */ def prepareSegment(segment: Segment, previousSegment: Segment, nextSegment: Segment): Segment = js.native
@@ -84,6 +84,7 @@ class Path () extends js.Object {
   def toPolylines(): js.Array[Polyline] | Null = js.native
   def toPolylines(opt: SegmentSubdivisionsOpt): js.Array[Polyline] | Null = js.native
   def translate(): this.type = js.native
+  def translate(tx: js.UndefOr[scala.Nothing], ty: Double): this.type = js.native
   def translate(tx: Double): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: PlainPoint): this.type = js.native

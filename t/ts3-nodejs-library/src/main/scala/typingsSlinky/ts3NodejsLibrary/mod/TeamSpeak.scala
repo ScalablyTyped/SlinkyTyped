@@ -1,7 +1,8 @@
 package typingsSlinky.ts3NodejsLibrary.mod
 
+import typingsSlinky.std.Partial
 import typingsSlinky.ts3NodejsLibrary.anon.PartialConnectionParams
-import typingsSlinky.ts3NodejsLibrary.queryResponseMod.QueryResponse
+import typingsSlinky.ts3NodejsLibrary.teamSpeakQueryMod.TeamSpeakQuery.ResponseEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +28,7 @@ object TeamSpeak extends js.Object {
     * @param array the array which should get filtered
     * @param filter filter object
     */
-  def filter[T /* <: QueryResponse */](array: js.Array[T], filter: T): js.Array[T] = js.native
+  def filter[T /* <: ResponseEntry */](array: js.Array[T], filter: Partial[T]): js.Array[T] = js.native
   /**
     * retrieves the first element of an array
     * @param input the response input
@@ -45,5 +46,13 @@ object TeamSpeak extends js.Object {
     * @param time time in ms to wait
     */
   def wait(time: Double): js.Promise[_] = js.native
+  @js.native
+  object QueryProtocol extends js.Object {
+    /* "raw" */ val RAW: typingsSlinky.ts3NodejsLibrary.teamSpeakMod.TeamSpeak.QueryProtocol.RAW with String = js.native
+    /* "ssh" */ val SSH: typingsSlinky.ts3NodejsLibrary.teamSpeakMod.TeamSpeak.QueryProtocol.SSH with String = js.native
+    @JSBracketAccess
+    def apply(value: String): js.UndefOr[typingsSlinky.ts3NodejsLibrary.teamSpeakMod.TeamSpeak.QueryProtocol with String] = js.native
+  }
+  
 }
 

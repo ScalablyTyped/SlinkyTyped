@@ -1,6 +1,5 @@
 package typingsSlinky.reactVirtualized.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -42,7 +41,7 @@ object List {
     @scala.inline
     def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def cellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[TagMod[Any]]): this.type = set("cellRangeRenderer", js.Any.fromFunction1(value))
+    def cellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[ReactElement]): this.type = set("cellRangeRenderer", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -64,13 +63,11 @@ object List {
     @scala.inline
     def isScrolling(value: Boolean): this.type = set("isScrolling", value.asInstanceOf[js.Any])
     @scala.inline
-    def noContentRenderer(value: () => TagMod[Any]): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
+    def noContentRenderer(value: () => ReactElement): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
     @scala.inline
     def noRowsRenderer(value: () => ReactElement): this.type = set("noRowsRenderer", js.Any.fromFunction0(value))
     @scala.inline
     def onRowsRendered(value: /* info */ RenderedRows => Unit): this.type = set("onRowsRendered", js.Any.fromFunction1(value))
-    @scala.inline
-    def onScroll(value: (/* params */ OnScrollParams) | (/* params */ ScrollParams) => _ | Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
     def onScrollbarPresenceChange(value: /* params */ ScrollbarPresenceParams => _): this.type = set("onScrollbarPresenceChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -85,8 +82,6 @@ object List {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
     def scrollLeft(value: Double): this.type = set("scrollLeft", value.asInstanceOf[js.Any])
-    @scala.inline
-    def scrollToAlignment(value: Alignment with String): this.type = set("scrollToAlignment", value.asInstanceOf[js.Any])
     @scala.inline
     def scrollToColumn(value: Double): this.type = set("scrollToColumn", value.asInstanceOf[js.Any])
     @scala.inline
@@ -109,12 +104,14 @@ object List {
   @scala.inline
   def apply(
     height: Double,
+    onScroll: (js.UndefOr[js.Function1[/* params */ ScrollParams, _]]) with (js.UndefOr[js.Function1[/* params */ OnScrollParams, Unit]]),
     rowCount: Double,
     rowHeight: Double | (js.Function1[/* params */ Index, Double]),
-    rowRenderer: /* props */ ListRowProps => TagMod[Any],
+    rowRenderer: /* props */ ListRowProps => ReactElement,
+    scrollToAlignment: js.UndefOr[Alignment] with js.UndefOr[String],
     width: Double
   ): Builder = {
-    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowRenderer = js.Any.fromFunction1(rowRenderer), width = width.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], onScroll = onScroll.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any], rowRenderer = js.Any.fromFunction1(rowRenderer), scrollToAlignment = scrollToAlignment.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
   }
 }

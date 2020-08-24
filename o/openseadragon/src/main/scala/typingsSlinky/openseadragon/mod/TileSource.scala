@@ -20,6 +20,12 @@ class TileSource protected () extends EventSource {
   def addHandler(eventName: String, handler: EventHandler[TileSourceEvent]): Unit = js.native
   def addHandler(eventName: String, handler: EventHandler[TileSourceEvent], userData: js.Object): Unit = js.native
   def addOnceHandler(eventName: String, handler: EventHandler[TileSourceEvent]): Unit = js.native
+  def addOnceHandler(
+    eventName: String,
+    handler: EventHandler[TileSourceEvent],
+    userData: js.UndefOr[scala.Nothing],
+    times: Double
+  ): Unit = js.native
   def addOnceHandler(eventName: String, handler: EventHandler[TileSourceEvent], userData: js.Object): Unit = js.native
   def addOnceHandler(eventName: String, handler: EventHandler[TileSourceEvent], userData: js.Object, times: Double): Unit = js.native
   def configure(data: String): js.Object = js.native
@@ -41,7 +47,7 @@ class TileSource protected () extends EventSource {
   def getTileWidth(level: Double): Double = js.native
   def raiseEvent(eventName: String, eventArgs: js.Object): Unit = js.native
   def removeAllHandlers(eventName: String): Unit = js.native
-  def removeHandler(eventName: String, handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
+  def removeHandler(eventName: String, handler: EventHandler[TileSourceEvent]): Unit = js.native
   def supports(data: String, url: String): Boolean = js.native
   def supports(data: js.Array[_], url: String): Boolean = js.native
   def supports(data: js.Object, url: String): Boolean = js.native

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object CollapseMenuIcon {
-  @JSImport("@fluentui/react-icons/lib/components/CollapseMenuIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "CollapseMenuIcon")
   @js.native
   object component extends js.Object
   

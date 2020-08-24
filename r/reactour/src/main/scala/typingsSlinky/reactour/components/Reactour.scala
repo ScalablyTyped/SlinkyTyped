@@ -1,11 +1,11 @@
 package typingsSlinky.reactour.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactour.mod.ReactourAccessibilityOptions
 import typingsSlinky.reactour.mod.ReactourProps
 import typingsSlinky.reactour.mod.ReactourStep
 import typingsSlinky.reactour.mod.default
@@ -28,7 +28,9 @@ object Reactour {
     @scala.inline
     def accentColor(value: String): this.type = set("accentColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def badgeContent(value: (/* current */ Double, /* total */ Double) => TagMod[Any]): this.type = set("badgeContent", js.Any.fromFunction2(value))
+    def accessibilityOptions(value: ReactourAccessibilityOptions): this.type = set("accessibilityOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def badgeContent(value: (/* current */ Double, /* total */ Double) => ReactElement): this.type = set("badgeContent", js.Any.fromFunction2(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,6 +41,8 @@ object Reactour {
     def disableFocusLock(value: Boolean): this.type = set("disableFocusLock", value.asInstanceOf[js.Any])
     @scala.inline
     def disableInteraction(value: Boolean): this.type = set("disableInteraction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableKeyboardNavigationVarargs(value: (esc | right | left)*): this.type = set("disableKeyboardNavigation", js.Array(value :_*))
     @scala.inline
     def disableKeyboardNavigation(value: Boolean | (js.Array[esc | right | left])): this.type = set("disableKeyboardNavigation", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,7 +56,7 @@ object Reactour {
     @scala.inline
     def lastStepNextButtonReactElement(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def lastStepNextButton(value: TagMod[Any]): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
+    def lastStepNextButton(value: ReactElement): this.type = set("lastStepNextButton", value.asInstanceOf[js.Any])
     @scala.inline
     def maskClassName(value: String): this.type = set("maskClassName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,7 +64,7 @@ object Reactour {
     @scala.inline
     def nextButtonReactElement(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextButton(value: TagMod[Any]): this.type = set("nextButton", value.asInstanceOf[js.Any])
+    def nextButton(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
     @scala.inline
     def nextStep(value: () => Unit): this.type = set("nextStep", js.Any.fromFunction0(value))
     @scala.inline
@@ -70,7 +74,7 @@ object Reactour {
     @scala.inline
     def prevButtonReactElement(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def prevButton(value: TagMod[Any]): this.type = set("prevButton", value.asInstanceOf[js.Any])
+    def prevButton(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
     @scala.inline
     def prevStep(value: () => Unit): this.type = set("prevStep", js.Any.fromFunction0(value))
     @scala.inline

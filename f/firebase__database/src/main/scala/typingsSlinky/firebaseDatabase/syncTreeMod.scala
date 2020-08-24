@@ -172,8 +172,6 @@ object syncTreeMod extends js.Object {
       */
     def calcCompleteEventCache(path: Path): Node = js.native
     def calcCompleteEventCache(path: Path, writeIdsToExclude: js.Array[Double]): Node = js.native
-    def removeEventRegistration(query: Query): js.Array[Event] = js.native
-    def removeEventRegistration(query: Query, eventRegistration: Null, cancelError: js.Error): js.Array[Event] = js.native
     /**
       * Remove event callback(s).
       *
@@ -184,6 +182,8 @@ object syncTreeMod extends js.Object {
       * @param cancelError If a cancelError is provided, appropriate cancel events will be returned.
       * @return Cancel events, if cancelError was provided.
       */
+    def removeEventRegistration(query: Query): js.Array[Event] = js.native
+    def removeEventRegistration(query: Query, eventRegistration: Null, cancelError: js.Error): js.Array[Event] = js.native
     def removeEventRegistration(query: Query, eventRegistration: EventRegistration): js.Array[Event] = js.native
     def removeEventRegistration(query: Query, eventRegistration: EventRegistration, cancelError: js.Error): js.Array[Event] = js.native
   }

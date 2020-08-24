@@ -31,37 +31,6 @@ import scala.scalajs.js.annotation._
 	*/
 class ^ () extends Subsume {
   def this(id: String) = this()
-  /**
-  	Used identifier.
-  	*/
-  /* CompleteClass */
-  override var id: String = js.native
-  /**
-  	Postfix used in `.compose()`.
-  	*/
-  /* CompleteClass */
-  override var postfix: String = js.native
-  /**
-  	Prefix used in `.compose()`.
-  	*/
-  /* CompleteClass */
-  override var prefix: String = js.native
-  /**
-  	Regex used in `.parse()`.
-  	*/
-  /* CompleteClass */
-  override var regex: js.RegExp = js.native
-  /**
-  	@returns A wrapped version of `text` that you can embed in other content.
-  	*/
-  /* CompleteClass */
-  override def compose(string: String): String = js.native
-  /**
-  	Extract your embedded data from `text`.
-  	@returns An object with properties `.data` for your embedded data and `.rest` for everything else.
-  	*/
-  /* CompleteClass */
-  override def parse(string: String): ParseResult = js.native
 }
 
 @JSImport("subsume", JSImport.Namespace)

@@ -1,6 +1,5 @@
 package typingsSlinky.reduxPersist.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -20,9 +19,15 @@ object PersistGate {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reduxPersist.integrationReactMod.PersistGate] {
     @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* bootstrapped */ Boolean => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: ReactElement | (js.Function1[/* bootstrapped */ Boolean, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
     def loadingReactElement(value: ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
     @scala.inline
-    def loading(value: TagMod[Any]): this.type = set("loading", value.asInstanceOf[js.Any])
+    def loading(value: ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
     @scala.inline
     def onBeforeLift(value: () => Unit | js.Promise[Unit]): this.type = set("onBeforeLift", js.Any.fromFunction0(value))
   }

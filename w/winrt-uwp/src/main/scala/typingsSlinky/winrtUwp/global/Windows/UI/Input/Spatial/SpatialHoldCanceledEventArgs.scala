@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs")
 @js.native
 abstract class SpatialHoldCanceledEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs {
-  /* CompleteClass */
-  override var interactionSourceKind: js.Any = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs
 

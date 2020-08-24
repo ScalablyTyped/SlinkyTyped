@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ExternalTFVCIcon {
-  @JSImport("@fluentui/react-icons/lib/components/ExternalTFVCIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "ExternalTFVCIcon")
   @js.native
   object component extends js.Object
   

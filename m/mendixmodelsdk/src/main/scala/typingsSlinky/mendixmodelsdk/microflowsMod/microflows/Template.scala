@@ -7,7 +7,9 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.pagesMod.pages.PageSettings
 import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.UserTask
+import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.Workflow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,10 +31,12 @@ abstract class Template protected () extends Element {
   def containerAsCustomRequestHandling: CustomRequestHandling = js.native
   def containerAsHttpConfiguration: HttpConfiguration = js.native
   def containerAsLogMessageAction: LogMessageAction = js.native
+  def containerAsPageSettings: PageSettings = js.native
   def containerAsShowMessageAction: ShowMessageAction = js.native
   def containerAsStringTemplateParameterValue: StringTemplateParameterValue = js.native
   def containerAsUserTask: UserTask = js.native
   def containerAsValidationFeedbackAction: ValidationFeedbackAction = js.native
+  def containerAsWorkflow: Workflow = js.native
 }
 
 /* static members */

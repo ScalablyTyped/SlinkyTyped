@@ -16,8 +16,8 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.oracleOraclejet.anon.IconShape
 import typingsSlinky.oracleOraclejet.anon.Opacity
+import typingsSlinky.oracleOraclejet.anon.`6`
 import typingsSlinky.oracleOraclejet.mod.JetElement
 import typingsSlinky.oracleOraclejet.mod.JetSetPropertyType
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.abort
@@ -157,7 +157,7 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onShowDisclosureChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var overview: js.UndefOr[IconShape] = js.native
+  var overview: js.UndefOr[`6`] = js.native
   var selectable: js.UndefOr[auto | off] = js.native
   var shortDesc: js.UndefOr[String] = js.native
   var showDisclosure: js.UndefOr[on | off] = js.native
@@ -1014,7 +1014,7 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   @JSName("getProperty")
   def getProperty_labelStyle(property: labelStyle): js.UndefOr[js.Object | Null] = js.native
   @JSName("getProperty")
-  def getProperty_overview(property: overview): js.UndefOr[IconShape] = js.native
+  def getProperty_overview(property: overview): js.UndefOr[`6`] = js.native
   @JSName("getProperty")
   def getProperty_selectable(property: selectable): js.UndefOr[auto | off] = js.native
   @JSName("getProperty")
@@ -1031,9 +1031,17 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   def setProperty(property: showDisclosure, value: on): Unit = js.native
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojDiagramNodeSettableProperties]): Unit = js.native
   @JSName("setProperty")
+  def setProperty_categories(property: categories): Unit = js.native
+  @JSName("setProperty")
   def setProperty_categories(property: categories, value: js.Array[String]): Unit = js.native
   @JSName("setProperty")
+  def setProperty_descendantsConnectivity(property: descendantsConnectivity): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_icon(property: icon): Unit = js.native
+  @JSName("setProperty")
   def setProperty_icon(property: icon, value: Opacity): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_label(property: label): Unit = js.native
   @JSName("setProperty")
   def setProperty_label(property: label, value: String): Unit = js.native
   @JSName("setProperty")
@@ -1041,8 +1049,16 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   @JSName("setProperty")
   def setProperty_labelStyle(property: labelStyle, value: js.Object): Unit = js.native
   @JSName("setProperty")
-  def setProperty_overview(property: overview, value: IconShape): Unit = js.native
+  def setProperty_overview(property: overview): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_overview(property: overview, value: `6`): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_selectable(property: selectable): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_shortDesc(property: shortDesc): Unit = js.native
   @JSName("setProperty")
   def setProperty_shortDesc(property: shortDesc, value: String): Unit = js.native
+  @JSName("setProperty")
+  def setProperty_showDisclosure(property: showDisclosure): Unit = js.native
 }
 

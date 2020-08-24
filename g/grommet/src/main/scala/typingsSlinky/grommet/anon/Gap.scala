@@ -1,39 +1,61 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.utilsMod.BackgroundType
+import typingsSlinky.grommet.utilsMod.GapType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Gap extends js.Object {
-  var border: js.UndefOr[ColorWidth] = js.undefined
-  var check: js.UndefOr[RadiusString] = js.undefined
-  var gap: js.UndefOr[String] = js.undefined
-  var hover: js.UndefOr[Border0] = js.undefined
-  var icon: js.UndefOr[ExtendExtendType] = js.undefined
-  var icons: js.UndefOr[Circle] = js.undefined
-  var size: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[BackgroundType] = js.native
+  var extend: js.UndefOr[ExtendType] = js.native
+  var gap: js.UndefOr[GapType] = js.native
+  var header: js.UndefOr[BorderExtend] = js.native
+  var panel: js.UndefOr[`10`] = js.native
 }
 
 object Gap {
   @scala.inline
-  def apply(
-    border: ColorWidth = null,
-    check: RadiusString = null,
-    gap: String = null,
-    hover: Border0 = null,
-    icon: ExtendExtendType = null,
-    icons: Circle = null,
-    size: String = null
-  ): Gap = {
+  def apply(): Gap = {
     val __obj = js.Dynamic.literal()
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (check != null) __obj.updateDynamic("check")(check.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Gap]
   }
+  @scala.inline
+  implicit class GapOps[Self <: Gap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBackground(value: BackgroundType): Self = this.set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackground: Self = this.set("background", js.undefined)
+    @scala.inline
+    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    @scala.inline
+    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExtend: Self = this.set("extend", js.undefined)
+    @scala.inline
+    def setGap(value: GapType): Self = this.set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGap: Self = this.set("gap", js.undefined)
+    @scala.inline
+    def setHeader(value: BorderExtend): Self = this.set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeader: Self = this.set("header", js.undefined)
+    @scala.inline
+    def setPanel(value: `10`): Self = this.set("panel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePanel: Self = this.set("panel", js.undefined)
+  }
+  
 }
 

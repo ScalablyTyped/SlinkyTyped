@@ -3,7 +3,6 @@ package typingsSlinky.reactMdl.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -110,6 +109,8 @@ object FooterSection {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: Double | String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
@@ -186,7 +187,7 @@ object FooterSection {
     @scala.inline
     def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     @scala.inline
-    def logo(value: TagMod[Any]): this.type = set("logo", value.asInstanceOf[js.Any])
+    def logo(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
     @scala.inline
     def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
     @scala.inline

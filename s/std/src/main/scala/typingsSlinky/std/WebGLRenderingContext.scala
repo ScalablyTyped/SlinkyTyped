@@ -9,6 +9,4 @@ import scala.scalajs.js.annotation._
 trait WebGLRenderingContext
   extends WebGLRenderingContextBase
      with WebGLRenderingContextOverloads
-     with OffscreenRenderingContext
-     with RenderingContext
 

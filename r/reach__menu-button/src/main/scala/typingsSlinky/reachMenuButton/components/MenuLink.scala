@@ -14,11 +14,11 @@ object MenuLink {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T <: js.Object] (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ T] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object]
   
-  def apply[T <: js.Object](p: MenuLinkProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T <: js.Object](companion: MenuLink.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  def apply[/* <: js.Object */ T](p: MenuLinkProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[/* <: js.Object */ T](companion: MenuLink.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

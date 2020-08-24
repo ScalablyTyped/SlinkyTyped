@@ -37,35 +37,20 @@ object DATA_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDATA(value: data_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DATA")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withEXPLICIT_FEEDBACK(value: explicitFeedback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EXPLICIT_FEEDBACK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setDATA(value: data_): Self = this.set("DATA", value.asInstanceOf[js.Any])
     @scala.inline
-    def withFEEDBACK(value: feedback_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FEEDBACK")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setEXPLICIT_FEEDBACK(value: explicitFeedback): Self = this.set("EXPLICIT_FEEDBACK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withNOTIFICATION(value: notification_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NOTIFICATION")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFEEDBACK(value: feedback_): Self = this.set("FEEDBACK", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPERIODIC(value: periodic_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PERIODIC")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setNOTIFICATION(value: notification_): Self = this.set("NOTIFICATION", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPERIODIC(value: periodic_): Self = this.set("PERIODIC", value.asInstanceOf[js.Any])
   }
   
 }

@@ -3,7 +3,9 @@ package typingsSlinky.googleAuthLibrary
 import typingsSlinky.googleAuthLibrary.anon.TypeofDefaultTransporter
 import typingsSlinky.googleAuthLibrary.computeclientMod.ComputeOptions
 import typingsSlinky.googleAuthLibrary.googleauthMod.GoogleAuthOptions
+import typingsSlinky.googleAuthLibrary.idtokenclientMod.IdTokenOptions
 import typingsSlinky.googleAuthLibrary.jwtclientMod.JWTOptions
+import typingsSlinky.googleAuthLibrary.loginticketMod.TokenPayload
 import typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2ClientOptions
 import typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClientOptions
 import scala.scalajs.js
@@ -49,6 +51,18 @@ object mod extends js.Object {
   }
   
   @js.native
+  class IdTokenClient protected ()
+    extends typingsSlinky.googleAuthLibrary.idtokenclientMod.IdTokenClient {
+    /**
+      * Google ID Token client
+      *
+      * Retrieve access token from the metadata server.
+      * See: https://developers.google.com/compute/docs/authentication
+      */
+    def this(options: IdTokenOptions) = this()
+  }
+  
+  @js.native
   class JWT protected ()
     extends typingsSlinky.googleAuthLibrary.jwtclientMod.JWT {
     /**
@@ -68,7 +82,7 @@ object mod extends js.Object {
       email: js.UndefOr[String],
       keyFile: js.UndefOr[String],
       key: js.UndefOr[String],
-      scopes: js.UndefOr[js.Array[String] | String],
+      scopes: js.UndefOr[String | js.Array[String]],
       subject: js.UndefOr[String],
       keyId: js.UndefOr[String]
     ) = this()
@@ -88,12 +102,33 @@ object mod extends js.Object {
   class JWTAccess ()
     extends typingsSlinky.googleAuthLibrary.jwtaccessMod.JWTAccess {
     def this(email: String) = this()
+    def this(email: js.UndefOr[scala.Nothing], key: String) = this()
     def this(email: String, key: String) = this()
     def this(email: Null, key: String) = this()
+    def this(email: js.UndefOr[scala.Nothing], key: js.UndefOr[scala.Nothing], keyId: String) = this()
+    def this(email: js.UndefOr[scala.Nothing], key: String, keyId: String) = this()
+    def this(email: js.UndefOr[scala.Nothing], key: Null, keyId: String) = this()
+    def this(email: String, key: js.UndefOr[scala.Nothing], keyId: String) = this()
     def this(email: String, key: String, keyId: String) = this()
     def this(email: String, key: Null, keyId: String) = this()
+    def this(email: Null, key: js.UndefOr[scala.Nothing], keyId: String) = this()
     def this(email: Null, key: String, keyId: String) = this()
     def this(email: Null, key: Null, keyId: String) = this()
+  }
+  
+  @js.native
+  /**
+    * Create a simple class to extract user ID from an ID Token
+    *
+    * @param {string} env Envelope of the jwt
+    * @param {TokenPayload} pay Payload of the jwt
+    * @constructor
+    */
+  class LoginTicket ()
+    extends typingsSlinky.googleAuthLibrary.loginticketMod.LoginTicket {
+    def this(env: String) = this()
+    def this(env: js.UndefOr[scala.Nothing], pay: TokenPayload) = this()
+    def this(env: String, pay: TokenPayload) = this()
   }
   
   @js.native
@@ -111,7 +146,11 @@ object mod extends js.Object {
     extends typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2Client {
     def this(clientId: String) = this()
     def this(options: OAuth2ClientOptions) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String) = this()
     def this(clientId: String, clientSecret: String) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: js.UndefOr[scala.Nothing], redirectUri: String) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String, redirectUri: String) = this()
+    def this(clientId: String, clientSecret: js.UndefOr[scala.Nothing], redirectUri: String) = this()
     def this(clientId: String, clientSecret: String, redirectUri: String) = this()
   }
   
@@ -127,7 +166,11 @@ object mod extends js.Object {
     extends typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClient {
     def this(clientId: String) = this()
     def this(options: UserRefreshClientOptions) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String) = this()
     def this(clientId: String, clientSecret: String) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: js.UndefOr[scala.Nothing], refreshToken: String) = this()
+    def this(clientId: js.UndefOr[scala.Nothing], clientSecret: String, refreshToken: String) = this()
+    def this(clientId: String, clientSecret: js.UndefOr[scala.Nothing], refreshToken: String) = this()
     def this(clientId: String, clientSecret: String, refreshToken: String) = this()
   }
   
@@ -188,6 +231,10 @@ object mod extends js.Object {
       * Google Sign on certificates in PEM format.
       */
     val GOOGLE_OAUTH2_FEDERATED_SIGNON_PEM_CERTS_URL_ : js.Any = js.native
+    /**
+      * Google Sign on certificates in JWK format.
+      */
+    val GOOGLE_OAUTH2_IAP_PUBLIC_KEY_URL_ : js.Any = js.native
     /**
       * The base endpoint to revoke tokens.
       */

@@ -11,7 +11,7 @@ trait ConnectionPoolConfiguration extends js.Object {
     */
   var ConnectionBorrowTimeout: js.UndefOr[IntegerOptional] = js.native
   /**
-    *  One or more SQL statements for the proxy to run when opening each new database connection. Typically used with SET statements to make sure that each connection has identical settings such as time zone and character set. For multiple statements, use semicolons as the separator. You can also include multiple variables in a single SET statement, such as SET x=1, y=2.   InitQuery is not currently supported for PostgreSQL. Default: no initialization query
+    *  One or more SQL statements for the proxy to run when opening each new database connection. Typically used with SET statements to make sure that each connection has identical settings such as time zone and character set. For multiple statements, use semicolons as the separator. You can also include multiple variables in a single SET statement, such as SET x=1, y=2.  Default: no initialization query
     */
   var InitQuery: js.UndefOr[String] = js.native
   /**
@@ -30,20 +30,44 @@ trait ConnectionPoolConfiguration extends js.Object {
 
 object ConnectionPoolConfiguration {
   @scala.inline
-  def apply(
-    ConnectionBorrowTimeout: js.UndefOr[IntegerOptional] = js.undefined,
-    InitQuery: String = null,
-    MaxConnectionsPercent: js.UndefOr[IntegerOptional] = js.undefined,
-    MaxIdleConnectionsPercent: js.UndefOr[IntegerOptional] = js.undefined,
-    SessionPinningFilters: StringList = null
-  ): ConnectionPoolConfiguration = {
+  def apply(): ConnectionPoolConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ConnectionBorrowTimeout)) __obj.updateDynamic("ConnectionBorrowTimeout")(ConnectionBorrowTimeout.get.asInstanceOf[js.Any])
-    if (InitQuery != null) __obj.updateDynamic("InitQuery")(InitQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(MaxConnectionsPercent)) __obj.updateDynamic("MaxConnectionsPercent")(MaxConnectionsPercent.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(MaxIdleConnectionsPercent)) __obj.updateDynamic("MaxIdleConnectionsPercent")(MaxIdleConnectionsPercent.get.asInstanceOf[js.Any])
-    if (SessionPinningFilters != null) __obj.updateDynamic("SessionPinningFilters")(SessionPinningFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionPoolConfiguration]
   }
+  @scala.inline
+  implicit class ConnectionPoolConfigurationOps[Self <: ConnectionPoolConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setConnectionBorrowTimeout(value: IntegerOptional): Self = this.set("ConnectionBorrowTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConnectionBorrowTimeout: Self = this.set("ConnectionBorrowTimeout", js.undefined)
+    @scala.inline
+    def setInitQuery(value: String): Self = this.set("InitQuery", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInitQuery: Self = this.set("InitQuery", js.undefined)
+    @scala.inline
+    def setMaxConnectionsPercent(value: IntegerOptional): Self = this.set("MaxConnectionsPercent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxConnectionsPercent: Self = this.set("MaxConnectionsPercent", js.undefined)
+    @scala.inline
+    def setMaxIdleConnectionsPercent(value: IntegerOptional): Self = this.set("MaxIdleConnectionsPercent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxIdleConnectionsPercent: Self = this.set("MaxIdleConnectionsPercent", js.undefined)
+    @scala.inline
+    def setSessionPinningFiltersVarargs(value: String*): Self = this.set("SessionPinningFilters", js.Array(value :_*))
+    @scala.inline
+    def setSessionPinningFilters(value: StringList): Self = this.set("SessionPinningFilters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSessionPinningFilters: Self = this.set("SessionPinningFilters", js.undefined)
+  }
+  
 }
 

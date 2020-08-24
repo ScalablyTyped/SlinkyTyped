@@ -10,7 +10,7 @@ package object routerMod {
   type Subscription = js.Function2[
     /* data */ typingsSlinky.next.routerMod.RouteInfo, 
     /* App */ js.UndefOr[slinky.core.ReactComponentClass[js.Object]], 
-    scala.Unit
+    js.Promise[scala.Unit]
   ]
   type Url = typingsSlinky.node.urlMod.UrlObject | java.lang.String
 }

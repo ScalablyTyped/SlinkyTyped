@@ -30,17 +30,14 @@ object SecureOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTlsVersion(value: Max): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsVersion")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutTlsVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsVersion")(js.undefined)
-        ret
-    }
+    def setTlsVersion(value: Max): Self = this.set("tlsVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTlsVersion: Self = this.set("tlsVersion", js.undefined)
   }
   
 }

@@ -25,6 +25,14 @@ import scala.scalajs.js.annotation._
 class Raster ()
   extends typingsSlinky.paper.paper.Raster {
   /** 
+    * Creates a new raster from an object description, and places it in the
+    * active layer.
+    * 
+    * @param object - an object containing properties to be set on the
+    *     raster
+    */
+  def this(`object`: js.Object) = this()
+  /** 
     * Creates a new empty raster of the given size, and places it in the
     * active layer.
     * 
@@ -37,6 +45,7 @@ class Raster ()
   def this(source: HTMLCanvasElement) = this()
   def this(source: HTMLImageElement) = this()
   def this(size: typingsSlinky.paper.paper.Size, position: typingsSlinky.paper.paper.Point) = this()
+  def this(source: js.UndefOr[scala.Nothing], position: typingsSlinky.paper.paper.Point) = this()
   def this(source: String, position: typingsSlinky.paper.paper.Point) = this()
   def this(source: HTMLCanvasElement, position: typingsSlinky.paper.paper.Point) = this()
   def this(source: HTMLImageElement, position: typingsSlinky.paper.paper.Point) = this()

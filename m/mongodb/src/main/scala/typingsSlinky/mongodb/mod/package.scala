@@ -52,7 +52,7 @@ package object mod {
   // We can use TypeScript Omit once minimum required TypeScript Version is above 3.5
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type OnlyFieldsOfType[TSchema, FieldType, AssignableType] = (typingsSlinky.mongodb.mod.AcceptedFields[TSchema, FieldType, AssignableType]) with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, FieldType]) with typingsSlinky.mongodb.mod.DotAndArrayNotation[AssignableType]
-  type OptionalId[TSchema /* <: typingsSlinky.mongodb.anon.IdAny */] = typingsSlinky.mongodb.mod.WithId[TSchema] | ((typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.IdExtractIdType[TSchema])
+  type OptionalId[TSchema /* <: typingsSlinky.mongodb.anon.`1` */] = typingsSlinky.mongodb.mod.WithId[TSchema] | ((typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.`2`[TSchema])
   type PullAllOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PullAllOperator with org.scalablytyped.runtime.TopLevel[TSchema] with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, js.Array[_]]) with org.scalablytyped.runtime.StringDictionary[js.Array[_]]
   type PullOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PullOperator with org.scalablytyped.runtime.TopLevel[js.Any] with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, js.Array[_]]) with (org.scalablytyped.runtime.StringDictionary[typingsSlinky.mongodb.mod.QuerySelector[_] | js.Any])
   type PushOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PushOperator with org.scalablytyped.runtime.TopLevel[js.Any] with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, js.Array[_]]) with (org.scalablytyped.runtime.StringDictionary[typingsSlinky.mongodb.mod.ArrayOperator[_] | js.Any])
@@ -66,7 +66,7 @@ package object mod {
   type SetFields[TSchema] = typingsSlinky.mongodb.mongodbStrings.SetFields with org.scalablytyped.runtime.TopLevel[js.Any] with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, js.UndefOr[js.Array[_]]]) with (org.scalablytyped.runtime.StringDictionary[typingsSlinky.mongodb.mod.AddToSetOperators[_] | js.Any])
   type Unpacked[Type] = Type
   type UpdateOptionalId[T] = T | typingsSlinky.mongodb.mod.OptionalId[T]
-  type WithId[TSchema] = (typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.`0`[TSchema]
+  type WithId[TSchema] = (typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.IdExtractIdType[TSchema]
   type WithTransactionCallback[T] = js.Function1[/* session */ typingsSlinky.mongodb.mod.ClientSession, js.Promise[T]]
   type log = js.Function2[
     /* message */ js.UndefOr[java.lang.String], 

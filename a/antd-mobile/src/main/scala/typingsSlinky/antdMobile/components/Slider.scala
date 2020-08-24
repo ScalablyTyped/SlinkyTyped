@@ -1,25 +1,24 @@
 package typingsSlinky.antdMobile.components
 
 import org.scalablytyped.runtime.NumberDictionary
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.sliderMod.SliderProps
-import typingsSlinky.antdMobile.sliderMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Slider {
-  @JSImport("antd-mobile/lib/slider", JSImport.Default)
+  @JSImport("antd-mobile", "Slider")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Slider] {
     @scala.inline
     def defaultValue(value: Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +52,7 @@ object Slider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def tipFormatter(value: /* value */ js.UndefOr[String] => TagMod[Any]): this.type = set("tipFormatter", js.Any.fromFunction1(value))
+    def tipFormatter(value: /* value */ js.UndefOr[String] => ReactElement): this.type = set("tipFormatter", js.Any.fromFunction1(value))
     @scala.inline
     def trackStyle(value: CSSProperties): this.type = set("trackStyle", value.asInstanceOf[js.Any])
     @scala.inline

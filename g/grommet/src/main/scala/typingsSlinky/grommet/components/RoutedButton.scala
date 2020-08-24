@@ -1,7 +1,6 @@
 package typingsSlinky.grommet.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -33,7 +32,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RoutedButton {
-  @JSImport("grommet", "RoutedButton")
+  @JSImport("grommet/es6", "RoutedButton")
   @js.native
   object component extends js.Object
   
@@ -74,7 +73,7 @@ object RoutedButton {
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -85,6 +84,8 @@ object RoutedButton {
     def primary(value: Boolean): this.type = set("primary", value.asInstanceOf[js.Any])
     @scala.inline
     def reverse(value: Boolean): this.type = set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: small | medium | large): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline

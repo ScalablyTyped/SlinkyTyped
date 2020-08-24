@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiKubernetes.coreV1Mod
 
+import typingsSlinky.pulumiKubernetes.eventMod.EventArgs
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -12,19 +13,16 @@ import scala.scalajs.js.annotation._
 class Event protected ()
   extends typingsSlinky.pulumiKubernetes.eventMod.Event {
   /**
-    * Create a core.v1.Event resource with the given unique name, arguments, and options.
+    * Create a Event resource with the given unique name, arguments, and options.
     *
     * @param name The _unique_ name of the resource.
     * @param args The arguments to use to populate this resource's properties.
     * @param opts A bag of options that control this resource's behavior.
     */
   def this(name: String) = this()
-  def this(name: String, args: typingsSlinky.pulumiKubernetes.inputMod.core.v1.Event) = this()
-  def this(
-    name: String,
-    args: typingsSlinky.pulumiKubernetes.inputMod.core.v1.Event,
-    opts: CustomResourceOptions
-  ) = this()
+  def this(name: String, args: EventArgs) = this()
+  def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
+  def this(name: String, args: EventArgs, opts: CustomResourceOptions) = this()
 }
 
 /* static members */
@@ -32,15 +30,12 @@ class Event protected ()
 @js.native
 object Event extends js.Object {
   /**
-    * Get the state of an existing `Event` resource, as identified by `id`.
-    * The ID is of the form `[namespace]/<name>`; if `namespace` is omitted, then (per
-    * Kubernetes convention) the ID becomes `default/<name>`.
+    * Get an existing Event resource's state with the given name, ID, and optional extra
+    * properties used to qualify the lookup.
     *
-    * Pulumi will keep track of this resource using `name` as the Pulumi ID.
-    *
-    * @param name _Unique_ name used to register this resource with Pulumi.
-    * @param id An ID for the Kubernetes resource to retrieve. Takes the form `[namespace]/<name>`.
-    * @param opts Uniquely specifies a CustomResource to select.
+    * @param name The _unique_ name of the resulting resource.
+    * @param id The _unique_ provider ID of the resource to lookup.
+    * @param opts Optional settings to control the behavior of the CustomResource.
     */
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.eventMod.Event = js.native
   def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.eventMod.Event = js.native
@@ -48,6 +43,6 @@ object Event extends js.Object {
     * Returns true if the given object is an instance of Event.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
-  def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/Event.Event */ Boolean = js.native
+  def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/event.Event */ Boolean = js.native
 }
 

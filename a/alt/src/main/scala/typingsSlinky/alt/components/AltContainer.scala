@@ -31,6 +31,8 @@ object AltContainer {
     @scala.inline
     def store(value: AltStore[_]): this.type = set("store", value.asInstanceOf[js.Any])
     @scala.inline
+    def storesVarargs(value: AltStore[js.Any]*): this.type = set("stores", js.Array(value :_*))
+    @scala.inline
     def stores(value: js.Array[AltStore[_]]): this.type = set("stores", value.asInstanceOf[js.Any])
     @scala.inline
     def transform(value: (/* store */ AltStore[_], /* actions */ js.Any) => _): this.type = set("transform", js.Any.fromFunction2(value))

@@ -1,0 +1,13 @@
+package typingsSlinky.angularCore.mod
+
+import typingsSlinky.angularCore.angularCoreStrings.URL
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/core", "\u0275allowSanitizationBypassAndThrow")
+@js.native
+object ɵallowSanitizationBypassAndThrow_URL extends js.Object {
+  def apply(value: js.Any, `type`: URL): /* is @angular/core.@angular/core.ɵSafeUrl */ Boolean = js.native
+}
+

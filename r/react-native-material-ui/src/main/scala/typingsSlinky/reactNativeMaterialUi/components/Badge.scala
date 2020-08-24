@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.anon.Color
@@ -20,6 +21,8 @@ object Badge {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Badge] {
     @scala.inline
     def accent(value: Boolean): this.type = set("accent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def children(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def icon(value: String | Color): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline

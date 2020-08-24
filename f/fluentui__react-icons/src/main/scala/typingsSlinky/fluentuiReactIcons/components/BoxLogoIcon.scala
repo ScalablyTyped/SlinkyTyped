@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BoxLogoIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BoxLogoIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BoxLogoIcon")
   @js.native
   object component extends js.Object
   

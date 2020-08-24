@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Segment extends PathSegmentUnit {
+trait Segment extends js.Object {
    // getter, `never` for Moveto
   var end: Point | Null = js.native
   var isSegment: Boolean = js.native
@@ -47,6 +47,7 @@ trait Segment extends PathSegmentUnit {
   def tangentAtLength(length: Double): Line | Null = js.native
   def tangentAtT(t: Double): Line | Null = js.native
   def translate(): this.type = js.native
+  def translate(tx: js.UndefOr[scala.Nothing], ty: Double): this.type = js.native
   def translate(tx: Double): this.type = js.native
   def translate(tx: Double, ty: Double): this.type = js.native
   def translate(tx: PlainPoint): this.type = js.native

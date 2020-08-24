@@ -25,6 +25,10 @@ object outputPluginsMod extends js.Object {
     extends typingsSlinky.typedoc.layoutPluginMod.LayoutPlugin
   
   @js.native
+  class LegendPlugin ()
+    extends typingsSlinky.typedoc.legendPluginMod.LegendPlugin
+  
+  @js.native
   class MarkedLinksPlugin ()
     extends typingsSlinky.typedoc.markedLinksPluginMod.MarkedLinksPlugin
   

@@ -1,9 +1,8 @@
 package typingsSlinky.antdMobile.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobile.tabsMod.default
 import typingsSlinky.antdMobile.tabsPropsTypeMod.TabsProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
@@ -20,14 +19,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tabs {
-  @JSImport("antd-mobile/lib/tabs", JSImport.Default)
+  @JSImport("antd-mobile", "Tabs")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.Tabs] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,11 +46,11 @@ object Tabs {
     @scala.inline
     def prerenderingSiblingsNumber(value: Double): this.type = set("prerenderingSiblingsNumber", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderTab(value: /* tab */ TabData => TagMod[Any]): this.type = set("renderTab", js.Any.fromFunction1(value))
+    def renderTab(value: /* tab */ TabData => ReactElement): this.type = set("renderTab", js.Any.fromFunction1(value))
     @scala.inline
-    def renderTabBarFunction1(value: /* props */ TabBarPropsType => TagMod[Any]): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    def renderTabBarFunction1(value: /* props */ TabBarPropsType => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
     @scala.inline
-    def renderTabBar(value: (js.Function1[/* props */ TabBarPropsType, TagMod[Any]]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
+    def renderTabBar(value: (js.Function1[/* props */ TabBarPropsType, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
     @scala.inline
     def swipeable(value: Boolean): this.type = set("swipeable", value.asInstanceOf[js.Any])
     @scala.inline

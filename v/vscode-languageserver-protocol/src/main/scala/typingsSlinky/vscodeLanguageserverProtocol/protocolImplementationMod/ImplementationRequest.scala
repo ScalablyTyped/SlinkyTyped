@@ -1,9 +1,9 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolImplementationMod
 
+import typingsSlinky.vscodeJsonrpc.mod.ProgressType
 import typingsSlinky.vscodeJsonrpc.mod.RequestHandler
-import typingsSlinky.vscodeJsonrpc.mod.RequestType
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentPositionParams
-import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
+import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolRequestType
+import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashimplementation
 import typingsSlinky.vscodeLanguageserverTypes.mod.Definition
 import typingsSlinky.vscodeLanguageserverTypes.mod.DefinitionLink
 import typingsSlinky.vscodeLanguageserverTypes.mod.Location
@@ -15,12 +15,16 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode-languageserver-protocol/lib/protocol.implementation", "ImplementationRequest")
 @js.native
 object ImplementationRequest extends js.Object {
-  val `type`: RequestType[
-    TextDocumentPositionParams, 
+  val method: textDocumentSlashimplementation = js.native
+  /** @deprecated Use ImplementationRequest.type */
+  val resultType: ProgressType[js.Array[Location | LocationLink]] = js.native
+  val `type`: ProtocolRequestType[
+    ImplementationParams, 
     Location | (js.Array[Location | LocationLink]) | Null, 
+    js.Array[Location | LocationLink], 
     Unit, 
-    TextDocumentRegistrationOptions
+    ImplementationRegistrationOptions
   ] = js.native
-  type HandlerSignature = RequestHandler[TextDocumentPositionParams, Definition | js.Array[DefinitionLink] | Null, Unit]
+  type HandlerSignature = RequestHandler[ImplementationParams, Definition | js.Array[DefinitionLink] | Null, Unit]
 }
 

@@ -59,101 +59,42 @@ object AnchorArgumentsMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBottom(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withBottomLeft(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBottom(value: BBoxAnchorArguments): Self = this.set("bottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def withBottomRight(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomRight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBottomLeft(value: BBoxAnchorArguments): Self = this.set("bottomLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def withCenter(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setBottomRight(value: BBoxAnchorArguments): Self = this.set("bottomRight", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectionClosest(value: ConnectionClosestAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionClosest")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCenter(value: BBoxAnchorArguments): Self = this.set("center", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectionLength(value: ConnectionLengthAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionLength")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConnectionClosest(value: ConnectionClosestAnchorArguments): Self = this.set("connectionClosest", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectionPerpendicular(value: ConnectionPerpendicularAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPerpendicular")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConnectionLength(value: ConnectionLengthAnchorArguments): Self = this.set("connectionLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def withConnectionRatio(value: ConnectionLengthAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConnectionPerpendicular(value: ConnectionPerpendicularAnchorArguments): Self = this.set("connectionPerpendicular", value.asInstanceOf[js.Any])
     @scala.inline
-    def withLeft(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setConnectionRatio(value: ConnectionLengthAnchorArguments): Self = this.set("connectionRatio", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMidSide(value: MidSideAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midSide")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLeft(value: BBoxAnchorArguments): Self = this.set("left", value.asInstanceOf[js.Any])
     @scala.inline
-    def withModelCenter(value: ModelCenterAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelCenter")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMidSide(value: MidSideAnchorArguments): Self = this.set("midSide", value.asInstanceOf[js.Any])
     @scala.inline
-    def withPerpendicular(value: PaddingAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perpendicular")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setModelCenter(value: ModelCenterAnchorArguments): Self = this.set("modelCenter", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRight(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setPerpendicular(value: PaddingAnchorArguments): Self = this.set("perpendicular", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTop(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setRight(value: BBoxAnchorArguments): Self = this.set("right", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTopLeft(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTop(value: BBoxAnchorArguments): Self = this.set("top", value.asInstanceOf[js.Any])
     @scala.inline
-    def withTopRight(value: BBoxAnchorArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topRight")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setTopLeft(value: BBoxAnchorArguments): Self = this.set("topLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTopRight(value: BBoxAnchorArguments): Self = this.set("topRight", value.asInstanceOf[js.Any])
   }
   
 }

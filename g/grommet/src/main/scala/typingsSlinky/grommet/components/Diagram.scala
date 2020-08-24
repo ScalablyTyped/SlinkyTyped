@@ -22,7 +22,6 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.SVGProps
 import typingsSlinky.react.reactStrings._empty
 import typingsSlinky.react.reactStrings.`additions text`
@@ -97,14 +96,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Diagram {
-  @JSImport("grommet", "Diagram")
+  @JSImport("grommet/es6", "Diagram")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, SVGSVGElement] {
     @scala.inline
     def accentHeight(value: Double | String): this.type = set("accentHeight", value.asInstanceOf[js.Any])
     @scala.inline

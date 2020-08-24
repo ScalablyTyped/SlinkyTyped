@@ -10,16 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("HideFindResultsCommand")
 @js.native
 class HideFindResultsCommand ()
-  extends typingsSlinky.devexpressWeb.HideFindResultsCommand {
-  /**
-    * Executes the HideFindResultsCommand command.
-    */
-  /* CompleteClass */
-  override def execute(): Boolean = js.native
-  /**
-    * Gets information about the command's state.
-    */
-  /* CompleteClass */
-  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
-}
+  extends typingsSlinky.devexpressWeb.HideFindResultsCommand
 

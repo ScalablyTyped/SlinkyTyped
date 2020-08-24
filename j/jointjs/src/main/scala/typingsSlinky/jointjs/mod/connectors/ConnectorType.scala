@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait ConnectorType extends js.Object
 
-object ConnectorType {
-  @scala.inline
-  def normal: typingsSlinky.jointjs.jointjsStrings.normal = "normal".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.normal]
-  @scala.inline
-  def rounded: typingsSlinky.jointjs.jointjsStrings.rounded = "rounded".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.rounded]
-  @scala.inline
-  def smooth: typingsSlinky.jointjs.jointjsStrings.smooth = "smooth".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.smooth]
-  @scala.inline
-  def jumpover: typingsSlinky.jointjs.jointjsStrings.jumpover = "jumpover".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.jumpover]
-}
-

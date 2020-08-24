@@ -8,7 +8,6 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -80,12 +79,12 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.mod.PropTypes.Margin
-import typingsSlinky.materialUiCore.textFieldMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -93,14 +92,14 @@ import scala.scalajs.js.annotation._
 
 object TextField {
   object FilledTextFieldProps {
-    @JSImport("@material-ui/core/TextField", JSImport.Default)
+    @JSImport("@material-ui/core", "TextField")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def FormHelperTextProps(value: PartialFormHelperTextProp): this.type = set("FormHelperTextProps", value.asInstanceOf[js.Any])
       @scala.inline
@@ -230,7 +229,7 @@ object TextField {
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       @scala.inline
-      def component(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
       @scala.inline
@@ -256,7 +255,7 @@ object TextField {
       @scala.inline
       def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
-      def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       @scala.inline
@@ -296,7 +295,7 @@ object TextField {
       @scala.inline
       def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
-      def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       @scala.inline
@@ -512,6 +511,8 @@ object TextField {
       @scala.inline
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       @scala.inline
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      @scala.inline
       def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -526,14 +527,14 @@ object TextField {
   }
   
   object OutlinedTextFieldProps {
-    @JSImport("@material-ui/core/TextField", JSImport.Default)
+    @JSImport("@material-ui/core", "TextField")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def FormHelperTextProps(value: PartialFormHelperTextProp): this.type = set("FormHelperTextProps", value.asInstanceOf[js.Any])
       @scala.inline
@@ -663,7 +664,7 @@ object TextField {
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       @scala.inline
-      def component(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
       @scala.inline
@@ -689,7 +690,7 @@ object TextField {
       @scala.inline
       def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
-      def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       @scala.inline
@@ -729,7 +730,7 @@ object TextField {
       @scala.inline
       def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
-      def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       @scala.inline
@@ -945,6 +946,8 @@ object TextField {
       @scala.inline
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       @scala.inline
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      @scala.inline
       def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -959,14 +962,14 @@ object TextField {
   }
   
   object StandardTextFieldProps {
-    @JSImport("@material-ui/core/TextField", JSImport.Default)
+    @JSImport("@material-ui/core", "TextField")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def FormHelperTextProps(value: PartialFormHelperTextProp): this.type = set("FormHelperTextProps", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1096,7 +1099,7 @@ object TextField {
       @scala.inline
       def componentComponentClass(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       @scala.inline
-      def component(value: ReactComponentClass[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
+      def component(value: ReactType[FormControlProps]): this.type = set("component", value.asInstanceOf[js.Any])
       @scala.inline
       def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1122,7 +1125,7 @@ object TextField {
       @scala.inline
       def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
-      def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1162,7 +1165,7 @@ object TextField {
       @scala.inline
       def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
-      def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1377,6 +1380,8 @@ object TextField {
       def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
       @scala.inline
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+      @scala.inline
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
       @scala.inline
       def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       @scala.inline

@@ -1,6 +1,7 @@
 package typingsSlinky.p5.mod
 
 import org.scalajs.dom.raw.Node
+import typingsSlinky.p5.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -167,6 +168,7 @@ trait Element extends js.Object {
     *   @return the inner HTML of the element
     */
   def html(): String = js.native
+  def html(html: js.UndefOr[scala.Nothing], append: Boolean): Element = js.native
   def html(html: String): Element = js.native
   def html(html: String, append: Boolean): Element = js.native
   /**
@@ -350,7 +352,8 @@ trait Element extends js.Object {
     *   @return the x and y position of the element in an
     *   object
     */
-  def position(): js.Object = js.native
+  def position(): X = js.native
+  def position(x: js.UndefOr[scala.Nothing], y: Double): Element = js.native
   def position(x: Double): Element = js.native
   def position(x: Double, y: Double): Element = js.native
   /**

@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Divider {
-  @JSImport("antd/lib/divider", JSImport.Default)
+  @JSImport("antd", "Divider")
   @js.native
   object component extends js.Object
   

@@ -159,185 +159,74 @@ object TextLine {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAscent(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascent")(js.Any.fromFunction1(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withDraw(value: (Canvas, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setAscent(value: Double => Double): Self = this.set("ascent", js.Any.fromFunction1(value))
     @scala.inline
-    def withDrawRun(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawRun")(js.Any.fromFunction9(value))
-        ret
-    }
+    def setDraw(value: (Canvas, Double, Double, Double, Double) => Unit): Self = this.set("draw", js.Any.fromFunction5(value))
     @scala.inline
-    def withDrawTextRun(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTextRun")(js.Any.fromFunction9(value))
-        ret
-    }
+    def setDrawRun(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("drawRun", js.Any.fromFunction9(value))
     @scala.inline
-    def withGetOffsetBeforeAfter(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOffsetBeforeAfter")(js.Any.fromFunction6(value))
-        ret
-    }
+    def setDrawTextRun(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("drawTextRun", js.Any.fromFunction9(value))
     @scala.inline
-    def withGetOffsetToLeftRightOf(value: (Double, Boolean) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOffsetToLeftRightOf")(js.Any.fromFunction2(value))
-        ret
-    }
+    def setGetOffsetBeforeAfter(value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("getOffsetBeforeAfter", js.Any.fromFunction6(value))
     @scala.inline
-    def withHandleReplacement(
+    def setGetOffsetToLeftRightOf(value: (Double, Boolean) => Double): Self = this.set("getOffsetToLeftRightOf", js.Any.fromFunction2(value))
+    @scala.inline
+    def setHandleReplacement(
       value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleReplacement")(js.Any.fromFunction12(value))
-        ret
-    }
+    ): Self = this.set("handleReplacement", js.Any.fromFunction12(value))
     @scala.inline
-    def withHandleRun(
+    def setHandleRun(
       value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleRun")(js.Any.fromFunction11(value))
-        ret
-    }
+    ): Self = this.set("handleRun", js.Any.fromFunction11(value))
     @scala.inline
-    def withHandleText(
+    def setHandleText(
       value: (js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleText")(js.Any.fromFunction13(value))
-        ret
-    }
+    ): Self = this.set("handleText", js.Any.fromFunction13(value))
     @scala.inline
-    def withMCharacterStyleSpanSet(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCharacterStyleSpanSet")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCharacterStyleSpanSet(value: js.Any): Self = this.set("mCharacterStyleSpanSet", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMChars(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mChars")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMChars(value: js.Any): Self = this.set("mChars", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMCharsValid(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mCharsValid")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMCharsValid(value: js.Any): Self = this.set("mCharsValid", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDir(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDir")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDir(value: js.Any): Self = this.set("mDir", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMDirections(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mDirections")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMDirections(value: js.Any): Self = this.set("mDirections", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMHasTabs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mHasTabs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMHasTabs(value: js.Any): Self = this.set("mHasTabs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMLen(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mLen")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMLen(value: js.Any): Self = this.set("mLen", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMMetricAffectingSpanSpanSet(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mMetricAffectingSpanSpanSet")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMMetricAffectingSpanSpanSet(value: js.Any): Self = this.set("mMetricAffectingSpanSpanSet", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMPaint(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mPaint")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMPaint(value: js.Any): Self = this.set("mPaint", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMReplacementSpanSpanSet(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mReplacementSpanSpanSet")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMReplacementSpanSpanSet(value: js.Any): Self = this.set("mReplacementSpanSpanSet", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMSpanned(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mSpanned")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMSpanned(value: js.Any): Self = this.set("mSpanned", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMStart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mStart")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMStart(value: js.Any): Self = this.set("mStart", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMTabs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mTabs")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMTabs(value: js.Any): Self = this.set("mTabs", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mText")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMText(value: js.Any): Self = this.set("mText", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMWorkPaint(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mWorkPaint")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMWorkPaint(value: js.Any): Self = this.set("mWorkPaint", value.asInstanceOf[js.Any])
     @scala.inline
-    def withMeasure(value: (Double, Boolean, FontMetricsInt) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setMeasure(value: (Double, Boolean, FontMetricsInt) => Double): Self = this.set("measure", js.Any.fromFunction3(value))
     @scala.inline
-    def withMeasureRun(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureRun")(js.Any.fromFunction5(value))
-        ret
-    }
+    def setMeasureRun(value: (js.Any, js.Any, js.Any, js.Any, js.Any) => js.Any): Self = this.set("measureRun", js.Any.fromFunction5(value))
     @scala.inline
-    def withMetrics(value: FontMetricsInt => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setMetrics(value: FontMetricsInt => Double): Self = this.set("metrics", js.Any.fromFunction1(value))
     @scala.inline
-    def withNextTab(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextTab")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setNextTab(value: Double => Double): Self = this.set("nextTab", js.Any.fromFunction1(value))
     @scala.inline
-    def withSet(value: (TextPaint, String, Double, Double, Double, Directions, Boolean, TabStops) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction8(value))
-        ret
-    }
+    def setSet(value: (TextPaint, String, Double, Double, Double, Directions, Boolean, TabStops) => Unit): Self = this.set("set", js.Any.fromFunction8(value))
   }
   
 }

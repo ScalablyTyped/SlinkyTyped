@@ -24,29 +24,18 @@ object ConnectionOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInbound(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inbound")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withoutInbound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inbound")(js.undefined)
-        ret
-    }
+    def setInbound(value: Boolean): Self = this.set("inbound", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOutbound(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outbound")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteInbound: Self = this.set("inbound", js.undefined)
     @scala.inline
-    def withoutOutbound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outbound")(js.undefined)
-        ret
-    }
+    def setOutbound(value: Boolean): Self = this.set("outbound", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutbound: Self = this.set("outbound", js.undefined)
   }
   
 }

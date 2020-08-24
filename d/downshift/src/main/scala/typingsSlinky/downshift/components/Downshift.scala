@@ -1,6 +1,7 @@
 package typingsSlinky.downshift.components
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.downshift.mod.A11yStatusMessageOptions
@@ -21,9 +22,11 @@ object Downshift {
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[Item] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, default[Item]] {
+    @scala.inline
+    def children(value: /* options */ ControllerStateAndHelpers[Item] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def defaultHighlightedIndex(value: Double): this.type = set("defaultHighlightedIndex", value.asInstanceOf[js.Any])
     @scala.inline
@@ -33,7 +36,7 @@ object Downshift {
     @scala.inline
     def environment(value: Environment): this.type = set("environment", value.asInstanceOf[js.Any])
     @scala.inline
-    def getA11yStatusMessage(value: /* options */ A11yStatusMessageOptions[js.Any] => String): this.type = set("getA11yStatusMessage", js.Any.fromFunction1(value))
+    def getA11yStatusMessage(value: /* options */ A11yStatusMessageOptions[Item] => String): this.type = set("getA11yStatusMessage", js.Any.fromFunction1(value))
     @scala.inline
     def getItemId(value: /* index */ js.UndefOr[Double] => String): this.type = set("getItemId", js.Any.fromFunction1(value))
     @scala.inline
@@ -51,7 +54,7 @@ object Downshift {
     @scala.inline
     def initialIsOpen(value: Boolean): this.type = set("initialIsOpen", value.asInstanceOf[js.Any])
     @scala.inline
-    def initialSelectedItem(value: js.Any): this.type = set("initialSelectedItem", value.asInstanceOf[js.Any])
+    def initialSelectedItem(value: Item): this.type = set("initialSelectedItem", value.asInstanceOf[js.Any])
     @scala.inline
     def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,48 +66,53 @@ object Downshift {
     @scala.inline
     def itemCount(value: Double): this.type = set("itemCount", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemToString(value: /* item */ js.Any | Null => String): this.type = set("itemToString", js.Any.fromFunction1(value))
+    def itemToString(value: /* item */ Item | Null => String): this.type = set("itemToString", js.Any.fromFunction1(value))
     @scala.inline
     def labelId(value: String): this.type = set("labelId", value.asInstanceOf[js.Any])
     @scala.inline
     def menuId(value: String): this.type = set("menuId", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(
-      value: (/* selectedItem */ js.Any | Null, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+      value: (/* selectedItem */ Item | Null, /* stateAndHelpers */ ControllerStateAndHelpers[Item]) => Unit
     ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onInputValueChange(value: (/* inputValue */ String, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit): this.type = set("onInputValueChange", js.Any.fromFunction2(value))
+    def onInputValueChange(value: (/* inputValue */ String, /* stateAndHelpers */ ControllerStateAndHelpers[Item]) => Unit): this.type = set("onInputValueChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onOuterClick(value: /* stateAndHelpers */ ControllerStateAndHelpers[js.Any] => Unit): this.type = set("onOuterClick", js.Any.fromFunction1(value))
+    def onOuterClick(value: /* stateAndHelpers */ ControllerStateAndHelpers[Item] => Unit): this.type = set("onOuterClick", js.Any.fromFunction1(value))
     @scala.inline
     def onSelect(
-      value: (/* selectedItem */ js.Any | Null, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+      value: (/* selectedItem */ Item | Null, /* stateAndHelpers */ ControllerStateAndHelpers[Item]) => Unit
     ): this.type = set("onSelect", js.Any.fromFunction2(value))
     @scala.inline
     def onStateChange(
-      value: (/* options */ StateChangeOptions[js.Any], /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+      value: (/* options */ StateChangeOptions[Item], /* stateAndHelpers */ ControllerStateAndHelpers[Item]) => Unit
     ): this.type = set("onStateChange", js.Any.fromFunction2(value))
     @scala.inline
     def onUserAction(
-      value: (/* options */ StateChangeOptions[js.Any], /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+      value: (/* options */ StateChangeOptions[Item], /* stateAndHelpers */ ControllerStateAndHelpers[Item]) => Unit
     ): this.type = set("onUserAction", js.Any.fromFunction2(value))
     @scala.inline
     def scrollIntoView(value: (/* node */ HTMLElement, /* menuNode */ HTMLElement) => Unit): this.type = set("scrollIntoView", js.Any.fromFunction2(value))
     @scala.inline
-    def selectedItem(value: js.Any): this.type = set("selectedItem", value.asInstanceOf[js.Any])
+    def selectedItem(value: Item): this.type = set("selectedItem", value.asInstanceOf[js.Any])
     @scala.inline
     def selectedItemNull: this.type = set("selectedItem", null)
     @scala.inline
-    def selectedItemChanged(value: (js.Any, js.Any) => Boolean): this.type = set("selectedItemChanged", js.Any.fromFunction2(value))
+    def selectedItemChanged(value: (Item, Item) => Boolean): this.type = set("selectedItemChanged", js.Any.fromFunction2(value))
     @scala.inline
     def stateReducer(
-      value: (/* state */ DownshiftState[js.Any], /* changes */ StateChangeOptions[js.Any]) => Partial[StateChangeOptions[js.Any]]
+      value: (/* state */ DownshiftState[Item], /* changes */ StateChangeOptions[Item]) => Partial[StateChangeOptions[Item]]
     ): this.type = set("stateReducer", js.Any.fromFunction2(value))
     @scala.inline
     def suppressRefError(value: Boolean): this.type = set("suppressRefError", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: DownshiftProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Downshift.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps[Item](p: DownshiftProps[Item]): Builder[Item] = new Builder[Item](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Item](): Builder[Item] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Item](js.Array(this.component, __props.asInstanceOf[DownshiftProps[Item]]))
+  }
+  implicit def make[Item](companion: Downshift.type): Builder[Item] = new Builder[Item](js.Array(this.component, js.Dictionary.empty))()
 }
 

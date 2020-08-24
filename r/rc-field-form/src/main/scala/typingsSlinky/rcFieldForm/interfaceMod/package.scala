@@ -31,4 +31,5 @@ package object interfaceMod {
     /* callback */ js.Function1[/* error */ js.UndefOr[java.lang.String], scala.Unit], 
     js.Promise[scala.Unit] | scala.Unit
   ]
+  type ValuedNotifyInfo = typingsSlinky.rcFieldForm.interfaceMod.NotifyInfo with typingsSlinky.rcFieldForm.anon.Store
 }

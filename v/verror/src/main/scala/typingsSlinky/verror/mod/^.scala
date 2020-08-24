@@ -7,16 +7,11 @@ import scala.scalajs.js.annotation._
 
 @JSImport("verror", JSImport.Namespace)
 @js.native
-class ^ () extends VError {
+class ^ protected () extends VError {
+  def this(message: js.UndefOr[scala.Nothing], params: js.Any*) = this()
   def this(message: String, params: js.Any*) = this()
   def this(options: js.Error, message: String, params: js.Any*) = this()
   def this(options: Options, message: String, params: js.Any*) = this()
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override def cause(): js.UndefOr[js.Error] = js.native
 }
 
 @JSImport("verror", JSImport.Namespace)

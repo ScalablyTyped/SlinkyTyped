@@ -24,7 +24,30 @@ trait ListFormat extends js.Object {
   def ApplyBulletDefault(DefaultListBehavior: js.Any): Unit = js.native
   def ApplyBulletDefaultOld(): Unit = js.native
   def ApplyListTemplate(ListTemplate: typingsSlinky.activexWord.Word.ListTemplate): Unit = js.native
+  def ApplyListTemplate(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.Any
+  ): Unit = js.native
+  def ApplyListTemplate(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any
+  ): Unit = js.native
+  def ApplyListTemplate(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any,
+    DefaultListBehavior: js.Any
+  ): Unit = js.native
   def ApplyListTemplate(ListTemplate: typingsSlinky.activexWord.Word.ListTemplate, ContinuePreviousList: js.Any): Unit = js.native
+  def ApplyListTemplate(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.Any,
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.Any
+  ): Unit = js.native
   def ApplyListTemplate(
     ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
     ContinuePreviousList: js.Any,
@@ -37,6 +60,11 @@ trait ListFormat extends js.Object {
     DefaultListBehavior: js.Any
   ): Unit = js.native
   def ApplyListTemplateOld(ListTemplate: typingsSlinky.activexWord.Word.ListTemplate): Unit = js.native
+  def ApplyListTemplateOld(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any
+  ): Unit = js.native
   def ApplyListTemplateOld(ListTemplate: typingsSlinky.activexWord.Word.ListTemplate, ContinuePreviousList: js.Any): Unit = js.native
   def ApplyListTemplateOld(
     ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
@@ -44,11 +72,83 @@ trait ListFormat extends js.Object {
     ApplyTo: js.Any
   ): Unit = js.native
   def ApplyListTemplateWithLevel(ListTemplate: typingsSlinky.activexWord.Word.ListTemplate): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.UndefOr[scala.Nothing],
+    ApplyLevel: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.Any,
+    ApplyLevel: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any,
+    DefaultListBehavior: js.UndefOr[scala.Nothing],
+    ApplyLevel: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any,
+    DefaultListBehavior: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.UndefOr[scala.Nothing],
+    ApplyTo: js.Any,
+    DefaultListBehavior: js.Any,
+    ApplyLevel: js.Any
+  ): Unit = js.native
   def ApplyListTemplateWithLevel(ListTemplate: typingsSlinky.activexWord.Word.ListTemplate, ContinuePreviousList: js.Any): Unit = js.native
   def ApplyListTemplateWithLevel(
     ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
     ContinuePreviousList: js.Any,
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.UndefOr[scala.Nothing],
+    ApplyLevel: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.Any,
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.Any,
+    ApplyTo: js.UndefOr[scala.Nothing],
+    DefaultListBehavior: js.Any,
+    ApplyLevel: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.Any,
     ApplyTo: js.Any
+  ): Unit = js.native
+  def ApplyListTemplateWithLevel(
+    ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
+    ContinuePreviousList: js.Any,
+    ApplyTo: js.Any,
+    DefaultListBehavior: js.UndefOr[scala.Nothing],
+    ApplyLevel: js.Any
   ): Unit = js.native
   def ApplyListTemplateWithLevel(
     ListTemplate: typingsSlinky.activexWord.Word.ListTemplate,
@@ -73,6 +173,7 @@ trait ListFormat extends js.Object {
   def ConvertNumbersToText(): Unit = js.native
   def ConvertNumbersToText(NumberType: js.Any): Unit = js.native
   def CountNumberedItems(): Double = js.native
+  def CountNumberedItems(NumberType: js.UndefOr[scala.Nothing], Level: js.Any): Double = js.native
   def CountNumberedItems(NumberType: js.Any): Double = js.native
   def CountNumberedItems(NumberType: js.Any, Level: js.Any): Double = js.native
   def ListIndent(): Unit = js.native

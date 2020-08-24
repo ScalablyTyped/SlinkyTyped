@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 package object esCollectionMod {
   type CollectionCellGroupRenderer = js.Function1[
     /* params */ typingsSlinky.reactVirtualized.esCollectionMod.CollectionCellGroupRendererParams, 
-    js.Array[slinky.core.TagMod[scala.Any]]
+    js.Array[slinky.core.facade.ReactElement]
   ]
   type CollectionCellRenderer = js.Function1[
     /* params */ typingsSlinky.reactVirtualized.esCollectionMod.CollectionCellRendererParams, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type CollectionCellSizeAndPositionGetter = js.Function1[
     /* params */ typingsSlinky.reactVirtualized.mod.Index, 

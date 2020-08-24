@@ -28,30 +28,5 @@ class ContactPoint protected ()
     pointOther: typingsSlinky.playcanvas.pc.Vec3,
     normal: typingsSlinky.playcanvas.pc.Vec3
   ) = this()
-  /**
-    * The point on the entity where the contact occurred, relative to the entity.
-    */
-  /* CompleteClass */
-  override var localPoint: typingsSlinky.playcanvas.pc.Vec3 = js.native
-  /**
-    * The point on the other entity where the contact occurred, relative to the other entity.
-    */
-  /* CompleteClass */
-  override var localPointOther: typingsSlinky.playcanvas.pc.Vec3 = js.native
-  /**
-    * The normal vector of the contact on the other entity, in world space.
-    */
-  /* CompleteClass */
-  override var normal: typingsSlinky.playcanvas.pc.Vec3 = js.native
-  /**
-    * The point on the entity where the contact occurred, in world space.
-    */
-  /* CompleteClass */
-  override var point: typingsSlinky.playcanvas.pc.Vec3 = js.native
-  /**
-    * The point on the other entity where the contact occurred, in world space.
-    */
-  /* CompleteClass */
-  override var pointOther: typingsSlinky.playcanvas.pc.Vec3 = js.native
 }
 

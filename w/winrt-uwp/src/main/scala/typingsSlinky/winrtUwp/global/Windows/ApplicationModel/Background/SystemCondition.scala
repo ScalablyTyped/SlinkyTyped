@@ -14,8 +14,5 @@ class SystemCondition protected ()
     * @param conditionType Specifies the condition type.
     */
   def this(conditionType: typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.SystemConditionType) = this()
-  /** Gets the condition type of a system condition. */
-  /* CompleteClass */
-  override var conditionType: typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.SystemConditionType = js.native
 }
 

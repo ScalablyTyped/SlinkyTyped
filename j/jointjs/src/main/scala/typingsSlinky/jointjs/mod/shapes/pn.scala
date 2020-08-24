@@ -19,6 +19,7 @@ object pn extends js.Object {
   @js.native
   class Place () extends Element {
     def this(attributes: Attributes) = this()
+    def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
     def this(attributes: Attributes, opt: StringDictionary[js.Any]) = this()
   }
   
@@ -30,6 +31,7 @@ object pn extends js.Object {
   @js.native
   class Transition () extends Element {
     def this(attributes: GenericAttributes[SVGRectSelector]) = this()
+    def this(attributes: js.UndefOr[scala.Nothing], opt: StringDictionary[js.Any]) = this()
     def this(attributes: GenericAttributes[SVGRectSelector], opt: StringDictionary[js.Any]) = this()
   }
   

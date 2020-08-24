@@ -1,6 +1,7 @@
 package typingsSlinky.reactResponsive.components
 
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
@@ -35,6 +36,12 @@ object ReactResponsive {
     def aural(value: Boolean): this.type = set("aural", value.asInstanceOf[js.Any])
     @scala.inline
     def braille(value: Boolean): this.type = set("braille", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* matches */ Boolean => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: ReactElement | (js.Function1[/* matches */ Boolean, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

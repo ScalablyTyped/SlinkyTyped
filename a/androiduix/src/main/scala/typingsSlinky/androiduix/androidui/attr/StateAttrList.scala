@@ -40,59 +40,28 @@ object StateAttrList {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddStatedAttr(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addStatedAttr")(js.Any.fromFunction2(value))
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withAddStatedAttrImpl(value: (js.Any, js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addStatedAttrImpl")(js.Any.fromFunction3(value))
-        ret
-    }
+    def setAddStatedAttr(value: (String, String) => Unit): Self = this.set("addStatedAttr", js.Any.fromFunction2(value))
     @scala.inline
-    def withGetMatchedStateAttr(value: js.Array[Double] => StateAttr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMatchedStateAttr")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setAddStatedAttrImpl(value: (js.Any, js.Any, js.Any) => js.Any): Self = this.set("addStatedAttrImpl", js.Any.fromFunction3(value))
     @scala.inline
-    def withGetOrCreateStateAttr(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrCreateStateAttr")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetMatchedStateAttr(value: js.Array[Double] => StateAttr): Self = this.set("getMatchedStateAttr", js.Any.fromFunction1(value))
     @scala.inline
-    def withGetStateAttr(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStateAttr")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setGetOrCreateStateAttr(value: js.Any => js.Any): Self = this.set("getOrCreateStateAttr", js.Any.fromFunction1(value))
     @scala.inline
-    def withMView(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mView")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setGetStateAttr(value: js.Any => js.Any): Self = this.set("getStateAttr", js.Any.fromFunction1(value))
     @scala.inline
-    def withMatchedStateAttrList(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchedStateAttrList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMView(value: js.Any): Self = this.set("mView", value.asInstanceOf[js.Any])
     @scala.inline
-    def withOriginStateAttrList(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originStateAttrList")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setMatchedStateAttrList(value: js.Any): Self = this.set("matchedStateAttrList", value.asInstanceOf[js.Any])
     @scala.inline
-    def withRemoveAttrAllState(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttrAllState")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOriginStateAttrList(value: js.Any): Self = this.set("originStateAttrList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRemoveAttrAllState(value: String => Unit): Self = this.set("removeAttrAllState", js.Any.fromFunction1(value))
   }
   
 }

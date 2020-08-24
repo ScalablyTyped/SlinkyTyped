@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RemoveFromShoppingListIcon {
-  @JSImport("@fluentui/react-icons/lib/components/RemoveFromShoppingListIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "RemoveFromShoppingListIcon")
   @js.native
   object component extends js.Object
   

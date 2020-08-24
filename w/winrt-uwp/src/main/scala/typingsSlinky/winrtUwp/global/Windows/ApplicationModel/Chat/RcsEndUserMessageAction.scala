@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Chat.RcsEndUserMessageAction")
 @js.native
 abstract class RcsEndUserMessageAction ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RcsEndUserMessageAction {
-  /** Gets the label of the action. */
-  /* CompleteClass */
-  override var label: String = js.native
-}
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RcsEndUserMessageAction
 

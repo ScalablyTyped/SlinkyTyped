@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/compiler", "ParseTreeResult")
 @js.native
 class ParseTreeResult protected ()
-  extends typingsSlinky.angularCompiler.publicApiMod.ParseTreeResult {
+  extends typingsSlinky.angularCompiler.compilerMod.ParseTreeResult {
   def this(
     rootNodes: js.Array[Node],
     errors: js.Array[typingsSlinky.angularCompiler.srcParseUtilMod.ParseError]

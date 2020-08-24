@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir`
   - typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis`
   - typingsSlinky.csstype.csstypeStrings.ColonColoncue
+  - typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region`
   - typingsSlinky.csstype.csstypeStrings.ColonColonpart
   - typingsSlinky.csstype.csstypeStrings.ColonColonslotted
   - typingsSlinky.csstype.csstypeStrings.Colondir
@@ -24,6 +25,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type`
   - typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type`
   - typingsSlinky.csstype.csstypeStrings.Colonwhere
+  - typingsSlinky.csstype.csstypeStrings.`Colon-khtml-any-link`
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link`
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-focusring`
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-full-screen`
@@ -119,6 +121,8 @@ trait Pseudos extends js.Object
 
 object Pseudos {
   @scala.inline
+  def `Colon-khtml-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-khtml-any-link` = ":-khtml-any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-khtml-any-link`]
+  @scala.inline
   def `Colon-moz-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link` = ":-moz-any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link`]
   @scala.inline
   def `Colon-moz-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis` = ":-moz-any()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis`]
@@ -208,6 +212,8 @@ object Pseudos {
   def ColonColonbefore: typingsSlinky.csstype.csstypeStrings.ColonColonbefore = "::before".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonbefore]
   @scala.inline
   def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = "::cue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColoncue]
+  @scala.inline
+  def `ColonColoncue-region`: typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region` = "::cue-region".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region`]
   @scala.inline
   def `ColonColonfirst-letter`: typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter` = "::first-letter".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter`]
   @scala.inline

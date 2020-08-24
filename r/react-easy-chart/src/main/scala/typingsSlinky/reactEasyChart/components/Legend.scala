@@ -18,6 +18,8 @@ object Legend {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactEasyChart.mod.Legend] {
     @scala.inline
+    def configVarargs(value: ColorString*): this.type = set("config", js.Array(value :_*))
+    @scala.inline
     def config(value: js.Array[ColorString]): this.type = set("config", value.asInstanceOf[js.Any])
     @scala.inline
     def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])

@@ -2,8 +2,6 @@ package typingsSlinky.firebaseDatabase
 
 import typingsSlinky.firebaseDatabase.immutableTreeMod.ImmutableTree
 import typingsSlinky.firebaseDatabase.operationMod.Operation
-import typingsSlinky.firebaseDatabase.operationMod.OperationSource
-import typingsSlinky.firebaseDatabase.operationMod.OperationType
 import typingsSlinky.firebaseDatabase.pathMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,28 +24,7 @@ object ackUserWriteMod extends js.Object {
       /** @inheritDoc */ revert: Boolean
     ) = this()
     /** @inheritDoc */ var affectedTree: ImmutableTree[Boolean] = js.native
-    /**
-      * @type {!Path}
-      */
-    /* CompleteClass */
-    override var path: Path = js.native
     /** @inheritDoc */ var revert: Boolean = js.native
-    /**
-      * @type {!OperationSource}
-      */
-    /* CompleteClass */
-    override var source: OperationSource = js.native
-    /**
-      * @type {!OperationType}
-      */
-    /* CompleteClass */
-    override var `type`: OperationType = js.native
-    /**
-      * @param {string} childName
-      * @return {?Operation}
-      */
-    /* CompleteClass */
-    override def operationForChild(childName: String): Operation | Null = js.native
   }
   
 }

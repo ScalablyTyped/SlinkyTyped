@@ -1,5 +1,6 @@
 package typingsSlinky.three.mod
 
+import typingsSlinky.three.propertyBindingMod.ParseTrackNameResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,6 +27,7 @@ object PropertyBinding extends js.Object {
   def create(root: js.Any, path: js.Any): typingsSlinky.three.propertyBindingMod.PropertyBinding | typingsSlinky.three.propertyBindingMod.PropertyBinding.Composite = js.native
   def create(root: js.Any, path: js.Any, parsedPath: js.Any): typingsSlinky.three.propertyBindingMod.PropertyBinding | typingsSlinky.three.propertyBindingMod.PropertyBinding.Composite = js.native
   def findNode(root: js.Any, nodeName: String): js.Any = js.native
-  def parseTrackName(trackName: String): js.Any = js.native
+  def parseTrackName(trackName: String): ParseTrackNameResults = js.native
+  def sanitizeNodeName(name: String): String = js.native
 }
 

@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class LiteralPrimitive protected ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.LiteralPrimitive {
-  def this(span: typingsSlinky.angularCompiler.astMod.ParseSpan, value: js.Any) = this()
+  def this(
+    span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    sourceSpan: typingsSlinky.angularCompiler.astMod.AbsoluteSourceSpan,
+    value: js.Any
+  ) = this()
 }
 

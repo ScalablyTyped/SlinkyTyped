@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BugBlockIcon {
-  @JSImport("@fluentui/react-icons/lib/components/BugBlockIcon", JSImport.Default)
+  @JSImport("@fluentui/react-icons", "BugBlockIcon")
   @js.native
   object component extends js.Object
   

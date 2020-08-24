@@ -4,7 +4,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
 import typingsSlinky.materialUiCore.hiddenCssMod.HiddenCssProps
-import typingsSlinky.materialUiCore.hiddenCssMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ object HiddenCss {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def lgDown(value: Boolean): this.type = set("lgDown", value.asInstanceOf[js.Any])
     @scala.inline
@@ -26,6 +25,8 @@ object HiddenCss {
     def mdDown(value: Boolean): this.type = set("mdDown", value.asInstanceOf[js.Any])
     @scala.inline
     def mdUp(value: Boolean): this.type = set("mdUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onlyVarargs(value: Breakpoint*): this.type = set("only", js.Array(value :_*))
     @scala.inline
     def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
     @scala.inline

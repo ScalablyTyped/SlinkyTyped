@@ -35,6 +35,8 @@ object ReactAddToCalendar {
     @scala.inline
     def dropdownClass(value: String): this.type = set("dropdownClass", value.asInstanceOf[js.Any])
     @scala.inline
+    def listItemsVarargs(value: js.Any*): this.type = set("listItems", js.Array(value :_*))
+    @scala.inline
     def listItems(value: js.Array[_]): this.type = set("listItems", value.asInstanceOf[js.Any])
     @scala.inline
     def optionsOpen(value: Boolean): this.type = set("optionsOpen", value.asInstanceOf[js.Any])

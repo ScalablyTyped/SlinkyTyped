@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeElements.components
 
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -20,6 +21,8 @@ object Tooltip {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Tooltip] {
     @scala.inline
+    def ModalComponent(value: ReactComponentClass[js.Object]): this.type = set("ModalComponent", value.asInstanceOf[js.Any])
+    @scala.inline
     def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
@@ -39,6 +42,10 @@ object Tooltip {
     def pointerColor(value: String): this.type = set("pointerColor", value.asInstanceOf[js.Any])
     @scala.inline
     def popover(value: ReactElement): this.type = set("popover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skipAndroidStatusBar(value: Boolean): this.type = set("skipAndroidStatusBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toggleAction(value: String): this.type = set("toggleAction", value.asInstanceOf[js.Any])
     @scala.inline
     def toggleOnPress(value: Boolean): this.type = set("toggleOnPress", value.asInstanceOf[js.Any])
     @scala.inline

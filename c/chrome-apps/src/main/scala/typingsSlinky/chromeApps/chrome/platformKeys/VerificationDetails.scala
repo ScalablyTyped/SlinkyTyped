@@ -28,17 +28,16 @@ object VerificationDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
     }
     @scala.inline
-    def withServerCertificateChain(value: js.Array[js.typedarray.ArrayBuffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCertificateChain")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setHostname(value: String): Self = this.set("hostname", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setServerCertificateChainVarargs(value: js.typedarray.ArrayBuffer*): Self = this.set("serverCertificateChain", js.Array(value :_*))
+    @scala.inline
+    def setServerCertificateChain(value: js.Array[js.typedarray.ArrayBuffer]): Self = this.set("serverCertificateChain", value.asInstanceOf[js.Any])
   }
   
 }

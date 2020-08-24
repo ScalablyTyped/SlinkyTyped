@@ -23,6 +23,11 @@ class ODataMetaModel protected ()
   ) = this()
   def this(
     oMetadata: typingsSlinky.openui5.sap.ui.model.odata.ODataMetadata,
+    oAnnotations: js.UndefOr[scala.Nothing],
+    oODataModelInterface: js.Any
+  ) = this()
+  def this(
+    oMetadata: typingsSlinky.openui5.sap.ui.model.odata.ODataMetadata,
     oAnnotations: typingsSlinky.openui5.sap.ui.model.odata.ODataAnnotations,
     oODataModelInterface: js.Any
   ) = this()

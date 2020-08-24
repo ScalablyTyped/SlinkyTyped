@@ -17,6 +17,11 @@ class FluentBundle protected () extends js.Object {
   def addMessages(source: String): js.Array[String] = js.native
   def addResource(res: FluentResource): js.Array[String] = js.native
   def format(message: js.Array[FluentNode]): String = js.native
+  def format(
+    message: js.Array[FluentNode],
+    args: js.UndefOr[scala.Nothing],
+    errors: js.Array[String | js.Error]
+  ): String = js.native
   def format(message: js.Array[FluentNode], args: js.Object): String = js.native
   def format(message: js.Array[FluentNode], args: js.Object, errors: js.Array[String | js.Error]): String = js.native
   def getMessage(id: String): js.UndefOr[js.Array[FluentNode]] = js.native
